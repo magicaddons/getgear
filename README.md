@@ -8,9 +8,9 @@ GetGear helps Alliance players plan equipment upgrades from **levels 1–30**, s
 
 ## Download
 
-**[Download GetGear v0.12.10 Beta](https://github.com/magicaddons/getgear/releases/tag/v0.12.10)**
+**[Download GetGear v0.12.11 Beta](https://github.com/magicaddons/getgear/releases/tag/v0.12.11)**
 
-On the release page, expand **Assets** and download **`GetGear-v0.12.10-private-test-beta.zip`**.
+On the release page, expand **Assets** and download **`GetGear-v0.12.11-private-test-beta.zip`**.
 
 **Use the ZIP listed under Assets**, not GitHub's automatically generated *Source code (zip)*, which is intended for browsing the repository rather than installing the packaged addon.
 
@@ -30,11 +30,11 @@ On the release page, expand **Assets** and download **`GetGear-v0.12.10-private-
 
 1. Download the latest beta ZIP from [Releases](https://github.com/magicaddons/getgear/releases).
 2. Close World of Warcraft.
-3. Extract the ZIP and copy its **`GetGear`** folder into your WoW Forever client's `Interface/AddOns/` folder.
-4. Check that `GetGear.toc` is directly inside `Interface/AddOns/GetGear/`, not inside an extra nested folder.
+3. Extract the ZIP and copy its **`GetGear`** folder into the live WoW Forever client's `_forever_/Interface/AddOns/` folder.
+4. Check that `GetGear.toc` is directly inside `_forever_/Interface/AddOns/GetGear/`, not inside an extra nested folder.
 5. Launch WoW Forever and enter **`/getgear`** to open the guide.
 
-If updating from an earlier version, replace the old `GetGear` addon folder. You can back up your SavedVariables first; v0.12.10 is designed to preserve existing GetGear progress.
+If updating from an earlier version, replace the old `GetGear` addon folder. You can back up your SavedVariables first; v0.12.11 is designed to preserve existing GetGear progress.
 
 ## Using the account-wide inventory
 
@@ -55,14 +55,16 @@ Counts can be incomplete or out of date if a character's bags or bank haven't be
 - Recipe availability and crafting capabilities of offline alts are not yet tracked.
 - The addon is a **beta**, not a fully verified guide for every item or server build.
 
-## What's new in v0.12.10
+## What's new in v0.12.11
 
-- Corrected four level-25 leather helms previously misidentified as trainer-taught crafts; their documented dungeon-drop sources no longer add crafting materials.
-- Preserved the separate crafted level-20 leather hoods and their patterns.
-- Fixed acquisition text being truncated at punctuation, including descriptions containing **Mr. Smite**.
-- Retained prior gear-data, UI, inventory and crafting-description corrections.
+- Added optional **Leatherworking 125** pattern routes to four level-25 leather helms while preserving their dungeon-drop sources.
+- Updated **four leather pants** to their documented **Leatherworking 100** patterns and **three chain helms** to their **Blacksmithing 125** plans.
+- Removed outdated trainer assumptions for those recipes without inventing dungeon boss locations or ACA vendor inventory.
+- Retained all 404 gear recommendations, all nine class guides, and the existing progress and inventory systems.
 
-See the [v0.12.10 release](https://github.com/magicaddons/getgear/releases/tag/v0.12.10) for the downloadable build.
+The launch client has not yet been tested in-game. Some quest and early caster reward changes announced by Blizzard still lack item-specific verified values.
+
+See the [v0.12.11 release](https://github.com/magicaddons/getgear/releases/tag/v0.12.11) for the downloadable build.
 
 ## Feedback and bug reports
 
