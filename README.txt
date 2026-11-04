@@ -212,6 +212,7 @@ FOCUSED IN-GAME CHECKS FOR v0.12.10
 5. /reload and confirm saved acquired/skipped/hidden status and Alt inventory
    are unchanged. Screenshot any unexpected recipe banner or item tooltip.
 
+
 v0.12.11 PRE-LAUNCH DATA UPDATE (4 NOVEMBER 2026)
 --------------------------------------------------
 - Blizzard's November 2 notes confirmed additional dungeon-drop LW/BS recipes.
