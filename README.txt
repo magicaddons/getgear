@@ -1,4 +1,4 @@
-GETGEAR v0.12.10 BETA - DUNGEON HELM AND SOURCE TEXT FIXES
+GETGEAR v0.12.11 BETA - PRE-LAUNCH PATTERN EVIDENCE UPDATE
 ==============================================
 
 A World of Warcraft: Forever Alliance gear progression and crafting-planning
@@ -211,3 +211,29 @@ FOCUSED IN-GAME CHECKS FOR v0.12.10
    should appear without being cut off after "Mr.".
 5. /reload and confirm saved acquired/skipped/hidden status and Alt inventory
    are unchanged. Screenshot any unexpected recipe banner or item tooltip.
+
+v0.12.11 PRE-LAUNCH DATA UPDATE (4 NOVEMBER 2026)
+--------------------------------------------------
+- Blizzard's November 2 notes confirmed additional dungeon-drop LW/BS recipes.
+- The launch client now indexes six level-25 leather-helm patterns. GetGear's
+  four catalogued level-25 helms retain their documented finished-item
+  dungeon-loot route AND explain the optional Leatherworking 125 craft route.
+  Because the craft is optional, ingredients do NOT inflate normal material
+  totals for dungeon loot. Pattern boss locations remain unverified.
+- Corrected four level-20 Leather Pants crafts to learn via new pattern items
+  at Leatherworking 100, and three level-25 Chain Helms to use dropped
+  plans at Blacksmithing 125. No trainer or ACA vendor location is invented.
+- Reviewed ACA vendor data and early caster/quest reward notes. The notes
+  do not specify changed item IDs or revised vendor stock; existing beta
+  acquisition data is preserved rather than guessing values.
+- The client now states that wands do not scale damage from user spell
+  damage; GetGear does not attempt to add such scaling.
+- No change to item recommendation IDs, progress, SavedVariables, or slash
+  command: /getgear is the only command.
+- This is an offline-tested beta, not a guarantee of launch boss/vendor
+  inventory; always prioritize live item tooltips where available.
+
+INSTALL ON LAUNCH CLIENT
+------------------------
+Copy GetGear into the live client's _forever_/Interface/AddOns/GetGear folder.
+The beta client may use a different addon folder.
