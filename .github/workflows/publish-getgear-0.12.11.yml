@@ -1,0 +1,49 @@
+name: Publish GetGear v0.12.11 beta
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/publish-getgear-0.12.11.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the verified addon source
+        uses: actions/checkout@v4
+      - name: Validate build and prepare installable ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q '^## Version: 0.12.11$' GetGear.toc
+          grep -q '^LaunchEvidence131.lua$' GetGear.toc
+          test "$(grep -c '^LaunchEvidence131.lua$' GetGear.toc)" -eq 1
+          test -f LaunchEvidence131.lua
+          test -f Core.lua
+          test -f MapPin.tga
+          mkdir -p dist/GetGear
+          cp ./*.lua GetGear.toc README.txt MapPin.tga DATA_MODEL.md dist/GetGear/
+          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq 36
+          (
+            cd dist
+            zip -q -r "../GetGear-v0.12.11-private-test-beta.zip" GetGear
+          )
+          unzip -t GetGear-v0.12.11-private-test-beta.zip
+      - name: Publish v0.12.11 prerelease
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release create v0.12.11 GetGear-v0.12.11-private-test-beta.zip \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "GetGear v0.12.11 Beta" \
+            --notes-file RELEASE_v0.12.11.md \
+            --prerelease \
+            --target "$GITHUB_SHA"
