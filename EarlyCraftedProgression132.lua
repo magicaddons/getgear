@@ -92,6 +92,15 @@ local entries = {
         classes={PALADIN=true},
         note="Early mail feet upgrade. The Warrior guide already contains this objective.",
     },
+    {
+        itemID=4362, name="Rough Boomstick", slot="Ranged", level=5,
+        profession="Engineering", method="trainer",
+        source="Engineering trainer (minimum learning skill unverified)",
+        stats="4.13 ranged DPS, +1 Stamina; Bind on Equip",
+        mats={Mat(4361,"Copper Tube",1),Mat(4359,"Handful of Copper Bolts",1),Mat(4399,"Wooden Stock",1)},
+        classes={HUNTER=true},
+        note="Optional Engineering gun; 4.13 DPS is an early upgrade from Hornwood Recurve Bow (2.38). Requires gun proficiency and ammunition; buy or commission if not an Engineer.",
+    },
 }
 
 local audit={itemsAdded=0,recommendationsAdded=0,recommendationsAlreadyPresent=0,byClass={}}
