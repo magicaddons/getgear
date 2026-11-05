@@ -30,6 +30,15 @@ for class,recs in pairs(addon.Recommendations) do
   end
 end
 assert(recTotal==425,"recommendations "..recTotal)
+local coarseCount=0
+for _,id in ipairs({2572,6239,6240,4308,4239,2309,2312}) do
+ for _,mat in ipairs(addon.ItemCatalog[id].reagents or {}) do
+  assert(not (mat.name=="Coarse Thread" and mat.itemID~=2320),
+    "Coarse Thread ID mismatch on "..id)
+  if mat.name=="Coarse Thread" then coarseCount=coarseCount+1 end
+ end
+end
+assert(coarseCount==7,"expected seven Coarse Thread recipes, got "..coarseCount)
 local needed={
  PRIEST={2572,6239,6240,4308},MAGE={2572,6239,4308},WARLOCK={2572,6239,4308},
  HUNTER={5957,2303,2300,4239},ROGUE={5957,2303,2300,4239},
