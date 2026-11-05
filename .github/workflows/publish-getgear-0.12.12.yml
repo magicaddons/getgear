@@ -1,0 +1,60 @@
+name: Publish GetGear v0.12.12 beta
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-getgear-0.12.12.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact release source
+        uses: actions/checkout@v4
+      - name: Install Lua 5.4
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+      - name: Validate addon and create installable ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q '^## Version: 0.12.12$' GetGear.toc
+          test "$(grep -c '^EarlyCraftedProgression132.lua$' GetGear.toc)" -eq 1
+          test -f EarlyCraftedProgression132.lua
+          test -f LaunchEvidence131.lua
+          test -f MapPin.tga
+          test -f RELEASE_v0.12.12.md
+          test "$(find . -maxdepth 1 -type f -name '*.lua' | wc -l)" -eq 33
+          lua5.4 tests/early-crafts-regression.lua .
+          mkdir -p dist/GetGear
+          cp ./*.lua GetGear.toc README.txt MapPin.tga DATA_MODEL.md dist/GetGear/
+          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq 37
+          test -f dist/GetGear/GetGear.toc
+          test -f dist/GetGear/EarlyCraftedProgression132.lua
+          (cd dist && zip -q -r '../GetGear-v0.12.12-private-test-beta.zip' GetGear)
+          unzip -t GetGear-v0.12.12-private-test-beta.zip
+          unzip -p GetGear-v0.12.12-private-test-beta.zip GetGear/GetGear.toc | grep -q '^## Version: 0.12.12$'
+      - name: Publish v0.12.12 beta release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if gh release view v0.12.12 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo 'Release already exists; not overwriting it.' >&2
+            exit 1
+          fi
+          gh release create v0.12.12 GetGear-v0.12.12-private-test-beta.zip \
+            --repo "$GITHUB_REPOSITORY" \
+            --title 'GetGear v0.12.12 Beta' \
+            --notes-file RELEASE_v0.12.12.md \
+            --prerelease \
+            --target "$GITHUB_SHA"
