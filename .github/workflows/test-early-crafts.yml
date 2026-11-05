@@ -1,0 +1,26 @@
+name: Validate Early Crafted Gear
+
+on:
+  pull_request:
+    paths:
+      - "*.lua"
+      - "GetGear.toc"
+      - "tests/**"
+      - ".github/workflows/test-early-crafts.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Install Lua 5.4
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+      - name: Compile each addon module and test crafted progressions
+        run: lua5.4 tests/early-crafts-regression.lua .

@@ -8,9 +8,9 @@ GetGear helps Alliance players plan equipment upgrades from **levels 1–30**, s
 
 ## Download
 
-**[Download GetGear v0.12.11 Beta](https://github.com/magicaddons/getgear/releases/tag/v0.12.11)**
+**[Download GetGear v0.12.12 Beta](https://github.com/magicaddons/getgear/releases/tag/v0.12.12)**
 
-On the release page, expand **Assets** and download **`GetGear-v0.12.11-private-test-beta.zip`**.
+On the release page, expand **Assets** and download **`GetGear-v0.12.12-private-test-beta.zip`**.
 
 **Use the ZIP listed under Assets**, not GitHub's automatically generated *Source code (zip)*, which is intended for browsing the repository rather than installing the packaged addon.
 
@@ -34,7 +34,7 @@ On the release page, expand **Assets** and download **`GetGear-v0.12.11-private-
 4. Check that `GetGear.toc` is directly inside `_forever_/Interface/AddOns/GetGear/`, not inside an extra nested folder.
 5. Launch WoW Forever and enter **`/getgear`** to open the guide.
 
-If updating from an earlier version, replace the old `GetGear` addon folder. You can back up your SavedVariables first; v0.12.11 is designed to preserve existing GetGear progress.
+If updating from an earlier version, replace the old `GetGear` addon folder. You can back up your SavedVariables first; v0.12.12 is designed to preserve existing GetGear progress.
 
 ## Using the account-wide inventory
 
@@ -55,16 +55,20 @@ Counts can be incomplete or out of date if a character's bags or bank haven't be
 - Recipe availability and crafting capabilities of offline alts are not yet tracked.
 - The addon is a **beta**, not a fully verified guide for every item or server build.
 
-## What's new in v0.12.11
+## What's new in v0.12.12
 
-- Added optional **Leatherworking 125** pattern routes to four level-25 leather helms while preserving their dungeon-drop sources.
-- Updated **four leather pants** to their documented **Leatherworking 100** patterns and **three chain helms** to their **Blacksmithing 125** plans.
-- Removed outdated trainer assumptions for those recipes without inventing dungeon boss locations or ACA vendor inventory.
-- Retained all 404 gear recommendations, all nine class guides, and the existing progress and inventory systems.
+The new release addresses missing ordinary green crafted equipment during levels 1–15 across **all nine Alliance class guides**, especially while players are still wearing starting gear.
 
-The launch client has not yet been tested in-game. Some quest and early caster reward changes announced by Blizzard still lack item-specific verified values.
+- **Tailoring:** Red Linen Robe, Red/Blue Linen Vests and Green Linen Bracers for relevant casters.
+- **Leatherworking:** Embossed Leather Gloves/Boots and Fine Leather Gloves for appropriate physical or caster builds.
+- **Blacksmithing:** Copper Chain Belt; Copper Chain Boots added to Paladin.
+- **Engineering:** Rough Boomstick ranged gun for Hunters. Earlier Enchanting wands remain supported.
+- **No profession gate on recommendations:** Useful tradeable gear is listed even when your character has not trained the crafting profession.
+- Added reagent data, acquisition caveats and regression coverage for the added items.
 
-See the [v0.12.11 release](https://github.com/magicaddons/getgear/releases/tag/v0.12.11) for the downloadable build.
+The catalogue now contains **234 items** and **426 recommendations** over **37 class/spec preview views**. Your progress, inventory data and `/getgear` command remain unchanged.
+
+GetGear is still a **beta**. Some early pattern sources, trainer availability and launch-server recipes require in-game verification. See the [v0.12.12 release](https://github.com/magicaddons/getgear/releases/tag/v0.12.12).
 
 ## Feedback and bug reports
 
