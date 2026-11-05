@@ -184,10 +184,9 @@ local function InventoryItemName(id)
         if ok and type(result)=="string" and result~="" then name=result end
     end
     if not name and GetGear.MaterialNames then name=GetGear.MaterialNames[id] end
-    if not name and not requestedInventoryNames[id] and C_Item
-        and type(C_Item.RequestLoadItemDataByID)=="function" then
+    if not name and not requestedInventoryNames[id] then
         requestedInventoryNames[id]=true
-        pcall(C_Item.RequestLoadItemDataByID,id)
+        if GetGear.RequestItemDataOnce then GetGear:RequestItemDataOnce(id) end
     end
     if not name then name="Item #"..tostring(id) end
     return name
