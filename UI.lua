@@ -3,11 +3,9 @@ local addonName, GetGear = ...
 -- Pure Blizzard UI, with no external process or communication bridge.
 local function ItemIcon(itemID)
     if type(itemID) == "number" and C_Item and type(C_Item.GetItemIconByID) == "function" then
-        local icon = C_Item.GetItemIconByID(itemID)
-        if icon then return icon end
-        if type(C_Item.RequestLoadItemDataByID) == "function" then
-            C_Item.RequestLoadItemDataByID(itemID)
-        end
+        local ok, icon = pcall(C_Item.GetItemIconByID,itemID)
+        if ok and icon then return icon end
+        if GetGear.RequestItemDataOnce then GetGear:RequestItemDataOnce(itemID) end
     end
     return "Interface\\Icons\\INV_Misc_QuestionMark"
 end
