@@ -1,4 +1,4 @@
-GETGEAR v0.12.12 BETA - EARLY CRAFTED GEAR COVERAGE
+GETGEAR v0.12.13 BETA - LOGIN ITEM-DATA LOOP FIX
 ==============================================
 
 A World of Warcraft: Forever Alliance gear progression and crafting-planning
@@ -258,3 +258,12 @@ V0.12.12 BETA - EARLY-CRAFTED GEAR COVERAGE (5 NOVEMBER 2026)
 - 234 catalogue items and 426 gear recommendations, all nine classes, 37
   class/spec views. No changes to SavedVariables keys or /getgear command.
 - Beta remains subject to in-game trainer/source and UI testing.
+
+V0.12.13 BETA - LOGIN ITEM-DATA LOOP GUARD (5 NOVEMBER 2026)
+--------------------------------------------------------------
+- Refresh only for GetGear's own item-data responses, not every addon event.
+- Do not re-request missing item data repeatedly in one play session.
+- Coalesce delayed refreshes, rate-limit and avoid recursive redraws.
+- Bag, equipment and profession updates are unchanged.
+- Item/recommendation data and SavedVariables unchanged since v0.12.12.
+- Automated event simulation added; live-client retest still required.

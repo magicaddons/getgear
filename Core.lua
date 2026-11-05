@@ -49,7 +49,7 @@ local function NotifyLevel(newLevel)
     end
 end
 
-events:SetScript("OnEvent", function(_, event, arg1)
+events:SetScript("OnEvent", function(_, event, arg1, arg2)
     if event == "ADDON_LOADED" then
         if arg1 ~= addonName then return end
         if type(GetGear_CharacterDB) ~= "table" then GetGear_CharacterDB = {} end
@@ -99,8 +99,11 @@ events:SetScript("OnEvent", function(_, event, arg1)
         if arg1 == "player" and GetGear.RefreshAll then GetGear:RefreshAll() end
     elseif event == "PLAYER_EQUIPMENT_CHANGED" then
         if GetGear.RefreshAll then GetGear:RefreshAll() end
-    elseif event == "BAG_UPDATE_DELAYED" or event == "ITEM_DATA_LOAD_RESULT" then
+    elseif event == "BAG_UPDATE_DELAYED" then
         if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end
+    elseif event == "ITEM_DATA_LOAD_RESULT" then
+        -- Only respond to outstanding GetGear requests, with debounced refresh.
+        if GetGear.OnItemDataLoadResult then GetGear:OnItemDataLoadResult(arg1,arg2) end
     elseif event == "SKILL_LINES_CHANGED" or event == "TRADE_SKILL_LIST_UPDATE" or event == "TRADE_SKILL_SHOW" or event == "CHAT_MSG_SKILL" then
         -- Dropping/relearning a profession must invalidate any positive recipe
         -- cache from the old profession skill line.

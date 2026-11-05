@@ -1,0 +1,52 @@
+name: Publish GetGear v0.12.13 beta
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publish-getgear-0.12.13.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+      - name: Validate source and package
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q '^## Version: 0.12.13$' GetGear.toc
+          test "$(grep -c '^ItemData.lua$' GetGear.toc)" -eq 1
+          test "$(find . -maxdepth 1 -type f -name '*.lua' | wc -l)" -eq 34
+          lua5.4 tests/early-crafts-regression.lua .
+          lua5.4 tests/item-data-regression.lua .
+          mkdir -p dist/GetGear
+          cp ./*.lua GetGear.toc README.txt MapPin.tga DATA_MODEL.md dist/GetGear/
+          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq 38
+          (cd dist && zip -q -r ../GetGear-v0.12.13-private-test-beta.zip GetGear)
+          unzip -t GetGear-v0.12.13-private-test-beta.zip
+          unzip -p GetGear-v0.12.13-private-test-beta.zip GetGear/GetGear.toc | grep -q '^## Version: 0.12.13$'
+      - name: Publish release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if gh release view v0.12.13 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo 'Release already exists; not overwriting.' >&2
+            exit 1
+          fi
+          gh release create v0.12.13 GetGear-v0.12.13-private-test-beta.zip \
+            --repo "$GITHUB_REPOSITORY" \
+            --title 'GetGear v0.12.13 Beta' \
+            --notes-file RELEASE_v0.12.13.md \
+            --prerelease \
+            --target "$GITHUB_SHA"
