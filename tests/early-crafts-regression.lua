@@ -16,10 +16,10 @@ for line in toc:gmatch("[^\r\n]+") do
 end
 assert(files>=33,"expected v0.12.11 modules plus early craft module")
 local audit=assert(addon.EarlyCraftedProgression132,"missing early craft audit")
-assert(audit.itemsAdded==8 and audit.recommendationsAdded==21,
+assert(audit.itemsAdded==9 and audit.recommendationsAdded==22,
   "unexpected early craft counts: "..audit.itemsAdded.." / "..audit.recommendationsAdded)
 local catalog=0;for _ in pairs(addon.ItemCatalog) do catalog=catalog+1 end
-assert(catalog==233,"catalogue count "..catalog)
+assert(catalog==234,"catalogue count "..catalog)
 local recTotal=0
 for class,recs in pairs(addon.Recommendations) do
   local ids={}
@@ -29,7 +29,7 @@ for class,recs in pairs(addon.Recommendations) do
     ids[r.id]=true;recTotal=recTotal+1
   end
 end
-assert(recTotal==425,"recommendations "..recTotal)
+assert(recTotal==426,"recommendations "..recTotal)
 local coarseCount=0
 for _,id in ipairs({2572,6239,6240,4308,4239,2309,2312}) do
  for _,mat in ipairs(addon.ItemCatalog[id].reagents or {}) do
@@ -39,9 +39,15 @@ for _,id in ipairs({2572,6239,6240,4308,4239,2309,2312}) do
  end
 end
 assert(coarseCount==7,"expected seven Coarse Thread recipes, got "..coarseCount)
+local gun=assert(addon.ItemCatalog[4362],"missing engineering gun")
+assert(gun.profession=="Engineering" and gun.availableLevel==5 and gun.slot=="Ranged")
+local gunMats={}
+for _,r in ipairs(gun.reagents) do gunMats[r.itemID]=r.amount end
+assert(gunMats[4361]==1 and gunMats[4359]==1 and gunMats[4399]==1,
+  "wrong Rough Boomstick ingredient IDs")
 local needed={
  PRIEST={2572,6239,6240,4308},MAGE={2572,6239,4308},WARLOCK={2572,6239,4308},
- HUNTER={5957,2303,2300,4239},ROGUE={5957,2303,2300,4239},
+ HUNTER={5957,2303,2300,4239,4362},ROGUE={5957,2303,2300,4239},
  DRUID={5957,2303,2300,4239,2309,2312},
  SHAMAN={5957,2303,2300,4239,2309,2312},
  WARRIOR={2852,3469,3471,2851},PALADIN={2852,3469,3471,2851},
@@ -61,7 +67,7 @@ for _,id in ipairs({2572,6239,6240,2312}) do
  local i=addon.ItemCatalog[id]
  assert(i.recipeLearnMethod=="pattern" and i.professionSkillRequired,"missing pattern evidence "..id)
 end
-for _,id in ipairs({4308,4239,2309,2851}) do
+for _,id in ipairs({4308,4239,2309,2851,4362}) do
  local i=addon.ItemCatalog[id]
  assert(i.recipeLearnMethod=="trainer" and not i.professionSkillRequired and
         i.recipeLearnSkillEvidence=="unverified","invented trainer minimum "..id)
