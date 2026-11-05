@@ -102,9 +102,7 @@ local function ItemStats(itemID)
     if type(itemID)~="number" then return nil end
     local out=Stats("item:"..itemID)
     if out then return out end
-    if C_Item and type(C_Item.RequestLoadItemDataByID)=="function" then
-        pcall(C_Item.RequestLoadItemDataByID,itemID)
-    end
+    if GetGear.RequestItemDataOnce then GetGear:RequestItemDataOnce(itemID) end
     return nil
 end
 local function Equipped(slot)
@@ -232,8 +230,8 @@ local function ItemInfo(item)
     if type(getter) ~= "function" then return nil end
     local ok, name, link, quality, itemLevel = pcall(getter,item)
     if not ok or not name or not IsSafe(quality) or not IsSafe(itemLevel) then
-        if type(item)=="number" and C_Item and type(C_Item.RequestLoadItemDataByID)=="function" then
-            pcall(C_Item.RequestLoadItemDataByID,item)
+        if type(item)=="number" and GetGear.RequestItemDataOnce then
+            GetGear:RequestItemDataOnce(item)
         end
         return nil
     end
