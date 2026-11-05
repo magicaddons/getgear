@@ -1,4 +1,4 @@
-GETGEAR v0.12.11 BETA - PRE-LAUNCH PATTERN EVIDENCE UPDATE
+GETGEAR v0.12.12 BETA - EARLY CRAFTED GEAR COVERAGE
 ==============================================
 
 A World of Warcraft: Forever Alliance gear progression and crafting-planning
@@ -8,7 +8,7 @@ INSTALL
 -------
 1. Exit WoW.
 2. Back up your current GetGear folder and SavedVariables if desired.
-3. Replace Interface/AddOns/GetGear with this package's GetGear folder.
+3. Replace _forever_/Interface/AddOns/GetGear with this package's GetGear folder.
    Do not keep an old WoWForeverGearGuide addon folder alongside it.
 4. Start the game, and use /getgear to open the detailed guide.
 
@@ -238,3 +238,23 @@ INSTALL ON LAUNCH CLIENT
 ------------------------
 Copy GetGear into the live client's _forever_/Interface/AddOns/GetGear folder.
 The beta client may use a different addon folder.
+
+
+V0.12.12 BETA - EARLY-CRAFTED GEAR COVERAGE (5 NOVEMBER 2026)
+----------------------------------------------------------------
+- Added nine new equippable crafted items and 22 class/spec gear recommendations
+  across all nine Alliance class guides, primarily at character levels 5-10.
+- Tailoring: Red Linen Robe, Red/Blue Linen Vests and Green Linen Bracers.
+- Leatherworking: Embossed Leather Gloves and Boots; Fine Leather Gloves.
+- Blacksmithing: Copper Chain Belt; connected previously catalogued Copper
+  Chain Boots to Paladin without duplicating the Warrior objective.
+- Engineering: Rough Boomstick gun for Hunter; account for guns/ammunition.
+- Enchanting: existing early wands retained; no new wand data changes.
+- Reagent IDs checked, including Coarse Thread (2320), Rough Boomstick parts.
+- New low-level crafts do not require the player to have the profession to
+  *see* a recommendation: a tradeable upgrade may be bought or commissioned.
+- Trainer learning minima that cannot be independently corroborated remain
+  explicitly unverified; pattern teaching minima and equip levels are distinct.
+- 234 catalogue items and 426 gear recommendations, all nine classes, 37
+  class/spec views. No changes to SavedVariables keys or /getgear command.
+- Beta remains subject to in-game trainer/source and UI testing.
