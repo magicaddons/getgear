@@ -40,7 +40,8 @@ local function NotifyLevel(newLevel)
     for _, item in ipairs(GetGear.Gear) do
         if item.targetLevel == newLevel and VerifiedNotificationSource(item)
             and not GetGear:GetStatus(item) and not GetGear:IsHidden(item)
-            and not GetGear:IsGearEquipped(item) then
+            and not GetGear:IsGearEquipped(item)
+            and (not GetGear.ShouldDisplayCraftedGear or GetGear:ShouldDisplayCraftedGear(item)) then
             count = count + 1
         end
     end
@@ -68,6 +69,8 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         -- Only presentation is affected: status, hidden and acquired keys never change.
         if type(o.filterObsolete) ~= "boolean" then o.filterObsolete = true end
         if type(o.bagUpgrades) ~= "boolean" then o.bagUpgrades = true end
+        -- Per-character opt-in: preserve profession-agnostic recommendations by default.
+        if type(o.hideUncraftableCrafts) ~= "boolean" then o.hideUncraftableCrafts = false end
         if type(o.expanded) ~= "table" then o.expanded = {} end
         if type(o.minimized) ~= "table" then o.minimized = {} end
         if type(o.dependencyCollapsed) ~= "table" then o.dependencyCollapsed = {} end

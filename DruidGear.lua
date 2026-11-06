@@ -200,11 +200,11 @@ assert(GetGear:RegisterItem({
     instructions="Search your realm's Auction House: this BoE mace has appeared in Forever player AH scans. " ..
         "Specific world monsters and lockbox drops are Classic references, NOT confirmed beta sources. Check price before buying.",
     notes="Two-handed mace: 30.2 weapon DPS, +34 Attack Power, +3 Strength, +6 Stamina. " ..
-        "Very expensive on some beta realms. Feral weapon DPS matters; check the equipped tooltip.",
+        "Very expensive on some beta realms.",
 }))
 assert(GetGear:AddRecommendation("DRUID",{
     itemID=13045,targetLevel=30,specs=FERAL,
-    notes="Expensive world-drop/AH alternative, not required for leveling. Form weapon DPS needs in-game comparison.",
+    notes="Expensive world-drop/AH alternative, not required for leveling.",
 }))
 assert(GetGear:RegisterItem({
     itemID=9449,name="Manual Crowd Pummeler",slot="Two-Hand Mace",availableLevel=29,

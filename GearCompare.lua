@@ -376,7 +376,7 @@ function GetGear:GetObsoleteGearReason(gear)
         for key,value in pairs(candidate) do
             if key~="ITEM_MOD_DAMAGE_PER_SECOND_SHORT" and (equipped[key] or 0)+0.0001<value then return nil end
         end
-        return "Equipped wand has higher damage per second without losing any reported base stats. Compare damage school/effects manually."
+        return "Equipped wand has higher DPS with no lower reported base stats."
     end
     local weaponSlot=OBSOLETE_WEAPON_SLOTS[gear.slot]
     if weaponSlot then
@@ -394,7 +394,7 @@ function GetGear:GetObsoleteGearReason(gear)
         local equippedDPS=WeaponDPS(equippedLink,LinkItemID(equippedLink))
         if not candidateDPS or not equippedDPS or equippedDPS<=candidateDPS+0.0001 then return nil end
         if not NoWeaponStatTradeoff(ItemStats(gear.itemID),Stats(equippedLink)) then return nil end
-        return "Equipped weapon has higher reported DPS and no lower reported base stats. Verify speed, damage school and effects manually."
+        return "Equipped weapon has higher DPS and no lower reported base stats."
     end
     local slot=OBSOLETE_ARMOR_SLOTS[gear.slot]
     if not slot then return nil end
@@ -407,22 +407,13 @@ function GetGear:GetObsoleteGearReason(gear)
     local candidate,equipped=ItemStats(gear.itemID),Stats(link)
     if not candidate or not equipped then return nil end
     if not Dominates(candidate,equipped,candidateInfo.quality) then return nil end
-    return "Equipped item has at least as much of every reported base stat. Check unusual effects manually."
+    return "Equipped item has at least as much of every reported base stat."
 end
 local function Number(n)
     if math.abs(n-math.floor(n+0.5))<0.0001 then return tostring(math.floor(n+0.5)) end
     return string.format("%.1f",n)
 end
 function GetGear:ComparisonNumber(n) return Number(n) end
-local function IsFeralWeapon(self, gear)
-    if self.classToken ~= "DRUID" then return false end
-    if self:GetSpecialization() ~= "Feral Cat" and self:GetSpecialization() ~= "Feral Bear" then return false end
-    return gear and (TWO_HANDED[gear.slot] or gear.slot=="Main Hand")
-end
-local function IsWarriorWeapon(self,gear)
-    return self.classToken == "WARRIOR" and gear
-        and (TWO_HANDED[gear.slot] or gear.slot=="Main Hand")
-end
 function GetGear:ComparisonInline(gear, detailed)
     local comparison=self:GetGearComparison(gear)
     if not comparison then return "",false end
@@ -450,11 +441,6 @@ function GetGear:ComparisonInline(gear, detailed)
             lines[#lines+1]=table.concat(bits,detailed and "\n" or "   ")
         end
     end
-    if IsFeralWeapon(self,gear) then
-        lines[#lines+1]="|cff96a6baFeral: also compare weapon DPS manually; form DPS may differ.|r"
-    elseif IsWarriorWeapon(self,gear) then
-        lines[#lines+1]="|cff96a6baWarrior: compare weapon DPS, speed and effects manually; stat deltas are incomplete.|r"
-    end
     return table.concat(lines,"\n"),true
 end
 function GetGear:AppendComparisonTooltip(tip,gear)
@@ -462,7 +448,7 @@ function GetGear:AppendComparisonTooltip(tip,gear)
     local compare=self:GetGearComparison(gear)
     if not compare then return end
     tip:AddLine(" ")
-    tip:AddLine("Gear comparison (base item stats)",1,0.82,0.35)
+    tip:AddLine("Gear comparison",1,0.82,0.35)
     if compare.message then
         tip:AddLine(compare.message,0.72,0.78,0.85,true)
         return
@@ -480,11 +466,5 @@ function GetGear:AppendComparisonTooltip(tip,gear)
                     1,1,1,r,g,b)
             end
         end
-    end
-    tip:AddLine("Enchantments, on-use effects and weapon DPS are not fully compared.",0.63,0.67,0.74,true)
-    if IsFeralWeapon(self,gear) then
-        tip:AddLine("Feral forms: check weapon DPS manually; the base-stat delta alone is insufficient.",0.95,0.72,0.42,true)
-    elseif IsWarriorWeapon(self,gear) then
-        tip:AddLine("Warrior: compare weapon DPS, speed and proc effects manually; stat deltas are insufficient to rank weapons.",0.95,0.72,0.42,true)
     end
 end

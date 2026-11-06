@@ -504,6 +504,7 @@ function GetGear:GetAggregateMaterials(scope)
     local totals, result = {}, {}
     for _, gear in ipairs(self.Gear) do
         if gear.targetLevel <= level + 5 and not self:GetStatus(gear)
+            and (not self.ShouldDisplayCraftedGear or self:ShouldDisplayCraftedGear(gear))
             and (scope == "all" or (not self:IsHidden(gear)
                 and not self:IsGearEquipped(gear)
                 and self:GetObsoleteGearReason(gear) == nil)) then
@@ -592,7 +593,13 @@ function GetGear:GetItems(mode)
             else
                 include = false
             end
-            if include then result[#result + 1] = record end
+            -- This is a display-only filter. Completed and Hidden remain
+            -- accessible so existing statuses can always be reviewed/undone.
+            local history = mode == "completed" or mode == "hidden" or mode == "bags"
+            if include and (history or not self.ShouldDisplayCraftedGear
+                or self:ShouldDisplayCraftedGear(record)) then
+                result[#result + 1] = record
+            end
         end
     end
     -- Objective ordering is neutral: level first, then equipment slot/name/ID.
