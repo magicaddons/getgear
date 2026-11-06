@@ -1,4 +1,4 @@
-GETGEAR v0.12.13 BETA - LOGIN ITEM-DATA LOOP FIX
+GETGEAR v0.12.14 BETA - CLEANER WEAPON COMPARISONS
 ==============================================
 
 A World of Warcraft: Forever Alliance gear progression and crafting-planning
@@ -267,3 +267,17 @@ V0.12.13 BETA - LOGIN ITEM-DATA LOOP GUARD (5 NOVEMBER 2026)
 - Bag, equipment and profession updates are unchanged.
 - Item/recommendation data and SavedVariables unchanged since v0.12.12.
 - Automated event simulation added; live-client retest still required.
+
+
+V0.12.14 BETA - CLEANER COMPARISONS (NOT YET PUBLISHED)
+-------------------------------------------------------
+- Remove repetitive Warrior weapon disclaimer from compact overlay, guide
+  and item hover tooltip, leaving the real comparison values intact.
+- Remove equivalent automatic Feral Druid disclaimers and the generic
+  all-class warning appended to comparison tooltips.
+- Retain Strength, Stamina, Armor, Weapon DPS and other numerical changes,
+  including two-hand-vs-main/off-hand comparison and unavailable-data messages.
+- Trim redundant Warrior and Feral Druid weapon recommendation notes.
+- Retain v0.12.13's login item-data loop fix, previous crafting data and
+  all existing settings, status records and the sole /getgear command.
+- The version is a build candidate; actual in-game verification remains needed.
