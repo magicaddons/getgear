@@ -27,3 +27,27 @@ jobs:
           lua5.4 tests/early-crafts-regression.lua .
           lua5.4 tests/item-data-regression.lua .
           lua5.4 tests/comparison-cleanup.lua .
+      - name: Package GetGear v0.12.14 beta candidate
+        if: github.head_ref == 'fix/clean-comparison-disclaimers'
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q '^## Version: 0.12.14$' GetGear.toc
+          test "$(grep -c '^GearCompare.lua$' GetGear.toc)" -eq 1
+          test "$(find . -maxdepth 1 -name '*.lua' -type f | wc -l)" -eq 34
+          test "$(grep -c '\.lua$' GetGear.toc)" -eq 34
+          mkdir -p dist/GetGear
+          cp ./*.lua GetGear.toc README.txt MapPin.tga DATA_MODEL.md dist/GetGear/
+          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq 38
+          (cd dist && zip -q -r '../GetGear-v0.12.14-private-test-beta.zip' GetGear)
+          unzip -t GetGear-v0.12.14-private-test-beta.zip
+          unzip -p GetGear-v0.12.14-private-test-beta.zip GetGear/GetGear.toc | grep -q '^## Version: 0.12.14$'
+          unzip -p GetGear-v0.12.14-private-test-beta.zip GetGear/GearCompare.lua | grep -q 'Equipped weapon has higher DPS'
+      - name: Upload installable ZIP (build candidate only)
+        if: github.head_ref == 'fix/clean-comparison-disclaimers'
+        uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-v0.12.14-private-test-beta
+          path: GetGear-v0.12.14-private-test-beta.zip
+          if-no-files-found: error
+          retention-days: 30
