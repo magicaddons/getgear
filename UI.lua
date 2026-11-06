@@ -2055,7 +2055,7 @@ end
 -- Settings in separate window; overlay stays uncluttered while playing.
 -- =====================================================================
 local settings = CreateFrame("Frame", "GetGear_OverlaySettings", UIParent, "BasicFrameTemplateWithInset")
-settings:SetSize(418, 530)
+settings:SetSize(418, 570)
 settings:SetPoint("CENTER", UIParent, "CENTER", 270, 50)
 -- Settings must still be usable when opened from the foreground detail guide.
 settings:SetFrameStrata("DIALOG")
@@ -2161,10 +2161,25 @@ bagsCheck:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 bagsCheck:SetScript("OnLeave",HideItemTooltip)
+-- This is only a display filter: it does not modify gear statuses or
+-- hide quest/dungeon/vendor objectives. Preview Guide stays unrestricted.
+local craftFilterCheck=NewCheck(settings,"Hide crafted gear I can't make",423,function(v)
+    GetGear.db.overlay.hideUncraftableCrafts=v
+    GetGear:RefreshAll()
+end)
+craftFilterCheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Hide uncraftable gear",1,0.82,0.35)
+    GameTooltip:AddLine("Off by default. When enabled, crafted-only equipment is filtered if this character lacks the profession, a confirmed skill requirement, or a required pattern not yet confirmed as learned.",1,1,1,true)
+    GameTooltip:AddLine("Other acquisition routes, bag upgrades, completed/hidden history and Preview Guide remain available. Open your profession window to refresh learned-pattern detection.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+craftFilterCheck:SetScript("OnLeave",HideItemTooltip)
 -- Keep the Tracked/All material-scope choice in settings, without
 -- confusing it with the Total Materials minimize button.
 local materialScopeButton=NewButton(settings,"",185,23)
-materialScopeButton:SetPoint("TOPLEFT",18,-438)
+materialScopeButton:SetPoint("TOPLEFT",18,-466)
 materialScopeButton:SetScript("OnClick",function(self)
     if not GetGear.db then return end
     local opts=GetGear.db.overlay
@@ -2199,6 +2214,7 @@ function GetGear:ShowSettings()
     combatCheck:SetChecked(self.db.overlay.hideInCombat)
     obsoleteCheck:SetChecked(self.db.overlay.filterObsolete ~= false)
     bagsCheck:SetChecked(self.db.overlay.bagUpgrades ~= false)
+    craftFilterCheck:SetChecked(self.db.overlay.hideUncraftableCrafts == true)
     alphaSlider:SetValue(math.floor((self.db.overlay.backgroundOpacity or 0.78)*100 + 0.5))
     overlayScaleSlider:SetValue(math.floor((self.db.overlay.scale or 1)*100+0.5))
     detailScaleSlider:SetValue(math.floor((self.db.detail.scale or 1)*100+0.5))
