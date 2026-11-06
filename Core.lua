@@ -40,7 +40,8 @@ local function NotifyLevel(newLevel)
     for _, item in ipairs(GetGear.Gear) do
         if item.targetLevel == newLevel and VerifiedNotificationSource(item)
             and not GetGear:GetStatus(item) and not GetGear:IsHidden(item)
-            and not GetGear:IsGearEquipped(item) then
+            and not GetGear:IsGearEquipped(item)
+            and (not GetGear.ShouldDisplayCraftedGear or GetGear:ShouldDisplayCraftedGear(item)) then
             count = count + 1
         end
     end
