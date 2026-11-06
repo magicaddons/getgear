@@ -79,7 +79,7 @@ Craft(3471,"Copper Chain Vest","Chest",5,30,"BoE","+1 Strength; 108 armor",ALL,"
     "Cheap tradeable alternative to crafted BoP gear.")
 Craft(2844,"Copper Mace","Main Hand",4,15,"No bind","3.8 weapon DPS",PROT,"Medium",{
     Mat(2840,"Copper Bar",6),Mat(2880,"Weak Flux",1),Mat(2589,"Linen Cloth",2)},
-    "Use with a shield; check actual weapon DPS before replacing a better quest reward.")
+    "Use with a shield.")
 Craft(2845,"Copper Axe","Main Hand",4,20,"No bind","3.8 weapon DPS",PROT,"Optional",nil,
     "Alternative to Copper Mace, not a second mandatory upgrade.")
 Craft(7955,"Copper Claymore","Two-Hand Sword",6,30,"BoE","7.7 weapon DPS, +1 Strength, +1 Stamina",DAMAGE,"Medium",{
@@ -89,7 +89,7 @@ Craft(7955,"Copper Claymore","Two-Hand Sword",6,30,"BoE","7.7 weapon DPS, +1 Str
 Craft(3488,"Copper Battle Axe","Two-Hand Axe",8,35,"BoE","9.0 weapon DPS, +3 Stamina",DAMAGE,"Medium",{
     Mat(2840,"Copper Bar",12),Mat(2880,"Weak Flux",2),
     Mat(774,"Malachite",2),Mat(3470,"Rough Grinding Stone",2),Mat(2318,"Light Leather",2)},
-    "Offensive two-hander; prioritize actual weapon damage rather than just stats.")
+    "Offensive two-hander.")
 Craft(6214,"Heavy Copper Maul","Two-Hand Mace",11,65,"BoE","10.8 weapon DPS, +4 Strength",DAMAGE,"Medium",{
     Mat(2840,"Copper Bar",12),Mat(2880,"Weak Flux",2),Mat(2318,"Light Leather",2)},
     "Can also be a leveling weapon if switching out of defensive setup.")
@@ -123,7 +123,7 @@ Craft(2849,"Bronze Axe","Main Hand",18,85,"BoE","11.6 weapon DPS, +3 Strength",P
 Craft(2850,"Bronze Shortsword","Main Hand",19,95,"BoE","12.2 weapon DPS, +3 Agility",PROT,"Medium",nil,
     "One-handed alternative to Bronze Axe; pick one based on actual gear.")
 Craft(3491,"Heavy Bronze Mace","Main Hand",20,130,"BoE","12.9 weapon DPS, +4 Strength",PROT,"High",nil,
-    "Shield-compatible threat and soloing weapon. Do not assume stats-only comparison includes DPS.")
+    "Shield-compatible threat and soloing weapon.")
 Craft(7956,"Bronze Warhammer","Two-Hand Mace",20,125,"BoE","16.9 weapon DPS, +6 Stamina, +6 Strength",DAMAGE,"High",nil,
     "Strong tradeable leveling two-hander for Arms or early Fury.")
 Craft(250530,"Protector's Silvered Chain Helm","Head",20,95,"BoP","+7 Defense, +9 Stamina",PROT,"High",nil,
@@ -187,4 +187,4 @@ Unconfirmed(5197,"Cookie's Tenderizer","Main Hand",16,18,"Dungeon boss drop",
 
 -- Beta-observed quest reward, not guaranteed for every quest choice.
 assert(GetGear:AddRecommendation("WARRIOR", {itemID=270027, targetLevel=25,
-    specs={"Arms","Fury"}, notes="Ursine Hammer, player-observed What Comes Around... quest reward (one report); mutually exclusive with the other rewards, compare weapon DPS."}),"Warrior Ursine Hammer")
+    specs={"Arms","Fury"}, notes="Ursine Hammer, player-observed What Comes Around... quest reward (one report); mutually exclusive with the other rewards."}),"Warrior Ursine Hammer")
