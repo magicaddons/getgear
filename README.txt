@@ -1,4 +1,4 @@
-GETGEAR v0.12.14 BETA - CLEANER WEAPON COMPARISONS
+GETGEAR v0.12.14 BETA - CRAFTING FILTER + CLEANER COMPARISONS
 ==============================================
 
 A World of Warcraft: Forever Alliance gear progression and crafting-planning
@@ -269,7 +269,7 @@ V0.12.13 BETA - LOGIN ITEM-DATA LOOP GUARD (5 NOVEMBER 2026)
 - Automated event simulation added; live-client retest still required.
 
 
-V0.12.14 BETA - CLEANER COMPARISONS (NOT YET PUBLISHED)
+V0.12.14 BETA - PERSONAL CRAFT FILTER AND CLEANER COMPARISONS
 -------------------------------------------------------
 - Remove repetitive Warrior weapon disclaimer from compact overlay, guide
   and item hover tooltip, leaving the real comparison values intact.
@@ -280,4 +280,14 @@ V0.12.14 BETA - CLEANER COMPARISONS (NOT YET PUBLISHED)
 - Trim redundant Warrior and Feral Druid weapon recommendation notes.
 - Retain v0.12.13's login item-data loop fix, previous crafting data and
   all existing settings, status records and the sole /getgear command.
-- The version is a build candidate; actual in-game verification remains needed.
+- NEW: /getgear settings -> Hide crafted gear I can't make.
+  Off by default: keep all crafted recommendations, including buyable gear.
+  On: a crafted-only item appears only when this character has the profession,
+  meets any confirmed skill minimum and the recipe is positively identified
+  as learned by the client. Open your profession window once after login to
+  refresh known-recipe detection (unknown recipes hide in strict mode).
+- The option is character-specific; quest/vendor/dungeon recommendations,
+  ordinary bag upgrades, Hidden/Completed history and Preview Guide remain.
+- Materials and level-up alerts follow the opt-in filter; no statuses change.
+- Automated regressions passed and ZIP validated; live-client verification
+  of profession APIs and recipe availability remains needed.
