@@ -46,19 +46,11 @@ function GetGear:ShouldDisplayCraftedGear(gear)
         return false
     end
 
+    -- Opt-in strict mode: only show a craft when the recipe is positively
+    -- known. The live API may not expose complete recipe information until
+    -- the player opens their profession window. Unknown is NOT craftable.
+    -- Existing GetRecipeKnowledge recognises recipe spell IDs and recipe
+    -- names observed from the open profession window.
     local learned = self.GetRecipeKnowledge and self:GetRecipeKnowledge(gear)
-    if learned == true then return true end
-
-    -- Pattern-only crafts need the separately learned pattern. An unscanned
-    -- recipe is unknown rather than known, so a strict opt-in filter hides it
-    -- until the profession window supplies positive evidence.
-    if gear.recipeLearnMethod == "pattern"
-        or gear.professionLearnSource == "Pattern" then
-        return false
-    end
-
-    -- For trainer/initial recipes, the current client only confirms positives,
-    -- not negatives, when the crafting window has not been scanned. Keep
-    -- these provisionally visible rather than mislabeling unknown as missing.
-    return true
+    return learned == true
 end
