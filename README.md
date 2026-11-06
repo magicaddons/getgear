@@ -8,9 +8,9 @@ GetGear helps Alliance players plan equipment upgrades from **levels 1–30**, s
 
 ## Download
 
-**[Download GetGear v0.12.13 Beta](https://github.com/magicaddons/getgear/releases/tag/v0.12.13)**
+**[Download GetGear v0.12.14 Beta](https://github.com/magicaddons/getgear/releases/tag/v0.12.14)**
 
-On the release page, expand **Assets** and download **`GetGear-v0.12.13-private-test-beta.zip`**.
+On the release page, expand **Assets** and download **`GetGear-v0.12.14-private-test-beta.zip`**.
 
 **Use the ZIP listed under Assets**, not GitHub's automatically generated *Source code (zip)*, which is intended for browsing the repository rather than installing the packaged addon.
 
@@ -34,7 +34,7 @@ On the release page, expand **Assets** and download **`GetGear-v0.12.13-private-
 4. Check that `GetGear.toc` is directly inside `_forever_/Interface/AddOns/GetGear/`, not inside an extra nested folder.
 5. Launch WoW Forever and enter **`/getgear`** to open the guide.
 
-If updating from an earlier version, replace the old `GetGear` addon folder. You can back up your SavedVariables first; v0.12.13 is designed to preserve existing GetGear progress.
+If updating from an earlier version, replace the old `GetGear` addon folder. You can back up your SavedVariables first; v0.12.14 is designed to preserve existing GetGear progress.
 
 ## Using the account-wide inventory
 
@@ -55,13 +55,17 @@ Counts can be incomplete or out of date if a character's bags or bank haven't be
 - Recipe availability and crafting capabilities of offline alts are not yet tracked.
 - The addon is a **beta**, not a fully verified guide for every item or server build.
 
-## What's new in v0.12.13
+## What's new in v0.12.14
 
-This release fixes a **character-login freeze** triggered by repeated `ITEM_DATA_LOAD_RESULT` refreshes. Item requests now use a shared guard and successful results trigger delayed, rate-limited, nonrecursive redraws.
+**Optional personal crafting filter:** Open **`/getgear settings`** and check **Hide crafted gear I can't make**. This is **off by default**, preserving all previous recommendations, including gear you can buy or commission from another player. When enabled, crafted-only equipment is shown only if this character has the necessary profession, meets confirmed skill minima, and the recipe can be positively identified as learned. **Open your profession window once after login** to refresh learned-recipe detection. Unknown recipe knowledge is hidden in this strict opt-in mode.
 
-No gear data was changed: all **234 items, 426 recommendations and 37 specialization views** remain from v0.12.12, including the low-level Tailoring, Leatherworking, Blacksmithing and Engineering additions. SavedVars and progress remain compatible.
+Quest rewards, dungeon drops, vendors, ordinary bag upgrades and non-crafting acquisition routes remain visible. Hidden/completed history and Preview Guide are unchanged. The filter also removes ineligible crafts from material totals. It is stored per character.
 
-See the [v0.12.13 release](https://github.com/magicaddons/getgear/releases/tag/v0.12.13). In-game verification is still required.
+**Cleaner comparisons:** Removed the repetitive Warrior, Feral Druid and generic disclaimers below gear comparisons. Numeric Strength, Stamina, Armor and Weapon DPS deltas continue to display normally.
+
+This release retains v0.12.13's login freeze guard and all **234 catalogue items, 426 recommendations and 37 specialization views**. SavedVars remain compatible; use **`/getgear`** to open the guide.
+
+See the [v0.12.14 release](https://github.com/magicaddons/getgear/releases/tag/v0.12.14). In-game verification remains necessary.
 
 ## Feedback and bug reports
 
