@@ -8,6 +8,7 @@ local M={"WARRIOR","PALADIN","HUNTER","SHAMAN"}
 local L={"DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 local P={"WARRIOR","PALADIN"}
 local S={"WARRIOR","PALADIN","ROGUE","HUNTER","MAGE","WARLOCK"}
+local D={"WARRIOR","ROGUE","HUNTER","DRUID","SHAMAN","PRIEST","MAGE","WARLOCK"}
 local function Mat(id,name,amount) return {itemID=id,name=name,amount=amount} end
 local mats={
   thick= function(n) return Mat(4234,"Thick Leather",n) end,
@@ -85,6 +86,22 @@ local gear={
     "26.6 weapon DPS, +6 Strength, +4 Agility; one-hand sword",
     {Mat(3860,"Mithril Bar",14),Mat(6037,"Truesilver Bar",4),
       Mat(7966,"Solid Grinding Stone",1),mats.thick(2)},S),
+  T(7944,"Dazzling Mithril Rapier",43,"Main Hand","One-Hand Sword","Blacksmithing",215,
+    "28.5 weapon DPS, +8 Agility; one-hand sword",
+    {Mat(3860,"Mithril Bar",14),Mat(7909,"Aquamarine",1),
+      Mat(1705,"Lesser Moonstone",2),Mat(1206,"Moss Agate",2),
+      Mat(7966,"Solid Grinding Stone",1),Mat(4338,"Mageweave Cloth",2)},S),
+  T(7961,"Phantom Blade",44,"Main Hand","One-Hand Sword","Blacksmithing",nil,
+    "32.5 weapon DPS; chance on hit: -100 enemy armor and prevents stealth",
+    {Mat(3860,"Mithril Bar",28),Mat(7081,"Breath of Wind",6),
+      Mat(6037,"Truesilver Bar",8),Mat(3823,"Lesser Invisibility Potion",2),
+      Mat(7909,"Aquamarine",6),Mat(7966,"Solid Grinding Stone",4),
+      Mat(4234,"Thick Leather",2)},S),
+  T(7947,"Ebon Shiv",46,"Main Hand","Dagger","Blacksmithing",230,
+    "30.3 weapon DPS, +9 Agility; one-hand dagger",
+    {Mat(3860,"Mithril Bar",12),Mat(6037,"Truesilver Bar",6),
+      Mat(7910,"Star Ruby",2),Mat(7966,"Solid Grinding Stone",1),
+      Mat(4234,"Thick Leather",2)},D),
   T(14153,"Robe of the Void",57,"Chest","Cloth","Tailoring",295,
     "Warlock only, bind on pickup; +10 Stamina, +9 Intellect, +46 Spell Power; pet heal",
     {mats.runeBolt(12),Mat(12662,"Demonic Rune",20),Mat(14256,"Felcloth",40),
