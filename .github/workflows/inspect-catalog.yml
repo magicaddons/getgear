@@ -1,0 +1,29 @@
+name: Inspect Forever gear catalogue HTML
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/inspect-catalog.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect one class page without importing anything
+        run: |
+          python3 - <<'PY'
+          import urllib.request,re,html
+          url="https://ahledger.com/wow-forever/items/armor/leather"
+          req=urllib.request.Request(url,headers={"User-Agent":"GetGear data audit (contact via GitHub magicaddons/getgear)"})
+          with urllib.request.urlopen(req,timeout=25) as res:
+            page=res.read(1000000).decode("utf-8","replace")
+            print("HTTP",res.status,"PAGE_BYTES",len(page))
+          hrefs=re.findall(r'href=["\']([^"\']+)["\']',page)
+          print("HREFS",len(hrefs))
+          item=[u for u in hrefs if "/items/" in u and re.search(r"/items/\d+",u)]
+          print("ITEM HREFS",len(item))
+          print("SAMPLE",item[:25])
+          print("PAGINATION",sorted(set(u for u in hrefs if "page=" in u))[:25])
+          print("HTML SAMPLE",html.unescape(page[:900]))
+          PY
