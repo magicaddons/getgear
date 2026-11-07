@@ -68,6 +68,44 @@ jobs:
           unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GearRelevance.lua | grep -Fq 'IsOlderGear'
           sha256sum GetGear-v0.14.0-beta4-test-only.zip
           ls -lh GetGear-v0.14.0-beta4-test-only.zip
+      - name: Verify exact Beta4 archive manifest and no unsafe file types
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib, zipfile
+          toc=pathlib.Path('GetGear.toc').read_text()
+          modules={r.strip() for r in toc.splitlines() if r.strip().endswith('.lua')}
+          assert len(modules)==16
+          extras={'GetGear.toc','README.txt','BETA_0140_NOTES.txt',
+                  'MapPin.tga','DATA_MODEL.md','BUILD_INFO.txt'}
+          expected={'GetGear/'+p for p in modules|extras}
+          path='GetGear-v0.14.0-beta4-test-only.zip'
+          with zipfile.ZipFile(path) as z:
+              members=[x for x in z.infolist() if not x.is_dir()]
+              names={x.filename for x in members}
+              assert len(members)==len(expected)==22
+              assert names==expected,(names-expected,expected-names)
+              for member in members:
+                  p=pathlib.PurePosixPath(member.filename)
+                  assert len(p.parts)==2 and p.parts[0]=='GetGear'
+                  assert not any(s in ('.','..') for s in p.parts)
+                  assert not member.filename.lower().endswith(('.exe','.dll','.bat','.cmd','.ps1','.sh','.url','.lnk'))
+                  assert ((member.external_attr>>16)&0o170000)!=0o120000
+              assert z.testzip() is None
+          print('PASS: exact 16 Lua + 6 supporting files, no executables, symlinks, traversal or extra entries')
+          PY
+      - name: Antivirus scan of exact Beta4 ZIP and extracted files
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq clamav clamav-freshclam
+          sudo systemctl stop clamav-freshclam.service || true
+          sudo freshclam --stdout
+          clamscan --version
+          clamscan --recursive --infected GetGear-v0.14.0-beta4-test-only.zip dist/GetGear
+          echo 'PASS: ClamAV scan of the actual Beta4 artifact found no known threats'
       - name: Upload private GetGear Beta 4 ZIP
         if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
         uses: actions/upload-artifact@v4
