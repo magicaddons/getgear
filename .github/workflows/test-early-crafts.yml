@@ -33,29 +33,40 @@ jobs:
           lua5.4 tests/full-catalogue-eligibility.lua .
           lua5.4 tests/generated-item-load-guard.lua .
           lua5.4 tests/coverage-audit.lua .
-      - name: Package GetGear v0.12.14 beta candidate
-        if: github.head_ref == 'fix/clean-comparison-disclaimers'
+      - name: Package GetGear v0.13.0 Beta 1 (private test candidate)
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
         shell: bash
         run: |
           set -euo pipefail
-          grep -q '^## Version: 0.12.14$' GetGear.toc
+          grep -Fxq '## Version: 0.13.0-beta1' GetGear.toc
           test "$(grep -c '^GearCompare.lua$' GetGear.toc)" -eq 1
-          local_count="$(find . -maxdepth 1 -name '*.lua' -type f | wc -l)"
+          test "$(grep -c '^GeneratedForeverGear.lua$' GetGear.toc)" -eq 1
+          test "$(grep -c '^EarlyCoverage133.lua$' GetGear.toc)" -eq 1
           toc_count="$(grep -c '.lua$' GetGear.toc)"
+          local_count="$(find . -maxdepth 1 -name '*.lua' -type f | wc -l)"
           test "$local_count" -eq "$toc_count"
-          test "$toc_count" -ge 35
+          test "$toc_count" -ge 38
+          while IFS= read -r module; do
+            case "$module" in
+              *.lua) test -f "$module" ;;
+            esac
+          done < GetGear.toc
           mkdir -p dist/GetGear
-          cp ./*.lua GetGear.toc README.txt MapPin.tga DATA_MODEL.md dist/GetGear/
-          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq "$((toc_count + 4))"
-          (cd dist && zip -q -r '../GetGear-v0.12.14-private-test-beta.zip' GetGear)
-          unzip -t GetGear-v0.12.14-private-test-beta.zip
-          unzip -p GetGear-v0.12.14-private-test-beta.zip GetGear/GetGear.toc | grep -q '^## Version: 0.12.14$'
-          unzip -p GetGear-v0.12.14-private-test-beta.zip GetGear/GearCompare.lua | grep -q 'Equipped weapon has higher DPS'
-      - name: Upload installable ZIP (build candidate only)
-        if: github.head_ref == 'fix/clean-comparison-disclaimers'
+          cp ./*.lua GetGear.toc README.txt BETA_0130_NOTES.txt MapPin.tga DATA_MODEL.md dist/GetGear/
+          printf 'GetGear version: 0.13.0-beta1\nDevelopment branch: work/gear-1-60-expansion\nSource commit: %s\nBuild type: test-only GitHub Actions artifact, NOT a public release\n' "$GITHUB_SHA" > dist/GetGear/BUILD_INFO.txt
+          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq "$((toc_count+6))"
+          (cd dist && zip -q -r '../GetGear-v0.13.0-beta1-test-only.zip' GetGear)
+          unzip -tq GetGear-v0.13.0-beta1-test-only.zip
+          unzip -p GetGear-v0.13.0-beta1-test-only.zip GetGear/GetGear.toc | grep -Fxq '## Version: 0.13.0-beta1'
+          unzip -p GetGear-v0.13.0-beta1-test-only.zip GetGear/GeneratedForeverGear.lua | grep -q 'GetGear.GeneratedForeverGear=audit'
+          unzip -p GetGear-v0.13.0-beta1-test-only.zip GetGear/EarlyCoverage133.lua | grep -q 'Thick War Axe'
+          sha256sum GetGear-v0.13.0-beta1-test-only.zip
+          ls -lh GetGear-v0.13.0-beta1-test-only.zip
+      - name: Upload GetGear v0.13.0 Beta 1 installable ZIP (test only)
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
         uses: actions/upload-artifact@v4
         with:
-          name: GetGear-v0.12.14-private-test-beta
-          path: GetGear-v0.12.14-private-test-beta.zip
+          name: GetGear-v0.13.0-beta1-test-only
+          path: GetGear-v0.13.0-beta1-test-only.zip
           if-no-files-found: error
           retention-days: 30
