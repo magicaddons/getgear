@@ -107,12 +107,15 @@ for _,e in ipairs(gear) do
             zone=e.profession.." / player trading",
             confidence="client",acquisitionKind="Crafting",acquisitionConfidence="client",
             sourceURL=sourceURL,profession=e.profession,
-            professionSkillRequired=e.learn,recipeLearnMethod=pattern and "pattern" or "trainer",
+            professionSkillRequired=e.learn,recipeLearnMethod=pattern and "pattern" or "unknown",
             recipeLearnSkillEvidence=pattern and "Forever recipe teaching item" or "unverified",
-            recipeLearningAvailability="Client recipe verified; live pattern/trainer availability unverified",
+            recipeLearningAvailability="Client recipe verified; live pattern/specialization availability unverified",
             notes=e.benefits,reagents=e.reagents,
             instructions="The item and recipe exist in the Forever game client. Obtain the recipe/pattern and craft, or buy the finished Bind on Equip item from players. Client data alone does not confirm the live pattern seller or drop location.",
         }
+        if e.id==8347 or e.id==8367 then
+            item.instructions="Specialist Dragonscale Leatherworking recipe; confirm specialization, known recipe, and pattern access in the live game before crafting or commissioning."
+        end
         if e.id==14153 or e.id==14154 then
             item.instructions="Bind on pickup: your character must have Tailoring and the learned pattern. Verify the live recipe source. The finished robe cannot be bought or commissioned."
         end
@@ -122,11 +125,16 @@ for _,e in ipairs(gear) do
         audit.alreadyPresent=audit.alreadyPresent+1
     end
     for _,class in ipairs(e.classes) do
+        -- Hunters and Shamans receive Mail proficiency at level 40.
+        local targetLevel=e.level
+        if e.armor=="Mail" and (class=="HUNTER" or class=="SHAMAN") then
+            targetLevel=math.max(40,targetLevel)
+        end
         local recID="item_"..e.id
         local found=GetGear.RecommendationIndex and GetGear.RecommendationIndex[class]
             and GetGear.RecommendationIndex[class].ids[recID]
         if not found then
-            local rec={itemID=e.id,targetLevel=e.level,focus="All",
+            local rec={itemID=e.id,targetLevel=targetLevel,focus="All",
                 notes="Source-checked level 31-60 option. "..e.benefits}
             assert(GetGear:AddRecommendation(class,rec),
                 "could not add 31-60 item "..e.id.." for "..class)
