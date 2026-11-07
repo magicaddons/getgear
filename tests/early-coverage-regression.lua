@@ -14,9 +14,9 @@ for path in toc:gmatch("[^\r\n]+") do
     end
 end
 local expected={
-    [3473]={level=8, classes={WARRIOR=true,PALADIN=true},
+    [3473]={level=8, classes={WARRIOR=8,PALADIN=8,HUNTER=40,SHAMAN=40},
         mats={[2840]=8,[2320]=3,[3470]=3}},
-    [3489]={level=12,classes={WARRIOR=true,PALADIN=true,HUNTER=true,ROGUE=true,SHAMAN=true},
+    [3489]={level=12,classes={WARRIOR=12,PALADIN=12,HUNTER=12,ROGUE=12,SHAMAN=12},
         mats={[2840]=10,[2880]=2,[2842]=2,[3470]=2,[2318]=2}}
 }
 for itemID,rule in pairs(expected) do
@@ -38,7 +38,7 @@ for itemID,rule in pairs(expected) do
         for _,item in ipairs(list) do
             if item.itemID==itemID then
                 total=total+1
-                assert(item.targetLevel==rule.level,cls.." has incorrect target level "..itemID)
+                assert(item.targetLevel==rule.classes[cls],cls.." has incorrect target level "..itemID)
                 assert(item.specs==nil and item.focus=="All",cls.." has spec-restricted "..itemID)
             end
         end
