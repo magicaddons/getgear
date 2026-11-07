@@ -587,7 +587,7 @@ local levelText = NewText(window, "GameFontNormalLarge")
 levelText:SetPoint("TOPLEFT", 18, -36)
 local subtitle = NewText(window, "GameFontHighlightSmall", 720)
 subtitle:SetPoint("TOPLEFT", levelText, "BOTTOMLEFT", 0, -7)
-subtitle:SetText("Hover icons for stats. Equipped items appear in Completed; older outclassed gear in Earlier Gear. Neither changes saved statuses.")
+subtitle:SetText("Hover for stats. Equipped gear appears in Completed; outclassed and older imported gear in Earlier Gear. Saves unchanged.")
 
 -- Session-only detailed-window planning state. Never saved and never used
 -- in GetGear.Gear / GetItems / RefreshOverlay or character progression.
@@ -1208,7 +1208,7 @@ function GetGear:RefreshUI()
     else
         list = self:GetItems(self.activeTab)
         levelText:SetText(playerName .. "  |  " .. ColoredCharacterLabel(self.level, race, class, classToken))
-        subtitle:SetText("Hover icons for stats. Equipped items appear in Completed; older outclassed gear in Earlier Gear. Neither changes saved statuses.")
+        subtitle:SetText("Hover for stats. Equipped gear appears in Completed; outclassed and older imported gear in Earlier Gear. Saves unchanged.")
         specButton:SetText(spec == "All" and "All specs" or spec)
         specButton:Show(); startPreview:Show(); altInventoryButton:Show()
         previewHeading:Hide(); exitPreview:Hide()
@@ -1261,7 +1261,7 @@ function GetGear:RefreshUI()
         row.meta:SetText(inPreview and "No recommendations for this class / specialization / level; try All specs or Full 1-60."
             or (#self.Gear == 0 and self:GetGuideEmptyMessage()
             or (self.activeTab=="bags" and "No ordinary bag upgrades needed, bag inspection unavailable, or bag recommendations disabled."
-            or self.activeTab=="earlier" and "No gear is clearly outclassed, or automatic filtering is switched off."
+            or self.activeTab=="earlier" and "No gear is outclassed or at least five levels below you in the default imported guide."
             or "Check other tabs or another specialization; hidden objectives remain in Hidden.")))
         row.levelHeader:SetText("LEVEL")
         row.levelValue:SetText("")
@@ -2197,7 +2197,7 @@ obsoleteCheck:SetScript("OnEnter",function(self)
     GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
     GameTooltip:AddLine("Conservative earlier gear filtering",1,0.82,0.35)
     GameTooltip:AddLine("Moves clearly outclassed older armour and ordinary weapons to Earlier Gear; matching equipped items appear in Completed.",1,1,1,true)
-    GameTooltip:AddLine("Weapon DPS, stats, item quality and special effects are checked conservatively. Unknown items stay active; nothing is permanently hidden.",0.7,0.8,1,true)
+    GameTooltip:AddLine("Separate from the five-level lookback on bulk-imported gear. Older imported gear moves to Earlier Gear unless Show all valid equipment is enabled.",0.7,0.8,1,true)
     GameTooltip:Show()
 end)
 obsoleteCheck:SetScript("OnLeave",HideItemTooltip)
@@ -2239,7 +2239,7 @@ allValidGearCheck:SetScript("OnEnter",function(self)
     if not GameTooltip then return end
     GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
     GameTooltip:AddLine("Expanded equipment catalogue",1,0.82,0.35)
-    GameTooltip:AddLine("Off by default. Shows every class-equipable candidate, including cloth on Warriors, off-role stats and Winter Hats.",1,1,1,true)
+    GameTooltip:AddLine("Off by default. Restores off-role and older bulk-imported equipment (five or more levels below you), plus novelty gear such as Winter Hats.",1,1,1,true)
     GameTooltip:AddLine("Internal QA/test and placeholder items remain excluded. Existing acquired/hidden states are not changed. Also applies to Preview Guide.",0.72,0.83,1,true)
     GameTooltip:Show()
 end)
