@@ -84,27 +84,31 @@ def plain_text(markup):
 
 
 def classify_stat_role(text, kind, subtype):
-    """Intentionally conservative: unknown/mixed stats remain eligible by default."""
-    magical = bool(re.search(
-        r"\b(?:intellect|spirit|spell(?:s| power| damage| hit| critical| crit)|"
-        r"healing|mana(?: regeneration| per| restored)?|"
+    """Do not confuse Hunter-friendly Intellect with spell-damage bonuses."""
+    spell_effect = bool(re.search(
+        r"\\b(?:spell power|spell damage|spell hit|spell crit|spell critical|"
+        r"spell penetration|healing(?: done)?|damage done by (?:magical )?spells|"
         r"shadow damage|fire damage|frost damage|nature damage|"
-        r"arcane damage|holy damage)\b", text, re.I))
+        r"arcane damage|holy damage)\\b", text, re.I))
+    mana_stat = bool(re.search(
+        r"\\b(?:intellect|spirit|mana(?: regeneration| per| restored)?)\\b",
+        text, re.I))
     physical = bool(re.search(
-        r"\b(?:strength|agility|attack power|melee attack|ranged attack|"
-        r"defense|parry|dodge|block(?:ing)?|armor penetration)\b", text, re.I))
-    if magical and physical:
+        r"\\b(?:strength|agility|attack power|melee attack|ranged attack|"
+        r"defense|parry|dodge|block(?:ing)?|armor penetration)\\b", text, re.I))
+    if physical and (spell_effect or mana_stat):
         return "mixed"
-    if magical:
+    if spell_effect:
         return "spell"
+    if mana_stat:
+        return "mana"
     if physical:
         return "physical"
-    # Ordinary melee weapons with no magical benefits are physical
-    # leveling options, not caster upgrades. Wands are a caster exception.
+    # No magical bonus on a melee weapon: usable as a physical leveling
+    # option but not by default a caster build's upgrade. Wands excepted.
     if kind == "weapon" and subtype != "Wand":
         return "physical"
     return "utility"
-
 
 def parse_equipment(record):
     item_id = record.get("itemId")
