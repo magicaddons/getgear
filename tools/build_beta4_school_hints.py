@@ -19,8 +19,8 @@ def main():
     raw=urllib.request.urlopen(urllib.request.Request(
         UPSTREAM,headers={"User-Agent":"GetGear beta4 data audit"}),timeout=75).read(30_000_000)
     digest=hashlib.sha256(raw).hexdigest()
-    generated=(ROOT/"GeneratedForeverGear.lua").read_text(encoding="utf8")
-    assert digest in generated,("Source snapshot changed. Refuse to merge evidence "
+    generated=(ROOT/"EquipmentCache.lua").read_text(encoding="utf8")
+    assert digest in generated,("Source snapshot changed. Review and rebuild the Beta4 equipment cache before merging evidence. "
                                 "from a different cache revision: "+digest)
     source=json.loads(raw)
     classes={}
