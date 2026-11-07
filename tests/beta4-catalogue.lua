@@ -54,6 +54,10 @@ assert(find("WARRIOR",2572),"Warrior can physically equip cloth; relevance filte
 assert(find("WARRIOR",5957) and find("WARRIOR",2303))
 assert(find("WARRIOR",7166),"Copper Dagger must remain discoverable as valid gear")
 assert(find("WARRIOR",3473) and find("WARRIOR",3489))
+-- The Warlock quest Orb grants BOTH Fire and Shadow bonuses; school-exclusive
+-- metadata would mislead future talent-aware filtering.
+assert(addon.ItemCatalog[6898] and addon.ItemCatalog[6898].schoolOnly==nil,
+       "Mixed Fire/Shadow Orb of Soran'ruk is incorrectly labelled Fire-only")
 assert(find("WARRIOR",3473).targetLevel==8)
 assert(find("WARRIOR",3489).targetLevel==12)
 assert(find("HUNTER",3473).targetLevel==40,"Hunter Mail proficiency at 40")
