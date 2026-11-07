@@ -504,7 +504,9 @@ function GetGear:GetAggregateMaterials(scope)
     local totals, result = {}, {}
     for _, gear in ipairs(self.Gear) do
         if gear.targetLevel <= level + 5 and not self:GetStatus(gear)
-            and (not self.ShouldDisplayGear or self:ShouldDisplayGear(gear,self.classToken,"materials"))
+            and (not self.ShouldDisplayGear
+                or self:ShouldDisplayGear(gear,self.classToken,
+                    scope=="all" and "materials-all" or "materials"))
             and (not self.ShouldDisplayCraftedGear or self:ShouldDisplayCraftedGear(gear))
             and (scope == "all" or (not self:IsHidden(gear)
                 and not self:IsGearEquipped(gear)
@@ -585,10 +587,13 @@ function GetGear:GetItems(mode)
                 include = target > level and target <= level + 5
                     and status == nil and not hidden and not self:IsGearEquipped(record)
             elseif mode == "earlier" then
-                -- Earlier Gear contains auto-filtered equipment, not manually hidden items.
+                -- Earlier Gear catches either proven stat-obsolete items OR
+                -- bulk-imported gear at least 5 levels below the character.
+                -- Curated items are not aged out; no saved flags are changed.
                 include = target <= level and status == nil and not hidden
                     and not self:IsGearEquipped(record)
-                    and self:GetObsoleteGearReason(record) ~= nil
+                    and ((self.IsOlderImportedGear and self:IsOlderImportedGear(record,level))
+                        or self:GetObsoleteGearReason(record) ~= nil)
             elseif mode == "available" then
                 include = target <= level and status == nil and not hidden
                     and not self:IsGearEquipped(record)
