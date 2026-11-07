@@ -18,6 +18,12 @@ jobs:
           raw=urllib.request.urlopen(url,timeout=75).read()
           assert hashlib.sha256(raw).hexdigest()=='5d9a6461d2a7adbc4e3d765f19fbeb6adb37c4c53161bb89e4d7b770f805ca32'
           source=json.loads(raw)
+          print('total rows',len(source),'forever rows',sum(item.get('itemExpansion')=='Forever' for item in source))
+          for checkid in (3073,4331,5212,6898,12984,7053):
+              rec=next((r for r in source if r.get('itemId')==checkid),None)
+              if rec:
+                  tt=html.unescape(re.sub(r'<[^>]*>',' ',rec.get('tooltipHtml') or ''))
+                  print('CHECK',checkid,rec.get('name'),rec.get('itemExpansion'),re.sub(r'\s+',' ',tt)[:450])
           for school in ('Frost','Arcane','Fire'):
               found=[]
               for item in source:
