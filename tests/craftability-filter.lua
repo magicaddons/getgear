@@ -45,6 +45,8 @@ local function contains(list,id)for _,x in ipairs(list) do if x.itemID==id then 
 -- The default intentionally offers crafted items even without the profession.
 assert(addon:ShouldDisplayCraftedGear(robe))
 local unknownCraft={itemID=999000,slot="Chest",craftOnly=true,sourceType="Crafted gear (recipe unknown)"}
+assert(addon:IsCraftMaterialsUnknown(unknownCraft),
+    "Generated crafted gear with absent reagent list must mark materials incomplete")
 assert(addon:ShouldDisplayCraftedGear(unknownCraft),
     "Default mode should show source-confirmed crafted items with unknown recipe")
 assert(count(addon:GetItems("tracker"))==6)
