@@ -72,6 +72,27 @@ if f then
     end
     f:close()
 end
+-- Items absent from the dated equipment cache need evidence-led proficiency
+-- classification, never a narrow mask inherited from editorial spec curation.
+-- Generic jewelry/cloaks equip on all classes; known class-quest exclusives
+-- retain their class gate. Entries are mask, armor/weapon type, optional role.
+local manualOnlyEvidence={
+ [1449]={511,"Jewelry","spell"},[2042]={239,"Staff"},[2506]={176,"Bow","physical"},
+ [2844]={473,"Mace","physical"},[2845]={496,"Axe","physical"},
+ [2853]={480,"Mail","utility"},[2903]={176,"Bow","physical"},
+ [2933]={511,"Jewelry","mixed"},[3026]={176,"Bow","physical"},
+ [3027]={176,"Bow","physical"},[3719]={511,"Jewelry","spell"},
+ [4311]={511,"Jewelry","spell"},[5542]={511,"Jewelry","spell"},
+ [5596]={176,"Bow","physical"},[6223]={448,"Shield"},
+ [6898]={4,"Held In Off-hand"},[6953]={256,"Mace"},
+ [6970]={128,"Shield"},[6972]={128,"Mail"},
+ [7001]={7,"Wand","spell"},[7053]={511,"Jewelry","spell"},
+ [8071]={7,"Wand","spell"},[15109]={4,"Staff"},
+ [15866]={8,"Held In Off-hand","mana"},[16608]={8,"Leather","mana"},
+ [247789]={7,"Wand","spell"},[270027]={392,"Mace","mixed"},
+ [274092]={176,"Thrown","physical"},
+ [279898]={335,"Held In Off-hand","spell"},
+}
 local manualOnly,missing,acquisition,schoolCount=0,0,0,0
 for id,item in pairs(items) do
     local e=eligibility[id]
@@ -80,10 +101,12 @@ for id,item in pairs(items) do
         -- The original researched class coverage is *fallback evidence* only
         -- for items missing from the dated client cache; it must never limit
         -- an item present in the equipment cache.
-        e={mask=manualMasks[id] or 0,
+        local evidence=manualOnlyEvidence[id]
+        assert(evidence,"Manual-only item requires audited proficiency evidence: "..id)
+        e={mask=evidence[1],
            equipLevel=tonumber(item.availableLevel) or 1,
-           armorType=item.armorType or "",
-           statRole=item.statRole or "utility",sourceCode=0}
+           armorType=evidence[2],
+           statRole=evidence[3] or item.statRole or "utility",sourceCode=0}
         eligibility[id]=e
     end
     if not e.mask or e.mask==0 then missing=missing+1 end
