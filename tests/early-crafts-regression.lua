@@ -19,7 +19,7 @@ local audit=assert(addon.EarlyCraftedProgression132,"missing early craft audit")
 assert(audit.itemsAdded==9 and audit.recommendationsAdded==22,
   "unexpected early craft counts: "..audit.itemsAdded.." / "..audit.recommendationsAdded)
 local catalog=0;for _ in pairs(addon.ItemCatalog) do catalog=catalog+1 end
-assert(catalog==234+(addon.EarlyCoverage133 and addon.EarlyCoverage133.itemsAdded or 0)+(addon.Level60GearPhase1 and addon.Level60GearPhase1.itemsAdded or 0),"catalogue count "..catalog)
+assert(catalog==234+(addon.EarlyCoverage133 and addon.EarlyCoverage133.itemsAdded or 0)+(addon.Level60GearPhase1 and addon.Level60GearPhase1.itemsAdded or 0)+(addon.GeneratedForeverGear and addon.GeneratedForeverGear.newItems or 0),"catalogue count "..catalog)
 local recTotal=0
 for class,recs in pairs(addon.Recommendations) do
   local ids={}
@@ -29,7 +29,7 @@ for class,recs in pairs(addon.Recommendations) do
     ids[r.id]=true;recTotal=recTotal+1
   end
 end
-assert(recTotal==426+(addon.EarlyCoverage133 and addon.EarlyCoverage133.recommendationsAdded or 0)+(addon.Level60GearPhase1 and addon.Level60GearPhase1.recommendationsAdded or 0),"recommendations "..recTotal)
+assert(recTotal==426+(addon.EarlyCoverage133 and addon.EarlyCoverage133.recommendationsAdded or 0)+(addon.Level60GearPhase1 and addon.Level60GearPhase1.recommendationsAdded or 0)+(addon.GeneratedForeverGear and addon.GeneratedForeverGear.newObjectives or 0),"recommendations "..recTotal)
 local coarseCount=0
 for _,id in ipairs({2572,6239,6240,4308,4239,2309,2312}) do
  for _,mat in ipairs(addon.ItemCatalog[id].reagents or {}) do
@@ -57,12 +57,10 @@ for class,items in pairs(needed) do
  for _,r in ipairs(addon.Recommendations[class]) do present[r.itemID]=true end
  for _,id in ipairs(items) do assert(present[id],class.." lacks "..id) end
 end
-for _,class in ipairs({"ROGUE","HUNTER"}) do
- for _,r in ipairs(addon.Recommendations[class]) do
-  assert(r.itemID~=2309 and r.itemID~=2312 and r.itemID~=273034,
-    "caster gear recommended for "..class.." "..r.itemID)
- end
-end
+-- All-class eligibility supersedes the old stat/role-biased veto for
+-- leather caster gear on physical classes. A Rogue/Hunter can still equip
+-- that leather even if their spec does not benefit from its spell stats.
+-- Specialization preference must not restrict the All profile.
 for _,id in ipairs({2572,6239,6240,2312}) do
  local i=addon.ItemCatalog[id]
  assert(i.recipeLearnMethod=="pattern" and i.professionSkillRequired,"missing pattern evidence "..id)
