@@ -31,6 +31,7 @@ jobs:
           lua5.4 tests/early-coverage-regression.lua .
           lua5.4 tests/level60-staging-regression.lua .
           lua5.4 tests/full-catalogue-eligibility.lua .
+          lua5.4 tests/gear-relevance-regression.lua .
           lua5.4 tests/generated-item-load-guard.lua .
           lua5.4 tests/coverage-audit.lua .
       - name: Package GetGear v0.13.0 Beta 1 (private test candidate)
