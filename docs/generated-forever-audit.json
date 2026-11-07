@@ -1,0 +1,41 @@
+{
+  "upstream": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+  "sha256": "5d9a6461d2a7adbc4e3d765f19fbeb6adb37c4c53161bb89e4d7b770f805ca32",
+  "sourceLastRefresh": "2026-10-21T16:20:02.538Z",
+  "upstreamItems": 10058,
+  "importableItems": 7678,
+  "eligibleClassCount": {
+    "DRUID": 3846,
+    "HUNTER": 4851,
+    "MAGE": 2460,
+    "PALADIN": 5512,
+    "PRIEST": 2615,
+    "ROGUE": 3625,
+    "SHAMAN": 5097,
+    "WARLOCK": 2448,
+    "WARRIOR": 5765
+  },
+  "levelBandCount": {
+    "1-15": 725,
+    "16-30": 1447,
+    "31-45": 1465,
+    "46-60": 4041
+  },
+  "rejectReasons": {
+    "class-restriction": 1,
+    "internal-test-or-placeholder": 45,
+    "no-proven-equip-level": 1754,
+    "not-green-or-better": 48,
+    "outside-level-range": 4,
+    "unconfirmed-forever-facts": 15,
+    "unsupported-or-unknown-slot": 513
+  },
+  "statRoleCounts": {
+    "mana": 821,
+    "mixed": 1129,
+    "physical": 2296,
+    "spell": 1747,
+    "utility": 1685
+  },
+  "warning": "Client/beta existence is not a live drop or quest guarantee; original GetGear records override generated facts"
+}

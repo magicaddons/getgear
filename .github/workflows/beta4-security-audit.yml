@@ -1,0 +1,58 @@
+name: GetGear Beta4 original ZIP security audit
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/beta4-security-audit.yml"
+permissions:
+  actions: read
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download exact Beta4 release candidate artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: GetGear-v0.14.0-beta4-test-only
+          run-id: 42380654647
+          github-token: ${{ github.token }}
+          path: downloaded
+      - name: Verify exact checksum, archive entries and safe paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo '07c7131d4e69d5d0ac0169a9c9f5612a6eac037edae9490e7ac9183376a77fa1  downloaded/GetGear-v0.14.0-beta4-test-only.zip' | sha256sum -c -
+          python3 - <<'PY'
+          import zipfile,pathlib
+          path=pathlib.Path("downloaded/GetGear-v0.14.0-beta4-test-only.zip")
+          with zipfile.ZipFile(path) as z:
+              allfiles=[x for x in z.infolist() if not x.is_dir()]
+              assert len(allfiles)==22,("Unexpected file count",len(allfiles))
+              for f in allfiles:
+                  p=pathlib.PurePosixPath(f.filename)
+                  assert len(p.parts)==2 and p.parts[0]=="GetGear",f.filename
+                  assert not any(x in (".","..") for x in p.parts),f.filename
+                  assert p.suffix.lower() in {".lua",".txt",".toc",".tga",".md"},f.filename
+                  assert ((f.external_attr>>16)&0o170000)!=0o120000,f.filename
+              assert sum(x.filename.endswith(".lua") for x in allfiles)==16
+              assert z.testzip() is None
+              assert "## Version: 0.14.0-beta4" in z.read("GetGear/GetGear.toc").decode()
+          print("PASS exact Beta4 hash and 22 expected addon-only files, no binaries or unsafe paths")
+          PY
+          mkdir -p extracted
+          unzip -q downloaded/GetGear-v0.14.0-beta4-test-only.zip -d extracted
+      - name: Install antivirus
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq clamav clamav-freshclam
+      - name: Update antivirus signatures
+        run: |
+          sudo systemctl stop clamav-freshclam.service || true
+          sudo freshclam --stdout
+      - name: Scan original ZIP and extracted addon
+        run: |
+          set -euo pipefail
+          clamscan --version
+          clamscan --infected --recursive downloaded extracted
+          echo "PASS: no known ClamAV detections in Beta4 exact release candidate"

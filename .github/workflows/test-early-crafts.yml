@@ -1,56 +1,116 @@
-name: Validate GetGear Data and Login Events
-
+name: Validate GetGear Beta 4 unified catalogue and package
 on:
   pull_request:
     paths:
       - "*.lua"
       - "GetGear.toc"
-      - "tests/**"
+      - "tests/beta4-*.lua"
       - ".github/workflows/test-early-crafts.yml"
+      - "BETA_0140_NOTES.txt"
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Check out source
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Install Lua 5.4
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq lua5.4
-      - name: Compile each addon module and test crafted progressions
-        run: |
-          lua5.4 tests/early-crafts-regression.lua .
-          lua5.4 tests/item-data-regression.lua .
-          lua5.4 tests/comparison-cleanup.lua .
-          lua5.4 tests/craftability-filter.lua .
-      - name: Package GetGear v0.12.14 beta candidate
-        if: github.head_ref == 'fix/clean-comparison-disclaimers'
+      - name: Syntax, unified data, class, relevance and talent regressions
         shell: bash
         run: |
           set -euo pipefail
-          grep -q '^## Version: 0.12.14$' GetGear.toc
-          test "$(grep -c '^GearCompare.lua$' GetGear.toc)" -eq 1
-          local_count="$(find . -maxdepth 1 -name '*.lua' -type f | wc -l)"
+          while IFS= read -r module; do
+            case "$module" in
+              *.lua) test -f "$module"; luac5.4 -p "$module" ;;
+            esac
+          done < GetGear.toc
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+      - name: Verify minimal install manifest and make Beta 4 ZIP
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fxq '## Version: 0.14.0-beta4' GetGear.toc
+          grep -Fxq 'ResearchedItemFacts.lua' GetGear.toc
+          grep -Fxq 'EquipmentCache.lua' GetGear.toc
+          grep -Fxq 'TalentAwareness.lua' GetGear.toc
+          if grep -Fxq 'GeneratedForeverGear.lua' GetGear.toc ||
+             grep -Fxq 'ClassProfiles.lua' GetGear.toc ||
+             grep -Fxq 'DataIntegrity127.lua' GetGear.toc; then
+            echo 'Legacy runtime module unexpectedly included'
+            exit 1
+          fi
           toc_count="$(grep -c '.lua$' GetGear.toc)"
-          test "$local_count" -eq "$toc_count"
-          test "$toc_count" -ge 35
+          test "$toc_count" -ge 15
+          test "$toc_count" -le 18
           mkdir -p dist/GetGear
-          cp ./*.lua GetGear.toc README.txt MapPin.tga DATA_MODEL.md dist/GetGear/
-          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq "$((toc_count + 4))"
-          (cd dist && zip -q -r '../GetGear-v0.12.14-private-test-beta.zip' GetGear)
-          unzip -t GetGear-v0.12.14-private-test-beta.zip
-          unzip -p GetGear-v0.12.14-private-test-beta.zip GetGear/GetGear.toc | grep -q '^## Version: 0.12.14$'
-          unzip -p GetGear-v0.12.14-private-test-beta.zip GetGear/GearCompare.lua | grep -q 'Equipped weapon has higher DPS'
-      - name: Upload installable ZIP (build candidate only)
-        if: github.head_ref == 'fix/clean-comparison-disclaimers'
+          while IFS= read -r module; do
+            case "$module" in
+              *.lua) cp "$module" dist/GetGear/ ;;
+            esac
+          done < GetGear.toc
+          cp GetGear.toc README.txt BETA_0140_NOTES.txt MapPin.tga DATA_MODEL.md dist/GetGear/
+          printf 'GetGear version: 0.14.0-beta4\nDevelopment branch: work/gear-1-60-expansion\nSource commit: %s\nType: private test ZIP, NOT a public release\n' "$GITHUB_SHA" > dist/GetGear/BUILD_INFO.txt
+          test "$(find dist/GetGear -maxdepth 1 -name '*.lua' | wc -l)" -eq "$toc_count"
+          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq "$((toc_count+6))"
+          (cd dist && zip -q -r '../GetGear-v0.14.0-beta4-test-only.zip' GetGear)
+          unzip -tq GetGear-v0.14.0-beta4-test-only.zip
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GetGear.toc | grep -Fxq '## Version: 0.14.0-beta4'
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GuideEngine.lua | grep -Fq 'EquipmentByClass'
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GearRelevance.lua | grep -Fq 'IsOlderGear'
+          sha256sum GetGear-v0.14.0-beta4-test-only.zip
+          ls -lh GetGear-v0.14.0-beta4-test-only.zip
+      - name: Verify exact Beta4 archive manifest and no unsafe file types
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib, zipfile
+          toc=pathlib.Path('GetGear.toc').read_text()
+          modules={r.strip() for r in toc.splitlines() if r.strip().endswith('.lua')}
+          assert len(modules)==16
+          extras={'GetGear.toc','README.txt','BETA_0140_NOTES.txt',
+                  'MapPin.tga','DATA_MODEL.md','BUILD_INFO.txt'}
+          expected={'GetGear/'+p for p in modules|extras}
+          path='GetGear-v0.14.0-beta4-test-only.zip'
+          with zipfile.ZipFile(path) as z:
+              members=[x for x in z.infolist() if not x.is_dir()]
+              names={x.filename for x in members}
+              assert len(members)==len(expected)==22
+              assert names==expected,(names-expected,expected-names)
+              for member in members:
+                  p=pathlib.PurePosixPath(member.filename)
+                  assert len(p.parts)==2 and p.parts[0]=='GetGear'
+                  assert not any(s in ('.','..') for s in p.parts)
+                  assert not member.filename.lower().endswith(('.exe','.dll','.bat','.cmd','.ps1','.sh','.url','.lnk'))
+                  assert ((member.external_attr>>16)&0o170000)!=0o120000
+              assert z.testzip() is None
+          print('PASS: exact 16 Lua + 6 supporting files, no executables, symlinks, traversal or extra entries')
+          PY
+      - name: Antivirus scan of exact Beta4 ZIP and extracted files
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq clamav clamav-freshclam
+          sudo systemctl stop clamav-freshclam.service || true
+          sudo freshclam --stdout
+          clamscan --version
+          clamscan --recursive --infected GetGear-v0.14.0-beta4-test-only.zip dist/GetGear
+          echo 'PASS: ClamAV scan of the actual Beta4 artifact found no known threats'
+      - name: Upload private GetGear Beta 4 ZIP
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
         uses: actions/upload-artifact@v4
         with:
-          name: GetGear-v0.12.14-private-test-beta
-          path: GetGear-v0.12.14-private-test-beta.zip
+          name: GetGear-v0.14.0-beta4-test-only
+          path: GetGear-v0.14.0-beta4-test-only.zip
           if-no-files-found: error
           retention-days: 30

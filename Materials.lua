@@ -164,7 +164,8 @@ end
 function GetGear:IsCraftMaterialsUnknown(gear)
     if not gear or gear.bagUpgrade then return false end
     local profession=gear.profession or gear.sourceType
-    return (profession=="Blacksmithing" or profession=="Leatherworking"
+    return (gear.craftOnly==true
+        or profession=="Blacksmithing" or profession=="Leatherworking"
         or profession=="Tailoring" or profession=="Enchanting")
         and (type(gear.reagents)~="table" or #gear.reagents==0)
 end
@@ -173,6 +174,9 @@ function GetGear:GetUndocumentedCrafts(scope)
     local pending,level={},self.level or 1
     for _,gear in ipairs(self.Gear) do
         if gear.targetLevel<=level+5 and not self:GetStatus(gear)
+            and (not self.ShouldDisplayGear
+                or self:ShouldDisplayGear(gear,self.classToken,
+                    scope=="all" and "materials-all" or "materials"))
             and (not self.ShouldDisplayCraftedGear or self:ShouldDisplayCraftedGear(gear))
             and (scope=="all" or (not self:IsHidden(gear)
                 and not self:IsGearEquipped(gear)
@@ -190,6 +194,9 @@ function GetGear:GetCombinedMaterialRows(scope)
     local level=self.level or 1
     for _,gear in ipairs(self.Gear) do
         if gear.targetLevel <= level+5 and not self:GetStatus(gear)
+            and (not self.ShouldDisplayGear
+                or self:ShouldDisplayGear(gear,self.classToken,
+                    scope=="all" and "materials-all" or "materials"))
             and (not self.ShouldDisplayCraftedGear or self:ShouldDisplayCraftedGear(gear))
             and (scope=="all" or (not self:IsHidden(gear)
                 and not self:IsGearEquipped(gear)
