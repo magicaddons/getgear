@@ -1,0 +1,78 @@
+name: Validate GetGear Beta 4 unified catalogue and package
+on:
+  pull_request:
+    paths:
+      - "*.lua"
+      - "GetGear.toc"
+      - "tests/beta4-*.lua"
+      - ".github/workflows/test-early-crafts.yml"
+      - "BETA_0140_NOTES.txt"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua 5.4
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+      - name: Syntax, unified data, class, relevance and talent regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in
+              *.lua) test -f "$module"; luac5.4 -p "$module" ;;
+            esac
+          done < GetGear.toc
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+      - name: Verify minimal install manifest and make Beta 4 ZIP
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fxq '## Version: 0.14.0-beta4' GetGear.toc
+          grep -Fxq 'ResearchedItemFacts.lua' GetGear.toc
+          grep -Fxq 'EquipmentCache.lua' GetGear.toc
+          grep -Fxq 'TalentAwareness.lua' GetGear.toc
+          if grep -Fxq 'GeneratedForeverGear.lua' GetGear.toc ||
+             grep -Fxq 'ClassProfiles.lua' GetGear.toc ||
+             grep -Fxq 'DataIntegrity127.lua' GetGear.toc; then
+            echo 'Legacy runtime module unexpectedly included'
+            exit 1
+          fi
+          toc_count="$(grep -c '.lua$' GetGear.toc)"
+          test "$toc_count" -ge 15
+          test "$toc_count" -le 18
+          mkdir -p dist/GetGear
+          while IFS= read -r module; do
+            case "$module" in
+              *.lua) cp "$module" dist/GetGear/ ;;
+            esac
+          done < GetGear.toc
+          cp GetGear.toc README.txt BETA_0140_NOTES.txt MapPin.tga DATA_MODEL.md dist/GetGear/
+          printf 'GetGear version: 0.14.0-beta4\nDevelopment branch: work/gear-1-60-expansion\nSource commit: %s\nType: private test ZIP, NOT a public release\n' "$GITHUB_SHA" > dist/GetGear/BUILD_INFO.txt
+          test "$(find dist/GetGear -maxdepth 1 -name '*.lua' | wc -l)" -eq "$toc_count"
+          test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq "$((toc_count+6))"
+          (cd dist && zip -q -r '../GetGear-v0.14.0-beta4-test-only.zip' GetGear)
+          unzip -tq GetGear-v0.14.0-beta4-test-only.zip
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GetGear.toc | grep -Fxq '## Version: 0.14.0-beta4'
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GuideEngine.lua | grep -Fq 'EquipmentByClass'
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GearRelevance.lua | grep -Fq 'IsOlderGear'
+          sha256sum GetGear-v0.14.0-beta4-test-only.zip
+          ls -lh GetGear-v0.14.0-beta4-test-only.zip
+      - name: Upload private GetGear Beta 4 ZIP
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
+        uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-v0.14.0-beta4-test-only
+          path: GetGear-v0.14.0-beta4-test-only.zip
+          if-no-files-found: error
+          retention-days: 30
