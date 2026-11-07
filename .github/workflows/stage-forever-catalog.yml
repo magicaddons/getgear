@@ -30,6 +30,14 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq lua5.4
           luac5.4 -p dist/GeneratedForeverGear.lua
+      - name: Validate broad catalogue against the addon in isolation
+        shell: bash
+        run: |
+          mkdir -p dist/standalone
+          cp ./*.lua GetGear.toc dist/standalone/
+          cp dist/GeneratedForeverGear.lua dist/standalone/
+          sed -i '/^Level60GearPhase1.lua$/a GeneratedForeverGear.lua' dist/standalone/GetGear.toc
+          lua5.4 tests/generated-cache-smoke.lua dist/standalone
       - name: Keep candidate only as development artifact, never publish release
         uses: actions/upload-artifact@v4
         with:
