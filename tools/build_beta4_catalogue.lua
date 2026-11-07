@@ -11,7 +11,8 @@ local bits={}
 for i,name in ipairs(classes) do bits[name]=2^(i-1) end
 local toc=assert(io.open(root.."/GetGear.toc")):read("*a")
 for line in toc:gmatch("[^\r\n]+") do
-    if line:match("%.lua$") then
+    if line:match("%.lua$") and line~="AltInventory.lua"
+        and line~="Core.lua" and line~="UI.lua" then
         local chunk,err=loadfile(root.."/"..line)
         assert(chunk,line..": "..tostring(err))
         local ok,result=pcall(chunk,"GetGear",addon)
