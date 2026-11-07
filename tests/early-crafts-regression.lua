@@ -19,7 +19,7 @@ local audit=assert(addon.EarlyCraftedProgression132,"missing early craft audit")
 assert(audit.itemsAdded==9 and audit.recommendationsAdded==22,
   "unexpected early craft counts: "..audit.itemsAdded.." / "..audit.recommendationsAdded)
 local catalog=0;for _ in pairs(addon.ItemCatalog) do catalog=catalog+1 end
-assert(catalog==234,"catalogue count "..catalog)
+assert(catalog==234+(addon.Level60GearPhase1 and addon.Level60GearPhase1.itemsAdded or 0),"catalogue count "..catalog)
 local recTotal=0
 for class,recs in pairs(addon.Recommendations) do
   local ids={}
@@ -29,7 +29,7 @@ for class,recs in pairs(addon.Recommendations) do
     ids[r.id]=true;recTotal=recTotal+1
   end
 end
-assert(recTotal==426,"recommendations "..recTotal)
+assert(recTotal==426+(addon.Level60GearPhase1 and addon.Level60GearPhase1.recommendationsAdded or 0),"recommendations "..recTotal)
 local coarseCount=0
 for _,id in ipairs({2572,6239,6240,4308,4239,2309,2312}) do
  for _,mat in ipairs(addon.ItemCatalog[id].reagents or {}) do
