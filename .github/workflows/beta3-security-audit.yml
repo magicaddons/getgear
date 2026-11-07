@@ -1,0 +1,66 @@
+name: Security audit - GetGear Beta 3 downloaded artifact
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/beta3-security-audit.yml"
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Download original Beta 3 artifact from successful build
+        uses: actions/download-artifact@v4
+        with:
+          name: GetGear-v0.13.0-beta3-test-only
+          run-id: 42374247181
+          github-token: ${{ github.token }}
+          path: downloaded
+      - name: Verify original ZIP checksum, file types, paths and content
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo 'f75ab49fae4225e3828434d9ed9d19ec5167c7f69ea579cb0872a68db7d4c0ac  downloaded/GetGear-v0.13.0-beta3-test-only.zip' | sha256sum -c -
+          python3 - <<'PY'
+          import zipfile, pathlib
+          path=pathlib.Path('downloaded/GetGear-v0.13.0-beta3-test-only.zip')
+          with zipfile.ZipFile(path) as archive:
+              infos=[i for i in archive.infolist() if not i.is_dir()]
+              allowed={'.lua','.toc','.txt','.tga','.md'}
+              assert len(infos)==45, ('Unexpected file count',len(infos))
+              print('Original archive entries:',len(infos))
+              for entry in infos:
+                  p=pathlib.PurePosixPath(entry.filename)
+                  assert p.parts[0]=='GetGear' and len(p.parts)==2, entry.filename
+                  assert not any(part in ('..','.') for part in p.parts),entry.filename
+                  assert p.suffix.lower() in allowed,entry.filename
+                  # Unix symlink mode 0o120000
+                  assert ((entry.external_attr >> 16) & 0o170000) != 0o120000, entry.filename
+                  print(f'  {entry.filename} ({entry.file_size} bytes)')
+              assert sum(i.filename.endswith('.lua') for i in infos)==39
+              assert archive.testzip() is None, 'Archive CRC failed'
+              toc=archive.read('GetGear/GetGear.toc').decode('utf-8')
+              assert '## Version: 0.13.0-beta3' in toc
+          print('PASS: expected exact SHA256 and 45 Lua/text/texture files; no executables/symlinks/traversal')
+          PY
+          mkdir -p extracted
+          unzip -q downloaded/GetGear-v0.13.0-beta3-test-only.zip -d extracted
+      - name: Install ClamAV antivirus engine
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq clamav clamav-freshclam
+      - name: Update antivirus signatures
+        shell: bash
+        run: |
+          sudo systemctl stop clamav-freshclam.service || true
+          sudo freshclam --stdout
+      - name: Scan the exact ZIP and extracted files
+        shell: bash
+        run: |
+          set -euo pipefail
+          clamscan --version
+          clamscan --infected --recursive downloaded extracted
+          echo "PASS: ClamAV found no known signatures in original Beta3 archive or extracted contents"
