@@ -56,6 +56,14 @@ local unknownSource={itemID=910008,name="Unverified early item",slot="Ring",
     sourceType="Source not documented",fromGeneratedCache=true,statRole="utility"}
 assert(not addon:ShouldDisplayGear(unknownSource,"WARRIOR"),
     "Source-less client artifacts must not dominate default view")
+local genericDrop={itemID=910009,name="Generic world-drop candidate",slot="Ring",
+    sourceType="World drop (route unverified)",fromGeneratedCache=true,statRole="physical"}
+assert(not addon:ShouldDisplayGear(genericDrop,"WARRIOR"),
+    "Unconfirmed random world drops should be opt-in")
+local observedDrop={itemID=910010,name="Player-observed world drop",slot="Ring",
+    sourceType="World drop",confidence="observed",statRole="physical"}
+assert(addon:ShouldDisplayGear(observedDrop,"WARRIOR"),
+    "Reviewed/observed drops must remain visible")
 local utility={itemID=910005,name="Resist-all trinket",slot="Trinket",
     fromGeneratedCache=true,statRole="utility"}
 assert(addon:ShouldDisplayGear(utility,"MAGE")
@@ -82,6 +90,7 @@ assert(addon:ShouldDisplayGear(casterRing,"WARRIOR"))
 assert(addon:ShouldDisplayGear(physicalRing,"MAGE"))
 assert(addon:ShouldDisplayGear(unknownSource,"WARRIOR"),
     "Expanded catalogue must retain unverified candidates")
+assert(addon:ShouldDisplayGear(genericDrop,"WARRIOR"))
 for _,id in ipairs({21524,21525}) do
     assert(addon:ShouldDisplayGear(addon.ItemCatalog[id],"WARRIOR"))
 end
