@@ -16,6 +16,10 @@ local function CraftingProfession(gear)
     if not gear or gear.bagUpgrade then return nil end
     if CRAFT_PROFESSIONS[gear.profession] then return gear.profession end
     if CRAFT_PROFESSIONS[gear.sourceType] then return gear.sourceType end
+    -- Generated Forever client data sometimes confirms that an item is
+    -- crafted without identifying its profession or recipe. In the strict
+    -- opt-in mode, UNKNOWN craftability must not become 'craftable'.
+    if gear.craftOnly == true then return "__UNKNOWN_CRAFT__" end
     return nil
 end
 
@@ -25,6 +29,7 @@ function GetGear:ShouldDisplayCraftedGear(gear)
 
     local profession = CraftingProfession(gear)
     if not profession then return true end
+    if profession == "__UNKNOWN_CRAFT__" then return false end
 
     -- An unavailable professions API is an unknown state, not proof that
     -- the player lacks the profession. Fail open until the client is ready.
