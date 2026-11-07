@@ -34,6 +34,22 @@ function GetGear:IsHardExcludedGear(gear)
     return false
 end
 
+-- Five-level rolling lookback, only for bulk-imported (unverified)
+-- equipment. At player level 15, target levels <=10 belong to Earlier
+-- Gear; level 11 stays in Available Now. The calculation uses the current
+-- character level on every refresh and never alters SavedVariables.
+local IMPORTED_LEVEL_LOOKBACK = 5
+
+function GetGear:IsOlderImportedGear(gear, characterLevel)
+    if not gear or gear.fromGeneratedCache~=true then return false end
+    local opts=self.db and self.db.overlay
+    if opts and opts.showAllValidGear==true then return false end
+    local target=gear.targetLevel or gear.availableLevel
+    local current=characterLevel or self.level
+    return type(target)=="number" and type(current)=="number"
+        and target <= current-IMPORTED_LEVEL_LOOKBACK
+end
+
 function GetGear:ShouldDisplayGear(gear, classToken, mode)
     if not gear or gear.bagUpgrade then return true end
     if self:IsHardExcludedGear(gear) then return false end
@@ -43,6 +59,12 @@ function GetGear:ShouldDisplayGear(gear, classToken, mode)
     if not gear.fromGeneratedCache then return true end
     local opts=self.db and self.db.overlay
     if opts and opts.showAllValidGear==true then return true end
+
+    -- Earlier Gear is the destination for aged-out imported items, not
+    -- another hidden state. History, full preview and the explicit "All"
+    -- materials scope also keep their existing behavior.
+    if mode~="earlier" and mode~="preview" and mode~="materials-all"
+        and self:IsOlderImportedGear(gear) then return false end
 
     if NOVELTY_IDS[gear.itemID] then return false end
     -- A beta-cache entry with no documented route is a valid client item,
