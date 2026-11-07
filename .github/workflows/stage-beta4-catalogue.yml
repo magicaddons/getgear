@@ -24,10 +24,10 @@ jobs:
       - name: Flatten final effective item records and class eligibility
         run: |
           mkdir -p dist
-          lua5.4 tools/build_beta4_catalogue.lua . dist/CatalogueFacts.lua tools/beta4_schools.tsv
-          luac5.4 -p dist/CatalogueFacts.lua
-          test "$(grep -c '^ \[' dist/CatalogueFacts.lua)" -ge 15000
-          wc -l -c dist/CatalogueFacts.lua
+          lua5.4 tools/build_beta4_catalogue.lua . dist/ResearchedItemFacts.lua tools/beta4_schools.tsv
+          luac5.4 -p dist/ResearchedItemFacts.lua
+          test "$(grep -c '^ \[' dist/ResearchedItemFacts.lua)" -ge 240
+          wc -l -c dist/ResearchedItemFacts.lua
       - name: Save derived single authoritative catalogue in development branch
         if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion' && github.event.pull_request.head.repo.full_name == github.repository
         shell: bash
@@ -37,8 +37,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin work/gear-1-60-expansion
           git checkout -B work/gear-1-60-expansion origin/work/gear-1-60-expansion
-          cp dist/CatalogueFacts.lua CatalogueFacts.lua
-          git add CatalogueFacts.lua
+          cp dist/ResearchedItemFacts.lua ResearchedItemFacts.lua
+          git add ResearchedItemFacts.lua
           if ! git diff --cached --quiet; then
             git commit -m "Generate flattened item facts, class masks and conservative pure-school hints"
             git push origin HEAD:work/gear-1-60-expansion
@@ -47,6 +47,6 @@ jobs:
         with:
           name: Beta4-canonical-catalogue-staging-only
           path: |
-            dist/CatalogueFacts.lua
+            dist/ResearchedItemFacts.lua
             tools/beta4_schools.tsv
           retention-days: 7
