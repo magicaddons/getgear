@@ -605,7 +605,8 @@ local function PreviewEntries()
     local all = GetGear:GetPreviewRecommendations(preview.classToken, preview.spec)
     local visible = {}
     for _, gear in ipairs(all) do
-        if preview.full or (gear.targetLevel and gear.targetLevel <= preview.level) then
+        if (preview.full or (gear.targetLevel and gear.targetLevel <= preview.level))
+            and (not GetGear.ShouldDisplayGear or GetGear:ShouldDisplayGear(gear,preview.classToken,"preview")) then
             visible[#visible+1] = gear
         end
     end
@@ -1222,9 +1223,10 @@ function GetGear:RefreshUI()
         scroll:SetPoint("TOPLEFT",17,-185)
         scroll:SetPoint("BOTTOMRIGHT",-35,15)
     end
+    local relevanceKey = self.db.overlay.showAllValidGear and "all" or "relevant"
     local viewKey = inPreview and ("preview:"..preview.classToken..":"..preview.spec..":"..
-        tostring(preview.level)..":"..tostring(preview.full))
-        or ("character:"..tostring(self.activeTab)..":"..tostring(spec)..":"..tostring(self.level))
+        tostring(preview.level)..":"..tostring(preview.full)..":"..relevanceKey)
+        or ("character:"..tostring(self.activeTab)..":"..tostring(spec)..":"..tostring(self.level)..":"..relevanceKey)
     if detailViewKey ~= viewKey then
         detailPage, detailViewKey = 1, viewKey
         scroll:SetVerticalScroll(0)
@@ -2106,7 +2108,7 @@ end
 -- Settings in separate window; overlay stays uncluttered while playing.
 -- =====================================================================
 local settings = CreateFrame("Frame", "GetGear_OverlaySettings", UIParent, "BasicFrameTemplateWithInset")
-settings:SetSize(418, 570)
+settings:SetSize(418, 628)
 settings:SetPoint("CENTER", UIParent, "CENTER", 270, 50)
 -- Settings must still be usable when opened from the foreground detail guide.
 settings:SetFrameStrata("DIALOG")
@@ -2227,10 +2229,25 @@ craftFilterCheck:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 craftFilterCheck:SetScript("OnLeave",HideItemTooltip)
+-- All class-equipable gear, including off-role/novelty, is opt-in. Hard
+-- exclusions for QA and internal placeholders always remain excluded.
+local allValidGearCheck=NewCheck(settings,"Show all valid equipment (including off-spec)",459,function(v)
+    GetGear.db.overlay.showAllValidGear=v
+    GetGear:RefreshAll()
+end)
+allValidGearCheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Expanded equipment catalogue",1,0.82,0.35)
+    GameTooltip:AddLine("Off by default. Shows every class-equipable candidate, including cloth on Warriors, off-role stats and Winter Hats.",1,1,1,true)
+    GameTooltip:AddLine("Internal QA/test and placeholder items remain excluded. Existing acquired/hidden states are not changed. Also applies to Preview Guide.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+allValidGearCheck:SetScript("OnLeave",HideItemTooltip)
 -- Keep the Tracked/All material-scope choice in settings, without
 -- confusing it with the Total Materials minimize button.
 local materialScopeButton=NewButton(settings,"",185,23)
-materialScopeButton:SetPoint("TOPLEFT",18,-466)
+materialScopeButton:SetPoint("TOPLEFT",18,-505)
 materialScopeButton:SetScript("OnClick",function(self)
     if not GetGear.db then return end
     local opts=GetGear.db.overlay
@@ -2266,6 +2283,7 @@ function GetGear:ShowSettings()
     obsoleteCheck:SetChecked(self.db.overlay.filterObsolete ~= false)
     bagsCheck:SetChecked(self.db.overlay.bagUpgrades ~= false)
     craftFilterCheck:SetChecked(self.db.overlay.hideUncraftableCrafts == true)
+    allValidGearCheck:SetChecked(self.db.overlay.showAllValidGear == true)
     alphaSlider:SetValue(math.floor((self.db.overlay.backgroundOpacity or 0.78)*100 + 0.5))
     overlayScaleSlider:SetValue(math.floor((self.db.overlay.scale or 1)*100+0.5))
     detailScaleSlider:SetValue(math.floor((self.db.detail.scale or 1)*100+0.5))
