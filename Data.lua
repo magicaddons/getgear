@@ -504,6 +504,7 @@ function GetGear:GetAggregateMaterials(scope)
     local totals, result = {}, {}
     for _, gear in ipairs(self.Gear) do
         if gear.targetLevel <= level + 5 and not self:GetStatus(gear)
+            and (not self.ShouldDisplayGear or self:ShouldDisplayGear(gear,self.classToken,"materials"))
             and (not self.ShouldDisplayCraftedGear or self:ShouldDisplayCraftedGear(gear))
             and (scope == "all" or (not self:IsHidden(gear)
                 and not self:IsGearEquipped(gear)
@@ -567,7 +568,8 @@ function GetGear:GetItems(mode)
     for _, record in ipairs(planning) do
         local status = record.bagUpgrade and nil or self:GetStatus(record)
         local target = record.targetLevel
-        if type(target) == "number" then
+        if type(target) == "number"
+            and (not self.ShouldDisplayGear or self:ShouldDisplayGear(record,self.classToken,mode)) then
             local hidden = self:IsHidden(record)
             local include = false
             if mode == "bags" then
