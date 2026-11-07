@@ -59,17 +59,28 @@ function GetGear:AddRecommendation(classToken, recommendation)
         or type(recommendation.targetLevel) ~= "number" then return false end
     if not self.GuideDefinitions[classToken] or not self.ItemCatalog[recommendation.itemID] then return false end
     local list = self.Recommendations[classToken]
-    for _, previous in ipairs(list) do
-        -- Two separate copies of a one-handed weapon may be objectives for
-        -- main and off hand. A distinct persisted ID and slot are mandatory.
-        if previous.itemID == recommendation.itemID then
-            local facts = self.ItemCatalog[recommendation.itemID]
-            local oldSlot = previous.slot or facts.slot
-            local newSlot = recommendation.slot or facts.slot
-            if oldSlot == newSlot or not recommendation.id
-                or recommendation.id == previous.id then return false end
+    -- Index once per class. Full-range catalogues must not compare every new
+    -- objective with every older objective (quadratic login-time cost).
+    self.RecommendationIndex = self.RecommendationIndex or {}
+    local index = self.RecommendationIndex[classToken]
+    if not index then
+        index = { ids = {}, items = {} }
+        for _, previous in ipairs(list) do
+            index.ids[previous.id or ("item_" .. tostring(previous.itemID))] = true
+            local entries = index.items[previous.itemID] or {}
+            entries[#entries+1] = { id=previous.id, slot=previous.slot or (self.ItemCatalog[previous.itemID] or {}).slot }
+            index.items[previous.itemID] = entries
         end
-        if recommendation.id and previous.id == recommendation.id then return false end
+        self.RecommendationIndex[classToken] = index
+    end
+    local newID = recommendation.id or ("item_" .. tostring(recommendation.itemID))
+    if index.ids[newID] then return false end
+    -- One-handed dual-wield objectives still need distinct persisted IDs.
+    for _, previous in ipairs(index.items[recommendation.itemID] or {}) do
+        local slot = recommendation.slot or self.ItemCatalog[recommendation.itemID].slot
+        if previous.slot == slot or not recommendation.id or recommendation.id == previous.id then
+            return false
+        end
     end
     local entry = {}
     for key, value in pairs(recommendation) do
@@ -78,6 +89,10 @@ function GetGear:AddRecommendation(classToken, recommendation)
     if not entry.id then entry.id = "item_" .. tostring(recommendation.itemID) end
     if not entry.focus then entry.focus = "All" end
     list[#list+1] = entry
+    index.ids[entry.id] = true
+    local entries = index.items[entry.itemID] or {}
+    entries[#entries+1] = { id=entry.id, slot=entry.slot or self.ItemCatalog[entry.itemID].slot }
+    index.items[entry.itemID] = entries
     return true
 end
 
