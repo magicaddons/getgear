@@ -22,11 +22,21 @@ are independent, unchanged except for the new source/visibility boundary.
 
 ### Original evidence and regeneration
 
-Historical staged releases remain available in Git history. The scripts
-tools/build_beta4_catalogue.lua, tools/build_beta4_school_hints.py and
-tools/rewrite_beta4_generated.py derive the consolidated data from the
-pre-Beta4 branch's final effective item facts and the SHA-locked October 21
-Forever beta cache. They are **development tools**, not addon files.
+Historical staged releases, and the one-time migration scripts used
+to flatten all 259 finalized researched records, remain in Git history.
+For future dated item-cache updates, run
+`python3 tools/build_beta4_cache.py --input /path/to/Forever\ Cache.json`
+and review the generated `EquipmentCache.lua` and audit report before
+committing. This wraps `build_forever_catalog.py` and
+`rewrite_beta4_generated.py`, retaining compact class eligibility rather
+than emitting editorial recommendations. The separate
+`build_beta4_school_hints.py` tool computes conservative pure-school
+candidates from the SAME cache SHA; its output must be independently
+reviewed before merging into `ResearchedItemFacts.lua`.
+
+These are development tools, not addon files. Source facts from the
+original manual guides are preserved in the active canonical research data,
+and all old amendment modules are retained in Git history only.
 
 The initial Beta4 build resets per-character progress and presentation
 preferences with `schemaVersion=4`. Account-wide inventory tracking is
