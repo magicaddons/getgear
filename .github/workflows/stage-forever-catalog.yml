@@ -1,8 +1,11 @@
-name: Rebuild dated Forever 1-60 cache (manual development utility)
+name: Rebuild beta2 class-relevant Forever cache (temporary)
 on:
+  pull_request:
+    paths:
+      - '.github/workflows/stage-forever-catalog.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   stage:
     runs-on: ubuntu-latest
@@ -30,6 +33,23 @@ jobs:
             sed -i '/^Level60GearPhase1.lua$/a GeneratedForeverGear.lua' dist/standalone/GetGear.toc
           fi
           lua5.4 tests/generated-cache-smoke.lua dist/standalone
+      - name: Commit verified cache refresh to beta development branch only
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion' && github.event.pull_request.head.repo.full_name == github.repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "getgear-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin work/gear-1-60-expansion
+          git checkout -B work/gear-1-60-expansion origin/work/gear-1-60-expansion
+          cp dist/GeneratedForeverGear.lua ./GeneratedForeverGear.lua
+          mkdir -p docs
+          cp dist/forever-audit.json docs/generated-forever-audit.json
+          git add GeneratedForeverGear.lua docs/generated-forever-audit.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh generated Forever cache with spell/physical role flags and QA exclusion"
+            git push origin HEAD:work/gear-1-60-expansion
+          fi
       - name: Keep development-only audit artifact
         uses: actions/upload-artifact@v4
         with:
