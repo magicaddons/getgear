@@ -1,0 +1,49 @@
+name: Probe public Forever catalog (development only)
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/probe-forever-catalog.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check public item API shapes (no downloaded data retained)
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, urllib.error
+          paths = [
+            "https://api.ahledger.com/v1/catalog?class=armor",
+            "https://api.ahledger.com/v1/catalog/items?class=armor",
+            "https://api.ahledger.com/v1/catalog/armor",
+            "https://api.ahledger.com/v1/items?game=forever&class=armor",
+            "https://api.ahledger.com/v1/items/8203?game=forever",
+            "https://ahledger.com/data",
+          ]
+          for url in paths:
+              print("\nURL",url,flush=True)
+              try:
+                  request = urllib.request.Request(url,headers={"User-Agent":"GetGear development/0.1 (source verification)"})
+                  with urllib.request.urlopen(request,timeout=15) as resp:
+                      sample=resp.read(16384)
+                      print("STATUS",resp.status,"CONTENT-TYPE",resp.headers.get("content-type"),"SAMPLE-BYTES",len(sample))
+                      try:
+                          obj=json.loads(sample)
+                          if isinstance(obj,dict):
+                              print("TOP-KEYS",sorted(obj.keys()))
+                              for k,v in obj.items():
+                                  if isinstance(v,list):
+                                      print("ARRAY",k,len(v),"FIRST-KEYS",list(v[0].keys())[:32] if v and isinstance(v[0],dict) else "")
+                                      if v and isinstance(v[0],dict): print("FIRST-RECORD",repr(v[0])[:1000])
+                                  elif isinstance(v,dict):
+                                      print("OBJECT",k,list(v.keys())[:32])
+                          elif isinstance(obj,list):
+                              print("ARRAY-LENGTH",len(obj),"FIRST",repr(obj[0])[:1200] if obj else "")
+                      except Exception:
+                          print("BODY-PREFIX",sample[:360].decode("utf-8","replace"))
+              except Exception as exc:
+                  print("FAILED",type(exc).__name__,str(exc)[:260])
+          PY
