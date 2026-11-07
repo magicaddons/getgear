@@ -578,18 +578,23 @@ function GetGear:GetItems(mode)
             elseif mode == "hidden" then
                 include = status == nil and hidden
             elseif mode == "upcoming" then
-                include = status == nil and not hidden and not self:IsGearEquipped(record)
-                    and target > level and target <= level + 5
+                -- Level gates must precede equipment/stat queries. A 1-60
+                -- catalogue has thousands of future entries.
+                include = target > level and target <= level + 5
+                    and status == nil and not hidden and not self:IsGearEquipped(record)
             elseif mode == "earlier" then
                 -- Earlier Gear contains auto-filtered equipment, not manually hidden items.
-                include = status == nil and not hidden and not self:IsGearEquipped(record)
-                    and target <= level and self:GetObsoleteGearReason(record) ~= nil
+                include = target <= level and status == nil and not hidden
+                    and not self:IsGearEquipped(record)
+                    and self:GetObsoleteGearReason(record) ~= nil
             elseif mode == "available" then
-                include = status == nil and not hidden and not self:IsGearEquipped(record)
-                    and target <= level and self:GetObsoleteGearReason(record) == nil
+                include = target <= level and status == nil and not hidden
+                    and not self:IsGearEquipped(record)
+                    and self:GetObsoleteGearReason(record) == nil
             elseif mode == "tracker" then
-                include = status == nil and not hidden and not self:IsGearEquipped(record)
-                    and target <= level + 5 and (record.bagUpgrade or self:GetObsoleteGearReason(record) == nil)
+                include = target <= level + 5 and status == nil and not hidden
+                    and not self:IsGearEquipped(record)
+                    and (record.bagUpgrade or self:GetObsoleteGearReason(record) == nil)
             else
                 include = false
             end
