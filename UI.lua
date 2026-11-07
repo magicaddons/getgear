@@ -591,7 +591,7 @@ subtitle:SetText("Hover icons for stats. Equipped items appear in Completed; old
 
 -- Session-only detailed-window planning state. Never saved and never used
 -- in GetGear.Gear / GetItems / RefreshOverlay or character progression.
-local preview = {active=false, classToken="ROGUE", spec="All", level=30, full=true}
+local preview = {active=false, classToken="ROGUE", spec="All", level=60, full=true}
 local previewClasses = {
     "PRIEST", "WARLOCK", "MAGE", "DRUID", "WARRIOR",
     "ROGUE", "PALADIN", "HUNTER", "SHAMAN",
@@ -699,17 +699,17 @@ previewLevel:SetPoint("TOPLEFT", 389, -122)
 previewLevel:SetAutoFocus(false)
 previewLevel:SetNumeric(true)
 previewLevel:SetMaxLetters(2)
-previewLevel:SetText("30")
+previewLevel:SetText("60")
 local previewPlus = NewButton(window, "+", 28, 24)
 previewPlus:SetPoint("TOPLEFT", 441, -122)
-local previewFullButton = NewButton(window, "Full 1-30: ON", 156, 24)
+local previewFullButton = NewButton(window, "Full 1-60: ON", 156, 24)
 previewFullButton:SetPoint("TOPLEFT", 477, -122)
 
 startPreview:SetScript("OnClick", function()
     preview.active = true
     preview.classToken = GetGear.GuideDefinitions[GetGear.classToken] and GetGear.classToken or "ROGUE"
     preview.spec = "All"
-    preview.level = 30
+    preview.level = 60
     preview.full = true
     scroll:SetVerticalScroll(0)
     GetGear:RefreshUI()
@@ -742,7 +742,7 @@ previewSpecButton:SetScript("OnClick", function()
     GetGear:RefreshUI()
 end)
 local function SetPreviewLevel(delta)
-    preview.level = math.max(1, math.min(30, preview.level+delta))
+    preview.level = math.max(1, math.min(60, preview.level+delta))
     preview.full = false
     scroll:SetVerticalScroll(0)
     GetGear:RefreshUI()
@@ -752,7 +752,7 @@ previewPlus:SetScript("OnClick", function() SetPreviewLevel(1) end)
 previewLevel:SetScript("OnEnterPressed", function(self)
     local chosen = tonumber(self:GetText())
     if chosen then
-        preview.level = math.max(1, math.min(30, math.floor(chosen)))
+        preview.level = math.max(1, math.min(60, math.floor(chosen)))
         preview.full = false
         scroll:SetVerticalScroll(0)
     end
@@ -785,6 +785,26 @@ previewSpecButton:SetScript("OnLeave",HideItemTooltip)
 
 local statusText = NewText(window, "GameFontHighlightSmall", 720, "RIGHT")
 statusText:SetPoint("TOPRIGHT", -38, -151)
+-- A full 1-60 catalogue can contain thousands of rows per class.
+-- Keep only one bounded page of detailed WoW frames alive at a time.
+local DETAIL_PAGE_SIZE = 40
+local detailPage, detailViewKey = 1, nil
+local pagePrev = NewButton(window, "< Prev", 72, 22)
+pagePrev:SetPoint("TOPLEFT", 18, -152)
+local pageNext = NewButton(window, "Next >", 72, 22)
+pageNext:SetPoint("LEFT", pagePrev, "RIGHT", 62, 0)
+local pageLabel = NewText(window, "GameFontHighlightSmall", 58, "CENTER")
+pageLabel:SetPoint("LEFT", pagePrev, "RIGHT", 3, 0)
+pagePrev:SetScript("OnClick", function()
+    detailPage = math.max(1, detailPage-1)
+    scroll:SetVerticalScroll(0)
+    GetGear:RefreshUI()
+end)
+pageNext:SetScript("OnClick", function()
+    detailPage = detailPage+1
+    scroll:SetVerticalScroll(0)
+    GetGear:RefreshUI()
+end)
 scroll = CreateFrame("ScrollFrame", nil, window, "UIPanelScrollFrameTemplate")
 scroll:SetPoint("TOPLEFT", 17, -185)
 scroll:SetPoint("BOTTOMRIGHT", -35, 15)
@@ -1147,6 +1167,7 @@ function GetGear:RefreshUI()
         previewClassButton:Hide();previewSpecButton:Hide()
         previewMinus:Hide();previewPlus:Hide();previewLevelLabel:Hide();previewLevel:Hide();previewFullButton:Hide()
         statusText:Hide()
+        pagePrev:Hide(); pageNext:Hide(); pageLabel:Hide()
         scroll:Hide()
         inventoryView:Show()
         RefreshInventoryBrowser()
@@ -1167,7 +1188,7 @@ function GetGear:RefreshUI()
     if inPreview then
         list = PreviewEntries()
         levelText:SetText("GetGear  |  " .. ColoredCharacterLabel(
-            preview.full and "1-30" or preview.level, "", previewNames[preview.classToken], preview.classToken))
+            preview.full and "1-60" or preview.level, "", previewNames[preview.classToken], preview.classToken))
         subtitle:SetText("Browse future or alternate-class gear. Read-only: no saves, equip comparisons or live status filters.")
         startPreview:Hide(); specButton:Hide(); altInventoryButton:Hide()
         previewHeading:Show(); exitPreview:Show()
@@ -1176,7 +1197,7 @@ function GetGear:RefreshUI()
         previewClassButton:SetText("Class: " .. previewNames[preview.classToken])
         previewSpecButton:SetText("Spec: " .. preview.spec)
         previewLevel:SetText(tostring(preview.level))
-        previewFullButton:SetText(preview.full and "Full 1-30: ON" or "Full 1-30: OFF")
+        previewFullButton:SetText(preview.full and "Full 1-60: ON" or "Full 1-60: OFF")
         statusText:ClearAllPoints()
         statusText:SetPoint("TOPRIGHT", -38, -151)
         statusText:SetText(tostring(#list) .. " preview objectives" .. (preview.full and " (all levels)" or " (up to level " .. preview.level .. ")"))
@@ -1201,6 +1222,29 @@ function GetGear:RefreshUI()
         scroll:SetPoint("TOPLEFT",17,-185)
         scroll:SetPoint("BOTTOMRIGHT",-35,15)
     end
+    local viewKey = inPreview and ("preview:"..preview.classToken..":"..preview.spec..":"..
+        tostring(preview.level)..":"..tostring(preview.full))
+        or ("character:"..tostring(self.activeTab)..":"..tostring(spec)..":"..tostring(self.level))
+    if detailViewKey ~= viewKey then
+        detailPage, detailViewKey = 1, viewKey
+        scroll:SetVerticalScroll(0)
+    end
+    local pageCount = math.max(1, math.ceil(#list/DETAIL_PAGE_SIZE))
+    detailPage = math.min(detailPage, pageCount)
+    if pageCount > 1 then
+        pagePrev:Show(); pageNext:Show(); pageLabel:Show()
+        pagePrev:SetEnabled(detailPage>1)
+        pageNext:SetEnabled(detailPage<pageCount)
+        pageLabel:SetText(detailPage.."/"..pageCount)
+        local subset = {}
+        local first = (detailPage-1)*DETAIL_PAGE_SIZE+1
+        for i=first, math.min(#list, first+DETAIL_PAGE_SIZE-1) do
+            subset[#subset+1] = list[i]
+        end
+        list = subset
+    else
+        pagePrev:Hide(); pageNext:Hide(); pageLabel:Hide()
+    end
     local innerWidth = math.max(655, (scroll:GetWidth() or 725) - 5)
     content:SetWidth(innerWidth)
     local y = 0
@@ -1212,7 +1256,7 @@ function GetGear:RefreshUI()
         row.frame:SetHeight(95)
         row.item:Hide()
         row.name:SetText("No gear objectives in this category")
-        row.meta:SetText(inPreview and "No recommendations for this class / specialization / level; try All specs or Full 1-30."
+        row.meta:SetText(inPreview and "No recommendations for this class / specialization / level; try All specs or Full 1-60."
             or (#self.Gear == 0 and self:GetGuideEmptyMessage()
             or (self.activeTab=="bags" and "No ordinary bag upgrades needed, bag inspection unavailable, or bag recommendations disabled."
             or self.activeTab=="earlier" and "No gear is clearly outclassed, or automatic filtering is switched off."
@@ -1790,7 +1834,14 @@ function GetGear:RefreshOverlay()
             totalY = 44
         else
             noObjectives:Hide()
-            for i, gear in ipairs(list) do
+            -- The compact overlay is a quick tracker, not a thousands-row catalogue.
+            -- Browse the entire objective list in /getgear (paged above).
+            local overlayCap = 32
+            if #list > overlayCap then
+                objHeadText:SetText("OBJECTIVES ("..#list.."; first "..overlayCap.." shown, more in /getgear)")
+            end
+            for i=1,math.min(#list,overlayCap) do
+                local gear = list[i]
                 local r = overlayRows[i] or NewOverlayRow(i)
                 r.f:ClearAllPoints()
                 r.f:SetPoint("TOPLEFT", objContent, "TOPLEFT", 0, -totalY)
@@ -1926,7 +1977,7 @@ function GetGear:RefreshOverlay()
             end
         end
     end
-    for i=(opts.objectivesCollapsed and 1 or #list+1),#overlayRows do overlayRows[i].f:Hide() end
+    for i=(opts.objectivesCollapsed and 1 or math.min(#list,32)+1),#overlayRows do overlayRows[i].f:Hide() end
     local materials = self:GetCombinedMaterialRows(opts.materialScope)
     local totalMatsH=math.max(42,#materials*29+7)
     local desiredObj = opts.objectivesCollapsed and 0 or math.max(45,totalY)
