@@ -23,6 +23,7 @@ jobs:
           python3 tools/build_beta4_school_hints.py --output tools/beta4_schools.tsv
       - name: Flatten final effective item records and class eligibility
         run: |
+          mkdir -p dist
           lua5.4 tools/build_beta4_catalogue.lua . dist/CatalogueFacts.lua tools/beta4_schools.tsv
           luac5.4 -p dist/CatalogueFacts.lua
           test "$(grep -c '^ \[' dist/CatalogueFacts.lua)" -ge 15000
