@@ -1,0 +1,49 @@
+name: Stage Beta4 canonical equipment facts (temporary development utility)
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/stage-beta4-catalogue.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  canonicalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua 5.4
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+      - name: Derive source-version-locked school hints
+        run: |
+          python3 tools/build_beta4_school_hints.py --output tools/beta4_schools.tsv
+      - name: Flatten final effective item records and class eligibility
+        run: |
+          lua5.4 tools/build_beta4_catalogue.lua . dist/CatalogueFacts.lua tools/beta4_schools.tsv
+          luac5.4 -p dist/CatalogueFacts.lua
+          test "$(grep -c '^ \[' dist/CatalogueFacts.lua)" -ge 15000
+          wc -l -c dist/CatalogueFacts.lua
+      - name: Save derived single authoritative catalogue in development branch
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion' && github.event.pull_request.head.repo.full_name == github.repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "getgear-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin work/gear-1-60-expansion
+          git checkout -B work/gear-1-60-expansion origin/work/gear-1-60-expansion
+          cp dist/CatalogueFacts.lua CatalogueFacts.lua
+          git add CatalogueFacts.lua
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate flattened item facts, class masks and conservative pure-school hints"
+            git push origin HEAD:work/gear-1-60-expansion
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Beta4-canonical-catalogue-staging-only
+          path: |
+            dist/CatalogueFacts.lua
+            tools/beta4_schools.tsv
+          retention-days: 7
