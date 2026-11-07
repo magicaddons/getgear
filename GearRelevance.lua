@@ -49,6 +49,10 @@ function GetGear:ShouldDisplayGear(gear, classToken, mode)
     -- not automatically a reachable leveling objective. Available via
     -- the expanded catalogue until a player-observed route is added.
     if gear.sourceType=="Source not documented" then return false end
+    -- The upstream 'Drops' bucket has no specific obtainable enemy/zone.
+    -- Keep these possible random world drops in the expanded catalogue, not
+    -- the default leveling checklist. Observed curated drops still show.
+    if gear.sourceType=="World drop (route unverified)" then return false end
 
     classToken = classToken or self.classToken
     if not classToken then return true end
