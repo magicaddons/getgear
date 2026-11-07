@@ -49,7 +49,8 @@ def main():
         neutral=r"(?:\+\s*\d+\s*(?:Intellect|Spirit|Stamina|Strength|Agility|Spell Power|Healing|Mana)\b|" \
                 r"all spells?\b|damage done by spells\b|healing done\b|" \
                 r"\+\s*\d+\s*(?:Fire|Frost|Arcane|Shadow|Nature|Holy)\s+Resistance\b|" \
-                r"attack power\b|mana per 5\b|spell hit\b|spell critical\b)"
+                r"attack power\b|mana per 5\b|spell hit\b|spell critical\b|" \
+                r"\+\s*\d+\s*(?:Shadow|Nature|Holy)\s+(?:Spell\s+)?Damage\b)"
         if re.search(neutral,text,re.I):
             continue
         classes[item_id]=next(iter(found))
