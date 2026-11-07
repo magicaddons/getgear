@@ -1,0 +1,40 @@
+name: Stage broad Forever 1-60 item cache (unpublished)
+on:
+  pull_request:
+    paths:
+      - "tools/build_forever_catalog.py"
+      - ".github/workflows/stage-forever-catalog.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate source-caveated Forever 1-60 data
+        run: |
+          mkdir -p dist
+          python3 tools/build_forever_catalog.py --output dist/GeneratedForeverGear.lua --report dist/forever-audit.json
+          python3 - <<'PY'
+          import json,pathlib
+          report=json.loads(pathlib.Path('dist/forever-audit.json').read_text())
+          assert report['upstreamItems']>=10000
+          assert report['importableItems']>=1000
+          assert report['importableItems']<=10000
+          assert report['sourceLastRefresh'].startswith('2026-10')
+          print('PASS: staging cache has',report['importableItems'],'class-eligible items')
+          PY
+      - name: Syntax-check generated Lua
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+          luac5.4 -p dist/GeneratedForeverGear.lua
+      - name: Keep candidate only as development artifact, never publish release
+        uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-Forever-cache-staging-only
+          path: |
+            dist/GeneratedForeverGear.lua
+            dist/forever-audit.json
+          retention-days: 14
