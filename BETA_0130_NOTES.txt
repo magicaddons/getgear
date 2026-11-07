@@ -1,4 +1,4 @@
-GetGear v0.13.0 Beta 2 — PRIVATE TEST BUILD ONLY (WoW Forever)
+GetGear v0.13.0 Beta 3 — PRIVATE TEST BUILD ONLY (WoW Forever)
 ================================================================
 Not an official/stable public release. v0.12.14 remains published.
 Sources are an October 21 Forever beta-client snapshot + curated data,
@@ -13,6 +13,25 @@ INSTALL / ROLLBACK
 4. Launch the game and type /getgear (not /gg).
 5. Roll back by exiting and restoring your v0.12.14 or beta1 folder;
    restore any backed-up SavedVariables only if necessary.
+
+BETA 3 CHANGES -- ROLLING IMPORTED GEAR WINDOW
+- At level 15, imported target levels 1-10 are moved to Earlier Gear.
+  Levels 11-15 remain Available Now; 16-20 are Upcoming.
+- The cutoff re-evaluates whenever your character levels up or the
+  guide/overlay refreshes. It is NOT a one-time login setting.
+- Applies ONLY to unreviewed bulk-imported equipment; existing curated
+  equipment remains visible regardless of its age (unless stat-obsolete).
+- Nothing is permanently hidden: saved acquired/hidden statuses remain
+  intact and aging moves items to Earlier Gear.
+- The "Show all valid equipment" setting disables the five-level
+  age cutoff and restores older imported items to the normal view.
+  Stat-obsolete filtering is still a separate existing setting.
+- Tracked crafting-material totals exclude aged-out imported crafts;
+  All material scope continues to include Earlier Gear.
+- The full Preview Guide remains an all-level browsing tool.
+- Test at level 15: level-10 imported gear belongs in Earlier Gear,
+  level-11 imported gear remains Available Now, and curated older
+  recommendations are preserved. Check overlay and pagination.
 
 BETA 2 CHANGES
 - The DEFAULT guide now filters obvious client-only junk and off-role

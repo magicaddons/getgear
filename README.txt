@@ -1,9 +1,21 @@
-GETGEAR v0.13.0 BETA 2 - RELEVANT GEAR + EXPANDED 1-60 CATALOGUE
+GETGEAR v0.13.0 BETA 3 - ROLLING FIVE-LEVEL IMPORTED GEAR WINDOW
 ==============================================
 
 A World of Warcraft: Forever Alliance gear progression and crafting-planning
 addon. This TEST build supports all nine classes and levels 1-60.
 Not a public release: many generated sources remain unverified on live servers.
+
+BETA 3 -- DEFAULT LEVEL WINDOW
+------------------------------
+For a level-15 character, bulk-imported equipment with target level 10 or lower
+moves from Available Now / the tracker to Earlier Gear. Levels 11-15 remain
+available; levels 16-20 appear as upcoming. This rule recalculates on level-up.
+Hand-reviewed GetGear equipment, bags, acquired/hidden gear and the full
+Preview Guide are not aged out. The existing obsolete-gear stat filter is
+independent of this rule. Display settings > "Show all valid equipment"
+restores older imported candidates in the normal guide; it never restores
+hard-excluded QA/placeholder items. Materials in Tracked scope follow this
+window, while All scope retains older objectives.
 
 INSTALL
 -------

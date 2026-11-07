@@ -56,6 +56,12 @@ in-client test and release approval.
 
 - Indexed recommendation identities remove quadratic duplicate scans when
   thousands of new class objectives are registered.
+- Beta 3 adds a rolling five-level lookback for the bulk-imported catalogue:
+  a level-15 character sees imported target levels 11-15 in Available Now,
+  while target levels 10 and below appear in Earlier Gear. Only imported
+  gear is aged; hand-reviewed objectives and recorded statuses remain
+  untouched. Show all valid equipment restores the older imported entries.
+  Tracked materials obey the window; All materials and full Preview do not.
 - Beta 2 filters known QA/dev-only and generic Restored placeholder IDs outright;
   Winter Hats and off-role items remain available only with the per-character
   **Show all valid equipment** preference. Unverified generic world drops and
