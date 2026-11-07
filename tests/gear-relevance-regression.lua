@@ -46,6 +46,16 @@ local casterRing={itemID=910004,name="Spellpower ring",slot="Ring",
 assert(not addon:ShouldDisplayGear(physicalRing,"MAGE"))
 assert(not addon:ShouldDisplayGear(casterRing,"WARRIOR"))
 assert(addon:ShouldDisplayGear(casterRing,"MAGE"))
+local manaMail=synthetic(910007,"Mail","mana")
+assert(addon:ShouldDisplayGear(manaMail,"HUNTER"),
+    "Hunters use mana and must retain Intellect-only gear")
+assert(addon:ShouldDisplayGear(manaMail,"SHAMAN"))
+assert(not addon:ShouldDisplayGear(manaMail,"WARRIOR"),
+    "Unmixed mana-only Mail is not a normal Warrior upgrade")
+local unknownSource={itemID=910008,name="Unverified early item",slot="Ring",
+    sourceType="Source not documented",fromGeneratedCache=true,statRole="utility"}
+assert(not addon:ShouldDisplayGear(unknownSource,"WARRIOR"),
+    "Source-less client artifacts must not dominate default view")
 local utility={itemID=910005,name="Resist-all trinket",slot="Trinket",
     fromGeneratedCache=true,statRole="utility"}
 assert(addon:ShouldDisplayGear(utility,"MAGE")
@@ -70,6 +80,8 @@ addon.db.overlay.showAllValidGear=true
 assert(addon:ShouldDisplayGear(cloth,"WARRIOR"))
 assert(addon:ShouldDisplayGear(casterRing,"WARRIOR"))
 assert(addon:ShouldDisplayGear(physicalRing,"MAGE"))
+assert(addon:ShouldDisplayGear(unknownSource,"WARRIOR"),
+    "Expanded catalogue must retain unverified candidates")
 for _,id in ipairs({21524,21525}) do
     assert(addon:ShouldDisplayGear(addon.ItemCatalog[id],"WARRIOR"))
 end
