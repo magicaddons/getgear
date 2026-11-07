@@ -1,0 +1,49 @@
+GetGear v0.13.0 Beta 1 — TEST BUILD ONLY (WoW Forever)
+=========================================================
+Not a verified live-server gear guide or a public/stable release.
+Do not distribute as a final release. Existing v0.12.14 remains the public baseline.
+
+INSTALL / ROLLBACK
+1. Exit the game fully.
+2. Back up your existing _forever_/Interface/AddOns/GetGear folder.
+3. Back up SavedVariables containing GetGear_AccountDB and GetGear_CharacterDB.
+4. Replace the existing GetGear addon folder with the GetGear folder inside
+   this ZIP. Avoid nesting GetGear/GetGear by accident.
+5. Launch WoW Forever. Open the addon using /getgear (not /gg).
+6. To roll back: exit game and restore the saved v0.12.14 AddOns/GetGear folder
+   and, if needed, its saved SavedVariables files.
+
+WHAT IS IN THIS BUILD
+- Expands item planning to level 60 for all nine Alliance classes and
+  provides a 1–60 Preview Guide (40 visible detailed entries per page).
+- Adds about 7,751 item records and 36,518 class equipment objectives, using
+  an Oct 21 Forever BETA client cache plus the original reviewed gear list.
+- Original hand-reviewed records take precedence over generated records.
+- Adds the previously missed Runed Copper Pants and Thick War Axe to
+  eligible classes, including Rogue use of one-handed axes in Forever.
+- Preserves prior status/hidden keys and crafting material information.
+- A 32-entry compact overlay display cap and guarded item-data requests are
+  intended to reduce risk of freezes with larger catalogues.
+
+LIMITATIONS
+- Broad-catalogue records are CANDIDATES, not confirmed live-server drops.
+  Some may be unavailable or phased. Acquisition routes for these records
+  are explicitly uncertain; do not farm them based on unsupported locations.
+- Generated crafted items may have unknown recipes and ingredients; missing
+  materials are NOT assumed to be zero.
+- CI regression tests passed, but actual Forever client performance,
+  tooltip rendering and login behavior have not been verified.
+
+TEST CHECKLIST
+1. Log in with GetGear enabled. Look for stalls/crashes or repeated Lua errors.
+2. Open /getgear. Change tabs, levels and specs; inspect Preview Guide 1–60.
+3. Use detail pagination (Prev/Next) and ensure scrolling stays responsive.
+4. On your Warrior, confirm Runed Copper Pants and Thick War Axe appear when
+   level-eligible, not acquired, and not hidden.
+5. Test the strict 'hide uncraftable' toggle if you use it; default remains off.
+6. Switch characters, restart client, and check that prior acquired/hidden
+   states are preserved.
+7. For any problematic item, report its item ID, class, level and page.
+
+Development source: https://github.com/magicaddons/getgear/pull/4
+Data caveats: docs/GEAR_DATA_SCOPE.md in the repository.
