@@ -587,11 +587,11 @@ local levelText = NewText(window, "GameFontNormalLarge")
 levelText:SetPoint("TOPLEFT", 18, -36)
 local subtitle = NewText(window, "GameFontHighlightSmall", 720)
 subtitle:SetPoint("TOPLEFT", levelText, "BOTTOMLEFT", 0, -7)
-subtitle:SetText("Hover for stats. Equipped gear appears in Completed; outclassed and older imported gear in Earlier Gear. Saves unchanged.")
+subtitle:SetText("Hover for stats. Equipped gear appears in Completed; older and outclassed gear in Earlier Gear.")
 
 -- Session-only detailed-window planning state. Never saved and never used
 -- in GetGear.Gear / GetItems / RefreshOverlay or character progression.
-local preview = {active=false, classToken="ROGUE", spec="All", level=60, full=true}
+local preview = {active=false, classToken="ROGUE", level=60, full=true}
 local previewClasses = {
     "PRIEST", "WARLOCK", "MAGE", "DRUID", "WARRIOR",
     "ROGUE", "PALADIN", "HUNTER", "SHAMAN",
@@ -602,7 +602,7 @@ local previewNames = {
     HUNTER="Hunter", SHAMAN="Shaman",
 }
 local function PreviewEntries()
-    local all = GetGear:GetPreviewRecommendations(preview.classToken, preview.spec)
+    local all = GetGear:GetPreviewRecommendations(preview.classToken)
     local visible = {}
     for _, gear in ipairs(all) do
         if (preview.full or (gear.targetLevel and gear.targetLevel <= preview.level))
@@ -639,35 +639,16 @@ for i, entry in ipairs(tabNames) do
     end)
     tabs[i] = btn
 end
--- Manual specialization selector. It cycles planning profiles; it does not
--- inspect talents or assume a particular Forever specialization API.
-local specButton = NewButton(window, "All specs", 101, 24)
-specButton:SetPoint("TOPLEFT", 18, -122)
-specButton:SetScript("OnClick", function()
-    if GetGear:NextSpecialization() then
-        scroll:SetVerticalScroll(0)
-        GetGear:RefreshUI()
-    end
-end)
-specButton:SetScript("OnEnter", function(self)
-    if not GameTooltip then return end
-    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
-    GameTooltip:AddLine("Gear recommendation profile",1,0.82,0.35)
-    GameTooltip:AddLine("Click to cycle specialization profiles. This is a manual preference, not detected talents.",1,1,1,true)
-    GameTooltip:AddLine("Or type /getgear spec <name>",0.8,0.86,1)
-    GameTooltip:Show()
-end)
-specButton:SetScript("OnLeave", HideItemTooltip)
 local optionsButton = NewButton(window, "Display settings", 130, 24)
-optionsButton:SetPoint("TOPLEFT", 124, -122)
+optionsButton:SetPoint("TOPLEFT", 18, -122)
 optionsButton:SetScript("OnClick", function() GetGear:ShowSettings() end)
 
 -- Preview controls exist ONLY in the detailed guide, not the tracker overlay.
 local startPreview = NewButton(window, "Preview guide", 126, 24)
-startPreview:SetPoint("TOPLEFT", 260, -122)
+startPreview:SetPoint("TOPLEFT", 155, -122)
 -- Detailed-window-only entry point for cached bags/bank diagnostics.
 local altInventoryButton = NewButton(window, "Alt inventory", 126, 24)
-altInventoryButton:SetPoint("TOPLEFT", 392, -122)
+altInventoryButton:SetPoint("TOPLEFT", 289, -122)
 altInventoryButton:SetScript("OnClick", function()
     if GetGear.ShowAltInventoryBrowser then GetGear:ShowAltInventoryBrowser() end
 end)
@@ -687,29 +668,26 @@ local exitPreview = NewButton(window, "Return to character", 137, 24)
 exitPreview:SetPoint("TOPLEFT", 489, -91)
 local previewClassButton = NewButton(window, "Class: Rogue", 151, 24)
 previewClassButton:SetPoint("TOPLEFT", 18, -122)
-local previewSpecButton = NewButton(window, "Spec: All", 147, 24)
-previewSpecButton:SetPoint("TOPLEFT", 176, -122)
 local previewMinus = NewButton(window, "-", 28, 24)
-previewMinus:SetPoint("TOPLEFT", 329, -122)
+previewMinus:SetPoint("TOPLEFT", 176, -122)
 local previewLevelLabel = NewText(window, "GameFontHighlightSmall", 24)
-previewLevelLabel:SetPoint("TOPLEFT", 360, -126)
+previewLevelLabel:SetPoint("TOPLEFT", 210, -126)
 previewLevelLabel:SetText("Lv")
 local previewLevel = CreateFrame("EditBox", nil, window, "InputBoxTemplate")
 previewLevel:SetSize(45, 22)
-previewLevel:SetPoint("TOPLEFT", 389, -122)
+previewLevel:SetPoint("TOPLEFT", 239, -122)
 previewLevel:SetAutoFocus(false)
 previewLevel:SetNumeric(true)
 previewLevel:SetMaxLetters(2)
 previewLevel:SetText("60")
 local previewPlus = NewButton(window, "+", 28, 24)
-previewPlus:SetPoint("TOPLEFT", 441, -122)
+previewPlus:SetPoint("TOPLEFT", 290, -122)
 local previewFullButton = NewButton(window, "Full 1-60: ON", 156, 24)
-previewFullButton:SetPoint("TOPLEFT", 477, -122)
+previewFullButton:SetPoint("TOPLEFT", 328, -122)
 
 startPreview:SetScript("OnClick", function()
     preview.active = true
     preview.classToken = GetGear.GuideDefinitions[GetGear.classToken] and GetGear.classToken or "ROGUE"
-    preview.spec = "All"
     preview.level = 60
     preview.full = true
     scroll:SetVerticalScroll(0)
@@ -724,19 +702,7 @@ previewClassButton:SetScript("OnClick", function()
     for i, class in ipairs(previewClasses) do
         if class == preview.classToken then
             preview.classToken = previewClasses[(i % #previewClasses)+1]
-            preview.spec = "All"
-            break
-        end
-    end
-    scroll:SetVerticalScroll(0)
-    GetGear:RefreshUI()
-end)
-previewSpecButton:SetScript("OnClick", function()
-    local choices=GetGear:GetSpecializationChoices(preview.classToken)
-    for i, choice in ipairs(choices) do
-        if choice == preview.spec then
-            preview.spec = choices[(i % #choices)+1]
-            break
+                    break
         end
     end
     scroll:SetVerticalScroll(0)
@@ -776,14 +742,6 @@ previewClassButton:SetScript("OnEnter", function(self)
     GameTooltip:Show()
 end)
 previewClassButton:SetScript("OnLeave",HideItemTooltip)
-previewSpecButton:SetScript("OnEnter", function(self)
-    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
-    GameTooltip:AddLine("Cycle specialization filters",1,0.82,0.35)
-    GameTooltip:AddLine("This does not change your character's saved spec.",1,1,1,true)
-    GameTooltip:Show()
-end)
-previewSpecButton:SetScript("OnLeave",HideItemTooltip)
-
 local statusText = NewText(window, "GameFontHighlightSmall", 720, "RIGHT")
 statusText:SetPoint("TOPRIGHT", -38, -151)
 -- A full 1-60 catalogue can contain thousands of rows per class.
@@ -1163,9 +1121,9 @@ function GetGear:RefreshUI()
         levelText:SetText("GetGear  |  Account inventory")
         subtitle:SetText("Search saved bags and banks across your characters. Offline counts are last known, not live.")
         for _,button in ipairs(tabs) do button:Hide() end
-        specButton:Hide(); startPreview:Hide(); altInventoryButton:Hide();optionsButton:Hide()
+         startPreview:Hide(); altInventoryButton:Hide();optionsButton:Hide()
         previewHeading:Hide();exitPreview:Hide()
-        previewClassButton:Hide();previewSpecButton:Hide()
+        previewClassButton:Hide();
         previewMinus:Hide();previewPlus:Hide();previewLevelLabel:Hide();previewLevel:Hide();previewFullButton:Hide()
         statusText:Hide()
         pagePrev:Hide(); pageNext:Hide(); pageLabel:Hide()
@@ -1181,7 +1139,6 @@ function GetGear:RefreshUI()
     local race = type(UnitRace)=="function" and UnitRace("player") or ""
     local class = self.className or (type(UnitClass)=="function" and UnitClass("player")) or "Class"
     local classToken = type(UnitClass)=="function" and select(2,UnitClass("player")) or nil
-    local spec = self.GetSpecialization and self:GetSpecialization() or "All"
     local list
     for _, button in ipairs(tabs) do
         if inPreview then button:Hide() else button:Show() end
@@ -1191,12 +1148,11 @@ function GetGear:RefreshUI()
         levelText:SetText("GetGear  |  " .. ColoredCharacterLabel(
             preview.full and "1-60" or preview.level, "", previewNames[preview.classToken], preview.classToken))
         subtitle:SetText("Browse future or alternate-class gear. Read-only: no saves, equip comparisons or live status filters.")
-        startPreview:Hide(); specButton:Hide(); altInventoryButton:Hide()
+        startPreview:Hide();  altInventoryButton:Hide()
         previewHeading:Show(); exitPreview:Show()
-        previewClassButton:Show(); previewSpecButton:Show()
+        previewClassButton:Show(); 
         previewMinus:Show(); previewPlus:Show(); previewLevelLabel:Show(); previewLevel:Show(); previewFullButton:Show()
         previewClassButton:SetText("Class: " .. previewNames[preview.classToken])
-        previewSpecButton:SetText("Spec: " .. preview.spec)
         previewLevel:SetText(tostring(preview.level))
         previewFullButton:SetText(preview.full and "Full 1-60: ON" or "Full 1-60: OFF")
         statusText:ClearAllPoints()
@@ -1209,24 +1165,23 @@ function GetGear:RefreshUI()
         list = self:GetItems(self.activeTab)
         levelText:SetText(playerName .. "  |  " .. ColoredCharacterLabel(self.level, race, class, classToken))
         subtitle:SetText("Hover for stats. Equipped gear appears in Completed; outclassed and older imported gear in Earlier Gear. Saves unchanged.")
-        specButton:SetText(spec == "All" and "All specs" or spec)
-        specButton:Show(); startPreview:Show(); altInventoryButton:Show()
+         startPreview:Show(); altInventoryButton:Show()
         previewHeading:Hide(); exitPreview:Hide()
-        previewClassButton:Hide(); previewSpecButton:Hide()
+        previewClassButton:Hide(); 
         previewMinus:Hide(); previewPlus:Hide(); previewLevelLabel:Hide(); previewLevel:Hide(); previewFullButton:Hide()
-        local contextNote = (self.classToken == "MAGE" and spec == "All")
-            and "  |  All shows Arcane, Fire and Frost alternatives" or ""
         statusText:ClearAllPoints()
         statusText:SetPoint("TOPRIGHT", -38, -151)
-        statusText:SetText(tostring(#list) .. " objectives" .. contextNote)
+        local dominant=self.GetDominantTalentTree and self:GetDominantTalentTree()
+        statusText:SetText(tostring(#list) .. " equipment items" ..
+            (self.classToken=="MAGE" and dominant and ("  |  "..dominant.." talents") or ""))
         scroll:ClearAllPoints()
         scroll:SetPoint("TOPLEFT",17,-185)
         scroll:SetPoint("BOTTOMRIGHT",-35,15)
     end
     local relevanceKey = self.db.overlay.showAllValidGear and "all" or "relevant"
-    local viewKey = inPreview and ("preview:"..preview.classToken..":"..preview.spec..":"..
+    local viewKey = inPreview and ("preview:"..preview.classToken..":"..
         tostring(preview.level)..":"..tostring(preview.full)..":"..relevanceKey)
-        or ("character:"..tostring(self.activeTab)..":"..tostring(spec)..":"..tostring(self.level)..":"..relevanceKey)
+        or ("character:"..tostring(self.activeTab)..":"..tostring(self.level)..":"..relevanceKey..":"..tostring(self.dominantTalentTree))
     if detailViewKey ~= viewKey then
         detailPage, detailViewKey = 1, viewKey
         scroll:SetVerticalScroll(0)
@@ -1258,11 +1213,11 @@ function GetGear:RefreshUI()
         row.frame:SetHeight(95)
         row.item:Hide()
         row.name:SetText("No gear objectives in this category")
-        row.meta:SetText(inPreview and "No recommendations for this class / specialization / level; try All specs or Full 1-60."
+        row.meta:SetText(inPreview and "No equipment for this class and level; try Full 1-60."
             or (#self.Gear == 0 and self:GetGuideEmptyMessage()
             or (self.activeTab=="bags" and "No ordinary bag upgrades needed, bag inspection unavailable, or bag recommendations disabled."
             or self.activeTab=="earlier" and "No gear is outclassed or at least five levels below you in the default imported guide."
-            or "Check other tabs or another specialization; hidden objectives remain in Hidden.")))
+            or "Check other tabs; manually hidden equipment remains in Hidden.")))
         row.levelHeader:SetText("LEVEL")
         row.levelValue:SetText("")
         row.desc:Hide()

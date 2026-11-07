@@ -1,24 +1,40 @@
-# GetGear data model (0.11.3)
+# GetGear Beta 4 data architecture
 
-The addon is loaded from `Interface/AddOns/GetGear/GetGear.toc`.
-Lua modules share the `GetGear` table supplied via WoW's addon `...` varargs.
+The source of truth for each item is **ResearchedItemFacts.lua** (259
+pre-import records containing final researched facts and confidence labels),
+falling back to **EquipmentCache.lua** (7,678 additional compact Forever
+beta-client records). When an ID occurs in both, the researched item facts
+win; the equipability mask/level derived from the client cache is independent.
 
-- `ClassProfiles.lua` implements `GetGear.ItemCatalog` and class recommendation
-  tables: `GetGear.Recommendations.PRIEST`, `...ROGUE`, etc.
-- `GetGear:RegisterItem` holds reusable item facts while
-  `GetGear:AddRecommendation` holds class/spec/level-specific objectives.
-- `GetGear:GetPreviewRecommendations(class, spec)` builds read-only planning
-  lists separately from `GetGear.Gear` (the live character guide).
-- `Core.lua` initialises the current character via `ADDON_LOADED` where
-  `arg1 == addonName` (which is `GetGear`), and initialises UI last.
-- The per-character saved-variable table is `GetGear_CharacterDB` and is
-  declared in `GetGear.toc` as `SavedVariablesPerCharacter`.
-- Objective persistence keys (`item_<ID>` or the distinct Rogue
-  `item_<ID>_offhand` entries) remain stable from v0.11.2.
-- `UI.lua` references `Interface\AddOns\GetGear\MapPin` for map artwork.
+**GuideEngine.lua** builds one class-wide index directly from equipability
+masks; there are no editorial Recommendation tables, spec-profile selectors
+or extra Main Hand/Off Hand recommendations. **GuideState.lua** handles
+progress and level-window lists. **GearRelevance.lua** applies the same
+five-level and stat-role rules to ALL records. **TalentAwareness.lua** reads
+WoW Forever's CamelotCombat trait groups, never modifies talents, and
+recognizes only a clearly dominant Mage tree for exclusive school bonuses.
 
-**Migration note:** v0.11.3's rename of the addon folder and saved-variable
-name intentionally does not import the former beta's character settings.
-Future production releases must preserve the `GetGear` addon identity and
-`GetGear_CharacterDB` table, and should migrate data explicitly if changing
-saved-variable schemas or objective IDs.
+**MapNavigation.lua** retains map-opening code; all old patch files,
+recipe-source reconciliations and acquisition edits have been folded into
+the final researched facts. Runtime helpers for recipe knowledge, bags,
+materials, account inventory, item-cache load guards and gear comparisons
+are independent, unchanged except for the new source/visibility boundary.
+
+### Original evidence and regeneration
+
+Historical staged releases remain available in Git history. The scripts
+tools/build_beta4_catalogue.lua, tools/build_beta4_school_hints.py and
+tools/rewrite_beta4_generated.py derive the consolidated data from the
+pre-Beta4 branch's final effective item facts and the SHA-locked October 21
+Forever beta cache. They are **development tools**, not addon files.
+
+The initial Beta4 build resets per-character progress and presentation
+preferences with `schemaVersion=4`. Account-wide inventory tracking is
+intentionally separate.
+
+### Limitations
+
+Cached equipment facts are NOT proof of acquisition on the live realm.
+Hand-authored research is preserved as evidence, not as a special permission
+to bypass universal filtering. An uncertain talent API or split fails open;
+users can also opt into the complete class-equippable catalogue.

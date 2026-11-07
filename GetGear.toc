@@ -1,45 +1,22 @@
 ## Interface: 16001
 ## Title: GetGear
-## Notes: Alliance gear progression with 1-60 expansion preview, crafting materials and acquisition guidance for WoW Forever
-## Version: 0.13.0-beta3
+## Notes: Alliance class-eligible gear 1–60 with source and crafting evidence (WoW Forever)
+## Version: 0.14.0-beta4
 ## SavedVariables: GetGear_AccountDB
 ## SavedVariablesPerCharacter: GetGear_CharacterDB
 
-Data.lua
-SupplementalGear.lua
-EarlyGear.lua
-Acquisition.lua
+ResearchedItemFacts.lua
+EquipmentCache.lua
+GuideEngine.lua
+GuideState.lua
 Materials.lua
+MapNavigation.lua
 AltInventory.lua
 RecipeKnowledge.lua
 BagUpgrades.lua
-ClassProfiles.lua
-WarlockGear.lua
-MageGear.lua
-DungeonGear.lua
-ReleaseAuditItems.lua
-DruidGear.lua
-WarriorGear.lua
-ExpandedGearItems.lua
-RogueGear.lua
-PaladinGear.lua
-HunterGear.lua
-ShamanGear.lua
-AcquisitionRoutes.lua
-CraftingAudit.lua
-RecipeLearningCorrections.lua
-SourceEvidence.lua
-DataIntegrity127.lua
-EvidenceReconciliation129.lua
-EvidenceReconciliation130.lua
-DungeonAcquisitionCorrections.lua
-LaunchEvidence131.lua
-EarlyCraftedProgression132.lua
-EarlyCoverage133.lua
-Level60GearPhase1.lua
-GeneratedForeverGear.lua
 ItemData.lua
 CraftingVisibility.lua
+TalentAwareness.lua
 GearRelevance.lua
 GearCompare.lua
 Core.lua

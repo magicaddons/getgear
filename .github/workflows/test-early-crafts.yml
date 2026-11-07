@@ -1,77 +1,78 @@
-name: Validate GetGear Data and Login Events
-
+name: Validate GetGear Beta 4 unified catalogue and package
 on:
   pull_request:
     paths:
       - "*.lua"
       - "GetGear.toc"
-      - "tests/**"
+      - "tests/beta4-*.lua"
       - ".github/workflows/test-early-crafts.yml"
+      - "BETA_0140_NOTES.txt"
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Check out source
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Install Lua 5.4
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq lua5.4
-      - name: Compile modules and run regressions
+      - name: Syntax, unified data, class, relevance and talent regressions
+        shell: bash
         run: |
-          lua5.4 tests/early-crafts-regression.lua .
-          lua5.4 tests/item-data-regression.lua .
-          lua5.4 tests/comparison-cleanup.lua .
-          lua5.4 tests/craftability-filter.lua .
-          lua5.4 tests/early-coverage-regression.lua .
-          lua5.4 tests/level60-staging-regression.lua .
-          lua5.4 tests/full-catalogue-eligibility.lua .
-          lua5.4 tests/gear-relevance-regression.lua .
-          lua5.4 tests/rolling-level-window.lua .
-          lua5.4 tests/generated-item-load-guard.lua .
-          lua5.4 tests/coverage-audit.lua .
-      - name: Package GetGear v0.13.0 Beta 3 (private test candidate)
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in
+              *.lua) test -f "$module"; luac5.4 -p "$module" ;;
+            esac
+          done < GetGear.toc
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+      - name: Verify minimal install manifest and make Beta 4 ZIP
         if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
         shell: bash
         run: |
           set -euo pipefail
-          grep -Fxq '## Version: 0.13.0-beta3' GetGear.toc
-          test "$(grep -c '^GearCompare.lua$' GetGear.toc)" -eq 1
-          test "$(grep -c '^GeneratedForeverGear.lua$' GetGear.toc)" -eq 1
-          test "$(grep -c '^EarlyCoverage133.lua$' GetGear.toc)" -eq 1
-          test "$(grep -c '^GearRelevance.lua$' GetGear.toc)" -eq 1
+          grep -Fxq '## Version: 0.14.0-beta4' GetGear.toc
+          grep -Fxq 'ResearchedItemFacts.lua' GetGear.toc
+          grep -Fxq 'EquipmentCache.lua' GetGear.toc
+          grep -Fxq 'TalentAwareness.lua' GetGear.toc
+          if grep -Fxq 'GeneratedForeverGear.lua' GetGear.toc ||
+             grep -Fxq 'ClassProfiles.lua' GetGear.toc ||
+             grep -Fxq 'DataIntegrity127.lua' GetGear.toc; then
+            echo 'Legacy runtime module unexpectedly included'
+            exit 1
+          fi
           toc_count="$(grep -c '.lua$' GetGear.toc)"
-          local_count="$(find . -maxdepth 1 -name '*.lua' -type f | wc -l)"
-          test "$local_count" -eq "$toc_count"
-          test "$toc_count" -ge 39
+          test "$toc_count" -ge 15
+          test "$toc_count" -le 18
+          mkdir -p dist/GetGear
           while IFS= read -r module; do
             case "$module" in
-              *.lua) test -f "$module" ;;
+              *.lua) cp "$module" dist/GetGear/ ;;
             esac
           done < GetGear.toc
-          mkdir -p dist/GetGear
-          cp ./*.lua GetGear.toc README.txt BETA_0130_NOTES.txt MapPin.tga DATA_MODEL.md dist/GetGear/
-          printf 'GetGear version: 0.13.0-beta3\nDevelopment branch: work/gear-1-60-expansion\nSource commit: %s\nBuild type: test-only GitHub Actions artifact, NOT a public release\n' "$GITHUB_SHA" > dist/GetGear/BUILD_INFO.txt
+          cp GetGear.toc README.txt BETA_0140_NOTES.txt MapPin.tga DATA_MODEL.md dist/GetGear/
+          printf 'GetGear version: 0.14.0-beta4\nDevelopment branch: work/gear-1-60-expansion\nSource commit: %s\nType: private test ZIP, NOT a public release\n' "$GITHUB_SHA" > dist/GetGear/BUILD_INFO.txt
+          test "$(find dist/GetGear -maxdepth 1 -name '*.lua' | wc -l)" -eq "$toc_count"
           test "$(find dist/GetGear -maxdepth 1 -type f | wc -l)" -eq "$((toc_count+6))"
-          (cd dist && zip -q -r '../GetGear-v0.13.0-beta3-test-only.zip' GetGear)
-          unzip -tq GetGear-v0.13.0-beta3-test-only.zip
-          unzip -p GetGear-v0.13.0-beta3-test-only.zip GetGear/GetGear.toc | grep -Fxq '## Version: 0.13.0-beta3'
-          unzip -p GetGear-v0.13.0-beta3-test-only.zip GetGear/GeneratedForeverGear.lua | grep -Fq 'GetGear.GeneratedForeverGear=audit'
-          unzip -p GetGear-v0.13.0-beta3-test-only.zip GetGear/EarlyCoverage133.lua | grep -Fq 'Thick War Axe'
-          unzip -p GetGear-v0.13.0-beta3-test-only.zip GetGear/GearRelevance.lua | grep -Fq 'IsHardExcludedGear'
-          unzip -p GetGear-v0.13.0-beta3-test-only.zip GetGear/UI.lua | grep -Fq 'allValidGearCheck=NewCheck'
-          sha256sum GetGear-v0.13.0-beta3-test-only.zip
-          ls -lh GetGear-v0.13.0-beta3-test-only.zip
-      - name: Upload GetGear v0.13.0 Beta 3 installable ZIP (test only)
+          (cd dist && zip -q -r '../GetGear-v0.14.0-beta4-test-only.zip' GetGear)
+          unzip -tq GetGear-v0.14.0-beta4-test-only.zip
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GetGear.toc | grep -Fxq '## Version: 0.14.0-beta4'
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GuideEngine.lua | grep -Fq 'EquipmentByClass'
+          unzip -p GetGear-v0.14.0-beta4-test-only.zip GetGear/GearRelevance.lua | grep -Fq 'IsOlderGear'
+          sha256sum GetGear-v0.14.0-beta4-test-only.zip
+          ls -lh GetGear-v0.14.0-beta4-test-only.zip
+      - name: Upload private GetGear Beta 4 ZIP
         if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
         uses: actions/upload-artifact@v4
         with:
-          name: GetGear-v0.13.0-beta3-test-only
-          path: GetGear-v0.13.0-beta3-test-only.zip
+          name: GetGear-v0.14.0-beta4-test-only
+          path: GetGear-v0.14.0-beta4-test-only.zip
           if-no-files-found: error
           retention-days: 30

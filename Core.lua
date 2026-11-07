@@ -16,6 +16,12 @@ events:RegisterEvent("TRADE_SKILL_SHOW")
 events:RegisterEvent("CHAT_MSG_SKILL")
 events:RegisterEvent("PLAYER_REGEN_DISABLED")
 events:RegisterEvent("PLAYER_REGEN_ENABLED")
+-- Forever can expose different talent-event subsets. Optional registration
+-- must not abort addon loading when a particular event is unavailable.
+for _,name in ipairs({"TRAIT_CONFIG_UPDATED","ACTIVE_TALENT_GROUP_CHANGED",
+                     "PLAYER_TALENT_UPDATE"}) do
+    pcall(events.RegisterEvent,events,name)
+end
 
 local function Say(message)
     if DEFAULT_CHAT_FRAME then
@@ -41,6 +47,7 @@ local function NotifyLevel(newLevel)
         if item.targetLevel == newLevel and VerifiedNotificationSource(item)
             and not GetGear:GetStatus(item) and not GetGear:IsHidden(item)
             and not GetGear:IsGearEquipped(item)
+            and (not GetGear.ShouldDisplayGear or GetGear:ShouldDisplayGear(item,GetGear.classToken,"available"))
             and (not GetGear.ShouldDisplayCraftedGear or GetGear:ShouldDisplayCraftedGear(item)) then
             count = count + 1
         end
@@ -55,6 +62,16 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if arg1 ~= addonName then return end
         if type(GetGear_CharacterDB) ~= "table" then GetGear_CharacterDB = {} end
         local db = GetGear_CharacterDB
+        -- Explicit Beta 4 format reset: no compatibility layer for the
+        -- retired curated/spec objective system. The account bag ledger
+        -- remains independent and is not wiped.
+        if db.schemaVersion~=4 then
+            db.status={}
+            db.hidden={}
+            db.overlay={}
+            db.detail={}
+            db.schemaVersion=4
+        end
         if type(db.status) ~= "table" then db.status = {} end
         if type(db.hidden) ~= "table" then db.hidden = {} end
         if type(db.overlay) ~= "table" then db.overlay = {} end
@@ -88,17 +105,17 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
             o.materialShare=nil
         end
         if type(db.detail.scale) ~= "number" then db.detail.scale=1 end
-        -- Per-character SavedVariables are already isolated by WoW. No migration
-        -- of existing acquired/hidden/minimized item state is necessary.
-        if type(db.specialization) ~= "string" then db.specialization = "All" end
+        db.specialization=nil -- the manual specialization system is retired
         GetGear.db = db
         if GetGear.AltInventory then GetGear.AltInventory:Initialize() end
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or 1
+        if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
         if GetGear.InitializeUI then GetGear:InitializeUI() end
     elseif event == "PLAYER_ENTERING_WORLD" then
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or GetGear.level
+        if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
         if GetGear.RefreshAll then GetGear:RefreshAll() end
     elseif event == "UNIT_INVENTORY_CHANGED" then
         if arg1 == "player" and GetGear.RefreshAll then GetGear:RefreshAll() end
@@ -122,6 +139,10 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         local newLevel = tonumber(arg1) or UnitLevel("player") or GetGear.level
         if newLevel > GetGear.level then NotifyLevel(newLevel) end
         GetGear.level = newLevel
+        if GetGear.RefreshAll then GetGear:RefreshAll() end
+    elseif event == "TRAIT_CONFIG_UPDATED" or event == "ACTIVE_TALENT_GROUP_CHANGED"
+        or event == "PLAYER_TALENT_UPDATE" then
+        if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
         if GetGear.RefreshAll then GetGear:RefreshAll() end
     elseif event == "PLAYER_REGEN_DISABLED" or event == "PLAYER_REGEN_ENABLED" then
         if GetGear.RefreshOverlay then GetGear:RefreshOverlay() end
@@ -169,27 +190,16 @@ SlashCmdList.GETGEAR = function(command)
         else Say("Use /getgear inventory [itemID] to check an item.") end
     elseif command == "status" then
         Say("Level " .. tostring(GetGear.level) .. " " .. tostring(GetGear.className or "unknown class")
-            .. "; profile " .. tostring(GetGear.GetSpecialization and GetGear:GetSpecialization() or "All")
-            .. "; active recommendations " .. tostring(#GetGear.Gear)
+            .. "; inferred talent tree " .. tostring(GetGear.GetDominantTalentTree and GetGear:GetDominantTalentTree() or "unclassified")
+            .. "; class equipment " .. tostring(#GetGear.Gear)
             .. "; shared catalog " .. tostring(GetGear.GetCatalogSize and GetGear:GetCatalogSize() or 0)
             .. "; interface " .. tostring(select(4, GetBuildInfo())) .. ".")
-    elseif command == "spec" then
-        local choices = GetGear:GetSpecializationChoices()
-        Say("Current profile: " .. GetGear:GetSpecialization() .. ". Options: " .. table.concat(choices, ", ")
-            .. ". Use /getgear spec Shadow (for example) to select one.")
-    elseif command:sub(1,5) == "spec " then
-        local requested = strtrim(command:sub(6))
-        if GetGear:SetSpecialization(requested) then
-            Say("Gear profile set to " .. GetGear:GetSpecialization() .. ". " .. #GetGear.Gear .. " recommendations in this profile.")
-        else
-            Say("Unknown profile. Choices for this class: " .. table.concat(GetGear:GetSpecializationChoices(), ", "))
-        end
     elseif command == "overlay" then
         if GetGear.ToggleOverlay then GetGear:ToggleOverlay() end
     elseif command == "settings" then
         if GetGear.ShowSettings then GetGear:ShowSettings() end
     elseif command == "help" then
-        Say("/getgear = guide; /getgear inventory [itemID] = cached bags/banks; /getgear bankdiag = bank slot diagnostics; /getgear spec [name] = build; /getgear overlay = tracker; /getgear settings = settings; /getgear notify = alerts; /getgear status = diagnostics")
+        Say("/getgear = guide; /getgear inventory [itemID] = cached bags/banks; /getgear bankdiag = bank slot diagnostics; /getgear overlay = tracker; /getgear settings = settings; /getgear notify = alerts; /getgear status = diagnostics")
     elseif GetGear.ToggleUI then
         GetGear:ToggleUI()
     end

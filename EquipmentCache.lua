@@ -7687,53 +7687,44 @@ local rows = {
     {286995,"Guardian's Emblem",28,"Neck","Jewelry",1,511,"",1,false,"spell"},
     {286996,"City Guard's Tarnished Blade",29,"Main Hand","Sword",1,438,"",1,false,"spell"},
 }
-local audit={newItems=0,newObjectives=0,existingItems=0,byClass={}}
+
+-- Compact generated equipment; this file must load AFTER ResearchedItemFacts.
+-- Source is an October 2026 Forever beta-client snapshot, not live-drop proof.
+local audit={newItems=0,eligibility=0}
+GetGear.EquipmentEligibility=GetGear.EquipmentEligibility or {}
 for _,r in ipairs(rows) do
-    local id,name,level,slot,subtype,sourceCode,mask,sourceLabel,phase,craftOnly,role =
+    local id,name,level,slot,subtype,sourceCode,mask,label,phase,craftOnly,role =
         r[1],r[2],r[3],r[4],r[5],r[6],r[7],r[8],r[9],r[10],r[11]
     if not GetGear.ItemCatalog[id] then
         local description=SOURCES[sourceCode] or SOURCES[1]
-        local zone=(sourceLabel~='' and sourceLabel or 'Source not yet confirmed')
+        local zone=(label~='' and label or 'Source not yet confirmed')
         if phase>1 then zone=zone..' (future phase possible)' end
-        assert(GetGear:RegisterItem({
+        GetGear.ItemCatalog[id]={
             itemID=id,name=name,availableLevel=level,slot=slot,
+            armorType=subtype,statRole=role,
             sourceType=description,source=description,zone=zone,
             sourceURL='https://www.wowhead.com/forever/item='..id,
             confidence='client',acquisitionConfidence='classic-reference',
             acquisitionKind=description,craftOnly=craftOnly,
-            fromGeneratedCache=true,armorType=subtype,statRole=role,
             notes=DEFAULT_NOTE,
             instructions='Client-indexed equipment; specific drop, quest, vendor,'
                 ..' or recipe access is unverified in live WoW Forever.',
-        }), 'generated catalogue item collision '..id)
+        }
         audit.newItems=audit.newItems+1
-    else
-        audit.existingItems=audit.existingItems+1
     end
-    for i,classToken in ipairs(CLASSES) do
-        if math.floor(mask / (2 ^ (i-1))) % 2 >= 1 then
-            local goal = level
-            if subtype=='Mail' and (classToken=='HUNTER' or classToken=='SHAMAN') then
-                goal=math.max(40,goal)
-            elseif subtype=='Plate' then
-                goal=math.max(40,goal)
-            end
-            local progressID='item_'..id
-            local idx=GetGear.RecommendationIndex and GetGear.RecommendationIndex[classToken]
-            local exists=idx and idx.ids[progressID]
-            if not idx then
-                for _,old in ipairs(GetGear.Recommendations[classToken] or {}) do
-                    if old.itemID==id then exists=true;break end
-                end
-            end
-            if not exists then
-                assert(GetGear:AddRecommendation(classToken,{
-                    itemID=id,targetLevel=goal,focus='All',
-                }), 'generated recommendation failed '..id..' '..classToken)
-                audit.newObjectives=audit.newObjectives+1
-                audit.byClass[classToken]=(audit.byClass[classToken] or 0)+1
-            end
-        end
+    local facts=GetGear.ItemCatalog[id]
+    if not facts.armorType then facts.armorType=subtype end
+    if not facts.statRole then facts.statRole=role end
+    if GetGear.PureSchoolBonus and GetGear.PureSchoolBonus[id] then
+        facts.schoolOnly=GetGear.PureSchoolBonus[id]
     end
+    GetGear.EquipmentEligibility[id]={mask,level,subtype}
+    audit.eligibility=audit.eligibility+1
 end
+assert(audit.eligibility>7000,"Forever equipment cache unexpectedly sparse")
+local total=0
+for _ in pairs(GetGear.ItemCatalog) do total=total+1 end
+assert(GetGear.CatalogueAudit and
+       total==GetGear.CatalogueAudit.items,
+       "Researched and generated catalogue totals disagree: "..total)
 GetGear.GeneratedForeverGear=audit
