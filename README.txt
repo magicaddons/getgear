@@ -1,12 +1,12 @@
-GETGEAR v0.12.14 BETA - CRAFTING FILTER + CLEANER COMPARISONS
+GETGEAR v0.13.0 BETA 1 - ALL-CLASS 1-60 TEST CATALOGUE
 ==============================================
 
 A World of Warcraft: Forever Alliance gear progression and crafting-planning
-addon. Supports all nine classes and levels 1-30.
+addon. This TEST build supports all nine classes and levels 1-60.\nNot a public release: many generated sources remain unverified on live servers.
 
 INSTALL
 -------
-1. Exit WoW.
+IMPORTANT: Read BETA_0130_NOTES.txt first for backup and rollback instructions.\n1. Exit WoW.
 2. Back up your current GetGear folder and SavedVariables if desired.
 3. Replace _forever_/Interface/AddOns/GetGear with this package's GetGear folder.
    Do not keep an old WoWForeverGearGuide addon folder alongside it.
