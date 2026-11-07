@@ -164,7 +164,8 @@ end
 function GetGear:IsCraftMaterialsUnknown(gear)
     if not gear or gear.bagUpgrade then return false end
     local profession=gear.profession or gear.sourceType
-    return (profession=="Blacksmithing" or profession=="Leatherworking"
+    return (gear.craftOnly==true
+        or profession=="Blacksmithing" or profession=="Leatherworking"
         or profession=="Tailoring" or profession=="Enchanting")
         and (type(gear.reagents)~="table" or #gear.reagents==0)
 end
