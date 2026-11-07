@@ -84,6 +84,7 @@ for id,name in pairs(hints) do
     assert(addon.ItemCatalog[id],"School-only hint missing actual equipment "..id)
     schools[name]=true;count=count+1
 end
-assert(count>=5 and schools.Fire and schools.Frost,
-    "Pure-school metadata absent from compact catalogue: "..count)
-print("PASS Beta4 C_Traits Fire/Frost/Arcane dominance, mixed stat safety, ambiguity and API fallback, expanded/preview and 13 pure-school items")
+assert(count>=10 and schools.Fire and schools.Arcane,
+    "Conservative school metadata absent from compact catalogue: "..count)
+assert(not hints[6898],"Mixed Fire/Shadow Warlock quest item must not be school-exclusive")
+print("PASS Beta4 C_Traits Fire/Frost/Arcane dominance, mixed stat safety, ambiguity and API fallback, expanded/preview and conservative pure-school items")
