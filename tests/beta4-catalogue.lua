@@ -71,7 +71,7 @@ local trap=assert(addon.ItemCatalog[252495])
 local ingredients={}
 for _,r in ipairs(trap.reagents or {}) do ingredients[r.itemID]=r.amount end
 assert(ingredients[2318]==12 and ingredients[4231]==3 and
-       ingredients[249427]==2 and ingredients[2320]==1 and ingredients[6470]==2,
+       ingredients[249427]==2 and ingredients[2321]==1 and ingredients[6470]==2,
        "Trapper's Leather Gloves verified ingredients lost")
 assert(addon.ItemCatalog[2933].acquisitionLocation or
        addon.ItemCatalog[2933].questStart,
