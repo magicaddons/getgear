@@ -18,10 +18,10 @@ in-client test and release approval.
   [Napalmsteak's Forever item cache](https://github.com/Napalmsteak/WoW-Classic-Item-Caches).
   The cache contains 10,058 client-indexed rows and was last refreshed
   **October 21, 2026** (beta-era snapshot).
-- Parsed 7,722 records as plausibly equipable green-or-better armor, weapons,
-  jewelry or relevant relics within levels 1–60. Kept **7,492 records not
+- Parsed 7,678 records as plausibly equipable green-or-better armor, weapons,
+  jewelry or relevant relics within levels 1–60. Kept **7,448 records not
   already represented by the curated GetGear catalogue**. Current offline
-  totals are **7,751 items** and **36,518 class-specific equipment objectives**.
+  totals are **7,707 items** and **36,275 class-specific equipment objectives**.
   These are candidates, **not all validated live upgrades**.
 - The importer excludes unconfirmed-client facts, items without a proven
   equip level (unless low-level starter gear), unsupported slots, faction/
@@ -56,6 +56,13 @@ in-client test and release approval.
 
 - Indexed recommendation identities remove quadratic duplicate scans when
   thousands of new class objectives are registered.
+- Beta 2 filters known QA/dev-only and generic Restored placeholder IDs outright;
+  Winter Hats and off-role items remain available only with the per-character
+  **Show all valid equipment** preference. Unverified generic world drops and
+  records without documented sources are also expanded-mode only.
+- Relevance heuristics differentiate true spell bonuses, physical stats,
+  mixed stats, mana/Intellect and utility/resistances. Hunters retain mana
+  gear; Paladin/Druid/Shaman hybrids retain meaningful cloth options.
 - Detailed gear lists render **40 rows per page**; the compact overlay limits
   itself to **32 displayed objectives**. The complete list remains in the
   detailed window, without deleting objectives.
@@ -83,7 +90,7 @@ in-client test and release approval.
   and profession sources with observed Forever routes.
 - Fill missing crafting reagents and recipe learning requirements progressively.
 - Audit faction-restricted quest rewards, weapons with unusual proficiency
-  exceptions, and the remaining 2,336 excluded cache rows case by case.
+  exceptions, and the remaining 2,380 excluded cache rows case by case.
 - Keep v0.12.14 published unchanged until a release candidate is approved.
 
 Source copyright/attribution: item data and names © Blizzard Entertainment;
