@@ -16,9 +16,8 @@ local NOVELTY_IDS = {
 }
 local PHYSICAL = {WARRIOR=true, ROGUE=true, HUNTER=true}
 local CLOTH_CASTER = {PRIEST=true, MAGE=true, WARLOCK=true}
-local CLOTH_NONSTANDARD = {WARRIOR=true, PALADIN=true, ROGUE=true, HUNTER=true}
-local NO_LEATHER = {WARRIOR=true, PALADIN=true}
-local HYBRID_CASTER = {DRUID=true, SHAMAN=true}
+local CLOTH_NONSTANDARD = {WARRIOR=true, ROGUE=true, HUNTER=true}
+local HYBRID_CASTER = {PALADIN=true, DRUID=true, SHAMAN=true}
 
 function GetGear:IsHardExcludedGear(gear)
     if not gear then return false end
@@ -56,7 +55,14 @@ function GetGear:ShouldDisplayGear(gear, classToken, mode)
         if HYBRID_CASTER[classToken] and gear.statRole~="spell"
             and gear.statRole~="mixed" then return false end
     elseif armor=="Leather" then
-        if NO_LEATHER[classToken] then return false end
+        -- Low-level physical-stat leather may be a genuine Warrior upgrade.
+        -- Paladins can also use caster or melee leather; don't force them
+        -- into a single spec or hide an actual hybrid choice.
+        if classToken=="WARRIOR"
+            and gear.statRole~="physical" and gear.statRole~="mixed" then return false end
+        if classToken=="PALADIN"
+            and gear.statRole~="physical" and gear.statRole~="spell"
+            and gear.statRole~="mixed" then return false end
     end
     -- Do not make a BiS choice. Only suppress clear single-role conflicts;
     -- unknown/mixed/utility/resistance equipment stays visible.
