@@ -260,6 +260,7 @@ def write_lua(records, path, digest):
         "            sourceURL='https://www.wowhead.com/forever/item='..id,",
         "            confidence='client',acquisitionConfidence='classic-reference',",
         "            acquisitionKind=description,craftOnly=craftOnly,",
+        "            fromGeneratedCache=true,",
         "            notes=DEFAULT_NOTE,",
         "            instructions='Client-indexed equipment; specific drop, quest, vendor,'",
         "                ..' or recipe access is unverified in live WoW Forever.',",
