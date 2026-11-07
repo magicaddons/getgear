@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - ".github/workflows/stage-beta4-catalogue.yml"
+      - "tools/build_beta4_catalogue.lua"
+      - "tools/build_beta4_school_hints.py"
   workflow_dispatch:
 permissions:
   contents: write
