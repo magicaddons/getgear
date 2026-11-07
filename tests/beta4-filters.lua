@@ -39,7 +39,6 @@ assert(contains("upcoming",2933)==false,"Late quest must not be in the next five
 addon.level=13
 assert(contains("available",3489))
 addon.level=16
-assert(not contains("available",3489),"Level-12 axe must age out at player level 17, not 16")
 -- At level 16, target 12 is still 4 levels behind.
 assert(contains("available",3489))
 addon.level=17
