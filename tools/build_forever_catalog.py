@@ -83,6 +83,29 @@ def plain_text(markup):
     return re.sub(r"\s+", " ", html.unescape(x)).strip()
 
 
+def classify_stat_role(text, kind, subtype):
+    """Intentionally conservative: unknown/mixed stats remain eligible by default."""
+    magical = bool(re.search(
+        r"\b(?:intellect|spirit|spell(?:s| power| damage| hit| critical| crit)|"
+        r"healing|mana(?: regeneration| per| restored)?|"
+        r"shadow damage|fire damage|frost damage|nature damage|"
+        r"arcane damage|holy damage)\b", text, re.I))
+    physical = bool(re.search(
+        r"\b(?:strength|agility|attack power|melee attack|ranged attack|"
+        r"defense|parry|dodge|block(?:ing)?|armor penetration)\b", text, re.I))
+    if magical and physical:
+        return "mixed"
+    if magical:
+        return "spell"
+    if physical:
+        return "physical"
+    # Ordinary melee weapons with no magical benefits are physical
+    # leveling options, not caster upgrades. Wands are a caster exception.
+    if kind == "weapon" and subtype != "Wand":
+        return "physical"
+    return "utility"
+
+
 def parse_equipment(record):
     item_id = record.get("itemId")
     markup = record.get("tooltipHtml") or ""
@@ -90,6 +113,10 @@ def parse_equipment(record):
         return None, "invalid-record"
     if record.get("itemExpansion") != "Forever":
         return None, "wrong-expansion"
+    name = str(record.get("name") or "")
+    if (item_id == 24358 or 281685 <= item_id <= 281729 or
+        re.match(r"^(?:QATest|QA\s+Test|GM\s+Test)(?:\b|\W)", name, re.I)):
+        return None, "internal-test-or-placeholder"
     diff = record.get("changeFromClassic") or {}
     if diff.get("status") == "unconfirmed":
         return None, "unconfirmed-forever-facts"
@@ -211,6 +238,7 @@ def parse_equipment(record):
     return {
         "id": item_id, "name": str(record.get("name") or ""), "level": required_level,
         "slot": slot, "subtype": subtype, "kind": kind, "source": source_code,
+        "statRole": classify_stat_role(text, kind, subtype),
         "sourceLabel": label, "mask": mask, "phase": phase,
         "craftOnly": "Crafted" in source_kinds and
                      not any(x in source_kinds for x in ("Dungeon", "Quest", "Vendor", "Drop", "PvP")),
@@ -233,7 +261,7 @@ def write_lua(records, path, digest):
         "local CLASSES = {" + ",".join(lua_quote(x) for x in CLASSES) + "}",
         "local SOURCES = {" + ",".join(lua_quote(SOURCE_TEXT[i]) for i in sorted(SOURCE_TEXT)) + "}",
         "local DEFAULT_NOTE = 'Forever client item. Where/how to obtain it is not verified on the live server.'",
-        "-- Rows: itemID, name, equip-level, slot, subtype, sourceCode, classMask, sourceLabel, phase, craftOnly.",
+        "-- Rows: itemID, name, equip-level, slot, subtype, sourceCode, classMask, sourceLabel, phase, craftOnly, statRole.",
         "local rows = {",
     ]
     for x in records:
@@ -241,15 +269,15 @@ def write_lua(records, path, digest):
             str(x["id"]), lua_quote(x["name"]), str(x["level"]),
             lua_quote(x["slot"]), lua_quote(x["subtype"]), str(x["source"]),
             str(x["mask"]), lua_quote(x["sourceLabel"]), str(x["phase"]),
-            "true" if x["craftOnly"] else "false",
+            "true" if x["craftOnly"] else "false", lua_quote(x["statRole"]),
         )
         out.append("    {" + ",".join(vals) + "},")
     out += [
         "}",
         "local audit={newItems=0,newObjectives=0,existingItems=0,byClass={}}",
         "for _,r in ipairs(rows) do",
-        "    local id,name,level,slot,subtype,sourceCode,mask,sourceLabel,phase,craftOnly =",
-        "        r[1],r[2],r[3],r[4],r[5],r[6],r[7],r[8],r[9],r[10]",
+        "    local id,name,level,slot,subtype,sourceCode,mask,sourceLabel,phase,craftOnly,role =",
+        "        r[1],r[2],r[3],r[4],r[5],r[6],r[7],r[8],r[9],r[10],r[11]",
         "    if not GetGear.ItemCatalog[id] then",
         "        local description=SOURCES[sourceCode] or SOURCES[1]",
         "        local zone=(sourceLabel~='' and sourceLabel or 'Source not yet confirmed')",
@@ -260,7 +288,7 @@ def write_lua(records, path, digest):
         "            sourceURL='https://www.wowhead.com/forever/item='..id,",
         "            confidence='client',acquisitionConfidence='classic-reference',",
         "            acquisitionKind=description,craftOnly=craftOnly,",
-        "            fromGeneratedCache=true,",
+        "            fromGeneratedCache=true,armorType=subtype,statRole=role,",
         "            notes=DEFAULT_NOTE,",
         "            instructions='Client-indexed equipment; specific drop, quest, vendor,'",
         "                ..' or recipe access is unverified in live WoW Forever.',",
@@ -335,6 +363,9 @@ def main():
             raise ValueError("Sentinel item missing/misclassified: " + str(item_id) + " " + str(item))
     if found[14154]["mask"] != (1 << CLASSES.index("PRIEST")):
         raise ValueError("Truefaith Vestments must be Priest-only")
+    for test_id in (24358, 281685, 281701):
+        if test_id in found:
+            raise ValueError("QA/restoration placeholder incorrectly included: "+str(test_id))
     write_lua(rows, args.output, digest)
     counts = collections.Counter()
     bands = collections.Counter()
@@ -351,6 +382,7 @@ def main():
         "eligibleClassCount": dict(sorted(counts.items())),
         "levelBandCount": dict(sorted(bands.items())),
         "rejectReasons": dict(sorted(rejected.items())),
+        "statRoleCounts": dict(sorted(collections.Counter(x["statRole"] for x in rows).items())),
         "warning": "Client/beta existence is not a live drop or quest guarantee; original GetGear records override generated facts",
     }
     args.report.parent.mkdir(parents=True, exist_ok=True)
