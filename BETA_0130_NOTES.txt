@@ -1,49 +1,74 @@
-GetGear v0.13.0 Beta 1 — TEST BUILD ONLY (WoW Forever)
-=========================================================
-Not a verified live-server gear guide or a public/stable release.
-Do not distribute as a final release. Existing v0.12.14 remains the public baseline.
+GetGear v0.13.0 Beta 2 — PRIVATE TEST BUILD ONLY (WoW Forever)
+================================================================
+Not an official/stable public release. v0.12.14 remains published.
+Sources are an October 21 Forever beta-client snapshot + curated data,
+not a guarantee that every item/drop/quest is available on live servers.
 
 INSTALL / ROLLBACK
-1. Exit the game fully.
-2. Back up your existing _forever_/Interface/AddOns/GetGear folder.
-3. Back up SavedVariables containing GetGear_AccountDB and GetGear_CharacterDB.
-4. Replace the existing GetGear addon folder with the GetGear folder inside
-   this ZIP. Avoid nesting GetGear/GetGear by accident.
-5. Launch WoW Forever. Open the addon using /getgear (not /gg).
-6. To roll back: exit game and restore the saved v0.12.14 AddOns/GetGear folder
-   and, if needed, its saved SavedVariables files.
+1. Exit WoW completely.
+2. Optionally back up _forever_/Interface/AddOns/GetGear and the WTF
+   SavedVariables containing GetGear_AccountDB / GetGear_CharacterDB.
+3. Extract this ZIP's GetGear folder into _forever_/Interface/AddOns/,
+   replacing the old addon folder. Do not keep two active GetGear copies.
+4. Launch the game and type /getgear (not /gg).
+5. Roll back by exiting and restoring your v0.12.14 or beta1 folder;
+   restore any backed-up SavedVariables only if necessary.
 
-WHAT IS IN THIS BUILD
-- Expands item planning to level 60 for all nine Alliance classes and
-  provides a 1–60 Preview Guide (40 visible detailed entries per page).
-- Adds about 7,751 item records and 36,518 class equipment objectives, using
-  an Oct 21 Forever BETA client cache plus the original reviewed gear list.
-- Original hand-reviewed records take precedence over generated records.
-- Adds the previously missed Runed Copper Pants and Thick War Axe to
-  eligible classes, including Rogue use of one-handed axes in Forever.
-- Preserves prior status/hidden keys and crafting material information.
-- A 32-entry compact overlay display cap and guarded item-data requests are
-  intended to reduce risk of freezes with larger catalogues.
+BETA 2 CHANGES
+- The DEFAULT guide now filters obvious client-only junk and off-role
+  gear from the broad imported catalogue. The level 1-60 data remains.
+- Permanently excludes known internal QA records (e.g. item 24358,
+  QATest +1000 Spell Dmg Ring) and generic low-level Restored
+  placeholder records (281685-281729). Higher-level Restored PvP
+  equipment is NOT excluded by this rule.
+- Red/Green Winter Hats (21524/21525) are excluded from default
+  leveling recommendations, but can be viewed in expanded mode.
+- Generic client entries with NO source and unverified random world
+  drops are kept in expanded mode; hand-reviewed and player-observed
+  item routes remain available in the normal guide.
+- Class-relevance rules distinguish spell effects, physical stats,
+  mixed stats, mana/Intellect and utility/resistance equipment.
+  Hunters retain Intellect/mana options; caster Paladins, Druids and
+  Shamans retain appropriate cloth/leather hybrids. Physical-stat
+  leather can still be relevant for early Warriors.
+- New checkbox under /getgear > Display settings:
+  "Show all valid equipment (including off-spec)"
+  Default OFF, saved separately per character.
+  Turn it ON to restore broader off-role and novelty gear. It does
+  NOT restore internal QA or placeholder items; those are excluded.
+- Existing curated class items, crafted materials, acquired/hidden
+  progress and alternate-spec planning remain intact.
+- 7,707 catalogued items and 36,275 class-specific objectives remain
+  before default relevance filtering. The full numbers are NOT the
+  count of verified live obtainable upgrades.
 
-LIMITATIONS
-- Broad-catalogue records are CANDIDATES, not confirmed live-server drops.
-  Some may be unavailable or phased. Acquisition routes for these records
-  are explicitly uncertain; do not farm them based on unsupported locations.
-- Generated crafted items may have unknown recipes and ingredients; missing
-  materials are NOT assumed to be zero.
-- CI regression tests passed, but actual Forever client performance,
-  tooltip rendering and login behavior have not been verified.
+FIRST TESTS
+1. Start with the ordinary default setting (Show all valid OFF).
+2. On your Warrior, check level-relevant items appear; Red/Green
+   Winter Hats, Restored Cloth Helm, Restored Mail Coif and QATest
+   +1000 Spell Dmg Ring should NOT appear.
+3. Check Runed Copper Pants and Thick War Axe remain available
+   when level-eligible and not acquired/hidden/clearly obsolete.
+4. Open /getgear > Display settings, enable Show all valid.
+   Red/Green Winter Hats may now appear. The QATest ring and
+   low-level generic Restored items must remain absent.
+5. Test Preview Guide (all nine classes, levels 1-60), pagination,
+   and switching classes/specs with the toggle ON and OFF.
+6. Look for legitimate upgrades accidentally filtered in default
+   mode, especially Hybrid/Intellect/Hunter gear, spells/procs and
+   rare drops. Report item ID, class, level and why it matters.
+7. Check login, reload, quest updates, items, materials and overlay
+   responsiveness, plus that acquired/hidden gear is still tracked.
 
-TEST CHECKLIST
-1. Log in with GetGear enabled. Look for stalls/crashes or repeated Lua errors.
-2. Open /getgear. Change tabs, levels and specs; inspect Preview Guide 1–60.
-3. Use detail pagination (Prev/Next) and ensure scrolling stays responsive.
-4. On your Warrior, confirm Runed Copper Pants and Thick War Axe appear when
-   level-eligible, not acquired, and not hidden.
-5. Test the strict 'hide uncraftable' toggle if you use it; default remains off.
-6. Switch characters, restart client, and check that prior acquired/hidden
-   states are preserved.
-7. For any problematic item, report its item ID, class, level and page.
+SOURCE LIMITATIONS
+- The October 21 item cache is out of date relative to live Forever.
+  Some client records may be unavailable, phased, faction-only or
+  incorrectly attributed. Source claims are deliberately qualified.
+- Relevance classification is conservative and not a BiS ranking.
+  It is NOT perfect: use the all-valid toggle when exploring unusual
+  gearing strategies or auditing omitted items.
+- This beta passes offline Lua/GitHub Actions regression tests.
+  It has NOT yet passed in-game client testing.
 
-Development source: https://github.com/magicaddons/getgear/pull/4
-Data caveats: docs/GEAR_DATA_SCOPE.md in the repository.
+Development: https://github.com/magicaddons/getgear/pull/4
+Full audit: docs/GEAR_DATA_SCOPE.md in the repository.
