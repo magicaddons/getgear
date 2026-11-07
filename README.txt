@@ -1,12 +1,14 @@
-GETGEAR v0.13.0 BETA 1 - ALL-CLASS 1-60 TEST CATALOGUE
+GETGEAR v0.13.0 BETA 2 - RELEVANT GEAR + EXPANDED 1-60 CATALOGUE
 ==============================================
 
 A World of Warcraft: Forever Alliance gear progression and crafting-planning
-addon. This TEST build supports all nine classes and levels 1-60.\nNot a public release: many generated sources remain unverified on live servers.
+addon. This TEST build supports all nine classes and levels 1-60.
+Not a public release: many generated sources remain unverified on live servers.
 
 INSTALL
 -------
-IMPORTANT: Read BETA_0130_NOTES.txt first for backup and rollback instructions.\n1. Exit WoW.
+IMPORTANT: Read BETA_0130_NOTES.txt first for backup and rollback instructions.
+1. Exit WoW.
 2. Back up your current GetGear folder and SavedVariables if desired.
 3. Replace _forever_/Interface/AddOns/GetGear with this package's GetGear folder.
    Do not keep an old WoWForeverGearGuide addon folder alongside it.
@@ -43,12 +45,16 @@ The existing per-material tooltips and diagnostic command remain available:
 
 OTHER GUIDE FEATURES
 --------------------
-- Nine Alliance class guides with spec filters and 404 gear recommendations.
+- Nine Alliance class guides with 36,275 class-specific equipment candidates.
+  Default hides obvious QA placeholders, novelty items, unverified random world
+  drops and clearly off-role gear; open Display settings to opt into all valid
+  class-equippable equipment. Existing curated guides remain intact.
 - Recommended, upcoming, skipped, completed and earlier gear categories.
 - Source and acquisition notes with map navigation where known.
 - Profession skill and recipe information where the client supplies it.
 - Crafting materials breakdown and bag count comparisons.
-- Detailed-window read-only guide preview for classes/levels 1-30.
+- Detailed-window read-only guide preview for all nine classes, levels 1-60,
+  with 40-row pages and the same relevance settings as the live guide.
 - Compact overlay intentionally has NO inventory-browser controls.
 - Per-character checklist state stored separately from account inventory.
 
