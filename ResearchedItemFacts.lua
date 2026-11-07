@@ -300,7 +300,6 @@ GetGear.PureSchoolBonus={
  [5069]="Fire",
  [5212]="Fire",
  [5213]="Fire",
- [6898]="Fire",
  [8184]="Fire",
  [10042]="Fire",
  [10044]="Fire",
