@@ -6,7 +6,10 @@ local skips={["Core.lua"]=true,["UI.lua"]=true,["AltInventory.lua"]=true}
 local toc=assert(io.open(root.."/GetGear.toc")):read("*a")
 for file in toc:gmatch("[^\r\n]+") do
     if file:match("%.lua$") and not skips[file] then
-        assert(assert(loadfile(root.."/"..file))("GetGear",addon))
+        local chunk,err=loadfile(root.."/"..file)
+        assert(chunk,file..": "..tostring(err))
+        local ok,result=pcall(chunk,"GetGear",addon)
+        assert(ok,file..": "..tostring(result))
     end
 end
 local classes={"PRIEST","MAGE","WARLOCK","DRUID","WARRIOR","ROGUE","PALADIN","HUNTER","SHAMAN"}
