@@ -61,11 +61,8 @@ assert(loadTime<20 and elapsed<20,
     "Potential client performance regression load="..loadTime.." scan="..elapsed)
 local ui=assert(io.open(root.."/UI.lua")):read("*a")
 assert(ui:find("DETAIL_PAGE_SIZE = 40",1,true))
-assert(ui:find("local MAX_OBJECTIVES",1,true)
-    or ui:find("MAX_OBJECTIVES",1,true)
-    or ui:find("OBJECTIVE_LIMIT",1,true)
-    or ui:find("MAX_VISIBLE_OBJECTIVES",1,true),
-    "Compact overlay must keep a bounded row count")
+assert(ui:find("local overlayCap = 32",1,true),
+    "Compact overlay lost its 32-record frame cap")
 print(string.format(
     "PASS Beta4 stress: %d Lua files, %d class/level checks, 0 item-cache requests, load %.2fs, filtering %.2fs",
     loaded,classCount,loadTime,elapsed))
