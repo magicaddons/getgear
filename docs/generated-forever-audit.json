@@ -3,31 +3,38 @@
   "sha256": "5d9a6461d2a7adbc4e3d765f19fbeb6adb37c4c53161bb89e4d7b770f805ca32",
   "sourceLastRefresh": "2026-10-21T16:20:02.538Z",
   "upstreamItems": 10058,
-  "importableItems": 7722,
+  "importableItems": 7678,
   "eligibleClassCount": {
-    "DRUID": 3870,
-    "HUNTER": 4885,
-    "MAGE": 2474,
-    "PALADIN": 5554,
-    "PRIEST": 2630,
-    "ROGUE": 3648,
-    "SHAMAN": 5130,
-    "WARLOCK": 2462,
-    "WARRIOR": 5809
+    "DRUID": 3846,
+    "HUNTER": 4851,
+    "MAGE": 2460,
+    "PALADIN": 5512,
+    "PRIEST": 2615,
+    "ROGUE": 3625,
+    "SHAMAN": 5097,
+    "WARLOCK": 2448,
+    "WARRIOR": 5765
   },
   "levelBandCount": {
-    "1-15": 769,
+    "1-15": 725,
     "16-30": 1447,
     "31-45": 1465,
     "46-60": 4041
   },
   "rejectReasons": {
     "class-restriction": 1,
+    "internal-test-or-placeholder": 45,
     "no-proven-equip-level": 1754,
     "not-green-or-better": 48,
     "outside-level-range": 4,
     "unconfirmed-forever-facts": 15,
-    "unsupported-or-unknown-slot": 514
+    "unsupported-or-unknown-slot": 513
+  },
+  "statRoleCounts": {
+    "mixed": 1134,
+    "physical": 2287,
+    "spell": 2646,
+    "utility": 1611
   },
   "warning": "Client/beta existence is not a live drop or quest guarantee; original GetGear records override generated facts"
 }
