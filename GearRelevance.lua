@@ -14,7 +14,8 @@ local NOVELTY_IDS = {
     [21524]=true, -- Red Winter Hat (Winter Veil costume)
     [21525]=true, -- Green Winter Hat
 }
-local PHYSICAL = {WARRIOR=true, ROGUE=true, HUNTER=true}
+local NO_SPELL_GEAR = {WARRIOR=true, ROGUE=true, HUNTER=true}
+local NO_MANA_GEAR = {WARRIOR=true, ROGUE=true}
 local CLOTH_CASTER = {PRIEST=true, MAGE=true, WARLOCK=true}
 local CLOTH_NONSTANDARD = {WARRIOR=true, ROGUE=true, HUNTER=true}
 local HYBRID_CASTER = {PALADIN=true, DRUID=true, SHAMAN=true}
@@ -44,6 +45,10 @@ function GetGear:ShouldDisplayGear(gear, classToken, mode)
     if opts and opts.showAllValidGear==true then return true end
 
     if NOVELTY_IDS[gear.itemID] then return false end
+    -- A beta-cache entry with no documented route is a valid client item,
+    -- not automatically a reachable leveling objective. Available via
+    -- the expanded catalogue until a player-observed route is added.
+    if gear.sourceType=="Source not documented" then return false end
 
     classToken = classToken or self.classToken
     if not classToken then return true end
@@ -53,7 +58,7 @@ function GetGear:ShouldDisplayGear(gear, classToken, mode)
         -- Hybrid healers may prefer strong cloth spell gear; keep it only
         -- when the source tooltip positively identifies caster benefits.
         if HYBRID_CASTER[classToken] and gear.statRole~="spell"
-            and gear.statRole~="mixed" then return false end
+            and gear.statRole~="mixed" and gear.statRole~="mana" then return false end
     elseif armor=="Leather" then
         -- Low-level physical-stat leather may be a genuine Warrior upgrade.
         -- Paladins can also use caster or melee leather; don't force them
@@ -62,12 +67,15 @@ function GetGear:ShouldDisplayGear(gear, classToken, mode)
             and gear.statRole~="physical" and gear.statRole~="mixed" then return false end
         if classToken=="PALADIN"
             and gear.statRole~="physical" and gear.statRole~="spell"
-            and gear.statRole~="mixed" then return false end
+            and gear.statRole~="mixed" and gear.statRole~="mana" then return false end
     end
     -- Do not make a BiS choice. Only suppress clear single-role conflicts;
     -- unknown/mixed/utility/resistance equipment stays visible.
     local role=gear.statRole
-    if role=="spell" and PHYSICAL[classToken] then return false end
+    if role=="spell" and NO_SPELL_GEAR[classToken] then return false end
+    -- Hunters use mana and benefit from Intellect; unlike Warriors/Rogues,
+    -- never hide a Hunter upgrade merely for being Intellect/Spirit gear.
+    if role=="mana" and NO_MANA_GEAR[classToken] then return false end
     if role=="physical" and CLOTH_CASTER[classToken] then return false end
     return true
 end
