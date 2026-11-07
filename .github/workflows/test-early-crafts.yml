@@ -28,6 +28,7 @@ jobs:
           lua5.4 tests/item-data-regression.lua .
           lua5.4 tests/comparison-cleanup.lua .
           lua5.4 tests/craftability-filter.lua .
+          lua5.4 tests/early-coverage-regression.lua .
           lua5.4 tests/level60-staging-regression.lua .
           lua5.4 tests/coverage-audit.lua .
       - name: Package GetGear v0.12.14 beta candidate
