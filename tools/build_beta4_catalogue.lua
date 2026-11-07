@@ -10,7 +10,11 @@ local classes={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARR
 local bits={}
 for i,name in ipairs(classes) do bits[name]=2^(i-1) end
 local toc=assert(io.open(root.."/GetGear.toc")):read("*a")
+local manualIDs={}
 for line in toc:gmatch("[^\r\n]+") do
+    if line=="GeneratedForeverGear.lua" then
+        for id in pairs(addon.ItemCatalog or {}) do manualIDs[id]=true end
+    end
     if line:match("%.lua$") and line~="AltInventory.lua"
         and line~="Core.lua" and line~="UI.lua" then
         local chunk,err=loadfile(root.."/"..line)
@@ -132,22 +136,35 @@ out:write("GetGear.ItemCatalog={\n")
 local ids={}
 for id in pairs(items) do ids[#ids+1]=id end
 table.sort(ids)
+local researched=0
 for _,id in ipairs(ids) do
-    out:write(" [",id,"]=",serialize(items[id],{},0),",\n")
+    if manualIDs[id] then
+        researched=researched+1
+        out:write(" [",id,"]=",serialize(items[id],{},0),",\n")
+    end
 end
 out:write("}\nGetGear.EquipmentEligibility={\n")
 for _,id in ipairs(ids) do
-    local e=eligibility[id]
-    -- Mask and restrictions are equipment facts, not spec profiles.
-    out:write(" [",id,"]={",e.mask,",",e.equipLevel,",",
-        string.format("%q",e.armorType or ""),"},\n")
+    if not cacheRows or not eligibility[id].sourceCode
+        or eligibility[id].sourceCode==0 then
+        local e=eligibility[id]
+        out:write(" [",id,"]={",e.mask,",",e.equipLevel,",",
+            string.format("%q",e.armorType or ""),"},\n")
+    end
 end
-out:write("}\n")
-out:write("GetGear.Gear={}\n")
-out:write("GetGear.CatalogueAudit={items=",#ids,",manualOnly=",manualOnly,
-    ",acquisitionLevels=",acquisition,",schoolOnly=",schoolCount,"}\n")
+out:write("}\nGetGear.PureSchoolBonus={\n")
+for _,id in ipairs(ids) do
+    if schools[id] then
+        out:write(" [",id,"]=",string.format("%q",schools[id]),",\n")
+    end
+end
+out:write("}\nGetGear.Gear={}\n")
+out:write("GetGear.CatalogueAudit={items=",#ids,",researched=",researched,
+    ",manualOnly=",manualOnly,",acquisitionLevels=",acquisition,
+    ",schoolOnly=",schoolCount,"}\n")
 out:close()
-print("CANONICAL PASS items="..#ids.." manualOnly="..manualOnly..
+assert(researched==234,"manual override count changed unexpectedly: "..researched)
+print("CANONICAL PASS items="..#ids.." researched="..researched.." manualOnly="..manualOnly..
     " acquisitionLevels="..acquisition.." schoolOnly="..schoolCount..
     " originalRecommendations="..(function()
         local n=0;for _,list in pairs(recommendations) do n=n+#list end
