@@ -279,7 +279,7 @@ def write_lua(records, path, digest):
         "            local progressID='item_'..id",
         "            local idx=GetGear.RecommendationIndex and GetGear.RecommendationIndex[classToken]",
         "            local exists=idx and idx.ids[progressID]",
-        "            if not exists then",
+        "            if not idx then",
         "                for _,old in ipairs(GetGear.Recommendations[classToken] or {}) do",
         "                    if old.itemID==id then exists=true;break end",
         "                end",
