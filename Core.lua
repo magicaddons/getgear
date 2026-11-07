@@ -71,6 +71,8 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if type(o.bagUpgrades) ~= "boolean" then o.bagUpgrades = true end
         -- Per-character opt-in: preserve profession-agnostic recommendations by default.
         if type(o.hideUncraftableCrafts) ~= "boolean" then o.hideUncraftableCrafts = false end
+        -- Beta 2: all class-equippable gear is an explicit opt-in.
+        if type(o.showAllValidGear) ~= "boolean" then o.showAllValidGear = false end
         if type(o.expanded) ~= "table" then o.expanded = {} end
         if type(o.minimized) ~= "table" then o.minimized = {} end
         if type(o.dependencyCollapsed) ~= "table" then o.dependencyCollapsed = {} end
