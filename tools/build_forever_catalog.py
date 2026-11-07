@@ -86,16 +86,16 @@ def plain_text(markup):
 def classify_stat_role(text, kind, subtype):
     """Do not confuse Hunter-friendly Intellect with spell-damage bonuses."""
     spell_effect = bool(re.search(
-        r"\\b(?:spell power|spell damage|spell hit|spell crit|spell critical|"
+        r"\b(?:spell power|spell damage|spell hit|spell crit|spell critical|"
         r"spell penetration|healing(?: done)?|damage done by (?:magical )?spells|"
         r"shadow damage|fire damage|frost damage|nature damage|"
-        r"arcane damage|holy damage)\\b", text, re.I))
+        r"arcane damage|holy damage)\b", text, re.I))
     mana_stat = bool(re.search(
-        r"\\b(?:intellect|spirit|mana(?: regeneration| per| restored)?)\\b",
+        r"\b(?:intellect|spirit|mana(?: regeneration| per| restored)?)\b",
         text, re.I))
     physical = bool(re.search(
-        r"\\b(?:strength|agility|attack power|melee attack|ranged attack|"
-        r"defense|parry|dodge|block(?:ing)?|armor penetration)\\b", text, re.I))
+        r"\b(?:strength|agility|attack power|melee attack|ranged attack|"
+        r"defense|parry|dodge|block(?:ing)?|armor penetration)\b", text, re.I))
     if physical and (spell_effect or mana_stat):
         return "mixed"
     if spell_effect:
