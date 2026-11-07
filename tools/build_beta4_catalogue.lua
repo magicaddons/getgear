@@ -110,7 +110,12 @@ for id,item in pairs(items) do
         eligibility[id]=e
     end
     if not e.mask or e.mask==0 then missing=missing+1 end
-    item.armorType=e.armorType~="" and e.armorType or item.armorType
+    -- Manual-only records retain researched armor classifications as-is.
+    -- The eligibility mask contains their validated wear permissions; do not
+    -- invent a display-role armor type from a compatibility-only mask.
+    if e.sourceCode~=0 then
+        item.armorType=e.armorType~="" and e.armorType or item.armorType
+    end
     item.statRole=e.statRole~="" and e.statRole or item.statRole or "utility"
     item.availableLevel=math.max(1,math.min(60,tonumber(e.equipLevel) or tonumber(item.availableLevel) or 1))
     local target=practical[id]

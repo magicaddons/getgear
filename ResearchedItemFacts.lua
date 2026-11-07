@@ -309,4 +309,4 @@ GetGear.PureSchoolBonus={
  [281925]="Fire",
 }
 GetGear.Gear={}
-GetGear.CatalogueAudit={items=7707,researched=259,manualOnly=29,acquisitionLevels=16,schoolOnly=13}
+GetGear.CatalogueAudit={items=7707,researched=259,manualOnly=29,acquisitionLevels=16,schoolOnly=12}
