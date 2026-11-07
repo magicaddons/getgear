@@ -36,7 +36,38 @@ jobs:
           mkdir -p dist/standalone
           cp ./*.lua GetGear.toc dist/standalone/
           cp dist/GeneratedForeverGear.lua dist/standalone/
-          sed -i '/^Level60GearPhase1.lua$/a GeneratedForeverGear.lua' dist/standalone/GetGear.toc
+          if ! grep -q '^GeneratedForeverGear.lua
+          lua5.4 tests/generated-cache-smoke.lua dist/standalone
+      - name: Save validated candidate to the same development PR branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'work/gear-1-60-expansion'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "getgear-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin work/gear-1-60-expansion
+          git checkout -B work/gear-1-60-expansion origin/work/gear-1-60-expansion
+          cp dist/GeneratedForeverGear.lua ./GeneratedForeverGear.lua
+          mkdir -p docs
+          cp dist/forever-audit.json docs/generated-forever-audit.json
+          git add GeneratedForeverGear.lua docs/generated-forever-audit.json
+          if git diff --cached --quiet; then
+            echo "No source changes in generated catalogue"
+          else
+            git commit -m "Stage source-caveated Forever 1-60 equipment cache (not active yet)"
+            git push origin HEAD:work/gear-1-60-expansion
+          fi
+      - name: Keep candidate only as development artifact, never publish release
+        uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-Forever-cache-staging-only
+          path: |
+            dist/GeneratedForeverGear.lua
+            dist/forever-audit.json
+          retention-days: 14
+ dist/standalone/GetGear.toc; then
+            sed -i '/^Level60GearPhase1.lua$/a GeneratedForeverGear.lua' dist/standalone/GetGear.toc
+          fi
           lua5.4 tests/generated-cache-smoke.lua dist/standalone
       - name: Save validated candidate to the same development PR branch
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'work/gear-1-60-expansion'
