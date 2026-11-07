@@ -225,12 +225,16 @@ local OBSOLETE_ARMOR_SLOTS = {
     Head=1, Shoulder=3, Chest=5, Waist=6, Legs=7, Feet=8,
     Wrist=9, Hands=10, Back=15,
 }
-local function ItemInfo(item)
+local function ItemInfo(item, requestIfMissing)
     local getter = C_Item and C_Item.GetItemInfo or GetItemInfo
     if type(getter) ~= "function" then return nil end
     local ok, name, link, quality, itemLevel = pcall(getter,item)
     if not ok or not name or not IsSafe(quality) or not IsSafe(itemLevel) then
-        if type(item)=="number" and GetGear.RequestItemDataOnce then
+        -- Never issue thousands of item-load requests just to classify
+        -- obsolete generated gear. An already-cached item can still be
+        -- compared; visible/hovered items retain lazy tooltip loading.
+        if requestIfMissing ~= false and type(item)=="number"
+            and GetGear.RequestItemDataOnce then
             GetGear:RequestItemDataOnce(item)
         end
         return nil
@@ -362,7 +366,7 @@ function GetGear:GetObsoleteGearReason(gear)
         if not equippedLink then return nil end
         local equippedID=LinkItemID(equippedLink)
         if equippedID==gear.itemID then return nil end
-        local candidateInfo,equippedInfo=ItemInfo(gear.itemID),ItemInfo(equippedLink)
+        local candidateInfo,equippedInfo=ItemInfo(gear.itemID, not gear.fromGeneratedCache),ItemInfo(equippedLink)
         if not candidateInfo or not equippedInfo then return nil end
         if candidateInfo.quality<1 or candidateInfo.quality>2 then return nil end
         if equippedInfo.quality<candidateInfo.quality then return nil end
@@ -383,7 +387,7 @@ function GetGear:GetObsoleteGearReason(gear)
         local equippedLink=Equipped(weaponSlot)
         if not equippedLink or LinkItemID(equippedLink)==gear.itemID then return nil end
         local candidateLink="item:"..gear.itemID
-        local candidateInfo,equippedInfo=ItemInfo(gear.itemID),ItemInfo(equippedLink)
+        local candidateInfo,equippedInfo=ItemInfo(gear.itemID, not gear.fromGeneratedCache),ItemInfo(equippedLink)
         if not candidateInfo or not equippedInfo then return nil end
         -- Only low-quality ordinary gear is eligible for automatic removal.
         if candidateInfo.quality<1 or candidateInfo.quality>2 then return nil end
@@ -400,7 +404,7 @@ function GetGear:GetObsoleteGearReason(gear)
     if not slot then return nil end
     local link=Equipped(slot)
     if not link then return nil end
-    local candidateInfo,equippedInfo=ItemInfo(gear.itemID),ItemInfo(link)
+    local candidateInfo,equippedInfo=ItemInfo(gear.itemID, not gear.fromGeneratedCache),ItemInfo(link)
     if not candidateInfo or not equippedInfo then return nil end
     if candidateInfo.quality<1 or candidateInfo.quality>2 then return nil end
     if equippedInfo.quality<candidateInfo.quality or equippedInfo.level<candidateInfo.level then return nil end
