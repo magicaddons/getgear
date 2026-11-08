@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - work/beta7-evidence-reconciliation
+      - work/dungeon-drops-recipe-provenance
   workflow_dispatch:
 permissions:
   contents: read
