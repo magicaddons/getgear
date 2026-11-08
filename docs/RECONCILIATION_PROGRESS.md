@@ -6,15 +6,15 @@
 - Historical reconciliation CI: successful run [42488267084](https://github.com/magicaddons/getgear/actions/runs/42488267084); latest source snapshot passed its existing catalogue checks in [42488345804](https://github.com/magicaddons/getgear/actions/runs/42488345804). Earlier intermediate source-probe failures do not supersede those passes.
 
 ## Checkpoint 1 — dungeon equipment vs. crafted gear classification
-**Scope:** One known false-positive dungeon record, item 220606 *Idol of the Dream*, not a re-audit of the catalogue.
+**Status: completed and audited. Scope:** One known false-positive dungeon record, item 220606 *Idol of the Dream*, not a re-audit of the catalogue.
 
 - Root cause: the historical EquipmentCache row labels the item `The Temple of Atal'Hakkar, Crafted` with dungeon source code 6. The original recipe inventory did not include this craft, causing a generated report to treat the finished gear as unidentified dungeon loot.
 - Corrected runtime source through `SourceEnrichment.lua` without modifying item ID, level, class mask, or all previously indexed recipe material lists.
 - Independently published Forever client recipe: spell 1249128, Enchanting 300, formula item 249529; seven ingredient quantities matched against [ForeverDiff](https://foreverdiff.com/recipes/idol-of-the-dream-54443/), [Wowhead's Forever recipe](https://www.wowhead.com/forever/spell=1249128/idol-of-the-dream), and names/IDs already in `GeneratedBeta7Evidence.lua`.
 - Provisional Alliance source: Alynsia at Three Corners, Redridge Mountains, reported as 240 Merchant's Favor with Honored requirement. [Forever atlas](https://wowforever.gg/en/atlas/knowledge/items/formula-idol-of-the-dream-i249529/), [Wowhead formula](https://www.wowhead.com/forever/item=249529/formula-idol-of-the-dream), and [community beta merchant log](https://wowforevertalent.com/professions/enchanting/?acquisition=favor). Live inventory/stock is NOT verified.
-- Generator now preserves the historical dungeon association as `crafted-item` but excludes it from dungeon loot and unresolved dungeon enemy counts. Expected report once CI regeneration passes: 552 actual dungeon equipment records, 24 dungeon-pattern associations, 1 false-positive craft, 31 unresolved enemy/role questions.
+- The regenerated audit retains the historical association as `crafted-item` rather than loot: **552** dungeon equipment records, **24** possible dungeon-pattern associations, **1** false-positive finished craft, and **31** unresolved enemy/role questions. The excluded item is absent from both `dungeon_equipment_drops.csv` and `dungeon_source_followups.csv`.
 - Added offline regression expectations to `tests/beta7-evidence.lua` and `tests/beta7-acquisition-reconciled.lua`.
-- **Validation:** CI regeneration and regression results pending. Never promote source reference to a confirmed live drop or currently stocked vendor.
+- **Validation: PASS** — [CI run 42489073921](https://github.com/magicaddons/getgear/actions/runs/42489073921) completed successfully on 2026-11-09 (Adelaide). It ran public-source reconciliation, syntax checks for all addon Lua modules, nine-class catalogue/source/material/armour/preview regression, overlay filters, and performance checks. CI regenerated the reports in commit [`f7d3286`](https://github.com/magicaddons/getgear/commit/f7d3286a2f722f892771050d0adb2d298cb91245). This is **offline** validation, not a live-server test. Never promote a reference to a confirmed live drop or currently stocked vendor.
 - **Packaging:** Prohibited without explicit user approval; no ZIP, tag, release, merge or change to `main`.
 
 ## Next checkpoint

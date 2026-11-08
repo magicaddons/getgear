@@ -1,30 +1,36 @@
-# GetGear 1–60 audit — release readiness gate
+# GetGear 1–60 acquisition reconciliation — release-readiness gate
 
-**Decision: Do not propose a new public release yet.** This is a source-data audit, not a verified in-client release candidate.
+**Status: not approved for another build or public release (9 November 2026).**
+This is an offline evidence-reconciliation branch; it is not a verified in-client release candidate.
+The existing public v0.14.0-beta7 prerelease is separate from this work. No subsequent ZIP, tag, release, merge or change to `main` has been authorised.
 
-## What is covered
+## Latest validated state
+- Development branch: `work/full-acquisition-reconciliation-20261109`.
+- [Completed checkpoint and provenance](../RECONCILIATION_PROGRESS.md); [regenerated reconciliation summary](reconciliation-20261109/README.md).
+- **7,707** equipment IDs retained, with **36,341** class-item objectives across nine classes.
+- **1,252** previously indexed crafting recipes matched the reference dataset and their original ingredient lists remain unchanged. Checkpoint 1 additionally corrected *Idol of the Dream* (220606), a previously omitted Enchanting craft.
+- **577** historically dungeon-associated entries reviewed: **552** actual dungeon equipment entries, **24** equipment entries associated with potentially dungeon-acquired patterns, and **1** finished Enchanting craft incorrectly imported as dungeon loot.
+- **31** dungeon equipment entries still need a better boss/trash/specific mob classification or current-server evidence.
+- **954** recipe-book sources still need live confirmation: **68** named-vendor references and **886** trainer-labelled recipes with separate book IDs.
+- Player-observed and community listings must remain labelled by evidence quality; a client encounter name is not a confirmed drop rate.
 
-- All **7,707** known 1–60 item IDs were enumerated and cross-indexed to **36,341** objectives across all nine classes.
-- All **1,252** crafting recipes in this equipment catalogue have non-empty ingredient lists that **agree exactly** with the independently published Forever client recipe extract (Everloot 1.60.1.70790): **zero material additions or corrections** were warranted by that source comparison.
-- Cross-checks used independent Everloot recipe and dungeon encounter exports, MAF2414's profession extract, AHledger's 2,203 profession references and item-name catalogue, and player-observed Everloot acquisition edges.
-- Source confidence levels preserve uncertainty rather than turning client metadata or Classic leads into guaranteed Forever acquisition.
-- Offline Lua parsing, nine-class catalogue, class armour eligibility, ingredient names, source-specific and performance tests passed in [full audit CI](https://github.com/magicaddons/getgear/actions/runs/42480971680).
-- [Direct dungeon encounter classification refinement](dungeon_role_reconciliation.csv) corrected 41 labels without pretending to prove server-side loot tables.
+## Automated validation
+- [Comprehensive reconciliation workflow 42489073921](https://github.com/magicaddons/getgear/actions/runs/42489073921): **passed** source regeneration, syntax checks, 9-class catalogue, sources, recipe materials, armour rules, compact overlay filtering, preview layout and performance regressions.
+- The tests include a regression preventing the crafted Idol of the Dream from being treated as dungeon equipment.
+- This workflow **does not package an addon** or publish anything. All files are committed only to the development branch.
+- Automated Lua tests do not establish real Forever item-cache behaviour, vendor stock, actual drop rates or on-screen layout in the live client.
 
-## Unresolved work and priorities
+## Next work, one bounded category at a time
+1. **Dungeon equipment source quality:** resolve a small, evidence-supported group from [31 remaining leads](reconciliation-20261109/dungeon_source_followups.csv). Do not call a rare/elite mob a boss merely because Classic databases attach its name to loot.
+2. **Recipe learning source quality:** only after dungeon work, investigate specific groups among [954 unconfirmed books](reconciliation-20261109/recipe_source_followups.csv). Distinguish the recipe item's existence from trainer teaching, vendor stock and reputation/specialisation gates.
+3. **Other acquisition uncertainties:** review the earlier [complete equipment queue](unresolved_items.csv) using Forever-specific observations; retain items with unconfirmed routes rather than deleting them.
+4. **Live acceptance:** inspect source strings, the crafting materials view, per-character settings, and SavedVariables migration on an installed Forever client.
 
-1. **198 dungeon-associated records** still need an independently supported mob/source identity or boss-versus-trash classification; check [dungeon queue](dungeon_sources_unresolved.csv). Also verify the acquisition route of *all* client-named encounter items instead of assuming encounter roster inclusion proves drops.
-2. **68 recipes** have known recipe item IDs but unresolved vendor/trainer/drop/quest acquisition paths; check [recipe learning queue](recipe_learning_unresolved.csv). A separate **1,086** AHledger-trainer classifications are *references*, not confirmed in-game trainer teaching availability.
-3. **6,389** equipment records still carry unverified acquisition routes; these require trustworthy Forever-specific evidence or in-game verification. Do **not** hide the gear merely because research is incomplete.
-4. **33** independent item-name disagreements and **716** IDs missing from the independent item catalogue need review. Absence does not prove an item was removed; do not auto-delete or rename.
-5. **106** catalogue items have observed Everloot drop edges linking to NPC IDs; the optional NPC name census returned an HTTP 429. Preserve these IDs and evidence for later manual lookup rather than invent names.
-6. Verify source strings and layout in the **actual Forever client** and validate the installed build against saved-character data. Offline tests do not prove UI functionality or live availability.
+## Required before requesting build approval
+- Any new source-data change must pass the full nine-class tests again.
+- Verify representative early levelling items, including Goblin Mail Leggings (1943), Blackwater Cutlass (1951) and Guard's Chain Shirt (250489), plus newly corrected Idol of the Dream (220606).
+- Confirm new source descriptions remain clear and uncertainty is visible in the compact overlay and detailed guide.
+- Report unresolved sources openly instead of claiming complete live verification.
+- **Ask for explicit permission before creating a ZIP, tag, release or modifying `main`.**
 
-## Approval gate
-
-- Resolve or prominently label the highest-priority source gaps and their confidence at item level.
-- Review target items at early warrior levelling, especially **Goblin Mail Leggings (1943)**, **Blackwater Cutlass (1951)** and **Guard's Chain Shirt (250489)**. Confirm materials and the clear dungeon/recipe acquisition labels in the overlay.
-- Re-run the full nine-class source, materials, armour, performance and UI tests after any code or source-data changes.
-- Obtain explicit authorization before creating any installable ZIP or GitHub release; keep the existing `main` branch unchanged in the meantime.
-
-No public addon release, tag or package has been created in this audit.
+No user action is required for further offline source research; eventual in-game checks can be optional and targeted.
