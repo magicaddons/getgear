@@ -27,6 +27,9 @@ for item in items:
     temp={"sourceType":item["sourceType"],"source":item["source"],
           "acquisitionConfidence":item.get("sourceEvidence","")}
     new=module.dungeon_source(temp,bosses)
+    # The human-readable audit CSV omits acquisitionKind; if the item was
+    # only dungeon-associated through that field, retain its original label.
+    if new=="not-dungeon" and old!="not-dungeon":continue
     if old==new:continue
     unresolved=("dungeon; enemy unresolved","named dungeon enemy; boss/trash unresolved")
     promoted=old in unresolved and new.startswith("named client")
