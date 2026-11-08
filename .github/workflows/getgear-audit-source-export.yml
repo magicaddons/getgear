@@ -47,6 +47,8 @@ jobs:
           curl -fLSsS --retry 1 --max-time 25 https://forevertome.com/professions -o export/forevertome-professions.html || true
           curl -fLSsS --retry 1 --max-time 25 https://guide.wow4ever.se/en/professions -o export/wow4ever-professions.html || true
           curl -fLSsS --retry 1 --max-time 25 https://wowforever.one/professions/ -o export/wowforever-professions.html || true
+                    curl -fLSsS --retry 2 --max-time 65 https://forevertome.com/data/recipes.yafo0pc388.json -o export/ForeverTomeRecipes.json
+          python3 -m json.tool export/ForeverTomeRecipes.json > /dev/null
                     ls -lh export
           sha256sum export/*.json > export/SOURCE_HASHES.txt
       - name: Upload source snapshot
