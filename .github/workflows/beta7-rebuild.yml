@@ -1,0 +1,137 @@
+name: GetGear Beta 7 frozen-source rebuild and PRIVATE test
+on:
+  push:
+    branches: [work/beta7-evidence-reconciliation]
+    paths:
+      - .github/workflows/beta7-rebuild.yml
+      - tools/generate_beta7_evidence.py
+      - tests/beta7-coverage.lua
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover frozen Nov 8 audit sources
+        uses: actions/download-artifact@v4
+        with:
+          name: getgear-source-audit-2026-11-08
+          repository: magicaddons/getgear
+          run-id: 42465512234
+          github-token: ${{ github.token }}
+          path: .beta7-sources
+      - name: Generate source evidence and preserve input hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s .beta7-sources/ForeverCache.json
+          test -s .beta7-sources/ForeverTomeRecipes.json
+          test -s .beta7-sources/eg/1.60.1.70840/vendors.json
+          mkdir -p .beta7-generated docs
+          sha256sum .beta7-sources/ForeverCache.json \
+            .beta7-sources/ForeverTomeRecipes.json \
+            .beta7-sources/eg/1.60.1.70840/vendors.json \
+            .beta7-sources/eg/1.60.1.70840/quests.enUS.json \
+            > .beta7-generated/SOURCE_INPUT_SHA256.txt
+          python3 tools/generate_beta7_evidence.py \
+            --source .beta7-sources \
+            --equipment-cache EquipmentCache.lua \
+            --out .beta7-generated
+          cp .beta7-generated/GeneratedBeta7Evidence.lua GeneratedBeta7Evidence.lua
+          cp .beta7-generated/Beta7-audit-summary.json docs/BETA7-generated-summary.json
+          cp .beta7-generated/Beta7-item-level-audit.csv docs/BETA7-item-level-audit.csv
+          cp .beta7-generated/SOURCE_INPUT_SHA256.txt docs/BETA7-source-input-hashes.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path("GetGear.toc");s=p.read_text()
+          assert "EquipmentCache.lua\nSourceEnrichment.lua" in s or \
+                 "EquipmentCache.lua\nGeneratedBeta7Evidence.lua\nSourceEnrichment.lua" in s
+          if "GeneratedBeta7Evidence.lua" not in s:
+              s=s.replace("EquipmentCache.lua\nSourceEnrichment.lua",
+                          "EquipmentCache.lua\nGeneratedBeta7Evidence.lua\nSourceEnrichment.lua")
+          s=s.replace("## Version: 0.14.0-beta4","## Version: 0.14.0-beta7")
+          assert s.count("GeneratedBeta7Evidence.lua")==1
+          p.write_text(s)
+          PY
+      - name: Install Lua and execute existing plus new regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+          while IFS= read -r module; do
+            case "$module" in *.lua) test -f "$module"; luac5.4 -p "$module";; esac
+          done < GetGear.toc
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-coverage.lua .
+      - name: Verify and package private test-only ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(grep -c '\.lua$' GetGear.toc)" -eq 18
+          grep -Fxq '## Version: 0.14.0-beta7' GetGear.toc
+          mkdir -p dist/GetGear
+          while IFS= read -r module; do
+            case "$module" in *.lua) cp "$module" dist/GetGear/;; esac
+          done < GetGear.toc
+          cp GetGear.toc MapPin.tga README.txt DATA_MODEL.md BETA7_PRIVATE_NOTES.txt dist/GetGear/
+          printf 'GetGear 0.14.0-beta7\nPRIVATE TEST ONLY\nSource audit: 2026-11-08\nWorkflow: %s\n' \
+            "$GITHUB_RUN_ID" > dist/GetGear/BUILD_INFO.txt
+          (cd dist && zip -q -r ../GetGear-v0.14.0-beta7-PRIVATE-TEST.zip GetGear)
+          unzip -tq GetGear-v0.14.0-beta7-PRIVATE-TEST.zip
+          python3 - <<'PY'
+          import pathlib,zipfile
+          s=pathlib.Path("GetGear.toc").read_text()
+          modules={x.strip() for x in s.splitlines() if x.strip().endswith(".lua")}
+          extras={"GetGear.toc","MapPin.tga","README.txt","DATA_MODEL.md",
+                  "BETA7_PRIVATE_NOTES.txt","BUILD_INFO.txt"}
+          expected={"GetGear/"+name for name in modules|extras}
+          with zipfile.ZipFile("GetGear-v0.14.0-beta7-PRIVATE-TEST.zip") as z:
+              entries=[x for x in z.infolist() if not x.is_dir()]
+              actual={x.filename for x in entries}
+              assert len(modules)==18 and len(entries)==len(expected)==24
+              assert actual==expected,(actual-expected,expected-actual)
+              assert z.testzip() is None
+              for x in entries:
+                  assert x.filename.count("/")==1
+                  assert not x.filename.lower().endswith(
+                      (".exe",".dll",".bat",".cmd",".ps1",".sh",".lnk",".url"))
+                  assert ((x.external_attr>>16)&0o170000)!=0o120000
+          print("PASS: precisely 18 Lua and six support files")
+          PY
+          sha256sum GetGear-v0.14.0-beta7-PRIVATE-TEST.zip
+      - name: Preserve private ZIP and item audit as downloadable artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-v0.14.0-beta7-PRIVATE-TEST-and-audit
+          path: |
+            GetGear-v0.14.0-beta7-PRIVATE-TEST.zip
+            .beta7-generated/Beta7-audit-summary.json
+            .beta7-generated/Beta7-item-level-audit.csv
+            .beta7-generated/SOURCE_INPUT_SHA256.txt
+          include-hidden-files: true
+          retention-days: 30
+          if-no-files-found: error
+      - name: Commit durable generated files only to development branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_NAME" = work/beta7-evidence-reconciliation
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add GetGear.toc GeneratedBeta7Evidence.lua \
+            docs/BETA7-generated-summary.json docs/BETA7-item-level-audit.csv \
+            docs/BETA7-source-input-hashes.txt
+          if git diff --cached --quiet; then echo "Nothing changed"; else
+            git commit -m "Integrate frozen Beta7 full-catalogue source overlay and item-level audit"
+            git push origin HEAD:work/beta7-evidence-reconciliation
+          fi
+          echo "No tag, merge, main change or public release."
