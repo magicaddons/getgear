@@ -262,9 +262,13 @@ function GetGear:ShouldShowOverlayWorldBoEDrops(gear)
         or (type(gear.reagents)=="table" and #gear.reagents>0) then return true end
     local source=type(gear.sourceType)=="string" and gear.sourceType:lower() or ""
     local route=type(gear.acquisitionKind)=="string" and gear.acquisitionKind:lower() or ""
-    -- Explicit actionable sources beat vague world-drop descriptors.
+    local zone=type(gear.zone)=="string" and gear.zone:lower() or ""
+    local details=type(gear.source)=="string" and gear.source:lower() or ""
+    -- Some source imports say "World drop" generically while their zone
+    -- explicitly lists "Drops, Quest Rewards". Never lose such an alternative.
     for _,name in ipairs({"dungeon","quest","vendor","craft","pvp","reputation"}) do
-        if source:find(name,1,true) or route:find(name,1,true) then
+        if source:find(name,1,true) or route:find(name,1,true)
+            or zone:find(name,1,true) or details:find(name,1,true) then
             return true
         end
     end
