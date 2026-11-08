@@ -25,12 +25,12 @@ local patches = {
         acquisitionConfidence = "published-forever",
         acquisitionLocation = {
             zone = "Redridge Mountains", spot = "Stondry Darkhammer, ACA plans",
-            x = 10.4, y = 74.7, quality = "forever",
+            x = 8.01, y = 74.81, quality = "forever",
         },
         acquisitionLocationConfidence = "published-forever",
         bindingStatus = "bop",
         bindingEvidence = "published-forever-item-tooltip",
-        instructions = "Buy Plans: Veteran's Chain Belt from Stondry Darkhammer, the Azeroth Commerce Authority blacksmith in Redridge Mountains (10.4, 74.7), for 30 Merchant's Favor. Learn the plans at Blacksmithing 45. The finished item binds on pickup, so the intended wearer must be the blacksmith. Verify live vendor availability.",
+        instructions = "Buy Plans: Veteran's Chain Belt from Stondry Darkhammer, the Azeroth Commerce Authority blacksmith in Redridge Mountains (8.01, 74.81), for 30 Merchant's Favor. Learn the plans at Blacksmithing 45. The finished item binds on pickup, so the intended wearer must be the blacksmith. Verify live vendor availability.",
         notes = "Published Forever recipe and materials; 85 is the first yellow skill-up threshold, NOT the plan-learning requirement.",
         reagents = {
             {itemID=2840, name="Copper Bar", amount=12},
@@ -56,7 +56,7 @@ local patches = {
         recipeLearnMethod = "pattern",
         recipeLearnSkillEvidence = "published-forever-plan",
         recipeLearningEvidence = "Forever plans/recipe tooltips; creature-specific live drops unverified",
-        recipeLearningSourceURL = "https://www.wowhead.com/forever/item=2883/plans-runed-copper-breastplate",
+        recipeLearningSourceURL = "https://www.wowhead.com/forever/item=2881/plans-runed-copper-breastplate",
         sourceType = "Blacksmithing",
         source = "Plans: Runed Copper Breastplate (world drop)",
         zone = "World drop / player trade / Auction House",
