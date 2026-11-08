@@ -167,9 +167,9 @@ for _,r in ipairs({
     assert(ev.sourceSummary:find(r.actor,1,true)
         and ev.sourceSummary:find("live drop unverified",1,true),
         "Reference must retain named role and loot caveat "..r.id)
-    assert(not followUpCSV:find("\\n"..r.id..",",1,true),
+    assert(not followUpCSV:find("\n"..r.id..",",1,true),
         "Role-reviewed item remains in identity queue "..r.id)
-    assert(dungeonDropCSV:find("\\n"..r.id..",",1,true),
+    assert(dungeonDropCSV:find("\n"..r.id..",",1,true),
         "Role-reviewed item disappeared from dungeon scope "..r.id)
 end
 for _,r in ipairs({
@@ -183,12 +183,12 @@ for _,r in ipairs({
         and ev.sourceSummary:find("Forever coffer loot unverified",1,true))
     assert(not ev.sourceSummary:find("Boss:",1,true)
         and not ev.sourceSummary:find("Enemy:",1,true))
-    assert(followUpCSV:find("\\n"..r.id..",",1,true),
+    assert(followUpCSV:find("\n"..r.id..",",1,true),
         "Unverified coffer contents must stay queued "..r.id)
 end
 for _,id in ipairs({10801,14525,23173,273044}) do
     assert(addon.ItemCatalog[id],"Unresolved item missing "..id)
-    assert(followUpCSV:find("\\n"..id..",",1,true),
+    assert(followUpCSV:find("\n"..id..",",1,true),
         "Do not promote historic NPC item mapping to Forever drop "..id)
 end
 local vendorCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/recipe_vendor_book_checks.csv")):read("*a")
