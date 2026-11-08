@@ -28,15 +28,23 @@ for item in items:
           "acquisitionConfidence":item.get("sourceEvidence","")}
     new=module.dungeon_source(temp,bosses)
     if old==new:continue
-    assert old in ("dungeon; enemy unresolved","named dungeon enemy; boss/trash unresolved"),(old,new)
-    assert new.startswith("named client"),(old,new)
+    unresolved=("dungeon; enemy unresolved","named dungeon enemy; boss/trash unresolved")
+    promoted=old in unresolved and new.startswith("named client")
+    downgraded=old.startswith("named client") and new in unresolved
+    assert promoted or downgraded,(old,new)
     item["dungeonClassification"]=new
     flags=set(x for x in item["issues"].split(";") if x)
-    flags.discard("dungeon_enemy_or_role_unresolved")
+    if promoted:
+        flags.discard("dungeon_enemy_or_role_unresolved")
+    else:
+        # Some imported "boss names" are ordinary mobs. The published
+        # client encounter roster cannot establish a boss identity here.
+        flags.add("dungeon_enemy_or_role_unresolved")
     item["issues"]=";".join(sorted(flags))
     changed.append({"itemID":item["itemID"],"name":item["name"],"source":item["source"],
-        "old":old,"new":new,"evidence":"Named Forever client encounter, NOT confirmed loot"
-        if item.get("sourceEvidence")!="observed" else "Named encounter; GetGear research reports player-observed drop",
+        "old":old,"new":new,
+        "evidence":("Named Forever client encounter, NOT confirmed loot"
+            if promoted else "Not a recognised client encounter; boss/trash remains unresolved"),
         "encounterSource":url})
 write("all_items.csv",items,list(items[0]))
 write("unresolved_items.csv",[x for x in items if x["issues"]],list(items[0]))
