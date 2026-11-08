@@ -38,7 +38,16 @@ jobs:
              fname=$(echo "$site" | sed -E 's#https?://([^/]+)/?.*#\\1#')
              curl -fLSsS --retry 1 --max-time 30 "$site" -o "export/prof-${fname}.html" || true
           done
-          ls -lh export
+          for u in "https://www.curseforge.com/api/v1/mods/1558208/files/9335129/download" "https://mediafilez.forgecdn.net/files/9335/129/ItemDB-ItemDB-v1.8.0.zip"; do
+            if curl -fLSsS --retry 1 --max-time 80 "$u" -o export/LibItemDB.zip && unzip -tq export/LibItemDB.zip >/dev/null 2>&1; then
+              echo "Item name library downloaded"; break
+            fi
+            rm -f export/LibItemDB.zip
+          done
+          curl -fLSsS --retry 1 --max-time 25 https://forevertome.com/professions -o export/forevertome-professions.html || true
+          curl -fLSsS --retry 1 --max-time 25 https://guide.wow4ever.se/en/professions -o export/wow4ever-professions.html || true
+          curl -fLSsS --retry 1 --max-time 25 https://wowforever.one/professions/ -o export/wowforever-professions.html || true
+                    ls -lh export
           sha256sum export/*.json > export/SOURCE_HASHES.txt
       - name: Upload source snapshot
         uses: actions/upload-artifact@v4
