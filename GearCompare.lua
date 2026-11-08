@@ -98,11 +98,13 @@ local function Stats(link)
     if not ok or type(result)~="table" then return nil end
     return NormalizeStats(result)
 end
-local function ItemStats(itemID)
+local function ItemStats(itemID, requestIfMissing)
     if type(itemID)~="number" then return nil end
     local out=Stats("item:"..itemID)
     if out then return out end
-    if GetGear.RequestItemDataOnce then GetGear:RequestItemDataOnce(itemID) end
+    if requestIfMissing ~= false and GetGear.RequestItemDataOnce then
+        GetGear:RequestItemDataOnce(itemID)
+    end
     return nil
 end
 local function Equipped(slot)
@@ -146,7 +148,7 @@ local function Combine(a,b)
     return result
 end
 local function MakeGroup(label, candidate, equippedLinks)
-    local result={label=label,rows={}}
+    local result={label=label,rows={},comparable=false}
     if #equippedLinks==0 then
         result.message="No item equipped";return result
     end
@@ -181,15 +183,16 @@ local function MakeGroup(label, candidate, equippedLinks)
         end
     end
     if #result.rows==0 then result.message="No differences in reported base stats" end
+    result.comparable=true -- both candidate and equipped base stats were read
     return result
 end
 
-function GetGear:GetGearComparison(gear)
+function GetGear:GetGearComparison(gear, suppressItemDataRequest)
     if type(gear)~="table" then return nil end
     if self:IsGearEquipped(gear) then return {message="Already equipped",groups={}} end
     local slots=SLOT[gear.slot]
     if not slots then return {message="No comparison available for this slot",groups={}} end
-    local candidate=ItemStats(gear.itemID)
+    local candidate=ItemStats(gear.itemID, not suppressItemDataRequest)
     local groups={}
     if gear.slot=="Ring" or gear.slot=="Trinket" then
         for index,slot in ipairs(slots) do
@@ -219,6 +222,32 @@ function GetGear:GetGearComparison(gear)
     end
     return {groups=groups}
 end
+
+-- Strictly an overlay presentation filter, independent of catalogue visibility
+-- and user-hidden/acquired states. A stat comparison is conclusive only when
+-- both candidate and equipped item data are present. Never start bulk item-data
+-- requests while scanning the 1-60 tracker catalogue.
+function GetGear:ShouldShowOverlayStatChanges(gear)
+    if not gear or gear.bagUpgrade then return true end
+    if self.db and self.db.overlay and self.db.overlay.hideWithoutPositiveStats==false then
+        return true
+    end
+    local comparison=self:GetGearComparison(gear,true)
+    if not comparison or comparison.message
+        or type(comparison.groups)~="table" or #comparison.groups==0 then
+        return true -- unavailable/equipped/unknown: not proof of no improvement
+    end
+    for _,group in ipairs(comparison.groups) do
+        if not group.comparable then return true end
+        for _,stat in ipairs(group.rows or {}) do
+            if type(stat.delta)=="number" and stat.delta>0.0001 then
+                return true -- one positive stat against any eligible slot
+            end
+        end
+    end
+    return false -- every eligible comparison is zero or negative only
+end
+
 -- v0.10.5: Reversible earlier-gear classification. Equipment-ID matching
 -- is handled independently; there is no implicit SavedVariables migration.
 local OBSOLETE_ARMOR_SLOTS = {
