@@ -27,9 +27,9 @@ for name,url in urls.items():
    text=b.decode("utf8","replace")
    srcs=re.findall(r'<script[^>]*?src="([^"]+)"',text)
    print("SCRIPTS",len(srcs),srcs[:20])
-   for token in ('itemDatabase','__NEXT_DATA__','items.json','database.json','api/items','NEXT_PUBLIC','__next_f'):
+   for token in ('itemDatabase','__NEXT_DATA__','items.json','database.json','api/items','NEXT_PUBLIC','__next_f','data-db-page','"shards"','"meta"','shards','db-config','data-db-','CFG','index-shard'):
     i=text.find(token)
-    print("HTMLTOKEN",token,i,text[max(0,i-100):i+150] if i>=0 else "")
+    print("HTMLTOKEN",token,i,text[max(0,i-180):i+750] if i>=0 else "")
    continue
   obj=json.loads(b)
   print("ROOT",name,type(obj).__name__,len(obj),list(obj)[:14] if isinstance(obj,dict) else ("first keys "+str(list(obj[0])[:20]) if obj else "empty"))
