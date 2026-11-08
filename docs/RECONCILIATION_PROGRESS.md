@@ -81,6 +81,9 @@ The [agent instructions](../AGENTS.md) and [bounded overnight/Codex plan](OVERNI
 ## Checkpoint 5F — vendor book sources 273981–273993
 **Documentation-only, targeted 13-row provenance/invariant checks PASS.** [Research evidence](source-audit-1-60/reconciliation-20261109/CHECKPOINT5F_VENDOR_EVIDENCE.md) records seven Justice and six Conviction patterns. Five exact Forever tooltips, eight specific named-guide references; unknown book-specific gates are not inferred. **42/68** individually researched; **26** remain. All **68** live-stock-unverified, **954** recipe-source uncertainties unchanged. No addon changes; last full CI PASS 42493307958. Next 273994–274006.
 
+## Checkpoint 5G — remaining Conviction, Grimstitch and Spiritcaller books 273994–274006
+**Evidence-only, targeted 13-row invariants PASS.** [Research record](source-audit-1-60/reconciliation-20261109/CHECKPOINT5G_VENDOR_EVIDENCE.md) differentiates three exact Forever book tooltips from 10 named profession-guide references, preserving unknown individual gates. **55/68** vendor-book IDs individually assessed; **13** remain, 274007–274019. All 68 stock sources live-unverified; 954 recipe-source routes remain open. No addon changes or new full CI (last PASS 42493307958).
+
 ## Next checkpoint
 Resolve the remaining **6** source-verification leads only if new Forever item-specific evidence appears. Two are container/coffer leads, and four are unconfirmed mob/item or historical event associations. Next bounded active category is **954** recipe-book sources (68 vendor, 886 trainer-labelled). Preserve the other-equipment, final-audit, and in-game acceptance checkpoints in that order.
 
