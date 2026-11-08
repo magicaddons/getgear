@@ -1,0 +1,28 @@
+name: Export public quest and dungeon evidence for GetGear reconciliation
+on:
+  push:
+    branches: [work/gear-data-reconciliation]
+    paths: [.github/workflows/getgear-quest-evidence-export.yml]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download quest/dungeon/recipe source snapshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p export
+          for name in forever-quests forever-recipes mat-sources dungeons; do
+            curl --fail --location --retry 3 --silent --show-error \
+              "https://playautotechnologies.org/data/${name}.json" -o "export/${name}.json"
+            python3 -m json.tool "export/${name}.json" >/dev/null
+          done
+          sha256sum export/*.json > export/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-quest-and-recipe-evidence
+          path: export/
+          retention-days: 14
