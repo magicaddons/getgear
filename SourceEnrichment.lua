@@ -2,10 +2,50 @@ local addonName, GetGear = ...
 -- Beta 7 evidence reconciliation (development only).
 -- Applied after the dated client cache and the 259 hand-reviewed records.
 -- Never replace class masks, item identities or level gates.
--- These three fixes use published Forever-specific item/recipe/dungeon evidence.
+-- Corrections include published Forever-specific item/recipe/dungeon evidence
+-- and clearly labelled Classic-reference dungeon trash sources.
 -- "Published" does not mean personally observed in the live client.
 
 local patches = {
+    [1943] = { -- Goblin Mail Leggings: ordinary Deadmines mob, not a boss
+        sourceType = "Dungeon trash",
+        source = "The Deadmines - Goblin Shipbuilder (trash; Classic loot reference)",
+        sourceSummary = "The Deadmines | Trash: Goblin Shipbuilder (Classic ref.)",
+        zone = "The Deadmines",
+        acquisitionKind = "Dungeon trash drop",
+        acquisitionConfidence = "classic-reference",
+        sourceURL = "https://www.wowhead.com/forever/item=1943/goblin-mail-leggings",
+        instructions = "Goblin Shipbuilder is an ordinary enemy in The Deadmines, not a boss. The listed drop source comes from Classic loot references; confirm the drop on Forever before targeted farming.",
+    },
+    [1951] = { -- Blackwater Cutlass: Classic-reference regular enemies
+        sourceType = "Dungeon trash",
+        source = "The Deadmines - Defias Pirate / Defias Squallshaper (trash; Classic loot reference)",
+        sourceSummary = "The Deadmines | Trash: Defias Pirate / Squallshaper (Classic ref.)",
+        zone = "The Deadmines",
+        acquisitionKind = "Dungeon trash drop",
+        acquisitionConfidence = "classic-reference",
+        sourceURL = "https://www.wowhead.com/forever/item=1951/blackwater-cutlass",
+        instructions = "Classic loot tables list Defias Pirate and Defias Squallshaper as drops in The Deadmines. These are ordinary enemies, not bosses. Specific live Forever loot rates remain unverified.",
+    },
+    [250489] = { -- Guard's Chain Shirt: dropped Blacksmithing plans, NOT a trainer recipe
+        sourceType = "Blacksmithing",
+        source = "Plans: Guard's Chain Shirt (dropped recipe; live source not verified)",
+        sourceSummary = "Blacksmithing | Dropped plans (low-level dungeon loot; source unverified)",
+        zone = "Dropped plans / Blacksmithing",
+        profession = "Blacksmithing",
+        professionSkillRequired = 80,
+        recipeLearnMethod = "pattern",
+        recipePatternItemID = 251341,
+        recipeLearnSkillEvidence = "published-forever-plan",
+        recipeLearningSourceURL = "https://www.wowhead.com/forever/item=251341/plans-guards-chain-shirt",
+        recipeAcquisitionKind = "Drop",
+        recipeDropSource = "Published low-level dungeon loot references; not confirmed live",
+        acquisitionKind = "Crafted gear - dropped plans",
+        acquisitionConfidence = "published-forever",
+        bindingStatus = "bop",
+        bindingEvidence = "published-forever-item-tooltip",
+        instructions = "Learn Plans: Guard's Chain Shirt at Blacksmithing 80. The plans are a drop, NOT trainer-taught; reported dungeon mobs and their drop chances still require live Forever verification. The finished chest binds on pickup, so the intended wearer must craft it.",
+    },
     [250513] = { -- Veteran's Chain Belt
         profession = "Blacksmithing",
         professionSkillRequired = 45, -- PLAN LEARNING MINIMUM, not yellow at 85
