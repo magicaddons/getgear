@@ -25,8 +25,17 @@ local function contains(mode,id)
 end
 for _,id in ipairs({5957,2303,7166,2852}) do
     assert(not contains("available",id),"Level-15 Warrior still recommended early gear "..id)
-    assert(contains("earlier",id),"Level-15 earlier gear missing "..id)
 end
+-- Beta7 primary-armor rule: older leather is not a Warrior default option,
+-- even in Earlier Gear. Older mail and usable weapons remain browsable.
+for _,id in ipairs({5957,2303}) do
+    assert(not contains("earlier",id),"Warrior Earlier Gear still lists leather "..id)
+end
+for _,id in ipairs({7166,2852}) do
+    assert(contains("earlier",id),"Level-15 earlier mail/weapon missing "..id)
+end
+assert(not contains("available",3313),"Ceremonial Leather Harness leaked into Warrior")
+assert(not contains("earlier",3313),"Leather harness should never be Warrior default")
 assert(not contains("available",2572),"Intellect-only Red Linen Robe leaked into Warrior")
 assert(not contains("earlier",2572),"Off-role cloth should not be presented as Warrior earlier gear")
 assert(contains("available",3489),"Level-12 Thick War Axe should still be current at 15")
@@ -50,6 +59,7 @@ addon.level=15
 -- items but never explicit QA or internal restored placeholders.
 addon.db.overlay.showAllValidGear=true
 assert(contains("available",5957) and contains("available",2303) and contains("available",7166))
+assert(contains("available",3313),"All-valid must restore Ceremonial Leather Harness")
 assert(contains("available",2572),"Expanded view should restore Warrior-equippable robe")
 assert(not contains("available",24358) and not contains("available",281685))
 addon.db.overlay.showAllValidGear=false
@@ -80,4 +90,4 @@ addon.Gear[#addon.Gear]=nil
 
 local activePreview=addon:GetPreviewRecommendations("MAGE")
 assert(#activePreview>1000,"Read-only class preview not available")
-print("PASS Beta4 Warrior lvl15 excludes all four reported items; aged/role gates, late quests, boundary, status, all-valid, materials and preview")
+print("PASS Beta7 Warrior lvl15 hides leather and four earlier items; aged/role gates, late quests, boundary, status, all-valid, materials and preview")
