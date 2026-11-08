@@ -24,6 +24,7 @@ release. It starts from `work/acquisition-reconciliation-1-60` at
   dungeon/quest/vendor/crafted routes are protected, even when those items
   themselves are BoE. The independent Classic + Forever quality index is
   only a cache-miss fallback; live client item information takes precedence.
+- **Mixed-stat spell-power protection:** [PR #6](https://github.com/magicaddons/getgear/pull/6) has been merged into this development branch. Each item now carries independently sourced (nonexclusive) spell-power, healing, mana, physical and defense flags where available. The generated Forever tooltip index covers **7,699 / 7,707** items; eight lack matching tooltip data. Warrior, Rogue and Hunter hide explicit spell-power items by default, even when they also contain Strength or Stamina. Paladin, Shaman and Druid retain hybrid choices; the existing Show all valid equipment option remains an override. [Evidence and source hash](source-audit-1-60/STAT_FLAGS.md) and nine-class regression tests are included.
 - **Both rules are reversible:** Settings toggles per character; detailed
   guide still allows browsing, and saved Hidden/Acquired/Skipped states
   aren't changed. Tracked materials reflect the overlay-filtered objectives;
