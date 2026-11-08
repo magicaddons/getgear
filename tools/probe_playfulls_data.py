@@ -19,6 +19,10 @@ for path in [cfg["meta"]]+cfg["shards"]:
  if isinstance(obj,dict):
   for k,v in list(obj.items())[:11]:
    print("FIELD",k,"type",type(v).__name__,"length",len(v) if hasattr(v,"__len__") else "na","sample",str(v[:1] if isinstance(v,list) else v)[:1400])
+  if "so" in obj:
+   print("SOURCE_KINDS",json.dumps(obj.get("sk"),ensure_ascii=False)[:3500])
+   print("SOURCE_NAMES",json.dumps(obj.get("src")[:6],ensure_ascii=False)[:3000])
+   print("SELECTED_SOURCE_RECORDS",json.dumps({k:obj["so"][k] for k in [41,421,1079,1279,1285,1907,6675,7004] if k<len(obj["so"])},ensure_ascii=False)[:9000])
   d=obj.get("rows",obj.get("items",[]))
  else:d=obj
  if isinstance(d,list) and d:
