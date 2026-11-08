@@ -1,0 +1,27 @@
+name: Export independent Forever profession source evidence
+on:
+  push:
+    branches: [work/gear-data-reconciliation]
+    paths: [.github/workflows/getgear-profession-evidence-export.yml]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Obtain public reference catalogue for evidence reconciliation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p export
+          curl --fail --location --retry 3 --silent --show-error \
+            https://raw.githubusercontent.com/LechuckThePirate/Fabrikao/57ed6c1c66495c4435f610297e841a4cf955a455/Data/Generated/Recipes.lua \
+            -o export/Fabrikao-Recipes.lua
+          test "$(wc -c < export/Fabrikao-Recipes.lua)" -gt 600000
+          sha256sum export/Fabrikao-Recipes.lua > export/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-independent-profession-evidence
+          path: export/
+          retention-days: 14
