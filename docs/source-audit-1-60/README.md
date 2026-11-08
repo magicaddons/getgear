@@ -1,11 +1,11 @@
 # GetGear 1–60 source and recipe audit (development only)
 
 This is a **machine-assisted census**, not a claim that every drop or vendor route was personally verified in the live realm.
-Generated UTC: 2026-11-08T12:35:15+00:00.
+Generated UTC: 2026-11-08T12:36:05+00:00.
 
 ## Coverage
 - Catalogue records checked: **7,707/7,707**; unique IDs: 7,707.
-- Items with one or more outstanding flags: **7,586**.
+- Items with one or more outstanding flags: **6,531**.
 - Crafting entries checked: **1,252**.
 - Recipe material candidates requiring changes: **0** (missing: 0; conflicts: 0).
 - Independent current-client recipe matches: **1,252**.
@@ -23,10 +23,11 @@ Generated UTC: 2026-11-08T12:35:15+00:00.
 - PALADIN: 5,525 class-item objectives
 
 ## Recipe acquisition categories
-- recipe teaching unresolved: 1,062
-- plans/pattern; source unresolved: 98
+- trainer (AHledger reference): 1,086
+- recipe item required; origin unresolved: 68
 - vendor recipe: 48
 - trainer (teaching unverified): 38
+- dropped recipe (Forever-observed): 6
 - initial profession: 4
 - dropped recipe: 2
 
@@ -39,9 +40,9 @@ Generated UTC: 2026-11-08T12:35:15+00:00.
 
 ## Outstanding issue counts
 - acquisition_route_unverified: 6,389
-- recipe_learning_source_unresolved: 1,160
 - not_in_independent_catalogue_or_hidden: 716
 - dungeon_enemy_or_role_unresolved: 235
+- recipe_learning_source_unresolved: 68
 - independent_name_disagreement: 33
 
 ## Interpretation and limitations
