@@ -37,6 +37,13 @@ DESIGN AND FILTERING
   world drops and unknown-source items stay visible with uncertainty
   labels. Utility, resistances, Hunter Intellect and hybrid options remain
   broadly available.
+- Default body-armour priority (rather than listing all equippable lower
+  armour classes): Warrior/Paladin Mail to 39 then Plate from 40;
+  Hunter/Shaman Leather to 39 then Mail from 40; Rogue/Druid Leather;
+  Priest/Mage/Warlock Cloth. This does NOT restrict weapons, rings, cloaks,
+  trinkets and other non-body-armour slots. Preview uses each item's level
+  when browsing past/future gear. "Show all valid equipment" restores
+  alternative body-armour types, including unusual cross-armour choices.
 - Mage only: read the COMMITTED Forever C_Traits group points. If Fire, Frost
   or Arcane clearly dominates, a modifier that provides damage ONLY for a
   different one of those schools is suppressed. Items with useful generic
