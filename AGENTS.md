@@ -16,3 +16,10 @@ Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [re
 
 ## Next work
 Checkpoint 4's [consistency audit](docs/source-audit-1-60/reconciliation-20261109/CHECKPOINT4_CONSISTENCY.md) passed. Six dungeon source links remain genuinely unresolved. Next priority is **954 recipe-book acquisition sources: 68 vendor references then 886 trainer-labelled records**; after that audit other equipment source uncertainty, then the full catalogue/source/filter regression pass, then in-game acceptance tests. See `docs/OVERNIGHT_WORK_PLAN.md` for batch and stopping rules.
+
+
+## Trainer-book research handover (Checkpoint 6A)
+- The 886 AHledger trainer-labelled books are structurally triaged, **not** confirmed trainer-taught or live-acquirable. Read [eight-group plan](docs/source-audit-1-60/reconciliation-20261109/TRAINER_BOOK_TRIAGE.md) and [886-row index](docs/source-audit-1-60/reconciliation-20261109/trainer_book_triage_index.csv); sample independent source checks are in `CHECKPOINT6A_TRAINER_SOURCE_EXAMPLES.md`.
+- Next bounded research category: **188 Merchant's Favor candidate vendor books** grouped by profession and both faction sellers. Do not copy a family gate to an exact book without direct evidence or assert published beta vendor stock is live.
+- Protect the distinction between book acquisition, trainer teaching, book learning skill, and finished-item crafting skill/difficulty. Don't erase simultaneous quest/drop routes (book 3609) via source precedence.
+- The old 68-book vendor research phase is complete at published-source level only. **954 total** recipe book routes remain unverified live. No build/release without approval.
