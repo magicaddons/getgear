@@ -378,8 +378,11 @@ def main():
     unresolved=[r for r in dungeon_rows if r["reconciledRole"] in
                 ("unknown","dungeon-general","dungeon-enemy","enemy")]
     write_csv("dungeon_source_followups.csv",unresolved,list(dungeon_rows[0]))
-    unresolved_books=[r for r in recipe_rows if ("unverified" in r["classification"]
-                      or r["classification"]=="learning source unverified")]
+    # Reference-only vendors or trainers have NOT been verified live; keep
+    # their high-priority plan books in the follow-up list.
+    unresolved_books=[r for r in recipe_rows if r["bookItemID"]
+                      and (r["classification"].endswith("-reference")
+                           or "unverified" in r["classification"])]
     write_csv("recipe_source_followups.csv",unresolved_books,list(recipe_rows[0]))
     # Prioritize active 1–30, specific unknown-source patterns, then 31–60.
     manual=sorted(unresolved,key=lambda r:(int(r["level"])>30,int(r["level"]),r["name"]))[:40]
@@ -429,7 +432,7 @@ def main():
         f"- Combined Forever cache entries: **{len(fcache):,}**; Playfulls item entries: **{len(play):,}**.",
         f"- Published player-observed relationships: **{sum(len(x) for x in observations.values()):,}**.",
         f"- Dungeon rows needing exact enemy/boss/trash verification: **{len(unresolved):,}**.",
-        f"- Recipes with explicit unresolved method or unverified book origin: **{len(unresolved_books):,}**.",
+        f"- Recipe book origins that still require live verification: **{len(unresolved_books):,}**.",
         f"- Item ID name mismatches against Forever cache: **{len(duplicate_identity)}**.",
         "",
         "## Dungeon source classifications (reference quality, not drop-rate proof)",
@@ -479,6 +482,8 @@ def main():
         "- [AHledger](https://ahledger.com) — supplemental recipe acquisition reference.",
     ])
     (REPORT/"README.md").write_text("\n".join(lines)+"\n",encoding="utf8")
+    for book in (273952,273968,273976,273988,274019):
+        print("BOOK_SOURCE_SAMPLE",book,json.dumps(play_entries(book),ensure_ascii=False)[:1000],flush=True)
     print("RECONCILE DONE",len(all_rows),"items",len(dungeon_rows),"dungeon",
           len(recipe_rows),"recipes",len(changes),"in-addon summaries",flush=True)
     print("DUNGEON ROLES",dict(roles),flush=True)
