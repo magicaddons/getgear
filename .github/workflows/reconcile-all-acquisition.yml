@@ -1,0 +1,82 @@
+name: Comprehensive 1-60 acquisition reconciliation (no release)
+on:
+  push:
+    branches: [work/full-acquisition-reconciliation-20261109]
+    paths:
+      - .github/workflows/reconcile-all-acquisition.yml
+      - tools/reconcile_acquisition_1_60.py
+      - AcquisitionEvidence.lua
+      - GetGear.toc
+      - tests/beta7-acquisition-reconciled.lua
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: getgear-full-acquisition-audit
+  cancel-in-progress: false
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install Lua
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y lua5.4
+      - name: Reconcile public Forever sources by item ID
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/reconcile_acquisition_1_60.py
+          python3 tools/reconcile_acquisition_1_60.py
+          test -s AcquisitionEvidenceIndex.lua
+          test -s docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv
+          test -s docs/source-audit-1-60/reconciliation-20261109/recipes_reconciled.csv
+          cat docs/source-audit-1-60/reconciliation-20261109/README.md
+      - name: Check Lua syntax of complete integrated addon
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in *.lua) test -f "$module"; luac5.4 -p "$module";; esac
+          done < GetGear.toc
+      - name: Full nine-class, filters, sources, crafting, layout and performance regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-material-names.lua .
+          lua5.4 tests/beta7-coverage.lua .
+          lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tests/beta7-armor-priority.lua .
+          lua5.4 tests/beta7-preview-layout.lua .
+          lua5.4 tests/beta7-stat-flags.lua .
+          lua5.4 tests/overlay-stat-filter.lua .
+          lua5.4 tests/overlay-green-boe-filter.lua .
+          lua5.4 tests/beta7-acquisition-reconciled.lua .
+      - name: Save source register and audit tables (development branch only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: getgear-acquisition-reconciliation-reports
+          path: docs/source-audit-1-60/reconciliation-20261109/
+          retention-days: 60
+      - name: Commit evidence index and reports only after passing validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "GetGear source evidence validator"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add AcquisitionEvidenceIndex.lua docs/source-audit-1-60/reconciliation-20261109
+          if ! git diff --cached --quiet; then
+            git commit -m "Reconcile all 7,707 equipment acquisitions with public Forever and player evidence"
+            git push origin "HEAD:work/full-acquisition-reconciliation-20261109"
+          fi
+      - name: Never package or release
+        run: echo "Development source and evidence only. No ZIP, tag, public release, or main modifications."
