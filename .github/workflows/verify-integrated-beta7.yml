@@ -1,0 +1,71 @@
+name: Verify combined GetGear overlay and acquisition (no release)
+on:
+  push:
+    branches: [work/integrated-overlay-and-acquisition-beta7]
+    paths:
+      - .github/workflows/verify-integrated-beta7.yml
+      - tools/generate_worlddrop_boe_index.py
+      - Core.lua
+      - GearCompare.lua
+      - GuideState.lua
+      - UI.lua
+      - GetGear.toc
+      - tests/overlay-stat-filter.lua
+      - tests/overlay-green-boe-filter.lua
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: verify-getgear-integration
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install Lua
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y lua5.4
+      - name: Rebuild cross-checked green BoE fallback
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/generate_worlddrop_boe_index.py
+          python3 tools/generate_worlddrop_boe_index.py
+          test -s WorldDropBoEIndex.lua
+      - name: Syntax-check every addon Lua module
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in *.lua) test -f "$module"; luac5.4 -p "$module";; esac
+          done < GetGear.toc
+      - name: Nine-class and overlay integration regressions
+        run: |
+          set -euo pipefail
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-material-names.lua .
+          lua5.4 tests/beta7-coverage.lua .
+          lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tests/beta7-armor-priority.lua .
+          lua5.4 tests/beta7-preview-layout.lua .
+          lua5.4 tests/overlay-stat-filter.lua .
+          lua5.4 tests/overlay-green-boe-filter.lua .
+      - name: Store fallback index and provenance ONLY in integration branch
+        run: |
+          set -euo pipefail
+          git config user.name "GetGear verification bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add WorldDropBoEIndex.lua docs/source-audit-1-60/BOE_FILTER_INDEX.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate offline cross-checked green BoE world-drop index (integration only)"
+            git push origin "HEAD:work/integrated-overlay-and-acquisition-beta7"
+          fi
+      - name: Confirm no packaging or release
+        run: echo "Validation only. No ZIP, public release, tag or changes to main."
