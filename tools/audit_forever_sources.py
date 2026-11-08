@@ -195,8 +195,8 @@ def main():
     except Exception as exc:failures["everloot_npc_sightings"]=str(exc)
     observed_by_item=collections.defaultdict(list)
     for edge in observed_edges:
-        if isinstance(edge,dict) and edge.get("evidence")=="observed"
-            and edge.get("fromKind")=="item":
+        if (isinstance(edge,dict) and edge.get("evidence")=="observed"
+                and edge.get("fromKind")=="item"):
             observed_by_item[asid(edge.get("fromId"))].append(edge)
     ahl_recipes,ahl_status=ahledger_recipes()
     provenance["ahledger_crafting"]={
