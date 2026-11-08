@@ -366,13 +366,43 @@ def main():
             elif iid not in changes and book and "unresolved" in existing_method:
                 changes[iid]={"summary":f"Recipe: plans/pattern #{book} (source unverified)",
                               "confidence":"client-pattern-unknown","url":"","patternID":book}
+        # Actionable vendor and quest research beyond the dungeon/recipe
+        # queues. Only enrich already vendor/quest/undocumented catalogue
+        # records; never turn a generic world-drop into an assumed vendor
+        # source (which would also conflict with the BoE overlay filter).
+        if iid not in changes and not is_dungeon and not recipe:
+            genericType=str(item["sourceType"] or "").lower()
+            manualQuality=item["sourceEvidence"] in (
+                "observed","forever","published-forever",
+                "published-forever-dungeon-journal","reported")
+            wanted=None
+            if genericType.startswith("vendor") or "source not documented" in genericType:
+                wanted=("vendor","merchant_favor")
+            elif genericType.startswith("quest") or "quest reward" in genericType:
+                wanted=("quest",)
+            if wanted and not manualQuality:
+                found=next((s for s in ps if s["type"] in wanted and s["npc"]
+                            and s["zone"] and "(horde)" not in s["zone"].lower()),None)
+                if found:
+                    if found["type"]=="quest":
+                        detail=("Quest: "+found["npc"]+" — "+found["zone"]
+                                +" (Forever reference; quest eligibility unverified)")
+                    else:
+                        detail=("Vendor: "+found["npc"]+" — "+found["zone"]
+                                +" (Forever reference; live stock unverified)")
+                    changes[iid]={"summary":detail,
+                                  "confidence":"forever-community-reference",
+                                  "url":PLAY_URL}
         all_rows.append({
             "itemID":iid,"name":name,"level":item["level"],
             "existingSourceType":item["sourceType"],"existingConfidence":item["sourceEvidence"],
             "ForeverCacheTypes":";".join(type_data),
+            "ForeverCacheSources":";".join((cache or {}).get("sourceLabels",[])),
             "PlayfullsTypes":";".join(pf_types),
             "PlayfullsSourceCount":len(ps),
+            "PlayfullsSources":json.dumps(ps,ensure_ascii=False),
             "EverlootObservedEdges":len(observed),
+            "EverlootObservedRelations":json.dumps(observed,ensure_ascii=False),
             "Dungeon":is_dungeon,"dungeonRole":result["role"] if result else "",
             "dungeonConfidence":result["confidence"] if result else "",
             "RecipeClassification":recipeStatus,
@@ -496,6 +526,7 @@ def main():
         "- A trainer-labelled recipe with a pattern item is marked for a teaching-method "
         "check; the two routes could both exist and should not be called contradictory "
         "without server evidence.",
+        "- Non-dungeon vendor/quest details only supplement imported generic vendor/quest entries and are explicitly labelled reference-only.",
         "- Original 1,252 crafting ingredient lists are **untouched**.",
         "- Higher-confidence manually reviewed source text and item-ID exceptions "
         "take priority over this generated evidence.",
@@ -503,7 +534,7 @@ def main():
         "recipe availability gates, or the two overlay filters.",
         "",
         "## Audit files",
-        "- [All equipment records](all_items_reconciled.csv) — one row per item.",
+        "- [All equipment records](all_items_reconciled.csv) — one row per item, including raw published source relationships and observation records.",
         "- [All historically dungeon-associated records](dungeon_items_reconciled.csv), "
         "including separately classified crafted-pattern entries.",
         "- [Actual dungeon equipment drops](dungeon_equipment_drops.csv) — "
