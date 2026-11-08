@@ -69,3 +69,23 @@ Unverified source identity is not an equipment eligibility veto: appropriate
 items remain visible with unverified-source labels, while conservative
 class/role and five-level ageing rules still apply. Public `main` remains
 v0.12.14; this Beta 7 work must not be merged without client validation.
+
+
+### Beta 7 primary armour preference correction
+
+The core equipability mask remains unchanged; a Warrior can technically equip
+leather. For the default guide, however, `GearRelevance.lua` now restricts
+body-armour choices to the class's **preferred armour type at that level**:
+Warrior/Paladin Mail through 39, Plate from 40; Hunter/Shaman Leather through
+39, Mail from 40; Rogue/Druid Leather; Priest/Mage/Warlock Cloth. Item slots
+such as weapons, cloaks, jewellery and trinkets are not subjected to this tier
+rule. The level-1–60 Preview calculates by the item's target level; live
+current-item lists use the character level; future items use the expected
+future equip level. The explicit "Show all valid equipment" setting bypasses
+this soft preference filter without allowing known QA records. Explicitly
+researched, reviewed exceptions can be added to the local allow-list.
+
+This was introduced after a live tester found Ceremonial Leather Harness
+(#3313, +4 Agility/+3 Spirit) in a Warrior default list. Class proficiency
+and stat-role alone were too permissive. Verified by
+`tests/beta7-armor-priority.lua` and `tests/beta4-filters.lua`.
