@@ -48,3 +48,24 @@ Cached equipment facts are NOT proof of acquisition on the live realm.
 Hand-authored research is preserved as evidence, not as a special permission
 to bypass universal filtering. An uncertain talent API or split fails open;
 users can also opt into the complete class-equippable catalogue.
+
+
+## Beta 7 source reconciliation overlay (development candidate)
+
+After `EquipmentCache.lua`, the generated `GeneratedBeta7Evidence.lua` applies
+2026-10-31 client recipe material inputs and conservatively sourced boss,
+vendor and quest names. `SourceEnrichment.lua` follows it and applies the
+three individually researched item corrections. This order is required by
+`GetGear.toc` and checked by `tests/beta7-evidence.lua`.
+
+A changed client recipe reagent list takes precedence over older manually
+entered materials, but the original 43 disagreement pairs are preserved
+in the separate pre-integration audit candidate and are not presented as
+fully live-verified. No generated data assigns a recipe learning skill,
+binding status or guaranteed faction/vendor access. The source generator and
+7,678-row item audit are committed under `tools/` and `docs/`, respectively.
+
+Unverified source identity is not an equipment eligibility veto: appropriate
+items remain visible with unverified-source labels, while conservative
+class/role and five-level ageing rules still apply. Public `main` remains
+v0.12.14; this Beta 7 work must not be merged without client validation.
