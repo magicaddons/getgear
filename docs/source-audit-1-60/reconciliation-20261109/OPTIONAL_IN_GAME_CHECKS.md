@@ -7,8 +7,6 @@ These are **optional**, not prerequisites for continued research. Check an item 
 | Level | Item ID | Item | Reported dungeon | Best current source |
 |---:|---:|---|---|---|
 | 20 | 23173 | Abomination Skin Leggings | Shadowfang Keep | dungeon-enemy (forever-reference-unverified) |
-| 20 | 5943 | Rift Bracers | Shadowfang Keep | dungeon-enemy (forever-reference-unverified) |
-| 21 | 3569 | Vicar's Robe | Razorfen Kraul | dungeon-enemy (forever-community-reference) |
 | 27 | 273044 | Arcanowisp Robes | City of Dalaran | dungeon-enemy (forever-reference-unverified) |
 | 30 | 9457 | Royal Diplomatic Scepter | Gnomeregan | dungeon-enemy (forever-reference-unverified) |
 | 30 | 23169 | Scorn's Icy Choker | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
@@ -26,6 +24,8 @@ These are **optional**, not prerequisites for continued research. Check an item 
 | 55 | 16695 | Devout Mantle | Blackrock Spire | dungeon-enemy (forever-reference-unverified) |
 | 55 | 12952 | Gyth's Skull | Blackrock Spire | dungeon-enemy (forever-reference-unverified) |
 | 55 | 16669 | Pauldrons of Elements | Blackrock Spire | dungeon-enemy (forever-reference-unverified) |
+| 57 | 14525 | Boneclenched Gauntlets | Scholomance | dungeon-enemy (forever-reference-unverified) |
+| 57 | 18760 | Necromantic Band | Scholomance | dungeon-enemy (forever-reference-unverified) |
 
 ## Recipe verification
 

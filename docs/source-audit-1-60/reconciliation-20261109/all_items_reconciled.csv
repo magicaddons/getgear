@@ -436,7 +436,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 3491,Heavy Bronze Mace,20,Blacksmithing,client,Crafted,Crafted,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference,,False
 3492,Mighty Iron Hammer,25,Blacksmithing,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference-with-pattern-item,,False
 3563,Seafarer's Pantaloons,19,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Large Loch Crocolisk, Loch Modan",0,False,,,,,False
-3569,Vicar's Robe,21,Dungeon (loot table unverified),classic-reference,Dungeon,Razorfen Kraul,dungeon,1,"dungeon: Death's Head Priest, Razorfen Kraul",0,True,dungeon-enemy,forever-community-reference,,Razorfen Kraul | Enemy: Death's Head Priest; boss/trash unverified,False
+3569,Vicar's Robe,21,Dungeon (loot table unverified),classic-reference,Dungeon,Razorfen Kraul,dungeon,1,"dungeon: Death's Head Priest, Razorfen Kraul",0,True,trash,published-forever-trash-reference,,Razorfen Kraul | Trash: Death's Head Priest (Forever loot reference; live drop unverified),False
 3571,Trogg Beater,18,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Magosh, Loch Modan",0,False,,,,,False
 3645,Seer's Cuffs,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 3647,Bright Bracers,18,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
@@ -750,7 +750,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 5782,Thick Murloc Armor,29,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference-with-pattern-item,,False
 5783,Murloc Scale Bracers,33,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference-with-pattern-item,,False
 5819,Sunblaze Coif,28,Dungeon (loot table unverified),classic-reference,Dungeon,Scarlet Monastery,dungeon,1,"dungeon: Trash mobs, Scarlet Monastery",0,True,trash,forever-community-reference,,Scarlet Monastery | Trash drop (Forever reference; live unverified),False
-5943,Rift Bracers,20,Dungeon (loot table unverified),client,Dungeon,Shadowfang Keep,,0,,0,True,dungeon-enemy,forever-reference-unverified,,Shadowfang Keep | Enemy: Arugal's Voidwalker (boss/trash unverified),False
+5943,Rift Bracers,20,Dungeon (loot table unverified),client,Dungeon,Shadowfang Keep,,0,,0,True,trash,published-forever-trash-reference,,Shadowfang Keep | Trash: Arugal's Voidwalker (Forever loot reference; live drop unverified),False
 5957,Handstitched Leather Vest,3,Leatherworking,client,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,initial,,False
 5958,Fine Leather Pants,16,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference-with-pattern-item,,False
 5961,Dark Leather Pants,18,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False

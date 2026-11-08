@@ -9,25 +9,27 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - New, conservative in-addon acquisition summaries generated: **1,076**.
 - Combined Forever cache entries: **10,315**; Playfulls item entries: **22,891**.
 - Published player-observed relationships: **859**.
-- True dungeon-equipment records: **552**; still needing an enemy/boss/trash identity: **22**.
+- True dungeon-equipment records: **552**; still needing an enemy/boss/trash identity: **20**.
 - Recipe book origins that still require live verification: **954** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
 - Item ID name mismatches against Forever cache: **0**.
 - Nine Scarlet Monastery Graveyard rare-boss loot references are attributed to the Forever Dungeon Journal, with no live drop-rate claims.
+- Two named dungeon trash equipment sources (Vicar's Robe and Rift Bracers) are now labelled from published Forever loot references; no live drop rates.
 
 ## Dungeon source classifications (reference quality, not drop-rate proof)
 - boss: 386
-- trash: 135
+- trash: 137
 - crafted-pattern: 24
-- dungeon-enemy: 22
+- dungeon-enemy: 20
 - rare-boss: 9
 - crafted-item: 1
 
 ## Dungeon evidence confidence
-- forever-community-reference: 476
-- forever-reference-unverified: 54
+- forever-community-reference: 475
+- forever-reference-unverified: 53
 - recipe-origin-unverified: 24
 - forever-observed-npc: 13
 - published-forever-dungeon-journal: 9
+- published-forever-trash-reference: 2
 - published-forever-recipe: 1
 
 ## Recipe learning (do not conflate *crafting* and *learning*)
@@ -41,6 +43,7 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 ## Critical policy
 - *Forever observed* means at least three Everloot installations independently recorded the item-to-NPC edge, and a published dungeon listing linked that NPC to this specific dungeon. These observations may still be incomplete.
 - *Forever community reference* is a loot-list claim checked against client item IDs; it is **not** evidence of a live drop chance.
+- *Published Forever trash reference* names a specific equipment item and trash NPC in a Forever zone/item listing, but is **not** a live drop observation.
 - *Classic reference* is used only as an explicitly uncertain farming lead.
 - Encounter names in the client identify NPCs, not their loot tables.
 - An unobserved recipe book is not evidence that a trainer teaches it or that a live vendor currently offers it.
@@ -71,3 +74,5 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - [WoW Forever Friends](https://www.wowforeverfriends.org/library/sources/) — Classic baseline NPC/item lookup explicitly labelled unverified for Forever.
 - [WoWhead Grovekeeper Leggings pattern](https://www.wowhead.com/forever/item=273964) and [Grovekeeper Mantle pattern](https://www.wowhead.com/forever/item=273958) — published plan tooltips with class/reputation/quest specialization requirements.
 - [AHledger](https://ahledger.com) — supplemental recipe acquisition reference.
+- [WoWhead Forever Razorfen Kraul](https://www.wowhead.com/forever/zone=491/razorfen-kraul) and [Forever caster guide](https://www.wowhead.com/forever/guide/classes/warlock/affliction/level-30-dps-overview) — Vicar's Robe attributed to Death's Head Priest, classed as trash.
+- [Azeroth.wiki Forever Rift Bracers](https://azeroth.wiki/forever/items/rift-bracers) — Arugal's Voidwalker in Shadowfang Keep listed as trash; the published listing does not establish current drop probability.
