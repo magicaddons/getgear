@@ -73,6 +73,15 @@ assert(reportCSV:find("crafted-pattern",1,true),
 local vendorCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/recipe_vendor_book_checks.csv")):read("*a")
 assert(vendorCSV:find("Aisarra Nightmeadow",1,true),
     "Named vendor reference must be preserved with live-stock caveat")
+local recipeReconciliation=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/README.md")):read("*a")
+assert(recipeReconciliation:find("**954**",1,true),
+    "All 68 vendor books and 886 trainer-labelled books need verification")
+assert(recipeReconciliation:find("**553**",1,true)
+    and recipeReconciliation:find("**24**",1,true),
+    "Crafted-pattern records must not masquerade as equipment drops")
+local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
+assert(index:find("reputation/quest/slot gates may apply",1,true),
+    "Preserve prospective Hyjal reputation and specialization requirements")
 -- The catalogue and crafting lists remain identical and class-wide.
 local checks={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 for _,cls in ipairs(checks) do
