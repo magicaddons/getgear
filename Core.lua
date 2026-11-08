@@ -91,6 +91,11 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if type(o.hideWithoutPositiveStats) ~= "boolean" then
             o.hideWithoutPositiveStats = true
         end
+        -- Overlay only: untargetable green BoE WORLD drops are off by
+        -- default, but dungeon/quest/vendor/crafted gear remains eligible.
+        if type(o.hideGreenBoEWorldDrops) ~= "boolean" then
+            o.hideGreenBoEWorldDrops = true
+        end
         -- Per-character opt-in: preserve profession-agnostic recommendations by default.
         if type(o.hideUncraftableCrafts) ~= "boolean" then o.hideUncraftableCrafts = false end
         -- Beta 2: all class-equippable gear is an explicit opt-in.
