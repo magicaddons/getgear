@@ -138,9 +138,9 @@ for _,entry in ipairs({
     assert(dungeonDropCSV:find("\n"..entry.id..",",1,true),
         "Named trash gear must remain counted as dungeon equipment")
 end
-assert(addon.ItemCatalog[3569].acquisitionConfidence=="classic-reference"
-    and addon.ItemCatalog[5943].acquisitionConfidence=="classic-reference",
-    "Additive reference must not upgrade the item's original source confidence")
+assert(addon.ItemCatalog[3569].acquisitionConfidence~="published-forever-trash-reference"
+    and addon.ItemCatalog[5943].acquisitionConfidence~="published-forever-trash-reference",
+    "Additive published reference must remain separate from original item confidence")
 
 local vendorCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/recipe_vendor_book_checks.csv")):read("*a")
 assert(vendorCSV:find("Aisarra Nightmeadow",1,true),
