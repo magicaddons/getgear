@@ -400,9 +400,10 @@ def main():
             "ForeverCacheSources":";".join((cache or {}).get("sourceLabels",[])),
             "PlayfullsTypes":";".join(pf_types),
             "PlayfullsSourceCount":len(ps),
-            "PlayfullsSources":json.dumps(ps,ensure_ascii=False),
+            "PlayfullsFirstSource":(
+                str(ps[0]["type"])+": "+str(ps[0]["npc"])+", "+str(ps[0]["zone"])
+                if ps else ""),
             "EverlootObservedEdges":len(observed),
-            "EverlootObservedRelations":json.dumps(observed,ensure_ascii=False),
             "Dungeon":is_dungeon,"dungeonRole":result["role"] if result else "",
             "dungeonConfidence":result["confidence"] if result else "",
             "RecipeClassification":recipeStatus,
