@@ -1,0 +1,161 @@
+name: Publish GetGear v0.14.0 Beta 7 prerelease
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-getgear-0.14.0-beta7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: getgear-release-v0.14.0-beta7
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout exact public source revision
+        uses: actions/checkout@v4
+
+      - name: Confirm intended public Beta 7 metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fxq '## Version: 0.14.0-beta7' GetGear.toc
+          grep -Fq 'levels 1–60' README.md
+          test -s RELEASE_v0.14.0-beta7.md
+          test -s README.txt
+          test -s DATA_MODEL.md
+          test -s MapPin.tga
+          test -s tests/beta7-preview-layout.lua
+          test -s tests/beta7-armor-priority.lua
+          test -s GeneratedBeta7Evidence.lua
+          grep -Fq 'PositionDisplaySettingsForPreview' UI.lua
+          grep -Fq 'ARMOR_EXCEPTIONS' GearRelevance.lua
+
+      - name: Install Lua 5.4
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+
+      - name: Syntax and complete public beta regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in
+              *.lua)
+                test -f "$module"
+                luac5.4 -p "$module"
+                ;;
+            esac
+          done < GetGear.toc
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-coverage.lua .
+          lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tests/beta7-armor-priority.lua .
+          lua5.4 tests/beta7-preview-layout.lua .
+
+      - name: Build minimal installable addon ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          ASSET=GetGear-v0.14.0-beta7.zip
+          count="$(grep -c '\.lua$' GetGear.toc)"
+          test "$count" -eq 18
+          mkdir -p dist/GetGear
+          while IFS= read -r module; do
+            case "$module" in
+              *.lua) cp "$module" dist/GetGear/ ;;
+            esac
+          done < GetGear.toc
+          cp GetGear.toc MapPin.tga README.txt DATA_MODEL.md dist/GetGear/
+          printf 'GetGear v0.14.0-beta7\nPublic beta (pre-release)\nSource commit: %s\nRepository: https://github.com/magicaddons/getgear\nLive item acquisition remains partially unverified.\n' \
+            "$GITHUB_SHA" > dist/GetGear/BUILD_INFO.txt
+          (cd dist && zip -q -r "../$ASSET" GetGear)
+          unzip -tq "$ASSET"
+          python3 - <<'PY'
+          import pathlib
+          import zipfile
+          manifest = pathlib.Path("GetGear.toc").read_text(encoding="utf-8")
+          modules = [line.strip() for line in manifest.splitlines() if line.strip().endswith(".lua")]
+          extras = {"GetGear.toc","MapPin.tga","README.txt","DATA_MODEL.md","BUILD_INFO.txt"}
+          expected = {"GetGear/"+name for name in set(modules)|extras}
+          assert len(modules) == len(set(modules)) == 18, "Missing or duplicated addon module"
+          with zipfile.ZipFile("GetGear-v0.14.0-beta7.zip") as archive:
+              files = [info for info in archive.infolist() if not info.is_dir()]
+              names = {entry.filename for entry in files}
+              assert len(files) == len(names) == len(expected) == 23, "Unexpected package file count"
+              assert names == expected, (names-expected, expected-names)
+              assert archive.testzip() is None, "Broken archive member"
+              for entry in files:
+                  p = pathlib.PurePosixPath(entry.filename)
+                  assert len(p.parts)==2 and p.parts[0]=="GetGear", p
+                  assert not any(part in (".","..") for part in p.parts), p
+                  assert p.suffix.lower() in (".lua",".toc",".txt",".md",".tga"), p
+                  assert ((entry.external_attr >> 16) & 0o170000) != 0o120000, p
+              toc = archive.read("GetGear/GetGear.toc").decode("utf-8")
+              ui = archive.read("GetGear/UI.lua").decode("utf-8")
+              relevance = archive.read("GetGear/GearRelevance.lua").decode("utf-8")
+              assert "## Version: 0.14.0-beta7" in toc
+              assert "PositionDisplaySettingsForPreview(inPreview)" in ui
+              assert "ARMOR_EXCEPTIONS" in relevance
+          print("PASS: 18 Lua modules, five support files, correct version, preview and armour fix")
+          PY
+          sha256sum "$ASSET" > "$ASSET.sha256"
+          cat "$ASSET.sha256"
+          ls -lh "$ASSET" "$ASSET.sha256"
+
+      - name: Publish versioned beta release and checksum
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG=v0.14.0-beta7
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "The tag/release already exists; refusing to overwrite a public download." >&2
+            exit 1
+          fi
+          gh release create "$TAG" \
+            GetGear-v0.14.0-beta7.zip \
+            GetGear-v0.14.0-beta7.zip.sha256 \
+            --repo "$GITHUB_REPOSITORY" \
+            --title 'GetGear v0.14.0 Beta 7 — Levels 1–60' \
+            --notes-file RELEASE_v0.14.0-beta7.md \
+            --prerelease \
+            --latest=false \
+            --target "$GITHUB_SHA"
+
+      - name: Verify published release metadata and asset bytes
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG=v0.14.0-beta7
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --json tagName,isPrerelease,assets,targetCommitish | \
+            jq -e --arg commit "$GITHUB_SHA" '
+              .tagName=="v0.14.0-beta7" and
+              .isPrerelease==true and
+              .targetCommitish==$commit and
+              ([.assets[].name] | index("GetGear-v0.14.0-beta7.zip") != null) and
+              ([.assets[].name] | index("GetGear-v0.14.0-beta7.zip.sha256") != null)
+            '
+          mkdir -p published
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern 'GetGear-v0.14.0-beta7.zip' --dir published
+          cmp GetGear-v0.14.0-beta7.zip published/GetGear-v0.14.0-beta7.zip
+          (cd published && cp ../GetGear-v0.14.0-beta7.zip.sha256 . && sha256sum -c GetGear-v0.14.0-beta7.zip.sha256)
+          echo 'PASS: published GitHub pre-release and binary ZIP exactly match tested source.'
