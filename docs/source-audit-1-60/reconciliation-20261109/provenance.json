@@ -29,11 +29,15 @@
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500": {
     "bytes": 103301,
-    "sha256": "3024686032ffe44032506bd41fb9564ada4ac3c9341cac76d7f6059d8db8b1de"
+    "sha256": "a1033fbd86c0c6492e6cd8a54d32036bc25bdb86005f093ed386e450eb9638dd"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
-    "bytes": 103488,
-    "sha256": "70cb31a73f0480bb843f4467f4e170a7f0c57e8d55d3892182f5a7e29ddd647b"
+    "bytes": 103553,
+    "sha256": "4206ba03ad5e938e7f87b8be7221e3fa4e81f5931aac7d77a3d6af4f86179869"
+  },
+  "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+    "bytes": 1675,
+    "sha256": "9cffc522126a02d29d353e76b775a1716a2150a642a4d94d36fd99bdb5a9910e"
   },
   "https://www.wowforeverfriends.org/items/items.json": {
     "bytes": 16908600,
@@ -43,7 +47,7 @@
     "bytes": 6121482,
     "sha256": "5c5a4524a3ad6a25c20902291d244baf32bb5f6b33c65c35847c7f5e1dcfb5f1"
   },
-  "lastRunUTC": "2026-11-08T14:29:36.468471+00:00",
+  "lastRunUTC": "2026-11-08T14:40:34.148859+00:00",
   "sourceCrediting": {
     "Everloot": "CC BY-SA 4.0; https://everloot.app; source records credited",
     "Playfulls": "Public community loot reference; https://playfulls.com/methodology; boss loot not live guaranteed",
@@ -52,8 +56,8 @@
     "AHledger": "Forever client recipe acquisition reference, not observed trainer inventories"
   },
   "Everloot": {
-    "dataAsOf": "2026-11-08T13:50:13.162Z",
-    "total": 1000,
+    "dataAsOf": "2026-11-08T14:30:16.060Z",
+    "total": 1006,
     "attribution": {
       "licence": "CC BY-SA 4.0",
       "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
