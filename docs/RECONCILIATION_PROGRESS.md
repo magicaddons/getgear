@@ -18,7 +18,7 @@
 - **Packaging:** Prohibited without explicit user approval; no ZIP, tag, release, merge or change to `main`.
 
 ## Checkpoint 2 — Scarlet Monastery Graveyard rare bosses
-**Scope:** Nine level-30 dungeon equipment items, three rare encounters. This is a targeted boss-versus-trash classification fix, not a new catalogue or recipe audit.
+**Status: completed and validated. Scope:** Nine level-30 dungeon equipment items, three rare encounters. This is a targeted boss-versus-trash classification fix, not a new catalogue or recipe audit.
 
 - Forever's published [Scarlet Monastery: Graveyard Dungeon Journal](https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard) identifies **Ironspine**, **Fallen Champion**, and **Azshir the Sleepless** as rare bosses, and lists three specific equipment rewards under each encounter.
 - Ironspine: **7686** Ironspine's Eye, **7687** Ironspine's Fist, **7688** Ironspine's Ribcage — [Journal loot](https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard/ironspine-rare).
@@ -26,12 +26,15 @@
 - Azshir the Sleepless: **7708** Necrotic Wand, **7709** Blighted Leggings, **7731** Ghostshard Talisman — [Journal loot](https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard/azshir-the-sleepless-rare).
 - The generator now uses an explicit nine-ID/item-name-checked journal register, records source role `rare-boss`, `published-forever-dungeon-journal` confidence, a direct journal URL, and the displayed summary "Rare boss: ... (Forever Dungeon Journal; live drop unverified)". It does not generalise Classic elite NPC ranks or encounter lists to loot.
 - Existing observed data for Blighted Leggings (#7709) is preserved; its missing readable source summary is supplemented only.
-- Expected post-regeneration: **552** real dungeon equipment entries remain; **9** move out of the unresolved boss-versus-trash queue; **22** unresolved dungeon entries remain.
-- **Validation:** source-regeneration CI, Lua syntax and nine-class regressions pending. Live server drop rates and rare spawn frequency have **not** been verified.
+- Regenerated report: **552** real dungeon equipment entries remain, **9** rare bosses are now separately documented, and the unresolved boss-versus-trash queue fell from **31 to 22**. All nine identifiers were checked against the regenerated equipment audit and the current in-addon evidence index.
+- **Validation: PASS** — [no-release CI run 42490031007](https://github.com/magicaddons/getgear/actions/runs/42490031007) completed the public source-reconciliation step, full manifest Lua syntax check, nine-class catalogue/crafting/armour/overlay/preview/performance regressions and evidence-index checks. The regenerated reports were saved in [commit 55324d3](https://github.com/magicaddons/getgear/commit/55324d34501d4288162b36912e59b22b15aeb2f9).
+- **Limitations:** Forever Dungeon Journal is published source evidence, **not** proof of a current live drop or percentage. No real-game UI or dungeon-drop observation was performed.
 - No ZIP, release, tag, branch merge or modification of `main`.
 
 ## Next checkpoint
-Research a small set of remaining `dungeon-enemy` entries against current Forever-specific observations and source identities. Do not upgrade Classic-only claims to live-verified facts. Check recipe-book teaching routes separately in a later checkpoint; 954 of those remain uncertain pending actual server evidence.
+Prioritise lower-level targets among the **22** remaining dungeon-source questions: Rift Bracers (5943) and Abomination Skin Leggings (23173) in Shadowfang Keep; Vicar's Robe (3569) in Razorfen Kraul; Arcanowisp Robes (273044) in City of Dalaran; and Scorn's Icy Choker (23169) in Scarlet Monastery Graveyard. These require their own small Forever-specific evidence batch—do not promote Classic-only drop rates or NPC labels to live confirmation.
+
+Recipe-book teaching routes are a **separate later category**; 954 remain uncertain pending source/stock evidence.
 
 ## User assistance
 None required now. Optional later in-game vendor checks can be requested after the independent research is exhausted.
