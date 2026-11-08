@@ -1,7 +1,7 @@
 # GetGear 1–60 source and recipe audit (development only)
 
 This is a **machine-assisted census**, not a claim that every drop or vendor route was personally verified in the live realm.
-Generated UTC: 2026-11-08T12:29:26+00:00.
+Generated UTC: 2026-11-08T12:35:15+00:00.
 
 ## Coverage
 - Catalogue records checked: **7,707/7,707**; unique IDs: 7,707.
@@ -68,3 +68,6 @@ Generated UTC: 2026-11-08T12:29:26+00:00.
 - [AHledger](https://ahledger.com/data) — newer Forever item catalog and observed-data methodology.
 - [Road to Forever](https://github.com/nobody174/wow-forever) — independently documented item acquisition leads.
 - [ForeverDB](https://foreverdb.net/developers) — additional acquisition research, its bulk API requires approval/key and was **not** queried.
+
+## Unavailable sources at run time
+- everloot_npc_sightings: `HTTP Error 429: Too Many Requests`

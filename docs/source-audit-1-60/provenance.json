@@ -39,7 +39,54 @@
       "url": "https://ahledger.com/api/catalog?class=trade-goods",
       "bytes": 60806,
       "sha256": "e5fcdcf446997cc2306788b5bd6d720af127fb8710a07d0733f165d0507eeadf"
+    },
+    "everloot_observed_edges": {
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+      "rows": 903,
+      "asOf": "2026-11-08T12:30:14.729Z",
+      "complete": true,
+      "licence": "CC BY-SA 4.0"
+    },
+    "ahledger_crafting": {
+      "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us",
+      "reciperecords": 2203,
+      "professions": {
+        "Blacksmithing": {
+          "count": 484,
+          "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=Blacksmithing"
+        },
+        "Leatherworking": {
+          "count": 559,
+          "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=Leatherworking"
+        },
+        "Tailoring": {
+          "count": 454,
+          "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=Tailoring"
+        },
+        "Enchanting": {
+          "count": 82,
+          "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=Enchanting"
+        },
+        "Engineering": {
+          "count": 268,
+          "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=Engineering"
+        },
+        "Alchemy": {
+          "count": 195,
+          "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=Alchemy"
+        },
+        "Cooking": {
+          "count": 130,
+          "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=Cooking"
+        },
+        "First Aid": {
+          "count": 31,
+          "url": "https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=First%20Aid"
+        }
+      }
     }
   },
-  "unavailable": {}
+  "unavailable": {
+    "everloot_npc_sightings": "HTTP Error 429: Too Many Requests"
+  }
 }
