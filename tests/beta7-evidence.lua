@@ -35,7 +35,7 @@ for id in pairs(addon.ItemCatalog) do
     total=total+1
 end
 assert(total==7707,"Beta 7 source-only patch changed catalogue item count")
-assert(addon.Beta7Reconciliation.verifiedSourcePatches==3)
+assert(addon.Beta7Reconciliation.verifiedSourcePatches==6)
 local function checkMats(id,expected)
     local item=assert(addon.ItemCatalog[id])
     local actual={}
@@ -68,10 +68,31 @@ assert(chest.name=="Runed Copper Breastplate")
 assert(chest.profession=="Blacksmithing" and chest.recipeSpellID==2667)
 assert(chest.professionSkillRequired==55 and chest.recipeLearnMethod=="pattern")
 checkMats(2864,{[2840]=12,[1210]=1,[3470]=2})
+-- Reviewed early dungeon drops must not be mislabelled as bosses.
+local leggings=assert(addon.ItemCatalog[1943])
+assert(leggings.sourceType=="Dungeon trash" and leggings.source:find("Goblin Shipbuilder",1,true))
+assert(leggings.acquisitionConfidence=="classic-reference")
+assert(addon:GetAcquisitionSummary(leggings):find("The Deadmines",1,true))
+assert(addon:GetAcquisitionSummary(leggings):find("Trash:",1,true))
+local cutlass=assert(addon.ItemCatalog[1951])
+assert(cutlass.sourceType=="Dungeon trash" and cutlass.source:find("Defias Pirate",1,true))
+assert(cutlass.source:find("Defias Squallshaper",1,true))
+assert(addon:GetAcquisitionSummary(cutlass):find("The Deadmines",1,true))
+
+-- A crafted item can require dropped plans without being a dungeon EQUIPMENT drop.
+local guards=assert(addon.ItemCatalog[250489])
+assert(guards.profession=="Blacksmithing" and guards.professionSkillRequired==80)
+assert(guards.recipeLearnMethod=="pattern" and guards.recipePatternItemID==251341)
+assert(guards.recipeAcquisitionKind=="Drop" and guards.bindingStatus=="bop")
+checkMats(250489,{[2841]=4,[3470]=2,[1210]=2})
+assert(addon:GetAcquisitionSummary(guards):find("Dropped plans",1,true))
+assert(addon:GetAcquisitionSummary({profession="Blacksmithing",recipeLearnMethod="pattern",recipeVendor="Stondry Darkhammer"}):find("Stondry Darkhammer",1,true))
+assert(addon:GetAcquisitionSummary({sourceType="Dungeon (loot table unverified)",source="Dungeon (loot table unverified)",zone="The Deadmines"}):find("dungeon loot",1,true))
+
 local classes={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 for _,class in ipairs(classes) do
     assert(#(addon.EquipmentByClass[class] or {})>=1000,
         "Lost unified class catalogue for "..class)
 end
 assert(addon.ItemCatalog[6898].schoolOnly==nil,"Mixed-school Orb was changed")
-print("PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 3 corrected items, map/recipe/boss/mat evidence")
+print("PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 6 corrected items, explicit trash/recipe provenance, map/mat evidence")
