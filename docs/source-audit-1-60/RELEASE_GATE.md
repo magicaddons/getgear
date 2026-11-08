@@ -26,6 +26,8 @@ The existing public v0.14.0-beta7 prerelease is separate from this work. No subs
 
 - **Checkpoint 4 PASS:** [20-case evidence register](reconciliation-20261109/CHECKPOINT4_EVIDENCE.md) and [577-row consistency audit](reconciliation-20261109/CHECKPOINT4_CONSISTENCY.md). [Non-release workflow 42493307958](https://github.com/magicaddons/getgear/actions/runs/42493307958) passed the complete nine-class, source-generation, Lua syntax, overlay/filtering, materials, preview and performance suite. This does **not** prove live loot or approve a build.
 
+**Checkpoint 5B evidence-only:** [five additional Grovekeeper vendor leads](reconciliation-20261109/CHECKPOINT5B_VENDOR_EVIDENCE.md) have individual evidence classifications; 8/68 researched overall, 68/68 still require live stock verification. Documentation-only; no new CI. No release approval.
+
 ## Next work, one bounded category at a time
 1. **Dungeon equipment source quality:** the role checkpoint is complete; [6 source-confirmation leads](reconciliation-20261109/dungeon_source_followups.csv) remain and should only be resolved with new Forever item-specific evidence. Avoid assuming live event spawns, City of Dalaran loot, Scholomance historic drops, or coffer contents.
 2. **Recipe learning source quality — next active checkpoint:** investigate groups among [954 unconfirmed books](reconciliation-20261109/recipe_source_followups.csv). Distinguish the recipe item's existence from trainer teaching, vendor stock and reputation/specialisation gates.

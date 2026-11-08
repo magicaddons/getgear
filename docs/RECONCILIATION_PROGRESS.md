@@ -66,6 +66,9 @@ The [agent instructions](../AGENTS.md) and [bounded overnight/Codex plan](OVERNI
 ## Checkpoint 5A — vendor-pattern evidence (2026-11-09)
 **Status: documentation-only, no new CI.** Direct Forever item-ID-locked vendor and specialization references were recorded for Grovekeeper Grips (book 273953), Mitts (273957) and Mantle (273958) in [the 3-case evidence note](source-audit-1-60/reconciliation-20261109/CHECKPOINT5A_VENDOR_EVIDENCE.md). The three remain in the **68-record live vendor verification queue**, as published inventory does not prove live merchant stock. The prior full non-release CI pass remains workflow 42493307958; no addon files, recipes or filters changed. Next batch: individual remaining Grovekeeper book pages and their distinct quest/reputation/specialization gates.
 
+## Checkpoint 5B — five more Grovekeeper pattern leads (2026-11-09)
+**Status: evidence-only; no new CI.** Five additional exact pattern IDs (273952, 273954, 273955, 273956, 273959) were cross-checked against published Forever guide, item or craft-spell evidence in [checkpoint 5B](source-audit-1-60/reconciliation-20261109/CHECKPOINT5B_VENDOR_EVIDENCE.md). Two have direct Forever pattern/spell evidence and three are guide-level vendor claims with independent repository item-ID mapping. Eight of 68 vendor references have now received individual research, but **all 68 remain live-unverified**. No runtime/source facts changed. Last full CI PASS remains 42493307958. Next batch: 273960–273966.
+
 ## Next checkpoint
 Resolve the remaining **6** source-verification leads only if new Forever item-specific evidence appears. Two are container/coffer leads, and four are unconfirmed mob/item or historical event associations. Next bounded active category is **954** recipe-book sources (68 vendor, 886 trainer-labelled). Preserve the other-equipment, final-audit, and in-game acceptance checkpoints in that order.
 
