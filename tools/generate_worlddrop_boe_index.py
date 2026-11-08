@@ -39,10 +39,11 @@ rejects=collections.Counter()
 for row in records:
     st=str(row.get("sourceType","")).lower()
     acq=str(row.get("source","")).lower()
+    zone=str(row.get("zone","")).lower()
     if "world drop" not in st:continue
-    # A reviewed alternative acquisition route protects an otherwise
-    # imported generic source label from unintended hiding.
-    if any(key in st or key in acq for key in
+    # Even the generic import can list "Drops, Quest Rewards" in its zone
+    # field; alternative actionable routes always win.
+    if any(key in st or key in acq or key in zone for key in
            ("dungeon","quest","vendor","crafted","reputation")):
         rejects["targetable"]+=1;continue
     if row.get("profession"):rejects["crafted"]+=1;continue
