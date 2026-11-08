@@ -6,7 +6,7 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - All **7,707 / 7,707** equipment records examined.
 - All **1,252 / 1,252** crafting recipes examined.
 - All **577 / 577** historically dungeon-associated records examined, including **24** crafted items whose patterns, NOT the equipment, may be dungeon drops.
-- New, conservative in-addon acquisition summaries generated: **583**.
+- New, conservative in-addon acquisition summaries generated: **1,075**.
 - Combined Forever cache entries: **10,315**; Playfulls item entries: **22,891**.
 - Published player-observed relationships: **853**.
 - True dungeon-equipment records: **553**; still needing an enemy/boss/trash identity: **32**.
@@ -44,12 +44,13 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - The 68 new level-60 book items have a published *Aisarra Nightmeadow* (Mount Hyjal) vendor lead, **not** live confirmed stock.
 - Example Forever plan tooltips independently identify requirements beyond the vendor: Grovekeeper Leggings requires Friendly status and the Friendly Advice quest; Grovekeeper Mantle requires reputation progress and shoulder specialization. Other books may have their own reputation or specialization gates.
 - A trainer-labelled recipe with a pattern item is marked for a teaching-method check; the two routes could both exist and should not be called contradictory without server evidence.
+- Non-dungeon vendor/quest details only supplement imported generic vendor/quest entries and are explicitly labelled reference-only.
 - Original 1,252 crafting ingredient lists are **untouched**.
 - Higher-confidence manually reviewed source text and item-ID exceptions take priority over this generated evidence.
 - The index does not alter class eligibility, player status, equipment quality, recipe availability gates, or the two overlay filters.
 
 ## Audit files
-- [All equipment records](all_items_reconciled.csv) — one row per item.
+- [All equipment records](all_items_reconciled.csv) — one row per item, including raw published source relationships and observation records.
 - [All historically dungeon-associated records](dungeon_items_reconciled.csv), including separately classified crafted-pattern entries.
 - [Actual dungeon equipment drops](dungeon_equipment_drops.csv) — boss, trash, enemy, confidence and observed sources.
 - [Unresolved dungeon sources](dungeon_source_followups.csv).
