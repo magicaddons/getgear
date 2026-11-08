@@ -7,6 +7,7 @@ urls={
 "everloot_edges":"https://everloot.app/api/edges?evidence=observed&limit=500",
 "everloot_encounters":"https://raw.githubusercontent.com/Everloot/everloot/main/web/src/data/game-data/client-encounters.json",
 "playfulls":"https://playfulls.com/database",
+"playfulls_script":"https://playfulls.com/database.js?v=55a74b15ec",
 "ahl_recipe":"https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000&profession=Blacksmithing",
 }
 for name,url in urls.items():
@@ -15,6 +16,13 @@ for name,url in urls.items():
   with urllib.request.urlopen(req,timeout=40) as r:
    b=r.read(28_000_000)
    print("SOURCE",name,"status",r.status,"bytes",len(b),"content_type",r.headers.get("Content-Type"))
+  if name=="playfulls_script":
+   text=b.decode("utf8","replace")
+   for token in ("/api/","fetch(","/data/","/database","catalog","item/","sources","endpoint","JSON.parse"):
+    indexes=[m.start() for m in re.finditer(re.escape(token),text)]
+    print("SCRIPT_TOKEN",token,len(indexes))
+    for i in indexes[:4]: print("SCRIPT_CONTEXT",text[max(0,i-110):i+210].replace("\\n"," ")[:320])
+   continue
   if name=="playfulls":
    text=b.decode("utf8","replace")
    srcs=re.findall(r'<script[^>]*?src="([^"]+)"',text)
