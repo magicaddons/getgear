@@ -6,25 +6,28 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - All **7,707 / 7,707** equipment records examined.
 - All **1,252 / 1,252** crafting recipes examined.
 - All **577 / 577** historically dungeon-associated records examined, including **24** crafted items with possible dungeon pattern routes and **1** item incorrectly catalogued as dungeon loot.
-- New, conservative in-addon acquisition summaries generated: **1,075**.
+- New, conservative in-addon acquisition summaries generated: **1,076**.
 - Combined Forever cache entries: **10,315**; Playfulls item entries: **22,891**.
 - Published player-observed relationships: **853**.
-- True dungeon-equipment records: **552**; still needing an enemy/boss/trash identity: **31**.
+- True dungeon-equipment records: **552**; still needing an enemy/boss/trash identity: **22**.
 - Recipe book origins that still require live verification: **954** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
 - Item ID name mismatches against Forever cache: **0**.
+- Nine Scarlet Monastery Graveyard rare-boss loot references are attributed to the Forever Dungeon Journal, with no live drop-rate claims.
 
 ## Dungeon source classifications (reference quality, not drop-rate proof)
 - boss: 386
 - trash: 135
-- dungeon-enemy: 31
 - crafted-pattern: 24
+- dungeon-enemy: 22
+- rare-boss: 9
 - crafted-item: 1
 
 ## Dungeon evidence confidence
 - forever-community-reference: 476
-- forever-reference-unverified: 63
+- forever-reference-unverified: 54
 - recipe-origin-unverified: 24
 - forever-observed-npc: 13
+- published-forever-dungeon-journal: 9
 - published-forever-recipe: 1
 
 ## Recipe learning (do not conflate *crafting* and *learning*)
