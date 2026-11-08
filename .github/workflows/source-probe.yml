@@ -1,0 +1,42 @@
+name: Probe public Forever evidence sources (audit-only)
+on:
+  push:
+    branches: [work/catalogue-source-audit-1-60]
+    paths: ['.github/workflows/source-probe.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check public data endpoints
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request,urllib.error
+          urls=[
+            'https://raw.githubusercontent.com/Everloot/everloot/main/web/src/data/game-data/client-recipes.json',
+            'https://raw.githubusercontent.com/MAF2414/wow-forever-talents/main/docs/professions-data.json',
+            'https://raw.githubusercontent.com/nobody174/wow-forever/main/bis/sources.json',
+            'https://ahledger.com/api/catalog?class=armor',
+            'https://api.ahledger.com/v1/items/250489?game=forever',
+            'https://everloot.app/api/items/250489',
+          ]
+          for url in urls:
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'GetGear-Open-Source-Audit/1.0','Accept':'application/json'})
+              with urllib.request.urlopen(req,timeout=12) as res:
+                data=res.read(7_500_000)
+                try:
+                  obj=json.loads(data)
+                  if isinstance(obj,dict): shape={k:type(v).__name__ for k,v in list(obj.items())[:20]}
+                  else: shape={'rootType':type(obj).__name__,'len':len(obj)}
+                  print(json.dumps({'url':url,'status':res.status,'sizeRead':len(data),'shape':shape},sort_keys=True))
+                except Exception as e:
+                  print(json.dumps({'url':url,'status':res.status,'bytes':len(data),'head':data[:150].decode('utf-8','replace')}))
+            except Exception as e:
+              print(json.dumps({'url':url,'error':str(e)[:200]}))
+          PY
