@@ -1,0 +1,18 @@
+# GetGear coding-agent guide
+
+Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
+
+## Work safely
+- Branch: `work/full-acquisition-reconciliation-20261109`. Verify fresh branch HEAD and any CI bot commits before editing or pushing. Never modify `main`.
+- **Explicit user approval required before any ZIP/build/package, tag, public release, or merge.** Do not invoke release workflows. The only permitted workflow is non-release reconciliation/validation.
+- One bounded research or correction batch at a time. Produce a permanent checkpoint note and commit verified changes before continuing; never leave an unexplained failed or pending CI run.
+- Preserve gear identity, equip gates, class/spec and armour filters, optional armour-only overlay setting, green world BoE filtering, user settings, recipe ingredients, all existing fixes and the full guide. Do not turn informational gear coverage into hand-picked recommendations.
+- Distinguish a published Forever item/recipe reference, client encounter name, community/source listing, independently observed live drop, and historical Classic loot. **No Classic item-to-NPC table or Forever-labelled reused historical guide is proof of current live server loot.** Keep uncertainty explicit.
+- A recipe *book's* existence does not prove vendor inventory, trainer teaching, reputation gating or current availability. Prefer exact item ID/name-locked evidence and traceable URLs.
+- If source evidence is weak, leave the record unresolved. Test negative cases: no false boss attribution, no replacement of verified source or reported observation, no recipe material or class eligibility mutation.
+- Reconcile data with `python3 tools/reconcile_acquisition_1_60.py` and run the full suite in `.github/workflows/reconcile-all-acquisition.yml`. It checks Lua syntax and nine-class catalogue, source, crafting, materials, stat/armour/BoE filters, layout and performance.
+- Review the resulting GitHub Actions job through completion. On failure, fix/test or record the blocker; do not claim success or start the next batch.
+- Update `docs/RECONCILIATION_PROGRESS.md`, `docs/source-audit-1-60/RELEASE_GATE.md` and a case-level evidence note with exact item IDs, new/remaining counts, citation URLs, CI run and final commit HEAD. CI can auto-commit generated reports after passing; include that final HEAD.
+
+## Next work
+Checkpoint 4's [consistency audit](docs/source-audit-1-60/reconciliation-20261109/CHECKPOINT4_CONSISTENCY.md) passed. Six dungeon source links remain genuinely unresolved. Next priority is **954 recipe-book acquisition sources: 68 vendor references then 886 trainer-labelled records**; after that audit other equipment source uncertainty, then the full catalogue/source/filter regression pass, then in-game acceptance tests. See `docs/OVERNIGHT_WORK_PLAN.md` for batch and stopping rules.

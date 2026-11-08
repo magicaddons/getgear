@@ -60,6 +60,9 @@
 - [Full evidence register](source-audit-1-60/reconciliation-20261109/CHECKPOINT4_EVIDENCE.md) lists all 20 cases and reasons to retain unresolved rows.
 - **Roadmap:** (1) finish any verifiable dungeon leads, (2) 954 recipe-book sources (68 vendor and 886 trainer-labelled), (3) other equipment source gaps, (4) final catalogue/source/filtering/regression audits, (5) in-game acceptance testing before asking approval to compile/publish. No packaging, tag, release or main merge.
 
+## Unattended checkpoint procedure
+The [agent instructions](../AGENTS.md) and [bounded overnight/Codex plan](OVERNIGHT_WORK_PLAN.md) document resume points, one-batch-at-a-time source validation, CI gating and release prohibitions. Scheduled task execution does not itself verify that repository writes or CI can run; each run must record actual outcomes.
+
 ## Next checkpoint
 Resolve the remaining **6** source-verification leads only if new Forever item-specific evidence appears. Two are container/coffer leads, and four are unconfirmed mob/item or historical event associations. Next bounded active category is **954** recipe-book sources (68 vendor, 886 trainer-labelled). Preserve the other-equipment, final-audit, and in-game acceptance checkpoints in that order.
 
