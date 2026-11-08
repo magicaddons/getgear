@@ -6,6 +6,8 @@ on:
       - .github/workflows/beta7-rebuild.yml
       - tools/generate_beta7_evidence.py
       - tests/beta7-coverage.lua
+      - tests/beta7-source-visibility.lua
+      - GearRelevance.lua
   workflow_dispatch:
 permissions:
   contents: write
@@ -72,6 +74,7 @@ jobs:
           lua5.4 tests/beta4-performance.lua .
           lua5.4 tests/beta7-evidence.lua .
           lua5.4 tests/beta7-coverage.lua .
+          lua5.4 tests/beta7-source-visibility.lua .
       - name: Verify and package private test-only ZIP
         shell: bash
         run: |
