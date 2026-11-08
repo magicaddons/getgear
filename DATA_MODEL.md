@@ -1,4 +1,4 @@
-# GetGear Beta 4 data architecture
+# GetGear v0.14.0 Beta 7 data architecture
 
 The source of truth for each item is **ResearchedItemFacts.lua** (259
 pre-import records containing final researched facts and confidence labels),
@@ -50,7 +50,7 @@ to bypass universal filtering. An uncertain talent API or split fails open;
 users can also opt into the complete class-equippable catalogue.
 
 
-## Beta 7 source reconciliation overlay (development candidate)
+## Beta 7 source reconciliation overlay (public beta)
 
 After `EquipmentCache.lua`, the generated `GeneratedBeta7Evidence.lua` applies
 2026-10-31 client recipe material inputs and conservatively sourced boss,
@@ -60,15 +60,16 @@ three individually researched item corrections. This order is required by
 
 A changed client recipe reagent list takes precedence over older manually
 entered materials, but the original 43 disagreement pairs are preserved
-in the separate pre-integration audit candidate and are not presented as
+in `docs/BETA7-reagent-discrepancies.tsv` and are not presented as
 fully live-verified. No generated data assigns a recipe learning skill,
 binding status or guaranteed faction/vendor access. The source generator and
 7,678-row item audit are committed under `tools/` and `docs/`, respectively.
 
 Unverified source identity is not an equipment eligibility veto: appropriate
 items remain visible with unverified-source labels, while conservative
-class/role and five-level ageing rules still apply. Public `main` remains
-v0.12.14; this Beta 7 work must not be merged without client validation.
+class/role and five-level ageing rules still apply. The code is published on `main` as v0.14.0-beta7, an explicitly
+incomplete public pre-release; individual live source verification remains
+ongoing.
 
 
 ### Beta 7 primary armour preference correction
