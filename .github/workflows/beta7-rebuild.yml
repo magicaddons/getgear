@@ -8,6 +8,10 @@ on:
       - tests/beta7-coverage.lua
       - tests/beta7-source-visibility.lua
       - GearRelevance.lua
+      - SourceEnrichment.lua
+      - README.txt
+      - DATA_MODEL.md
+      - BETA7_PRIVATE_NOTES.txt
   workflow_dispatch:
 permissions:
   contents: write
