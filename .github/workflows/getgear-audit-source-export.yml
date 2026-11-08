@@ -1,0 +1,38 @@
+name: GetGear temporary source audit export
+
+on:
+  push:
+    branches:
+      - work/gear-1-60-expansion
+    paths:
+      - .github/workflows/getgear-audit-source-export.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download public source evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p export
+          curl -fLSsS --retry 3 --max-time 120 "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json" -o export/ForeverCache.json
+          curl -fLSsS --retry 3 --max-time 30 "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/itemDatabaseSources.json" -o export/itemDatabaseSources.json
+          python3 -m json.tool export/ForeverCache.json > /dev/null
+          python3 -m json.tool export/itemDatabaseSources.json > /dev/null
+          for site in "https://forevertome.com/professions" "https://guide.wow4ever.se/en/professions" "https://wowforever.one/professions/" "https://foreverdb.net/profession/blacksmithing"; do
+            host=$(echo "$site" | sed -E 's,https?://([^/]+)/?.*,\\1,')
+            curl -fLSsS --retry 2 --max-time 25 -A "GetGearAudit/1.0 (noncommercial research)" "$site" -o "export/$host.html" || rm -f "export/$host.html"
+          done
+          ls -lh export
+          sha256sum export/*.json > export/SOURCE_HASHES.txt
+      - name: Upload source snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: getgear-source-audit-2026-11-08
+          path: export/
+          retention-days: 7
