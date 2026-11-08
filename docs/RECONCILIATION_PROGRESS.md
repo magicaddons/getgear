@@ -17,6 +17,19 @@
 - **Validation: PASS** — [CI run 42489073921](https://github.com/magicaddons/getgear/actions/runs/42489073921) completed successfully on 2026-11-09 (Adelaide). It ran public-source reconciliation, syntax checks for all addon Lua modules, nine-class catalogue/source/material/armour/preview regression, overlay filters, and performance checks. CI regenerated the reports in commit [`f7d3286`](https://github.com/magicaddons/getgear/commit/f7d3286a2f722f892771050d0adb2d298cb91245). This is **offline** validation, not a live-server test. Never promote a reference to a confirmed live drop or currently stocked vendor.
 - **Packaging:** Prohibited without explicit user approval; no ZIP, tag, release, merge or change to `main`.
 
+## Checkpoint 2 — Scarlet Monastery Graveyard rare bosses
+**Scope:** Nine level-30 dungeon equipment items, three rare encounters. This is a targeted boss-versus-trash classification fix, not a new catalogue or recipe audit.
+
+- Forever's published [Scarlet Monastery: Graveyard Dungeon Journal](https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard) identifies **Ironspine**, **Fallen Champion**, and **Azshir the Sleepless** as rare bosses, and lists three specific equipment rewards under each encounter.
+- Ironspine: **7686** Ironspine's Eye, **7687** Ironspine's Fist, **7688** Ironspine's Ribcage — [Journal loot](https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard/ironspine-rare).
+- Fallen Champion: **7689** Morbid Dawn, **7690** Ebon Vise, **7691** Embalmed Shroud — [Journal loot](https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard/fallen-champion-rare).
+- Azshir the Sleepless: **7708** Necrotic Wand, **7709** Blighted Leggings, **7731** Ghostshard Talisman — [Journal loot](https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard/azshir-the-sleepless-rare).
+- The generator now uses an explicit nine-ID/item-name-checked journal register, records source role `rare-boss`, `published-forever-dungeon-journal` confidence, a direct journal URL, and the displayed summary "Rare boss: ... (Forever Dungeon Journal; live drop unverified)". It does not generalise Classic elite NPC ranks or encounter lists to loot.
+- Existing observed data for Blighted Leggings (#7709) is preserved; its missing readable source summary is supplemented only.
+- Expected post-regeneration: **552** real dungeon equipment entries remain; **9** move out of the unresolved boss-versus-trash queue; **22** unresolved dungeon entries remain.
+- **Validation:** source-regeneration CI, Lua syntax and nine-class regressions pending. Live server drop rates and rare spawn frequency have **not** been verified.
+- No ZIP, release, tag, branch merge or modification of `main`.
+
 ## Next checkpoint
 Research a small set of remaining `dungeon-enemy` entries against current Forever-specific observations and source identities. Do not upgrade Classic-only claims to live-verified facts. Check recipe-book teaching routes separately in a later checkpoint; 954 of those remain uncertain pending actual server evidence.
 

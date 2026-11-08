@@ -87,6 +87,36 @@ assert(reportCSV:find("220606,Idol of the Dream",1,true)
     and reportCSV:find("crafted-item",1,true),
     "Preserve historical misclassification transparently in the audit")
 
+-- Nine former "boss/trash unknown" Scarlet Monastery entries are
+-- explicitly documented in Forever's Dungeon Journal as rare-boss loot.
+local rareBosses={
+    {actor="Ironspine", ids={7686,7687,7688},slug="ironspine-rare"},
+    {actor="Fallen Champion", ids={7689,7690,7691},slug="fallen-champion-rare"},
+    {actor="Azshir the Sleepless", ids={7708,7709,7731},slug="azshir-the-sleepless-rare"},
+}
+for _,group in ipairs(rareBosses) do
+    for _,id in ipairs(group.ids) do
+        local gear=assert(addon.ItemCatalog[id],"Missing journal gear "..id)
+        local research=assert(gear.acquisitionResearch,"Missing journal source "..id)
+        assert(research.confidence=="published-forever-dungeon-journal")
+        assert(research.sourceURL:find(group.slug,1,true),"Wrong rare-boss journal link "..id)
+        assert(gear.sourceSummary
+            and gear.sourceSummary:find("Rare boss: "..group.actor,1,true),
+            "Missing precise rare-boss display source "..id)
+        assert(not gear.sourceSummary:find("boss/trash unverified",1,true))
+        assert(not followUpCSV:find("\n"..id..",",1,true),
+            "Journal-documented boss still queued as unresolved "..id)
+        assert(dungeonDropCSV:find("\n"..id..",",1,true),
+            "Dungeon equipment removed incorrectly "..id)
+    end
+end
+assert(addon.ItemCatalog[7709].acquisitionConfidence=="observed",
+    "Do not erase the existing Blighted Leggings observation")
+assert(addon.ItemCatalog[7709].source=="Azshir the Sleepless",
+    "Do not overwrite Blighted Leggings original source")
+assert(addon.ItemCatalog[7709].instructions:find("observed in Forever",1,true),
+    "Do not erase prior live-recorded drop context")
+
 local vendorCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/recipe_vendor_book_checks.csv")):read("*a")
 assert(vendorCSV:find("Aisarra Nightmeadow",1,true),
     "Named vendor reference must be preserved with live-stock caveat")
@@ -95,7 +125,8 @@ assert(recipeReconciliation:find("**954**",1,true),
     "All 68 vendor books and 886 trainer-labelled books need verification")
 assert(recipeReconciliation:find("**552**",1,true)
     and recipeReconciliation:find("**24**",1,true)
-    and recipeReconciliation:find("**31**",1,true),
+    and recipeReconciliation:find("**22**",1,true)
+    and recipeReconciliation:find("rare-boss: 9",1,true),
     "Crafted-pattern records must not masquerade as equipment drops")
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),

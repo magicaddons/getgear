@@ -24,6 +24,29 @@ EVER_URL="https://everloot.app/api/edges?evidence=observed&limit=500"
 LEVELS={"observed":5,"forever":4,"published-forever-dungeon-journal":4,"reported":3,
         "published-forever":3,"classic-reference":1,"client":1}
 PROFESSIONS=("Blacksmithing","Leatherworking","Tailoring","Enchanting","Engineering","Alchemy","Cooking","First Aid")
+# Explicit per-item WoW Forever Dungeon Journal links, NOT extrapolated
+# from Classic NPC rank or an encounter name alone. Each journal page directly
+# lists the *finished equipment* against the named rare-boss loot table.
+# Journal presence is not a live observed drop or a drop-rate guarantee.
+SCARLET_GRAVEYARD_RARES = {
+    "Ironspine": {
+        "url":"https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard/ironspine-rare",
+        "items":{7686:"Ironspine's Eye",7687:"Ironspine's Fist",7688:"Ironspine's Ribcage"},
+    },
+    "Fallen Champion": {
+        "url":"https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard/fallen-champion-rare",
+        "items":{7689:"Morbid Dawn",7690:"Ebon Vise",7691:"Embalmed Shroud"},
+    },
+    "Azshir the Sleepless": {
+        "url":"https://www.wowhead.com/forever/dungeon-journal/scarlet-monastery-graveyard/azshir-the-sleepless-rare",
+        "items":{7708:"Necrotic Wand",7709:"Blighted Leggings",7731:"Ghostshard Talisman"},
+    },
+}
+JOURNAL_RARE_LOOT={
+    iid:(itemname,boss,record["url"])
+    for boss,record in SCARLET_GRAVEYARD_RARES.items()
+    for iid,itemname in record["items"].items()
+}
 UA="GetGear-Open-Source-Acquisition-Audit/1.0 (github.com/magicaddons/getgear)"
 # Historically tagged as dungeon equipment, but the client recipe creates it.
 # Keep the original record in the historic dungeon report without treating it as loot.
@@ -242,6 +265,7 @@ def main():
     dungeon=indexrows(DUNGEON)
     assert len(items)==7707 and len(recipes)==1252 and len(dungeon)==577
     dungeon_ids={int(r["itemID"]) for r in dungeon}
+    assert len(JOURNAL_RARE_LOOT)==9 and set(JOURNAL_RARE_LOOT).issubset(dungeon_ids)
     recipe_by_id={int(r["itemID"]):r for r in recipes}
     play,play_entries,play_config=playfulls()
     fcache={r["itemId"]:r for r in data(CACHE_URL) if isinstance(r,dict) and isinstance(r.get("itemId"),int)}
@@ -288,6 +312,17 @@ def main():
                 result={"role":"crafted-pattern","actor":"","zone":item["zone"],
                         "confidence":"recipe-origin-unverified","summary":"",
                         "sourceURL":"","observations":[],"foreverBoss":[]}
+            elif iid in JOURNAL_RARE_LOOT:
+                expected_name,actor,journal_url=JOURNAL_RARE_LOOT[iid]
+                assert norm(name)==norm(expected_name),(
+                    "Dungeon Journal item ID/name changed",iid,name,expected_name)
+                result={"role":"rare-boss","actor":actor,
+                        "zone":"Scarlet Monastery: Graveyard",
+                        "confidence":"published-forever-dungeon-journal",
+                        "summary":f"Scarlet Monastery: Graveyard | Rare boss: {actor} "
+                                  "(Forever Dungeon Journal; live drop unverified)",
+                        "sourceURL":journal_url,"observations":[],
+                        "foreverBoss":[actor]}
             else:
                 result=evidence_route(item,ps,cache,observed,classic_leads,bossnames)
             d_stats[(result["role"],result["confidence"])]+=1
@@ -315,9 +350,14 @@ def main():
                 "published-forever-dungeon-journal","published-forever")
             # Never overwrite SourceEnrichment's hand-reviewed examples.
             manual_exception=iid in (1943,1951,220606,271098)
-            if (generic and not highmanual and not manual_exception
-                and result["confidence"]!="unresolved"
-                and result["summary"]):
+            # The observed Blighted Leggings entry has no separate summary.
+            # Its original observed confidence, instructions and source remain
+            # untouched; the journal may *add* a human-readable rare-boss hint.
+            journal_summary_addition=(iid in JOURNAL_RARE_LOOT
+                and item["sourceEvidence"]=="observed")
+            if ((generic and not highmanual) or journal_summary_addition) \
+                and not manual_exception and result["confidence"]!="unresolved" \
+                and result["summary"]:
                 changes[iid]={"summary":result["summary"],
                               "confidence":result["confidence"],
                               "url":result["sourceURL"]}
@@ -510,6 +550,8 @@ def main():
         f"({len(named_vendor):,} named vendor references; {len(trainer_books):,} "
         "trainer-labelled recipes with separate pattern-book IDs).",
         f"- Item ID name mismatches against Forever cache: **{len(duplicate_identity)}**.",
+        "- Nine Scarlet Monastery Graveyard rare-boss loot references are attributed "
+        "to the Forever Dungeon Journal, with no live drop-rate claims.",
         "",
         "## Dungeon source classifications (reference quality, not drop-rate proof)",
     ]
@@ -588,7 +630,8 @@ def main():
           "vendor_books",len(named_vendor),"trainer_books",len(trainer_books),flush=True)
     assert len(all_rows)==7707 and len(dungeon_rows)==577 and len(recipe_rows)==1252
     assert roles["crafted-item"]==1 and roles["crafted-pattern"]==24
-    assert len(true_dungeon)==552 and len(unresolved)==31
+    assert roles["rare-boss"]==9
+    assert len(true_dungeon)==552 and len(unresolved)==22
     assert len(changes)>=100,"Insufficient actionable source evidence; fail closed"
 
 if __name__=="__main__":main()
