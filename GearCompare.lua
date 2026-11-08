@@ -248,6 +248,51 @@ function GetGear:ShouldShowOverlayStatChanges(gear)
     return false -- every eligible comparison is zero or negative only
 end
 
+-- Overlay-only restriction on *generic, untargetable world drops*, not on
+-- all Bind-on-Equip equipment. Craftable BoEs and named dungeon/quest/vendor
+-- items must remain eligible. Quality/bind data comes from the live client.
+-- When that metadata is absent, use the independently cross-checked
+-- Classic BoE index as a provisional fallback; a loaded Forever tooltip
+-- always overrides it. Never start item-cache requests during a filter pass.
+function GetGear:ShouldShowOverlayWorldBoEDrops(gear)
+    if not gear or gear.bagUpgrade then return true end
+    if self.db and self.db.overlay
+        and self.db.overlay.hideGreenBoEWorldDrops==false then return true end
+    if gear.profession or gear.craftOnly
+        or (type(gear.reagents)=="table" and #gear.reagents>0) then return true end
+    local source=type(gear.sourceType)=="string" and gear.sourceType:lower() or ""
+    local route=type(gear.acquisitionKind)=="string" and gear.acquisitionKind:lower() or ""
+    -- Explicit actionable sources beat vague world-drop descriptors.
+    for _,name in ipairs({"dungeon","quest","vendor","craft","pvp","reputation"}) do
+        if source:find(name,1,true) or route:find(name,1,true) then
+            return true
+        end
+    end
+    if not (source:find("world drop",1,true)
+        or route:find("world drop",1,true)) then return true end
+
+    local quality,binding
+    local getter=(C_Item and type(C_Item.GetItemInfo)=="function" and C_Item.GetItemInfo)
+        or (type(GetItemInfo)=="function" and GetItemInfo)
+    if getter and type(gear.itemID)=="number" then
+        local ok,name,link,q,level,minLevel,itemType,subType,stack,equip,icon,price,
+            classID,subclassID,bindType=pcall(getter,gear.itemID)
+        if ok and name and type(q)=="number" then
+            quality=q
+            if type(bindType)=="number" then binding=bindType end
+        end
+    end
+    -- A known non-green or non-BoE item must never be hidden by a Classic
+    -- reference. WoW's standard item-info binding codes: 1 BoP, 2 BoE.
+    if quality and quality~=2 then return true end
+    if binding and binding~=2 then return true end
+    if quality==2 and binding==2 then return false end
+    -- A partial client response isn't proof either way; only trust fallback
+    -- if the remaining data does not contradict its original classification.
+    return not (self.WorldDropGreenBoEIndex
+        and self.WorldDropGreenBoEIndex[gear.itemID]==true)
+end
+
 -- v0.10.5: Reversible earlier-gear classification. Equipment-ID matching
 -- is handled independently; there is no implicit SavedVariables migration.
 local OBSOLETE_ARMOR_SLOTS = {
