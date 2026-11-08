@@ -1,0 +1,36 @@
+name: Verify overlay stat filtering without packaging
+on:
+  push:
+    branches: [work/overlay-positive-stat-filter]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+      - name: Syntax and full regression suite (no ZIP or release)
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in *.lua) luac5.4 -p "$module";; esac
+          done < GetGear.toc
+          lua5.4 tests/overlay-stat-filter.lua .
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-coverage.lua .
+          lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tests/beta7-armor-priority.lua .
+          lua5.4 tests/beta7-preview-layout.lua .
+      - name: Confirm verification-only job
+        run: echo "No addon ZIP built; no release, tag or main-branch change."
