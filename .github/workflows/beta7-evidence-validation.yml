@@ -29,6 +29,7 @@ jobs:
           lua5.4 tests/beta4-talents.lua .
           lua5.4 tests/beta4-performance.lua .
           lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-material-names.lua .
           lua5.4 tests/beta7-preview-layout.lua .
       - name: No build or release
         run: echo "Only tests ran. No ZIP, tag, GitHub release or main branch change."
