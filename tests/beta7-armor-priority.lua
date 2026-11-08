@@ -16,9 +16,10 @@ local function sample(armor,level,slot)
         availableLevel=level,armorType=armor,slot=slot or "Chest",
         statRole="physical",sourceType="World drop (route unverified)"}
 end
-local function check(cls,level,allowed,blocked)
+local function check(cls,level,allowed,blocked,role)
     a.level=level
     local item=sample(allowed,level)
+    item.statRole=role or "physical"
     assert(a:ShouldDisplayGear(item,cls,"available"),
         cls.." at "..level.." should show "..allowed)
     item.armorType=blocked
@@ -46,8 +47,8 @@ for _,cls in ipairs({"ROGUE","DRUID"}) do
     check(cls,60,"Leather","Mail")
 end
 for _,cls in ipairs({"PRIEST","MAGE","WARLOCK"}) do
-    check(cls,13,"Cloth","Leather")
-    check(cls,60,"Cloth","Mail")
+    check(cls,13,"Cloth","Leather","spell")
+    check(cls,60,"Cloth","Mail","spell")
 end
 -- The reported actual item, from the frozen 1-60 index.
 local harness=assert(a.ItemCatalog[3313])
