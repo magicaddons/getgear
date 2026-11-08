@@ -1,6 +1,6 @@
 # Conservative green BoE world-drop filter index
 
-- Total items: **2344**
+- Total items: **2341**
 - These are only GENERIC WORLD DROPS; crafting, quest, dungeon and vendor items were excluded.
 - Default overlay rule uses GetItemInfo when loaded; this index is only the offline fallback.
 - The full guide and user Hidden/Acquired statuses are unchanged.
@@ -15,5 +15,6 @@
 
 ## Rejected source candidates
 - name-mismatch: 4
-- no-classic-record: 91
-- not-green-boe: 448
+- no-classic-record: 82
+- not-green-boe: 446
+- targetable: 14
