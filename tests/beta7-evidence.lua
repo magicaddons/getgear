@@ -57,7 +57,7 @@ assert(veteran.profession=="Blacksmithing" and veteran.professionSkillRequired==
 assert(veteran.recipeVendor=="Stondry Darkhammer" and veteran.recipeSpellID==1252262)
 assert(veteran.bindingStatus=="bop")
 assert(veteran.acquisitionLocation.zone=="Redridge Mountains"
-    and veteran.acquisitionLocation.x==10.4 and veteran.acquisitionLocation.y==74.7)
+    and veteran.acquisitionLocation.x==8.01 and veteran.acquisitionLocation.y==74.81)
 checkMats(250513,{[2840]=12,[3470]=4,[249427]=2,[5498]=2})
 local golem=assert(addon.ItemCatalog[271098])
 assert(golem.name=="Golemguard Chest" and golem.sourceType=="Dungeon")
