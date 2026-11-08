@@ -53,10 +53,10 @@
 - No ZIP, public release, tag, branch merge or change to `main`.
 
 ## Checkpoint 4 — dungeon role reconciliation (2026-11-09)
-**Status: evidence and regression changes committed; full non-release CI validation pending at the initial commit.**
+**Status: COMPLETED — full non-release CI PASS** in [workflow 42493307958](https://github.com/magicaddons/getgear/actions/runs/42493307958), including all nine classes, source regeneration, Lua syntax, filtering, materials, preview and performance.
 - Audited all 20 dungeon-source leads. **14** item-ID/name-locked encounter roles now have specific Forever journal, guide or beta reference links, with live-drop caveats; **2** Dark/Relic Coffer leads correctly identified as containers, not NPCs, and retained as unresolved; **4** other item-source links remain unresolved. Queue now **6**.
 - Dark Iron Ambassador's Royal Diplomatic Scepter has an exact Forever Journal loot link. Scorn's Icy Choker has a beta class-guide reference but event-spawn availability is not established. The BRD/UBRS/Sunken Temple/Scholomance item associations may derive from historic loot tables; never equate role identification with a live drop.
-- Regression assertions enforce item-ID/name mappings, source uncertainty, container roles, and invariant 552 dungeon equipment, 7,707 gear and 954 uncertain recipe books. Prior armour-only filtering stays untouched.
+- Regression assertions enforce item-ID/name mappings, source uncertainty, container roles, and invariant 552 dungeon equipment, 7,707 gear and 954 uncertain recipe books. The [full consistency audit](source-audit-1-60/reconciliation-20261109/CHECKPOINT4_CONSISTENCY.md) checked all 577 original rows: 577 distinct IDs, no invalid boss/trash/container role records; 13 previously player-observed references remain explicitly observation-level evidence, not guaranteed live rates. Prior armour-only filtering stays untouched.
 - [Full evidence register](source-audit-1-60/reconciliation-20261109/CHECKPOINT4_EVIDENCE.md) lists all 20 cases and reasons to retain unresolved rows.
 - **Roadmap:** (1) finish any verifiable dungeon leads, (2) 954 recipe-book sources (68 vendor and 886 trainer-labelled), (3) other equipment source gaps, (4) final catalogue/source/filtering/regression audits, (5) in-game acceptance testing before asking approval to compile/publish. No packaging, tag, release or main merge.
 

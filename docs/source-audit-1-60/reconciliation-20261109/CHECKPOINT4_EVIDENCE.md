@@ -36,3 +36,9 @@ This checkpoint reviews all 20 pending dungeon-source classifications. Published
 - **273044 Arcanowisp Robes:** Arcanic Enigma in City of Dalaran is a [community reference](https://tavernforever.com/en/loot/city-of-dalaran/) but [Forever beta reporting](https://www.wowhead.com/forever/guide/classes/mage/frost/level-30-dps-overview) cautioned no confirmed City loot.
 
 **Result:** 14 named roles, 2 correctly marked container leads (still open), 4 other unresolved = **6 remaining item-source verification leads**. Total dungeon equipment 552; full catalogue 7,707; recipe-book followups 954. No ZIP, release, tag or main branch changes.
+
+## Validation and whole-register consistency
+
+- **PASS:** [non-release workflow 42493307958](https://github.com/magicaddons/getgear/actions/runs/42493307958); source regeneration, full nine-class Lua regression, material rules, overlay armour-only and green world-BoE filters, preview and performance.
+- **PASS:** [all 577 historic rows checked](CHECKPOINT4_CONSISTENCY.md), exactly 552 dungeon equipment, 24 crafted-pattern leads and one incorrectly labelled finished craft. No duplicate IDs or NPC/container classification errors under documented assertions.
+- Generated data commit: [dee3f9b](https://github.com/magicaddons/getgear/commit/dee3f9b004473519523dca957ce2b28d22083537). No packaging/tag/release/merge.

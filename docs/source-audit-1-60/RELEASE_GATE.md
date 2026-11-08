@@ -24,7 +24,7 @@ The existing public v0.14.0-beta7 prerelease is separate from this work. No subs
 - This workflow **does not package an addon** or publish anything. All files are committed only to the development branch.
 - Automated Lua tests do not establish real Forever item-cache behaviour, vendor stock, actual drop rates or on-screen layout in the live client.
 
-- **Checkpoint 4 source pass:** [20-case evidence register](reconciliation-20261109/CHECKPOINT4_EVIDENCE.md); no live loot claims. New full CI validation should be recorded before seeking build approval.
+- **Checkpoint 4 PASS:** [20-case evidence register](reconciliation-20261109/CHECKPOINT4_EVIDENCE.md) and [577-row consistency audit](reconciliation-20261109/CHECKPOINT4_CONSISTENCY.md). [Non-release workflow 42493307958](https://github.com/magicaddons/getgear/actions/runs/42493307958) passed the complete nine-class, source-generation, Lua syntax, overlay/filtering, materials, preview and performance suite. This does **not** prove live loot or approve a build.
 
 ## Next work, one bounded category at a time
 1. **Dungeon equipment source quality:** the role checkpoint is complete; [6 source-confirmation leads](reconciliation-20261109/dungeon_source_followups.csv) remain and should only be resolved with new Forever item-specific evidence. Avoid assuming live event spawns, City of Dalaran loot, Scholomance historic drops, or coffer contents.
