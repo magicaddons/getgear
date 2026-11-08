@@ -355,7 +355,12 @@ def main():
                 candidate=recipe_sources[0]
                 vendor_actor=candidate["npc"] or candidate["zone"] or "vendor/enemy"
                 action=("vendor" if method=="vendor" else "dropped" if method=="drop" else "quest")
-                detail=f"Recipe: {action} plans/pattern — {vendor_actor} (Forever ref.; live unverified)"
+                if (book>=273952 and book<=274019 and
+                    norm(vendor_actor)=="aisarranightmeadow" and method=="vendor"):
+                    detail=("Recipe: Aisarra Nightmeadow, Mount Hyjal "
+                            "(reputation/quest/slot gates may apply; vendor stock unverified)")
+                else:
+                    detail=f"Recipe: {action} plans/pattern — {vendor_actor} (Forever ref.; live unverified)"
                 changes[iid]={"summary":detail,"confidence":"forever-community-reference",
                               "url":PLAY_URL,"patternID":book}
             elif iid not in changes and book and "unresolved" in existing_method:
@@ -398,7 +403,7 @@ def main():
     # Reference-only vendors or trainers have NOT been verified live; keep
     # their high-priority plan books in the follow-up list.
     unresolved_books=[r for r in recipe_rows if r["bookItemID"]
-                      and (r["classification"].endswith("-reference")
+                      and ("reference" in r["classification"]
                            or "unverified" in r["classification"])]
     write_csv("recipe_source_followups.csv",unresolved_books,list(recipe_rows[0]))
     named_vendor=[r for r in recipe_rows if r["classification"]=="vendor-reference"]
@@ -483,6 +488,11 @@ def main():
         "that a live vendor currently offers it.",
         "- The 68 new level-60 book items have a published *Aisarra Nightmeadow* "
         "(Mount Hyjal) vendor lead, **not** live confirmed stock.",
+        "- Example Forever plan tooltips independently identify requirements beyond "
+        "the vendor: Grovekeeper Leggings requires Friendly status and the "
+        "Friendly Advice quest; Grovekeeper Mantle requires reputation "
+        "progress and shoulder specialization. Other books may have their "
+        "own reputation or specialization gates.",
         "- A trainer-labelled recipe with a pattern item is marked for a teaching-method "
         "check; the two routes could both exist and should not be called contradictory "
         "without server evidence.",
@@ -517,6 +527,9 @@ def main():
         "— published Forever-specific tooltips and source references.",
         "- [WoW Forever Friends](https://www.wowforeverfriends.org/library/sources/) "
         "— Classic baseline NPC/item lookup explicitly labelled unverified for Forever.",
+        "- [WoWhead Grovekeeper Leggings pattern](https://www.wowhead.com/forever/item=273964) "
+        "and [Grovekeeper Mantle pattern](https://www.wowhead.com/forever/item=273958) "
+        "— published plan tooltips with class/reputation/quest specialization requirements.",
         "- [AHledger](https://ahledger.com) — supplemental recipe acquisition reference.",
     ])
     (REPORT/"README.md").write_text("\n".join(lines)+"\n",encoding="utf8")
