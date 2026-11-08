@@ -15,6 +15,10 @@ on:
       - GeneratedStatFlags.lua
       - tools/generate_forever_stat_flags.py
       - tests/beta7-stat-flags.lua
+      - AcquisitionEvidence.lua
+      - AcquisitionEvidenceIndex.lua
+      - tests/beta7-acquisition-reconciled.lua
+      - tools/reconcile_acquisition_1_60.py
       - tests/overlay-stat-filter.lua
       - tests/overlay-green-boe-filter.lua
   workflow_dispatch:
@@ -63,6 +67,7 @@ jobs:
           lua5.4 tests/overlay-stat-filter.lua .
           lua5.4 tests/overlay-green-boe-filter.lua .
           lua5.4 tests/beta7-stat-flags.lua .
+          lua5.4 tests/beta7-acquisition-reconciled.lua .
       - name: Store fallback index and provenance ONLY in integration branch
         run: |
           set -euo pipefail
