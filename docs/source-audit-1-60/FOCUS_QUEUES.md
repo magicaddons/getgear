@@ -3,7 +3,7 @@
 Generated from the complete [7,707-item census](all_items.csv). This report is an offline index and does not change any source verdict.
 
 - [Every dungeon-associated item; named client bosses are not necessarily confirmed loot sources](dungeon_sources.csv) — **577** entries
-- [Dungeon entries lacking a reliable boss/trash or enemy assignment](dungeon_sources_unresolved.csv) — **235** entries
+- [Dungeon entries lacking a reliable boss/trash or enemy assignment](dungeon_sources_unresolved.csv) — **198** entries
 - [Recipes with an unknown trainer/vendor/drop/quest learning route](recipe_learning_unresolved.csv) — **68** entries
 - [Name disagreements against the newer independent client catalogue; verify localisation and phase](independent_name_disagreements.csv) — **33** entries
 - [IDs not found in the newer item source; absence alone cannot establish removal](independent_catalogue_unmatched.csv) — **716** entries

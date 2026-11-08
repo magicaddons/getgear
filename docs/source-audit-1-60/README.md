@@ -5,7 +5,7 @@ Generated UTC: 2026-11-08T12:36:05+00:00.
 
 ## Coverage
 - Catalogue records checked: **7,707/7,707**; unique IDs: 7,707.
-- Items with one or more outstanding flags: **6,531**.
+- Items with one or more outstanding flags: **6,514**.
 - Crafting entries checked: **1,252**.
 - Recipe material candidates requiring changes: **0** (missing: 0; conflicts: 0).
 - Independent current-client recipe matches: **1,252**.
@@ -33,15 +33,16 @@ Generated UTC: 2026-11-08T12:36:05+00:00.
 
 ## Dungeon classifications
 - not-dungeon: 7,130
-- named client encounter (boss route unverified): 340
-- dungeon; enemy unresolved: 162
-- named dungeon enemy; boss/trash unresolved: 73
+- named client encounter (boss route unverified): 360
+- dungeon; enemy unresolved: 132
+- named dungeon enemy; boss/trash unresolved: 66
+- named client boss encounter (Forever-observed item source): 17
 - trash (reference): 2
 
 ## Outstanding issue counts
 - acquisition_route_unverified: 6,389
 - not_in_independent_catalogue_or_hidden: 716
-- dungeon_enemy_or_role_unresolved: 235
+- dungeon_enemy_or_role_unresolved: 198
 - recipe_learning_source_unresolved: 68
 - independent_name_disagreement: 33
 
@@ -57,6 +58,7 @@ Generated UTC: 2026-11-08T12:36:05+00:00.
 
 ## Files
 - [Complete per-item audit](all_items.csv) (every item ID and class eligibility)
+- [Direct-name dungeon classification corrections](dungeon_role_reconciliation.csv) (client encounters, no new drop claims)
 - [Unresolved item queue](unresolved_items.csv)
 - [Recipe evidence and material comparison](recipes.csv)
 - [Candidate material corrections](material_candidates.json)
