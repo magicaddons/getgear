@@ -57,6 +57,22 @@ assert(type(futureSummary)=="string" and futureSummary:find("unverified",1,true)
     "Future-recipe origin must remain explicitly unverified")
 assert(not futureSummary:find("trainer",1,true),
     "A pattern book is not proof of trainer teaching")
+-- A dungeon-sourced RECIPE must not claim the finished gear drops from a boss.
+for _,id in ipairs({252501,252502,252503,252445,253905}) do
+    local crafted=assert(addon.ItemCatalog[id],"Missing craftable fixture "..id)
+    assert(crafted.profession~=nil and type(crafted.reagents)=="table",
+        "Dungeon-associated crafted gear must remain craftable "..id)
+    assert(not (crafted.acquisitionResearch and
+        type(crafted.acquisitionResearch.sourceSummary)=="string" and
+        crafted.acquisitionResearch.sourceSummary:find("Boss:",1,true)),
+        "Pattern source must not become an equipment boss drop "..id)
+end
+local reportCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv")):read("*a")
+assert(reportCSV:find("crafted-pattern",1,true),
+    "The audit should explicitly separate dungeon recipe plans from equipment loot")
+local vendorCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/recipe_vendor_book_checks.csv")):read("*a")
+assert(vendorCSV:find("Aisarra Nightmeadow",1,true),
+    "Named vendor reference must be preserved with live-stock caveat")
 -- The catalogue and crafting lists remain identical and class-wide.
 local checks={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 for _,cls in ipairs(checks) do
