@@ -58,3 +58,20 @@ Not a substitute for in-client testing.
    publish as stable or modify `main`.
 
 This register is intentionally candid about partial progress.
+
+
+## Further recovered-source findings — 2026-11-08
+
+The Nov 8 GitHub Actions source-export artifact (run [42465512234](https://github.com/magicaddons/getgear/actions/runs/42465512234)) was recovered before its Nov 15 expiration. Its dated Forever item cache, 2026-10-31 ForeverTome recipe snapshot and EG Link contributed live-client data support a reproducible **local candidate** for the remaining catalogue. This candidate is **not yet committed** to GitHub and is **not** a packaged addon.
+
+- 7,678 dated cache items plus 29 manual-only researched entries = 7,707 unique catalogue identities; 36,341 class/level objectives preserved.
+- 1,244/1,244 cache-crafted items have source-derived reagent lists. The existing addon had 1,060 missing lists filled by the local candidate, while **43 existing lists disagreed** with the recovered client recipes and were corrected in the local candidate, with each before/after list separately retained for review. The remainder already agreed.
+- **Greater Mystic Wand (#217287)** has two recipes: Forever spell 14810 uses Lesser Mystic Essence; alternate spell 439134 uses Greater Mystic Essence. Candidate uses standard spell 14810, while retaining this caveat in its report. See [Wowhead Forever spell 14810](https://www.wowhead.com/forever/spell=14810/greater-mystic-wand) and [spell 439134](https://www.wowhead.com/forever/spell=439134/greater-mystic-wand).
+- 447/554 cache dungeon records have named boss metadata (415 newly populated in a runtime overlay; others already researched), leaving 107 unknown.
+- EG player-contributed observation data matched 56 of 1,495 vendor item identities, with 55 new source labels applied in the local candidate; 1,439 remain without an identified vendor.
+- EG cached quest records matched 27 of 231 quest-reward item identities; 204 remain without an identified quest. These matches **do not certify Alliance eligibility or live quest availability**.
+- Total new candidate metadata references: 1,244 crafted + 447 named dungeon + 56 vendor + 27 quest, including previously researched overlaps. Client item caches do not prove all items are obtainable today.
+
+The generated overlay passed an offline Lua 5.3 load of original Beta 4 modules: 7,707 unique items, 36,341 class objectives and nine classes unchanged, and precisely 43 previously conflicting reagent lists corrected. The generated data still needs integration on a tested development branch, full source review, in-game validation and a separate decision about producing a Beta 7 private test build. Do **not** mark Beta 7 complete or publish it on this basis.
+
+Examples of independently corroborated reagent corrections: [Tough Scorpid Breastplate takes Thick Leather](https://www.warcraftforever.wiki/wiki/Pattern:_Tough_Scorpid_Breastplate); [Veteran's Silvered Chain Shirt uses Coarse Grinding Stone](https://www.wowhead.com/forever/spell=1252267/veterans-silvered-chain-shirt), whereas older GetGear hand-coded values disagreed. These are representative checks, not certification of all 43 changed lists.
