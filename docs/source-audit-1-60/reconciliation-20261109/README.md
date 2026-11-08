@@ -5,28 +5,31 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 ## Catalogue and recipes
 - All **7,707 / 7,707** equipment records examined.
 - All **1,252 / 1,252** crafting recipes examined.
-- All **577 / 577** dungeon-associated equipment records examined.
+- All **577 / 577** historically dungeon-associated records examined, including **24** crafted items whose patterns, NOT the equipment, may be dungeon drops.
 - New, conservative in-addon acquisition summaries generated: **583**.
-- Combined Forever cache entries: **10,315**; Playfulls item entries: **22,890**.
+- Combined Forever cache entries: **10,315**; Playfulls item entries: **22,891**.
 - Published player-observed relationships: **853**.
-- Dungeon rows needing exact enemy/boss/trash verification: **80**.
-- Recipe book origins that still require live verification: **954**.
+- True dungeon-equipment records: **553**; still needing an enemy/boss/trash identity: **32**.
+- Recipe book origins that still require live verification: **68** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
 - Item ID name mismatches against Forever cache: **0**.
 
 ## Dungeon source classifications (reference quality, not drop-rate proof)
-- boss: 390
-- trash: 107
-- dungeon-enemy: 59
-- unknown: 21
+- boss: 386
+- trash: 135
+- dungeon-enemy: 31
+- crafted-pattern: 24
+- unknown: 1
 
 ## Dungeon evidence confidence
-- forever-community-reference: 480
+- forever-community-reference: 476
 - forever-reference-unverified: 63
-- unresolved: 21
+- recipe-origin-unverified: 24
 - forever-observed-npc: 13
+- unresolved: 1
 
 ## Recipe learning (do not conflate *crafting* and *learning*)
-- trainer-reference: 1,124
+- trainer-reference-with-pattern-item: 886
+- trainer-reference: 238
 - vendor-reference: 68
 - manual-researched: 50
 - forever-observed: 6
@@ -38,16 +41,21 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - *Classic reference* is used only as an explicitly uncertain farming lead.
 - Encounter names in the client identify NPCs, not their loot tables.
 - An unobserved recipe book is not evidence that a trainer teaches it or that a live vendor currently offers it.
+- The 68 new level-60 book items have a published *Aisarra Nightmeadow* (Mount Hyjal) vendor lead, **not** live confirmed stock.
+- A trainer-labelled recipe with a pattern item is marked for a teaching-method check; the two routes could both exist and should not be called contradictory without server evidence.
 - Original 1,252 crafting ingredient lists are **untouched**.
 - Higher-confidence manually reviewed source text and item-ID exceptions take priority over this generated evidence.
 - The index does not alter class eligibility, player status, equipment quality, recipe availability gates, or the two overlay filters.
 
 ## Audit files
 - [All equipment records](all_items_reconciled.csv) — one row per item.
-- [Dungeon acquisitions](dungeon_items_reconciled.csv) — boss, trash, named enemy, uncertainty, observations and source references.
+- [All historically dungeon-associated records](dungeon_items_reconciled.csv), including separately classified crafted-pattern entries.
+- [Actual dungeon equipment drops](dungeon_equipment_drops.csv) — boss, trash, enemy, confidence and observed sources.
 - [Unresolved dungeon sources](dungeon_source_followups.csv).
 - [Recipe acquisition and pattern book reconciliation](recipes_reconciled.csv).
 - [Unresolved recipe sources](recipe_source_followups.csv).
+- [68 named-vendor pattern-book verification leads](recipe_vendor_book_checks.csv).
+- [Recipes with both trainer-classified references and pattern books](recipe_trainer_book_checks.csv).
 - [Optional in-game verification](OPTIONAL_IN_GAME_CHECKS.md).
 - [Source versions, hashes, attribution and limitations](provenance.json).
 

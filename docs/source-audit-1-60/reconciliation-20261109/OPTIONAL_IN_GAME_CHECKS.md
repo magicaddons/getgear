@@ -6,27 +6,27 @@ These are **optional**, not prerequisites for continued research. Check an item 
 
 | Level | Item ID | Item | Reported dungeon | Best current source |
 |---:|---:|---|---|---|
-| 11 | 1925 | Defias Rapier | Deadmines | dungeon-enemy (forever-community-reference) |
-| 13 | 1944 | Metalworking Gloves | Deadmines | dungeon-enemy (forever-community-reference) |
-| 13 | 1945 | Woodworking Gloves | Deadmines | dungeon-enemy (forever-community-reference) |
-| 14 | 1943 | Goblin Mail Leggings | Deadmines | dungeon-enemy (forever-community-reference) |
-| 15 | 253905 | Filigreed Flame Gown | Dungeon loot / Auction House (if tradeable) | unknown (unresolved) |
-| 15 | 253909 | Filigreed Pearly Gown | Dungeon loot / Auction House (pattern only) | unknown (unresolved) |
-| 15 | 253901 | Filigreed Pristine Gown | Dungeon loot / Auction House (if tradeable) | unknown (unresolved) |
-| 15 | 253907 | Filigreed Shadow Gown | Dungeon loot / Auction House (if tradeable) | unknown (unresolved) |
-| 15 | 253903 | Filigreed Silky Gown | Dungeon loot / Auction House (pattern only) | unknown (unresolved) |
-| 18 | 5243 | Firebelcher | Wailing Caverns | dungeon-enemy (forever-community-reference) |
 | 20 | 23173 | Abomination Skin Leggings | Shadowfang Keep | dungeon-enemy (forever-reference-unverified) |
-| 20 | 252445 | Defender's Leather Pants | Dungeon pattern drops — exact boss unconfirmed | unknown (unresolved) |
-| 20 | 253941 | Filigreed Flame Leggings | Blackfathom Deeps; other dungeon loot may also be possible | unknown (unresolved) |
-| 20 | 253945 | Filigreed Pearly Leggings | Dungeon loot / Auction House (pattern only) | unknown (unresolved) |
-| 20 | 253943 | Filigreed Shadow Leggings | Dungeon loot / Auction House (if tradeable) | unknown (unresolved) |
-| 20 | 253939 | Filigreed Silky Leggings | Dungeon loot / Auction House (pattern only) | unknown (unresolved) |
 | 20 | 5943 | Rift Bracers | Shadowfang Keep | dungeon-enemy (forever-reference-unverified) |
-| 20 | 252502 | Stormrider's Leather Pants | Dungeon pattern drops — exact boss unconfirmed | unknown (unresolved) |
-| 20 | 252501 | Trapper's Leather Pants | Dungeon pattern drops — exact boss unconfirmed | unknown (unresolved) |
-| 20 | 252503 | Wisdom's Leather Pants | Dungeon pattern drops — exact boss unconfirmed | unknown (unresolved) |
+| 21 | 3569 | Vicar's Robe | Razorfen Kraul | dungeon-enemy (forever-community-reference) |
+| 27 | 273044 | Arcanowisp Robes | City of Dalaran | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7709 | Blighted Leggings | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7690 | Ebon Vise | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7691 | Embalmed Shroud | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7731 | Ghostshard Talisman | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7686 | Ironspine's Eye | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7687 | Ironspine's Fist | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7688 | Ironspine's Ribcage | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7689 | Morbid Dawn | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 7708 | Necrotic Wand | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 30 | 9457 | Royal Diplomatic Scepter | Gnomeregan | dungeon-enemy (forever-reference-unverified) |
+| 30 | 23169 | Scorn's Icy Choker | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
+| 47 | 11946 | Fire Opal Necklace | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
+| 47 | 10801 | Slitherscale Boots | Sunken Temple | dungeon-enemy (forever-community-reference) |
+| 48 | 11945 | Dark Iron Ring | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
+| 49 | 10804 | Fist of the Damned | The Temple of Atal'Hakkar | dungeon-enemy (forever-reference-unverified) |
+| 49 | 11633 | Spiderfang Carapace | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
 
 ## Recipe verification
 
-The 68 consecutive level-60 item IDs 273884–273951 have recipe book IDs but still need live availability evidence. Do **not** assume their recipes are trainer-taught or currently obtainable. No user verification needed until that content is actually encountered.
+The 68 consecutive level-60 item IDs 273884–273951 have book IDs and are listed by Playfulls under **Aisarra Nightmeadow, Mount Hyjal (Alliance)** as a provisional VENDOR lead. The public listing does **not** prove live vendor stock, accessible inventory or current availability. Do not mislabel these as trainer-taught. No user verification is needed until that content is encountered.
