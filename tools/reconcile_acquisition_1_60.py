@@ -134,7 +134,6 @@ def classic_monsters(item,ci,npcs):
              "source":CLASSIC_URL} for npcid in row.get("dropNpcIds",[]) if isinstance(npcid,int)][:15]
 
 def evidence_route(catalogue,sources,cacheitem,observed,classic_leads,bossnames):
-    is_dungeon=True
     pfkind,pf=roles_from_play(sources,bossnames)
     forever=[str(v) for v in (cacheitem or {}).get("bossNames",[]) if isinstance(v,str) and v.strip()]
     matched=[]
@@ -158,8 +157,12 @@ def evidence_route(catalogue,sources,cacheitem,observed,classic_leads,bossnames)
             # If a specific Classic loot NPC is independently listed as a
             # normal mob of the same name, it can be a *trash lead*, not
             # confirmed Forever loot.  Do not treat an unknown enemy as boss.
-            if any(norm(c["name"])==norm(actor) and c["rank"]=="Normal"
-                   for c in classic_leads):
+            if (norm(actor) not in bossnames
+                and any(norm(c["name"])==norm(actor)
+                        and c["rank"] not in ("Boss","World Boss")
+                        for c in classic_leads)):
+                # Elite dungeon enemies often are trash; an NPC-rank
+                # lookup alone must not be mistaken for a boss record.
                 role="trash"
         if matched:
             matched_names={norm(m["name"]) for m in matched}
@@ -263,14 +266,25 @@ def main():
         pf_types=sorted(set(s["type"] for s in ps))
         type_data=sorted(set((cache or {}).get("sourceTypes",[])))
         is_dungeon=iid in dungeon_ids
+        craft_pattern_route=is_dungeon and iid in recipe_by_id
         result=None
         if is_dungeon:
-            result=evidence_route(item,ps,cache,observed,classic_leads,bossnames)
+            if craft_pattern_route:
+                # Prior audits conflated a craftable item's dungeon-LOOTED
+                # PATTERN with the finished gear being a dungeon loot drop.
+                # These remain dungeon-associated for historic audit parity,
+                # but cannot be assigned a boss/trash equipment drop.
+                result={"role":"crafted-pattern","actor":"","zone":item["zone"],
+                        "confidence":"recipe-origin-unverified","summary":"",
+                        "sourceURL":"","observations":[],"foreverBoss":[]}
+            else:
+                result=evidence_route(item,ps,cache,observed,classic_leads,bossnames)
             d_stats[(result["role"],result["confidence"])]+=1
             dungeon_rows.append({
                 "itemID":iid,"name":name,"level":item["level"],
                 "existingType":item["sourceType"],"existingRoute":item["source"],
                 "existingEvidence":item["sourceEvidence"],"dungeon":result["zone"],
+                "sourceIsCraftedPattern":craft_pattern_route,
                 "reconciledRole":result["role"],"enemy":result["actor"],
                 "confidence":result["confidence"],"sourceSummary":result["summary"],
                 "playerObservedNPCs":json.dumps(result["observations"],ensure_ascii=False),
@@ -313,7 +327,8 @@ def main():
             elif existing_method.startswith("vendor recipe") or existing_method=="dropped recipe":
                 category="manual-researched"
             elif existing_method.startswith("trainer"):
-                category="trainer-reference"
+                category=("trainer-reference-with-pattern-item" if book
+                          else "trainer-reference")
             elif existing_method=="initial profession":
                 category="initial"
             elif method!="unresolved":
@@ -374,6 +389,8 @@ def main():
         + "}\n",encoding="utf8")
     write_csv("all_items_reconciled.csv",all_rows,list(all_rows[0]))
     write_csv("dungeon_items_reconciled.csv",dungeon_rows,list(dungeon_rows[0]))
+    true_dungeon=[r for r in dungeon_rows if r["reconciledRole"]!="crafted-pattern"]
+    write_csv("dungeon_equipment_drops.csv",true_dungeon,list(dungeon_rows[0]))
     write_csv("recipes_reconciled.csv",recipe_rows,list(recipe_rows[0]))
     unresolved=[r for r in dungeon_rows if r["reconciledRole"] in
                 ("unknown","dungeon-general","dungeon-enemy","enemy")]
@@ -384,6 +401,11 @@ def main():
                       and (r["classification"].endswith("-reference")
                            or "unverified" in r["classification"])]
     write_csv("recipe_source_followups.csv",unresolved_books,list(recipe_rows[0]))
+    named_vendor=[r for r in recipe_rows if r["classification"]=="vendor-reference"]
+    trainer_books=[r for r in recipe_rows
+                   if r["classification"]=="trainer-reference-with-pattern-item"]
+    write_csv("recipe_vendor_book_checks.csv",named_vendor,list(recipe_rows[0]))
+    write_csv("recipe_trainer_book_checks.csv",trainer_books,list(recipe_rows[0]))
     # Prioritize active 1–30, specific unknown-source patterns, then 31–60.
     manual=sorted(unresolved,key=lambda r:(int(r["level"])>30,int(r["level"]),r["name"]))[:40]
     with (REPORT/"OPTIONAL_IN_GAME_CHECKS.md").open("w",encoding="utf8") as f:
@@ -397,10 +419,12 @@ def main():
             f.write(f"| {r['level']} | {r['itemID']} | {r['name']} | "
                     f"{r['dungeon']} | {r['reconciledRole']} ({r['confidence']}) |\n")
         f.write("\n## Recipe verification\n\n")
-        f.write("The 68 consecutive level-60 item IDs 273884–273951 have recipe book IDs "
-                "but still need live availability evidence. Do **not** assume their recipes "
-                "are trainer-taught or currently obtainable. "
-                "No user verification needed until that content is actually encountered.\n")
+        f.write("The 68 consecutive level-60 item IDs 273884–273951 have book IDs "
+                "and are listed by Playfulls under **Aisarra Nightmeadow, Mount Hyjal "
+                "(Alliance)** as a provisional VENDOR lead. The public listing does "
+                "**not** prove live vendor stock, accessible inventory or current "
+                "availability. Do not mislabel these as trainer-taught. "
+                "No user verification is needed until that content is encountered.\n")
     counts=collections.Counter(r["confidence"] for r in dungeon_rows)
     roles=collections.Counter(r["reconciledRole"] for r in dungeon_rows)
     coverage=collections.Counter(r["RecipeClassification"] for r in all_rows if r["RecipeClassification"])
@@ -427,12 +451,17 @@ def main():
         "## Catalogue and recipes",
         f"- All **{len(items):,} / 7,707** equipment records examined.",
         f"- All **{len(recipes):,} / 1,252** crafting recipes examined.",
-        f"- All **{len(dungeon):,} / 577** dungeon-associated equipment records examined.",
+        f"- All **{len(dungeon):,} / 577** historically dungeon-associated records examined, "
+        f"including **{len(dungeon)-len(true_dungeon):,}** crafted items whose patterns, "
+        "NOT the equipment, may be dungeon drops.",
         f"- New, conservative in-addon acquisition summaries generated: **{len(changes):,}**.",
         f"- Combined Forever cache entries: **{len(fcache):,}**; Playfulls item entries: **{len(play):,}**.",
         f"- Published player-observed relationships: **{sum(len(x) for x in observations.values()):,}**.",
-        f"- Dungeon rows needing exact enemy/boss/trash verification: **{len(unresolved):,}**.",
-        f"- Recipe book origins that still require live verification: **{len(unresolved_books):,}**.",
+        f"- True dungeon-equipment records: **{len(true_dungeon):,}**; "
+        f"still needing an enemy/boss/trash identity: **{len(unresolved):,}**.",
+        f"- Recipe book origins that still require live verification: **{len(unresolved_books):,}** "
+        f"({len(named_vendor):,} named vendor references; {len(trainer_books):,} "
+        "trainer-labelled recipes with separate pattern-book IDs).",
         f"- Item ID name mismatches against Forever cache: **{len(duplicate_identity)}**.",
         "",
         "## Dungeon source classifications (reference quality, not drop-rate proof)",
@@ -452,6 +481,11 @@ def main():
         "- Encounter names in the client identify NPCs, not their loot tables.",
         "- An unobserved recipe book is not evidence that a trainer teaches it or "
         "that a live vendor currently offers it.",
+        "- The 68 new level-60 book items have a published *Aisarra Nightmeadow* "
+        "(Mount Hyjal) vendor lead, **not** live confirmed stock.",
+        "- A trainer-labelled recipe with a pattern item is marked for a teaching-method "
+        "check; the two routes could both exist and should not be called contradictory "
+        "without server evidence.",
         "- Original 1,252 crafting ingredient lists are **untouched**.",
         "- Higher-confidence manually reviewed source text and item-ID exceptions "
         "take priority over this generated evidence.",
@@ -460,11 +494,15 @@ def main():
         "",
         "## Audit files",
         "- [All equipment records](all_items_reconciled.csv) — one row per item.",
-        "- [Dungeon acquisitions](dungeon_items_reconciled.csv) — boss, trash, "
-        "named enemy, uncertainty, observations and source references.",
+        "- [All historically dungeon-associated records](dungeon_items_reconciled.csv), "
+        "including separately classified crafted-pattern entries.",
+        "- [Actual dungeon equipment drops](dungeon_equipment_drops.csv) — "
+        "boss, trash, enemy, confidence and observed sources.",
         "- [Unresolved dungeon sources](dungeon_source_followups.csv).",
         "- [Recipe acquisition and pattern book reconciliation](recipes_reconciled.csv).",
         "- [Unresolved recipe sources](recipe_source_followups.csv).",
+        "- [68 named-vendor pattern-book verification leads](recipe_vendor_book_checks.csv).",
+        "- [Recipes with both trainer-classified references and pattern books](recipe_trainer_book_checks.csv).",
         "- [Optional in-game verification](OPTIONAL_IN_GAME_CHECKS.md).",
         "- [Source versions, hashes, attribution and limitations](provenance.json).",
         "",
@@ -486,10 +524,11 @@ def main():
         print("BOOK_SOURCE_SAMPLE",book,json.dumps(play_entries(book),ensure_ascii=False)[:1000],flush=True)
     print("RECONCILE DONE",len(all_rows),"items",len(dungeon_rows),"dungeon",
           len(recipe_rows),"recipes",len(changes),"in-addon summaries",flush=True)
-    print("DUNGEON ROLES",dict(roles),flush=True)
+    print("DUNGEON ROLES",dict(roles),"true_dungeon",len(true_dungeon),flush=True)
     print("DUNGEON CONFIDENCE",dict(counts),flush=True)
     print("RECIPE STATUS",dict(coverage),flush=True)
-    print("UNRESOLVED",len(unresolved),"dungeon",len(unresolved_books),"recipe",flush=True)
+    print("UNRESOLVED",len(unresolved),"true dungeon",len(unresolved_books),"recipe",
+          "vendor_books",len(named_vendor),"trainer_books",len(trainer_books),flush=True)
     assert len(all_rows)==7707 and len(dungeon_rows)==577 and len(recipe_rows)==1252
     assert len(changes)>=100,"Insufficient actionable source evidence; fail closed"
 
