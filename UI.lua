@@ -2234,7 +2234,7 @@ end)
 allValidGearCheck:SetScript("OnLeave",HideItemTooltip)
 -- Only suppress conclusively non-improving items on the tracker. Pending
 -- comparisons stay visible and all gear remains in the detailed guide.
-local positiveStatCheck=NewCheck(settings,"Hide items without positive stat changes",493,function(v)
+local positiveStatCheck=NewCheck(settings,"Hide gear without positive stat changes",493,function(v)
     GetGear.db.overlay.hideWithoutPositiveStats=v
     GetGear:RefreshOverlay()
 end)
