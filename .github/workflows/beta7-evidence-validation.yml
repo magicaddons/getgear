@@ -1,0 +1,32 @@
+name: Verify Beta 7 source evidence without packaging
+on:
+  push:
+    branches:
+      - work/beta7-evidence-reconciliation
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lua5.4
+      - name: Validate manifest syntax and existing nine-class regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in *.lua) test -f "$module"; luac5.4 -p "$module";; esac
+          done < GetGear.toc
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+      - name: No build or release
+        run: echo "Only tests ran. No ZIP, tag, GitHub release or main branch change."
