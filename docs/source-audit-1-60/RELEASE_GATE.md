@@ -10,8 +10,8 @@ The existing public v0.14.0-beta7 prerelease is separate from this work. No subs
 - **7,707** equipment IDs retained, with **36,341** class-item objectives across nine classes.
 - **1,252** previously indexed crafting recipes matched the reference dataset and their original ingredient lists remain unchanged. Checkpoint 1 additionally corrected *Idol of the Dream* (220606), a previously omitted Enchanting craft.
 - **577** historically dungeon-associated entries reviewed: **552** actual dungeon equipment entries, **24** equipment entries associated with potentially dungeon-acquired patterns, and **1** finished Enchanting craft incorrectly imported as dungeon loot.
-- **20** dungeon equipment entries still need a better boss/trash/specific mob classification or current-server evidence; **9** Scarlet Graveyard rare-boss references were documented in checkpoint 2 and **2** specific named-trash entries in checkpoint 3.
-- Nine journal links were classified `rare-boss`, while Rift Bracers and Vicar’s Robe are now specifically classed `trash`; these are published references, **not** live drop probabilities.
+- **6** dungeon equipment entries remain source-unverified after Checkpoint 4, including **2** Dark/Relic Coffer container leads; **14** additional named encounter-role references were reviewed with Forever-specific sources. **9** Scarlet Graveyard rare references were documented in checkpoint 2 and **2** named-trash entries in checkpoint 3.
+- Nine earlier journal references plus three newly reviewed rare encounters are classed `rare-boss`; Rift Bracers and Vicar’s Robe remain `trash`, and **2** historical coffer entries are `container-lead`. All are references, **not** verified current live loot probabilities.
 - **954** recipe-book sources still need live confirmation: **68** named-vendor references and **886** trainer-labelled recipes with separate book IDs.
 - Player-observed and community listings must remain labelled by evidence quality; a client encounter name is not a confirmed drop rate.
 
@@ -24,9 +24,11 @@ The existing public v0.14.0-beta7 prerelease is separate from this work. No subs
 - This workflow **does not package an addon** or publish anything. All files are committed only to the development branch.
 - Automated Lua tests do not establish real Forever item-cache behaviour, vendor stock, actual drop rates or on-screen layout in the live client.
 
+- **Checkpoint 4 source pass:** [20-case evidence register](reconciliation-20261109/CHECKPOINT4_EVIDENCE.md); no live loot claims. New full CI validation should be recorded before seeking build approval.
+
 ## Next work, one bounded category at a time
-1. **Dungeon equipment source quality:** resolve small, evidence-supported groups from [20 remaining leads](reconciliation-20261109/dungeon_source_followups.csv). Prioritise Scorn/Sever event spawn availability, City of Dalaran actual drops and remaining lower-level encounters; no Classic NPC rank or generic encounter name alone is sufficient.
-2. **Recipe learning source quality:** only after dungeon work, investigate specific groups among [954 unconfirmed books](reconciliation-20261109/recipe_source_followups.csv). Distinguish the recipe item's existence from trainer teaching, vendor stock and reputation/specialisation gates.
+1. **Dungeon equipment source quality:** the role checkpoint is complete; [6 source-confirmation leads](reconciliation-20261109/dungeon_source_followups.csv) remain and should only be resolved with new Forever item-specific evidence. Avoid assuming live event spawns, City of Dalaran loot, Scholomance historic drops, or coffer contents.
+2. **Recipe learning source quality — next active checkpoint:** investigate groups among [954 unconfirmed books](reconciliation-20261109/recipe_source_followups.csv). Distinguish the recipe item's existence from trainer teaching, vendor stock and reputation/specialisation gates.
 3. **Other acquisition uncertainties:** review the earlier [complete equipment queue](unresolved_items.csv) using Forever-specific observations; retain items with unconfirmed routes rather than deleting them.
 4. **Live acceptance:** inspect source strings, the crafting materials view, per-character settings, and SavedVariables migration on an installed Forever client.
 

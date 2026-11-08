@@ -142,6 +142,55 @@ assert(addon.ItemCatalog[3569].acquisitionConfidence~="published-forever-trash-r
     and addon.ItemCatalog[5943].acquisitionConfidence~="published-forever-trash-reference",
     "Additive published reference must remain separate from original item confidence")
 
+-- Checkpoint 4: researched roles are reference-only, never live loot claims.
+for _,r in ipairs({
+    {id=9457,actor="Dark Iron Ambassador",confidence="published-forever-dungeon-journal"},
+    {id=10804,actor="Ogom the Wretched",confidence="forever-encounter-historic-loot-reference"},
+    {id=11633,actor="Hedrum the Creeper",confidence="published-forever-dungeon-guide"},
+    {id=11726,actor="Gorosh the Dervish",confidence="published-forever-dungeon-guide"},
+    {id=11728,actor="Ok'thor the Breaker",confidence="published-forever-dungeon-guide"},
+    {id=11729,actor="Hedrum the Creeper",confidence="published-forever-dungeon-guide"},
+    {id=11730,actor="Eviscerator",confidence="published-forever-dungeon-guide"},
+    {id=11731,actor="Anub'shiah",confidence="published-forever-dungeon-guide"},
+    {id=12952,actor="Gyth",confidence="published-forever-dungeon-guide"},
+    {id=16669,actor="Gyth",confidence="published-forever-dungeon-guide"},
+    {id=16695,actor="Solakar Flamewreath",confidence="published-forever-dungeon-guide"},
+    {id=18760,actor="Death Knight Darkreaver",confidence="forever-item-historic-loot-reference"},
+    {id=22242,actor="Verek",confidence="published-forever-dungeon-guide"},
+    {id=23169,actor="Scorn",confidence="published-forever-beta-class-guide"},
+}) do
+    local item=assert(addon.ItemCatalog[r.id],"Missing role item "..r.id)
+    local ev=assert(item.acquisitionResearch,"No role evidence "..r.id)
+    assert(ev.confidence==r.confidence,"Confidence mismatch "..r.id)
+    assert(type(ev.sourceURL)=="string" and ev.sourceURL~="",
+        "Evidence must retain source URL "..r.id)
+    assert(ev.sourceSummary:find(r.actor,1,true)
+        and ev.sourceSummary:find("live drop unverified",1,true),
+        "Reference must retain named role and loot caveat "..r.id)
+    assert(not followUpCSV:find("\\n"..r.id..",",1,true),
+        "Role-reviewed item remains in identity queue "..r.id)
+    assert(dungeonDropCSV:find("\\n"..r.id..",",1,true),
+        "Role-reviewed item disappeared from dungeon scope "..r.id)
+end
+for _,r in ipairs({
+    {id=11945},
+    {id=11946},
+}) do
+    local item=assert(addon.ItemCatalog[r.id])
+    local ev=assert(item.acquisitionResearch)
+    assert(ev.confidence=="historic-container-reference")
+    assert(ev.sourceSummary:find("Container lead:",1,true)
+        and ev.sourceSummary:find("Forever coffer loot unverified",1,true))
+    assert(not ev.sourceSummary:find("Boss:",1,true)
+        and not ev.sourceSummary:find("Enemy:",1,true))
+    assert(followUpCSV:find("\\n"..r.id..",",1,true),
+        "Unverified coffer contents must stay queued "..r.id)
+end
+for _,id in ipairs({10801,14525,23173,273044}) do
+    assert(addon.ItemCatalog[id],"Unresolved item missing "..id)
+    assert(followUpCSV:find("\\n"..id..",",1,true),
+        "Do not promote historic NPC item mapping to Forever drop "..id)
+end
 local vendorCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/recipe_vendor_book_checks.csv")):read("*a")
 assert(vendorCSV:find("Aisarra Nightmeadow",1,true),
     "Named vendor reference must be preserved with live-stock caveat")
@@ -150,8 +199,9 @@ assert(recipeReconciliation:find("**954**",1,true),
     "All 68 vendor books and 886 trainer-labelled books need verification")
 assert(recipeReconciliation:find("**552**",1,true)
     and recipeReconciliation:find("**24**",1,true)
-    and recipeReconciliation:find("**20**",1,true)
-    and recipeReconciliation:find("rare-boss: 9",1,true)
+    and recipeReconciliation:find("**6**",1,true)
+    and recipeReconciliation:find("rare-boss: 12",1,true)
+    and recipeReconciliation:find("container-lead: 2",1,true)
     and recipeReconciliation:find("trash: 137",1,true),
     "Crafted-pattern records must not masquerade as equipment drops")
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")

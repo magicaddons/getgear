@@ -52,8 +52,16 @@
 - **Validation: PASS** — [non-release CI run 42491517157](https://github.com/magicaddons/getgear/actions/runs/42491517157) regenerated public-source evidence and passed manifest Lua syntax, full nine-class tests, crafting/material sources, stat/armour filtering, preview layout and performance. The auto-regenerated index and reports were saved to [commit 059e188](https://github.com/magicaddons/getgear/commit/059e18829305a1b195d0ee310277da86a507fe8b). Two intermediate CI attempts failed only because the new test asserted an incorrect runtime source-confidence field/value; the test was corrected without changing source facts.
 - No ZIP, public release, tag, branch merge or change to `main`.
 
+## Checkpoint 4 — dungeon role reconciliation (2026-11-09)
+**Status: evidence and regression changes committed; full non-release CI validation pending at the initial commit.**
+- Audited all 20 dungeon-source leads. **14** item-ID/name-locked encounter roles now have specific Forever journal, guide or beta reference links, with live-drop caveats; **2** Dark/Relic Coffer leads correctly identified as containers, not NPCs, and retained as unresolved; **4** other item-source links remain unresolved. Queue now **6**.
+- Dark Iron Ambassador's Royal Diplomatic Scepter has an exact Forever Journal loot link. Scorn's Icy Choker has a beta class-guide reference but event-spawn availability is not established. The BRD/UBRS/Sunken Temple/Scholomance item associations may derive from historic loot tables; never equate role identification with a live drop.
+- Regression assertions enforce item-ID/name mappings, source uncertainty, container roles, and invariant 552 dungeon equipment, 7,707 gear and 954 uncertain recipe books. Prior armour-only filtering stays untouched.
+- [Full evidence register](source-audit-1-60/reconciliation-20261109/CHECKPOINT4_EVIDENCE.md) lists all 20 cases and reasons to retain unresolved rows.
+- **Roadmap:** (1) finish any verifiable dungeon leads, (2) 954 recipe-book sources (68 vendor and 886 trainer-labelled), (3) other equipment source gaps, (4) final catalogue/source/filtering/regression audits, (5) in-game acceptance testing before asking approval to compile/publish. No packaging, tag, release or main merge.
+
 ## Next checkpoint
-Investigate the remaining **20** dungeon-source questions separately: historical/event encounter availability (Scorn/Sever), live City of Dalaran loot (Arcanic Enigma), other low-level uncertain encounters (Dark Iron Ambassador) and then higher-level Blackrock/Sunken Temple/Scholomance sources. Do not promote Classic-only NPC ranks, spawn windows or drop chances to live verification.
+Resolve the remaining **6** source-verification leads only if new Forever item-specific evidence appears. Two are container/coffer leads, and four are unconfirmed mob/item or historical event associations. Next bounded active category is **954** recipe-book sources (68 vendor, 886 trainer-labelled). Preserve the other-equipment, final-audit, and in-game acceptance checkpoints in that order.
 
 Recipe-book teaching routes are a **separate later category**; 954 remain uncertain pending source/stock evidence.
 

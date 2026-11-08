@@ -60,6 +60,29 @@ FOREVER_TRASH_DROPS = {
         "url":"https://azeroth.wiki/forever/items/rift-bracers",
     },
 }
+# Checkpoint 4: item-ID/name-locked encounter-role references. Published Forever
+# guides can recycle older loot mappings; no live drop/spawn percentage is claimed.
+FOREVER_DUNGEON_ROLE_REFERENCES = {
+    9457: {"name":"Royal Diplomatic Scepter","actor":"Dark Iron Ambassador","zone":"Gnomeregan","role":"rare-boss","url":"https://www.wowhead.com/forever/dungeon-journal/gnomeregan/dark-iron-ambassador-rare","confidence":"published-forever-dungeon-journal","basis":"Forever Dungeon Journal item listing","warning":"rare spawn"},
+    10804: {"name":"Fist of the Damned","actor":"Ogom the Wretched","zone":"The Temple of Atal'Hakkar","role":"boss","url":"https://www.wowhead.com/forever/guide/the-temple-of-atalhakkar-dungeon-overview-location-rewards","confidence":"forever-encounter-historic-loot-reference","basis":"Forever boss encounter and historic item-to-NPC lead","warning":"item loot in Forever unconfirmed"},
+    11633: {"name":"Spiderfang Carapace","actor":"Hedrum the Creeper","zone":"Blackrock Depths","role":"boss","url":"https://www.wowhead.com/forever/guide/blackrock-depths-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":"random Ring of Law encounter"},
+    11726: {"name":"Savage Gladiator Chain","actor":"Gorosh the Dervish","zone":"Blackrock Depths","role":"boss","url":"https://www.wowhead.com/forever/guide/blackrock-depths-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":"random Ring of Law encounter"},
+    11728: {"name":"Savage Gladiator Leggings","actor":"Ok'thor the Breaker","zone":"Blackrock Depths","role":"boss","url":"https://www.wowhead.com/forever/guide/blackrock-depths-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":"random Ring of Law encounter"},
+    11729: {"name":"Savage Gladiator Helm","actor":"Hedrum the Creeper","zone":"Blackrock Depths","role":"boss","url":"https://www.wowhead.com/forever/guide/blackrock-depths-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":"random Ring of Law encounter"},
+    11730: {"name":"Savage Gladiator Grips","actor":"Eviscerator","zone":"Blackrock Depths","role":"boss","url":"https://www.wowhead.com/forever/guide/blackrock-depths-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":"random Ring of Law encounter"},
+    11731: {"name":"Savage Gladiator Greaves","actor":"Anub'shiah","zone":"Blackrock Depths","role":"boss","url":"https://www.wowhead.com/forever/guide/blackrock-depths-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":"random Ring of Law encounter"},
+    12952: {"name":"Gyth's Skull","actor":"Gyth","zone":"Upper Blackrock Spire","role":"boss","url":"https://www.wowhead.com/forever/guide/upper-blackrock-spire-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":""},
+    16669: {"name":"Pauldrons of Elements","actor":"Gyth","zone":"Upper Blackrock Spire","role":"boss","url":"https://www.wowhead.com/forever/guide/upper-blackrock-spire-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":""},
+    16695: {"name":"Devout Mantle","actor":"Solakar Flamewreath","zone":"Upper Blackrock Spire","role":"boss","url":"https://www.wowhead.com/forever/guide/upper-blackrock-spire-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":"Father Flame encounter"},
+    18760: {"name":"Necromantic Band","actor":"Death Knight Darkreaver","zone":"Scholomance","role":"boss","url":"https://www.wowhead.com/forever/item=18760/necromantic-band","confidence":"forever-item-historic-loot-reference","basis":"Forever item page with historic NPC loot reference","warning":"quest-summoned"},
+    22242: {"name":"Verek's Leash","actor":"Verek","zone":"Blackrock Depths","role":"rare-boss","url":"https://www.wowhead.com/forever/guide/blackrock-depths-dungeon-overview-location-rewards","confidence":"published-forever-dungeon-guide","basis":"Forever guide encounter loot reference","warning":"rare spawn"},
+    23169: {"name":"Scorn's Icy Choker","actor":"Scorn","zone":"Scarlet Monastery: Graveyard","role":"rare-boss","url":"https://www.wowhead.com/forever/guide/classes/warlock/demonology/level-30-dps-overview","confidence":"published-forever-beta-class-guide","basis":"Forever beta class-guide rare-elite item reference","warning":"historical Scourge-event spawn availability unverified"},
+}
+# Dark/Relic Coffer is a *container*. The item link is only a historic lead.
+DUNGEON_CONTAINER_LEADS = {
+    11945: {"name":"Dark Iron Ring","url":"https://foreverchanges.pro/item/11945/dark-iron-ring"},
+    11946: {"name":"Fire Opal Necklace","url":"https://www.wowhead.com/forever/item=11946/fire-opal-necklace"},
+}
 UA="GetGear-Open-Source-Acquisition-Audit/1.0 (github.com/magicaddons/getgear)"
 # Historically tagged as dungeon equipment, but the client recipe creates it.
 # Keep the original record in the historic dungeon report without treating it as loot.
@@ -279,6 +302,9 @@ def main():
     assert len(items)==7707 and len(recipes)==1252 and len(dungeon)==577
     dungeon_ids={int(r["itemID"]) for r in dungeon}
     assert len(JOURNAL_RARE_LOOT)==9 and set(JOURNAL_RARE_LOOT).issubset(dungeon_ids)
+    assert len(FOREVER_DUNGEON_ROLE_REFERENCES)==14 and set(FOREVER_DUNGEON_ROLE_REFERENCES).issubset(dungeon_ids)
+    assert len(DUNGEON_CONTAINER_LEADS)==2 and set(DUNGEON_CONTAINER_LEADS).issubset(dungeon_ids)
+    assert not set(FOREVER_DUNGEON_ROLE_REFERENCES).intersection(JOURNAL_RARE_LOOT)
     assert len(FOREVER_TRASH_DROPS)==2 and set(FOREVER_TRASH_DROPS).issubset(dungeon_ids)
     recipe_by_id={int(r["itemID"]):r for r in recipes}
     play,play_entries,play_config=playfulls()
@@ -337,6 +363,24 @@ def main():
                                   "(Forever Dungeon Journal; live drop unverified)",
                         "sourceURL":journal_url,"observations":[],
                         "foreverBoss":[actor]}
+            elif iid in FOREVER_DUNGEON_ROLE_REFERENCES:
+                ref=FOREVER_DUNGEON_ROLE_REFERENCES[iid]
+                assert norm(name)==norm(ref["name"]), ("Checkpoint 4 item name drift",iid,name,ref["name"])
+                label="Rare boss" if ref["role"]=="rare-boss" else "Boss"
+                warning=("; "+ref["warning"]) if ref["warning"] else ""
+                result={"role":ref["role"],"actor":ref["actor"],"zone":ref["zone"],
+                        "confidence":ref["confidence"],
+                        "summary":f'{ref["zone"]} | {label}: {ref["actor"]} '
+                                  f'({ref["basis"]}; live drop unverified{warning})',
+                        "sourceURL":ref["url"],"observations":[],"foreverBoss":[ref["actor"]]}
+            elif iid in DUNGEON_CONTAINER_LEADS:
+                ref=DUNGEON_CONTAINER_LEADS[iid]
+                assert norm(name)==norm(ref["name"]), ("Coffer item name drift",iid,name,ref["name"])
+                result={"role":"container-lead","actor":"Dark/Relic Coffer",
+                        "zone":"Blackrock Depths","confidence":"historic-container-reference",
+                        "summary":"Blackrock Depths | Container lead: Dark/Relic Coffer "
+                                  "(Classic-era item source only; Forever coffer loot unverified)",
+                        "sourceURL":ref["url"],"observations":[],"foreverBoss":[]}
             elif iid in FOREVER_TRASH_DROPS:
                 src=FOREVER_TRASH_DROPS[iid]
                 assert norm(name)==norm(src["name"]),(
@@ -506,7 +550,7 @@ def main():
     write_csv("dungeon_equipment_drops.csv",true_dungeon,list(dungeon_rows[0]))
     write_csv("recipes_reconciled.csv",recipe_rows,list(recipe_rows[0]))
     unresolved=[r for r in dungeon_rows if r["reconciledRole"] in
-                ("unknown","dungeon-general","dungeon-enemy","enemy")]
+                ("unknown","dungeon-general","dungeon-enemy","enemy","container-lead")]
     write_csv("dungeon_source_followups.csv",unresolved,list(dungeon_rows[0]))
     # Reference-only vendors or trainers have NOT been verified live; keep
     # their high-priority plan books in the follow-up list.
@@ -571,7 +615,7 @@ def main():
         f"- Combined Forever cache entries: **{len(fcache):,}**; Playfulls item entries: **{len(play):,}**.",
         f"- Published player-observed relationships: **{sum(len(x) for x in observations.values()):,}**.",
         f"- True dungeon-equipment records: **{len(true_dungeon):,}**; "
-        f"still needing an enemy/boss/trash identity: **{len(unresolved):,}**.",
+        f"still requiring encounter or container-loot confirmation: **{len(unresolved):,}**.",
         f"- Recipe book origins that still require live verification: **{len(unresolved_books):,}** "
         f"({len(named_vendor):,} named vendor references; {len(trainer_books):,} "
         "trainer-labelled recipes with separate pattern-book IDs).",
@@ -580,6 +624,10 @@ def main():
         "to the Forever Dungeon Journal, with no live drop-rate claims.",
         "- Two named dungeon trash equipment sources (Vicar's Robe and Rift Bracers) "
         "are now labelled from published Forever loot references; no live drop rates.",
+        "- Checkpoint 4 identifies **14** more encounter roles from Forever-published guides, "
+        "journal and beta references; none establishes live drop rates.",
+        "- **2** Dark/Relic Coffer leads are containers, not enemies, and remain unresolved "
+        "because Forever item-to-coffer loot is unverified.",
         "",
         "## Dungeon source classifications (reference quality, not drop-rate proof)",
     ]
@@ -666,8 +714,9 @@ def main():
           "vendor_books",len(named_vendor),"trainer_books",len(trainer_books),flush=True)
     assert len(all_rows)==7707 and len(dungeon_rows)==577 and len(recipe_rows)==1252
     assert roles["crafted-item"]==1 and roles["crafted-pattern"]==24
-    assert roles["rare-boss"]==9 and roles["trash"]>=137
-    assert len(true_dungeon)==552 and len(unresolved)==20
+    assert roles["rare-boss"]==12 and roles["trash"]>=137
+    assert roles["container-lead"]==2
+    assert len(true_dungeon)==552 and len(unresolved)==6
     assert len(changes)>=100,"Insufficient actionable source evidence; fail closed"
 
 if __name__=="__main__":main()
