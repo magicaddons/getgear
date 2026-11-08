@@ -49,8 +49,11 @@ function GetGear:ShouldDisplayGear(gear,classToken,mode)
     if mode~="earlier" and mode~="preview" and mode~="materials-all"
         and self:IsOlderGear(gear) then return false end
     if NOVELTY[gear.itemID] then return false end
-    if gear.sourceType=="Source not documented"
-        or gear.sourceType=="World drop (route unverified)" then return false end
+    -- Source uncertainty is not an equipment/proficiency veto. Unknown
+    -- world-drop or acquisition routes remain visible with their existing
+    -- unverified-source labels; users choose whether to pursue them.
+    -- This keeps the default catalogue class-wide rather than turning
+    -- research coverage into a silent recommendation whitelist.
 
     classToken=classToken or self.classToken
     if not classToken then return true end
