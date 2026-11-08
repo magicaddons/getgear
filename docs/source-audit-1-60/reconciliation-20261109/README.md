@@ -10,7 +10,7 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - Combined Forever cache entries: **10,315**; Playfulls item entries: **22,891**.
 - Published player-observed relationships: **853**.
 - True dungeon-equipment records: **553**; still needing an enemy/boss/trash identity: **32**.
-- Recipe book origins that still require live verification: **68** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
+- Recipe book origins that still require live verification: **954** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
 - Item ID name mismatches against Forever cache: **0**.
 
 ## Dungeon source classifications (reference quality, not drop-rate proof)
@@ -42,6 +42,7 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - Encounter names in the client identify NPCs, not their loot tables.
 - An unobserved recipe book is not evidence that a trainer teaches it or that a live vendor currently offers it.
 - The 68 new level-60 book items have a published *Aisarra Nightmeadow* (Mount Hyjal) vendor lead, **not** live confirmed stock.
+- Example Forever plan tooltips independently identify requirements beyond the vendor: Grovekeeper Leggings requires Friendly status and the Friendly Advice quest; Grovekeeper Mantle requires reputation progress and shoulder specialization. Other books may have their own reputation or specialization gates.
 - A trainer-labelled recipe with a pattern item is marked for a teaching-method check; the two routes could both exist and should not be called contradictory without server evidence.
 - Original 1,252 crafting ingredient lists are **untouched**.
 - Higher-confidence manually reviewed source text and item-ID exceptions take priority over this generated evidence.
@@ -64,4 +65,5 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - [Everloot](https://everloot.app) — player-observed edges; [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) attribution and share-alike on derived Everloot observations.
 - [Forever item cache](https://github.com/Napalmsteak/WoW-Classic-Item-Caches) — published Forever-specific tooltips and source references.
 - [WoW Forever Friends](https://www.wowforeverfriends.org/library/sources/) — Classic baseline NPC/item lookup explicitly labelled unverified for Forever.
+- [WoWhead Grovekeeper Leggings pattern](https://www.wowhead.com/forever/item=273964) and [Grovekeeper Mantle pattern](https://www.wowhead.com/forever/item=273958) — published plan tooltips with class/reputation/quest specialization requirements.
 - [AHledger](https://ahledger.com) — supplemental recipe acquisition reference.
