@@ -86,6 +86,11 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         -- Only presentation is affected: status, hidden and acquired keys never change.
         if type(o.filterObsolete) ~= "boolean" then o.filterObsolete = true end
         if type(o.bagUpgrades) ~= "boolean" then o.bagUpgrades = true end
+        -- Overlay-only; default on for both new and existing characters.
+        -- A missing/unknown comparison is never treated as a stat downgrade.
+        if type(o.hideWithoutPositiveStats) ~= "boolean" then
+            o.hideWithoutPositiveStats = true
+        end
         -- Per-character opt-in: preserve profession-agnostic recommendations by default.
         if type(o.hideUncraftableCrafts) ~= "boolean" then o.hideUncraftableCrafts = false end
         -- Beta 2: all class-equippable gear is an explicit opt-in.
