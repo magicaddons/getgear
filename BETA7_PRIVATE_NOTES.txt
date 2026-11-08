@@ -27,11 +27,17 @@ TEST INSTALL (ONLY AFTER YOUR OWN BACKUP)
 6. Check Runed Copper Breastplate (#2864): world-drop plans (#2881),
    Blacksmithing 55, not trainer learned.
 7. Check Golemguard Chest (#271098): Plunder loot in Hall of Thanes.
-8. Re-check nine classes, levels 1–60, Preview, Earlier Gear, crafting
+8. On a level-13+ Warrior, confirm Ceremonial Leather Harness (#3313)
+   and other leather chest/leg/hand items do NOT appear in default Available
+   or Earlier Gear. Enable "Show all valid equipment" and confirm they
+   become available for manual browsing.
+9. Check Warrior/Paladin Mail under 40 and Plate at 40; Hunter/Shaman
+   Leather under 40 and Mail at 40. Test Preview around level 39/40.
+10. Re-check nine classes, levels 1–60, Preview, Earlier Gear, crafting
    visibility, profession-recipe knowledge, materials and map navigation.
-9. If the source, drops, maps or levels disagree with the live client,
+11. If the source, drops, maps or levels disagree with the live client,
    capture item ID, source NPC or quest ID, tooltip and character faction.
-10. Report any in-game Lua error and what action preceded it.
+12. Report any in-game Lua error and what action preceded it.
 
 DO NOT: merge to main, make a public release/tag or claim complete live
 validation on the strength of offline or GitHub Actions tests alone.
