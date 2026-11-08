@@ -1,0 +1,30 @@
+name: Export canonical source inputs for GetGear reconciliation
+on:
+  push:
+    branches: [work/gear-data-reconciliation]
+    paths: [.github/workflows/getgear-data-source-export.yml]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Export historical researched source and independent Forever item cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p export/legacy export/source
+          git archive origin/main | tar -xf - -C export/legacy
+          curl --fail --location --retry 3 --silent --show-error \
+            'https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json' \
+            -o export/source/Forever-Cache.json
+          test "$(wc -c < export/source/Forever-Cache.json)" -gt 10000000
+          printf 'legacy=%s\ncache_bytes=%s\n' "$(find export/legacy -maxdepth 1 -name '*.lua' | wc -l)" "$(wc -c < export/source/Forever-Cache.json)" > export/SOURCE_INFO.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-reconciliation-source-inputs
+          path: export/
+          retention-days: 14
