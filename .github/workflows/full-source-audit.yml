@@ -6,6 +6,7 @@ on:
       - tools/audit_forever_sources.py
       - tools/export_source_audit.lua
       - .github/workflows/full-source-audit.yml
+      - tests/beta7-coverage.lua
   workflow_dispatch:
 permissions:
   contents: write
