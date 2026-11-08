@@ -31,6 +31,36 @@ def pull(url):
 def norm(v):
     return re.sub(r"\s+"," ",str(v or "").strip()).casefold()
 
+def public_pages(url, field, cap=40000):
+    """Traverse public paginated evidence, respecting each endpoint's next URL."""
+    rows=[];pages=0;seen=set();meta={}
+    while url and url not in seen and len(rows)<cap and pages<80:
+        seen.add(url)
+        obj,source=pull(url)
+        if not isinstance(obj,dict) or not isinstance(obj.get(field),list):break
+        rows.extend(obj[field]);pages+=1
+        meta={"asOf":obj.get("dataAsOf"),"total":obj.get("total"),
+              "pages":pages,"lastUrl":url,"attribution":obj.get("attribution")}
+        url=obj.get("next")
+    meta["downloaded"]=len(rows)
+    meta["complete"]=url is None
+    return rows,meta
+
+def ahledger_recipes():
+    """Acquisition labels and recipe reagents from an independent catalogue."""
+    rows=[];statuses={}
+    for profession in ("Blacksmithing","Leatherworking","Tailoring",
+                       "Enchanting","Engineering","Alchemy","Cooking","First Aid"):
+        url=("https://api.ahledger.com/v1/crafting/forever.normal.alliance.us"
+             "?all=1&limit=2000&profession="+quote(profession))
+        try:
+            obj,meta=pull(url)
+            found=[r for r in obj.get("recipes",[]) if isinstance(r,dict)]
+            statuses[profession]={"count":len(found),"url":meta["url"]}
+            rows.extend(found)
+        except Exception as exc:statuses[profession]={"error":str(exc)}
+    return rows,statuses
+
 def asid(v):
     if isinstance(v,bool): return None
     if isinstance(v,int): return v if v>0 else None
@@ -139,6 +169,44 @@ def main():
         except Exception as exc:
             failures[key]=str(exc)
             print("AUDIT SOURCE UNAVAILABLE",key,str(exc),flush=True)
+    observed_edges=[];observed_meta={};npc_facts={}
+    try:
+        observed_edges,observed_meta=public_pages(
+            "https://everloot.app/api/edges?evidence=observed&limit=500","edges")
+        print("AUDIT OBSERVED EDGES",len(observed_edges),observed_meta.get("complete"),flush=True)
+        provenance["everloot_observed_edges"]={
+            "url":"https://everloot.app/api/edges?evidence=observed&limit=500",
+            "rows":len(observed_edges),"asOf":observed_meta.get("asOf"),
+            "complete":observed_meta.get("complete"),"licence":"CC BY-SA 4.0"}
+    except Exception as exc:failures["everloot_observed_edges"]=str(exc)
+    try:
+        sightings,sight_meta=public_pages(
+            "https://everloot.app/api/corpus/public?kinds=npc_sighting&limit=500",
+            "records",cap=40000)
+        for sight in sightings:
+            if not isinstance(sight,dict):continue
+            npc=asid(sight.get("npcId"))
+            if npc and isinstance(sight.get("name"),str) and sight["name"]:
+                if npc not in npc_facts:npc_facts[npc]=sight
+        provenance["everloot_npc_sightings"]={
+            "url":"https://everloot.app/api/corpus/public?kinds=npc_sighting&limit=500",
+            "rows":len(sightings),"asOf":sight_meta.get("asOf"),
+            "complete":sight_meta.get("complete"),"licence":"CC BY-SA 4.0"}
+    except Exception as exc:failures["everloot_npc_sightings"]=str(exc)
+    observed_by_item=collections.defaultdict(list)
+    for edge in observed_edges:
+        if isinstance(edge,dict) and edge.get("evidence")=="observed"
+            and edge.get("fromKind")=="item":
+            observed_by_item[asid(edge.get("fromId"))].append(edge)
+    ahl_recipes,ahl_status=ahledger_recipes()
+    provenance["ahledger_crafting"]={
+        "url":"https://api.ahledger.com/v1/crafting/forever.normal.alliance.us",
+        "reciperecords":len(ahl_recipes),"professions":ahl_status}
+    ahl_by_spell=collections.defaultdict(list);ahl_by_result=collections.defaultdict(list)
+    for rec in ahl_recipes:
+        recipe=rec.get("recipe") or {};result=rec.get("result") or {}
+        if asid(recipe.get("spellId")):ahl_by_spell[asid(recipe["spellId"])].append(rec)
+        if asid(result.get("id")):ahl_by_result[asid(result["id"])].append(rec)
     # Source absence NEVER counts as evidence that a recipe or loot is absent.
     ever_by_spell=collections.defaultdict(list);ever_by_output=collections.defaultdict(list)
     ever=evidence.get("everloot_recipes",{})
