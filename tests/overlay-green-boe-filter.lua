@@ -30,6 +30,10 @@ assert(addon:ShouldShowOverlayWorldBoEDrops(world(1121,{sourceType="Dungeon boss
     "Dungeon BoEs remain available")
 assert(addon:ShouldShowOverlayWorldBoEDrops(world(1121,{sourceType="Quest reward"}))==true,
     "Quest reward BoEs remain available")
+assert(addon:ShouldShowOverlayWorldBoEDrops(world(1121,{zone="Drops, Quest Rewards"}))==true,
+    "Imported world-drop records with an alternate quest route must remain visible")
+assert(addon:ShouldShowOverlayWorldBoEDrops(world(1121,{source="Also in dungeon loot"}))==true,
+    "A known dungeon source must beat an ambiguous world-drop label")
 assert(addon:ShouldShowOverlayWorldBoEDrops(world(1121,{sourceType="Vendor"}))==true,
     "Vendor BoEs remain available")
 assert(addon:ShouldShowOverlayWorldBoEDrops(world(1121,{profession="Tailoring"}))==true,
