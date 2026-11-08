@@ -34,7 +34,7 @@ def flags_from_tooltip(raw):
     normalized=re.sub(r"\s+"," ",parser.get()).lower()
     # Distinguish passive spell-power boosts from cast procs/use-effects.
     effects=re.findall(r"\bEquip:\s*(.*?)(?=\bEquip:|\bUse:|\bChance on hit:|\bSell Price:|$)",
-                       normalized,re.S)
+                       normalized,re.S|re.I)
     spell=has_stat(normalized,r"(?:spell\s+power|spell\s+damage)")
     healing=has_stat(normalized,r"(?:healing(?:\s+power)?)")
     for effect in effects:
