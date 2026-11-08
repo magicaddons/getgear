@@ -1,8 +1,13 @@
+HISTORICAL PRIVATE TEST CHECKLIST (ARCHIVED)
+This file records the checks used before the PUBLIC v0.14.0-beta7 pre-release.
+It is not bundled in the current public release. Download/install instructions:
+https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta7
+
 GetGear v0.14.0 Beta 7 — PRIVATE TEST CANDIDATE, NOT A PUBLIC RELEASE
 ========================================================================
 
-This is a development-data reconciliation of the existing Beta4 1–60
-class-equippable catalogue. The original public release remains v0.12.14.
+This is the historical development-data reconciliation checklist for the
+Beta 4 to Beta 7 class-equippable catalogue migration.
 
 IMPORTANT
 - A candidate appearing in the equipment list is NOT proof it currently
@@ -39,5 +44,6 @@ TEST INSTALL (ONLY AFTER YOUR OWN BACKUP)
    capture item ID, source NPC or quest ID, tooltip and character faction.
 12. Report any in-game Lua error and what action preceded it.
 
-DO NOT: merge to main, make a public release/tag or claim complete live
-validation on the strength of offline or GitHub Actions tests alone.
+HISTORICAL GATE: In the private test stage we did not merge or publish.
+Beta 7 is now being published as a public *pre-release*. Do not claim complete
+live source validation on the strength of automated tests alone.
