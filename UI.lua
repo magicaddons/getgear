@@ -1791,6 +1791,15 @@ function GetGear:RefreshOverlay()
     trackerLevel:SetText(ColoredCharacterLabel(self.level, race, class, classToken))
 
     local list = self:GetItems("tracker")
+    if opts.hideWithoutPositiveStats ~= false and self.ShouldShowOverlayStatChanges then
+        local visible = {}
+        for _,gear in ipairs(list) do
+            if self:ShouldShowOverlayStatChanges(gear) then
+                visible[#visible+1] = gear
+            end
+        end
+        list = visible
+    end
     objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  OBJECTIVES (" .. #list .. ")")
     local totalY = 0
     if opts.objectivesCollapsed then
@@ -2212,10 +2221,26 @@ allValidGearCheck:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 allValidGearCheck:SetScript("OnLeave",HideItemTooltip)
+-- Reduces visual noise in the compact overlay only; the full guide, bags,
+-- manually Hidden and Completed remain unchanged. Unknown item/comparison
+-- data stays visible, so a loading item cannot silently vanish.
+local positiveStatCheck=NewCheck(settings,"Hide gear without positive stat changes",493,function(v)
+    GetGear.db.overlay.hideWithoutPositiveStats=v
+    GetGear:RefreshOverlay()
+end)
+positiveStatCheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Overlay stat-change filter",1,0.82,0.35)
+    GameTooltip:AddLine("On by default. Hides overlay items whose confirmed comparisons contain no positive stat deltas (only negatives or no changes).",1,1,1,true)
+    GameTooltip:AddLine("Unknown or loading comparisons, empty equipment slots and bag upgrades remain visible. Full Guide and All-materials scope are unaffected.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+positiveStatCheck:SetScript("OnLeave",HideItemTooltip)
 -- Keep the Tracked/All material-scope choice in settings, without
 -- confusing it with the Total Materials minimize button.
 local materialScopeButton=NewButton(settings,"",185,23)
-materialScopeButton:SetPoint("TOPLEFT",18,-505)
+materialScopeButton:SetPoint("TOPLEFT",18,-536)
 materialScopeButton:SetScript("OnClick",function(self)
     if not GetGear.db then return end
     local opts=GetGear.db.overlay
@@ -2252,6 +2277,7 @@ function GetGear:ShowSettings()
     bagsCheck:SetChecked(self.db.overlay.bagUpgrades ~= false)
     craftFilterCheck:SetChecked(self.db.overlay.hideUncraftableCrafts == true)
     allValidGearCheck:SetChecked(self.db.overlay.showAllValidGear == true)
+    positiveStatCheck:SetChecked(self.db.overlay.hideWithoutPositiveStats ~= false)
     alphaSlider:SetValue(math.floor((self.db.overlay.backgroundOpacity or 0.78)*100 + 0.5))
     overlayScaleSlider:SetValue(math.floor((self.db.overlay.scale or 1)*100+0.5))
     detailScaleSlider:SetValue(math.floor((self.db.detail.scale or 1)*100+0.5))
