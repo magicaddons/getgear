@@ -1,0 +1,18 @@
+name: Probe public acquisition datasets (read-only)
+on:
+  push:
+    branches: [work/full-acquisition-reconciliation-20261109]
+    paths:
+      - tools/probe_all_acquisition_sources.py
+      - .github/workflows/probe-acquisition.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect evidence inputs
+        run: python3 tools/probe_all_acquisition_sources.py
