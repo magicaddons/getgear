@@ -28,6 +28,16 @@ jobs:
             host=$(echo "$site" | sed -E 's,https?://([^/]+)/?.*,\\1,')
             curl -fLSsS --retry 2 --max-time 25 -A "GetGearAudit/1.0 (noncommercial research)" "$site" -o "export/$host.html" || rm -f "export/$host.html"
           done
+          for u in "https://www.curseforge.com/api/v1/mods/1558781/files/9095167/download" "https://mediafilez.forgecdn.net/files/9095/167/ProfessionDB-ProfessionDB-v1.9.1.zip" "https://edge.forgecdn.net/files/9095/167/ProfessionDB-ProfessionDB-v1.9.1.zip"; do
+            if curl -fLSsS --retry 1 --max-time 45 "$u" -o export/LibProfessionDB.zip && unzip -tq export/LibProfessionDB.zip >/dev/null 2>&1; then
+              echo "Recipe library downloaded from $u"; break
+            fi
+            rm -f export/LibProfessionDB.zip
+          done
+          for site in "https://forevertome.com/professions" "https://guide.wow4ever.se/en/professions" "https://wowforever.one/professions/" "https://foreverdb.net/profession/blacksmithing"; do
+             fname=$(echo "$site" | sed -E 's#https?://([^/]+)/?.*#\\1#')
+             curl -fLSsS --retry 1 --max-time 30 "$site" -o "export/prof-${fname}.html" || true
+          done
           ls -lh export
           sha256sum export/*.json > export/SOURCE_HASHES.txt
       - name: Upload source snapshot
