@@ -7,6 +7,8 @@ on:
       - tools/generate_beta7_evidence.py
       - tests/beta7-coverage.lua
       - tests/beta7-source-visibility.lua
+      - tests/beta7-armor-priority.lua
+      - tests/beta4-filters.lua
       - GearRelevance.lua
       - SourceEnrichment.lua
       - README.txt
@@ -80,6 +82,7 @@ jobs:
           lua5.4 tests/beta7-evidence.lua .
           lua5.4 tests/beta7-coverage.lua .
           lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tests/beta7-armor-priority.lua .
           lua5.4 tools/export_beta7_reagent_deltas.lua . docs/BETA7-reagent-discrepancies.tsv
       - name: Verify and package private test-only ZIP
         shell: bash
