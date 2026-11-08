@@ -1,0 +1,70 @@
+name: Validate independent Forever item stat flags (development only)
+on:
+  push:
+    branches: [work/independent-stat-flags]
+    paths:
+      - .github/workflows/verify-stat-flags.yml
+      - tools/generate_forever_stat_flags.py
+      - GearRelevance.lua
+      - StatEvidence.lua
+      - GetGear.toc
+      - tests/beta7-stat-flags.lua
+      - tests/beta4-performance.lua
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: getgear-stat-flags-validation
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install Lua
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y lua5.4
+      - name: Generate Forever tooltip stat dimensions
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/generate_forever_stat_flags.py
+          python3 tools/generate_forever_stat_flags.py
+          test -s GeneratedStatFlags.lua
+      - name: Syntax check all addon Lua
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in *.lua) test -f "$module"; luac5.4 -p "$module";; esac
+          done < GetGear.toc
+      - name: Nine-class and integrated overlay verification
+        run: |
+          set -euo pipefail
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-material-names.lua .
+          lua5.4 tests/beta7-coverage.lua .
+          lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tests/beta7-armor-priority.lua .
+          lua5.4 tests/beta7-preview-layout.lua .
+          lua5.4 tests/overlay-stat-filter.lua .
+          lua5.4 tests/overlay-green-boe-filter.lua .
+          lua5.4 tests/beta7-stat-flags.lua .
+      - name: Commit generated evidence on this branch only
+        run: |
+          set -euo pipefail
+          git config user.name "GetGear stat flag verifier"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add GeneratedStatFlags.lua docs/source-audit-1-60/STAT_FLAGS.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate source-hashed, nonexclusive Forever stat flags and coverage report"
+            git push origin "HEAD:work/independent-stat-flags"
+          fi
+      - name: Confirm no public release
+        run: echo "Research and tests only. No addon ZIP, tag, release, or main changes."
