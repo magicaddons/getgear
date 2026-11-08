@@ -32,6 +32,8 @@ The existing public v0.14.0-beta7 prerelease is separate from this work. No subs
 
 **Checkpoint 5D evidence-only:** [seven books 273967–273973](reconciliation-20261109/CHECKPOINT5D_VENDOR_EVIDENCE.md) researched; **22/68** vendor books individually reviewed, **68/68** still live-stock-unverified, **954** total book-route uncertainties unchanged. Direct Forever item tooltip establishes specific 273968 reputation/quest gate. No runtime edits or new CI; prior PASS 42493307958 remains latest validated code run.
 
+**Checkpoint 5E evidence-only:** [seven exact Forever book tooltips 273974–273980](reconciliation-20261109/CHECKPOINT5E_VENDOR_EVIDENCE.md) reviewed and queue-ID cross-checked: **29/68 vendor books individually researched**, **39/68 remain unreviewed**, **68/68 vendor-stock references still live-unverified**, **886 trainer-labelled references still unresolved** and **954 total unresolved recipe-book routes**. No runtime code/source changes. Targeted source-register validation passed, but **no new full CI was run**; the last full no-release CI pass remains 42493307958. No release approval.
+
 ## Next work, one bounded category at a time
 1. **Dungeon equipment source quality:** the role checkpoint is complete; [6 source-confirmation leads](reconciliation-20261109/dungeon_source_followups.csv) remain and should only be resolved with new Forever item-specific evidence. Avoid assuming live event spawns, City of Dalaran loot, Scholomance historic drops, or coffer contents.
 2. **Recipe learning source quality — next active checkpoint:** investigate groups among [954 unconfirmed books](reconciliation-20261109/recipe_source_followups.csv). Distinguish the recipe item's existence from trainer teaching, vendor stock and reputation/specialisation gates.
