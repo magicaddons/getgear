@@ -1,0 +1,45 @@
+{
+  "sources": {
+    "everloot_recipes": {
+      "url": "https://raw.githubusercontent.com/Everloot/everloot/main/web/src/data/game-data/client-recipes.json",
+      "bytes": 159309,
+      "sha256": "078980b8fa69d209f8564a06c2c664fd411074bf088d71cde09b4fc261eec850"
+    },
+    "everloot_encounters": {
+      "url": "https://raw.githubusercontent.com/Everloot/everloot/main/web/src/data/game-data/client-encounters.json",
+      "bytes": 13945,
+      "sha256": "6c1d61df0e01248e6141cec91de31755ce781892bf7a1f886f4c1f3618069270"
+    },
+    "maf_professions": {
+      "url": "https://raw.githubusercontent.com/MAF2414/wow-forever-talents/main/docs/professions-data.json",
+      "bytes": 6713728,
+      "sha256": "8a7744e0c735561b8f7ce2db6eb24395f4f0b13a9db569be9e94b5a0f309d8f9"
+    },
+    "independent_sources": {
+      "url": "https://raw.githubusercontent.com/nobody174/wow-forever/main/bis/sources.json",
+      "bytes": 29294,
+      "sha256": "06fc35bd5d9edf8d7b1dfe52a296baa0d9f639cff7f709a5838fb5db563c2335"
+    },
+    "ahledger_armor": {
+      "url": "https://ahledger.com/api/catalog?class=armor",
+      "bytes": 1173289,
+      "sha256": "5560fc95fb76ef15d2ace79d10d235b9d8e70e9dfd77bed092727d1d62f748b6"
+    },
+    "ahledger_weapon": {
+      "url": "https://ahledger.com/api/catalog?class=weapon",
+      "bytes": 249933,
+      "sha256": "f2635b35420510c0ba48b51125db9e6194b707115d462dd609aad12df88a3a6a"
+    },
+    "ahledger_recipe": {
+      "url": "https://ahledger.com/api/catalog?class=recipe",
+      "bytes": 276934,
+      "sha256": "2192ffaf9877de07262a423b0b363f536508b31463d671466b7269d15f7c1f04"
+    },
+    "ahledger_trade_goods": {
+      "url": "https://ahledger.com/api/catalog?class=trade-goods",
+      "bytes": 60806,
+      "sha256": "e5fcdcf446997cc2306788b5bd6d720af127fb8710a07d0733f165d0507eeadf"
+    }
+  },
+  "unavailable": {}
+}
