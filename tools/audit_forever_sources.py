@@ -135,6 +135,41 @@ def method(item):
         return "plans/pattern; source unresolved"
     return "recipe teaching unresolved"
 
+def select_ahledger(item, by_spell, by_result):
+    iid=asid(item.get("id"));spell=asid(item.get("recipeSpellID"))
+    choices=by_spell.get(spell,[]) if spell else []
+    choices=[r for r in choices if asid((r.get("result") or {}).get("id"))==iid]
+    if len(choices)==1:return choices[0]
+    choices=[r for r in by_result.get(iid,[])
+             if norm((r.get("recipe") or {}).get("profession"))==norm(item.get("profession"))]
+    return choices[0] if len(choices)==1 else None
+
+def refine_learning(item,base,ahl,observed_by_item,maf_rec):
+    """Observed pattern origins outrank reference-only acquisition categories."""
+    books=[]
+    if asid(item.get("recipePatternItemID")):
+        books=[asid(item["recipePatternItemID"])]
+    elif maf_rec and isinstance(maf_rec.get("books"),list):
+        books=[asid(b) for b in maf_rec["books"] if asid(b)]
+    for book in books:
+        for edge in observed_by_item.get(book,[]):
+            if edge.get("rel")=="dropped_by":
+                return "dropped recipe (Forever-observed)","Everloot observed item acquisition",books
+            if edge.get("rel")=="sold_by":
+                return "vendor recipe (Forever-observed)","Everloot observed vendor",books
+            if edge.get("rel")=="reward_from":
+                return "quest recipe (Forever-observed)","Everloot observed quest",books
+    if base not in ("recipe teaching unresolved","plans/pattern; source unresolved"):
+        return base,"GetGear manual research (review confidence)",books
+    reported=norm((ahl or {}).get("recipe",{}).get("acquisition"))
+    if reported in ("trainer","vendor","drop","quest"):
+        display={"trainer":"trainer","vendor":"vendor recipe","drop":"dropped recipe",
+                 "quest":"quest recipe"}[reported]
+        return display+" (AHledger reference)","AHledger recipe acquisition catalogue",books
+    if books:
+        return "recipe item required; origin unresolved","MAF client recipe spell book ID",books
+    return base,"learning route not independently documented",books
+
 def dungeon_source(item,boss_names):
     source_type=norm(item.get("sourceType"))
     acq_kind=norm(item.get("acquisitionKind"))
@@ -260,18 +295,41 @@ def main():
         if source_type.startswith("Source not") or "unverified" in source_type.lower():
             route="unresolved route"
         source_group[source_type or "Unknown"]+=1
-        d=dungeon_source(item,boss_names);dungeons[d]+=1
-        m=method(item)
+        d=dungeon_source(item,boss_names)
+        edges=observed_by_item.get(item_id,[])
+        observed_drops=[e for e in edges if e.get("rel")=="dropped_by"]
+        observed_sellers=[e for e in edges if e.get("rel")=="sold_by"]
+        observed_mob_names=[]
+        observed_mob_ids=[]
+        for e in observed_drops:
+            npc=asid(e.get("toId"))
+            if e.get("toKind")=="npc" and npc:
+                observed_mob_ids.append(npc)
+                fact=npc_facts.get(npc,{})
+                if fact.get("name"):observed_mob_names.append(fact["name"])
+        if d!="not-dungeon" and observed_mob_names:
+            source_name=norm(item.get("source"))
+            matches=[name for name in observed_mob_names if norm(name) in source_name]
+            if matches:
+                d=("Forever-observed boss NPC drop"
+                   if all(norm(n) in boss_names for n in matches)
+                   else "Forever-observed named dungeon enemy; boss role unresolved")
+        dungeons[d]+=1
+        ahl=select_ahledger(item,ahl_by_spell,ahl_by_result)
+        maf_rec=maf_by_spell.get(asid(item.get("recipeSpellID")))
+        m,method_evidence,books=refine_learning(
+            item,method(item),ahl,observed_by_item,maf_rec)
         flags=[]
         if route=="unresolved route":flags.append("acquisition_route_unverified")
-        if d in ("dungeon; enemy unresolved","named dungeon enemy; boss/trash unresolved"):
+        if d in ("dungeon; enemy unresolved","named dungeon enemy; boss/trash unresolved",
+                   "Forever-observed named dungeon enemy; boss role unresolved"):
             flags.append("dungeon_enemy_or_role_unresolved")
         if item_id not in catalog: flags.append("not_in_independent_catalogue_or_hidden")
         elif norm(catalog[item_id])!=norm(item["name"]):
             flags.append("independent_name_disagreement")
         if prof:
             methods[m]+=1
-            if m in ("plans/pattern; source unresolved","recipe teaching unresolved"):
+            if "unresolved" in m:
                 flags.append("recipe_learning_source_unresolved")
             existing=parse_encoded(item.get("reagents",""))
             match,why=match_everloot(item,ever_by_spell,ever_by_output)
@@ -281,6 +339,10 @@ def main():
             maf_rec=maf_by_spell.get(match["spell"] if match else asid(item.get("recipeSpellID")))
             maf_inputs=ingredients(maf_rec.get("reagents")) if maf_rec else None
             maf_agrees=maf_inputs is not None and expected is not None and maf_inputs==expected
+            ahl_inputs=ingredients((ahl or {}).get("reagents"))
+            ahl_agrees=ahl_inputs is not None and expected is not None and ahl_inputs==expected
+            if ahl_inputs is not None and expected is not None and not ahl_agrees:
+                flags.append("AHledger_vs_Everloot_material_disagreement")
             if not existing:flags.append("crafting_materials_unavailable")
             elif expected is not None and not same:
                 flags.append("independent_materials_disagreement")
@@ -294,12 +356,16 @@ def main():
                 if existing:major_conflicts.append(record)
             recipes.append({
                 "itemID":item_id,"name":item["name"],"profession":prof,
-                "method":m,"spellID":item.get("recipeSpellID",""),
+                "method":m,"methodEvidence":method_evidence,
+                "recipeItems":";".join(str(x) for x in books),
+                "AHLedgerMethod":(ahl or {}).get("recipe",{}).get("acquisition",""),
+                "spellID":item.get("recipeSpellID",""),
                 "clientMatch":why,"currentReagents":encoded(existing),
                 "independentReagents":encoded(expected),
                 "materialStatus":("confirmed" if same else "missing" if not existing
                                    else "disagreement" if expected is not None else "uncorroborated"),
                 "MAFCorroboratesCurrent":("yes" if maf_agrees else "no/unknown"),
+                "AHLedgerCorroboratesCurrent":("yes" if ahl_agrees else "no/unknown"),
                 "issues":";".join(sorted(set(flags))),
             })
         external=independent.get(str(item_id),{})
@@ -311,8 +377,12 @@ def main():
             "slot":item["slot"],"classes":item["classes"],"sourceType":source_type,
             "source":item.get("source",""),"zone":item.get("zone",""),
             "sourceEvidence":acq,"routeStatus":route,"dungeonClassification":d,
-            "recipeMethod":m,"recipeSpellID":item.get("recipeSpellID",""),
+            "recipeMethod":m,"methodEvidence":method_evidence,
+            "recipeSpellID":item.get("recipeSpellID",""),
             "reagentCount":len(parse_encoded(item.get("reagents",""))),
+            "observedLootNPCIds":";".join(str(x) for x in sorted(set(observed_mob_ids))),
+            "observedLootNPCNames":";".join(sorted(set(observed_mob_names))),
+            "observedVendorCount":len(observed_sellers),
             "independentName":catalog.get(item_id,""),
             "independentSourceLead":independent_note,
             "issues":";".join(sorted(set(flags))),
