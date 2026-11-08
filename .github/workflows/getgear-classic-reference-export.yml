@@ -1,0 +1,33 @@
+name: Export historical Classic NPC/vendor evidence for GetGear (audit only)
+on:
+  push:
+    branches: [work/gear-data-reconciliation]
+    paths: [.github/workflows/getgear-classic-reference-export.yml]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch historical Classic DB vendor table evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p export
+          curl --fail --location --retry 3 --silent --show-error \
+            https://raw.githubusercontent.com/cmangos/classic-db/master/Full_DB/ClassicDB_1_12_1_z2815.sql.gz \
+            -o export/ClassicDB_1_12_1_z2815.sql.gz
+          curl --fail --location --retry 3 --silent --show-error \
+            https://raw.githubusercontent.com/cmangos/classic-db/master/LICENSE.md \
+            -o export/LICENSE.md
+          curl --fail --location --retry 3 --silent --show-error \
+            https://raw.githubusercontent.com/cmangos/classic-db/master/COPYRIGHT.md \
+            -o export/COPYRIGHT.md
+          test "$(wc -c < export/ClassicDB_1_12_1_z2815.sql.gz)" -gt 9000000
+          sha256sum export/*.gz > export/SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GetGear-historical-classic-vendor-evidence
+          path: export/
+          retention-days: 14
