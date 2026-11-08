@@ -1,0 +1,33 @@
+name: Reconcile directly named dungeon encounters (report only)
+on:
+  push:
+    branches: [work/catalogue-source-audit-1-60]
+    paths:
+      - tools/refine_dungeon_source_report.py
+      - .github/workflows/refine-dungeon-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and refine report only
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/refine_dungeon_source_report.py tools/audit_forever_sources.py
+          python3 tools/refine_dungeon_source_report.py
+          test -s docs/source-audit-1-60/dungeon_role_reconciliation.csv
+      - name: Save updated audit queue to development branch
+        run: |
+          git config user.name "GetGear audit bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/source-audit-1-60/
+          if ! git diff --cached --quiet; then
+            git commit -m "Refine dungeon encounter source audit without claiming live drop certainty"
+            git push origin "HEAD:work/catalogue-source-audit-1-60"
+          fi
+      - name: Confirm no addon release
+        run: echo "Report update only; no addon ZIP or tag and no main-branch changes."
