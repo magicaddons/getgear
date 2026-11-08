@@ -25,6 +25,11 @@ LEVELS={"observed":5,"forever":4,"published-forever-dungeon-journal":4,"reported
         "published-forever":3,"classic-reference":1,"client":1}
 PROFESSIONS=("Blacksmithing","Leatherworking","Tailoring","Enchanting","Engineering","Alchemy","Cooking","First Aid")
 UA="GetGear-Open-Source-Acquisition-Audit/1.0 (github.com/magicaddons/getgear)"
+# Historically tagged as dungeon equipment, but the client recipe creates it.
+# Keep the original record in the historic dungeon report without treating it as loot.
+MISCLASSIFIED_DUNGEON_CRAFTS = {
+    220606: ("Enchanting", "https://www.wowhead.com/forever/spell=1249128/idol-of-the-dream"),
+}
 provenance={}
 failures={}
 
@@ -269,7 +274,13 @@ def main():
         craft_pattern_route=is_dungeon and iid in recipe_by_id
         result=None
         if is_dungeon:
-            if craft_pattern_route:
+            if iid in MISCLASSIFIED_DUNGEON_CRAFTS:
+                profession,url=MISCLASSIFIED_DUNGEON_CRAFTS[iid]
+                result={"role":"crafted-item","actor":"","zone":"Crafting ("+profession+")",
+                        "confidence":"published-forever-recipe",
+                        "summary":profession+" | Crafted equipment (not a dungeon drop; live recipe stock unverified)",
+                        "sourceURL":url,"observations":[],"foreverBoss":[]}
+            elif craft_pattern_route:
                 # Prior audits conflated a craftable item's dungeon-LOOTED
                 # PATTERN with the finished gear being a dungeon loot drop.
                 # These remain dungeon-associated for historic audit parity,
@@ -303,7 +314,7 @@ def main():
             highmanual=item["sourceEvidence"] in ("observed","forever",
                 "published-forever-dungeon-journal","published-forever")
             # Never overwrite SourceEnrichment's hand-reviewed examples.
-            manual_exception=iid in (1943,1951,271098)
+            manual_exception=iid in (1943,1951,220606,271098)
             if (generic and not highmanual and not manual_exception
                 and result["confidence"]!="unresolved"
                 and result["summary"]):
@@ -425,7 +436,7 @@ def main():
         + "}\n",encoding="utf8")
     write_csv("all_items_reconciled.csv",all_rows,list(all_rows[0]))
     write_csv("dungeon_items_reconciled.csv",dungeon_rows,list(dungeon_rows[0]))
-    true_dungeon=[r for r in dungeon_rows if r["reconciledRole"]!="crafted-pattern"]
+    true_dungeon=[r for r in dungeon_rows if r["reconciledRole"] not in ("crafted-pattern","crafted-item")]
     write_csv("dungeon_equipment_drops.csv",true_dungeon,list(dungeon_rows[0]))
     write_csv("recipes_reconciled.csv",recipe_rows,list(recipe_rows[0]))
     unresolved=[r for r in dungeon_rows if r["reconciledRole"] in
@@ -488,8 +499,8 @@ def main():
         f"- All **{len(items):,} / 7,707** equipment records examined.",
         f"- All **{len(recipes):,} / 1,252** crafting recipes examined.",
         f"- All **{len(dungeon):,} / 577** historically dungeon-associated records examined, "
-        f"including **{len(dungeon)-len(true_dungeon):,}** crafted items whose patterns, "
-        "NOT the equipment, may be dungeon drops.",
+        f"including **{roles['crafted-pattern']:,}** crafted items with possible dungeon pattern routes "
+        f"and **{roles['crafted-item']:,}** item incorrectly catalogued as dungeon loot.",
         f"- New, conservative in-addon acquisition summaries generated: **{len(changes):,}**.",
         f"- Combined Forever cache entries: **{len(fcache):,}**; Playfulls item entries: **{len(play):,}**.",
         f"- Published player-observed relationships: **{sum(len(x) for x in observations.values()):,}**.",
@@ -528,7 +539,8 @@ def main():
         "check; the two routes could both exist and should not be called contradictory "
         "without server evidence.",
         "- Non-dungeon vendor/quest details only supplement imported generic vendor/quest entries and are explicitly labelled reference-only.",
-        "- Original 1,252 crafting ingredient lists are **untouched**.",
+        "- Original 1,252 indexed crafting ingredient lists are **untouched**; one additional "
+        "client-confirmed craft is corrected in SourceEnrichment.lua.",
         "- Higher-confidence manually reviewed source text and item-ID exceptions "
         "take priority over this generated evidence.",
         "- The index does not alter class eligibility, player status, equipment quality, "
@@ -537,7 +549,7 @@ def main():
         "## Audit files",
         "- [All equipment records](all_items_reconciled.csv) — one row per item, including raw published source relationships and observation records.",
         "- [All historically dungeon-associated records](dungeon_items_reconciled.csv), "
-        "including separately classified crafted-pattern entries.",
+        "including separately classified crafted-pattern and misclassified crafted-item entries.",
         "- [Actual dungeon equipment drops](dungeon_equipment_drops.csv) — "
         "boss, trash, enemy, confidence and observed sources.",
         "- [Unresolved dungeon sources](dungeon_source_followups.csv).",
@@ -575,6 +587,8 @@ def main():
     print("UNRESOLVED",len(unresolved),"true dungeon",len(unresolved_books),"recipe",
           "vendor_books",len(named_vendor),"trainer_books",len(trainer_books),flush=True)
     assert len(all_rows)==7707 and len(dungeon_rows)==577 and len(recipe_rows)==1252
+    assert roles["crafted-item"]==1 and roles["crafted-pattern"]==24
+    assert len(true_dungeon)==552 and len(unresolved)==31
     assert len(changes)>=100,"Insufficient actionable source evidence; fail closed"
 
 if __name__=="__main__":main()

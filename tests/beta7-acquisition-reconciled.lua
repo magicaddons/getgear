@@ -70,14 +70,32 @@ end
 local reportCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv")):read("*a")
 assert(reportCSV:find("crafted-pattern",1,true),
     "The audit should explicitly separate dungeon recipe plans from equipment loot")
+-- The historical Atal'Hakkar association for Idol of the Dream is false:
+-- the finished relic is an Enchanting craft, with a separately sold formula.
+local idol=assert(addon.ItemCatalog[220606])
+assert(idol.sourceType=="Enchanting" and idol.recipeSpellID==1249128
+    and idol.recipePatternItemID==249529 and idol.recipeLearnMethod=="pattern")
+assert(idol.profession=="Enchanting" and idol.professionSkillRequired==300
+    and idol.recipeVendor=="Alynsia")
+local dungeonDropCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/dungeon_equipment_drops.csv")):read("*a")
+assert(not dungeonDropCSV:find("\n220606,",1,true),
+    "Crafted idol incorrectly counted as dungeon equipment loot")
+local followUpCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/dungeon_source_followups.csv")):read("*a")
+assert(not followUpCSV:find("\n220606,",1,true),
+    "Known craft must not remain on dungeon-enemy verification list")
+assert(reportCSV:find("220606,Idol of the Dream",1,true)
+    and reportCSV:find("crafted-item",1,true),
+    "Preserve historical misclassification transparently in the audit")
+
 local vendorCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/recipe_vendor_book_checks.csv")):read("*a")
 assert(vendorCSV:find("Aisarra Nightmeadow",1,true),
     "Named vendor reference must be preserved with live-stock caveat")
 local recipeReconciliation=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/README.md")):read("*a")
 assert(recipeReconciliation:find("**954**",1,true),
     "All 68 vendor books and 886 trainer-labelled books need verification")
-assert(recipeReconciliation:find("**553**",1,true)
-    and recipeReconciliation:find("**24**",1,true),
+assert(recipeReconciliation:find("**552**",1,true)
+    and recipeReconciliation:find("**24**",1,true)
+    and recipeReconciliation:find("**31**",1,true),
     "Crafted-pattern records must not masquerade as equipment drops")
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),

@@ -35,7 +35,7 @@ for id in pairs(addon.ItemCatalog) do
     total=total+1
 end
 assert(total==7707,"Beta 7 source-only patch changed catalogue item count")
-assert(addon.Beta7Reconciliation.verifiedSourcePatches==6)
+assert(addon.Beta7Reconciliation.verifiedSourcePatches==7)
 local function checkMats(id,expected)
     local item=assert(addon.ItemCatalog[id])
     local actual={}
@@ -59,6 +59,19 @@ assert(veteran.bindingStatus=="bop")
 assert(veteran.acquisitionLocation.zone=="Redridge Mountains"
     and veteran.acquisitionLocation.x==8.01 and veteran.acquisitionLocation.y==74.81)
 checkMats(250513,{[2840]=12,[3470]=4,[249427]=2,[5498]=2})
+-- The old catalogue called item 220606 an Atal'Hakkar dungeon drop.
+-- Forever's recipe + Formula item identify the finished relic as Enchanting.
+local idol=assert(addon.ItemCatalog[220606])
+assert(idol.sourceType=="Enchanting" and idol.profession=="Enchanting")
+assert(idol.recipeSpellID==1249128 and idol.recipePatternItemID==249529)
+assert(idol.professionSkillRequired==300 and idol.recipeLearnMethod=="pattern")
+assert(idol.recipeVendor=="Alynsia" and idol.recipeVendorCost==240)
+assert(idol.bindingStatus=="bop" and idol.recipeVendorCurrency=="Merchant's Favor")
+checkMats(220606,{[14344]=2,[16203]=4,[16204]=6,[249431]=8,
+                   [249430]=4,[249409]=2,[11291]=4})
+assert(addon:GetAcquisitionSummary(idol):find("Alynsia",1,true))
+assert(not addon:GetAcquisitionSummary(idol):find("dungeon",1,true))
+
 local golem=assert(addon.ItemCatalog[271098])
 assert(golem.name=="Golemguard Chest" and golem.sourceType=="Dungeon")
 assert(golem.source:find("Plunder",1,true) and golem.zone=="The Hall of Thanes")
@@ -95,4 +108,4 @@ for _,class in ipairs(classes) do
         "Lost unified class catalogue for "..class)
 end
 assert(addon.ItemCatalog[6898].schoolOnly==nil,"Mixed-school Orb was changed")
-print("PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 6 corrected items, explicit trash/recipe provenance, map/mat evidence")
+print("PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 7 corrected items, explicit trash/recipe provenance, map/mat evidence")
