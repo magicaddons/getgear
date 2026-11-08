@@ -1,0 +1,70 @@
+{
+  "baseCache": 7678,
+  "totalCatalogueWithManual": 7707,
+  "sourceCategoryCounts": {
+    "drop": 2885,
+    "dungeon": 554,
+    "crafted": 1244,
+    "quest": 231,
+    "other": 1269,
+    "vendor": 1495
+  },
+  "enrichedByCategory": {
+    "dungeon": 447,
+    "crafted": 1244,
+    "vendor": 56,
+    "quest": 27
+  },
+  "remainingVendorUnknown": 1439,
+  "remainingQuestUnknown": 204,
+  "remainingDungeonBossUnknown": 107,
+  "multipleRecipeVariants": [
+    {
+      "itemId": 217287,
+      "name": "Greater Mystic Wand",
+      "selectedSpell": 14810,
+      "alternatives": [
+        {
+          "spellId": 14810,
+          "reagents": [
+            {
+              "itemId": 11134,
+              "quantity": 1
+            },
+            {
+              "itemId": 11137,
+              "quantity": 1
+            },
+            {
+              "itemId": 11291,
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "spellId": 439134,
+          "reagents": [
+            {
+              "itemId": 11135,
+              "quantity": 1
+            },
+            {
+              "itemId": 11137,
+              "quantity": 1
+            },
+            {
+              "itemId": 11291,
+              "quantity": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceFrozen": "2026-11-08 source export; vendor/quest sessions limited",
+  "reliabilityNotes": [
+    "Client cache does not prove live obtainability",
+    "Profession skill colours are not learn minima",
+    "Alliance eligibility for observed quests/vendors unverified"
+  ]
+}
