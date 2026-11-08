@@ -72,6 +72,9 @@ The [agent instructions](../AGENTS.md) and [bounded overnight/Codex plan](OVERNI
 ## Checkpoint 5C — seven more Grovekeeper books (2026-11-09)
 **Status: evidence-only, no new CI.** Reviewed pattern IDs 273960–273966 in [checkpoint 5C](source-audit-1-60/reconciliation-20261109/CHECKPOINT5C_VENDOR_EVIDENCE.md), distinguishing direct pattern tooltips, exact craft-spell-to-vendor links, and slot-family-only inferences. **15/68** vendor books have individually recorded evidence; **68/68 remain live-stock-unverified**, and all **954** uncertain recipe-book routes remain open. No runtime/source changes. Last full CI pass: 42493307958. Next: vendor-book IDs after 273966.
 
+## Checkpoint 5D — seven additional vendor books (2026-11-09)
+**Status: evidence-only, no new CI.** Reviewed exact book IDs 273967–273973 in [checkpoint 5D](source-audit-1-60/reconciliation-20261109/CHECKPOINT5D_VENDOR_EVIDENCE.md). The direct Forever tooltip for Wildstalker's Legguards 273968 establishes Friendly Guardians of Hyjal and Friendly Advice; other books have spell, finished-item or guide-level vendor evidence, with unverified individual gates. **22/68** vendor books individually researched; **68/68** still live-stock-unverified and **954** book-route uncertainties remain open. No runtime change. Latest full non-release CI PASS 42493307958. Next: 273974–273980.
+
 ## Next checkpoint
 Resolve the remaining **6** source-verification leads only if new Forever item-specific evidence appears. Two are container/coffer leads, and four are unconfirmed mob/item or historical event associations. Next bounded active category is **954** recipe-book sources (68 vendor, 886 trainer-labelled). Preserve the other-equipment, final-audit, and in-game acceptance checkpoints in that order.
 
