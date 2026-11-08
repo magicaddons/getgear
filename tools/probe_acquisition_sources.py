@@ -27,10 +27,16 @@ for key,url in urls.items():
      v=d.get(id) if isinstance(d,dict) else next((x for x in d if isinstance(x,dict) and str(x.get("id"))==id),None)
      print("CLASSIC_ITEM",id,json.dumps(v,default=str)[:2600])
    if key=="classic_npcs":
-    d=j.get("npcs",j) if isinstance(j,dict) else j
-    for id in ["1732","634","644","630","1725"]:
-     v=d.get(id) if isinstance(d,dict) else next((x for x in d if isinstance(x,dict) and str(x.get("id"))==id),None)
-     print("CLASSIC_NPC",id,json.dumps(v,default=str)[:2600])
+    d=j.get("records",j) if isinstance(j,dict) else j
+    print("NPC_FIRST",json.dumps(d[0],default=str)[:3000])
+    for id in ["3947","657","1732","646","644","630"]:
+     v=next((x for x in d if isinstance(x,dict) and str(x.get("id",x.get("npcId",x.get("entry"))))==id),None)
+     print("CLASSIC_NPC",id,json.dumps(v,default=str)[:3000])
+   if key=="playfulls":
+    html=data.decode("utf-8","replace")
+    for needle in ["__NEXT_DATA__","/api/","data-source","application/json","_next/static"]:
+     idx=html.find(needle)
+     print("HTML_CLUE",needle,html[max(0,idx-120):idx+320] if idx>=0 else "NONE")
    if key=="everloot_drops":print("DROPS_EXAMPLE",json.dumps(j.get("rates",[])[:2]))
   except Exception as e:
    print("TEXT",key,data[:400].decode("utf8","replace"),"jsonerror",str(e))
