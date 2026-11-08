@@ -1,0 +1,76 @@
+name: Run GetGear 1-60 full source audit (no release)
+on:
+  push:
+    branches: [work/catalogue-source-audit-1-60]
+    paths:
+      - tools/audit_forever_sources.py
+      - tools/export_source_audit.lua
+      - .github/workflows/full-source-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  full-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install Lua
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -qq -y lua5.4
+      - name: Validate addon manifest and Lua syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in *.lua) test -f "$module"; luac5.4 -p "$module";; esac
+          done < GetGear.toc
+          luac5.4 -p tools/export_source_audit.lua
+          python3 -m py_compile tools/audit_forever_sources.py
+      - name: Nine-class functional and source-data regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-material-names.lua .
+          lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tests/beta7-armor-priority.lua .
+          lua5.4 tests/beta7-preview-layout.lua .
+          lua5.4 tests/beta7-coverage.lua .
+      - name: Export and cross-check 7,707 item records
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p docs/source-audit-1-60
+          lua5.4 tools/export_source_audit.lua . /tmp/getgear-source-catalogue.tsv
+          python3 tools/audit_forever_sources.py --catalogue /tmp/getgear-source-catalogue.tsv --out docs/source-audit-1-60
+          cat docs/source-audit-1-60/README.md
+      - name: Publish audit files as downloadable artifact (no addon ZIP)
+        uses: actions/upload-artifact@v4
+        with:
+          name: getgear-1-60-source-audit
+          path: docs/source-audit-1-60/
+          retention-days: 60
+      - name: Commit audit REPORT to this development branch only
+        if: github.ref == 'refs/heads/work/catalogue-source-audit-1-60'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "GetGear audit bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/source-audit-1-60
+          if ! git diff --cached --quiet; then
+            git commit -m "Audit 1-60 catalogue against independent Forever evidence; unresolved queue"
+            git push origin "HEAD:work/catalogue-source-audit-1-60"
+          else
+            echo "Audit reports unchanged"
+          fi
+      - name: No release
+        run: echo "No addon packaging, tag, release, or main-branch change was performed."
