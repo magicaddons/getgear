@@ -1791,6 +1791,21 @@ function GetGear:RefreshOverlay()
     trackerLevel:SetText(ColoredCharacterLabel(self.level, race, class, classToken))
 
     local list = self:GetItems("tracker")
+    -- These are independent overlay presentation filters. Neither affects
+    -- the full guide, saved progress, or the catalogue's source research.
+    if self.ShouldShowOverlayStatChanges or self.ShouldShowOverlayWorldBoEDrops then
+        local visible={}
+        for _,gear in ipairs(list) do
+            local useful=(opts.hideWithoutPositiveStats==false)
+                or not self.ShouldShowOverlayStatChanges
+                or self:ShouldShowOverlayStatChanges(gear)
+            local obtainable=(opts.hideGreenBoEWorldDrops==false)
+                or not self.ShouldShowOverlayWorldBoEDrops
+                or self:ShouldShowOverlayWorldBoEDrops(gear)
+            if useful and obtainable then visible[#visible+1]=gear end
+        end
+        list=visible
+    end
     objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  OBJECTIVES (" .. #list .. ")")
     local totalY = 0
     if opts.objectivesCollapsed then
@@ -2081,7 +2096,7 @@ end
 -- Settings in separate window; overlay stays uncluttered while playing.
 -- =====================================================================
 local settings = CreateFrame("Frame", "GetGear_OverlaySettings", UIParent, "BasicFrameTemplateWithInset")
-settings:SetSize(418, 628)
+settings:SetSize(418, 692)
 settings:SetPoint("CENTER", UIParent, "CENTER", 270, 50)
 -- Settings must still be usable when opened from the foreground detail guide.
 settings:SetFrameStrata("DIALOG")
@@ -2217,10 +2232,40 @@ allValidGearCheck:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 allValidGearCheck:SetScript("OnLeave",HideItemTooltip)
+-- Only suppress conclusively non-improving items on the tracker. Pending
+-- comparisons stay visible and all gear remains in the detailed guide.
+local positiveStatCheck=NewCheck(settings,"Hide items without positive stat changes",493,function(v)
+    GetGear.db.overlay.hideWithoutPositiveStats=v
+    GetGear:RefreshOverlay()
+end)
+positiveStatCheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Overlay upgrade comparison",1,0.82,0.35)
+    GameTooltip:AddLine("On by default. Hides only items with confirmed comparisons where every stat change is zero or negative.",1,1,1,true)
+    GameTooltip:AddLine("Missing comparison data, equipment empty slots, bag upgrades and the full Guide are unaffected.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+positiveStatCheck:SetScript("OnLeave",HideItemTooltip)
+-- This is only a display rule for generic world drops. A green BoE
+-- crafted item or a targetable boss/trash/quest reward is not filtered.
+local greenBoECheck=NewCheck(settings,"Hide green BoE world drops from tracker",526,function(v)
+    GetGear.db.overlay.hideGreenBoEWorldDrops=v
+    GetGear:RefreshOverlay()
+end)
+greenBoECheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Optional world-drop suppression",1,0.82,0.35)
+    GameTooltip:AddLine("On by default. Hide uncommon (green), Bind-on-Equip WORLD drops that cannot be targeted like quest, dungeon or crafting rewards.",1,1,1,true)
+    GameTooltip:AddLine("Crafted BoEs, dungeon drops, quest rewards and the full Guide remain visible. You can switch this off at any time.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+greenBoECheck:SetScript("OnLeave",HideItemTooltip)
 -- Keep the Tracked/All material-scope choice in settings, without
 -- confusing it with the Total Materials minimize button.
 local materialScopeButton=NewButton(settings,"",185,23)
-materialScopeButton:SetPoint("TOPLEFT",18,-505)
+materialScopeButton:SetPoint("TOPLEFT",18,-576)
 materialScopeButton:SetScript("OnClick",function(self)
     if not GetGear.db then return end
     local opts=GetGear.db.overlay
@@ -2257,6 +2302,8 @@ function GetGear:ShowSettings()
     bagsCheck:SetChecked(self.db.overlay.bagUpgrades ~= false)
     craftFilterCheck:SetChecked(self.db.overlay.hideUncraftableCrafts == true)
     allValidGearCheck:SetChecked(self.db.overlay.showAllValidGear == true)
+    positiveStatCheck:SetChecked(self.db.overlay.hideWithoutPositiveStats ~= false)
+    greenBoECheck:SetChecked(self.db.overlay.hideGreenBoEWorldDrops ~= false)
     alphaSlider:SetValue(math.floor((self.db.overlay.backgroundOpacity or 0.78)*100 + 0.5))
     overlayScaleSlider:SetValue(math.floor((self.db.overlay.scale or 1)*100+0.5))
     detailScaleSlider:SetValue(math.floor((self.db.detail.scale or 1)*100+0.5))
