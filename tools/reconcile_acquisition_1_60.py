@@ -425,7 +425,12 @@ def main():
             # untouched; the journal may *add* a human-readable rare-boss hint.
             journal_summary_addition=(iid in JOURNAL_RARE_LOOT
                 and item["sourceEvidence"]=="observed")
-            # Item-locked Forever role evidence may be added alongside an older\n            # Classic/manual source; AcquisitionEvidence never overwrites it.\n            checkpoint4_additive=(iid in FOREVER_DUNGEON_ROLE_REFERENCES\n                and not highmanual)\n            if ((generic and not highmanual) or journal_summary_addition\n                or checkpoint4_additive) \
+            # Item-locked Forever role evidence may be added alongside an older
+            # Classic/manual source; AcquisitionEvidence never overwrites it.
+            checkpoint4_additive=(iid in FOREVER_DUNGEON_ROLE_REFERENCES
+                and not highmanual)
+            if ((generic and not highmanual) or journal_summary_addition
+                or checkpoint4_additive) \
                 and not manual_exception and result["confidence"]!="unresolved" \
                 and result["summary"]:
                 changes[iid]={"summary":result["summary"],
