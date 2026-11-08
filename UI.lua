@@ -1880,22 +1880,27 @@ function GetGear:RefreshOverlay()
                     r.comparison:Hide()
                 end
                 local expanded = opts.expanded[gear.id]
+                -- Acquisition must be visible at a glance, not hidden behind
+                -- an expand click. Detailed source notes still appear expanded.
+                local summary = self.GetAcquisitionSummary and self:GetAcquisitionSummary(gear)
                 if expanded then
-                    -- No duplicate fixed benefit badge: comparison numbers are
-                    -- already visible inline; icon tooltip has complete stats.
-                    for _, widget in ipairs(r.benefits) do widget:Hide() end
-                    local summary=DescribeOverlay(gear,r.pin:IsShown())
-                    if summary and summary~="" then
-                        r.desc:ClearAllPoints()
-                        r.desc:SetPoint("TOPLEFT", r.f, "TOPLEFT", 11, -nextY)
-                        r.desc:SetText(summary)
-                        r.desc:Show()
-                        -- The former 35-pixel minimum created a large blank gap
-                        -- even when the summary occupied only one text line.
-                        nextY = nextY + MeasureText(r.desc, 12) + 5
-                    else
-                        r.desc:Hide()
+                    local detail=DescribeOverlay(gear,r.pin:IsShown())
+                    if detail and detail~="" then
+                        if summary and summary~="" and not detail:find(summary,1,true) then
+                            summary=summary.."\n"..detail
+                        else
+                            summary=detail
+                        end
                     end
+                end
+                if summary and summary~="" then
+                    r.desc:ClearAllPoints()
+                    r.desc:SetPoint("TOPLEFT", r.f, "TOPLEFT", 11, -nextY)
+                    r.desc:SetText(summary)
+                    r.desc:Show()
+                    -- Use measured wrapped text height, including the brief
+                    -- source shown before expansion.
+                    nextY = nextY + MeasureText(r.desc, 12) + 5
                 else
                     r.desc:Hide()
                 end
