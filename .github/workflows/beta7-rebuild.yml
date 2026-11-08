@@ -12,6 +12,7 @@ on:
       - README.txt
       - DATA_MODEL.md
       - BETA7_PRIVATE_NOTES.txt
+      - tools/export_beta7_reagent_deltas.lua
   workflow_dispatch:
 permissions:
   contents: write
@@ -79,6 +80,7 @@ jobs:
           lua5.4 tests/beta7-evidence.lua .
           lua5.4 tests/beta7-coverage.lua .
           lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tools/export_beta7_reagent_deltas.lua . docs/BETA7-reagent-discrepancies.tsv
       - name: Verify and package private test-only ZIP
         shell: bash
         run: |
@@ -124,6 +126,7 @@ jobs:
             .beta7-generated/Beta7-audit-summary.json
             .beta7-generated/Beta7-item-level-audit.csv
             .beta7-generated/SOURCE_INPUT_SHA256.txt
+            docs/BETA7-reagent-discrepancies.tsv
           include-hidden-files: true
           retention-days: 30
           if-no-files-found: error
@@ -136,7 +139,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add GetGear.toc GeneratedBeta7Evidence.lua \
             docs/BETA7-generated-summary.json docs/BETA7-item-level-audit.csv \
-            docs/BETA7-source-input-hashes.txt
+            docs/BETA7-source-input-hashes.txt docs/BETA7-reagent-discrepancies.tsv
           if git diff --cached --quiet; then echo "Nothing changed"; else
             git commit -m "Integrate frozen Beta7 full-catalogue source overlay and item-level audit"
             git push origin HEAD:work/beta7-evidence-reconciliation
