@@ -91,6 +91,12 @@ function GetGear:ShouldDisplayGear(gear,classToken,mode)
             and ARMOR_EXCEPTIONS[classToken][gear.itemID]) then
         return false
     end
+    -- Explicit nonexclusive spell-power is a stronger signal than a broad
+    -- "mixed" role (which can also be Strength + Spirit). A warrior, rogue
+    -- or hunter normally gains nothing from passive spell damage. Preserve
+    -- real hybrids for Paladin, Shaman and Druid.
+    if NO_SPELL[classToken] and type(gear.statFlags)=="table"
+        and gear.statFlags.spellPower==true then return false end
     if role=="spell" and NO_SPELL[classToken] then return false end
     if role=="mana" and NO_MANA[classToken] then return false end
     if role=="physical" and CLOTH_CASTER[classToken] then return false end
