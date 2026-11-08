@@ -32,23 +32,24 @@
 - No ZIP, release, tag, branch merge or modification of `main`.
 
 ## UI checkpoint — armour-only overlay filtering (2026-11-09)
-**Scope:** Conservative per-character overlay display filtering; full guide unaffected.
+**Status: completed and validated. Scope:** Conservative per-character overlay display filtering; full guide unaffected.
 - Current `ShouldShowOverlayStatChanges` accepted positive `ITEM_MOD_ARMOR_SHORT` or `RESISTANCE0_NAME` as a valid upgrade despite negative intellect, spirit or other stats. These two ordinary armour keys no longer qualify by themselves.
 - Any positive *non-armour* stat—including resistance, stamina, primary stats, spell stats—still qualifies even if other stats fall. Unknown comparison data and empty equipment slots remain visible. No bulk client item-data requests.
-- New per-character setting: **Count armour-only improvements** (default **off**, including every tank-capable class; opt-in supports tank roles). Only appears while the pre-existing positive-stat filter is enabled.
+- New per-character setting: **Count armour-only improvements** (default **off**, including every tank-capable class; opt-in supports tank roles). Only affects tracker visibility while the pre-existing positive-stat filter is enabled; its setting is always visible in Display Settings.
 - Detailed Guide, item eligibility, stat comparison numbers, materials in 'All' scope, source research and equipment progress remain unchanged; tracked material totals follow overlay visibility.
 - **Validation: PASS** — [no-release CI 42490932171](https://github.com/magicaddons/getgear/actions/runs/42490932171) completed all source regeneration, addon Lua syntax and nine-class comparison, overlay, material, layout and performance regressions. It did **not** package or publish a release.
 - Packaging and publishing remain out of scope.
 
 ## Checkpoint 3 — named low-level dungeon trash
-**Status: source correction committed; CI validation pending. Scope:** Two level-20/21 equipment drops whose named enemies can now be classified as trash using specific Forever references.
+**Status: completed and validated. Scope:** Two level-20/21 equipment drops whose named enemies can now be classified as trash using specific Forever references.
 
 - **Rift Bracers (5943)** — Arugal's Voidwalker in **Shadowfang Keep**. [Forever-specific item entry](https://azeroth.wiki/forever/items/rift-bracers) explicitly lists Arugal's Voidwalker and "Trash"; independent [Icy Veins Forever item](https://db.icy-veins.com/wow-forever/items/5943) lists the same NPC as a source. Old Classic-based percentages are not asserted as live Forever rates.
 - **Vicar's Robe (3569)** — Death's Head Priest in **Razorfen Kraul**, identified on the [WoWhead Forever zone page](https://www.wowhead.com/forever/zone=491/razorfen-kraul). The [Forever Affliction guide](https://www.wowhead.com/forever/guide/classes/warlock/affliction/level-30-dps-overview) independently lists Vicar's Robe under RFK **Trash**, not a named boss.
 - The generator adds an exact two-ID/name-checked source override, role `trash`, a direct source URL and a clear `live drop unverified` caveat. It preserves the original source, source evidence, item ID, stats, eligibility and all recipe/mats data.
-- Expected post-reconciliation: **137** trash equipment references, **20** remaining unresolved dungeon NPC/role entries; **552** total dungeon equipment and **954** uncertain recipe book sources unchanged.
+- Regenerated report confirms **137** trash equipment references, **20** remaining unresolved dungeon NPC/role entries, **552** total dungeon equipment and **954** uncertain recipe book sources. All **7,707** equipment identities and previously indexed **1,252** recipes are retained.
 - **Scorn's Icy Choker (23169)** and **Abomination Skin Leggings (23173)**: both have credible historic links to Scorn and Sever, but Classic-era event-specific spawn availability is a caveat; no current Forever spawn/loot observation was established here, so neither is promoted in this checkpoint. [Forever source item](https://www.wowhead.com/forever/item=23169/scorns-icy-choker), [Forever Shadowfang source](https://senseos.gg/wiki/wow-forever/loot-tables/shadowfang-keep/).
 - **Arcanowisp Robes (273044)**: [City of Dalaran community listing](https://tavernforever.com/en/loot/city-of-dalaran/) associates it with Arcanic Enigma, but [Forever class guides](https://www.wowhead.com/forever/guide/classes/mage/frost/level-30-dps-overview) expressly lack confirmed City of Dalaran drops; source remains uncertain rather than falsely confirmed.
+- **Validation: PASS** — [non-release CI run 42491517157](https://github.com/magicaddons/getgear/actions/runs/42491517157) regenerated public-source evidence and passed manifest Lua syntax, full nine-class tests, crafting/material sources, stat/armour filtering, preview layout and performance. The auto-regenerated index and reports were saved to [commit 059e188](https://github.com/magicaddons/getgear/commit/059e18829305a1b195d0ee310277da86a507fe8b). Two intermediate CI attempts failed only because the new test asserted an incorrect runtime source-confidence field/value; the test was corrected without changing source facts.
 - No ZIP, public release, tag, branch merge or change to `main`.
 
 ## Next checkpoint

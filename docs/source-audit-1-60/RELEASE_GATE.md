@@ -19,7 +19,7 @@ The existing public v0.14.0-beta7 prerelease is separate from this work. No subs
 - [Comprehensive reconciliation workflow 42489073921](https://github.com/magicaddons/getgear/actions/runs/42489073921): **passed** the original crafted-item correction and full validation.
 - [Checkpoint 2 workflow 42490031007](https://github.com/magicaddons/getgear/actions/runs/42490031007): **passed** the nine specific Scarlet Graveyard rare-boss references, report regeneration, Lua syntax, 9-class catalogue, sources, recipe materials, armour rules, compact overlay filtering, preview layout and performance regressions.
 - [Armour-only overlay CI 42490932171](https://github.com/magicaddons/getgear/actions/runs/42490932171): **passed** full nine-class tests, two ordinary armour stat aliases, default-off opt-in, setting persistence and tracked/all-material correctness.
-- Checkpoint 3 named-trash source CI: pending after this commit.
+- [Checkpoint 3 named-trash CI 42491517157](https://github.com/magicaddons/getgear/actions/runs/42491517157): **passed** source regeneration, 7,707 equipment and 1,252 recipe checks, nine-class regressions, Lua syntax, UI filters, materials, preview and performance. The regenerated reports and evidence index are saved in [commit 059e188](https://github.com/magicaddons/getgear/commit/059e18829305a1b195d0ee310277da86a507fe8b).
 - The tests include a regression preventing the crafted Idol of the Dream from being treated as dungeon equipment.
 - This workflow **does not package an addon** or publish anything. All files are committed only to the development branch.
 - Automated Lua tests do not establish real Forever item-cache behaviour, vendor stock, actual drop rates or on-screen layout in the live client.
