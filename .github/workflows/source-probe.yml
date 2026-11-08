@@ -22,6 +22,9 @@ jobs:
             'https://raw.githubusercontent.com/MAF2414/wow-forever-talents/main/docs/professions-data.json',
             'https://raw.githubusercontent.com/nobody174/wow-forever/main/bis/sources.json',
             'https://ahledger.com/api/catalog?class=armor',
+            'https://ahledger.com/api/catalog?class=weapons',
+            'https://ahledger.com/api/catalog?class=recipes',
+            'https://ahledger.com/api/catalog?class=trade-goods',
             'https://api.ahledger.com/v1/items/250489?game=forever',
             'https://everloot.app/api/items/250489',
           ]
@@ -34,6 +37,10 @@ jobs:
                   obj=json.loads(data)
                   if isinstance(obj,dict): shape={k:type(v).__name__ for k,v in list(obj.items())[:20]}
                   else: shape={'rootType':type(obj).__name__,'len':len(obj)}
+                  if 'professions-data' in url:
+                    print('MAF_SAMPLE '+json.dumps({'item_sample':next(iter(obj.get('items',{}).items()),None),'record_sample':obj.get('records',[None])[0],'profession_sample':obj.get('professions',[None])[0]},default=str)[:3500])
+                  if 'api/catalog' in url:
+                    print('CATALOG_SAMPLE '+json.dumps({'rowCount':len(obj.get('rows',[])),'first':obj.get('rows',[None])[0]},default=str)[:1800])
                   print(json.dumps({'url':url,'status':res.status,'sizeRead':len(data),'shape':shape},sort_keys=True))
                 except Exception as e:
                   print(json.dumps({'url':url,'status':res.status,'bytes':len(data),'head':data[:150].decode('utf-8','replace')}))
