@@ -36,7 +36,9 @@ function GetGear:GetAggregateMaterials(scope)
                 and not self:IsGearEquipped(gear)
                 and self:GetObsoleteGearReason(gear) == nil
                 and (not self.ShouldShowOverlayStatChanges
-                    or self:ShouldShowOverlayStatChanges(gear)))) then
+                    or self:ShouldShowOverlayStatChanges(gear))
+                and (not self.ShouldShowOverlayWorldBoEDrops
+                    or self:ShouldShowOverlayWorldBoEDrops(gear)))) then
             for _, material in ipairs(gear.reagents or {}) do
                 local entry = totals[material.itemID]
                 if not entry then
