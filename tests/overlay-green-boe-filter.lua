@@ -51,4 +51,21 @@ assert(addon:ShouldShowOverlayWorldBoEDrops(world(1121))==true,
     "Live client must override an obsolete Classic-reference fallback")
 -- Shared state isn't mutated by the presentation-only filter.
 assert(addon.db.overlay.hideGreenBoEWorldDrops==true)
+local ui=assert(io.open(root.."/UI.lua")):read("*a")
+local core=assert(io.open(root.."/Core.lua")):read("*a")
+local toc=assert(io.open(root.."/GetGear.toc")):read("*a")
+local statsFilter=assert(ui:find("self:ShouldShowOverlayStatChanges(gear)",1,true))
+local boeFilter=assert(ui:find("self:ShouldShowOverlayWorldBoEDrops(gear)",1,true))
+local overlayCap=assert(ui:find("local overlayCap = 32",1,true))
+assert(statsFilter<overlayCap and boeFilter<overlayCap,
+    "Combined overlay filters must apply BEFORE the 32-objective cap")
+assert(ui:find("Hide green BoE world drops from tracker",1,true)
+    and ui:find("greenBoECheck:SetChecked",1,true),
+    "Reversible green BoE setting missing")
+assert(core:find("o.hideGreenBoEWorldDrops = true",1,true),
+    "Green BoE filtering must default on for existing and new characters")
+assert(toc:find("WorldDropBoEIndex.lua",1,true),"Item fallback index not loaded")
+local state=assert(io.open(root.."/GuideState.lua")):read("*a")
+assert(state:find("self:ShouldShowOverlayWorldBoEDrops(gear)",1,true),
+    "Tracked crafting materials must match BoE-filtered objectives")
 print("PASS green-BoE overlay: world-drop default, route exceptions, live override, provisional fallback and settings")
