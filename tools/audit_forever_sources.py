@@ -176,14 +176,24 @@ def dungeon_source(item,boss_names):
     if "dungeon" not in source_type and "dungeon" not in acq_kind:return "not-dungeon"
     if "trash" in source_type or "trash" in acq_kind:return "trash (reference)"
     source=item.get("source","")
+    source_norm=norm(source)
+    # A separate client-encounter roster lets us identify NAMED encounter
+    # enemies, not certify the item's actual loot assignment in Forever.
+    # This also handles human-written sources such as "Kelris (observed)",
+    # "Mr. Smite, Deadmines", and "Classic-reference: Lord Serpentis".
+    matches=[name for name in boss_names if len(name)>=5
+             and re.search(r"(?<!\w)"+re.escape(name)+r"(?!\w)",source_norm)]
+    if matches:
+        if item.get("acquisitionConfidence")=="observed":
+            return "named client boss encounter (Forever-observed item source)"
+        return "named client encounter (boss route unverified)"
     enemy=""
     for pattern in (r"^Boss:\s*(.+?)\s*\(",r"^Dungeon enemy:\s*(.+?)\s*\("):
         m=re.search(pattern,source,re.I)
         if m:enemy=m.group(1).strip();break
     if not enemy:return "dungeon; enemy unresolved"
-    names=[norm(s) for s in re.split(r"\s*/\s*",enemy)]
-    if names and all(n in boss_names for n in names):
-        return "named client encounter (boss route unverified)"
+    # The absent encounter identity does not prove trash: rare elites and
+    # newly added Forever encounter variants can also be absent from DB2.
     return "named dungeon enemy; boss/trash unresolved"
 
 def main():
