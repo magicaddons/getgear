@@ -47,6 +47,19 @@ JOURNAL_RARE_LOOT={
     for boss,record in SCARLET_GRAVEYARD_RARES.items()
     for iid,itemname in record["items"].items()
 }
+# Forever-specific loot references identify these two *trash* NPCs.
+# The source pages also name the exact finished item. NPC attribution is
+# published source evidence only, not a verified current-server drop rate.
+FOREVER_TRASH_DROPS = {
+    3569: {
+        "name":"Vicar's Robe","npc":"Death's Head Priest","zone":"Razorfen Kraul",
+        "url":"https://www.wowhead.com/forever/zone=491/razorfen-kraul",
+    },
+    5943: {
+        "name":"Rift Bracers","npc":"Arugal's Voidwalker","zone":"Shadowfang Keep",
+        "url":"https://azeroth.wiki/forever/items/rift-bracers",
+    },
+}
 UA="GetGear-Open-Source-Acquisition-Audit/1.0 (github.com/magicaddons/getgear)"
 # Historically tagged as dungeon equipment, but the client recipe creates it.
 # Keep the original record in the historic dungeon report without treating it as loot.
@@ -266,6 +279,7 @@ def main():
     assert len(items)==7707 and len(recipes)==1252 and len(dungeon)==577
     dungeon_ids={int(r["itemID"]) for r in dungeon}
     assert len(JOURNAL_RARE_LOOT)==9 and set(JOURNAL_RARE_LOOT).issubset(dungeon_ids)
+    assert len(FOREVER_TRASH_DROPS)==2 and set(FOREVER_TRASH_DROPS).issubset(dungeon_ids)
     recipe_by_id={int(r["itemID"]):r for r in recipes}
     play,play_entries,play_config=playfulls()
     fcache={r["itemId"]:r for r in data(CACHE_URL) if isinstance(r,dict) and isinstance(r.get("itemId"),int)}
@@ -323,6 +337,18 @@ def main():
                                   "(Forever Dungeon Journal; live drop unverified)",
                         "sourceURL":journal_url,"observations":[],
                         "foreverBoss":[actor]}
+            elif iid in FOREVER_TRASH_DROPS:
+                src=FOREVER_TRASH_DROPS[iid]
+                assert norm(name)==norm(src["name"]),(
+                    "Forever trash item ID/name changed",iid,name,src["name"])
+                result={"role":"trash","actor":src["npc"],
+                        "zone":src["zone"],
+                        "confidence":"published-forever-trash-reference",
+                        "summary":f'{src["zone"]} | Trash: {src["npc"]} '
+                                  "(Forever loot reference; live drop unverified)",
+                        "sourceURL":src["url"],"observations":[],
+                        "foreverBoss":[str(v) for v in (cache or {}).get("bossNames",[])
+                                       if isinstance(v,str)]}
             else:
                 result=evidence_route(item,ps,cache,observed,classic_leads,bossnames)
             d_stats[(result["role"],result["confidence"])]+=1
@@ -552,6 +578,8 @@ def main():
         f"- Item ID name mismatches against Forever cache: **{len(duplicate_identity)}**.",
         "- Nine Scarlet Monastery Graveyard rare-boss loot references are attributed "
         "to the Forever Dungeon Journal, with no live drop-rate claims.",
+        "- Two named dungeon trash equipment sources (Vicar's Robe and Rift Bracers) "
+        "are now labelled from published Forever loot references; no live drop rates.",
         "",
         "## Dungeon source classifications (reference quality, not drop-rate proof)",
     ]
@@ -566,6 +594,8 @@ def main():
         "to this specific dungeon. These observations may still be incomplete.",
         "- *Forever community reference* is a loot-list claim checked against client "
         "item IDs; it is **not** evidence of a live drop chance.",
+        "- *Published Forever trash reference* names a specific equipment item and "
+        "trash NPC in a Forever zone/item listing, but is **not** a live drop observation.",
         "- *Classic reference* is used only as an explicitly uncertain farming lead.",
         "- Encounter names in the client identify NPCs, not their loot tables.",
         "- An unobserved recipe book is not evidence that a trainer teaches it or "
@@ -617,6 +647,12 @@ def main():
         "and [Grovekeeper Mantle pattern](https://www.wowhead.com/forever/item=273958) "
         "— published plan tooltips with class/reputation/quest specialization requirements.",
         "- [AHledger](https://ahledger.com) — supplemental recipe acquisition reference.",
+        "- [WoWhead Forever Razorfen Kraul](https://www.wowhead.com/forever/zone=491/razorfen-kraul) "
+        "and [Forever caster guide](https://www.wowhead.com/forever/guide/classes/warlock/affliction/level-30-dps-overview) "
+        "— Vicar's Robe attributed to Death's Head Priest, classed as trash.",
+        "- [Azeroth.wiki Forever Rift Bracers](https://azeroth.wiki/forever/items/rift-bracers) "
+        "— Arugal's Voidwalker in Shadowfang Keep listed as trash; "
+        "the published listing does not establish current drop probability.",
     ])
     (REPORT/"README.md").write_text("\n".join(lines)+"\n",encoding="utf8")
     for book in (273952,273968,273976,273988,274019):
@@ -630,8 +666,8 @@ def main():
           "vendor_books",len(named_vendor),"trainer_books",len(trainer_books),flush=True)
     assert len(all_rows)==7707 and len(dungeon_rows)==577 and len(recipe_rows)==1252
     assert roles["crafted-item"]==1 and roles["crafted-pattern"]==24
-    assert roles["rare-boss"]==9
-    assert len(true_dungeon)==552 and len(unresolved)==22
+    assert roles["rare-boss"]==9 and roles["trash"]>=137
+    assert len(true_dungeon)==552 and len(unresolved)==20
     assert len(changes)>=100,"Insufficient actionable source evidence; fail closed"
 
 if __name__=="__main__":main()

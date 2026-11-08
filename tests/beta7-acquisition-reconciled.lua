@@ -117,6 +117,31 @@ assert(addon.ItemCatalog[7709].source=="Azshir the Sleepless",
 assert(addon.ItemCatalog[7709].instructions:find("observed in Forever",1,true),
     "Do not erase prior live-recorded drop context")
 
+-- Two explicitly attributed named trash drops, retained as published
+-- references rather than promoted to observed Forever drop chances.
+for _,entry in ipairs({
+    {id=3569,name="Death's Head Priest",urlPart="razorfen-kraul"},
+    {id=5943,name="Arugal's Voidwalker",urlPart="rift-bracers"},
+}) do
+    local item=assert(addon.ItemCatalog[entry.id],"Missing dungeon trash "..entry.id)
+    local source=assert(item.acquisitionResearch,"Missing trash evidence "..entry.id)
+    assert(source.confidence=="published-forever-trash-reference")
+    assert(source.sourceURL:find(entry.urlPart,1,true),
+        "Missing precise Forever loot reference "..entry.id)
+    assert(item.sourceSummary
+        and item.sourceSummary:find("Trash: "..entry.name,1,true),
+        "Specific dungeon trash identity not shown "..entry.id)
+    assert(item.sourceSummary:find("live drop unverified",1,true),
+        "Do not imply verified live drop rates for dungeon trash")
+    assert(not followUpCSV:find("\n"..entry.id..",",1,true),
+        "Item with named trash identity still queued "..entry.id)
+    assert(dungeonDropCSV:find("\n"..entry.id..",",1,true),
+        "Named trash gear must remain counted as dungeon equipment")
+end
+assert(addon.ItemCatalog[3569].sourceEvidence=="classic-reference"
+    and addon.ItemCatalog[5943].sourceEvidence=="client",
+    "Additive reference must not upgrade the item's original source confidence")
+
 local vendorCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/recipe_vendor_book_checks.csv")):read("*a")
 assert(vendorCSV:find("Aisarra Nightmeadow",1,true),
     "Named vendor reference must be preserved with live-stock caveat")
@@ -125,8 +150,9 @@ assert(recipeReconciliation:find("**954**",1,true),
     "All 68 vendor books and 886 trainer-labelled books need verification")
 assert(recipeReconciliation:find("**552**",1,true)
     and recipeReconciliation:find("**24**",1,true)
-    and recipeReconciliation:find("**22**",1,true)
-    and recipeReconciliation:find("rare-boss: 9",1,true),
+    and recipeReconciliation:find("**20**",1,true)
+    and recipeReconciliation:find("rare-boss: 9",1,true)
+    and recipeReconciliation:find("trash: 137",1,true),
     "Crafted-pattern records must not masquerade as equipment drops")
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
