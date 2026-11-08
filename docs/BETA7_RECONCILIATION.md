@@ -1,7 +1,8 @@
-# Beta 7 acquisition reconciliation — private test candidate (live validation outstanding)
+# Beta 7 acquisition reconciliation — public beta (live validation outstanding)
 
-This branch is **not** a published Beta 7 build. `main` remains unchanged. The staged
-`SourceEnrichment.lua` is an overlay so the baseline 259 researched facts and 7,678
+The v0.14.0-beta7 code is now on public `main` and is being published as a
+GitHub pre-release, not a fully verified stable build. `SourceEnrichment.lua`
+is an overlay so the baseline 259 researched facts and 7,678
 cached records can remain byte-for-byte unchanged while evidence is audited.
 The complete catalogue contains **7,707 unique item IDs** (some researched
 identities overlap the cache). Source corrections must not change item IDs,
@@ -56,9 +57,10 @@ Not a substitute for in-client testing.
 5. **Offline done:** Generate and commit an item-level coverage report and
    test the nine-class catalogue, source visibility and materials. **Open:**
    actual live-client gameplay, UI, crafting, faction and map validation.
-6. **Private ZIP done:** GitHub Actions packages a test-only candidate after
-   offline checks. **Not authorized/appropriate:** a public release, tag,
-   main-branch merge or any claim of complete live-source verification.
+6. **Public beta packaging:** The release workflow packages the tested source
+   from `main` into a versioned addon ZIP, verifies its contents, and publishes
+   a GitHub **pre-release**. This is not certification of complete live-source
+   verification.
 
 This register is intentionally candid about partial progress.
 
@@ -67,7 +69,9 @@ This register is intentionally candid about partial progress.
 
 The Nov 8 GitHub Actions source-export artifact (run [42465512234](https://github.com/magicaddons/getgear/actions/runs/42465512234)) was recovered before its Nov 15 expiration. Its dated Forever item cache, 2026-10-31 ForeverTome recipe snapshot and EG Link contributed live-client data support a reproducible **development-branch integration**. The generated
 Lua and item-level audit are committed and a private test-only ZIP exists as a
-GitHub Actions artifact; this is **not a public release**.
+GitHub Actions artifact. The public beta is packaged separately from the
+latest `main` source; historic private test artifacts are not the official
+user download.
 
 - 7,678 dated cache items plus 29 manual-only researched entries = 7,707 unique catalogue identities; 36,341 class/level objectives preserved.
 - 1,244/1,244 cache-crafted items have source-derived reagent lists. The existing addon had 1,060 missing lists filled by the local candidate, while **43 existing lists disagreed** with the recovered client recipes and were corrected in the local candidate, with each before/after list separately retained for review. The remainder already agreed.
@@ -81,24 +85,27 @@ The generated overlay now passes GitHub Actions Lua 5.4 regression testing
 against the actual Beta 7 manifest: 7,707 unique items, 36,341 class
 objectives, nine classes, 1,060 newly populated ingredient lists and exactly
 43 conflicting original ingredient lists corrected against the dated recipe
-export. The private installable ZIP is manifest-checked. In-game validation
-and resolving live-source gaps remain outstanding. **Do not publish Beta 7
-as stable on the strength of offline checks.**
+export. The private development ZIP was manifest-checked; the public package is
+separately built and verified from `main`. In-game validation
+and resolving live-source gaps remain outstanding. **This release is a beta,
+not a declaration that every item source is live-verified.**
 
 Examples of independently corroborated reagent corrections: [Tough Scorpid Breastplate takes Thick Leather](https://www.warcraftforever.wiki/wiki/Pattern:_Tough_Scorpid_Breastplate); [Veteran's Silvered Chain Shirt uses Coarse Grinding Stone](https://www.wowhead.com/forever/spell=1252267/veterans-silvered-chain-shirt), whereas older GetGear hand-coded values disagreed. These are representative checks, not certification of all 43 changed lists.
 
 
 ## Integration checkpoints and reproducibility
 
-- Branch: [work/beta7-evidence-reconciliation](https://github.com/magicaddons/getgear/tree/work/beta7-evidence-reconciliation)
-- Private development build: [Beta 7 GitHub Actions rebuild](https://github.com/magicaddons/getgear/actions/workflows/beta7-rebuild.yml)
+- Public source: [main](https://github.com/magicaddons/getgear/tree/main)
+- Beta 7 release: [v0.14.0-beta7](https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta7)
+- Original reconstruction: [Beta 7 GitHub Actions rebuild](https://github.com/magicaddons/getgear/actions/workflows/beta7-rebuild.yml)
 - Generator: `tools/generate_beta7_evidence.py`; source hashes:
   `docs/BETA7-source-input-hashes.txt`
 - Full dated item report: `docs/BETA7-item-level-audit.csv`
 - All original/replacement reagent disagreements:
   `docs/BETA7-reagent-discrepancies.tsv` (43 entries)
 - Offline tests: `tests/beta7-coverage.lua`, `tests/beta7-evidence.lua`,
-  `tests/beta7-source-visibility.lua`, plus the four earlier Beta 4
+  `tests/beta7-source-visibility.lua`, `tests/beta7-armor-priority.lua`,
+  `tests/beta7-preview-layout.lua`, plus the four earlier Beta 4
   catalogue/filter/talent/performance regressions.
 
 The source export includes EG player-contributed data licensed under CC BY 4.0
