@@ -49,6 +49,26 @@ jobs:
           curl -fLSsS --retry 1 --max-time 25 https://wowforever.one/professions/ -o export/wowforever-professions.html || true
                     curl -fLSsS --retry 2 --max-time 65 https://forevertome.com/data/recipes.yafo0pc388.json -o export/ForeverTomeRecipes.json
           python3 -m json.tool export/ForeverTomeRecipes.json > /dev/null
+                    python3 - <<'PY'
+          import urllib.request, json, pathlib
+          root=pathlib.Path("export/eg");root.mkdir(exist_ok=True,parents=True)
+          source="https://raw.githubusercontent.com/JIVESCORP/eg-link-output-wowf/main/data"
+          with urllib.request.urlopen(source+"/index.json",timeout=50) as r:idx=json.load(r)
+          (root/"index.json").write_text(json.dumps(idx),encoding="utf-8")
+          builds=idx["products"]["wowf"]
+          selected=list(builds)[-8:]
+          for build in selected:
+            target=root/build;target.mkdir(exist_ok=True)
+            for kind in ("vendors","npcs","loot","quests.enUS","quest_scan","creatures"):
+              if kind not in builds[build]:continue
+              try:
+                with urllib.request.urlopen(source+"/wowf/"+build+"/"+kind+".json",timeout=45) as r:
+                  data=r.read()
+                json.loads(data)
+                (target/(kind+".json")).write_bytes(data)
+                print("EG",build,kind,len(data))
+              except Exception as ex: print("EG unavailable",build,kind,str(ex)[:90])
+          PY
                     ls -lh export
           sha256sum export/*.json > export/SOURCE_HASHES.txt
       - name: Upload source snapshot
