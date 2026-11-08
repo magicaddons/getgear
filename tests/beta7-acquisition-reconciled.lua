@@ -52,8 +52,11 @@ assert(future.recipePatternItemID==273952,
     "Level-60 book ID from independent Forever recipe data disappeared")
 assert(future.recipeLearnMethod=="pattern",
     "A pattern book must not be misclassified as trainer teaching")
-assert(addon:GetAcquisitionSummary(future):find("source unverified",1,true),
-    "Do not invent future-recipe pattern availability")
+local futureSummary=addon:GetAcquisitionSummary(future)
+assert(type(futureSummary)=="string" and futureSummary:find("unverified",1,true),
+    "Future-recipe origin must remain explicitly unverified")
+assert(not futureSummary:find("trainer",1,true),
+    "A pattern book is not proof of trainer teaching")
 -- The catalogue and crafting lists remain identical and class-wide.
 local checks={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 for _,cls in ipairs(checks) do
