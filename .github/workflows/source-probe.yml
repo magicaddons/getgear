@@ -38,6 +38,9 @@ jobs:
                   if isinstance(obj,dict): shape={k:type(v).__name__ for k,v in list(obj.items())[:20]}
                   else: shape={'rootType':type(obj).__name__,'len':len(obj)}
                   if 'professions-data' in url:
+                    craft=next((x for x in obj.get('records',[]) if x.get('outputs') and x.get('reagents')),None)
+                    specific=next((x for x in obj.get('records',[]) if x.get('id')==1252238),None)
+                    print('MAF_CRAFT '+json.dumps({'craft':craft,'guards':specific},default=str)[:4500])
                     print('MAF_SAMPLE '+json.dumps({'item_sample':next(iter(obj.get('items',{}).items()),None),'record_sample':obj.get('records',[None])[0],'profession_sample':obj.get('professions',[None])[0]},default=str)[:3500])
                   if 'api/catalog' in url:
                     print('CATALOG_SAMPLE '+json.dumps({'rowCount':len(obj.get('rows',[])),'first':obj.get('rows',[None])[0]},default=str)[:1800])
