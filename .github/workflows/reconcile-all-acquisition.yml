@@ -8,6 +8,11 @@ on:
       - AcquisitionEvidence.lua
       - GetGear.toc
       - tests/beta7-acquisition-reconciled.lua
+      - GearCompare.lua
+      - Core.lua
+      - UI.lua
+      - GuideState.lua
+      - tests/overlay-stat-filter.lua
   workflow_dispatch:
 permissions:
   contents: write

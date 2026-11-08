@@ -227,6 +227,11 @@ end
 -- and user-hidden/acquired states. A stat comparison is conclusive only when
 -- both candidate and equipped item data are present. Never start bulk item-data
 -- requests while scanning the 1-60 tracker catalogue.
+-- Armor is defensive context, not by itself a meaningful upgrade for every
+-- class/role. Both client armor stat keys are excluded from default positive
+-- qualification. An explicit per-character setting opts back into armor-only
+-- gains for tanks or other players who value them.
+local ARMOR_ONLY_KEYS={ITEM_MOD_ARMOR_SHORT=true,RESISTANCE0_NAME=true}
 function GetGear:ShouldShowOverlayStatChanges(gear)
     if not gear or gear.bagUpgrade then return true end
     if self.db and self.db.overlay and self.db.overlay.hideWithoutPositiveStats==false then
@@ -237,15 +242,22 @@ function GetGear:ShouldShowOverlayStatChanges(gear)
         or type(comparison.groups)~="table" or #comparison.groups==0 then
         return true -- unavailable/equipped/unknown: not proof of no improvement
     end
+    local armorGain=false
     for _,group in ipairs(comparison.groups) do
         if not group.comparable then return true end
         for _,stat in ipairs(group.rows or {}) do
             if type(stat.delta)=="number" and stat.delta>0.0001 then
-                return true -- one positive stat against any eligible slot
+                if not ARMOR_ONLY_KEYS[stat.key] then
+                    return true -- one non-armor improvement against any slot
+                end
+                armorGain=true
             end
         end
     end
-    return false -- every eligible comparison is zero or negative only
+    -- Armor-only gains are hidden by default, even if other stats worsen.
+    -- The opt-in permits the previous behavior without altering source data.
+    return armorGain and self.db and self.db.overlay
+        and self.db.overlay.countArmorOnlyUpgrades==true or false
 end
 
 -- Overlay-only restriction on *generic, untargetable world drops*, not on

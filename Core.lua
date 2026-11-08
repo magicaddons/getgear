@@ -91,6 +91,11 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if type(o.hideWithoutPositiveStats) ~= "boolean" then
             o.hideWithoutPositiveStats = true
         end
+        -- Disabled by default on all classes, including Warrior/Paladin/Druid:
+        -- current class alone does not establish a tanking role.
+        if type(o.countArmorOnlyUpgrades) ~= "boolean" then
+            o.countArmorOnlyUpgrades = false
+        end
         -- Overlay only: untargetable green BoE WORLD drops are off by
         -- default, but dungeon/quest/vendor/crafted gear remains eligible.
         if type(o.hideGreenBoEWorldDrops) ~= "boolean" then

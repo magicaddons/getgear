@@ -2242,7 +2242,7 @@ positiveStatCheck:SetScript("OnEnter",function(self)
     if not GameTooltip then return end
     GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
     GameTooltip:AddLine("Overlay upgrade comparison",1,0.82,0.35)
-    GameTooltip:AddLine("On by default. Hides only items with confirmed comparisons where every stat change is zero or negative.",1,1,1,true)
+    GameTooltip:AddLine("On by default. Requires at least one confirmed positive stat other than ordinary armour, unless you enable armour-only improvements below.",1,1,1,true)
     GameTooltip:AddLine("Missing comparison data, equipment empty slots, bag upgrades and the full Guide are unaffected.",0.72,0.83,1,true)
     GameTooltip:Show()
 end)
@@ -2262,10 +2262,25 @@ greenBoECheck:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 greenBoECheck:SetScript("OnLeave",HideItemTooltip)
+-- Class alone does not imply a tank role. This opt-in restores armor-only
+-- recommendations without changing the full guide or other stat deltas.
+local armorOnlyCheck=NewCheck(settings,"Count armour-only improvements",559,function(v)
+    GetGear.db.overlay.countArmorOnlyUpgrades=v
+    GetGear:RefreshOverlay()
+end)
+armorOnlyCheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Armour-only overlay improvements",1,0.82,0.35)
+    GameTooltip:AddLine("Off by default for every class. Enable when you want added armour alone to keep an item in the tracker, such as while playing a tank.",1,1,1,true)
+    GameTooltip:AddLine("All other improvements, the complete Guide, and comparative armour numbers are unaffected.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+armorOnlyCheck:SetScript("OnLeave",HideItemTooltip)
 -- Keep the Tracked/All material-scope choice in settings, without
 -- confusing it with the Total Materials minimize button.
 local materialScopeButton=NewButton(settings,"",185,23)
-materialScopeButton:SetPoint("TOPLEFT",18,-576)
+materialScopeButton:SetPoint("TOPLEFT",18,-604)
 materialScopeButton:SetScript("OnClick",function(self)
     if not GetGear.db then return end
     local opts=GetGear.db.overlay
@@ -2304,6 +2319,7 @@ function GetGear:ShowSettings()
     allValidGearCheck:SetChecked(self.db.overlay.showAllValidGear == true)
     positiveStatCheck:SetChecked(self.db.overlay.hideWithoutPositiveStats ~= false)
     greenBoECheck:SetChecked(self.db.overlay.hideGreenBoEWorldDrops ~= false)
+    armorOnlyCheck:SetChecked(self.db.overlay.countArmorOnlyUpgrades == true)
     alphaSlider:SetValue(math.floor((self.db.overlay.backgroundOpacity or 0.78)*100 + 0.5))
     overlayScaleSlider:SetValue(math.floor((self.db.overlay.scale or 1)*100+0.5))
     detailScaleSlider:SetValue(math.floor((self.db.detail.scale or 1)*100+0.5))

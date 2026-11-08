@@ -31,6 +31,15 @@
 - **Limitations:** Forever Dungeon Journal is published source evidence, **not** proof of a current live drop or percentage. No real-game UI or dungeon-drop observation was performed.
 - No ZIP, release, tag, branch merge or modification of `main`.
 
+## UI checkpoint — armour-only overlay filtering (2026-11-09)
+**Scope:** Conservative per-character overlay display filtering; full guide unaffected.
+- Current `ShouldShowOverlayStatChanges` accepted positive `ITEM_MOD_ARMOR_SHORT` or `RESISTANCE0_NAME` as a valid upgrade despite negative intellect, spirit or other stats. These two ordinary armour keys no longer qualify by themselves.
+- Any positive *non-armour* stat—including resistance, stamina, primary stats, spell stats—still qualifies even if other stats fall. Unknown comparison data and empty equipment slots remain visible. No bulk client item-data requests.
+- New per-character setting: **Count armour-only improvements** (default **off**, including every tank-capable class; opt-in supports tank roles). Only appears while the pre-existing positive-stat filter is enabled.
+- Detailed Guide, item eligibility, stat comparison numbers, materials in 'All' scope, source research and equipment progress remain unchanged; tracked material totals follow overlay visibility.
+- Offline validation: pending explicit [comprehensive no-release workflow](https://github.com/magicaddons/getgear/actions/workflows/reconcile-all-acquisition.yml); nine-class regression fixtures added.
+- Packaging and publishing remain out of scope.
+
 ## Next checkpoint
 Prioritise lower-level targets among the **22** remaining dungeon-source questions: Rift Bracers (5943) and Abomination Skin Leggings (23173) in Shadowfang Keep; Vicar's Robe (3569) in Razorfen Kraul; Arcanowisp Robes (273044) in City of Dalaran; and Scorn's Icy Choker (23169) in Scarlet Monastery Graveyard. These require their own small Forever-specific evidence batch—do not promote Classic-only drop rates or NPC labels to live confirmation.
 
