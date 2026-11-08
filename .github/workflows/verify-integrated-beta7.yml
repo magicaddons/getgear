@@ -10,6 +10,11 @@ on:
       - GuideState.lua
       - UI.lua
       - GetGear.toc
+      - GearRelevance.lua
+      - StatEvidence.lua
+      - GeneratedStatFlags.lua
+      - tools/generate_forever_stat_flags.py
+      - tests/beta7-stat-flags.lua
       - tests/overlay-stat-filter.lua
       - tests/overlay-green-boe-filter.lua
   workflow_dispatch:
@@ -57,6 +62,7 @@ jobs:
           lua5.4 tests/beta7-preview-layout.lua .
           lua5.4 tests/overlay-stat-filter.lua .
           lua5.4 tests/overlay-green-boe-filter.lua .
+          lua5.4 tests/beta7-stat-flags.lua .
       - name: Store fallback index and provenance ONLY in integration branch
         run: |
           set -euo pipefail
