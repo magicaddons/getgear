@@ -26,7 +26,11 @@ jobs:
             'https://ahledger.com/api/catalog?class=recipes',
             'https://ahledger.com/api/catalog?class=trade-goods',
             'https://api.ahledger.com/v1/items/250489?game=forever',
-            'https://everloot.app/api/items/250489',
+            'https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000',
+            'https://everloot.app/api/edges?limit=2',
+            'https://everloot.app/api/rollups/drops?limit=2',
+            'https://everloot.app/api/items?item=250489&limit=2',
+            'https://everloot.app/api/corpus/public?limit=2',
           ]
           for url in urls:
             try:
@@ -42,6 +46,10 @@ jobs:
                     specific=next((x for x in obj.get('records',[]) if x.get('id')==1252238),None)
                     print('MAF_CRAFT '+json.dumps({'craft':craft,'guards':specific},default=str)[:4500])
                     print('MAF_SAMPLE '+json.dumps({'item_sample':next(iter(obj.get('items',{}).items()),None),'record_sample':obj.get('records',[None])[0],'profession_sample':obj.get('professions',[None])[0]},default=str)[:3500])
+                  if '/v1/crafting/' in url:
+                    print('CRAFT_SAMPLE '+json.dumps({'total':len(obj.get('recipes',[])),'filters':obj.get('filters'),'first':obj.get('recipes',[None])[0]},default=str)[:1700])
+                  if 'everloot.app/api/' in url:
+                    print('EVERLOOT_SAMPLE '+json.dumps({k:(v[:1] if isinstance(v,list) else v) for k,v in obj.items()},default=str)[:1800])
                   if 'api/catalog' in url:
                     print('CATALOG_SAMPLE '+json.dumps({'rowCount':len(obj.get('rows',[])),'first':obj.get('rows',[None])[0]},default=str)[:1800])
                   print(json.dumps({'url':url,'status':res.status,'sizeRead':len(data),'shape':shape},sort_keys=True))
