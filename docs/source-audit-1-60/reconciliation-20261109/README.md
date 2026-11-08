@@ -6,30 +6,38 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - All **7,707 / 7,707** equipment records examined.
 - All **1,252 / 1,252** crafting recipes examined.
 - All **577 / 577** historically dungeon-associated records examined, including **24** crafted items with possible dungeon pattern routes and **1** item incorrectly catalogued as dungeon loot.
-- New, conservative in-addon acquisition summaries generated: **1,076**.
+- New, conservative in-addon acquisition summaries generated: **1,077**.
 - Combined Forever cache entries: **10,315**; Playfulls item entries: **22,891**.
 - Published player-observed relationships: **859**.
-- True dungeon-equipment records: **552**; still needing an enemy/boss/trash identity: **20**.
+- True dungeon-equipment records: **552**; still requiring encounter or container-loot confirmation: **6**.
 - Recipe book origins that still require live verification: **954** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
 - Item ID name mismatches against Forever cache: **0**.
 - Nine Scarlet Monastery Graveyard rare-boss loot references are attributed to the Forever Dungeon Journal, with no live drop-rate claims.
 - Two named dungeon trash equipment sources (Vicar's Robe and Rift Bracers) are now labelled from published Forever loot references; no live drop rates.
+- Checkpoint 4 identifies **14** more encounter roles from Forever-published guides, journal and beta references; none establishes live drop rates.
+- **2** Dark/Relic Coffer leads are containers, not enemies, and remain unresolved because Forever item-to-coffer loot is unverified.
 
 ## Dungeon source classifications (reference quality, not drop-rate proof)
-- boss: 386
+- boss: 397
 - trash: 137
 - crafted-pattern: 24
-- dungeon-enemy: 20
-- rare-boss: 9
+- rare-boss: 12
+- dungeon-enemy: 4
+- container-lead: 2
 - crafted-item: 1
 
 ## Dungeon evidence confidence
 - forever-community-reference: 475
-- forever-reference-unverified: 53
+- forever-reference-unverified: 37
 - recipe-origin-unverified: 24
 - forever-observed-npc: 13
-- published-forever-dungeon-journal: 9
+- published-forever-dungeon-journal: 10
+- published-forever-dungeon-guide: 10
 - published-forever-trash-reference: 2
+- historic-container-reference: 2
+- forever-encounter-historic-loot-reference: 1
+- forever-item-historic-loot-reference: 1
+- published-forever-beta-class-guide: 1
 - published-forever-recipe: 1
 
 ## Recipe learning (do not conflate *crafting* and *learning*)

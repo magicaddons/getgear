@@ -8,24 +8,10 @@ These are **optional**, not prerequisites for continued research. Check an item 
 |---:|---:|---|---|---|
 | 20 | 23173 | Abomination Skin Leggings | Shadowfang Keep | dungeon-enemy (forever-reference-unverified) |
 | 27 | 273044 | Arcanowisp Robes | City of Dalaran | dungeon-enemy (forever-reference-unverified) |
-| 30 | 9457 | Royal Diplomatic Scepter | Gnomeregan | dungeon-enemy (forever-reference-unverified) |
-| 30 | 23169 | Scorn's Icy Choker | Scarlet Monastery | dungeon-enemy (forever-reference-unverified) |
-| 47 | 11946 | Fire Opal Necklace | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
+| 47 | 11946 | Fire Opal Necklace | Blackrock Depths | container-lead (historic-container-reference) |
 | 47 | 10801 | Slitherscale Boots | Sunken Temple | dungeon-enemy (forever-community-reference) |
-| 48 | 11945 | Dark Iron Ring | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
-| 49 | 10804 | Fist of the Damned | The Temple of Atal'Hakkar | dungeon-enemy (forever-reference-unverified) |
-| 49 | 11633 | Spiderfang Carapace | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
-| 51 | 22242 | Verek's Leash | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
-| 52 | 11726 | Savage Gladiator Chain | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
-| 52 | 11731 | Savage Gladiator Greaves | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
-| 52 | 11730 | Savage Gladiator Grips | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
-| 52 | 11729 | Savage Gladiator Helm | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
-| 52 | 11728 | Savage Gladiator Leggings | Blackrock Depths | dungeon-enemy (forever-reference-unverified) |
-| 55 | 16695 | Devout Mantle | Blackrock Spire | dungeon-enemy (forever-reference-unverified) |
-| 55 | 12952 | Gyth's Skull | Blackrock Spire | dungeon-enemy (forever-reference-unverified) |
-| 55 | 16669 | Pauldrons of Elements | Blackrock Spire | dungeon-enemy (forever-reference-unverified) |
+| 48 | 11945 | Dark Iron Ring | Blackrock Depths | container-lead (historic-container-reference) |
 | 57 | 14525 | Boneclenched Gauntlets | Scholomance | dungeon-enemy (forever-reference-unverified) |
-| 57 | 18760 | Necromantic Band | Scholomance | dungeon-enemy (forever-reference-unverified) |
 
 ## Recipe verification
 
