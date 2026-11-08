@@ -63,6 +63,9 @@
 ## Unattended checkpoint procedure
 The [agent instructions](../AGENTS.md) and [bounded overnight/Codex plan](OVERNIGHT_WORK_PLAN.md) document resume points, one-batch-at-a-time source validation, CI gating and release prohibitions. Scheduled task execution does not itself verify that repository writes or CI can run; each run must record actual outcomes.
 
+## Checkpoint 5A — vendor-pattern evidence (2026-11-09)
+**Status: documentation-only, no new CI.** Direct Forever item-ID-locked vendor and specialization references were recorded for Grovekeeper Grips (book 273953), Mitts (273957) and Mantle (273958) in [the 3-case evidence note](source-audit-1-60/reconciliation-20261109/CHECKPOINT5A_VENDOR_EVIDENCE.md). The three remain in the **68-record live vendor verification queue**, as published inventory does not prove live merchant stock. The prior full non-release CI pass remains workflow 42493307958; no addon files, recipes or filters changed. Next batch: individual remaining Grovekeeper book pages and their distinct quest/reputation/specialization gates.
+
 ## Next checkpoint
 Resolve the remaining **6** source-verification leads only if new Forever item-specific evidence appears. Two are container/coffer leads, and four are unconfirmed mob/item or historical event associations. Next bounded active category is **954** recipe-book sources (68 vendor, 886 trainer-labelled). Preserve the other-equipment, final-audit, and in-game acceptance checkpoints in that order.
 
