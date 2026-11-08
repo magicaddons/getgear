@@ -23,7 +23,7 @@ local enrichments having been restored.
 
 | Item ID | Item | Acquisition evidence | Confidence and limits |
 |---|---|---|---|
-| 250513 | Veteran's Chain Belt | Plans item 251365 sold by Stondry Darkhammer (ACA), Redridge Mountains 10.4, 74.7; Blacksmithing 45; four reagents | Published Forever plan & vendor; live vendor stock not personally observed |
+| 250513 | Veteran's Chain Belt | Plans item 251365 sold by Stondry Darkhammer (ACA), Redridge Mountains 8.01, 74.81; Blacksmithing 45; four reagents | Published Forever plan & vendor; live vendor stock not personally observed |
 | 271098 | Golemguard Chest | Plunder, third boss in Hall of Thanes | Forever Dungeon Journal, not an observed live drop rate |
 | 2864 | Runed Copper Breastplate | Blacksmithing spell 2667, 12 Copper Bars, 1 Shadowgem, 2 Rough Grinding Stones; Plans world drop and plan-use threshold 55 in Forever sources | Published Forever client/plan evidence; individual live creature sources unconfirmed; some mirrors retain conflicting old skill figures |
 
@@ -32,7 +32,7 @@ Primary links:
 - https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions
 - https://www.wowhead.com/forever/dungeon-journal/the-hall-of-thanes/plunder
 - https://www.wowhead.com/forever/spell=2667/runed-copper-breastplate
-- https://www.wowhead.com/forever/item=2883/plans-runed-copper-breastplate
+- https://www.wowhead.com/forever/item=2881/plans-runed-copper-breastplate
 - https://azeroth.wiki/forever/professions/blacksmithing/veteran-s-chain-belt
 - https://azeroth.wiki/forever/professions/blacksmithing/runed-copper-breastplate
 
