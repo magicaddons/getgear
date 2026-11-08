@@ -685,6 +685,18 @@ previewPlus:SetPoint("TOPLEFT", 290, -122)
 local previewFullButton = NewButton(window, "Full 1-60: ON", 156, 24)
 previewFullButton:SetPoint("TOPLEFT", 328, -122)
 
+-- Preview shares the detailed-window second toolbar row with Display
+-- settings. Keep the settings control immediately after Full 1-60 rather
+-- than at the Class selector's coordinates (Beta5 regression prevention).
+local function PositionDisplaySettingsForPreview(active)
+    optionsButton:ClearAllPoints()
+    if active then
+        optionsButton:SetPoint("LEFT", previewFullButton, "RIGHT", 8, 0)
+    else
+        optionsButton:SetPoint("TOPLEFT", 18, -122)
+    end
+end
+
 startPreview:SetScript("OnClick", function()
     preview.active = true
     preview.classToken = GetGear.GuideDefinitions[GetGear.classToken] and GetGear.classToken or "ROGUE"
@@ -1135,6 +1147,7 @@ function GetGear:RefreshUI()
     inventoryView:Hide()
     scroll:Show();statusText:Show();optionsButton:Show()
     local inPreview = preview.active
+    PositionDisplaySettingsForPreview(inPreview)
     local playerName = UnitName("player") or "Character"
     local race = type(UnitRace)=="function" and UnitRace("player") or ""
     local class = self.className or (type(UnitClass)=="function" and UnitClass("player")) or "Class"

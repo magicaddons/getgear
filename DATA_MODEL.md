@@ -48,3 +48,44 @@ Cached equipment facts are NOT proof of acquisition on the live realm.
 Hand-authored research is preserved as evidence, not as a special permission
 to bypass universal filtering. An uncertain talent API or split fails open;
 users can also opt into the complete class-equippable catalogue.
+
+
+## Beta 7 source reconciliation overlay (development candidate)
+
+After `EquipmentCache.lua`, the generated `GeneratedBeta7Evidence.lua` applies
+2026-10-31 client recipe material inputs and conservatively sourced boss,
+vendor and quest names. `SourceEnrichment.lua` follows it and applies the
+three individually researched item corrections. This order is required by
+`GetGear.toc` and checked by `tests/beta7-evidence.lua`.
+
+A changed client recipe reagent list takes precedence over older manually
+entered materials, but the original 43 disagreement pairs are preserved
+in the separate pre-integration audit candidate and are not presented as
+fully live-verified. No generated data assigns a recipe learning skill,
+binding status or guaranteed faction/vendor access. The source generator and
+7,678-row item audit are committed under `tools/` and `docs/`, respectively.
+
+Unverified source identity is not an equipment eligibility veto: appropriate
+items remain visible with unverified-source labels, while conservative
+class/role and five-level ageing rules still apply. Public `main` remains
+v0.12.14; this Beta 7 work must not be merged without client validation.
+
+
+### Beta 7 primary armour preference correction
+
+The core equipability mask remains unchanged; a Warrior can technically equip
+leather. For the default guide, however, `GearRelevance.lua` now restricts
+body-armour choices to the class's **preferred armour type at that level**:
+Warrior/Paladin Mail through 39, Plate from 40; Hunter/Shaman Leather through
+39, Mail from 40; Rogue/Druid Leather; Priest/Mage/Warlock Cloth. Item slots
+such as weapons, cloaks, jewellery and trinkets are not subjected to this tier
+rule. The level-1–60 Preview calculates by the item's target level; live
+current-item lists use the character level; future items use the expected
+future equip level. The explicit "Show all valid equipment" setting bypasses
+this soft preference filter without allowing known QA records. Explicitly
+researched, reviewed exceptions can be added to the local allow-list.
+
+This was introduced after a live tester found Ceremonial Leather Harness
+(#3313, +4 Agility/+3 Spirit) in a Warrior default list. Class proficiency
+and stat-role alone were too permissive. Verified by
+`tests/beta7-armor-priority.lua` and `tests/beta4-filters.lua`.

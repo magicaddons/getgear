@@ -9,8 +9,18 @@ local NOVELTY = {[21524]=true,[21525]=true}
 local NO_SPELL = {WARRIOR=true,ROGUE=true,HUNTER=true}
 local NO_MANA = {WARRIOR=true,ROGUE=true}
 local CLOTH_CASTER = {PRIEST=true,MAGE=true,WARLOCK=true}
-local CLOTH_NONSTANDARD = {WARRIOR=true,ROGUE=true,HUNTER=true}
-local HYBRID_HEALER = {DRUID=true,SHAMAN=true,PALADIN=true}
+-- Default guide prioritises each class's intended body armour, NOT every
+-- armour type that the client permits it to equip. Ring, cloak, trinket and
+-- weapon slots are outside this preference rule. "Show all valid equipment"
+-- still exposes all proficiency-eligible, non-QA choices.
+local BODY_ARMOR = {Cloth=true,Leather=true,Mail=true,Plate=true}
+local CLOTH_CLASSES = {PRIEST=true,MAGE=true,WARLOCK=true}
+local LEATHER_CLASSES = {ROGUE=true,DRUID=true}
+local MAIL_TO_PLATE = {WARRIOR=true,PALADIN=true}
+local LEATHER_TO_MAIL = {HUNTER=true,SHAMAN=true}
+local EXEMPT_BODY_SLOTS = {Back=true,Shirt=true,Tabard=true}
+-- Add only verified item-specific exceptions here, never loose role exceptions.
+local ARMOR_EXCEPTIONS = {}
 local LOOKBACK = 5
 
 function GetGear:IsHardExcludedGear(gear)
@@ -49,25 +59,37 @@ function GetGear:ShouldDisplayGear(gear,classToken,mode)
     if mode~="earlier" and mode~="preview" and mode~="materials-all"
         and self:IsOlderGear(gear) then return false end
     if NOVELTY[gear.itemID] then return false end
-    if gear.sourceType=="Source not documented"
-        or gear.sourceType=="World drop (route unverified)" then return false end
+    -- Source uncertainty is not an equipment/proficiency veto. Unknown
+    -- world-drop or acquisition routes remain visible with their existing
+    -- unverified-source labels; users choose whether to pursue them.
+    -- This keeps the default catalogue class-wide rather than turning
+    -- research coverage into a silent recommendation whitelist.
 
     classToken=classToken or self.classToken
     if not classToken then return true end
     local armor=gear.armorType
     local role=gear.statRole
-
-    if armor=="Cloth" then
-        if CLOTH_NONSTANDARD[classToken] then return false end
-        if HYBRID_HEALER[classToken] and role~="spell"
-            and role~="mana" and role~="mixed" then return false end
-    elseif armor=="Leather" then
-        if classToken=="WARRIOR" and role~="physical"
-            and role~="mixed" then return false end
-        if classToken=="PALADIN" and role~="physical"
-            and role~="spell" and role~="mana" and role~="mixed" then
-            return false
-        end
+    -- Preview spans all levels independently of the current character:
+    -- reference each item's own target level so level-1 mail and level-40
+    -- plate can coexist in the same 1-60 class preview. Upcoming equipment
+    -- similarly uses its future target, not the player's present armour skill.
+    local armorLevel=(mode=="preview" or mode=="upcoming")
+        and (gear.targetLevel or gear.availableLevel)
+        or self.level or gear.targetLevel or gear.availableLevel
+    local preferred
+    if CLOTH_CLASSES[classToken] then
+        preferred="Cloth"
+    elseif LEATHER_CLASSES[classToken] then
+        preferred="Leather"
+    elseif MAIL_TO_PLATE[classToken] then
+        preferred=(armorLevel and armorLevel>=40) and "Plate" or "Mail"
+    elseif LEATHER_TO_MAIL[classToken] then
+        preferred=(armorLevel and armorLevel>=40) and "Mail" or "Leather"
+    end
+    if preferred and BODY_ARMOR[armor] and not EXEMPT_BODY_SLOTS[gear.slot]
+        and armor~=preferred and not (ARMOR_EXCEPTIONS[classToken]
+            and ARMOR_EXCEPTIONS[classToken][gear.itemID]) then
+        return false
     end
     if role=="spell" and NO_SPELL[classToken] then return false end
     if role=="mana" and NO_MANA[classToken] then return false end

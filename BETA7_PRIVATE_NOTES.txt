@@ -1,0 +1,43 @@
+GetGear v0.14.0 Beta 7 — PRIVATE TEST CANDIDATE, NOT A PUBLIC RELEASE
+========================================================================
+
+This is a development-data reconciliation of the existing Beta4 1–60
+class-equippable catalogue. The original public release remains v0.12.14.
+
+IMPORTANT
+- A candidate appearing in the equipment list is NOT proof it currently
+  drops, can be purchased, can be crafted, or can be obtained by Alliance.
+- The item-cache baseline predates launch (October 21, 2026).
+- New recipe input lists come from a dated Forever client recipe export
+  (October 31, 2026), not necessarily current trainer inventories.
+- Named bosses are client-reference associations, not verified loot rates.
+- Vendor and quest labels rely on a limited set of player-contributed
+  observations; check the live NPC, required reputation and quest eligibility.
+- "Required character level", "recipe learn minimum" and crafting skill
+  yellow/green/grey thresholds are different facts; never substitute one.
+
+TEST INSTALL (ONLY AFTER YOUR OWN BACKUP)
+1. Exit WoW Forever. Save your GetGear folder and GetGear SavedVariables.
+2. Replace only _forever_/Interface/AddOns/GetGear from the PRIVATE ZIP.
+3. Log in to a test character, reload UI and open /getgear. Verify no freeze.
+4. In the detailed guide compare several crafted items' reagents to the
+   *current game client* (especially 3480, 8203 and 250518).
+5. Check Veteran's Chain Belt (#250513): Stondry Darkhammer ACA plans,
+   Blacksmithing 45, four reagents and Bind on Pickup.
+6. Check Runed Copper Breastplate (#2864): world-drop plans (#2881),
+   Blacksmithing 55, not trainer learned.
+7. Check Golemguard Chest (#271098): Plunder loot in Hall of Thanes.
+8. On a level-13+ Warrior, confirm Ceremonial Leather Harness (#3313)
+   and other leather chest/leg/hand items do NOT appear in default Available
+   or Earlier Gear. Enable "Show all valid equipment" and confirm they
+   become available for manual browsing.
+9. Check Warrior/Paladin Mail under 40 and Plate at 40; Hunter/Shaman
+   Leather under 40 and Mail at 40. Test Preview around level 39/40.
+10. Re-check nine classes, levels 1–60, Preview, Earlier Gear, crafting
+   visibility, profession-recipe knowledge, materials and map navigation.
+11. If the source, drops, maps or levels disagree with the live client,
+   capture item ID, source NPC or quest ID, tooltip and character faction.
+12. Report any in-game Lua error and what action preceded it.
+
+DO NOT: merge to main, make a public release/tag or claim complete live
+validation on the strength of offline or GitHub Actions tests alone.

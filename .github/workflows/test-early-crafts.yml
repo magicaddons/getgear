@@ -69,6 +69,7 @@ jobs:
           sha256sum GetGear-v0.14.0-beta4-test-only.zip
           ls -lh GetGear-v0.14.0-beta4-test-only.zip
       - name: Verify exact Beta4 archive manifest and no unsafe file types
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
         shell: bash
         run: |
           set -euo pipefail
@@ -96,6 +97,7 @@ jobs:
           print('PASS: exact 16 Lua + 6 supporting files, no executables, symlinks, traversal or extra entries')
           PY
       - name: Antivirus scan of exact Beta4 ZIP and extracted files
+        if: github.event_name == 'pull_request' && github.head_ref == 'work/gear-1-60-expansion'
         shell: bash
         run: |
           set -euo pipefail
