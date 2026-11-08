@@ -1,4 +1,4 @@
-# GetGear integration checkpoint — 8 November 2026
+# GetGear unified development checkpoint — 9 November 2026
 
 This branch is the **only candidate for the next combined Beta**, not a public
 release. It starts from `work/acquisition-reconciliation-1-60` at
@@ -41,11 +41,50 @@ cases and module-load performance passed.
 Generated fallback provenance and counts:
 [BOE_FILTER_INDEX.md](source-audit-1-60/BOE_FILTER_INDEX.md).
 
+## Full acquisition reconciliation integrated
+
+[Pull request #7](https://github.com/magicaddons/getgear/pull/7) merged the complete
+[1–60 acquisition evidence register](source-audit-1-60/reconciliation-20261109/README.md)
+into this branch. Source-specific manual corrections and the two overlay
+filters remain unchanged.
+
+- **7,707 items / 1,252 crafted equipment recipes** cross-referenced by ID.
+- **1,075** additional, conservative displayed acquisition-source references,
+  with original confidence preserved; generic vendor/quest references are
+  never presented as confirmed player observations.
+- **577** old dungeon-associated records separated into **553 genuine
+  equipment drop objectives** and **24 crafted-equipment pattern sources**.
+- Among actual dungeon equipment: **386 published boss references**, **135
+  trash references**, and **32 still needing exact boss/trash or enemy
+  classification**. Only **13 item/NPC relationships** have joined evidence
+  from independently observed player installs. Boss/trash references are
+  useful directions, not live drop-rate promises.
+- **68 newly indexed high-level recipe books** are now linked to their
+  crafted output items. Published recipe sources point to **Aisarra Nightmeadow
+  (Mount Hyjal)** but live stock remains unverified, and some plans have
+  Guardians of Hyjal reputation, quest or slot-specialization gates.
+- **886 trainer-labelled recipes also have distinct pattern book IDs**;
+  both possible acquisition routes need independent checking, and the
+  existence of a book does not by itself contradict trainer learning.
+- Original ingredient lists, equipment roles, class masks and SavedVariables
+  remain unchanged. All nine classes and existing overlay-filtering regression
+  cases passed on [source integration CI](https://github.com/magicaddons/getgear/actions/runs/42488267084).
+
+### New reports
+
+[All sources and confidence levels](source-audit-1-60/reconciliation-20261109/all_items_reconciled.csv) ·
+[Dungeon equipment drops](source-audit-1-60/reconciliation-20261109/dungeon_equipment_drops.csv) ·
+[32 dungeon verification targets](source-audit-1-60/reconciliation-20261109/dungeon_source_followups.csv) ·
+[Recipe learning research](source-audit-1-60/reconciliation-20261109/recipes_reconciled.csv) ·
+[Optional in-game verification](source-audit-1-60/reconciliation-20261109/OPTIONAL_IN_GAME_CHECKS.md).
+
 ## Not yet claimed
 
-1. **Full acquisition reconciliation is not complete.** The audit contains
-   unresolved server-side loot and recipe-learning sources. Sources not
-   corroborated are labelled conservatively.
+1. **Comprehensive public-source reconciliation is complete, but live
+   acquisition verification is not.** The 32 ambiguous dungeon items and
+   954 pattern-book origins lack conclusive in-game evidence; all uncertain
+   sources remain explicitly labelled. Do not equate published loot-table
+   references with guaranteed live drops.
 2. **No in-client acceptance testing** of the combined branch yet. WoW's
    real item-info cache, SavedVariables upgrades and overlay layout must
    be exercised before proposing an installable ZIP.
@@ -53,9 +92,8 @@ Generated fallback provenance and counts:
    commits as of this checkpoint. Its intended behaviour is already
    implemented on THIS integration branch; avoid importing a later
    duplicate blindly.
-4. Separate work about class-specific spell/physical relevance may still
-   need reconciliation if another tab commits changes. Do not assume
-   this feature was included.
+4. The mixed-stat spell-power relevance fix **is included** and verified
+   on this unified branch. Do not import duplicate code from other tabs.
 
 ## Rules for concurrent sessions
 
