@@ -314,6 +314,12 @@ def main():
     assert len(reviewed)==len(reviewed_rows), "Duplicate reviewed recipe identity"
     provenance["reviewed_recipe_sources.json"]={"bytes":len(reviewed_bytes),
         "sha256":hashlib.sha256(reviewed_bytes).hexdigest()}
+    equipment_bytes=(REPORT/"reviewed_equipment_sources.json").read_bytes()
+    equipment_rows=json.loads(equipment_bytes)
+    reviewed_equipment={r["itemID"]:r for r in equipment_rows}
+    assert len(reviewed_equipment)==len(equipment_rows), "Duplicate reviewed equipment identity"
+    provenance["reviewed_equipment_sources.json"]={"bytes":len(equipment_bytes),
+        "sha256":hashlib.sha256(equipment_bytes).hexdigest()}
     play,play_entries,play_config=playfulls()
     fcache={r["itemId"]:r for r in data(CACHE_URL) if isinstance(r,dict) and isinstance(r.get("itemId"),int)}
     encounters=data(ENCOUNTER_URL).get("instances",{})
@@ -329,6 +335,7 @@ def main():
     for item in items:
         iid=int(item["itemID"])
         generated_hyjal_vendor_reference=False
+        generated_equipment_reference=False
         name=item["name"]
         cache=fcache.get(iid)
         if cache and norm(cache.get("name"))!=norm(name):
@@ -545,6 +552,7 @@ def main():
                 found=next((s for s in ps if s["type"] in wanted and s["npc"]
                             and s["zone"] and "(horde)" not in s["zone"].lower()),None)
                 if found:
+                    generated_equipment_reference=not observed
                     if found["type"]=="quest":
                         detail=("Quest: "+found["npc"]+" — "+found["zone"]
                                 +" (Forever reference; quest eligibility unverified)")
@@ -554,6 +562,17 @@ def main():
                     changes[iid]={"summary":detail,
                                   "confidence":"forever-community-reference",
                                   "url":PLAY_URL}
+        # Exact equipment/quest publication research is additive to the
+        # original item. Only supersede a generic hint generated above;
+        # preserve stronger evidence and all runtime manual instructions.
+        if iid in reviewed_equipment:
+            ref=reviewed_equipment[iid]
+            assert not recipe and name==ref["name"], ("Reviewed equipment identity drift",iid)
+            assert ref["liveVerified"] is False and "unverified" in ref["summary"]
+            if iid not in changes or generated_equipment_reference:
+                changes[iid]={"summary":ref["summary"],"confidence":ref["confidence"],
+                    "url":ref["sourceURL"],"equipmentReference":True,
+                    "details":ref.get("details","")}
         all_rows.append({
             "itemID":iid,"name":name,"level":item["level"],
             "existingSourceType":item["sourceType"],"existingConfidence":item["sourceEvidence"],
@@ -583,6 +602,7 @@ def main():
                   ",url="+lua_str(row.get("url",""))+
                   (",patternID="+str(row["patternID"]) if row.get("patternID") else "")+
                   (",recipeReference=true" if row.get("recipeReference") else "")+
+                  (",equipmentReference=true" if row.get("equipmentReference") else "")+
                   (",details="+lua_str(row["details"]) if row.get("details") else "")+
                   "},\n" for iid,row in sorted(changes.items()))
         + "}\n",encoding="utf8")

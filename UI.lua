@@ -284,7 +284,7 @@ local function Describe(gear, previewMode)
     local desc = (hasSource and (gear.source .. ": ") or "") .. (gear.instructions or "")
     if gear.notes and gear.notes ~= "" then desc = desc .. "\n" .. gear.notes end
     local research=gear.acquisitionResearch
-    if research and research.recipeReference and research.sourceSummary then
+    if research and (research.recipeReference or research.equipmentReference) and research.sourceSummary then
         desc=desc.."\n"..research.sourceSummary
         if research.details and research.details~="" then
             desc=desc.."\n"..research.details

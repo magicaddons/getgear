@@ -1,0 +1,205 @@
+{
+  "reviewedOn": "2026-11-09",
+  "liveVerified": false,
+  "sevenNewCommunityAssociations": [
+    {
+      "itemID": 10799,
+      "name": "Headspike",
+      "oldActor": "Atal'alarion",
+      "newCommunityActor": "Atal'alarion",
+      "retainedClientEncounters": "Atal'alarion",
+      "sourceURL": "https://playfulls.com/database",
+      "sourceRoutes": [
+        {
+          "type": "boss",
+          "npc": "Atal'alarion",
+          "zone": "Sunken Temple",
+          "path": "loot-tables/dungeons/sunken-temple",
+          "note": "loot-tables/dungeons/sunken-temple#boss-atalalarion",
+          "sourceRow": 6269,
+          "label": "Boss drop"
+        }
+      ],
+      "liveVerified": false
+    },
+    {
+      "itemID": 11631,
+      "name": "Stoneshell Guard",
+      "oldActor": "Lord Roccor",
+      "newCommunityActor": "Lord Roccor",
+      "retainedClientEncounters": "Lord Roccor",
+      "sourceURL": "https://playfulls.com/database",
+      "sourceRoutes": [
+        {
+          "type": "boss",
+          "npc": "Lord Roccor",
+          "zone": "Blackrock Depths",
+          "path": "loot-tables/dungeons/blackrock-depths",
+          "note": "loot-tables/dungeons/blackrock-depths#boss-lord-roccor",
+          "sourceRow": 6480,
+          "label": "Boss drop"
+        }
+      ],
+      "liveVerified": false
+    },
+    {
+      "itemID": 11747,
+      "name": "Flamestrider Robes",
+      "oldActor": "Pyromancer Loregrain",
+      "newCommunityActor": "Pyromancer Loregrain",
+      "retainedClientEncounters": "Pyromancer Loregrain",
+      "sourceURL": "https://playfulls.com/database",
+      "sourceRoutes": [
+        {
+          "type": "boss",
+          "npc": "Pyromancer Loregrain",
+          "zone": "Blackrock Depths",
+          "path": "loot-tables/dungeons/blackrock-depths",
+          "note": "loot-tables/dungeons/blackrock-depths#boss-pyromancer-loregrain",
+          "sourceRow": 6363,
+          "label": "Boss drop"
+        }
+      ],
+      "liveVerified": false
+    },
+    {
+      "itemID": 11750,
+      "name": "Kindling Stave",
+      "oldActor": "Pyromancer Loregrain",
+      "newCommunityActor": "Pyromancer Loregrain",
+      "retainedClientEncounters": "Pyromancer Loregrain",
+      "sourceURL": "https://playfulls.com/database",
+      "sourceRoutes": [
+        {
+          "type": "boss",
+          "npc": "Pyromancer Loregrain",
+          "zone": "Blackrock Depths",
+          "path": "loot-tables/dungeons/blackrock-depths",
+          "note": "loot-tables/dungeons/blackrock-depths#boss-pyromancer-loregrain",
+          "sourceRow": 6363,
+          "label": "Boss drop"
+        }
+      ],
+      "liveVerified": false
+    },
+    {
+      "itemID": 11765,
+      "name": "Pyremail Wristguards",
+      "oldActor": "Lord Incendius",
+      "newCommunityActor": "Lord Incendius",
+      "retainedClientEncounters": "Lord Incendius",
+      "sourceURL": "https://playfulls.com/database",
+      "sourceRoutes": [
+        {
+          "type": "boss",
+          "npc": "Lord Incendius",
+          "zone": "Blackrock Depths",
+          "path": "loot-tables/dungeons/blackrock-depths",
+          "note": "loot-tables/dungeons/blackrock-depths#boss-lord-incendius",
+          "sourceRow": 6502,
+          "label": "Boss drop"
+        }
+      ],
+      "liveVerified": false
+    },
+    {
+      "itemID": 11841,
+      "name": "Senior Designer's Pantaloons",
+      "oldActor": "Fineous Darkvire",
+      "newCommunityActor": "Fineous Darkvire",
+      "retainedClientEncounters": "Fineous Darkvire;General Angerforge",
+      "sourceURL": "https://playfulls.com/database",
+      "sourceRoutes": [
+        {
+          "type": "boss",
+          "npc": "Fineous Darkvire",
+          "zone": "Blackrock Depths",
+          "path": "loot-tables/dungeons/blackrock-depths",
+          "note": "loot-tables/dungeons/blackrock-depths#boss-fineous-darkvire",
+          "sourceRow": 6518,
+          "label": "Boss drop"
+        }
+      ],
+      "liveVerified": false
+    },
+    {
+      "itemID": 12243,
+      "name": "Smoldering Claw",
+      "oldActor": "Dreamscythe",
+      "newCommunityActor": "Hazzas",
+      "retainedClientEncounters": "Dreamscythe;Weaver;Hazzas;Morphaz",
+      "sourceURL": "https://playfulls.com/database",
+      "sourceRoutes": [
+        {
+          "type": "boss",
+          "npc": "Hazzas",
+          "zone": "Sunken Temple",
+          "path": "loot-tables/dungeons/sunken-temple",
+          "note": "loot-tables/dungeons/sunken-temple#boss-hazzas",
+          "sourceRow": 6268,
+          "label": "Boss drop"
+        }
+      ],
+      "liveVerified": false
+    }
+  ],
+  "smolderingClawPrimaryReference": {
+    "sourceURL": "https://www.wowhead.com/forever/item=12243/smoldering-claw",
+    "sha256": "367cc740888dcf21fc91a0341244cd7f3a0cc6a6c755648d7ed6db74a2f794b5",
+    "publishedEnemyIDs": [
+      {
+        "npcID": 5719,
+        "name": "Morphaz",
+        "locationIDs": [
+          1477
+        ]
+      },
+      {
+        "npcID": 5720,
+        "name": "Weaver",
+        "locationIDs": [
+          1477
+        ]
+      },
+      {
+        "npcID": 5721,
+        "name": "Dreamscythe",
+        "locationIDs": [
+          1477
+        ]
+      },
+      {
+        "npcID": 5722,
+        "name": "Hazzas",
+        "locationIDs": [
+          1477
+        ]
+      }
+    ]
+  },
+  "smolderingClawFinding": "Hazzas is one of four existing client encounter leads, not a contradictory source. Exact item page names all four. Original runtime source keeps all four; new generated hint stays published/live-unverified, no exclusive attribution.",
+  "newBookObservation": {
+    "gearID": 2317,
+    "bookID": 2409,
+    "spellID": 2169,
+    "relation": "dropped_by",
+    "npcID": 255964,
+    "npcName": "Fallen Necromancer",
+    "zone": "Ruins of Lordaeron",
+    "zoneBasis": "Exact NPC description, no usable map coordinates",
+    "installs": 3,
+    "lastSeen": "2026-11-08T07:09:56.000Z",
+    "npcURL": "https://www.wowhead.com/forever/npc=255964",
+    "npcPageSHA256": "436d96b299f190a615f153c7867b097ebb7a97e90607540f5ed279e81e40bc90",
+    "finding": "Exact NPC loot table independently includes book 2409; this NPC/zone was already present in reviewed runtime book details. No invented target name/pin or primary item confidence promotion; live-check queue retained."
+  },
+  "otherRefreshChanges": {
+    "EverlootTotalOld": 1127,
+    "EverlootTotalNew": 1274,
+    "catalogueObservedEdgeCountCellsChanged": 48,
+    "recipeObservedBookRelationshipsChanged": 1,
+    "bookSourceJSONChangesOtherwise": "13 source-row offsets only",
+    "PlayfullsItemCountOld": 23098,
+    "PlayfullsItemCountNew": 23147
+  }
+}

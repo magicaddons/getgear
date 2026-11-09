@@ -1132,6 +1132,46 @@ for _,id in ipairs({276538,276539,276540,276541}) do
     assert(a.details:find("disenchanting items from Hyjal Summit or Barrow Deeps",1,true))
 end
 
+-- Checkpoint 7B: detailed equipment quest routes are additive and distinct from recipe research.
+local reviewedQuestGear={5596,7001,16606,16607,217314,217315,263305,270027,281267,281269,281270,281271,281272,281273}
+for _,id in ipairs(reviewedQuestGear) do
+    local item=assert(addon.ItemCatalog[id])
+    local a=assert(item.acquisitionResearch)
+    assert(a.equipmentReference==true and not a.recipeReference)
+    assert(a.confidence=="published-forever-quest-equipment-reference")
+    assert(a.sourceSummary:find("unverified",1,true) and a.details:find("no current live acquisition confirmation",1,true))
+    assert(addon.AcquisitionEvidenceIndex[id].patternID==nil)
+end
+for _,id in ipairs({281269,281270,281271,281272,281273}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("Choose one of five",1,true) and d:find("#661446/#661448/#661449",1,true))
+    assert(d:find("ground objects, not enemies or vendors",1,true))
+    assert(not d:find("Scramble",1,true))
+end
+for _,id in ipairs({217314,217315}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("Scramble",1,true) and d:find("Alliance starts",1,true) and d:find("Horde starts",1,true))
+    assert(d:find("interactive objects, not NPCs",1,true))
+    assert(not d:find("Choose one of five",1,true))
+end
+assert(addon.ItemCatalog[16606].acquisitionResearch.details:find("Troll, Priest",1,true))
+assert(addon.ItemCatalog[16607].acquisitionResearch.details:find("Undead, Priest",1,true))
+assert(not addon.ItemCatalog[16606].acquisitionResearch.details:find("Undead, Priest",1,true))
+assert(addon.ItemCatalog[7001].acquisitionResearch.details:find("Alliance #1200",1,true)
+    and addon.ItemCatalog[7001].acquisitionResearch.details:find("Horde #6561",1,true))
+assert(addon.ItemCatalog[270027].acquisitionConfidence=="reported"
+    and addon.ItemCatalog[270027].source:find("seen by one player",1,true))
+assert(addon.ItemCatalog[5596].acquisitionResearch.details:find("not proof the complete chain is achievable at level 1",1,true))
+assert(addon.ItemCatalog[263305].acquisitionResearch.details:find("scripted confrontation",1,true))
+-- Fresh community listings cannot erase the existing multi-encounter source
+-- or promote a published item/NPC table into observed live equipment loot.
+local claw=assert(addon.ItemCatalog[12243])
+for _,name in ipairs({"Dreamscythe","Weaver","Hazzas","Morphaz"}) do
+    assert(claw.source:find(name,1,true))
+end
+assert(claw.acquisitionResearch.sourceSummary:find("live unverified",1,true)
+    and claw.acquisitionResearch.confidence~="forever-observed-npc")
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
