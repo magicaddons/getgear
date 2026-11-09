@@ -1078,6 +1078,33 @@ assert(addon.ItemCatalog[9366].recipePatternItemID==9367
     and addon.ItemCatalog[9366].acquisitionResearch.confidence=="published-forever-quest-book-reference")
 assert(not addon.ItemCatalog[217273].acquisitionResearch.sourceSummary:find("Hank the Hammer",1,true))
 
+-- Checkpoint 6U: recovered canonical book and exact spell identities, preserving uncertainty.
+local recoveredGenericBooks={{12610,12706},{12633,12711},{14128,14500},{14138,14501},{15095,15765},{15059,15771},{15062,15772},{22385,22388},{12420,12713},{12612,12714},{12640,12717},{13867,14504},{14130,14505},{14106,14506},{14139,14507},{15081,15774},{16007,16056},{12613,12718},{12614,12719},{12794,12837},{14112,14508},{14140,14509},{14146,14511},{15068,15779},{18405,18414},{18407,18415},{18408,18416},{18409,18417},{18504,18514},{18506,18515},{18508,18516},{21278,21548},{12790,12834},{12797,12836},{12784,12838},{20538,20546},{20537,20547},{20539,20548},{20549,20553},{20550,20554},{20551,20555},{22384,22390},{22383,22389},{18263,18265},{18168,18291},{18282,18292},{22194,22220},{22196,22222}}
+for _,r in ipairs(recoveredGenericBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.acquisitionResearch.sourceSummary:find("live unverified; non-exhaustive",1,true))
+    assert(item.acquisitionResearch.details:find("not drops of finished crafted gear",1,true))
+    assert(item.recipePatternItemID==r[2])
+end
+for _,id in ipairs({18405,18407,18408,18409,18504,18506,18508}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("object #179501",1,true) and d:find("Free Knot!",1,true)
+        and d:find("Gordok Shackle Key #18250",1,true))
+    assert(not d:find("Hermit Ortell",1,true))
+end
+for _,id in ipairs({20538,20537,20539,20549,20550,20551}) do
+    local d=assert(addon.ItemCatalog[id]).acquisitionResearch.details
+    assert(d:find("Hermit Ortell",1,true) and d:find("10 Encrypted Twilight Texts",1,true)
+        and d:find("Current delivery timing",1,true))
+    assert(not d:find("Free Knot!",1,true))
+end
+assert(addon.ItemCatalog[14112].acquisitionResearch.details:find("Winterspring",1,true)
+    and addon.ItemCatalog[14112].acquisitionResearch.details:find("fishing-table",1,true))
+assert(addon.ItemCatalog[12790].acquisitionResearch.details:find("Master Swordsmith",1,true))
+assert(addon.ItemCatalog[12784].acquisitionResearch.details:find("Master Axesmith",1,true))
+assert(not addon.ItemCatalog[12784].acquisitionResearch.details:find("Master Swordsmith",1,true))
+assert(addon.ItemCatalog[15095].acquisitionResearch.details:find("200 NPC rows and may be truncated",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
