@@ -1609,6 +1609,26 @@ end
 assert(addon.ItemCatalog[227062].acquisitionResearch.confidence=="published-pvp-vendor-reference-current-access-unverified",
     "Do not copy another seasonal ID's warning across the family")
 
+-- Checkpoint 8N: exact seasonal flags stay separate from absent purchase
+-- conditions, which never establish current rank-free access.
+local vendors8n=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/checkpoint8n_vendor_equipment.csv")):read("*a")
+local count8n,seasonalCount8n=0,0
+for id in vendors8n:gmatch("\n(%d+),") do
+    local a=addon.ItemCatalog[tonumber(id)].acquisitionResearch
+    assert(a.equipmentReference and a.sourceSummary:find("unverified",1,true) and not a.recipeReference)
+    if a.confidence=="published-forever-equipment-version-unconfirmed" then
+        seasonalCount8n=seasonalCount8n+1
+        assert(a.details:find("Matched merchant data does not override this version warning",1,true))
+    else
+        assert(a.confidence=="published-pvp-vendor-reference-current-access-unverified")
+    end
+    count8n=count8n+1
+end
+assert(count8n==100 and seasonalCount8n==28)
+assert(addon.ItemCatalog[227071].acquisitionResearch.confidence=="published-pvp-vendor-reference-current-access-unverified"
+    and addon.ItemCatalog[227074].acquisitionResearch.confidence=="published-forever-equipment-version-unconfirmed")
+assert(addon.ItemCatalog[227170].acquisitionResearch.details:find("no playerConditions and standing0",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),

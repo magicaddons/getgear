@@ -113,3 +113,7 @@ Full local and GitHub PASS: [42663990981](https://github.com/magicaddons/getgear
 ## Checkpoint 8M validated — next 8N
 
 Full local and GitHub PASS: [42665123374](https://github.com/magicaddons/getgear/actions/runs/42665123374), source `811035f8d8b6839067e82d38a6d090d51cf04f6f`; inspected direct bot/final validated HEAD `55bffb10c8717085b81a2b36cb9cc61309b4c7c1`. All14 PASS logs verified;24 modules/four reports. Bot changes only run timestamp/three response hashes; runtime/counts/reports unchanged. Equipment1,177/index2,857/display2,856/books759; crafts1,254/ingredients4,857. Remaining4,725; **next8N:first100 remaining level60 vendors** (227071 through227172), marked queue. Four exact version warnings and current purchase uncertainty retained. No release/main action.
+
+## Checkpoint 8N integrated — GitHub pending
+
+[Fourth100 level60 vendor cases](CHECKPOINT8N_LEVEL60_PVP_FOURTH100.md):100 exact joins/two unmapped NPCs;72 current-access-unverified references/28 exact version warnings, all corroborated by same-item seasonal/unconfirmed fields (not independent publisher claims). Shared8K policy reused without inferred ranks/currency/retirement. Full local PASS14/14,24 modules,four reports; GitHub PENDING. Equipment1,277/index2,957/display2,956/books759; crafts1,254/ingredients4,857 unchanged. All1,177 earlier entries retained;100 additive summaries only. Remaining4,625; next8O:first100 remaining level60 vendor IDs marked queue. No release/main action.
