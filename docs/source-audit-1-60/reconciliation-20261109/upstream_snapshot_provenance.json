@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8X Playfulls refresh;8O Everloot baseline retained",
-  "capturedUTC": "2026-11-09T23:41:21.370372+00:00",
+  "capturedForCheckpoint": "8X Playfulls/8Y Everloot exact edge refresh",
+  "capturedUTC": "2026-11-09T23:53:23.250818+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23283,
@@ -37,8 +37,8 @@
     "comparison": "Exact8O\u21928X:3 added IDs/0 removed/0 prior identity/source/offset/field10 changes; all3 outside7707 canonical, unnamed origins. Diagnostic only."
   },
   "everloot": {
-    "total": 1398,
-    "qualifyingItemRelationships": 1198,
+    "total": 1399,
+    "qualifyingItemRelationships": 1199,
     "attribution": {
       "licence": "CC BY-SA 4.0",
       "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -52,25 +52,25 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "9bf3a7d3155ba4d3687812b85b819ca55e2dc893eb29cce5b67647a42b2015f7",
-        "matchesCIResponseFingerprint": false,
-        "dataAsOf": "2026-11-09T21:40:15.722Z"
+        "sha256": "57d57d6f9619ebdb47c68c1317c09633f92575e5a289ae31504e873d86a17893",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T23:50:15.829Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103653,
-        "sha256": "8b02a12ed2dd1a8332859d90c02cbadfb6949f924554bf19fde00acbd6051ed8",
-        "matchesCIResponseFingerprint": false,
-        "dataAsOf": "2026-11-09T21:40:15.722Z"
+        "sha256": "732ee78f42f2de3b98d4d7897907f0de36c86de444d44db750514441e4125636",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T23:50:15.829Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
-        "bytes": 82267,
-        "sha256": "d766f84ed37d24041f9617f4da142109a8032c7353fbf1d35e487acea1088653",
-        "matchesCIResponseFingerprint": false,
-        "dataAsOf": "2026-11-09T21:40:15.722Z"
+        "bytes": 82469,
+        "sha256": "12777795f461cb79e557c668d400ff1b27897d45ec0c1d316694bb427a785290",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T23:50:15.829Z"
       }
     ],
-    "comparison": "Exact8N\u21928O snapshot diff:23 added edges/0 removed/49 install or lastSeen updates. Do not infer added identities from event timestamps. Separately fingerprinted capture, not assumed identical to CI responses."
+    "comparison": "Exact8O/8X\u21928Y:1 added reagent2320\u2192NPC5783 sold_by3install edge,4 existing counter/time updates,0 removed,0 selected76 edges. Separately fingerprinted read/dataAsOf matches CI; response hashes differ, no identical-response claim. No runtime/source-row/materials change."
   }
 }
