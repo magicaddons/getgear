@@ -1558,6 +1558,32 @@ assert(addon.ItemCatalog[12584].acquisitionResearch.details:find("#272693, a dif
 assert(addon.ItemCatalog[16437].acquisitionResearch.details:find("no usable map",1,true)
     and addon.ItemCatalog[16437].acquisitionResearch.details:find("not independently established current",1,true))
 
+-- Checkpoint 8L: rank-named and reputation-specific vendor references
+-- retain separate access confidence; missing shoulder versions stay gaps.
+local vendors8l=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/checkpoint8l_vendor_equipment.csv")):read("*a")
+local count8l=0
+for id in vendors8l:gmatch("\n(%d+),") do
+    local a=addon.ItemCatalog[tonumber(id)].acquisitionResearch
+    assert(a.equipmentReference and a.sourceSummary:find("unverified",1,true)
+        and a.confidence~="forever-observed-npc" and not a.recipeReference)
+    count8l=count8l+1
+end
+assert(count8l==100)
+for _,id in ipairs({18827,22843,23253}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-pvp-vendor-reference-current-access-unverified"
+        and a.details:find("do not establish coin-only, Neutral or rank-free access",1,true))
+end
+for _,id in ipairs({20056,20184}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-origin-unresolved"
+        and a.details:find("inventory omits this exact ID",1,true))
+end
+assert(addon.ItemCatalog[19099].acquisitionResearch.confidence=="published-forever-equipment-vendor-reference"
+    and addon.ItemCatalog[19099].acquisitionResearch.details:find("Frostwolf Clan - Revered",1,true))
+assert(addon.ItemCatalog[19321].acquisitionResearch.details:find("not both standings required",1,true))
+assert(addon.ItemCatalog[22651].acquisitionResearch.details:find("Warsong Outriders - Exalted",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
