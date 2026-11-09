@@ -1020,6 +1020,24 @@ assert(addon.ItemCatalog[22671].acquisitionResearch.sourceSummary:find("Revered 
 assert(not addon.ItemCatalog[22671].acquisitionResearch.sourceSummary:find("Argent Dawn",1,true),"Do not copy other Icebane book factions")
 assert(addon.ItemCatalog[13503].acquisitionResearch.details:find("Barkskin Burrow is the exact book-tooltip faction",1,true))
 
+-- Checkpoint 6R: book objects are not NPC drops; exact specialisations.
+local remainingDungeonBooks={{11811,11813},{15047,15730},{15046,15733},{15053,15749},{15088,15768},{15051,15770},{15085,15773},{15055,15775},{15090,15776},{15096,15777},{15052,15781},{14144,14495},{14154,14512},{14152,14513},{14153,14514},{11607,11611},{11606,11614},{11605,11615},{12796,12833},{12798,12835},{12783,12839},{4393,4415},{16004,16048},{18639,18658}}
+for _,r in ipairs(remainingDungeonBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    assert(item.acquisitionResearch.details:find("not drops of the finished crafted gear",1,true))
+    assert(item.acquisitionResearch.sourceSummary:find("live acquisition unverified",1,true))
+end
+assert(addon.ItemCatalog[11606].acquisitionResearch.details:find("lootable object #173232",1,true))
+assert(addon.ItemCatalog[11605].acquisitionResearch.details:find("lootable object #173234",1,true))
+assert(addon.ItemCatalog[11607].acquisitionResearch.details:find("Hammered Patron",1,true))
+assert(addon.ItemCatalog[12796].acquisitionResearch.details:find("Master Hammersmith",1,true))
+assert(addon.ItemCatalog[12798].acquisitionResearch.details:find("Master Axesmith",1,true))
+assert(addon.ItemCatalog[12783].acquisitionResearch.details:find("Weaponsmith",1,true))
+assert(addon.ItemCatalog[4393].acquisitionResearch.details:find("Kurzen Shadow Hunter",1,true))
+assert(not addon.ItemCatalog[11606].acquisitionResearch.details:find("lootable object #173234",1,true))
+assert(not addon.ItemCatalog[12783].acquisitionResearch.details:find("Master Axesmith",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
