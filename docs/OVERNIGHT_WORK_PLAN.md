@@ -46,3 +46,7 @@ Connect `magicaddons/getgear`, select the development branch, and configure a cl
 ## Resumed queue — checkpoint 8A
 
 [Continuation handover](source-audit-1-60/reconciliation-20261109/CONTINUATION.md) and [frozen exact-ID queue](source-audit-1-60/reconciliation-20261109/remaining_equipment_research_queue.csv) distinguish individual reviewed metadata from generic generated summaries. Next 8B: remaining 95 vendor cases at levels 1–30; then remaining lower-level quests, higher-level vendor/quest/undocumented cases, broad world-drop references and reputation exceptions. Completed recipe and dungeon work is not reopened absent stronger evidence. Every queue case needs a traceable researched disposition, including explicit unresolved/version/access exceptions; publication coverage never closes live verification.
+
+## Queue advance — checkpoints 8B/8C validated
+
+8B individually researched 95 remaining lower-level vendor items; full local/CI PASS 42616476682. 8C researched 34 remaining lower-level quest-family items; full local/CI PASS 42617823815, inspected bot 0cae6bb54173ad3a3d6296c5ae4a19adf5dca30f. Equipment registry 343, recipes 954, runtime summaries 2,178. Remaining exact queue 5,559; **next 8D: 71 vendor cases at catalogue levels 31–40**. Follow the latest continuation/progress entry over historical next-step text.
