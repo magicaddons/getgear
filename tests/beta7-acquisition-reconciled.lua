@@ -526,6 +526,30 @@ for _,id in ipairs({277050,277051,277052,277053}) do
     assert(addon.ItemCatalog[id].acquisitionResearch.sourceSummary:find("Friendly with Kirin Tor",1,true))
 end
 
+-- Checkpoint 6I: remaining low-level vendor books, per-seller locations,
+-- and an in-guide quest-supply reference remain informational.
+for _,r in ipairs({{3851,10858,130},{3849,12162,135},{277040,276976,175},
+                   {277041,276977,175},{277048,276984,175},{277049,276985,175},
+                   {4372,13309,120}}) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    assert(item.acquisitionResearch.sourceSummary:find(tostring(r[3]),1,true))
+    assert(describe(item,false):find("listed price",1,true)
+        and describe(item,false):find("live stock",1,true))
+end
+local maul=describe(addon.ItemCatalog[3851],false)
+assert(maul:find("Jannos Ironwill",1,true) and maul:find("Muuran",1,true)
+    and maul:find("Jazzrik",1,true) and maul:find("Badlands",1,true))
+assert(describe(addon.ItemCatalog[4372],false):find("Fradd Swiftgear",1,true)
+    and describe(addon.ItemCatalog[4372],false):find("Jinky Twizzlefixxit",1,true))
+assert(describe(addon.ItemCatalog[7915],false):find("Related quest supply: Solid Iron Maul plans",1,true))
+for _,id in ipairs({277040,277041}) do
+    assert(addon.ItemCatalog[id].acquisitionResearch.sourceSummary:find("Friendly with Earthen Ring",1,true))
+end
+for _,id in ipairs({277048,277049}) do
+    assert(addon.ItemCatalog[id].acquisitionResearch.sourceSummary:find("Friendly with Kirin Tor",1,true))
+end
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")

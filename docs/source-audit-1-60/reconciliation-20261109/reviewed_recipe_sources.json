@@ -5234,7 +5234,7 @@
     "liveVerified": false,
     "reviewedOn": "2026-11-09",
     "summary": "Plans: Barbaric Iron Helm (#7980), Blacksmithing 150; quest references: Horde: Horns of Frenzy (#2754) from Orokk Omosh, Orgrimmar; published quest minimum level 32 (published; current availability/prerequisites unverified).",
-    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nHorns of Frenzy (#2754): start Orokk Omosh, Orgrimmar; turn in to Orokk Omosh, Orgrimmar. Published reward is this book; Horde. Published minimum quest level 32; this is separate from equipment level and book-learning skill. Published quest classes: Warrior, Hunter, Druid (verify access; gear eligibility unchanged). Deliver 2 Solid Iron Mauls, 2 Silvered Bronze Boots and 2 Silvered Bronze Gauntlets. Current quest availability and prerequisite chain remain unverified.",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nHorns of Frenzy (#2754): start Orokk Omosh, Orgrimmar; turn in to Orokk Omosh, Orgrimmar. Published reward is this book; Horde. Published minimum quest level 32; this is separate from equipment level and book-learning skill. Published quest classes: Warrior, Hunter, Druid (verify access; gear eligibility unchanged). Deliver 2 Solid Iron Mauls, 2 Silvered Bronze Boots and 2 Silvered Bronze Gauntlets. Current quest availability and prerequisite chain remain unverified.\nRelated quest supply: Solid Iron Maul plans (#10858, crafted item #3851) have published sellers Jannos Ironwill in Arathi Highlands, Muuran in Desolace and Jazzrik in Badlands. Their stock/access remains unverified; these are supplies for the book quest, not extra ingredients added to the crafted helm.",
     "bookURL": "https://www.wowhead.com/forever/item=7980/plans-barbaric-iron-helm",
     "questReferences": [
       {
@@ -5281,7 +5281,15 @@
     "sourceSHA256": {
       "https://www.wowhead.com/forever/item=7980&xml": "c3bf34481b4c9e480ec8798421d9b8f10949950e03e12e3830dca5f21164c0f4",
       "https://www.wowhead.com/forever/item=7980": "0397dda2c1023fc5192115b593b566eeb2da66aae8f8c696c6e8a3e8c2f6e2d6"
-    }
+    },
+    "relatedSupplySources": [
+      {
+        "itemID": 3851,
+        "bookItemID": 10858,
+        "sourceURL": "https://www.wowhead.com/forever/item=10858",
+        "liveVerified": false
+      }
+    ]
   },
   {
     "itemID": 277672,
@@ -8758,6 +8766,626 @@
       "faction": "Kirin Tor",
       "standing": "Friendly",
       "liveVerified": false
+    }
+  },
+  {
+    "itemID": 3851,
+    "name": "Solid Iron Maul",
+    "bookItemID": 10858,
+    "spellID": 3494,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 130,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Solid Iron Maul (#10858), Blacksmithing 130; vendor references: Jannos Ironwill \u2014 Arathi Highlands; Muuran \u2014 Desolace; Jazzrik \u2014 Badlands (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nJannos Ironwill (NPC 1471), Arathi Highlands; listed price 31s 57c; limited-stock table reference. Arathi Highlands: published map x 46\u201346, y 47.4\u201347.6. Published listing/map only; live stock, discounts and access unverified.\nMuuran (NPC 8878), Desolace; listed price 31s 57c; stock quantity unverified. Desolace: published map x 55.6\u201355.6, y 56.4\u201356.6. Published listing/map only; live stock, discounts and access unverified.\nJazzrik (NPC 9179), Badlands; listed price 30s ; limited-stock table reference. Badlands: published map x 42.4\u201342.6, y 52.4\u201352.6. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=10858/plans-solid-iron-maul",
+    "vendorEvidence": [
+      {
+        "npcID": 1471,
+        "name": "Jannos Ironwill",
+        "zoneIDs": [
+          45
+        ],
+        "zone": "Arathi Highlands",
+        "cost": [
+          [
+            3157
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=10858",
+        "npcURL": "https://www.wowhead.com/forever/npc=1471",
+        "npcPageSHA256": "4946cc49a1fd832a1ef6e30fe28d71676be5b47f680e2ce28b79f4148f9a8e51",
+        "mapReference": {
+          "45": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  46,
+                  47.4
+                ],
+                [
+                  46,
+                  47.6
+                ]
+              ],
+              "uiMapId": 1417,
+              "uiMapName": "Arathi Highlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 8878,
+        "name": "Muuran",
+        "zoneIDs": [
+          405
+        ],
+        "zone": "Desolace",
+        "cost": [
+          [
+            3157
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=10858",
+        "npcURL": "https://www.wowhead.com/forever/npc=8878",
+        "npcPageSHA256": "6ef496bfc4ebba9cb7cd52d5628862bd1038b628a1d09e48c22a624fbd14974d",
+        "mapReference": {
+          "405": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  55.6,
+                  56.4
+                ],
+                [
+                  55.6,
+                  56.6
+                ]
+              ],
+              "uiMapId": 1443,
+              "uiMapName": "Desolace"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 9179,
+        "name": "Jazzrik",
+        "zoneIDs": [
+          3
+        ],
+        "zone": "Badlands",
+        "cost": [
+          [
+            3000
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=10858",
+        "npcURL": "https://www.wowhead.com/forever/npc=9179",
+        "npcPageSHA256": "3863165df47e099641d8c742a47a83733827f19817865199d8a4f94fa9b8ba3c",
+        "mapReference": {
+          "3": [
+            {
+              "count": 4,
+              "coords": [
+                [
+                  42.4,
+                  52.4
+                ],
+                [
+                  42.4,
+                  52.6
+                ],
+                [
+                  42.6,
+                  52.4
+                ],
+                [
+                  42.6,
+                  52.6
+                ]
+              ],
+              "uiMapId": 1418,
+              "uiMapName": "Badlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=10858&xml": "7df6c3e68d56f57cc59bb00b75ffd24a4028b110ed1526424999b0d4058a0c45",
+      "https://www.wowhead.com/forever/item=10858": "4f808476eeb6ff1ee7a2eaa4219f113298c1145dc3339ec8e181f7a570585113"
+    }
+  },
+  {
+    "itemID": 3849,
+    "name": "Hardened Iron Shortsword",
+    "bookItemID": 12162,
+    "spellID": 3492,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 135,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Hardened Iron Shortsword (#12162), Blacksmithing 135; vendor references: Jutak \u2014 Stranglethorn Vale; Sumi \u2014 Orgrimmar; Kaita Deepforge \u2014 Stormwind City (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nJutak (NPC 2843), Stranglethorn Vale; listed price 31s 57c; stock quantity unverified. Stranglethorn Vale: published map x 27.4\u201327.4, y 77.4\u201377.4. Published listing/map only; live stock, discounts and access unverified.\nSumi (NPC 3356), Orgrimmar; listed price 30s ; limited-stock table reference. Orgrimmar: published map x 82.4\u201382.6, y 23.4\u201323.8. Published listing/map only; live stock, discounts and access unverified.\nKaita Deepforge (NPC 5512), Stormwind City; listed price 31s 57c; limited-stock table reference. Stormwind City: published map x 56.4\u201363.4, y 16.2\u201337.6. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=12162/plans-hardened-iron-shortsword",
+    "vendorEvidence": [
+      {
+        "npcID": 2843,
+        "name": "Jutak",
+        "zoneIDs": [
+          33
+        ],
+        "zone": "Stranglethorn Vale",
+        "cost": [
+          [
+            3157
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=12162",
+        "npcURL": "https://www.wowhead.com/forever/npc=2843",
+        "npcPageSHA256": "9ea749eca3f770bd3fc06636810b331e67322743aa096ad4e7d66d80cc16c167",
+        "mapReference": {
+          "33": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  27.4,
+                  77.4
+                ]
+              ],
+              "uiMapId": 1434,
+              "uiMapName": "Stranglethorn Vale"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3356,
+        "name": "Sumi",
+        "zoneIDs": [
+          1637
+        ],
+        "zone": "Orgrimmar",
+        "cost": [
+          [
+            3000
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=12162",
+        "npcURL": "https://www.wowhead.com/forever/npc=3356",
+        "npcPageSHA256": "7fd1446c35707cff26c76e966bdcdac2e5f5bfdf162b56bc283bf562d69621c7",
+        "mapReference": {
+          "1637": [
+            {
+              "count": 3,
+              "coords": [
+                [
+                  82.4,
+                  23.4
+                ],
+                [
+                  82.4,
+                  23.8
+                ],
+                [
+                  82.6,
+                  23.8
+                ]
+              ],
+              "uiMapId": 1454,
+              "uiMapName": "Orgrimmar"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 5512,
+        "name": "Kaita Deepforge",
+        "zoneIDs": [
+          1519
+        ],
+        "zone": "Stormwind City",
+        "cost": [
+          [
+            3157
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=12162",
+        "npcURL": "https://www.wowhead.com/forever/npc=5512",
+        "npcPageSHA256": "d7c76d95b67bf081484655a10b8afbc078c77110609c27e9b4046356c977f9be",
+        "mapReference": {
+          "1519": [
+            {
+              "count": 6,
+              "coords": [
+                [
+                  56.4,
+                  16.2
+                ],
+                [
+                  56.4,
+                  17
+                ],
+                [
+                  56.6,
+                  17
+                ],
+                [
+                  56.8,
+                  16.4
+                ],
+                [
+                  63.2,
+                  37.4
+                ],
+                [
+                  63.4,
+                  37.6
+                ]
+              ],
+              "uiMapId": 1453,
+              "uiMapName": "Stormwind City"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12162&xml": "a49297957e950e970cbc084653c8e2c9cc4f963a507ecb7a8b43a643060f3fd9",
+      "https://www.wowhead.com/forever/item=12162": "f7ded77fc537986cc894dc7904a135874ca14460bae67b1ed1fdea7f7a8e2b97"
+    }
+  },
+  {
+    "itemID": 277040,
+    "name": "Cloudy Skyforged Helm",
+    "bookItemID": 276976,
+    "spellID": 1301526,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Cloudy Skyforged Helm (#276976), Blacksmithing 175; vendor references: Sutara Plainstalker \u2014 Mulgore (published; live stock/access unverified). Published requirement: Friendly with Earthen Ring.",
+    "details": "Published book vendor references (live stock/access unverified):\nSutara Plainstalker (NPC 264078), Mulgore; listed price 10g ; stock quantity unverified. Mulgore: published map x 34.4\u201334.6, y 22.8\u201322.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276976/plans-cloudy-skyforged-helm",
+    "vendorEvidence": [
+      {
+        "npcID": 264078,
+        "name": "Sutara Plainstalker",
+        "zoneIDs": [
+          215
+        ],
+        "zone": "Mulgore",
+        "cost": [
+          [
+            100000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276976",
+        "npcURL": "https://www.wowhead.com/forever/npc=264078",
+        "npcPageSHA256": "5aad06484223216eb0af31b20aec6b4bc93cbce604f90fb13237b3028179474e",
+        "mapReference": {
+          "215": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.6,
+                  22.8
+                ]
+              ],
+              "uiMapId": 1412,
+              "uiMapName": "Mulgore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276976&xml": "d9c5cf2213f52534915ee8c62d4a51c442e1aa7a37efe986c66d1715b0192559",
+      "https://www.wowhead.com/forever/item=276976": "bf236d31fc6510e791c7b840affe98e2a87b9c2b3e7c81288b733238abf6160d"
+    },
+    "purchaseGate": {
+      "factionID": 2787,
+      "faction": "Earthen Ring",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277041,
+    "name": "Cloudy Skyforged Pauldrons",
+    "bookItemID": 276977,
+    "spellID": 1301527,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Cloudy Skyforged Pauldrons (#276977), Blacksmithing 175; vendor references: Sutara Plainstalker \u2014 Mulgore (published; live stock/access unverified). Published requirement: Friendly with Earthen Ring.",
+    "details": "Published book vendor references (live stock/access unverified):\nSutara Plainstalker (NPC 264078), Mulgore; listed price 10g ; stock quantity unverified. Mulgore: published map x 34.4\u201334.6, y 22.8\u201322.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276977/plans-cloudy-skyforged-pauldrons",
+    "vendorEvidence": [
+      {
+        "npcID": 264078,
+        "name": "Sutara Plainstalker",
+        "zoneIDs": [
+          215
+        ],
+        "zone": "Mulgore",
+        "cost": [
+          [
+            100000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276977",
+        "npcURL": "https://www.wowhead.com/forever/npc=264078",
+        "npcPageSHA256": "5aad06484223216eb0af31b20aec6b4bc93cbce604f90fb13237b3028179474e",
+        "mapReference": {
+          "215": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.6,
+                  22.8
+                ]
+              ],
+              "uiMapId": 1412,
+              "uiMapName": "Mulgore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276977&xml": "49c8f72ba07b9613b1068f77e49cc13ededfe419fe2feed1788f0fda69a5599a",
+      "https://www.wowhead.com/forever/item=276977": "e4c094261d546506c5d9ae12315f0e8008d7f223e4eeaeddf0dbec2a6e21c03a"
+    },
+    "purchaseGate": {
+      "factionID": 2787,
+      "faction": "Earthen Ring",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277048,
+    "name": "Azure Skyforged Helm",
+    "bookItemID": 276984,
+    "spellID": 1301534,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Azure Skyforged Helm (#276984), Blacksmithing 175; vendor references: Archmage Alvareaux \u2014 Alterac Mountains (published; live stock/access unverified). Published requirement: Friendly with Kirin Tor.",
+    "details": "Published book vendor references (live stock/access unverified):\nArchmage Alvareaux (NPC 32287), Alterac Mountains; listed price 10g 52s 63c; stock quantity unverified. Alterac Mountains: published map x 14\u201314, y 63.2\u201363.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276984/plans-azure-skyforged-helm",
+    "vendorEvidence": [
+      {
+        "npcID": 32287,
+        "name": "Archmage Alvareaux",
+        "zoneIDs": [
+          36
+        ],
+        "zone": "Alterac Mountains",
+        "cost": [
+          [
+            105263
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276984",
+        "npcURL": "https://www.wowhead.com/forever/npc=32287",
+        "npcPageSHA256": "7bd84a01034c4850e308f7891838c2184107545735807e5f24ae9e4e19fd5759",
+        "mapReference": {
+          "36": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  14,
+                  63.2
+                ]
+              ],
+              "uiMapId": 1416,
+              "uiMapName": "Alterac Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276984&xml": "b1b0255a70ea23c394658703d8b52d52920f7005810e664ff17800857015ee65",
+      "https://www.wowhead.com/forever/item=276984": "a4267fafaf8f45db9dd987a5999ebf66589db9f6487009ce35d1d82f08c5f3a5"
+    },
+    "purchaseGate": {
+      "factionID": 2740,
+      "faction": "Kirin Tor",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277049,
+    "name": "Azure Skyforged Pauldrons",
+    "bookItemID": 276985,
+    "spellID": 1301535,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Azure Skyforged Pauldrons (#276985), Blacksmithing 175; vendor references: Archmage Alvareaux \u2014 Alterac Mountains (published; live stock/access unverified). Published requirement: Friendly with Kirin Tor.",
+    "details": "Published book vendor references (live stock/access unverified):\nArchmage Alvareaux (NPC 32287), Alterac Mountains; listed price 10g 52s 63c; stock quantity unverified. Alterac Mountains: published map x 14\u201314, y 63.2\u201363.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276985/plans-azure-skyforged-pauldrons",
+    "vendorEvidence": [
+      {
+        "npcID": 32287,
+        "name": "Archmage Alvareaux",
+        "zoneIDs": [
+          36
+        ],
+        "zone": "Alterac Mountains",
+        "cost": [
+          [
+            105263
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276985",
+        "npcURL": "https://www.wowhead.com/forever/npc=32287",
+        "npcPageSHA256": "7bd84a01034c4850e308f7891838c2184107545735807e5f24ae9e4e19fd5759",
+        "mapReference": {
+          "36": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  14,
+                  63.2
+                ]
+              ],
+              "uiMapId": 1416,
+              "uiMapName": "Alterac Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276985&xml": "bd8e82c39477405a630b7c231320935b8baa2ff2a0050b0d1afecb66acdd36b4",
+      "https://www.wowhead.com/forever/item=276985": "6f8adf893a55132e5824dcb5a4a8ae77594c67c978cc4d3afe06e950c6b0726f"
+    },
+    "purchaseGate": {
+      "factionID": 2740,
+      "faction": "Kirin Tor",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 4372,
+    "name": "Lovingly Crafted Boomstick",
+    "bookItemID": 13309,
+    "spellID": 3939,
+    "profession": "Engineering",
+    "bookLearningSkill": 120,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Schematic: Lovingly Crafted Boomstick (#13309), Engineering 120; vendor references: Fradd Swiftgear \u2014 Wetlands; Jinky Twizzlefixxit \u2014 Thousand Needles (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nFradd Swiftgear (NPC 2682), Wetlands; listed price 10s 52c; stock quantity unverified. Wetlands: published map x 26.2\u201326.4, y 25.4\u201325.8. Published listing/map only; live stock, discounts and access unverified.\nJinky Twizzlefixxit (NPC 6730), Thousand Needles; listed price 10s ; stock quantity unverified. Thousand Needles: published map x 77.6\u201377.6, y 77.8\u201377.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=13309/schematic-lovingly-crafted-boomstick",
+    "vendorEvidence": [
+      {
+        "npcID": 2682,
+        "name": "Fradd Swiftgear",
+        "zoneIDs": [
+          11
+        ],
+        "zone": "Wetlands",
+        "cost": [
+          [
+            1052
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=13309",
+        "npcURL": "https://www.wowhead.com/forever/npc=2682",
+        "npcPageSHA256": "944f22250ccb0a155b31f341bcd6b995c2a3f6d6f168e80dcfefe448cf66a5d9",
+        "mapReference": {
+          "11": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  26.2,
+                  25.4
+                ],
+                [
+                  26.4,
+                  25.8
+                ]
+              ],
+              "uiMapId": 1437,
+              "uiMapName": "Wetlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 6730,
+        "name": "Jinky Twizzlefixxit",
+        "zoneIDs": [
+          400
+        ],
+        "zone": "Thousand Needles",
+        "cost": [
+          [
+            1000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=13309",
+        "npcURL": "https://www.wowhead.com/forever/npc=6730",
+        "npcPageSHA256": "7e7933015e73732b4b515ecd37a535f6392db6dadb53d23a09bdfc954e951155",
+        "mapReference": {
+          "400": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  77.6,
+                  77.8
+                ]
+              ],
+              "uiMapId": 1441,
+              "uiMapName": "Thousand Needles"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=13309&xml": "ba87e4192691a1245b9889b38ef997f9860f9cd0aca125e86358e8f9e286c9f1",
+      "https://www.wowhead.com/forever/item=13309": "c695874f685d11c3687be13df0820983fd1114d23ad7907365e1a046550e35a2"
     }
   }
 ]
