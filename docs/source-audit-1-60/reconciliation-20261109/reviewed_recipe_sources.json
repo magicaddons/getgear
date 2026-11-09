@@ -6705,5 +6705,2059 @@
       "https://www.wowhead.com/forever/item=215370&xml": "69b3b221a62e1e3b6e8cd77c5c95419634954c35a1f0778741d1cb486eca3100",
       "https://www.wowhead.com/forever/item=215370": "be7d71ce8d3b2d1f92c17bb63cb7f98e4cc3c50b7c003704f9d5dd86e5b328dd"
     }
+  },
+  {
+    "itemID": 5780,
+    "name": "Murloc Scale Belt",
+    "bookItemID": 5786,
+    "spellID": 6702,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 65,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Murloc Scale Belt (#5786), Leatherworking 65; vendor references: Gina MacGregor \u2014 Westfall; Andrew Hilbert \u2014 Silverpine Forest; Mavralyn \u2014 Darkshore (published; live stock/access unverified). Also published book-drop leads: The Deadmines, The Barrens (live unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nGina MacGregor (NPC 843), Westfall; listed price 5s 78c; limited-stock table reference. Westfall: published map x 57.4\u201357.6, y 54\u201354. Published listing/map only; live stock, discounts and access unverified.\nAndrew Hilbert (NPC 3556), Silverpine Forest; listed price 5s 78c; stock quantity unverified. Silverpine Forest: published map x 43.2\u201343.2, y 40.6\u201340.6. Published listing/map only; live stock, discounts and access unverified.\nMavralyn (NPC 4186), Darkshore; listed price 5s 78c; limited-stock table reference. Darkshore: published map x 37\u201337, y 41.2\u201341.2. Published listing/map only; live stock, discounts and access unverified.\nPublished book-drop references (may retain historical data; live unverified; no rate claim):\nThe Deadmines: Defias Squallshaper.\nThe Barrens: Theramore Marine.",
+    "bookURL": "https://www.wowhead.com/forever/item=5786/pattern-murloc-scale-belt",
+    "vendorEvidence": [
+      {
+        "npcID": 843,
+        "name": "Gina MacGregor",
+        "zoneIDs": [
+          40
+        ],
+        "zone": "Westfall",
+        "cost": [
+          [
+            578
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5786",
+        "npcURL": "https://www.wowhead.com/forever/npc=843",
+        "npcPageSHA256": "ea4084d39f8f6e712cf0805f8709a00fee393b591086cceafe63433dbdae089e",
+        "mapReference": {
+          "40": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  57.4,
+                  54
+                ],
+                [
+                  57.6,
+                  54
+                ]
+              ],
+              "uiMapId": 1436,
+              "uiMapName": "Westfall"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3556,
+        "name": "Andrew Hilbert",
+        "zoneIDs": [
+          130
+        ],
+        "zone": "Silverpine Forest",
+        "cost": [
+          [
+            578
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5786",
+        "npcURL": "https://www.wowhead.com/forever/npc=3556",
+        "npcPageSHA256": "523f2c2195b50f83e18c41a637211a4604858cf730d463f8e9c686497e876548",
+        "mapReference": {
+          "130": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  43.2,
+                  40.6
+                ]
+              ],
+              "uiMapId": 1421,
+              "uiMapName": "Silverpine Forest"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 4186,
+        "name": "Mavralyn",
+        "zoneIDs": [
+          148
+        ],
+        "zone": "Darkshore",
+        "cost": [
+          [
+            578
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5786",
+        "npcURL": "https://www.wowhead.com/forever/npc=4186",
+        "npcPageSHA256": "92cd7f71d5ecfe59da43f34b520e39c0eabb219c388d6fecfbd5b90b1cbcb57a",
+        "mapReference": {
+          "148": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  37,
+                  41.2
+                ]
+              ],
+              "uiMapId": 1439,
+              "uiMapName": "Darkshore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=5786&xml": "407c57cf259c45b31fadf9d2e4968d6bb445c3095855ce253e7f51af8a34b27f",
+      "https://www.wowhead.com/forever/item=5786": "6ccf21cb2284d2eaa168575901392330c7f4815dc5d5eb08c12846ddc0440d70"
+    },
+    "dropReferences": [
+      {
+        "npcID": 1732,
+        "name": "Defias Squallshaper",
+        "zoneID": 1581,
+        "zone": "The Deadmines",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      },
+      {
+        "npcID": 3385,
+        "name": "Theramore Marine",
+        "zoneID": 17,
+        "zone": "The Barrens",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      }
+    ]
+  },
+  {
+    "itemID": 5781,
+    "name": "Murloc Scale Breastplate",
+    "bookItemID": 5787,
+    "spellID": 6703,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 70,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Murloc Scale Breastplate (#5787), Leatherworking 70; vendor references: Gina MacGregor \u2014 Westfall; Andrew Hilbert \u2014 Silverpine Forest; Mavralyn \u2014 Darkshore (published; live stock/access unverified). Also published book-drop leads: The Deadmines, The Barrens (live unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nGina MacGregor (NPC 843), Westfall; listed price 6s 31c; limited-stock table reference. Westfall: published map x 57.4\u201357.6, y 54\u201354. Published listing/map only; live stock, discounts and access unverified.\nAndrew Hilbert (NPC 3556), Silverpine Forest; listed price 6s 31c; stock quantity unverified. Silverpine Forest: published map x 43.2\u201343.2, y 40.6\u201340.6. Published listing/map only; live stock, discounts and access unverified.\nMavralyn (NPC 4186), Darkshore; listed price 6s 31c; limited-stock table reference. Darkshore: published map x 37\u201337, y 41.2\u201341.2. Published listing/map only; live stock, discounts and access unverified.\nPublished book-drop references (may retain historical data; live unverified; no rate claim):\nThe Deadmines: Defias Pirate.\nThe Barrens: Theramore Preserver.",
+    "bookURL": "https://www.wowhead.com/forever/item=5787/pattern-murloc-scale-breastplate",
+    "vendorEvidence": [
+      {
+        "npcID": 843,
+        "name": "Gina MacGregor",
+        "zoneIDs": [
+          40
+        ],
+        "zone": "Westfall",
+        "cost": [
+          [
+            631
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5787",
+        "npcURL": "https://www.wowhead.com/forever/npc=843",
+        "npcPageSHA256": "ea4084d39f8f6e712cf0805f8709a00fee393b591086cceafe63433dbdae089e",
+        "mapReference": {
+          "40": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  57.4,
+                  54
+                ],
+                [
+                  57.6,
+                  54
+                ]
+              ],
+              "uiMapId": 1436,
+              "uiMapName": "Westfall"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3556,
+        "name": "Andrew Hilbert",
+        "zoneIDs": [
+          130
+        ],
+        "zone": "Silverpine Forest",
+        "cost": [
+          [
+            631
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5787",
+        "npcURL": "https://www.wowhead.com/forever/npc=3556",
+        "npcPageSHA256": "523f2c2195b50f83e18c41a637211a4604858cf730d463f8e9c686497e876548",
+        "mapReference": {
+          "130": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  43.2,
+                  40.6
+                ]
+              ],
+              "uiMapId": 1421,
+              "uiMapName": "Silverpine Forest"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 4186,
+        "name": "Mavralyn",
+        "zoneIDs": [
+          148
+        ],
+        "zone": "Darkshore",
+        "cost": [
+          [
+            631
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5787",
+        "npcURL": "https://www.wowhead.com/forever/npc=4186",
+        "npcPageSHA256": "92cd7f71d5ecfe59da43f34b520e39c0eabb219c388d6fecfbd5b90b1cbcb57a",
+        "mapReference": {
+          "148": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  37,
+                  41.2
+                ]
+              ],
+              "uiMapId": 1439,
+              "uiMapName": "Darkshore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=5787&xml": "cfb2c4d0f6e71a26aeb8b60dfd12651623937e17b6ddee3af5c49627dcf965e2",
+      "https://www.wowhead.com/forever/item=5787": "7e666555ae63372368f691ffdfce07926dba64b01ff9cdf7a159e85c10c991ab"
+    },
+    "dropReferences": [
+      {
+        "npcID": 657,
+        "name": "Defias Pirate",
+        "zoneID": 1581,
+        "zone": "The Deadmines",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      },
+      {
+        "npcID": 3386,
+        "name": "Theramore Preserver",
+        "zoneID": 17,
+        "zone": "The Barrens",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      }
+    ]
+  },
+  {
+    "itemID": 5782,
+    "name": "Thick Murloc Armor",
+    "bookItemID": 5788,
+    "spellID": 6704,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 145,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Thick Murloc Armor (#5788), Leatherworking 145; vendor references: Micha Yance \u2014 Hillsbrad Foothills; Christoph Jeffcoat \u2014 Hillsbrad Foothills; Blixrez Goodstitch \u2014 Stranglethorn Vale (published; live stock/access unverified). Also published book-drop leads: Stranglethorn Vale, Wetlands (live unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nMicha Yance (NPC 2381), Hillsbrad Foothills; listed price 6s 84c; stock quantity unverified. Hillsbrad Foothills: published map x 49\u201349, y 55\u201355. Published listing/map only; live stock, discounts and access unverified.\nChristoph Jeffcoat (NPC 2393), Hillsbrad Foothills; listed price 6s 84c; stock quantity unverified. Hillsbrad Foothills: published map x 62.2\u201362.2, y 19\u201319. Published listing/map only; live stock, discounts and access unverified.\nBlixrez Goodstitch (NPC 2846), Stranglethorn Vale; listed price 6s 50c; limited-stock table reference. Stranglethorn Vale: published map x 28.2\u201328.2, y 77.4\u201377.6. Published listing/map only; live stock, discounts and access unverified.\nPublished book-drop references (may retain historical data; live unverified; no rate claim):\nStranglethorn Vale: Kurzen Commando.\nWetlands: Captain Halyndor.",
+    "bookURL": "https://www.wowhead.com/forever/item=5788/pattern-thick-murloc-armor",
+    "vendorEvidence": [
+      {
+        "npcID": 2381,
+        "name": "Micha Yance",
+        "zoneIDs": [
+          267
+        ],
+        "zone": "Hillsbrad Foothills",
+        "cost": [
+          [
+            684
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5788",
+        "npcURL": "https://www.wowhead.com/forever/npc=2381",
+        "npcPageSHA256": "cca99f7e30d00054161a580362eef2381f9a3b30ae3403ffd3e44d06447c8a0a",
+        "mapReference": {
+          "267": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  49,
+                  55
+                ]
+              ],
+              "uiMapId": 1424,
+              "uiMapName": "Hillsbrad Foothills"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 2393,
+        "name": "Christoph Jeffcoat",
+        "zoneIDs": [
+          267
+        ],
+        "zone": "Hillsbrad Foothills",
+        "cost": [
+          [
+            684
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5788",
+        "npcURL": "https://www.wowhead.com/forever/npc=2393",
+        "npcPageSHA256": "b7c5a03ced12c185f16e3fb04367a0916967845368c71e53096ba57daccb5be1",
+        "mapReference": {
+          "267": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  62.2,
+                  19
+                ]
+              ],
+              "uiMapId": 1424,
+              "uiMapName": "Hillsbrad Foothills"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 2846,
+        "name": "Blixrez Goodstitch",
+        "zoneIDs": [
+          33
+        ],
+        "zone": "Stranglethorn Vale",
+        "cost": [
+          [
+            650
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5788",
+        "npcURL": "https://www.wowhead.com/forever/npc=2846",
+        "npcPageSHA256": "fe8edc3162e2a4cd05acc42f7bfd200f3b1e2610ebf7678bfb7d251bfd54c367",
+        "mapReference": {
+          "33": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  28.2,
+                  77.4
+                ],
+                [
+                  28.2,
+                  77.6
+                ]
+              ],
+              "uiMapId": 1434,
+              "uiMapName": "Stranglethorn Vale"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=5788&xml": "5f51504929883d01e4c861fad7c66d0e052c465949745313c940ba42be4ddab2",
+      "https://www.wowhead.com/forever/item=5788": "8504b4345cd0fa2cac32f7667b9ef71ab72a8bd3d9c0ba53a8aae12d094a6ae0"
+    },
+    "dropReferences": [
+      {
+        "npcID": 938,
+        "name": "Kurzen Commando",
+        "zoneID": 33,
+        "zone": "Stranglethorn Vale",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      },
+      {
+        "npcID": 1160,
+        "name": "Captain Halyndor",
+        "zoneID": 11,
+        "zone": "Wetlands",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      }
+    ]
+  },
+  {
+    "itemID": 5963,
+    "name": "Barbaric Leggings",
+    "bookItemID": 5973,
+    "spellID": 7149,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 145,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Barbaric Leggings (#5973), Leatherworking 145; vendor references: Hammon Karwn \u2014 Arathi Highlands; Keena \u2014 Arathi Highlands; Lardan \u2014 Ashenvale; Jandia \u2014 Thousand Needles; Vendor-Tron 1000 \u2014 Desolace (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nHammon Karwn (NPC 2810), Arathi Highlands; listed price 6s 84c; stock quantity unverified. Arathi Highlands: published map x 46.4\u201346.4, y 47.4\u201347.4. Published listing/map only; live stock, discounts and access unverified.\nKeena (NPC 2821), Arathi Highlands; listed price 6s 84c; stock quantity unverified. Arathi Highlands: published map x 74\u201374, y 32.4\u201332.6. Published listing/map only; live stock, discounts and access unverified.\nLardan (NPC 3958), Ashenvale; listed price 6s 50c; limited-stock table reference. Ashenvale: published map x 34.8\u201334.8, y 49.8\u201349.8. Published listing/map only; live stock, discounts and access unverified.\nJandia (NPC 4877), Thousand Needles; listed price 6s 50c; limited-stock table reference. Thousand Needles: published map x 46\u201346, y 51.4\u201351.6. Published listing/map only; live stock, discounts and access unverified.\nVendor-Tron 1000 (NPC 12245), Desolace; listed price 6s 50c; stock quantity unverified. Desolace: published map x 60.2\u201360.2, y 38.2\u201338.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=5973/pattern-barbaric-leggings",
+    "vendorEvidence": [
+      {
+        "npcID": 2810,
+        "name": "Hammon Karwn",
+        "zoneIDs": [
+          45
+        ],
+        "zone": "Arathi Highlands",
+        "cost": [
+          [
+            684
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5973",
+        "npcURL": "https://www.wowhead.com/forever/npc=2810",
+        "npcPageSHA256": "9575647760b45b918fdc5fe820b888729a1316dc0578ad4dbb67f20cf46b1267",
+        "mapReference": {
+          "45": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  46.4,
+                  47.4
+                ]
+              ],
+              "uiMapId": 1417,
+              "uiMapName": "Arathi Highlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 2821,
+        "name": "Keena",
+        "zoneIDs": [
+          45
+        ],
+        "zone": "Arathi Highlands",
+        "cost": [
+          [
+            684
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5973",
+        "npcURL": "https://www.wowhead.com/forever/npc=2821",
+        "npcPageSHA256": "51ccc045d78a1b1ef71324e603efad02e440c575c3bde6057a80e3986e79cb7b",
+        "mapReference": {
+          "45": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  74,
+                  32.4
+                ],
+                [
+                  74,
+                  32.6
+                ]
+              ],
+              "uiMapId": 1417,
+              "uiMapName": "Arathi Highlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3958,
+        "name": "Lardan",
+        "zoneIDs": [
+          331
+        ],
+        "zone": "Ashenvale",
+        "cost": [
+          [
+            650
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5973",
+        "npcURL": "https://www.wowhead.com/forever/npc=3958",
+        "npcPageSHA256": "46ed031dc275ed27766adad37c5177a939579dfa80fee857d5bd071db68c56a9",
+        "mapReference": {
+          "331": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  34.8,
+                  49.8
+                ]
+              ],
+              "uiMapId": 1440,
+              "uiMapName": "Ashenvale"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 4877,
+        "name": "Jandia",
+        "zoneIDs": [
+          400
+        ],
+        "zone": "Thousand Needles",
+        "cost": [
+          [
+            650
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5973",
+        "npcURL": "https://www.wowhead.com/forever/npc=4877",
+        "npcPageSHA256": "06d791a6441221158eb3ad4cb4abee60e78221e4fef161d1608b5e02ba916a80",
+        "mapReference": {
+          "400": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  46,
+                  51.4
+                ],
+                [
+                  46,
+                  51.6
+                ]
+              ],
+              "uiMapId": 1441,
+              "uiMapName": "Thousand Needles"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 12245,
+        "name": "Vendor-Tron 1000",
+        "zoneIDs": [
+          405
+        ],
+        "zone": "Desolace",
+        "cost": [
+          [
+            650
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=5973",
+        "npcURL": "https://www.wowhead.com/forever/npc=12245",
+        "npcPageSHA256": "ef66ca85a4bc5ea8a1805af7f82cf4b3530dcff1b563ccc60d11d52d7cfd5b91",
+        "mapReference": {
+          "405": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  60.2,
+                  38.2
+                ]
+              ],
+              "uiMapId": 1443,
+              "uiMapName": "Desolace"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=5973&xml": "31186ff24c325ca2272c0b8d8a3dd735805fa0aab359b8cdce8dcc40f853563b",
+      "https://www.wowhead.com/forever/item=5973": "79f8d6bc3b062e347613c0815c57f8436809ec562200b09a643c80933123dd2d"
+    }
+  },
+  {
+    "itemID": 6467,
+    "name": "Deviate Scale Gloves",
+    "bookItemID": 6475,
+    "spellID": 7954,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 80,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Deviate Scale Gloves (#6475), Leatherworking 80; vendor references: Kalldan Felmoon \u2014 Wailing Caverns area, The Barrens (precise position unverified) (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nKalldan Felmoon (NPC 5783), Kalimdor; listed price 15s ; limited-stock table reference. Kalimdor: published map x 51.8\u201351.8, y 55.4\u201355.4. Published listing/map only; live stock, discounts and access unverified.\nLocation limitation: the primary NPC map is continent-level Kalimdor, not The Barrens zone coordinates. Independent published references place Kalldan in the Wailing Caverns area, but old entrance-cave and newer Cavern of Mists descriptions conflict; exact position remains unverified. Do not use the continent point as a dungeon/zone waypoint.",
+    "bookURL": "https://www.wowhead.com/forever/item=6475/pattern-deviate-scale-gloves",
+    "vendorEvidence": [
+      {
+        "npcID": 5783,
+        "name": "Kalldan Felmoon",
+        "zoneIDs": [
+          -6
+        ],
+        "zone": "Kalimdor",
+        "cost": [
+          [
+            1500
+          ]
+        ],
+        "listedStock": 2,
+        "sourceURL": "https://www.wowhead.com/forever/item=6475",
+        "npcURL": "https://www.wowhead.com/forever/npc=5783",
+        "npcPageSHA256": "0de2b364a0472c56c47695701daff39adfe1f30d8a05f2c9d5f80322a6f8a23f",
+        "mapReference": {
+          "-6": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  51.8,
+                  55.4
+                ]
+              ],
+              "uiMapId": 1414,
+              "uiMapName": "Kalimdor"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=6475&xml": "f4203650b434d90011297f3fad757c8173e93374a6b8d21e763f8cd7f7ed2778",
+      "https://www.wowhead.com/forever/item=6475": "e4b13b39da834317e17a3168632455a6afc05958163dd2a69fe51fa124da8970"
+    },
+    "additionalLocationURLs": [
+      "https://azeroth.wiki/forever/map/the-barrens/kalldan-felmoon",
+      "https://shokadezz.com/wow-forever/map"
+    ]
+  },
+  {
+    "itemID": 7284,
+    "name": "Red Whelp Gloves",
+    "bookItemID": 7290,
+    "spellID": 9072,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 95,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Red Whelp Gloves (#7290), Leatherworking 95; vendor references: Wenna Silkbeard \u2014 Wetlands (published; live stock/access unverified). Also published book-drop leads: Wetlands (live unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nWenna Silkbeard (NPC 2679), Wetlands; listed price 16s ; limited-stock table reference. Wetlands: published map x 25.6\u201325.6, y 25.8\u201325.8. Published listing/map only; live stock, discounts and access unverified.\nPublished book-drop references (may retain historical data; live unverified; no rate claim):\nWetlands: Dragonmaw Scout.",
+    "bookURL": "https://www.wowhead.com/forever/item=7290/pattern-red-whelp-gloves",
+    "vendorEvidence": [
+      {
+        "npcID": 2679,
+        "name": "Wenna Silkbeard",
+        "zoneIDs": [
+          11
+        ],
+        "zone": "Wetlands",
+        "cost": [
+          [
+            1600
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=7290",
+        "npcURL": "https://www.wowhead.com/forever/npc=2679",
+        "npcPageSHA256": "1297968359a9a8b01a4f1f4bbbc32371e26f8ccd36a3d335e3236e68c367bc2e",
+        "mapReference": {
+          "11": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  25.6,
+                  25.8
+                ]
+              ],
+              "uiMapId": 1437,
+              "uiMapName": "Wetlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7290&xml": "6e7491873a31a7a2032d5170ed85f48f0af3eeda4c47bb23705e520ac3b45204",
+      "https://www.wowhead.com/forever/item=7290": "ed1a5d96e4b8a4723f40d8b6fd34e40a47ac4d92dd6e27c2dd74fcd53760b532"
+    },
+    "dropReferences": [
+      {
+        "npcID": 2103,
+        "name": "Dragonmaw Scout",
+        "zoneID": 11,
+        "zone": "Wetlands",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      }
+    ]
+  },
+  {
+    "itemID": 7349,
+    "name": "Herbalist's Gloves",
+    "bookItemID": 7361,
+    "spellID": 9146,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 110,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Herbalist's Gloves (#7361), Leatherworking 110; vendor references: Harlown Darkweave \u2014 Ashenvale (published; live stock/access unverified). Also published book-drop leads: Ashenvale (live unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nHarlown Darkweave (NPC 6731), Ashenvale; listed price 18s ; limited-stock table reference. Ashenvale: published map x 18.2\u201318.2, y 60\u201360. Published listing/map only; live stock, discounts and access unverified.\nPublished book-drop references (may retain historical data; live unverified; no rate claim):\nAshenvale: Shadethicket Raincaller.",
+    "bookURL": "https://www.wowhead.com/forever/item=7361/pattern-herbalists-gloves",
+    "vendorEvidence": [
+      {
+        "npcID": 6731,
+        "name": "Harlown Darkweave",
+        "zoneIDs": [
+          331
+        ],
+        "zone": "Ashenvale",
+        "cost": [
+          [
+            1800
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=7361",
+        "npcURL": "https://www.wowhead.com/forever/npc=6731",
+        "npcPageSHA256": "e103de3f2b77c9c8dbcd8b3b42564ac1d19c4b44e2ce4762ed9fb825a4b61093",
+        "mapReference": {
+          "331": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  18.2,
+                  60
+                ]
+              ],
+              "uiMapId": 1440,
+              "uiMapName": "Ashenvale"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7361&xml": "701552af16bc0b6f62743ad297d5c47d99c2961fe04fb966ece70e82bd3d7a03",
+      "https://www.wowhead.com/forever/item=7361": "e26f1c8ecc47c10e4f8c925bacfc4b5f42f9c7b2b3007fbb6dd0c6b0396b2065"
+    },
+    "dropReferences": [
+      {
+        "npcID": 3783,
+        "name": "Shadethicket Raincaller",
+        "zoneID": 331,
+        "zone": "Ashenvale",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      }
+    ]
+  },
+  {
+    "itemID": 7352,
+    "name": "Earthen Leather Shoulders",
+    "bookItemID": 7362,
+    "spellID": 9147,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 110,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Earthen Leather Shoulders (#7362), Leatherworking 110; vendor references: Zixil \u2014 Hillsbrad Foothills (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nZixil (NPC 3537), Hillsbrad Foothills; listed price 20s ; limited-stock table reference. Hillsbrad Foothills: published map x 50.4\u201360.8, y 19.8\u201350.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=7362/pattern-earthen-leather-shoulders",
+    "vendorEvidence": [
+      {
+        "npcID": 3537,
+        "name": "Zixil",
+        "zoneIDs": [
+          267
+        ],
+        "zone": "Hillsbrad Foothills",
+        "cost": [
+          [
+            2000
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=7362",
+        "npcURL": "https://www.wowhead.com/forever/npc=3537",
+        "npcPageSHA256": "f8e3141ff6738d3a07b3619049cd88e4676e71c191d8eb071215fb9560e97b87",
+        "mapReference": {
+          "267": [
+            {
+              "count": 9,
+              "coords": [
+                [
+                  50.4,
+                  50.8
+                ],
+                [
+                  50.6,
+                  50.6
+                ],
+                [
+                  51,
+                  48
+                ],
+                [
+                  54.4,
+                  33.8
+                ],
+                [
+                  55.6,
+                  34.6
+                ],
+                [
+                  55.8,
+                  28.2
+                ],
+                [
+                  60.4,
+                  21
+                ],
+                [
+                  60.6,
+                  20.6
+                ],
+                [
+                  60.8,
+                  19.8
+                ]
+              ],
+              "uiMapId": 1424,
+              "uiMapName": "Hillsbrad Foothills"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7362&xml": "1e7715d6de62f2bb83c7fd21ce6acbe2df0d52ff2a350ab768687e359f7daa81",
+      "https://www.wowhead.com/forever/item=7362": "1c4e3a29b3c2371c630e37ce744dc3886db8a387191dd57d5249e7358e2a7f98"
+    }
+  },
+  {
+    "itemID": 4255,
+    "name": "Green Leather Armor",
+    "bookItemID": 7613,
+    "spellID": 3772,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 130,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Green Leather Armor (#7613), Leatherworking 130; vendor references: Wenna Silkbeard \u2014 Wetlands; George Candarte \u2014 Hillsbrad Foothills; Vendor-Tron 1000 \u2014 Desolace (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nWenna Silkbeard (NPC 2679), Wetlands; listed price 21s 5c; stock quantity unverified. Wetlands: published map x 25.6\u201325.6, y 25.8\u201325.8. Published listing/map only; live stock, discounts and access unverified.\nGeorge Candarte (NPC 2698), Hillsbrad Foothills; listed price 20s ; limited-stock table reference. Hillsbrad Foothills: published map x 92\u201392, y 38.2\u201338.6. Published listing/map only; live stock, discounts and access unverified.\nVendor-Tron 1000 (NPC 12245), Desolace; listed price 20s ; stock quantity unverified. Desolace: published map x 60.2\u201360.2, y 38.2\u201338.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=7613/pattern-green-leather-armor",
+    "vendorEvidence": [
+      {
+        "npcID": 2679,
+        "name": "Wenna Silkbeard",
+        "zoneIDs": [
+          11
+        ],
+        "zone": "Wetlands",
+        "cost": [
+          [
+            2105
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=7613",
+        "npcURL": "https://www.wowhead.com/forever/npc=2679",
+        "npcPageSHA256": "1297968359a9a8b01a4f1f4bbbc32371e26f8ccd36a3d335e3236e68c367bc2e",
+        "mapReference": {
+          "11": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  25.6,
+                  25.8
+                ]
+              ],
+              "uiMapId": 1437,
+              "uiMapName": "Wetlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 2698,
+        "name": "George Candarte",
+        "zoneIDs": [
+          267
+        ],
+        "zone": "Hillsbrad Foothills",
+        "cost": [
+          [
+            2000
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=7613",
+        "npcURL": "https://www.wowhead.com/forever/npc=2698",
+        "npcPageSHA256": "f5590a312eeb7f1f1f57e4e13270310548a43346a97b3950cbdc27af3a4e0eea",
+        "mapReference": {
+          "267": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  92,
+                  38.2
+                ],
+                [
+                  92,
+                  38.6
+                ]
+              ],
+              "uiMapId": 1424,
+              "uiMapName": "Hillsbrad Foothills"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 12245,
+        "name": "Vendor-Tron 1000",
+        "zoneIDs": [
+          405
+        ],
+        "zone": "Desolace",
+        "cost": [
+          [
+            2000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=7613",
+        "npcURL": "https://www.wowhead.com/forever/npc=12245",
+        "npcPageSHA256": "ef66ca85a4bc5ea8a1805af7f82cf4b3530dcff1b563ccc60d11d52d7cfd5b91",
+        "mapReference": {
+          "405": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  60.2,
+                  38.2
+                ]
+              ],
+              "uiMapId": 1443,
+              "uiMapName": "Desolace"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7613&xml": "213aee32e14a8b552d9d371a753d0ccb1234903d39c9d9896a7003edbd2d6677",
+      "https://www.wowhead.com/forever/item=7613": "aea6c5a2706623406bcf1554c255bc0870cdddae1b095565d023d4a7c335b80a"
+    }
+  },
+  {
+    "itemID": 4455,
+    "name": "Raptor Hide Harness",
+    "bookItemID": 13287,
+    "spellID": 4096,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 140,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Raptor Hide Harness (#13287), Leatherworking 140; vendor references: Tunkk \u2014 Arathi Highlands (published; live stock/access unverified). Also published book-drop leads: Wetlands (live unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nTunkk (NPC 2819), Arathi Highlands; listed price 26s 31c; limited-stock table reference. Arathi Highlands: published map x 74.8\u201374.8, y 34.4\u201334.6. Published listing/map only; live stock, discounts and access unverified.\nPublished book-drop references (may retain historical data; live unverified; no rate claim):\nWetlands: Dragonmaw Centurion.",
+    "bookURL": "https://www.wowhead.com/forever/item=13287/pattern-raptor-hide-harness",
+    "vendorEvidence": [
+      {
+        "npcID": 2819,
+        "name": "Tunkk",
+        "zoneIDs": [
+          45
+        ],
+        "zone": "Arathi Highlands",
+        "cost": [
+          [
+            2631
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=13287",
+        "npcURL": "https://www.wowhead.com/forever/npc=2819",
+        "npcPageSHA256": "5ce1037cd319220baf989d933cac441bbf9167c80aa5f42bc3c5de54f1dc12a4",
+        "mapReference": {
+          "45": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  74.8,
+                  34.4
+                ],
+                [
+                  74.8,
+                  34.6
+                ]
+              ],
+              "uiMapId": 1417,
+              "uiMapName": "Arathi Highlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=13287&xml": "4595b61bbc9b929c2e8a446a5c6fa9836e059b8c1060c71b55399e04409b5267",
+      "https://www.wowhead.com/forever/item=13287": "6690660038410ec1ab451da3de4bad2d375a1c5f085ec8ce2be6c850e9e88976"
+    },
+    "dropReferences": [
+      {
+        "npcID": 1036,
+        "name": "Dragonmaw Centurion",
+        "zoneID": 11,
+        "zone": "Wetlands",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      }
+    ]
+  },
+  {
+    "itemID": 4456,
+    "name": "Raptor Hide Belt",
+    "bookItemID": 13288,
+    "spellID": 4097,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 140,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Raptor Hide Belt (#13288), Leatherworking 140; vendor references: Androd Fadran \u2014 Arathi Highlands (published; live stock/access unverified). Also published book-drop leads: Hillsbrad Foothills (live unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nAndrod Fadran (NPC 2816), Arathi Highlands; listed price 25s ; limited-stock table reference. Arathi Highlands: published map x 45\u201345, y 46.8\u201346.8. Published listing/map only; live stock, discounts and access unverified.\nPublished book-drop references (may retain historical data; live unverified; no rate claim):\nHillsbrad Foothills: Daggerspine Shorestalker.",
+    "bookURL": "https://www.wowhead.com/forever/item=13288/pattern-raptor-hide-belt",
+    "vendorEvidence": [
+      {
+        "npcID": 2816,
+        "name": "Androd Fadran",
+        "zoneIDs": [
+          45
+        ],
+        "zone": "Arathi Highlands",
+        "cost": [
+          [
+            2500
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=13288",
+        "npcURL": "https://www.wowhead.com/forever/npc=2816",
+        "npcPageSHA256": "1e074bff6b0cd0d9c402023d63b6b358ce7d732ac9c1295400eb29a5321c8dfe",
+        "mapReference": {
+          "45": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  45,
+                  46.8
+                ]
+              ],
+              "uiMapId": 1417,
+              "uiMapName": "Arathi Highlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=13288&xml": "6ff8c274400439c3d9cf826f7b81d5ee67b322d094d74a27264b2d03c7320583",
+      "https://www.wowhead.com/forever/item=13288": "b5ba835b6a495d2986c8f570f649e443f045d3fd50ef82422660a2e39d040766"
+    },
+    "dropReferences": [
+      {
+        "npcID": 2368,
+        "name": "Daggerspine Shorestalker",
+        "zoneID": 267,
+        "zone": "Hillsbrad Foothills",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      }
+    ]
+  },
+  {
+    "itemID": 18948,
+    "name": "Barbaric Bracers",
+    "bookItemID": 18949,
+    "spellID": 23399,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 130,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Barbaric Bracers (#18949), Leatherworking 130; vendor references: Saenorion \u2014 Darnassus; Joseph Moore \u2014 Undercity (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nSaenorion (NPC 4225), Darnassus; listed price 21s 17c; limited-stock table reference. Darnassus: published map x 63.2\u201364.4, y 21.4\u201322.6. Published listing/map only; live stock, discounts and access unverified.\nJoseph Moore (NPC 4589), Undercity; listed price 21s 5c; limited-stock table reference. Undercity: published map x 70.2\u201370.6, y 58\u201359.6. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=18949/pattern-barbaric-bracers",
+    "vendorEvidence": [
+      {
+        "npcID": 4225,
+        "name": "Saenorion",
+        "zoneIDs": [
+          1657
+        ],
+        "zone": "Darnassus",
+        "cost": [
+          [
+            2117
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=18949",
+        "npcURL": "https://www.wowhead.com/forever/npc=4225",
+        "npcPageSHA256": "c4203155255502aa0fc360fbda06e2f5df1326d229b74a92c9a178e3fdd18233",
+        "mapReference": {
+          "1657": [
+            {
+              "count": 4,
+              "coords": [
+                [
+                  63.2,
+                  22.6
+                ],
+                [
+                  63.4,
+                  22.2
+                ],
+                [
+                  63.8,
+                  22
+                ],
+                [
+                  64.4,
+                  21.4
+                ]
+              ],
+              "uiMapId": 1457,
+              "uiMapName": "Darnassus"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 4589,
+        "name": "Joseph Moore",
+        "zoneIDs": [
+          1497
+        ],
+        "zone": "Undercity",
+        "cost": [
+          [
+            2105
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=18949",
+        "npcURL": "https://www.wowhead.com/forever/npc=4589",
+        "npcPageSHA256": "48781899da9871a292a5d8f1c56429dad652ff9cff142e3d4fcda71acf41b3ea",
+        "mapReference": {
+          "1497": [
+            {
+              "count": 4,
+              "coords": [
+                [
+                  70.2,
+                  58
+                ],
+                [
+                  70.4,
+                  58.8
+                ],
+                [
+                  70.6,
+                  58.8
+                ],
+                [
+                  70.6,
+                  59.6
+                ]
+              ],
+              "uiMapId": 1458,
+              "uiMapName": "Undercity"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=18949&xml": "0722d7b4516e1384bb815cbf104a7d0667194c31ebbefd18c453168b5bf6958f",
+      "https://www.wowhead.com/forever/item=18949": "7bce8dc7b4fe3789b2586b74f7ca2c42f413beb8a25e0af1e3db2ad673c181ff"
+    }
+  },
+  {
+    "itemID": 20575,
+    "name": "Black Whelp Tunic",
+    "bookItemID": 20576,
+    "spellID": 24940,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 75,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Black Whelp Tunic (#20576), Leatherworking 75; vendor references: Amy Davenport \u2014 Redridge Mountains (published; live stock/access unverified). Also published book-drop leads: Redridge Mountains (live unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nAmy Davenport (NPC 777), Redridge Mountains; listed price 14s 82c; limited-stock table reference. Redridge Mountains: published map x 23.8\u201329, y 47.4\u201347.6. Published listing/map only; live stock, discounts and access unverified.\nPublished book-drop references (may retain historical data; live unverified; no rate claim):\nRedridge Mountains: Black Dragon Whelp.",
+    "bookURL": "https://www.wowhead.com/forever/item=20576/pattern-black-whelp-tunic",
+    "vendorEvidence": [
+      {
+        "npcID": 777,
+        "name": "Amy Davenport",
+        "zoneIDs": [
+          44
+        ],
+        "zone": "Redridge Mountains",
+        "cost": [
+          [
+            1482
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=20576",
+        "npcURL": "https://www.wowhead.com/forever/npc=777",
+        "npcPageSHA256": "9e1ce94cb4d77530f1a0d3d3b4a018337dfba9470a04469f22535cff7640b1fd",
+        "mapReference": {
+          "44": [
+            {
+              "count": 4,
+              "coords": [
+                [
+                  23.8,
+                  47.6
+                ],
+                [
+                  24,
+                  47.4
+                ],
+                [
+                  29,
+                  47.4
+                ],
+                [
+                  29,
+                  47.6
+                ]
+              ],
+              "uiMapId": 1433,
+              "uiMapName": "Redridge Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=20576&xml": "9e812065095f292c4f49a1699455f87272ea6949fcd3952f8e0864f0ddb87dcf",
+      "https://www.wowhead.com/forever/item=20576": "f89762b06783da9664fc6f9be8551518711ec6174bb5d92b38076dee91ee824e"
+    },
+    "dropReferences": [
+      {
+        "npcID": 441,
+        "name": "Black Dragon Whelp",
+        "zoneID": 44,
+        "zone": "Redridge Mountains",
+        "confidence": "published-forever-book-drop-reference",
+        "liveVerified": false
+      }
+    ]
+  },
+  {
+    "itemID": 252424,
+    "name": "Black Whelp Slippers",
+    "bookItemID": 252761,
+    "spellID": 1255146,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 35,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Black Whelp Slippers (#252761), Leatherworking 35; vendor references: Granny Finespindle \u2014 Ironforge (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nGranny Finespindle (NPC 258306), Ironforge; listed price 5s 26c; stock quantity unverified. Ironforge: published map x 39.2\u201339.8, y 33.4\u201334. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=252761/pattern-black-whelp-slippers",
+    "vendorEvidence": [
+      {
+        "npcID": 258306,
+        "name": "Granny Finespindle",
+        "zoneIDs": [
+          1537
+        ],
+        "zone": "Ironforge",
+        "cost": [
+          [
+            526
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=252761",
+        "npcURL": "https://www.wowhead.com/forever/npc=258306",
+        "npcPageSHA256": "44d96f313eca976bef39d73cc0fb84bcf6495acf577409ba79fa0dd3afe8c960",
+        "mapReference": {
+          "1537": [
+            {
+              "count": 3,
+              "coords": [
+                [
+                  39.2,
+                  33.4
+                ],
+                [
+                  39.2,
+                  33.6
+                ],
+                [
+                  39.8,
+                  34
+                ]
+              ],
+              "uiMapId": 1455,
+              "uiMapName": "Ironforge"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=252761&xml": "f07bf351f096373e88984b0127130abf048f05990f5027955e84c1d6c8cf55c2",
+      "https://www.wowhead.com/forever/item=252761": "a850fc82fba190a2a459847140e20044d5eadcf0e948bdda8fbd880245ef5645"
+    }
+  },
+  {
+    "itemID": 252425,
+    "name": "Dark Leather Boots",
+    "bookItemID": 252762,
+    "spellID": 1255145,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 35,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Dark Leather Boots (#252762), Leatherworking 35; vendor references: Granny Finespindle \u2014 Ironforge (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nGranny Finespindle (NPC 258306), Ironforge; listed price 5s 26c; stock quantity unverified. Ironforge: published map x 39.2\u201339.8, y 33.4\u201334. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=252762/pattern-dark-leather-boots",
+    "vendorEvidence": [
+      {
+        "npcID": 258306,
+        "name": "Granny Finespindle",
+        "zoneIDs": [
+          1537
+        ],
+        "zone": "Ironforge",
+        "cost": [
+          [
+            526
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=252762",
+        "npcURL": "https://www.wowhead.com/forever/npc=258306",
+        "npcPageSHA256": "44d96f313eca976bef39d73cc0fb84bcf6495acf577409ba79fa0dd3afe8c960",
+        "mapReference": {
+          "1537": [
+            {
+              "count": 3,
+              "coords": [
+                [
+                  39.2,
+                  33.4
+                ],
+                [
+                  39.2,
+                  33.6
+                ],
+                [
+                  39.8,
+                  34
+                ]
+              ],
+              "uiMapId": 1455,
+              "uiMapName": "Ironforge"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=252762&xml": "78669b12142d04d452e7ee0b044afac95ffd6f7abaf65dd651a42dcbb826ea9d",
+      "https://www.wowhead.com/forever/item=252762": "c18af9c754f976f3da900b3a3a07d77a95bae1c356911768f35028777b91ab1a"
+    }
+  },
+  {
+    "itemID": 252426,
+    "name": "Murloc Scale Shoes",
+    "bookItemID": 252763,
+    "spellID": 1255144,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 35,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Murloc Scale Shoes (#252763), Leatherworking 35; vendor references: Granny Finespindle \u2014 Ironforge (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nGranny Finespindle (NPC 258306), Ironforge; listed price 5s 26c; stock quantity unverified. Ironforge: published map x 39.2\u201339.8, y 33.4\u201334. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=252763/pattern-murloc-scale-shoes",
+    "vendorEvidence": [
+      {
+        "npcID": 258306,
+        "name": "Granny Finespindle",
+        "zoneIDs": [
+          1537
+        ],
+        "zone": "Ironforge",
+        "cost": [
+          [
+            526
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=252763",
+        "npcURL": "https://www.wowhead.com/forever/npc=258306",
+        "npcPageSHA256": "44d96f313eca976bef39d73cc0fb84bcf6495acf577409ba79fa0dd3afe8c960",
+        "mapReference": {
+          "1537": [
+            {
+              "count": 3,
+              "coords": [
+                [
+                  39.2,
+                  33.4
+                ],
+                [
+                  39.2,
+                  33.6
+                ],
+                [
+                  39.8,
+                  34
+                ]
+              ],
+              "uiMapId": 1455,
+              "uiMapName": "Ironforge"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=252763&xml": "88fae8adacfc6cdba227d3a2d35233f0e47eab792faa9376dbab268709add4c6",
+      "https://www.wowhead.com/forever/item=252763": "16ac5b0b68345ee0e7c2c0f9515896e3cdce317ca1314e10c8dc0dbbac4867ea"
+    }
+  },
+  {
+    "itemID": 252461,
+    "name": "Skirmisher's Leather Belt",
+    "bookItemID": 252830,
+    "spellID": 1255077,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 150,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Skirmisher's Leather Belt (#252830), Leatherworking 150; vendor references: Granny Finespindle \u2014 Ironforge (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nGranny Finespindle (NPC 258306), Ironforge; listed price 21s 5c; stock quantity unverified. Ironforge: published map x 39.2\u201339.8, y 33.4\u201334. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=252830/pattern-skirmishers-leather-belt",
+    "vendorEvidence": [
+      {
+        "npcID": 258306,
+        "name": "Granny Finespindle",
+        "zoneIDs": [
+          1537
+        ],
+        "zone": "Ironforge",
+        "cost": [
+          [
+            2105
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=252830",
+        "npcURL": "https://www.wowhead.com/forever/npc=258306",
+        "npcPageSHA256": "44d96f313eca976bef39d73cc0fb84bcf6495acf577409ba79fa0dd3afe8c960",
+        "mapReference": {
+          "1537": [
+            {
+              "count": 3,
+              "coords": [
+                [
+                  39.2,
+                  33.4
+                ],
+                [
+                  39.2,
+                  33.6
+                ],
+                [
+                  39.8,
+                  34
+                ]
+              ],
+              "uiMapId": 1455,
+              "uiMapName": "Ironforge"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=252830&xml": "8f3bea2f53a0c8724036733b4ed61d0cbff6e1e8584438b47fd5e4443ad6f11c",
+      "https://www.wowhead.com/forever/item=252830": "ddbd4831f347c380733845e39a0995e7a8f0440446b2af3d90cea700b41edb0a"
+    }
+  },
+  {
+    "itemID": 277042,
+    "name": "Cloudy Gustwoven Hood",
+    "bookItemID": 276978,
+    "spellID": 1301528,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Cloudy Gustwoven Hood (#276978), Leatherworking 175; vendor references: Sutara Plainstalker \u2014 Mulgore (published; live stock/access unverified). Published requirement: Friendly with Earthen Ring.",
+    "details": "Published book vendor references (live stock/access unverified):\nSutara Plainstalker (NPC 264078), Mulgore; listed price 10g ; stock quantity unverified. Mulgore: published map x 34.4\u201334.6, y 22.8\u201322.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276978/pattern-cloudy-gustwoven-hood",
+    "vendorEvidence": [
+      {
+        "npcID": 264078,
+        "name": "Sutara Plainstalker",
+        "zoneIDs": [
+          215
+        ],
+        "zone": "Mulgore",
+        "cost": [
+          [
+            100000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276978",
+        "npcURL": "https://www.wowhead.com/forever/npc=264078",
+        "npcPageSHA256": "eea8d151e4191832229b97bbbf84b5dbaee18709f61b25841f56b8f621d07362",
+        "mapReference": {
+          "215": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.6,
+                  22.8
+                ]
+              ],
+              "uiMapId": 1412,
+              "uiMapName": "Mulgore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276978&xml": "5fd52815b7624c5c595ca82b73c9036a1c05034f17b8e6250204ce459b087b4f",
+      "https://www.wowhead.com/forever/item=276978": "1c38e5ec15afb57defaf0f89eee76d0dba48be309c4f569bd263c29f926a1cae"
+    },
+    "purchaseGate": {
+      "factionID": 2787,
+      "faction": "Earthen Ring",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277043,
+    "name": "Cloudy Gustwoven Spaulders",
+    "bookItemID": 276979,
+    "spellID": 1301529,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Cloudy Gustwoven Spaulders (#276979), Leatherworking 175; vendor references: Sutara Plainstalker \u2014 Mulgore (published; live stock/access unverified). Published requirement: Friendly with Earthen Ring.",
+    "details": "Published book vendor references (live stock/access unverified):\nSutara Plainstalker (NPC 264078), Mulgore; listed price 10g ; stock quantity unverified. Mulgore: published map x 34.4\u201334.6, y 22.8\u201322.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276979/pattern-cloudy-gustwoven-spaulders",
+    "vendorEvidence": [
+      {
+        "npcID": 264078,
+        "name": "Sutara Plainstalker",
+        "zoneIDs": [
+          215
+        ],
+        "zone": "Mulgore",
+        "cost": [
+          [
+            100000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276979",
+        "npcURL": "https://www.wowhead.com/forever/npc=264078",
+        "npcPageSHA256": "eea8d151e4191832229b97bbbf84b5dbaee18709f61b25841f56b8f621d07362",
+        "mapReference": {
+          "215": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.6,
+                  22.8
+                ]
+              ],
+              "uiMapId": 1412,
+              "uiMapName": "Mulgore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276979&xml": "48b9f6a916767e647d65038f60681f7ffaca8e533ca89c239769d4224f3232b4",
+      "https://www.wowhead.com/forever/item=276979": "161b5d348e14e57fdfae60733995b3c5b830ee8f61f12907b0260e922749803e"
+    },
+    "purchaseGate": {
+      "factionID": 2787,
+      "faction": "Earthen Ring",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277044,
+    "name": "Cloudy Windraveled Cover",
+    "bookItemID": 276980,
+    "spellID": 1301530,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Cloudy Windraveled Cover (#276980), Leatherworking 175; vendor references: Sutara Plainstalker \u2014 Mulgore (published; live stock/access unverified). Published requirement: Friendly with Earthen Ring.",
+    "details": "Published book vendor references (live stock/access unverified):\nSutara Plainstalker (NPC 264078), Mulgore; listed price 10g ; stock quantity unverified. Mulgore: published map x 34.4\u201334.6, y 22.8\u201322.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276980/pattern-cloudy-windraveled-cover",
+    "vendorEvidence": [
+      {
+        "npcID": 264078,
+        "name": "Sutara Plainstalker",
+        "zoneIDs": [
+          215
+        ],
+        "zone": "Mulgore",
+        "cost": [
+          [
+            100000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276980",
+        "npcURL": "https://www.wowhead.com/forever/npc=264078",
+        "npcPageSHA256": "eea8d151e4191832229b97bbbf84b5dbaee18709f61b25841f56b8f621d07362",
+        "mapReference": {
+          "215": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.6,
+                  22.8
+                ]
+              ],
+              "uiMapId": 1412,
+              "uiMapName": "Mulgore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276980&xml": "16129d771d48a17f45cc144cd4296803f4954a2bdb1ba3ed69aaad165c653ae6",
+      "https://www.wowhead.com/forever/item=276980": "22bda5131630e7a15989ef124754aa641fe8e0736d780b042b5f98863f1dd686"
+    },
+    "purchaseGate": {
+      "factionID": 2787,
+      "faction": "Earthen Ring",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277045,
+    "name": "Cloudy Windraveled Drapes",
+    "bookItemID": 276981,
+    "spellID": 1301531,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Cloudy Windraveled Drapes (#276981), Leatherworking 175; vendor references: Sutara Plainstalker \u2014 Mulgore (published; live stock/access unverified). Published requirement: Friendly with Earthen Ring.",
+    "details": "Published book vendor references (live stock/access unverified):\nSutara Plainstalker (NPC 264078), Mulgore; listed price 10g ; stock quantity unverified. Mulgore: published map x 34.4\u201334.6, y 22.8\u201322.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276981/pattern-cloudy-windraveled-drapes",
+    "vendorEvidence": [
+      {
+        "npcID": 264078,
+        "name": "Sutara Plainstalker",
+        "zoneIDs": [
+          215
+        ],
+        "zone": "Mulgore",
+        "cost": [
+          [
+            100000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276981",
+        "npcURL": "https://www.wowhead.com/forever/npc=264078",
+        "npcPageSHA256": "eea8d151e4191832229b97bbbf84b5dbaee18709f61b25841f56b8f621d07362",
+        "mapReference": {
+          "215": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.6,
+                  22.8
+                ]
+              ],
+              "uiMapId": 1412,
+              "uiMapName": "Mulgore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276981&xml": "24b58617e3f3e54b58240c6d0e7a87093926b4c16fca4a07b541a061cfb1d60a",
+      "https://www.wowhead.com/forever/item=276981": "0442cb4e2b689f6c574b62140a7e2a21186b6b3926e76b1b9467f628a7ddaa4c"
+    },
+    "purchaseGate": {
+      "factionID": 2787,
+      "faction": "Earthen Ring",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277050,
+    "name": "Azure Gustwoven Hood",
+    "bookItemID": 276986,
+    "spellID": 1301536,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Azure Gustwoven Hood (#276986), Leatherworking 175; vendor references: Archmage Alvareaux \u2014 Alterac Mountains (published; live stock/access unverified). Published requirement: Friendly with Kirin Tor.",
+    "details": "Published book vendor references (live stock/access unverified):\nArchmage Alvareaux (NPC 32287), Alterac Mountains; listed price 10g 52s 63c; stock quantity unverified. Alterac Mountains: published map x 14\u201314, y 63.2\u201363.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276986/pattern-azure-gustwoven-hood",
+    "vendorEvidence": [
+      {
+        "npcID": 32287,
+        "name": "Archmage Alvareaux",
+        "zoneIDs": [
+          36
+        ],
+        "zone": "Alterac Mountains",
+        "cost": [
+          [
+            105263
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276986",
+        "npcURL": "https://www.wowhead.com/forever/npc=32287",
+        "npcPageSHA256": "d227ff6f90be7406ab37a0c6bc4540adf6de6be26c7e146d9408045507c38e95",
+        "mapReference": {
+          "36": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  14,
+                  63.2
+                ]
+              ],
+              "uiMapId": 1416,
+              "uiMapName": "Alterac Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276986&xml": "38bc41991a8ef7177383128a72b4b282cc7e51a46138ecbedd51fc1401deebd5",
+      "https://www.wowhead.com/forever/item=276986": "123e7f643c29f176a42415309a3ab5ac25d0cacc51bddc926c52f9cf36e6c5c3"
+    },
+    "purchaseGate": {
+      "factionID": 2740,
+      "faction": "Kirin Tor",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277051,
+    "name": "Azure Gustwoven Spaulders",
+    "bookItemID": 276987,
+    "spellID": 1301537,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Azure Gustwoven Spaulders (#276987), Leatherworking 175; vendor references: Archmage Alvareaux \u2014 Alterac Mountains (published; live stock/access unverified). Published requirement: Friendly with Kirin Tor.",
+    "details": "Published book vendor references (live stock/access unverified):\nArchmage Alvareaux (NPC 32287), Alterac Mountains; listed price 10g 52s 63c; stock quantity unverified. Alterac Mountains: published map x 14\u201314, y 63.2\u201363.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276987/pattern-azure-gustwoven-spaulders",
+    "vendorEvidence": [
+      {
+        "npcID": 32287,
+        "name": "Archmage Alvareaux",
+        "zoneIDs": [
+          36
+        ],
+        "zone": "Alterac Mountains",
+        "cost": [
+          [
+            105263
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276987",
+        "npcURL": "https://www.wowhead.com/forever/npc=32287",
+        "npcPageSHA256": "d227ff6f90be7406ab37a0c6bc4540adf6de6be26c7e146d9408045507c38e95",
+        "mapReference": {
+          "36": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  14,
+                  63.2
+                ]
+              ],
+              "uiMapId": 1416,
+              "uiMapName": "Alterac Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276987&xml": "f0166e0f4a45c56cc282e7a1fbe7229830ca773ee20f166f6b036a9281446eaf",
+      "https://www.wowhead.com/forever/item=276987": "4c7f70264e6523e065f6a64d429a534dc1d5abdd2af6f36f1de3c28ea07e404a"
+    },
+    "purchaseGate": {
+      "factionID": 2740,
+      "faction": "Kirin Tor",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277052,
+    "name": "Azure Windraveled Cover",
+    "bookItemID": 276988,
+    "spellID": 1301538,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Azure Windraveled Cover (#276988), Leatherworking 175; vendor references: Archmage Alvareaux \u2014 Alterac Mountains (published; live stock/access unverified). Published requirement: Friendly with Kirin Tor.",
+    "details": "Published book vendor references (live stock/access unverified):\nArchmage Alvareaux (NPC 32287), Alterac Mountains; listed price 10g 52s 63c; stock quantity unverified. Alterac Mountains: published map x 14\u201314, y 63.2\u201363.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276988/pattern-azure-windraveled-cover",
+    "vendorEvidence": [
+      {
+        "npcID": 32287,
+        "name": "Archmage Alvareaux",
+        "zoneIDs": [
+          36
+        ],
+        "zone": "Alterac Mountains",
+        "cost": [
+          [
+            105263
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276988",
+        "npcURL": "https://www.wowhead.com/forever/npc=32287",
+        "npcPageSHA256": "d227ff6f90be7406ab37a0c6bc4540adf6de6be26c7e146d9408045507c38e95",
+        "mapReference": {
+          "36": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  14,
+                  63.2
+                ]
+              ],
+              "uiMapId": 1416,
+              "uiMapName": "Alterac Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276988&xml": "d80d4f61104a293624cb84e486d1c3de7ec7deee3c2d61d50d4b5b87f2f1a434",
+      "https://www.wowhead.com/forever/item=276988": "f5ba8c1e5aedcb3d4ce97d1e38d1664a2fc6bd0b2a75f59e8d56cb565d03f634"
+    },
+    "purchaseGate": {
+      "factionID": 2740,
+      "faction": "Kirin Tor",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277053,
+    "name": "Azure Windraveled Drapes",
+    "bookItemID": 276989,
+    "spellID": 1301539,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Azure Windraveled Drapes (#276989), Leatherworking 175; vendor references: Archmage Alvareaux \u2014 Alterac Mountains (published; live stock/access unverified). Published requirement: Friendly with Kirin Tor.",
+    "details": "Published book vendor references (live stock/access unverified):\nArchmage Alvareaux (NPC 32287), Alterac Mountains; listed price 10g 52s 63c; stock quantity unverified. Alterac Mountains: published map x 14\u201314, y 63.2\u201363.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276989/pattern-azure-windraveled-drapes",
+    "vendorEvidence": [
+      {
+        "npcID": 32287,
+        "name": "Archmage Alvareaux",
+        "zoneIDs": [
+          36
+        ],
+        "zone": "Alterac Mountains",
+        "cost": [
+          [
+            105263
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276989",
+        "npcURL": "https://www.wowhead.com/forever/npc=32287",
+        "npcPageSHA256": "d227ff6f90be7406ab37a0c6bc4540adf6de6be26c7e146d9408045507c38e95",
+        "mapReference": {
+          "36": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  14,
+                  63.2
+                ]
+              ],
+              "uiMapId": 1416,
+              "uiMapName": "Alterac Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276989&xml": "8f495d632adfc559e9295081dc54d2acda1cb728769c740dbca90aba6b5eaed1",
+      "https://www.wowhead.com/forever/item=276989": "f328a401e0b66eccae738ae84e887b0e0127b5738335f63684c3185ee899d081"
+    },
+    "purchaseGate": {
+      "factionID": 2740,
+      "faction": "Kirin Tor",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
   }
 ]

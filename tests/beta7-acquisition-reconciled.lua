@@ -475,6 +475,57 @@ for _,id in ipairs({210781,215365,215366}) do
     assert(not item.acquisitionResearch.sourceSummary:find("vendor references:",1,true))
 end
 
+-- Checkpoint 6H: all 25 non-Favor Leatherworking books preserve named
+-- sellers, exact IDs, reputation and alternate-drop/location caveats.
+local otherLeather={
+    {5780,5786,65},
+    {5781,5787,70},
+    {5782,5788,145},
+    {5963,5973,145},
+    {6467,6475,80},
+    {7284,7290,95},
+    {7349,7361,110},
+    {7352,7362,110},
+    {4255,7613,130},
+    {4455,13287,140},
+    {4456,13288,140},
+    {18948,18949,130},
+    {20575,20576,75},
+    {252424,252761,35},
+    {252425,252762,35},
+    {252426,252763,35},
+    {252461,252830,150},
+    {277042,276978,175},
+    {277043,276979,175},
+    {277044,276980,175},
+    {277045,276981,175},
+    {277050,276986,175},
+    {277051,276987,175},
+    {277052,276988,175},
+    {277053,276989,175},
+}
+for _,r in ipairs(otherLeather) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    assert(item.acquisitionResearch.sourceSummary:find("Leatherworking "..r[3],1,true))
+    assert(describe(item,false):find("live stock",1,true))
+end
+assert(describe(addon.ItemCatalog[5780],false):find("Defias Squallshaper",1,true))
+assert(describe(addon.ItemCatalog[20575],false):find("Black Dragon Whelp",1,true))
+assert(describe(addon.ItemCatalog[252424],false):find("Granny Finespindle",1,true))
+assert(not describe(addon.ItemCatalog[252424],false):find("Defias Squallshaper",1,true),
+    "Do not copy a Murloc Scale Belt drop onto new Slippers")
+local kalldan=describe(addon.ItemCatalog[6467],false)
+assert(kalldan:find("Wailing Caverns area",1,true)
+    and kalldan:find("continent-level Kalimdor",1,true)
+    and kalldan:find("exact position remains unverified",1,true))
+for _,id in ipairs({277042,277043,277044,277045}) do
+    assert(addon.ItemCatalog[id].acquisitionResearch.sourceSummary:find("Friendly with Earthen Ring",1,true))
+end
+for _,id in ipairs({277050,277051,277052,277053}) do
+    assert(addon.ItemCatalog[id].acquisitionResearch.sourceSummary:find("Friendly with Kirin Tor",1,true))
+end
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
