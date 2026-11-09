@@ -1,7 +1,7 @@
 {
   "baseline": "d59141b",
   "reviewedOn": "2026-11-09",
-  "status": "Full local PASS; non-release GitHub CI pending source push",
+  "status": "Full local and GitHub PASS; bot reviewed; raw-source diagnostics documented",
   "counts": {
     "items": 100,
     "itemPages": 100,
@@ -9944,6 +9944,18 @@
     "addedBookIDs": 759,
     "selectedObservedEdgeCounts": {
       "0": 100
-    }
+    },
+    "diagnosticSnapshotChecks": "PASS:23241 item projections/9150 definitions/1375 edges;39 field10-only changes; all source-entry indices unchanged"
+  },
+  "rawUpstreamReview": "checkpoint8n_raw_upstream_review.json",
+  "upstreamSnapshotRegister": "upstream_snapshot_provenance.json",
+  "githubValidation": {
+    "runURL": "https://github.com/magicaddons/getgear/actions/runs/42666508212",
+    "sourceCommit": "befe841ba8a0f5b48551ede3e80f8382b5da15ad",
+    "validatedBotHead": "2fd9b88ec273213d73fc32756d1be3f1174e0712",
+    "testsPassed": 14,
+    "luaModules": 24,
+    "requiredReports": 4,
+    "botDelta": "run timestamp and three response hashes only"
   }
 }

@@ -1,0 +1,84 @@
+{
+  "capturedForCheckpoint": "8N",
+  "capturedUTC": "2026-11-09T17:48:56.801160+00:00",
+  "purpose": "Factual projection snapshots for exact future source-delta comparison; diagnostic audit data, not new runtime source adoption.",
+  "playfulls": {
+    "itemCount": 23241,
+    "sourceDefinitions": 9150,
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/gear.4462f570fe.json",
+        "bytes": 1310307,
+        "sha256": "4462f570fea5da84fd360e285d9329a4894f98d58ceaab5c9bfa2eb0c3b08dfd",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.57d605d886.json",
+        "bytes": 464217,
+        "sha256": "57d605d8860d06a3a704c5f52a2787e8a9246b03b1c7b4ec0b890245cde3152a",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.bafb8cc442.json",
+        "bytes": 446206,
+        "sha256": "bafb8cc442ba0b03cd40761ce376ba17784ee8ec5f212eff935c1cf5b476a823",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.d8ba2f8550.json",
+        "bytes": 1310307,
+        "sha256": "d8ba2f8550f3d2f84fafaa8823f7538d7382ecfd20ca9848d0dde75b09fce7ea",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.19d6802fa7.json",
+        "bytes": 464217,
+        "sha256": "19d6802fa77b7aa2b8f05fa4f1b4d19508de84efff460e5d8c9eb603f43b6a02",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.4fb3c002c6.json",
+        "bytes": 446206,
+        "sha256": "4fb3c002c6f33a2ce34e5d20a0da64881442bcde9e6ad517a5687663e21ef0cc",
+        "matchesRecordedFingerprint": true
+      }
+    ],
+    "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
+    "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
+    "rawField10Interpretation": "Uninterpreted; source-entry indices used by generator are field15."
+  },
+  "everloot": {
+    "total": 1375,
+    "qualifyingItemRelationships": 1178,
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "file": "upstream_everloot_edges_snapshot.csv",
+    "buildJSON": "JSON encoding preserves null/value types",
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103434,
+        "sha256": "cbd7f699194d217ca384fa1e7c59c4f96b1929abb6339aecf02a04e24cc49593",
+        "dataAsOf": "2026-11-09T17:40:15.099Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103652,
+        "sha256": "b2a5894b1d182d8c39d605a47c1eef7271787cad0f1ed93a37be1a50f341d1b1",
+        "dataAsOf": "2026-11-09T17:40:15.099Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 77580,
+        "sha256": "ea108ddfa85050f910eef0f6207d8fec649790b38dd017d7902e54a15783a94c",
+        "dataAsOf": "2026-11-09T17:40:15.099Z"
+      }
+    ],
+    "comparisonLimit": "Previous full raw edge payload was not retained. Total delta +10 and qualifying delta +8 are established, but exact newly added edge set is not asserted. Capture is a separately fingerprinted later read, not conflated with CI response hashes."
+  }
+}
