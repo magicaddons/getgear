@@ -591,6 +591,74 @@ assert(not flameGown:find("Wailing Caverns",1,true),"Do not infer every gown dro
 assert(addon.ItemCatalog[253977].acquisitionResearch.details:find("Dark Iron Ambassador",1,true))
 assert(not addon.ItemCatalog[253979].acquisitionResearch.details:find("Dark Iron Ambassador",1,true))
 
+-- Checkpoint 6K: exact reputation books, contested current access, no inferred gear gates.
+local nightclawBooks={
+    {276992,276928,60,"Honored"},
+    {276993,276929,50,"Friendly"},
+    {276994,276930,55,"Friendly"},
+    {276995,276931,50,"Friendly"},
+    {276996,276932,60,"Honored"},
+    {276997,276933,55,"Friendly"},
+    {277016,276952,60,"Honored"},
+    {277017,276953,50,"Friendly"},
+    {277018,276954,55,"Friendly"},
+    {277019,276955,50,"Friendly"},
+    {277020,276956,60,"Honored"},
+    {277021,276957,55,"Friendly"},
+    {276998,276934,60,"Honored"},
+    {276999,276935,50,"Friendly"},
+    {277000,276936,55,"Friendly"},
+    {277001,276937,50,"Friendly"},
+    {277002,276938,60,"Honored"},
+    {277003,276939,55,"Friendly"},
+    {277004,276940,60,"Honored"},
+    {277005,276941,50,"Friendly"},
+    {277006,276942,55,"Friendly"},
+    {277007,276943,50,"Friendly"},
+    {277008,276944,60,"Honored"},
+    {277009,276945,55,"Friendly"},
+    {277022,276958,60,"Honored"},
+    {277023,276959,50,"Friendly"},
+    {277024,276960,55,"Friendly"},
+    {277025,276961,50,"Friendly"},
+    {277026,276962,60,"Honored"},
+    {277027,276963,55,"Friendly"},
+    {277028,276964,60,"Honored"},
+    {277029,276965,50,"Friendly"},
+    {277030,276966,55,"Friendly"},
+    {277031,276967,50,"Friendly"},
+    {277032,276968,60,"Honored"},
+    {277033,276969,55,"Friendly"},
+    {277010,276946,60,"Honored"},
+    {277011,276947,50,"Friendly"},
+    {277012,276948,55,"Friendly"},
+    {277013,276949,50,"Friendly"},
+    {277014,276950,60,"Honored"},
+    {277015,276951,55,"Friendly"},
+    {277034,276970,60,"Honored"},
+    {277035,276971,50,"Friendly"},
+    {277036,276972,55,"Friendly"},
+    {277037,276973,50,"Friendly"},
+    {277038,276974,60,"Honored"},
+    {277039,276975,55,"Friendly"},
+}
+for _,r in ipairs(nightclawBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    local research=assert(item.acquisitionResearch)
+    assert(research.confidence=="published-forever-recipe-vendor-reference")
+    assert(research.sourceSummary:find(r[4].." with Nightclaw Druids",1,true))
+    assert(research.sourceSummary:find("shop access disputed; live unverified",1,true))
+    local text=describe(item,false)
+    assert(text:find("Nightclaw Cavern",1,true) and text:find("63.8, 36.0",1,true))
+    assert(text:find("Unnerving Silence (#94484)",1,true)
+        and text:find("do not assume every race",1,true))
+    assert(text:find("No new race, class or equip restriction",1,true))
+end
+assert(addon.ItemCatalog[276992].acquisitionResearch.sourceSummary:find("Honored",1,true))
+assert(not addon.ItemCatalog[276993].acquisitionResearch.sourceSummary:find("Honored",1,true),
+    "Do not copy chest/leg reputation gates onto wrist books")
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")

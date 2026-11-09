@@ -1,0 +1,155 @@
+{
+  "reviewedOn": "2026-11-09",
+  "liveVerified": false,
+  "vendor": {
+    "npcID": 254151,
+    "name": "Vayn Moongaze",
+    "url": "https://www.wowhead.com/forever/npc=254151",
+    "sha256": "060db1bddfe132cf5781a2d3c632c7817d1eea9343c8bae8a80570c87045608d",
+    "mapper": {
+      "16593": [
+        {
+          "count": 5,
+          "coords": [
+            [
+              63.3,
+              38.1
+            ],
+            [
+              63.4,
+              36.3
+            ],
+            [
+              63.8,
+              36
+            ],
+            [
+              63.8,
+              36.7
+            ],
+            [
+              64.1,
+              37.7
+            ]
+          ],
+          "uiMapId": 2521,
+          "uiMapName": "Zephras Isle"
+        }
+      ]
+    }
+  },
+  "questAndGuideSources": [
+    {
+      "url": "https://www.wowhead.com/forever/quest=94484",
+      "sha256": "8ef7e40703f7054759eae26507b5ae75b6bf97e7914832d555c90fc400bad416",
+      "questDetails": {
+        "category": 16593,
+        "category2": -2,
+        "id": 94484,
+        "level": 11,
+        "name": "Unnerving Silence",
+        "race": 4294967296,
+        "reprewards": [
+          [
+            2758,
+            100
+          ]
+        ],
+        "reqlevel": 8,
+        "reqrace": 4294967296,
+        "side": 3,
+        "xp": 220,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "factsMarkup": "[ul][li]Level: 11[/li][li]Requires level 8[/li][li]Side: Both[/li][li]Race: [race=95][/li][li][icon name=quest-start]Start: [url=/forever/npc=252359/lotheluum-starbreeze]Lotheluum Starbreeze[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=257944/elegael-thornpaw]Elegael Thornpaw[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=r1]8[/color][small] &nbsp;[/small][color=r2]9[/color][small] &nbsp;[/small][color=r3]14[/color][small] &nbsp;[/small][color=r4]17[/color][/li][li]Added in patch [acronym=\"1.60.1.69913\"]1.60.1[/acronym][/li][/ul]"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quest=93165",
+      "sha256": "cb4c6bf1c0fbedb1691f8ae8120f5efc4b43fde9245ebaf07a75a398dde7981a",
+      "questDetails": {
+        "category": 16593,
+        "category2": -2,
+        "id": 93165,
+        "itemchoices": [
+          [
+            263306,
+            1
+          ],
+          [
+            263307,
+            1
+          ],
+          [
+            263308,
+            1
+          ]
+        ],
+        "level": 13,
+        "money": 400,
+        "name": "Mercy Falls on Deaf Ears",
+        "race": 4294967332,
+        "reprewards": [
+          [
+            2758,
+            1000
+          ]
+        ],
+        "reqlevel": 8,
+        "reqrace": 4294967332,
+        "side": 3,
+        "xp": 910,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "factsMarkup": "[ul][li]Level: 13[/li][li]Requires level 8[/li][li]Side: Both[/li][li]Races: [race=3], [race=6], [br][race=95][/li][li][icon name=quest-start]Start: [url=/forever/npc=254151/vayn-moongaze]Vayn Moongaze[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=254151/vayn-moongaze]Vayn Moongaze[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]8[/color][small] &nbsp;[/small][color=r1]9[/color][small] &nbsp;[/small][color=r2]11[/color][small] &nbsp;[/small][color=r3]16[/color][small] &nbsp;[/small][color=r4]19[/color][/li][li]Added in patch [acronym=\"1.60.1.69893\"]1.60.1[/acronym][/li][/ul]"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quest=93459",
+      "sha256": "5748db6e5f01acdb15568fdd279ca48c40aafc573ff22bd79eb1780191d99fd4",
+      "questDetails": {
+        "category": 16593,
+        "category2": -2,
+        "id": 93459,
+        "level": 13,
+        "name": "More Al'Aketh Ears",
+        "reprewards": [
+          [
+            2758,
+            200
+          ]
+        ],
+        "reqlevel": 8,
+        "side": 3,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      }
+    },
+    {
+      "url": "https://www.wowhead.com/forever/guide/reputation/nightclaw-druids-quests-quartermaster-rewards",
+      "sha256": "8000514b4cffa9726901b5acd6c251f1e0c6cb2d4bfe675cd44777e12060e482"
+    },
+    {
+      "url": "https://www.wowhead.com/forever/guide/zephras-isle-zone-overview-maps-locations-and-trainers-34862",
+      "sha256": "1365bc3dcf66bce0c98e8f176943f90e97a9fa028b828455d3aa88e90f0837b7"
+    }
+  ],
+  "conflicts": [
+    "Quest 94484 exact metadata restricts race 95, contrary to broad guide access claim.",
+    "Quest 93165 exact metadata lists races 3,6,95; no all-race route assumed.",
+    "Quest 93165 objective requires 5 ears, while guide says 10.",
+    "Quest 93459 objective prose says 10 but objective table says 5; metadata rewards 200 reputation.",
+    "Quest 93459 prose names Vayn Moonclaw; end-NPC metadata links Vayn Moongaze 254151.",
+    "Vendor comment 6468441 dated 2026-11-08 reports no shop option; not independent live verification."
+  ],
+  "finding": "Exact book gates and seller references integrated; live shop/quest access unresolved. No fixed ear totals, rep-grind estimate or new gear eligibility restriction."
+}
