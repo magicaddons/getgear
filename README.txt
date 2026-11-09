@@ -75,3 +75,18 @@ Positive-stat tracker filtering, optional armour-only improvements and
 default-hidden green world BoEs preserve full guide coverage. No new
 SavedVariables migration is introduced in this beta; retain backups.
 Full automated tests passed; in-game UI and live source acceptance remain.
+
+SOURCE CREDITS
+--------------
+Everloot: https://everloot.app — community observation data, CC BY-SA 4.0
+https://creativecommons.org/licenses/by-sa/4.0/
+Everloot-derived reference data is adapted/combined and remains subject to
+CC BY-SA 4.0. Observations do not imply guaranteed future loot or rates.
+Playfulls: https://playfulls.com/database — public community source references;
+https://playfulls.com/methodology
+WoW Forever Friends: https://www.wowforeverfriends.org — Classic-reference
+item/NPC data, not proof of current Forever acquisition.
+Forever client cache: https://github.com/Napalmsteak/WoW-Classic-Item-Caches
+Recipe/client references: AHledger and the dated client snapshots documented
+in the repository. Individual publication checks cite Wowhead Forever and
+other source URLs in the reviewed evidence registers. No Blizzard affiliation.

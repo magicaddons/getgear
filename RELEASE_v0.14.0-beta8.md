@@ -19,7 +19,7 @@ Upgrading from v0.12.x to the v0.14.x catalogue can reset old character progress
 
 ## Validation and limits
 
-Python compilation/full source reconciliation, all **24 Lua modules** and all **14 regressions** must pass locally and in the non-release GitHub workflow before this package is published. The ZIP is checked for its exact module/support-file manifest and matching committed bytes; a SHA256 checksum is supplied.
+Python compilation/full source reconciliation, all **24 Lua modules** and all **14 regressions** passed locally and in [GitHub validation](https://github.com/magicaddons/getgear/actions/runs/42602679107). Inspected validated code commit: `a907d939aea29fa9683a740514c4a8171b1318e3`. The ZIP is checked for its exact module/support-file manifest and matching committed bytes; a SHA256 checksum is supplied.
 
 **Six dungeon source links and 954 current recipe-book routes still need live verification.** Some indexed entries are explicitly flagged unavailable or cross-version; other gear origins and current eligibility remain unknown. Full in-game UI, item-cache, quest/script, vendor-stock, map and settings acceptance still requires testing. Automated tests and community observations do not guarantee future loot/stock or certify every route. This is a beta, not a release candidate or stable release.
 
