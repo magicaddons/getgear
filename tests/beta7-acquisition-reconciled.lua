@@ -1306,6 +1306,37 @@ assert(addon.ItemCatalog[257255].acquisitionResearch.details:find("quest-page ob
     and addon.ItemCatalog[257255].acquisitionResearch.details:find("quest inputs",1,true))
 assert(addon.ItemCatalog[6898].acquisitionResearch.details:find("alternatives, not simultaneous rewards",1,true))
 
+-- Checkpoint 8D: exact PvP versions, opposite factions, events and new Cartel sellers.
+local midLevelVendors={12251,12252,12257,19512,19515,19520,19524,19536,19540,19544,19548,19552,19556,19560,19564,19568,19572,19581,19584,19590,19597,20089,20092,20095,20098,20101,20104,20107,20110,20113,20116,20119,20122,20125,20128,20153,20156,20161,20166,20168,20173,20180,20183,20187,20192,20198,20200,20206,20209,21116,21118,21565,21567,272059,272062,272066,272070,272074,272081,272085,272089,272093,274750,274751,274753,274754,276200,276201,276202,276203,276204}
+for _,id in ipairs(midLevelVendors) do
+    local a=assert(addon.ItemCatalog[id]).acquisitionResearch
+    assert(a.equipmentReference and not a.recipeReference
+        and a.sourceSummary:find("unverified",1,true))
+end
+for _,id in ipairs({20119,20122,20180,20183}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-origin-unresolved"
+        and a.details:find("inventory omits this exact ID",1,true)
+        and a.details:find("No guessed seller",1,true))
+end
+for _,id in ipairs({19581,19584,19590,19597}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("Exalted",1,true) and d:find("not proof a character must satisfy both opposing factions",1,true))
+end
+assert(addon.ItemCatalog[21565].acquisitionResearch.details:find("Friendly",1,true)
+    and not addon.ItemCatalog[21565].acquisitionResearch.details:find("requires Exalted",1,true))
+assert(addon.ItemCatalog[12251].acquisitionResearch.details:find("not assume both Lhara locations are simultaneously active",1,true)
+    and addon.ItemCatalog[12251].acquisitionResearch.details:find("Zulrg",1,true))
+for _,id in ipairs({276200,276201,276202,276203,276204}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("Riverglades at 77,52.8",1,true)
+        and d:find("not replace this with Gadgetzan/Tanaris",1,true))
+end
+assert(addon.ItemCatalog[276200].acquisitionResearch.details:find("Powderfuse - Friendly",1,true)
+    and addon.ItemCatalog[276204].acquisitionResearch.details:find("Powderfuse - Honored",1,true))
+assert(addon.ItemCatalog[19544].acquisitionResearch.details:find("Warsong Outriders - Revered",1,true)
+    and addon.ItemCatalog[19512].acquisitionResearch.details:find("Warsong Outriders - Honored",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),

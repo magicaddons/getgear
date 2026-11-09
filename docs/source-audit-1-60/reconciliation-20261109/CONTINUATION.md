@@ -31,3 +31,7 @@ All 95 selected vendor cases publication-researched/integrated; full local PASS 
 ## Checkpoint 8C complete
 
 All 34 selected lower-level quest-family IDs publication-researched: 32 rewards/two provided-only objects. Full local PASS 14/14,24 modules,3 files; GitHub PASS 42617823815, source 55d2a7cd1524465bed9c58408a6bb32ed920d86c, inspected bot 0cae6bb54173ad3a3d6296c5ae4a19adf5dca30f changes run/data-as-of timestamps and three response hashes only. All 14 PASS logs inspected. Runtime index 2,178; equipment 343; recipes 954. Remaining frozen queue 5,559; **71 vendor level 31–40 IDs marked 8D** are next. Preserve exact-role and access exceptions; source evidence/failed object reads documented in case note.
+
+## Checkpoint 8D in validation
+
+71 vendor level31–40 cases researched; full local PASS14/14,24 modules,3 files. GitHub pending source push; complete/inspect bot before next. Equipment414, index2,210, recipes954. Exact queue5,488 remaining; **ten quest-family level31–50 IDs marked8E** are next, followed by31–40 undocumented cases. Four exact missing Mail/Lamellar origins stay unresolved.
