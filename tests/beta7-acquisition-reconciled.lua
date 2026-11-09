@@ -928,6 +928,32 @@ assert(addon.ItemCatalog[12422].acquisitionResearch.details:lower():find("60 x t
 assert(addon.ItemCatalog[12631].acquisitionResearch.details:find("BOTH plans #12699 and finished Fiery Plate Gauntlets #12631",1,true))
 assert(addon.ItemCatalog[12631].sourceType=="Blacksmithing", "Preserve crafted facts alongside direct quest alternative")
 
+-- Checkpoint 6P: exact vendor versions, specialisations and source-specific gates.
+local highVendorBooks={{3837,6047},{7924,7995},{7947,8030},{3853,12163},{3855,12164},{12773,12819},{12775,12823},{19051,19203},{19057,19205},{19690,19776},{19691,19777},{19692,19778},{19693,19779},{19694,19780},{19695,19781},{250538,251390},{250606,251458},{250608,251460},{250616,251468},{275622,275598},{275623,275599},{275624,275600},{275625,275601},{275626,275602},{275627,275603},{5783,5789},{7386,7451},{8187,8385},{8192,8409},{4262,14635},{15077,15724},{15083,15725},{15045,15726},{15074,15729},{15061,15734},{15067,15735},{15071,15740},{15057,15741},{15048,15751},{15094,15756},{15063,15758},{15050,15759},{15080,15762},{18238,18239},{19044,19326},{19049,19327},{19052,19328},{19685,19769},{19686,19770},{19687,19771},{19688,19772},{19689,19773},{15065,20254},{252552,252877},{252599,252933},{276538,276542},{276539,276543},{276540,276544},{276541,276545},{7063,7088},{10030,10318},{13858,14469},{13863,14481},{14107,14483},{13864,14488},{18486,18487},{19047,19215},{19050,19218},{19682,19764},{19683,19765},{19684,19766},{22758,22772},{22757,22773},{22756,22774},{254123,254124},{10011,254682},{275604,275580},{275605,275581},{275606,275582},{275607,275583},{275608,275584},{275609,275585},{18634,18652},{19999,20000},{19998,20001}}
+for _,r in ipairs(highVendorBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    assert(item.acquisitionResearch.details:find("current inventory/access unverified",1,true))
+end
+local normalGloves=addon.ItemCatalog[8187]
+local otherGloves=addon.ItemCatalog[217270]
+assert(normalGloves.recipePatternItemID==8385)
+assert(normalGloves.acquisitionResearch.confidence=="published-forever-recipe-vendor-reference")
+assert(otherGloves.recipePatternItemID==nil,"Unavailable look-alike version must not gain a required book")
+assert(otherGloves.acquisitionResearch.confidence=="published-forever-availability-conflict")
+assert(not otherGloves.acquisitionResearch.details:find("Rock Elemental",1,true))
+assert(addon.ItemCatalog[7947].acquisitionResearch.details:find("Spectral Essence",1,true))
+assert(addon.ItemCatalog[15045].acquisitionResearch.details:find("Dragonscale Leatherworking",1,true))
+assert(addon.ItemCatalog[15074].acquisitionResearch.details:find("Tribal Leatherworking",1,true))
+assert(addon.ItemCatalog[276538].acquisitionResearch.details:find("Friendly Advice",1,true))
+assert(addon.ItemCatalog[276539].acquisitionResearch.details:find("rank unspecified",1,true))
+assert(addon.ItemCatalog[276540].acquisitionResearch.details:find("Shoulders specialisation",1,true))
+assert(addon.ItemCatalog[276541].acquisitionResearch.details:find("Boots specialisation",1,true))
+assert(addon.ItemCatalog[250538].acquisitionResearch.details:find("do not assume it bypasses",1,true))
+assert(addon.ItemCatalog[250606].acquisitionResearch.details:find("2 Massive Iron Axes",1,true))
+assert(addon.ItemCatalog[10011].acquisitionResearch.details:find("1 White Bandit Mask",1,true))
+assert(addon.ItemCatalog[250608].acquisitionResearch.details:find("full quest page could not be retrieved",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
