@@ -1,5 +1,7 @@
 # Checkpoint 6S — 119 accessible higher-level drop books; 48 source checks blocked
 
+**Follow-up:** [Checkpoint 6U](CHECKPOINT6U_FINAL_GENERIC_AND_TRIAGE_COMPLETION.md) recovered and validated all 48 source-access cases through canonical public pages. This note preserves the original partial-run state; its pending CSV is historical, not the current queue.
+
 9 November 2026; baseline `1008be5` after complete dungeon-book validation.
 
 **Research coverage is PARTIAL: 119/167 higher-level generic-drop cases researched; 48 remain PENDING HTTP 403.** The full workflow validation below applies to the submitted 119-case changes and complete existing addon, not a completed 167-case research pass. No new runtime record was added for the blocked 48.
