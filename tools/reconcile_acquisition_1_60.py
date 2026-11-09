@@ -510,8 +510,11 @@ def main():
             assert recipe["recipeItems"]==str(ref["bookItemID"])
             assert ref["liveVerified"] is False
             assert "unverified" in ref["summary"]
-            if iid not in changes and item["sourceEvidence"] not in (
-                    "observed","forever","published-forever","reported"):
+            # Reviewed publication-level recipes may already have manual
+            # instructions. Supplement those facts without replacing their
+            # source/confidence/summary; AcquisitionEvidence preserves them.
+            # Actual recorded or reported observations remain protected.
+            if iid not in changes and item["sourceEvidence"] not in ("observed","reported"):
                 changes[iid]={"summary":ref["summary"],"confidence":ref["confidence"],
                     "url":ref["bookURL"],"patternID":ref["bookItemID"],
                     "recipeReference":True}

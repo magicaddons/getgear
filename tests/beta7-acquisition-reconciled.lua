@@ -5,14 +5,42 @@ local toc=assert(io.open(root.."/GetGear.toc")):read("*a")
 local positions={}
 local skip={["Core.lua"]=true,["UI.lua"]=true,["AltInventory.lua"]=true}
 local n=0
+-- Evidence overlays must preserve every pre-existing field except their
+-- explicitly additive summary/book metadata. Deep copies detect nested
+-- ingredient, stat and eligibility mutations, not just item counts.
+local function copy(value)
+    if type(value)~="table" then return value end
+    local out={}; for k,v in pairs(value) do out[k]=copy(v) end; return out
+end
+local function same(a,b)
+    if type(a)~=type(b) then return false end
+    if type(a)~="table" then return a==b end
+    for k,v in pairs(a) do if not same(v,b[k]) then return false end end
+    for k in pairs(b) do if a[k]==nil then return false end end
+    return true
+end
+local additive={sourceSummary=true,acquisitionResearch=true,
+    recipePatternItemID=true,recipeLearnMethod=true,recipeMethodEvidence=true}
 for path in toc:gmatch("[^\r\n]+") do
     if path:match("%.lua$") then
         n=n+1;positions[path]=n
         if not skip[path] then
             local chunk,err=loadfile(root.."/"..path)
             assert(chunk,path..": "..tostring(err))
+            local before=path=="AcquisitionEvidence.lua" and copy(addon.ItemCatalog)
             local ok,message=pcall(chunk,"GetGear",addon)
             assert(ok,path..": "..tostring(message))
+            if before then
+                for id,facts in pairs(before) do
+                    local after=assert(addon.ItemCatalog[id],"Removed item "..id)
+                    for key,value in pairs(facts) do
+                        if not additive[key] then
+                            assert(same(value,after[key]),"Evidence mutated "..id.."/"..key)
+                        end
+                    end
+                end
+                for id in pairs(addon.ItemCatalog) do assert(before[id],"Added item "..id) end
+            end
         end
     end
 end
@@ -252,6 +280,61 @@ assert(fixture.ItemCatalog[250515].sourceSummary=="Original observation")
 assert(fixture.ItemCatalog[250515].acquisitionConfidence=="observed"
     and fixture.ItemCatalog[250515].classMask==1
     and fixture.ItemCatalog[250515].reagents[1].amount==12)
+
+-- Checkpoint 6C: all six early Tailoring slots retain exact book IDs,
+-- item-specific skill and usable directions for both factions.
+local tailoringBooks={
+    {253889,253890,60},
+    {253891,253892,60},
+    {253893,253894,60},
+    {253895,253896,60},
+    {253897,253898,60},
+    {253899,253900,60},
+    {253913,253914,75},
+    {253915,253916,75},
+    {253917,253918,75},
+    {253919,253920,75},
+    {253921,253922,75},
+    {253923,253924,75},
+    {253925,253926,85},
+    {253927,253928,85},
+    {253929,253930,85},
+    {253931,253932,85},
+    {253933,253934,85},
+    {253935,253936,85},
+    {253949,253950,100},
+    {253951,253952,100},
+    {253953,253954,100},
+    {253955,253956,100},
+    {253957,253958,100},
+    {253959,253960,100},
+    {253961,253962,110},
+    {253963,253964,110},
+    {253965,253966,110},
+    {253967,253968,110},
+    {253969,253970,110},
+    {253971,253972,110},
+    {253987,253988,125},
+    {253989,253990,125},
+    {253991,253992,125},
+    {253993,253994,125},
+    {253995,253996,125},
+    {253997,253998,125},
+}
+for _,r in ipairs(tailoringBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    local text=addon:GetAcquisitionSummary(item)
+    assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
+    assert(text:find("Pattern:",1,true) and text:find("#"..r[2],1,true)
+        and text:find("Tailoring "..r[3],1,true)
+        and text:find("Alliance Mivin Shadowweave",1,true)
+        and text:find("Horde Jim'bek",1,true)
+        and text:find("30 Merchant's Favor",1,true)
+        and text:find("live stock/gates unverified",1,true))
+    assert(item.acquisitionResearch.confidence=="published-forever-recipe-vendor-reference")
+    assert(not text:find("Boss:",1,true))
+    assert(describe(item,false):find("Jim'bek",1,true),"Guide lost Horde source")
+end
 
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
