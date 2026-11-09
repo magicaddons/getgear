@@ -513,8 +513,9 @@ def main():
             # Reviewed publication-level recipes may already have manual
             # instructions. Supplement those facts without replacing their
             # source/confidence/summary; AcquisitionEvidence preserves them.
-            # Actual recorded or reported observations remain protected.
-            if iid not in changes and item["sourceEvidence"] not in ("observed","reported"):
+            # Existing observations and source text remain primary at runtime;
+            # an independently researched book route is additive metadata.
+            if iid not in changes:
                 changes[iid]={"summary":ref["summary"],"confidence":ref["confidence"],
                     "url":ref["bookURL"],"patternID":ref["bookItemID"],
                     "recipeReference":True,"details":ref.get("details","")}

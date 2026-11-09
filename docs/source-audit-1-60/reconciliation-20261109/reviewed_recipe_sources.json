@@ -4908,5 +4908,476 @@
       "hordeFactionConfirmed": false
     },
     "details": "The exact schematic tooltip requires Friendly but does not name its faction. The published Fritz Fizzle inventory specifies Azeroth Commerce Authority. Confirm the corresponding Horde vendor reputation gate; do not infer it solely from the shared schematic."
+  },
+  {
+    "itemID": 3471,
+    "name": "Copper Chain Vest",
+    "bookItemID": 3609,
+    "spellID": 3321,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 30,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Copper Chain Vest (#3609), Blacksmithing 30; quest references: Alliance: Supplying the Front (#1578) from Tormus Deepforge, Ironforge (published; current availability/prerequisites unverified). Also a generic drop reference; no targeted farm verified.",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nSupplying the Front (#1578): start Tormus Deepforge, Ironforge; turn in to Thorvald Deepforge, Loch Modan. Published reward is this book; Alliance. Minimum level is not treated as established from the page\u2019s placeholder field of 1. Published quest classes: Warrior, Paladin, Rogue (verify access; gear eligibility unchanged). Deliver 6 Copper Axes and 6 Copper Chain Belts to the southern guard tower in Loch Modan. Current quest availability and prerequisite chain remain unverified.\nBook 3609 also has a broad published dropped-by table. Retain the generic drop route alongside Supplying the Front; do not turn the table\u2019s 200 displayed rows or historic comments into a guaranteed Forever farm or drop rate.",
+    "bookURL": "https://www.wowhead.com/forever/item=3609/plans-copper-chain-vest",
+    "questReferences": [
+      {
+        "questID": 1578,
+        "name": "Supplying the Front",
+        "faction": "Alliance",
+        "minimumLevelField": 1,
+        "classIDs": [
+          1,
+          2,
+          4
+        ],
+        "raceIDs": [],
+        "startNPC": {
+          "id": 6031,
+          "name": "Tormus Deepforge"
+        },
+        "startZone": "Ironforge",
+        "endNPC": {
+          "id": 6030,
+          "name": "Thorvald Deepforge"
+        },
+        "endZone": "Loch Modan",
+        "rewardKind": "guaranteed",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=1578",
+        "objectiveItems": [
+          {
+            "itemID": 2845,
+            "amount": 6
+          },
+          {
+            "itemID": 2851,
+            "amount": 6
+          }
+        ]
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=3609&xml": "a742dd872297ae707ddb8b2f91a6533cc4d0b859433b35ecf91a7854864e4b12",
+      "https://www.wowhead.com/forever/item=3609": "7c68201b85f90520a4ccf9f0c3a9001752ccb1b4068b6c72ed2a0b5a74d8f515"
+    }
+  },
+  {
+    "itemID": 6468,
+    "name": "Deviate Scale Belt",
+    "bookItemID": 6476,
+    "spellID": 7955,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 90,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Deviate Scale Belt (#6476), Leatherworking 90; quest references: Both factions: Deviate Eradication (#1487) from Ebru, Wailing Caverns (precise position unverified); published quest minimum level 15; choose the pattern reward (published; current availability/prerequisites unverified).",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nDeviate Eradication (#1487): start Ebru, Wailing Caverns (precise position unverified); turn in to Ebru, Wailing Caverns (precise position unverified). Published reward is a choice: select this book; Both factions. Published minimum quest level 15; this is separate from equipment level and book-learning skill. Kill 7 each of Deviate Ravagers, Vipers, Shamblers and Dreadfangs; return to Ebru. Current quest availability and prerequisite chain remain unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=6476/pattern-deviate-scale-belt",
+    "questReferences": [
+      {
+        "questID": 1487,
+        "name": "Deviate Eradication",
+        "faction": "Both factions",
+        "minimumLevelField": 15,
+        "classIDs": [],
+        "raceIDs": [],
+        "startNPC": {
+          "id": 5768,
+          "name": "Ebru"
+        },
+        "startZone": "Wailing Caverns (precise position unverified)",
+        "endNPC": {
+          "id": 5768,
+          "name": "Ebru"
+        },
+        "endZone": "Wailing Caverns (precise position unverified)",
+        "rewardKind": "choice",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=1487"
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=6476&xml": "cdd540ca01bfb68c4a0bbf67793b0dd54e4a6c065d72770e4ee06634dc000afe",
+      "https://www.wowhead.com/forever/item=6476": "bd3719ccfbd547d483394fc4e2421bef8c47d432940de16a19a2b662343b259c"
+    }
+  },
+  {
+    "itemID": 6709,
+    "name": "Moonglow Vest",
+    "bookItemID": 6710,
+    "spellID": 8322,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 65,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Moonglow Vest (#6710), Leatherworking 65; quest references: Alliance: Moonglow Vest (#1582) from Lotherias, Darnassus; published quest minimum level 8 (published; current availability/prerequisites unverified).",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nMoonglow Vest (#1582): start Lotherias, Darnassus; turn in to Lotherias, Darnassus. Published reward is this book; Alliance. Published minimum quest level 8; this is separate from equipment level and book-learning skill. Deliver 1 Embossed Leather Gloves, 5 Embossed Leather Boots and 5 Embossed Leather Cloaks. Current quest availability and prerequisite chain remain unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=6710/pattern-moonglow-vest",
+    "questReferences": [
+      {
+        "questID": 1582,
+        "name": "Moonglow Vest",
+        "faction": "Alliance",
+        "minimumLevelField": 8,
+        "classIDs": [],
+        "raceIDs": [],
+        "startNPC": {
+          "id": 6034,
+          "name": "Lotherias"
+        },
+        "startZone": "Darnassus",
+        "endNPC": {
+          "id": 6034,
+          "name": "Lotherias"
+        },
+        "endZone": "Darnassus",
+        "rewardKind": "guaranteed",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=1582",
+        "objectiveItems": [
+          {
+            "itemID": 4239,
+            "amount": 1
+          },
+          {
+            "itemID": 2309,
+            "amount": 5
+          },
+          {
+            "itemID": 2310,
+            "amount": 5
+          }
+        ]
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=6710&xml": "e0594b119acf8fe8e7d6f5f154c0ea2a52eef58c9c3bafa8fb00c5fa7e4f702b",
+      "https://www.wowhead.com/forever/item=6710": "9d69376a855c0c78a8cd7bc5731dd4572e47e9e11374899f64611a9c25e6c35c"
+    }
+  },
+  {
+    "itemID": 6731,
+    "name": "Ironforge Breastplate",
+    "bookItemID": 6735,
+    "spellID": 8367,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 100,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Ironforge Breastplate (#6735), Blacksmithing 100; quest references: Alliance: Gearing Redridge (#1618) from Tormus Deepforge, Ironforge (published; current availability/prerequisites unverified).",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nGearing Redridge (#1618): start Tormus Deepforge, Ironforge; turn in to Verner Osgood, Redridge Mountains. Published reward is this book; Alliance. Minimum level is not treated as established from the page\u2019s placeholder field of 1. Deliver 4 Runed Copper Belts and 4 Heavy Copper Mauls. Current quest availability and prerequisite chain remain unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=6735/plans-ironforge-breastplate",
+    "questReferences": [
+      {
+        "questID": 1618,
+        "name": "Gearing Redridge",
+        "faction": "Alliance",
+        "minimumLevelField": 1,
+        "classIDs": [],
+        "raceIDs": [],
+        "startNPC": {
+          "id": 6031,
+          "name": "Tormus Deepforge"
+        },
+        "startZone": "Ironforge",
+        "endNPC": {
+          "id": 415,
+          "name": "Verner Osgood"
+        },
+        "endZone": "Redridge Mountains",
+        "rewardKind": "guaranteed",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=1618",
+        "objectiveItems": [
+          {
+            "itemID": 2857,
+            "amount": 4
+          },
+          {
+            "itemID": 6214,
+            "amount": 4
+          }
+        ]
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=6735&xml": "954a1db7eb20b3bd51a16016c2f775199bf2840772efc196b0c2a82ef6b330de",
+      "https://www.wowhead.com/forever/item=6735": "11856e6980f2c61557a8e84241d3f8f6bfff343205bffadb951da699dc19e359"
+    }
+  },
+  {
+    "itemID": 7913,
+    "name": "Barbaric Iron Shoulders",
+    "bookItemID": 7978,
+    "spellID": 9811,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 135,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Barbaric Iron Shoulders (#7978), Blacksmithing 135; quest references: Horde: On Iron Pauldrons (#2752) from Orokk Omosh, Orgrimmar; published quest minimum level 32 (published; current availability/prerequisites unverified).",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nOn Iron Pauldrons (#2752): start Orokk Omosh, Orgrimmar; turn in to Orokk Omosh, Orgrimmar. Published reward is this book; Horde. Published minimum quest level 32; this is separate from equipment level and book-learning skill. Deliver 4 Bronze Battleaxes and 4 Bronze Warhammers. Current quest availability and prerequisite chain remain unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=7978/plans-barbaric-iron-shoulders",
+    "questReferences": [
+      {
+        "questID": 2752,
+        "name": "On Iron Pauldrons",
+        "faction": "Horde",
+        "minimumLevelField": 32,
+        "classIDs": [],
+        "raceIDs": [],
+        "startNPC": {
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "startZone": "Orgrimmar",
+        "endNPC": {
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "endZone": "Orgrimmar",
+        "rewardKind": "guaranteed",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2752",
+        "objectiveItems": [
+          {
+            "itemID": 7958,
+            "amount": 4
+          },
+          {
+            "itemID": 7956,
+            "amount": 4
+          }
+        ]
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7978&xml": "cab58cdbc9bf61dad64c3934581483f977d444cc376a68f4e4d0600655f8cc86",
+      "https://www.wowhead.com/forever/item=7978": "74db1bd11fae37e1fc3076f991a4e3941f3b40168bd8829f432d9345f99d220b"
+    }
+  },
+  {
+    "itemID": 7914,
+    "name": "Barbaric Iron Breastplate",
+    "bookItemID": 7979,
+    "spellID": 9813,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 135,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Barbaric Iron Breastplate (#7979), Blacksmithing 135; quest references: Horde: Barbaric Battlements (#2751) from Orokk Omosh, Orgrimmar; published quest minimum level 32 (published; current availability/prerequisites unverified).",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nBarbaric Battlements (#2751): start Orokk Omosh, Orgrimmar; turn in to Orokk Omosh, Orgrimmar. Published reward is this book; Horde. Published minimum quest level 32; this is separate from equipment level and book-learning skill. Deliver 2 Patterned Bronze Bracers, 2 Bronze Greatswords and 2 Sharp Claws. Current quest availability and prerequisite chain remain unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=7979/plans-barbaric-iron-breastplate",
+    "questReferences": [
+      {
+        "questID": 2751,
+        "name": "Barbaric Battlements",
+        "faction": "Horde",
+        "minimumLevelField": 32,
+        "classIDs": [],
+        "raceIDs": [],
+        "startNPC": {
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "startZone": "Orgrimmar",
+        "endNPC": {
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "endZone": "Orgrimmar",
+        "rewardKind": "guaranteed",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2751",
+        "objectiveItems": [
+          {
+            "itemID": 2868,
+            "amount": 2
+          },
+          {
+            "itemID": 7957,
+            "amount": 2
+          },
+          {
+            "itemID": 5635,
+            "amount": 2
+          }
+        ]
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7979&xml": "2394d7f5fe73a97840a21302ea3eb6fad5f3bc20e454e8f126f69f81b9ff77ed",
+      "https://www.wowhead.com/forever/item=7979": "73880ba02d3ef5bc297cb196484500258059f328d89563f6c7f021503daeb8ed"
+    }
+  },
+  {
+    "itemID": 7915,
+    "name": "Barbaric Iron Helm",
+    "bookItemID": 7980,
+    "spellID": 9814,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 150,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Barbaric Iron Helm (#7980), Blacksmithing 150; quest references: Horde: Horns of Frenzy (#2754) from Orokk Omosh, Orgrimmar; published quest minimum level 32 (published; current availability/prerequisites unverified).",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nHorns of Frenzy (#2754): start Orokk Omosh, Orgrimmar; turn in to Orokk Omosh, Orgrimmar. Published reward is this book; Horde. Published minimum quest level 32; this is separate from equipment level and book-learning skill. Published quest classes: Warrior, Hunter, Druid (verify access; gear eligibility unchanged). Deliver 2 Solid Iron Mauls, 2 Silvered Bronze Boots and 2 Silvered Bronze Gauntlets. Current quest availability and prerequisite chain remain unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=7980/plans-barbaric-iron-helm",
+    "questReferences": [
+      {
+        "questID": 2754,
+        "name": "Horns of Frenzy",
+        "faction": "Horde",
+        "minimumLevelField": 32,
+        "classIDs": [
+          1,
+          3,
+          11
+        ],
+        "raceIDs": [],
+        "startNPC": {
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "startZone": "Orgrimmar",
+        "endNPC": {
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "endZone": "Orgrimmar",
+        "rewardKind": "guaranteed",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2754",
+        "objectiveItems": [
+          {
+            "itemID": 3851,
+            "amount": 2
+          },
+          {
+            "itemID": 3482,
+            "amount": 2
+          },
+          {
+            "itemID": 3483,
+            "amount": 2
+          }
+        ]
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7980&xml": "c3bf34481b4c9e480ec8798421d9b8f10949950e03e12e3830dca5f21164c0f4",
+      "https://www.wowhead.com/forever/item=7980": "0397dda2c1023fc5192115b593b566eeb2da66aae8f8c696c6e8a3e8c2f6e2d6"
+    }
+  },
+  {
+    "itemID": 277672,
+    "name": "Rough Copper Chain Boots",
+    "bookItemID": 277673,
+    "spellID": 1302598,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 50,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Rough Copper Chain Boots (#277673), Blacksmithing 50; quest references: Alliance: The Quarry's Smith (#95217) from Frast Dokner, Dun Morogh; published quest minimum level 7 / Horde: This Is Spinal Axe (#96874) from Ug'thok, Orgrimmar; published quest minimum level 6 (published; current availability/prerequisites unverified).",
+    "details": "Published recipe-book quest references (live availability and prerequisites unverified):\nThe Quarry's Smith (#95217): start Frast Dokner, Dun Morogh; turn in to Frast Dokner, Dun Morogh. Published reward is this book; Alliance. Published minimum quest level 7; this is separate from equipment level and book-learning skill. Published quest classes: Warrior, Paladin, Shaman (verify access; gear eligibility unchanged). Published race restriction present; exact character access needs confirmation (not applied to gear eligibility). Deliver 12 Copper Bars and 4 Toughened Boar Hides. Current quest availability and prerequisite chain remain unverified.\nThis Is Spinal Axe (#96874): start Ug'thok, Orgrimmar; turn in to Ug'thok, Orgrimmar. Published reward is this book; Horde. Published minimum quest level 6; this is separate from equipment level and book-learning skill. Published quest classes: Warrior, Paladin, Shaman (verify access; gear eligibility unchanged). Collect 5 Weathered Spines from beasts in Thunder Ridge and bring 5 Rough Grinding Stones. Current quest availability and prerequisite chain remain unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=277673/plans-rough-copper-chain-boots",
+    "questReferences": [
+      {
+        "questID": 95217,
+        "name": "The Quarry's Smith",
+        "faction": "Alliance",
+        "minimumLevelField": 7,
+        "classIDs": [
+          1,
+          2,
+          7
+        ],
+        "raceIDs": [
+          3,
+          4,
+          7,
+          95
+        ],
+        "startNPC": {
+          "id": 1698,
+          "name": "Frast Dokner"
+        },
+        "startZone": "Dun Morogh",
+        "endNPC": {
+          "id": 1698,
+          "name": "Frast Dokner"
+        },
+        "endZone": "Dun Morogh",
+        "rewardKind": "guaranteed",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=95217",
+        "objectiveItems": [
+          {
+            "itemID": 2840,
+            "amount": 12
+          },
+          {
+            "itemID": 267416,
+            "amount": 4
+          }
+        ]
+      },
+      {
+        "questID": 96874,
+        "name": "This Is Spinal Axe",
+        "faction": "Horde",
+        "minimumLevelField": 6,
+        "classIDs": [
+          1,
+          2,
+          7
+        ],
+        "raceIDs": [],
+        "startNPC": {
+          "id": 10266,
+          "name": "Ug'thok"
+        },
+        "startZone": "Orgrimmar",
+        "endNPC": {
+          "id": 10266,
+          "name": "Ug'thok"
+        },
+        "endZone": "Orgrimmar",
+        "rewardKind": "guaranteed",
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=96874",
+        "objectiveItems": [
+          {
+            "itemID": 275719,
+            "amount": 5
+          },
+          {
+            "itemID": 3470,
+            "amount": 5
+          }
+        ]
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=277673&xml": "f54d46c3caf00f9f359481d74c5946dcb43d5bdcc7de0938f0182abaa10ccd71",
+      "https://www.wowhead.com/forever/item=277673": "8581f5451377c1d26030d0f894966bba419ec2e52f822143ae8372b906aa289d"
+    }
   }
 ]

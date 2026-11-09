@@ -405,6 +405,35 @@ for _,r in ipairs({{280306,280321},{280307,280322},{280308,280323}}) do
     assert(describe(item,false):find("does not name its faction",1,true))
 end
 
+-- Checkpoint 6F: book quest routes retain distinct starts/turn-ins,
+-- reward choices and access gates without restricting the gear catalogue.
+for _,r in ipairs({{3471,3609},{6468,6476},{6709,6710},{6731,6735},
+                   {7913,7978},{7914,7979},{7915,7980},{277672,277673}}) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    local text=addon:GetAcquisitionSummary(item)
+    assert(item.recipePatternItemID==r[2] and text:find("#"..r[2],1,true))
+    assert(item.acquisitionResearch.confidence=="published-forever-quest-book-reference")
+    assert(text:find("current availability/prerequisites unverified",1,true))
+end
+local copperQuest=describe(addon.ItemCatalog[3471],false)
+assert(copperQuest:find("Supplying the Front",1,true)
+    and copperQuest:find("start Tormus Deepforge, Ironforge",1,true)
+    and copperQuest:find("Thorvald Deepforge, Loch Modan",1,true)
+    and copperQuest:find("generic drop route",1,true))
+local deviate=addon.ItemCatalog[6468]
+assert(deviate.acquisitionConfidence=="reported","Original report confidence must survive")
+assert(describe(deviate,false):find("a choice: select this book",1,true))
+local bootsQuest=describe(addon.ItemCatalog[277672],false)
+assert(bootsQuest:find("The Quarry's Smith",1,true)
+    and bootsQuest:find("This Is Spinal Axe",1,true)
+    and bootsQuest:find("Frast Dokner, Dun Morogh",1,true)
+    and bootsQuest:find("Ug'thok, Orgrimmar",1,true))
+local shoulders=addon.ItemCatalog[7913]
+assert(describe(shoulders,false):find("minimum quest level 32",1,true)
+    and describe(shoulders,false):find("4 Bronze Battleaxes and 4 Bronze Warhammers",1,true))
+assert(shoulders.requiredLevel~=32,"Quest access must not become the gear equip gate")
+assert(not addon:GetAcquisitionSummary(shoulders):find("Vendor:",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
