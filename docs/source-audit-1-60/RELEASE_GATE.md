@@ -231,3 +231,7 @@ Full local and GitHub PASS: [42658598705](https://github.com/magicaddons/getgear
 ## Checkpoint 8I validated — next 8J
 
 Full local and GitHub PASS: [42660857813](https://github.com/magicaddons/getgear/actions/runs/42660857813), source `ecc4b2882c3340e985a9b8576bc78e7b759aea56`; inspected direct bot/final validated HEAD `b54a4afa7fd38c7c5e9f494546c95f46a1e98663`. All14 PASS logs verified;24 modules/four reports. Bot changes only run timestamp/three response hashes; runtime/counts/reports unchanged. Equipment814/index2,543/display2,542/books759; crafts1,254/ingredients4,857. Remaining5,088; **next8J:63 vendors at58**. No release/main action.
+
+## Checkpoint 8J integrated — GitHub pending
+
+[63 level58 vendor cases](reconciliation-20261109/CHECKPOINT8J_LEVEL58_VENDORS.md):59 exact merchant joins/seven NPCs and four exact missing Mail/Lamellar origins. Darkspear58 ranks directly evidenced, no copied lower-tier data. Full local PASS14/14,24 modules,four reports; GitHub PENDING. Equipment877/index2,578/display2,577/books759; crafts1,254/ingredients4,857 unchanged. All814 prior entries retained;63 additive summaries only. Remaining5,025; next8K:first100 remaining level60 vendor IDs numerically sorted/marked queue. No release/main action.

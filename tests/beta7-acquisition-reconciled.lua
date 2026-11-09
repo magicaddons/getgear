@@ -1516,6 +1516,28 @@ for _,id in ipairs({20069,20220}) do
 end
 assert(addon.ItemCatalog[19087].acquisitionResearch.details:find("Grunnda Wolfheart13218 have no usable map",1,true))
 
+-- Checkpoint 8J: exact level58 vendor versions and missing Mail/Lamellar
+-- IDs retain their own routes, ranks and unresolved status.
+local vendors8j=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/checkpoint8j_vendor_equipment.csv")):read("*a")
+local count8j=0
+for id in vendors8j:gmatch("\n(%d+),") do
+    local a=addon.ItemCatalog[tonumber(id)].acquisitionResearch
+    assert(a.equipmentReference and a.sourceSummary:find("unverified",1,true)
+        and a.confidence~="forever-observed-npc" and not a.recipeReference)
+    count8j=count8j+1
+end
+assert(count8j==63)
+for _,id in ipairs({20044,20051,20177,20181}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-origin-unresolved"
+        and a.details:find("inventory omits this exact ID",1,true))
+end
+assert(addon.ItemCatalog[272064].acquisitionResearch.details:find("Darkspear Raiders - Honored",1,true))
+assert(addon.ItemCatalog[272079].acquisitionResearch.details:find("Darkspear Raiders - Revered",1,true))
+assert(addon.ItemCatalog[272087].acquisitionResearch.details:find("not a recipe book",1,true)
+    and not addon.ItemCatalog[272087].profession)
+assert(addon.ItemCatalog[16335].acquisitionResearch.details:find("not proof of a current honour rank",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
