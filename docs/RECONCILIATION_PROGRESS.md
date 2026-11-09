@@ -337,3 +337,7 @@ Full local and GitHub PASS: [42710850319](https://github.com/magicaddons/getgear
 ## Checkpoint 8P integrated — GitHub pending
 
 [100 level60 PvP vendor cases](source-audit-1-60/reconciliation-20261109/CHECKPOINT8P_LEVEL60_PVP_FIFTH100.md):100 exact merchant joins/two unmapped NPCs;95 current-access-unverified/five exact seasonal-version warnings. Shared8K policy reused; no inferred Honor/rank/current charge/retirement. Full local PASS14/14,24 modules,four reports; GitHub PENDING. All1,377 earlier objects retained;100 summaries only. Equipment1,477/index3,157/display3,156/books759; crafts1,254/ingredients4,857 unchanged. Remaining4,425; next8Q:first100 remaining60-vendor IDs231692–235479, after CI/bot review. Feeds unchanged from audited8O; no release/main action.
+
+## Checkpoint 8P validated — next 8Q
+
+Full local and GitHub PASS: [42711806965](https://github.com/magicaddons/getgear/actions/runs/42711806965), source `b5590f1cb16d00cbf373abce5128c81755ea0354`; inspected direct bot/final validated HEAD `3aef918f3e028d0134038d6c5f1f25cbb80cc310`. All14 CI PASS logs verified;24 modules/four reports. Bot changes only run timestamp/three response hashes; runtime/counts/reports unchanged. Equipment1,477/index3,157/display3,156/books759; crafts1,254/ingredients4,857. Remaining4,425; **next8Q:first100 remaining60-vendor IDs231692–235479**, marked queue.95 current-access-unverified references/five exact version warnings remain publication facts. No release/main action.
