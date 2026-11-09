@@ -37,3 +37,7 @@ When raw source totals/shards change, compare factual snapshots in CONTINUATION.
 8Q Anachronos inventory/23 input direct pages403;35 exact tooltip ranks are use/equip facts, not independently read purchase gates. Ten existing class restrictions retained. Legacy three-path rings21196–21210 have different IDs.8R Repair Chalice1232438→239117 uses3 unnamed242465 fragments; no learned profession/current input farm or canonical239117 name established. No new regular crafts/reagents from vendor costs.
 
 8T typed currency3469 Tarnished Undermine Real differs from item3469 and same-name physical226404. Published total cap165 is not item stack250/daily/weekly earning cap. Guide25Oct earning55+ boss model is assumed/previous55 purchase unconfirmed, not current proof. All current currency/stock/phase/acceptance remains unverified.
+
+## Checkpoint8X research preserved — integration pending
+
+100 exact Premier55 identities/101 discovery queries,100 class masks; all primary acquisition tables empty/no explicit availability flags. Seven unnamed vendor-category leads and Builder rank10/primary general no-rank discrepancy qualified, no exact current route invented.171 cachedNPC/95 inventories reused,0 selected matches, bounded only. Evidence CHECKPOINT8X_IN_PROGRESS.md/checkpoint8x_working_evidence.json/discovery_index.json. All100 remain8X/unreviewed, registry1943/index3592/remaining3959. Latest fullPASS8W42721186621/bota425567; integrate then full local/CI/bot, next8Y last76 undocumented55. No release/main action.
