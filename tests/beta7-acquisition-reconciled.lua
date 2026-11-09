@@ -738,6 +738,29 @@ local pearly=addon.ItemCatalog[253945].acquisitionResearch.details
 assert(pearly:find("Shadow Charger",1,true) and pearly:find("Lady Sarevess",1,true))
 assert(not pearly:find("Kresh",1,true),"Do not spread another Filigreed book's NPCs")
 
+-- Checkpoint 6M: trainer alternatives must not acquire a fabricated required book ID.
+local trainerAlternatives={250620,250621,250482,250556,250557,250558,250559,250560,253885,253887,254001,254003,254005,254007,254009,254011}
+for _,id in ipairs(trainerAlternatives) do
+    local item=assert(addon.ItemCatalog[id])
+    assert(item.recipePatternItemID==nil,"Unknown physical book origin must not add a required book ID")
+    assert(item.acquisitionResearch.confidence=="published-forever-trainer-spell-reference")
+    assert(item.acquisitionResearch.sourceSummary:find("not established required",1,true))
+    local detail=item.acquisitionResearch.details
+    assert(detail:find("Book existence does not establish",1,true)
+        and detail:find("live trainer inventory",1,true))
+end
+local newlyLocatedBooks={{250500,251352},{250501,251353},{250502,251354},{252501,252793},{252445,252794},{252503,252797},{253999,254000}}
+for _,r in ipairs(newlyLocatedBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    assert(item.acquisitionResearch.details:find("not drops of the finished crafted gear",1,true))
+end
+local protector=addon.ItemCatalog[250500].acquisitionResearch.details
+local acolyte=addon.ItemCatalog[250501].acquisitionResearch.details
+assert(protector:find("Dextren Ward",1,true) and not acolyte:find("Dextren Ward",1,true))
+assert(acolyte:find("Bazil Thredd",1,true) and not protector:find("Bazil Thredd",1,true))
+assert(addon.ItemCatalog[253999].acquisitionResearch.details:find("Gravelsnout Surveyor",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")

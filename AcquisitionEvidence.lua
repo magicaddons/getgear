@@ -24,8 +24,9 @@ for id,reference in pairs(records) do
             facts.sourceSummary=reference.summary
             added=added+1
         end
-        -- Published recipe item existence establishes that a *book* is
-        -- needed, NOT whether a live trainer/vendor/mob supplies it.
+        -- Associate a researched book route when one is supplied. Book
+        -- existence alone does not establish the only learning path;
+        -- trainer alternatives with unknown book origin omit patternID.
         if type(reference.patternID)=="number" and not facts.recipePatternItemID then
             facts.recipePatternItemID=reference.patternID
             if not facts.recipeLearnMethod then

@@ -518,7 +518,7 @@ def main():
             if iid not in changes:
                 changes[iid]={"summary":ref["summary"],"confidence":ref["confidence"],
                     "url":ref["bookURL"],
-                    "patternID":None if ref.get("warningOnly") else ref["bookItemID"],
+                    "patternID":None if (ref.get("warningOnly") or ref.get("bookOriginUnknown")) else ref["bookItemID"],
                     "recipeReference":True,"details":ref.get("details","")}
         # Actionable vendor and quest research beyond the dungeon/recipe
         # queues. Only enrich already vendor/quest/undocumented catalogue
