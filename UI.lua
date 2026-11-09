@@ -286,6 +286,9 @@ local function Describe(gear, previewMode)
     local research=gear.acquisitionResearch
     if research and research.recipeReference and research.sourceSummary then
         desc=desc.."\n"..research.sourceSummary
+        if research.details and research.details~="" then
+            desc=desc.."\n"..research.details
+        end
     end
     if gear.suitabilityWarning and gear.suitabilityWarning~="" and
         not desc:find(gear.suitabilityWarning,1,true) then

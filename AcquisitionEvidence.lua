@@ -17,6 +17,7 @@ for id,reference in pairs(records) do
             sourceSummary=reference.summary,
             referenceDate="2026-11-09",
             recipeReference=reference.recipeReference,
+            details=reference.details,
         }
         if not manualCurrent
             and type(reference.summary)=="string" and reference.summary~="" then

@@ -336,6 +336,52 @@ for _,r in ipairs(tailoringBooks) do
     assert(describe(item,false):find("Jim'bek",1,true),"Guide lost Horde source")
 end
 
+-- Checkpoint 6D: all researched Leatherworking books keep vendor and
+-- drop alternatives distinct from the finished crafted equipment.
+local leatherBooks={
+    {252428,252765,60},
+    {252429,252766,60},
+    {252430,252767,60},
+    {252431,252768,60},
+    {252432,252769,60},
+    {252433,252770,60},
+    {252497,252780,75},
+    {252499,252782,75},
+    {252440,252787,85},
+    {252442,252789,85},
+    {252444,252791,85},
+    {252505,252799,100},
+    {252447,252800,100},
+    {252506,252802,100},
+    {252451,252808,110},
+    {252516,252820,125},
+    {252517,252821,125},
+    {252458,252823,125},
+    {252518,252824,125},
+}
+for _,r in ipairs(leatherBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    local text=addon:GetAcquisitionSummary(item)
+    assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
+    assert(text:find("#"..r[2],1,true) and text:find("Leatherworking "..r[3],1,true)
+        and text:find("Alliance Daniel Stitchsong",1,true)
+        and text:find("Horde Pawani",1,true)
+        and text:find("30 Merchant's Favor",1,true)
+        and text:find("live stock/gates unverified",1,true))
+    assert(describe(item,false):find("Pawani",1,true))
+end
+local bookDrop=assert(addon.ItemCatalog[252497]) -- Totemic Gloves
+local bookDetail=describe(bookDrop,false)
+assert(bookDetail:find("Published book-drop references",1,true)
+    and bookDetail:find("The Deadmines: Sneed",1,true)
+    and bookDetail:find("Fel Steed",1,true) and bookDetail:find("Ragefire Chasm",1,true)
+    and bookDetail:find("live unverified; no drop-rate claim",1,true))
+assert(bookDrop.sourceType=="Leatherworking" and bookDrop.profession=="Leatherworking")
+assert(not addon:GetAcquisitionSummary(bookDrop):find("Boss:",1,true))
+assert(describe(addon.ItemCatalog[252505],false):find("Player report: Lord Cobrahn",1,true))
+assert(not addon.ItemCatalog[252428].acquisitionResearch.details,
+    "A published drop for a glove must not spread to the belt family")
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")

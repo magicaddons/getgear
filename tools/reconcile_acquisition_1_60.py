@@ -517,7 +517,7 @@ def main():
             if iid not in changes and item["sourceEvidence"] not in ("observed","reported"):
                 changes[iid]={"summary":ref["summary"],"confidence":ref["confidence"],
                     "url":ref["bookURL"],"patternID":ref["bookItemID"],
-                    "recipeReference":True}
+                    "recipeReference":True,"details":ref.get("details","")}
         # Actionable vendor and quest research beyond the dungeon/recipe
         # queues. Only enrich already vendor/quest/undocumented catalogue
         # records; never turn a generic world-drop into an assumed vendor
@@ -574,6 +574,7 @@ def main():
                   ",url="+lua_str(row.get("url",""))+
                   (",patternID="+str(row["patternID"]) if row.get("patternID") else "")+
                   (",recipeReference=true" if row.get("recipeReference") else "")+
+                  (",details="+lua_str(row["details"]) if row.get("details") else "")+
                   "},\n" for iid,row in sorted(changes.items()))
         + "}\n",encoding="utf8")
     write_csv("all_items_reconciled.csv",all_rows,list(all_rows[0]))
