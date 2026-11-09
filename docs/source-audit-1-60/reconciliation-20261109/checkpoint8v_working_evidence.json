@@ -1,5 +1,5 @@
 {
-  "status": "Publication research preserved; runtime integration/full validation/queue advance PENDING",
+  "status": "Publication research integrated and validated; original preservation snapshot retained",
   "baseline": "11dd2f1782f3105b3e19c5e889f235fd5fe547bd",
   "reviewedOn": "2026-11-09",
   "counts": {
@@ -1764,5 +1764,16 @@
     },
     "secondaryHTTPFingerprints": "Connected-web reads do not expose complete response fingerprints; none invented."
   },
-  "limits": "Primary exact items/joins are publication facts only. Deadwood Beads pickup-bound/stack250, origin/rep earning/current access unresolved; no Hyjal universal55/FriendlyAdvice gate copied. Four items retain originalSourceNotDocumented/eligibility. WisepawTotem is two-handStaff, BearPokingStick two-handPolearm, not new recipe/Shaman restriction. No new regular crafts/reagents. Primary red unavailable18023 badge and seasonal227947 flags are exact-version source warnings, not new runtime removal or broad-family flags. All1821 prior entries/crafts1254/ingredients4857 preserved; no full8V PASS/queue completion yet."
+  "limits": "Primary exact items/joins are publication facts only. Deadwood Beads pickup-bound/stack250, origin/rep earning/current access unresolved; no Hyjal universal55/FriendlyAdvice gate copied. Four items retain originalSourceNotDocumented/eligibility. WisepawTotem is two-handStaff, BearPokingStick two-handPolearm, not new recipe/Shaman restriction. No new regular crafts/reagents. Primary red unavailable18023 badge and seasonal227947 flags are exact-version source warnings, not new runtime removal or broad-family flags. All1821 prior entries/crafts1254/ingredients4857 preserved; no full8V PASS/queue completion yet.",
+  "integrationOutcome": {
+    "sourceCommit": "fcad7a674238f17b8b3fb3028eb36fb613240c38",
+    "ciRun": "https://github.com/magicaddons/getgear/actions/runs/42718647114",
+    "validatedBotHead": "a4c1f978d88dce5fdda48ea0a768fd17ca56c463",
+    "fullRegression": "14 PASS;24 modules;four reports; local and CI",
+    "equipmentRegistry": 1843,
+    "index": 3492,
+    "display": 3491,
+    "frozenRemaining": 4059,
+    "next": "8W:first100 undocumented55 IDs16367\u2013272630 marked queue"
+  }
 }
