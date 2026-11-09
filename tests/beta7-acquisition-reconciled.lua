@@ -1497,6 +1497,25 @@ assert(addon.ItemCatalog[274432].acquisitionResearch.confidence=="secondary-gene
     and addon.ItemCatalog[274432].sourceType=="Source not documented")
 assert(addon.ItemCatalog[271941].acquisitionResearch.details:find("Theramore Expeditionary Force - Exalted",1,true))
 
+-- Checkpoint 8I: opposing faction gates and per-merchant prices remain
+-- separate; finished off-hands with Tome names are not recipe books.
+for _,id in ipairs({19087,19088,19089,19090,19091,19092,19093,19094,19095,19096,19097,19098,
+    19308,19309,19310,19311,19312,19315,19323,19324,19325,20069,20070,20214,20220}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.equipmentReference and a.confidence=="published-forever-equipment-vendor-reference"
+        and not a.recipeReference and a.sourceSummary:find("unverified",1,true))
+end
+assert(addon.ItemCatalog[19323].acquisitionResearch.details:find("not both opposing standings",1,true)
+    and addon.ItemCatalog[19323].acquisitionResearch.details:find("standing0 does not mean Neutral",1,true))
+assert(addon.ItemCatalog[19091].acquisitionResearch.details:find("4g 74s 42c",1,true)
+    and addon.ItemCatalog[19091].acquisitionResearch.details:find("4g 74s 43c",1,true))
+assert(addon.ItemCatalog[19308].acquisitionResearch.details:find("not a profession recipe book",1,true)
+    and not addon.ItemCatalog[19308].profession)
+for _,id in ipairs({20069,20220}) do
+    assert(addon.ItemCatalog[id].acquisitionResearch.details:find("separate faction versions",1,true))
+end
+assert(addon.ItemCatalog[19087].acquisitionResearch.details:find("Grunnda Wolfheart13218 have no usable map",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
