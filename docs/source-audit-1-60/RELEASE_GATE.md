@@ -1,8 +1,7 @@
 # GetGear 1–60 acquisition reconciliation — release-readiness gate
 
-**Status: Beta 8 packaging/tag/public prerelease explicitly authorised by the user (9 November 2026); code/package validated; public asset upload blocked by environment network policy.**
-This is not a verified in-client release candidate. Research is paused; the authorised beta consolidates validated work with explicit source/live-client limitations.
-The existing public v0.14.0-beta7 prerelease is separate from this work. The current user instruction authorises the next beta ZIP/tag/prerelease. No merge or change to `main` is authorised.
+**Status: research resumed after verified Beta 8 publication. No build/package/tag/release/merge/main changes authorised by the current research request.**
+Beta 8 is already published and independently verified; its original immutable source/assets must remain untouched. Historical release-blocker and pause entries below describe prior states, not current instructions. Offline validation is not live-client acceptance.
 
 ## Latest validated state
 - Development branch: `work/full-acquisition-reconciliation-20261109`.
@@ -176,3 +175,7 @@ The user manually published the existing release. **Publication complete:** [Get
 Latest full code validation remains [non-release CI 42602679107](https://github.com/magicaddons/getgear/actions/runs/42602679107): PASS, 14/14 regressions and 24 Lua modules, inspected bot commit `a907d939aea29fa9683a740514c4a8171b1318e3`. This closeout performed targeted download/metadata/package/documentation checks only; no new full CI, build, regeneration, upload, publication or research was performed.
 
 Documentation closeout starts from development HEAD `a70b80614dfc486959b17d8c0265f1a3bf237ee4`; the resulting documentation commit is recorded by Git history on `work/full-acquisition-reconciliation-20261109`. Main remains `cf7fa410f841cc19c84f4514e6b98ec435ff2ec4`. **Research remains paused.** Current live-source and in-client acceptance limitations remain open; publication is not live verification.
+
+## Checkpoint 8A — unattended continuation and remaining queue
+
+Research resumed from verified branch HEAD `f6c7b1986fec1840bd88b0320f5f071b55e1e679`. [Continuation handover](reconciliation-20261109/CONTINUATION.md) records scheduling limits and the exact next batch. Remaining individually unreviewed noncraft/nondungeon source queue: **5,688** (1,403 vendor, 234 quest, 1,162 undocumented, 2,887 world-drop, two reputation). These are publication-research cases, not 5,688 proven acquisition errors. Checkpoint 8B begins with 95 lower-level vendor IDs excluded from 7C's completed set. Targeted queue/identity/disjointness checks PASS. Documentation only; no fresh full CI. Latest full validated code/source remains [42602679107](https://github.com/magicaddons/getgear/actions/runs/42602679107), 14/14 tests, 24 modules, inspected bot `a907d939aea29fa9683a740514c4a8171b1318e3`.
