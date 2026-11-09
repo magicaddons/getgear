@@ -1,0 +1,4185 @@
+{
+  "status": "Publication research preserved; runtime integration/full validation/queue advance pending",
+  "baseline": "988c99a",
+  "reviewedOn": "2026-11-09",
+  "counts": {
+    "selected": 76,
+    "primaryPages": 76,
+    "primaryAcquisitionTables": 0,
+    "explicitClassMasksMatched": 72,
+    "unavailablePageFlags": 0,
+    "seasonalWarnings": 0,
+    "premierNames": 74,
+    "otherOriginGaps": 2,
+    "weakUnnamedVendorLeads": 8,
+    "attributedNamedVendorReports": 1,
+    "currentLiveVerified": 0,
+    "discoveryQueries": 87,
+    "selectedDiscoveryIDs": 76,
+    "cachedNPCPages": 171,
+    "actualReusedSellsTables": 95,
+    "newTargetedNPCPages": 1
+  },
+  "items": {
+    "273367": {
+      "url": "https://www.wowhead.com/forever/item=273367",
+      "bytes": 171185,
+      "sha256": "cc5a0bdb6df5a212503e31cde50cb02442be706474258ed08ff8bad3cc729249",
+      "title": "Premier Kodohide Waistband - Item - Forever",
+      "tooltipText": "Premier Kodohide Waistband      Item Level  60   Binds when picked up     Waist    Leather        95 Armor    +19 Stamina    +10 Intellect    +8 Spirit         Classes:  Druid        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 273367,
+        "name": "Premier Kodohide Waistband",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273365": {
+      "url": "https://www.wowhead.com/forever/item=273365",
+      "bytes": 168909,
+      "sha256": "d0bc453ac18bd37ec3f20260b3914a4d0435edb8c8ff85d2e71132ba726a86ce",
+      "title": "Premier Luminous Sabatons - Item - Forever",
+      "tooltipText": "Premier Luminous Sabatons      Item Level  60   Binds when picked up     Feet    Plate        431 Armor    +19 Stamina    +10 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.      Lieutenant Commander's Aegis  (0/6)     Premier Luminous Gauntlets      Premier Luminous Sabatons      Premier Luminous Leggings      Premier Luminous Breastplate      Premier Luminous Shoulders      Premier Luminous Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273365,
+        "name": "Premier Luminous Sabatons",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 401,
+          "name": "Lieutenant Commander's Aegis"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273364": {
+      "url": "https://www.wowhead.com/forever/item=273364",
+      "bytes": 165251,
+      "sha256": "24eebf78cc8efbfb6972a19266acdda02900861b8153f4bc5a48376cca31c2d2",
+      "title": "Premier Luminous Armsplints - Item - Forever",
+      "tooltipText": "Premier Luminous Armsplints      Item Level  60   Binds when picked up     Wrist    Plate        274 Armor    +14 Stamina    +9 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 273364,
+        "name": "Premier Luminous Armsplints",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273366": {
+      "url": "https://www.wowhead.com/forever/item=273366",
+      "bytes": 194831,
+      "sha256": "7dbcf6e11067c7e5aecd1e347a8f9e5d74bc70275e29f68c5aa5782f124f1355",
+      "title": "Premier Luminous Cinch - Item - Forever",
+      "tooltipText": "Premier Luminous Cinch      Item Level  60   Binds when picked up     Waist    Plate        353 Armor    +19 Stamina    +7 Intellect    Restores + 4 mana per 5 sec.        Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   13  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 273366,
+        "name": "Premier Luminous Cinch",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273369": {
+      "url": "https://www.wowhead.com/forever/item=273369",
+      "bytes": 172530,
+      "sha256": "4c48d73feac57296364fc3bf740fbd0c1294aeec8976f92ebbd65e0344e8c5c5",
+      "title": "Premier Lunarhide Girdle - Item - Forever",
+      "tooltipText": "Premier Lunarhide Girdle      Item Level  60   Binds when picked up     Waist    Leather        95 Armor    +20 Stamina    +10 Intellect         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .",
+      "identity": {
+        "id": 273369,
+        "name": "Premier Lunarhide Girdle",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273370": {
+      "url": "https://www.wowhead.com/forever/item=273370",
+      "bytes": 185676,
+      "sha256": "7bbb2dd54a494b4c128628149d08d42ee81481c25eeb064dd8ecedf76804d034",
+      "title": "Premier Lunarhide Footwraps - Item - Forever",
+      "tooltipText": "Premier Lunarhide Footwraps      Item Level  60   Binds when picked up     Feet    Leather        116 Armor    +20 Stamina    +10 Intellect         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Lieutenant Commander's Wildhide  (0/6)     Premier Lunarhide Gloves      Premier Lunarhide Footwraps      Premier Lunarhide Leggings      Premier Lunarhide Tunic      Premier Lunarhide Shoulders      Premier Lunarhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273370,
+        "name": "Premier Lunarhide Footwraps",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2081,
+          "name": "Lieutenant Commander's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273371": {
+      "url": "https://www.wowhead.com/forever/item=273371",
+      "bytes": 181472,
+      "sha256": "772df10c2ee4e74d071ba797e372ea64b04ad01cabeaf92e48d87ee829e88fe1",
+      "title": "Premier Lunarhide Tunic - Item - Forever",
+      "tooltipText": "Premier Lunarhide Tunic      Item Level  60   Binds when picked up     Chest    Leather        169 Armor    +26 Stamina    +11 Intellect         Classes:  Druid        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   9 .      Lieutenant Commander's Wildhide  (0/6)     Premier Lunarhide Gloves      Premier Lunarhide Footwraps      Premier Lunarhide Leggings      Premier Lunarhide Tunic      Premier Lunarhide Shoulders      Premier Lunarhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273371,
+        "name": "Premier Lunarhide Tunic",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2081,
+          "name": "Lieutenant Commander's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273373": {
+      "url": "https://www.wowhead.com/forever/item=273373",
+      "bytes": 193667,
+      "sha256": "382fd15fce511cbf4568b87e0a0f159e95fd076a9a2fb510b0c7b81560a1f2a0",
+      "title": "Premier Dreamhide Leggings - Item - Forever",
+      "tooltipText": "Premier Dreamhide Leggings      Item Level  60   Binds when picked up     Legs    Leather        148 Armor    +26 Stamina    +12 Intellect    +4 Spirit         Classes:  Druid        Requires Level  55   Equip: Increases healing done by up to   20  and damage done by up to   7  for all magical spells and effects.      Lieutenant Commander's Refuge  (0/6)     Premier Dreamhide Gloves      Premier Dreamhide Footwraps      Premier Dreamhide Leggings      Premier Dreamhide Tunic      Premier Dreamhide Shoulders      Premier Dreamhide Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273373,
+        "name": "Premier Dreamhide Leggings",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 551,
+          "name": "Lieutenant Commander's Refuge"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273374": {
+      "url": "https://www.wowhead.com/forever/item=273374",
+      "bytes": 176336,
+      "sha256": "85d0d900a1a76067e3ae8cfd8e351a7037b04352a1af91d857597554ea7dff33",
+      "title": "Premier Dreamhide Headguard - Item - Forever",
+      "tooltipText": "Premier Dreamhide Headguard      Item Level  60   Binds when picked up     Head    Leather        137 Armor    +26 Stamina    +9 Intellect    +6 Spirit         Classes:  Druid        Requires Level  55   Equip: Increases healing done by up to   24  and damage done by up to   8  for all magical spells and effects.      Lieutenant Commander's Refuge  (0/6)     Premier Dreamhide Gloves      Premier Dreamhide Footwraps      Premier Dreamhide Leggings      Premier Dreamhide Tunic      Premier Dreamhide Shoulders      Premier Dreamhide Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273374,
+        "name": "Premier Dreamhide Headguard",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 551,
+          "name": "Lieutenant Commander's Refuge"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273375": {
+      "url": "https://www.wowhead.com/forever/item=273375",
+      "bytes": 183233,
+      "sha256": "473cd746164848b93397eb319dd139ff8608eedf5b6fd7c35e35be49bd8c4237",
+      "title": "Premier Dreamhide Shoulders - Item - Forever",
+      "tooltipText": "Premier Dreamhide Shoulders      Item Level  60   Binds when picked up     Shoulder    Leather        127 Armor    +20 Stamina    +8 Intellect    +4 Spirit         Classes:  Druid        Requires Level  55   Equip: Increases healing done by up to   15  and damage done by up to   5  for all magical spells and effects.      Lieutenant Commander's Refuge  (0/6)     Premier Dreamhide Gloves      Premier Dreamhide Footwraps      Premier Dreamhide Leggings      Premier Dreamhide Tunic      Premier Dreamhide Shoulders      Premier Dreamhide Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273375,
+        "name": "Premier Dreamhide Shoulders",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 551,
+          "name": "Lieutenant Commander's Refuge"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273368": {
+      "url": "https://www.wowhead.com/forever/item=273368",
+      "bytes": 182993,
+      "sha256": "5411f59d98ded71e7f2ac1d70eaf2ead9ef4c216d417a556e72c1fd50fdd2c34",
+      "title": "Premier Lunarhide Gloves - Item - Forever",
+      "tooltipText": "Premier Lunarhide Gloves      Item Level  60   Binds when picked up     Hands    Leather        106 Armor    +21 Stamina    +8 Intellect         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .     Equip:   Increases your effective stealth detection level by 2.         Lieutenant Commander's Wildhide  (0/6)     Premier Lunarhide Gloves      Premier Lunarhide Footwraps      Premier Lunarhide Leggings      Premier Lunarhide Tunic      Premier Lunarhide Shoulders      Premier Lunarhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273368,
+        "name": "Premier Lunarhide Gloves",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2081,
+          "name": "Lieutenant Commander's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273372": {
+      "url": "https://www.wowhead.com/forever/item=273372",
+      "bytes": 182791,
+      "sha256": "865456598e655b36b8ab2e4e952a92a29e2bd017a0cc3aec33b64c65ca21cf7a",
+      "title": "Premier Mail Girdle - Item - Forever",
+      "tooltipText": "Premier Mail Girdle      Item Level  60   Binds when picked up     Waist    Mail        199 Armor    +20 Stamina    +9 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   9 .",
+      "identity": {
+        "id": 273372,
+        "name": "Premier Mail Girdle",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273377": {
+      "url": "https://www.wowhead.com/forever/item=273377",
+      "bytes": 181315,
+      "sha256": "b13e7db704f0f0d5e1fddc1621d6afee3f0858f56e968859c1457a82dd3e4836",
+      "title": "Premier Dreamhide Gloves - Item - Forever",
+      "tooltipText": "Premier Dreamhide Gloves      Item Level  60   Binds when picked up     Hands    Leather        106 Armor    +19 Stamina    +10 Intellect    +7 Spirit         Classes:  Druid        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.     Equip:   Increases your effective stealth detection level by 2.         Lieutenant Commander's Refuge  (0/6)     Premier Dreamhide Gloves      Premier Dreamhide Footwraps      Premier Dreamhide Leggings      Premier Dreamhide Tunic      Premier Dreamhide Shoulders      Premier Dreamhide Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273377,
+        "name": "Premier Dreamhide Gloves",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 551,
+          "name": "Lieutenant Commander's Refuge"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273378": {
+      "url": "https://www.wowhead.com/forever/item=273378",
+      "bytes": 169915,
+      "sha256": "2bc1f53ce5b9bf0351bf31df41a94d144f22988d4c035673f9d54c6bbb97bac8",
+      "title": "Premier Dreamhide Girdle - Item - Forever",
+      "tooltipText": "Premier Dreamhide Girdle      Item Level  60   Binds when picked up     Waist    Leather        95 Armor    +19 Stamina    +10 Intellect    +8 Spirit         Classes:  Druid        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 273378,
+        "name": "Premier Dreamhide Girdle",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273379": {
+      "url": "https://www.wowhead.com/forever/item=273379",
+      "bytes": 182988,
+      "sha256": "08d543751d9b81665b57bbc55de833b1f02153653326a76378d41455c7d6aa58",
+      "title": "Premier Dreamhide Footwraps - Item - Forever",
+      "tooltipText": "Premier Dreamhide Footwraps      Item Level  60   Binds when picked up     Feet    Leather        116 Armor    +19 Stamina    +12 Intellect    +4 Spirit         Classes:  Druid        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.      Lieutenant Commander's Refuge  (0/6)     Premier Dreamhide Gloves      Premier Dreamhide Footwraps      Premier Dreamhide Leggings      Premier Dreamhide Tunic      Premier Dreamhide Shoulders      Premier Dreamhide Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273379,
+        "name": "Premier Dreamhide Footwraps",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 551,
+          "name": "Lieutenant Commander's Refuge"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273381": {
+      "url": "https://www.wowhead.com/forever/item=273381",
+      "bytes": 180196,
+      "sha256": "fe9fe9bc6115299385a55b660e368b03c150ce92ee77b760b70cf23046a9fdb3",
+      "title": "Premier Wyrmhide Armguards - Item - Forever",
+      "tooltipText": "Premier Wyrmhide Armguards      Item Level  60   Binds when picked up     Wrist    Leather        74 Armor    +15 Stamina    +7 Intellect         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   5 .",
+      "identity": {
+        "id": 273381,
+        "name": "Premier Wyrmhide Armguards",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273380": {
+      "url": "https://www.wowhead.com/forever/item=273380",
+      "bytes": 185609,
+      "sha256": "13a321b159e6d0780fd09ab4725c38e855866fc2eac9dc632b5981df9b421ee4",
+      "title": "Premier Dreamhide Tunic - Item - Forever",
+      "tooltipText": "Premier Dreamhide Tunic      Item Level  60   Binds when picked up     Chest    Leather        169 Armor    +26 Stamina    +9 Intellect    +7 Spirit         Classes:  Druid        Requires Level  55   Equip: Increases healing done by up to   33  and damage done by up to   11  for all magical spells and effects.      Lieutenant Commander's Refuge  (0/6)     Premier Dreamhide Gloves      Premier Dreamhide Footwraps      Premier Dreamhide Leggings      Premier Dreamhide Tunic      Premier Dreamhide Shoulders      Premier Dreamhide Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273380,
+        "name": "Premier Dreamhide Tunic",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 551,
+          "name": "Lieutenant Commander's Refuge"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273382": {
+      "url": "https://www.wowhead.com/forever/item=273382",
+      "bytes": 189708,
+      "sha256": "7670848cf14cdfbdf8e809eb40a187fa7b5825518fd7edc94bd8f9d6f29b6931",
+      "title": "Premier Wyrmhide Gauntlets - Item - Forever",
+      "tooltipText": "Premier Wyrmhide Gauntlets      Item Level  60   Binds when picked up     Hands    Leather        106 Armor    +21 Stamina    +8 Intellect         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .     Equip:   Increases your effective stealth detection level by 2.         Champion's Wildhide  (0/6)     Premier Wyrmhide Gauntlets      Premier Wyrmhide Treads      Premier Wyrmhide Leggings      Premier Wyrmhide Chestpiece      Premier Wyrmhide Shoulders      Premier Wyrmhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273382,
+        "name": "Premier Wyrmhide Gauntlets",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2080,
+          "name": "Champion's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273384": {
+      "url": "https://www.wowhead.com/forever/item=273384",
+      "bytes": 184948,
+      "sha256": "3d3b2e1452d1874ba5d68b79089a6ef5a0d8358da944029860219a44a0d13225",
+      "title": "Premier Wyrmhide Chestpiece - Item - Forever",
+      "tooltipText": "Premier Wyrmhide Chestpiece      Item Level  60   Binds when picked up     Chest    Leather        169 Armor    +26 Stamina    +11 Intellect         Classes:  Druid        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   9 .      Champion's Wildhide  (0/6)     Premier Wyrmhide Gauntlets      Premier Wyrmhide Treads      Premier Wyrmhide Leggings      Premier Wyrmhide Chestpiece      Premier Wyrmhide Shoulders      Premier Wyrmhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273384,
+        "name": "Premier Wyrmhide Chestpiece",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2080,
+          "name": "Champion's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273383": {
+      "url": "https://www.wowhead.com/forever/item=273383",
+      "bytes": 190361,
+      "sha256": "12f92ec3e69eb1ca4a42a5f49f6cc11c94a4c327a7c06877a3399b8ed669c3e5",
+      "title": "Premier Wyrmhide Treads - Item - Forever",
+      "tooltipText": "Premier Wyrmhide Treads      Item Level  60   Binds when picked up     Feet    Leather        116 Armor    +20 Stamina    +10 Intellect         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Champion's Wildhide  (0/6)     Premier Wyrmhide Gauntlets      Premier Wyrmhide Treads      Premier Wyrmhide Leggings      Premier Wyrmhide Chestpiece      Premier Wyrmhide Shoulders      Premier Wyrmhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273383,
+        "name": "Premier Wyrmhide Treads",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2080,
+          "name": "Champion's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273386": {
+      "url": "https://www.wowhead.com/forever/item=273386",
+      "bytes": 173185,
+      "sha256": "8c0d47c24dbfc8d7126b682f5a8e68b2b94e133b82a1707f8e5e3df28b50fc89",
+      "title": "Premier Wyrmhide Headguard - Item - Forever",
+      "tooltipText": "Premier Wyrmhide Headguard      Item Level  60   Binds when picked up     Head    Leather        137 Armor    +26 Stamina    +14 Intellect         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   9 .      Champion's Wildhide  (0/6)     Premier Wyrmhide Gauntlets      Premier Wyrmhide Treads      Premier Wyrmhide Leggings      Premier Wyrmhide Chestpiece      Premier Wyrmhide Shoulders      Premier Wyrmhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273386,
+        "name": "Premier Wyrmhide Headguard",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2080,
+          "name": "Champion's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273387": {
+      "url": "https://www.wowhead.com/forever/item=273387",
+      "bytes": 186254,
+      "sha256": "56e452ea785cf990bfe996cddd06caa0c8a2dee19c29a54035a2703e4684aeb9",
+      "title": "Premier Wyrmhide Shoulders - Item - Forever",
+      "tooltipText": "Premier Wyrmhide Shoulders      Item Level  60   Binds when picked up     Shoulder    Leather        127 Armor    +20 Stamina    +8 Intellect    +50 Armor         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Champion's Wildhide  (0/6)     Premier Wyrmhide Gauntlets      Premier Wyrmhide Treads      Premier Wyrmhide Leggings      Premier Wyrmhide Chestpiece      Premier Wyrmhide Shoulders      Premier Wyrmhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273387,
+        "name": "Premier Wyrmhide Shoulders",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2080,
+          "name": "Champion's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273443": {
+      "url": "https://www.wowhead.com/forever/item=273443",
+      "bytes": 192877,
+      "sha256": "8e36a6a4f4fb64ed9255f0c7e57b8a97dc8e6e97974aff19cd1921b85ed4c440",
+      "title": "Premier Mooncloth Boots - Item - Forever",
+      "tooltipText": "Premier Mooncloth Boots      Item Level  60   Binds when picked up     Feet    Cloth        59 Armor    +19 Stamina    +10 Intellect    +10 Spirit         Classes:  Priest        Requires Level  55   Equip: Increases healing done by up to   15  and damage done by up to   5  for all magical spells and effects.      Lieutenant Commander's Investiture  (0/6)     Premier Mooncloth Robes      Premier Mooncloth Gloves      Premier Mooncloth Boots      Premier Mooncloth Leggings      Premier Mooncloth Mantle      Premier Mooncloth Hood      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases the duration of your Psychic Scream spell by 1 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273443,
+        "name": "Premier Mooncloth Boots",
+        "reqlevel": 55,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2075,
+          "name": "Lieutenant Commander's Investiture"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273385": {
+      "url": "https://www.wowhead.com/forever/item=273385",
+      "bytes": 183357,
+      "sha256": "594534db860d1198f365bda9764d7df22df026820bb4ee758ac9a459038b5f76",
+      "title": "Premier Wyrmhide Leggings - Item - Forever",
+      "tooltipText": "Premier Wyrmhide Leggings      Item Level  60   Binds when picked up     Legs    Leather        148 Armor    +26 Stamina    +11 Intellect         Classes:  Druid        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   9 .      Champion's Wildhide  (0/6)     Premier Wyrmhide Gauntlets      Premier Wyrmhide Treads      Premier Wyrmhide Leggings      Premier Wyrmhide Chestpiece      Premier Wyrmhide Shoulders      Premier Wyrmhide Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Increases your movement speed by 15% while in Bear, Cat, or Travel Form. \u00a0Only active outdoors.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273385,
+        "name": "Premier Wyrmhide Leggings",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2080,
+          "name": "Champion's Wildhide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273388": {
+      "url": "https://www.wowhead.com/forever/item=273388",
+      "bytes": 173800,
+      "sha256": "c81bd3ac0219ad72a17f3e41a5353ca48487cea55045ba0731e89c37647c824f",
+      "title": "Premier Wyrmhide Waistband - Item - Forever",
+      "tooltipText": "Premier Wyrmhide Waistband      Item Level  60   Binds when picked up     Waist    Leather        95 Armor    +20 Stamina    +10 Intellect         Classes:  Druid        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .",
+      "identity": {
+        "id": 273388,
+        "name": "Premier Wyrmhide Waistband",
+        "reqlevel": 55,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273444": {
+      "url": "https://www.wowhead.com/forever/item=273444",
+      "bytes": 195514,
+      "sha256": "0c5db7e0f2dbf3b96a77edd5bd4cd22bbfddc6504dfc662466e25c0d1998d1b8",
+      "title": "Premier Mooncloth Cuffs - Item - Forever",
+      "tooltipText": "Premier Mooncloth Cuffs      Item Level  60   Binds when picked up     Wrist    Cloth        37 Armor    +14 Stamina    +9 Intellect         Classes:  Priest        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 273444,
+        "name": "Premier Mooncloth Cuffs",
+        "reqlevel": 55,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273447": {
+      "url": "https://www.wowhead.com/forever/item=273447",
+      "bytes": 173254,
+      "sha256": "77e75eb0d471b4b87f32d472b88b6a41c2445e4f52ed5d009ebce36e156dcad3",
+      "title": "Premier Mooncloth Leggings - Item - Forever",
+      "tooltipText": "Premier Mooncloth Leggings      Item Level  60   Binds when picked up     Legs    Cloth        75 Armor    +25 Stamina    +14 Intellect         Classes:  Priest        Requires Level  55   Equip: Increases healing done by up to   24  and damage done by up to   8  for all magical spells and effects.      Lieutenant Commander's Investiture  (0/6)     Premier Mooncloth Robes      Premier Mooncloth Gloves      Premier Mooncloth Boots      Premier Mooncloth Leggings      Premier Mooncloth Mantle      Premier Mooncloth Hood      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases the duration of your Psychic Scream spell by 1 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273447,
+        "name": "Premier Mooncloth Leggings",
+        "reqlevel": 55,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2075,
+          "name": "Lieutenant Commander's Investiture"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273445": {
+      "url": "https://www.wowhead.com/forever/item=273445",
+      "bytes": 199207,
+      "sha256": "1b1970216ea6bc7aa23202de31b750f41fa5faf8d3f59f07bd5d9e2b885f3372",
+      "title": "Premier Mooncloth Gloves - Item - Forever",
+      "tooltipText": "Premier Mooncloth Gloves      Item Level  60   Binds when picked up     Hands    Cloth        53 Armor    +20 Stamina    +9 Intellect         Classes:  Priest        Requires Level  55   Equip: Increases healing done by up to   18  and damage done by up to   6  for all magical spells and effects.     Equip:   Gives you a 50% chance to avoid interruption caused by damage while casting Flash Heal.         Lieutenant Commander's Investiture  (0/6)     Premier Mooncloth Robes      Premier Mooncloth Gloves      Premier Mooncloth Boots      Premier Mooncloth Leggings      Premier Mooncloth Mantle      Premier Mooncloth Hood      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases the duration of your Psychic Scream spell by 1 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273445,
+        "name": "Premier Mooncloth Gloves",
+        "reqlevel": 55,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2075,
+          "name": "Lieutenant Commander's Investiture"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273449": {
+      "url": "https://www.wowhead.com/forever/item=273449",
+      "bytes": 187924,
+      "sha256": "d6799283949aa9f287c660ef324f650fe7c390575259273f057025b32f800216",
+      "title": "Premier Mooncloth Cord - Item - Forever",
+      "tooltipText": "Premier Mooncloth Cord      Item Level  60   Binds when picked up     Waist    Cloth        48 Armor    +19 Stamina    +8 Intellect    +8 Spirit         Classes:  Priest        Requires Level  55   Equip: Increases healing done by up to   18  and damage done by up to   6  for all magical spells and effects.",
+      "identity": {
+        "id": 273449,
+        "name": "Premier Mooncloth Cord",
+        "reqlevel": 55,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273448": {
+      "url": "https://www.wowhead.com/forever/item=273448",
+      "bytes": 193447,
+      "sha256": "5c106fa7090bbebfb62e8e7b00e6266e4d522b07729ca2f243eed5205eee70d0",
+      "title": "Premier Mooncloth Robes - Item - Forever",
+      "tooltipText": "Premier Mooncloth Robes      Item Level  60   Binds when picked up     Chest    Cloth        85 Armor    +25 Stamina    +10 Intellect    +6 Spirit         Classes:  Priest        Requires Level  55   Equip: Increases healing done by up to   26  and damage done by up to   9  for all magical spells and effects.      Lieutenant Commander's Investiture  (0/6)     Premier Mooncloth Robes      Premier Mooncloth Gloves      Premier Mooncloth Boots      Premier Mooncloth Leggings      Premier Mooncloth Mantle      Premier Mooncloth Hood      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Increases the duration of your Psychic Scream spell by 1 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 273448,
+        "name": "Premier Mooncloth Robes",
+        "reqlevel": 55,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2075,
+          "name": "Lieutenant Commander's Investiture"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274176": {
+      "url": "https://www.wowhead.com/forever/item=274176",
+      "bytes": 180905,
+      "sha256": "4dacd772c441e63475a2c84a191607137688d2d01220ce4f69e3fd9ef3a33cc9",
+      "title": "Premier Scalemail Walkers - Item - Forever",
+      "tooltipText": "Premier Scalemail Walkers      Item Level  60   Binds when picked up     Feet    Mail        244 Armor    +19 Stamina    +10 Intellect         Classes:  Shaman        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   7 .     Equip:   Increases the speed of your Ghost Wolf ability by 15%.         Lieutenant Commander's Thunderfist  (0/6)     Premier Scalemail Vices      Premier Scalemail Walkers      Premier Scalemail Legguards      Premier Scalemail Chestpiece      Premier Scalemail Pauldrons      Premier Scalemail Helm      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274176,
+        "name": "Premier Scalemail Walkers",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2096,
+          "name": "Lieutenant Commander's Thunderfist"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "273450": {
+      "url": "https://www.wowhead.com/forever/item=273450",
+      "bytes": 210738,
+      "sha256": "f82f8027cc8ee7609a83b5d065c15e9f2c7a53ee7a1c79a804bc0f3d9dfa5a44",
+      "title": "Premier Silken Cuffs - Item - Forever",
+      "tooltipText": "Premier Silken Cuffs      Item Level  60   Binds when picked up     Wrist    Cloth        37 Armor    +14 Stamina    +9 Intellect         Classes:  Priest        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 273450,
+        "name": "Premier Silken Cuffs",
+        "reqlevel": 55,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274177": {
+      "url": "https://www.wowhead.com/forever/item=274177",
+      "bytes": 167617,
+      "sha256": "d2030a25c38a2b4740589b353d3d3936c200320bbb97f8f4ab85c6467bd191a7",
+      "title": "Premier Flatmail Grips - Item - Forever",
+      "tooltipText": "Premier Flatmail Grips      Item Level  60   Binds when picked up     Hands    Mail        221 Armor    +8 Strength    +19 Stamina    +8 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   8 .      Lieutenant Commander's Earthshaker  (0/6)     Premier Flatmail Grips      Premier Flatmail Greaves      Premier Flatmail Leggings      Premier Flatmail Hauberk      Premier Flatmail Shoulders      Premier Flatmail Headguard      (2) Set :  +40 Attack Power.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274177,
+        "name": "Premier Flatmail Grips",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2088,
+          "name": "Lieutenant Commander's Earthshaker"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274178": {
+      "url": "https://www.wowhead.com/forever/item=274178",
+      "bytes": 173628,
+      "sha256": "e09a40c7feaf9e669fc89a9394b7f76f7dab6a7dc655524e107e1042f90e938d",
+      "title": "Premier Scalemail Helm - Item - Forever",
+      "tooltipText": "Premier Scalemail Helm      Item Level  60   Binds when picked up     Head    Mail        288 Armor    +25 Stamina    +10 Intellect         Classes:  Shaman        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   14 .      Lieutenant Commander's Thunderfist  (0/6)     Premier Scalemail Vices      Premier Scalemail Walkers      Premier Scalemail Legguards      Premier Scalemail Chestpiece      Premier Scalemail Pauldrons      Premier Scalemail Helm      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274178,
+        "name": "Premier Scalemail Helm",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2096,
+          "name": "Lieutenant Commander's Thunderfist"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274179": {
+      "url": "https://www.wowhead.com/forever/item=274179",
+      "bytes": 174419,
+      "sha256": "c26d945b49f8dee93e7a34d709a882262a5971593dcb04c279933726e0a88439",
+      "title": "Premier Scalemail Chestpiece - Item - Forever",
+      "tooltipText": "Premier Scalemail Chestpiece      Item Level  60   Binds when picked up     Chest    Mail        354 Armor    +24 Stamina    +11 Intellect         Classes:  Shaman        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   12 .      Lieutenant Commander's Thunderfist  (0/6)     Premier Scalemail Vices      Premier Scalemail Walkers      Premier Scalemail Legguards      Premier Scalemail Chestpiece      Premier Scalemail Pauldrons      Premier Scalemail Helm      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274179,
+        "name": "Premier Scalemail Chestpiece",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2096,
+          "name": "Lieutenant Commander's Thunderfist"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274181": {
+      "url": "https://www.wowhead.com/forever/item=274181",
+      "bytes": 171581,
+      "sha256": "0bc59460dfb6984fab440ea9e5d15fc4b2aa458feb5c378f0214016f796c0465",
+      "title": "Premier Flatmail Shoulders - Item - Forever",
+      "tooltipText": "Premier Flatmail Shoulders      Item Level  60   Binds when picked up     Shoulder    Mail        266 Armor    +10 Strength    +19 Stamina    +6 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Lieutenant Commander's Earthshaker  (0/6)     Premier Flatmail Grips      Premier Flatmail Greaves      Premier Flatmail Leggings      Premier Flatmail Hauberk      Premier Flatmail Shoulders      Premier Flatmail Headguard      (2) Set :  +40 Attack Power.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274181,
+        "name": "Premier Flatmail Shoulders",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2088,
+          "name": "Lieutenant Commander's Earthshaker"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274193": {
+      "url": "https://www.wowhead.com/forever/item=274193",
+      "bytes": 174230,
+      "sha256": "fee777a5946048a1c9445ad3e527aaf99fc0f94907d8649ef202e57bdb2d2061",
+      "title": "Premier Scalemail Vices - Item - Forever",
+      "tooltipText": "Premier Scalemail Vices      Item Level  60   Binds when picked up     Hands    Mail        221 Armor    +19 Stamina    +10 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   12 .      Lieutenant Commander's Thunderfist  (0/6)     Premier Scalemail Vices      Premier Scalemail Walkers      Premier Scalemail Legguards      Premier Scalemail Chestpiece      Premier Scalemail Pauldrons      Premier Scalemail Helm      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274193,
+        "name": "Premier Scalemail Vices",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2096,
+          "name": "Lieutenant Commander's Thunderfist"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274180": {
+      "url": "https://www.wowhead.com/forever/item=274180",
+      "bytes": 167958,
+      "sha256": "112c8039247eb44f6756f98f8008689a5c5a5dc421b8d9af6435ed242366e592",
+      "title": "Premier Flatmail Leggings - Item - Forever",
+      "tooltipText": "Premier Flatmail Leggings      Item Level  60   Binds when picked up     Legs    Mail        310 Armor    +14 Strength    +25 Stamina    +8 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases your chance to Dodge an attack by 0.5%.      Lieutenant Commander's Earthshaker  (0/6)     Premier Flatmail Grips      Premier Flatmail Greaves      Premier Flatmail Leggings      Premier Flatmail Hauberk      Premier Flatmail Shoulders      Premier Flatmail Headguard      (2) Set :  +40 Attack Power.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274180,
+        "name": "Premier Flatmail Leggings",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2088,
+          "name": "Lieutenant Commander's Earthshaker"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274182": {
+      "url": "https://www.wowhead.com/forever/item=274182",
+      "bytes": 174578,
+      "sha256": "3f7f2917188e5f2f895cd54a0ca03bcdff8243d7dc57242e1aaaf50c80ec9858",
+      "title": "Premier Flatmail Wristguards - Item - Forever",
+      "tooltipText": "Premier Flatmail Wristguards      Item Level  60   Binds when picked up     Wrist    Mail        155 Armor    +9 Strength    +14 Stamina    +5 Intellect         Classes:  Shaman        Requires Level  55",
+      "identity": {
+        "id": 274182,
+        "name": "Premier Flatmail Wristguards",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274194": {
+      "url": "https://www.wowhead.com/forever/item=274194",
+      "bytes": 166919,
+      "sha256": "a9566fe3f0c18af68cc1c01c884eefde342eecf26b427e044ef8a3a59ac31134",
+      "title": "Premier Flatmail Hauberk - Item - Forever",
+      "tooltipText": "Premier Flatmail Hauberk      Item Level  60   Binds when picked up     Chest    Mail        354 Armor    +11 Strength    +25 Stamina    +6 Intellect         Classes:  Shaman        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.      Lieutenant Commander's Earthshaker  (0/6)     Premier Flatmail Grips      Premier Flatmail Greaves      Premier Flatmail Leggings      Premier Flatmail Hauberk      Premier Flatmail Shoulders      Premier Flatmail Headguard      (2) Set :  +40 Attack Power.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274194,
+        "name": "Premier Flatmail Hauberk",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2088,
+          "name": "Lieutenant Commander's Earthshaker"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274196": {
+      "url": "https://www.wowhead.com/forever/item=274196",
+      "bytes": 166187,
+      "sha256": "9e31637b3361c8c333b1b031c5779bda4f37d70d3f5cd7504dfa8b0f95511650",
+      "title": "Premier Flatmail Headguard - Item - Forever",
+      "tooltipText": "Premier Flatmail Headguard      Item Level  60   Binds when picked up     Head    Mail        288 Armor    +11 Strength    +26 Stamina    +6 Intellect         Classes:  Shaman        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.      Lieutenant Commander's Earthshaker  (0/6)     Premier Flatmail Grips      Premier Flatmail Greaves      Premier Flatmail Leggings      Premier Flatmail Hauberk      Premier Flatmail Shoulders      Premier Flatmail Headguard      (2) Set :  +40 Attack Power.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274196,
+        "name": "Premier Flatmail Headguard",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2088,
+          "name": "Lieutenant Commander's Earthshaker"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274192": {
+      "url": "https://www.wowhead.com/forever/item=274192",
+      "bytes": 168411,
+      "sha256": "53ee87b1bdcfc987ccde4c2d7f85ddeca07c09408b3950d8e354afc8dc54fa8e",
+      "title": "Premier Flatmail Greaves - Item - Forever",
+      "tooltipText": "Premier Flatmail Greaves      Item Level  60   Binds when picked up     Feet    Mail        244 Armor    +8 Strength    +20 Stamina    +5 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .     Equip:   Increases the speed of your Ghost Wolf ability by 15%.         Lieutenant Commander's Earthshaker  (0/6)     Premier Flatmail Grips      Premier Flatmail Greaves      Premier Flatmail Leggings      Premier Flatmail Hauberk      Premier Flatmail Shoulders      Premier Flatmail Headguard      (2) Set :  +40 Attack Power.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274192,
+        "name": "Premier Flatmail Greaves",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2088,
+          "name": "Lieutenant Commander's Earthshaker"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274214": {
+      "url": "https://www.wowhead.com/forever/item=274214",
+      "bytes": 166317,
+      "sha256": "33d2ba1ade9541f1702a2e2988b396f45ff4769246cf7333e8f92d165e6a75eb",
+      "title": "Premier Flatmail Girdle - Item - Forever",
+      "tooltipText": "Premier Flatmail Girdle      Item Level  60   Binds when picked up     Waist    Mail        199 Armor    +12 Strength    +19 Stamina    +8 Intellect         Classes:  Shaman        Requires Level  55",
+      "identity": {
+        "id": 274214,
+        "name": "Premier Flatmail Girdle",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274215": {
+      "url": "https://www.wowhead.com/forever/item=274215",
+      "bytes": 171687,
+      "sha256": "074b808ef8141a5fd33cc67e611825c9cbb00ff1db9a977ff80ec262cea3c0b0",
+      "title": "Premier Scalemail Wristguards - Item - Forever",
+      "tooltipText": "Premier Scalemail Wristguards      Item Level  60   Binds when picked up     Wrist    Mail        155 Armor    +15 Stamina    +6 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .",
+      "identity": {
+        "id": 274215,
+        "name": "Premier Scalemail Wristguards",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274195": {
+      "url": "https://www.wowhead.com/forever/item=274195",
+      "bytes": 177815,
+      "sha256": "0f65f9f333a41434dac95e6ce0c26f3d970053ed9daaccf8f6ca62f8d9974d67",
+      "title": "Premier Scalemail Legguards - Item - Forever",
+      "tooltipText": "Premier Scalemail Legguards      Item Level  60   Binds when picked up     Legs    Mail        310 Armor    +25 Stamina    +8 Intellect         Classes:  Shaman        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   14 .      Lieutenant Commander's Thunderfist  (0/6)     Premier Scalemail Vices      Premier Scalemail Walkers      Premier Scalemail Legguards      Premier Scalemail Chestpiece      Premier Scalemail Pauldrons      Premier Scalemail Helm      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274195,
+        "name": "Premier Scalemail Legguards",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2096,
+          "name": "Lieutenant Commander's Thunderfist"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274217": {
+      "url": "https://www.wowhead.com/forever/item=274217",
+      "bytes": 180834,
+      "sha256": "06bc3ed639bbc4f6d516950825347af4743fb5ea65319717631ff655fdd19b2b",
+      "title": "Premier Linkmail Walkers - Item - Forever",
+      "tooltipText": "Premier Linkmail Walkers      Item Level  60   Binds when picked up     Feet    Mail        244 Armor    +19 Stamina    +10 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.     Equip:   Increases the speed of your Ghost Wolf ability by 15%.         Lieutenant Commander's Wartide  (0/6)     Premier Linkmail Vices      Premier Linkmail Walkers      Premier Linkmail Legguards      Premier Linkmail Chestpiece      Premier Linkmail Pauldrons      Premier Linkmail Helm      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274217,
+        "name": "Premier Linkmail Walkers",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2092,
+          "name": "Lieutenant Commander's Wartide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274197": {
+      "url": "https://www.wowhead.com/forever/item=274197",
+      "bytes": 174876,
+      "sha256": "2b4ddb248f473c69fdbd2849e03749f879ad3888cb8ddca8edc3136337b269c0",
+      "title": "Premier Scalemail Pauldrons - Item - Forever",
+      "tooltipText": "Premier Scalemail Pauldrons      Item Level  60   Binds when picked up     Shoulder    Mail        266 Armor    +20 Stamina    +9 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   9 .      Lieutenant Commander's Thunderfist  (0/6)     Premier Scalemail Vices      Premier Scalemail Walkers      Premier Scalemail Legguards      Premier Scalemail Chestpiece      Premier Scalemail Pauldrons      Premier Scalemail Helm      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274197,
+        "name": "Premier Scalemail Pauldrons",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2096,
+          "name": "Lieutenant Commander's Thunderfist"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274218": {
+      "url": "https://www.wowhead.com/forever/item=274218",
+      "bytes": 170149,
+      "sha256": "321ef6b2a0119d33a4fa09a235030faabee2f0685d4eca0ee0a26f2f470c58d7",
+      "title": "Premier Linkmail Helm - Item - Forever",
+      "tooltipText": "Premier Linkmail Helm      Item Level  60   Binds when picked up     Head    Mail        288 Armor    +26 Stamina    +8 Intellect    +8 Spirit         Classes:  Shaman        Requires Level  55   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.      Lieutenant Commander's Wartide  (0/6)     Premier Linkmail Vices      Premier Linkmail Walkers      Premier Linkmail Legguards      Premier Linkmail Chestpiece      Premier Linkmail Pauldrons      Premier Linkmail Helm      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274218,
+        "name": "Premier Linkmail Helm",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2092,
+          "name": "Lieutenant Commander's Wartide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274220": {
+      "url": "https://www.wowhead.com/forever/item=274220",
+      "bytes": 170364,
+      "sha256": "daea06ee882ef5f1d1c16ceb8b6ae03186aa41ae0f3132c74e2f833461f9b7ee",
+      "title": "Premier Linkmail Vices - Item - Forever",
+      "tooltipText": "Premier Linkmail Vices      Item Level  60   Binds when picked up     Hands    Mail        221 Armor    +19 Stamina    +7 Intellect    +6 Spirit         Classes:  Shaman        Requires Level  55   Equip: Increases healing done by up to   15  and damage done by up to   5  for all magical spells and effects.      Lieutenant Commander's Wartide  (0/6)     Premier Linkmail Vices      Premier Linkmail Walkers      Premier Linkmail Legguards      Premier Linkmail Chestpiece      Premier Linkmail Pauldrons      Premier Linkmail Helm      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274220,
+        "name": "Premier Linkmail Vices",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2092,
+          "name": "Lieutenant Commander's Wartide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274221": {
+      "url": "https://www.wowhead.com/forever/item=274221",
+      "bytes": 177985,
+      "sha256": "01f2bb287c2cc10952376244f4cd8cb73550db1b53bffeeba37d60dc08d22160",
+      "title": "Premier Linkmail Legguards - Item - Forever",
+      "tooltipText": "Premier Linkmail Legguards      Item Level  60   Binds when picked up     Legs    Mail        310 Armor    +25 Stamina    +11 Intellect         Classes:  Shaman        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.      Lieutenant Commander's Wartide  (0/6)     Premier Linkmail Vices      Premier Linkmail Walkers      Premier Linkmail Legguards      Premier Linkmail Chestpiece      Premier Linkmail Pauldrons      Premier Linkmail Helm      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274221,
+        "name": "Premier Linkmail Legguards",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2092,
+          "name": "Lieutenant Commander's Wartide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274219": {
+      "url": "https://www.wowhead.com/forever/item=274219",
+      "bytes": 174586,
+      "sha256": "83ff0fd4f244175797386f74f7deb99a44bfe99623785e3e66d3b5dae9c1ef31",
+      "title": "Premier Linkmail Chestpiece - Item - Forever",
+      "tooltipText": "Premier Linkmail Chestpiece      Item Level  60   Binds when picked up     Chest    Mail        354 Armor    +25 Stamina    +11 Intellect         Classes:  Shaman        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.      Lieutenant Commander's Wartide  (0/6)     Premier Linkmail Vices      Premier Linkmail Walkers      Premier Linkmail Legguards      Premier Linkmail Chestpiece      Premier Linkmail Pauldrons      Premier Linkmail Helm      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274219,
+        "name": "Premier Linkmail Chestpiece",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2092,
+          "name": "Lieutenant Commander's Wartide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274224": {
+      "url": "https://www.wowhead.com/forever/item=274224",
+      "bytes": 166128,
+      "sha256": "37c37b056d2fab5c3c23338512ba4c48738b81046da34ba206c60f515d485917",
+      "title": "Premier Linkmail Girdle - Item - Forever",
+      "tooltipText": "Premier Linkmail Girdle      Item Level  60   Binds when picked up     Waist    Mail        199 Armor    +19 Stamina    +8 Intellect    +8 Spirit         Classes:  Shaman        Requires Level  55   Equip: Increases healing done by up to   15  and damage done by up to   5  for all magical spells and effects.",
+      "identity": {
+        "id": 274224,
+        "name": "Premier Linkmail Girdle",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274222": {
+      "url": "https://www.wowhead.com/forever/item=274222",
+      "bytes": 172386,
+      "sha256": "506152f58531ff82ea6fbf0204a2c98d0db337714826fbf7190bcfd49f13165d",
+      "title": "Premier Linkmail Pauldrons - Item - Forever",
+      "tooltipText": "Premier Linkmail Pauldrons      Item Level  60   Binds when picked up     Shoulder    Mail        266 Armor    +19 Stamina    +9 Intellect    +6 Spirit         Classes:  Shaman        Requires Level  55   Equip: Increases healing done by up to   15  and damage done by up to   5  for all magical spells and effects.      Lieutenant Commander's Wartide  (0/6)     Premier Linkmail Vices      Premier Linkmail Walkers      Premier Linkmail Legguards      Premier Linkmail Chestpiece      Premier Linkmail Pauldrons      Premier Linkmail Helm      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Improves your chance to get a critical strike with all Shock spells by 2%.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274222,
+        "name": "Premier Linkmail Pauldrons",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2092,
+          "name": "Lieutenant Commander's Wartide"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274225": {
+      "url": "https://www.wowhead.com/forever/item=274225",
+      "bytes": 174759,
+      "sha256": "b5cb18817572f659b745c65b0014a9f7441b695a5b4a9e6c881ee5bb93620fce",
+      "title": "Premier Scalemail Girdle - Item - Forever",
+      "tooltipText": "Premier Scalemail Girdle      Item Level  60   Binds when picked up     Waist    Mail        199 Armor    +20 Stamina    +9 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   9 .",
+      "identity": {
+        "id": 274225,
+        "name": "Premier Scalemail Girdle",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274223": {
+      "url": "https://www.wowhead.com/forever/item=274223",
+      "bytes": 171831,
+      "sha256": "ef5434f70628a321f6db0f61a10ef883c58a0d16a3c1c82a040a4579346a7c14",
+      "title": "Premier Linkmail Wristguards - Item - Forever",
+      "tooltipText": "Premier Linkmail Wristguards      Item Level  60   Binds when picked up     Wrist    Mail        155 Armor    +14 Stamina    +9 Intellect         Classes:  Shaman        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 274223,
+        "name": "Premier Linkmail Wristguards",
+        "reqlevel": 55,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274226": {
+      "url": "https://www.wowhead.com/forever/item=274226",
+      "bytes": 177229,
+      "sha256": "27d1315936794a025c99a57c9f1f4f2f0896bf250fa84f86e0044dc4b0af5d0e",
+      "title": "Premier Scaled Sabatons - Item - Forever",
+      "tooltipText": "Premier Scaled Sabatons      Item Level  60   Binds when picked up     Feet    Plate        431 Armor    +10 Strength    +19 Stamina    +7 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Champion's Vindication  (0/6)     Premier Scaled Gauntlets      Premier Scaled Sabatons      Premier Scaled Leggings      Premier Scaled Breastplate      Premier Scaled Shoulders      Premier Scaled Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274226,
+        "name": "Premier Scaled Sabatons",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2084,
+          "name": "Champion's Vindication"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274227": {
+      "url": "https://www.wowhead.com/forever/item=274227",
+      "bytes": 177154,
+      "sha256": "1da25acd34fec8ef0e947e0ce567fdcf7b707b14b45f5c6d15abca7ec1cf2f74",
+      "title": "Premier Scaled Gauntlets - Item - Forever",
+      "tooltipText": "Premier Scaled Gauntlets      Item Level  60   Binds when picked up     Hands    Plate        392 Armor    +11 Strength    +19 Stamina    +5 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .     Equip:   Increases the duration of your Repentance by 1 sec.         Champion's Vindication  (0/6)     Premier Scaled Gauntlets      Premier Scaled Sabatons      Premier Scaled Leggings      Premier Scaled Breastplate      Premier Scaled Shoulders      Premier Scaled Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274227,
+        "name": "Premier Scaled Gauntlets",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2084,
+          "name": "Champion's Vindication"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274230": {
+      "url": "https://www.wowhead.com/forever/item=274230",
+      "bytes": 172622,
+      "sha256": "bdc7d02fe5d28767ecad6d3ec1657ad8374ed20e43914a109aa96c794a0cf129",
+      "title": "Premier Scaled Breastplate - Item - Forever",
+      "tooltipText": "Premier Scaled Breastplate      Item Level  60   Binds when picked up     Chest    Plate        627 Armor    +11 Strength    +25 Stamina    +11 Intellect         Classes:  Paladin        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.      Champion's Vindication  (0/6)     Premier Scaled Gauntlets      Premier Scaled Sabatons      Premier Scaled Leggings      Premier Scaled Breastplate      Premier Scaled Shoulders      Premier Scaled Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274230,
+        "name": "Premier Scaled Breastplate",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2084,
+          "name": "Champion's Vindication"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274229": {
+      "url": "https://www.wowhead.com/forever/item=274229",
+      "bytes": 177086,
+      "sha256": "fe926d954f506f9602dcb19e45ee475d147a739b33c5900b9091ad7d9e412645",
+      "title": "Premier Scaled Armsplints - Item - Forever",
+      "tooltipText": "Premier Scaled Armsplints      Item Level  60   Binds when picked up     Wrist    Plate        274 Armor    +9 Strength    +14 Stamina    +5 Intellect         Classes:  Paladin        Requires Level  55",
+      "identity": {
+        "id": 274229,
+        "name": "Premier Scaled Armsplints",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274228": {
+      "url": "https://www.wowhead.com/forever/item=274228",
+      "bytes": 183065,
+      "sha256": "ba2916e4a3ee70253cff3f416fae8548db082c67b09d8e7ae7a52e53b61d9eb7",
+      "title": "Premier Scaled Cinch - Item - Forever",
+      "tooltipText": "Premier Scaled Cinch      Item Level  60   Binds when picked up     Waist    Plate        353 Armor    +12 Strength    +19 Stamina    +7 Intellect         Classes:  Paladin        Requires Level  55",
+      "identity": {
+        "id": 274228,
+        "name": "Premier Scaled Cinch",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274231": {
+      "url": "https://www.wowhead.com/forever/item=274231",
+      "bytes": 170350,
+      "sha256": "089604a7b7d205db180f4e44b3118481e78a6355c6323ff7ec0eb6d8fd58d5a1",
+      "title": "Premier Scaled Headguard - Item - Forever",
+      "tooltipText": "Premier Scaled Headguard      Item Level  60   Binds when picked up     Head    Plate        509 Armor    +11 Strength    +25 Stamina    +7 Intellect         Classes:  Paladin        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Champion's Vindication  (0/6)     Premier Scaled Gauntlets      Premier Scaled Sabatons      Premier Scaled Leggings      Premier Scaled Breastplate      Premier Scaled Shoulders      Premier Scaled Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274231,
+        "name": "Premier Scaled Headguard",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2084,
+          "name": "Champion's Vindication"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274233": {
+      "url": "https://www.wowhead.com/forever/item=274233",
+      "bytes": 179946,
+      "sha256": "dfa929061ddb76b6c929c87106e9a6f16df07e9d963fc0f4118d3c092eb1d044",
+      "title": "Premier Scaled Shoulders - Item - Forever",
+      "tooltipText": "Premier Scaled Shoulders      Item Level  60   Binds when picked up     Shoulder    Plate        470 Armor    +11 Strength    +19 Stamina    +5 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Champion's Vindication  (0/6)     Premier Scaled Gauntlets      Premier Scaled Sabatons      Premier Scaled Leggings      Premier Scaled Breastplate      Premier Scaled Shoulders      Premier Scaled Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274233,
+        "name": "Premier Scaled Shoulders",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2084,
+          "name": "Champion's Vindication"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274232": {
+      "url": "https://www.wowhead.com/forever/item=274232",
+      "bytes": 174959,
+      "sha256": "61e470e2ad0344eb73a8a18dfe219052999b7949526d86f86dfdf0136169951a",
+      "title": "Premier Scaled Leggings - Item - Forever",
+      "tooltipText": "Premier Scaled Leggings      Item Level  60   Binds when picked up     Legs    Plate        548 Armor    +13 Strength    +25 Stamina         Classes:  Paladin        Requires Level  55   Equip: Improves your chance to get a critical strike by 0.5%.   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Champion's Vindication  (0/6)     Premier Scaled Gauntlets      Premier Scaled Sabatons      Premier Scaled Leggings      Premier Scaled Breastplate      Premier Scaled Shoulders      Premier Scaled Headguard      (2) Set :  Increases damage and healing done by magical spells and effects by up to 23.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274232,
+        "name": "Premier Scaled Leggings",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2084,
+          "name": "Champion's Vindication"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274245": {
+      "url": "https://www.wowhead.com/forever/item=274245",
+      "bytes": 166488,
+      "sha256": "a79f3eec7b7ebd169cb851998afece8bfd6d68de41b9c0fdbbf4daf2742d5394",
+      "title": "Premier Lamellar Leggings - Item - Forever",
+      "tooltipText": "Premier Lamellar Leggings      Item Level  60   Binds when picked up     Legs    Plate        548 Armor    +25 Stamina    +14 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.      Champion's Aegis  (0/6)     Premier Lamellar Gauntlets      Premier Lamellar Sabatons      Premier Lamellar Leggings      Premier Lamellar Breastplate      Premier Lamellar Shoulders      Premier Lamellar Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274245,
+        "name": "Premier Lamellar Leggings",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2082,
+          "name": "Champion's Aegis"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274244": {
+      "url": "https://www.wowhead.com/forever/item=274244",
+      "bytes": 168207,
+      "sha256": "7721e7fd7d151862df27390e8a1a78a5f6ba4a16186afe1e4e9a7e7194e9acd5",
+      "title": "Premier Lamellar Breastplate - Item - Forever",
+      "tooltipText": "Premier Lamellar Breastplate      Item Level  60   Binds when picked up     Chest    Plate        627 Armor    +26 Stamina    +7 Intellect    Restores + 4 mana per 5 sec.        Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.      Champion's Aegis  (0/6)     Premier Lamellar Gauntlets      Premier Lamellar Sabatons      Premier Lamellar Leggings      Premier Lamellar Breastplate      Premier Lamellar Shoulders      Premier Lamellar Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274244,
+        "name": "Premier Lamellar Breastplate",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2082,
+          "name": "Champion's Aegis"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274247": {
+      "url": "https://www.wowhead.com/forever/item=274247",
+      "bytes": 170358,
+      "sha256": "2f1ac5a89e273c8a2dfe98bc9e2a64f26b7c8333eadd93842742cd42b2ea1b41",
+      "title": "Premier Lamellar Shoulders - Item - Forever",
+      "tooltipText": "Premier Lamellar Shoulders      Item Level  60   Binds when picked up     Shoulder    Plate        470 Armor    +19 Stamina    +4 Intellect    Restores + 4 mana per 5 sec.        Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   18  and damage done by up to   6  for all magical spells and effects.      Champion's Aegis  (0/6)     Premier Lamellar Gauntlets      Premier Lamellar Sabatons      Premier Lamellar Leggings      Premier Lamellar Breastplate      Premier Lamellar Shoulders      Premier Lamellar Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274247,
+        "name": "Premier Lamellar Shoulders",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2082,
+          "name": "Champion's Aegis"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274246": {
+      "url": "https://www.wowhead.com/forever/item=274246",
+      "bytes": 166849,
+      "sha256": "67455d3ba0600a60c570b530418939dc941a71e44c76ccfcd9a713c15cb65c27",
+      "title": "Premier Lamellar Headguard - Item - Forever",
+      "tooltipText": "Premier Lamellar Headguard      Item Level  60   Binds when picked up     Head    Plate        509 Armor    +25 Stamina    +9 Intellect    Restores + 4 mana per 5 sec.        Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   24  and damage done by up to   8  for all magical spells and effects.      Champion's Aegis  (0/6)     Premier Lamellar Gauntlets      Premier Lamellar Sabatons      Premier Lamellar Leggings      Premier Lamellar Breastplate      Premier Lamellar Shoulders      Premier Lamellar Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274246,
+        "name": "Premier Lamellar Headguard",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2082,
+          "name": "Champion's Aegis"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274258": {
+      "url": "https://www.wowhead.com/forever/item=274258",
+      "bytes": 168918,
+      "sha256": "4890acdc2b4cf0309d57bedf1f2fbe8325c18f5a6c987d37a14ff4b82d46f180",
+      "title": "Premier Lamellar Sabatons - Item - Forever",
+      "tooltipText": "Premier Lamellar Sabatons      Item Level  60   Binds when picked up     Feet    Plate        431 Armor    +19 Stamina    +10 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.      Champion's Aegis  (0/6)     Premier Lamellar Gauntlets      Premier Lamellar Sabatons      Premier Lamellar Leggings      Premier Lamellar Breastplate      Premier Lamellar Shoulders      Premier Lamellar Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274258,
+        "name": "Premier Lamellar Sabatons",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2082,
+          "name": "Champion's Aegis"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274256": {
+      "url": "https://www.wowhead.com/forever/item=274256",
+      "bytes": 167676,
+      "sha256": "fe5ae604032caf64052733f1277779377255e9341f73c5d586d38ec82c5900ec",
+      "title": "Premier Lamellar Gauntlets - Item - Forever",
+      "tooltipText": "Premier Lamellar Gauntlets      Item Level  60   Binds when picked up     Hands    Plate        392 Armor    +20 Stamina    +9 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   18  and damage done by up to   6  for all magical spells and effects.     Equip:   Increases the critical strike chance of your Flash of Light by 2%.         Champion's Aegis  (0/6)     Premier Lamellar Gauntlets      Premier Lamellar Sabatons      Premier Lamellar Leggings      Premier Lamellar Breastplate      Premier Lamellar Shoulders      Premier Lamellar Headguard      (2) Set :  Increases healing done by up to 44 and damage done by up to 15 for all magical spells and effects.    (4) Set :  Reduces the cooldown of your Hammer of Justice by 10 sec.    (6) Set :  +20 Stamina.",
+      "identity": {
+        "id": 274256,
+        "name": "Premier Lamellar Gauntlets",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [
+        {
+          "id": 2082,
+          "name": "Champion's Aegis"
+        }
+      ],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274257": {
+      "url": "https://www.wowhead.com/forever/item=274257",
+      "bytes": 165288,
+      "sha256": "020dfa0b398e603e98edd872763ccb9e0e9fa7b7b3291bed906912edffa1516a",
+      "title": "Premier Lamellar Armsplints - Item - Forever",
+      "tooltipText": "Premier Lamellar Armsplints      Item Level  60   Binds when picked up     Wrist    Plate        274 Armor    +14 Stamina    +9 Intellect         Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   11  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 274257,
+        "name": "Premier Lamellar Armsplints",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274969": {
+      "url": "https://www.wowhead.com/forever/item=274969",
+      "bytes": 162987,
+      "sha256": "1f378cd6f1854ba5ca33ffea4fc301fa288286cba90e13e98a4712413d4102b2",
+      "title": "Premier Master Sergeant's Insignia - Item - Forever",
+      "tooltipText": "Premier Master Sergeant's Insignia      Item Level  60   Binds when picked up     Neck            +16 Stamina    +7 Spirit              Requires Level  55 Requires Master Sergeant / Senior Sergeant (Rank 4)",
+      "identity": {
+        "id": 274969,
+        "name": "Premier Master Sergeant's Insignia",
+        "reqlevel": 55,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Requires Level 55",
+        "Requires Master Sergeant / Senior Sergeant (Rank 4)"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274968": {
+      "url": "https://www.wowhead.com/forever/item=274968",
+      "bytes": 163000,
+      "sha256": "f83eaa304dcb0126bed0c78b7c6bde7c9bf34b83a74d20eb78c02812cf399dd9",
+      "title": "Premier Senior Sergeant's Insignia - Item - Forever",
+      "tooltipText": "Premier Senior Sergeant's Insignia      Item Level  60   Binds when picked up     Neck            +16 Stamina    +7 Spirit              Requires Level  55 Requires Master Sergeant / Senior Sergeant (Rank 4)",
+      "identity": {
+        "id": 274968,
+        "name": "Premier Senior Sergeant's Insignia",
+        "reqlevel": 55,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Requires Level 55",
+        "Requires Master Sergeant / Senior Sergeant (Rank 4)"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "274259": {
+      "url": "https://www.wowhead.com/forever/item=274259",
+      "bytes": 166372,
+      "sha256": "888b5b6da0332326737bf87ce66ffde73ba89b90160078ff9f6416b3014631c2",
+      "title": "Premier Lamellar Cinch - Item - Forever",
+      "tooltipText": "Premier Lamellar Cinch      Item Level  60   Binds when picked up     Waist    Plate        353 Armor    +19 Stamina    +7 Intellect    Restores + 4 mana per 5 sec.        Classes:  Paladin        Requires Level  55   Equip: Increases healing done by up to   13  and damage done by up to   4  for all magical spells and effects.",
+      "identity": {
+        "id": 274259,
+        "name": "Premier Lamellar Cinch",
+        "reqlevel": 55,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "276399": {
+      "url": "https://www.wowhead.com/forever/item=276399",
+      "bytes": 157595,
+      "sha256": "741a169067ad54a5ae8490e3bff001b9329f06b4c5fe7c42ae7858c089746520",
+      "title": "Plate of the Scarlet Bastion - Item - Forever",
+      "tooltipText": "Plate of the Scarlet Bastion      Item Level  60   Binds when picked up     Chest    Plate        627 Armor    +18 Stamina    Restores + 7 mana per 5 sec.             Requires Level  55   Equip: Increases healing done by up to   35  and damage done by up to   12  for all magical spells and effects.      Sell Price:  3   53   7",
+      "identity": {
+        "id": 276399,
+        "name": "Plate of the Scarlet Bastion",
+        "reqlevel": 55,
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "276419": {
+      "url": "https://www.wowhead.com/forever/item=276419",
+      "bytes": 160659,
+      "sha256": "0eaca7c097215a41593b6fc1b695de794fc84cbaf33a19874ee27429237360cd",
+      "title": "Lightcrest Hammer - Item - Forever",
+      "tooltipText": "Lightcrest Hammer      Item Level  60   Binds when picked up     One-Hand    Mace        \n       66 - 123 Damage  \n     Speed  2.40 \n   (39.38 damage per second)             Requires Level  55    Chance on hit:   Smites a target for 105 Holy damage. Deals 2 times as much damage to Undead.         Sell Price:  5   17   51",
+      "identity": {
+        "id": 276419,
+        "name": "Lightcrest Hammer",
+        "reqlevel": 55,
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    },
+    "275437": {
+      "url": "https://www.wowhead.com/forever/item=275437",
+      "bytes": 180739,
+      "sha256": "ad3bf0595ac8559e72b4e56ca2f9188469cfaf2035f2921a6ee5c4ad78ba2302",
+      "title": "Premier Silken Sash - Item - Forever",
+      "tooltipText": "Premier Silken Sash      Item Level  60   Binds when picked up     Waist    Cloth        48 Armor    +19 Stamina    +8 Intellect    +8 Spirit         Classes:  Priest        Requires Level  55   Equip: Increases healing done by up to   18  and damage done by up to   6  for all magical spells and effects.",
+      "identity": {
+        "id": 275437,
+        "name": "Premier Silken Sash",
+        "reqlevel": 55,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "quality": 3
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 55
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 55"
+      ],
+      "acquisitionLists": {},
+      "setReferences": [],
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false
+    }
+  },
+  "cachedNPCSurvey": {
+    "pagesReused": 171,
+    "matches": [],
+    "scope": [
+      {
+        "npcID": 3410,
+        "url": "https://www.wowhead.com/forever/npc=3410",
+        "bytes": 59131,
+        "sha256": "4d29869dbfce55081f610e989278b5465c9ec467f808e5fac752f0720ea1bb8d",
+        "title": "Jin'sora - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3479,
+        "url": "https://www.wowhead.com/forever/npc=3479",
+        "bytes": 59326,
+        "sha256": "1293028962731f7bb5609eb27ee8f7bfa9b1a912a38004407c5d01cb575e3bac",
+        "title": "Nargal Deatheye - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 1139,
+        "url": "https://www.wowhead.com/forever/npc=1139",
+        "bytes": 46975,
+        "sha256": "8f32ca1b508ec865793c92810fd5201a4c6e089073f52ce58ec116d84abc1c39",
+        "title": "Magistrate Bluntnose - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 4173,
+        "url": "https://www.wowhead.com/forever/npc=4173",
+        "bytes": 56171,
+        "sha256": "1333b95a3f41bdeefb3de798f4a1a92fc8683a444b04493e3fa404a21c75136f",
+        "title": "Landria - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 253136,
+        "url": "https://www.wowhead.com/forever/npc=253136",
+        "bytes": 46418,
+        "sha256": "8e30fcb32edd36a7cda9fd00b85592bf429eda75b820b311f148c0e9f4053705",
+        "title": "Orgrul - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 4217,
+        "url": "https://www.wowhead.com/forever/npc=4217",
+        "bytes": 250063,
+        "sha256": "16d88ee7947815dd99c91154b15a1c9e235e4bd216760aeec4f54e74f3755649",
+        "title": "Mathrengyl Bearwalker - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 9027,
+        "url": "https://www.wowhead.com/forever/npc=9027",
+        "bytes": 146276,
+        "sha256": "23388ed61b997c9e973484006abb703759589e964096f3b7ee0532b0c70d3302",
+        "title": "Gorosh the Dervish - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 844,
+        "url": "https://www.wowhead.com/forever/npc=844",
+        "bytes": 80399,
+        "sha256": "70203b7b5d233a39b4ddf92cc25e75c2c6eecce0031f9e94e64fbaf577807462",
+        "title": "Antonio Perelli - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 7895,
+        "url": "https://www.wowhead.com/forever/npc=7895",
+        "bytes": 86335,
+        "sha256": "1b29640f01e3c382d62097b501ae8585021ae883a2e8faaafa21f31583c9865b",
+        "title": "Ambassador Bloodrage - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 15127,
+        "url": "https://www.wowhead.com/forever/npc=15127",
+        "bytes": 203415,
+        "sha256": "e0a81bf4965c15abc0789cada96651648c975217bc6789328f7116ff0e96d648",
+        "title": "Samuel Hawke - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 268592,
+        "url": "https://www.wowhead.com/forever/npc=268592",
+        "bytes": 47393,
+        "sha256": "02ed2979371c8899f21bd3c0e033a08f30f5e0c9814a25d168e5f9d7860ddb0c",
+        "title": "Olariaan Swiftburn - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 222,
+        "url": "https://www.wowhead.com/forever/npc=222",
+        "bytes": 50875,
+        "sha256": "195d937056014e48038e329a3aacf75c4ff7401a08882f3a95d0ae38ed339166",
+        "title": "Nillen Andemar - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 263570,
+        "url": "https://www.wowhead.com/forever/npc=263570",
+        "bytes": 97808,
+        "sha256": "d218768609758ec9e375c6caa73ca9456472f22e390e71721ead16f2fb71eb2c",
+        "title": "Creeg Bothunk - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 9029,
+        "url": "https://www.wowhead.com/forever/npc=9029",
+        "bytes": 92435,
+        "sha256": "198cb395d0b41bb1e05c944121321981985e80ae8fcb4073f087e2cc2fb10017",
+        "title": "Eviscerator - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 5144,
+        "url": "https://www.wowhead.com/forever/npc=5144",
+        "bytes": 209320,
+        "sha256": "9d06baaa8d6c3691d71fe74ea33e1988e194a03036e7f3d26794841d35b5fe68",
+        "title": "Bink - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 10857,
+        "url": "https://www.wowhead.com/forever/npc=10857",
+        "bytes": 97233,
+        "sha256": "5938c379c3e7102337499655a11123d2cc1a4f42decac1e9d4430fea479981ee",
+        "title": "Argent Quartermaster Lightspark - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 257597,
+        "url": "https://www.wowhead.com/forever/npc=257597",
+        "bytes": 49643,
+        "sha256": "6ac315efcb5057e2a43219feffbaf156519a347aa4ee5031765a2d8a318742ee",
+        "title": "Bruegs Kindleborn - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 14581,
+        "url": "https://www.wowhead.com/forever/npc=14581",
+        "bytes": 127760,
+        "sha256": "4f24513c2d19ae10ace17ca712520f1177697810d43874a0ad33ef0bfc4a1cc0",
+        "title": "Sergeant Thunderhorn - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 1307,
+        "url": "https://www.wowhead.com/forever/npc=1307",
+        "bytes": 65871,
+        "sha256": "655d9eeb58a5add597cc88714b71d561724e3922869a17b41e1af17d98d9a7d5",
+        "title": "Charys Yserian - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 9552,
+        "url": "https://www.wowhead.com/forever/npc=9552",
+        "bytes": 56260,
+        "sha256": "c103c23e5fb8f88bda1cb2d961231d3d602bed869561a590cb8aa3c9752974ee",
+        "title": "Zanara - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 9032,
+        "url": "https://www.wowhead.com/forever/npc=9032",
+        "bytes": 75766,
+        "sha256": "51210114f8c7ed2dad6663aacf9dc07ea17a59b54b1629c457e458a2b864f340",
+        "title": "Hedrum the Creeper - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 252448,
+        "url": "https://www.wowhead.com/forever/npc=252448",
+        "bytes": 49468,
+        "sha256": "0dae3d37dca2809725bd232436261b1c3db70f31b6a26cff5e2915bb7d5fb869",
+        "title": "Alvarion Windfield - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 4175,
+        "url": "https://www.wowhead.com/forever/npc=4175",
+        "bytes": 77878,
+        "sha256": "1c848869d2cc4baae1683eddb1a5c3dac6f2961de03c99e5eb7c4ff17c6f87b1",
+        "title": "Vinasia - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 256629,
+        "url": "https://www.wowhead.com/forever/npc=256629",
+        "bytes": 61315,
+        "sha256": "211b49ce8e119454f19545aa99214bee8151eb07c1ac707d23f34e8a7861d6ba",
+        "title": "Dala Fairmaw - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 11555,
+        "url": "https://www.wowhead.com/forever/npc=11555",
+        "bytes": 81102,
+        "sha256": "e833caa63a0569a538661aceea492f5280a69d7ee2c904d12b833c649b8be4c1",
+        "title": "Gorn One Eye - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 11802,
+        "url": "https://www.wowhead.com/forever/npc=11802",
+        "bytes": 73193,
+        "sha256": "45b25620a68ff944c17e443fc995a85d9276599c0bd9a4f906454c436da6b031",
+        "title": "Dendrite Starblaze - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 11036,
+        "url": "https://www.wowhead.com/forever/npc=11036",
+        "bytes": 283641,
+        "sha256": "972c94e194e636c9eba450aefaba0625db6e6f771de7934aaaf13fe2acb069cf",
+        "title": "Leonid Barthalomew the Revered - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 6006,
+        "url": "https://www.wowhead.com/forever/npc=6006",
+        "bytes": 198576,
+        "sha256": "e4bb3e55f5184c1b35e2252ded8f49c58c29da6deb6dcf23745538aea998214f",
+        "title": "Shadowsworn Adept - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 7506,
+        "url": "https://www.wowhead.com/forever/npc=7506",
+        "bytes": 59777,
+        "sha256": "fc9a6971c61459a76a500250cd87e80ea120077281425ceafdd3e1a1125b1c9d",
+        "title": "Bloodmage Lynnore - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 211033,
+        "url": "https://www.wowhead.com/forever/npc=211033",
+        "bytes": 121058,
+        "sha256": "39bd2e8c181f993d569227a39bf439d780cb3f919b5f14fccbbbcfe4d4454a60",
+        "title": "Garion Wendell - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 5907,
+        "url": "https://www.wowhead.com/forever/npc=5907",
+        "bytes": 57692,
+        "sha256": "e803385d87f901f822e1a648e395a4e74da396238880e0730df27d1381a6834c",
+        "title": "Kranal Fiss - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 11079,
+        "url": "https://www.wowhead.com/forever/npc=11079",
+        "bytes": 48189,
+        "sha256": "88442b11094244a82abdf0490fb2ab7cae43d2cfdac8af74dad4357ead924a69",
+        "title": "Wynd Nightchaser - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 7356,
+        "url": "https://www.wowhead.com/forever/npc=7356",
+        "bytes": 115124,
+        "sha256": "a2d30cd84181cd024dd1fdae6da98683d66b28e3cecb3c7b04f9f14c4bf47409",
+        "title": "Plaguemaw the Rotting - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 1146,
+        "url": "https://www.wowhead.com/forever/npc=1146",
+        "bytes": 56187,
+        "sha256": "5bc07fb44d15527883caae44116a6ea876432fd1bd9d1cecc52d555dcf6a2a2c",
+        "title": "Vharr - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3539,
+        "url": "https://www.wowhead.com/forever/npc=3539",
+        "bytes": 66924,
+        "sha256": "32147d48396014c3e334ca3cbbaab91279f2162814c0f8dccf03a2c9268be841",
+        "title": "Ott - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 2845,
+        "url": "https://www.wowhead.com/forever/npc=2845",
+        "bytes": 63023,
+        "sha256": "300dc6ee3beb0cabe4f5068b0c3459dc11729bc2e174f3ba8575cddb98be23a8",
+        "title": "Fargon Mortalak - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3015,
+        "url": "https://www.wowhead.com/forever/npc=3015",
+        "bytes": 61985,
+        "sha256": "d959fdb581bec44bb71dfa773a0e435441ec18e0364f5ae96e644741ce3e48e5",
+        "title": "Kuna Thunderhorn - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 12782,
+        "url": "https://www.wowhead.com/forever/npc=12782",
+        "bytes": 137404,
+        "sha256": "cdbc8b91b74f40639ff04aef874d6b2b1702bc6d8a9de20595fa75c274ab9098",
+        "title": "Captain O'Neal - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 211022,
+        "url": "https://www.wowhead.com/forever/npc=211022",
+        "bytes": 123414,
+        "sha256": "0ce458168e36cca9641929a9e073d95b65f8c05281d852fb89cf86b875234ae9",
+        "title": "Owen Thadd - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 10856,
+        "url": "https://www.wowhead.com/forever/npc=10856",
+        "bytes": 79595,
+        "sha256": "ec78f00a3a35eaa5de063fcd34cc9866230a3f9af36cf9e3c6e78f3540749ad2",
+        "title": "Argent Quartermaster Hasana - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 12203,
+        "url": "https://www.wowhead.com/forever/npc=12203",
+        "bytes": 94887,
+        "sha256": "e415becf5c436d1a31336b766eb688d388ed5d0611338a8eb6693edf7c9b4ce7",
+        "title": "Landslide - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 9030,
+        "url": "https://www.wowhead.com/forever/npc=9030",
+        "bytes": 121823,
+        "sha256": "41cd4b4854ed8fdd5f6b8e8b04e76174ba836ce13a6bd9e035b7b5c1a38bb9ef",
+        "title": "Ok'thor the Breaker - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 221740,
+        "url": "https://www.wowhead.com/forever/npc=221740",
+        "bytes": 46112,
+        "sha256": "7dacd37b9746b8356817228653b8d5be4c51b7ba2f220fa5f3d6befc91836d45",
+        "title": "Calefactus the Unleashed - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 6008,
+        "url": "https://www.wowhead.com/forever/npc=6008",
+        "bytes": 107899,
+        "sha256": "d3176e6f3d7a3862580d4d014bf7caa6d998ef32aaa1547bb67f5066d4a233d4",
+        "title": "Shadowsworn Warlock - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 9555,
+        "url": "https://www.wowhead.com/forever/npc=9555",
+        "bytes": 56137,
+        "sha256": "3e1c1c0242a1dbd87139455944ed1ce30c0c8e31c2a968a8950110ad8682a98d",
+        "title": "Mu'uta - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3316,
+        "url": "https://www.wowhead.com/forever/npc=3316",
+        "bytes": 80436,
+        "sha256": "ceb629c187044b8b3b74936a77f496e9dafe94f3f57913fa22d3ca746dd2f5b0",
+        "title": "Handor - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 253177,
+        "url": "https://www.wowhead.com/forever/npc=253177",
+        "bytes": 48186,
+        "sha256": "8b976e109f5ada504af4c877be66421bc0da3938f468df2391610eab5ac42dca",
+        "title": "Nerlokh - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 265576,
+        "url": "https://www.wowhead.com/forever/npc=265576",
+        "bytes": 48081,
+        "sha256": "37dbf601465d11d24cb002a7bac5ffb4605fbae8f26d66e166c4c7bab0060254",
+        "title": "Rettrick - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 11557,
+        "url": "https://www.wowhead.com/forever/npc=11557",
+        "bytes": 123809,
+        "sha256": "d93237a5dd27bb2b3cb48e715f4034959b1d16e81ab48ba4b622eac6bf234f60",
+        "title": "Meilosh - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 12777,
+        "url": "https://www.wowhead.com/forever/npc=12777",
+        "bytes": 406825,
+        "sha256": "648ac9992e2df5f1a7a626dece2e3bd62a2b7fed1d2f7cdae124d89300fb3812",
+        "title": "Captain Dirgehammer - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 252382,
+        "url": "https://www.wowhead.com/forever/npc=252382",
+        "bytes": 231310,
+        "sha256": "fb6d8b2e16ca8164012e8e36c5a0d5aae66cca27accfc7a5bc7e795baf25a8c1",
+        "title": "Sessaria Skystride - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 2679,
+        "url": "https://www.wowhead.com/forever/npc=2679",
+        "bytes": 101826,
+        "sha256": "cb315227b7249f0eeb61e509342e7db71842142932f716cdaf6259bc79372225",
+        "title": "Wenna Silkbeard - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 255897,
+        "url": "https://www.wowhead.com/forever/npc=255897",
+        "bytes": 80315,
+        "sha256": "928ce5f5bfbfbe38126114f4cd37af1c5e728215834e733186e37ab639e7a884",
+        "title": "Friz Frazzlespark - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 2843,
+        "url": "https://www.wowhead.com/forever/npc=2843",
+        "bytes": 58508,
+        "sha256": "42e8772e0169f9f02b62a65eff60576322ca0a5f5bf8ca822b239b9ab67241c6",
+        "title": "Jutak - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 260042,
+        "url": "https://www.wowhead.com/forever/npc=260042",
+        "bytes": 47938,
+        "sha256": "ce9a23f47ec0196a19b922795f5e0f555cf26f5fb4c3d4b1661f15335333d39b",
+        "title": "Captain Dreadrise - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 4086,
+        "url": "https://www.wowhead.com/forever/npc=4086",
+        "bytes": 71272,
+        "sha256": "7ae55ae160596ad356a7e0c76de9364597cdf82fd5770db7d4181e79948ea701",
+        "title": "Veenix - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 13217,
+        "url": "https://www.wowhead.com/forever/npc=13217",
+        "bytes": 120868,
+        "sha256": "9ce2c0773cce665c7e4a0fabb5e65d7a51c6f472bf5550b7f13f5dd80f244a3d",
+        "title": "Thanthaldis Snowgleam - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 1214,
+        "url": "https://www.wowhead.com/forever/npc=1214",
+        "bytes": 59126,
+        "sha256": "3728039c14ebab658600a9e594341ac1829f9c6fa8cd7ac9310284eaea5afe4a",
+        "title": "Aldren Cordon - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3448,
+        "url": "https://www.wowhead.com/forever/npc=3448",
+        "bytes": 62880,
+        "sha256": "6e56e982317447b5caff4af332d67584534b7ef492e5c9e10892fd59389a4765",
+        "title": "Tonga Runetotem - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 12029,
+        "url": "https://www.wowhead.com/forever/npc=12029",
+        "bytes": 58144,
+        "sha256": "3a7769a504fb1c7ce3d48a338c35e73ca8c323211220f592565ae845dab12e12",
+        "title": "Narianna - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 4232,
+        "url": "https://www.wowhead.com/forever/npc=4232",
+        "bytes": 54465,
+        "sha256": "3b72d77dbcc62311d592b4b7395dbcb761eaec960564b3cf9a26d3dd53b02734",
+        "title": "Glorandiir - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 1217,
+        "url": "https://www.wowhead.com/forever/npc=1217",
+        "bytes": 48510,
+        "sha256": "e0f240108ff0d44b921528bab4d7bcd13ec1f63b2ded5fb007df0759a275875d",
+        "title": "Glorin Steelbrow - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 240248,
+        "url": "https://www.wowhead.com/forever/npc=240248",
+        "bytes": 264499,
+        "sha256": "544a9a319348bf179875323d74b6f514cebe044b00803c1bd8b92e04a6fe492a",
+        "title": "Bryon Steelblade - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 252800,
+        "url": "https://www.wowhead.com/forever/npc=252800",
+        "bytes": 53927,
+        "sha256": "30b39cec6c8378a84beeb5d312a55214cfe22fb17b260b42cdce06a60482a985",
+        "title": "Aamelia Windfield - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3702,
+        "url": "https://www.wowhead.com/forever/npc=3702",
+        "bytes": 72020,
+        "sha256": "9f05d083eb62fbcb98e316796023853bfcf18c51c376096ea944ce359769414f",
+        "title": "Alanndarian Nightsong - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 11536,
+        "url": "https://www.wowhead.com/forever/npc=11536",
+        "bytes": 102152,
+        "sha256": "190db6ea27f9b2e798f97503d54a8da2f98b6c90525601cdff749b7913d5ad9f",
+        "title": "Quartermaster Miranda Breechlock - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 6007,
+        "url": "https://www.wowhead.com/forever/npc=6007",
+        "bytes": 135215,
+        "sha256": "155db073ebb5f2fb666e3cf32e371d80d4542f0f935fc96594252390b7c4c438",
+        "title": "Shadowsworn Enforcer - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 4884,
+        "url": "https://www.wowhead.com/forever/npc=4884",
+        "bytes": 51877,
+        "sha256": "80bb43eb0f88aaa34f8e553977ea3574bef4061a92b828ed544b847d29fe7d87",
+        "title": "Zulrg - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3536,
+        "url": "https://www.wowhead.com/forever/npc=3536",
+        "bytes": 59601,
+        "sha256": "47b429b10548005bd6a5d537b06ae97b2adde93ddaaac99d50f1928f92df6b34",
+        "title": "Kris Legace - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 4568,
+        "url": "https://www.wowhead.com/forever/npc=4568",
+        "bytes": 213017,
+        "sha256": "f6f1fbc44ff6c2c937920408bdba5f7d1b2d9dfae20dfec9795263575c61c0a4",
+        "title": "Anastasia Hartwell - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3543,
+        "url": "https://www.wowhead.com/forever/npc=3543",
+        "bytes": 64378,
+        "sha256": "41255e60e3ddd0b0f528b2fedd1a3d2ae72b0ac42babf72070e6d3e906584bba",
+        "title": "Robert Aebischer - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 4888,
+        "url": "https://www.wowhead.com/forever/npc=4888",
+        "bytes": 52039,
+        "sha256": "251c53995149db14cb8f8eadc302545b533007acd23167b6636f051169c42045",
+        "title": "Marie Holdston - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 9031,
+        "url": "https://www.wowhead.com/forever/npc=9031",
+        "bytes": 77322,
+        "sha256": "59158be43a63d643985e0535d36051a85231900d33ed9692ca0b26334280281b",
+        "title": "Anub'shiah - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 4892,
+        "url": "https://www.wowhead.com/forever/npc=4892",
+        "bytes": 59800,
+        "sha256": "e749a54c10c6ab9488d057a51c4229e4c991dd0a7b8a9bae0a46ed07269764bb",
+        "title": "Jensen Farran - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 13219,
+        "url": "https://www.wowhead.com/forever/npc=13219",
+        "bytes": 117770,
+        "sha256": "94e42328cdb6fe872489163b6e0d0a72886297136dfb12aa1ae36127b230e260",
+        "title": "Jekyll Flandring - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3951,
+        "url": "https://www.wowhead.com/forever/npc=3951",
+        "bytes": 51747,
+        "sha256": "4a64d6f5d649599f3a401b40e8432edce0259ec8bc808deda34792c62d4cfe00",
+        "title": "Bhaldaran Ravenshade - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 2258,
+        "url": "https://www.wowhead.com/forever/npc=2258",
+        "bytes": 111629,
+        "sha256": "e1c378371d8273817038ce6d1f68513c30ab955b37b48409f7ef47d650a4ab16",
+        "title": "Stone Fury - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 12045,
+        "url": "https://www.wowhead.com/forever/npc=12045",
+        "bytes": 55835,
+        "sha256": "53426724bb62e413b9408f321d825fcc1290bc8054ac0f089288695c85130d3b",
+        "title": "Hae'Wilani - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3600,
+        "url": "https://www.wowhead.com/forever/npc=3600",
+        "bytes": 207091,
+        "sha256": "2baecc9141ecdf4849ca97b779dd647f6d3e85f33580d6e7f59060f9cd0bd63c",
+        "title": "Laurna Morninglight - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 6009,
+        "url": "https://www.wowhead.com/forever/npc=6009",
+        "bytes": 155219,
+        "sha256": "ca0d79ff619f95565a73aa872e63821aab56d3b62d12bca236b23fb1a6c2f9e6",
+        "title": "Shadowsworn Dreadweaver - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 5397,
+        "url": "https://www.wowhead.com/forever/npc=5397",
+        "bytes": 64676,
+        "sha256": "e11cf28ef403e2d4c53e1d6e5c7b4cb4c671710bcf4e24dd4d423a254cdfccc0",
+        "title": "Uthek the Wise - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 2839,
+        "url": "https://www.wowhead.com/forever/npc=2839",
+        "bytes": 55053,
+        "sha256": "90300be1186a1a73d6b9fa9efc44e9c734fb4699e8592d63835941ea4bab9713",
+        "title": "Haren Kanmae - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 1646,
+        "url": "https://www.wowhead.com/forever/npc=1646",
+        "bytes": 58076,
+        "sha256": "7c653682a465de8cad7706c3799d0d8134d9a395f40c32d293a6aaf9191f55f7",
+        "title": "Baros Alexston - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3658,
+        "url": "https://www.wowhead.com/forever/npc=3658",
+        "bytes": 63359,
+        "sha256": "80c68fa91655c56c9bb1511ba7dba44aa059c1848f867bb19ef2c672d9709a35",
+        "title": "Lizzarik - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 4085,
+        "url": "https://www.wowhead.com/forever/npc=4085",
+        "bytes": 61674,
+        "sha256": "a95a9bd06da8b6f19f76c065f80ad826a1152a3fba38f1688a11bb196541fac9",
+        "title": "Nizzik - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 1298,
+        "url": "https://www.wowhead.com/forever/npc=1298",
+        "bytes": 67693,
+        "sha256": "1a5263399f2e58382d413415ea71cda57f7b14d3dfff06e2458c940b1fb5964b",
+        "title": "Frederick Stover - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 14754,
+        "url": "https://www.wowhead.com/forever/npc=14754",
+        "bytes": 170720,
+        "sha256": "9774815aed89f30cfd0202747ed767712e81638ef96fa0af05cab8103ca85ed9",
+        "title": "Kelm Hargunth - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3019,
+        "url": "https://www.wowhead.com/forever/npc=3019",
+        "bytes": 54742,
+        "sha256": "cc29fc62a1505e3657d36e9b41c2fe2ba5e2d5eb715705a5f82e46239792e3fd",
+        "title": "Delgo Ragetotem - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3534,
+        "url": "https://www.wowhead.com/forever/npc=3534",
+        "bytes": 63151,
+        "sha256": "4f3afddb7d88e7d945ef502f733d99ceeae24dff3533d397a1d6d20da948cf7e",
+        "title": "Wallace the Blind - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3671,
+        "url": "https://www.wowhead.com/forever/npc=3671",
+        "bytes": 225300,
+        "sha256": "c9ff84076ca4a253cf6853e675f8a19daf28e68710f9d41dd977a39bcfc3f240",
+        "title": "Lady Anacondra - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 4604,
+        "url": "https://www.wowhead.com/forever/npc=4604",
+        "bytes": 55129,
+        "sha256": "154ec9fb7d17609d8104b5d14016c69dcb050d8d233c18a6d63f4f9a2175aab5",
+        "title": "Abigail Sawyer - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 14846,
+        "url": "https://www.wowhead.com/forever/npc=14846",
+        "bytes": 76681,
+        "sha256": "466785625ba497533d91df2c3d15e8a2363ed5c83303c1b7e77d5de499995d7f",
+        "title": "Lhara - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 10684,
+        "url": "https://www.wowhead.com/forever/npc=10684",
+        "bytes": 62815,
+        "sha256": "ee530d5835aedfdaac5f403b052f801512ff2dbf3c517d13aded2e4720e4a307",
+        "title": "Remorseful Highborne - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 5122,
+        "url": "https://www.wowhead.com/forever/npc=5122",
+        "bytes": 59262,
+        "sha256": "42f1aa3999a0fe9980b123cc4ec7db91886c24bf8e7ef0257f76ca123b4dacda",
+        "title": "Skolmin Goldfury - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3683,
+        "url": "https://www.wowhead.com/forever/npc=3683",
+        "bytes": 55601,
+        "sha256": "782c4bedf0e62f5bf4e448a9fc5b8642649a69bfda56aabc0d661ae837e95960",
+        "title": "Kiknikle - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 272045,
+        "url": "https://www.wowhead.com/forever/npc=272045",
+        "bytes": 80340,
+        "sha256": "a98a8e4a495ea127cf52a6e8403c8ca01e3a60c178543abf294ef74bb5dea40a",
+        "title": "Brother Zendraas - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 2078,
+        "url": "https://www.wowhead.com/forever/npc=2078",
+        "bytes": 50457,
+        "sha256": "86ee874deb2e0c8ed64f59553c77d49cd863ba35bb5fd9d3999279f139990e44",
+        "title": "Athridas Bearmantle - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3682,
+        "url": "https://www.wowhead.com/forever/npc=3682",
+        "bytes": 57169,
+        "sha256": "4ec96b1a774467430f3043362f3c003ec59599c790877302a0ec321886d2509b",
+        "title": "Vrang Wildgore - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 227853,
+        "url": "https://www.wowhead.com/forever/npc=227853",
+        "bytes": 87042,
+        "sha256": "609195a2db255c1d0705ff5fffa77e57537321eede9d863d5da790c95102f850",
+        "title": "Pix Xizzix - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 13218,
+        "url": "https://www.wowhead.com/forever/npc=13218",
+        "bytes": 100432,
+        "sha256": "2a14fa75d5cc6e40d3c9cd90a64e0c02cd6b5b54e73535573f9861e069a02e03",
+        "title": "Grunnda Wolfheart - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 14753,
+        "url": "https://www.wowhead.com/forever/npc=14753",
+        "bytes": 217236,
+        "sha256": "d80bbb4202fcce3e644e74d77eae68c2744cef32384092b0140d94544b3f4e93",
+        "title": "Illiyana Moonblaze - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 2840,
+        "url": "https://www.wowhead.com/forever/npc=2840",
+        "bytes": 49295,
+        "sha256": "f03892ac74ee5e03987bd1cfa15a9001c8c940c2878c447f6b3230c8c023cd6d",
+        "title": "Kizz Bluntstrike - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 1454,
+        "url": "https://www.wowhead.com/forever/npc=1454",
+        "bytes": 62062,
+        "sha256": "bab0cd4b9a7b3f2d7b7fd119613fad64afa0609a51fd204d3707bbde6b5c7f3d",
+        "title": "Jennabink Powerseam - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 234,
+        "url": "https://www.wowhead.com/forever/npc=234",
+        "bytes": 75977,
+        "sha256": "1b420412c9abba38337dbfc6d92ed368df0b7c9db674456076da31d66fa66d35",
+        "title": "Gryan Stoutmantle - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3134,
+        "url": "https://www.wowhead.com/forever/npc=3134",
+        "bytes": 57172,
+        "sha256": "43640c5084d33ff226d704e4d83ccf9315be86f9a8e3eaabf81f71439b08b02a",
+        "title": "Kzixx - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 270570,
+        "url": "https://www.wowhead.com/forever/npc=270570",
+        "bytes": 71687,
+        "sha256": "c9f7a7da0ad865cb98dedd77fdffb70ec82cfc968492850ad204dc8693651707",
+        "title": "Justine Kai - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 7267,
+        "url": "https://www.wowhead.com/forever/npc=7267",
+        "bytes": 149732,
+        "sha256": "904219aa08732307b22acda312ae909b9e15e7d61eb621baf889962b120d1121",
+        "title": "Chief Ukorz Sandscalp - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 7317,
+        "url": "https://www.wowhead.com/forever/npc=7317",
+        "bytes": 51341,
+        "sha256": "5036e3cdad296153a06423878735b3c6af9d4f56541363cb8cb22494926cafb5",
+        "title": "Oben Rageclaw - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 9028,
+        "url": "https://www.wowhead.com/forever/npc=9028",
+        "bytes": 74641,
+        "sha256": "fdc13e0dedb6870fd0e25efb15e7f6babcd590869d5c1fc599255ed68b04a8b3",
+        "title": "Grizzle - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 167,
+        "url": "https://www.wowhead.com/forever/npc=167",
+        "bytes": 56991,
+        "sha256": "a6c91a0c01c378ab96ecf3ac64b3adfa09153167467327dea3f29e4d19071dc6",
+        "title": "Morhan Coppertongue - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 7358,
+        "url": "https://www.wowhead.com/forever/npc=7358",
+        "bytes": 360769,
+        "sha256": "76265546ff6aaa0d56b76e763de8bad0c616b7ec0b0806b86db0ee2c57e86919",
+        "title": "Amnennar the Coldbringer - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 6004,
+        "url": "https://www.wowhead.com/forever/npc=6004",
+        "bytes": 216839,
+        "sha256": "6ca3d5f1378ed7db84f3f111454ddc78beea0834e2a5d320beb884837510a426",
+        "title": "Shadowsworn Cultist - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 6487,
+        "url": "https://www.wowhead.com/forever/npc=6487",
+        "bytes": 280735,
+        "sha256": "70899e13cc277527f15a5d2d14d4a1b609fd613e5d8ce05b38f138554084d06d",
+        "title": "Arcanist Doan - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 8567,
+        "url": "https://www.wowhead.com/forever/npc=8567",
+        "bytes": 228988,
+        "sha256": "bdf892cce801dccd1c4ccd3e05cc84717c73b56d1dce758b115ebe4bc056805e",
+        "title": "Glutton - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 1284,
+        "url": "https://www.wowhead.com/forever/npc=1284",
+        "bytes": 91492,
+        "sha256": "01d3ad1fb2c6e73be13154693b1b61e654f2bf792ab5368afe4af03815c0ba2b",
+        "title": "Archbishop Benedictus - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 6181,
+        "url": "https://www.wowhead.com/forever/npc=6181",
+        "bytes": 63700,
+        "sha256": "a2dcda477ace7e4e7ff7d8782691b4ffd8f2cabe852f61b136e9faae8ebb80e3",
+        "title": "Jordan Stilwell - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 1226,
+        "url": "https://www.wowhead.com/forever/npc=1226",
+        "bytes": 213768,
+        "sha256": "15cbbf8191011062a5018a4a7a72538a903ec26b44550a0431ef9ce36b7073b4",
+        "title": "Maxan Anvol - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 6166,
+        "url": "https://www.wowhead.com/forever/npc=6166",
+        "bytes": 56892,
+        "sha256": "42c9f6390d70d56182bcba8e4b12d4d79ec3294a15c386d78328826cb96b975b",
+        "title": "Yorus Barleybrew - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 263,
+        "url": "https://www.wowhead.com/forever/npc=263",
+        "bytes": 59820,
+        "sha256": "337532504589f43fd9e547ce7fd7cd1ca8901781da515195aca2a1c8c274c1d6",
+        "title": "Lord Ello Ebonlocke - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 265003,
+        "url": "https://www.wowhead.com/forever/npc=265003",
+        "bytes": 51281,
+        "sha256": "16d7e2b47bde674521a35e8d2cbb1608bd27f0ca621880da1b77c2a00c626231",
+        "title": "Thom Filch - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 252172,
+        "url": "https://www.wowhead.com/forever/npc=252172",
+        "bytes": 45015,
+        "sha256": "e4baf8a1ff424b68162657d4a1998bb83f6f682560efd64deb6e26f43b40d667",
+        "title": "Danarii Bellowveil - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 5497,
+        "url": "https://www.wowhead.com/forever/npc=5497",
+        "bytes": 225396,
+        "sha256": "eeb950c19f9612b2a69259c71bc03b5660ac9825ca7cb3e0da2825fb4fa819af",
+        "title": "Jennea Cannon - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 253139,
+        "url": "https://www.wowhead.com/forever/npc=253139",
+        "bytes": 53936,
+        "sha256": "ccb1544105b3d4a6f3ca1d31531dafe735d7cf4f510e162a1b15bb72e9856d63",
+        "title": "Gorhak - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 5398,
+        "url": "https://www.wowhead.com/forever/npc=5398",
+        "bytes": 61867,
+        "sha256": "2772db3d0874454e9c789391e3101c2dc59eaa9a3ebe88e7ba3a0b67b76f0860",
+        "title": "Warug - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 5880,
+        "url": "https://www.wowhead.com/forever/npc=5880",
+        "bytes": 212728,
+        "sha256": "cb57e1990584e8c7c6a148f91be4d96a13dc42ce1909e22af0cc6d78de620287",
+        "title": "Un'Thuwa - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3033,
+        "url": "https://www.wowhead.com/forever/npc=3033",
+        "bytes": 225312,
+        "sha256": "3e49189fbdda94e46b27a48f63e3262362f1e2e6d165189d49a01e7ae4212669",
+        "title": "Turak Runetotem - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 225,
+        "url": "https://www.wowhead.com/forever/npc=225",
+        "bytes": 65506,
+        "sha256": "42ea45887a0be8eb0af8ecc0035f14891ccd2d7497ae2a2d4e27842743c33fa3",
+        "title": "Gavin Gnarltree - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3486,
+        "url": "https://www.wowhead.com/forever/npc=3486",
+        "bytes": 62859,
+        "sha256": "b00d792319836557055668497c32e5920a79cd654264e66c05b7f0bf2c370c0a",
+        "title": "Halija Whitestrider - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 14301,
+        "url": "https://www.wowhead.com/forever/npc=14301",
+        "bytes": 55245,
+        "sha256": "c103366cf893cf6b374022e88b743c99db8bd29de5a94ebc61811de066e3dfba",
+        "title": "Brinna Valanaar - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 7802,
+        "url": "https://www.wowhead.com/forever/npc=7802",
+        "bytes": 76067,
+        "sha256": "599c881bf1099ba3b9f50bad806c4b3b3cf06b3c26957971ccc354034dd2b34c",
+        "title": "Galvan the Ancient - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 1441,
+        "url": "https://www.wowhead.com/forever/npc=1441",
+        "bytes": 58809,
+        "sha256": "2a0574f84728651ad077cdfd9eb2967f5d32fa6bf059721b6a17a23b84dd9df4",
+        "title": "Brak Durnad - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 12792,
+        "url": "https://www.wowhead.com/forever/npc=12792",
+        "bytes": 404352,
+        "sha256": "292b6a08caff52bed43b19621733034e5843501ee79f0bbb21b78c746c4eabc1",
+        "title": "Lady Palanseer - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 2483,
+        "url": "https://www.wowhead.com/forever/npc=2483",
+        "bytes": 66945,
+        "sha256": "8c3d094a02df4fc40805d65d3b23402edeeb3c84a40e6593128627ec2b34999e",
+        "title": "Jaquilina Dramet - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 8127,
+        "url": "https://www.wowhead.com/forever/npc=8127",
+        "bytes": 141051,
+        "sha256": "58fc78dc1fa2ad0e7ad7ba576ac38a6f0f7353106a0a9fcc359efb9acabf2a50",
+        "title": "Antu'sul - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 1749,
+        "url": "https://www.wowhead.com/forever/npc=1749",
+        "bytes": 80454,
+        "sha256": "2ad78a46fdc498269fe4ce3c15a51a9678861121351619c233ef5c4ff663dcc7",
+        "title": "Lady Katrana Prestor - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3554,
+        "url": "https://www.wowhead.com/forever/npc=3554",
+        "bytes": 53575,
+        "sha256": "c93d125833afe2175673950e43a5cbceb9f9b0f3ebf703005fcce1dd19da6d80",
+        "title": "Andrea Boynton - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 377,
+        "url": "https://www.wowhead.com/forever/npc=377",
+        "bytes": 216633,
+        "sha256": "c79d710b624502b8073c45d9dc14215b6a8685295b3b0d8fd3b8dfeeff4db057",
+        "title": "Priestess Josetta - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 5768,
+        "url": "https://www.wowhead.com/forever/npc=5768",
+        "bytes": 86705,
+        "sha256": "b5e7c9149f479daefebc341d106cc256e752e678313013158d2409ab50cfcbc4",
+        "title": "Ebru - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3516,
+        "url": "https://www.wowhead.com/forever/npc=3516",
+        "bytes": 107556,
+        "sha256": "9db5460d9cd8b9cbff9763e08f4f813c54a95b1e72dfed1f9b3b06dbe69a120e",
+        "title": "Arch Druid Fandral Staghelm - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 6247,
+        "url": "https://www.wowhead.com/forever/npc=6247",
+        "bytes": 67247,
+        "sha256": "8c547cc884d8ae53f6be25b8120d408396d8a63e9d050ca77547df57eab8ab27",
+        "title": "Doan Karhan - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 10304,
+        "url": "https://www.wowhead.com/forever/npc=10304",
+        "bytes": 63012,
+        "sha256": "fb45d2322d251a87a713e091e6f1ec6943c55e3fa26879ec0c63665f34bcf47b",
+        "title": "Aurora Skycaller - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 14508,
+        "url": "https://www.wowhead.com/forever/npc=14508",
+        "bytes": 60264,
+        "sha256": "aa69742e7036def224280627b4738d266871f30f7d7d07c65a21cc16a18f9080",
+        "title": "Short John Mithril - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 1187,
+        "url": "https://www.wowhead.com/forever/npc=1187",
+        "bytes": 56060,
+        "sha256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+        "title": "Daryl the Youngling - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3315,
+        "url": "https://www.wowhead.com/forever/npc=3315",
+        "bytes": 80540,
+        "sha256": "ed6c2ca088d7e56ba911ccc0722bad2d5a1bb73bd964529dfe1c657ad0acb6ab",
+        "title": "Tor'phan - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 253066,
+        "url": "https://www.wowhead.com/forever/npc=253066",
+        "bytes": 44757,
+        "sha256": "d5e299ef35873b07f10b4a63bb649570c8a428153fd3e1d4705c91910b9fa93b",
+        "title": "Umarak - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 12799,
+        "url": "https://www.wowhead.com/forever/npc=12799",
+        "bytes": 103199,
+        "sha256": "85bc08f8f4d38c4023aec9e4a1d8231f418f13c438c1498fc08f734dc2daa140",
+        "title": "Sergeant Ba'sha - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 5413,
+        "url": "https://www.wowhead.com/forever/npc=5413",
+        "bytes": 50605,
+        "sha256": "16be972ee823225cac55edaca32d8cd61740c138946069214c18501f1b5c761c",
+        "title": "Furen Longbeard - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 12805,
+        "url": "https://www.wowhead.com/forever/npc=12805",
+        "bytes": 105579,
+        "sha256": "06ea504880d1f4fdffffa9a26cf633b3bf9de666170f57b9919b8f94fcb05e6b",
+        "title": "Officer Areyn - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 10819,
+        "url": "https://www.wowhead.com/forever/npc=10819",
+        "bytes": 43272,
+        "sha256": "93f5b7aadefc68cc10e33f7d7fd8071419ce3f10fb9b50456df9ed26002c4064",
+        "title": "Baron Bloodbane - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 984,
+        "url": "https://www.wowhead.com/forever/npc=984",
+        "bytes": 60104,
+        "sha256": "7fdddcccc0fd3049805358905ae383548356ec716079095a64d65814de292bc7",
+        "title": "Thralosh - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 265575,
+        "url": "https://www.wowhead.com/forever/npc=265575",
+        "bytes": 48097,
+        "sha256": "3dff58f0ca81e36ccb029e45cd18f957752724cd417156d61897bebf64ffcbd4",
+        "title": "Gezzy Gunkgear - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 6005,
+        "url": "https://www.wowhead.com/forever/npc=6005",
+        "bytes": 195465,
+        "sha256": "8fe5dd55f329468955aafa34d42965d449a4c7f579333907113b12f676326365",
+        "title": "Shadowsworn Thug - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 253140,
+        "url": "https://www.wowhead.com/forever/npc=253140",
+        "bytes": 53934,
+        "sha256": "62c767ef4d856acb205a14c572bcf57eefa465d121503321bb15636cf2784cbf",
+        "title": "Molkar - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3493,
+        "url": "https://www.wowhead.com/forever/npc=3493",
+        "bytes": 58301,
+        "sha256": "96e63eaacf84a78d616639c822bcdeac1994ea2aaeca79622ea5eaca5a03ced0",
+        "title": "Grazlix - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3567,
+        "url": "https://www.wowhead.com/forever/npc=3567",
+        "bytes": 47144,
+        "sha256": "34ed23db3bdc4b60561b1dc0690cf5c8ae219f5e14a1f05f8dd2e29a5771f92d",
+        "title": "Tallonkai Swiftroot - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3537,
+        "url": "https://www.wowhead.com/forever/npc=3537",
+        "bytes": 65238,
+        "sha256": "a5f8dc79316376d4d17695c4d749deaf8ad0c2043cd8f954f6ef4ec5bbcffcb7",
+        "title": "Zixil - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 793,
+        "url": "https://www.wowhead.com/forever/npc=793",
+        "bytes": 48127,
+        "sha256": "550aa130e2de04a3b27a1a4a687cb19765532f70ed06836f9bac9696561c5654",
+        "title": "Kara Adams - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 256507,
+        "url": "https://www.wowhead.com/forever/npc=256507",
+        "bytes": 49239,
+        "sha256": "d569281bc950b75d683a827ae2d6eac24a97b256da70232c5bfcee6408a37d47",
+        "title": "Belann Windwood - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3180,
+        "url": "https://www.wowhead.com/forever/npc=3180",
+        "bytes": 56422,
+        "sha256": "270a8140b8f7f584491062d8fdfd3e1a8636a67fd554fd3918384000b7209854",
+        "title": "Dark Iron Entrepreneur - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 13216,
+        "url": "https://www.wowhead.com/forever/npc=13216",
+        "bytes": 114340,
+        "sha256": "6a1d842af38d7b7a911bd57c7115f367f2989e4b7855ee858e8caa4f95ac6b62",
+        "title": "Gaelden Hammersmith - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 4235,
+        "url": "https://www.wowhead.com/forever/npc=4235",
+        "bytes": 56105,
+        "sha256": "53858e926cac8c168abe8b866fc4a78b1422843bef49819fa902a8d803b7b58d",
+        "title": "Turian - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 9548,
+        "url": "https://www.wowhead.com/forever/npc=9548",
+        "bytes": 67835,
+        "sha256": "8e641303fab51f80241c75c662db49c756d246f63ccc824f9e5e7af54f299e9f",
+        "title": "Cawind Trueaim - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 15126,
+        "url": "https://www.wowhead.com/forever/npc=15126",
+        "bytes": 212022,
+        "sha256": "8392f592d4bf5c41e2c24e151a390cbf3fb1b323825d9b1f37985d46832b6323",
+        "title": "Rutherford Twing - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 9551,
+        "url": "https://www.wowhead.com/forever/npc=9551",
+        "bytes": 64872,
+        "sha256": "df3663bcd2ad5c73a67526e37c4544f7c0aa1bdfc45e509d236eccee9c1b5c5e",
+        "title": "Starn - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 3091,
+        "url": "https://www.wowhead.com/forever/npc=3091",
+        "bytes": 61883,
+        "sha256": "2a838db1b0deb2fae162a04841f9b6d9159261deece0e8d2c526aa16a07e7904",
+        "title": "Franklin Hamar - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 251902,
+        "url": "https://www.wowhead.com/forever/npc=251902",
+        "bytes": 49437,
+        "sha256": "0c46299bc17c61bf2ec9d3b1afa40d38bceaacba91e940c903501a6058bd2547",
+        "title": "Illaya Amberwind - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 3975,
+        "url": "https://www.wowhead.com/forever/npc=3975",
+        "bytes": 367243,
+        "sha256": "a88c58cfe095a8e36142e00128cf9102247800777ef7af002cba14b3ec46c5a9",
+        "title": "Herod - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 263569,
+        "url": "https://www.wowhead.com/forever/npc=263569",
+        "bytes": 91817,
+        "sha256": "89f7917b426e6a9511085bd7e2dbe49b69afa12c18321f62ec0c3152001ce4bf",
+        "title": "Bryanna Embreeze - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 4890,
+        "url": "https://www.wowhead.com/forever/npc=4890",
+        "bytes": 57331,
+        "sha256": "4601a0be8e72c0564ed9b1a730197e631872d54ed812848a856453c7096e774c",
+        "title": "Piter Verance - NPC - Forever",
+        "hasSellsTable": true
+      },
+      {
+        "npcID": 6566,
+        "url": "https://www.wowhead.com/forever/npc=6566",
+        "bytes": 57913,
+        "sha256": "b6166dc25e631c71a134bcd46db58e88363f593d838341ffbd2c5ab9d093b457",
+        "title": "Estelle Gendry - NPC - Forever",
+        "hasSellsTable": false
+      },
+      {
+        "npcID": 2482,
+        "url": "https://www.wowhead.com/forever/npc=2482",
+        "bytes": 80933,
+        "sha256": "036033213537a83bb2b8328515076c8b393a62453a93fc512a154c13a67553e0",
+        "title": "Zarena Cromwind - NPC - Forever",
+        "hasSellsTable": true
+      }
+    ],
+    "pagesWithSellsTables": 95,
+    "limits": "Same171 cached NPC responses/95 sells inventories reused;0 selected exact matches. Separate new targeted Biggins12781 page adds one inspected inventory. Bounded survey, not all current merchants/stock."
+  },
+  "targetedPrimaryMerchant": {
+    "url": "https://www.wowhead.com/forever/npc=12781",
+    "bytes": 54297,
+    "sha256": "eb01fd0c52aded477141174a92673f078deab032ccc7efd3febad013d35dfaef",
+    "title": "Master Sergeant Biggins - NPC - Forever",
+    "maps": [],
+    "publishedInventory": [
+      {
+        "id": 15198,
+        "name": "Knight's Colors",
+        "cost": [
+          [
+            36000,
+            [],
+            []
+          ]
+        ]
+      },
+      {
+        "id": 18606,
+        "name": "Alliance Battle Standard",
+        "cost": [
+          [
+            50000,
+            [],
+            []
+          ]
+        ],
+        "playerConditions": [
+          "Requires Knight-Lieutenant / Blood Guard (Rank 7)"
+        ]
+      },
+      {
+        "id": 18839,
+        "name": "Combat Healing Potion",
+        "cost": [
+          [
+            1000,
+            [],
+            []
+          ]
+        ],
+        "playerConditions": [
+          "Requires Sergeant Major /  First Sergeant (Rank 5)"
+        ]
+      },
+      {
+        "id": 18841,
+        "name": "Combat Mana Potion",
+        "cost": [
+          [
+            1100,
+            [],
+            []
+          ]
+        ],
+        "playerConditions": [
+          "Requires Sergeant Major /  First Sergeant (Rank 5)"
+        ]
+      },
+      {
+        "id": 272694,
+        "name": "Private's Tabard",
+        "cost": [
+          [
+            10000,
+            [],
+            []
+          ]
+        ],
+        "playerConditions": [
+          "Requires Private/Scout (Rank 1)"
+        ]
+      },
+      {
+        "id": 272695,
+        "name": "Knight's Colors",
+        "cost": [
+          [
+            40000,
+            [],
+            []
+          ]
+        ],
+        "playerConditions": [
+          "Requires Knight / Stone Guard (Rank 6)"
+        ]
+      }
+    ],
+    "selectedIDsPresent": [],
+    "limits": "Primary inventory omits274969; omission is not proof the secondary report false or item impossible. No primary map coordinates supplied."
+  },
+  "reportedMerchant": {
+    "itemID": 274969,
+    "itemURL": "https://ahledger.com/items/274969-premier-master-sergeants-insignia",
+    "npcURL": "https://ahledger.com/wow-forever/npcs/12781-master-sergeant-biggins",
+    "actorID": 12781,
+    "actorName": "Master Sergeant Biggins",
+    "reportedLocation": "Stormwind City, Champion's Hall",
+    "contributorCount": 1,
+    "merchantPublishedItemCount": 9,
+    "price": "not seen",
+    "join": "Secondary item links Biggins; secondary NPC nine-item inventory links back to exact274969 item URL. Same publisher/two sides, not two independent witnesses.",
+    "limits": "Attributed addon-contributor report; raw dated acquisition scan not inspected; no current price/rank/stock/availability/coordinates established. General market scan age is not selected vendor observation time. Primary NPC six-item table omits exact ID; dated official outage matters.274968 SeniorSergeant same-name-family does not inherit Biggins; neck gear not CC-break trinket.",
+    "directHTTP": {
+      "ah-insignia": {
+        "url": "https://ahledger.com/items/274969-premier-master-sergeants-insignia",
+        "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"
+      },
+      "ah-biggins": {
+        "url": "https://ahledger.com/wow-forever/npcs/12781-master-sergeant-biggins",
+        "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"
+      },
+      "pvp-gear": {
+        "url": "https://mmonster.co/wow-forever/guides/pvp/gear",
+        "error": "URLError(OSError('Tunnel connection failed: 403 Forbidden'))"
+      }
+    }
+  },
+  "secondaryPvPGuide": {
+    "url": "https://mmonster.co/wow-forever/guides/pvp/gear",
+    "read": "Connected web full narrative/price caveat examined; direct HTTP403, no hash invented.",
+    "linkedExactIDsInspected": [
+      273450,
+      274969,
+      274968
+    ],
+    "claims": {
+      "273450": "4500Honor +10WarsongGulchMarks",
+      "274969": "rank4 /7500Honor +10DarkspearIslandsMarks",
+      "274968": "rank4 /7500Honor +10DarkspearIslandsMarks"
+    },
+    "limits": "Guide explicitly says price rows come from client but slot-to-price-row assignment unconfirmed. Treat amounts/rank as attributed beta/editorial leads, not accepted exact current costs/gates. It acknowledges vendor outage. Do not propagate price schedule to all selected items or retroactively claim prior reads."
+  },
+  "reusedPrimaryPvPGuide": {
+    "url": "https://www.wowhead.com/forever/guide/pvp-overview-ranking-rewards",
+    "bytes": 146131,
+    "sha256": "1c77fcf274329ccb133862bc3dd31240854a77132bb6e06fd9bfb84605aa5629",
+    "selectedIDsPresentInResponse": [],
+    "limits": "Response occurrence is not by itself a guide instruction or current vendor mapping; inspect narrative context for each match. General policy is reused from completed8K.",
+    "reuse": "Full response read during8W, not refetched/current exact-item inventory proof."
+  },
+  "officialAccessUpdate": "checkpoint8y_pvp_access_update.json",
+  "weakVendorLeads": [
+    {
+      "url": "https://wow-forever.gg/db/items/273382-premier-wyrmhide-gauntlets/",
+      "selectedIDs": [
+        273382
+      ]
+    },
+    {
+      "url": "https://wow-forever.gg/db/items/273384-premier-wyrmhide-chestpiece/",
+      "selectedIDs": [
+        273384
+      ]
+    },
+    {
+      "url": "https://wow-forever.gg/db/items/273385-premier-wyrmhide-leggings/",
+      "selectedIDs": [
+        273385
+      ]
+    },
+    {
+      "url": "https://wow-forever.gg/db/items/273387-premier-wyrmhide-shoulders/",
+      "selectedIDs": [
+        273387
+      ]
+    },
+    {
+      "url": "https://wow-forever.gg/db/items/274176-premier-scalemail-walkers/",
+      "selectedIDs": [
+        274176
+      ]
+    },
+    {
+      "url": "https://wow-forever.gg/db/items/274181-premier-flatmail-shoulders/",
+      "selectedIDs": [
+        274181
+      ]
+    },
+    {
+      "url": "https://wow-forever.gg/db/items/274227-premier-scaled-gauntlets/",
+      "selectedIDs": [
+        274227
+      ]
+    },
+    {
+      "url": "https://wow-forever.gg/db/items/274230-premier-scaled-breastplate/",
+      "selectedIDs": [
+        274230
+      ]
+    }
+  ],
+  "otherGaps": {
+    "276399": "Plate of ScarletBastion:primary no sources; secondary cache-reveal date not looted-by identity/boss/quest proof; focused stillsixty item reader only loading shell. No Balnazzar/Stratholme route inferred from name.",
+    "276419": "LightcrestHammer:One-HandMace with Holy/extraUndead proc; no class requirement/source; user-created cosmetic outfits/same-model are not NPC loot, crafting, Paladin-only or Scarlet-source proof."
+  },
+  "limits": "No new current NPC/cost/rank/faction/phase/retirement/recipe/sourceType/class/stat/filter changes from generic labels, old templates, names or omitted tables. Preserve all2043 prior reviewed objects; new dated global access context in shared8K followup does not reopen completed individual cases."
+}
