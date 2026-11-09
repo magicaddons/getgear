@@ -382,6 +382,29 @@ assert(describe(addon.ItemCatalog[252505],false):find("Player report: Lord Cobra
 assert(not addon.ItemCatalog[252428].acquisitionResearch.details,
     "A published drop for a glove must not spread to the belt family")
 
+-- Checkpoint 6E: item-specific costs and reputation must not leak
+-- between profession families or turn a publication into live stock.
+for _,r in ipairs({{249392,249482},{249393,249483},{249394,249484}}) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    local text=addon:GetAcquisitionSummary(item)
+    assert(item.recipePatternItemID==r[2] and text:find("Enchanting 140",1,true)
+        and text:find("Alliance Alynsia",1,true) and text:find("Horde Beneris",1,true)
+        and text:find("45 Merchant's Favor",1,true)
+        and text:find("live stock/gates unverified",1,true))
+    assert(not text:find("Friendly reputation",1,true),"Do not infer a gate from Engineering")
+end
+for _,r in ipairs({{280306,280321},{280307,280322},{280308,280323}}) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    local text=addon:GetAcquisitionSummary(item)
+    assert(item.recipePatternItemID==r[2] and text:find("Engineering 175",1,true)
+        and text:find("Alliance Fritz Fizzle",1,true) and text:find("Horde Fizzlefuse",1,true)
+        and text:find("180 Merchant's Favor",1,true)
+        and text:find("Friendly reputation",1,true)
+        and text:find("Horde faction gate unverified",1,true)
+        and text:find("live stock/gates unverified",1,true))
+    assert(describe(item,false):find("does not name its faction",1,true))
+end
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
