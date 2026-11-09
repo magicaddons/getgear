@@ -1418,6 +1418,49 @@ for _,id in ipairs({284707,281661,282702,284063}) do
 end
 assert(addon.ItemCatalog[7497].acquisitionResearch.details:find("Ivory Band #11995 versus #7497",1,true))
 
+-- Checkpoint 8G: primary inventory joins, blocked item pages and secondary
+-- seller leads must retain different confidence and access guarantees.
+local vendor8g=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/checkpoint8g_vendor_equipment.csv")):read("*a")
+local count8g=0
+for id in vendor8g:gmatch("\n(%d+),") do
+    local a=assert(addon.ItemCatalog[tonumber(id)]).acquisitionResearch
+    assert(a.equipmentReference and a.sourceSummary:find("unverified",1,true))
+    assert(a.confidence~="forever-observed-npc" and not a.recipeReference)
+    count8g=count8g+1
+end
+assert(count8g==207)
+for _,id in ipairs({20118,20121,20179,20185}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-origin-unresolved"
+        and a.details:find("inventory omits this exact ID",1,true))
+end
+for _,id in ipairs({220799,220808,220900}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-version-unconfirmed"
+        and a.details:find("acquisition not confirmed by the publisher",1,true))
+end
+for _,id in ipairs({220908,223073,272060,272080,272096}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-vendor-reference"
+        and a.details:find("Merchant-only evidence",1,true))
+end
+assert(addon.ItemCatalog[272060].acquisitionResearch.details:find("Darkspear Raiders - Friendly",1,true))
+assert(addon.ItemCatalog[272096].acquisitionResearch.details:find("Separate secondary exact-ID gate reference",1,true)
+    and addon.ItemCatalog[272096].acquisitionResearch.details:find("Darkspear Raiders Exalted",1,true))
+for id=274755,274761 do
+    local item=addon.ItemCatalog[id]
+    assert(item.acquisitionResearch.confidence=="secondary-publisher-vendor-lead-unverified"
+        and item.acquisitionResearch.details:find("no primary reverse inventory/cost/stock verification",1,true)
+        and not item.profession)
+end
+assert(addon.ItemCatalog[274755].acquisitionResearch.sourceSummary:find("Everlook Friendly",1,true)
+    and addon.ItemCatalog[274760].acquisitionResearch.sourceSummary:find("Everlook Honored",1,true))
+assert(addon.ItemCatalog[274760].acquisitionResearch.details:find("not proof of a one-carried limit",1,true))
+assert(addon.ItemCatalog[16769].acquisitionResearch.details:find("no explicit Timbermaw standing",1,true))
+assert(addon.ItemCatalog[19580].acquisitionResearch.details:find("not both opposing standings",1,true))
+assert(addon.ItemCatalog[11308].acquisitionResearch.details:find("not simultaneous current spawns",1,true))
+assert(addon.ItemCatalog[220799].acquisitionResearch.details:find("no usable published map",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
