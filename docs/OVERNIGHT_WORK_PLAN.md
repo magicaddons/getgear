@@ -54,3 +54,7 @@ Connect `magicaddons/getgear`, select the development branch, and configure a cl
 ## Queue advance — checkpoint 8D validated
 
 71 vendor cases at levels 31–40 complete; full local/CI PASS 42618811590, inspected bot d4110ea3c1bf821df92cb3939be64285a0ce1efe. Equipment 414, recipes 954, runtime summaries 2,210; remaining queue 5,488. **Next 8E: ten quest-family cases at levels 31–50**, then 31–40 undocumented source cases. No release permission.
+
+## Queue advance — checkpoint 8E validated
+
+Ten quest-family cases at levels 31–50 complete; full local/CI PASS 42620153753, inspected bot c7cb16e8b9af3fd80838a43db882cb7085fd56e3. Equipment 424, recipes 954, runtime summaries 2,215; remaining queue 5,478. **Next 8F: 93 undocumented-source cases at levels 31–40**. Preserve structured facts/joins/fingerprints without full source narratives.

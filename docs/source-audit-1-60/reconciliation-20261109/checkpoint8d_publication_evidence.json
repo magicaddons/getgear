@@ -15239,14 +15239,22 @@
       "bytes": 103678,
       "sha256": "085056313849c8675d9f19f1e0c605d57a7bedf2faf86e7cede5571fe99f6443",
       "title": "Gadgetzan - Faction - Forever",
-      "bodyText": "Gadgetzan Capital of the Steamwheedle Cartel and home to goblinhood's finest engineers, alchemists and merchants. Rank Name Min Amount 1 Hated 0 36000 2 Hostile 36000 3000 3 Unfriendly 39000 3000 4 Neutral 42000 3000 5 Friendly 45000 6000 6 Honored 51000 12000 7 Revered 63000 21000 8 Exalted 84000"
+      "structuredFindings": {
+        "factionName": "Gadgetzan",
+        "affiliation": "Steamwheedle Cartel",
+        "currentEarningRatesVerified": false
+      }
     },
     "2827": {
       "url": "https://www.wowhead.com/forever/faction=2827",
       "bytes": 61272,
       "sha256": "9e261aad826f988ae9597fc443524adee2ec2ac19b84ea64baa80fdab179b759",
       "title": "Powderfuse - Faction - Forever",
-      "bodyText": "Powderfuse A strong arm of the Steamwheedle Cartel, this port is home to seafaring sailors and back-alley dealers spanning the eastern sea trading routes. Rank Name Min Amount 1 Hated 0 36000 2 Hostile 36000 3000 3 Unfriendly 39000 3000 4 Neutral 42000 3000 5 Friendly 45000 6000 6 Honored 51000 12000 7 Revered 63000 21000 8 Exalted 84000"
+      "structuredFindings": {
+        "factionName": "Powderfuse",
+        "affiliation": "Steamwheedle Cartel",
+        "currentEarningRatesVerified": false
+      }
     }
   }
 }

@@ -33474,8 +33474,6 @@
       ]
     },
     "fetchedUTC": "2026-11-09T12:16:16.924436+00:00",
-    "tooltipHTML": "<table><tr><td><!--nstart--><b class=\"q1\">Windstone</b><!--nend--><!--ndstart--><!--ndend--><span class=\"q whtt-extra whtt-ilvl\"><br>Item Level <!--ilvl-->1</span><!--bo--><!--ue--><!--ue--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--></td></tr></table><table><tr><td><!--useText:0:1--><span id=\"useText1\" class=\"q2\">Use: <!--useEffect:0:1--><a href=\"/forever/spell=1259231/infusion-of-wind\" class=\"q2\">Restores 21 to 59 mana and 32 to 89 health. This item cannot be used outside of Skywall.</a> (2 Min Cooldown)<!--useEffect:1--></span><!--useText:1--><!--itemEffects:1--><br><span class=\"q\">&quot;A small glowing stone empowered with the magical essence of Skywall. It is often used as both a currency and a source of magical energy on Zephras Isle.&quot;</span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-extra whtt-maxstack\">Max Stack: 50</div><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneycopper\">4</span></div></td></tr></table>",
-    "tooltipText": "Windstone      Item Level  1                Use:   Restores 21 to 59 mana and 32 to 89 health. This item cannot be used outside of Skywall.  (2 Min Cooldown)      \"A small glowing stone empowered with the magical essence of Skywall. It is often used as both a currency and a source of magical energy on Zephras Isle.\"     Max Stack: 50  Sell Price:  4",
     "item": {
       "classs": 0,
       "displayName": "Windstone",
@@ -33546,6 +33544,13 @@
         "sellprice": 4,
         "statsInfo": []
       }
+    },
+    "structuredTooltipFindings": {
+      "itemID": 255663,
+      "name": "Windstone",
+      "currencyLocation": "Zephras Isle",
+      "consumableUseRestriction": "Skywall",
+      "currentSupplyVerified": false
     }
   },
   "zone": {
