@@ -201,3 +201,7 @@ Full local and GitHub PASS: [42718647114](https://github.com/magicaddons/getgear
 ## Checkpoint8W research preserved — integration pending
 
 100 exact primary IDs/100 discovery queries/99 selected IDs,1 DalaExalted25-bead merchant/token join,18355 unavailable flag,29 secondary-rank8/primary-omission discrepancies and68 Premier/one cloth origin gaps preserved in CHECKPOINT8W_IN_PROGRESS.md/checkpoint8w_working_evidence.json/discovery_index.json.171 cachedNPCpages/95 actual inventories reused; no seller matches beyondDala, not exhaustive current-vendor proof. Runtime/fullvalidation/queueadvance pending; all100 still8W. Registry1843/index3492/remaining4059; latest fullPASS8V42718647114/bota4c1f97. Finish saved integration/full local/CI/bot then next100 undocumented55. No release/main action.
+
+## Checkpoint8W integrated — GitHub pending
+
+[100 undocumented55 cases](CHECKPOINT8W_LEVEL55_UNDOCUMENTED_FIRST100.md):1 Dala25-bead/Exalted exact vendor+token join;18355 unavailable;29 exact secondary-rank8/primary-omission discrepancies;68 Premier+1 cloth origin gaps.171 reusedNPCpages/95 actual inventories bounded, not all current merchants; selectedobservedFeedCounts0 not impossibility. Full local14/24/4 PASS, CI pending. All1,843 prior objects exact;100 summaries only. Equipment1,943/index3,592/display3,591/books759; crafts1,254/ingredients4,857. Frozenremaining3,959; next8X100 undocumented55 IDs272634–273363, after CI/bot. Later9A39 separate coverage candidates. No release/main action.

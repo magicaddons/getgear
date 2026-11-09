@@ -41,3 +41,5 @@ When raw source totals/shards change, compare factual snapshots in CONTINUATION.
 ## Checkpoint8W research preserved — integration pending
 
 100 exact primary IDs/100 discovery queries/99 selected IDs,1 DalaExalted25-bead merchant/token join,18355 unavailable flag,29 secondary-rank8/primary-omission discrepancies and68 Premier/one cloth origin gaps preserved in CHECKPOINT8W_IN_PROGRESS.md/checkpoint8w_working_evidence.json/discovery_index.json.171 cachedNPCpages/95 actual inventories reused; no seller matches beyondDala, not exhaustive current-vendor proof. Runtime/fullvalidation/queueadvance pending; all100 still8W. Registry1843/index3492/remaining4059; latest fullPASS8V42718647114/bota4c1f97. Finish saved integration/full local/CI/bot then next100 undocumented55. No release/main action.
+
+**Current8W integrated/local PASS:**100 entries, all1,843 prior objects unchanged; evidence in CHECKPOINT8W_LEVEL55_UNDOCUMENTED_FIRST100.md.1 exact DalaExalted25-bead,1 unavailable,29 rank discrepancies,69 other gaps; no sourceType/gate changes. Equipment1,943/index3,592/remaining3,959; full local14/24/4 PASS, CI/bot pending. Next8X100 undocumented55 IDs272634–273363.
