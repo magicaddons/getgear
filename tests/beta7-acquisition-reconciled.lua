@@ -550,6 +550,47 @@ for _,id in ipairs({277048,277049}) do
     assert(addon.ItemCatalog[id].acquisitionResearch.sourceSummary:find("Friendly with Kirin Tor",1,true))
 end
 
+-- Checkpoint 6J: exact dungeon book loot references must not become
+-- finished-item boss loot or spread between superficially similar patterns.
+local dungeonBooks={
+    {253901,253902,75},
+    {253903,253904,75},
+    {253905,253906,75},
+    {253907,253908,75},
+    {253909,253910,75},
+    {253911,253912,75},
+    {253937,253938,100},
+    {253939,253940,100},
+    {253941,253942,100},
+    {253943,253944,100},
+    {253947,253948,100},
+    {253975,253976,125},
+    {253977,253978,125},
+    {253979,253980,125},
+    {253981,253982,125},
+    {253983,253984,125},
+    {253985,253986,125},
+}
+for _,r in ipairs(dungeonBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    assert(item.acquisitionResearch.confidence=="published-forever-book-drop-reference")
+    local detail=item.acquisitionResearch.details
+    assert(detail:find("no drop-rate claim",1,true)
+        and detail:find("not drops of the finished crafted equipment",1,true))
+    assert(not item.acquisitionResearch.sourceSummary:find("Boss:",1,true))
+    assert(item.profession=="Tailoring" and type(item.reagents)=="table")
+    assert(describe(item,false):find("Published recipe-book drop references",1,true))
+end
+local pristineGown=addon.ItemCatalog[253901].acquisitionResearch.details
+local silkyGown=addon.ItemCatalog[253903].acquisitionResearch.details
+local flameGown=addon.ItemCatalog[253905].acquisitionResearch.details
+assert(pristineGown:find("Kresh",1,true) and not pristineGown:find("Lady Anacondra",1,true))
+assert(silkyGown:find("Lady Anacondra",1,true) and not silkyGown:find("Kresh",1,true))
+assert(not flameGown:find("Wailing Caverns",1,true),"Do not infer every gown drops in WC")
+assert(addon.ItemCatalog[253977].acquisitionResearch.details:find("Dark Iron Ambassador",1,true))
+assert(not addon.ItemCatalog[253979].acquisitionResearch.details:find("Dark Iron Ambassador",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
