@@ -1,0 +1,35 @@
+# Checkpoint8Y — final76 undocumented level55 cases
+
+Publication research9November2026UTC; preserved193a84a before integration.76 exact frozenIDs273364–276419, level55, disjoint from2043 prior reviewed entries. [Evidence](checkpoint8y_working_evidence.json), [discovery/refinement index](checkpoint8y_discovery_index.json), [dispositions](checkpoint8y_undocumented_equipment.csv), [local log](checkpoint8y_local_results.txt). All76 rareBoP/equip55 primary identities matched;72 explicit class masks match canonical. The two neck items/Plate276399/Lightcrest276419 have no explicit class mask; no inferred restriction. All76 primary acquisition tables empty, no unavailable/seasonal page flags.74 Premier names/two other gaps; publication research is not current acquisition confirmation.
+
+87 discovery queries (76 original+11 focused/refinements), focused linked readers,171 cachedNPCpages/95 actual inventories reused with0 selected matches, plus one new targeted NPC12781 full response. Combined inspected scope172NPCpages/96 inventory tables, not all possible current sellers. Source identities/hashes and bounded reuse are explicit; secondaryHTTP403 results do not become full response hashes.0 selected qualifying observed-feed edges at>=3 installs is source coverage, not proof of impossibility.
+
+## Attributed Biggins report, not confirmed current stock
+
+**274969 Premier Master Sergeant’s Insignia**: [AHledger item](https://ahledger.com/items/274969-premier-master-sergeants-insignia) links **Master Sergeant Biggins12781**, and its [merchant inventory](https://ahledger.com/wow-forever/npcs/12781-master-sergeant-biggins) links back to exact same item URL. Published Stormwind City/Champion’s Hall; nine items from **one addon contributor**, selected **price not seen**. Two sides of one publisher/report are not two independent observations. No raw dated vendor scan inspected; general market-scan45-minute age does not date this acquisition report, and no AH listing is claimed for pickup-bound gear.
+
+Separately fetched [primary12781](https://www.wowhead.com/forever/npc=12781) has six inventory IDs15198/18606/18839/18841/272694/272695, **omits274969** and provides **no map coordinates**. Preserve discrepancy; omission is not proof reported source false or server purchase impossible. Secondary Classic-derived four-stock sources are not current Forever corroboration. Report remains attributed/current-live-unverified, no runtime sourceType/vendor actor override/current price/rank/coordinates. **274968 Premier Senior Sergeant’s Insignia** has no corresponding named source and does not inherit Biggins. Both items are neck gear, not crowd-control-break insignia trinkets.
+
+## Newly verified official access status
+
+Directly read [Kaivax’s official known-issues thread](https://us.forums.blizzard.com/en/wow/t/known-issues-wow-forever-updated-nov-5/2402363), posted5November15:42UTC, checked9November. It still lists temporary PvP-vendor unavailability in **Orgrimmar,Stormwind,Dalaran**. The separately resolved quest entry is struck through; the vendor entry remains. Evidence in [dated access update](checkpoint8y_pvp_access_update.json); source URL/title/attribution, no invented complete response hash. Mirrors corroborate publication, not independent current live tests.
+
+This is a material access-context addition to completed PvP publication research, recorded as a later followup in checkpoint8k_pvp_system_context.json. Prior exact-ID references remain researched/current-live-unverified; no need to repeat them or rewrite their historical evidence. No permanent item retirement, every battleground/reputation merchant outage or reopening date inferred. Future in-game testing should recheck official status before spending time travelling/farming for capital purchases. Research continues independently.
+
+## Eight unnamed vendor leads and qualified price guide
+
+273382WyrmhideGauntlets/273384WyrmhideChestpiece/273385WyrmhideLeggings/273387WyrmhideShoulders,274176ScalemailWalkers/274181FlatmailShoulders/274227ScaledGauntlets/274230ScaledBreastplate have secondary vendor/appearance-category labels, with no named merchant/cost/stock. These remain weak leads, no sourceType promotion. Exact URLs retained per item. Other Premier client/build/set/rank headings establish no current route, faction or upgrade mapping; retain8X general primary rare-no-rank versus secondary rank10-heading discrepancy without adding a gate.
+
+Refinements exposed a [secondary commercial PvP guide](https://mmonster.co/wow-forever/guides/pvp/gear) with exact-name Honor/mark amounts. Clicked links independently identify **273450 SilkenCuffs** (4500Honor+10WSGMarks) and **274969/274968 necklaces** (rank4/7500Honor+10DarkspearMarks). Crucial caveat: guide admits the price rows are from the client and **slot-to-price-row assignment is unconfirmed**. These are attributed beta/editorial leads, not accepted exact current costs/ranks; no full price schedule propagated to76 cases or earlier checkpoints. Guide also acknowledges capital-vendor outage. No commercial services used, purchases or messages.
+
+## Two nonPremier origin gaps
+
+**276399 Plate of the Scarlet Bastion:** primary no source; secondary cache-reveal2Nov timestamp is not a named loot event. Focused stillsixty item reader is a navigation/loading shell, not independently read acquisition data. No Balnazzar/Stratholme, quest, smithing or Paladin-only rule derived from Scarlet name/healing stats.
+
+**276419 Lightcrest Hammer:** One-Hand Mace, Holy proc/double damage to Undead, no explicit class mask. User-created cosmetic outfits/same-model rows are not NPC loot or a named route. No Paladin-only eligibility, learned recipe or Scarlet source inferred. Current origin/availability remain unverified.
+
+## Validation and continuation
+
+Full local PASS: fresh online reconciliation/Python syntax,24 modules,four reports,14 regressions.2043 prior registry objects exact;76 identities/fingerprint sets/72 class masks; attributed-report versus primary omission, no invented current price/rank/map; dated capital outage versus retirement/everyBG; unconfirmed price mapping, no274968 inheritance and two nonPremier name/proc/outfit negative cases PASS. Only76 generated summaries semantically change. Playfulls exact shards23,283/9,152 unchanged from8X;Everloot1398/1198 totals stable. Equipment**2119**, index**3768**, display**3767**, books759, crafts1254/ingredients4857. All7707 identities/36341 class objectives, stronger evidence/filters/settings preserved.
+
+**Non-release GitHubCI/bot review pending.** Frozenremaining**3783** (undocumented706,quest190,world2887); all276 previously remaining undocumented55 are now publication-researched across8W/X/Y. **Next8Z:all10 undocumented56–57**, level-then-ID ordering269503–284253, marked queue; then145 level58 in bounded batches, one59,550level60. Later9A42 outside-canonical candidates, original954 current book routes/six dungeon/other live exceptions remain open. No build/package/tag/release/merge/main action.
