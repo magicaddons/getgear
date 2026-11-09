@@ -1538,6 +1538,26 @@ assert(addon.ItemCatalog[272087].acquisitionResearch.details:find("not a recipe 
     and not addon.ItemCatalog[272087].profession)
 assert(addon.ItemCatalog[16335].acquisitionResearch.details:find("not proof of a current honour rank",1,true))
 
+-- Checkpoint 8K: exact coin-table references are not confirmed current
+-- PvP purchase paths; missing conditions cannot establish rank-free access.
+local vendors8k=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/checkpoint8k_vendor_equipment.csv")):read("*a")
+local count8k=0
+for id in vendors8k:gmatch("\n(%d+),") do
+    local a=addon.ItemCatalog[tonumber(id)].acquisitionResearch
+    assert(a.equipmentReference
+        and a.confidence=="published-pvp-vendor-reference-current-access-unverified"
+        and a.sourceSummary:find("current version/cost/access unverified",1,true)
+        and a.details:find("not a verified current purchase charge",1,true)
+        and a.details:find("no playerConditions and standing0",1,true)
+        and not a.recipeReference)
+    count8k=count8k+1
+end
+assert(count8k==100)
+assert(addon.ItemCatalog[12584].acquisitionResearch.details:find("#272693, a different ID",1,true)
+    and addon.ItemCatalog[12584].acquisitionResearch.details:find("no sold-by table",1,true))
+assert(addon.ItemCatalog[16437].acquisitionResearch.details:find("no usable map",1,true)
+    and addon.ItemCatalog[16437].acquisitionResearch.details:find("not independently established current",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
