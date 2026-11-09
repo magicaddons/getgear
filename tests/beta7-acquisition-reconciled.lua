@@ -1038,6 +1038,25 @@ assert(addon.ItemCatalog[4393].acquisitionResearch.details:find("Kurzen Shadow H
 assert(not addon.ItemCatalog[11606].acquisitionResearch.details:find("lootable object #173234",1,true))
 assert(not addon.ItemCatalog[12783].acquisitionResearch.details:find("Master Axesmith",1,true))
 
+-- Checkpoint 6S: only successfully researched cases enter runtime; partial source pass is explicit.
+local higherGenericBooks={{3854,3868,true},{3856,3869,true},{3845,3873,true},{3846,3874,true},{3847,3875,true},{4260,4300,true},{4264,4301,true},{4328,4353,true},{4329,4356,true},{7059,7084,true},{7060,7085,true},{7061,7086,true},{7390,7452,true},{7391,7453,true},{7921,7975,true},{7934,7990,true},{7932,7991,true},{7942,7992,true},{7944,7993,true},{7946,8028,true},{7943,8029,true},{8174,8384,true},{8200,8386,true},{8201,8387,true},{8202,8389,true},{8203,8395,true},{8205,8397,true},{8204,8398,true},{8209,8399,true},{8207,8400,true},{8206,8401,true},{8208,8402,true},{10007,10300,true},{10008,10301,true},{10009,10302,true},{10018,10312,true},{10029,10315,true},{10033,10320,true},{10510,10604,true},{11608,11610,true},{11604,11612,true},{12260,12261,true},{12405,12682,true},{12406,12683,true},{12408,12684,true},{12416,12685,true},{12415,12689,true},{12409,12693,true},{12410,12694,true},{12418,12695,true},{12419,12697,true},{12417,12702,true},{12414,12704,true},{12611,12707,true},{12781,12827,true},{12792,12828,true},{12782,12830,true},{13869,14466,true},{13868,14467,true},{13857,14470,true},{14042,14471,true},{14143,14473,true},{13870,14474,true},{14043,14476,true},{14142,14477,true},{14100,14478,true},{14101,14479,true},{14141,14480,true},{14132,14485,true},{13871,14489,true},{14045,14490,true},{13865,14491,true},{14108,14492,true},{14136,14493,true},{14104,14494,true},{14111,14496,true},{14137,14497,true},{13866,14498,true},{15076,15727,true},{15084,15728,true},{15091,15731,true},{15054,15732,true},{15073,15737,true},{15078,15738,true},{15092,15739,true},{15082,15743,true},{15086,15744,true},{15093,15745,true},{15072,15746,true},{15069,15747,true},{15079,15748,true},{15060,15752,true},{15056,15753,true},{15075,15755,true},{15087,15757,true},{15066,15760,true},{15070,15761,true},{15049,15763,true},{15058,15764,true},{15995,16043,true},{16022,16054,true},{17704,17706,true},{17721,17722,true},{18638,18657,true},{250537,251389,true},{250539,251391,true},{250542,251394,true},{250548,251400,false},{250605,251457,true},{250607,251459,true},{250609,251461,true},{250611,251463,true},{252466,252845,true},{252532,252846,true},{252533,252847,true},{252565,252899,true},{254019,254020,true},{254033,254034,true},{254043,254044,false}}
+for _,r in ipairs(higherGenericBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.acquisitionResearch.sourceSummary:find("live unverified; non-exhaustive",1,true))
+    assert(item.acquisitionResearch.details:find("not drops of finished crafted gear",1,true))
+    if r[3] then assert(item.recipePatternItemID==r[2])
+    else assert(addon.AcquisitionEvidenceIndex[r[1]].patternID==nil) end
+end
+assert(addon.ItemCatalog[12781].acquisitionResearch.details:find("object #176325",1,true))
+assert(addon.ItemCatalog[12782].acquisitionResearch.details:find("object #176327",1,true))
+assert(addon.ItemCatalog[17704].acquisitionResearch.details:find("current event availability/dates",1,true))
+assert(addon.ItemCatalog[17721].acquisitionResearch.details:find("Smokywood Pastures Special Gift",1,true))
+assert(addon.ItemCatalog[250548].acquisitionResearch.details:find("no named trainer/vendor/drop/quest source",1,true))
+assert(addon.ItemCatalog[254043].acquisitionResearch.details:find("Book existence does not establish",1,true))
+assert(addon.ItemCatalog[15078].acquisitionResearch.details:find("Blackrock Soldier",1,true))
+assert(not addon.ItemCatalog[12781].acquisitionResearch.details:find("object #176327",1,true))
+assert(addon.ItemCatalog[7934].acquisitionResearch.details:find("200 NPC rows and may be truncated",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
