@@ -101,3 +101,7 @@ Local lock resilience: use a bounded own-work lease, e.g. `flock -n /tmp/getgear
 ## Checkpoint 8L integrated — GitHub pending
 
 [Second100 level60 vendor cases](CHECKPOINT8L_LEVEL60_VENDORS_SECOND100.md):98 named cases/114 exact joins/11 NPCs;63 rank-named current paths unresolved,35 explicit reputation references,two missing shoulder origins. Five merchants unpinned. Shared8K policy reused without repeated research or guessed gates/currency/retirement. Full local PASS14/14,24 modules,four reports; GitHub PENDING. Equipment1,077/index2,757/display2,756/books759; crafts1,254/ingredients4,857 unchanged. All977 earlier entries retained;100 additive summaries only. Remaining4,825; next8M:first100 remaining level60 vendor IDs marked queue. No release/main action.
+
+## Checkpoint 8L validated — next 8M
+
+Full local and GitHub PASS: [42663990981](https://github.com/magicaddons/getgear/actions/runs/42663990981), source `cc28ef28cb9f58faea8c2a6c45399fcb725a98c1`; inspected direct bot/final validated HEAD `f3857cddf86cf6b8e37123e8dabcdae4eadd7196`. All14 PASS logs verified;24 modules/four reports. Bot changes only run timestamp/three response hashes; runtime/counts/reports unchanged. Equipment1,077/index2,757/display2,756/books759; crafts1,254/ingredients4,857. Remaining4,825; **next8M:first100 remaining level60 vendors** (23254 through227070), marked queue. Rank-named current purchase paths and all current-source uncertainties retained. No release/main action.
