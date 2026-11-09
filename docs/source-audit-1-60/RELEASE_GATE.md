@@ -203,3 +203,7 @@ Research resumed from verified branch HEAD `f6c7b1986fec1840bd88b0320f5f071b55e1
 ## Checkpoint 8F — omitted craft and 93 source dispositions
 
 [8F case note](reconciliation-20261109/CHECKPOINT8F_LEVEL31_40_UNDOCUMENTED.md): full local PASS 14/14, 24 modules, Python/reconciliation; required outputs expand 3→4 with the supplementary-craft audit, retaining earlier checks. Sole new craft274490 adds two ingredient rows; all 1,253 earlier definitions/4,855 ingredients, 7,707 identities/36,341 objectives retained. New totals 1,254/4,857, equipment517/index2,308. Original954 book queue and supplemental book live checks explicit. GitHub **PENDING**, latest completed baseline42620153753. No release authority; finish CI/bot before8G.
+
+## Checkpoint 8F validated — next 8G
+
+Full local and GitHub PASS: [42654914045](https://github.com/magicaddons/getgear/actions/runs/42654914045), source `801ae96935e90d4baae1952262bd24dfde67855d`; inspected direct bot/final validated HEAD `c283e82aaee5b284e49d524433174ea82e4697db`. All 14 PASS log lines verified; 24 modules/four reports. Bot changes only provenance timestamps/data-as-of and three response hashes; counts/runtime/reports unchanged. Equipment517/index2,308/display2,307; crafts1,254/ingredients4,857. Remaining5,385; next8G:207 vendor cases at41–50. No release/main change.

@@ -58,3 +58,7 @@ Connect `magicaddons/getgear`, select the development branch, and configure a cl
 ## Queue advance — checkpoint 8E validated
 
 Ten quest-family cases at levels 31–50 complete; full local/CI PASS 42620153753, inspected bot c7cb16e8b9af3fd80838a43db882cb7085fd56e3. Equipment 424, recipes 954, runtime summaries 2,215; remaining queue 5,478. **Next 8F: 93 undocumented-source cases at levels 31–40**. Preserve structured facts/joins/fingerprints without full source narratives.
+
+## Checkpoint 8F validated — next 8G
+
+Full local and GitHub PASS: [42654914045](https://github.com/magicaddons/getgear/actions/runs/42654914045), source `801ae96935e90d4baae1952262bd24dfde67855d`; inspected direct bot/final validated HEAD `c283e82aaee5b284e49d524433174ea82e4697db`. All 14 PASS log lines verified; 24 modules/four reports. Bot changes only provenance timestamps/data-as-of and three response hashes; counts/runtime/reports unchanged. Equipment517/index2,308/display2,307; crafts1,254/ingredients4,857. Remaining5,385; next8G:207 vendor cases at41–50. No release/main change.
