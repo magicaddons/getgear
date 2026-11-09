@@ -434,6 +434,47 @@ assert(describe(shoulders,false):find("minimum quest level 32",1,true)
 assert(shoulders.requiredLevel~=32,"Quest access must not become the gear equip gate")
 assert(not addon:GetAcquisitionSummary(shoulders):find("Vendor:",1,true))
 
+-- Checkpoint 6G: exact non-Favor sellers, limited stock, map references,
+-- reputation gates and unavailable-book conflicts stay distinct.
+local otherTailoring={
+    {6240,6270,35},
+    {6242,6272,45},
+    {6263,6274,75},
+    {6264,6275,90},
+    {4319,7114,120},
+    {4322,14630,130},
+    {277046,276982,175},
+    {277047,276983,175},
+    {277054,276990,175},
+    {277055,276991,175},
+}
+for _,r in ipairs(otherTailoring) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    local text=item.acquisitionResearch.sourceSummary
+    assert(text:find("Tailoring "..r[3],1,true)
+        and text:find("live stock/access unverified",1,true))
+    assert(describe(item,false):find("published map",1,true))
+end
+local blue=describe(addon.ItemCatalog[6240],false)
+assert(blue:find("Tharynn Bouden",1,true) and blue:find("Wrahk",1,true)
+    and blue:find("Borya",1,true) and blue:find("limited-stock table reference",1,true))
+assert(not addon:GetAcquisitionSummary(addon.ItemCatalog[6240]):find("Friendly",1,true))
+for _,id in ipairs({277046,277047}) do
+    assert(addon:GetAcquisitionSummary(addon.ItemCatalog[id]):find("Friendly with Earthen Ring",1,true))
+end
+for _,id in ipairs({277054,277055}) do
+    assert(addon:GetAcquisitionSummary(addon.ItemCatalog[id]):find("Friendly with Kirin Tor",1,true))
+end
+for _,id in ipairs({210781,215365,215366}) do
+    local item=assert(addon.ItemCatalog[id],"Keep catalogue identity pending stronger evidence")
+    assert(item.acquisitionResearch.confidence=="published-forever-availability-conflict")
+    assert(item.acquisitionResearch.sourceSummary:find("unavailable to players",1,true))
+    assert(not item.recipePatternItemID,
+        "Unavailable book warning must not become a new required learning gate")
+    assert(not item.acquisitionResearch.sourceSummary:find("vendor references:",1,true))
+end
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")

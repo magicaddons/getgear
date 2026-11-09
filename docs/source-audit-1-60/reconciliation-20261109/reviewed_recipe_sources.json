@@ -5379,5 +5379,1331 @@
       "https://www.wowhead.com/forever/item=277673&xml": "f54d46c3caf00f9f359481d74c5946dcb43d5bdcc7de0938f0182abaa10ccd71",
       "https://www.wowhead.com/forever/item=277673": "8581f5451377c1d26030d0f894966bba419ec2e52f822143ae8372b906aa289d"
     }
+  },
+  {
+    "itemID": 6240,
+    "name": "Blue Linen Vest",
+    "bookItemID": 6270,
+    "spellID": 7630,
+    "profession": "Tailoring",
+    "bookLearningSkill": 35,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Blue Linen Vest (#6270), Tailoring 35; vendor references: Tharynn Bouden \u2014 Elwynn Forest; Borya \u2014 Orgrimmar; Wrahk \u2014 The Barrens; Constance Brisboise \u2014 Tirisfal Glades; Valdaron \u2014 Darkshore (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nTharynn Bouden (NPC 66), Elwynn Forest; listed price 2s 10c; stock quantity unverified. Elwynn Forest: published map x 41.8\u201341.8, y 67\u201367. Published listing/map only; live stock, discounts and access unverified.\nBorya (NPC 3364), Orgrimmar; listed price 1s 88c; limited-stock table reference. Orgrimmar: published map x 63\u201363.2, y 50.4\u201351.2. Published listing/map only; live stock, discounts and access unverified.\nWrahk (NPC 3485), The Barrens; listed price 2s 10c; limited-stock table reference. The Barrens: published map x 52.2\u201352.2, y 31.6\u201331.6. Published listing/map only; live stock, discounts and access unverified.\nConstance Brisboise (NPC 3522), Tirisfal Glades; listed price 2s 10c; limited-stock table reference. Tirisfal Glades: published map x 52.4\u201352.6, y 55.6\u201355.6. Published listing/map only; live stock, discounts and access unverified.\nValdaron (NPC 4189), Darkshore; listed price 2s 10c; stock quantity unverified. Darkshore: published map x 38\u201338.2, y 40.4\u201340.6. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=6270/pattern-blue-linen-vest",
+    "vendorEvidence": [
+      {
+        "npcID": 66,
+        "name": "Tharynn Bouden",
+        "zoneIDs": [
+          12
+        ],
+        "zone": "Elwynn Forest",
+        "cost": [
+          [
+            210
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6270",
+        "npcURL": "https://www.wowhead.com/forever/npc=66",
+        "npcPageSHA256": "2c1230009e896a48373e7b49aa389eaa494826dd9dcee517284b5394f9ec167b",
+        "mapReference": {
+          "12": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  41.8,
+                  67
+                ]
+              ],
+              "uiMapId": 1429,
+              "uiMapName": "Elwynn Forest"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3364,
+        "name": "Borya",
+        "zoneIDs": [
+          1637
+        ],
+        "zone": "Orgrimmar",
+        "cost": [
+          [
+            188
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6270",
+        "npcURL": "https://www.wowhead.com/forever/npc=3364",
+        "npcPageSHA256": "6da7126f5f519ec57e44ebeab9b98f7d7c5e0183189e54b9e7620181737a2021",
+        "mapReference": {
+          "1637": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  63,
+                  51.2
+                ],
+                [
+                  63.2,
+                  50.4
+                ]
+              ],
+              "uiMapId": 1454,
+              "uiMapName": "Orgrimmar"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3485,
+        "name": "Wrahk",
+        "zoneIDs": [
+          17
+        ],
+        "zone": "The Barrens",
+        "cost": [
+          [
+            210
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6270",
+        "npcURL": "https://www.wowhead.com/forever/npc=3485",
+        "npcPageSHA256": "f6b162af341d512d6e71a66a745fb89dbe571ed376bdd17ac72c000a7ab8935b",
+        "mapReference": {
+          "17": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  52.2,
+                  31.6
+                ]
+              ],
+              "uiMapId": 1413,
+              "uiMapName": "The Barrens"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3522,
+        "name": "Constance Brisboise",
+        "zoneIDs": [
+          85
+        ],
+        "zone": "Tirisfal Glades",
+        "cost": [
+          [
+            210
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6270",
+        "npcURL": "https://www.wowhead.com/forever/npc=3522",
+        "npcPageSHA256": "102cb0e648401f710c5c66be42bf828459a9c49d22c7e940565835d4ab3804ad",
+        "mapReference": {
+          "85": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  52.4,
+                  55.6
+                ],
+                [
+                  52.6,
+                  55.6
+                ]
+              ],
+              "uiMapId": 1420,
+              "uiMapName": "Tirisfal Glades"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 4189,
+        "name": "Valdaron",
+        "zoneIDs": [
+          148
+        ],
+        "zone": "Darkshore",
+        "cost": [
+          [
+            210
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6270",
+        "npcURL": "https://www.wowhead.com/forever/npc=4189",
+        "npcPageSHA256": "b4338bd723d6e15eff05ab61f644e35aa14a23008c22061a8e799a6dfe2ab6ce",
+        "mapReference": {
+          "148": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  38,
+                  40.6
+                ],
+                [
+                  38.2,
+                  40.4
+                ]
+              ],
+              "uiMapId": 1439,
+              "uiMapName": "Darkshore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=6270&xml": "e600401d59b347afc4902efeed8091a1fab8957fdc58b9a942afb990e5290dd2",
+      "https://www.wowhead.com/forever/item=6270": "919ab797a1f10af3fd4800f3df79a8c3213155b6516db70bd7e193bdbe6edd8a"
+    }
+  },
+  {
+    "itemID": 6242,
+    "name": "Blue Linen Robe",
+    "bookItemID": 6272,
+    "spellID": 7633,
+    "profession": "Tailoring",
+    "bookLearningSkill": 45,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Blue Linen Robe (#6272), Tailoring 45; vendor references: Drake Lindgren \u2014 Elwynn Forest; Wrahk \u2014 The Barrens; Ranik \u2014 The Barrens; Andrew Hilbert \u2014 Silverpine Forest; Elynna \u2014 Darnassus (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nDrake Lindgren (NPC 1250), Elwynn Forest; listed price 3s 15c; stock quantity unverified. Elwynn Forest: published map x 83\u201383.2, y 66.4\u201366.6. Published listing/map only; live stock, discounts and access unverified.\nWrahk (NPC 3485), The Barrens; listed price 3s 15c; limited-stock table reference. The Barrens: published map x 52.2\u201352.2, y 31.6\u201331.6. Published listing/map only; live stock, discounts and access unverified.\nRanik (NPC 3499), The Barrens; listed price 3s ; limited-stock table reference. The Barrens: published map x 61.8\u201361.8, y 38.6\u201338.6. Published listing/map only; live stock, discounts and access unverified.\nAndrew Hilbert (NPC 3556), Silverpine Forest; listed price 3s 15c; stock quantity unverified. Silverpine Forest: published map x 43.2\u201343.2, y 40.6\u201340.6. Published listing/map only; live stock, discounts and access unverified.\nElynna (NPC 4168), Darnassus; listed price 3s ; limited-stock table reference. Darnassus: published map x 64.2\u201364.6, y 21.4\u201321.6. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=6272/pattern-blue-linen-robe",
+    "vendorEvidence": [
+      {
+        "npcID": 1250,
+        "name": "Drake Lindgren",
+        "zoneIDs": [
+          12
+        ],
+        "zone": "Elwynn Forest",
+        "cost": [
+          [
+            315
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6272",
+        "npcURL": "https://www.wowhead.com/forever/npc=1250",
+        "npcPageSHA256": "4660e628b0a9231db424bdcaf308a8fb45bf357ca1fbb48dd7bea906a30dbdd0",
+        "mapReference": {
+          "12": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  83,
+                  66.4
+                ],
+                [
+                  83.2,
+                  66.6
+                ]
+              ],
+              "uiMapId": 1429,
+              "uiMapName": "Elwynn Forest"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3485,
+        "name": "Wrahk",
+        "zoneIDs": [
+          17
+        ],
+        "zone": "The Barrens",
+        "cost": [
+          [
+            315
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6272",
+        "npcURL": "https://www.wowhead.com/forever/npc=3485",
+        "npcPageSHA256": "f6b162af341d512d6e71a66a745fb89dbe571ed376bdd17ac72c000a7ab8935b",
+        "mapReference": {
+          "17": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  52.2,
+                  31.6
+                ]
+              ],
+              "uiMapId": 1413,
+              "uiMapName": "The Barrens"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3499,
+        "name": "Ranik",
+        "zoneIDs": [
+          17
+        ],
+        "zone": "The Barrens",
+        "cost": [
+          [
+            300
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6272",
+        "npcURL": "https://www.wowhead.com/forever/npc=3499",
+        "npcPageSHA256": "175b080d322ee4c85636f122af3e0a0d580c82c7f98d7a34191a66f9016f4138",
+        "mapReference": {
+          "17": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  61.8,
+                  38.6
+                ]
+              ],
+              "uiMapId": 1413,
+              "uiMapName": "The Barrens"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3556,
+        "name": "Andrew Hilbert",
+        "zoneIDs": [
+          130
+        ],
+        "zone": "Silverpine Forest",
+        "cost": [
+          [
+            315
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6272",
+        "npcURL": "https://www.wowhead.com/forever/npc=3556",
+        "npcPageSHA256": "523f2c2195b50f83e18c41a637211a4604858cf730d463f8e9c686497e876548",
+        "mapReference": {
+          "130": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  43.2,
+                  40.6
+                ]
+              ],
+              "uiMapId": 1421,
+              "uiMapName": "Silverpine Forest"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 4168,
+        "name": "Elynna",
+        "zoneIDs": [
+          1657
+        ],
+        "zone": "Darnassus",
+        "cost": [
+          [
+            300
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6272",
+        "npcURL": "https://www.wowhead.com/forever/npc=4168",
+        "npcPageSHA256": "25dd26a29a2375e69eb9ab5ed035fb6d1578017494f56f0f38baa0e71193b880",
+        "mapReference": {
+          "1657": [
+            {
+              "count": 4,
+              "coords": [
+                [
+                  64.2,
+                  21.4
+                ],
+                [
+                  64.2,
+                  21.6
+                ],
+                [
+                  64.6,
+                  21.4
+                ],
+                [
+                  64.6,
+                  21.6
+                ]
+              ],
+              "uiMapId": 1457,
+              "uiMapName": "Darnassus"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=6272&xml": "d9aa3b991b589cc3c54f08b04f6291ed063dfe122b812446ffea48b9a7db2bc8",
+      "https://www.wowhead.com/forever/item=6272": "d95b461d614868af28f2f4547bdd4696f2434179d8b786565078c16d274d8411"
+    }
+  },
+  {
+    "itemID": 6263,
+    "name": "Blue Overalls",
+    "bookItemID": 6274,
+    "spellID": 7639,
+    "profession": "Tailoring",
+    "bookLearningSkill": 75,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Blue Overalls (#6274), Tailoring 75; vendor references: Gina MacGregor \u2014 Westfall; Alexandra Bolero \u2014 Stormwind City; Mallen Swain \u2014 Hillsbrad Foothills; Borya \u2014 Orgrimmar; Yonada \u2014 The Barrens (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nGina MacGregor (NPC 843), Westfall; listed price 4s 21c; limited-stock table reference. Westfall: published map x 57.4\u201357.6, y 54\u201354. Published listing/map only; live stock, discounts and access unverified.\nAlexandra Bolero (NPC 1347), Stormwind City; listed price 3s 76c; limited-stock table reference. Stormwind City: published map x 43.4\u201353.2, y 74\u201381.6. Published listing/map only; live stock, discounts and access unverified.\nMallen Swain (NPC 2394), Hillsbrad Foothills; listed price 4s 21c; stock quantity unverified. Hillsbrad Foothills: published map x 62\u201362, y 21\u201321. Published listing/map only; live stock, discounts and access unverified.\nBorya (NPC 3364), Orgrimmar; listed price 3s 76c; limited-stock table reference. Orgrimmar: published map x 63\u201363.2, y 50.4\u201351.2. Published listing/map only; live stock, discounts and access unverified.\nYonada (NPC 5944), The Barrens; listed price 4s 21c; limited-stock table reference. The Barrens: published map x 45\u201345, y 59.2\u201359.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=6274/pattern-blue-overalls",
+    "vendorEvidence": [
+      {
+        "npcID": 843,
+        "name": "Gina MacGregor",
+        "zoneIDs": [
+          40
+        ],
+        "zone": "Westfall",
+        "cost": [
+          [
+            421
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6274",
+        "npcURL": "https://www.wowhead.com/forever/npc=843",
+        "npcPageSHA256": "ea4084d39f8f6e712cf0805f8709a00fee393b591086cceafe63433dbdae089e",
+        "mapReference": {
+          "40": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  57.4,
+                  54
+                ],
+                [
+                  57.6,
+                  54
+                ]
+              ],
+              "uiMapId": 1436,
+              "uiMapName": "Westfall"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 1347,
+        "name": "Alexandra Bolero",
+        "zoneIDs": [
+          1519
+        ],
+        "zone": "Stormwind City",
+        "cost": [
+          [
+            376
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6274",
+        "npcURL": "https://www.wowhead.com/forever/npc=1347",
+        "npcPageSHA256": "df83bc0da67bd4303abd19cdfb476d8ea92f6b438df42ca057e9390ee440fb7e",
+        "mapReference": {
+          "1519": [
+            {
+              "count": 3,
+              "coords": [
+                [
+                  43.4,
+                  74
+                ],
+                [
+                  43.6,
+                  74
+                ],
+                [
+                  53.2,
+                  81.6
+                ]
+              ],
+              "uiMapId": 1453,
+              "uiMapName": "Stormwind City"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 2394,
+        "name": "Mallen Swain",
+        "zoneIDs": [
+          267
+        ],
+        "zone": "Hillsbrad Foothills",
+        "cost": [
+          [
+            421
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6274",
+        "npcURL": "https://www.wowhead.com/forever/npc=2394",
+        "npcPageSHA256": "3a5095688b22aa66a01371039cb7fb437617f9f29fff840c430eae010f63a186",
+        "mapReference": {
+          "267": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  62,
+                  21
+                ]
+              ],
+              "uiMapId": 1424,
+              "uiMapName": "Hillsbrad Foothills"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3364,
+        "name": "Borya",
+        "zoneIDs": [
+          1637
+        ],
+        "zone": "Orgrimmar",
+        "cost": [
+          [
+            376
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6274",
+        "npcURL": "https://www.wowhead.com/forever/npc=3364",
+        "npcPageSHA256": "6da7126f5f519ec57e44ebeab9b98f7d7c5e0183189e54b9e7620181737a2021",
+        "mapReference": {
+          "1637": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  63,
+                  51.2
+                ],
+                [
+                  63.2,
+                  50.4
+                ]
+              ],
+              "uiMapId": 1454,
+              "uiMapName": "Orgrimmar"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 5944,
+        "name": "Yonada",
+        "zoneIDs": [
+          17
+        ],
+        "zone": "The Barrens",
+        "cost": [
+          [
+            421
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6274",
+        "npcURL": "https://www.wowhead.com/forever/npc=5944",
+        "npcPageSHA256": "3365189e7a0a082c7d2e59781541d072bcd2ad7d5c1f9571487fbb8c1759724b",
+        "mapReference": {
+          "17": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  45,
+                  59.2
+                ]
+              ],
+              "uiMapId": 1413,
+              "uiMapName": "The Barrens"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=6274&xml": "628b32c6cacfc7efaaf199a17bc66ce246fd0623d63cd2258943d62c812f9ffa",
+      "https://www.wowhead.com/forever/item=6274": "76a0a5f3e0b9f79a0556b42a81e1a9d4bb5b04dab68299a23cb4da00eae15f0a"
+    }
+  },
+  {
+    "itemID": 6264,
+    "name": "Greater Adept's Robe",
+    "bookItemID": 6275,
+    "spellID": 7643,
+    "profession": "Tailoring",
+    "bookLearningSkill": 90,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Greater Adept's Robe (#6275), Tailoring 90; vendor references: Jennabink Powerseam \u2014 Wetlands; Rann Flamespinner \u2014 Loch Modan; Sheri Zipstitch \u2014 Duskwood; Ranik \u2014 The Barrens; Elynna \u2014 Darnassus; Millie Gregorian \u2014 Undercity (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nJennabink Powerseam (NPC 1454), Wetlands; listed price 8s ; limited-stock table reference. Wetlands: published map x 8\u20138, y 55.8\u201355.8. Published listing/map only; live stock, discounts and access unverified.\nRann Flamespinner (NPC 1474), Loch Modan; listed price 8s 42c; limited-stock table reference. Loch Modan: published map x 36\u201336, y 46\u201346. Published listing/map only; live stock, discounts and access unverified.\nSheri Zipstitch (NPC 2669), Duskwood; listed price 8s 42c; stock quantity unverified. Duskwood: published map x 75.6\u201375.6, y 45.4\u201345.6. Published listing/map only; live stock, discounts and access unverified.\nRanik (NPC 3499), The Barrens; listed price 8s ; limited-stock table reference. The Barrens: published map x 61.8\u201361.8, y 38.6\u201338.6. Published listing/map only; live stock, discounts and access unverified.\nElynna (NPC 4168), Darnassus; listed price 8s ; limited-stock table reference. Darnassus: published map x 64.2\u201364.6, y 21.4\u201321.6. Published listing/map only; live stock, discounts and access unverified.\nMillie Gregorian (NPC 4577), Undercity; listed price 8s 42c; stock quantity unverified. Undercity: published map x 70.4\u201370.8, y 29.4\u201330.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=6275/pattern-greater-adepts-robe",
+    "vendorEvidence": [
+      {
+        "npcID": 1454,
+        "name": "Jennabink Powerseam",
+        "zoneIDs": [
+          11
+        ],
+        "zone": "Wetlands",
+        "cost": [
+          [
+            800
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6275",
+        "npcURL": "https://www.wowhead.com/forever/npc=1454",
+        "npcPageSHA256": "305f6025cdcdfa0af80bda43d69c750f560b72e1f7cba498112489e3554ec7c9",
+        "mapReference": {
+          "11": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  8,
+                  55.8
+                ]
+              ],
+              "uiMapId": 1437,
+              "uiMapName": "Wetlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 1474,
+        "name": "Rann Flamespinner",
+        "zoneIDs": [
+          38
+        ],
+        "zone": "Loch Modan",
+        "cost": [
+          [
+            842
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6275",
+        "npcURL": "https://www.wowhead.com/forever/npc=1474",
+        "npcPageSHA256": "f650094954c67f6b857de4308a467856f9cc9163eda29d1ecc4869986c7d0678",
+        "mapReference": {
+          "38": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  36,
+                  46
+                ]
+              ],
+              "uiMapId": 1432,
+              "uiMapName": "Loch Modan"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 2669,
+        "name": "Sheri Zipstitch",
+        "zoneIDs": [
+          10
+        ],
+        "zone": "Duskwood",
+        "cost": [
+          [
+            842
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6275",
+        "npcURL": "https://www.wowhead.com/forever/npc=2669",
+        "npcPageSHA256": "bcd834a32a49307ef31b96b034ce969c28864e1441fb7ec28450440c445077cb",
+        "mapReference": {
+          "10": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  75.6,
+                  45.4
+                ],
+                [
+                  75.6,
+                  45.6
+                ]
+              ],
+              "uiMapId": 1431,
+              "uiMapName": "Duskwood"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 3499,
+        "name": "Ranik",
+        "zoneIDs": [
+          17
+        ],
+        "zone": "The Barrens",
+        "cost": [
+          [
+            800
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6275",
+        "npcURL": "https://www.wowhead.com/forever/npc=3499",
+        "npcPageSHA256": "175b080d322ee4c85636f122af3e0a0d580c82c7f98d7a34191a66f9016f4138",
+        "mapReference": {
+          "17": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  61.8,
+                  38.6
+                ]
+              ],
+              "uiMapId": 1413,
+              "uiMapName": "The Barrens"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 4168,
+        "name": "Elynna",
+        "zoneIDs": [
+          1657
+        ],
+        "zone": "Darnassus",
+        "cost": [
+          [
+            800
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6275",
+        "npcURL": "https://www.wowhead.com/forever/npc=4168",
+        "npcPageSHA256": "25dd26a29a2375e69eb9ab5ed035fb6d1578017494f56f0f38baa0e71193b880",
+        "mapReference": {
+          "1657": [
+            {
+              "count": 4,
+              "coords": [
+                [
+                  64.2,
+                  21.4
+                ],
+                [
+                  64.2,
+                  21.6
+                ],
+                [
+                  64.6,
+                  21.4
+                ],
+                [
+                  64.6,
+                  21.6
+                ]
+              ],
+              "uiMapId": 1457,
+              "uiMapName": "Darnassus"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 4577,
+        "name": "Millie Gregorian",
+        "zoneIDs": [
+          1497
+        ],
+        "zone": "Undercity",
+        "cost": [
+          [
+            842
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=6275",
+        "npcURL": "https://www.wowhead.com/forever/npc=4577",
+        "npcPageSHA256": "488d96ccc5428c7536d254085b79df0b56dc1b5859b5fe4f2551eb879e1be9a6",
+        "mapReference": {
+          "1497": [
+            {
+              "count": 4,
+              "coords": [
+                [
+                  70.4,
+                  29.4
+                ],
+                [
+                  70.4,
+                  30.2
+                ],
+                [
+                  70.8,
+                  29.4
+                ],
+                [
+                  70.8,
+                  29.6
+                ]
+              ],
+              "uiMapId": 1458,
+              "uiMapName": "Undercity"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=6275&xml": "7b935b7877c7ccd74245c0ad739671681d455275fbe90d5ca632405d843840f1",
+      "https://www.wowhead.com/forever/item=6275": "1289edd2eefd45973505253dbbe4ceb93e14e906684d72a6812791a9fe41e658"
+    }
+  },
+  {
+    "itemID": 4319,
+    "name": "Azure Silk Gloves",
+    "bookItemID": 7114,
+    "spellID": 3854,
+    "profession": "Tailoring",
+    "bookLearningSkill": 120,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Azure Silk Gloves (#7114), Tailoring 120; vendor references: Wenna Silkbeard \u2014 Wetlands; Kireena \u2014 Desolace (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nWenna Silkbeard (NPC 2679), Wetlands; listed price 10s 52c; stock quantity unverified. Wetlands: published map x 25.6\u201325.6, y 25.8\u201325.8. Published listing/map only; live stock, discounts and access unverified.\nKireena (NPC 9636), Desolace; listed price 10s ; limited-stock table reference. Desolace: published map x 51\u201351, y 53.4\u201353.6. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=7114/pattern-azure-silk-gloves",
+    "vendorEvidence": [
+      {
+        "npcID": 2679,
+        "name": "Wenna Silkbeard",
+        "zoneIDs": [
+          11
+        ],
+        "zone": "Wetlands",
+        "cost": [
+          [
+            1052
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=7114",
+        "npcURL": "https://www.wowhead.com/forever/npc=2679",
+        "npcPageSHA256": "1297968359a9a8b01a4f1f4bbbc32371e26f8ccd36a3d335e3236e68c367bc2e",
+        "mapReference": {
+          "11": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  25.6,
+                  25.8
+                ]
+              ],
+              "uiMapId": 1437,
+              "uiMapName": "Wetlands"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 9636,
+        "name": "Kireena",
+        "zoneIDs": [
+          405
+        ],
+        "zone": "Desolace",
+        "cost": [
+          [
+            1000
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=7114",
+        "npcURL": "https://www.wowhead.com/forever/npc=9636",
+        "npcPageSHA256": "8fa42dcf29d9caf0ec7ac4d03eb959e59821d6249ec0df2d45160a4f80e59bc1",
+        "mapReference": {
+          "405": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  51,
+                  53.4
+                ],
+                [
+                  51,
+                  53.6
+                ]
+              ],
+              "uiMapId": 1443,
+              "uiMapName": "Desolace"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7114&xml": "1cc243a76cd91ac1dd3d55a5073dc60b9588d9890f998cbd4f412989416726e6",
+      "https://www.wowhead.com/forever/item=7114": "d8ed6f3e7d435a5397499bb05bc8db195361db37ed23016b46a13de411cad233"
+    }
+  },
+  {
+    "itemID": 4322,
+    "name": "Enchanter's Cowl",
+    "bookItemID": 14630,
+    "spellID": 3857,
+    "profession": "Tailoring",
+    "bookLearningSkill": 130,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Enchanter's Cowl (#14630), Tailoring 130; vendor references: Xizk Goodstitch \u2014 Stranglethorn Vale; Super-Seller 680 \u2014 Desolace (published; live stock/access unverified).",
+    "details": "Published book vendor references (live stock/access unverified):\nXizk Goodstitch (NPC 2670), Stranglethorn Vale; listed price 10s ; limited-stock table reference. Stranglethorn Vale: published map x 28.6\u201328.6, y 76.8\u201376.8. Published listing/map only; live stock, discounts and access unverified.\nSuper-Seller 680 (NPC 12246), Desolace; listed price 10s ; stock quantity unverified. Desolace: published map x 40.4\u201340.6, y 79.2\u201379.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=14630/pattern-enchanters-cowl",
+    "vendorEvidence": [
+      {
+        "npcID": 2670,
+        "name": "Xizk Goodstitch",
+        "zoneIDs": [
+          33
+        ],
+        "zone": "Stranglethorn Vale",
+        "cost": [
+          [
+            1000
+          ]
+        ],
+        "listedStock": 1,
+        "sourceURL": "https://www.wowhead.com/forever/item=14630",
+        "npcURL": "https://www.wowhead.com/forever/npc=2670",
+        "npcPageSHA256": "3096fd6809354b672f894352a8e5b017a4d3a70aac6e3959ff2e80777ac75082",
+        "mapReference": {
+          "33": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  28.6,
+                  76.8
+                ]
+              ],
+              "uiMapId": 1434,
+              "uiMapName": "Stranglethorn Vale"
+            }
+          ]
+        },
+        "liveVerified": false
+      },
+      {
+        "npcID": 12246,
+        "name": "Super-Seller 680",
+        "zoneIDs": [
+          405
+        ],
+        "zone": "Desolace",
+        "cost": [
+          [
+            1000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=14630",
+        "npcURL": "https://www.wowhead.com/forever/npc=12246",
+        "npcPageSHA256": "94c90a3a3715f20bbc5c50a3557742ee47be869bdcd4fdd8ff19a37c2f227303",
+        "mapReference": {
+          "405": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  40.4,
+                  79.2
+                ],
+                [
+                  40.6,
+                  79.2
+                ]
+              ],
+              "uiMapId": 1443,
+              "uiMapName": "Desolace"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=14630&xml": "fff45b21b54be36aa70809ddd9021b1835aa83df518d9acd68e4bfdffde83128",
+      "https://www.wowhead.com/forever/item=14630": "37c7a39f6c9fbc8b93ab4a08cb96aa5b458bc747807f2da33bad15c86f383483"
+    }
+  },
+  {
+    "itemID": 277046,
+    "name": "Cloudy Stormsewn Cowl",
+    "bookItemID": 276982,
+    "spellID": 1301532,
+    "profession": "Tailoring",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Cloudy Stormsewn Cowl (#276982), Tailoring 175; vendor references: Sutara Plainstalker \u2014 Mulgore (published; live stock/access unverified). Published requirement: Friendly with Earthen Ring.",
+    "details": "Published book vendor references (live stock/access unverified):\nSutara Plainstalker (NPC 264078), Mulgore; listed price 10g ; stock quantity unverified. Mulgore: published map x 34.4\u201334.6, y 22.8\u201322.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276982/pattern-cloudy-stormsewn-cowl",
+    "vendorEvidence": [
+      {
+        "npcID": 264078,
+        "name": "Sutara Plainstalker",
+        "zoneIDs": [
+          215
+        ],
+        "zone": "Mulgore",
+        "cost": [
+          [
+            100000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276982",
+        "npcURL": "https://www.wowhead.com/forever/npc=264078",
+        "npcPageSHA256": "eea8d151e4191832229b97bbbf84b5dbaee18709f61b25841f56b8f621d07362",
+        "mapReference": {
+          "215": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.6,
+                  22.8
+                ]
+              ],
+              "uiMapId": 1412,
+              "uiMapName": "Mulgore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276982&xml": "3a80873e1a6ee03eace2d73c0675d4d46163afb384807e3b75e4d7c4334c4053",
+      "https://www.wowhead.com/forever/item=276982": "6ed8aa29f40cbdc3f90b5b33ab09f10385bff995fe0628f09c8c6cc1620b0102"
+    },
+    "purchaseGate": {
+      "factionID": 2787,
+      "faction": "Earthen Ring",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277047,
+    "name": "Cloudy Stormsewn Epaulets",
+    "bookItemID": 276983,
+    "spellID": 1301533,
+    "profession": "Tailoring",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Cloudy Stormsewn Epaulets (#276983), Tailoring 175; vendor references: Sutara Plainstalker \u2014 Mulgore (published; live stock/access unverified). Published requirement: Friendly with Earthen Ring.",
+    "details": "Published book vendor references (live stock/access unverified):\nSutara Plainstalker (NPC 264078), Mulgore; listed price 10g ; stock quantity unverified. Mulgore: published map x 34.4\u201334.6, y 22.8\u201322.8. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276983/pattern-cloudy-stormsewn-epaulets",
+    "vendorEvidence": [
+      {
+        "npcID": 264078,
+        "name": "Sutara Plainstalker",
+        "zoneIDs": [
+          215
+        ],
+        "zone": "Mulgore",
+        "cost": [
+          [
+            100000
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276983",
+        "npcURL": "https://www.wowhead.com/forever/npc=264078",
+        "npcPageSHA256": "eea8d151e4191832229b97bbbf84b5dbaee18709f61b25841f56b8f621d07362",
+        "mapReference": {
+          "215": [
+            {
+              "count": 2,
+              "coords": [
+                [
+                  34.4,
+                  22.8
+                ],
+                [
+                  34.6,
+                  22.8
+                ]
+              ],
+              "uiMapId": 1412,
+              "uiMapName": "Mulgore"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276983&xml": "5e10402ae3a8b6cd064971de9e0ed3365cf45f2a2dc2cafde53a3d679116218e",
+      "https://www.wowhead.com/forever/item=276983": "6041112b35c06a8d38129a813d8cab528707e49b165b6bc1c49bcbf9a0a2c0b9"
+    },
+    "purchaseGate": {
+      "factionID": 2787,
+      "faction": "Earthen Ring",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277054,
+    "name": "Azure Stormsewn Cowl",
+    "bookItemID": 276990,
+    "spellID": 1301540,
+    "profession": "Tailoring",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Azure Stormsewn Cowl (#276990), Tailoring 175; vendor references: Archmage Alvareaux \u2014 Alterac Mountains (published; live stock/access unverified). Published requirement: Friendly with Kirin Tor.",
+    "details": "Published book vendor references (live stock/access unverified):\nArchmage Alvareaux (NPC 32287), Alterac Mountains; listed price 10g 52s 63c; stock quantity unverified. Alterac Mountains: published map x 14\u201314, y 63.2\u201363.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276990/pattern-azure-stormsewn-cowl",
+    "vendorEvidence": [
+      {
+        "npcID": 32287,
+        "name": "Archmage Alvareaux",
+        "zoneIDs": [
+          36
+        ],
+        "zone": "Alterac Mountains",
+        "cost": [
+          [
+            105263
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276990",
+        "npcURL": "https://www.wowhead.com/forever/npc=32287",
+        "npcPageSHA256": "d227ff6f90be7406ab37a0c6bc4540adf6de6be26c7e146d9408045507c38e95",
+        "mapReference": {
+          "36": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  14,
+                  63.2
+                ]
+              ],
+              "uiMapId": 1416,
+              "uiMapName": "Alterac Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276990&xml": "59d48f557b076bab02691a63b96552e6002febe9e97f556f59e6ecacf560d2b0",
+      "https://www.wowhead.com/forever/item=276990": "237ae63ef30e66c2703f182eb3574f1020bb08b7cf2f08b2e211025ddd77d2a0"
+    },
+    "purchaseGate": {
+      "factionID": 2740,
+      "faction": "Kirin Tor",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 277055,
+    "name": "Azure Stormsewn Epaulets",
+    "bookItemID": 276991,
+    "spellID": 1301541,
+    "profession": "Tailoring",
+    "bookLearningSkill": 175,
+    "confidence": "published-forever-recipe-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Azure Stormsewn Epaulets (#276991), Tailoring 175; vendor references: Archmage Alvareaux \u2014 Alterac Mountains (published; live stock/access unverified). Published requirement: Friendly with Kirin Tor.",
+    "details": "Published book vendor references (live stock/access unverified):\nArchmage Alvareaux (NPC 32287), Alterac Mountains; listed price 10g 52s 63c; stock quantity unverified. Alterac Mountains: published map x 14\u201314, y 63.2\u201363.2. Published listing/map only; live stock, discounts and access unverified.",
+    "bookURL": "https://www.wowhead.com/forever/item=276991/pattern-azure-stormsewn-epaulets",
+    "vendorEvidence": [
+      {
+        "npcID": 32287,
+        "name": "Archmage Alvareaux",
+        "zoneIDs": [
+          36
+        ],
+        "zone": "Alterac Mountains",
+        "cost": [
+          [
+            105263
+          ]
+        ],
+        "listedStock": -1,
+        "sourceURL": "https://www.wowhead.com/forever/item=276991",
+        "npcURL": "https://www.wowhead.com/forever/npc=32287",
+        "npcPageSHA256": "d227ff6f90be7406ab37a0c6bc4540adf6de6be26c7e146d9408045507c38e95",
+        "mapReference": {
+          "36": [
+            {
+              "count": 1,
+              "coords": [
+                [
+                  14,
+                  63.2
+                ]
+              ],
+              "uiMapId": 1416,
+              "uiMapName": "Alterac Mountains"
+            }
+          ]
+        },
+        "liveVerified": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=276991&xml": "70ca00852c51a8c5bc02e6f508c659f24940cc8111fa3e90a15fe86738b08b90",
+      "https://www.wowhead.com/forever/item=276991": "ccc1ed6218755875089269652a4d7a0f51a5fdd25787bd7d9311d8054a731b8d"
+    },
+    "purchaseGate": {
+      "factionID": 2740,
+      "faction": "Kirin Tor",
+      "standing": "Friendly",
+      "liveVerified": false
+    }
+  },
+  {
+    "itemID": 210781,
+    "name": "Phoenix Bindings",
+    "bookItemID": 211247,
+    "spellID": 428424,
+    "profession": "Tailoring",
+    "bookLearningSkill": 125,
+    "confidence": "published-forever-availability-conflict",
+    "liveVerified": false,
+    "warningOnly": true,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern #211247: published Forever book page flags this item unavailable to players. Imported vendor/drop claims conflict; current learning route unresolved. Live availability unverified.",
+    "details": "The exact Forever book page is flagged unavailable and has no teaches-recipe table, although its tooltip names the expected spell and imported sources list vendors/drops. This can reflect inherited/historical data. Do not treat it as a reliable purchase or farming instruction, or conclude the finished gear is impossible through every route. Existing catalogue/eligibility is retained pending stronger evidence.",
+    "bookURL": "https://www.wowhead.com/forever/item=211247",
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=211247&xml": "87d230c986ebece7ea4d30fbf06b79840155b793bd2beed7143d80cfd30bcc7f",
+      "https://www.wowhead.com/forever/item=211247": "4280ab29bd5a92c38c93da4aa687def214512ebb7485a293c1d9517bd25d87dc"
+    }
+  },
+  {
+    "itemID": 215366,
+    "name": "Invoker's Cord",
+    "bookItemID": 215369,
+    "spellID": 435841,
+    "profession": "Tailoring",
+    "bookLearningSkill": 150,
+    "confidence": "published-forever-availability-conflict",
+    "liveVerified": false,
+    "warningOnly": true,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern #215369: published Forever book page flags this item unavailable to players. Imported vendor/drop claims conflict; current learning route unresolved. Live availability unverified.",
+    "details": "The exact Forever book page is flagged unavailable and has no teaches-recipe table, although its tooltip names the expected spell and imported sources list vendors/drops. This can reflect inherited/historical data. Do not treat it as a reliable purchase or farming instruction, or conclude the finished gear is impossible through every route. Existing catalogue/eligibility is retained pending stronger evidence.",
+    "bookURL": "https://www.wowhead.com/forever/item=215369",
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=215369&xml": "9eadbb039c7380e7602f96290c7a1a439c128205e6abfa39f67f6e39a0c9ed51",
+      "https://www.wowhead.com/forever/item=215369": "60b19718720e9ae22d18318b2784e231025a425c11aac53c7f8c4430eea4d12c"
+    }
+  },
+  {
+    "itemID": 215365,
+    "name": "Invoker's Mantle",
+    "bookItemID": 215370,
+    "spellID": 435848,
+    "profession": "Tailoring",
+    "bookLearningSkill": 150,
+    "confidence": "published-forever-availability-conflict",
+    "liveVerified": false,
+    "warningOnly": true,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern #215370: published Forever book page flags this item unavailable to players. Imported vendor/drop claims conflict; current learning route unresolved. Live availability unverified.",
+    "details": "The exact Forever book page is flagged unavailable and has no teaches-recipe table, although its tooltip names the expected spell and imported sources list vendors/drops. This can reflect inherited/historical data. Do not treat it as a reliable purchase or farming instruction, or conclude the finished gear is impossible through every route. Existing catalogue/eligibility is retained pending stronger evidence.",
+    "bookURL": "https://www.wowhead.com/forever/item=215370",
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=215370&xml": "69b3b221a62e1e3b6e8cd77c5c95419634954c35a1f0778741d1cb486eca3100",
+      "https://www.wowhead.com/forever/item=215370": "be7d71ce8d3b2d1f92c17bb63cb7f98e4cc3c50b7c003704f9d5dd86e5b328dd"
+    }
   }
 ]
