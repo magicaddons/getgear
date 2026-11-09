@@ -1,6 +1,6 @@
 # GetGear 1–60 acquisition reconciliation — release-readiness gate
 
-**Status: Beta 8 packaging/tag/public prerelease explicitly authorised by the user (9 November 2026); code validated locally and on GitHub; package/publication pending.**
+**Status: Beta 8 packaging/tag/public prerelease explicitly authorised by the user (9 November 2026); code/package validated; public asset upload blocked by environment network policy.**
 This is not a verified in-client release candidate. Research is paused; the authorised beta consolidates validated work with explicit source/live-client limitations.
 The existing public v0.14.0-beta7 prerelease is separate from this work. The current user instruction authorises the next beta ZIP/tag/prerelease. No merge or change to `main` is authorised.
 
@@ -161,3 +161,7 @@ User authorised [continuous sequential research](../OVERNIGHT_WORK_PLAN.md) acro
 ## Checkpoint 7D — 107 undocumented lower-level items; research pause for Beta 8
 
 [Exact source/availability audit](reconciliation-20261109/CHECKPOINT7D_LOW_LEVEL_UNDOCUMENTED_EQUIPMENT.md): 41 named-source cases, eight unavailable-page flags, ten cross-version warnings, 48 explicit unlocated origins. 55 NPC, 31 fishing and one object relationships; 47 NPC titles match, three missing maps remain unpinned. Seven Theramore IDs absent from checked quartermaster inventory remain unresolved; no source inferred from gear names. **Local full validation PASS; GitHub PASS.** Source commit `7b3ba3e0592e43182d90f257fce4524b340c5961`; [non-release CI 42602679107](https://github.com/magicaddons/getgear/actions/runs/42602679107) completed all steps; full logs confirm 14/14 regressions and 2,177 summaries. Inspected direct bot child/final HEAD `a907d939aea29fa9683a740514c4a8171b1318e3`: only provenance timestamp and three Everloot response hashes differ; generated runtime index and evidence match local validation. Compilation/full online reconciliation, three required files, 24 modules and 14/14 regressions; source/class/material/settings/filter safeguards intact. Index 2,177; equipment registry 214, recipe registry 954, added book IDs 759. One fresh Blackcrow community link remains live-unverified; remaining CSV churn is source-row offsets only. Six dungeon and 954 current book checks stay open. User has paused further research and explicitly authorised consolidating/publishing Beta 8; complete CI/bot review before packaging. No merge/main change authorised.
+
+## Beta 8 package ready; public release blocked
+
+User-authorised Beta 8 source/tag `543e5a248a018f8a9144e64aca655d242cf274e0` has complete local/GitHub PASS and a verified 29-file ZIP (SHA256 `f8435b632cede83dd79ddded6348a7e2f9995da08fe13e4f859466a10a97a732`). Tag pushed; draft release ID 439010698 has no assets. **Not published:** enforced cloud network policy excludes `uploads.github.com`, and uploads return HTTP403. User must add that domain in environment settings/apply; no environment-change tool is exposed here. [Exact handover and safe publication steps](../BETA8_RELEASE_HANDOVER.md). Research paused; main unchanged. Do not label the draft/tag a completed public release.

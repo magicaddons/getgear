@@ -26,3 +26,6 @@ Checkpoint 4's [consistency audit](docs/source-audit-1-60/reconciliation-2026110
 
 ## Current user steering — research paused; Beta 8 authorised
 On 9 November the user asked to pause research and publish a new version consolidating completed work. Prepare **v0.14.0-beta8 as a public prerelease**, package/tag/publish only after full local/non-release GitHub validation and bot review. This explicit instruction supplies the release approval required above; it does not authorise merging or changing main. No new research batches during release closeout. Keep in-client/live-data limitations explicit and persist release URL, exact tag/source commit, ZIP checksum and validation evidence. Continue research only after the user resumes it.
+
+## Immediate resume: finish authorised Beta 8 upload, not research
+See [release handover](docs/BETA8_RELEASE_HANDOVER.md). Beta 8 code/ZIP passed all validation; tag is pushed at `543e5a248a018f8a9144e64aca655d242cf274e0`. Draft release439010698 has no assets. Publication is blocked because enforced cloud network settings omit `uploads.github.com`; user has been asked to add/apply that domain. After current policy permits it, use normal upload to the retained draft, publish prerelease and verify downloaded bytes. No further release permission needed; do not bypass network policy, force tags, modify main or resume research.
