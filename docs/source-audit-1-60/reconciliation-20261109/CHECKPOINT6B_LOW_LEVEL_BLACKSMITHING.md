@@ -50,7 +50,9 @@ Generated-diff review: sourceRow shifts affect 48 dungeon rows and 28 recipe row
 
 **Local PASS:** Python compilation and full online reconciliation; three required generated files; Lua 5.4.7 syntax for all 24 manifest modules; 14/14 workflow regressions. Added ten exact book/source assertions, player-report uncertainty checks, real detailed-guide formatter execution and negative tests protecting original observations/materials/class masks. `git -c core.whitespace=cr-at-eol diff --check` passed.
 
-**GitHub PENDING:** only reconcile-all-acquisition.yml is permitted; record its completed result and bot HEAD before closing this checkpoint.
+**GitHub PASS:** [non-release run 42550577399](https://github.com/magicaddons/getgear/actions/runs/42550577399) completed at 2026-11-09T02:23:07Z (12:53 Adelaide), with all reconciliation, required-file, 24-module syntax, 14-test regression, artifact and development report-commit steps successful. Validated source commit `a05bd5fdd615730fefa0e97e2a823c5427707945`; verified bot final HEAD `26756f6367f10aa0ceeff91dd3d6dce8ce4ed3c1`. Compared bot output to the locally validated generation: identical evidence index and CSV/README contents; only three Everloot response hashes and timestamp differ in provenance.json.
+
+Git/CLI credentials briefly failed before push (Bad credentials / could not read Username). Published the nine reviewed source/documentation files through the connected GitHub integration with an expected-HEAD lease; CI regenerated the reports only after validation. CLI access subsequently recovered. Local commit `0043385c0e48390fce9c727ea47bb42d56b7c551` was preserved on `preserved-local-checkpoint6b`; required local development branch now tracks the verified CI result. No user credential action was needed. Documentation-only outcome closeout follows the bot commit.
 
 ## Remaining work and next bounded batch
 
