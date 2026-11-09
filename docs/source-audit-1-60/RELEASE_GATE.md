@@ -195,3 +195,7 @@ Research resumed from verified branch HEAD `f6c7b1986fec1840bd88b0320f5f071b55e1
 ## Checkpoint 8E — exact quest tiers and unresolved access
 
 [Ten mid-level quest items](reconciliation-20261109/CHECKPOINT8E_LEVEL31_50_QUESTS.md): 13 reward edges, 13 exact NPC joins; qualified Library 25-book tier, Arena 12-input/unknown-minimum and distinct centaur versions. Local full PASS 14/14, 24 modules, 3 files; GitHub **PASS [42620153753](https://github.com/magicaddons/getgear/actions/runs/42620153753)**; source `a2a21769e9e0949cab0ab09e4cbaff59acbdf871`, inspected bot `c7cb16e8b9af3fd80838a43db882cb7085fd56e3` changes only timestamp/three response hashes, all 14 PASS logs inspected. Equipment 424 / index 2,215 / recipes 954. No release authority; next 8F after CI/bot review.
+
+## 8F preservation — pending research integration
+
+[In-progress93-case evidence](reconciliation-20261109/CHECKPOINT8F_IN_PROGRESS.md) is saved; a supported missing craft is identified, but no8F runtime integration/full validation completed. Queue/registry/runtime counts unchanged from8E. Documentation-only identity/fingerprint checks PASS; retain full CI42620153753. No release authority.
