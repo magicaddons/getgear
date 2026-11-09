@@ -191,3 +191,7 @@ Research resumed from verified branch HEAD `f6c7b1986fec1840bd88b0320f5f071b55e1
 ## Checkpoint 8D — vendor level 31–40 details
 
 [71 cases](reconciliation-20261109/CHECKPOINT8D_LEVEL31_40_VENDORS.md): 67 named references/four unresolved exact origins; 75 exact merchant joins/11 maps. Local full PASS 14/14, 24 modules, 3 files; GitHub **PASS [42618811590](https://github.com/magicaddons/getgear/actions/runs/42618811590)**; source `c1daede10d072a461847185be86d4e0ef5b00eee`, inspected bot `d4110ea3c1bf821df92cb3939be64285a0ce1efe` changes only run timestamp/three response hashes. All 14 PASS logs inspected. Index 2,210 / equipment 414 / recipes 954. No release authority; next 8E only after CI/bot review.
+
+## Checkpoint 8E — exact quest tiers and unresolved access
+
+[Ten mid-level quest items](reconciliation-20261109/CHECKPOINT8E_LEVEL31_50_QUESTS.md): 13 reward edges, 13 exact NPC joins; qualified Library25-book tier, Arena12-input/unknown-minimum and distinct centaur versions. Local full PASS14/14,24 modules,3 files; GitHub **PENDING** (latest completed baseline42618811590). Equipment424/index2,215/recipes954. No release authority; next8F after CI/bot review.

@@ -1337,6 +1337,34 @@ assert(addon.ItemCatalog[276200].acquisitionResearch.details:find("Powderfuse - 
 assert(addon.ItemCatalog[19544].acquisitionResearch.details:find("Warsong Outriders - Revered",1,true)
     and addon.ItemCatalog[19512].acquisitionResearch.details:find("Warsong Outriders - Honored",1,true))
 
+-- Checkpoint 8E: missing quest minimums, library thresholds and centaur versions do not merge.
+local midLevelQuests={6773,6774,6788,19024,271800,271802,271804,277254,277258,277260}
+for _,id in ipairs(midLevelQuests) do
+    local a=assert(addon.ItemCatalog[id]).acquisitionResearch
+    assert(a.equipmentReference and not a.recipeReference
+        and a.sourceSummary:find("unverified",1,true))
+end
+local arena=addon.ItemCatalog[19024].acquisitionResearch.details
+assert(arena:find("12 Arena Master #18706",1,true)
+    and arena:find("quest minimum remains unknown",1,true)
+    and arena:find("not proof Grandmaster #7838 also does",1,true)
+    and arena:find("Arena Treasure Chest #179697",1,true)
+    and arena:find("Arena Spoils #277534",1,true))
+for _,id in ipairs({277254,277258,277260}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("25 donated books to exact quest #82208",1,true)
+        and d:find("20 books belongs to different quest #79536",1,true)
+        and d:find("no obsolete Mage-only rune gate",1,true)
+        and d:find("does not list #82208 as a start",1,true))
+end
+for _,id in ipairs({271800,271804}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("resurrection ritual choice reward, not a kill-drop",1,true)
+        and d:find("Side None",1,true) and d:find("No exact Orgrul NPC ID",1,true))
+end
+assert(addon.ItemCatalog[271802].acquisitionResearch.details:find("Horde/Gelkis Honored kill-objective route",1,true))
+assert(addon.ItemCatalog[6788].acquisitionResearch.details:find("no published clan-standing objective",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),

@@ -968,10 +968,10 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 6730,Ironforge Chain,11,Blacksmithing,client,Crafted,Crafted,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference,,False
 6731,Ironforge Breastplate,15,Blacksmithing,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference-with-pattern-item,"Plans: Ironforge Breastplate (#6735), Blacksmithing 100; quest references: Alliance: Gearing Redridge (#1618) from Tormus Deepforge, Ironforge (published; current availability/prerequisites unverified).",False
 6733,Ironforge Gauntlets,23,Blacksmithing,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference,,False
-6773,Kolkar Marauder Chain,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Hratha, Desolace",0,False,,,,Quest: Khan Hratha — Desolace (Forever reference; quest eligibility unverified),False
-6774,Traitor's Finger,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Hratha, Desolace",0,False,,,,Quest: Khan Hratha — Desolace (Forever reference; quest eligibility unverified),False
+6773,Kolkar Marauder Chain,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Hratha, Desolace",0,False,,,,"Quest reference: Khan Hratha #1380 (Both, minimum 30) / Khan Hratha #96222 (Both, minimum 35) (current eligibility/chain unverified).",False
+6774,Traitor's Finger,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Hratha, Desolace",0,False,,,,"Quest reference: Khan Hratha #1380 (Both, minimum 30) / Khan Hratha #96222 (Both, minimum 35) (current eligibility/chain unverified).",False
 6787,White Woolen Dress,17,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference,,False
-6788,Kolkar Hunter's Belt,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Hratha, Desolace",0,False,,,,Quest: Khan Hratha — Desolace (Forever reference; quest eligibility unverified),False
+6788,Kolkar Hunter's Belt,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Hratha, Desolace",0,False,,,,"Quest reference: Khan Hratha #1381 (Both, minimum 30) / Khan Hratha #96222 (Both, minimum 35) (current eligibility/chain unverified).",False
 6898,Orb of Soran'ruk,20,Quest,classic-reference,Quest,Quest Rewards,quest,1,"quest: The Orb of Soran'ruk, The Barrens",0,False,,,,"Quest reference: The Orb of Soran'ruk #1740 (Both, minimum 20) (current eligibility/chain unverified).",False
 6902,Bands of Serra'kis,22,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Old Serra'kis, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Old Serra'kis (Forever reference; live unverified),False
 6903,Gaze Dreamer Pants,23,Dungeon,observed,Dungeon,Blackfathom Deeps,boss,1,"boss: Twilight Lord Kelris, Blackfathom Deeps",0,True,boss,forever-community-reference,,,False
@@ -4028,7 +4028,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 18948,Barbaric Bracers,27,Leatherworking,client,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Barbaric Bracers (#18949), Leatherworking 130; vendor references: Saenorion — Darnassus; Joseph Moore — Undercity (published; live stock/access unverified).",False
 18957,Brushwood Blade,1,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Druid of the Claw, Teldrassil (Alliance)",0,False,,,,"Quest reference: Druid of the Claw #2561 (Alliance, minimum 3) (current eligibility/chain unverified).",False
 19019,"Thunderfury, Blessed Blade of the Windseeker",60,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Rise, Thunderfury!, ",0,False,,,,,False
-19024,Arena Grand Master,50,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Arena Grandmaster, Stranglethorn Vale",0,False,,,,Quest: Arena Grandmaster — Stranglethorn Vale (Forever reference; quest eligibility unverified),False
+19024,Arena Grand Master,50,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Arena Grandmaster, Stranglethorn Vale",0,False,,,,"Quest reference: Arena Grandmaster #7838 (Both, minimum unknown) (current eligibility/chain unverified).",False
 19043,Heavy Timbermaw Belt,53,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False
 19044,Might of the Timbermaw,53,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Might of the Timbermaw (#19326), Leatherworking 265; published vendor references: Meilosh — Felwood (live stock/access unverified). Published requirement: Honored with Timbermaw Hold.",False
 19047,Wisdom of the Timbermaw,53,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Wisdom of the Timbermaw (#19215), Tailoring 255; published vendor references: Meilosh — Felwood (live stock/access unverified). Published requirement: Honored with Timbermaw Hold.",False
@@ -6339,11 +6339,11 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 271797,Staff of Revelations,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
 271798,Desperate Barrier,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
 271799,Desert Crawler's Claw,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
-271800,Scavenged Magram Armament,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,,0,,0,False,,,,,False
+271800,Scavenged Magram Armament,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,,0,,0,False,,,,"Quest reference: Khan Jehn #93196 (unspecified side, minimum 35) (current eligibility/chain unverified).",False
 271801,Abandoned Ferocity,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
-271802,Bludgeon of Betrayed Virtues,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Jehn, Desolace",0,False,,,,Quest: Khan Jehn — Desolace (Forever reference; quest eligibility unverified),False
+271802,Bludgeon of Betrayed Virtues,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Jehn, Desolace",0,False,,,,"Quest reference: Khan Jehn #93128 (Horde, minimum 35) (current eligibility/chain unverified).",False
 271803,Greatstaff of the Necrokhans,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
-271804,Soulsplatter Mace,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,,0,,0,False,,,,,False
+271804,Soulsplatter Mace,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,,0,,0,False,,,,"Quest reference: Khan Jehn #93196 (unspecified side, minimum 35) (current eligibility/chain unverified).",False
 271805,Thrice-Damned Effigy,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
 271903,Enriched Seal,48,Source not documented,classic-reference,Other,Unknown source,reputation,1,"reputation: Theramore Expeditionary Force, ",0,False,,,,,False
 271904,Volunteer's Lucky Seal,33,Source not documented,classic-reference,Other,Unknown source,reputation,1,"reputation: Theramore Expeditionary Force, ",0,False,,,,,False
@@ -7363,11 +7363,11 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 277245,Swampspine Crusher,40,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
 277248,Notched Ritual Rib,40,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
 277250,The Skullcracker,40,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
-277254,Truthseeker's Bow,40,Quest reward (eligibility unverified),client,Quest,Quest Rewards,,0,,0,False,,,,,False
+277254,Truthseeker's Bow,40,Quest reward (eligibility unverified),client,Quest,Quest Rewards,,0,,0,False,,,,"Quest reference: Greater Friend of the Library #82208 (Both, minimum 35) (current eligibility/chain unverified).",False
 277256,Dudd's Second-Favorite Wand,40,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
-277258,Crest of Elucidation,40,Quest reward (eligibility unverified),client,Quest,Quest Rewards,,0,,0,False,,,,,False
+277258,Crest of Elucidation,40,Quest reward (eligibility unverified),client,Quest,Quest Rewards,,0,,0,False,,,,"Quest reference: Greater Friend of the Library #82208 (Both, minimum 35) (current eligibility/chain unverified).",False
 277259,Fermented Restoration Potion,40,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
-277260,Researcher's Night Light,40,Quest reward (eligibility unverified),client,Quest,Quest Rewards,,0,,0,False,,,,,False
+277260,Researcher's Night Light,40,Quest reward (eligibility unverified),client,Quest,Quest Rewards,,0,,0,False,,,,"Quest reference: Greater Friend of the Library #82208 (Both, minimum 35) (current eligibility/chain unverified).",False
 277672,Rough Copper Chain Boots,4,Blacksmithing,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference-with-pattern-item,"Plans: Rough Copper Chain Boots (#277673), Blacksmithing 50; quest references: Alliance: The Quarry's Smith (#95217) from Frast Dokner, Dun Morogh; published quest minimum level 7 / Horde: This Is Spinal Axe (#96874) from Ug'thok, Orgrimmar; published quest minimum level 6 (published; current availability/prerequisites unverified).",False
 277844,Mirage Mirror,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False
 277910,Mysticbloom Seed,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,,False

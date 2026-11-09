@@ -35,3 +35,7 @@ All 34 selected lower-level quest-family IDs publication-researched: 32 rewards/
 ## Checkpoint 8D complete
 
 71 vendor level 31–40 cases researched; full local PASS 14/14, 24 modules, 3 files. GitHub PASS 42618811590; source c1daede10d072a461847185be86d4e0ef5b00eee, inspected bot d4110ea3c1bf821df92cb3939be64285a0ce1efe changes run timestamp/three response hashes only; all 14 PASS logs verified. Equipment 414, index 2,210, recipes 954. Exact queue 5,488 remaining; **ten quest-family level 31–50 IDs marked 8E** are next, followed by 31–40 undocumented cases. Four exact missing Mail/Lamellar origins stay unresolved.
+
+## Checkpoint 8E in validation
+
+Ten quest-family level31–50 cases researched; full local PASS14/14,24 modules,3 files and Python syntax/online reconciliation. GitHub pending source push: finish run/inspect bot before next. Equipment424/index2,215/recipes954. Exact queue5,478 remaining; **93 undocumented-source level31–40 IDs marked8F** are next. Keep Library threshold/Horde acceptance, Arena unknown minimum/current chest, and centaur giver/phase/version exceptions explicit.
