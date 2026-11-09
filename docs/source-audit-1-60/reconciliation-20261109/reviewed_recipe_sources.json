@@ -25400,5 +25400,1865 @@
       "https://www.wowhead.com/forever/item=280328&xml": "f593dfe023e8aa613acb65297e4af4c34ca2c994a2d23e3e0865d2ae3a1dc1ed",
       "https://www.wowhead.com/forever/item=280328": "8e73b7c9b240112608b7d75d92b7c89151668868801ab97934b3a2d7cedc97c1"
     }
+  },
+  {
+    "itemID": 7916,
+    "name": "Barbaric Iron Boots",
+    "bookItemID": 7981,
+    "spellID": 9818,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 155,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Barbaric Iron Boots (#7981), Blacksmithing 155; quest references: Trampled Under Foot (#2753), Horde, minimum quest level 32; start Orokk Omosh (NPC 7790), Orgrimmar (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nTrampled Under Foot (#2753): start Orokk Omosh (NPC 7790), Orgrimmar; turn in to Orokk Omosh (NPC 7790), Orgrimmar. Published reward: this exact book; Horde; minimum quest level 32 (separate from gear equip level and book learning skill). Orokk Omosh published map footprint: Orgrimmar x 78.4\u201379.6, y 21.4\u201322.6. Published quest delivery objectives: 4 x Green Iron Helms (#3836), 4 x Green Iron Bracers (#3835), 2 x Green Iron Leggings (#3842). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=7981",
+    "questReferences": [
+      {
+        "questID": 2753,
+        "name": "Trampled Under Foot",
+        "faction": "Horde",
+        "minimumLevelField": 32,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 3836,
+            "amount": 4,
+            "name": "Green Iron Helms",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 3835,
+            "amount": 4,
+            "name": "Green Iron Bracers",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 3842,
+            "amount": 2,
+            "name": "Green Iron Leggings",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2753",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7981&xml": "fe63bbbebcccfcb9857088039e1ce96e1d5624390b7b1e7e7dcc882f45142e6a",
+      "https://www.wowhead.com/forever/item=7981": "a7c02ccacb7503f0a86a782c42e525f2684d6099edc5a2e9584fe69a7d116820",
+      "https://www.wowhead.com/forever/quest=2753": "3c52e8632c716957460dc718e20204e8b43c1e01506479eab009e4b4a3642e24"
+    }
+  },
+  {
+    "itemID": 7917,
+    "name": "Barbaric Iron Gloves",
+    "bookItemID": 7982,
+    "spellID": 9820,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 160,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Barbaric Iron Gloves (#7982), Blacksmithing 160; quest references: Joys of Omosh (#2755), Horde, minimum quest level 32; start Orokk Omosh (NPC 7790), Orgrimmar (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nJoys of Omosh (#2755): start Orokk Omosh (NPC 7790), Orgrimmar; turn in to Orokk Omosh (NPC 7790), Orgrimmar. Published reward: this exact book; Horde; minimum quest level 32 (separate from gear equip level and book learning skill). Orokk Omosh published map footprint: Orgrimmar x 78.4\u201379.6, y 21.4\u201322.6. Objective: watch and learn the Omosh Dance of Joy. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=7982",
+    "questReferences": [
+      {
+        "questID": 2755,
+        "name": "Joys of Omosh",
+        "faction": "Horde",
+        "minimumLevelField": 32,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7790,
+          "name": "Orokk Omosh"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2755",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7982&xml": "167c03210d16e67dfaafb334c7f75d2f803ed57d88c295bc45a12224620c42f9",
+      "https://www.wowhead.com/forever/item=7982": "7ef0d998d441395779722420150cbe2dbdcdc38cdb7ce6fba7a345dc881ea52e",
+      "https://www.wowhead.com/forever/quest=2755": "bee72b97b024b7c64dbad26ef6d5474a82ca0bda803ffddef427f0bc4093dd90"
+    }
+  },
+  {
+    "itemID": 7926,
+    "name": "Ornate Mithril Pants",
+    "bookItemID": 7983,
+    "spellID": 9945,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 195,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Ornate Mithril Pants (#7983), Blacksmithing 195; quest references: Smelt On, Smelt Off (#2761), Both factions, minimum quest level 40; start Galvan the Ancient (NPC 7802), Stranglethorn Vale (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nSmelt On, Smelt Off (#2761): start Galvan the Ancient (NPC 7802), Stranglethorn Vale; turn in to Galvan the Ancient (NPC 7802), Stranglethorn Vale. Published reward: this exact book; Both factions; minimum quest level 40 (separate from gear equip level and book learning skill). Galvan the Ancient published map footprint: Stranglethorn Vale x 50.4\u201350.6, y 20.4\u201320.6. Published quest delivery objectives: 40 x Iron Bars (#3575), 40 x Mithril Bars (#3860). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=7983",
+    "questReferences": [
+      {
+        "questID": 2761,
+        "name": "Smelt On, Smelt Off",
+        "faction": "Both factions",
+        "minimumLevelField": 40,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7802,
+          "name": "Galvan the Ancient"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7802,
+          "name": "Galvan the Ancient"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 3575,
+            "amount": 40,
+            "name": "Iron Bars",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 3860,
+            "amount": 40,
+            "name": "Mithril Bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2761",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7983&xml": "9cf2297dcd7f67b9e77f9f448efe4b6fad4e1b35a686cf3deb5b76f6b6d1b77f",
+      "https://www.wowhead.com/forever/item=7983": "a4d0432344598818c7b5768ece1118db68dbdbe1f38c8cb9e068c5ac1899558a",
+      "https://www.wowhead.com/forever/quest=2761": "4937c1e5888c230638d0cc8bdb9422c2e466d998f0fd8b988ef99be759b6eeb8"
+    }
+  },
+  {
+    "itemID": 7927,
+    "name": "Ornate Mithril Gloves",
+    "bookItemID": 7984,
+    "spellID": 9950,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 195,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Ornate Mithril Gloves (#7984), Blacksmithing 195; quest references: The Great Silver Deceiver (#2762), Both factions, minimum quest level 40; start Galvan the Ancient (NPC 7802), Stranglethorn Vale (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nThe Great Silver Deceiver (#2762): start Galvan the Ancient (NPC 7802), Stranglethorn Vale; turn in to Galvan the Ancient (NPC 7802), Stranglethorn Vale. Published reward: this exact book; Both factions; minimum quest level 40 (separate from gear equip level and book learning skill). Galvan the Ancient published map footprint: Stranglethorn Vale x 50.4\u201350.6, y 20.4\u201320.6. Quest metadata lists Warrior, Paladin; current quest-class access unverified. This is not applied to the gear catalogue or filters. Published quest delivery objectives: 40 x Mithril Bars (#3860), 5 x Truesilver Bars (#6037). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=7984",
+    "questReferences": [
+      {
+        "questID": 2762,
+        "name": "The Great Silver Deceiver",
+        "faction": "Both factions",
+        "minimumLevelField": 40,
+        "classIDs": [
+          1,
+          2
+        ],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7802,
+          "name": "Galvan the Ancient"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7802,
+          "name": "Galvan the Ancient"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 3860,
+            "amount": 40,
+            "name": "Mithril Bars",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 6037,
+            "amount": 5,
+            "name": "Truesilver Bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2762",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7984&xml": "cae4910b47c37de2be981365b22a236ffb2e7b5fced16110ebb4c6ad5816e356",
+      "https://www.wowhead.com/forever/item=7984": "eef8ddbe3131838c193393bc19da1d4e4f9058cb0ee59432d2b3680bfeb70729",
+      "https://www.wowhead.com/forever/quest=2762": "3979dc36009cd1f04d5ec44afdcccd2521ab68812593d696db1d936a3f190f3e"
+    }
+  },
+  {
+    "itemID": 7928,
+    "name": "Ornate Mithril Shoulders",
+    "bookItemID": 7985,
+    "spellID": 9952,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 200,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Ornate Mithril Shoulders (#7985), Blacksmithing 200; quest references: The Art of the Imbue (#2763), Both factions, minimum quest level 40; start Galvan the Ancient (NPC 7802), Stranglethorn Vale (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nThe Art of the Imbue (#2763): start Galvan the Ancient (NPC 7802), Stranglethorn Vale; turn in to Galvan the Ancient (NPC 7802), Stranglethorn Vale. Published reward: this exact book; Both factions; minimum quest level 40 (separate from gear equip level and book learning skill). Galvan the Ancient published map footprint: Stranglethorn Vale x 50.4\u201350.6, y 20.4\u201320.6. Quest metadata lists Warrior, Paladin; current quest-class access unverified. This is not applied to the gear catalogue or filters. Published quest delivery objectives: 40 x Mithril Bars (#3860), 4 x Citrines (#3864). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=7985",
+    "questReferences": [
+      {
+        "questID": 2763,
+        "name": "The Art of the Imbue",
+        "faction": "Both factions",
+        "minimumLevelField": 40,
+        "classIDs": [
+          1,
+          2
+        ],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7802,
+          "name": "Galvan the Ancient"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7802,
+          "name": "Galvan the Ancient"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 3860,
+            "amount": 40,
+            "name": "Mithril Bars",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 3864,
+            "amount": 4,
+            "name": "Citrines",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2763",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=7985&xml": "4b4910e614f9491ef9e26841f18f3dcfe86a1a47eaf7ebd3fe11a2b4c8db99dd",
+      "https://www.wowhead.com/forever/item=7985": "48b06b079a36662ce00cc81c4368ecd247b25e141c0bd5b20f4592ef432110c1",
+      "https://www.wowhead.com/forever/quest=2763": "9e91dc5c7cd3e9a6226e709dd5f93151595fa334653f62bebe23e34d7035e7d3"
+    }
+  },
+  {
+    "itemID": 8210,
+    "name": "Wild Leather Shoulders",
+    "bookItemID": 8403,
+    "spellID": 10529,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 195,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Wild Leather Shoulders (#8403), Leatherworking 195; quest references: Wild Leather Shoulders (#2848), Alliance, minimum quest level 30; start Pratt McGrubben (NPC 7852), Feralas / Wild Leather Shoulders (#2855), Horde, minimum quest level 30; start Jangdor Swiftstrider (NPC 7854), Feralas (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nWild Leather Shoulders (#2848): start Pratt McGrubben (NPC 7852), Feralas; turn in to Pratt McGrubben (NPC 7852), Feralas. Published reward: this exact book; Alliance; minimum quest level 30 (separate from gear equip level and book learning skill). Pratt McGrubben published map footprint: Feralas x 30.4\u201330.6, y 42.6\u201342.8. Published quest delivery objectives: 6 x Thick Armor Kits (#8173), 1 x Wildvine (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.\nWild Leather Shoulders (#2855): start Jangdor Swiftstrider (NPC 7854), Feralas; turn in to Jangdor Swiftstrider (NPC 7854), Feralas. Published reward: this exact book; Horde; minimum quest level 30 (separate from gear equip level and book learning skill). Jangdor Swiftstrider published map footprint: Feralas x 74.4\u201374.6, y 42.8\u201342.8. Published quest delivery objectives: 6 x Thick Armor Kits (#8173), 1 x Wildvine (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=8403",
+    "questReferences": [
+      {
+        "questID": 2848,
+        "name": "Wild Leather Shoulders",
+        "faction": "Alliance",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8173,
+            "amount": 6,
+            "name": "Thick Armor Kits",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 1,
+            "name": "Wildvine",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2848",
+        "alsoRewardsFinishedGear": false
+      },
+      {
+        "questID": 2855,
+        "name": "Wild Leather Shoulders",
+        "faction": "Horde",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8173,
+            "amount": 6,
+            "name": "Thick Armor Kits",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 1,
+            "name": "Wildvine",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2855",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=8403&xml": "643c8987697c364c13119026e3d17582cd177c9476b4c2eb37636409f3969534",
+      "https://www.wowhead.com/forever/item=8403": "44ff895189028edcb1b9f3dfd49eb1a06d4987d5dc90ec017af1fd6f4a85e842",
+      "https://www.wowhead.com/forever/quest=2848": "4b7d6f5a8cbe0a1551f19816b988dadb61f9627cdb93e4dc007b1d75a2a1c543",
+      "https://www.wowhead.com/forever/quest=2855": "ce28ea3271a43c8903677115b75733a16925ee63cb9681fdd24bc5a301de360a"
+    }
+  },
+  {
+    "itemID": 8211,
+    "name": "Wild Leather Vest",
+    "bookItemID": 8404,
+    "spellID": 10544,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 200,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Wild Leather Vest (#8404), Leatherworking 200; quest references: Wild Leather Vest (#2849), Alliance, minimum quest level 30; start Pratt McGrubben (NPC 7852), Feralas / Wild Leather Vest (#2856), Horde, minimum quest level 30; start Jangdor Swiftstrider (NPC 7854), Feralas (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nWild Leather Vest (#2849): start Pratt McGrubben (NPC 7852), Feralas; turn in to Pratt McGrubben (NPC 7852), Feralas. Published reward: this exact book; Alliance; minimum quest level 30 (separate from gear equip level and book learning skill). Pratt McGrubben published map footprint: Feralas x 30.4\u201330.6, y 42.6\u201342.8. Published quest delivery objectives: 2 x Turtle Scale Breastplates (#8189), 2 x Turtle Scale Gloves (#8187), 1 x Wildvine (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.\nWild Leather Vest (#2856): start Jangdor Swiftstrider (NPC 7854), Feralas; turn in to Jangdor Swiftstrider (NPC 7854), Feralas. Published reward: this exact book; Horde; minimum quest level 30 (separate from gear equip level and book learning skill). Jangdor Swiftstrider published map footprint: Feralas x 74.4\u201374.6, y 42.8\u201342.8. Published quest delivery objectives: 2 x Turtle Scale Breastplates (#8189), 2 x Turtle Scale Gloves (#8187), 1 x Wildvine (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=8404",
+    "questReferences": [
+      {
+        "questID": 2849,
+        "name": "Wild Leather Vest",
+        "faction": "Alliance",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8189,
+            "amount": 2,
+            "name": "Turtle Scale Breastplates",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8187,
+            "amount": 2,
+            "name": "Turtle Scale Gloves",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 1,
+            "name": "Wildvine",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2849",
+        "alsoRewardsFinishedGear": false
+      },
+      {
+        "questID": 2856,
+        "name": "Wild Leather Vest",
+        "faction": "Horde",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8189,
+            "amount": 2,
+            "name": "Turtle Scale Breastplates",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8187,
+            "amount": 2,
+            "name": "Turtle Scale Gloves",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 1,
+            "name": "Wildvine",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2856",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=8404&xml": "9c7fea93a95f4661856ee6cf4eeed7f426bbb5f5525fa052a014ac6dc4d7b86a",
+      "https://www.wowhead.com/forever/item=8404": "fcb744f0cdbd70d16b0067f006d744e78124e04ee248323dedb85c5fdc282ca3",
+      "https://www.wowhead.com/forever/quest=2849": "9f040f790e1369ce898cad28eee9dba8efd3b86cbd7548fe04f3e7676bddb29e",
+      "https://www.wowhead.com/forever/quest=2856": "167152c318d86a6877fb98d38cfa9f0793aa60ee08b367f3f49c0fcb59387134"
+    }
+  },
+  {
+    "itemID": 8214,
+    "name": "Wild Leather Helmet",
+    "bookItemID": 8405,
+    "spellID": 10546,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 200,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Wild Leather Helmet (#8405), Leatherworking 200; quest references: Wild Leather Helmet (#2850), Alliance, minimum quest level 30; start Pratt McGrubben (NPC 7852), Feralas / Wild Leather Helmet (#2857), Horde, minimum quest level 30; start Jangdor Swiftstrider (NPC 7854), Feralas (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nWild Leather Helmet (#2850): start Pratt McGrubben (NPC 7852), Feralas; turn in to Pratt McGrubben (NPC 7852), Feralas. Published reward: this exact book; Alliance; minimum quest level 30 (separate from gear equip level and book learning skill). Pratt McGrubben published map footprint: Feralas x 30.4\u201330.6, y 42.6\u201342.8. Published quest delivery objectives: 2 x Nightscape Tunics (#8175), 2 x Nightscape Headbands (#8176), 1 x Wildvine (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.\nWild Leather Helmet (#2857): start Jangdor Swiftstrider (NPC 7854), Feralas; turn in to Jangdor Swiftstrider (NPC 7854), Feralas. Published reward: this exact book; Horde; minimum quest level 30 (separate from gear equip level and book learning skill). Jangdor Swiftstrider published map footprint: Feralas x 74.4\u201374.6, y 42.8\u201342.8. Published quest delivery objectives: 2 x Nightscape Tunics (#8175), 2 x Nightscape Headbands (#8176), 1 x Wildvine (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=8405",
+    "questReferences": [
+      {
+        "questID": 2850,
+        "name": "Wild Leather Helmet",
+        "faction": "Alliance",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8175,
+            "amount": 2,
+            "name": "Nightscape Tunics",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8176,
+            "amount": 2,
+            "name": "Nightscape Headbands",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 1,
+            "name": "Wildvine",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2850",
+        "alsoRewardsFinishedGear": false
+      },
+      {
+        "questID": 2857,
+        "name": "Wild Leather Helmet",
+        "faction": "Horde",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8175,
+            "amount": 2,
+            "name": "Nightscape Tunics",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8176,
+            "amount": 2,
+            "name": "Nightscape Headbands",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 1,
+            "name": "Wildvine",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2857",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=8405&xml": "b5f869919618b3e2223212ada29d4efc51159d253c7202877e196fca8dd377b8",
+      "https://www.wowhead.com/forever/item=8405": "11262323c9f0ec33b7ad8873cf8475673080062c0fce207ccb505a9aa1eb3fd6",
+      "https://www.wowhead.com/forever/quest=2850": "11b0b71de9f6065439ede8a32fe5d2f37272794c7879920a094599c4e0953300",
+      "https://www.wowhead.com/forever/quest=2857": "e419006ae366759b4548f8ef24cd3277dbc05372cae85dcc33b4fafc90d4b913"
+    }
+  },
+  {
+    "itemID": 8213,
+    "name": "Wild Leather Boots",
+    "bookItemID": 8406,
+    "spellID": 10566,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 220,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Wild Leather Boots (#8406), Leatherworking 220; quest references: Wild Leather Boots (#2851), Alliance, minimum quest level 30; start Pratt McGrubben (NPC 7852), Feralas / Wild Leather Boots (#2858), Horde, minimum quest level 30; start Jangdor Swiftstrider (NPC 7854), Feralas (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nWild Leather Boots (#2851): start Pratt McGrubben (NPC 7852), Feralas; turn in to Pratt McGrubben (NPC 7852), Feralas. Published reward: this exact book; Alliance; minimum quest level 30 (separate from gear equip level and book learning skill). Pratt McGrubben published map footprint: Feralas x 30.4\u201330.6, y 42.6\u201342.8. Published quest delivery objectives: 2 x Nightscape Pants (#8193), 2 x Nightscape Boots (#8197), 2 x Wildvines (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.\nWild Leather Boots (#2858): start Jangdor Swiftstrider (NPC 7854), Feralas; turn in to Jangdor Swiftstrider (NPC 7854), Feralas. Published reward: this exact book; Horde; minimum quest level 30 (separate from gear equip level and book learning skill). Jangdor Swiftstrider published map footprint: Feralas x 74.4\u201374.6, y 42.8\u201342.8. Published quest delivery objectives: 2 x Nightscape Pants (#8193), 2 x Nightscape Boots (#8197), 2 x Wildvines (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=8406",
+    "questReferences": [
+      {
+        "questID": 2851,
+        "name": "Wild Leather Boots",
+        "faction": "Alliance",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8193,
+            "amount": 2,
+            "name": "Nightscape Pants",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8197,
+            "amount": 2,
+            "name": "Nightscape Boots",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 2,
+            "name": "Wildvines",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2851",
+        "alsoRewardsFinishedGear": false
+      },
+      {
+        "questID": 2858,
+        "name": "Wild Leather Boots",
+        "faction": "Horde",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8193,
+            "amount": 2,
+            "name": "Nightscape Pants",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8197,
+            "amount": 2,
+            "name": "Nightscape Boots",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 2,
+            "name": "Wildvines",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2858",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=8406&xml": "ccfc0a1f78dfb0d6521b89e2c6013ed8ffc69d289603492151711636be4bc3ce",
+      "https://www.wowhead.com/forever/item=8406": "5e12f16cf39879a27550d871f04116a14ffecb232949f3b76546d0b97a7bbc2f",
+      "https://www.wowhead.com/forever/quest=2851": "43cc2e88a2e25ed086b1f79424ebb32209db070d34d1e6cd471df4cdd38515e9",
+      "https://www.wowhead.com/forever/quest=2858": "0160ed23302c5a527ce4987149119958aff2e656e002592f3eaed699924b750c"
+    }
+  },
+  {
+    "itemID": 8212,
+    "name": "Wild Leather Leggings",
+    "bookItemID": 8407,
+    "spellID": 10572,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 225,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Wild Leather Leggings (#8407), Leatherworking 225; quest references: Wild Leather Leggings (#2852), Alliance, minimum quest level 30; start Pratt McGrubben (NPC 7852), Feralas / Wild Leather Leggings (#2859), Horde, minimum quest level 30; start Jangdor Swiftstrider (NPC 7854), Feralas (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nWild Leather Leggings (#2852): start Pratt McGrubben (NPC 7852), Feralas; turn in to Pratt McGrubben (NPC 7852), Feralas. Published reward: this exact book; Alliance; minimum quest level 30 (separate from gear equip level and book learning skill). Pratt McGrubben published map footprint: Feralas x 30.4\u201330.6, y 42.6\u201342.8. Published quest delivery objectives: 2 x Turtle Scale Helms (#8191), 2 x Turtle Scale Bracers (#8198), 2 x Wildvines (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.\nWild Leather Leggings (#2859): start Jangdor Swiftstrider (NPC 7854), Feralas; turn in to Jangdor Swiftstrider (NPC 7854), Feralas. Published reward: this exact book; Horde; minimum quest level 30 (separate from gear equip level and book learning skill). Jangdor Swiftstrider published map footprint: Feralas x 74.4\u201374.6, y 42.8\u201342.8. Published quest delivery objectives: 2 x Turtle Scale Helms (#8191), 2 x Turtle Scale Bracers (#8198), 2 x Wildvines (#8153). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=8407",
+    "questReferences": [
+      {
+        "questID": 2852,
+        "name": "Wild Leather Leggings",
+        "faction": "Alliance",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7852,
+          "name": "Pratt McGrubben"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8191,
+            "amount": 2,
+            "name": "Turtle Scale Helms",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8198,
+            "amount": 2,
+            "name": "Turtle Scale Bracers",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 2,
+            "name": "Wildvines",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2852",
+        "alsoRewardsFinishedGear": false
+      },
+      {
+        "questID": 2859,
+        "name": "Wild Leather Leggings",
+        "faction": "Horde",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7854,
+          "name": "Jangdor Swiftstrider"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 8191,
+            "amount": 2,
+            "name": "Turtle Scale Helms",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8198,
+            "amount": 2,
+            "name": "Turtle Scale Bracers",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 8153,
+            "amount": 2,
+            "name": "Wildvines",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2859",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=8407&xml": "f77e4345d7db65ecf20a801ba24ef71029f16fb74e41b8e5a048c591cc1b9919",
+      "https://www.wowhead.com/forever/item=8407": "70c7b3d9e0bb1aad514e4f608aa6b4a8cc9f7a4dd7fec5da4dbddc5a5a64ecc4",
+      "https://www.wowhead.com/forever/quest=2852": "a99b47516c80a547b10aae5522eb4b78f444b1936bf754bc6f9d3859dfb122c0",
+      "https://www.wowhead.com/forever/quest=2859": "2d93a59b617ee2b74066c83c61dde66dc2e7fb42e0bcc7744f3b81d38c80287c"
+    }
+  },
+  {
+    "itemID": 9366,
+    "name": "Golden Scale Gauntlets",
+    "bookItemID": 9367,
+    "spellID": 11643,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 180,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Golden Scale Gauntlets (#9367), Blacksmithing 180; quest references: The Origins of Smithing (#2758), Alliance, minimum quest level 40; start Hank the Hammer (NPC 7798), Stormwind City (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nThe Origins of Smithing (#2758): start Hank the Hammer (NPC 7798), Stormwind City; turn in to Hank the Hammer (NPC 7798), Stormwind City. Published reward: this exact book; Alliance; minimum quest level 40 (separate from gear equip level and book learning skill). Hank the Hammer published map footprint: Stormwind City x 56\u201363, y 15.2\u201336.8. Quest metadata lists Warrior, Paladin; current quest-class access unverified. This is not applied to the gear catalogue or filters. Published quest delivery objectives: 6 x Golden Scale Bracers (#6040). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=9367",
+    "questReferences": [
+      {
+        "questID": 2758,
+        "name": "The Origins of Smithing",
+        "faction": "Alliance",
+        "minimumLevelField": 40,
+        "classIDs": [
+          1,
+          2
+        ],
+        "raceIDs": [
+          1,
+          3,
+          4
+        ],
+        "startEntity": {
+          "kind": "npc",
+          "id": 7798,
+          "name": "Hank the Hammer"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 7798,
+          "name": "Hank the Hammer"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 6040,
+            "amount": 6,
+            "name": "Golden Scale Bracers",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=2758",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=9367&xml": "0d5245b70787e323105ed252ec5e8f6e37816f71cdede97cde9c0be8b9208cb0",
+      "https://www.wowhead.com/forever/item=9367": "f2df08907fa77cf741473dfc02b29db4b8e01ad3c70a78f4bc73d9256a6bab7d",
+      "https://www.wowhead.com/forever/quest=2758": "562fa0f339769e64d068ac93a8088f467a7560962fac3f76cad917bddca314e6"
+    }
+  },
+  {
+    "itemID": 10025,
+    "name": "Shadoweave Mask",
+    "bookItemID": 10463,
+    "spellID": 12086,
+    "profession": "Tailoring",
+    "bookLearningSkill": 200,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Shadoweave Mask (#10463), Tailoring 200; quest references: The Undermarket (#3402), Both factions, minimum quest level 40; start Nilith Lokrav (NPC 8439), Searing Gorge (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nThe Undermarket (#3402): start Nilith Lokrav (NPC 8439), Searing Gorge; turn in to Vizzklick (NPC 6568), Tanaris. Published reward: this exact book; Both factions; minimum quest level 40 (separate from gear equip level and book learning skill). Nilith Lokrav published map footprint: Searing Gorge x 40.8\u201341, y 74.4\u201374.8. Vizzklick published map footprint: Tanaris x 51\u201351, y 27.4\u201327.4. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=10463",
+    "questReferences": [
+      {
+        "questID": 3402,
+        "name": "The Undermarket",
+        "faction": "Both factions",
+        "minimumLevelField": 40,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 8439,
+          "name": "Nilith Lokrav"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 6568,
+          "name": "Vizzklick"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=3402",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=10463&xml": "ce6d53821f92aa637b3000ff243938f06ec49d0245fbfcc122f3fd0115c43562",
+      "https://www.wowhead.com/forever/item=10463": "4c5109de302b8d1df9d0b18022adb1c4edb3f6abcceeb671e814c5e40cbf9c4e",
+      "https://www.wowhead.com/forever/quest=3402": "cc54eec5d876d29117f5ef795268061f0ca8b78dffdcd4b7d67a16bb181ad226"
+    }
+  },
+  {
+    "itemID": 12428,
+    "name": "Imperial Plate Shoulders",
+    "bookItemID": 12687,
+    "spellID": 16646,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 240,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Imperial Plate Shoulders (#12687), Blacksmithing 240; quest references: Imperial Plate Shoulders (#7659), Both factions, minimum quest level 50; start Derotain Mudsipper (NPC 14567), Tanaris (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nImperial Plate Shoulders (#7659): start Derotain Mudsipper (NPC 14567), Tanaris; turn in to Derotain Mudsipper (NPC 14567), Tanaris. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Derotain Mudsipper published map footprint: Tanaris x 51.4\u201351.4, y 28.4\u201328.6. Published quest delivery objectives: 20 x thorium bars (#12359). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12687",
+    "questReferences": [
+      {
+        "questID": 7659,
+        "name": "Imperial Plate Shoulders",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12359,
+            "amount": 20,
+            "name": "thorium bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7659",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12687&xml": "b1a80b53699db07af4e02d0b532ee077a1a662ded2462ab28d9a89ff98b2ba73",
+      "https://www.wowhead.com/forever/item=12687": "c72c1a169a31c9c179e29939f3c5300936c081ac3f1613dba661875433229063",
+      "https://www.wowhead.com/forever/quest=7659": "1dc31391bafcb48615cfe309959b1282f89a816075b66edcbd1315d7d5d9242c"
+    }
+  },
+  {
+    "itemID": 12424,
+    "name": "Imperial Plate Belt",
+    "bookItemID": 12688,
+    "spellID": 16647,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 240,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Imperial Plate Belt (#12688), Blacksmithing 240; quest references: Imperial Plate Belt (#7653), Both factions, minimum quest level 50; start Derotain Mudsipper (NPC 14567), Tanaris (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nImperial Plate Belt (#7653): start Derotain Mudsipper (NPC 14567), Tanaris; turn in to Derotain Mudsipper (NPC 14567), Tanaris. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Derotain Mudsipper published map footprint: Tanaris x 51.4\u201351.4, y 28.4\u201328.6. Published quest delivery objectives: 20 x thorium bars (#12359). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12688",
+    "questReferences": [
+      {
+        "questID": 7653,
+        "name": "Imperial Plate Belt",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12359,
+            "amount": 20,
+            "name": "thorium bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7653",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12688&xml": "bd42e50c242241b6607a7dcc26d5dec45495726d605bddd20296b3f1f2f21b5f",
+      "https://www.wowhead.com/forever/item=12688": "8d4c48b1199e02176f8f893287d86a0d02d2cd95a0ee40d03bc8890a279e8dbe",
+      "https://www.wowhead.com/forever/quest=7653": "df6f9f0049ab035a254ad8e22ce15ce776ada78386b2456b43743c28086c5705"
+    }
+  },
+  {
+    "itemID": 12425,
+    "name": "Imperial Plate Bracers",
+    "bookItemID": 12690,
+    "spellID": 16649,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 245,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Imperial Plate Bracers (#12690), Blacksmithing 245; quest references: Imperial Plate Bracer (#7655), Both factions, minimum quest level 50; start Derotain Mudsipper (NPC 14567), Tanaris (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nImperial Plate Bracer (#7655): start Derotain Mudsipper (NPC 14567), Tanaris; turn in to Derotain Mudsipper (NPC 14567), Tanaris. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Derotain Mudsipper published map footprint: Tanaris x 51.4\u201351.4, y 28.4\u201328.6. Published quest delivery objectives: 20 x thorium bars (#12359). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12690",
+    "questReferences": [
+      {
+        "questID": 7655,
+        "name": "Imperial Plate Bracer",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12359,
+            "amount": 20,
+            "name": "thorium bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7655",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12690&xml": "75b47b138ad05e08955ff179eff9dc947e24baae46f95719b6ea37bd9954c794",
+      "https://www.wowhead.com/forever/item=12690": "db4b5d6842b3b9ec0f0796f74c301e4c9bc95944e306e063ef7f761d50c5177b",
+      "https://www.wowhead.com/forever/quest=7655": "2274786f3c137d2bc67fd2afc5cd8e03bd9c2e94723f30bda34170f5fa62018b"
+    }
+  },
+  {
+    "itemID": 12628,
+    "name": "Demon Forged Breastplate",
+    "bookItemID": 12696,
+    "spellID": 16667,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 260,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Demon Forged Breastplate (#12696), Blacksmithing 260; quest references: The Demon Forge (#5127), Both factions, minimum quest level 55; start Lorax (NPC 10918), Winterspring (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nThe Demon Forge (#5127): start Lorax (NPC 10918), Winterspring; turn in to Lorax (NPC 10918), Winterspring. Published reward: this exact book; Both factions; minimum quest level 55 (separate from gear equip level and book learning skill). Lorax published map footprint: Winterspring x 63.8\u201363.8, y 73.8\u201373.8. Quest metadata lists Warrior, Paladin; current quest-class access unverified. This is not applied to the gear catalogue or filters. Published quest delivery objectives: 1 x Soul Stained Pike (#12847), 1 x Unforged Rune Covered Breastplate (#12806). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12696",
+    "questReferences": [
+      {
+        "questID": 5127,
+        "name": "The Demon Forge",
+        "faction": "Both factions",
+        "minimumLevelField": 55,
+        "classIDs": [
+          1,
+          2
+        ],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 10918,
+          "name": "Lorax"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 10918,
+          "name": "Lorax"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12847,
+            "amount": 1,
+            "name": "Soul Stained Pike",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 12806,
+            "amount": 1,
+            "name": "Unforged Rune Covered Breastplate",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 12848,
+            "amount": 0,
+            "name": "Blood Stained Pike",
+            "role": "provided/reference"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=5127",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12696&xml": "e90e89865ee1b8e02a99804f9f4f46857578327c383224dc76e144fdc431cacb",
+      "https://www.wowhead.com/forever/item=12696": "8eb97c24b2cdf48a49f920536aa25ba6ba4b70f0c26c4f8450278e7a6074f154",
+      "https://www.wowhead.com/forever/quest=5127": "3858a5b114d170507c256285bc897c9c372ef67e87bf9eaff7a6eb12a38942fd"
+    }
+  },
+  {
+    "itemID": 12631,
+    "name": "Fiery Plate Gauntlets",
+    "bookItemID": 12699,
+    "spellID": 16655,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 265,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Fiery Plate Gauntlets (#12699), Blacksmithing 265; quest references: Fiery Plate Gauntlets (#5124), Both factions, minimum quest level 55; start Malyfous Darkhammer (NPC 10637), Winterspring (published; current access/prerequisites unverified). The same quest also lists the finished Fiery Plate Gauntlets (#12631) as a reward (published; live unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nFiery Plate Gauntlets (#5124): start Malyfous Darkhammer (NPC 10637), Winterspring; turn in to Malyfous Darkhammer (NPC 10637), Winterspring. Published reward: this exact book; Both factions; minimum quest level 55 (separate from gear equip level and book learning skill). Malyfous Darkhammer published map footprint: Winterspring x 61\u201361, y 38.6\u201338.6. Published quest delivery objectives: 1 x Unfired Plate Gauntlets (#12812), 6 x Enchanted Thorium Bars (#12655), 2 x Essence of Fire (#7078), 4 x Star Rubies (#7910). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.\nExact quest 5124 reward metadata lists BOTH plans #12699 and finished Fiery Plate Gauntlets #12631. This is a separate published direct-gear reward alternative; crafting is not established as the only acquisition path. Current availability/prerequisites remain unverified; original crafted catalogue facts are preserved.",
+    "bookURL": "https://www.wowhead.com/forever/item=12699",
+    "questReferences": [
+      {
+        "questID": 5124,
+        "name": "Fiery Plate Gauntlets",
+        "faction": "Both factions",
+        "minimumLevelField": 55,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 10637,
+          "name": "Malyfous Darkhammer"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 10637,
+          "name": "Malyfous Darkhammer"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12812,
+            "amount": 1,
+            "name": "Unfired Plate Gauntlets",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 12655,
+            "amount": 6,
+            "name": "Enchanted Thorium Bars",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 7078,
+            "amount": 2,
+            "name": "Essence of Fire",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 7910,
+            "amount": 4,
+            "name": "Star Rubies",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=5124",
+        "alsoRewardsFinishedGear": true
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12699&xml": "0a25e8b4d07768519428614dbf87ca5c002d03afe1f137bcc5e3453ee695d341",
+      "https://www.wowhead.com/forever/item=12699": "2e8258c3323fed52cbb0f2a6e3d5fa552d6e8853efab946a29d71a1e65693a84",
+      "https://www.wowhead.com/forever/quest=5124": "a9ccf504f8ded9628b1305ed281f168e7c9cdb9b1baa4175bcef04d2553223e2"
+    }
+  },
+  {
+    "itemID": 12426,
+    "name": "Imperial Plate Boots",
+    "bookItemID": 12700,
+    "spellID": 16657,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 270,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Imperial Plate Boots (#12700), Blacksmithing 270; quest references: Imperial Plate Boots (#7654), Both factions, minimum quest level 50; start Derotain Mudsipper (NPC 14567), Tanaris (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nImperial Plate Boots (#7654): start Derotain Mudsipper (NPC 14567), Tanaris; turn in to Derotain Mudsipper (NPC 14567), Tanaris. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Derotain Mudsipper published map footprint: Tanaris x 51.4\u201351.4, y 28.4\u201328.6. Published quest delivery objectives: 40 x thorium bars (#12359). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12700",
+    "questReferences": [
+      {
+        "questID": 7654,
+        "name": "Imperial Plate Boots",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12359,
+            "amount": 40,
+            "name": "thorium bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7654",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12700&xml": "007df9248d782a78845d3c07c608fb4bdf0cf9a707193ce66365ee9028357408",
+      "https://www.wowhead.com/forever/item=12700": "ff4092a24e302743349b58b57cf3ad823ae11ae36ff6b9c8d68304918500d767",
+      "https://www.wowhead.com/forever/quest=7654": "5ed07dba4805f9e3d55340b6a93836f2ec1476e432171fc369a277f0523b49f4"
+    }
+  },
+  {
+    "itemID": 12427,
+    "name": "Imperial Plate Helm",
+    "bookItemID": 12701,
+    "spellID": 16658,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 270,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Imperial Plate Helm (#12701), Blacksmithing 270; quest references: Imperial Plate Helm (#7657), Both factions, minimum quest level 50; start Derotain Mudsipper (NPC 14567), Tanaris (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nImperial Plate Helm (#7657): start Derotain Mudsipper (NPC 14567), Tanaris; turn in to Derotain Mudsipper (NPC 14567), Tanaris. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Derotain Mudsipper published map footprint: Tanaris x 51.4\u201351.4, y 28.4\u201328.6. Published quest delivery objectives: 50 x thorium bars (#12359). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12701",
+    "questReferences": [
+      {
+        "questID": 7657,
+        "name": "Imperial Plate Helm",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12359,
+            "amount": 50,
+            "name": "thorium bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7657",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12701&xml": "892ecd8009b58e5ded8b3d07b32f297db0bbf5d170b5bf14bb766d43843278fa",
+      "https://www.wowhead.com/forever/item=12701": "40779900792e1b35c53d26350321f17e06536847339eef1ef49763ea24df20c4",
+      "https://www.wowhead.com/forever/quest=7657": "7d7b97d61bcb8ef32ad194d6b216faacc7cc17869a39ceec8bf41f4a70159635"
+    }
+  },
+  {
+    "itemID": 12422,
+    "name": "Imperial Plate Chest",
+    "bookItemID": 12705,
+    "spellID": 16663,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 275,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Imperial Plate Chest (#12705), Blacksmithing 275; quest references: Imperial Plate Chest (#7656), Both factions, minimum quest level 50; start Derotain Mudsipper (NPC 14567), Tanaris (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nImperial Plate Chest (#7656): start Derotain Mudsipper (NPC 14567), Tanaris; turn in to Derotain Mudsipper (NPC 14567), Tanaris. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Derotain Mudsipper published map footprint: Tanaris x 51.4\u201351.4, y 28.4\u201328.6. Published quest delivery objectives: 60 x thorium bars (#12359). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12705",
+    "questReferences": [
+      {
+        "questID": 7656,
+        "name": "Imperial Plate Chest",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12359,
+            "amount": 60,
+            "name": "thorium bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7656",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12705&xml": "2c91ad2d72d1d5668592776cbb8824a7703db5e42b00b8972a104651700ab92b",
+      "https://www.wowhead.com/forever/item=12705": "f94544a04ffd9918b8e545bd2834a8713a348efd4faa412c868a30818e523421",
+      "https://www.wowhead.com/forever/quest=7656": "473ed7d76575d53bf0a3125c55f654fc81411d6ca29f4ea82ab961f3eba2ca96"
+    }
+  },
+  {
+    "itemID": 12429,
+    "name": "Imperial Plate Leggings",
+    "bookItemID": 12715,
+    "spellID": 16730,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 280,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Imperial Plate Leggings (#12715), Blacksmithing 280; quest references: Imperial Plate Leggings (#7658), Both factions, minimum quest level 50; start Derotain Mudsipper (NPC 14567), Tanaris (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nImperial Plate Leggings (#7658): start Derotain Mudsipper (NPC 14567), Tanaris; turn in to Derotain Mudsipper (NPC 14567), Tanaris. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Derotain Mudsipper published map footprint: Tanaris x 51.4\u201351.4, y 28.4\u201328.6. Published quest delivery objectives: 60 x thorium bars (#12359). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12715",
+    "questReferences": [
+      {
+        "questID": 7658,
+        "name": "Imperial Plate Leggings",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14567,
+          "name": "Derotain Mudsipper"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 12359,
+            "amount": 60,
+            "name": "thorium bars",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7658",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12715&xml": "992c4ab236f4cac4282c3755106d9e07a5bf61f4cc582a6c81858901f690de50",
+      "https://www.wowhead.com/forever/item=12715": "e5092c4a0d405c79ab8f314c8ce96e8821ceb443b3406ae90999f4a13198f0d7",
+      "https://www.wowhead.com/forever/quest=7658": "3aef2c94fcebd9f7c80a0df3cabbda6a0a0645acdd6a57ed88cc94521e6e799e"
+    }
+  },
+  {
+    "itemID": 12620,
+    "name": "Enchanted Thorium Helm",
+    "bookItemID": 12725,
+    "spellID": 16742,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 300,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Enchanted Thorium Helm (#12725), Blacksmithing 300; quest references: Enchanted Thorium Platemail: Volume III (#7651), Both factions, minimum quest level 50; start use Enchanted Thorium Platemail (item #18771) (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nEnchanted Thorium Platemail: Volume III (#7651): start use Enchanted Thorium Platemail (item #18771); turn in to Lorekeeper Lydros (NPC 14368), Dire Maul. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Published quest delivery objectives: 1 x Enchanted Thorium Platemail (#18771). These delivery costs are not the finished recipe ingredients. Starting item #18771 begins this exact quest; requires character level 50 and Blacksmithing 300 according to its tooltip; acquisition/current access unverified. Published binding recipe combines: Bottom Half of Advanced Armorsmithing: Volume III (#18783); published drop references Black Guard Swordsmith \u2014 Stratholme / Top Half of Advanced Armorsmithing: Volume III (#18784); published drop references Urok Doomhowl \u2014 Blackrock Spire. These are historical-capable Forever publication tables, not live loot proof; no dungeon wing is inferred from a shared zone ID. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12725",
+    "questReferences": [
+      {
+        "questID": 7651,
+        "name": "Enchanted Thorium Platemail: Volume III",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "item",
+          "id": 18771,
+          "name": "Enchanted Thorium Platemail"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14368,
+          "name": "Lorekeeper Lydros"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 18771,
+            "amount": 1,
+            "name": "Enchanted Thorium Platemail",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7651",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12725&xml": "cffa5d3f15e8f373ff185926f916f3626a3e08b08bd691c539554ebd1fd8b7af",
+      "https://www.wowhead.com/forever/item=12725": "d7741143220ef02d437ef46c0e297b7eca6bb833ec1209ee0d2389970a4f68bd",
+      "https://www.wowhead.com/forever/quest=7651": "5d5efefca12bdb323523cc748e88e27102afbcab05ddba64bf522560f836ae28"
+    }
+  },
+  {
+    "itemID": 12619,
+    "name": "Enchanted Thorium Leggings",
+    "bookItemID": 12726,
+    "spellID": 16744,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 300,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Enchanted Thorium Leggings (#12726), Blacksmithing 300; quest references: Enchanted Thorium Platemail: Volume II (#7650), Both factions, minimum quest level 50; start use Enchanted Thorium Platemail (item #18770) (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nEnchanted Thorium Platemail: Volume II (#7650): start use Enchanted Thorium Platemail (item #18770); turn in to Lorekeeper Lydros (NPC 14368), Dire Maul. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Published quest delivery objectives: 1 x Enchanted Thorium Platemail (#18770). These delivery costs are not the finished recipe ingredients. Starting item #18770 begins this exact quest; requires character level 50 and Blacksmithing 300 according to its tooltip; acquisition/current access unverified. Published binding recipe combines: Bottom Half of Advanced Armorsmithing: Volume II (#18781); published drop references Crimson Hammersmith \u2014 Stratholme / Top Half of Advanced Armorsmithing: Volume II (#18782); published drop references Rattlegore \u2014 Scholomance. These are historical-capable Forever publication tables, not live loot proof; no dungeon wing is inferred from a shared zone ID. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12726",
+    "questReferences": [
+      {
+        "questID": 7650,
+        "name": "Enchanted Thorium Platemail: Volume II",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "item",
+          "id": 18770,
+          "name": "Enchanted Thorium Platemail"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14368,
+          "name": "Lorekeeper Lydros"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 18770,
+            "amount": 1,
+            "name": "Enchanted Thorium Platemail",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7650",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12726&xml": "590b17cacbe1e0639bfb7feb0fca857ce9dee651959ce2f5d13bbf0c82ac1626",
+      "https://www.wowhead.com/forever/item=12726": "bc5ef12432c309182fae4504f28abab493daa0e42d19d9530ddf423bf9535d1b",
+      "https://www.wowhead.com/forever/quest=7650": "5ad5d542ebb320cc0be0eafa3ca57c7bed43f793b141dcad2f2d8e3f2b1e4356"
+    }
+  },
+  {
+    "itemID": 12618,
+    "name": "Enchanted Thorium Breastplate",
+    "bookItemID": 12727,
+    "spellID": 16745,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 300,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Enchanted Thorium Breastplate (#12727), Blacksmithing 300; quest references: Enchanted Thorium Platemail: Volume I (#7649), Both factions, minimum quest level 50; start use Enchanted Thorium Platemail (item #18769) (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nEnchanted Thorium Platemail: Volume I (#7649): start use Enchanted Thorium Platemail (item #18769); turn in to Lorekeeper Lydros (NPC 14368), Dire Maul. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Published quest delivery objectives: 1 x Enchanted Thorium Platemail (#18769). These delivery costs are not the finished recipe ingredients. Starting item #18769 begins this exact quest; requires character level 50 and Blacksmithing 300 according to its tooltip; acquisition/current access unverified. Published binding recipe combines: Bottom Half of Advanced Armorsmithing: Volume I (#18779); published drop references Goraluk Anvilcrack \u2014 Blackrock Spire / Top Half of Advanced Armorsmithing: Volume I (#18780); published drop references King Gordok \u2014 Dire Maul. These are historical-capable Forever publication tables, not live loot proof; no dungeon wing is inferred from a shared zone ID. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12727",
+    "questReferences": [
+      {
+        "questID": 7649,
+        "name": "Enchanted Thorium Platemail: Volume I",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "item",
+          "id": 18769,
+          "name": "Enchanted Thorium Platemail"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 14368,
+          "name": "Lorekeeper Lydros"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 18769,
+            "amount": 1,
+            "name": "Enchanted Thorium Platemail",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7649",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12727&xml": "728ad26c9c99736043aa60260660b55d673c6394066326aea74fa7a19a81563f",
+      "https://www.wowhead.com/forever/item=12727": "61d814403939a464b1c2e124ab0df7a9409de773f7ea76f6bfe08ad8810bb3f8",
+      "https://www.wowhead.com/forever/quest=7649": "6a605b5ed6e80f28a43bc58ceda3a087abe081b95abc1ee3fa658fb0dfbbd8bd"
+    }
+  },
+  {
+    "itemID": 12774,
+    "name": "Dawn's Edge",
+    "bookItemID": 12821,
+    "spellID": 16970,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 250,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Dawn's Edge (#12821), Blacksmithing 250; quest references: Snakestone of the Shadow Huntress (#5306), Both factions, minimum quest level 50; start Kilram (NPC 11192), Winterspring (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nSnakestone of the Shadow Huntress (#5306): start Kilram (NPC 11192), Winterspring; turn in to Kilram (NPC 11192), Winterspring. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Kilram published map footprint: Winterspring x 61.2\u201361.2, y 37\u201337. Published quest delivery objectives: 1 x Vosh'gajin's Snakestone (#13352). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12821",
+    "questReferences": [
+      {
+        "questID": 5306,
+        "name": "Snakestone of the Shadow Huntress",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 11192,
+          "name": "Kilram"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 11192,
+          "name": "Kilram"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 13352,
+            "amount": 1,
+            "name": "Vosh'gajin's Snakestone",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=5306",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12821&xml": "1d52e662ccc6b19f60e3b88584b177743b2c3f9e99fc46e02a9319f55288c28a",
+      "https://www.wowhead.com/forever/item=12821": "3c408477e3fd89b3398ff1eb531cf07c07ef24679e13efddbb645df527654822",
+      "https://www.wowhead.com/forever/quest=5306": "304c849aedc2e99b1a6509e1eaf90670dd16fb38d5626cf9f624e1b5a85862de"
+    }
+  },
+  {
+    "itemID": 12776,
+    "name": "Enchanted Battlehammer",
+    "bookItemID": 12824,
+    "spellID": 16973,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 255,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Enchanted Battlehammer (#12824), Blacksmithing 255; quest references: Sweet Serenity (#5305), Both factions, minimum quest level 50; start Lilith the Lithe (NPC 11191), Winterspring / Sweet Serenity (#8869), Both factions, minimum quest level 50; turn-in giver/location not established (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nSweet Serenity (#5305): start Lilith the Lithe (NPC 11191), Winterspring; turn in to Lilith the Lithe (NPC 11191), Winterspring. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Lilith the Lithe published map footprint: Winterspring x 61.2\u201361.2, y 37.2\u201337.2. Published quest delivery objectives: 1 x Crimson Hammersmith's Apron (#13351). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.\nSweet Serenity (#8869): start giver/location not established; turn in to giver/location not established. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Published quest delivery objectives: 1 x Crimson Hammersmith's Apron (#13351). These delivery costs are not the finished recipe ingredients. This duplicate Sweet Serenity record lacks named giver/turn-in metadata. Do not copy Lilith from quest 5305 onto it; its current use is unresolved. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12824",
+    "questReferences": [
+      {
+        "questID": 5305,
+        "name": "Sweet Serenity",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 11191,
+          "name": "Lilith the Lithe"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 11191,
+          "name": "Lilith the Lithe"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 13351,
+            "amount": 1,
+            "name": "Crimson Hammersmith's Apron",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=5305",
+        "alsoRewardsFinishedGear": false
+      },
+      {
+        "questID": 8869,
+        "name": "Sweet Serenity",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": null,
+        "endEntity": null,
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 13351,
+            "amount": 1,
+            "name": "Crimson Hammersmith's Apron",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=8869",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12824&xml": "fd0e142002050a0d5290d130124c6bfdacd197714924cfb802fc59ded3dad319",
+      "https://www.wowhead.com/forever/item=12824": "4d66cc31a03976fdd44e259d219ddd1cf35dbf89d3ab015bc1e4e46a3fd73b45",
+      "https://www.wowhead.com/forever/quest=5305": "8505b0eba1575141fe18af27636f003f53fbb6df6000762abd02bdb96306ea67",
+      "https://www.wowhead.com/forever/quest=8869": "46198500fc7295e426e9902c2e21c421b68fdf4528a2ee5385f18aa117ac09e6"
+    }
+  },
+  {
+    "itemID": 12777,
+    "name": "Blazing Rapier",
+    "bookItemID": 12825,
+    "spellID": 16978,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 255,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Blazing Rapier (#12825), Blacksmithing 255; quest references: Corruption (#5307), Both factions, minimum quest level 50; start Seril Scourgebane (NPC 11193), Winterspring (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nCorruption (#5307): start Seril Scourgebane (NPC 11193), Winterspring; turn in to Seril Scourgebane (NPC 11193), Winterspring. Published reward: this exact book; Both factions; minimum quest level 50 (separate from gear equip level and book learning skill). Seril Scourgebane published map footprint: Winterspring x 61.2\u201361.2, y 37.2\u201337.2. Published quest delivery objectives: 1 x Insignia of the Black Guard (#13350). These delivery costs are not the finished recipe ingredients. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=12825",
+    "questReferences": [
+      {
+        "questID": 5307,
+        "name": "Corruption",
+        "faction": "Both factions",
+        "minimumLevelField": 50,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "npc",
+          "id": 11193,
+          "name": "Seril Scourgebane"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 11193,
+          "name": "Seril Scourgebane"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 13350,
+            "amount": 1,
+            "name": "Insignia of the Black Guard",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=5307",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=12825&xml": "8157802d004efd3f44e6068c1ca5956e753ebc16541d6e12548a765f83102ac8",
+      "https://www.wowhead.com/forever/item=12825": "cbb5f3e427a16d0b9e222f396ac67511f3466ed64c93245198260d26a2668795",
+      "https://www.wowhead.com/forever/quest=5307": "e3f7859c5dd2f0948b7cf3e3fff21c72d98fb519d616a3a1bbdfba1a4900ef46"
+    }
+  },
+  {
+    "itemID": 17193,
+    "name": "Sulfuron Hammer",
+    "bookItemID": 18592,
+    "spellID": 21161,
+    "profession": "Blacksmithing",
+    "bookLearningSkill": 300,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Plans: Sulfuron Hammer (#18592), Blacksmithing 300; quest references: A Binding Contract (#7604), Both factions, minimum quest level 60; start use Thorium Brotherhood Contract (item #18628) (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nA Binding Contract (#7604): start use Thorium Brotherhood Contract (item #18628); turn in to Lokhtos Darkbargainer (NPC 12944), Blackrock Depths. Published reward: this exact book; Both factions; minimum quest level 60 (separate from gear equip level and book learning skill). Published quest delivery objectives: 1 x Thorium Brotherhood Contract (#18628), 1 x Sulfuron Ingot (#17203). These delivery costs are not the finished recipe ingredients. Starting item #18628 begins this exact quest; requires character level 60 according to its tooltip; acquisition/current access unverified. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=18592",
+    "questReferences": [
+      {
+        "questID": 7604,
+        "name": "A Binding Contract",
+        "faction": "Both factions",
+        "minimumLevelField": 60,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": {
+          "kind": "item",
+          "id": 18628,
+          "name": "Thorium Brotherhood Contract"
+        },
+        "endEntity": {
+          "kind": "npc",
+          "id": 12944,
+          "name": "Lokhtos Darkbargainer"
+        },
+        "rewardKind": "guaranteed",
+        "objectiveItems": [
+          {
+            "itemID": 18628,
+            "amount": 1,
+            "name": "Thorium Brotherhood Contract",
+            "role": "quest-objective"
+          },
+          {
+            "itemID": 17203,
+            "amount": 1,
+            "name": "Sulfuron Ingot",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=7604",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=18592&xml": "c4ac4bce593acadff0ecac9fbe96651d629d430213794e69d9c5885d967818fd",
+      "https://www.wowhead.com/forever/item=18592": "45d2a6c0d33f60ee4689d3ff1e42594f9bda04e146c7f6a0140ed8f18d2186a3",
+      "https://www.wowhead.com/forever/quest=7604": "771c61ae8281701bd7b0d797e04957cf5f06a779d7b131f7dad2926124b3e83c"
+    }
+  },
+  {
+    "itemID": 252480,
+    "name": "Blue Suede Armor",
+    "bookItemID": 252883,
+    "spellID": 1255024,
+    "profession": "Leatherworking",
+    "bookLearningSkill": 265,
+    "confidence": "published-forever-quest-book-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Pattern: Blue Suede Armor (#252883), Leatherworking 265; quest references: Leather Technique (#92817), faction unspecified in retrieved metadata, minimum quest level 30; choose book reward; turn-in Talra, Gelkis Village, Desolace (quest narrative; NPC ID/precise pin unverified) (published; current access/prerequisites unverified).",
+    "details": "These references track recipe books; separate direct-gear rewards are noted when exact quest metadata lists them. No live acquisition confirmed.\nLeather Technique (#92817): start giver/location not established; turn in to Talra, Gelkis Village, Desolace (quest narrative; NPC ID/precise pin unverified). Published reward: choice; select this exact book; faction unspecified in retrieved metadata; minimum quest level 30 (separate from gear equip level and book learning skill). Published quest delivery objectives: 1 x Barbaric Harness (#5739). These delivery costs are not the finished recipe ingredients. Published objective also requires Friendly Gelkis Clan Centaur. The text names Talra for delivery; quest-giver identity, numeric NPC ID and precise position are not established. Do not invent a map pin. Current availability, prerequisites, specialisation access and completeness of the chain remain unverified. Map footprints are reference ranges, not current sightings or central waypoints.",
+    "bookURL": "https://www.wowhead.com/forever/item=252883",
+    "questReferences": [
+      {
+        "questID": 92817,
+        "name": "Leather Technique",
+        "faction": "faction unspecified in retrieved metadata",
+        "minimumLevelField": 30,
+        "classIDs": [],
+        "raceIDs": [],
+        "startEntity": null,
+        "endEntity": null,
+        "rewardKind": "choice",
+        "objectiveItems": [
+          {
+            "itemID": 5739,
+            "amount": 1,
+            "name": "Barbaric Harness",
+            "role": "quest-objective"
+          }
+        ],
+        "liveVerified": false,
+        "prerequisitesVerified": false,
+        "sourceURL": "https://www.wowhead.com/forever/quest=92817",
+        "alsoRewardsFinishedGear": false
+      }
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=252883&xml": "7f35baa9c92a35c903a21164651c9b89c5c88d1fa8f2f5567fdc5e6905c3418f",
+      "https://www.wowhead.com/forever/item=252883": "31240ecf5cfb6e4175ad15f43534ce9224b9e389426e8149dd71b4b7cab92afc",
+      "https://www.wowhead.com/forever/quest=92817": "fc283b424bd70c626dd883f7f218034d5550b5926d10aafd7f103e6d64236757"
+    }
   }
 ]

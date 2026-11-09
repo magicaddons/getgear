@@ -902,6 +902,32 @@ for _,id in ipairs({280306,280307,280308}) do
     assert(text:find("not live purchase verification",1,true))
 end
 
+-- Checkpoint 6O: item starts, objective costs and alternate faction quests.
+local higherQuestBooks={{7916,7981},{7917,7982},{7926,7983},{7927,7984},{7928,7985},{8210,8403},{8211,8404},{8214,8405},{8213,8406},{8212,8407},{9366,9367},{10025,10463},{12428,12687},{12424,12688},{12425,12690},{12628,12696},{12631,12699},{12426,12700},{12427,12701},{12422,12705},{12429,12715},{12620,12725},{12619,12726},{12618,12727},{12774,12821},{12776,12824},{12777,12825},{17193,18592},{252480,252883}}
+for _,r in ipairs(higherQuestBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    assert(item.acquisitionResearch.confidence=="published-forever-quest-book-reference")
+    assert(item.acquisitionResearch.details:find("These references track recipe books",1,true))
+    assert(item.acquisitionResearch.details:find("prerequisites",1,true))
+end
+assert(addon.ItemCatalog[8210].acquisitionResearch.details:find("Pratt McGrubben",1,true))
+assert(addon.ItemCatalog[8210].acquisitionResearch.details:find("Jangdor Swiftstrider",1,true))
+assert(addon.ItemCatalog[252480].acquisitionResearch.details:find("select this exact book",1,true))
+assert(addon.ItemCatalog[252480].acquisitionResearch.details:find("Friendly Gelkis Clan Centaur",1,true))
+assert(addon.ItemCatalog[252480].acquisitionResearch.details:find("Do not invent a map pin",1,true))
+assert(addon.ItemCatalog[12620].acquisitionResearch.details:find("item #18771",1,true))
+assert(addon.ItemCatalog[12620].acquisitionResearch.details:find("Blacksmithing 300",1,true))
+assert(addon.ItemCatalog[12620].acquisitionResearch.details:find("Black Guard Swordsmith",1,true))
+assert(addon.ItemCatalog[12620].acquisitionResearch.details:find("Urok Doomhowl",1,true))
+assert(addon.ItemCatalog[17193].acquisitionResearch.details:find("item #18628",1,true))
+assert(addon.ItemCatalog[17193].acquisitionResearch.details:find("Sulfuron Ingot",1,true))
+assert(addon.ItemCatalog[12428].acquisitionResearch.details:lower():find("20 x thorium bar",1,true))
+assert(addon.ItemCatalog[12422].acquisitionResearch.details:lower():find("60 x thorium bar",1,true))
+
+assert(addon.ItemCatalog[12631].acquisitionResearch.details:find("BOTH plans #12699 and finished Fiery Plate Gauntlets #12631",1,true))
+assert(addon.ItemCatalog[12631].sourceType=="Blacksmithing", "Preserve crafted facts alongside direct quest alternative")
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
