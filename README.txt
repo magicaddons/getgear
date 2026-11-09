@@ -1,7 +1,7 @@
-GETGEAR 0.14.0 BETA 7 — ALLIANCE LEVELS 1–60
+GETGEAR 0.14.0 BETA 8 — ALLIANCE LEVELS 1–60
 ================================================
 PUBLIC BETA / PRE-RELEASE. Not a finished, fully verified item database.
-Official download: https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta7
+Official download: https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta8
 
 ABOUT
 -----
@@ -51,8 +51,8 @@ KEY COMMANDS
 SOURCES, SCOPE & REPORTING
 --------------------------
 The 7,707-item catalogue (36,341 class-equippable item objectives) is based
-partly on a Forever item snapshot from 21 Oct 2026. Recipe reagents for 1,244
-crafted items come from 31 Oct 2026 client-derived data. Not all entries,
+partly on a Forever item snapshot from 21 Oct 2026. Runtime ingredient lists cover 1,253 crafts (4,855 ingredient rows),
+with client-derived recipe data and individually documented corrections. Not all entries,
 vendor stock, quests, boss drops, recipe-learning sources and skill levels
 are verified obtainable in the current game. Alliance is the route focus.
 
@@ -63,3 +63,15 @@ Read the public release notes and current README.md at:
 https://github.com/magicaddons/getgear
 Report errors with item IDs, class, level, source and screenshots at:
 https://github.com/magicaddons/getgear/issues
+
+BETA 8 CONSOLIDATION
+--------------------
+2,177 conservative acquisition summaries, including reviewed metadata for
+954 recipe-book cases and 214 other equipment cases. Exact source actors,
+locations, quests, reputation/slot gates, costs and alternatives retain
+uncertainty. Unavailable-page and cross-version flags are not live sources.
+Six dungeon source links and 954 current book routes still need live checks.
+Positive-stat tracker filtering, optional armour-only improvements and
+default-hidden green world BoEs preserve full guide coverage. No new
+SavedVariables migration is introduced in this beta; retain backups.
+Full automated tests passed; in-game UI and live source acceptance remain.

@@ -1202,6 +1202,39 @@ assert(addon.ItemCatalog[276273].acquisitionResearch.details:find("one Extravaga
     and addon.ItemCatalog[276273].acquisitionResearch.details:find("Current event schedule",1,true))
 assert(addon.ItemCatalog[206386].acquisitionResearch.details:find("not proof the relic, rune mechanic or Rune Broker exists",1,true))
 
+-- Checkpoint 7D: complete bounded source-undocumented triage; no invented sources or version spread.
+local sourceUndocumentedGear={3334,4196,4763,5000,6360,6589,6698,6707,6708,6711,6724,6728,7426,7427,7467,8350,9602,18611,205218,206376,206383,206384,206385,206389,206390,206391,231877,241089,241090,251960,263005,263007,263431,263432,263434,263435,263436,264501,271911,271916,271920,271927,271931,271935,271939,274444,274445,274978,277213,280304,281730,281731,281732,281733,281926,281927,282636,282642,282653,282654,282655,282717,282721,283361,284177,284386,284399,284400,284401,284403,284459,284573,284574,284667,284668,284697,284699,284700,284702,284704,284717,285191,285192,285212,285236,285253,285268,285326,285331,285344,285351,286537,286540,286982,286983,286984,286985,286986,286987,286988,286989,286990,286991,286992,286993,286995,286996}
+local unavailableGear={6698,6707,6708,6711,6724,6728,274978,285326}
+local unresolvedGear={4196,4763,5000,6589,7426,7427,7467,9602,231877,251960,263431,263432,263434,263435,263436,271911,271916,271920,271927,271931,271935,271939,274444,274445,280304,281730,281731,281732,281733,282642,282655,282717,284403,284459,284573,284574,284667,284697,284699,284700,284717,285191,285192,286982,286983,286984,286993,286995}
+for _,id in ipairs(sourceUndocumentedGear) do
+    local a=assert(addon.ItemCatalog[id]).acquisitionResearch
+    assert(a.equipmentReference and not a.recipeReference)
+    assert(a.sourceSummary:find("unverified",1,true) and addon.AcquisitionEvidenceIndex[id].patternID==nil)
+end
+for _,id in ipairs(unavailableGear) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-item-availability-warning"
+        and a.details:find("not a claim a player can obtain it",1,true))
+end
+for _,id in ipairs(unresolvedGear) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-origin-unresolved")
+    assert(a.details:find("No guessed source",1,true))
+end
+local shovel=addon.ItemCatalog[3334].acquisitionResearch.details
+assert(shovel:find("Farmer Solliden",1,true) and shovel:find("Tirisfal Farmer",1,true)
+    and shovel:find("Stepping Stones #79192",1,true)
+    and shovel:find("quest minimum 14 is not the gear equip level 5",1,true))
+assert(addon.ItemCatalog[6360].acquisitionResearch.details:find("fishing catches, not NPC drops",1,true))
+assert(addon.ItemCatalog[8350].acquisitionResearch.details:find("gear equip level is not a fishing skill requirement",1,true))
+assert(addon.ItemCatalog[264501].acquisitionResearch.details:find("interactive object, not a boss NPC",1,true))
+assert(addon.ItemCatalog[271911].acquisitionResearch.details:find("omits this exact ID",1,true)
+    and addon.ItemCatalog[271911].acquisitionResearch.details:find("Honored",1,true))
+assert(addon.ItemCatalog[274444].acquisitionResearch.details:find("Corporal/Grunt (Rank 2)",1,true))
+assert(not addon.ItemCatalog[274444].acquisitionResearch.details:find("this exact item page explicitly flags unavailable",1,true))
+assert(addon.ItemCatalog[284573].acquisitionResearch.confidence=="published-forever-equipment-origin-unresolved")
+assert(addon.ItemCatalog[205218].acquisitionResearch.confidence=="published-cross-version-availability-warning")
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),

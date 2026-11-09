@@ -1,5 +1,7 @@
 # GetGear: continuous Codex research and checkpoint plan
 
+**Current steering (9 November): research paused by the user; consolidate and publish the next beta, v0.14.0-beta8, from the fully validated development branch. Packaging/tag/prerelease explicitly authorised; merging/main remain unauthorised. Preserve remaining research queue for a later resume.**
+
 **Prepared 2026-11-09; revised for Codex on 2026-11-09 with user authorisation.** This procedure permits sustained work through multiple sequential batches in one session. It is not evidence that unattended tasks have completed. Durable checkpoints remain necessary because tool, network, credential, context and session failures are still possible in Codex.
 
 ## Session scope and continuation

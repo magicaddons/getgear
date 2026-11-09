@@ -1,8 +1,8 @@
 # GetGear 1–60 acquisition reconciliation — release-readiness gate
 
-**Status: not approved for another build or public release (9 November 2026).**
-This is an offline evidence-reconciliation branch; it is not a verified in-client release candidate.
-The existing public v0.14.0-beta7 prerelease is separate from this work. No subsequent ZIP, tag, release, merge or change to `main` has been authorised.
+**Status: Beta 8 packaging/tag/public prerelease explicitly authorised by the user (9 November 2026); publication pending validated closeout.**
+This is not a verified in-client release candidate. Research is paused; the authorised beta consolidates validated work with explicit source/live-client limitations.
+The existing public v0.14.0-beta7 prerelease is separate from this work. The current user instruction authorises the next beta ZIP/tag/prerelease. No merge or change to `main` is authorised.
 
 ## Latest validated state
 - Development branch: `work/full-acquisition-reconciliation-20261109`.
@@ -157,3 +157,7 @@ User authorised [continuous sequential research](../OVERNIGHT_WORK_PLAN.md) acro
 ## Checkpoint 7C — all 93 lower-level vendor cases without generated detail
 
 [Exact merchant inventories, item gates and version safeguards](reconciliation-20261109/CHECKPOINT7C_LOW_LEVEL_VENDOR_EQUIPMENT.md): 72 named vendor-reference cases, 19 explicit SoD/Forever cross-version warnings, two unlocated Lamellar origins. 194 exact ID/name/cost merchant joins, 73 title-matched NPC maps, 62 limited-stock rows and 40 individual reputation gates. Source classes, prices, access and unknown ranks are not inferred across variants. Fishing bucket uses exact event coin, without invented timing. **Local full validation PASS; GitHub PASS.** Source commit `2a2248024845f6fa01539bed1ede3213be87e003`; [non-release CI 42599639023](https://github.com/magicaddons/getgear/actions/runs/42599639023) completed all steps; full logs confirm 14/14 regressions and 2,070 summaries. Inspected direct bot child/final HEAD `c213d24c2309c6f4eb0df7f0e1a2afa0b4b25009`: only provenance timestamp and three Everloot response hashes differ; generated runtime index and evidence match local validation. Compilation/full online reconciliation, required files 3/3, all 24 modules, 14/14 regressions. Fresh Everloot records separately corroborate three Shadowfang relationships with three installations plus exact NPC/community-source matches; no published-only record becomes observed. Primary item facts/confidence remain unchanged. Index 2,070; reviewed equipment 107, recipes 954, added book IDs 759. Six dungeon and 954 current book verification routes still open. Next lower-level undocumented-source gaps after CI/bot review. No release approval.
+
+## Checkpoint 7D — 107 undocumented lower-level items; research pause for Beta 8
+
+[Exact source/availability audit](reconciliation-20261109/CHECKPOINT7D_LOW_LEVEL_UNDOCUMENTED_EQUIPMENT.md): 41 named-source cases, eight unavailable-page flags, ten cross-version warnings, 48 explicit unlocated origins. 55 NPC, 31 fishing and one object relationships; 47 NPC titles match, three missing maps remain unpinned. Seven Theramore IDs absent from checked quartermaster inventory remain unresolved; no source inferred from gear names. **Local full validation PASS; GitHub PENDING.** Compilation/full online reconciliation, three required files, 24 modules and 14/14 regressions; source/class/material/settings/filter safeguards intact. Index 2,177; equipment registry 214, recipe registry 954, added book IDs 759. One fresh Blackcrow community link remains live-unverified; remaining CSV churn is source-row offsets only. Six dungeon and 954 current book checks stay open. User has paused further research and explicitly authorised consolidating/publishing Beta 8; complete CI/bot review before packaging. No merge/main change authorised.

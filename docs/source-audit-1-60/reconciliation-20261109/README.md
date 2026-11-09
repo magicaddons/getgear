@@ -6,8 +6,8 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - All **7,707 / 7,707** equipment records examined.
 - All **1,252 / 1,252** crafting recipes examined.
 - All **577 / 577** historically dungeon-associated records examined, including **24** crafted items with possible dungeon pattern routes and **1** item incorrectly catalogued as dungeon loot.
-- New, conservative in-addon acquisition summaries generated: **2,070**.
-- Combined Forever cache entries: **10,315**; Playfulls item entries: **23,147**.
+- New, conservative in-addon acquisition summaries generated: **2,177**.
+- Combined Forever cache entries: **10,315**; Playfulls item entries: **23,178**.
 - Published player-observed relationships: **1,137**.
 - True dungeon-equipment records: **552**; still requiring encounter or container-loot confirmation: **6**.
 - Recipe book origins that still require live verification: **954** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
@@ -27,10 +27,10 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - crafted-item: 1
 
 ## Dungeon evidence confidence
-- forever-community-reference: 488
+- forever-community-reference: 489
 - recipe-origin-unverified: 24
-- forever-reference-unverified: 19
 - forever-observed-npc: 18
+- forever-reference-unverified: 18
 - published-forever-dungeon-journal: 10
 - published-forever-dungeon-guide: 10
 - published-forever-trash-reference: 2
