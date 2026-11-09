@@ -11,3 +11,5 @@ Continue from [self-contained working evidence](checkpoint8o_working_evidence.js
 ## Superseding integration record
 
 Runtime integration and local full suite now PASS; see CHECKPOINT8O_LEVEL60_VENDOR_EXCHANGES.md. GitHub CI/bot review remains pending. Do not repeat the primary research or integration. Queue100 marked publication-researched; next8P remains gated on CI.
+
+**Completed:** integration and full local/CI/bot review now PASS; final validated103cd7f, run42710850319. The integration pending statements above are historical preservation records. Follow CHECKPOINT8O_LEVEL60_VENDOR_EXCHANGES.md/CONTINUATION.md; next8P.

@@ -1,0 +1,2071 @@
+{
+  "capturedUTC": "2026-11-09T22:21:56.156519+00:00",
+  "ciRun": 42710850319,
+  "botHead": "103cd7f27f3f87ef3cbb281db7dca64e7c6e9b20",
+  "playfulls": {
+    "beforeItems": 23241,
+    "afterItems": 23280,
+    "beforeDefinitions": 9150,
+    "afterDefinitions": 9152,
+    "newItems": [
+      {
+        "itemID": 1168,
+        "name": "Skullflame Shield",
+        "sources": [
+          {
+            "type": "worlddrop",
+            "label": "World drop",
+            "npc": "",
+            "zone": "",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 9481,
+        "name": "The Minotaur",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Zul'Farrak",
+            "path": "loot-tables/dungeons/zulfarrak",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 10629,
+        "name": "Mistwalker Boots",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 13166,
+        "name": "Slamshot Shoulders",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Highlord Omokk",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "367fe82d03e35942eeb6182137e65156d992064013a3687fb877e4414e95978f"
+          }
+        ]
+      },
+      {
+        "itemID": 13185,
+        "name": "Sunderseer Mantle",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Crystal Fang",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 13204,
+        "name": "Bashguuder",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Ghok Bashguud",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 13211,
+        "name": "Slashclaw Bracers",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Halycon",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "d76aee1e7550040883d42739a608e3fd21248e778ecddafec634d8af7d82f2c5"
+          }
+        ]
+      },
+      {
+        "itemID": 13378,
+        "name": "Songbird Blouse",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Hearthsinger Forresten",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "d0b7f58cf3e12296279302749853abac966d0ff9f91b2d7811d77e0e2bb7d4b8"
+          }
+        ]
+      },
+      {
+        "itemID": 13955,
+        "name": "Stoneform Shoulders",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Kirtonos the Herald",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "4adea772399faf806e088ad9a361d279a574835dd97b12eec5f5befa73f5b342"
+          }
+        ]
+      },
+      {
+        "itemID": 13967,
+        "name": "Windreaver Greaves",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Kirtonos the Herald",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "4adea772399faf806e088ad9a361d279a574835dd97b12eec5f5befa73f5b342"
+          }
+        ]
+      },
+      {
+        "itemID": 14538,
+        "name": "Deadwalker Mantle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Rattlegore",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "42c5fee65f03dc68a617734070a7236ba3f008547c5723202a7d7a8a07c9f9b7"
+          }
+        ]
+      },
+      {
+        "itemID": 14636,
+        "name": "Cadaverous Belt",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Instructor Malicia",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "775e8b56c8647269b62dec8fb022af9c81b67630c9de9b40b466601b3da201f3"
+          }
+        ]
+      },
+      {
+        "itemID": 14637,
+        "name": "Cadaverous Armor",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Instructor Malicia",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "775e8b56c8647269b62dec8fb022af9c81b67630c9de9b40b466601b3da201f3"
+          }
+        ]
+      },
+      {
+        "itemID": 14638,
+        "name": "Cadaverous Leggings",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Instructor Malicia",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "775e8b56c8647269b62dec8fb022af9c81b67630c9de9b40b466601b3da201f3"
+          }
+        ]
+      },
+      {
+        "itemID": 14640,
+        "name": "Cadaverous Gloves",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Instructor Malicia",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "775e8b56c8647269b62dec8fb022af9c81b67630c9de9b40b466601b3da201f3"
+          }
+        ]
+      },
+      {
+        "itemID": 14641,
+        "name": "Cadaverous Walkers",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Instructor Malicia",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "775e8b56c8647269b62dec8fb022af9c81b67630c9de9b40b466601b3da201f3"
+          }
+        ]
+      },
+      {
+        "itemID": 18366,
+        "name": "Gordok's Handguards",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Unfinished Gordok Business",
+            "zone": "Dire Maul",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 18367,
+        "name": "Gordok's Gauntlets",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Unfinished Gordok Business",
+            "zone": "Dire Maul",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 18368,
+        "name": "Gordok's Gloves",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Unfinished Gordok Business",
+            "zone": "Dire Maul",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 18369,
+        "name": "Gordok's Handwraps",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Unfinished Gordok Business",
+            "zone": "Dire Maul",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ]
+      },
+      {
+        "itemID": 18499,
+        "name": "Barrier Shield",
+        "sources": []
+      },
+      {
+        "itemID": 18682,
+        "name": "Ghoul Skin Leggings",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Instructor Malicia",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "775e8b56c8647269b62dec8fb022af9c81b67630c9de9b40b466601b3da201f3"
+          }
+        ]
+      },
+      {
+        "itemID": 18684,
+        "name": "Dimly Opalescent Ring",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Instructor Malicia",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "775e8b56c8647269b62dec8fb022af9c81b67630c9de9b40b466601b3da201f3"
+          }
+        ]
+      },
+      {
+        "itemID": 22271,
+        "name": "Leggings of Frenzied Magic",
+        "sources": []
+      },
+      {
+        "itemID": 260216,
+        "name": "Ouroboros Ring",
+        "sources": []
+      },
+      {
+        "itemID": 260217,
+        "name": "Eagle's Head Signet",
+        "sources": []
+      },
+      {
+        "itemID": 260218,
+        "name": "Malefactor's End",
+        "sources": []
+      },
+      {
+        "itemID": 260219,
+        "name": "Engraved Band",
+        "sources": []
+      },
+      {
+        "itemID": 270301,
+        "name": "Ve'han's Research Notes",
+        "sources": []
+      },
+      {
+        "itemID": 276744,
+        "name": "Zarla's Snack Pouch",
+        "sources": []
+      },
+      {
+        "itemID": 280058,
+        "name": "Impish Chain Hood",
+        "sources": []
+      },
+      {
+        "itemID": 280073,
+        "name": "Burnished Pridescales",
+        "sources": []
+      },
+      {
+        "itemID": 280076,
+        "name": "Horns of Varrox",
+        "sources": []
+      },
+      {
+        "itemID": 280080,
+        "name": "Claymore of Two Moons",
+        "sources": []
+      },
+      {
+        "itemID": 284066,
+        "name": "Husk of the Husk",
+        "sources": []
+      },
+      {
+        "itemID": 284097,
+        "name": "Everstaring Abomination Eye",
+        "sources": []
+      },
+      {
+        "itemID": 284157,
+        "name": "Ranger Lord's Longsword",
+        "sources": []
+      },
+      {
+        "itemID": 286614,
+        "name": "Gruff's Tough Tongue",
+        "sources": []
+      },
+      {
+        "itemID": 287032,
+        "name": "Den Champion's Binding",
+        "sources": []
+      }
+    ],
+    "removedIDs": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 10660,
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 2915,
+        "name": "Taran Icebreaker",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 5427,
+        "name": "Crude Pocket Watch",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 5864,
+        "name": "Gray Ram",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 8261,
+        "name": "Serpentskin Helm",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8281,
+        "name": "Valorous Pauldrons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8632,
+        "name": "Reins of the Spotted Frostsaber",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 9355,
+        "name": "Hoop Earring",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 10061,
+        "name": "Duskwoven Turban",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10097,
+        "name": "Councillor's Circlet",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10111,
+        "name": "Wanderer's Hat",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10177,
+        "name": "Mystical Leggings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10179,
+        "name": "Mystical Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10180,
+        "name": "Mystical Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10189,
+        "name": "Swashbuckler's Shoulderpads",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10202,
+        "name": "Overlord's Vambraces",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10306,
+        "name": "Scroll of Spirit IV",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 11308,
+        "name": "Sylvan Shortbow",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 12264,
+        "name": "Worg Carrier",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 12529,
+        "name": "Smolderweb Carrier",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 13009,
+        "name": "Cow King's Hide",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13013,
+        "name": "Elder Wizard's Mantle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13036,
+        "name": "Assassination Blade",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13144,
+        "name": "Serenity Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13884,
+        "name": "49 Pound Redgill",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 14269,
+        "name": "Gaea's Slippers",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14290,
+        "name": "Arachnidian Footpads",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14296,
+        "name": "Arachnidian Pauldrons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14300,
+        "name": "Bonecaster's Cape",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14440,
+        "name": "Venomshroud Cape",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14655,
+        "name": "Scorpashi Breastplate",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14780,
+        "name": "Khan's Buckler",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14794,
+        "name": "Protector Ankleguards",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14802,
+        "name": "Bloodlust Gauntlets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14849,
+        "name": "Sunscale Helmet",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14904,
+        "name": "Brutish Breastplate",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14913,
+        "name": "Jade Greaves",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14918,
+        "name": "Jade Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14920,
+        "name": "Jade Legplates",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15172,
+        "name": "Potent Bands",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15381,
+        "name": "Rageclaw Chestguard",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15625,
+        "name": "Gryphon Mail Gauntlets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 19223,
+        "name": "Darkmoon Dog",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 19304,
+        "name": "Spiced Beef Jerky",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 20763,
+        "name": "Broken Weapon",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 24232,
+        "name": "Shabby Knot",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 264119,
+        "name": "Craftsman's Writ: Draught of Detect Demon",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264120,
+        "name": "Craftsman's Writ: Gift of Arthas",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264121,
+        "name": "Craftsman's Writ: Flask of Chromatic Resistance",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264125,
+        "name": "Craftsman's Writ: Radiant Circlet",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264129,
+        "name": "Craftsman's Writ: Imperial Plate Chest",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264131,
+        "name": "Craftsman's Writ: Huge Thorium Battleaxe",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264145,
+        "name": "Craftsman's Writ: Volcanic Breastplate",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 274417,
+        "name": "Barkskin Baubles",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 276101,
+        "name": "Zizplink's Grocery List",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 277109,
+        "name": "Zephrali Greatstaff",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 277500,
+        "name": "Scroll of Imbue Greater Flame",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 281312,
+        "name": "Fallen Dragon's Scepter",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 283389,
+        "name": "Skonk's List",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 284228,
+        "name": "Vial of Vile Liquid",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 284230,
+        "name": "Rage Paw",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 284707,
+        "name": "Basilisk Sinew Belt",
+        "before": "3",
+        "after": 7
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1375,
+    "afterRaw": 1398,
+    "qualifying": 1198,
+    "addedEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 15017,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3840,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-09T20:49:01.000Z",
+        "lastSeen": "2026-11-09T20:49:01.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2078,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3840,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-09T20:52:03.000Z",
+        "lastSeen": "2026-11-09T20:52:03.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 1815,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3840,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-09T21:13:33.000Z",
+        "lastSeen": "2026-11-09T21:13:33.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2601,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 5761,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-09T21:03:44.000Z",
+        "lastSeen": "2026-11-09T21:03:44.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 4575,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 5755,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-09T20:49:04.000Z",
+        "lastSeen": "2026-11-09T20:49:04.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14122,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 5053,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-09T20:58:34.000Z",
+        "lastSeen": "2026-11-09T20:58:34.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15018,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 8886,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-09T20:55:55.000Z",
+        "lastSeen": "2026-11-09T20:55:55.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15222,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 75293,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-09T20:49:10.000Z",
+        "lastSeen": "2026-11-09T20:49:10.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 1815,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 75293,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-09T20:49:10.000Z",
+        "lastSeen": "2026-11-09T20:49:10.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6465,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3669,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-09T20:55:41.000Z",
+        "lastSeen": "2026-11-09T20:55:41.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 7005,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6256,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6217,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2320,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2321,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2678,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2692,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 3372,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6529,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6530,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 3556,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 3482,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1413,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-06T13:12:29.000Z",
+        "lastSeen": "2026-11-09T19:06:20.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 3003,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1456,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T06:37:57.000Z",
+        "lastSeen": "2026-11-09T18:23:04.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 3556,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1421,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T12:20:55.000Z",
+        "lastSeen": "2026-11-09T19:18:45.000Z"
+      }
+    ],
+    "removedEdges": [],
+    "updatedEdges": [
+      {
+        "key": [
+          "item",
+          "2770",
+          "dropped_by",
+          "object",
+          "1731"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-09T10:58:22.000Z",
+            "after": "2026-11-09T18:44:07.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2835",
+          "dropped_by",
+          "object",
+          "1731"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-09T10:58:22.000Z",
+            "after": "2026-11-09T18:44:07.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2592",
+          "dropped_by",
+          "npc",
+          "3840"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T17:14:08.000Z",
+            "after": "2026-11-09T21:17:51.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2589",
+          "dropped_by",
+          "npc",
+          "3840"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:49:15.000Z",
+            "after": "2026-11-09T21:13:33.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "10413",
+          "dropped_by",
+          "npc",
+          "3840"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:36:52.000Z",
+            "after": "2026-11-09T21:07:27.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6443",
+          "dropped_by",
+          "npc",
+          "5761"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:39:02.000Z",
+            "after": "2026-11-09T21:02:57.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6470",
+          "dropped_by",
+          "npc",
+          "5761"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T16:49:44.000Z",
+            "after": "2026-11-09T21:14:09.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "14729",
+          "dropped_by",
+          "npc",
+          "5761"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-07T23:53:57.000Z",
+            "after": "2026-11-09T21:03:50.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6444",
+          "dropped_by",
+          "npc",
+          "8886"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6443",
+          "dropped_by",
+          "npc",
+          "8886"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6445",
+          "dropped_by",
+          "npc",
+          "8886"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6470",
+          "dropped_by",
+          "npc",
+          "8886"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6471",
+          "dropped_by",
+          "npc",
+          "8886"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "1210",
+          "dropped_by",
+          "npc",
+          "8886"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "14559",
+          "dropped_by",
+          "npc",
+          "8886"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6444",
+          "dropped_by",
+          "npc",
+          "5048"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6443",
+          "dropped_by",
+          "npc",
+          "5048"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          },
+          "lastSeen": {
+            "before": "2026-11-08T16:26:32.000Z",
+            "after": "2026-11-09T20:53:31.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6445",
+          "dropped_by",
+          "npc",
+          "5048"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6470",
+          "dropped_by",
+          "npc",
+          "5048"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "15498",
+          "dropped_by",
+          "npc",
+          "5048"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "248684",
+          "dropped_by",
+          "npc",
+          "5048"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4604",
+          "dropped_by",
+          "npc",
+          "5055"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:36:17.000Z",
+            "after": "2026-11-09T21:02:18.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4606",
+          "dropped_by",
+          "npc",
+          "5055"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:36:48.000Z",
+            "after": "2026-11-09T21:11:40.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2452",
+          "dropped_by",
+          "npc",
+          "5055"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-07T11:30:24.000Z",
+            "after": "2026-11-09T21:11:40.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6444",
+          "dropped_by",
+          "npc",
+          "5756"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:55:21.000Z",
+            "after": "2026-11-09T21:15:26.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "17056",
+          "dropped_by",
+          "npc",
+          "5756"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T03:49:23.000Z",
+            "after": "2026-11-09T21:19:48.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "17056",
+          "dropped_by",
+          "npc",
+          "5056"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:58:06.000Z",
+            "after": "2026-11-09T21:26:14.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2996",
+          "dropped_by",
+          "object",
+          "75293"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T16:16:30.000Z",
+            "after": "2026-11-09T20:49:10.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "273084",
+          "dropped_by",
+          "npc",
+          "3653"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-07T23:45:44.000Z",
+            "after": "2026-11-09T20:57:49.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6460",
+          "dropped_by",
+          "npc",
+          "3669"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "273089",
+          "dropped_by",
+          "npc",
+          "3670"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:41:36.000Z",
+            "after": "2026-11-09T21:06:21.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "9738",
+          "dropped_by",
+          "npc",
+          "3669"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2589",
+          "dropped_by",
+          "npc",
+          "3669"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4537",
+          "dropped_by",
+          "npc",
+          "3669"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "15893",
+          "dropped_by",
+          "npc",
+          "3669"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "3377",
+          "dropped_by",
+          "npc",
+          "3669"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "10410",
+          "dropped_by",
+          "npc",
+          "3669"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6629",
+          "dropped_by",
+          "npc",
+          "5775"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T03:52:27.000Z",
+            "after": "2026-11-09T21:27:03.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "273137",
+          "dropped_by",
+          "npc",
+          "3674"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-07T14:12:53.000Z",
+            "after": "2026-11-09T21:17:48.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "4312",
+          "located_in",
+          "zone",
+          "1442"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-09T14:10:13.000Z",
+            "after": "2026-11-09T18:30:09.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "258878",
+          "located_in",
+          "zone",
+          "1413"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T17:20:20.000Z",
+            "after": "2026-11-09T19:01:41.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "5611",
+          "located_in",
+          "zone",
+          "1454"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T09:22:23.000Z",
+            "after": "2026-11-09T19:17:00.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "3296",
+          "located_in",
+          "zone",
+          "1454"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-07T13:50:56.000Z",
+            "after": "2026-11-09T17:54:16.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "250686",
+          "located_in",
+          "zone",
+          "1421"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T08:31:52.000Z",
+            "after": "2026-11-09T19:17:31.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "2121",
+          "located_in",
+          "zone",
+          "1421"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T08:32:09.000Z",
+            "after": "2026-11-09T19:17:51.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "1938",
+          "located_in",
+          "zone",
+          "1421"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T08:32:17.000Z",
+            "after": "2026-11-09T19:18:00.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "1952",
+          "located_in",
+          "zone",
+          "1421"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T08:32:36.000Z",
+            "after": "2026-11-09T19:18:37.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "1937",
+          "located_in",
+          "zone",
+          "1421"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T09:30:17.000Z",
+            "after": "2026-11-09T19:20:00.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "256400",
+          "located_in",
+          "zone",
+          "1413"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T14:21:11.000Z",
+            "after": "2026-11-09T18:40:07.000Z"
+          }
+        }
+      }
+    ],
+    "selected100QualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    }
+  },
+  "generatedReports": {
+    "all_items_reconciled.csv": {
+      "sourceRowOffsetOnlyCells": 0,
+      "semanticChanges": [
+        {
+          "itemID": "2078",
+          "name": "Northern Shortsword",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "itemID": "4575",
+          "name": "Medicine Staff",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "itemID": "6465",
+          "name": "Robe of the Moccasin",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            },
+            "dungeonConfidence": {
+              "before": "forever-community-reference",
+              "after": "forever-observed-npc"
+            },
+            "additiveSummary": {
+              "before": "Wailing Caverns | Boss: Lord Cobrahn (Forever reference; live unverified)",
+              "after": "Wailing Caverns | Boss: Lord Cobrahn (Forever observed)"
+            }
+          }
+        },
+        {
+          "itemID": "14122",
+          "name": "Ritual Bands",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 2,
+              "after": 3
+            }
+          }
+        },
+        {
+          "itemID": "15017",
+          "name": "Lupine Leggings",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "15018",
+          "name": "Lupine Vest",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "itemID": "15222",
+          "name": "Barbed Club",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        }
+      ]
+    },
+    "dungeon_items_reconciled.csv": {
+      "sourceRowOffsetOnlyCells": 281,
+      "semanticChanges": [
+        {
+          "itemID": "6460",
+          "name": "Cobrahn's Grasp",
+          "changes": {
+            "playerObservedNPCs": {
+              "before": [
+                {
+                  "name": "Lord Cobrahn",
+                  "npcID": 3669,
+                  "installs": 4,
+                  "lastSeen": "2026-11-08T16:28:01.000Z",
+                  "evidence": "everloot-3plus-installs"
+                }
+              ],
+              "after": [
+                {
+                  "name": "Lord Cobrahn",
+                  "npcID": 3669,
+                  "installs": 5,
+                  "lastSeen": "2026-11-08T16:28:01.000Z",
+                  "evidence": "everloot-3plus-installs"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "itemID": "6465",
+          "name": "Robe of the Moccasin",
+          "changes": {
+            "confidence": {
+              "before": "forever-community-reference",
+              "after": "forever-observed-npc"
+            },
+            "sourceSummary": {
+              "before": "Wailing Caverns | Boss: Lord Cobrahn (Forever reference; live unverified)",
+              "after": "Wailing Caverns | Boss: Lord Cobrahn (Forever observed)"
+            },
+            "playerObservedNPCs": {
+              "before": [],
+              "after": [
+                {
+                  "name": "Lord Cobrahn",
+                  "npcID": 3669,
+                  "installs": 5,
+                  "lastSeen": "2026-11-09T20:55:41.000Z",
+                  "evidence": "everloot-3plus-installs"
+                }
+              ]
+            },
+            "needsLiveVerification": {
+              "before": "True",
+              "after": "False"
+            }
+          }
+        },
+        {
+          "itemID": "10410",
+          "name": "Leggings of the Fang",
+          "changes": {
+            "playerObservedNPCs": {
+              "before": [
+                {
+                  "name": "Lord Cobrahn",
+                  "npcID": 3669,
+                  "installs": 4,
+                  "lastSeen": "2026-11-08T20:29:36.000Z",
+                  "evidence": "everloot-3plus-installs"
+                }
+              ],
+              "after": [
+                {
+                  "name": "Lord Cobrahn",
+                  "npcID": 3669,
+                  "installs": 5,
+                  "lastSeen": "2026-11-08T20:29:36.000Z",
+                  "evidence": "everloot-3plus-installs"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "recipes_reconciled.csv": {
+      "sourceRowOffsetOnlyCells": 771,
+      "semanticChanges": [
+        {
+          "itemID": "2585",
+          "name": "Gray Woolen Robe",
+          "changes": {
+            "evidence": {
+              "before": "forever-community-reference",
+              "after": "forever-observed"
+            },
+            "observedBookAcquisition": {
+              "before": [],
+              "after": [
+                {
+                  "relation": "dropped_by",
+                  "targetID": 5761,
+                  "targetType": "npc",
+                  "targetName": "Deviate Shambler",
+                  "installs": 5,
+                  "lastSeen": "2026-11-09T21:03:44.000Z"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "clientEncounterReview": {
+    "previousURL": "https://raw.githubusercontent.com/Everloot/everloot/62e3c4acb338bbddc9c242add9ef14bcfa408f6e/web/src/data/game-data/client-encounters.json",
+    "previousSHA256": "6c1d61df0e01248e6141cec91de31755ce781892bf7a1f886f4c1f3618069270",
+    "sameInstancesAndNames": true,
+    "changedTopLevelFields": [
+      "build"
+    ],
+    "previousBuild": {
+      "product": "wowf",
+      "buildId": 70790,
+      "version": "1.60.1.70790",
+      "buildConfig": "9006ba6948388dd0d4a0578e64b8a92e",
+      "definitions": "a936b2d4f4db",
+      "extractedAt": "2026-11-04T18:40:31.705Z"
+    },
+    "currentBuild": {
+      "product": "wowf",
+      "buildId": 70862,
+      "version": "1.60.1.70862",
+      "buildConfig": "5ada954223f7c409ea172361f5c9e565",
+      "definitions": "fb58b5b8ea8c",
+      "extractedAt": "2026-11-09T19:39:19.744Z"
+    }
+  },
+  "conclusion": "Direct bot child inspected; fourteen CI regressions PASS. Sole generated runtime summary change6465 Robe of the Moccasin\u2192Lord Cobrahn3669 supported by observed five-install edge. Two prior Cobrahn drop counters4\u21925. Book2601 (not output2585)\u2192Deviate Shambler5761 five installs retained in recipe audit; prior publication metadata remains conservative, no all-route live claim. Six other canonical observed-edge counters increment; no world-source reclassification.23 exact new raw edges/20 qualifying;49 existing install/lastSeen updates.39 new Playfulls IDs/two definitions, no changed resolved acquisition facts on previous rows;10660 index-only row shifts and61 uninterpreted field10 updates. Client instances/names exactly unchanged, only build metadata70790\u219270862. All100 selected8O cases retain zero qualifying edges. No runtime eligibility/craft/reagent changes."
+}
