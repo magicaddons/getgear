@@ -1172,6 +1172,36 @@ end
 assert(claw.acquisitionResearch.sourceSummary:find("live unverified",1,true)
     and claw.acquisitionResearch.confidence~="forever-observed-npc")
 
+-- Checkpoint 7C: exact vendor references, version-specific warnings and honest source gaps.
+local reviewedVendorGear={2506,3026,3027,4765,4781,4789,4794,4795,4796,4800,4816,4829,4832,11303,11304,15200,18834,18845,18846,18849,18850,18851,18852,18853,19513,19521,19537,19545,19553,19561,19569,20152,20157,20162,20164,20169,20172,20178,20182,20188,20191,20197,20201,20207,20210,20425,20426,20429,20430,20437,20441,20442,21120,206386,209611,209612,209613,209614,209615,209616,209617,209618,209619,209620,209621,209622,209623,209624,209625,209626,211500,211856,211857,212580,212581,212582,212583,212584,212585,212586,212587,272067,272071,272075,272082,272086,272090,272094,274741,274742,274743,274744,276273}
+local crossVersionGear={206386,209611,209612,209613,209614,209615,209616,209617,209618,209619,209620,209621,209622,209623,209624,209625,209626,212582,212586}
+for _,id in ipairs(reviewedVendorGear) do
+    local a=assert(addon.ItemCatalog[id]).acquisitionResearch
+    assert(a.equipmentReference and not a.recipeReference)
+    assert(a.sourceSummary:find("unverified",1,true) and a.details:find("unchanged",1,true))
+    assert(addon.AcquisitionEvidenceIndex[id].patternID==nil)
+end
+for _,id in ipairs(crossVersionGear) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-cross-version-availability-warning")
+    assert(a.details:find("not an instruction that this item can currently be bought",1,true))
+end
+for _,id in ipairs({20178,20182}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-origin-unresolved")
+    assert(a.details:find("No guessed seller, price or farm",1,true))
+end
+assert(addon.ItemCatalog[18834].acquisitionResearch.confidence=="published-forever-equipment-vendor-reference")
+assert(not addon.ItemCatalog[18834].acquisitionResearch.details:find("added in Season of Discovery",1,true))
+assert(addon.ItemCatalog[209611].acquisitionResearch.details:find("class access: Hunter",1,true))
+assert(addon.ItemCatalog[18834].acquisitionResearch.details:find("class access: Warrior",1,true))
+assert(addon.ItemCatalog[20425].acquisitionResearch.details:find("Warsong Outriders - Revered",1,true))
+assert(addon.ItemCatalog[20426].acquisitionResearch.details:find("Warsong Outriders - Honored",1,true))
+assert(addon.ItemCatalog[20425].acquisitionResearch.details:find("Standing 0 is not proof of Neutral access",1,true))
+assert(addon.ItemCatalog[276273].acquisitionResearch.details:find("one Extravagant Extravaganza Coin #274026",1,true)
+    and addon.ItemCatalog[276273].acquisitionResearch.details:find("Current event schedule",1,true))
+assert(addon.ItemCatalog[206386].acquisitionResearch.details:find("not proof the relic, rune mechanic or Rune Broker exists",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
