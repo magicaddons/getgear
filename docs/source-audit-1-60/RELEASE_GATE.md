@@ -183,3 +183,7 @@ Research resumed from verified branch HEAD `f6c7b1986fec1840bd88b0320f5f071b55e1
 ## Checkpoint 8B — merchant details and price exceptions
 
 [95 exact lower-level vendor cases](reconciliation-20261109/CHECKPOINT8B_REMAINING_LOW_LEVEL_VENDORS.md): 93 named references, two unresolved origins, 198 merchant edges/206 inventory rows/59 maps; eight explicit Windstone price disputes and 25 alternate drop references retained. All 954 recipe cases and six dungeon exceptions still live-unverified. Local full PASS: 14/14 regressions, 24 modules, reconciliation and required files; GitHub **PASS [42616476682](https://github.com/magicaddons/getgear/actions/runs/42616476682)**; source `9f90939f1db03bb17fac0af249052f4394016ec9`, inspected bot `bad361a997d6d24d66bf1f81ecd9e6289ebd0342` changes only timestamp and three response hashes; all 14 PASS lines verified. Runtime 2,177 summaries; equipment registry 309. No release permission. Next 8C after CI/bot review.
+
+## Checkpoint 8C — exact quest roles and access limits
+
+[34 remaining lower-level quest-family items](reconciliation-20261109/CHECKPOINT8C_REMAINING_LOW_LEVEL_QUESTS.md): 32 rewards, two provided-only objects; 91 exact quest pages and 71 independent NPC joins. Crystal minimum 53, cursed/cleansed distinction and both-role Swatter retained. Local full PASS 14/14,24 modules,3 files; GitHub **PENDING**, latest completed code baseline remains 42616476682 until closeout. Equipment registry 343; index2,178; recipes954. No release authority. Next8D only after CI/bot review.

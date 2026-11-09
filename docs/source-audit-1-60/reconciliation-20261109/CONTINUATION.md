@@ -27,3 +27,7 @@ The frozen [5,688-case queue](remaining_equipment_research_queue.csv) selects ca
 ## Checkpoint 8B complete
 
 All 95 selected vendor cases publication-researched/integrated; full local PASS 14/14,24 modules. GitHub full PASS 42616476682 (source 9f90939f1db03bb17fac0af249052f4394016ec9); direct bot child bad361a997d6d24d66bf1f81ecd9e6289ebd0342 inspected: timestamp/three response hashes only. All 14 logs verified through connector. Next 8C may begin. Frozen queue now marks these 95 researched; 5,593 remain, with **34 lower-level quest-family IDs marked 8C**. See exact evidence note. Automation start was adjusted to two hours after setup (`DTSTART:20261109T141544Z`, Adelaide 10 November 00:45:44), then every two hours; enabled, next-run field still null. No usage/billing controls changed.
+
+## Checkpoint 8C in validation
+
+All34 selected lower-level quest-family IDs publication-researched:32 rewards/two provided-only objects. Full local PASS14/14,24 modules,3 files. GitHub pending source push; finish and inspect bot before next batch. Runtime index2,178; equipment343; recipes954. Remaining frozen queue5,559; **71 vendor level31–40 IDs marked8D** are next. Preserve exact-role and access exceptions; source evidence/failed object reads documented in case note.

@@ -1273,6 +1273,39 @@ assert(addon.ItemCatalog[274745].acquisitionResearch.details:find("Booty Bay - F
 assert(addon.ItemCatalog[4766].acquisitionResearch.details:find("not a single waypoint",1,true)
     and addon.ItemCatalog[4766].acquisitionResearch.details:find("no current quantity/restock verified",1,true))
 
+-- Checkpoint 8C: provided tools are distinct from rewards and low equip levels from quest access.
+local remainingEarlyQuests={1449,2042,2903,2933,2944,6223,6898,6953,6970,6972,7507,7508,8071,9513,9514,9598,9599,9603,13347,15109,15866,16604,16605,16608,18957,257255,263312,263313,263314,263329,263412,263430,279898,282284}
+for _,id in ipairs(remainingEarlyQuests) do
+    local a=assert(addon.ItemCatalog[id]).acquisitionResearch
+    assert(a.equipmentReference and not a.recipeReference
+        and a.sourceSummary:find("unverified",1,true)
+        and addon.AcquisitionEvidenceIndex[id].patternID==nil)
+end
+for _,id in ipairs({2944,13347}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-quest-provided-item-reference"
+        and a.sourceSummary:find("not a final quest reward",1,true))
+end
+local crystal=addon.ItemCatalog[13347].acquisitionResearch.details
+assert(crystal:find("each minimum 53",1,true)
+    and crystal:find("not a permanent low-level trinket reward",1,true)
+    and crystal:find("damage and drains 100 to 500 mana",1,true))
+assert(addon.ItemCatalog[2944].acquisitionResearch.details:find("different Cleansed Eye of Paleth #2943",1,true))
+assert(addon.ItemCatalog[263329].acquisitionResearch.details:find("both provided as a quest tool and awarded",1,true)
+    and addon.ItemCatalog[263329].acquisitionResearch.confidence=="published-forever-quest-equipment-reference")
+assert(addon.ItemCatalog[2933].acquisitionResearch.details:find("Lady Katrana Prestor #1749 as end",1,true))
+assert(addon.ItemCatalog[2903].acquisitionResearch.details:find("within 15 minutes",1,true)
+    and addon.ItemCatalog[2903].acquisitionResearch.details:find("not a Hunter-class restriction",1,true))
+assert(addon.ItemCatalog[6953].acquisitionResearch.details:find("not an ordinary repeatable Blacksmithing recipe",1,true)
+    and not addon.ItemCatalog[6953].profession)
+assert(addon.ItemCatalog[6972].acquisitionResearch.details:find("not proof of the current transition into #1782",1,true))
+assert(addon.ItemCatalog[263430].acquisitionResearch.details:find("no Mage-only quest gate is invented",1,true))
+assert(addon.ItemCatalog[263412].acquisitionResearch.details:find("all four distinct reward quests",1,true)
+    and addon.ItemCatalog[263412].acquisitionResearch.details:find("no explicit Shaman class field",1,true))
+assert(addon.ItemCatalog[257255].acquisitionResearch.details:find("quest-page object lead",1,true)
+    and addon.ItemCatalog[257255].acquisitionResearch.details:find("quest inputs",1,true))
+assert(addon.ItemCatalog[6898].acquisitionResearch.details:find("alternatives, not simultaneous rewards",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
