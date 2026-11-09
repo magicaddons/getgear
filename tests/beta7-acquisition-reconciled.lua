@@ -1057,6 +1057,27 @@ assert(addon.ItemCatalog[15078].acquisitionResearch.details:find("Blackrock Sold
 assert(not addon.ItemCatalog[12781].acquisitionResearch.details:find("object #176327",1,true))
 assert(addon.ItemCatalog[7934].acquisitionResearch.details:find("200 NPC rows and may be truncated",1,true))
 
+-- Checkpoint 6T: four exact drop routes, one unavailable version and 146 honest origin gaps.
+local noAltOriginGaps={254013,250535,254015,254017,249144,10010,250540,250541,250546,250549,250550,250610,252465,252531,252562,252563,252564,254037,254039,254041,254047,10020,249234,250612,10032,250544,250545,10038,10039,252574,252575,250586,250587,252544,252467,254073,254075,254077,252545,252546,252580,252581,249232,250588,254093,250551,250552,250553,250554,250555,252547,252548,252549,252550,252551,252582,252583,252584,252585,252586,252587,254095,254097,254099,254101,254103,254105,252478,252592,252593,252594,252595,252596,250589,250590,250615,252479,252553,252554,252597,252598,254119,252555,254125,250591,250592,252556,252557,252481,252600,254121,254127,249237,250593,252558,252559,254129,254131,260819,260820,260828,260829,250594,250598,250599,250600,250601,252560,252482,252561,252483,252484,252485,252486,252601,252602,252603,252604,252605,252606,254135,254137,260821,279246,279247,279248,279249,279250,279251,279252,279253,279254,279255,279256,279257,279259,279260,279261,279262,279263,279264,279265,279266,279267,279268,279273}
+for _,id in ipairs(noAltOriginGaps) do
+    local item=assert(addon.ItemCatalog[id])
+    assert(addon.AcquisitionEvidenceIndex[id].patternID==nil)
+    assert(item.acquisitionResearch.confidence=="published-forever-book-origin-unresolved")
+    assert(item.acquisitionResearch.details:find("not current teaching proof",1,true)
+        and item.acquisitionResearch.details:find("not proof a trainer cannot teach",1,true))
+end
+for _,r in ipairs({{250536,251388,"Kurzen Jungle Fighter"},{250547,251399,"Ragglesnout"},
+                   {254021,254022,"Saltscale Oracle"},{254045,254046,"Amnennar the Coldbringer"}}) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2] and item.acquisitionResearch.details:find(r[3],1,true))
+    assert(item.acquisitionResearch.details:find("not drops of the finished crafted gear",1,true))
+end
+assert(addon.ItemCatalog[217273].recipePatternItemID==nil)
+assert(addon.ItemCatalog[217273].acquisitionResearch.confidence=="published-forever-availability-conflict")
+assert(addon.ItemCatalog[9366].recipePatternItemID==9367
+    and addon.ItemCatalog[9366].acquisitionResearch.confidence=="published-forever-quest-book-reference")
+assert(not addon.ItemCatalog[217273].acquisitionResearch.sourceSummary:find("Hank the Hammer",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
