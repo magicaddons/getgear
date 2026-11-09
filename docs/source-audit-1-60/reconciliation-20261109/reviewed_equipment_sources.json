@@ -32437,5 +32437,39 @@
       "https://www.wowhead.com/forever/item=272958": "b6a1bc1778bff3a749a6976e05ababed874a92820aedf0fdeb8616cc1928f8af",
       "https://www.wowhead.com/forever/npc=263570": "d218768609758ec9e375c6caa73ca9456472f22e390e71721ead16f2fb71eb2c"
     }
+  },
+  {
+    "itemID": 19525,
+    "name": "Lorekeeper's Ring",
+    "confidence": "published-forever-reputation-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Reputation vendor reference: Illiyana Moonblaze; Silverwing Sentinels Honored (current stock/access unverified).",
+    "details": "Exact item and separately fetched Illiyana Moonblaze #14753 inventory match selected ID/name/normalized coin-table cost/stock. Published location: Ashenvale x61.4\u201361.6, y83.8\u201383.8 (published footprint, not one waypoint). Inventory explicitly requires Silverwing Sentinels - Honored; published price 2g, not a verified current discount/charge. Published row identifies the Alliance item version; opposing-faction same-name alternatives are not substituted. Gear equip28 is distinct from reputation purchase access. No finite table stock limit shown; current stock/faction acceptance and current interaction remain unverified.\nThe inventory standing field is0, but its independent playerConditions explicitly require Silverwing Sentinels - Honored and the exact tooltip agrees. Do not interpret standing0 as Neutral or no reputation gate. The equip-data block lacks a reqfaction field; no numeric faction/use-rank field is invented from that omission. This is finished ring equipment, not a class-restricted recipe or a quest reward merely because its name mentions a Lorekeeper.\nCurrent reputation earning, marks/Honor/quest/phase requirements beyond the displayed condition, stock/restock and purchase acceptance remain unverified; no historical rank, event timing, discount formula or guaranteed current route inferred. Existing family, class/equip/stat/armour/filter settings are preserved. Publication references are not personal live observations.",
+    "sourceURL": "https://www.wowhead.com/forever/item=19525",
+    "vendorNPCIDs": [
+      14753
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=19525": "dcab203c9e5089bd3063673fb205434be0c5c62dc447e45e492f4c1441d8f4ac",
+      "https://www.wowhead.com/forever/npc=14753": "d80bbb4202fcce3e644e74d77eae68c2744cef32384092b0140d94544b3f4e93"
+    }
+  },
+  {
+    "itemID": 20099,
+    "name": "Highlander's Cloth Girdle",
+    "confidence": "published-forever-reputation-vendor-reference",
+    "liveVerified": false,
+    "reviewedOn": "2026-11-09",
+    "summary": "Reputation vendor reference: Samuel Hawke; The League of Arathor Honored (current stock/access unverified).",
+    "details": "Exact item and separately fetched Samuel Hawke #15127 inventory match selected ID/name/normalized coin-table cost/stock. Published location: Arathi Highlands x46\u201346, y45.2\u201345.6 (published footprint, not one waypoint). Inventory explicitly requires The League of Arathor - Honored; published price 72s 7c, not a verified current discount/charge. Published row identifies the Alliance item version; opposing-faction same-name alternatives are not substituted. Gear equip28 is distinct from reputation purchase access. No finite table stock limit shown; current stock/faction acceptance and current interaction remain unverified.\nExact equip data faction509/reqrep5 and inventory standing5 agree with The League of Arathor - Honored condition. NPC metadata says Alliance reaction changed from Friendly to Neutral; this is actor reaction, not removal/lowering of the item\u2019s Honored requirement. Repeated tooltip/condition text describes the same faction/rank, not two separate reputation grinds or an additional prerequisite.\nCurrent reputation earning, marks/Honor/quest/phase requirements beyond the displayed condition, stock/restock and purchase acceptance remain unverified; no historical rank, event timing, discount formula or guaranteed current route inferred. Existing family, class/equip/stat/armour/filter settings are preserved. Publication references are not personal live observations.",
+    "sourceURL": "https://www.wowhead.com/forever/item=20099",
+    "vendorNPCIDs": [
+      15127
+    ],
+    "sourceSHA256": {
+      "https://www.wowhead.com/forever/item=20099": "3a85ae702551e779672fc9749ddc3a0d4707c9ca810bd605d988c80748dff58c",
+      "https://www.wowhead.com/forever/npc=15127": "e0a81bf4965c15abc0789cada96651648c975217bc6789328f7116ff0e96d648"
+    }
   }
 ]

@@ -1,0 +1,306 @@
+{
+  "baseline": "fd8a3ec2d3d672272bbc9da5a84b61c492bdfb77",
+  "reviewedOn": "2026-11-09",
+  "status": "Integrated;full validation pending",
+  "counts": {
+    "items": 2,
+    "exactMerchantJoins": 2,
+    "explicitHonoredConditions": 2,
+    "currentLiveVerified": 0
+  },
+  "items": {
+    "19525": {
+      "url": "https://www.wowhead.com/forever/item=19525",
+      "bytes": 168402,
+      "sha256": "dcab203c9e5089bd3063673fb205434be0c5c62dc447e45e492f4c1441d8f4ac",
+      "title": "Lorekeeper's Ring - Item - Forever",
+      "tooltipText": "Lorekeeper's Ring      Item Level  33   Binds when picked up Unique     Finger            +4 Stamina    Restores + 2 mana per 5 sec.             Requires Level  28 Requires Silverwing Sentinels - Honored   Equip: Increases damage and healing done by magical spells and effects by up to   7 .      Sell Price:  50",
+      "identity": {
+        "id": 19525,
+        "name": "Lorekeeper's Ring",
+        "reqlevel": 28,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 28
+      },
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Illiyana Moonblaze",
+          "displayNames": [],
+          "id": 14753,
+          "location": [
+            331
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Illiyana Moonblaze",
+          "names": [],
+          "react": [
+            1,
+            null
+          ],
+          "tag": "Silverwing Supply Officer",
+          "type": 7,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              20000
+            ]
+          ],
+          "popularity": 1627
+        }
+      ]
+    },
+    "20099": {
+      "url": "https://www.wowhead.com/forever/item=20099",
+      "bytes": 249010,
+      "sha256": "3a85ae702551e779672fc9749ddc3a0d4707c9ca810bd605d988c80748dff58c",
+      "title": "Highlander's Cloth Girdle - Item - Forever",
+      "tooltipText": "Highlander's Cloth Girdle      Item Level  33   Binds when picked up Unique     Waist    Cloth        28 Armor    +4 Stamina    +3 Intellect    +60 Armor              Requires Level  28 Requires  The League of Arathor  - Honored Requires The League of Arathor - Honored   Equip: Increases damage and healing done by magical spells and effects by up to   11 .      Sell Price:  14   41",
+      "identity": {
+        "id": 20099,
+        "name": "Highlander's Cloth Girdle",
+        "reqlevel": 28,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Armor 28 instead of 88"
+          ],
+          "notShown": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 28,
+        "reqfaction": 509,
+        "reqrep": 5
+      },
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Samuel Hawke",
+          "displayNames": [],
+          "id": 15127,
+          "location": [
+            45
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Samuel Hawke",
+          "names": [],
+          "react": [
+            0,
+            null
+          ],
+          "tag": "League of Arathor Supply Officer",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed",
+              "faction_changed"
+            ],
+            "lines": [
+              "Alliance Neutral instead of Friendly",
+              "Sells: adds Major Healing Draught, Major Mana Draught"
+            ],
+            "notShown": [
+              "Alliance Neutral instead of Friendly",
+              "Sells: adds Major Healing Draught, Major Mana Draught"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              7207
+            ]
+          ],
+          "popularity": 142
+        }
+      ]
+    }
+  },
+  "merchants": {
+    "14753": {
+      "url": "https://www.wowhead.com/forever/npc=14753",
+      "bytes": 217236,
+      "sha256": "d80bbb4202fcce3e644e74d77eae68c2744cef32384092b0140d94544b3f4e93",
+      "title": "Illiyana Moonblaze - NPC - Forever",
+      "maps": {
+        "331": [
+          {
+            "count": 2,
+            "coords": [
+              [
+                61.4,
+                83.8
+              ],
+              [
+                61.6,
+                83.8
+              ]
+            ],
+            "uiMapId": 1440,
+            "uiMapName": "Ashenvale"
+          }
+        ]
+      },
+      "selectedInventoryRows": [
+        {
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Lorekeeper's Ring",
+          "flags2": 24580,
+          "id": 19525,
+          "level": 33,
+          "name": "Lorekeeper's Ring",
+          "quality": 3,
+          "reqlevel": 28,
+          "side": 1,
+          "slot": 11,
+          "slotbak": 11,
+          "source": [
+            5
+          ],
+          "sourcemore": [
+            {
+              "n": "Illiyana Moonblaze",
+              "t": 1,
+              "ti": 14753,
+              "z": 331
+            }
+          ],
+          "subclass": -2,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "playerConditions": [
+            "Requires Silverwing Sentinels - Honored"
+          ],
+          "standing": 0,
+          "react": [
+            1,
+            null
+          ],
+          "stack": [
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              20000,
+              [],
+              []
+            ]
+          ]
+        }
+      ]
+    },
+    "15127": {
+      "url": "https://www.wowhead.com/forever/npc=15127",
+      "bytes": 203415,
+      "sha256": "e0a81bf4965c15abc0789cada96651648c975217bc6789328f7116ff0e96d648",
+      "title": "Samuel Hawke - NPC - Forever",
+      "maps": {
+        "45": [
+          {
+            "count": 2,
+            "coords": [
+              [
+                46,
+                45.2
+              ],
+              [
+                46,
+                45.6
+              ]
+            ],
+            "uiMapId": 1417,
+            "uiMapName": "Arathi Highlands"
+          }
+        ]
+      },
+      "selectedInventoryRows": [
+        {
+          "appearances": {
+            "0": [
+              9965,
+              "inv_belt_16"
+            ]
+          },
+          "armor": 28,
+          "armorbonus": 60,
+          "classs": 4,
+          "displayName": "Highlander's Cloth Girdle",
+          "displayid": 9965,
+          "flags2": 24580,
+          "id": 20099,
+          "level": 33,
+          "name": "Highlander's Cloth Girdle",
+          "quality": 3,
+          "reqlevel": 28,
+          "side": 1,
+          "slot": 6,
+          "slotbak": 6,
+          "source": [
+            5
+          ],
+          "sourcemore": [
+            {
+              "n": "Samuel Hawke",
+              "t": 1,
+              "ti": 15127,
+              "z": 45
+            }
+          ],
+          "subclass": 1,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed"
+            ],
+            "lines": [
+              "Armor 28 instead of 88"
+            ],
+            "notShown": []
+          },
+          "playerConditions": [
+            "Requires The League of Arathor - Honored"
+          ],
+          "standing": 5,
+          "react": [
+            0,
+            null
+          ],
+          "stack": [
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              7207,
+              [],
+              []
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "method": "Two exact item/inventory ID/name/normalized coin-table/stock joins; each explicit Honored condition.19525 standing0 does not erase playerConditions;20099 Neutral actor reaction does not change Honored rank. Same condition repeated is not an extra grind. Preserve existing reputation family/eligibility."
+}
