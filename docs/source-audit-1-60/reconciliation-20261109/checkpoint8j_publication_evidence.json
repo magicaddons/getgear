@@ -1,7 +1,7 @@
 {
   "baseline": "adfbc77",
   "reviewedOn": "2026-11-09",
-  "status": "Full local PASS; non-release GitHub CI pending source push",
+  "status": "Full local and GitHub PASS; bot reviewed",
   "counts": {
     "items": 63,
     "itemPages": 63,
@@ -13483,5 +13483,14 @@
     "selectedObservedEdgeCounts": {
       "0": 63
     }
+  },
+  "githubValidation": {
+    "runURL": "https://github.com/magicaddons/getgear/actions/runs/42661663397",
+    "sourceCommit": "2dca2c05b45a78c94e10e71d434d80293d180a25",
+    "validatedBotHead": "884c9284bdf966d0eb4c44131655f7f104dd044f",
+    "testsPassed": 14,
+    "luaModules": 24,
+    "requiredReports": 4,
+    "botDelta": "run timestamp and three response hashes only"
   }
 }
