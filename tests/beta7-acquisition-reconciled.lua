@@ -1235,6 +1235,44 @@ assert(not addon.ItemCatalog[274444].acquisitionResearch.details:find("this exac
 assert(addon.ItemCatalog[284573].acquisitionResearch.confidence=="published-forever-equipment-origin-unresolved")
 assert(addon.ItemCatalog[205218].acquisitionResearch.confidence=="published-cross-version-availability-warning")
 
+-- Checkpoint 8B: inventory duplicates, alternate drops and same-name variants stay qualified.
+local remainingEarlyVendors={4766,4777,4778,4782,4786,4817,4818,4820,4821,4822,4824,4825,4826,4827,4828,4830,4831,4833,4835,4836,4837,4838,11305,11306,12247,12248,12249,12250,18442,18854,18856,18857,18858,18859,18862,18863,18864,19517,19541,19549,19557,19565,19573,20090,20093,20096,20102,20105,20108,20111,20114,20117,20120,20123,20126,20129,20431,20434,20438,20439,20440,20443,20444,21119,21566,21568,274745,274746,274747,274748,274749,277056,277057,277058,277059,277060,277061,277062,277063,277064,277065,277066,277067,277068,277069,277070,277071,277072,277073,277074,277075,277076,277077,277078,277079}
+for _,id in ipairs(remainingEarlyVendors) do
+    local a=assert(addon.ItemCatalog[id]).acquisitionResearch
+    assert(a.equipmentReference and not a.recipeReference
+        and a.sourceSummary:find("unverified",1,true))
+    assert(addon.AcquisitionEvidenceIndex[id].patternID==nil)
+end
+for _,id in ipairs({20120,20123}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-origin-unresolved"
+        and a.details:find("inventory omits this exact ID",1,true)
+        and a.details:find("No guessed seller",1,true))
+end
+for _,id in ipairs({277058,277061,277064,277067,277070,277073,277076,277079}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("8 Windstone #255663 and 12 Windstone #255663",1,true)
+        and d:find("current price unresolved",1,true))
+end
+local wind=addon.ItemCatalog[277056].acquisitionResearch.details
+assert(wind:find("25 Windstone #255663",1,true)
+    and wind:find("Brother Zendraas",1,true) and wind:find("57.8,52",1,true)
+    and wind:find("Alternate published item-page NPC drops",1,true)
+    and wind:find("no independent NPC map/loot-inventory join",1,true))
+assert(not wind:find("current price unresolved",1,true),"Do not spread sibling-price disputes")
+assert(not addon.ItemCatalog[277058].acquisitionResearch.details:find("Alternate published item-page NPC drops",1,true),
+    "Do not spread sibling drop routes")
+for _,id in ipairs({21566,21568}) do
+    local d=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(d:find("not proof a player must satisfy both opposing factions",1,true))
+end
+assert(addon.ItemCatalog[18854].acquisitionResearch.details:find("Classes: Warrior",1,true))
+assert(addon.ItemCatalog[18856].acquisitionResearch.details:find("Classes: Hunter",1,true))
+assert(addon.ItemCatalog[274745].acquisitionResearch.details:find("Booty Bay - Friendly",1,true)
+    and addon.ItemCatalog[274749].acquisitionResearch.details:find("Booty Bay - Honored",1,true))
+assert(addon.ItemCatalog[4766].acquisitionResearch.details:find("not a single waypoint",1,true)
+    and addon.ItemCatalog[4766].acquisitionResearch.details:find("no current quantity/restock verified",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),

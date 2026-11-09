@@ -1,0 +1,68 @@
+{
+  "all_items_reconciled.csv": {
+    "additiveSummaryCells": 95,
+    "sourceRowOffsetOnlyCells": 0,
+    "semanticChanges": [
+      {
+        "itemID": "11822",
+        "name": "Omnicast Boots",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "boss"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "boss: Golem Lord Argelmach, Blackrock Depths"
+          },
+          "dungeonConfidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          }
+        }
+      }
+    ]
+  },
+  "dungeon_items_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 42,
+    "semanticChanges": [
+      {
+        "itemID": "11822",
+        "name": "Omnicast Boots",
+        "changes": {
+          "confidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          },
+          "PlayfullsRoutes": {
+            "before": [],
+            "after": [
+              {
+                "type": "boss",
+                "npc": "Golem Lord Argelmach",
+                "zone": "Blackrock Depths",
+                "path": "loot-tables/dungeons/blackrock-depths",
+                "note": "loot-tables/dungeons/blackrock-depths#boss-golem-lord-argelmach",
+                "label": "Boss drop"
+              }
+            ]
+          },
+          "sourceURL": {
+            "before": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+            "after": "https://playfulls.com/database"
+          }
+        }
+      }
+    ]
+  },
+  "recipes_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 12,
+    "semanticChanges": []
+  }
+}

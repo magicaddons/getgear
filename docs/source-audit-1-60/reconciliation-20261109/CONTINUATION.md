@@ -23,3 +23,7 @@ The frozen [5,688-case queue](remaining_equipment_research_queue.csv) selects ca
 **Next checkpoint 8B:** all 95 remaining vendor items at catalogue levels 1–30. Do not re-review 7C's 93 cases. Fetch exact Forever item pages, identity-lock, preserve alternate routes, independently join merchant inventories by exact item ID/name, check costs/stock/requirements and qualified locations. Missing/version-disputed inventory remains unresolved. Then remaining lower-level quests, higher-level vendor/quest/undocumented, world-drop, reputation and final full integrity/acceptance plan. Further batches can subdivide these coherent groups.
 
 8A targeted checks: queue unique IDs, canonical name/level equality, zero intersection with reviewed-equipment registry, exact family partition and 95 next-batch IDs. PASS; documentation only, no regeneration/full CI. Commit identity is recoverable from Git history (do not insert a self-referential commit hash).
+
+## Checkpoint 8B in validation
+
+All 95 selected vendor cases publication-researched/integrated; full local PASS 14/14,24 modules. GitHub non-release run pending source push: finish validation and inspect bot before starting 8C. Frozen queue now marks these 95 researched; 5,593 remain, with **34 lower-level quest-family IDs marked 8C**. See exact evidence note. Automation start was adjusted to two hours after setup (`DTSTART:20261109T141544Z`, Adelaide 10 November 00:45:44), then every two hours; enabled, next-run field still null. No usage/billing controls changed.
