@@ -30,6 +30,10 @@ Only AcquisitionEvidenceIndex.lua and ten generated reports changed. Most CSV ch
 - Regression negative cases retain Goblin Mail Leggings 1943 caveat, Blackwater Cutlass 1951 reviewed source, Guard’s Chain Shirt 250489 dropped book 251341, crafted Idol 220606 / formula 249529, prior Blighted Leggings 7709 observation and source precedence. Armour-only default-off opt-in, positive-stat safety, green BoE default-hidden filter, settings migration, tracked/all materials and full guide checks passed.
 
 ## GitHub result
-PENDING: reviewed generated changes require a fresh run of `.github/workflows/reconcile-all-acquisition.yml` only. Record run URL, conclusion and any final bot commit after completion. Local PASS does not establish GitHub PASS.
+**PASS:** [non-release workflow 42547493799](https://github.com/magicaddons/getgear/actions/runs/42547493799), dispatched on validation commit `458292015cd3e3720efde22502fbaa1c7a0468de`, completed successfully at 2026-11-09T01:49:11Z (12:19 Adelaide). Reconciliation, required-file checks, complete manifest Lua syntax, all 14 regressions, report artifact upload and development-only report commit steps succeeded.
+
+Verified and fast-forwarded bot final commit `50db73df97eedead6af702f183690785775ec392`, direct child of the dispatched commit. Its entire diff is provenance.json only: three Everloot HTTP response hashes and generation timestamp; no evidence rows, index, confidence or addon changes. Local generated evidence matches CI apart from that request metadata. Final documentation closeout follows this bot commit and does not change validated code/data; its commit SHA is available from the development branch history.
+
+CLI log download hit a Forbidden response at the Actions results-receiver host; GitHub connector job-log retrieval succeeded, so full test output was inspected through that fallback. This was not a validation blocker. No failed or pending validation run remains.
 
 No ZIP, packaging/build, tag, release, merge, release workflow or main modification. Offline tests do not verify live client layout/item cache, current vendor stock, trainer inventories, spawn availability or drop probabilities. In-game acceptance and release approval remain outstanding.
