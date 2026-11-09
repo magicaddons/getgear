@@ -7,3 +7,7 @@ Continue from [self-contained working evidence](checkpoint8o_working_evidence.js
 **Resume:** integrate100 reviewed equipment metadata entries, distinguishing84 PvP versus16 item exchanges and22 version warnings; expose exact named costs, bindings and published equip-profession requirements without adding regular recipes/reagents or inventing purchase/profession gates. Preserve all1,254 existing crafts/4,857 ingredients. Run fresh reconciliation/Python syntax,24 modules,four reports,14 regressions, then non-release GitHub CI/bot review. Document any genuine discrepancy and continue independent work.
 
 **Pending:** runtime integration/full validation/queue advance not done. Registry remains1,277/index2,957/display2,956; remaining4,625, all100 still unreviewed/marked8O. Latest complete full CI42666508212/bot2fd9b88 remains the validation baseline. No8O full PASS claimed. Primary joins/identity/quantity/seasonal checks PASS as publication research only. No release/build/package/tag/merge/main action.
+
+## Superseding integration record
+
+Runtime integration and local full suite now PASS; see CHECKPOINT8O_LEVEL60_VENDOR_EXCHANGES.md. GitHub CI/bot review remains pending. Do not repeat the primary research or integration. Queue100 marked publication-researched; next8P remains gated on CI.

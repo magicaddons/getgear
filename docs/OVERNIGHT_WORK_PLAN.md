@@ -130,3 +130,7 @@ Full local and GitHub PASS: [42666508212](https://github.com/magicaddons/getgear
 ## Checkpoint 8O research preserved — integration pending
 
 8O research preserved in CHECKPOINT8O_IN_PROGRESS.md/checkpoint8o_working_evidence.json:100 identities,114 merchant joins,16 exchanges/23 inputs/48 reverse cost joins,22 exact version warnings.84 PvP cases and16 item exchanges must remain distinct; profession-use290 is not learned crafting or purchase access, and Scourgestones12843 are not Valor Tokens12844. Runtime/full validation/queue advance PENDING; all100 remain8O/unreviewed, registry1,277/index2,957/remaining4,625. Latest full PASS42666508212/bot2fd9b88 retained. Finish saved integration then full local/CI/bot; no release/main action.
+
+## Checkpoint 8O integrated — GitHub pending
+
+[100 level60 vendor cases](source-audit-1-60/reconciliation-20261109/CHECKPOINT8O_LEVEL60_VENDOR_EXCHANGES.md):84 PvP references/16 item exchanges,114 merchant joins/48 input reverse joins,22 exact seasonal warnings. Bound outputs/profession-use290 separate from base BoE craft, learned recipes and purchase gates. Exact Scourgestones12843, not ValorTokens12844; barter is not free. Full local PASS14/14,24 modules,four reports; GitHub PENDING. All1,277 earlier objects retained;100 summary changes only. Equipment1,377/index3,057/display3,056/books759; crafts1,254/ingredients4,857 unchanged. Remaining4,525; next8P:first100 remaining60-vendor IDs231583–231691, marked queue, after CI/bot review. No release/main action.
