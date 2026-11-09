@@ -1,0 +1,33 @@
+{
+  "reviewedOn": "2026-11-09",
+  "liveVerified": false,
+  "sources": [
+    {
+      "url": "https://www.wow-professions.com/forever/merchants-favor-durotar-supply-azeroth-commerce",
+      "access": "Connected web; shell proxy 403",
+      "finding": "Published camp locations, sealed-crate Favor turn-ins to Marcy Baker/Dokimi; separate reputation through customer-delivered Craftsman writs."
+    },
+    {
+      "url": "https://www.wow-professions.com/forever/npc/fizzlefuse",
+      "access": "Connected web",
+      "finding": "Exact schematic links 280321,280322,280323 published as Friendly Durotar Supply and Logistics; 280325-280328 Friendly and 264234 Honored."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/guide/azeroth-commerce-authority-reputation-professions",
+      "access": "Connected web",
+      "finding": "Published Alliance Three Corners and Horde Crossroads camp context; currency/recipe tables. Do not copy generic camp coordinates as an individual seller pin."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=256730/stondry-darkhammer",
+      "access": "Connected web",
+      "finding": "Exact seller identity and Redridge Mountains location independently read."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=248197/gormak",
+      "access": "Connected web",
+      "finding": "Exact seller identity and The Barrens location independently read."
+    }
+  ],
+  "sourceResponseHandling": "All 117 book XML/item responses successfully fetched in this batch with configured User-Agent before singular/plural checks. Later repeat book/NPC fetches returned 403; reparsed same-batch successful local bytes and recorded their hashes. No missing response fabricated; no new NPC coordinate or shop claim made.",
+  "remainingUncertainty": "Physical routes and gates live-unverified; book tooltips do not name reputation faction. Guides are published context only."
+}

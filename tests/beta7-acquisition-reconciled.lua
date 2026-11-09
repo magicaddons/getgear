@@ -379,8 +379,12 @@ assert(bookDetail:find("Published book-drop references",1,true)
 assert(bookDrop.sourceType=="Leatherworking" and bookDrop.profession=="Leatherworking")
 assert(not addon:GetAcquisitionSummary(bookDrop):find("Boss:",1,true))
 assert(describe(addon.ItemCatalog[252505],false):find("Player report: Lord Cobrahn",1,true))
-assert(not addon.ItemCatalog[252428].acquisitionResearch.details,
+local beltDetail=addon.ItemCatalog[252428].acquisitionResearch.details or ""
+assert(not beltDetail:find("Published book-drop references",1,true)
+    and not beltDetail:find("Lord Cobrahn",1,true)
+    and not beltDetail:find("Sneed",1,true),
     "A published drop for a glove must not spread to the belt family")
+assert(beltDetail:find("Waylaid Crate",1,true),"Shared Favor directions remain useful for belts")
 
 -- Checkpoint 6E: item-specific costs and reputation must not leak
 -- between profession families or turn a publication into live stock.
@@ -400,7 +404,7 @@ for _,r in ipairs({{280306,280321},{280307,280322},{280308,280323}}) do
         and text:find("Alliance Fritz Fizzle",1,true) and text:find("Horde Fizzlefuse",1,true)
         and text:find("180 Merchant's Favor",1,true)
         and text:find("Friendly reputation",1,true)
-        and text:find("Horde faction gate unverified",1,true)
+        and text:find("Horde: Durotar Supply and Logistics",1,true)
         and text:find("live stock/gates unverified",1,true))
     assert(describe(item,false):find("does not name its faction",1,true))
 end
@@ -760,6 +764,143 @@ local acolyte=addon.ItemCatalog[250501].acquisitionResearch.details
 assert(protector:find("Dextren Ward",1,true) and not acolyte:find("Dextren Ward",1,true))
 assert(acolyte:find("Bazil Thredd",1,true) and not protector:find("Bazil Thredd",1,true))
 assert(addon.ItemCatalog[253999].acquisitionResearch.details:find("Gravelsnout Surveyor",1,true))
+
+-- Checkpoint 6N: cost is not a reputation rule; exact rank/name/ID exceptions.
+local highFavor={
+    {250561,251413,90,"Honored"},
+    {250562,251414,90,"Honored"},
+    {250563,251415,90,"Honored"},
+    {250564,251416,90,"Honored"},
+    {250565,251417,90,"Honored"},
+    {250566,251418,60,"Friendly"},
+    {250567,251419,60,"Friendly"},
+    {250568,251420,60,"Friendly"},
+    {250569,251421,60,"Friendly"},
+    {250570,251422,60,"Friendly"},
+    {250571,251423,90,"Honored"},
+    {250572,251424,90,"Honored"},
+    {250573,251425,90,"Honored"},
+    {250575,251427,90,"Honored"},
+    {250576,251428,60,"Friendly"},
+    {250577,251429,60,"Friendly"},
+    {250578,251430,60,"Friendly"},
+    {250579,251431,60,"Friendly"},
+    {250580,251432,60,"Friendly"},
+    {250581,251433,90,"Honored"},
+    {250582,251434,90,"Honored"},
+    {250583,251435,90,"Honored"},
+    {250584,251436,90,"Honored"},
+    {250585,251437,90,"Honored"},
+    {250595,251447,120,"Honored"},
+    {250596,251448,120,"Honored"},
+    {250597,251449,120,"Honored"},
+    {250613,251465,90,"Honored"},
+    {250614,251466,90,"Honored"},
+    {250619,251471,120,"Honored"},
+    {252524,252836,60,"Friendly"},
+    {252525,252837,60,"Friendly"},
+    {252526,252838,60,"Friendly"},
+    {252527,252839,60,"Friendly"},
+    {252528,252840,60,"Friendly"},
+    {252529,252841,60,"Friendly"},
+    {252530,252842,60,"Friendly"},
+    {252534,252848,60,"Friendly"},
+    {252535,252849,60,"Friendly"},
+    {252536,252850,60,"Friendly"},
+    {252537,252851,60,"Friendly"},
+    {252538,252852,60,"Friendly"},
+    {252539,252853,90,"Honored"},
+    {252540,252854,90,"Honored"},
+    {252541,252855,90,"Honored"},
+    {252542,252856,90,"Honored"},
+    {252543,252857,90,"Honored"},
+    {252468,252860,90,"Honored"},
+    {252469,252861,90,"Honored"},
+    {252470,252862,90,"Honored"},
+    {252471,252863,90,"Honored"},
+    {252472,252864,90,"Honored"},
+    {252473,252872,90,"Honored"},
+    {252474,252873,90,"Honored"},
+    {252475,252874,90,"Honored"},
+    {252476,252875,90,"Honored"},
+    {252477,252876,90,"Honored"},
+    {252566,252900,60,"Friendly"},
+    {252567,252901,60,"Friendly"},
+    {252568,252902,60,"Friendly"},
+    {252569,252903,60,"Friendly"},
+    {252570,252904,90,"Honored"},
+    {252571,252905,90,"Honored"},
+    {252572,252906,90,"Honored"},
+    {252573,252907,90,"Honored"},
+    {252576,252910,90,"Honored"},
+    {252577,252911,90,"Honored"},
+    {252578,252912,90,"Honored"},
+    {252579,252913,90,"Honored"},
+    {252588,252922,90,"Honored"},
+    {252589,252923,90,"Honored"},
+    {252590,252924,90,"Honored"},
+    {252591,252925,90,"Honored"},
+    {254023,254024,60,"Friendly"},
+    {254025,254026,60,"Friendly"},
+    {254027,254028,60,"Friendly"},
+    {254029,254030,60,"Friendly"},
+    {254031,254032,60,"Friendly"},
+    {254049,254050,60,"Friendly"},
+    {254051,254052,60,"Friendly"},
+    {254053,254054,60,"Friendly"},
+    {254055,254056,60,"Friendly"},
+    {254057,254058,60,"Friendly"},
+    {254059,254060,60,"Friendly"},
+    {254061,254062,60,"Friendly"},
+    {254063,254064,60,"Friendly"},
+    {254065,254066,60,"Friendly"},
+    {254067,254068,60,"Friendly"},
+    {254069,254070,60,"Friendly"},
+    {254071,254072,60,"Friendly"},
+    {254081,254082,60,"Friendly"},
+    {254083,254084,60,"Friendly"},
+    {254085,254086,60,"Friendly"},
+    {254087,254088,60,"Friendly"},
+    {254089,254090,60,"Friendly"},
+    {254091,254092,60,"Friendly"},
+    {254107,254108,90,"Honored"},
+    {254109,254110,90,"Honored"},
+    {254111,254112,90,"Honored"},
+    {254113,254114,90,"Honored"},
+    {254115,254116,90,"Honored"},
+    {254117,254118,90,"Honored"},
+    {249441,249493,120,"Friendly"},
+    {249442,249494,120,"Friendly"},
+    {249443,249495,120,"Friendly"},
+    {249453,249506,120,"Friendly"},
+    {249454,249507,120,"Friendly"},
+    {249455,249508,120,"Friendly"},
+    {249456,249509,120,"Friendly"},
+    {228175,249530,240,"Honored"},
+    {228176,249532,240,"Honored"},
+    {249385,249537,180,"Honored"},
+    {260824,264234,360,"Honored"},
+    {280310,280325,180,"Friendly"},
+    {280311,280326,180,"Friendly"},
+    {280312,280327,180,"Friendly"},
+    {280313,280328,180,"Friendly"},
+}
+for _,r in ipairs(highFavor) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    local text=item.acquisitionResearch.sourceSummary
+    assert(text:find(r[3].." Merchant's Favor",1,true))
+    assert(text:find("Tooltip: "..r[4],1,true))
+    assert(text:find("live stock/gates unverified",1,true))
+    assert(item.acquisitionResearch.details:find("No gate is inferred from cost",1,true))
+end
+assert(addon.ItemCatalog[280310].acquisitionResearch.sourceSummary:find("Tooltip: Friendly",1,true))
+assert(addon.ItemCatalog[249385].acquisitionResearch.sourceSummary:find("Tooltip: Honored",1,true))
+for _,id in ipairs({280306,280307,280308}) do
+    local text=addon.ItemCatalog[id].acquisitionResearch.details
+    assert(text:find("Friendly Durotar Supply and Logistics",1,true))
+    assert(text:find("not live purchase verification",1,true))
+end
 
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
