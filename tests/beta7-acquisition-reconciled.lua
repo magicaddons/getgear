@@ -1584,6 +1584,31 @@ assert(addon.ItemCatalog[19099].acquisitionResearch.confidence=="published-forev
 assert(addon.ItemCatalog[19321].acquisitionResearch.details:find("not both standings required",1,true))
 assert(addon.ItemCatalog[22651].acquisitionResearch.details:find("Warsong Outriders - Exalted",1,true))
 
+-- Checkpoint 8M: four explicit seasonal warnings are item-specific,
+-- while the other matched PvP rows still have unresolved current access.
+local vendors8m=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/checkpoint8m_vendor_equipment.csv")):read("*a")
+local seasonal8m={[227050]=true,[227051]=true,[227052]=true,[227053]=true}
+local count8m=0
+for id in vendors8m:gmatch("\n(%d+),") do
+    id=tonumber(id)
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.equipmentReference and a.sourceSummary:find("unverified",1,true) and not a.recipeReference)
+    if seasonal8m[id] then
+        assert(a.confidence=="published-forever-equipment-version-unconfirmed"
+            and a.details:find("Matched merchant data does not override this version warning",1,true))
+    else
+        assert(a.confidence=="published-pvp-vendor-reference-current-access-unverified")
+    end
+    count8m=count8m+1
+end
+assert(count8m==100)
+for _,id in ipairs({23452,23453,23468,23469}) do
+    assert(addon.ItemCatalog[id].acquisitionResearch.details:find("finished held-in-off-hand equipment",1,true)
+        and not addon.ItemCatalog[id].profession)
+end
+assert(addon.ItemCatalog[227062].acquisitionResearch.confidence=="published-pvp-vendor-reference-current-access-unverified",
+    "Do not copy another seasonal ID's warning across the family")
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),

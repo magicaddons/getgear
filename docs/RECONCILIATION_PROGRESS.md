@@ -305,3 +305,7 @@ Full local and GitHub PASS: [42662988658](https://github.com/magicaddons/getgear
 ## Checkpoint 8L validated — next 8M
 
 Full local and GitHub PASS: [42663990981](https://github.com/magicaddons/getgear/actions/runs/42663990981), source `cc28ef28cb9f58faea8c2a6c45399fcb725a98c1`; inspected direct bot/final validated HEAD `f3857cddf86cf6b8e37123e8dabcdae4eadd7196`. All14 PASS logs verified;24 modules/four reports. Bot changes only run timestamp/three response hashes; runtime/counts/reports unchanged. Equipment1,077/index2,757/display2,756/books759; crafts1,254/ingredients4,857. Remaining4,825; **next8M:first100 remaining level60 vendors** (23254 through227070), marked queue. Rank-named current purchase paths and all current-source uncertainties retained. No release/main action.
+
+## Checkpoint 8M integrated — GitHub pending
+
+[Third100 level60 vendor cases](source-audit-1-60/reconciliation-20261109/CHECKPOINT8M_LEVEL60_PVP_THIRD100.md):100 exact item/merchant joins/four unmapped NPCs;96 current purchase paths unresolved,four exact seasonal version warnings. Warning flags not propagated to other IDs; four Tomes remain finished off-hands. Shared8K system context reused. Full local PASS14/14,24 modules,four reports; GitHub PENDING. Equipment1,177/index2,857/display2,856/books759; crafts1,254/ingredients4,857 unchanged. All1,077 earlier entries retained;100 additive summaries only. Remaining4,725; next8N:first100 remaining level60 vendor IDs marked queue. No release/main action.
