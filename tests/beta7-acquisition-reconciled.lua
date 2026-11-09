@@ -659,6 +659,85 @@ assert(addon.ItemCatalog[276992].acquisitionResearch.sourceSummary:find("Honored
 assert(not addon.ItemCatalog[276993].acquisitionResearch.sourceSummary:find("Honored",1,true),
     "Do not copy chest/leg reputation gates onto wrist books")
 
+-- Checkpoint 6L: generic-drop book references are not exclusive live farms.
+local genericBooks={
+    {3481,2882},
+    {3490,2883},
+    {3492,3608},
+    {3484,3611},
+    {3485,3612},
+    {3850,3866},
+    {3852,3867},
+    {3840,3870},
+    {3841,3871},
+    {3843,3872},
+    {5541,5543},
+    {2869,5578},
+    {10423,10424},
+    {250483,251335},
+    {250484,251336},
+    {250485,251337},
+    {250486,251338},
+    {250487,251339},
+    {250533,251385},
+    {250534,251386},
+    {250602,251454},
+    {250603,251455},
+    {250604,251456},
+    {2307,2406},
+    {2312,2408},
+    {2317,2409},
+    {4250,4294},
+    {4252,4296},
+    {4254,4297},
+    {4258,4298},
+    {4256,4299},
+    {5958,5972},
+    {7280,7288},
+    {4248,7360},
+    {7358,7363},
+    {7359,7364},
+    {7373,7449},
+    {7375,7450},
+    {252449,252804},
+    {2572,2598},
+    {2585,2601},
+    {4313,4345},
+    {4317,4349},
+    {4321,4350},
+    {4323,4351},
+    {4325,4352},
+    {5770,5773},
+    {6239,6271},
+    {7065,7090},
+    {7049,7091},
+    {7047,7092},
+    {10048,10316},
+    {253945,253946},
+    {4383,4412},
+}
+for _,r in ipairs(genericBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.recipePatternItemID==r[2])
+    local research=assert(item.acquisitionResearch)
+    assert(research.confidence=="published-forever-book-drop-reference")
+    assert(research.sourceSummary:find("live unverified; non-exhaustive",1,true))
+    local detail=research.details
+    assert(detail:find("not finished crafted gear",1,true)
+        and detail:find("No confirmed live drop",1,true))
+    assert(not detail:find("Drop Chance:",1,true) and not detail:find("%%"))
+end
+local arcana=addon.ItemCatalog[5770].acquisitionResearch
+assert(arcana.sourceSummary:find("Defias Enchanter",1,true)
+    and arcana.sourceSummary:find("Dark Strand Voidcaller",1,true))
+assert(arcana.details:find("not a single waypoint",1,true))
+local linen=addon.ItemCatalog[2572].acquisitionResearch.details
+assert(linen:find("200 NPC rows and may be truncated",1,true))
+assert(not linen:find("Defias Enchanter",1,true),"Do not copy Arcana's targeted source onto Linen")
+local pearly=addon.ItemCatalog[253945].acquisitionResearch.details
+assert(pearly:find("Shadow Charger",1,true) and pearly:find("Lady Sarevess",1,true))
+assert(not pearly:find("Kresh",1,true),"Do not spread another Filigreed book's NPCs")
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")

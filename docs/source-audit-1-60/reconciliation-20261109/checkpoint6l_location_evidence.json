@@ -1,0 +1,2028 @@
+{
+  "reviewedOn": "2026-11-09",
+  "liveVerified": false,
+  "zoneReferences": [
+    {
+      "zoneID": 1,
+      "name": "Dun Morogh",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1",
+      "sha256": "cb2ef7b20ed578e11e547e9b6cd3ea4f24254ce43e1966d1d8c2aa8fe5c77dc8"
+    },
+    {
+      "zoneID": 3,
+      "name": "Badlands",
+      "sourceURL": "https://www.wowhead.com/forever/zone=3",
+      "sha256": "7c58f7dd03547caf8bf157a64dc8a6d90e7663459abbe04b75e6f90c48f0aadf"
+    },
+    {
+      "zoneID": 8,
+      "name": "Swamp of Sorrows",
+      "sourceURL": "https://www.wowhead.com/forever/zone=8",
+      "sha256": "70aa320cdb3db6399423e85c859f8b42a128e2d26aafd1ad80d1363c84b2369b"
+    },
+    {
+      "zoneID": 10,
+      "name": "Duskwood",
+      "sourceURL": "https://www.wowhead.com/forever/zone=10",
+      "sha256": "cca078ff78f30b8648e6a02d8e5820eaaf2459f72281233bcee8d7d990683543"
+    },
+    {
+      "zoneID": 11,
+      "name": "Wetlands",
+      "sourceURL": "https://www.wowhead.com/forever/zone=11",
+      "sha256": "6be1e99fe1395eb3b572a7e61c6672b95c6f71e1c72966781ec0d1bda5fd80fd"
+    },
+    {
+      "zoneID": 12,
+      "name": "Elwynn Forest",
+      "sourceURL": "https://www.wowhead.com/forever/zone=12",
+      "sha256": "f7041496fe9e08bb9b38bc6da220b430851c1379025d7a29505df05765c0a421"
+    },
+    {
+      "zoneID": 14,
+      "name": "Durotar",
+      "sourceURL": "https://www.wowhead.com/forever/zone=14",
+      "sha256": "89c6de99f16d39f66b8717ca30275cf71aa5e031bd0c32f0f8e9e4bc3719d5c2"
+    },
+    {
+      "zoneID": 15,
+      "name": "Dustwallow Marsh",
+      "sourceURL": "https://www.wowhead.com/forever/zone=15",
+      "sha256": "920a62b04ed3d7ab3f506dce5b03a6edac6d8573268fc964e27bc93f1e8e43eb"
+    },
+    {
+      "zoneID": 17,
+      "name": "The Barrens",
+      "sourceURL": "https://www.wowhead.com/forever/zone=17",
+      "sha256": "577aea655e55bb8df84661bfef5b1276d96a3f78aca6aaa45bd28d2168615cfa"
+    },
+    {
+      "zoneID": 33,
+      "name": "Stranglethorn Vale",
+      "sourceURL": "https://www.wowhead.com/forever/zone=33",
+      "sha256": "330fd5bcb6fd20fea00ad32b7fa60310248d072945607a3548ebf649922ccb34"
+    },
+    {
+      "zoneID": 36,
+      "name": "Alterac Mountains",
+      "sourceURL": "https://www.wowhead.com/forever/zone=36",
+      "sha256": "2faedadc948cb823fa0647c41879ea29b385f1b274d2e30f8a9e6a507b7bc938"
+    },
+    {
+      "zoneID": 38,
+      "name": "Loch Modan",
+      "sourceURL": "https://www.wowhead.com/forever/zone=38",
+      "sha256": "a0647531d5017557020eb8aaeb6df83ed1c7fbedba9e74a1319e9eb7f46d7655"
+    },
+    {
+      "zoneID": 40,
+      "name": "Westfall",
+      "sourceURL": "https://www.wowhead.com/forever/zone=40",
+      "sha256": "efda5d719a5bb73b06e60b84f3e0d3d04bd0b1c5a14122ba0bb6324a9ff5d344"
+    },
+    {
+      "zoneID": 44,
+      "name": "Redridge Mountains",
+      "sourceURL": "https://www.wowhead.com/forever/zone=44",
+      "sha256": "41dc94ff41684d9951397398d894e859d7668a69be68e6e244ded289e91e8f7c"
+    },
+    {
+      "zoneID": 45,
+      "name": "Arathi Highlands",
+      "sourceURL": "https://www.wowhead.com/forever/zone=45",
+      "sha256": "56c0f8268aa07e60846fc77c90b69b7aaea9a68b038c15115d8e799b2e3e64c3"
+    },
+    {
+      "zoneID": 85,
+      "name": "Tirisfal Glades",
+      "sourceURL": "https://www.wowhead.com/forever/zone=85",
+      "sha256": "8439273cbce5933d8dd3c8b486c3dd248f2744cc411de73609115a9a1af2d9f4"
+    },
+    {
+      "zoneID": 130,
+      "name": "Silverpine Forest",
+      "sourceURL": "https://www.wowhead.com/forever/zone=130",
+      "sha256": "1127a5c3b0c5bfe1e7b5a2744aee2416046681249826a3b61b4872838508521b"
+    },
+    {
+      "zoneID": 141,
+      "name": "Teldrassil",
+      "sourceURL": "https://www.wowhead.com/forever/zone=141",
+      "sha256": "7541dd01a548fa03f447644858531082ea026f816b63dbdc4ff877561461dd9b"
+    },
+    {
+      "zoneID": 148,
+      "name": "Darkshore",
+      "sourceURL": "https://www.wowhead.com/forever/zone=148",
+      "sha256": "97bf0c2899a9f619437d9bfc214352c31a8c701619c30cf7275fad39a790d4de"
+    },
+    {
+      "zoneID": 209,
+      "name": "Shadowfang Keep",
+      "sourceURL": "https://www.wowhead.com/forever/zone=209",
+      "sha256": "fc39f31aaceb223df2571ab4fa3d3642b0a4414d34f45db6c1e175b3d0b31d93"
+    },
+    {
+      "zoneID": 215,
+      "name": "Mulgore",
+      "sourceURL": "https://www.wowhead.com/forever/zone=215",
+      "sha256": "409b6404d5f9300e4a3ee440d8cebd75d37c63108acfcce85bf549d960315031"
+    },
+    {
+      "zoneID": 267,
+      "name": "Hillsbrad Foothills",
+      "sourceURL": "https://www.wowhead.com/forever/zone=267",
+      "sha256": "9b29f3100ba6b07145bc5f2e1ad38407c732fd5b6ddd63dabee66ee46f2da32f"
+    },
+    {
+      "zoneID": 331,
+      "name": "Ashenvale",
+      "sourceURL": "https://www.wowhead.com/forever/zone=331",
+      "sha256": "e23a0bcd80944660fe80a84dd6d185283e82b0f444a7ceba941cc787164e3b5c"
+    },
+    {
+      "zoneID": 357,
+      "name": "Feralas",
+      "sourceURL": "https://www.wowhead.com/forever/zone=357",
+      "sha256": "ae7deed8cec5a8a0d944d2d707142b0e138ae4868511cf69233f9d99d5d97436"
+    },
+    {
+      "zoneID": 400,
+      "name": "Thousand Needles",
+      "sourceURL": "https://www.wowhead.com/forever/zone=400",
+      "sha256": "6ba36f87af6bd8ec3d66bf0d99f6faecd555e2c3abef596c1a7474b9e878fcf1"
+    },
+    {
+      "zoneID": 405,
+      "name": "Desolace",
+      "sourceURL": "https://www.wowhead.com/forever/zone=405",
+      "sha256": "ec8635c2c91d9baa004cbe0dc90beec22801fc8b10c193c554efccbe6436307c"
+    },
+    {
+      "zoneID": 406,
+      "name": "Stonetalon Mountains",
+      "sourceURL": "https://www.wowhead.com/forever/zone=406",
+      "sha256": "fe1edb5bae2348b0d81d5008b4dc00ee1ee2a7418a2c68dfffcf48373230ed08"
+    },
+    {
+      "zoneID": 491,
+      "name": "Razorfen Kraul",
+      "sourceURL": "https://www.wowhead.com/forever/zone=491",
+      "sha256": "48a7b47f6a60e9541bfccf30db6150f292d4b0779b177617e03a54b7ccc88e77"
+    },
+    {
+      "zoneID": 618,
+      "name": "Winterspring",
+      "sourceURL": "https://www.wowhead.com/forever/zone=618",
+      "sha256": "1fe2073d95b6f6aa272d7191af11cfcd012c79da96ae14f2efbb1c6ecc9940d7"
+    },
+    {
+      "zoneID": 717,
+      "name": "The Stockade",
+      "sourceURL": "https://www.wowhead.com/forever/zone=717",
+      "sha256": "33314137b86b6f5445f545ce9641b7e1ddb66d396a0c82af7275414a05b0a642"
+    },
+    {
+      "zoneID": 718,
+      "name": "Wailing Caverns",
+      "sourceURL": "https://www.wowhead.com/forever/zone=718",
+      "sha256": "4efadcb730fc597f80a3a3d58bf5082e670f2b4012f1acbcb902e9ce194bcce9"
+    },
+    {
+      "zoneID": 719,
+      "name": "Blackfathom Deeps",
+      "sourceURL": "https://www.wowhead.com/forever/zone=719",
+      "sha256": "6475660993dfc5002118f590c445b4867b53ef41d89bcbf49e0c57a5860f8f39"
+    },
+    {
+      "zoneID": 721,
+      "name": "Gnomeregan",
+      "sourceURL": "https://www.wowhead.com/forever/zone=721",
+      "sha256": "8e44d5d8fe44346d1dcc6663bd254e0f3b883943c1308dece3e34c342f890cf6"
+    },
+    {
+      "zoneID": 722,
+      "name": "Razorfen Downs",
+      "sourceURL": "https://www.wowhead.com/forever/zone=722",
+      "sha256": "311a8c2e8fc6a178ccdcce765bddb81138b9dcacbc2cf6106075e53d2e2e8881"
+    },
+    {
+      "zoneID": 796,
+      "name": "Scarlet Monastery",
+      "sourceURL": "https://www.wowhead.com/forever/zone=796",
+      "sha256": "9397e1e4702f2acfb5f5349d44caf73984461d45022233c82dae6d06ada58fa9"
+    },
+    {
+      "zoneID": 1337,
+      "name": "Uldaman",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1337",
+      "sha256": "579924c2e4cfaa58e6cf0391b5b58282dde3d7415ef7eaf545db154fe6d4e857"
+    },
+    {
+      "zoneID": 1497,
+      "name": "Undercity",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1497",
+      "sha256": "8709928ce596b2df042f0ad3780bcda80e277281129e5ef40e2cfab2a7a83ac6"
+    },
+    {
+      "zoneID": 1519,
+      "name": "Stormwind City",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1519",
+      "sha256": "436fbd17b7b087fa8648dd88f8fd799138c21a4008780f89ac7bbbfd84c6d957"
+    },
+    {
+      "zoneID": 1581,
+      "name": "The Deadmines",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1581",
+      "sha256": "1b1480dd7b27c79200258d93969194b882b53ae6d7aa7b3e50faf18404c16005"
+    },
+    {
+      "zoneID": 1637,
+      "name": "Orgrimmar",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1637",
+      "sha256": "9172711202d839b7c905d740c335d5f5d9c0275772e686939c95b61e881d881c"
+    },
+    {
+      "zoneID": 1638,
+      "name": "Thunder Bluff",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1638",
+      "sha256": "1d0c8b656135de2d5b8dd5b748d48d150a534d1dffe2c26714795d049a7de8ca"
+    },
+    {
+      "zoneID": 1657,
+      "name": "Darnassus",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1657",
+      "sha256": "bc812ba5308e19149e059da8141e016699ea8b06ed089b20ef6b1dc71e20f14e"
+    },
+    {
+      "zoneID": 2437,
+      "name": "Ragefire Chasm",
+      "sourceURL": "https://www.wowhead.com/forever/zone=2437",
+      "sha256": "df017d836a2a1682c012a583dfd62ee832800618325c77556ed46dc665aea194"
+    },
+    {
+      "zoneID": 2557,
+      "name": "Dire Maul",
+      "sourceURL": "https://www.wowhead.com/forever/zone=2557",
+      "sha256": "9639cb4a1221fa24f807600698ef36d5e2d103b0c5b9d7a7f028caae57b87b1a"
+    },
+    {
+      "zoneID": 16593,
+      "name": "Zephras Isle",
+      "sourceURL": "https://www.wowhead.com/forever/zone=16593",
+      "sha256": "c56626624f6ff5ad8cc6311a3258776f4bc21abc435060bca9e4f9f2b6c4e312"
+    },
+    {
+      "zoneID": 16611,
+      "name": "Ruins of Lordaeron",
+      "sourceURL": "https://www.wowhead.com/forever/zone=16611",
+      "sha256": "0424343eb895c01bbf754b2b4a7f567c3792b02a02f3ac7967e14af01fe75e03"
+    },
+    {
+      "zoneID": 16651,
+      "name": "Shen'dralas",
+      "sourceURL": "https://www.wowhead.com/forever/zone=16651",
+      "sha256": "8ab872fafa377ae8070ff55387c96b8b2dfd8aa0e359e9dcdce87ed52f838e4f"
+    },
+    {
+      "zoneID": 16732,
+      "name": "Excavation Site: Wetlands",
+      "sourceURL": "https://www.wowhead.com/forever/zone=16732",
+      "sha256": "51d57ff222bda160b85dcbf99524ea56cc068cbd50a6bb5a69f2c0c4bfe0a395"
+    },
+    {
+      "zoneID": 16919,
+      "name": "The Hall of Thanes",
+      "sourceURL": "https://www.wowhead.com/forever/zone=16919",
+      "sha256": "11fd3640b99e9f3dd99494e6de9e69cd807da5816502d30ff3fb61bf5ea1f0b1"
+    }
+  ],
+  "sparseSourceNPCs": [
+    {
+      "npcID": 2261,
+      "name": "Syndicate Watchman",
+      "url": "https://www.wowhead.com/forever/npc=2261",
+      "sha256": "b0414fb7a4eb8725f9aafe0392119ee99efa9dea62e616bf97f65c03bf288830",
+      "mapper": {
+        "267": [
+          {
+            "count": 52,
+            "coords": [
+              [
+                66.6,
+                50
+              ],
+              [
+                67.2,
+                46
+              ],
+              [
+                67.4,
+                47.8
+              ],
+              [
+                67.6,
+                47.2
+              ],
+              [
+                74.8,
+                39.2
+              ],
+              [
+                75.2,
+                40.2
+              ],
+              [
+                75.2,
+                40.8
+              ],
+              [
+                75.4,
+                42.2
+              ],
+              [
+                75.6,
+                42.4
+              ],
+              [
+                75.8,
+                42.6
+              ],
+              [
+                75.8,
+                44.2
+              ],
+              [
+                76,
+                46.6
+              ],
+              [
+                76.2,
+                41
+              ],
+              [
+                76.4,
+                46.4
+              ],
+              [
+                76.6,
+                46.2
+              ],
+              [
+                76.6,
+                46.6
+              ],
+              [
+                76.8,
+                42.2
+              ],
+              [
+                76.8,
+                42.6
+              ],
+              [
+                77,
+                45.4
+              ],
+              [
+                77.2,
+                39.4
+              ],
+              [
+                77.4,
+                43.8
+              ],
+              [
+                77.6,
+                44
+              ],
+              [
+                77.8,
+                40.4
+              ],
+              [
+                77.8,
+                40.6
+              ],
+              [
+                78.2,
+                43.2
+              ],
+              [
+                78.4,
+                41.6
+              ],
+              [
+                78.4,
+                44.6
+              ],
+              [
+                78.8,
+                42
+              ],
+              [
+                79,
+                40.6
+              ],
+              [
+                79,
+                44.6
+              ],
+              [
+                79.2,
+                43.2
+              ],
+              [
+                79.4,
+                40
+              ],
+              [
+                79.4,
+                44.4
+              ],
+              [
+                79.4,
+                46.8
+              ],
+              [
+                79.6,
+                39.4
+              ],
+              [
+                79.6,
+                39.6
+              ],
+              [
+                79.6,
+                41.8
+              ],
+              [
+                79.6,
+                44.4
+              ],
+              [
+                79.6,
+                46.8
+              ],
+              [
+                79.8,
+                43.2
+              ],
+              [
+                79.8,
+                44.6
+              ],
+              [
+                80.2,
+                41
+              ],
+              [
+                80.4,
+                46.2
+              ],
+              [
+                80.8,
+                46.8
+              ],
+              [
+                81,
+                43.2
+              ],
+              [
+                81,
+                44
+              ],
+              [
+                81,
+                46
+              ],
+              [
+                81.6,
+                44.4
+              ],
+              [
+                81.8,
+                43.4
+              ],
+              [
+                81.8,
+                44.6
+              ],
+              [
+                82.4,
+                41.8
+              ],
+              [
+                82.6,
+                41.8
+              ]
+            ],
+            "uiMapId": 1424,
+            "uiMapName": "Hillsbrad Foothills"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 48,
+      "name": "Skeletal Warrior",
+      "url": "https://www.wowhead.com/forever/npc=48",
+      "sha256": "2c0cd0cce77524ffaca4e3fb3c6801d28eaa9ca59e5380f7b4c4202cde5b56b1",
+      "mapper": {
+        "10": [
+          {
+            "count": 33,
+            "coords": [
+              [
+                76.8,
+                72.2
+              ],
+              [
+                77,
+                70.3
+              ],
+              [
+                77.2,
+                73.6
+              ],
+              [
+                77.4,
+                70.6
+              ],
+              [
+                77.4,
+                73.4
+              ],
+              [
+                77.6,
+                73.2
+              ],
+              [
+                77.7,
+                71.4
+              ],
+              [
+                77.9,
+                71.6
+              ],
+              [
+                78.2,
+                66.8
+              ],
+              [
+                78.2,
+                67.6
+              ],
+              [
+                78.6,
+                70.6
+              ],
+              [
+                79,
+                69.4
+              ],
+              [
+                79,
+                69.6
+              ],
+              [
+                79.2,
+                72
+              ],
+              [
+                79.4,
+                68.2
+              ],
+              [
+                79.4,
+                73
+              ],
+              [
+                79.6,
+                68.2
+              ],
+              [
+                79.6,
+                71
+              ],
+              [
+                79.6,
+                73
+              ],
+              [
+                79.7,
+                66
+              ],
+              [
+                79.8,
+                68.6
+              ],
+              [
+                80,
+                71.8
+              ],
+              [
+                80.4,
+                66.6
+              ],
+              [
+                80.4,
+                70.2
+              ],
+              [
+                80.4,
+                73.8
+              ],
+              [
+                80.6,
+                66.2
+              ],
+              [
+                80.6,
+                66.6
+              ],
+              [
+                80.6,
+                70.2
+              ],
+              [
+                80.8,
+                68.4
+              ],
+              [
+                80.8,
+                73.4
+              ],
+              [
+                80.8,
+                74
+              ],
+              [
+                81,
+                69.2
+              ],
+              [
+                81.8,
+                68.7
+              ]
+            ],
+            "uiMapId": 1431,
+            "uiMapName": "Duskwood"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 3711,
+      "name": "Wrathtail Myrmidon",
+      "url": "https://www.wowhead.com/forever/npc=3711",
+      "sha256": "5beb9cdc4e178a99f7947fae90ace322eaceb682f98c79d286a4a5217a8800cd",
+      "mapper": {
+        "331": [
+          {
+            "count": 17,
+            "coords": [
+              [
+                6.4,
+                13.2
+              ],
+              [
+                7.2,
+                12
+              ],
+              [
+                7.2,
+                12.8
+              ],
+              [
+                7.2,
+                15.2
+              ],
+              [
+                7.4,
+                14.4
+              ],
+              [
+                7.5,
+                14.4
+              ],
+              [
+                7.8,
+                13.2
+              ],
+              [
+                8.4,
+                12.2
+              ],
+              [
+                8.9,
+                12.3
+              ],
+              [
+                9.4,
+                27.8
+              ],
+              [
+                9.5,
+                12.3
+              ],
+              [
+                9.6,
+                27.4
+              ],
+              [
+                9.6,
+                27.6
+              ],
+              [
+                11.3,
+                30.3
+              ],
+              [
+                11.4,
+                31
+              ],
+              [
+                11.6,
+                31.4
+              ],
+              [
+                11.6,
+                31.6
+              ]
+            ],
+            "uiMapId": 1440,
+            "uiMapName": "Ashenvale"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 433,
+      "name": "Shadowhide Gnoll",
+      "url": "https://www.wowhead.com/forever/npc=433",
+      "sha256": "e3b9dc23153a1c53bc8b9d429f767286ed5c5ea00c4b78f1712728925cbab2a9",
+      "mapper": {
+        "44": [
+          {
+            "count": 33,
+            "coords": [
+              [
+                66.4,
+                58.8
+              ],
+              [
+                66.7,
+                52.8
+              ],
+              [
+                66.8,
+                58.8
+              ],
+              [
+                67,
+                41.2
+              ],
+              [
+                67.2,
+                40.4
+              ],
+              [
+                67.3,
+                43.8
+              ],
+              [
+                67.4,
+                43.1
+              ],
+              [
+                67.5,
+                55.5
+              ],
+              [
+                67.8,
+                43.1
+              ],
+              [
+                67.9,
+                40.9
+              ],
+              [
+                68.1,
+                54.6
+              ],
+              [
+                68.8,
+                41
+              ],
+              [
+                68.8,
+                41.6
+              ],
+              [
+                69.2,
+                45.1
+              ],
+              [
+                69.2,
+                47.7
+              ],
+              [
+                69.3,
+                40.4
+              ],
+              [
+                69.5,
+                40.8
+              ],
+              [
+                69.5,
+                45.5
+              ],
+              [
+                69.7,
+                47.5
+              ],
+              [
+                69.8,
+                40.2
+              ],
+              [
+                69.9,
+                47.4
+              ],
+              [
+                70.8,
+                48.7
+              ],
+              [
+                70.9,
+                47.1
+              ],
+              [
+                71,
+                48
+              ],
+              [
+                71.2,
+                45.6
+              ],
+              [
+                71.5,
+                45.7
+              ],
+              [
+                72,
+                51
+              ],
+              [
+                72.2,
+                40.4
+              ],
+              [
+                72.2,
+                40.6
+              ],
+              [
+                72.6,
+                40.8
+              ],
+              [
+                74.4,
+                43.6
+              ],
+              [
+                75.2,
+                49.4
+              ],
+              [
+                76.6,
+                45
+              ]
+            ],
+            "uiMapId": 1433,
+            "uiMapName": "Redridge Mountains"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 10758,
+      "name": "Grimtotem Bandit",
+      "url": "https://www.wowhead.com/forever/npc=10758",
+      "sha256": "c7d6f16c1859d0ebcb6ba0690c1dbc4b4e227a4a4052eabc891a060f54ef22a7",
+      "mapper": {
+        "400": [
+          {
+            "count": 25,
+            "coords": [
+              [
+                32.2,
+                31.6
+              ],
+              [
+                32.2,
+                33
+              ],
+              [
+                32.4,
+                27.4
+              ],
+              [
+                32.6,
+                32
+              ],
+              [
+                32.8,
+                27.4
+              ],
+              [
+                32.8,
+                27.6
+              ],
+              [
+                32.8,
+                32.6
+              ],
+              [
+                32.8,
+                35.6
+              ],
+              [
+                33.4,
+                28.8
+              ],
+              [
+                33.8,
+                38.8
+              ],
+              [
+                34.2,
+                36
+              ],
+              [
+                34.4,
+                30.6
+              ],
+              [
+                35,
+                39.2
+              ],
+              [
+                35.2,
+                31
+              ],
+              [
+                35.6,
+                31
+              ],
+              [
+                37,
+                32.6
+              ],
+              [
+                37.2,
+                32
+              ],
+              [
+                37.6,
+                31.4
+              ],
+              [
+                37.8,
+                35.2
+              ],
+              [
+                38.4,
+                27.2
+              ],
+              [
+                38.4,
+                40.4
+              ],
+              [
+                38.6,
+                27.4
+              ],
+              [
+                38.6,
+                27.8
+              ],
+              [
+                38.6,
+                40.4
+              ],
+              [
+                38.8,
+                40.6
+              ]
+            ],
+            "uiMapId": 1441,
+            "uiMapName": "Thousand Needles"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 4101,
+      "name": "Screeching Roguefeather",
+      "url": "https://www.wowhead.com/forever/npc=4101",
+      "sha256": "7988084a10859b02de56374efc8c9db0e4ce5beb4aee15360df4d7b088e493c6",
+      "mapper": {
+        "400": [
+          {
+            "count": 17,
+            "coords": [
+              [
+                26,
+                55.4
+              ],
+              [
+                26,
+                55.6
+              ],
+              [
+                26.2,
+                52.6
+              ],
+              [
+                26.4,
+                47.8
+              ],
+              [
+                26.4,
+                52.2
+              ],
+              [
+                26.4,
+                53.6
+              ],
+              [
+                26.5,
+                53.4
+              ],
+              [
+                26.6,
+                53.6
+              ],
+              [
+                26.7,
+                55.6
+              ],
+              [
+                26.8,
+                55.4
+              ],
+              [
+                27,
+                52
+              ],
+              [
+                27.2,
+                51.2
+              ],
+              [
+                27.6,
+                50
+              ],
+              [
+                28,
+                51.2
+              ],
+              [
+                28.1,
+                49.3
+              ],
+              [
+                28.6,
+                51.2
+              ],
+              [
+                28.8,
+                50.4
+              ]
+            ],
+            "uiMapId": 1441,
+            "uiMapName": "Thousand Needles"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 2586,
+      "name": "Syndicate Highwayman",
+      "url": "https://www.wowhead.com/forever/npc=2586",
+      "sha256": "b0629b2e0e073d94992d0954ceb1c33529616ad2e026bb359b14793673254b19",
+      "mapper": {
+        "45": [
+          {
+            "count": 50,
+            "coords": [
+              [
+                29.2,
+                27.2
+              ],
+              [
+                29.2,
+                28.4
+              ],
+              [
+                29.2,
+                28.6
+              ],
+              [
+                30,
+                24.4
+              ],
+              [
+                30,
+                24.6
+              ],
+              [
+                30.2,
+                30.2
+              ],
+              [
+                30.2,
+                31
+              ],
+              [
+                30.4,
+                26
+              ],
+              [
+                30.4,
+                27.2
+              ],
+              [
+                30.4,
+                27.8
+              ],
+              [
+                30.4,
+                28.8
+              ],
+              [
+                30.6,
+                27.8
+              ],
+              [
+                30.8,
+                24.2
+              ],
+              [
+                31,
+                29.4
+              ],
+              [
+                31,
+                29.6
+              ],
+              [
+                31.2,
+                25.4
+              ],
+              [
+                31.4,
+                25.6
+              ],
+              [
+                31.4,
+                31.2
+              ],
+              [
+                31.4,
+                32.4
+              ],
+              [
+                31.4,
+                32.6
+              ],
+              [
+                31.6,
+                30.4
+              ],
+              [
+                31.6,
+                30.8
+              ],
+              [
+                31.8,
+                24
+              ],
+              [
+                31.8,
+                32.8
+              ],
+              [
+                32.2,
+                25
+              ],
+              [
+                32.2,
+                25.6
+              ],
+              [
+                32.4,
+                31.8
+              ],
+              [
+                32.6,
+                25.8
+              ],
+              [
+                32.8,
+                24.4
+              ],
+              [
+                32.8,
+                25.4
+              ],
+              [
+                33,
+                32.6
+              ],
+              [
+                33.4,
+                27
+              ],
+              [
+                33.4,
+                30.2
+              ],
+              [
+                33.4,
+                31.4
+              ],
+              [
+                33.4,
+                31.6
+              ],
+              [
+                33.6,
+                30.4
+              ],
+              [
+                33.6,
+                31.6
+              ],
+              [
+                33.8,
+                25.4
+              ],
+              [
+                33.8,
+                26.4
+              ],
+              [
+                33.8,
+                29.2
+              ],
+              [
+                33.8,
+                30.8
+              ],
+              [
+                33.8,
+                32.6
+              ],
+              [
+                34,
+                26.6
+              ],
+              [
+                34.4,
+                28.4
+              ],
+              [
+                34.6,
+                27
+              ],
+              [
+                34.6,
+                28.4
+              ],
+              [
+                34.6,
+                28.6
+              ],
+              [
+                34.6,
+                30
+              ],
+              [
+                34.6,
+                31.2
+              ],
+              [
+                34.6,
+                31.6
+              ]
+            ],
+            "uiMapId": 1417,
+            "uiMapName": "Arathi Highlands"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 11915,
+      "name": "Gogger Rock Keeper",
+      "url": "https://www.wowhead.com/forever/npc=11915",
+      "sha256": "233ecab9e55b86060a4f863a7b88bf5f8c04adf36cf2a529ca951b79e55b705a",
+      "mapper": {
+        "406": [
+          {
+            "count": 13,
+            "coords": [
+              [
+                58.4,
+                90
+              ],
+              [
+                59,
+                89.4
+              ],
+              [
+                59.4,
+                90.4
+              ],
+              [
+                59.6,
+                90.4
+              ],
+              [
+                60.2,
+                90.8
+              ],
+              [
+                60.2,
+                91.8
+              ],
+              [
+                60.6,
+                91.4
+              ],
+              [
+                61,
+                92.2
+              ],
+              [
+                61.2,
+                92.6
+              ],
+              [
+                62.4,
+                93.4
+              ],
+              [
+                62.4,
+                93.6
+              ],
+              [
+                62.6,
+                93.4
+              ],
+              [
+                62.6,
+                93.6
+              ]
+            ],
+            "uiMapId": 1442,
+            "uiMapName": "Stonetalon Mountains"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 3727,
+      "name": "Dark Strand Enforcer",
+      "url": "https://www.wowhead.com/forever/npc=3727",
+      "sha256": "6a6d930fd93c2d0420ea645915580d4ffa29b6e17dcf4f37753eee706da1b124",
+      "mapper": {
+        "331": [
+          {
+            "count": 9,
+            "coords": [
+              [
+                25.6,
+                27.4
+              ],
+              [
+                25.6,
+                28
+              ],
+              [
+                25.6,
+                28.6
+              ],
+              [
+                31.2,
+                31.6
+              ],
+              [
+                31.4,
+                30.4
+              ],
+              [
+                31.4,
+                31.2
+              ],
+              [
+                31.6,
+                31
+              ],
+              [
+                31.6,
+                31.6
+              ],
+              [
+                31.8,
+                30.4
+              ]
+            ],
+            "uiMapId": 1440,
+            "uiMapName": "Ashenvale"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 3771,
+      "name": "Bleakheart Hellcaller",
+      "url": "https://www.wowhead.com/forever/npc=3771",
+      "sha256": "5e3f860e8533d02cd09aa79024ca0953fe74533ad00bfcec205069f578877ce4",
+      "mapper": {
+        "331": [
+          {
+            "count": 13,
+            "coords": [
+              [
+                79.4,
+                50.2
+              ],
+              [
+                79.6,
+                49.4
+              ],
+              [
+                79.6,
+                50.2
+              ],
+              [
+                80,
+                50.8
+              ],
+              [
+                80.6,
+                50.4
+              ],
+              [
+                80.6,
+                50.8
+              ],
+              [
+                81.4,
+                48.2
+              ],
+              [
+                81.4,
+                51.6
+              ],
+              [
+                81.6,
+                48.4
+              ],
+              [
+                81.6,
+                48.6
+              ],
+              [
+                82.2,
+                50
+              ],
+              [
+                82.4,
+                51.8
+              ],
+              [
+                82.8,
+                50
+              ]
+            ],
+            "uiMapId": 1440,
+            "uiMapName": "Ashenvale"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 3817,
+      "name": "Shadowhorn Stag",
+      "url": "https://www.wowhead.com/forever/npc=3817",
+      "sha256": "fcf3ce2a75c2db05b135bce304e208a10cbbe391bb8867566f0ca2efbff5e24e",
+      "mapper": {
+        "331": [
+          {
+            "count": 85,
+            "coords": [
+              [
+                36.2,
+                61.4
+              ],
+              [
+                36.3,
+                61.6
+              ],
+              [
+                37.2,
+                62.4
+              ],
+              [
+                37.4,
+                60.8
+              ],
+              [
+                37.4,
+                67.8
+              ],
+              [
+                37.4,
+                71.2
+              ],
+              [
+                37.6,
+                60.4
+              ],
+              [
+                37.6,
+                61
+              ],
+              [
+                37.7,
+                62.1
+              ],
+              [
+                37.9,
+                62.6
+              ],
+              [
+                38.1,
+                67.7
+              ],
+              [
+                38.2,
+                67.4
+              ],
+              [
+                38.6,
+                68.4
+              ],
+              [
+                38.7,
+                63.1
+              ],
+              [
+                38.8,
+                68.6
+              ],
+              [
+                39.1,
+                71.1
+              ],
+              [
+                39.2,
+                64.1
+              ],
+              [
+                39.2,
+                64.5
+              ],
+              [
+                39.2,
+                66.1
+              ],
+              [
+                39.2,
+                70.3
+              ],
+              [
+                39.3,
+                67.1
+              ],
+              [
+                39.6,
+                63.4
+              ],
+              [
+                39.6,
+                65.8
+              ],
+              [
+                39.8,
+                63.6
+              ],
+              [
+                39.8,
+                69.4
+              ],
+              [
+                40,
+                69.7
+              ],
+              [
+                40.6,
+                61.7
+              ],
+              [
+                40.7,
+                70.8
+              ],
+              [
+                40.8,
+                73
+              ],
+              [
+                41.1,
+                66.7
+              ],
+              [
+                41.2,
+                65.6
+              ],
+              [
+                41.3,
+                64
+              ],
+              [
+                41.3,
+                67.8
+              ],
+              [
+                41.4,
+                65.4
+              ],
+              [
+                41.5,
+                65.5
+              ],
+              [
+                41.5,
+                67.4
+              ],
+              [
+                41.6,
+                67.6
+              ],
+              [
+                41.8,
+                64.9
+              ],
+              [
+                41.9,
+                64.3
+              ],
+              [
+                42.2,
+                70
+              ],
+              [
+                42.3,
+                61.1
+              ],
+              [
+                42.6,
+                60.9
+              ],
+              [
+                42.6,
+                68.6
+              ],
+              [
+                42.8,
+                60.4
+              ],
+              [
+                42.8,
+                68.4
+              ],
+              [
+                42.9,
+                63.4
+              ],
+              [
+                43.2,
+                58.9
+              ],
+              [
+                43.2,
+                62.3
+              ],
+              [
+                43.3,
+                63.5
+              ],
+              [
+                44.6,
+                62.6
+              ],
+              [
+                45.2,
+                64.4
+              ],
+              [
+                46.6,
+                53.8
+              ],
+              [
+                47.2,
+                61
+              ],
+              [
+                48.4,
+                62
+              ],
+              [
+                48.6,
+                55.4
+              ],
+              [
+                48.7,
+                55.7
+              ],
+              [
+                49.4,
+                62.8
+              ],
+              [
+                49.6,
+                62.8
+              ],
+              [
+                50.2,
+                47
+              ],
+              [
+                50.2,
+                50.4
+              ],
+              [
+                50.6,
+                49.4
+              ],
+              [
+                50.6,
+                49.6
+              ],
+              [
+                50.6,
+                54.2
+              ],
+              [
+                50.8,
+                46
+              ],
+              [
+                51,
+                55
+              ],
+              [
+                51.4,
+                45.4
+              ],
+              [
+                51.4,
+                53.2
+              ],
+              [
+                51.6,
+                45.6
+              ],
+              [
+                51.6,
+                53
+              ],
+              [
+                51.8,
+                56.2
+              ],
+              [
+                52.2,
+                64
+              ],
+              [
+                52.4,
+                62.4
+              ],
+              [
+                52.4,
+                62.6
+              ],
+              [
+                52.6,
+                62.6
+              ],
+              [
+                52.8,
+                54.2
+              ],
+              [
+                54.2,
+                52.4
+              ],
+              [
+                54.2,
+                53.4
+              ],
+              [
+                54.2,
+                54
+              ],
+              [
+                54.6,
+                55.6
+              ],
+              [
+                55.4,
+                53.2
+              ],
+              [
+                55.4,
+                54.8
+              ],
+              [
+                56,
+                55.4
+              ],
+              [
+                56,
+                55.6
+              ],
+              [
+                56.2,
+                58.2
+              ],
+              [
+                58.2,
+                57
+              ]
+            ],
+            "uiMapId": 1440,
+            "uiMapName": "Ashenvale"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 910,
+      "name": "Defias Enchanter",
+      "url": "https://www.wowhead.com/forever/npc=910",
+      "sha256": "60b04db1a9280f2e5c9c8366c0af1fc361f1a8d39d4989b9c6006ab8dd153a82",
+      "mapper": {
+        "10": [
+          {
+            "count": 18,
+            "coords": [
+              [
+                21,
+                72.2
+              ],
+              [
+                21.4,
+                73
+              ],
+              [
+                21.6,
+                73.2
+              ],
+              [
+                21.9,
+                71.9
+              ],
+              [
+                23.2,
+                71.6
+              ],
+              [
+                23.4,
+                71.4
+              ],
+              [
+                23.6,
+                71.4
+              ],
+              [
+                24.4,
+                72
+              ],
+              [
+                48.4,
+                76.6
+              ],
+              [
+                48.6,
+                76.4
+              ],
+              [
+                48.6,
+                77.6
+              ],
+              [
+                49.4,
+                76.8
+              ],
+              [
+                50.2,
+                77.4
+              ],
+              [
+                50.4,
+                76.4
+              ],
+              [
+                50.4,
+                77.6
+              ],
+              [
+                50.6,
+                76.2
+              ],
+              [
+                50.6,
+                77
+              ],
+              [
+                50.6,
+                77.6
+              ]
+            ],
+            "uiMapId": 1431,
+            "uiMapName": "Duskwood"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 2337,
+      "name": "Dark Strand Voidcaller",
+      "url": "https://www.wowhead.com/forever/npc=2337",
+      "sha256": "028a496d18b4eed65645499eeedbbc3a3f2f55e998076ec2e25473195a0a0556",
+      "mapper": {
+        "148": [
+          {
+            "count": 4,
+            "coords": [
+              [
+                56.2,
+                26
+              ],
+              [
+                56.4,
+                26.6
+              ],
+              [
+                56.6,
+                26.4
+              ],
+              [
+                56.6,
+                26.6
+              ]
+            ],
+            "uiMapId": 1439,
+            "uiMapName": "Darkshore"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 639,
+      "name": "Edwin VanCleef",
+      "url": "https://www.wowhead.com/forever/npc=639",
+      "sha256": "1f40aca862773d092ee908ddf0eed9bab8e0c723889d4a602ed3e03b5ee27518",
+      "mapper": []
+    },
+    {
+      "npcID": 3865,
+      "name": "Shadow Charger",
+      "url": "https://www.wowhead.com/forever/npc=3865",
+      "sha256": "883587e02f14c1fbffef6b7b2032b89dd3554d9c94a5f99820a242724955de4e",
+      "mapper": []
+    },
+    {
+      "npcID": 4831,
+      "name": "Lady Sarevess",
+      "url": "https://www.wowhead.com/forever/npc=4831",
+      "sha256": "46964572d9dfb528c37e6326dc556bf1afd17e20e177d18ce8fe67951c707c6b",
+      "mapper": []
+    },
+    {
+      "npcID": 4887,
+      "name": "Ghamoo-ra",
+      "url": "https://www.wowhead.com/forever/npc=4887",
+      "sha256": "dc5a2519b1c6c7a94f28e88a240e676fb7ad65af536cf1c020bdcce6ff029f0d",
+      "mapper": []
+    }
+  ],
+  "negativeLocationIDs": "Unresolved source categories retained as IDs; never converted into guessed dungeon/continent waypoints."
+}
