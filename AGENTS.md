@@ -39,3 +39,7 @@ When raw source totals/shards change, compare factual snapshots in CONTINUATION.
 8Q Anachronos inventory/23 input direct pages403;35 exact tooltip ranks are use/equip facts, not independently read purchase gates. Ten existing class restrictions retained. Legacy three-path rings21196–21210 have different IDs.8R Repair Chalice1232438→239117 uses3 unnamed242465 fragments; no learned profession/current input farm or canonical239117 name established. No new regular crafts/reagents from vendor costs.
 
 8T typed currency3469 Tarnished Undermine Real differs from item3469 and same-name physical226404. Published total cap165 is not item stack250/daily/weekly earning cap. Guide25Oct earning55+ boss model is assumed/previous55 purchase unconfirmed, not current proof. All current currency/stock/phase/acceptance remains unverified.
+
+## Checkpoint8Z research preserved — integration pending
+
+10 exact undocumented56–57 identities/22 queries/2NPC primaryreads.284268 item-only GrizzleSnowpaw10199 named loot ref, primaryNPC85rows omitselected; no current rate/reverse/live claim.282070 namesakeGruklash8979 omitsselected, no source inference. Other9 origins unresolved, secondaryHorde-only/other-version-unavailable/cache/set/recipe labels qualified.174NPC/96inventories0matches bounded. Proof CHECKPOINT8Z_IN_PROGRESS.md/working_evidence/discovery_index. All10 still8Z,registry2119/index3768/remaining3783/latest fullPASS8Y42723894319/botf5b9f56. Integrate/full local/CI/bot then8AA100undoc58. No release/main action.
