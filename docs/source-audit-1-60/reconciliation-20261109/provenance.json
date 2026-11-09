@@ -1,31 +1,35 @@
 {
+  "supplementary_crafts.json": {
+    "bytes": 1315,
+    "sha256": "4bbb2e2b0407f70cf5aa86624bf76114869928ac799f04056829df7a9c86ed6b"
+  },
   "reviewed_recipe_sources.json": {
     "bytes": 2926585,
     "sha256": "1d5928b2c89e564a3a0a3a902bf0cd7fc221c648ab222ee16ed85157dd894ec2"
   },
   "reviewed_equipment_sources.json": {
-    "bytes": 1032541,
-    "sha256": "583584fdc305f744994fcc607ff3eb8b6889e342334fd7131f3636946bbe0b0b"
+    "bytes": 1203535,
+    "sha256": "0abbead0497453e50d4b9def053b9c2c65d355264ee669e6ef9c558da349f5e5"
   },
   "https://playfulls.com/database": {
     "bytes": 140463,
-    "sha256": "3a785ff08068d846e2d5e765f8c5836dbf59fb2fa127914080cd90248be65122"
+    "sha256": "127c2e863c206513094fd9b448bcd5f0944a07db6eafc9c8fa2b196bdbc37fa0"
   },
-  "https://playfulls.com/db/meta.fc6bada22e.json": {
-    "bytes": 988561,
-    "sha256": "fc6bada22e9c0507d1d95a70ddb5bb209027ee96465a504ce11f6aecac40dbab"
+  "https://playfulls.com/db/meta.e623bfc2ea.json": {
+    "bytes": 988656,
+    "sha256": "e623bfc2eaefea5b77b6a117a54db05b1436a8386a7b43dca20f63a3db68d609"
   },
-  "https://playfulls.com/db/gear.64b14cae3f.json": {
-    "bytes": 1303611,
-    "sha256": "64b14cae3f6546d42a0eeb91d1e8a4d19ba2976936bec0b42a801ce6eaa2248e"
+  "https://playfulls.com/db/gear.9c7e74fd49.json": {
+    "bytes": 1310106,
+    "sha256": "9c7e74fd492e01c5eb3af0c8ca423d78b7120a94d9defcd4caec598d45220086"
   },
-  "https://playfulls.com/db/goods.66fb9a3654.json": {
-    "bytes": 464216,
-    "sha256": "66fb9a36544e5cdcc7277c91e3dc34c8ca2da3727d20964d1c297665a3e372db"
+  "https://playfulls.com/db/goods.57d605d886.json": {
+    "bytes": 464217,
+    "sha256": "57d605d8860d06a3a704c5f52a2787e8a9246b03b1c7b4ec0b890245cde3152a"
   },
-  "https://playfulls.com/db/other.b20c541323.json": {
-    "bytes": 446202,
-    "sha256": "b20c541323c74f35ce0d03fb6735e440bf78551088599292773b2abaf536b956"
+  "https://playfulls.com/db/other.bafb8cc442.json": {
+    "bytes": 446206,
+    "sha256": "bafb8cc442ba0b03cd40761ce376ba17784ee8ec5f212eff935c1cf5b476a823"
   },
   "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json": {
     "bytes": 18590138,
@@ -36,16 +40,16 @@
     "sha256": "6c1d61df0e01248e6141cec91de31755ce781892bf7a1f886f4c1f3618069270"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500": {
-    "bytes": 103419,
-    "sha256": "fe1c76430e50f4f30ad999482a0266863a5adcd4af40949e32c50d8ad4585f49"
+    "bytes": 103436,
+    "sha256": "0b86d4e439957c8ac87a153ea25a9f9013b2b385d4b266a6b8aba1670f7a6ec7"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
-    "bytes": 103658,
-    "sha256": "e8cb89ba806604a7f2c74a23b096b10bdd3cb9d08ec0f3acb6dbbe268be70090"
+    "bytes": 103650,
+    "sha256": "a3e6497854b558285b1498412429f7d9eb79c9a014a9cdefb5c69ae8250f760b"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
-    "bytes": 66273,
-    "sha256": "1f2991ffac9fec1ef7e847d151bb2e4bc455ae0920070eb4dc06c5e846562198"
+    "bytes": 75525,
+    "sha256": "59770931d0c9099d3662a6652b80ad8cf6870ee346dd51364a122075572611f9"
   },
   "https://www.wowforeverfriends.org/items/items.json": {
     "bytes": 16908600,
@@ -55,7 +59,7 @@
     "bytes": 6121482,
     "sha256": "5c5a4524a3ad6a25c20902291d244baf32bb5f6b33c65c35847c7f5e1dcfb5f1"
   },
-  "lastRunUTC": "2026-11-09T12:49:36.422150+00:00",
+  "lastRunUTC": "2026-11-09T16:17:57.238612+00:00",
   "sourceCrediting": {
     "Everloot": "CC BY-SA 4.0; https://everloot.app; source records credited",
     "Playfulls": "Public community loot reference; https://playfulls.com/methodology; boss loot not live guaranteed",
@@ -64,8 +68,8 @@
     "AHledger": "Forever client recipe acquisition reference, not observed trainer inventories"
   },
   "Everloot": {
-    "dataAsOf": "2026-11-09T12:30:17.086Z",
-    "total": 1320,
+    "dataAsOf": "2026-11-09T15:50:18.557Z",
+    "total": 1365,
     "attribution": {
       "licence": "CC BY-SA 4.0",
       "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -76,7 +80,7 @@
     "complete": true
   },
   "Playfulls": {
-    "items": 23183,
+    "items": 23239,
     "sourceRecords": 3,
     "database": "https://playfulls.com/database"
   },

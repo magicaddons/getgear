@@ -7,9 +7,12 @@ on:
       - tools/reconcile_acquisition_1_60.py
       - docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json
       - docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json
+      - docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts.json
+      - SourceEnrichment.lua
       - AcquisitionEvidence.lua
       - GetGear.toc
       - tests/beta7-acquisition-reconciled.lua
+      - tests/beta7-evidence.lua
       - GearCompare.lua
       - Core.lua
       - UI.lua
@@ -42,6 +45,7 @@ jobs:
           test -s AcquisitionEvidenceIndex.lua
           test -s docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv
           test -s docs/source-audit-1-60/reconciliation-20261109/recipes_reconciled.csv
+          test -s docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts_reconciled.csv
           cat docs/source-audit-1-60/reconciliation-20261109/README.md
       - name: Check Lua syntax of complete integrated addon
         shell: bash

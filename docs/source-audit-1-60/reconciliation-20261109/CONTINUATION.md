@@ -45,3 +45,9 @@ Latest documentation closeout abridges evidence dictionaries to used structured 
 ## Checkpoint 8F currently in progress
 
 Use CHECKPOINT8F_IN_PROGRESS.md and checkpoint8f_working_evidence.json as the durable resume point. All93 item pages,35 quest/series pages, primary NPC/spell/input evidence and60 exact discovery searches are saved. Integration/full validation PENDING; do not mark93 queue cases complete or reuse8E CI as an8F pass. New verified missing craft274490 requires material/profession/supplement audit integration; secondary drop badges are not observed loot. Current runtime remains equipment424/index2,215/originalbookregistry954; queue5,478 includes these93 still-unreviewed integration cases. Finish specified joins, conversion inputs and supported craft correction, then full local/CI/bot review.
+
+## Current 8F — local PASS, GitHub pending
+
+Use CHECKPOINT8F_LEVEL31_40_UNDOCUMENTED.md, superseding initial preservation note. All 93 cases integrated, full local PASS 14/14, 24 modules, Python/reconciliation and four required reports. Craft274490 adds two material rows; exact comparison preserves all 1,253 older crafts/4,855 ingredients and identities/class objectives. Totals1,254 crafts/4,857 ingredients, index2,308/display2,307/equipment517; original recipe registry954 plus separate supplemental audit.
+
+GitHub run pending source push: complete/inspect bot before **8G: 207 vendor level41–50 IDs marked in queue**. Remaining queue5,385. Source/observation/reporting deltas reviewed in case note; original954 book queue/six dungeon exceptions remain. Two scheduled continuation messages arrived while active and duplicate invocations were skipped; no separate worker/new automation. Scheduled delivery has worked; usage balances/refresh guarantees remain unavailable. Process locks can expire across idle/restart, so check actual active work/remote/CI as well as renewing a local lock.

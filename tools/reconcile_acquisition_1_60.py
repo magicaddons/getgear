@@ -307,6 +307,22 @@ def main():
     assert not set(FOREVER_DUNGEON_ROLE_REFERENCES).intersection(JOURNAL_RARE_LOOT)
     assert len(FOREVER_TRASH_DROPS)==2 and set(FOREVER_TRASH_DROPS).issubset(dungeon_ids)
     recipe_by_id={int(r["itemID"]):r for r in recipes}
+    # Keep later, independently reviewed crafts separate from the immutable
+    # 1,252-row historical recipe inventory. They must still be audited.
+    supplemental_bytes=(REPORT/"supplementary_crafts.json").read_bytes()
+    supplemental_rows=json.loads(supplemental_bytes)
+    supplemental={r["itemID"]:r for r in supplemental_rows}
+    item_names={int(r["itemID"]):r["name"] for r in items}
+    assert len(supplemental)==len(supplemental_rows)
+    assert not set(supplemental).intersection(recipe_by_id)
+    for iid,record in supplemental.items():
+        assert item_names.get(iid)==record["name"] and record["liveVerified"] is False
+        assert record["learningSkill"]>0 and record["spellID"]>0 and record["bookItemID"]>0
+        assert record["reagents"] and len({r[0] for r in record["reagents"]})==len(record["reagents"])
+        assert all(isinstance(r[0],int) and isinstance(r[1],int) and r[0]>0 and r[1]>0
+                   for r in record["reagents"])
+    provenance["supplementary_crafts.json"]={"bytes":len(supplemental_bytes),
+        "sha256":hashlib.sha256(supplemental_bytes).hexdigest()}
     reviewed_path=REPORT/"reviewed_recipe_sources.json"
     reviewed_bytes=reviewed_path.read_bytes()
     reviewed_rows=json.loads(reviewed_bytes)
@@ -573,6 +589,13 @@ def main():
                 changes[iid]={"summary":ref["summary"],"confidence":ref["confidence"],
                     "url":ref["sourceURL"],"equipmentReference":True,
                     "details":ref.get("details","")}
+                if ref.get("supplementalCraft"):
+                    craft=supplemental[iid]
+                    assert ref["patternID"]==craft["bookItemID"]
+                    changes[iid]["recipeReference"]=True
+                    changes[iid]["patternID"]=craft["bookItemID"]
+        if iid in supplemental:
+            recipeStatus="supplementary-published-craft"
         all_rows.append({
             "itemID":iid,"name":name,"level":item["level"],
             "existingSourceType":item["sourceType"],"existingConfidence":item["sourceEvidence"],
@@ -625,6 +648,14 @@ def main():
                    if r["classification"]=="trainer-reference-with-pattern-item"]
     write_csv("recipe_vendor_book_checks.csv",named_vendor,list(recipe_rows[0]))
     write_csv("recipe_trainer_book_checks.csv",trainer_books,list(recipe_rows[0]))
+    write_csv("supplementary_crafts_reconciled.csv",[
+        {"itemID":r["itemID"],"name":r["name"],"profession":r["profession"],
+         "learningSkill":r["learningSkill"],"spellID":r["spellID"],"bookItemID":r["bookItemID"],
+         "reagents":";".join(str(i)+":"+str(n) for i,n in r["reagents"]),
+         "sourceURL":r["sourceURL"],"bookURL":r["bookURL"],"requiresLiveCheck":True}
+        for r in sorted(supplemental_rows,key=lambda r:r["itemID"])],
+        ["itemID","name","profession","learningSkill","spellID","bookItemID","reagents",
+         "sourceURL","bookURL","requiresLiveCheck"])
     # Prioritize active 1–30, specific unknown-source patterns, then 31–60.
     manual=sorted(unresolved,key=lambda r:(int(r["level"])>30,int(r["level"]),r["name"]))[:40]
     with (REPORT/"OPTIONAL_IN_GAME_CHECKS.md").open("w",encoding="utf8") as f:
@@ -669,7 +700,9 @@ def main():
         "",
         "## Catalogue and recipes",
         f"- All **{len(items):,} / 7,707** equipment records examined.",
-        f"- All **{len(recipes):,} / 1,252** crafting recipes examined.",
+        f"- All **{len(recipes):,} / 1,252** previously indexed crafting recipes examined.",
+        f"- **{len(supplemental):,} supplementary published crafts** audited separately "
+        f"({len(recipes)+len(supplemental):,} runtime crafts in total); original ingredient lists remain unchanged.",
         f"- All **{len(dungeon):,} / 577** historically dungeon-associated records examined, "
         f"including **{roles['crafted-pattern']:,}** crafted items with possible dungeon pattern routes "
         f"and **{roles['crafted-item']:,}** item incorrectly catalogued as dungeon loot.",
@@ -678,9 +711,11 @@ def main():
         f"- Published player-observed relationships: **{sum(len(x) for x in observations.values()):,}**.",
         f"- True dungeon-equipment records: **{len(true_dungeon):,}**; "
         f"still requiring encounter or container-loot confirmation: **{len(unresolved):,}**.",
-        f"- Recipe book origins that still require live verification: **{len(unresolved_books):,}** "
+        f"- Original queued recipe book origins that still require live verification: **{len(unresolved_books):,}** "
         f"({len(named_vendor):,} named vendor references; {len(trainer_books):,} "
         "trainer-labelled recipes with separate pattern-book IDs).",
+        "- Supplementary craft books also need current live acquisition confirmation; "
+        "they are separately listed and are not silently added to the original 954-case queue.",
         f"- Item ID name mismatches against Forever cache: **{len(duplicate_identity)}**.",
         "- Nine Scarlet Monastery Graveyard rare-boss loot references are attributed "
         "to the Forever Dungeon Journal, with no live drop-rate claims.",
@@ -721,8 +756,8 @@ def main():
         "check; the two routes could both exist and should not be called contradictory "
         "without server evidence.",
         "- Non-dungeon vendor/quest details only supplement imported generic vendor/quest entries and are explicitly labelled reference-only.",
-        "- Original 1,252 indexed crafting ingredient lists are **untouched**; one additional "
-        "client-confirmed craft is corrected in SourceEnrichment.lua.",
+        f"- Original 1,252 indexed crafting ingredient lists are **untouched**; "
+        f"{len(supplemental)} additional published crafts are corrected and audited separately.",
         "- Higher-confidence manually reviewed source text and item-ID exceptions "
         "take priority over this generated evidence.",
         "- The index does not alter class eligibility, player status, equipment quality, "
@@ -736,6 +771,7 @@ def main():
         "boss, trash, enemy, confidence and observed sources.",
         "- [Unresolved dungeon sources](dungeon_source_followups.csv).",
         "- [Recipe acquisition and pattern book reconciliation](recipes_reconciled.csv).",
+        "- [Later supplementary crafts and their exact ingredients](supplementary_crafts_reconciled.csv).",
         "- [Unresolved recipe sources](recipe_source_followups.csv).",
         "- [68 named-vendor pattern-book verification leads](recipe_vendor_book_checks.csv).",
         "- [Recipes with both trainer-classified references and pattern books](recipe_trainer_book_checks.csv).",

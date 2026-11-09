@@ -35,7 +35,7 @@ for id in pairs(addon.ItemCatalog) do
     total=total+1
 end
 assert(total==7707,"Beta 7 source-only patch changed catalogue item count")
-assert(addon.Beta7Reconciliation.verifiedSourcePatches==7)
+assert(addon.Beta7Reconciliation.verifiedSourcePatches==8)
 local function checkMats(id,expected)
     local item=assert(addon.ItemCatalog[id])
     local actual={}
@@ -69,6 +69,17 @@ assert(idol.recipeVendor=="Alynsia" and idol.recipeVendorCost==240)
 assert(idol.bindingStatus=="bop" and idol.recipeVendorCurrency=="Merchant's Favor")
 checkMats(220606,{[14344]=2,[16203]=4,[16204]=6,[249431]=8,
                    [249430]=4,[249409]=2,[11291]=4})
+local hoof=assert(addon.ItemCatalog[274490])
+assert(hoof.name=="Centaur Hoofwarmers" and hoof.profession=="Leatherworking")
+assert(hoof.professionSkillRequired==165 and hoof.recipeSpellID==1294289
+    and hoof.recipePatternItemID==274491 and hoof.recipeLearnMethod=="pattern")
+assert(hoof.bindingStatus=="boe" and hoof.recipeVendorCurrency=="Carved Centaur Totem")
+assert(hoof.instructions:find("15 Carved Centaur Totems",1,true)
+    and hoof.instructions:find("60 totems",1,true)
+    and hoof.instructions:find("wearer need not learn Leatherworking",1,true))
+assert(hoof.recipeVendorCost==nil and hoof.acquisitionLocation==nil,
+    "Two standing-dependent vendors must not become one false global price or waypoint")
+checkMats(274490,{[4304]=12,[8343]=2})
 assert(addon:GetAcquisitionSummary(idol):find("Alynsia",1,true))
 assert(not addon:GetAcquisitionSummary(idol):find("dungeon",1,true))
 
@@ -108,4 +119,4 @@ for _,class in ipairs(classes) do
         "Lost unified class catalogue for "..class)
 end
 assert(addon.ItemCatalog[6898].schoolOnly==nil,"Mixed-school Orb was changed")
-print("PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 7 corrected items, explicit trash/recipe provenance, map/mat evidence")
+print("PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 8 corrected items, explicit trash/recipe provenance, map/mat evidence")

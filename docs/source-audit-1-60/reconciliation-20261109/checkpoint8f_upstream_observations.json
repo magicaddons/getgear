@@ -1,0 +1,240 @@
+{
+  "evidence": "Fresh source deltas already present in generated reconciliation; player observations, not personal/live-in-session tests",
+  "sourceURL": "https://everloot.app/api/edges?evidence=observed&limit=500",
+  "sourceProvenance": {
+    "https://everloot.app/api/edges?evidence=observed&limit=500": {
+      "bytes": 103436,
+      "sha256": "1c73b1b55108c56e0a013ca6e66f960bf356c48cbde798768768128cbfe3d01d"
+    },
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+      "bytes": 103650,
+      "sha256": "87de27db50ba14e60482026087cc959cc235a98b89896edd498a315c65ad6d97"
+    },
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+      "bytes": 75525,
+      "sha256": "426be82abd7a2aac8b77b1e367addf6a77019e6820e4f6b2228cb29e8891ad86"
+    }
+  },
+  "attribution": {
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+    "source": "https://everloot.app/database/items",
+    "terms": "https://everloot.app/terms#licences"
+  },
+  "meta": {
+    "dataAsOf": "2026-11-09T15:50:18.557Z",
+    "total": 1365,
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "complete": true
+  },
+  "selectedEdges": {
+    "789": [
+      {
+        "fromKind": "item",
+        "fromId": 789,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 5755,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-08T16:12:27.000Z",
+        "lastSeen": "2026-11-08T16:12:27.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 789,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3654,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-07T14:40:47.000Z",
+        "lastSeen": "2026-11-07T14:40:47.000Z"
+      }
+    ],
+    "3040": [
+      {
+        "fromKind": "item",
+        "fromId": 3040,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3840,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-07T11:40:29.000Z",
+        "lastSeen": "2026-11-08T03:15:39.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 3040,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3637,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-08T16:06:30.000Z",
+        "lastSeen": "2026-11-08T16:06:30.000Z"
+      }
+    ],
+    "10412": [
+      {
+        "fromKind": "item",
+        "fromId": 10412,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3671,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-08T17:42:37.000Z",
+        "lastSeen": "2026-11-08T17:42:37.000Z"
+      }
+    ],
+    "14367": [
+      {
+        "fromKind": "item",
+        "fromId": 14367,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 5761,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-08T20:34:07.000Z",
+        "lastSeen": "2026-11-08T20:34:07.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14367,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3640,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-07T12:08:15.000Z",
+        "lastSeen": "2026-11-07T12:08:15.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14367,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 5755,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-08T20:25:15.000Z",
+        "lastSeen": "2026-11-08T20:25:15.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14367,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 5763,
+        "evidence": "observed",
+        "build": null,
+        "installs": 4,
+        "firstSeen": "2026-11-08T18:02:14.000Z",
+        "lastSeen": "2026-11-08T18:02:14.000Z"
+      }
+    ],
+    "15211": [
+      {
+        "fromKind": "item",
+        "fromId": 15211,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3840,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-08T16:38:15.000Z",
+        "lastSeen": "2026-11-08T16:38:15.000Z"
+      }
+    ],
+    "15498": [
+      {
+        "fromKind": "item",
+        "fromId": 15498,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 5048,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-08T16:17:42.000Z",
+        "lastSeen": "2026-11-08T16:17:42.000Z"
+      }
+    ],
+    "15502": [
+      {
+        "fromKind": "item",
+        "fromId": 15502,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3840,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-08T16:34:38.000Z",
+        "lastSeen": "2026-11-08T16:34:38.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15502,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3671,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-08T17:42:37.000Z",
+        "lastSeen": "2026-11-08T17:42:37.000Z"
+      }
+    ],
+    "253904": [
+      {
+        "fromKind": "item",
+        "fromId": 253904,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3671,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-08T17:42:37.000Z",
+        "lastSeen": "2026-11-08T17:42:37.000Z"
+      }
+    ]
+  },
+  "newBookIdentityVerification": {
+    "npc": {
+      "url": "https://www.wowhead.com/forever/npc=3671",
+      "bytes": 225300,
+      "sha256": "c9ff84076ca4a253cf6853e675f8a19daf28e68710f9d41dd977a39bcfc3f240",
+      "title": "Lady Anacondra - NPC - Forever",
+      "maps": []
+    },
+    "item": {
+      "url": "https://www.wowhead.com/forever/item=253904",
+      "bytes": 60405,
+      "sha256": "8c4d13f0b6bd02c4022586cd8fca5706385410faf53422f87bb7869bec5d8c08",
+      "title": "Pattern: Filigreed Silky Gown - Item - Forever",
+      "maps": null
+    }
+  },
+  "newBookInterpretation": "Exact book253904\u2192NPC3671 recorded by five installations; independent page identifies Lady Anacondra. This is a book observation, not a finished-gown drop. Published Gilnid alternative retained, no exclusive source/learning-method/current vendor conclusion."
+}

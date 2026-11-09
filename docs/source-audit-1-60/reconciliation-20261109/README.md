@@ -4,13 +4,15 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 
 ## Catalogue and recipes
 - All **7,707 / 7,707** equipment records examined.
-- All **1,252 / 1,252** crafting recipes examined.
+- All **1,252 / 1,252** previously indexed crafting recipes examined.
+- **2 supplementary published crafts** audited separately (1,254 runtime crafts in total); original ingredient lists remain unchanged.
 - All **577 / 577** historically dungeon-associated records examined, including **24** crafted items with possible dungeon pattern routes and **1** item incorrectly catalogued as dungeon loot.
-- New, conservative in-addon acquisition summaries generated: **2,215**.
-- Combined Forever cache entries: **10,315**; Playfulls item entries: **23,183**.
-- Published player-observed relationships: **1,137**.
+- New, conservative in-addon acquisition summaries generated: **2,308**.
+- Combined Forever cache entries: **10,315**; Playfulls item entries: **23,239**.
+- Published player-observed relationships: **1,170**.
 - True dungeon-equipment records: **552**; still requiring encounter or container-loot confirmation: **6**.
-- Recipe book origins that still require live verification: **954** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
+- Original queued recipe book origins that still require live verification: **954** (68 named vendor references; 886 trainer-labelled recipes with separate pattern-book IDs).
+- Supplementary craft books also need current live acquisition confirmation; they are separately listed and are not silently added to the original 954-case queue.
 - Item ID name mismatches against Forever cache: **0**.
 - Nine Scarlet Monastery Graveyard rare-boss loot references are attributed to the Forever Dungeon Journal, with no live drop-rate claims.
 - Two named dungeon trash equipment sources (Vicar's Robe and Rift Bracers) are now labelled from published Forever loot references; no live drop rates.
@@ -27,10 +29,10 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - crafted-item: 1
 
 ## Dungeon evidence confidence
-- forever-community-reference: 490
+- forever-community-reference: 495
 - recipe-origin-unverified: 24
 - forever-observed-npc: 18
-- forever-reference-unverified: 17
+- forever-reference-unverified: 12
 - published-forever-dungeon-journal: 10
 - published-forever-dungeon-guide: 10
 - published-forever-trash-reference: 2
@@ -47,6 +49,7 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - manual-researched: 50
 - forever-observed: 6
 - initial: 4
+- supplementary-published-craft: 2
 
 ## Critical policy
 - *Forever observed* means at least three Everloot installations independently recorded the item-to-NPC edge, and a published dungeon listing linked that NPC to this specific dungeon. These observations may still be incomplete.
@@ -59,7 +62,7 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - Example Forever plan tooltips independently identify requirements beyond the vendor: Grovekeeper Leggings requires Friendly status and the Friendly Advice quest; Grovekeeper Mantle requires reputation progress and shoulder specialization. Other books may have their own reputation or specialization gates.
 - A trainer-labelled recipe with a pattern item is marked for a teaching-method check; the two routes could both exist and should not be called contradictory without server evidence.
 - Non-dungeon vendor/quest details only supplement imported generic vendor/quest entries and are explicitly labelled reference-only.
-- Original 1,252 indexed crafting ingredient lists are **untouched**; one additional client-confirmed craft is corrected in SourceEnrichment.lua.
+- Original 1,252 indexed crafting ingredient lists are **untouched**; 2 additional published crafts are corrected and audited separately.
 - Higher-confidence manually reviewed source text and item-ID exceptions take priority over this generated evidence.
 - The index does not alter class eligibility, player status, equipment quality, recipe availability gates, or the two overlay filters.
 
@@ -69,6 +72,7 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - [Actual dungeon equipment drops](dungeon_equipment_drops.csv) — boss, trash, enemy, confidence and observed sources.
 - [Unresolved dungeon sources](dungeon_source_followups.csv).
 - [Recipe acquisition and pattern book reconciliation](recipes_reconciled.csv).
+- [Later supplementary crafts and their exact ingredients](supplementary_crafts_reconciled.csv).
 - [Unresolved recipe sources](recipe_source_followups.csv).
 - [68 named-vendor pattern-book verification leads](recipe_vendor_book_checks.csv).
 - [Recipes with both trainer-classified references and pattern books](recipe_trainer_book_checks.csv).

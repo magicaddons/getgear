@@ -1,0 +1,724 @@
+{
+  "all_items_reconciled.csv": {
+    "additiveSummaryCells": 93,
+    "sourceRowOffsetOnlyCells": 0,
+    "semanticChanges": [
+      {
+        "itemID": "789",
+        "name": "Stout Battlehammer",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 1,
+            "after": 2
+          }
+        }
+      },
+      {
+        "itemID": "3040",
+        "name": "Hunter's Muzzle Loader",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 1,
+            "after": 2
+          }
+        }
+      },
+      {
+        "itemID": "10412",
+        "name": "Belt of the Fang",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 1
+          }
+        }
+      },
+      {
+        "itemID": "14367",
+        "name": "Mystic's Gloves",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 3,
+            "after": 4
+          }
+        }
+      },
+      {
+        "itemID": "14620",
+        "name": "Deathbone Girdle",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "boss"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "boss: Instructor Malicia, Scholomance"
+          },
+          "dungeonConfidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          }
+        }
+      },
+      {
+        "itemID": "14621",
+        "name": "Deathbone Sabatons",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "boss"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "boss: Instructor Malicia, Scholomance"
+          },
+          "dungeonConfidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          }
+        }
+      },
+      {
+        "itemID": "14622",
+        "name": "Deathbone Gauntlets",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "boss"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "boss: Instructor Malicia, Scholomance"
+          },
+          "dungeonConfidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          }
+        }
+      },
+      {
+        "itemID": "14623",
+        "name": "Deathbone Legguards",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "boss"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "boss: Instructor Malicia, Scholomance"
+          },
+          "dungeonConfidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          }
+        }
+      },
+      {
+        "itemID": "14624",
+        "name": "Deathbone Chestplate",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "boss"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "boss: Instructor Malicia, Scholomance"
+          },
+          "dungeonConfidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          }
+        }
+      },
+      {
+        "itemID": "15211",
+        "name": "Militant Shortsword",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 1
+          }
+        }
+      },
+      {
+        "itemID": "15498",
+        "name": "Outrunner's Slippers",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 1
+          }
+        }
+      },
+      {
+        "itemID": "15502",
+        "name": "Outrunner's Gloves",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 2
+          }
+        }
+      },
+      {
+        "itemID": "220606",
+        "name": "Idol of the Dream",
+        "changes": {
+          "RecipeClassification": {
+            "before": "",
+            "after": "supplementary-published-craft"
+          }
+        }
+      },
+      {
+        "itemID": "274490",
+        "name": "Centaur Hoofwarmers",
+        "changes": {
+          "RecipeClassification": {
+            "before": "",
+            "after": "supplementary-published-craft"
+          }
+        }
+      }
+    ]
+  },
+  "dungeon_items_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 416,
+    "semanticChanges": [
+      {
+        "itemID": "5970",
+        "name": "Serpent Gloves",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Lord Serpentis",
+                "npcID": 3673,
+                "installs": 4,
+                "lastSeen": "2026-11-08T03:51:23.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Lord Serpentis",
+                "npcID": 3673,
+                "installs": 5,
+                "lastSeen": "2026-11-08T03:51:23.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "6447",
+        "name": "Worn Turtle Shell Shield",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Kresh",
+                "npcID": 3653,
+                "installs": 5,
+                "lastSeen": "2026-11-07T18:13:14.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Kresh",
+                "npcID": 3653,
+                "installs": 6,
+                "lastSeen": "2026-11-07T18:13:14.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "6459",
+        "name": "Savage Trodders",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Lord Serpentis",
+                "npcID": 3673,
+                "installs": 4,
+                "lastSeen": "2026-11-07T14:22:37.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Lord Serpentis",
+                "npcID": 3673,
+                "installs": 5,
+                "lastSeen": "2026-11-07T14:22:37.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "6460",
+        "name": "Cobrahn's Grasp",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Lord Cobrahn",
+                "npcID": 3669,
+                "installs": 3,
+                "lastSeen": "2026-11-08T04:06:28.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Lord Cobrahn",
+                "npcID": 3669,
+                "installs": 4,
+                "lastSeen": "2026-11-08T16:28:01.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "6472",
+        "name": "Stinging Viper",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Lord Pythas",
+                "npcID": 3670,
+                "installs": 4,
+                "lastSeen": "2026-11-08T03:30:17.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Lord Pythas",
+                "npcID": 3670,
+                "installs": 5,
+                "lastSeen": "2026-11-08T03:30:17.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "6473",
+        "name": "Armor of the Fang",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Lord Pythas",
+                "npcID": 3670,
+                "installs": 4,
+                "lastSeen": "2026-11-08T00:07:37.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Lord Pythas",
+                "npcID": 3670,
+                "installs": 5,
+                "lastSeen": "2026-11-08T00:07:37.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "10410",
+        "name": "Leggings of the Fang",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Lord Cobrahn",
+                "npcID": 3669,
+                "installs": 3,
+                "lastSeen": "2026-11-08T20:29:36.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Lord Cobrahn",
+                "npcID": 3669,
+                "installs": 4,
+                "lastSeen": "2026-11-08T20:29:36.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "10411",
+        "name": "Footpads of the Fang",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Lord Serpentis",
+                "npcID": 3673,
+                "installs": 4,
+                "lastSeen": "2026-11-08T20:57:45.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Lord Serpentis",
+                "npcID": 3673,
+                "installs": 5,
+                "lastSeen": "2026-11-08T20:57:45.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "13245",
+        "name": "Kresh's Back",
+        "changes": {
+          "playerObservedNPCs": {
+            "before": [
+              {
+                "name": "Kresh",
+                "npcID": 3653,
+                "installs": 5,
+                "lastSeen": "2026-11-08T20:18:13.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ],
+            "after": [
+              {
+                "name": "Kresh",
+                "npcID": 3653,
+                "installs": 6,
+                "lastSeen": "2026-11-08T20:18:13.000Z",
+                "evidence": "everloot-3plus-installs"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "14620",
+        "name": "Deathbone Girdle",
+        "changes": {
+          "confidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          },
+          "PlayfullsRoutes": {
+            "before": [],
+            "after": [
+              {
+                "type": "boss",
+                "npc": "Instructor Malicia",
+                "zone": "Scholomance",
+                "path": "loot-tables/dungeons/scholomance",
+                "note": "loot-tables/dungeons/scholomance#boss-instructor-malicia",
+                "label": "Boss drop"
+              }
+            ]
+          },
+          "sourceURL": {
+            "before": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+            "after": "https://playfulls.com/database"
+          }
+        }
+      },
+      {
+        "itemID": "14621",
+        "name": "Deathbone Sabatons",
+        "changes": {
+          "confidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          },
+          "PlayfullsRoutes": {
+            "before": [],
+            "after": [
+              {
+                "type": "boss",
+                "npc": "Instructor Malicia",
+                "zone": "Scholomance",
+                "path": "loot-tables/dungeons/scholomance",
+                "note": "loot-tables/dungeons/scholomance#boss-instructor-malicia",
+                "label": "Boss drop"
+              }
+            ]
+          },
+          "sourceURL": {
+            "before": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+            "after": "https://playfulls.com/database"
+          }
+        }
+      },
+      {
+        "itemID": "14622",
+        "name": "Deathbone Gauntlets",
+        "changes": {
+          "confidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          },
+          "PlayfullsRoutes": {
+            "before": [],
+            "after": [
+              {
+                "type": "boss",
+                "npc": "Instructor Malicia",
+                "zone": "Scholomance",
+                "path": "loot-tables/dungeons/scholomance",
+                "note": "loot-tables/dungeons/scholomance#boss-instructor-malicia",
+                "label": "Boss drop"
+              }
+            ]
+          },
+          "sourceURL": {
+            "before": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+            "after": "https://playfulls.com/database"
+          }
+        }
+      },
+      {
+        "itemID": "14623",
+        "name": "Deathbone Legguards",
+        "changes": {
+          "confidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          },
+          "PlayfullsRoutes": {
+            "before": [],
+            "after": [
+              {
+                "type": "boss",
+                "npc": "Instructor Malicia",
+                "zone": "Scholomance",
+                "path": "loot-tables/dungeons/scholomance",
+                "note": "loot-tables/dungeons/scholomance#boss-instructor-malicia",
+                "label": "Boss drop"
+              }
+            ]
+          },
+          "sourceURL": {
+            "before": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+            "after": "https://playfulls.com/database"
+          }
+        }
+      },
+      {
+        "itemID": "14624",
+        "name": "Deathbone Chestplate",
+        "changes": {
+          "confidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          },
+          "PlayfullsRoutes": {
+            "before": [],
+            "after": [
+              {
+                "type": "boss",
+                "npc": "Instructor Malicia",
+                "zone": "Scholomance",
+                "path": "loot-tables/dungeons/scholomance",
+                "note": "loot-tables/dungeons/scholomance#boss-instructor-malicia",
+                "label": "Boss drop"
+              }
+            ]
+          },
+          "sourceURL": {
+            "before": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+            "after": "https://playfulls.com/database"
+          }
+        }
+      }
+    ]
+  },
+  "recipes_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 488,
+    "semanticChanges": [
+      {
+        "itemID": "2311",
+        "name": "White Leather Jerkin",
+        "changes": {
+          "observedBookAcquisition": {
+            "before": [
+              {
+                "relation": "dropped_by",
+                "targetID": 75293,
+                "targetType": "object",
+                "targetName": "",
+                "installs": 5,
+                "lastSeen": "2026-11-08T03:40:23.000Z"
+              }
+            ],
+            "after": [
+              {
+                "relation": "dropped_by",
+                "targetID": 75293,
+                "targetType": "object",
+                "targetName": "",
+                "installs": 6,
+                "lastSeen": "2026-11-08T03:40:23.000Z"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "4315",
+        "name": "Reinforced Woolen Shoulders",
+        "changes": {
+          "observedBookAcquisition": {
+            "before": [
+              {
+                "relation": "dropped_by",
+                "targetID": 5755,
+                "targetType": "npc",
+                "targetName": "Deviate Viper",
+                "installs": 5,
+                "lastSeen": "2026-11-07T23:10:51.000Z"
+              }
+            ],
+            "after": [
+              {
+                "relation": "dropped_by",
+                "targetID": 5755,
+                "targetType": "npc",
+                "targetName": "Deviate Viper",
+                "installs": 6,
+                "lastSeen": "2026-11-07T23:10:51.000Z"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "4331",
+        "name": "Phoenix Gloves",
+        "changes": {
+          "observedBookAcquisition": {
+            "before": [
+              {
+                "relation": "dropped_by",
+                "targetID": 5756,
+                "targetType": "npc",
+                "targetName": "Deviate Venomwing",
+                "installs": 4,
+                "lastSeen": "2026-11-07T14:06:46.000Z"
+              }
+            ],
+            "after": [
+              {
+                "relation": "dropped_by",
+                "targetID": 5756,
+                "targetType": "npc",
+                "targetName": "Deviate Venomwing",
+                "installs": 5,
+                "lastSeen": "2026-11-07T14:06:46.000Z"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "252502",
+        "name": "Stormrider's Leather Pants",
+        "changes": {
+          "observedBookAcquisition": {
+            "before": [
+              {
+                "relation": "dropped_by",
+                "targetID": 3673,
+                "targetType": "npc",
+                "targetName": "Lord Serpentis",
+                "installs": 4,
+                "lastSeen": "2026-11-07T14:22:37.000Z"
+              }
+            ],
+            "after": [
+              {
+                "relation": "dropped_by",
+                "targetID": 3673,
+                "targetType": "npc",
+                "targetName": "Lord Serpentis",
+                "installs": 5,
+                "lastSeen": "2026-11-07T14:22:37.000Z"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "itemID": "253903",
+        "name": "Filigreed Silky Gown",
+        "changes": {
+          "evidence": {
+            "before": "forever-community-reference",
+            "after": "forever-observed"
+          },
+          "observedBookAcquisition": {
+            "before": [],
+            "after": [
+              {
+                "relation": "dropped_by",
+                "targetID": 3671,
+                "targetType": "npc",
+                "targetName": "",
+                "installs": 5,
+                "lastSeen": "2026-11-08T17:42:37.000Z"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

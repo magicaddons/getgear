@@ -1365,6 +1365,59 @@ end
 assert(addon.ItemCatalog[271802].acquisitionResearch.details:find("Horde/Gelkis Honored kill-objective route",1,true))
 assert(addon.ItemCatalog[6788].acquisitionResearch.details:find("no published clan-standing objective",1,true))
 
+-- Checkpoint 8F: exact routes, unresolved provenance and one truly learned craft.
+local undocumentedMidLevel={5008,5743,7466,7497,8708,9718,12258,16792,217497,271794,271795,271796,271797,271798,271799,271801,271803,271805,271904,271905,271910,271915,271919,271926,271930,271934,271938,274294,274295,274380,274381,274385,274425,274428,274430,274484,274485,274490,274605,277212,277216,277217,277225,277228,277229,277230,277231,277233,277237,277238,277239,277240,277241,277242,277243,277244,277245,277248,277250,277256,277259,277844,277910,277950,281657,281661,281676,281750,281896,282550,282551,282555,282557,282561,282702,282703,282704,282706,282713,283254,283255,284063,284707,284712,284713,285089,285093,285095,285102,285103,285177,286568,286639}
+for _,id in ipairs(undocumentedMidLevel) do
+    local a=assert(addon.ItemCatalog[id]).acquisitionResearch
+    assert(a.equipmentReference and a.sourceSummary:find("unverified",1,true))
+    assert(a.confidence~="forever-observed-npc","No qualifying observed edges for this selected group")
+    if id~=274490 then assert(not a.recipeReference and addon.AcquisitionEvidenceIndex[id].patternID==nil) end
+end
+for _,id in ipairs({5008,5743,7466,7497,12258,16792,274484,277212,277217,277225,277228,277229,277230,277231,277233,277237,277238,277239,277240,277241,277242,277243,277244,277245,277248,277250,277259,277910,277950,281657,281676,281750,281896,282550,282555,282557,282561,282703,282704,282706,282713,284712,284713,285089,285093,285095,285102,285103,285177,286568}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="published-forever-equipment-origin-unresolved"
+        and a.details:find("No guessed source",1,true))
+end
+for _,id in ipairs({274425,274428,274430,274485,282551,283255}) do
+    local a=addon.ItemCatalog[id].acquisitionResearch
+    assert(a.confidence=="secondary-publisher-drop-lead-unverified"
+        and a.details:find("badge describes client/server item-cache presence",1,true)
+        and a.details:find("Classic-derived",1,true))
+    assert(not a.sourceSummary:find("Boss:",1,true) and not a.sourceSummary:find("Rare:",1,true))
+end
+assert(addon.ItemCatalog[286639].acquisitionResearch.details:find("NPC loot list omits this exact ID",1,true))
+assert(addon.ItemCatalog[274605].acquisitionResearch.details:find("no usable published location",1,true))
+assert(addon.ItemCatalog[277844].acquisitionResearch.details:find("input #278744",1,true)
+    and addon.ItemCatalog[277844].acquisitionResearch.details:find("different trinket #277844",1,true))
+assert(addon.ItemCatalog[271796].acquisitionResearch.details:find("426 Well Cursed Bones",1,true)
+    and addon.ItemCatalog[271796].acquisitionResearch.details:find("end-only actor",1,true))
+assert(addon.ItemCatalog[271803].acquisitionResearch.details:find("No exact current actor/map/faction",1,true))
+assert(addon.ItemCatalog[8708].acquisitionResearch.details:find("duration is ONE HOUR",1,true)
+    and addon.ItemCatalog[8708].acquisitionResearch.details:find("cooldown is THREE HOURS",1,true))
+for _,id in ipairs({8708,9718,217497}) do
+    assert(not addon.ItemCatalog[id].profession,"Item-use conversion must not invent a learned profession recipe")
+end
+assert(addon.ItemCatalog[217497].acquisitionResearch.details:find("Scroll origin remains unresolved",1,true))
+assert(addon.ItemCatalog[9718].acquisitionResearch.details:find("Blacksmithing 190",1,true))
+assert(addon.ItemCatalog[274484].acquisitionResearch.details:find("creates Pendulum of Doom #9425",1,true)
+    and addon.ItemCatalog[274484].acquisitionResearch.confidence=="published-forever-equipment-origin-unresolved")
+assert(addon.ItemCatalog[274490].acquisitionResearch.recipeReference
+    and addon.ItemCatalog[274490].recipePatternItemID==274491
+    and addon.ItemCatalog[274490].profession=="Leatherworking")
+assert(addon.ItemCatalog[274490].acquisitionResearch.details:find("15 Carved Centaur Totems",1,true)
+    and addon.ItemCatalog[274490].acquisitionResearch.details:find("60 Carved Centaur Totems",1,true))
+assert(addon:GetAcquisitionSummary(addon.ItemCatalog[274490]):find("Leatherworking",1,true))
+local supplementaryCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts_reconciled.csv")):read("*a")
+assert(supplementaryCSV:find("274490,Centaur Hoofwarmers,Leatherworking,165,1294289,274491,4304:12;8343:2",1,true)
+    and supplementaryCSV:find("220606,Idol of the Dream",1,true))
+for _,id in ipairs({284707,281661,282702,284063}) do
+    local item=addon.ItemCatalog[id]
+    assert(item.acquisitionResearch.confidence=="secondary-generic-worlddrop-reference"
+        and item.sourceType=="Source not documented",
+        "Unverified generic labels must not silently reclassify gear/filter semantics")
+end
+assert(addon.ItemCatalog[7497].acquisitionResearch.details:find("Ivory Band #11995 versus #7497",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),
