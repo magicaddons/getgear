@@ -1105,9 +1105,37 @@ assert(addon.ItemCatalog[12784].acquisitionResearch.details:find("Master Axesmit
 assert(not addon.ItemCatalog[12784].acquisitionResearch.details:find("Master Swordsmith",1,true))
 assert(addon.ItemCatalog[15095].acquisitionResearch.details:find("200 NPC rows and may be truncated",1,true))
 
+-- Checkpoint 7A: exact original Hyjal book gates supersede only a generic generated hint.
+local hyjalVendorBooks={{273884,273952,"Friendly Advice",8},{273885,273953,"Gloves",6},{273886,273954,"Shoulders",6},{273887,273955,"Boots",6},{273888,273956,"Friendly Advice",8},{273889,273957,"Gloves",6},{273890,273958,"Shoulders",6},{273891,273959,"Boots",6},{273892,273960,"Friendly Advice",8},{273893,273961,"Gloves",6},{273894,273962,"Shoulders",6},{273895,273963,"Boots",6},{273896,273964,"Friendly Advice",8},{273897,273965,"Gloves",6},{273898,273966,"Shoulders",6},{273899,273967,"Boots",6},{273900,273968,"Friendly Advice",8},{273901,273969,"Gloves",6},{273902,273970,"Shoulders",6},{273903,273971,"Boots",6},{273904,273972,"Friendly Advice",8},{273905,273973,"Gloves",6},{273906,273974,"Shoulders",6},{273907,273975,"Boots",6},{273908,273976,"Friendly Advice",8},{273909,273977,"Gloves",6},{273910,273978,"Shoulders",6},{273911,273979,"Boots",6},{273912,273980,"Friendly Advice",8},{273913,273981,"Gloves",6},{273914,273982,"Shoulders",6},{273915,273983,"Boots",6},{273916,273984,"Friendly Advice",8},{273917,273985,"Gloves",6},{273918,273986,"Shoulders",6},{273919,273987,"Boots",6},{273920,273988,"Friendly Advice",8},{273921,273989,"Gloves",6},{273922,273990,"Shoulders",6},{273923,273991,"Boots",6},{273924,273992,"Friendly Advice",8},{273925,273993,"Gloves",6},{273926,273994,"Shoulders",6},{273927,273995,"Boots",6},{273928,273996,"Friendly Advice",8},{273929,273997,"Gloves",6},{273930,273998,"Shoulders",6},{273931,273999,"Boots",6},{273932,274000,"Friendly Advice",8},{273933,274001,"Gloves",6},{273934,274002,"Shoulders",6},{273935,274003,"Boots",6},{273936,274004,"Friendly Advice",8},{273937,274005,"Gloves",6},{273938,274006,"Shoulders",6},{273939,274007,"Boots",6},{273940,274008,"Friendly Advice",8},{273941,274009,"Gloves",6},{273942,274010,"Shoulders",6},{273943,274011,"Boots",6},{273944,274012,"Friendly Advice",8},{273945,274013,"Gloves",6},{273946,274014,"Shoulders",6},{273947,274015,"Boots",6},{273948,274016,"Friendly Advice",8},{273949,274017,"Gloves",6},{273950,274018,"Shoulders",6},{273951,274019,"Boots",6}}
+for _,r in ipairs(hyjalVendorBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    local a=assert(item.acquisitionResearch)
+    assert(item.recipePatternItemID==r[2] and a.recipeReference==true)
+    assert(a.confidence=="published-forever-recipe-vendor-reference")
+    assert(a.details:find("not sale of the finished crafted gear",1,true))
+    assert(a.details:find("Purchase cost and quest/slot gates are separate",1,true))
+    assert(a.details:find("disenchanting items from Hyjal Summit or Barrow Deeps",1,true))
+    assert(a.details:find("exact item yields",1,true) and a.sourceSummary:find("live stock/access unverified",1,true))
+    assert(a.details:find(r[4].." x Malleable Essence of Nature #274030",1,true))
+    if r[3]=="Friendly Advice" then
+        assert(a.details:find("exact quest ID",1,true) and not a.details:find("rank is unspecified",1,true))
+    else
+        assert(a.details:find(r[3].." specialisation",1,true) and a.details:find("rank is unspecified",1,true))
+        for _,slot in ipairs({"Gloves","Shoulders","Boots"}) do
+            if slot~=r[3] then assert(not a.details:find(slot.." specialisation",1,true)) end
+        end
+    end
+end
+-- Published new currency information does not change prior Spiritcaller slot conditions.
+for _,id in ipairs({276538,276539,276540,276541}) do
+    local a=assert(addon.ItemCatalog[id]).acquisitionResearch
+    assert(a.details:find("disenchanting items from Hyjal Summit or Barrow Deeps",1,true))
+end
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
-assert(index:find("reputation/quest/slot gates may apply",1,true),
-    "Preserve prospective Hyjal reputation and specialization requirements")
+assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
+    and index:find("Boots specialisation (exact rank unspecified)",1,true),
+    "Preserve individually evidenced Hyjal gates and unspecified-rank limits")
 -- The catalogue and crafting lists remain identical and class-wide.
 local checks={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 for _,cls in ipairs(checks) do

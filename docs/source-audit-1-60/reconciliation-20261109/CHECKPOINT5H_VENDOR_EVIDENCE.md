@@ -1,4 +1,6 @@
 # Checkpoint 5H — final vendor-book batch 274007–274019
+
+**Later stronger publication evidence:** [Checkpoint 7A](CHECKPOINT7A_HYJAL_VENDOR_RUNTIME.md) recovered all 68 exact book gates and integrated them into runtime after trainer-triage completion. The original partial gate knowledge and stop point below remain historical; current live stock remains unverified.
 2026-11-09. **13 book-item/gear/spell mappings reviewed. No verified live merchant purchases.**
 
 | Book ID | Finished item | Skill/spell | Best published evidence | Individually evidenced gate | Live stock observed? |

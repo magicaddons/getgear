@@ -328,6 +328,7 @@ def main():
     unmatched_forever=[];duplicate_identity=[]
     for item in items:
         iid=int(item["itemID"])
+        generated_hyjal_vendor_reference=False
         name=item["name"]
         cache=fcache.get(iid)
         if cache and norm(cache.get("name"))!=norm(name):
@@ -490,6 +491,9 @@ def main():
                 action=("vendor" if method=="vendor" else "dropped" if method=="drop" else "quest")
                 if (book>=273952 and book<=274019 and
                     norm(vendor_actor)=="aisarranightmeadow" and method=="vendor"):
+                    generated_hyjal_vendor_reference=(
+                        conf=="forever-community-reference"
+                        and category=="vendor-reference")
                     detail=("Recipe: Aisarra Nightmeadow, Mount Hyjal "
                             "(reputation/quest/slot gates may apply; vendor stock unverified)")
                 else:
@@ -515,7 +519,10 @@ def main():
             # source/confidence/summary; AcquisitionEvidence preserves them.
             # Existing observations and source text remain primary at runtime;
             # an independently researched book route is additive metadata.
-            if iid not in changes:
+            # Exact reviewed Hyjal book gates may replace this iteration's
+            # generic generated vendor hint. Observed/manual/dungeon entries
+            # never set that marker and keep their original precedence.
+            if iid not in changes or generated_hyjal_vendor_reference:
                 changes[iid]={"summary":ref["summary"],"confidence":ref["confidence"],
                     "url":ref["bookURL"],
                     "patternID":None if (ref.get("warningOnly") or ref.get("bookOriginUnknown")) else ref["bookItemID"],
