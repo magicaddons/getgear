@@ -954,6 +954,72 @@ assert(addon.ItemCatalog[250606].acquisitionResearch.details:find("2 Massive Iro
 assert(addon.ItemCatalog[10011].acquisitionResearch.details:find("1 White Bandit Mask",1,true))
 assert(addon.ItemCatalog[250608].acquisitionResearch.details:find("full quest page could not be retrieved",1,true))
 
+-- Checkpoint 6Q: named reputation is not acquisition proof or a family rule.
+local highRep={
+    {13503,13517,"Exalted with Barkskin Burrow",true},
+    {16980,17017,"Honored with Thorium Brotherhood",true},
+    {16979,17018,"Friendly with Thorium Brotherhood",true},
+    {19156,19219,"Honored with Thorium Brotherhood",true},
+    {19165,19220,"Revered with Thorium Brotherhood",true},
+    {16982,17022,"Friendly with Thorium Brotherhood",true},
+    {16983,17023,"Friendly with Thorium Brotherhood",true},
+    {16984,17025,"Honored with Thorium Brotherhood",true},
+    {19149,19330,"Honored with Thorium Brotherhood",true},
+    {19157,19331,"Revered with Thorium Brotherhood",true},
+    {19162,19332,"Revered with Thorium Brotherhood",true},
+    {19163,19333,"Revered with Thorium Brotherhood",true},
+    {275610,275586,"Friendly with Cenarion Circle",false},
+    {275611,275587,"Honored with Cenarion Circle",false},
+    {275612,275588,"Honored with Cenarion Circle",false},
+    {275613,275589,"Friendly with Cenarion Circle",false},
+    {275614,275590,"Honored with Cenarion Circle",false},
+    {275615,275591,"Honored with Cenarion Circle",false},
+    {275616,275592,"Friendly with Cenarion Circle",false},
+    {275617,275593,"Honored with Cenarion Circle",false},
+    {275618,275594,"Honored with Cenarion Circle",false},
+    {275619,275595,"Friendly with Cenarion Circle",false},
+    {275620,275596,"Honored with Cenarion Circle",false},
+    {275621,275597,"Honored with Cenarion Circle",false},
+    {12625,12698,"Revered with Argent Dawn",true},
+    {16989,17049,"Honored with Thorium Brotherhood",true},
+    {17014,17051,"Friendly with Thorium Brotherhood",true},
+    {17013,17052,"Revered with Thorium Brotherhood",true},
+    {16988,17053,"Revered with Thorium Brotherhood",true},
+    {17015,17059,"Honored with Thorium Brotherhood",true},
+    {17016,17060,"Honored with Thorium Brotherhood",true},
+    {19148,19206,"Honored with Thorium Brotherhood",true},
+    {19164,19207,"Revered with Thorium Brotherhood",true},
+    {19166,19208,"Revered with Thorium Brotherhood",true},
+    {19167,19209,"Revered with Thorium Brotherhood",true},
+    {19170,19210,"Exalted with Thorium Brotherhood",true},
+    {19168,19211,"Exalted with Thorium Brotherhood",true},
+    {19169,19212,"Exalted with Thorium Brotherhood",true},
+    {20039,20040,"Exalted with Thorium Brotherhood",true},
+    {22198,22219,"Revered with Cenarion Circle",true},
+    {22191,22221,"Exalted with Cenarion Circle",true},
+    {22669,22703,"Exalted with Argent Dawn",false},
+    {22670,22704,"Revered with Argent Dawn",false},
+    {22671,22705,"Revered with Hydraxian Waterlords",false},
+    {250617,251469,"Revered with Timbermaw Hold",false},
+    {250618,251470,"Revered with Timbermaw Hold",false},
+}
+for _,r in ipairs(highRep) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    assert(item.acquisitionResearch.sourceSummary:find(r[3],1,true))
+    if r[4] then
+        assert(item.recipePatternItemID==r[2])
+        assert(item.acquisitionResearch.details:find("listed price",1,true))
+    else
+        assert(addon.AcquisitionEvidenceIndex[r[1]].patternID==nil,
+            "Unknown book origin must not create a new required book ID")
+        assert(item.acquisitionResearch.confidence=="published-forever-book-requirement-reference")
+        assert(item.acquisitionResearch.details:find("no vendor, enemy, quest or trainer source",1,true))
+    end
+end
+assert(addon.ItemCatalog[22671].acquisitionResearch.sourceSummary:find("Revered with Hydraxian Waterlords",1,true))
+assert(not addon.ItemCatalog[22671].acquisitionResearch.sourceSummary:find("Argent Dawn",1,true),"Do not copy other Icebane book factions")
+assert(addon.ItemCatalog[13503].acquisitionResearch.details:find("Barkskin Burrow is the exact book-tooltip faction",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")

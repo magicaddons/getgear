@@ -1,0 +1,571 @@
+{
+  "reviewedOn": "2026-11-09",
+  "liveVerified": false,
+  "vendorNPCs": [
+    {
+      "npcID": 256629,
+      "name": "Dala Fairmaw",
+      "url": "https://www.wowhead.com/forever/npc=256629",
+      "sha256": "7fa8443ea98345403b9a65387de5fe9f5735ccbae1b23a9a96c335ac76062bcf",
+      "mapper": {
+        "616": [
+          {
+            "count": 1,
+            "coords": [
+              [
+                21,
+                78.6
+              ]
+            ],
+            "uiMapId": 2482,
+            "uiMapName": "Mount Hyjal"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 12944,
+      "name": "Lokhtos Darkbargainer",
+      "url": "https://www.wowhead.com/forever/npc=12944",
+      "sha256": "c10df4c6d7b5de4f71df113dd77dca93822c261fb9cbf104017e6947423846d6",
+      "mapper": []
+    },
+    {
+      "npcID": 10856,
+      "name": "Argent Quartermaster Hasana",
+      "url": "https://www.wowhead.com/forever/npc=10856",
+      "sha256": "5e18c319ce26c37c9986be292222ae75c5b78fc6870d37da5c9c381702449528",
+      "mapper": {
+        "85": [
+          {
+            "count": 1,
+            "coords": [
+              [
+                83.2,
+                68.2
+              ]
+            ],
+            "uiMapId": 1420,
+            "uiMapName": "Tirisfal Glades"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 10857,
+      "name": "Argent Quartermaster Lightspark",
+      "url": "https://www.wowhead.com/forever/npc=10857",
+      "sha256": "afc34ebb08d7fcf91eb24dd5f1b56eccaf12218bfadd4ed6a64561458540852f",
+      "mapper": {
+        "28": [
+          {
+            "count": 1,
+            "coords": [
+              [
+                42.8,
+                83.8
+              ]
+            ],
+            "uiMapId": 1422,
+            "uiMapName": "Western Plaguelands"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 11536,
+      "name": "Quartermaster Miranda Breechlock",
+      "url": "https://www.wowhead.com/forever/npc=11536",
+      "sha256": "e008b2e4fe3beb16cf15aa2ce4032773bc6df39882c3e2b4b965023d971540c1",
+      "mapper": {
+        "139": [
+          {
+            "count": 2,
+            "coords": [
+              [
+                81.4,
+                60
+              ],
+              [
+                81.6,
+                60
+              ]
+            ],
+            "uiMapId": 1423,
+            "uiMapName": "Eastern Plaguelands"
+          }
+        ]
+      }
+    },
+    {
+      "npcID": 15471,
+      "name": "Lieutenant General Andorov",
+      "url": "https://www.wowhead.com/forever/npc=15471",
+      "sha256": "2ae9784d956c185217fd3a2d6b66c711c506b6c559c4a51aa5b7ae65110b7e16",
+      "mapper": []
+    }
+  ],
+  "spellChecks": [
+    {
+      "itemID": 275610,
+      "spellID": 1297126,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297126",
+      "sha256": "baa36f040e6a0daf09d116b149d08ddca18e25deb19f6425fa24baff0015dc2b",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Bileblister Claws",
+            "flags2": 8192,
+            "id": 275586,
+            "level": 1,
+            "name": "Pattern: Bileblister Claws",
+            "quality": 3,
+            "skill": 285,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275611,
+      "spellID": 1297127,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297127",
+      "sha256": "37dfd23005360830343226c633c96e8b8ba0fd59cd5d0fecf81addd12b4bb5ec",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Bileblister Girdle",
+            "flags2": 8192,
+            "id": 275587,
+            "level": 1,
+            "name": "Pattern: Bileblister Girdle",
+            "quality": 3,
+            "skill": 290,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275612,
+      "spellID": 1297128,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297128",
+      "sha256": "b6c5865879bfdaf925d3901f441f25ba1a16e08bc3d685a8badfc39c26764001",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Bileblister Boots",
+            "flags2": 8192,
+            "id": 275588,
+            "level": 1,
+            "name": "Pattern: Bileblister Boots",
+            "quality": 3,
+            "skill": 295,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275613,
+      "spellID": 1297129,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297129",
+      "sha256": "e3afc389851d7d9f63a593b36221659061eda749866fb13105aeea62c3a07751",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Hivethrasher's Claws",
+            "flags2": 8192,
+            "id": 275589,
+            "level": 1,
+            "name": "Pattern: Hivethrasher's Claws",
+            "quality": 3,
+            "skill": 285,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275614,
+      "spellID": 1297130,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297130",
+      "sha256": "9b82923c8c260e19888f2017f57eb6701d9d1ccc3ffb7a75552f64943ebb3467",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Hivethrasher's Girdle",
+            "flags2": 8192,
+            "id": 275590,
+            "level": 1,
+            "name": "Pattern: Hivethrasher's Girdle",
+            "quality": 3,
+            "skill": 290,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275615,
+      "spellID": 1297131,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297131",
+      "sha256": "8a703b47bd674809ad2aac3548cdf52859dded97f2ea7e23dbcae866bc8fe50b",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Hivethrasher's Boots",
+            "flags2": 8192,
+            "id": 275591,
+            "level": 1,
+            "name": "Pattern: Hivethrasher's Boots",
+            "quality": 3,
+            "skill": 295,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275616,
+      "spellID": 1297132,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297132",
+      "sha256": "2a6ef95cf66adaac39d11ae7ff0eaba5344999634f22c55c1f27c52041b206a2",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Scalegut Clenchers",
+            "flags2": 8192,
+            "id": 275592,
+            "level": 1,
+            "name": "Pattern: Scalegut Clenchers",
+            "quality": 3,
+            "skill": 285,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275617,
+      "spellID": 1297133,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297133",
+      "sha256": "a7311a521624854d2190db04319ee6de88b40f1b6e2f50d94c50b5d12e53b704",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Scalegut Belt",
+            "flags2": 8192,
+            "id": 275593,
+            "level": 1,
+            "name": "Pattern: Scalegut Belt",
+            "quality": 3,
+            "skill": 290,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275618,
+      "spellID": 1297134,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297134",
+      "sha256": "1f7160dbd543b629a8af6e63742405ba90ed61e916789db5626ee95487656a1e",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Scalegut Treaders",
+            "flags2": 8192,
+            "id": 275594,
+            "level": 1,
+            "name": "Pattern: Scalegut Treaders",
+            "quality": 3,
+            "skill": 295,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275619,
+      "spellID": 1297135,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297135",
+      "sha256": "e14f6c64b70eb1c1b83dc85c2a10c2a7999c21f972995ff6af8aa129646b4a57",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Broodwatcher's Clenchers",
+            "flags2": 8192,
+            "id": 275595,
+            "level": 1,
+            "name": "Pattern: Broodwatcher's Clenchers",
+            "quality": 3,
+            "skill": 285,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275620,
+      "spellID": 1297136,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297136",
+      "sha256": "b2d314295b23233da032f426fedc92573307b30e2259710ca54e890328b6ede1",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Broodwatcher's Belt",
+            "flags2": 8192,
+            "id": 275596,
+            "level": 1,
+            "name": "Pattern: Broodwatcher's Belt",
+            "quality": 3,
+            "skill": 290,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 275621,
+      "spellID": 1297137,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1297137",
+      "sha256": "51dec804a0581d57efbf9aa0675463770602d105f4bc1de9d2118cc9dab44058",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Pattern: Broodwatcher's Treaders",
+            "flags2": 8192,
+            "id": 275597,
+            "level": 1,
+            "name": "Pattern: Broodwatcher's Treaders",
+            "quality": 3,
+            "skill": 295,
+            "slot": 0,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 22669,
+      "spellID": 28242,
+      "sourceURL": "https://www.wowhead.com/forever/spell=28242",
+      "sha256": "f1901899177f9bac66a231b782f1453fe999d8c255591e2ba81ee762b30e89a9",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Plans: Icebane Breastplate",
+            "flags2": 24580,
+            "id": 22703,
+            "level": 80,
+            "name": "Plans: Icebane Breastplate",
+            "quality": 1,
+            "skill": 300,
+            "slot": 0,
+            "subclass": 4,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 22670,
+      "spellID": 28243,
+      "sourceURL": "https://www.wowhead.com/forever/spell=28243",
+      "sha256": "57003b1aa29bb02c51175ec2c5820132129504153102458a568874d609f5a2cd",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Plans: Icebane Gauntlets",
+            "flags2": 24580,
+            "id": 22704,
+            "level": 80,
+            "name": "Plans: Icebane Gauntlets",
+            "quality": 1,
+            "skill": 300,
+            "slot": 0,
+            "subclass": 4,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 22671,
+      "spellID": 28244,
+      "sourceURL": "https://www.wowhead.com/forever/spell=28244",
+      "sha256": "495586b40bce99d0025448cca7be175c6f4147b9833da3401354f07af20b452d",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Plans: Icebane Bracers",
+            "flags2": 24580,
+            "id": 22705,
+            "level": 80,
+            "name": "Plans: Icebane Bracers",
+            "quality": 1,
+            "skill": 300,
+            "slot": 0,
+            "subclass": 4,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 250617,
+      "spellID": 1252366,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1252366",
+      "sha256": "00ee0971f954b04993032cf1bf11a8818110afb334ff14e2b897ecf6d1fde041",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Plans: Stormcarver",
+            "flags2": 24576,
+            "id": 251469,
+            "level": 60,
+            "name": "Plans: Stormcarver",
+            "quality": 3,
+            "skill": 300,
+            "slot": 0,
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "itemID": 250618,
+      "spellID": 1252367,
+      "sourceURL": "https://www.wowhead.com/forever/spell=1252367",
+      "sha256": "0750c4ec1a015664120ab62b124fe044bff76a1f860ae3b93b69142081e6b37b",
+      "tables": {
+        "taught-by-item": [
+          {
+            "classs": 9,
+            "displayName": "Plans: Bagh Nakh",
+            "flags2": 24576,
+            "id": 251470,
+            "level": 60,
+            "name": "Plans: Bagh Nakh",
+            "quality": 3,
+            "skill": 300,
+            "slot": 0,
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "exactVendorInventoryMatches": [],
+  "unresolvedResearch": "Seventeen exact books have no named vendor/drop/quest/trainer source in checked item/spell tables. Related cached NPC inventories had no exact-ID match. Targeted searches for Bileblister Claws, Stormcarver and Bagh Nakh found requirement/identity references but no stronger named current source; do not infer quartermasters."
+}
