@@ -1,0 +1,35 @@
+# Checkpoint 8H — 65 undocumented-source items at levels 41–50
+
+Publication research on 9 November 2026 UTC, baseline `c2dd4bdc0f2c3930ac0d1eaffcb8957b7a165d6b`. All 65 canonical item pages read and identity-locked, excluding all 724 earlier reviewed equipment IDs. [Cases](checkpoint8h_equipment_evidence.csv), [primary structured proof](checkpoint8h_publication_evidence.json), [merchant joins](checkpoint8h_merchant_references.csv), [requirements](checkpoint8h_item_requirements.csv), [50 exact discovery queries](checkpoint8h_discovery.json), [secondary reads and four focused searches](checkpoint8h_secondary_checks.json).
+
+Results: **13 vendor references, one quest reward, one item-use assembly, one attributed beta-player drop report, one generic world-drop label, 48 unresolved origins**. All remain unverified for current live acquisition. Missing relationships, same-name versions, source disagreements and placeholder labels are documented without inventing a source or unavailable flag.
+
+## Exact routes and discrepancies
+
+**Theramore:** all 13 selected level48/50 versions match [Bryanna Embreeze #263569](https://www.wowhead.com/forever/npc=263569) independently by exact ID/name/price/stock. Published location is The Barrens 63.4,58.6. Individual ranks are two Friendly trinkets, three Honored rings/neck, four Revered weapons/off-hand and four Exalted gloves. Ranks come from exact tooltips and the individual inventory, not an opposing faction or another level's version. Prices are separately recorded; no finite stock is shown, without a current-stock guarantee. Phase, standing access, earning rates and current charges remain unverified.
+
+**Infernal Lasso #219345:** [Brought to Heel #81919](https://www.wowhead.com/forever/quest=81919) directly rewards this permanent equip50 trinket, quest minimum45/display54/Elite. The same-name **provided quest tool is #220216**, a separate level1 quest item with a 30-second weakening effect. Its cooldown, use and retention must not be transferred to the permanent reward's five-minute combat effect.
+
+The published chain starts [The Burning Beast #81900](https://www.wowhead.com/forever/quest=81900) at [Weathered Etching #441061](https://www.wowhead.com/forever/object=441061), Searing Gorge x14.4–14.5/y36.3–36.5, then visits Bloodmage Lynnore #7506 in the Blasted Lands x50.4–50.6/y14.2–14.6. Both object-start and NPC-end reverse joins agree for this first step. [Chains That Bind #81917](https://www.wowhead.com/forever/quest=81917) requires five Infernal Chain Links #220214; all six Shadowsworn item-to-NPC edges independently reverse-match. Final quest requires one Fel Lifeblood #220213 from Calefactus #221740; reverse loot confirms Lifeblood, not the finished trinket.
+
+Later quest pages encode Lynnore as giver/ender, **but his reverse lists omit #81917/#81919**. All three quest records have unconfirmed environment status and Side None. Keep actor/phasing/faction acceptance uncertainty; a minimum45 field does not prove complete access at45. Calefactus has a broad published mapper footprint while the quest narrative says its current location is unknown; no single live pin, required party size or guaranteed tool retention is asserted.
+
+**Sul'thraze #9372:** [Call of Sul'thraze #11654](https://www.wowhead.com/forever/spell=11654) is an item-use conversion, with output9372, reagent Sang'thraze9379 and use items Jang'thraze9380/11086. The exact9380 tooltip also describes combining the swords. No profession, skill, trainer or recipe book is shown; this is not a missing learned craft. Sang'thraze9379 independently reverse-matches Antu'sul8127; that is the **input sword's** published drop, not Sul'thraze's. Consumption/retention and current operation remain unverified.
+
+**Selected Jang'thraze #9380 remains origin-unresolved:** [Chief Ukorz #7267](https://www.wowhead.com/forever/npc=7267) lists the different same-name11086, not9380. **Fist of Stone #17733** likewise cannot inherit Landslide12203's exact17943 loot record. Independently checked reverse lists verify both mismatches. Similar-looking PvP bracers272580/272581 are absent from Sergeant Ba'sha12799's inventory, which lists different IDs. Onyx7547/7548 and Ornate Bracers16664 also have different same-name versions.
+
+## Secondary evidence and honest gaps
+
+**Unbreakable Golem Grips #282097:** [exact item lead](https://foreverchanges.pro/item/282097) names Faulty War Golem/Searing Gorge. The publisher's [rares article](https://foreverchanges.pro/rares) attributes a beta-player report dated October15 and a publisher beta check on October24. This reporting is distinct from its item/cache badge. No independently inspected current drop, qualifying multi-install observation, live pin/rate/respawn or primary rare-role reclassification is claimed. A separate class guide repeats this report rather than independently corroborating it.
+
+**Stone Keeper Spire #274432:** a secondary exact-ID page labels a generic world drop without a named enemy or observation. Other pages have no source. Keep the label secondary and retain `Source not documented` and existing filter behavior. Its name does not establish a Stone Keeper/Uldaman drop.
+
+For **48 exact origin gaps**, all received exact-name/ID searches; relevant secondary pages were read beyond snippets. Cache-confirmation badges establish item data, not loot. A Daybreak sealed-ID-block/dungeon association is inference, not a current Zul'Farrak enemy/container join. Grunter, Clack, Smoldar, Ironback and Feardred names do not prove drops. Twilight Forgehammer281665 serving as a Blacksmith Hammer is a **tool role**, not a learned recipe, a profession gate for wearing it or its acquisition source. `[TMP]` in236755's name is not an explicit unavailable-to-players flag.
+
+Proof dictionaries retain used factual records, URLs, full primary response fingerprints and negative joins; no quest story/article prose or fabricated HTTP hash for connected-web reads.
+
+## Validation and continuation
+
+**Full local PASS:** fresh online reconciliation/Python syntax, all24 Lua modules, four required reports, all14 regressions ([output](checkpoint8h_local_results.txt)). Primary fingerprints match all65 new cases; all724 older registry objects unchanged. Index2,535/display2,534/books759; crafts1,254/ingredients4,857 unchanged. Semantic comparison:65 additive summaries only; no other derived catalogue/dungeon/recipe semantic changes. **GitHub CI pending:** inspect full run/bot before advancing. All 724 older equipment entries, original catalogue/class/equip/recipe ingredients and supplemental crafts must remain intact. No build/package/tag/release/merge/main action.
+
+After verification: equipment789, remaining frozen queue **5,113** (vendor1,030; quest190; undocumented1,004; world-drop2,887; reputation2). **Next 8I:25 vendor cases at catalogue level55**, followed by63 vendors at58 and bounded groups at60, remaining high-level quests/undocumented/world-drop/reputation and final integrity/client acceptance planning. Original954 book live routes, six dungeon exceptions and current-source uncertainties remain open.

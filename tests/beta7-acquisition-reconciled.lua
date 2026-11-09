@@ -1461,6 +1461,42 @@ assert(addon.ItemCatalog[19580].acquisitionResearch.details:find("not both oppos
 assert(addon.ItemCatalog[11308].acquisitionResearch.details:find("not simultaneous current spawns",1,true))
 assert(addon.ItemCatalog[220799].acquisitionResearch.details:find("no usable published map",1,true))
 
+-- Checkpoint 8H: distinguish quest tool/reward IDs, input versus output
+-- drops, same-name versions and tool roles from learned crafting.
+local cases8h=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/checkpoint8h_equipment_evidence.csv")):read("*a")
+local count8h=0
+for id in cases8h:gmatch("\n(%d+),") do
+    local a=assert(addon.ItemCatalog[tonumber(id)]).acquisitionResearch
+    assert(a.equipmentReference and a.sourceSummary:find("unverified",1,true)
+        and a.confidence~="forever-observed-npc" and not a.recipeReference)
+    count8h=count8h+1
+end
+assert(count8h==65)
+local lasso=addon.ItemCatalog[219345].acquisitionResearch
+assert(lasso.details:find("PROVIDED quest tool is Infernal Lasso #220216",1,true)
+    and lasso.details:find("not permanent trinket #219345",1,true)
+    and lasso.details:find("reverse-list discrepancy",1,true)
+    and lasso.details:find("five Infernal Chain Links #220214",1,true)
+    and lasso.details:find("Lifeblood, not the finished Lasso",1,true))
+assert(addon.ItemCatalog[9372].acquisitionResearch.details:find("not a learned profession recipe",1,true))
+assert(not addon.ItemCatalog[9372].profession and not addon.ItemCatalog[281665].profession)
+assert(addon.ItemCatalog[281665].acquisitionResearch.details:find("TOOL role",1,true))
+assert(addon.ItemCatalog[9380].acquisitionResearch.confidence=="published-forever-equipment-origin-unresolved"
+    and addon.ItemCatalog[9380].acquisitionResearch.details:find("#11086, not selected #9380",1,true))
+assert(addon.ItemCatalog[17733].acquisitionResearch.details:find("Fist of Stone #17943, not selected #17733",1,true))
+for _,id in ipairs({272580,272581}) do
+    assert(addon.ItemCatalog[id].acquisitionResearch.confidence=="published-forever-equipment-origin-unresolved"
+        and addon.ItemCatalog[id].acquisitionResearch.details:find("inventory omits this exact ID",1,true))
+end
+assert(addon.ItemCatalog[236755].acquisitionResearch.details:find("not an explicit unavailable-to-players flag",1,true))
+assert(addon.ItemCatalog[274641].acquisitionResearch.details:find("client names/effects",1,true))
+assert(addon.ItemCatalog[282097].acquisitionResearch.confidence=="published-beta-player-drop-report-unverified"
+    and addon.ItemCatalog[282097].acquisitionResearch.details:find("no independently inspected current live drop",1,true)
+    and addon.ItemCatalog[282097].sourceType=="Source not documented")
+assert(addon.ItemCatalog[274432].acquisitionResearch.confidence=="secondary-generic-worlddrop-reference"
+    and addon.ItemCatalog[274432].sourceType=="Source not documented")
+assert(addon.ItemCatalog[271941].acquisitionResearch.details:find("Theramore Expeditionary Force - Exalted",1,true))
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("Friendly Guardians of Hyjal + completion of Friendly Advice",1,true)
     and index:find("Boots specialisation (exact rank unspecified)",1,true),

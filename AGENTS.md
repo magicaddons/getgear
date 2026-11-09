@@ -33,3 +33,5 @@ Read the latest progress entry and [continuation handover](docs/source-audit-1-6
 207 vendor41–50 cases integrated; read latest progress/case note. Equipment724/index2,470/display2,469; remaining5,178. Full local14/14,24 modules,four reports; finish non-release CI/bot review before **8H:65 undocumented41–50** (marked in queue). Preserve primary/merchant-only/secondary evidence and seasonal warnings. Automation remains enabled, single existing conversation; no release/main authority.
 
 Current verified checkpoint:8G full local/CI PASS42656807047, bot54346df provenance-only review complete. **Proceed8H:65 undocumented41–50**, marked queue. Older pending entries above are historical.
+
+Current8H:65 cases integrated/full local PASS14/14,24 modules,four reports. Finish non-release CI/bot review before **8I:25 vendors at55** (queue marked). Equipment789/index2,535/display2,534, remaining5,113. Preserve quest-tool/reward IDs, actor omissions, input/output drops, same-name variants and tool-versus-craft distinctions. No release/main action.
