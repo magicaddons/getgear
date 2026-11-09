@@ -97,3 +97,7 @@ Recipe-book teaching routes are a **separate later category**; 954 remain uncert
 
 ## User assistance
 None required now. Optional later in-game vendor checks can be requested after the independent research is exhausted.
+
+## Full non-release validation — 9 November 2026
+
+**Local PASS; GitHub PENDING.** [Full evidence and generated-change review](source-audit-1-60/reconciliation-20261109/FULL_VALIDATION_20261109.md). Fresh baseline 2dd4d453501aef7bf6d7fb9d3b831dff7dc245c5; online reconciliation, Python compile, 3 required files, all 24 Lua modules and all 14 workflow regressions passed after regeneration. Catalogue, ingredients, eligibility, settings and filters retained. Refresh includes two qualifying recorded Everloot gear observations and one book observation; publications alone remain unconfirmed. Six dungeon and 954 recipe routes stay open. No live-client acceptance or release approval. Non-release GitHub run and final HEAD will be recorded after completion.

@@ -57,3 +57,7 @@ The existing public v0.14.0-beta7 prerelease is separate from this work. No subs
 - **Ask for explicit permission before creating a ZIP, tag, release or modifying `main`.**
 
 No user action is required for further offline source research; eventual in-game checks can be optional and targeted.
+
+## Full non-release validation refresh — 9 November 2026
+
+**Local PASS; GitHub PENDING.** [Full evidence and generated-change review](reconciliation-20261109/FULL_VALIDATION_20261109.md). Fresh baseline 2dd4d453501aef7bf6d7fb9d3b831dff7dc245c5; online reconciliation, Python compile, 3 required files, all 24 Lua modules and all 14 workflow regressions passed after regeneration. Catalogue, ingredients, eligibility, settings and filters retained. Refresh includes two qualifying recorded Everloot gear observations and one book observation; publications alone remain unconfirmed. Six dungeon and 954 recipe routes stay open. No live-client acceptance or release approval. Non-release GitHub run and final HEAD will be recorded after completion.
