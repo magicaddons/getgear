@@ -165,3 +165,13 @@ User authorised [continuous sequential research](../OVERNIGHT_WORK_PLAN.md) acro
 ## Beta 8 package ready; public release blocked
 
 User-authorised Beta 8 source/tag `543e5a248a018f8a9144e64aca655d242cf274e0` has complete local/GitHub PASS and a verified 29-file ZIP (SHA256 `f8435b632cede83dd79ddded6348a7e2f9995da08fe13e4f859466a10a97a732`). Tag pushed; draft release ID 439010698 has no assets. **Not published:** enforced cloud network policy excludes `uploads.github.com`, and uploads return HTTP403. User must add that domain in environment settings/apply; no environment-change tool is exposed here. [Exact handover and safe publication steps](../BETA8_RELEASE_HANDOVER.md). Research paused; main unchanged. Do not label the draft/tag a completed public release.
+
+## Upload retry — 9 November 2026; authentication blocked
+
+Research remains paused. Development branch resumed at `5df3d2bb18f4a789e3cc35a72640f0498e03c889`. Current managed-environment observations are current, and the applied network policy is enforced with `uploads.github.com` explicitly allowed. Fresh remote tag inspection confirms annotated tag target `543e5a248a018f8a9144e64aca655d242cf274e0`.
+
+The user supplied the original ZIP and authorised generating its checksum text file. Verified ZIP: 519,620 bytes, SHA-256 `f8435b632cede83dd79ddded6348a7e2f9995da08fe13e4f859466a10a97a732`; archive CRC and all 29 recorded manifest hashes pass. Created `GetGear-v0.14.0-beta8.zip.sha256` with the verified digest and ZIP basename; ZIP was not modified or rebuilt.
+
+Normal `gh release upload` to existing draft ID **439010698** reached `uploads.github.com` but returned **HTTP 401: Bad credentials**. Subsequent API inspection confirms the same draft remains unpublished with **assets empty**. `gh auth status` confirms the active magicaddons account through GH_TOKEN, and authenticated repository API reads work; this does not establish credential validity for the upload host. The previous network-domain blocker is resolved; upload authentication is now the blocker. No tag/release recreation, asset overwrite, merge or main change occurred.
+
+Resume after GitHub upload authentication is repaired: recheck draft/tag and original ZIP digest, upload ZIP plus checksum to this same draft, download and compare draft assets, publish with prerelease=true and latest=false, then download both published assets and verify exact bytes/checksum before recording publication success. No public Beta 8 publication is claimed. Latest code validation remains successful [CI 42602679107](https://github.com/magicaddons/getgear/actions/runs/42602679107), 14/14 regressions and 24 modules; this documentation-only retry ran targeted package/API checks, no new full CI or research.
