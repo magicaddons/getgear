@@ -1,5 +1,5 @@
 {
-  "status": "Publication research preserved; runtime integration/full validation/queue advance pending",
+  "status": "Publication research integrated and validated; original preservation snapshot retained",
   "baseline": "e4494a485a8f8540ab66f5bd4afc1934e5dcadad",
   "reviewedOn": "2026-11-09",
   "counts": {
@@ -5075,5 +5075,16 @@
     "selectedRows": 100,
     "nonzeroItems": [],
     "limits": "Published feed coverage/threshold, not proof that an item cannot drop or be purchased; personal liveVerified staysfalse."
+  },
+  "integrationOutcome": {
+    "sourceCommit": "8183aa43eed1976694f5060be87e379d27a0e36e",
+    "ciRun": "https://github.com/magicaddons/getgear/actions/runs/42721186621",
+    "validatedBotHead": "a425567c922e9df649a79d60b4f10f7151f78b22",
+    "fullRegression": "14 PASS;24 modules;four reports; local and CI",
+    "equipmentRegistry": 1943,
+    "index": 3592,
+    "display": 3591,
+    "frozenRemaining": 3959,
+    "next": "8W:first100 undocumented55 IDs272634\u2013273363 marked queue"
   }
 }
