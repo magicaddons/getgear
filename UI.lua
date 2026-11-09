@@ -283,6 +283,10 @@ local function Describe(gear, previewMode)
     local hasSource = type(gear.source)=="string" and gear.source~=""
     local desc = (hasSource and (gear.source .. ": ") or "") .. (gear.instructions or "")
     if gear.notes and gear.notes ~= "" then desc = desc .. "\n" .. gear.notes end
+    local research=gear.acquisitionResearch
+    if research and research.recipeReference and research.sourceSummary then
+        desc=desc.."\n"..research.sourceSummary
+    end
     if gear.suitabilityWarning and gear.suitabilityWarning~="" and
         not desc:find(gear.suitabilityWarning,1,true) then
         desc=desc.."\n"..gear.suitabilityWarning

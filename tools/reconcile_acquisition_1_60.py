@@ -307,6 +307,13 @@ def main():
     assert not set(FOREVER_DUNGEON_ROLE_REFERENCES).intersection(JOURNAL_RARE_LOOT)
     assert len(FOREVER_TRASH_DROPS)==2 and set(FOREVER_TRASH_DROPS).issubset(dungeon_ids)
     recipe_by_id={int(r["itemID"]):r for r in recipes}
+    reviewed_path=REPORT/"reviewed_recipe_sources.json"
+    reviewed_bytes=reviewed_path.read_bytes()
+    reviewed_rows=json.loads(reviewed_bytes)
+    reviewed={r["itemID"]:r for r in reviewed_rows}
+    assert len(reviewed)==len(reviewed_rows), "Duplicate reviewed recipe identity"
+    provenance["reviewed_recipe_sources.json"]={"bytes":len(reviewed_bytes),
+        "sha256":hashlib.sha256(reviewed_bytes).hexdigest()}
     play,play_entries,play_config=playfulls()
     fcache={r["itemId"]:r for r in data(CACHE_URL) if isinstance(r,dict) and isinstance(r.get("itemId"),int)}
     encounters=data(ENCOUNTER_URL).get("instances",{})
@@ -492,6 +499,22 @@ def main():
             elif iid not in changes and book and "unresolved" in existing_method:
                 changes[iid]={"summary":f"Recipe: plans/pattern #{book} (source unverified)",
                               "confidence":"client-pattern-unknown","url":"","patternID":book}
+        # Item/book/spell locked publication research supplements an unknown
+        # learning route. Never rewrite the original classification, learning
+        # gates, ingredients, or a stronger observed/manual source.
+        if iid in reviewed:
+            ref=reviewed[iid]
+            assert recipe and name==ref["name"], ("Reviewed recipe identity drift",iid)
+            assert int(recipe["spellID"])==ref["spellID"]
+            assert recipe["profession"]==ref["profession"]
+            assert recipe["recipeItems"]==str(ref["bookItemID"])
+            assert ref["liveVerified"] is False
+            assert "unverified" in ref["summary"]
+            if iid not in changes and item["sourceEvidence"] not in (
+                    "observed","forever","published-forever","reported"):
+                changes[iid]={"summary":ref["summary"],"confidence":ref["confidence"],
+                    "url":ref["bookURL"],"patternID":ref["bookItemID"],
+                    "recipeReference":True}
         # Actionable vendor and quest research beyond the dungeon/recipe
         # queues. Only enrich already vendor/quest/undocumented catalogue
         # records; never turn a generic world-drop into an assumed vendor
@@ -547,6 +570,7 @@ def main():
                   ",confidence="+lua_str(row["confidence"])+
                   ",url="+lua_str(row.get("url",""))+
                   (",patternID="+str(row["patternID"]) if row.get("patternID") else "")+
+                  (",recipeReference=true" if row.get("recipeReference") else "")+
                   "},\n" for iid,row in sorted(changes.items()))
         + "}\n",encoding="utf8")
     write_csv("all_items_reconciled.csv",all_rows,list(all_rows[0]))

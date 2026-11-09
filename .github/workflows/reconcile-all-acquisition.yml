@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/reconcile-all-acquisition.yml
       - tools/reconcile_acquisition_1_60.py
+      - docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json
       - AcquisitionEvidence.lua
       - GetGear.toc
       - tests/beta7-acquisition-reconciled.lua

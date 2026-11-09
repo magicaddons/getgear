@@ -204,6 +204,55 @@ assert(recipeReconciliation:find("**552**",1,true)
     and recipeReconciliation:find("container-lead: 2",1,true)
     and recipeReconciliation:find("trash: 137",1,true),
     "Crafted-pattern records must not masquerade as equipment drops")
+-- Checkpoint 6B: specific book research is actionable inside both views,
+-- without claiming stock, trainer teaching, or a finished-item dungeon drop.
+local reviewedBooks={
+    {250515,251367,45},{250516,251368,45},{250517,251369,45},
+    {250510,251362,80},{250512,251364,80},{250507,251359,85},
+    {250529,251381,95},{250532,251384,95},{250522,251374,110},
+    {250527,251379,125},
+}
+for _,r in ipairs(reviewedBooks) do
+    local item=assert(addon.ItemCatalog[r[1]])
+    local ev=assert(item.acquisitionResearch)
+    assert(ev.recipeReference and ev.confidence=="published-forever-recipe-vendor-reference")
+    assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
+    local text=addon:GetAcquisitionSummary(item)
+    assert(text:find("Plans #"..r[2],1,true)
+        and text:find("Blacksmithing "..r[3],1,true)
+        and text:find("Alliance Stondry Darkhammer",1,true)
+        and text:find("Horde Gor'mak",1,true)
+        and text:find("Three Corners",1,true)
+        and text:find("Crossroads",1,true)
+        and text:find("30 Merchant's Favor",1,true)
+        and text:find("live stock/gates unverified",1,true))
+    assert(item.acquisitionConfidence=="published-client-recipe",
+        "Publication must not promote original item confidence")
+    assert(item.professionSkillRequired==nil,
+        "Book tooltip learning requirement must not mutate crafting/equip gates")
+    assert(not text:find("Boss:",1,true),"Finished craft must not become boss loot")
+end
+assert(addon.ItemCatalog[250510].sourceSummary:find("Player report:",1,true))
+assert(addon.ItemCatalog[250512].sourceSummary:find("enemy unspecified",1,true))
+assert(addon.ItemCatalog[250529].sourceSummary:find("Verdan the Everliving",1,true))
+-- Exercise the real detailed-guide formatter with the researched source.
+local ui=assert(io.open(root.."/UI.lua")):read("*a")
+local describeBody=assert(ui:match("local function Describe%(gear, previewMode%)%s*(.-)\nend"))
+local describe=assert(load("return function(gear,previewMode)\n"..describeBody.."\nend",
+    "Describe", "t", {type=type,tostring=tostring,table=table}))()
+local detailed=describe(addon.ItemCatalog[250515],false)
+assert(detailed:find("Stondry Darkhammer",1,true)
+    and detailed:find("Gor'mak",1,true) and detailed:find("unverified",1,true))
+-- An existing observed/manual description retains display precedence.
+local fixture={ItemCatalog={[250515]={sourceSummary="Original observation",
+    acquisitionConfidence="observed",reagents={{itemID=2840,amount=12}},classMask=1}},
+    AcquisitionEvidenceIndex=addon.AcquisitionEvidenceIndex}
+assert(loadfile(root.."/AcquisitionEvidence.lua"))("GetGear",fixture)
+assert(fixture.ItemCatalog[250515].sourceSummary=="Original observation")
+assert(fixture.ItemCatalog[250515].acquisitionConfidence=="observed"
+    and fixture.ItemCatalog[250515].classMask==1
+    and fixture.ItemCatalog[250515].reagents[1].amount==12)
+
 local index=assert(io.open(root.."/AcquisitionEvidenceIndex.lua")):read("*a")
 assert(index:find("reputation/quest/slot gates may apply",1,true),
     "Preserve prospective Hyjal reputation and specialization requirements")
