@@ -41,3 +41,5 @@ When raw source totals/shards change, compare factual snapshots in CONTINUATION.
 ## Checkpoint8V publication research preserved — integration pending
 
 22 primary identities, four Dala Revered vendor/token reverse joins, exact18023 unavailable/227947 seasonal flags; qualified conflicting277117/preview284266/speculative284065/286640/auction282026/generic-world labels documented in CHECKPOINT8V_IN_PROGRESS.md and checkpoint8v_working_evidence.json. Eight auxiliary NPC checks,28 discovery queries/focused sources saved; no repeated source pass needed. Runtime/full validation/queue advance PENDING. Registry1821/index3470/remaining4081, all22 still8V. Latest full PASS8U42716468554/botd0a5d94 retained; finish integration/full local/CI/bot then next100 undocumented55. No release/main action.
+
+**Current8V integrated/local PASS:** see CHECKPOINT8V_LEVEL51_54_UNDOCUMENTED.md.22 entries with bounded source confidence; all1,821 prior objects unchanged. Equipment1,843/index3,492/remaining4,059; full local14/24/4 PASS, CI/bot pending. Next8W first100 undocumented55 IDs16367–272630. No sourceType/eligibility/recipe mutation.

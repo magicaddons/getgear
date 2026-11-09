@@ -335,3 +335,7 @@ Full local and GitHub PASS: [42716468554](https://github.com/magicaddons/getgear
 ## Checkpoint8V publication research preserved — integration pending
 
 22 primary identities, four Dala Revered vendor/token reverse joins, exact18023 unavailable/227947 seasonal flags; qualified conflicting277117/preview284266/speculative284065/286640/auction282026/generic-world labels documented in CHECKPOINT8V_IN_PROGRESS.md and checkpoint8v_working_evidence.json. Eight auxiliary NPC checks,28 discovery queries/focused sources saved; no repeated source pass needed. Runtime/full validation/queue advance PENDING. Registry1821/index3470/remaining4081, all22 still8V. Latest full PASS8U42716468554/botd0a5d94 retained; finish integration/full local/CI/bot then next100 undocumented55. No release/main action.
+
+## Checkpoint8V integrated — GitHub pending
+
+[22 undocumented51–54](reconciliation-20261109/CHECKPOINT8V_LEVEL51_54_UNDOCUMENTED.md):4 Dala Revered/token reverse joins; exact18023 unavailable/227947 seasonal flags;277117 conflict/284266 unnamed preview/2 speculative/auction282026/2 generic categories/9 gaps retained with qualified evidence. No fake NPC/outfit/drop/recipe/current-table inference. Full local14/24/4 PASS, CI pending. All1,821 prior objects unchanged;22 summaries only. Equipment1,843/index3,492/display3,491/books759; crafts1,254/ingredients4,857. Frozenremaining4,059; next8W100 undocumented55 IDs16367–272630, after CI/bot. Later9A39 coverage candidates separate. No release/main action.
