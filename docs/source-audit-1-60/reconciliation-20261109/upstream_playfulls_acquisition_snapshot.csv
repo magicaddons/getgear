@@ -65,7 +65,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 210,Dirty Leather Boots,4,"[4,5,6,7]"
 236,Cured Leather Armor,4,"[241,242,243,244,245,233,246,247,248,249,250,251,-13]"
 237,Cured Leather Pants,4,"[241,242,243,244,245,233,246,247,248,249,250,251,-13]"
-238,Cured Leather Boots,0,"[241,242,243,244,245,233,246,247,248,249,250,251,-13]"
+238,Cured Leather Boots,4,"[241,242,243,244,245,233,246,247,248,249,250,251,-13]"
 239,Cured Leather Gloves,4,"[241,242,243,244,245,233,246,247,248,249,250,251,-13]"
 285,Scalemail Vest,6,"[253,254,255,256,257,258,259,260,261,262,263,264]"
 286,Scalemail Pants,4,"[253,254,255,256,257,258,259,260,261,262,263,264]"
@@ -440,7 +440,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 1309,Oslow's Toolbox,0,[1080]
 1310,Smith's Trousers,0,[1077]
 1314,Ghoul Fingers,6,[1081]
-1315,Lei of Lilies,2,[1082]
+1315,Lei of Lilies,6,[1082]
 1317,Hardened Root Staff,2,[1083]
 1318,Night Reaver,6,[1084]
 1319,Ring of Iron Will,0,[1085]
@@ -666,7 +666,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 1717,Double Link Tunic,6,"[1263,280,281,282,283,609,284,285,335,286,287,610,-13]"
 1718,Basilisk Hide Pants,6,"[1185,283,609,335,286,287,610,336]"
 1720,Tanglewood Staff,6,"[1116,335,336,337]"
-1721,Viking Warhammer,2,"[627,336,337,939,940]"
+1721,Viking Warhammer,6,"[627,336,337,939,940]"
 1722,Thornstone Sledgehammer,6,"[783,283,609,335,286,287,610,336]"
 1725,Large Knapsack,4,"[1264,283,609,286,287,610,782,778,779,1265,1266]"
 1726,Poison-tipped Bone Spear,6,"[777,283,609,335,286,287,610,779]"
@@ -822,7 +822,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 1970,Restoring Balm,0,"[1296,1300]"
 1971,Furlbrow's Deed,0,[1301]
 1972,Westfall Deed,0,"[1302,1303]"
-1973,Orb of Deception,2,[]
+1973,Orb of Deception,6,[]
 1974,Mindthrust Bracers,6,[1084]
 1975,Pysan's Old Greatsword,6,[421]
 1976,Slaghammer,6,[421]
@@ -2400,7 +2400,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 3932,Smotts' Chest,0,[2807]
 3935,Smotts' Cutlass,0,[]
 3936,Crochet Belt,0,"[2808,283,609,335,286,287,610,336,337]"
-3937,Crochet Boots,0,"[2808,335,336,337]"
+3937,Crochet Boots,4,"[2808,335,336,337]"
 3938,Crochet Bracers,0,"[2808,283,609,335,286,287,610,336,337]"
 3939,Crochet Cloak,4,"[2808,335,336,337]"
 3940,Crochet Gloves,0,"[2808,335,336,337]"
@@ -2421,7 +2421,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 3956,Mesh Gloves,0,[]
 3960,Bag of Water Elemental Bracers,0,[2809]
 3961,Thick Leather Belt,0,"[2808,283,609,335,286,287,610,336,337,1353]"
-3962,Thick Leather Boots,0,"[2808,335,336,337,1353]"
+3962,Thick Leather Boots,4,"[2808,335,336,337,1353]"
 3963,Thick Leather Bracers,0,"[2808,283,609,335,286,287,610,336,337]"
 3964,Thick Cloak,0,"[2808,335,336,337]"
 3965,Thick Leather Gloves,0,"[2808,335,336,337,1353]"
@@ -2475,7 +2475,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 4022,Crushing Maul,0,"[2808,335,336,337,939]"
 4023,Fine Pointed Dagger,4,"[2808,283,609,335,286,287,610,336,337]"
 4024,Heavy War Staff,0,"[2808,335,336,337]"
-4025,Balanced Long Bow,0,"[2808,283,609,335,286,287,610,336,337]"
+4025,Balanced Long Bow,4,"[2808,283,609,335,286,287,610,336,337]"
 4026,Sentinel Musket,0,"[2808,283,609,335,286,287,610,336,337]"
 4027,Catelyn's Blade,0,[2816]
 4028,Bundle of Akiris Reeds,0,[2817]
@@ -3000,7 +3000,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 4575,Medicine Staff,6,"[1043,280,281,631,284,306,288,632]"
 4576,Light Bow,6,"[832,280,281,282,283,631,284,285,286,287,306,288,-15]"
 4577,Compact Shotgun,6,"[2242,359,280,281,284,306,288]"
-4580,Sabertooth Fang,0,[3275]
+4580,Sabertooth Fang,4,[3275]
 4581,Patch of Fine Fur,0,[3276]
 4582,Soft Bushy Tail,4,[]
 4583,Thick Furry Mane,4,[3277]
@@ -3020,7 +3020,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 4597,Recipe: Minor Discolored Healing Potion,4,"[3287,3288,3289,3290]"
 4598,Goblin Fishing Pole,0,[3291]
 4599,Cured Ham Steak,4,"[8,9,10,11,12,13,14,15,16,17,18,19,-57]"
-4600,Cherry Grog,0,"[105,114,29,1770]"
+4600,Cherry Grog,4,"[105,114,29,1770]"
 4601,Soft Banana Bread,4,"[3255,89,90,3256,103,104,114,3257,120,3258,3259,3260,-50]"
 4602,Moon Harvest Pumpkin,4,"[84,3247,3248,3249,3250,139,142,150,152,28,32,172,-25]"
 4603,Raw Spotted Yellowtail,4,[]
@@ -3571,7 +3571,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 5235,Alchemist's Wand,0,[]
 5236,Combustible Wand,0,"[3674,3675,3676,3677,3678]"
 5237,Mind-numbing Poison,4,"[2008,2009,3688]"
-5238,Pitchwood Wand,0,"[3674,3675,3676,3677,3678]"
+5238,Pitchwood Wand,4,"[3674,3675,3676,3677,3678]"
 5239,Blackbone Wand,4,"[3674,3675,3676,3677,3678]"
 5240,Torchlight Wand,0,[898]
 5241,Dwarven Flamestick,0,[2209]
@@ -5540,7 +5540,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 8083,Light Plate Bracers,0,"[938,336,337,939]"
 8084,Light Plate Gloves,0,"[938,337,939]"
 8085,Light Plate Pants,0,"[938,336,337,939,1201,1202]"
-8086,Light Plate Shoulderpads,0,"[938,336,337,939]"
+8086,Light Plate Shoulderpads,4,"[938,336,337,939]"
 8087,Sample of Zanzil's Altered Mixture,0,[5496]
 8088,Platemail Belt,0,"[1600,1387,1388,1390,260,1601,1602,262,263,1595,1603]"
 8089,Platemail Boots,0,"[1600,1387,1388,1390,260,1601,1602,262,263,1595,1603]"
@@ -5587,7 +5587,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 8140,Chromite Girdle,6,"[787,283,609,335,286,287,610,336,785]"
 8141,Chromite Greaves,6,"[1185,283,609,335,286,287,610,336,785,786]"
 8142,Chromite Barbute,6,"[1185,283,609,335,286,287,610,336,785,1203]"
-8143,Chromite Legplates,2,"[1183,335,336,337,1184,1192]"
+8143,Chromite Legplates,6,"[1183,335,336,337,1184,1192]"
 8144,Chromite Pauldrons,6,"[1183,283,609,335,286,287,610,784,336,337,785]"
 8146,Wicked Claw,4,"[5499,336,337]"
 8147,Tiny Copper Key,0,[]
@@ -5672,7 +5672,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 8248,Imperial Red Cloak,6,"[1439,335,336,337,939,1184,1192]"
 8249,Imperial Red Gloves,6,"[834,336,337,939,940]"
 8250,Imperial Red Mantle,6,"[834,336,337,939,1201,1202,940,941]"
-8251,Imperial Red Pants,2,"[627,336,337,939,1201,1202,1184,940]"
+8251,Imperial Red Pants,6,"[627,336,337,939,1201,1202,1184,940]"
 8252,Imperial Red Robe,2,"[5725,337,939,1201,1202,940,2773,5726]"
 8253,Imperial Red Sash,2,"[626,336,337,939,940]"
 8254,Imperial Red Circlet,6,"[834,336,337,939,940]"
@@ -5684,7 +5684,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 8260,Serpentskin Gloves,6,"[834,336,337,939,940]"
 8261,Serpentskin Helm,6,"[627,336,337,939,940]"
 8262,Serpentskin Leggings,6,"[627,336,337,939,940]"
-8263,Serpentskin Spaulders,2,"[834,336,337,939,940]"
+8263,Serpentskin Spaulders,6,"[834,336,337,939,940]"
 8264,Ebonhold Wristguards,6,"[834,336,337,939,940]"
 8265,Ebonhold Armor,2,"[5725,337,939,2773,5726]"
 8266,Ebonhold Cloak,6,"[626,336,337,939,940]"
@@ -6441,7 +6441,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 9358,A Head Rag,0,"[1183,784,1203,5874]"
 9359,Southsea Lamp,6,[]
 9360,Cuergo's Gold,0,[1203]
-9361,Cuergo's Gold with Worm,0,[5940]
+9361,Cuergo's Gold with Worm,4,[5940]
 9362,Brilliant Gold Ring,0,"[5941,5942,5943]"
 9363,Sparklematic-Wrapped Box,0,"[5944,5945]"
 9364,Heavy Leaden Collection Phial,0,[5946]
@@ -6940,7 +6940,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 9955,Chieftain's Shoulders,6,"[1439,335,336,337,939,1184,5366]"
 9956,Warmonger's Bracers,6,"[1183,335,336,337]"
 9957,Warmonger's Chestpiece,6,"[1439,335,336,337,939,2775,5366]"
-9958,Warmonger's Buckler,2,"[1439,335,336,337,939,1184,940]"
+9958,Warmonger's Buckler,6,"[1439,335,336,337,939,1184,940]"
 9959,Warmonger's Cloak,6,"[1183,283,609,335,286,287,610,784,336,337,785]"
 9960,Warmonger's Gauntlets,6,"[1183,335,336,337,1184,940]"
 9961,Warmonger's Belt,6,"[1183,335,336,337,1184,1192]"
@@ -7017,7 +7017,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 10062,Duskwoven Gloves,6,"[626,336,337,939,940,5366]"
 10063,Duskwoven Amice,6,"[626,336,337,939,940,5366]"
 10064,Duskwoven Pants,6,"[834,336,337,939,940,5366,3358]"
-10065,Duskwoven Robe,2,"[627,336,337,939,940]"
+10065,Duskwoven Robe,6,"[627,336,337,939,940]"
 10066,Duskwoven Sash,6,"[1191,335,336,337,1184,940,1203,5366,1192]"
 10067,Righteous Waistguard,6,"[1191,335,336,337,1184,940,1203,5366,1192,3358]"
 10068,Righteous Boots,6,"[626,336,337,939,1184,940,5366]"
@@ -7048,7 +7048,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 10093,Revenant Deflector,2,"[627,336,337,939,940]"
 10094,Gothic Plate Vambraces,6,"[1183,283,609,335,286,287,610,336,337,785,1203,3358]"
 10095,Councillor's Boots,2,"[5725,337,939,1201,1202,5726]"
-10096,Councillor's Cuffs,2,"[627,336,337,939,1201,1202,940]"
+10096,Councillor's Cuffs,6,"[627,336,337,939,1201,1202,940]"
 10097,Councillor's Circlet,6,"[5727,337,939,2773,5726]"
 10098,Councillor's Cloak,6,"[834,336,337,939,940]"
 10099,Councillor's Gloves,2,"[627,336,337,939,1201,1202,940]"
@@ -7062,7 +7062,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 10107,Wanderer's Bracers,6,"[627,336,337,939,940,6097]"
 10108,Wanderer's Cloak,6,"[834,336,337,939,940]"
 10109,Wanderer's Belt,6,"[627,336,337,939,940]"
-10110,Wanderer's Gloves,2,"[627,336,337,939,940,6097]"
+10110,Wanderer's Gloves,6,"[627,336,337,939,940,6097]"
 10111,Wanderer's Hat,6,"[5727,337,939,2773,5726]"
 10112,Wanderer's Leggings,2,"[5730,337,939,1201,1202,2773,5726]"
 10113,Wanderer's Shoulders,2,"[5727,337,939,1201,1202,5726]"
@@ -7177,7 +7177,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 10226,Nightshade Helmet,2,"[836,5419,5726]"
 10227,Nightshade Leggings,2,"[1423,5419,2658]"
 10228,Nightshade Spaulders,6,"[5729,337,939,1201,1202,2773,5726,2658,3358]"
-10229,Engraved Bracers,2,"[5725,337,939,1201,1202,2773,6097,5726,3358]"
+10229,Engraved Bracers,6,"[5725,337,939,1201,1202,2773,6097,5726,3358]"
 10230,Engraved Breastplate,2,"[5729,337,939,2773,5726,2658,3358]"
 10231,Engraved Cape,6,"[627,336,337,939,940,6097,3358]"
 10232,Engraved Gauntlets,2,"[5730,337,939,1201,1202,2773,5726,3358]"
@@ -8150,7 +8150,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 11999,Lodestone Hoop,6,"[1183,335,336,337,1184,1402,1192]"
 12000,Limb Cleaver,2,"[6552,2796]"
 12001,Onyx Ring,6,"[1439,335,336,337,939,1184,940,1402,1192]"
-12002,Marble Circle,2,"[627,336,337,939,940,1268]"
+12002,Marble Circle,6,"[627,336,337,939,940,1268]"
 12003,Dark Dwarven Lager,0,[6552]
 12004,Obsidian Band,2,"[5730,337,939,2773,5726,1268]"
 12005,Granite Ring,2,"[1423,5419]"
@@ -9360,7 +9360,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14251,Lunar Cloak,6,"[1262,779]"
 14252,Lunar Coronet,6,[1183]
 14253,Lunar Handwraps,6,[787]
-14254,Lunar Raiment,2,[1183]
+14254,Lunar Raiment,6,[1183]
 14255,Lunar Belt,6,[783]
 14256,Felcloth,4,[4562]
 14257,Lunar Leggings,6,[1183]
@@ -9369,9 +9369,9 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14260,Bloodwoven Bracers,6,[1185]
 14261,Bloodwoven Cloak,6,[787]
 14262,Bloodwoven Mitts,6,[1183]
-14263,Bloodwoven Mask,2,[835]
+14263,Bloodwoven Mask,6,[835]
 14264,Bloodwoven Pants,6,[835]
-14265,Bloodwoven Wraps,2,[626]
+14265,Bloodwoven Wraps,6,[626]
 14266,Bloodwoven Pads,6,[1183]
 14267,Bloodwoven Jerkin,2,[626]
 14268,Gaea's Cuffs,6,[1183]
@@ -9384,7 +9384,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14275,Gaea's Raiment,2,[834]
 14276,Gaea's Belt,6,[1183]
 14277,Gaea's Tunic,2,[834]
-14278,Opulent Mantle,2,[1439]
+14278,Opulent Mantle,6,[1439]
 14279,Opulent Bracers,6,[1191]
 14280,Opulent Cape,6,[835]
 14281,Opulent Crown,6,[834]
@@ -9395,7 +9395,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14286,Opulent Belt,6,[1439]
 14287,Opulent Tunic,2,"[5725,5726]"
 14288,Arachnidian Armor,2,"[5727,5726]"
-14289,Arachnidian Girdle,2,[626]
+14289,Arachnidian Girdle,6,[626]
 14290,Arachnidian Footpads,6,[626]
 14291,Arachnidian Bracelets,6,[1439]
 14292,Arachnidian Cape,6,[1191]
@@ -9405,7 +9405,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14296,Arachnidian Pauldrons,6,[834]
 14297,Arachnidian Robes,2,"[5727,5726]"
 14298,Bonecaster's Spaulders,2,"[5725,5726]"
-14299,Bonecaster's Boots,2,[627]
+14299,Bonecaster's Boots,6,[627]
 14300,Bonecaster's Cape,6,[834]
 14301,Bonecaster's Bindings,2,[834]
 14302,Bonecaster's Gloves,2,"[5725,5726]"
@@ -9713,7 +9713,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14659,Scorpashi Leggings,6,[1183]
 14660,Scorpashi Shoulder Pads,6,[1183]
 14661,Keeper's Cord,0,[1191]
-14662,Keeper's Hooves,2,[626]
+14662,Keeper's Hooves,6,[626]
 14663,Keeper's Bindings,6,[835]
 14664,Keeper's Armor,2,[627]
 14665,Keeper's Cloak,6,[835]
@@ -9796,11 +9796,11 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14786,Khan's Legguards,6,[1183]
 14787,Khan's Mantle,6,[1183]
 14788,Protector Armguards,2,[1191]
-14789,Protector Breastplate,2,[627]
+14789,Protector Breastplate,6,[627]
 14790,Protector Buckler,2,[627]
 14791,Protector Cape,6,[835]
 14792,Protector Gauntlets,2,[1439]
-14793,Protector Waistband,2,[1439]
+14793,Protector Waistband,6,[1439]
 14794,Protector Ankleguards,6,[1439]
 14795,Protector Helm,2,[834]
 14796,Protector Legguards,2,[834]
@@ -9808,7 +9808,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14798,Bloodlust Breastplate,2,"[5728,5726]"
 14799,Bloodlust Boots,2,"[5730,5726]"
 14800,Bloodlust Buckler,2,"[5728,5726]"
-14801,Bloodlust Cape,2,[834]
+14801,Bloodlust Cape,6,[834]
 14802,Bloodlust Gauntlets,6,[627]
 14803,Bloodlust Belt,2,[627]
 14804,Bloodlust Helm,2,"[5730,5726]"
@@ -9846,7 +9846,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14844,Sunscale Chestguard,2,[627]
 14846,Sunscale Gauntlets,6,[1439]
 14847,Sunscale Belt,6,[1191]
-14848,Sunscale Sabatons,2,[1439]
+14848,Sunscale Sabatons,6,[1439]
 14849,Sunscale Helmet,6,[834]
 14850,Sunscale Legplates,6,[834]
 14851,Sunscale Spaulders,2,[626]
@@ -9893,7 +9893,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14916,Jade Deflector,2,[834]
 14917,Jade Gauntlets,6,[835]
 14918,Jade Belt,6,[1183]
-14919,Jade Circlet,2,[834]
+14919,Jade Circlet,6,[834]
 14920,Jade Legplates,6,[626]
 14921,Jade Epaulets,2,[1191]
 14922,Lofty Sabatons,2,[834]
@@ -9922,8 +9922,8 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14945,Warbringer's Legguards,6,[1183]
 14946,Warbringer's Spaulders,6,[787]
 14947,Warbringer's Shield,6,[1183]
-14948,Bloodforged Chestpiece,2,[626]
-14949,Bloodforged Gauntlets,2,[1183]
+14948,Bloodforged Chestpiece,6,[626]
+14949,Bloodforged Gauntlets,6,[1183]
 14950,Bloodforged Belt,6,[1183]
 14951,Bloodforged Sabatons,6,[1183]
 14952,Bloodforged Helmet,6,[1439]
@@ -9936,7 +9936,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 14959,High Chief's Gauntlets,2,[834]
 14960,High Chief's Belt,6,[626]
 14961,High Chief's Crown,2,[627]
-14962,High Chief's Legguards,2,[627]
+14962,High Chief's Legguards,6,[627]
 14963,High Chief's Pauldrons,6,[834]
 14964,High Chief's Shield,2,"[5725,5726]"
 14965,High Chief's Bindings,6,[1191]
@@ -10182,7 +10182,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 15252,Tusker Sword,6,"[1191,335,336,337,1184,1192]"
 15253,Beheading Blade,6,"[834,336,337,939,940]"
 15254,Dark Espadon,6,"[627,336,337,939,1201,1202,940]"
-15255,Gallant Flamberge,2,"[5727,337,939,1201,1202,1184,2773,5726]"
+15255,Gallant Flamberge,6,"[5727,337,939,1201,1202,1184,2773,5726]"
 15256,Massacre Sword,2,"[5728,337,939,1201,1202,2773,5726]"
 15257,Shin Blade,2,"[1423,5419]"
 15258,Divine Warblade,2,"[1267,5419]"
@@ -10217,7 +10217,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 15287,Crusader Bow,6,"[1183,283,609,335,286,287,610,784,336,337,785]"
 15288,Blasthorn Bow,2,"[836,5726]"
 15289,Archstrike Bow,2,"[1267,5419]"
-15290,Brown Kodo,0,[7029]
+15290,Brown Kodo,4,[7029]
 15291,Harpy Needler,6,"[626,336,337,939,1201,1202,940]"
 15292,Green Kodo,0,[]
 15293,Teal Kodo,0,[]
@@ -10245,7 +10245,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 15322,Smoothbore Gun,6,"[833,283,609,335,286,287,610,778,779,1265]"
 15323,Percussion Shotgun,6,"[1439,335,336,337,939,1184,1192]"
 15324,Burnside Rifle,0,"[5725,337,939,1201,1202,2773,5726]"
-15325,Sharpshooter Harquebus,2,"[896,337,939,1201,1202,2773,5726]"
+15325,Sharpshooter Harquebus,6,"[896,337,939,1201,1202,2773,5726]"
 15326,Gleaming Throwing Axe,0,"[2162,903,907,946,910,947]"
 15327,Wicked Throwing Dagger,0,"[903,907,946,910,947]"
 15328,Joseph's Key,0,[7031]
@@ -10303,9 +10303,9 @@ itemID,name,rawField10,sourceRowIndicesJSON
 15380,Rageclaw Bracers,6,[1183]
 15381,Rageclaw Chestguard,6,[626]
 15382,Rageclaw Cloak,6,[1183]
-15383,Rageclaw Gloves,2,[835]
+15383,Rageclaw Gloves,6,[835]
 15384,Rageclaw Helm,6,[1439]
-15385,Rageclaw Leggings,2,[1191]
+15385,Rageclaw Leggings,6,[1191]
 15386,Rageclaw Shoulder Pads,6,[835]
 15387,Jadefire Bracelets,6,[1439]
 15388,Jadefire Belt,4,[834]
@@ -10533,7 +10533,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 15615,Bonelink Helmet,6,[1183]
 15616,Bonelink Legplates,6,[1183]
 15617,Bonelink Epaulets,6,[1183]
-15618,Bonelink Wall Shield,2,[1183]
+15618,Bonelink Wall Shield,6,[1183]
 15619,Gryphon Mail Belt,6,[835]
 15620,Gryphon Mail Bracelets,6,[1183]
 15621,Gryphon Mail Buckler,6,[626]
@@ -10697,7 +10697,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 15795,Emerald Mist Gauntlets,0,[6846]
 15796,Seaspray Bracers,0,[6677]
 15797,Shining Armplates,0,[6677]
-15798,Chipped Ogre Teeth,0,[7079]
+15798,Chipped Ogre Teeth,4,[7079]
 15799,Heroic Commendation Medal,0,"[7080,7081]"
 15800,Intrepid Shortsword,0,"[7080,7081]"
 15801,Valiant Shortsword,0,"[7080,7081]"
@@ -12471,7 +12471,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 19262,Five of Warlords,4,[]
 19263,Six of Warlords,0,[]
 19264,Seven of Warlords,0,[]
-19265,Eight of Warlords,0,[]
+19265,Eight of Warlords,4,[]
 19266,Sayge's Fortune #20,0,[]
 19267,Elementals Deck,0,[]
 19268,Ace of Elementals,4,"[6504,7490]"
@@ -19321,7 +19321,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 264123,Craftsman's Writ: Major Rejuvenation Potion,1,[]
 264124,Craftsman's Writ: Distilled Firewater,3,[]
 264125,Craftsman's Writ: Radiant Circlet,5,[]
-264126,Craftsman's Writ: Radiant Belt,1,[]
+264126,Craftsman's Writ: Radiant Belt,5,[]
 264127,Craftsman's Writ: Orcish War Leggings,5,[]
 264128,Craftsman's Writ: Mithril Spurs,1,[]
 264129,Craftsman's Writ: Imperial Plate Chest,5,[]
@@ -19352,7 +19352,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 264154,Craftsman's Writ: Runecloth Boots,5,[]
 264155,Craftsman's Writ: Tuxedo Jacket,5,[]
 264156,Craftsman's Writ: Felcloth Boots,1,[]
-264157,Craftsman's Writ: Cenarion Herb Bag,1,[]
+264157,Craftsman's Writ: Cenarion Herb Bag,5,[]
 264158,Craftsman's Writ: Shadoweave Mask,5,[]
 264159,Craftsman's Writ: Ghostweave Vest,1,[]
 264160,Craftsman's Writ: Soul Pouch,5,[]
@@ -22753,7 +22753,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 281733,Restored Wand,1,[]
 281746,Kurmokk's Pelt,3,[]
 281750,Murloc Oracle's Dagger,7,[]
-281891,Fishscale Hauberk,3,[]
+281891,Fishscale Hauberk,7,[]
 281896,Surveyor's Gloves,7,[]
 281925,Whelpfire Wand,7,[]
 281926,Bound Bracers,7,[]
@@ -22785,7 +22785,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 282046,Gnome Skull,1,[]
 282047,Baby Crocolisk,3,[]
 282048,Ragged Dark Iron Cuffs,3,[]
-282049,Deathmaw's Guise,3,[]
+282049,Deathmaw's Guise,7,[]
 282064,Tim's Lost Rib,1,[9018]
 282065,Sealed Letter,1,[9018]
 282070,Gruklash's Basher,3,[]
@@ -22828,7 +22828,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 282561,Siegebreaker's Blaster,3,[]
 282568,Fireflare Handwraps,3,[]
 282631,Xorothian Footwraps,3,[]
-282632,Scalding Staff,3,[]
+282632,Scalding Staff,7,[]
 282633,Mastrogonde's Sinister Gown,3,[]
 282635,Ancient Switches Thrown,3,[]
 282636,Silkspun Gloves,7,[]
@@ -22906,7 +22906,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 284192,Furbolg Loincloth,7,[]
 284193,Moongazer's Wand,7,[]
 284197,Hide of Mongress,3,[]
-284199,Death Howl's Guise,3,[]
+284199,Death Howl's Guise,7,[]
 284214,Minfernal,3,[]
 284215,Ancient Lichen Vestments,3,[]
 284218,Slime-Coated Gloves,3,[]

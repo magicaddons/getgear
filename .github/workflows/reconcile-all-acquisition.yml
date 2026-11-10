@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/reconcile-all-acquisition.yml
       - tools/reconcile_acquisition_1_60.py
+      - tools/capture_acquisition_audit.py
       - docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json
       - docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json
       - docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts.json
@@ -42,6 +43,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m py_compile tools/reconcile_acquisition_1_60.py
+          python3 -m py_compile tools/capture_acquisition_audit.py
           python3 tests/reconcile-dungeon-link-guards.py
           python3 tools/reconcile_acquisition_1_60.py
           test -s AcquisitionEvidenceIndex.lua

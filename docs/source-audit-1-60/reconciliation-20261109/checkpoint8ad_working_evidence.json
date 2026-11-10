@@ -1,5 +1,5 @@
 {
-  "status": "Publication research preserved; integration/full validation/queue advance pending",
+  "status": "Integrated;final full localPASS;nonreleaseCI/bot pending",
   "baseline": "6200f9274b7262bcd5d036748b1a213465dd0a70",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -6002,5 +6002,30 @@
     },
     "limits": "Exact18713 item-use assembly published. InternalDNDCreate18715/18713 not independent live/player-activation proof; no staff route/transform invented. Stave/string quests reward inputs, not finished weapons; providedBark18708 not rewardedStave18707.18705direct403/weboldcomments not currentOnyxiaroute.7636solo four-head objective published; no unverified extra prerequisite/leaf drop/chain pin. Different sibling20488 not substituted."
   },
-  "limits": "All published references/currentavailability/acceptance/retention remain live-unverified. No sourceType/stat/eligibility/recipe/material/filter changes.54 redwarnings individually verified, not inherited fromotheredition.90names actualequip60;43BoP/9BoE/2unstated amongwarnings.20248mask2561 nine-classWarriorprojection plusout-of-scope2560auditonly.32secondaryrank12claims/currentprimaryomission unresolved; no current price/Honor/rank/Premierretirement inferred. Numericcreates0/0 fields not assumed zero output or player yield. Legacy input rates/namedboss references never finishedoutputloot/currentobservedrate."
+  "limits": "All published references/currentavailability/acceptance/retention remain live-unverified. No sourceType/stat/eligibility/recipe/material/filter changes.54 redwarnings individually verified, not inherited fromotheredition.90names actualequip60;43BoP/9BoE/2unstated amongwarnings.20248mask2561 nine-classWarriorprojection plusout-of-scope2560auditonly.32secondaryrank12claims/currentprimaryomission unresolved; no current price/Honor/rank/Premierretirement inferred. Numericcreates0/0 fields not assumed zero output or player yield. Legacy input rates/namedboss references never finishedoutputloot/currentobservedrate.",
+  "validationPause": {
+    "firstFullRun": "PASS14Lua+offlinePython/24modules/fourreports",
+    "pending": "Final annotation-text cleanup needs regenerated index/full suite; queue remains8AD and no CI started",
+    "network": "Two final attempts stopped on EverlootHTTP429, followed byHEAD confirmingRetry-After675seconds at2026-11-10T05:04:17Z",
+    "earliestEverlootRetryUTC": "2026-11-10T05:15:32Z",
+    "independentWork": "User-authorized independent read-only8AE primary/discovery gathering during backoff; no8AE integration/queue advance/overlapping validation. Returnfinish8AD first."
+  },
+  "integrationOutcome": {
+    "equipmentRegistry": 2375,
+    "index": 4024,
+    "display": 4023,
+    "books": 759,
+    "remaining": 3527,
+    "nextCheckpoint": "8AE first100 of450 remaining undocumented60",
+    "nextFirst": "20329",
+    "nextLast": "272538",
+    "priorObjectsExact": 2275,
+    "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
+    "ci": "pending",
+    "rawComparison": "checkpoint8ad_raw_upstream_review.json",
+    "validationHistory": "FirstfullPASS;two readabilitycleanupregenerationshitEverloot429, respectedRetryAfter675s,no failingCI/sourcepushed;finalunchangedgeneratorcapturedactualHTTPbytes/fullPASS supersedes.",
+    "httpCaptureCommand": "python3 tools/capture_acquisition_audit.py 8ad --output-root /tmp/getgear-research",
+    "captureValidation": "7 actualoriginalHTTPbyte/hashsets matchgeneratedprovenance,all3Everlootresponses exact;no replay/fallback/extra request;helper syntax checked locally/CI",
+    "uninterpretedField10Changes": 50
+  }
 }
