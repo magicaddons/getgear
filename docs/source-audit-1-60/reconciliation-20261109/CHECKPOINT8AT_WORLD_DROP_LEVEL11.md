@@ -1,6 +1,6 @@
 # Checkpoint 8AT — 27 world-drop queue cases at catalogue level 11
 
-Research preserved 10 November 2026 UTC;integration/fresh full validation/CI/bot review pending. Previous full PASS8AS:[42831013401](https://github.com/magicaddons/getgear/actions/runs/42831013401),source `1b03e569380b657e31d613b8c66affeb648a731c`,inspected bot `9c19706cd31593ada9dc73ccea0582b225f72f6d`.
+Integrated with full sequential fresh local PASS 10 November 2026 UTC;non-release CI/bot review pending. Previous full PASS8AS:[42831013401](https://github.com/magicaddons/getgear/actions/runs/42831013401),source `1b03e569380b657e31d613b8c66affeb648a731c`,inspected bot `9c19706cd31593ada9dc73ccea0582b225f72f6d`.
 
 ## Identities, routes and confidence
 
@@ -40,3 +40,9 @@ Eleven reused failure URLs comprise eight observed actors,key-sourceStormer3273 
 Integrate27 qualified records,preserve3198prior objects/stronger sources/canonical facts. Fresh actual same-run HTTP capture must exit0 before full14Lua+offlinePython/24module/four-report/helper syntax suite,semantic/raw upstream comparisons,non-release CI completion/direct bot review. Registry3198/index4669/display4668/books759/frozen2704 stillincludes27pendingintegration. AfterPASS8AU:all72world-drop cases at cataloguelevels12–13(40+32),numeric item-ID order,verifiedqueue. Thenhigherlevels/9A201candidates/systematicBackscopeaudit/finalintegrity/acceptanceplan. Sixdungeonexceptions/954livebookroutes remain open. No main/Beta8/build/package/tag/release/billing action.
 
 The incoming scheduled continuation during8AT was a duplicate start;the original active worker’s lease/remote HEAD were verified and work continued in this conversation. The single self-owned automation was reconfirmed enabled,lastwake14:11:48UTC;no secondworker/automation was created. Tools expose no usage balance or guaranteed refresh timing.
+
+## Local integration validation
+
+Fresh actual8ATcapture exited0 before14Lua+offlinePython/24modules/fourreports/helper syntax PASS. [Local results](checkpoint8at_local_results.txt),[semantic comparison](checkpoint8at_upstream_review.json):27summarycells only/zeroothersemantics-offsets/fivecompanionreportbytes exact/3198priorregistry objects exact. Registry3225/index4696/display4695/books759/crafts1254/ingredients4857/7707identities36341objectives/filters/settings/sixdungeonexceptions preserved.
+
+[Raw comparison](checkpoint8at_raw_upstream_review.json):PF23441/9157complete responseobjects/bytes/hash unchanged from8AS;Everloot1416raw1204qualifiedexactrelations/build/install/first-lastseen,20selectedobservations. Seven freshsame-runHTTPbodies/provenance/registryhash match;201outsidecanonical candidates unchanged. Frozenremaining2677allworlddrop;8AU72cataloguelevels12–13(40+32)numericIDorder marked. CI/directbot review stillrequired before8AU.

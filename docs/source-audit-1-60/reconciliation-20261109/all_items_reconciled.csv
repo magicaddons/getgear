@@ -56,7 +56,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 1214,Gnoll Punisher,14,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Redridge Brute, Ribchaser, Redridge Mountains",0,False,,,,,False
 1215,Support Girdle,19,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Boss Galgosh, Loch Modan",0,False,,,,,False
 1218,Heavy Gnoll War Club,16,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Redridge Alpha, Redridge Mountains",0,False,,,,,False
-1219,Redridge Machete,11,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Redridge Poacher, Redridge Mountains",0,False,,,,,False
+1219,Redridge Machete,11,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Redridge Poacher, Redridge Mountains",0,False,,,,Published enemy reference: Redridge Poacher (current acquisition unverified).,False
 1220,Lupine Axe,15,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Redridge Drudger, Redridge Mountains",0,False,,,,,False
 1265,Scorpion Sting,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 1280,Cloaked Hood,33,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Syndicate Assassin, Alterac Mountains",0,False,,,,,False
@@ -133,7 +133,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 1925,Defias Rapier,11,Dungeon (loot table unverified),client,Dungeon,The Deadmines,dungeon,1,"dungeon: Defias Watchman, Deadmines",0,True,trash,forever-community-reference,,Deadmines | Trash: Defias Watchman (Forever reference; live unverified),False
 1926,Weighted Sap,10,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Defias Digger, Westfall",0,False,,,,Published enemy reference: Defias Digger (current acquisition unverified).,False
 1927,Deadmines Cleaver,10,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Defias Henchman, Westfall",0,False,,,,Published enemy reference: Defias Henchman (current acquisition unverified).,False
-1928,Defias Mage Staff,11,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,,False
+1928,Defias Mage Staff,11,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Defias Magician (current acquisition unverified).,False
 1929,Silk-threaded Trousers,13,Dungeon (loot table unverified),classic-reference,Dungeon,The Deadmines,dungeon,1,"dungeon: Trash mobs, Deadmines",0,True,trash,forever-community-reference,,Deadmines | Trash drop (Forever reference; live unverified),False
 1933,Staff of Conjuring,10,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Defias Conjurer, Westfall",0,False,,,,Published enemy reference: Defias Conjurer (current acquisition unverified).,False
 1934,Stonemason Trousers,15,Dungeon (loot table unverified),client,Dungeon,The Deadmines,dungeon,1,"dungeon: Trash mobs, Deadmines",0,True,trash,forever-community-reference,,Deadmines | Trash drop (Forever reference; live unverified),False
@@ -305,11 +305,11 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 2965,Warrior's Tunic,6,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",0,False,,,,Published world-drop references: Warrior's Tunic (broad loot list; current routes unverified).,False
 2966,Warrior's Pants,5,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",0,False,,,,Published world-drop references: Warrior's Pants (broad loot list; current routes unverified).,False
 2969,Spellbinder Vest,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
-2970,Spellbinder Pants,11,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",2,False,,,,,False
+2970,Spellbinder Pants,11,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",2,False,,,,"Published player-observed sources: Ghoul #250627, Skeletal Mage #250624 (Everloot; build/current access unverified).",False
 2973,Hunting Tunic,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,,False
-2974,Hunting Pants,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,,False
+2974,Hunting Pants,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,Published player-observed sources: Spider #250484 (Everloot; build/current access unverified).,False
 2976,Hunting Gloves,10,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",1,False,,,,Published player-observed sources: Skeletal Soldier #250626 (Everloot; build/current access unverified).,False
-2977,Veteran Armor,11,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",1,False,,,,,False
+2977,Veteran Armor,11,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",1,False,,,,Published player-observed sources: Skeleton #250618 (Everloot; build/current access unverified).,False
 2978,Veteran Leggings,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",1,False,,,,Published player-observed sources: Battered Chest #106319 (Everloot; build/current access unverified).,False
 2980,Veteran Gloves,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",0,False,,,,Published world-drop references: Veteran Gloves (broad loot list; current routes unverified).,False
 2981,Seer's Robe,16,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
@@ -395,11 +395,11 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 3291,Ancestral Woollies,8,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Searing Blade Cultist #11322 (Everloot; build/current access unverified).,False
 3292,Ancestral Tunic,8,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Ragefire Trogg #11318 (Everloot; build/current access unverified).,False
 3302,Brackwater Boots,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Ragefire Trogg #11318 (Everloot; build/current access unverified).,False
-3305,Brackwater Leggings,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
+3305,Brackwater Leggings,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Brackwater Leggings (broad loot list; current routes unverified).,False
 3306,Brackwater Vest,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
 3307,Barbaric Cloth Boots,10,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",3,False,,,,"Published player-observed sources: Searing Blade Cultist #11322, Searing Blade Enforcer #11323, Searing Blade Warlock #11324 (Everloot; build/current access unverified).",False
 3308,Barbaric Cloth Gloves,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",2,False,,,,"Published player-observed sources: Searing Blade Cultist #11322, Southsea Brigand #3381 (Everloot; build/current access unverified).",False
-3309,Barbaric Loincloth,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
+3309,Barbaric Loincloth,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,Published player-observed sources: Searing Blade Warlock #11324 (Everloot; build/current access unverified).,False
 3310,Barbaric Cloth Vest,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
 3313,Ceremonial Leather Harness,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
 3314,Ceremonial Leather Gloves,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Venture Co. Mercenary #3282 (Everloot; build/current access unverified).,False
@@ -602,7 +602,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 4562,Severing Axe,5,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",0,False,,,,Published world-drop references: Severing Axe (broad loot list; current routes unverified).,False
 4564,Spiked Club,8,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,7,"worlddrop: , ",3,False,,,,"Published player-observed sources: Ragefire Trogg #11318, Southsea Cannoneer #3382, Venture Co. Peon #3285 (Everloot; build/current access unverified).",False
 4566,Sturdy Quarterstaff,8,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,7,"worlddrop: , ",1,False,,,,Published player-observed sources: Zhevra Runner #3242 (Everloot; build/current access unverified).,False
-4567,Merc Sword,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",4,False,,,,,False
+4567,Merc Sword,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",4,False,,,,"Published player-observed sources: Skeleton #250618, Searing Blade Enforcer #11323, Ragged Ghoul #250622, Deep Widow #256040 (Everloot; build/current access unverified).",False
 4568,Grunt Axe,16,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",2,False,,,,,False
 4569,Staunch Hammer,9,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,7,"worlddrop: , ",1,False,,,,Published player-observed sources: Skeleton #250618 (Everloot; build/current access unverified).,False
 4570,Birchwood Maul,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,7,"worlddrop: , ",3,False,,,,"Published player-observed sources: Searing Blade Cultist #11322, Searing Blade Enforcer #11323, Fallen Necromancer #255964 (Everloot; build/current access unverified).",False
@@ -868,23 +868,23 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 6536,Willow Vest,14,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
 6537,Willow Boots,10,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",2,False,,,,"Published player-observed sources: Skeletal Soldier #250626, Ghoul #250627 (Everloot; build/current access unverified).",False
 6538,Willow Robe,14,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
-6539,Willow Belt,11,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",1,False,,,,,False
+6539,Willow Belt,11,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",1,False,,,,Published player-observed sources: Large Battered Chest #75293 (Everloot; build/current access unverified).,False
 6540,Willow Pants,13,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",1,False,,,,,False
-6541,Willow Gloves,11,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
+6541,Willow Gloves,11,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published world-drop references: Willow Gloves (broad loot list; current routes unverified).,False
 6543,Willow Bracers,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",1,False,,,,Published player-observed sources: Broodling #250625 (Everloot; build/current access unverified).,False
 6545,Soldier's Armor,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 6546,Soldier's Leggings,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 6547,Soldier's Gauntlets,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
-6548,Soldier's Girdle,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
+6548,Soldier's Girdle,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published world-drop references: Soldier's Girdle (broad loot list; current routes unverified).,False
 6550,Soldier's Wristguards,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",2,False,,,,"Published player-observed sources: Fishing-related object #35591, Broodling #250625 (Everloot; build/current access unverified).",False
 6551,Soldier's Boots,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 6552,Bard's Tunic,14,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",2,False,,,,,False
 6553,Bard's Trousers,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 6554,Bard's Gloves,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",2,False,,,,,False
 6556,Bard's Bracers,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",2,False,,,,"Published player-observed sources: Skeleton #250618, Spider #250484 (Everloot; build/current access unverified).",False
-6557,Bard's Boots,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,,False
+6557,Bard's Boots,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,Published player-observed sources: Moonrage Glutton #1779 (Everloot; build/current access unverified).,False
 6558,Bard's Belt,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",1,False,,,,Published player-observed sources: Ragged Ghoul #250622 (Everloot; build/current access unverified).,False
-6559,Bard's Buckler,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,,False
+6559,Bard's Buckler,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,Published player-observed sources: Large Battered Chest #75293 (Everloot; build/current access unverified).,False
 6560,Soldier's Shield,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,,False
 6561,Seer's Padded Armor,16,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
 6562,Shimmering Boots,16,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
@@ -2413,7 +2413,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14090,Beaded Britches,6,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",0,False,,,,Published world-drop references: Beaded Britches (broad loot list; current routes unverified).,False
 14091,Beaded Robe,6,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",0,False,,,,Published world-drop references: Beaded Robe (broad loot list; current routes unverified).,False
 14094,Beaded Wraps,6,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",0,False,,,,Published world-drop references: Beaded Wraps (broad loot list; current routes unverified).,False
-14096,Native Vest,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
+14096,Native Vest,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Native Vest (broad loot list; current routes unverified).,False
 14097,Native Pants,9,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Searing Blade Cultist #11322 (Everloot; build/current access unverified).,False
 14100,Brightcloth Robe,49,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Brightcloth Robe (#14478), Tailoring 225; broad published book-drop table; zone examples: Ahn'Qiraj, Ashenvale, Azshara; all retrieved names/locations in Guide (published; live unverified; non-exhaustive).",False
 14101,Brightcloth Gloves,49,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Brightcloth Gloves (#14479), Tailoring 225; broad published book-drop table; zone examples: Alterac Valley, Ashenvale, Azshara; all retrieved names/locations in Guide (published; live unverified; non-exhaustive).",False
@@ -2421,12 +2421,12 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14106,Felcloth Robe,56,Tailoring,client,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Felcloth Robe (#14506), Tailoring 260; broad published book-drop table; zone examples: Ahn'Qiraj, Alterac Valley, Ashenvale; all retrieved names/locations in Guide (published; live unverified; non-exhaustive).",False
 14107,Felcloth Pants,50,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Felcloth Pants (#14483), Tailoring 230; published vendor references: Lorelae Wintersong — Moonglade (live stock/access unverified).",False
 14108,Felcloth Boots,52,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Felcloth Boots (#14492), Tailoring 240; broad published book-drop table; zone examples: Ahn'Qiraj, Alterac Valley, Ashenvale; all retrieved names/locations in Guide (published; live unverified; non-exhaustive).",False
-14109,Native Robe,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
+14109,Native Robe,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Native Robe (broad loot list; current routes unverified).,False
 14111,Felcloth Hood,53,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Felcloth Hood (#14496), Tailoring 245; broad published book-drop table; zone examples: Ahn'Qiraj, Alterac Valley, Ashenvale; all retrieved names/locations in Guide (published; live unverified; non-exhaustive).",False
 14112,Felcloth Shoulders,57,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Felcloth Shoulders (#14508), Tailoring 265; broad published book-drop table; zone examples: Ahn'Qiraj, Alterac Valley, Ashenvale; all retrieved names/locations in Guide (published; live unverified; non-exhaustive).",False
 14113,Aboriginal Sash,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",2,False,,,,"Published player-observed sources: Venture Co. Drudger #3284, Kolkar Stormer #3273 (Everloot; build/current access unverified).",False
-14114,Aboriginal Footwraps,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",4,False,,,,,False
-14117,Aboriginal Gloves,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
+14114,Aboriginal Footwraps,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",4,False,,,,"Published player-observed sources: Sunscale Scytheclaw #3256, Searing Blade Enforcer #11323, Earthborer #11320, Tinkerer Sniggles #3471 (Everloot; build/current access unverified).",False
+14117,Aboriginal Gloves,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Aboriginal Gloves (broad loot list; current routes unverified).,False
 14119,Aboriginal Loincloth,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
 14120,Aboriginal Robe,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
 14121,Aboriginal Vest,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
@@ -2982,9 +2982,9 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15009,Primal Leggings,6,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed drops: Burning Blade Apprentice (Everloot; build/current access unverified).,False
 15010,Primal Wraps,6,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",0,False,,,,Published world-drop references: Primal Wraps (broad loot list; current routes unverified).,False
 15011,Lupine Cord,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Ragefire Trogg #11318 (Everloot; build/current access unverified).,False
-15012,Lupine Slippers,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
+15012,Lupine Slippers,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Lupine Slippers (broad loot list; current routes unverified).,False
 15014,Lupine Buckler,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",2,False,,,,,False
-15016,Lupine Handwraps,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",2,False,,,,,False
+15016,Lupine Handwraps,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",2,False,,,,"Published player-observed sources: Searing Blade Cultist #11322, Kolkar Bloodcharger #3397 (Everloot; build/current access unverified).",False
 15017,Lupine Leggings,14,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
 15018,Lupine Vest,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",2,False,,,,,False
 15045,Green Dragonscale Breastplate,47,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Green Dragonscale Breastplate (#15726), Leatherworking 235; published vendor references: Masat T'andr — Swamp of Sorrows (live stock/access unverified). Published specialisation: Dragonscale Leatherworking.",False
@@ -3116,7 +3116,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15194,Grand Legguards,56,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,,False
 15195,Grand Breastplate,57,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15200,Senior Sergeant's Insignia,30,Vendor (availability unverified),classic-reference,PvP;Vendor,Vendors;PvP,pvp;vendor,2,"vendor: Sergeant Ba'sha, Orgrimmar (Horde)",0,False,,,,Senior Sergeant's Insignia (#15200); published merchant references: Sergeant Ba'sha — Orgrimmar (live stock/price/access unverified).,False
-15210,Raider Shortsword,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
+15210,Raider Shortsword,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published world-drop references: Raider Shortsword (broad loot list; current routes unverified).,False
 15211,Militant Shortsword,17,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,11,"worlddrop: , ",1,False,,,,,False
 15212,Fighter Broadsword,22,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
 15213,Mercenary Blade,31,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
@@ -3174,7 +3174,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15265,Painbringer,53,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
 15266,Fierce Mauler,56,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,,False
 15267,Brutehammer,58,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15268,Twin-bladed Axe,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,,False
+15268,Twin-bladed Axe,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",1,False,,,,Published player-observed sources: Skeletal Soldier #250626 (Everloot; build/current access unverified).,False
 15269,Massive Battle Axe,19,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
 15270,Gigantic War Axe,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
 15271,Colossal Great Axe,51,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
@@ -3201,9 +3201,9 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15296,Hawkeye Bow,58,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,,False
 15298,Grizzly Buckler,8,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",0,False,,,,Published world-drop references: Grizzly Buckler (broad loot list; current routes unverified).,False
 15303,Grizzly Pants,9,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",2,False,,,,"Published player-observed sources: Ragefire Trogg #11318, Ragefire Shaman #11319 (Everloot; build/current access unverified).",False
-15304,Grizzly Jerkin,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
+15304,Grizzly Jerkin,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Grizzly Jerkin (broad loot list; current routes unverified).,False
 15305,Feral Shoes,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
-15306,Feral Bindings,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
+15306,Feral Bindings,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,Published player-observed sources: Ragefire Trogg #11318 (Everloot; build/current access unverified).,False
 15307,Feral Buckler,14,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
 15308,Feral Cord,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
 15310,Feral Gloves,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
@@ -3292,9 +3292,9 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15479,Charger's Armor,6,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",0,False,,,,Published world-drop references: Charger's Armor (broad loot list; current routes unverified).,False
 15485,War Torn Pants,9,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",0,False,,,,Published world-drop references: War Torn Pants (broad loot list; current routes unverified).,False
 15486,War Torn Shield,7,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed drops: Ragefire Trogg (Everloot; build/current access unverified).,False
-15487,War Torn Tunic,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
+15487,War Torn Tunic,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: War Torn Tunic (broad loot list; current routes unverified).,False
 15488,Bloodspattered Surcoat,16,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
-15489,Bloodspattered Sabatons,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
+15489,Bloodspattered Sabatons,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Bloodspattered Sabatons (broad loot list; current routes unverified).,False
 15491,Bloodspattered Gloves,10,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",2,False,,,,"Published player-observed sources: Savannah Prowler #3425, Molten Elemental #11321 (Everloot; build/current access unverified).",False
 15492,Bloodspattered Sash,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Ragefire Trogg #11318 (Everloot; build/current access unverified).,False
 15493,Bloodspattered Loincloth,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,,False
@@ -7564,7 +7564,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 282778,Mark of the Red Flight,41,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,Origin unresolved: Mark of the Red Flight exact ID (publication searched; current acquisition unverified).,False
 283254,Heart of Alterac,34,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,NPC loot reference: Stone Fury (current drop/spawn unverified).,False
 283255,Syndicate Executioner's Slicer,33,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,"Secondary lead: Gravis Slipknot, Alterac Mountains (current drop/origin unverified).",False
-283259,Bearhide Vicegrips,11,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,,False
+283259,Bearhide Vicegrips,11,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Old Vicejaw (current acquisition unverified).,False
 283361,Gorefang's Runners,11,Source not documented,classic-reference,Drop,Drops,,0,,0,False,,,,Gorefang's Runners (#283361); published acquisition references: Gorefang — Silverpine Forest (live unverified; non-exhaustive).,False
 283460,Decaying Flesh Belt,7,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Blightsculler (current acquisition unverified).,False
 283462,Bayne's Bite,7,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Bayne (current acquisition unverified).,False
@@ -7583,7 +7583,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 284165,Duskstalker's Hide,6,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Duskstalker (current acquisition unverified).,False
 284166,Gnarlpine War Staff,8,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Grimmaw (current acquisition unverified).,False
 284167,Blackmoss Robes,10,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Blackmoss the Fetid (current acquisition unverified).,False
-284173,Impcaster's Staff,11,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,,False
+284173,Impcaster's Staff,11,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Licillin (current acquisition unverified).,False
 284174,Serrated Shadowclaw,10,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published enemy reference: Shadowclaw (current acquisition unverified).,False
 284177,Sinslayer's Smasher,13,Source not documented,classic-reference,Drop,Drops,,0,,0,False,,,,Sinslayer's Smasher (#284177); published acquisition references: Lord Sinslayer — Darkshore (live unverified; non-exhaustive).,False
 284185,Greymist Gauntlets,13,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,,False

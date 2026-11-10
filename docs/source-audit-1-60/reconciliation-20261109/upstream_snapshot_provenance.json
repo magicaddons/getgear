@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8AS actual HTTP capture",
-  "capturedUTC": "2026-11-10T14:05:40.641659+00:00",
+  "capturedForCheckpoint": "8AT actual HTTP capture",
+  "capturedUTC": "2026-11-10T14:21:05.656171+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23441,
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "8ARfinal\u21928AS23441/9157 completePFresponseobjects/bytes/hash exact;allrawrows/names/sourcefacts/indices/field10/fullmetadata unchanged;201candidates exact."
+    "comparison": "8AS\u21928AT23441/9157 completePFresponseobjects/bytes/hash exact;allrawrows/names/sourcefacts/indices/field10/fullmetadata unchanged;201candidates exact."
   },
   "everloot": {
     "total": 1416,
@@ -52,25 +52,25 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "e7cbb4bb0729159249fd1c0aa06b19f7cbecd0de42cef617a3a2dce63b91eb84",
+        "sha256": "7f78136d7dea277d425a9550a829831649c7b1e464d16b45d1be275313f64744",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T13:40:13.525Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103652,
-        "sha256": "51b5262b4385fbef69c8c0d240b1c43621f2472543940d18c5013bdea122ed96",
+        "sha256": "cd03160082c0048b9b3b331759ecc61ab1257021e89dba6981cd850ff1fdbf4b",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T13:40:13.525Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 85987,
-        "sha256": "b00055276e8368e698eed346afa6975fd9b919c0509ff56561fa6fd58f733294",
+        "sha256": "33a664c3bc419a57aa75680d39257d38447e5e7af2a94782ba4cb31119008db4",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T13:40:13.525Z"
       }
     ],
-    "comparison": "Actual8AS1416raw1204qualified exactrelations/build/install/first-lastseen unchanged from8ARfinalactualbaseline;63qualifiedselectededges37items/buildnull/61NPC2objects.62ownitemactors/19independentfullreverse(18NPC1chest);35591fishingobjectidentity,notsecondchest/NPC/currentlootproof. Botbytesnotinferred."
+    "comparison": "Actual8AT1416raw1204qualified exactrelations/build/install/first-lastseen unchanged from8ASactualbaseline;20qualifiedselectededges12items/buildnull/18NPC2objects.20ownitemactors/10independentfullreverse(8NPC2LargeBatteredChest75293),notpersonalcurrentbuild/rates. Botbytesnotinferred."
   }
 }
