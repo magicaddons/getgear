@@ -1,0 +1,68 @@
+{
+  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
+  "baseline": "1b39e7a9f822b538bbf0710119fe9c38c3883c5c",
+  "reviewedOn": "2026-11-10",
+  "counts": {
+    "selected": 1,
+    "primaryPages": 1,
+    "discoveryQueries": 2,
+    "primaryAcquisitionTables": 0,
+    "unavailableOrSeasonalWarnings": 0,
+    "currentLiveVerified": 0
+  },
+  "item": {
+    "url": "https://www.wowhead.com/forever/item=211940",
+    "bytes": 158973,
+    "sha256": "966463d2242af759b388880309f5806b213d44c789a415e0642c6be2e403882f",
+    "title": "Ecks'av's Tribal Guardian - Item - Forever",
+    "tooltipText": "Ecks'av's Tribal Guardian      Item Level  64   Binds when picked up     Two-Hand    Polearm        \n       165 - 247 Damage  \n     Speed  3.70 \n   (55.64 damage per second)   40 Armor              Requires Level  59    Equip:   Gives 40 additional armor to nearby party members for 4 min. Players may only have one aura on them per paladin at any one time.         Sell Price:  7   43   46",
+    "identity": {
+      "id": 211940,
+      "name": "Ecks'av's Tribal Guardian",
+      "reqlevel": 59,
+      "quality": 3,
+      "slot": 17,
+      "subclass": 6,
+      "envChange": {
+        "status": "updated",
+        "labels": [
+          "damage_changed"
+        ],
+        "lines": [
+          "Damage 166 - 247 instead of 155 - 231"
+        ],
+        "notShown": []
+      }
+    },
+    "requirements": [
+      "Requires Level 59"
+    ],
+    "binding": "BoP",
+    "equipRequirements": {
+      "reqlevel": 59
+    },
+    "relatedLists": [
+      "outfits"
+    ]
+  },
+  "cachedNPCSurvey": {
+    "pagesReused": 174,
+    "matches": [],
+    "pagesWithSellsTables": 96,
+    "scope": "Reused174 full cachedNPC/96 actual inventories;0selected matches, not freshstock/exhaustive merchant proof."
+  },
+  "discoveryIndex": "checkpoint8ac_discovery_index.json",
+  "findings": "Origin unresolved. Historical patch1.15 PTR unused claims do not transfer to Forever; current primary no explicit warning. Equip DevotionAura17232 is not learned profession/Paladin-only gate; useroutfits not drops. Primary damage numeric/tooltip/annotation and secondary build values differ, no acquisition inference/stat edit.",
+  "limits": "No namedseller/dropper/quest/recipe, price fromgenericbuyfield, sourceType/gate/class/stat/craft/material mutation or current availability/impossibility assertion.",
+  "integrationOutcome": {
+    "equipmentRegistry": 2275,
+    "index": 3924,
+    "display": 3923,
+    "books": 759,
+    "remaining": 3627,
+    "nextCheckpoint": "8AD first100 undocumented60 IDs13262\u201320328",
+    "local": "14Lua+offlinePython/24modules/fourreports PASS",
+    "ci": "pending",
+    "rawComparison": "checkpoint8ac_raw_upstream_review.json"
+  }
+}

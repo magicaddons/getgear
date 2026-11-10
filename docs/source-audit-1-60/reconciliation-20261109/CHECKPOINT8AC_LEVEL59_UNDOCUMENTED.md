@@ -1,0 +1,11 @@
+# Checkpoint8AC — sole undocumented level59 case
+
+Research10Nov2026UTC. Exact **211940 Ecks’av’sTribalGuardian**, rareBoP/equip59/TwoHandPolearm. [Full proof](checkpoint8ac_working_evidence.json), [discovery](checkpoint8ac_discovery_index.json), [disposition](checkpoint8ac_undocumented_equipment.csv), [local](checkpoint8ac_local_results.txt), [feed comparison](checkpoint8ac_raw_upstream_review.json).
+
+Exact primary fullHTTP success/ID/name/title/equip/hash verified. No merchant/quest/drop/created-by table or explicit unavailable/seasonal notice. Onlyuseroutfit isnotloot. Two focused queries find exact211940 secondaryclientpage withsource notlogged; no reliable namedcurrentorigin. WarcraftWiki cached unused/neveravailableclaim explicitly patch1.15.0 PTR/historical, not currentForeverretirement. FocusedWiki403/webprimaryinaccessible recorded; successfuldirectprimaryhash retained, no inventedsecondaryfullresponse. Missingtables/data presence notproofavailable/impossible.
+
+Equip DevotionAura17232 text isnot learnedcraft or Paladin-onlyequipgate; no explicitclass/race requirement. BlackhandDoomsaw resemblance/historicalcomment isnotcurrentbossloot. Genericbuyprice notvendorquote. Primarytooltip165–247/55.64,embeddedroundedannotation166–247/55.73 andoldersecondary162–243reflectfield/builddifferences,notacquisitionevidence/statcorrection. Canonicaleligibility/stats/sourceType/recipes/materials/filtersunchanged.
+
+174previouslyfetchedNPC/96inventoriesreused,0selectedmatches;notfreshstock/exhaustive. FreshPlayfulls23334/9153 resolvedfacts/names/offsets/field10unchanged;Everloot1399raw1199qualifiedexactedges/countersunchanged,0selected. Separatecapturefingerprintsretained,notfabricatedsamereconciliationresponseclaim.90outsidecanonical9Acandidatesremainseparate.
+
+Freshreconcile/full14Lua+offlinePython/24modules/fourreportsPASS;16localPASSincludingfiles/syntax.2274priorobjectsexact;one summarycellonly,0othersemanticchanges. Equipment2275/index3924/display3923/books759;7707canonical/36341classobjectives/1254crafts4857ingredients/all6dungeonexceptions intact. **GitHubCI/botpending.** Remaining3627:undoc550(all60),quest190,world2887. **Next8AD:first100undocumented60 IDs13262–20328**,markedqueueafterlocalPASS;thenremaining450. Originalcurrent-livebook/dungeonexceptionsopen. No release/main/Beta8/build/package/tag/mergeaction.
