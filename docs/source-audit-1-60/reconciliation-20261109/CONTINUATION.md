@@ -1,8 +1,8 @@
 # GetGear unattended research continuation
 
-## Latest verified checkpoint — 8AD, 10 November 2026 UTC
+## Latest verified checkpoint — 8AE, 10 November 2026 UTC
 
-Full local/nonreleaseCI42761206604 PASS; sourcefb8e7a80bf9b90d44149a0f91d1e2e5fb7dbb7db, inspected finalbot798d0f5e9bef91cbea0f06de1306f49833f8314d.14Lua+offlinePython/24modules/fourreports; helper syntax checked. Equipment2375/index4024/display4023/books759; frozenremaining3527. **Resume8AE100 IDs20329–272538: research already preserved7ad4415**, exact proof/discovery/inprogress files; integrate without refetching, then fresh capture/fullsuite/CI/bot.8AD rate-limitpause below is historical/resolved. Use repository capture helper to avoid duplicate diagnostic feed requests; no response replay/fallback. Next8AF after8AE validation. Later9A90 candidates/current-live book/dungeon/access exceptions remain. Main/Beta8 protected; no release/build/package/tag/merge.
+Full local/nonreleaseCI42761883642 PASS; sourcee349135a18c4a2de272a95fde7a8200f9c992e97, inspected finalbot87b917993106fc0631e12b0ef4b7ccd8ca66853b.14Lua+offlinePython/24modules/fourreports/helper syntax. Equipment2475/index4124/display4123/books759;frozenremaining3427. **Resume8AF100 IDs272539–272809**,markedqueue;then250undocumented60/quest190/world2887.8AE37unavailable/1seasonal/10Exaltedjoins/2othercreation/50gaps qualified;do not repeat. Bot15newfeedIDs split1canonical11633emptysource+14outside→104pending9Acandidates;Playfulls23349/9153,allpriorfacts/definitionsunchanged,no runtimechange. Use repository actualHTTPcapturehelper toavoidduplicaterequests;429pause below is historical/resolved. All current-live book/dungeon/access exceptions/main/Beta8 protections remain.
 
 ## Current authority and protected baseline
 
@@ -305,3 +305,9 @@ TwoHTTP429attempts resolvedafterRetry-After675s;finalfreshcapture7originalHTTPby
 ## Checkpoint8AE integrated — GitHub pending
 
 100 savedresearch cases integratedafter8ADvalidation,withoutrepeatfetches.37primaryunavailable/1exactseasonal191312/10BryannaExalted7joins/2normalcreation/50gaps incl272452primarytooltiprank14/weakunnamedDalaranlead.44classmasks;DEPoutputs20487/20488not18715/18713;235044itemuse notlearnedcraft/234819originunknown/234820full403. Full14Lua+offlinePython/24modules/fourreportslocalPASS;CIpending.2375priorobjectsexact;100summarycellsonly;all6dungeonexceptionsintact. Equipment2475/index4124/display4123/books759/crafts1254/ingredients4857.7same-runactualHTTPcapturesmatchprovenance/noextradiagnosticrequests;23334/9153/1399raw1199qualifiedexactfactsunchanged;90pending9Acandidatesseparate. Remaining3427(undoc350/quest190/world2887);next8AF100IDs272539–272809 afterCI/bot. See CHECKPOINT8AE_LEVEL60_UNDOCUMENTED_SECOND100.md/evidence/local/rawreview. No release/mainaction.
+
+## Checkpoint8AE validated — next8AF
+
+Full local/GitHub PASS:[42761883642](https://github.com/magicaddons/getgear/actions/runs/42761883642),source e349135a18c4a2de272a95fde7a8200f9c992e97;inspected directbot/finalvalidated 87b917993106fc0631e12b0ef4b7ccd8ca66853b.14Lua+offlinePython/24modules/fourreports,15CItestPASS/helper syntax. BotREADMEfeedcount/provenanceonly,no runtime/report/indexchange. Equipment2475/index4124/display4123/books759,crafts1254/ingredients4857;2375priorobjectsexact/100summariesonly/all6dungeonexceptionsintact.37unavailable/1exactseasonal/10BryannaExalted7/2othercreation/50gapsqualified;44classmasks/272452exacttooltiprank14notacceptedpurchasegate/DEPdistinctoutputs preserved.
+
+BotfreshPlayfulls23349/9153 adds15IDs:1alreadycanonical11633SpiderfangCarapaceemptysource(notnewroute)+14outside→104pending9Acandidates,unique/disjoint/noautomaticadoption.0priornames/resolvedfacts/offsets/field10changes;all9153definitionfacts/rawhashesexact. Changedcontentaddressedfilesfetchedonce/hashmatchedtobotprovenance;unchangedcapturesreused. Everloot1399/1199 exactlocal8AEcapturebaselineunchanged;noadditionalAPIrefetchorbotresponse-byteidentityclaim. DiagnosticPlayfullssnapshotrefreshed. Remaining3427(undoc350/quest190/world2887);next8AF:first100undocumented60 IDs272539–272809,markedqueue,then250. No release/mainaction.

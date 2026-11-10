@@ -1,0 +1,286 @@
+{
+  "capturedUTC": "2026-11-10T05:25:41.182684+00:00",
+  "method": "Exact full factual snapshot comparison8AD\u21928AEbot; changed content-addressed Playfulls files fetched once/hash-matched to bot provenance; unchanged captures reused. Everloot uses8AE local same-run capture, not bot response-byte identity; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23334,
+    "afterItems": 23349,
+    "beforeDefinitions": 9153,
+    "afterDefinitions": 9153,
+    "newItems": [
+      {
+        "itemID": 2246,
+        "name": "Myrmidon's Signet",
+        "sources": [
+          {
+            "type": "worlddrop",
+            "label": "World drop",
+            "npc": "",
+            "zone": "",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 9483,
+        "name": "Flaming Incinerator",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Zul'Farrak",
+            "path": "loot-tables/dungeons/zulfarrak",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 10623,
+        "name": "Winter's Bite",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 11633,
+        "name": "Spiderfang Carapace",
+        "sources": [],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 11722,
+        "name": "Dregmetal Spaulders",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 11930,
+        "name": "The Emperor's New Cape",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Emperor Dagran Thaurissan",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "6f968fc4964941026417b14777a4c8be2056dce642675bee31c0c13ac2976689"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 11934,
+        "name": "Emperor's Seal",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Emperor Dagran Thaurissan",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "6f968fc4964941026417b14777a4c8be2056dce642675bee31c0c13ac2976689"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13409,
+        "name": "Tearfall Bracers",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "The Unforgiven",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "ba32115cb17f9040653149350f331ee7bfd487ea9db7a451cef1a42e9a305544"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18289,
+        "name": "Barbed Thorn Necklace",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18308,
+        "name": "Clever Hat",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Zevrim Thornhoof",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "dad1a4f823b8ddce38e1c7f95d501fd7759c924ec7ccc07cb4b819b4fab86362"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18312,
+        "name": "Energized Chestplate",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Alzzin the Wildshaper",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "3894c224c587160bc3936ba6b52d94557a0606ab6d76eae284d2ae0beaf86af8"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18390,
+        "name": "Tanglemoss Leggings",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Tendris Warpwood",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "1203da09d47e9a18ffbfc494c489e48ba7642c1fcd51770757a51e7b81609107"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18466,
+        "name": "Royal Seal of Eldre'Thalas",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Codex of Defense",
+            "zone": "Dire Maul",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18738,
+        "name": "Carapace Spine Crossbow",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Nerub'enkan",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "db40c508ae2287c8b3865180c121486d2948762444ed0317d015d11fd828c2da"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22270,
+        "name": "Entrenching Boots",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.77786170c2.json",
+        "bytes": 988994,
+        "sha256": "77786170c2a3e2e6c37cd032aedd0103d8a874cd99b39319282628e0b1d87b5e",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.27dfc3df89.json",
+        "bytes": 1322843,
+        "sha256": "27dfc3df8955986c74155cadc1e907544456ba55b4859ec21895d352ff780528",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.53b6748bf5.json",
+        "bytes": 464371,
+        "sha256": "53b6748bf500cb1345cbff7010487ef185e0bd244076dbac75e376b6b0b0d6f7",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.02167da97a.json",
+        "bytes": 446193,
+        "sha256": "02167da97ac49c3ed4dc7f78f9c532bf3a77a2e4511b38a313d03de79cec9251",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1399,
+    "afterRaw": 1399,
+    "qualifying": 1199,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "42bd88d8f9e98ec410827ec4549f74d2c32c5c43319ce45d32691fe66bf205f4",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T05:10:14.691Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103653,
+        "sha256": "c984f7f51c85d60e7d2f80c2fa2e8552dc7c208520dac08d9783a2dad2c8e7b1",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T05:10:14.691Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 82469,
+        "sha256": "ee0fce94ed7417341d0b0422b5df1be70f0ad0f7496127e47a79389e505f7728",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T05:10:14.691Z"
+      }
+    ]
+  },
+  "definitionAudit": {
+    "total": 9153,
+    "changedResolvedDefinitions": 0,
+    "changedRawRowHashes": 0
+  },
+  "interpretation": "15 newly indexed IDs:1 alreadycanonical11633SpiderfangCarapace with empty source rows,14 outsidecanonical. No prior names/resolvedsourcefacts/offsets/field10changes,all9153definitionfacts/rawrowhashesexact. No runtime/canonicalreport/index change.14 become104 pending9Acandidates,not automaticadoption/currentloot/newgameitems. Everloot comparison reuses8AE local same-run capture;botresponsebyteidentitynotclaimed/no additionalAPIrefetch."
+}

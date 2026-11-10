@@ -1,21 +1,21 @@
 {
-  "capturedForCheckpoint": "8AD Playfulls/8Y Everloot factual baseline retained",
-  "capturedUTC": "2026-11-10T05:16:26.687104+00:00",
+  "capturedForCheckpoint": "8AEbot Playfulls/8Y Everloot factual baseline retained",
+  "capturedUTC": "2026-11-10T05:25:41.182684+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23334,
+    "itemCount": 23349,
     "sourceDefinitions": 9153,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.b4d62c8d8f.json",
+        "url": "https://playfulls.com/db/meta.77786170c2.json",
         "bytes": 988994,
-        "sha256": "b4d62c8d8f1665c7d66069e36c810c61b83833b5b4c4313b5f9559c07aca4c01",
+        "sha256": "77786170c2a3e2e6c37cd032aedd0103d8a874cd99b39319282628e0b1d87b5e",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.81695aceee.json",
-        "bytes": 1321109,
-        "sha256": "81695aceee455dd9441d9aafc4372ad03ee5dccc57888161607dfb7a6f839fd0",
+        "url": "https://playfulls.com/db/gear.27dfc3df89.json",
+        "bytes": 1322843,
+        "sha256": "27dfc3df8955986c74155cadc1e907544456ba55b4859ec21895d352ff780528",
         "matchesRecordedFingerprint": true
       },
       {
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "8AA\u21928AD:50 uninterpretedfield10changes;0new/removedIDs/names/resolvedfacts/offsetchanges;23334/9153. Notavailability/cache-eventproof. ActualoriginalHTTPbytecapturesavoideddiagnosticrefetch."
+    "comparison": "8AD\u21928AEbot15newIDs:1canonical11633no source/14outside\u2192104pending9A.0previous names/resolvedfacts/offset/field10changes;all9153definitions/rawhashesunchanged. No runtimeupdate/currentlootclaim. Changedcontentaddressedfilesfetchedonce/hashmatched;unchangedcapturesreused."
   },
   "everloot": {
     "total": 1399,

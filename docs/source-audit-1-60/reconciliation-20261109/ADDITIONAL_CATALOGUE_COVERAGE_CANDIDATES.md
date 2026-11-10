@@ -17,3 +17,7 @@ Exact8O→8X full-source comparison adds **11824 Cyclopean Band,18320 Demondash 
 ##8AA upstream extension —90 total pending candidates
 
 21 newly indexed Playfulls IDs include **three already canonical**13387ForesightGirdle/13400VambracesSadist/14525BoneclenchedGauntlets, audited as source changes rather than new candidates. The other18 are outsidecanonical; candidateCSV now90 unique pending9A IDs (72+18), no frozen-queue inflation/automatic adoption/current-live/new-game-item claim. Exact IDs/names/typed sources/fingerprints in checkpoint8aa_raw_upstream_review.json. All90 need individual scope/identity/version/eligibility/acquisition audit. Three canonical dungeon community references do not prove live loot/rates;14525 remains in original6unresolved queue after regression-preserving generator fix. Existing indexed Playfulls facts/Everloot edges unchanged; snapshot updated23334/9153.
+
+##8AEbot extension —104 total pending candidates
+
+15 newly indexed IDs include one alreadycanonical11633SpiderfangCarapace with empty publishedsources,notnewscope/sourcecorrection. Other14 areoutsidecanonical andbring90→104unique/disjoint9Acandidates. Exacttypednames/sourcehints/hashsetsin checkpoint8ae_bot_raw_upstream_review.json;allrequireindividualscope/identity/version/eligibility/acquisitionauditbeforeadoption/completion. No currentloot/newgameitem/automaticrecipeclaim.23349/9153diagnosticbaseline;0previousfacts/names/offsets/field10changes/all9153definitionsandrawhashesunchanged. BotREADMEcount/provenanceonly,no runtime/report/indexchange.
