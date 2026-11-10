@@ -1,0 +1,7 @@
+# Checkpoint8AH — research preserved, integration pending
+
+## Checkpoint8AH research preserved — integration pending
+
+100 exact60 identities/108queries:59fullprimary(43Premier+16Watcher),41direct404 with exact aggregatecache identities, no unavailable inference.39primaryclassmasks+41cachedclassprojectionsmatchcanonical;28same-name lower-ID alternativesdo nottransfercraft/binding/source.4primaryrank14/4secondaryunnamedlocationleads(allDalaran,oneChampionsHall/oneOrgrimmar,4pins);39Premierarmourorigin-rank gaps.16WatcherpublishedaliasesmatchexistingindependentNameflags and independentfaction2819 reward/equip-standingjoins4/5/6/7;familyUniqueEquippedlimitnotownership. Secondaryclient5/8/12/20goldnot acceptedprice;generalHonored/FirstOnesFreeconditionnotselectedNPC/questjoin. Reused174NPC96inventories0matches/general9Novguide0IDs;no currentroute/availabilityinvented. Proof CHECKPOINT8AH_IN_PROGRESS.md/working_evidence/discovery_index. Registry2675/index4324/remaining3227 unchanged;all100still8AH. Resumeintegrate100 preserving2675priorobjects/canonicalnames/eligibility;freshsame-runHTTPcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot;then8AI final50undoc60. LatestfullPASS8AG42764864014/bot277eb219.107separate9Acandidates/liveexceptionsopen. No release/mainaction.
+
+See self-contained facts, primary/aggregate fingerprints and per-item missing-page/alias/standing distinctions. Do not repeat saved research.41missing pages have no successful item HTTP hash; cache record hashes are projection hashes only.
