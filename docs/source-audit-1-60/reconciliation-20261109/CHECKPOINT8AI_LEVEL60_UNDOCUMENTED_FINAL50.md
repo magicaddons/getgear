@@ -1,6 +1,6 @@
 # Checkpoint 8AI — final 50 undocumented level-60 acquisition cases
 
-Status: research/integration and full local validation PASS; non-release CI/bot review pending. All1,162 cases in the frozen undocumented queue are now publication-researched. This closes the research queue, not unknown origins or current live verification.
+Status: publication research/integration and full local/non-release CI42768530618 PASS; directbot2b51ecb385f4e9a9d2afb6a5217821326b0ca7a5 reviewed. All1,162 cases in the frozen undocumented queue are now publication-researched. This closes the research queue, not unknown origins or current live verification.
 
 ## Scope and next checkpoint
 
@@ -45,3 +45,11 @@ Unique-Equipped is not Unique ownership or the Watcher ring-family restriction. 
 
 All1,162 undocumented cases have traceable researched dispositions, including honest unresolved cases. Continue the190 quest/world2,887 queues and candidate audit. Later in-game work must determine current named origins, stock/access/accepted costs, set/equip behavior and retention. No release build/package/tag/publish, Beta8 replacement, main modification or billing action.
 
+
+## Checkpoint 8AI validated — next 8AJ
+
+Full local/GitHub PASS: [42768530618](https://github.com/magicaddons/getgear/actions/runs/42768530618), source8ad3a37edcf6c951d157ff6b84000595bba0168e; inspected direct bot/final validated 2b51ecb385f4e9a9d2afb6a5217821326b0ca7a5. All14 Lua regressions, offline Python guard,24 modules/four reports/helper syntax pass;15 timestamped CI test-PASS lines inspected. Bot changes only run time/three Everloot response hashes; no runtime/report/index/count changes or claimed independently captured bot response bytes.
+
+Final50 undocumented cases complete:49 primary404/cache-identified unknown origins,49 class projections(7Priest/18Paladin/18Shaman/6Druid),32 different-ID namesakes not source/craft/binding transfer;one primary Band of the Better Half284716. Actual21Sep news explicitly leaves its origin unknown; Mr.Smite/1.01%/Deadmines evidence identifies sibling FirstMate284715. Misleading search snippet resolved by actual secondary page's selected Unknown row. No purchase price, ownership/class gate or old-stat correction invented. Canonical identity/eligibility and prior2,775 objects exact;50 summary cells only/all six dungeon exceptions retained.
+
+Equipment2,825/index4,474/display4,473/books759;crafts1,254/ingredients4,857. Seven same-run actual HTTP captures match provenance; both reused aggregate fingerprints also match fresh regeneration. Local Playfulls23,352/9,153 and Everloot1,399raw/1,199qualified exact facts/counters unchanged; zero selected observed edges.107 outside-canonical9A candidates remain separate/unvalidated. **All1,162 frozen undocumented cases publication-researched**, unknown origins/live exceptions not closed. Frozen queue conservation5,688=2,611researched+3,077remaining;equipment214+2,611=2,825. Remaining190quest/2,887world-drop. **Next8AJ:first12quest60 IDs19019–21188**, markedqueue; then15 legacyNozdormurings before laterAQ/Naxx groups. All current-live book/dungeon/access/supply/retention exceptions remain. No release/main/billing action.
