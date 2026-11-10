@@ -1,4 +1,6 @@
-# Checkpoint8AJ — phase1 preserved, research/integration pending
+# Checkpoint8AJ — publication research complete, integration pending
+
+Latest resume: integrate the12 cases from working_evidence + input_evidence chainFacts. The phase1 entries below are historical; phase2 complete details and exact next integration step appear at the end.
 
 ## Checkpoint8AJ phase1 preserved — research/integration pending
 
@@ -7,3 +9,9 @@
 Read CHECKPOINT8AJ_IN_PROGRESS.md/working_evidence/discovery_index. **Resumephase2:**exact7785/7786Thunderfurychain,linkedHeadNefarian19003/NightmareObject20644/inputorigins,4deckassemblyspells+8cards each/trigger,physical19182vswallet515/currentearning-access limits,readableNPCreversejoins/qualifiedmissinglinks;finishper-itemproof thenintegrate12 preserving2825priorobjects/freshcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot. All12still8AJ;registry2825/index4474/frozen3077 unchanged. LatestfullPASS8AI42768530618/bot2b51ecb385f4e9a9d2afb6a5217821326b0ca7a5;no new fullrun claimed. Then8AK15legacyNozdormurings. All1162undocumentedpublicationresearchcomplete/107separate9Acandidates/liveexceptions remain. No release/mainaction.
 
 Saved fullHTTP responses/projections are checked against cached originals. Current temporarycollector files are conveniences;the durable proof/index/nextResearch list supplies a self-contained resume. No queue advance or12runtimeobjects yet. Subsequent research must refine these same IDs,not restart them.
+
+## Checkpoint8AJ research complete — integration pending
+
+12quest60 identities/20queries;21fullquests/32NPC/69auxiliaryinput-or-selecteditems/6spells/1currency/full9Novguide fingerprinted.12directrewardjoins;fourdeckassemblies/32cardinputs/nineAceNPCreversejoins;twoGelvas14828/item/currency515 triplejoins1200each withquestmin55/equip60/physical19182HTTP404distinctions;threeDragonslayerchoiceitems/twofactionheads19002-3/chains/Stonebridge14721versusstaleAfrasiabi;Thunderfuryexact10bars17771(notore18562)/Essence/bindings/VesselDNDtriggerunverified;MalfurionObjectfourNPCjoins;Fist8573Exalted609/15-20-20-1tokens/MarkfourDukes+briefing/container/fourrepresentativeassignmentactorjoins. InputNPCreferencesnotfinishedgearloot/livepercentages;Firefightercrossversion/currentpresenceunconfirmed,notdeclaredSoD-only. Smeltthreshold/secondarytrainer-auto notcurrentlearning/wieldergate. GuideoldBlueDragoneffectnotadopted;publishedfairecalendarnotpersonalcurrentstock.
+
+Read updated working_evidence and checkpoint8aj_input_evidence.json chainFacts. **Resumeintegration12**,preserve2825priorobjects/canonicaleligibility/strongersources;freshsame-runHTTPcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot,thenmark8AK15legacyNozdormu21196–21210. Runtime2825/index4474/frozen3077/12still8AJ unchanged;latestfullPASS8AI42768530618/bot2b51ecb. NPCcacheexpandedby8AJ;derivefuturecorpus/inventorycounts,do nothardcode174/96. All1162undocpublicationcoverage/107separate9Acandidates/liveexceptions retained. No release/mainaction.
