@@ -1,5 +1,5 @@
 {
-  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
+  "status": "Complete at publication-research level;full local/nonreleaseCI PASS;directbot reviewed",
   "baseline": "915a1b2f5c9df7289db9dc8cb69020ce304ddf37",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -2745,10 +2745,15 @@
     "nextLast": "21210",
     "priorObjectsExact": 2825,
     "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
-    "ci": "pending",
+    "ci": "success;15testPASS=14Lua+offlinePython/24modules/fourreports;capturehelpersyntaxchecked",
     "additionalCandidates": 121,
     "rawComparison": "checkpoint8aj_raw_upstream_review.json",
     "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticrequests/replay/fallback",
-    "sourceDelta": "14outsidecanonicalnewIDs;33outsideindexrows/16definitionpositions fact-preserving;23366/9153snapshot;0priorfacts/names/field10changes"
+    "sourceDelta": "14outsidecanonicalnewIDs;33outsideindexrows/16definitionpositions fact-preserving;23366/9153snapshot;0priorfacts/names/field10changes",
+    "sourceCommit": "3c29c1a37f8b49a6edeccb7ca5dec57957907c1a",
+    "ciRun": 42771400963,
+    "ciJob": 129679798630,
+    "validatedFinalHEAD": "90cc64e85c5d8fe1dfe247f7a754b3eeb42acb33",
+    "botReview": "Onlytimestamp/threeEverlootresponsehashes;no runtime/report/index/countchange;botresponse-byteidentitynotclaimed"
   }
 }

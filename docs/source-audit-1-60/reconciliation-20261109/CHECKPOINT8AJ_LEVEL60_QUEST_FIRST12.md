@@ -1,6 +1,6 @@
 # Checkpoint 8AJ — first 12 level-60 quest equipment cases
 
-Status: publication research/integration and full local validation PASS; non-release CI and resulting bot review pending. No current live acquisition is asserted.
+Status: complete at publication-research level; full local/non-release CI42771400963 PASS and directbot90cc64e85c5d8fe1dfe247f7a754b3eeb42acb33 reviewed. No current live acquisition is asserted.
 
 ## Scope, evidence and next checkpoint
 
@@ -74,3 +74,13 @@ Mark21508 is rewarded by8538 after four named Dukes and Briefing20948. Commander
 
 Current availability, stock, accepted quests/costs, group/event/phase state and retention remain live-testing work.954 live book routes and six dungeon exceptions remain open. No release build/package/tag/publish, Beta8 replacement, main modification or billing action.
 
+
+## Checkpoint 8AJ validated — next 8AK
+
+Full local/GitHub PASS: [42771400963](https://github.com/magicaddons/getgear/actions/runs/42771400963), source3c29c1a37f8b49a6edeccb7ca5dec57957907c1a; inspected direct bot/final validated90cc64e85c5d8fe1dfe247f7a754b3eeb42acb33. All14 Lua regressions, offline Python guard,24 modules/four reports/helper syntax pass;15 timestamped CI test-PASS lines inspected. Bot changes only run time/three Everloot response hashes; no runtime/report/index/count changes or independently captured bot API byte-identity claim. Playfulls content-addressed files match local.
+
+Twelve exact quest cases complete:Thunderfury/inputblade/10bars17771 and qualifiedbindings-Essence/VesselDND;fourdeckassemblies/32cards/nineAceNPCjoins/min1quest-display55-equip60;threeDragonslayerone-choiceitems/twofactionheads/StonebridgeversusstaleAfrasiabi;twoGelvas1200currency515triplejoins+legacyquest55/equip60/physical19182HTTP404;MalfurionfourObjectNPCjoinsnotringloot;FistExalted609/15-20-20-1tokens/Markdukes-briefing-container/representativeassignmentactorjoins.130fullsourcepages/20queries fingerprinted. No inputNPC loot promoted to finishedrewards, guessedprofession/currentprice/rate/stock/calendar/oldBlueDragoneffect adoption. Existing2,825 objects/eligibility exact;12 summary cells only/all six dungeon exceptions retained.
+
+Equipment2,837/index4,479/display4,478/books759;crafts1,254/ingredients4,857. Seven same-run actual feed captures match provenance; no extra diagnostic requests. Playfulls23,366/9,153 adds14 outsidecanonical/disjoint prior107→121pending9Acandidates;33outsidecanonicalindex-onlyrows/16definitionpositions fact-preserving/same9153resolvedmultiset. Zero previous acquisitionfacts/names/field10changes. Everloot1,399raw/1,199qualified local exactfacts/counters unchanged;zero selected observededges. Diagnostic Playfulls baseline refreshed8AJlocal;8YEverloot factualsnapshot retained. No automatic catalogue adoption.
+
+Frozen remaining3,065=178quest/2,887world-drop;**next8AK:15legacyNozdormu quest rings21196–21210**,markedqueue. Do not repeat35 newer-ring8Qcases or assume their purchase/gates apply. All1,162 undocumented cases remain publication-researched;954livebookroutes/sixdungeon/access/phase/retention exceptions remain. NPCcacheexpandedby8AJ;derivefutureinventory/corpuscounts,notold174/96. Main/Beta8 tag/source rechecked10Nov06:52UTC unchanged. No release/main/billing action.
