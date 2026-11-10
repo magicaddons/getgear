@@ -1,6 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
-Current pending total: **219 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AY below; original-count sections are historical.
+Current pending total: **224 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8BA below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
@@ -69,3 +69,7 @@ Nine newPlayfulls IDs are outsidecanonical/disjoint201:10847Dragon’sCall,12554
 ## 8AY actual feed extension —219 pending candidates
 
 Nine new IDs are outside the frozen catalogue and disjoint from210 prior pending rows:1680Headchopper,9512Blackmetal Cape,15411Mark of Fordring,15413Ornate Adamantium Breastplate,15418Shimmering Platinum Warhammer,15421Shroud of the Exile,16058Fordring's Seal,280029Cinderedge Crescent,287044Predator's Shroud. Exact names/sourcefields are inCSV and checkpoint8ay_feed_delta_review.json. Two full source definitions are new(MoshOggButcher/InDreams);all9158priorfull definitions unchanged. These are feed publication references,not verified current quest choices,automaticallyadoptedgear/newgameitems or current live loot. Each needs9Aidentity/version/scope/eligibility/acquisition research. Prior210candidate rows remain exact. The systematic full-cache/feedBack-slotcoverageaudit and ten omitted cloak siblings remain required;discovering these nine does not establish exhaustive coverage.
+
+## 8BA fresh feed extension — 224 pending candidates
+
+Five IDs are outside the frozen catalogue and disjoint from all 219 prior candidates: 12546 Aristocratic Cuffs, 12551 Stoneshield Cloak, 13386 Archivist Cape, 22404 Willey’s Back Scratcher, 284091 Scarlet Forgemaster’s Bindings. Exact names/source fields are retained in CSV and checkpoint8ba_feed_delta_review.json. All need individual identity/version/scope/eligibility/acquisition checks; no gear or new current loot is adopted automatically. Three cloak names reinforce the known Back-slot coverage deficiency. They do not replace the required full-cache/feed all-slot audit or ten omitted cloak siblings. All prior 219 candidate objects are preserved.

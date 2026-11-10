@@ -281,7 +281,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 1036,Tablet of Nullify Disease,4,[]
 1037,Tablet of Lightning Bolt II,4,[]
 1038,Tablet of Restoration II,4,[]
-1041,Horn of the Black Wolf,4,[]
+1041,Horn of the Black Wolf,6,[]
 1048,Tablet of Lightning Shield II,4,[]
 1049,Tablet of Purge,4,[]
 1052,Tablet of Spirit Armor II,4,[]
@@ -328,7 +328,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 1129,Ghoul Fang,0,"[794,795,796,797,798,884]"
 1130,Vial of Spider Venom,0,"[885,886,887,888,889,890]"
 1131,Totem of Infliction,2,[891]
-1132,Horn of the Timber Wolf,4,[892]
+1132,Horn of the Timber Wolf,6,[892]
 1133,Horn of the Winter Wolf,0,[]
 1134,Horn of the Gray Wolf,2,[]
 1136,Libram: Divine Favor II,4,[]
@@ -1121,9 +1121,9 @@ itemID,name,rawField10,sourceRowIndicesJSON
 2408,Pattern: Fine Leather Gloves,4,[1588]
 2409,Pattern: Dark Leather Tunic,4,[1588]
 2410,Smoky Torch,0,[]
-2411,Black Stallion Bridle,0,"[1589,1590]"
+2411,Black Stallion Bridle,2,"[1589,1590]"
 2413,Palomino,0,[]
-2414,Pinto Bridle,4,"[1589,1590,1591,1592]"
+2414,Pinto Bridle,6,"[1589,1590,1591,1592]"
 2415,White Stallion,0,[]
 2417,Augmented Chain Vest,0,"[1593,1389,1390,1594,1595,1392,260,261,262,263,1596,1597,-13]"
 2418,Augmented Chain Leggings,0,"[1593,1389,1390,1594,1595,1392,260,261,262,263,1596,1597,-13]"
@@ -2832,7 +2832,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 4387,Iron Strut,4,[3124]
 4388,Discombobulator Ray,4,[3124]
 4389,Gyrochronatom,4,"[3125,1977,1956,1989,1981,1991,1968,1955,1974,1988,1985,1962,-22]"
-4390,Iron Grenade,4,[3126]
+4390,Iron Grenade,6,[3126]
 4391,Compact Harvest Reaper Kit,4,[3126]
 4392,Advanced Target Dummy,4,[3127]
 4393,Craftsman's Monocle,4,[3127]
@@ -3897,8 +3897,8 @@ itemID,name,rawField10,sourceRowIndicesJSON
 5649,Tome of Blizzard,4,[]
 5650,Tome of Conjure Water III,4,[]
 5654,Instant Toxin,0,[]
-5655,Chestnut Mare Bridle,4,"[1589,1590,1591,1592]"
-5656,Brown Horse Bridle,4,"[1589,1590,1591,1592]"
+5655,Chestnut Mare Bridle,6,"[1589,1590,1591,1592]"
+5656,Brown Horse Bridle,6,"[1589,1590,1591,1592]"
 5657,Recipe: Instant Toxin,4,[]
 5658,Libram: Seal of Might,4,[]
 5659,Smoldering Embers,0,"[4605,4606,4607]"
@@ -3907,10 +3907,10 @@ itemID,name,rawField10,sourceRowIndicesJSON
 5662,Libram: Seal of Righteousness III,4,[]
 5663,Horn of the Red Wolf,0,[]
 5664,Corroded Shrapnel,0,"[4608,4609,4610]"
-5665,Horn of the Dire Wolf,4,[892]
+5665,Horn of the Dire Wolf,6,[892]
 5666,Libram: Seal of Wrath II,4,[]
 5667,Libram: Seal of Wisdom II,4,[]
-5668,Horn of the Brown Wolf,4,[892]
+5668,Horn of the Brown Wolf,6,[892]
 5669,Dust Devil Debris,0,[4611]
 5670,Libram: Seal of Wrath IV,4,[]
 5671,Libram: Seal of Might III,4,[]
@@ -4098,15 +4098,15 @@ itemID,name,rawField10,sourceRowIndicesJSON
 5861,Beginnings of the Undead Threat,0,[]
 5862,Seaforium Booster,0,[4737]
 5863,Guild Charter,0,[]
-5864,Gray Ram,4,[4738]
+5864,Gray Ram,6,[4738]
 5865,Modified Seaforium Booster,0,[4737]
 5866,Sample of Indurium Ore,0,[4739]
 5867,Etched Phial,0,[4740]
 5868,Filled Etched Phial,0,[4741]
 5869,Cloven Hoof,0,[4742]
 5871,Large Hoof,4,"[4743,4567]"
-5872,Brown Ram,4,[4738]
-5873,White Ram,4,[4738]
+5872,Brown Ram,6,[4738]
+5873,White Ram,6,[4738]
 5874,Harness: Black Ram,0,[]
 5875,Harness: Blue Ram,0,[]
 5876,Blueleaf Tuber,0,[]
@@ -4697,7 +4697,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 6634,Ritual Salve,0,[3390]
 6635,Earth Sapta,0,"[5119,5120,5121,3646,5122,3647,5123]"
 6636,Fire Sapta,0,"[5124,5125,5126,5127]"
-6637,Water Sapta,0,"[5128,5129,5130,5131]"
+6637,Water Sapta,2,"[5128,5129,5130,5131]"
 6638,Air Sapta,0,[]
 6640,Felstalker Hoof,0,[5132]
 6641,Haunting Blade,6,[5133]
@@ -5842,21 +5842,21 @@ itemID,name,rawField10,sourceRowIndicesJSON
 8546,Powerful Smelling Salts,0,[]
 8547,Formula: Powerful Smelling Salts,4,[]
 8548,Divino-matic Rod,0,[]
-8563,Red Mechanostrider,4,[5793]
+8563,Red Mechanostrider,6,[5793]
 8564,Hippogryph Egg,0,[5794]
 8583,Horn of the Skeletal Mount,0,[]
 8584,Untapped Dowsing Widget,0,[5795]
 8585,Tapped Dowsing Widget,0,[]
-8586,Whistle of the Mottled Red Raptor,0,[]
+8586,Whistle of the Mottled Red Raptor,2,[]
 8587,Centipaar Insect Parts,0,"[5796,5797,5798,5799,5800,5801]"
-8588,Whistle of the Emerald Raptor,4,[5802]
+8588,Whistle of the Emerald Raptor,6,[5802]
 8589,Old Whistle of the Ivory Raptor,0,[]
 8590,Old Whistle of the Obsidian Raptor,0,[]
-8591,Whistle of the Turquoise Raptor,4,[5802]
-8592,Whistle of the Violet Raptor,4,[5802]
+8591,Whistle of the Turquoise Raptor,6,[5802]
+8592,Whistle of the Violet Raptor,6,[5802]
 8593,Scrimshank's Surveying Gear,0,[5803]
 8594,Insect Analysis Report,0,"[5804,5805,5806]"
-8595,Blue Mechanostrider,4,[5793]
+8595,Blue Mechanostrider,6,[5793]
 8603,Thistleshrub Dew,0,[5807]
 8623,OOX-17/TN Distress Beacon,0,[5808]
 8624,Red Sparkler,0,[]
@@ -5864,10 +5864,10 @@ itemID,name,rawField10,sourceRowIndicesJSON
 8626,Blue Sparkler,0,[]
 8627,Reins of the Night saber,0,[]
 8628,Reins of the Spotted Nightsaber,0,[]
-8629,Reins of the Striped Nightsaber,4,[5809]
+8629,Reins of the Striped Nightsaber,6,[5809]
 8630,Reins of the Bengal Tiger,0,[]
-8631,Reins of the Striped Frostsaber,4,[5809]
-8632,Reins of the Spotted Frostsaber,4,[5809]
+8631,Reins of the Striped Frostsaber,6,[5809]
+8632,Reins of the Spotted Frostsaber,6,[5809]
 8633,Reins of the Leopard,0,[]
 8643,Extraordinary Egg,0,[5810]
 8644,Fine Egg,0,[5810]
@@ -8331,14 +8331,14 @@ itemID,name,rawField10,sourceRowIndicesJSON
 12299,Netted Gloves,0,[2398]
 12300,Orb of Draconic Energy,0,[6608]
 12301,Bamboo Cage Key,0,[6609]
-12302,Reins of the Frostsaber,0,[]
-12303,Reins of the Nightsaber,0,[]
+12302,Reins of the Frostsaber,2,[]
+12303,Reins of the Nightsaber,2,[]
 12323,Unforged Seal of Ascension,0,[6608]
 12324,Forged Seal of Ascension,0,[]
-12325,Reins of the Primal Leopard,0,[]
-12326,Reins of the Tawny Sabercat,0,[]
+12325,Reins of the Primal Leopard,2,[]
+12326,Reins of the Tawny Sabercat,2,[]
 12327,Reins of the Golden Sabercat,2,[]
-12330,Horn of the Red Wolf,0,[]
+12330,Horn of the Red Wolf,2,[]
 12334,Frostmaul Shards,0,"[6610,6611,6612,6613]"
 12335,Gemstone of Smolderthorn,4,[6614]
 12336,Gemstone of Spirestone,4,[6615]
@@ -8353,10 +8353,10 @@ itemID,name,rawField10,sourceRowIndicesJSON
 12347,Filled Cleansing Bowl,0,[]
 12349,Cliffspring River Sample,0,[]
 12350,Empty Sampling Tube,0,[6622]
-12351,Horn of the Arctic Wolf,0,[]
+12351,Horn of the Arctic Wolf,2,[]
 12352,Doomrigger's Clasp,0,[]
-12353,White Stallion Bridle,0,[]
-12354,Palomino Bridle,0,[]
+12353,White Stallion Bridle,2,[]
+12354,Palomino Bridle,2,[]
 12355,Talisman of Corruption,0,[]
 12356,Highperch Wyvern Egg,0,[6623]
 12358,Darkstone Tablet,0,[]
@@ -8442,9 +8442,11 @@ itemID,name,rawField10,sourceRowIndicesJSON
 12543,Songstone of Ironforge,2,[6675]
 12544,Thrall's Resolve,2,[6676]
 12545,Eye of Orgrimmar,2,[6676]
+12546,Aristocratic Cuffs,6,[6479]
 12548,Magni's Will,2,[6675]
 12549,Braincage,6,[6479]
 12550,Runed Golem Shackles,6,[6479]
+12551,Stoneshield Cloak,6,[6479]
 12552,Blisterbane Wrap,6,[6479]
 12553,Swiftwalker Boots,6,[6677]
 12554,Hands of the Exalted Herald,6,[6677]
@@ -8924,22 +8926,22 @@ itemID,name,rawField10,sourceRowIndicesJSON
 13311,Schematic: Mechanical Dragonling,4,"[1956,4797]"
 13313,Sacred Highborne Writings,0,[6841]
 13315,Testament of Hope,2,[6836]
-13317,Whistle of the Ivory Raptor,0,[]
+13317,Whistle of the Ivory Raptor,2,[]
 13320,Arcane Quickener,0,"[6842,6843]"
-13321,Green Mechanostrider,4,[5793]
-13322,Unpainted Mechanostrider,4,[5793]
-13323,Purple Mechanostrider,0,[]
-13324,Red & Blue Mechanostrider,0,[]
+13321,Green Mechanostrider,6,[5793]
+13322,Unpainted Mechanostrider,6,[5793]
+13323,Purple Mechanostrider,2,[]
+13324,Red & Blue Mechanostrider,2,[]
 13325,Fluorescent Green Mechanostrider,0,[]
-13326,White Mechanostrider Mod A,0,[]
-13327,Icy Blue Mechanostrider Mod A,0,[]
-13328,Black Ram,0,[]
-13329,Frost Ram,0,[]
+13326,White Mechanostrider Mod A,2,[]
+13327,Icy Blue Mechanostrider Mod A,2,[]
+13328,Black Ram,2,[]
+13329,Frost Ram,2,[]
 13330,Dereks Radish Bag,0,[]
-13331,Red Skeletal Horse,4,[6844]
-13332,Blue Skeletal Horse,4,[6844]
-13333,Brown Skeletal Horse,4,[6844]
-13334,Green Skeletal Warhorse,0,[6844]
+13331,Red Skeletal Horse,6,[6844]
+13332,Blue Skeletal Horse,6,[6844]
+13333,Brown Skeletal Horse,6,[6844]
+13334,Green Skeletal Warhorse,2,[6844]
 13335,Deathcharger's Reins,4,[6845]
 13340,Cape of the Black Baron,6,[6845]
 13342,Pet Fish,0,[]
@@ -8980,6 +8982,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 13383,Woollies of the Prancing Minstrel,6,[6856]
 13384,Rainbow Girdle,6,[6856]
 13385,Tome of Knowledge,6,[6752]
+13386,Archivist Cape,6,[6752]
 13387,Foresight Girdle,6,[6752]
 13388,The Postmaster's Tunic,6,[6857]
 13389,The Postmaster's Trousers,6,[6857]
@@ -10258,7 +10261,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 15274,Diviner Long Staff,6,"[835,337,338,940,1203,1204,1185,941]"
 15275,Thaumaturgist Staff,6,"[628,337,338,940,1203,1204,941]"
 15276,Magus Long Staff,2,"[5731,338,940,1203,1204,2774,5727]"
-15277,Gray Kodo,4,[7033]
+15277,Gray Kodo,6,[7033]
 15278,Solstice Staff,2,"[897,338,940,1203,1204,2774,5727]"
 15279,Ivory Wand,6,"[627,337,338,940,941]"
 15280,Wizard's Hand,6,"[835,337,338,940,941]"
@@ -10271,10 +10274,10 @@ itemID,name,rawField10,sourceRowIndicesJSON
 15287,Crusader Bow,6,"[1184,284,610,336,287,288,611,785,337,338,786]"
 15288,Blasthorn Bow,2,"[837,5727]"
 15289,Archstrike Bow,2,"[1269,5420]"
-15290,Brown Kodo,4,[7033]
+15290,Brown Kodo,6,[7033]
 15291,Harpy Needler,6,"[627,337,338,940,1203,1204,941]"
-15292,Green Kodo,0,[]
-15293,Teal Kodo,0,[]
+15292,Green Kodo,2,[]
+15293,Teal Kodo,2,[]
 15294,Siege Bow,6,"[835,337,338,940,1203,1204,941]"
 15295,Quillfire Bow,6,"[628,337,338,940,1203,1204,1185,941]"
 15296,Hawkeye Bow,2,"[1868,5420]"
@@ -12250,39 +12253,39 @@ itemID,name,rawField10,sourceRowIndicesJSON
 18753,Arcanite Barding,0,"[7585,7586]"
 18760,Necromantic Band,0,[]
 18762,Shard of the Green Flame,0,[7563]
-18766,Reins of the Swift Frostsaber,0,"[5809,7587,7588]"
-18767,Reins of the Swift Mistsaber,0,"[5809,7587,7588]"
-18768,Reins of the Swift Dawnsaber,0,[]
+18766,Reins of the Swift Frostsaber,2,"[5809,7587,7588]"
+18767,Reins of the Swift Mistsaber,2,"[5809,7587,7588]"
+18768,Reins of the Swift Dawnsaber,2,[]
 18769,Enchanted Thorium Platemail,0,[6734]
 18770,Enchanted Thorium Platemail,0,[6733]
 18771,Enchanted Thorium Platemail,0,[6731]
-18772,Swift Green Mechanostrider,0,"[5793,7589,7590]"
-18773,Swift White Mechanostrider,0,"[5793,7589,7590]"
-18774,Swift Yellow Mechanostrider,0,"[5793,7589,7590]"
+18772,Swift Green Mechanostrider,2,"[5793,7589,7590]"
+18773,Swift White Mechanostrider,2,"[5793,7589,7590]"
+18774,Swift Yellow Mechanostrider,2,"[5793,7589,7590]"
 18775,Manna-Enriched Horse Feed,0,[7591]
 18776,Swift Palomino,0,"[1589,1590,1591,1592,7592,7593]"
-18777,Swift Brown Steed,0,"[1589,1590,1591,1592,7592,7593]"
-18778,Swift White Steed,0,"[1589,1590,1591,1592,7592,7593]"
+18777,Swift Brown Steed,2,"[1589,1590,1591,1592,7592,7593]"
+18778,Swift White Steed,2,"[1589,1590,1591,1592,7592,7593]"
 18779,Bottom Half of Advanced Armorsmithing: Volume I,0,[7594]
 18780,Top Half of Advanced Armorsmithing: Volume I,4,[7535]
 18781,Bottom Half of Advanced Armorsmithing: Volume II,4,[7595]
 18782,Top Half of Advanced Armorsmithing: Volume II,4,[6932]
 18783,Bottom Half of Advanced Armorsmithing: Volume III,4,[7596]
 18784,Top Half of Advanced Armorsmithing: Volume III,4,[6807]
-18785,Swift White Ram,0,"[4738,7597,7598]"
-18786,Swift Brown Ram,0,"[4738,7597,7598]"
-18787,Swift Gray Ram,0,"[4738,7597,7598]"
-18788,Swift Blue Raptor,0,"[5802,7599,7600]"
-18789,Swift Olive Raptor,0,"[5802,7599,7600]"
-18790,Swift Orange Raptor,0,"[5802,7599,7600]"
-18791,Purple Skeletal Warhorse,0,[6844]
+18785,Swift White Ram,2,"[4738,7597,7598]"
+18786,Swift Brown Ram,2,"[4738,7597,7598]"
+18787,Swift Gray Ram,2,"[4738,7597,7598]"
+18788,Swift Blue Raptor,2,"[5802,7599,7600]"
+18789,Swift Olive Raptor,2,"[5802,7599,7600]"
+18790,Swift Orange Raptor,2,"[5802,7599,7600]"
+18791,Purple Skeletal Warhorse,2,[6844]
 18792,Blessed Arcanite Barding,0,[7601]
-18793,Great White Kodo,0,"[7033,7602,7603]"
-18794,Great Brown Kodo,0,"[7033,7602,7603]"
-18795,Great Gray Kodo,0,"[7033,7602,7603]"
-18796,Horn of the Swift Brown Wolf,0,"[892,7604,7605]"
-18797,Horn of the Swift Timber Wolf,0,"[892,7604,7605]"
-18798,Horn of the Swift Gray Wolf,0,"[892,7604,7605]"
+18793,Great White Kodo,2,"[7033,7602,7603]"
+18794,Great Brown Kodo,2,"[7033,7602,7603]"
+18795,Great Gray Kodo,2,"[7033,7602,7603]"
+18796,Horn of the Swift Brown Wolf,2,"[892,7604,7605]"
+18797,Horn of the Swift Timber Wolf,2,"[892,7604,7605]"
+18798,Horn of the Swift Gray Wolf,2,"[892,7604,7605]"
 18799,Charger's Redeemed Soul,0,[]
 18802,Shadowy Potion,0,[7564]
 18804,Lord Grayson's Satchel,0,[7606]
@@ -12341,7 +12344,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 18877,High Warlord's Greatsword,0,[6683]
 18879,Heavy Dark Iron Ring,0,[7611]
 18880,Darkreaver's Head,0,[]
-18902,Reins of the Swift Stormsaber,0,"[5809,7587,7588]"
+18902,Reins of the Swift Stormsaber,2,"[5809,7587,7588]"
 18904,Zorbin's Ultra-Shrinker,0,"[7612,7613]"
 18922,Secret Plans: Fiery Flux,0,[7614]
 18942,Fiery Flux,0,[]
@@ -14409,6 +14412,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 22400,Libram of Truth,6,[6503]
 22402,Libram of Grace,0,[8348]
 22403,Nacreous Shell Necklace,6,[6766]
+22404,Willey's Back Scratcher,6,[6766]
 22405,Mantle of the Scarlet Crusade,6,[6766]
 22407,Helm of the New Moon,6,[6766]
 22408,Ritssyn's Wand of Bad Mojo,6,[6845]
@@ -17592,7 +17596,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 247241,Greater Discolored Healing Potion,4,[2619]
 247242,Superior Discolored Healing Potion,4,[5844]
 247684,Forgotten Ashes,0,[]
-247754,Minor Arcane Elixir,4,[8743]
+247754,Minor Arcane Elixir,6,[8743]
 247755,Elixir of Minor Force,4,[8743]
 247786,Mote of Magic,4,"[6375,3178,3180,3181,3182,3183,3184,3185,3186,3187,3188,3189]"
 247789,Novice's Practice Wand,4,[6375]
@@ -19536,9 +19540,9 @@ itemID,name,rawField10,sourceRowIndicesJSON
 265810,Treat for Snufflesnout,1,[]
 265821,Twilight Key,1,[]
 265837,Kilgar's Head,1,[]
-265838,Green Skeletal Horse,1,[]
-265839,Dark Skeletal Horse,1,[]
-265840,Purple Skeletal Horse,1,[]
+265838,Green Skeletal Horse,3,[]
+265839,Dark Skeletal Horse,3,[]
+265840,Purple Skeletal Horse,3,[]
 265932,A Bloodsoaked Note,1,[]
 266148,Farmers' Mementos,1,[]
 266154,Lumber Tree Seed,1,[]
@@ -19698,12 +19702,12 @@ itemID,name,rawField10,sourceRowIndicesJSON
 269502,Dwarven Plate,1,[]
 269503,Poacher Boots,1,[]
 269504,Smoking Satchel,1,[]
-269671,Swift Empyrean Galestrider,1,[8909]
-269673,Swift Regal Galestrider,1,[]
-269678,Swift Stormy Galestrider,1,[8909]
-269681,Empyrean Galestrider,5,[8909]
-269682,Regal Galestrider,1,[]
-269683,Stormy Galestrider,5,[8909]
+269671,Swift Empyrean Galestrider,3,[8909]
+269673,Swift Regal Galestrider,3,[]
+269678,Swift Stormy Galestrider,3,[8909]
+269681,Empyrean Galestrider,7,[8909]
+269682,Regal Galestrider,3,[]
+269683,Stormy Galestrider,7,[8909]
 269715,Savannah Lion Hide,1,[]
 269716,Keen Skinning Knife,3,[8910]
 269717,Wildgore Greatsword,3,[8910]
@@ -21320,8 +21324,8 @@ itemID,name,rawField10,sourceRowIndicesJSON
 274384,Illegible Dogtags,1,[]
 274385,Abomination Chain,3,[]
 274386,Toy Soldier,1,[]
-274387,Swiftfeather Arrow,5,[7134]
-274388,Swiftstrike Shot,5,[7134]
+274387,Swiftfeather Arrow,7,[7134]
+274388,Swiftstrike Shot,7,[7134]
 274389,Schematic: Swiftfeather Arrow,5,[]
 274390,Schematic: Swiftstrike Shot,5,[]
 274391,Formula: Enchant Off Hand - Superior Intellect,5,[]
@@ -21436,7 +21440,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 274702,Level 38 Enchanting Supplies,1,[]
 274703,Level 57 Enchanting Supplies,1,[]
 274704,Level 60 Enchanting Supplies,1,[]
-274706,Reins of the Striped Dawnsaber,5,[]
+274706,Reins of the Striped Dawnsaber,7,[]
 274709,Potion of Experience - Level 23,1,[]
 274710,Potion of Experience - Level 38,1,[]
 274711,Potion of Experience - Level 57,1,[]
@@ -21470,7 +21474,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 274761,Parachute-Priest Pager,1,"[8981,8966]"
 274776,Uninfected Root Sample,1,[]
 274795,Embroidered Scabbard,1,[]
-274799,Ochre Skeletal Warhorse,1,[]
+274799,Ochre Skeletal Warhorse,3,[]
 274800,Fishing Trip,1,[]
 274895,Darkspear Islands Mark of Honor,1,[]
 274915,Sacristan Band,1,[]
@@ -21483,10 +21487,10 @@ itemID,name,rawField10,sourceRowIndicesJSON
 274926,Matriarch Quiver,1,[]
 274928,Curly's Chopper,1,[]
 274929,Hurley's Felling Axe,1,[]
-274930,Umber Galestrider,5,[8909]
+274930,Umber Galestrider,7,[8909]
 274931,Fur-Lined Bracers,3,[]
 274932,Coyote Hide Wraps,3,[]
-274933,Swift Umber Galestrider,1,[8909]
+274933,Swift Umber Galestrider,3,[8909]
 274935,Tessa's Tonic,1,[]
 274938,Gnollhide Tunic,1,[]
 274939,Southern Watch Leggings,1,[]
@@ -21717,12 +21721,12 @@ itemID,name,rawField10,sourceRowIndicesJSON
 275985,Unsullied Owl Statuette,1,[]
 275989,Tome of Dalaran,1,[]
 275991,Galvinquam's Drinking Gourd,1,[]
-275993,White Kodo,5,[]
+275993,White Kodo,7,[]
 275994,Captain Nials' Correspondence,1,[]
 275996,The Founding of Dalaran,1,[]
 275997,Cracked Sentry Core,3,[]
 275998,Galvinquam's Belongings,1,[]
-276063,Black Skeletal Horse,5,[]
+276063,Black Skeletal Horse,7,[]
 276064,War Paint Wrap,1,[]
 276065,Fizzgrimble's Mysterious Crate,1,[]
 276066,Frazzlespark's Crate,1,[]
@@ -22194,7 +22198,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 277957,Primitive Key,1,[]
 277958,Putrescent Bear Organs,1,[]
 277959,Putrescent Wolf Organs,1,[]
-277960,Lavender Kodo,1,[]
+277960,Lavender Kodo,3,[]
 277972,Mirrorscale's Wing,1,[]
 277973,Stag Lord's Bauble,1,[]
 277974,Twice Reordered Package,1,[]
@@ -22493,7 +22497,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 279957,Cookie's Feast,5,[9076]
 279959,Loom,5,[6981]
 279960,Lodestone,5,[9077]
-279961,Journeyman Campfire Kit,5,[2506]
+279961,Journeyman Campfire Kit,7,[2506]
 279962,Incense Candle,5,[9078]
 279964,Greenhouse,5,[9079]
 279965,Fishing Rack,5,[9080]
@@ -22897,7 +22901,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 282021,Dreadscorn's Spaulders,3,[]
 282023,Clack's Claw,7,[]
 282026,Unyielding Battle Signet,1,[]
-282028,Broken Frond of Celastrus,1,[]
+282028,Broken Frond of Celastrus,3,[]
 282029,Reaver's Repeater,3,[]
 282046,Gnome Skull,1,[]
 282047,Baby Crocolisk,3,[]
@@ -22998,6 +23002,7 @@ itemID,name,rawField10,sourceRowIndicesJSON
 284070,Dreadwhisper's Touch,3,[]
 284079,High Clerist's Seal,3,[]
 284086,Scarlet Executioner's Guise,3,[]
+284091,Scarlet Forgemaster's Bindings,3,[]
 284092,Keystone Fragment,1,[]
 284093,Keystone Fragment,1,[]
 284097,Everstaring Abomination Eye,3,[]
