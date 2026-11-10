@@ -1,0 +1,21 @@
+Checkpoint8AB nonreleaseCI42758142459 job129637235075 success; source d574c2993b9b5903be04da9c189b3531c5148399; inspected directbot/finalvalidated d205851bda1f894eb969459f543292113c0e2263.
+2026-11-10T04:48:27.2834946Z PASS offline dungeon-link boundaries: reviewed gaps, publication leads, exact actor observations
+2026-11-10T04:48:28.7999908Z SOURCE Playfulls 23334 items 9153 published source labels
+2026-11-10T04:48:38.1364809Z SOURCE Everloot 1399 observed edges 1199 item relationships
+2026-11-10T04:48:42.4196623Z RECONCILE DONE 7707 items 577 dungeon 1252 recipes 3923 in-addon summaries
+2026-11-10T04:48:42.4204565Z UNRESOLVED 6 true dungeon 954 recipe vendor_books 68 trainer_books 886
+2026-11-10T04:48:42.8050509Z PASS Beta4 canonical catalogue: 7707 records, 36341 class entries, 9 classes, 259 research overrides, quest/gates, 0 spec profiles
+2026-11-10T04:48:43.1860693Z PASS Beta7 Warrior lvl15 hides leather and four earlier items; aged/role gates, late quests, boundary, status, all-valid, materials and preview
+2026-11-10T04:48:43.3588199Z PASS Beta4 C_Traits Fire/Frost/Arcane dominance, mixed stat safety, ambiguity and API fallback, expanded/preview and conservative pure-school items
+2026-11-10T04:48:44.2576391Z PASS Beta4 stress: 24 Lua files, 45 class/level checks, 0 item-cache requests, load 0.16s, filtering 0.73s
+2026-11-10T04:48:44.4307019Z PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 8 corrected items, explicit trash/recipe provenance, map/mat evidence
+2026-11-10T04:48:44.6002026Z PASS Beta7 material names: belt names, all class recipes, 1254 crafts, 4857 ingredients without client item cache
+2026-11-10T04:48:44.7085826Z PASS full Beta7: 7707 items, 36341 class objectives, nine classes, 1060 new recipes, 43 corrections, 415 named dungeon enemies (not necessarily bosses), 55 vendor, 27 quest
+2026-11-10T04:48:44.7173373Z PASS Beta7 class-wide source-uncertainty visibility, QA veto, role, and older boundary
+2026-11-10T04:48:44.8179807Z PASS Beta7 preferred armor for nine classes, 39/40 switch, preview, upcoming, cloaks, all-valid and item 3313
+2026-11-10T04:48:44.8275866Z PASS Beta7 Preview Guide: no overlap, settings next to Full 1-60, 720px fit and correct normal/inventory transitions
+2026-11-10T04:48:44.9890099Z PASS Forever stat flags: 7699 independently typed 1-60 items, Crusader/Protector variants, 9 classes, hybrid examples and all-valid override
+2026-11-10T04:48:45.0036306Z PASS overlay stat filter: nine classes, two armor keys, armor-only opt-in, other positives/resistance, negative/zero/unknown, rings, bags, guide, materials, toggle and zero bulk requests
+2026-11-10T04:48:45.0057059Z PASS green-BoE overlay: world-drop default, route exceptions, live override, provisional fallback and settings
+2026-11-10T04:48:45.3060986Z PASS full acquisition reconciliation: 3923 item-ID sources; 3922 new displayed references; 759 new recipe book IDs, 577 dungeon routes, 1252 crafts and nine classes
+PASS directbot parent/author/fullstat/diff: only timestamp/three Everloot response hashes; no runtime/report/count/source-fact changes. No main/release action.
