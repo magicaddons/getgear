@@ -1,6 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
-Current pending total: **210 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AU below; original-count sections are historical.
+Current pending total: **219 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AY below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
@@ -65,3 +65,7 @@ Fresh actual reconciliation adds7 Playfulls IDs:canonical13402 Timmy’s Galoshe
 ## 8AU initial fresh upstream extension —210 pending candidates
 
 Nine newPlayfulls IDs are outsidecanonical/disjoint201:10847Dragon’sCall,12554HandsExaltedHerald,14022BarovPeasantCaller,18375BracersEclipse,18394DemonHowlWristguards,280022ScaleguardScimitar,281598Rusthowl’sWornCollar,286597CalmAirBand,286609Krellack’sCarapace. Exactfeednames/sourcefields are preserved;no automaticadoption/currentloot/newgameitem claim. See checkpoint8au_raw_upstream_review.json/checkpoint8au_delta_scope_review.json. Separate full72-item Everloot delta scope finds onlyalreadycanonical15477newobservation;71others excludeunderexistingquality/class/slot policy,includingfourpoorqualitycloaks. This doesnotresolve systemicBackscope deficiency oradd71newgear candidates. All210needindividual9Aidentity/version/scope/eligibility/acquisition audits.
+
+## 8AY actual feed extension —219 pending candidates
+
+Nine new IDs are outside the frozen catalogue and disjoint from210 prior pending rows:1680Headchopper,9512Blackmetal Cape,15411Mark of Fordring,15413Ornate Adamantium Breastplate,15418Shimmering Platinum Warhammer,15421Shroud of the Exile,16058Fordring's Seal,280029Cinderedge Crescent,287044Predator's Shroud. Exact names/sourcefields are inCSV and checkpoint8ay_feed_delta_review.json. Two full source definitions are new(MoshOggButcher/InDreams);all9158priorfull definitions unchanged. These are feed publication references,not verified current quest choices,automaticallyadoptedgear/newgameitems or current live loot. Each needs9Aidentity/version/scope/eligibility/acquisition research. Prior210candidate rows remain exact. The systematic full-cache/feedBack-slotcoverageaudit and ten omitted cloak siblings remain required;discovering these nine does not establish exhaustive coverage.
