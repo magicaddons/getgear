@@ -1,0 +1,18 @@
+{
+  "source": "a50fca7e6c4bb4eabea3046d985e4d846c0e7138",
+  "bot": "d1e13a2fe19e304880e106d5850ee024da222657",
+  "ciRun": 42886313120,
+  "ciJob": 130075445019,
+  "status": "success",
+  "changedFiles": [
+    "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+  ],
+  "changedProvenanceKeys": [
+    "https://everloot.app/api/edges?evidence=observed&limit=500",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+    "lastRunUTC"
+  ],
+  "scope": "Only reconciliation time/four Everloot API response hashes; PF fingerprints/runtime/reports/counts unchanged. Actual local8AX factual edges/counters retained. Bot API bytes not independently captured; equal counts do not prove equal counters. No extra diagnostic requests."
+}
