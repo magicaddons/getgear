@@ -1,6 +1,6 @@
 # Checkpoint 8AS — 101 world-drop queue cases, catalogue levels 8–10
 
-Research preserved 10 November 2026 UTC;integration/fresh full local/CI/bot validation pending. Previous full PASS8AR:[42828119795](https://github.com/magicaddons/getgear/actions/runs/42828119795),source `1511edc006dd19d50cfeaef287dd6ff6be7544fd`,inspected bot `e48b627d0d6f4b15174305c02f382b13323b881a`.
+Integrated with full sequential fresh local PASS 10 November 2026 UTC;non-release CI/bot review pending. Previous full PASS8AR:[42828119795](https://github.com/magicaddons/getgear/actions/runs/42828119795),source `1511edc006dd19d50cfeaef287dd6ff6be7544fd`,inspected bot `e48b627d0d6f4b15174305c02f382b13323b881a`.
 
 ## Evidence and scope
 
@@ -31,3 +31,9 @@ Unbalanced Idol210195 is Druid/equip10/BoP/Unique and explicitly says **Added in
 ## Resume
 
 Integrate101qualified metadata records,preserving3097prior objects/all stronger sources/canonical facts. Fresh actual same-run HTTP capture must exit0 before full14Lua+offlinePython/24module/four-report/helper syntax suite,semantic/raw upstream review,non-release CI completion and direct bot inspection. Currentregistry3097/index4568/display4567/books759;frozen2805includes these101 until validated. Next8AT:all27remaining world-drop cases at cataloguelevel11,numeric item-ID order(verifiedqueue),then higher levels/9A201candidates/systematicBackcoverageaudit/finalintegrity/acceptanceplan. Six dungeon exceptions/954current-live book routes remain open. No main/Beta8/build/package/tag/release/billing action.
+
+## Local integration validation
+
+Fresh actual8AScapture exited0 before14Lua+offlinePython/24modules/fourreports/helper syntax PASS. [Local results](checkpoint8as_local_results.txt),[semantic comparison](checkpoint8as_upstream_review.json):101summarycells only,zeroothersemantics/offsets,fivecompanionreportbytes exact;3097priorregistry objects exact. Registry3198/index4669/display4668/books759;1254crafts4857ingredients/7707identities36341objectives/settings/filters/sixdungeonexceptions preserved.
+
+[Raw comparison](checkpoint8as_raw_upstream_review.json):PF23441/9157 complete responseobjects/bytes/hash exact unchanged from8ARfinal;Everloot1416raw1204qualified exactrelations/build/install/first-lastseen,63selectedqualifiedobservations. Seven freshsame-run HTTPbodies/provenance/registryhash match,not replay/diagnosticrefetch.201outsidecanonicalcandidates unchanged. Frozenremaining2704allworlddrop;8AT27cataloguelevel11cases numericIDorder marked. CI/directbot stillrequired before8AT.

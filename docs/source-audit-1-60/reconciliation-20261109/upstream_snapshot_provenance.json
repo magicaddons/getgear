@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8AR final readability actual HTTP capture",
-  "capturedUTC": "2026-11-10T13:46:45.573162+00:00",
+  "capturedForCheckpoint": "8AS actual HTTP capture",
+  "capturedUTC": "2026-11-10T14:05:40.641659+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23441,
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "8AQ\u21928ARinitial\u21928ARfinal:23441/9157 completePFresponseobjects/bytes/hash exact;allpriorrawrows/names/sourcefacts/indices/field10/fullmetadata exact;201candidates unchanged. Initial/finalrawreviews separatelypreserved."
+    "comparison": "8ARfinal\u21928AS23441/9157 completePFresponseobjects/bytes/hash exact;allrawrows/names/sourcefacts/indices/field10/fullmetadata unchanged;201candidates exact."
   },
   "everloot": {
     "total": 1416,
@@ -52,25 +52,25 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "6db950d80874ed07a80a919811349bcd9717945f03eb969c7d5bc12d95c11768",
+        "sha256": "e7cbb4bb0729159249fd1c0aa06b19f7cbecd0de42cef617a3a2dce63b91eb84",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T13:40:13.525Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103652,
-        "sha256": "836467e6dc2dbb19e244f51131b57349d83a7fe20e83a141f8bd495c284da71b",
+        "sha256": "51b5262b4385fbef69c8c0d240b1c43621f2472543940d18c5013bdea122ed96",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T13:40:13.525Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 85987,
-        "sha256": "d2c3a7daef2706436f1252c8397663806bb256cebe610292cb8d0f34ee38c855",
+        "sha256": "b00055276e8368e698eed346afa6975fd9b919c0509ff56561fa6fd58f733294",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T13:40:13.525Z"
       }
     ],
-    "comparison": "Actual8ARfinal1416raw1204qualified exactrelations/build/install/first-lastseen unchanged from8AQactualbaseline;5qualifiedselectededges4items/buildnull independentlyjoinedfullNPCpages,notpersonalcurrentbuildproof. Botbytesnotinferred."
+    "comparison": "Actual8AS1416raw1204qualified exactrelations/build/install/first-lastseen unchanged from8ARfinalactualbaseline;63qualifiedselectededges37items/buildnull/61NPC2objects.62ownitemactors/19independentfullreverse(18NPC1chest);35591fishingobjectidentity,notsecondchest/NPC/currentlootproof. Botbytesnotinferred."
   }
 }
