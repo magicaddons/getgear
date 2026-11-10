@@ -1,6 +1,6 @@
 # Checkpoint 8AK — 15 legacy Nozdormu quest rings
 
-Status: publication research/integration and final local validation PASS; non-release CI/bot review pending. Current live acceptance and access remain unverified.
+Status: complete at publication-research level; full final local/non-release CI42773331069 PASS and directbotb72a360dfcbf5069965692876b6a4a80b3f3eb59 reviewed. Current live acceptance and access remain unverified.
 
 ## Scope and evidence
 
@@ -61,3 +61,13 @@ An initial local test/diagnostic attempt overlapped final generation fetches and
 
 Next in-game tests should check faction acceptance of8751/8756, how8765 starts, actual standing/claim conditions, input consumption, path-switch choice/retention, replacement behavior and present Anachronos/scarab availability.954 live book routes and six dungeon exceptions remain open. No release build/package/tag/publish, Beta8 replacement, main modification or billing action.
 
+
+## Checkpoint 8AK validated — next 8AL
+
+Full final local/GitHub PASS: [42773331069](https://github.com/magicaddons/getgear/actions/runs/42773331069), sourcecf62c174be8ae7fb2a23c1eaec5043ee75a99839; inspected direct bot/final validatedb72a360dfcbf5069965692876b6a4a80b3f3eb59. All14 Lua regressions, offline Python guard,24 modules/four reports/helper syntax pass;15 timestamped CI test-PASS lines inspected. Final local tests ran sequentially after complete capture;earlier overlapping test/diagnostic attempt discarded and not pushed. Bot changes only run time/three Everloot response hashes; no runtime/report/index/count changes or independently captured bot API byte-identity claim.
+
+Fifteen legacy Nozdormu rings complete:49fullresponses/19queries/15independentstanding+15questgain joins;12previous-ringquantity1reversejoins/3finalring+45typedscarab switches/6incomingchoices. ExactUnique-per-ID andfamilyUniqueEquipped1 retained;15DNDCreateItem references notlearnedcraft/replacement/specgates. Quest8751/8756Horde versus16othersBoth,8765missingstart,mapperreaction andcurrentacceptance discrepancies explicit;no canonicalclass/factioneligibility mutation. Prior8QknownNPC/scarab403failures reusedwithoutretry/fakehash;quest-sideTanaris65.2,50 notindependentNPC/currentstock. Legacy/newer35 ring rules remain separate.
+
+Equipment2,852/index4,479/display4,478/books759;crafts1,254/ingredients4,857. Prior2,837 objects exact;15 summary cells only/all six dungeon exceptions retained. All15 were indexed generically already,so no newindexIDs. Seven same-run actual feed captures match provenance; no extra diagnosticrequests. Playfulls23,366/9,153 and Everloot1,399raw/1,199qualified exactlocalfacts/counters unchanged;zero selected observededges.121 outsidecanonical9A candidates remain separate/unvalidated;diagnostic8AJlocalPlayfulls/8YEverloot factualbaselines retained.
+
+Frozen remaining3,050=163quest/2,887world-drop;**next8AL:7BlessedQiraji quest weapons21242/21244/21268/21269/21272/21273/21275**,markedqueue,thenAQclassarmour. Queueconservation5,688=2,638researched+3,050pending;registry214+2,638=2,852. All1,162 undocumented publicationcases remaincomplete/currentorigins/liveexceptions notclosed.954livebookroutes/sixdungeon/access/phase/retention exceptions remain. Main/Beta8 tag/source rechecked10Nov07:10UTC unchanged. No release/main/billing action.
