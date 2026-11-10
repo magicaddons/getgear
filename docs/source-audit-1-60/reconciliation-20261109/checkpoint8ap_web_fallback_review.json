@@ -1,0 +1,99 @@
+{
+  "method": "Readable web-tool projections only; not full original HTTP response bytes/hashes. No direct403 retries. Names/objectives/context do not establish live acceptance or independent selected NPC quest inventories.",
+  "reads": [
+    {
+      "url": "https://www.wowhead.com/forever/npc=16112/korfax-champion-of-the-light",
+      "status": "readable",
+      "facts": {
+        "name": "Korfax, Champion of the Light",
+        "zone": "Eastern Plaguelands"
+      },
+      "limits": "No selected quest start/end tables exposed. Old Thottbot/phase1 comments not current NPC availability/disenchanting rules."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/item=22349/desecrated-breastplate",
+      "status": "JavaScript robot-verification page",
+      "facts": {},
+      "limits": "No item binding/class/drop data or full HTTP hash established."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/faction=529/argent-dawn",
+      "status": "readable",
+      "facts": {
+        "name": "Argent Dawn"
+      },
+      "limits": "No selected72 objective/gain tables exposed. Historical reputation/attunement/recipe comments are not current costs, gear equip gates or new profession corrections."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quest=9033/echoes-of-war",
+      "status": "readable",
+      "facts": {
+        "name": "Echoes of War",
+        "actor": "Commander Eligor Dawnbringer",
+        "locationContext": "Light's Hope Chapel/Eastern Plaguelands",
+        "objectives": [
+          {
+            "name": "Living Monstrosity",
+            "quantity": 5
+          },
+          {
+            "name": "Stoneskin Gargoyle",
+            "quantity": 5
+          },
+          {
+            "name": "Deathknight Captain",
+            "quantity": 8
+          },
+          {
+            "name": "Venom Stalker",
+            "quantity": 3
+          }
+        ],
+        "ArgentDawnGain": 200
+      },
+      "limits": "Current prerequisite/unlock necessity for all72 not independently established by selected full quest records; old comments/Classic chain leads remain qualified. Objective kills not token/finished-armour loot."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quest=9121",
+      "status": "not accessible through web tool",
+      "facts": {},
+      "limits": "No inferred current cost/standing or full response hash."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quest=9122",
+      "status": "not accessible through web tool",
+      "facts": {},
+      "limits": "No inferred current cost/standing or full response hash."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/quest=9123/the-dread-citadel-naxxramas",
+      "status": "readable",
+      "facts": {
+        "name": "The Dread Citadel - Naxxramas",
+        "actor": "Archmage Angela Dosantos",
+        "variantStanding": "Argent Dawn Exalted",
+        "variantEntryCharge": "No cost stated for this specific Arcane Cloaking variant",
+        "ArgentDawnGain": 200
+      },
+      "limits": "Published9123 entry/attunement variant, not an Exalted requirement on72gear or a material waiver. Current portal/phase/acceptance unverified. Honored/Revered historical comment costs are not accepted current data;9121/9122 unreadable."
+    }
+  ],
+  "secondaryDiscrepancies": [
+    {
+      "url": "https://forevermastery.com/en/quests/9038",
+      "facts": "Classic-labelled Pauldrons page reports250gain/9000standing/72.0,48.5; actual full9038 publishes200gain/quest-side81.6,58, no standing objective. Do not adopt secondary threshold/point/250gain."
+    },
+    {
+      "url": "https://gearinsight.app/wow/en/forever/dungeon-quests",
+      "facts": "Beta/Classic-derived DreadCitadel\u2192EchoesWar chain lead, not independent current quest unlock/entry/gear gating."
+    },
+    {
+      "url": "https://wowforever.kickegg.net/articles/forever-warrior-class-quests?lang=en",
+      "facts": "PinnedQuestie/Classic-consensus objective/spawn reference, explicitly unverified in game; does not override individual full quest masks or establish current actor point."
+    },
+    {
+      "url": "https://worstguidesever.com/wow-forever-naxxramas-guide/",
+      "facts": "Generic nine-piece/no-direct-drop assertion not accepted for nine unselected rings; all9ringIDs already in pending world-drop queue, not72questcosts."
+    }
+  ]
+}
