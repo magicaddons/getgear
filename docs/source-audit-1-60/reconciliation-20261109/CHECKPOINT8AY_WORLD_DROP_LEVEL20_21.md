@@ -1,0 +1,43 @@
+# Checkpoint 8AY — 103 cases at catalogue levels 20–21
+
+Publication research preserved10November2026UTC; runtime integration/fresh reconciliation/full local/non-releaseCI/directbot review pending. Latest validated8AX: [CI42886313120](https://github.com/magicaddons/getgear/actions/runs/42886313120),source `a50fca7e6c4bb4eabea3046d985e4d846c0e7138`,inspected directbot `d1e13a2fe19e304880e106d5850ee024da222657`. No release authorised.
+
+## Evidence and confidence
+
+[Working proof](checkpoint8ay_working_evidence.json) locks103 exact queued IDs/names (49level20/54level21):78broad/25named dispositions.242unique full primary HTTP fingerprints:141new/101explicitly reused cached responses,eight original8AXfeed responses explicitly reused.103exact-ID/name searches andfourshared searches are indexed in [discovery](checkpoint8ay_discovery_index.json). Secondary projections do not carry invented original HTTP hashes. Three reused NPC responses15448/15528/15533 serve both new gear joins and already-researched crate quest roles; count each response once,not three additional HTTP reads.
+
+1253exact NPC drop reversejoins and106objectreversejoins across nineIDs. All named case actors have independent full reverse matches. Returned200-row lists may be capped; published map footprints are not guaranteed current pins. Generic community loot tables/Classic baselines,client encounter names and item/set names do not establish current loot, measured probabilities, automatic instance-boss status or class-only gates.
+
+89Uncommon/14Rare,101BoE/twoBoP285348/285350. Defias Mage Ring1077,Ring of the Shadow1462,Diamond Hammer2194,Blackfang2236 andBlack Widow Band6199alone show plainUnique: possession limits,not proof of one-time acquisition/currentduplicate retention. All103lack an explicit class-only mask or primary unavailable/Season-of-Discovery warning. Names such as DefiasMage/Magician/Prospector do not impose class or profession restrictions. Canonical equip/stat/proficiency facts remain unchanged.
+
+## Two attributed observations remain distinct
+
+Fortified Chain9818→Tormented Officer3873 has an attributed3-install/buildnull Everloot observation plus matching ownitem and independent fullNPCloot. Watcher's Cuffs14177→[Owatanka3473](https://www.wowhead.com/forever/npc=3473) has an attributed4-install/buildnull observation, but is absent from both its own115-row item list and the independent47-row NPCdrop list. Retain the report and both omissions explicitly; do not claim a two-sided match,current guaranteed drop or proof of absence/retirement. Neither list is claimed to return200rows for this case. Installs are not assumed unique players/current-build samples; no personal live drop/rate is asserted.
+
+## Exact named routes and charged shield
+
+[Necrology Robes2292](https://www.wowhead.com/forever/item=2292) has seven independently matched published actors:Son of Arugal2529,Shadowfang Glutton3857,Shadowfang Ragetooth3859,Lupine Horror3863,Tormented Officer3873,Wailing Guardsman3877,Wolf Master Nandos3927. These are not seven bosses or proof that every Shadowfang Keep enemy currently drops the robe. The [opened secondary page](https://foreverchanges.pro/item/2292/necrology-robes) explains its Confirmed in game badge using client/server-cache item properties,while separately showing a generic anyenemy dungeon percentage. That badge is not independent current verification of every loot relationship or its0.02%claim; no secondary stats/rates are adopted.
+
+[Black Husk Shield4444](https://www.wowhead.com/forever/item=4444) and[Leech Widow1112](https://www.wowhead.com/forever/npc=1112) independently match; the same NPC also independently lists Black Widow Band6199. The shield's own tooltip lists a poison-cureUse,five-minute cooldown andfivecharges. [FullAbolish Poison14253](https://www.wowhead.com/forever/spell=14253) independently lists4444as its used-by item. Published text describes an attempt to cureonepoison followed by periodic attempts everytwoseconds foreightseconds; ticks are not charges or guaranteed removals. This is an item effect,not a new profession recipe/Druid-or-Shaman equip restriction. Current charge consumption/refill and whether exhaustedcharges affect shield retention remain unverified; do not promise unlimited reuse or loss of the shield. Killmaim13016's on-hit bleed likewise does not establish crafting.
+
+## Alliance-named gear and access clues
+
+[Alliance Outrunner Healing Rod285348](https://www.wowhead.com/forever/item=285348) specifically matches[Hannah Bladeleaf5799](https://www.wowhead.com/forever/npc=5799); [Alliance Outrunner Staff285350](https://www.wowhead.com/forever/item=285350) specifically matches[Marcus Bel5800](https://www.wowhead.com/forever/npc=5800). Do not swap these sources or give both items to every patrol member. Both items are Rare/BoP/minimum21/no classmask; no ordinary unbound trade/AH route is established.
+
+FullNPCpages describe level24RareElite/Darnassus69actors,friendlyAlliance/hostileHordereactions andBarrensfootprints with12/15points. These are published source-access clues,not itemAlliance-only/Horde-only equip gates,reputation standing requirements,honor ranks or proof of current attackability/patrol/phase. No usable current single waypoint is inferred.
+
+## Containers and separately reused exchanges
+
+70physical-container references concern40gear cases;69independently reversejoin sixitems:20Heavy Bronze Lockbox4633,19Ornate Bronze Lockbox4632,15War Effort Supplies21510,11Minor Darkmoon Prize19298,twoMysterious Lockbox19425 andtwoCatfish6647. One21509WarEffort lead remains item-side/earlierfull403withoutunchangedretry. Sixteen selected fished-in tables do not impose wearerFishing requirements; physical containers and world objects stay distinct.
+
+[Heavy Bronze Lockbox4633](https://www.wowhead.com/forever/item=4633) saysLocked and has143published content rows,plus a200-row possibly capped dropped-by table. No independently established opening skill threshold,service/key fee or wearerRogue requirement is supplied. Its own table names[Highland Horror260808](https://www.wowhead.com/forever/npc=260808),whose newly read fullNPCtable independently contains4633. This is a published container-origin pair,not a current finished-gear drop from that NPC or guaranteed content roll. The NPCpage has no usable map. A [secondary searchprojection](https://forever-tavern.com/items/4633-heavy-bronze-lockbox/) mentionsWetlands/build70862/oneofonelootedkill;its fullwebopen failed. Do not convert that one-window claim into100%dropchance,currentlocationproof or independent gear-loot confirmation. No original secondary HTTP hash is invented.
+
+Nine distinct worldobjects are74447/74448/75295/75298/3715/4096/2850/2852/3714. Same-named LargeSolid/LargeIronBound/Solid/AllianceChest variants retain their own IDs and independently matched contents; do not copy coordinates/opening rules or infer Alliance equip restrictions from names.
+
+War Effort21510's twelvefixedcratequests/21NPCjoins and structured20/tooltipopeningambiguity are explicitly reused8AXevidence,including8612'sONEHordeSignet reward. MinorPrize19298fivecurrency515versuslegacyphysical19182ambiguity is reused8AV. Mysterious19425fourfixedcratequests/distinctpapers/endobjects/Ansekhwaanomaly are reused8AUforForest Leather Chestpiece3055/Fortified Gauntlets9813. These are not new HTTP fetches,freeinputs/allalternativefees/currentevent/guaranteedgearpieces or new crafts/ingredients. CrateBoP/Unique does not transfer to gear; fish binding/removedold use minimum does not create a wearerFishing/equip rule.
+
+## Validation and resume
+
+Zero new primary full read failures,one earlier21509full403reusedwithoutretry,andone failed secondary web open without a body hash.210additionalcandidates/systematicfull-cache/feedBack-slotcoverageaudit/tenomittedcloaks/sixdungeon/954current-livebookexceptions remain open. Countvalidation is not exhaustive gear coverage.
+
+Resumeintegration of103whilepreserving3559priorobjects/strongersources/canonicalstats/classes/equip/filters/settings/recipes. Freshsame-runHTTPcapture mustexit0 beforefull17localPASS/16CItestPASS/directbotreview. Frozen2343includes103pending. Next8AZ104worlddrop cataloguelevels22–23(55+49)numericIDorder,verifiedqueue. No main/Beta8/build/package/tag/release/billing action.
