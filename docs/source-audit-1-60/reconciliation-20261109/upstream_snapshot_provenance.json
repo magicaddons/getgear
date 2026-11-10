@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8AW actualfreshsame-runHTTPcapture",
-  "capturedUTC": "2026-11-10T19:10:16.038478+00:00",
+  "capturedForCheckpoint": "8AX actualfreshsame-runHTTPcapture afterintegration",
+  "capturedUTC": "2026-11-10T19:29:38.110284+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23450,
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "8AV\u21928AW fullPFresponseobjects/bytes/hash exactunchanged23450/9158/allrows/defs/rawfields;210candidatequeue byteexact."
+    "comparison": "8AW\u21928AX fullPFresponseobjects/bytes/hash exactunchanged23450/9158/allrows/defs/rawfields;210candidatequeue byteexact."
   },
   "everloot": {
     "total": 1550,
@@ -52,32 +52,32 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "d294317fc03fffbd4c110abf53d853c837ebe0d3751a0bd4b54c8d57b680975e",
+        "sha256": "386e8cb859d96a016f9443b467ce0b5160567664132a4f4b5fc9386ca30c8b6f",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T18:50:15.449Z"
+        "dataAsOf": "2026-11-10T19:20:16.992Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103546,
-        "sha256": "f3e8bb1cb59567d2ffb1f91fda9257a926d56f8b43f6944b044269a7f09a2a68",
+        "sha256": "f59cdb08df86edb517e38b8d93e56f8d8d743a961f01f538e532af39cdc2faec",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T18:50:15.449Z"
+        "dataAsOf": "2026-11-10T19:20:16.992Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103400,
-        "sha256": "0a30abe31d3a238c0cc07bd72accd07571c07417ac3adff9686b00e037f4aac3",
+        "sha256": "70e0000717343225c0f3ee703e94226dd3c30cacb35e74057741bbbe9b6c47e2",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T18:50:15.449Z"
+        "dataAsOf": "2026-11-10T19:20:16.992Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
         "bytes": 10711,
-        "sha256": "e6c497c29a63b84cbd1bece67beea431371c898a47b080758aa115011c394279",
+        "sha256": "3050cbf23e94eb85cdc4759d7461e1b3bcd156d1ebc4d557fd0f783316689a5e",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T18:50:15.449Z"
+        "dataAsOf": "2026-11-10T19:20:16.992Z"
       }
     ],
-    "comparison": "Actual8AW1550raw1315qualified fullrelation/build/install/first-lastSeen exactunchanged fromreviewed8AVactualbaseline;25selectedNPCedges19items/buildnull3\u20136installs.19ownitemactors16fullreverse/fourbothreturnedlistomissions/twoownitemomissionspositivefullNPC/fiveobservedunreadedgesexplicit. Eightactualsame-runoriginalbodies/hashmatch,botbytesnotinferred."
+    "comparison": "Actual8AX1550raw1315qual onlypriorNPC4577located_inzone1458installs3\u21924andlastSeen;no new/removed/build/firstSeen/item-dropchanges. FivequalifiedselectedNPCedgesfouritems unchanged;fiveownactors2fullreverse/3olderunreadexplicit. Eightactualsame-runoriginalbodies/hashmatch;botbytesnotinferred."
   }
 }

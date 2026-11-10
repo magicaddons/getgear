@@ -1,6 +1,6 @@
 # Checkpoint 8AX — 92 cases at catalogue levels 18–19
 
-Publication research preserved10November2026UTC; runtime integration/fresh reconciliation/full local/non-releaseCI/directbot review pending. Latest full validated8AW: [CI42882965745](https://github.com/magicaddons/getgear/actions/runs/42882965745),source `e35d4c03b46cf6323844784df6c842461e6e7897`,inspected directbot `3b0a5f5c7d2dc45859dc9089ccd51c9a64d5504e`. No release authorised.
+Integrated with fresh reconciliation/full sequential local PASS10November2026UTC;non-releaseCI/directbot review pending. Latest full validated8AW: [CI42882965745](https://github.com/magicaddons/getgear/actions/runs/42882965745),source `e35d4c03b46cf6323844784df6c842461e6e7897`,inspected directbot `3b0a5f5c7d2dc45859dc9089ccd51c9a64d5504e`. No release authorised.
 
 ## Evidence and confidence
 
@@ -52,3 +52,13 @@ FiveAlliance/sevenHordequests describeaccess to these exchanges, not faction equ
 Zero new full read failures;five earlier403URLs reused (21509,250622,250627,255964,256040),withoutnewattempts/hashes/negativeinventories/retirement. All210additionalcandidates/systematicBack-slotcoverageaudit/tenomittedcloaks/sixdungeon/954livebookexceptions remain open; countvalidation is not exhaustive coverage.
 
 Resumeintegration of92whilepreserving3467priorobjects,canonicalstats/classes/equip,filters/settings/recipes andstrongerobservations. Freshsame-runHTTPcapture mustexit0 beforefull17localPASS/16CItestPASS/directbotreview. Frozen2435includes92pending. Then derive/mark the next bounded queue fromremaining levels. No main/Beta8/build/package/tag/release/billing action.
+
+## Checkpoint 8AX integrated — full local PASS, CI pending
+
+92newmetadata/3467priorobjects exact;231fullprimaryresponses138new93explicitreused/eight8AWfeedresponses/92exact4sharedqueries.65broad26named1SoD213513originunresolved/1239NPC97objectreversejoins/fiveobjects. LibramPaladinmask2alreadycanonical/equip18item40BoPUnique/explicitSoDmaynotForever/noorigin;twofullspells416028usedby213513+differentconsumable213131/ability412019notcurrentlibramacquisition/newprofession/currentRuneBrokerstock/Freedom5currentchallengeproof.89BoE3BoP/78Uncommon14Rare/threeUnique6332/12996/213513/91nomask/nootherflags. FiveattributedNPCobservationsfouritems/buildnull3–6installs/fiveownactors/twofullreverse/threeolderunread;Sword286977250630onlyfullreverse/two250622250627knownunread/nogenericGhoulmapsboss.
+
+72physicalcontainerleads34cases/71reversejoins sixitems4632x32/19298x24/21510x10/21113x2/6647x2/19425x1;one21509knownunread. Warcrate21510CommonBoP88contents/structuredreq20tooltipomitsRequires/notgearBoP-equip20/currentopeningunverified.12independentfixedcratequests/21NPCstartendjoins7actors/12singlephysicalinputrows/alternativeexchangesnotall12fees/newcrafts/wearerprofessions.10min1display60+2min20display29/5Alliance7Hordenotgearfactiongates;8612ONE21438not3/rewardscostsdistinct. More/rawflagsnotcurrentrepeatability;DunMoroghDurotarnarrativevsIronforgeOrgmapsnotcurrentpins. MinorPrize515vlegacy19182explicitreused8AV;Mysterious19425fourfortunequests/papers/endobjects/Ansekhwaanomalyexplicitreused8AU/notfreepapers/all4fee/guaranteed790/currentfarm.13fished-innotwearerFishing. Fiveold403URLs reused/zero newfullfailures.
+
+Freshactual8AXcaptureexit0→full17localPASS=14Lua+2offlinePython+files/syntax/24modules/fourreports/3tools. Eightactualsame-runHTTPbodies/provenance/registryhash match;PF23450/9158fullobjects/bytes/hash unchanged from8AW;EV1550raw1315qualified onlypriorNPC4577located_inzone1458installs3→4/lastSeen,no newitemdrops/build/firstSeen/removals/selected5changes.92summarycells only/zeroothersemantics-offsets/fivecompanionreports+210candidates byteexact/fallback2340unchanged. Registry3559/index5030/display5029/books759/crafts1254/ingredients4857/7707identities36341objectives/filtersettings/sixdungeonexceptions intact.
+
+Frozenremaining2343allworlddrop; **next8AY103cataloguelevels20–21(49+54)numericIDorder**,markedqueue afterlocalPASS;finishCI/directbotfirst. Read CHECKPOINT8AX_WORLD_DROP_LEVEL18_19.md/working/local/raw/discovery.9A210candidates/systematicBackscopeaudit/954livebookexceptions remain. Environmenttransition19:25recovered/allproofcachepersisted/no duplicate/newautomation/quota-refreshguarantee/main/Beta8/build/package/tag/release/billing action.
