@@ -1,0 +1,1417 @@
+{
+  "capturedUTC": "2026-11-10T12:23:03.772825+00:00",
+  "method": "Exact full factual snapshot comparison: retained8ANlocal Playfulls/Everloot factual baselines to8AO; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23380,
+    "afterItems": 23423,
+    "beforeDefinitions": 9154,
+    "afterDefinitions": 9157,
+    "newItems": [
+      {
+        "itemID": 811,
+        "name": "Axe of the Deep Woods",
+        "sources": [
+          {
+            "type": "worlddrop",
+            "label": "World drop",
+            "npc": "",
+            "zone": "",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 10632,
+        "name": "Slimescale Bracers",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 11786,
+        "name": "Stone of the Earth",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Panzor the Invincible",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 11808,
+        "name": "Circle of Flame",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ambassador Flamelash",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "98da4661e2920a068d27f15de6d1e2ef92752075e061040320acbbd3b538bc83"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12542,
+        "name": "Funeral Pyre Vestment",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12553,
+        "name": "Swiftwalker Boots",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Princess Moira Bronzebeard",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "0732c4776ff6393571f6788105d683c5b5b226f106b6c818d2963fd05df808e5"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12653,
+        "name": "Riphook",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Shadow Hunter Vosh'gajin",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "c0cf53b1b7c6c9eb726b3cbf07fab59f09c79ca57a5c44d83a70645625bdebbc"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13168,
+        "name": "Plate of the Shaman King",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Highlord Omokk",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "367fe82d03e35942eeb6182137e65156d992064013a3687fb877e4414e95978f"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13257,
+        "name": "Demonic Runed Spaulders",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Shadow Hunter Vosh'gajin",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "c0cf53b1b7c6c9eb726b3cbf07fab59f09c79ca57a5c44d83a70645625bdebbc"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13284,
+        "name": "Swiftdart Battleboots",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Spirestone Battle Lord",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13372,
+        "name": "Slavedriver's Cane",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ramstein the Gorger",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "ba4cfd3ac00764453cbb8ec45b85baee0d12741c511b6ec043c932e2742dc140"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13380,
+        "name": "Willey's Portable Howitzer",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Cannon Master Willey",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "0585f0370148eb5296c90908702a6cdf98c6eca1cd2f0ce7f7c96923c5ece9b6"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13388,
+        "name": "The Postmaster's Tunic",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Postmaster Malown",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "a0b774804662f2db9cf608eb425dc1225cf2252797ada8497877f033306a6049"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13389,
+        "name": "The Postmaster's Trousers",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Postmaster Malown",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "a0b774804662f2db9cf608eb425dc1225cf2252797ada8497877f033306a6049"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13390,
+        "name": "The Postmaster's Band",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Postmaster Malown",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "a0b774804662f2db9cf608eb425dc1225cf2252797ada8497877f033306a6049"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13391,
+        "name": "The Postmaster's Treads",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Postmaster Malown",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "a0b774804662f2db9cf608eb425dc1225cf2252797ada8497877f033306a6049"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13392,
+        "name": "The Postmaster's Seal",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Postmaster Malown",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "a0b774804662f2db9cf608eb425dc1225cf2252797ada8497877f033306a6049"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13526,
+        "name": "Flamescarred Girdle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Maleki the Pallid",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "b4409002dc5fb383dcae81b77024c17ac77b51de2b0f19b988ad895f0582c986"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13534,
+        "name": "Banshee Finger",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Baroness Anastari",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "df6ccfe113462d21c332c86423bc5ce18f792a3deed56e22ed275db540027376"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13960,
+        "name": "Heart of the Fiend",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Kirtonos the Herald",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "4adea772399faf806e088ad9a361d279a574835dd97b12eec5f5befa73f5b342"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13983,
+        "name": "Gravestone War Axe",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Kirtonos the Herald",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "4adea772399faf806e088ad9a361d279a574835dd97b12eec5f5befa73f5b342"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 14545,
+        "name": "Ghostloom Leggings",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Jandice Barov",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "f77c47f526c31f2984cb81d1fe76b61ea54f7999a2c1c58c113d5756e3f3609a"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 17780,
+        "name": "Blade of Eternal Darkness",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Princess Theradras",
+            "zone": "Maraudon",
+            "path": "loot-tables/dungeons/maraudon",
+            "noteSHA256": "5a6a348378bc74c30432095e713a876a909476ed630bcf16ee49df896ef398c0"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18337,
+        "name": "Orphic Bracers",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Arcane Torrent, Mana Remnant, Residual Monstrosity +1",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18381,
+        "name": "Evil Eye Pendant",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Immol'thar",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "b0f9a6d81f40e3f15012aedf10cd05ef05977333dfde094c81799a08bc901df3"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18460,
+        "name": "Unsophisticated Hand Cannon",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Guard Mol'dar",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "078a9e98c2a7944c885ad0e91f9cafb0e42b5fbb7c061b8d7d0120af65b4f6b5"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18683,
+        "name": "Hammer of the Vesper",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Instructor Malicia",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "775e8b56c8647269b62dec8fb022af9c81b67630c9de9b40b466601b3da201f3"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18689,
+        "name": "Phantasmal Cloak",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Jandice Barov",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "f77c47f526c31f2984cb81d1fe76b61ea54f7999a2c1c58c113d5756e3f3609a"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18717,
+        "name": "Hammer of the Grand Crusader",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Balnazzar",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "bc76d2516e8dc4ccd44e1866295fcbaf043afe11167ac7276732c0ef021ec97c"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18718,
+        "name": "Grand Crusader's Helm",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Balnazzar",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "bc76d2516e8dc4ccd44e1866295fcbaf043afe11167ac7276732c0ef021ec97c"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18722,
+        "name": "Death Grips",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Magistrate Barthilas",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "574152ff6beeb5ca273dc38a2cf10420295a08b121f7d4587c47b60fd3129a1d"
+          }
+        ],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 18740,
+        "name": "Thuzadin Sash",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Nerub'enkan",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "db40c508ae2287c8b3865180c121486d2948762444ed0317d015d11fd828c2da"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22407,
+        "name": "Helm of the New Moon",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Cannon Master Willey",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "0585f0370148eb5296c90908702a6cdf98c6eca1cd2f0ce7f7c96923c5ece9b6"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22433,
+        "name": "Don Mauricio's Band of Domination",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Darkmaster Gandling",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "30f1f60ff88978deaf302d49835edc150fe42348ae4598d9f2999d2bf271d45b"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 23198,
+        "name": "Idol of Brutality",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Magistrate Barthilas",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "574152ff6beeb5ca273dc38a2cf10420295a08b121f7d4587c47b60fd3129a1d"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 276399,
+        "name": "Plate of the Scarlet Bastion",
+        "sources": [],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 276404,
+        "name": "Masterwork Crimson Hammer",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 276419,
+        "name": "Lightcrest Hammer",
+        "sources": [],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 276434,
+        "name": "Black Guard Skullcap",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280016,
+        "name": "Spiderchitin Wrap",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 282071,
+        "name": "Shin Slicers",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 284162,
+        "name": "Mossflayer Witchdoctor's Robe",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 287031,
+        "name": "Spearfisher's Waders",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 5312,
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 833,
+        "name": "Lifestone",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 2534,
+        "name": "Rondel",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 2893,
+        "name": "Deadly Poison II",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 3967,
+        "name": "Thick Leather Shoulderpads",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4092,
+        "name": "Prismatic Basilisk Scale",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4478,
+        "name": "Iridescent Scale Leggings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 4584,
+        "name": "Large Trophy Paw",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 6525,
+        "name": "Grunt's Harness",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 8253,
+        "name": "Imperial Red Sash",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8309,
+        "name": "Hero's Leggings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 9360,
+        "name": "Cuergo's Gold",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 10102,
+        "name": "Councillor's Robes",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10125,
+        "name": "Ornate Pauldrons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10211,
+        "name": "Elegant Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10222,
+        "name": "Nightshade Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10249,
+        "name": "Master's Cloak",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 10258,
+        "name": "Adventurer's Cape",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10267,
+        "name": "Masterwork Cape",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10282,
+        "name": "Emerald Vambraces",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10391,
+        "name": "Hyperion Vambraces",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 11302,
+        "name": "Uther's Strength",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 11408,
+        "name": "Bear Jaw",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 11409,
+        "name": "Bear Flank",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 12035,
+        "name": "Obsidian Pendant",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13053,
+        "name": "Doombringer",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13118,
+        "name": "Serpentine Sash",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13122,
+        "name": "Dark Phantom Cape",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14275,
+        "name": "Gaea's Raiment",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14306,
+        "name": "Bonecaster's Vest",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14327,
+        "name": "Resplendent Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14454,
+        "name": "Highborne Cord",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14661,
+        "name": "Keeper's Cord",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 14669,
+        "name": "Keeper's Mantle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14779,
+        "name": "Khan's Chestpiece",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14790,
+        "name": "Protector Buckler",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14851,
+        "name": "Sunscale Spaulders",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14970,
+        "name": "Glorious Legplates",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15119,
+        "name": "Highborne Pants",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15264,
+        "name": "Backbreaker",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15324,
+        "name": "Burnside Rifle",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 15428,
+        "name": "Peerless Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15622,
+        "name": "Gryphon Mail Breastplate",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15646,
+        "name": "Ironhide Legguards",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15647,
+        "name": "Ironhide Pauldrons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15659,
+        "name": "Impenetrable Bindings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 19280,
+        "name": "Four of Portals",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 24231,
+        "name": "Coarse Snuff",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 264123,
+        "name": "Craftsman's Writ: Major Rejuvenation Potion",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264146,
+        "name": "Craftsman's Writ: Runic Leather Headband",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264159,
+        "name": "Craftsman's Writ: Ghostweave Vest",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 274517,
+        "name": "Unerring Purpose",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 282048,
+        "name": "Ragged Dark Iron Cuffs",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 282074,
+        "name": "Ogre Sorcerer Belt",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 284843,
+        "name": "Sturdy Bearhide Legguards",
+        "before": "3",
+        "after": 7
+      }
+    ],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.21f84fc487.json",
+        "bytes": 989497,
+        "sha256": "21f84fc4877987a345bdac47b489fa7ba545cffc5a18fae85a6a58acd2ff453d",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.f240739399.json",
+        "bytes": 1331766,
+        "sha256": "f240739399e96b21e8631f0a7028a11c7b00ca76a230900d4e17f8e03c2a537f",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.442f8a784e.json",
+        "bytes": 464365,
+        "sha256": "442f8a784e46083a0a22585b607f3c17fd7701bafcf07a1dcc74eddc79fcc68c",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.8599f03e7a.json",
+        "bytes": 446192,
+        "sha256": "8599f03e7a6dc0f3466f24bad59940dbbf9d66251feaf93abc286c527926c219",
+        "matchesRecordedFingerprint": true
+      }
+    ],
+    "definitionPositionChanges": 2285,
+    "definitionResolvedAdditions": [
+      {
+        "label": "Dungeon drop",
+        "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "npc": "Spirestone Battle Lord",
+        "path": "loot-tables/dungeons/blackrock-spire",
+        "type": "dungeon",
+        "zone": "Blackrock Spire"
+      },
+      {
+        "label": "Boss drop",
+        "noteSHA256": "a0b774804662f2db9cf608eb425dc1225cf2252797ada8497877f033306a6049",
+        "npc": "Postmaster Malown",
+        "path": "loot-tables/dungeons/stratholme",
+        "type": "boss",
+        "zone": "Stratholme"
+      },
+      {
+        "label": "Dungeon drop",
+        "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "npc": "Arcane Torrent, Mana Remnant, Residual Monstrosity +1",
+        "path": "loot-tables/dungeons/dire-maul",
+        "type": "dungeon",
+        "zone": "Dire Maul"
+      }
+    ],
+    "definitionResolvedRemovals": [],
+    "previousResolvedDefinitionsPreserved": true,
+    "canonicalSourceIndexOnlyRows": 2107,
+    "outsideCanonicalSourceIndexOnlyRows": 3205
+  },
+  "everloot": {
+    "beforeRaw": 1399,
+    "afterRaw": 1416,
+    "qualifying": 1204,
+    "addedEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 2763,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3382,
+        "evidence": "observed",
+        "build": null,
+        "installs": 4,
+        "firstSeen": "2026-11-10T06:38:49.000Z",
+        "lastSeen": "2026-11-10T06:38:49.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 16784,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 178185,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T20:48:21.000Z",
+        "lastSeen": "2026-11-10T09:27:05.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 16745,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 178204,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T13:23:02.000Z",
+        "lastSeen": "2026-11-10T06:08:52.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 16744,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 178195,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T04:31:48.000Z",
+        "lastSeen": "2026-11-10T08:34:20.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 16762,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 177964,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T09:10:45.000Z",
+        "lastSeen": "2026-11-10T09:25:04.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 9087,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1456,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-06T18:08:48.000Z",
+        "lastSeen": "2026-11-10T10:04:52.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 2393,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1424,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T23:53:13.000Z",
+        "lastSeen": "2026-11-10T10:22:24.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 12867,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T23:55:28.000Z",
+        "lastSeen": "2026-11-10T03:12:12.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 11820,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T23:55:32.000Z",
+        "lastSeen": "2026-11-10T03:11:56.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 12724,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T23:56:16.000Z",
+        "lastSeen": "2026-11-10T03:10:04.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 6028,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T23:56:38.000Z",
+        "lastSeen": "2026-11-10T04:09:52.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 12737,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T23:56:51.000Z",
+        "lastSeen": "2026-11-10T03:10:49.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 11901,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T12:05:40.000Z",
+        "lastSeen": "2026-11-10T07:29:43.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 12757,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T12:05:53.000Z",
+        "lastSeen": "2026-11-10T07:29:55.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 12721,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T12:05:57.000Z",
+        "lastSeen": "2026-11-10T07:30:03.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 12736,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1440,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T12:06:08.000Z",
+        "lastSeen": "2026-11-10T07:31:08.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 4721,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1456,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T22:16:19.000Z",
+        "lastSeen": "2026-11-10T10:16:45.000Z"
+      }
+    ],
+    "removedEdges": [],
+    "updatedEdges": [
+      {
+        "key": [
+          "item",
+          "2770",
+          "dropped_by",
+          "object",
+          "1731"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-09T18:44:07.000Z",
+            "after": "2026-11-10T10:52:54.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2835",
+          "dropped_by",
+          "object",
+          "1731"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-09T18:44:07.000Z",
+            "after": "2026-11-10T10:52:54.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2589",
+          "dropped_by",
+          "npc",
+          "3382"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2455",
+          "dropped_by",
+          "npc",
+          "3382"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "5107",
+          "dropped_by",
+          "npc",
+          "3382"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "414",
+          "dropped_by",
+          "npc",
+          "3382"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4564",
+          "dropped_by",
+          "npc",
+          "3382"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "1516",
+          "dropped_by",
+          "npc",
+          "3382"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "5498",
+          "dropped_by",
+          "npc",
+          "3382"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "955",
+          "dropped_by",
+          "npc",
+          "3382"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "422",
+          "dropped_by",
+          "object",
+          "3695"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T23:30:00.000Z",
+            "after": "2026-11-10T03:25:10.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "3480",
+          "located_in",
+          "zone",
+          "1413"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-06T19:55:42.000Z",
+            "after": "2026-11-10T09:47:14.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "12616",
+          "located_in",
+          "zone",
+          "1440"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T23:57:55.000Z",
+            "after": "2026-11-10T05:41:05.000Z"
+          }
+        }
+      }
+    ],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "b2fd0ece8fc160ebeef9a9d5bd3e53dffd9d0d260f8df1f16062e817e7569fbb",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103652,
+        "sha256": "7708980be1d9b5549325b6eca64b9678cf49764b15c1f3cb52b0aa2cfa7be0b3",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 85987,
+        "sha256": "c765d88542bf5db656e93df3f59639b3ceb06688528c3c2c251f83795d70cae0",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      }
+    ]
+  },
+  "snapshotUpdate": "8AO final local actual-capture baseline:43newPF IDs(4canonical/39outside\u2192184candidates);3newdefinitions/all9154priorresolveddefinitions preserved;2285positions/5312index-onlyrows;54uninterpretedfield10changes(none8AO),notavailability/events. Two actualcanonical source changes811worlddrop/18722communityMagistratelead,notliveconfirmation;NPCreverseomission explicit. Everloot17newedges(5itemrelations/12NPClocations),13countertimeupdates(9installs/5lastSeen/1overlap),0removed/build/firstSeenchanges/selectededges. No diagnosticrefetches;finalreconcile followedwordingcorrection beforetests."
+}

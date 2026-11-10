@@ -1,44 +1,44 @@
 {
-  "capturedForCheckpoint": "8AN local actual-capture Playfulls/Everloot factual baselines",
-  "capturedUTC": "2026-11-10T07:53:00.082126+00:00",
+  "capturedForCheckpoint": "8AO final local actual-capture Playfulls/Everloot factual baselines",
+  "capturedUTC": "2026-11-10T12:22:29.514873+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23380,
-    "sourceDefinitions": 9154,
+    "itemCount": 23423,
+    "sourceDefinitions": 9157,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.7a75588c1e.json",
-        "bytes": 989113,
-        "sha256": "7a75588c1e1e76945006a7cec4858c4e40334c956e552a15ac9a7c6f72648a99",
+        "url": "https://playfulls.com/db/meta.21f84fc487.json",
+        "bytes": 989497,
+        "sha256": "21f84fc4877987a345bdac47b489fa7ba545cffc5a18fae85a6a58acd2ff453d",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.1a0db9b4be.json",
-        "bytes": 1326512,
-        "sha256": "1a0db9b4be1ed2e8f228bc0dd9ef59c961237641a639cdead478372a4ae90e47",
+        "url": "https://playfulls.com/db/gear.f240739399.json",
+        "bytes": 1331766,
+        "sha256": "f240739399e96b21e8631f0a7028a11c7b00ca76a230900d4e17f8e03c2a537f",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/goods.c2074ac0cd.json",
+        "url": "https://playfulls.com/db/goods.442f8a784e.json",
         "bytes": 464365,
-        "sha256": "c2074ac0cd66ea48e603867bdd546b006b0bfaa6f11bedb122c3a79c79c1e8d6",
+        "sha256": "442f8a784e46083a0a22585b607f3c17fd7701bafcf07a1dcc74eddc79fcc68c",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/other.f3463e4d0f.json",
+        "url": "https://playfulls.com/db/other.8599f03e7a.json",
         "bytes": 446192,
-        "sha256": "f3463e4d0fc83e1d79a39798d79671ceaf7620e51a2c4d99c541ade9840d6e91",
+        "sha256": "8599f03e7a6dc0f3466f24bad59940dbbf9d66251feaf93abc286c527926c219",
         "matchesRecordedFingerprint": true
       }
     ],
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "8AJlocal\u21928ANlocal:14newIDs alloutsidecanonical/disjoint121\u2192135pending9A.0prior itemresolvedfacts/names/field10 changes;7090index-onlyrows(3226canonical/3864outside),2718positions;one new DireMaul definition/all9153prior resolveddefinitions preserved. Same-run actualHTTPcaptures, noextra diagnosticrequests/currentloot orautomaticadoption."
+    "comparison": "8AO final local actual-capture baseline:43newPF IDs(4canonical/39outside\u2192184candidates);3newdefinitions/all9154priorresolveddefinitions preserved;2285positions/5312index-onlyrows;54uninterpretedfield10changes(none8AO),notavailability/events. Two actualcanonical source changes811worlddrop/18722communityMagistratelead,notliveconfirmation;NPCreverseomission explicit. Everloot17newedges(5itemrelations/12NPClocations),13countertimeupdates(9installs/5lastSeen/1overlap),0removed/build/firstSeenchanges/selectededges. No diagnosticrefetches;finalreconcile followedwordingcorrection beforetests."
   },
   "everloot": {
-    "total": 1399,
-    "qualifyingItemRelationships": 1199,
+    "total": 1416,
+    "qualifyingItemRelationships": 1204,
     "attribution": {
       "licence": "CC BY-SA 4.0",
       "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -52,25 +52,25 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "bfa5528768fba49c125c6ba3a97db28b91aa7b80d35a82ad701cdff4b540692e",
+        "sha256": "b2fd0ece8fc160ebeef9a9d5bd3e53dffd9d0d260f8df1f16062e817e7569fbb",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T07:40:17.217Z"
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
-        "bytes": 103653,
-        "sha256": "c303388741ba7cdd325762df770e3ba3967cec90233685e911fafaaa7a6aac14",
+        "bytes": 103652,
+        "sha256": "7708980be1d9b5549325b6eca64b9678cf49764b15c1f3cb52b0aa2cfa7be0b3",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T07:50:15.827Z"
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
-        "bytes": 82469,
-        "sha256": "2e4c3ba3790e469cb79a12ce7d51fec90670c8a78132d14e437b0a21a873dc3c",
+        "bytes": 85987,
+        "sha256": "c765d88542bf5db656e93df3f59639b3ceb06688528c3c2c251f83795d70cae0",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T07:50:15.827Z"
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
       }
     ],
-    "comparison": "8Y\u21928ANlocal:one npc3412 located_in zone1454 lastSeen update05:43:30Nov9\u219207:16:19Nov10;1399raw/1199qualified unchanged, no new/removed/itemloot/install/build changes;not loot-event/currentNPC observation inference."
+    "comparison": "8ANlocal\u21928AOfinal:17new exactedges(5item/12NPClocation),13updates(9installs/5lastSeen,oneoverlap),0removed/changedbuild/firstSeen/selected8AOedges. 1416raw/1204qualified. Exactscope exclusions incheckpoint8ao_feed_scope_review.json;notpersonalcurrentloot/rates."
   }
 }

@@ -1,0 +1,177 @@
+{
+  "status": "Sevenfull delta-source responses checked;publishedcommunitylead only/scopeexclusions preserved",
+  "sources": {
+    "16745": {
+      "url": "https://www.wowhead.com/forever/item=16745",
+      "bytes": 64778,
+      "sha256": "a2a3d14765973febe082ee8ee3518e8c608787dba8f4a64684c639f3b81b7c67",
+      "title": "Warsong Axe Shipment - Item - Forever",
+      "identity": {
+        "id": 16745,
+        "name": "Warsong Axe Shipment",
+        "classs": 12,
+        "subclass": 0,
+        "quality": 1,
+        "slot": 0,
+        "level": 1
+      },
+      "scope": "Questclass12/slot0non-equipment,not automatically adopted as gear."
+    },
+    "2763": {
+      "url": "https://www.wowhead.com/forever/item=2763",
+      "bytes": 262394,
+      "sha256": "aa22b86364e6301faade900eab1bf8267e160bae0414db76ebf54431d48230c4",
+      "title": "Fisherman Knife - Item - Forever",
+      "identity": {
+        "id": 2763,
+        "name": "Fisherman Knife",
+        "classs": 2,
+        "subclass": 15,
+        "quality": 0,
+        "slot": 13,
+        "level": 14,
+        "reqlevel": 9
+      },
+      "scope": "Poorquality0dagger,belowexistingautomaticcatalogueimportquality>=2 policy tools/build_forever_catalog.py:127\u2013129;no expansion/adoption inferred."
+    },
+    "18722": {
+      "url": "https://www.wowhead.com/forever/item=18722",
+      "bytes": 259773,
+      "sha256": "7a5e2af193d5b3421ae7a97a465107d2dd06dc7f873a1474564ada3f24fa4f45",
+      "title": "Death Grips - Item - Forever",
+      "identity": {
+        "id": 18722,
+        "name": "Death Grips",
+        "classs": 4,
+        "subclass": 4,
+        "quality": 3,
+        "slot": 10,
+        "level": 62,
+        "reqlevel": 57
+      },
+      "primaryItemNPCReference": 10435,
+      "scope": "Exactprimaryitempage supportsMagistrateBarthilas10435 communitylead;notliveobservation/rate. FullNPCtableomission retained separately,no reversejoin claimed."
+    },
+    "16784": {
+      "url": "https://www.wowhead.com/forever/item=16784",
+      "bytes": 50722,
+      "sha256": "93fa20d7838b951e5f2b524caf9ece7c7a4fe2d7cb839982ba2f07f9cc41eda6",
+      "title": "Sapphire of Aku'Mai - Item - Forever",
+      "identity": {
+        "id": 16784,
+        "name": "Sapphire of Aku'Mai",
+        "classs": 12,
+        "subclass": 0,
+        "quality": 1,
+        "slot": 0,
+        "level": 1
+      },
+      "scope": "Questclass12/slot0non-equipment,not automatically adopted as gear."
+    },
+    "16744": {
+      "url": "https://www.wowhead.com/forever/item=16744",
+      "bytes": 89780,
+      "sha256": "d501d1755ab601e0ebc9da1fdf058604b364720a2e38d27e620676a75bde4a9b",
+      "title": "Warsong Oil - Item - Forever",
+      "identity": {
+        "id": 16744,
+        "name": "Warsong Oil",
+        "classs": 12,
+        "subclass": 0,
+        "quality": 1,
+        "slot": 0,
+        "level": 1
+      },
+      "scope": "Questclass12/slot0non-equipment,not automatically adopted as gear."
+    },
+    "16762": {
+      "url": "https://www.wowhead.com/forever/item=16762",
+      "bytes": 58962,
+      "sha256": "38991eb8c71f822519571817e8454214b426e462774f9ba81468c06ebbbb171d",
+      "title": "Fathom Core - Item - Forever",
+      "identity": {
+        "id": 16762,
+        "name": "Fathom Core",
+        "classs": 12,
+        "subclass": 0,
+        "quality": 1,
+        "slot": 0,
+        "level": 1
+      },
+      "scope": "Questclass12/slot0non-equipment,not automatically adopted as gear."
+    },
+    "npc:10435": {
+      "url": "https://www.wowhead.com/forever/npc=10435",
+      "bytes": 88055,
+      "sha256": "3afb2a57f7525109a92988526d914a9e0ac75a863172ae7c5095e7005d6d0f0d",
+      "title": "Magistrate Barthilas - NPC - Forever",
+      "item18722Listed": false,
+      "dropRows": 18,
+      "scope": "FullNPCdrops omits18722 despiteprimaryitemreference/PFlead;omissionnotproofunavailable. No two-sided join/currentloot claim."
+    }
+  },
+  "newEverlootItemRelations": [
+    {
+      "fromKind": "item",
+      "fromId": 2763,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 3382,
+      "evidence": "observed",
+      "build": null,
+      "installs": 4,
+      "firstSeen": "2026-11-10T06:38:49.000Z",
+      "lastSeen": "2026-11-10T06:38:49.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 16784,
+      "rel": "dropped_by",
+      "toKind": "object",
+      "toId": 178185,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T20:48:21.000Z",
+      "lastSeen": "2026-11-10T09:27:05.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 16745,
+      "rel": "dropped_by",
+      "toKind": "object",
+      "toId": 178204,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T13:23:02.000Z",
+      "lastSeen": "2026-11-10T06:08:52.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 16744,
+      "rel": "dropped_by",
+      "toKind": "object",
+      "toId": 178195,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T04:31:48.000Z",
+      "lastSeen": "2026-11-10T08:34:20.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 16762,
+      "rel": "dropped_by",
+      "toKind": "object",
+      "toId": 177964,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:10:45.000Z",
+      "lastSeen": "2026-11-10T09:25:04.000Z"
+    }
+  ],
+  "primaryNPCOmission": "18722\u219210435itempage present;10435\u219218722NPCtable absent. Communityconfidence not independently observed loot. Original6 dungeonfollowups remain.",
+  "canonicalFeedAdditions": "811genericworlddrop;18722communityMagistratelead;276399/276419empty source lists retainreviewedoriginuncertainty."
+}

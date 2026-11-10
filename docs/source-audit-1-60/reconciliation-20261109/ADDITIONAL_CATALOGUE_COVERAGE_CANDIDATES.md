@@ -1,6 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
-Current pending total: **145 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AO below; original-count sections are historical.
+Current pending total: **184 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AO below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
@@ -45,3 +45,11 @@ Fourteen actual feed additions are all outside canonical7,707 and disjoint121 pr
 Ten cloak IDs21394/21397/21400/21403/21406/21409/21412/21415/21418/21710 are outside canonical/queue/registry and disjoint135 earlier candidates. Nine have exact set-member links in already read8AN full gear pages;21710 is an exact third8802 reward choice. Parent-page full response hashes are retained in [scope correction](checkpoint8ao_cloak_scope_correction.json), not invented own-cloak response hashes. Added for9A identity/version/scope/eligibility/acquisition audits only, not completed research or automatic catalogue adoption. This is a discovered coverage gap, not ten new feed/game items. Playfulls totals remain23,380/9,154.
 
 Earlier8AM/8AN prose calling these cloaks completed/researched was wrong; exact ID inspection corrects it. The7,707 frozen catalogue has only4Back-slot rows.9A must systematically audit Back coverage against full cache/feed equipment, beyond these ten siblings/new feed deltas. Runtime identities/filters and all existing full validation requirements remain protected; no scope expansion is presumed approved by a passing count test.
+
+## 8AO final local feed extension —184 total pending candidates
+
+Fresh mandatory final reconciliation adds43 Playfulls IDs:four already canonical(811/18722/276399/276419) and39 outsidecanonical/disjoint145 prior candidates→184 total. All39 exact names/source hints are retained in [raw review](checkpoint8ao_raw_upstream_review.json)/candidate CSV; no automatic gear adoption or asserted new game/current loot. The prior ten sibling cloaks remain scope-audit candidates;9A systematicBack coverage audit still required.
+
+Playfulls23,423/9,157 with three new definitions/all9,154 prior resolveddefinitions preserved;2,285positions/5,312index-onlyrows/54uninterpretedfield10changes(none8AO),no prior resolved acquisition/name changes. Actualcanonical additions:811 generic worlddrop and18722 communityMagistrateBarthilas lead;276399/276419 source lists empty. DeathGrips primary item agrees on10435 but fullNPCdrops omits18722,so no two-sided/current-observed claim.
+
+Everloot1,416raw/1,204qualified adds17relations(5item/12NPC-location),13counter-time updates,0removed/build/selected8AOedges. [Seven-source scope review](checkpoint8ao_feed_scope_review.json) confirms2763 poorquality0dagger below existingautomaticquality>=2 policy;16784/16745/16744/16762 are questclass12/slot0non-equipment. These do not become extra gear candidates or imply currentrates. Same-run captured bytes only, no extra diagnosticfeedrequests.
