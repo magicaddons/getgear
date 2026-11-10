@@ -1,5 +1,5 @@
 {
-  "status": "Confirmed cold-client fallback defect;repair/regressions/integration pending",
+  "status": "Exact4768fallbackrepair/generatorprotection/targetedtests+fullsequentialfinal localPASS;nonreleaseCI/bot pending",
   "baseline": "0e5e077b44999954d93cf4e6c0492ceac6455aae",
   "itemID": 4768,
   "name": "Adept's Gloves",
@@ -33,5 +33,22 @@
     "scope": "ActualretainedhashmatchedForevercachetooltipfacts vsClassic+olderAHledgerfallback;notlive/proposedautomaticchanges. Header q meansquality;EquipmentCache tuple6issourceCode,notquality."
   },
   "reproduction": "ActualGearCompare+actualWorldDropBoEIndex with GetItemInfo=nil hides4768;expected-visible regression fails beforechanges. LoadedliveRare/BoP wouldcorrectlyoverride;defectisprovisionalfallbackonly.",
-  "scope": "EquipmentCache tuple6=sourceCode,notquality;no catalogueidentity/stat/class/equipcorrection needed. Removeexact4768from2341fallback;retain2340others. ProtectgeneratoragainstobsoleteClassic/AHledgerinputswithreviewedexclusion;meaningful actualindex/live-override andofflinegeneratorregressions. No unrelatedfilterchange/release/main action."
+  "scope": "EquipmentCache tuple6=sourceCode,notquality;no catalogueidentity/stat/class/equipcorrection needed. Removeexact4768from2341fallback;retain2340others. ProtectgeneratoragainstobsoleteClassic/AHledgerinputswithreviewedexclusion;meaningful actualindex/live-override andofflinegeneratorregressions. No unrelatedfilterchange/release/main action.",
+  "repair": {
+    "beforeCount": 2341,
+    "afterCount": 2340,
+    "removedIDs": [
+      4768
+    ],
+    "addedIDs": [],
+    "other2340IDsExact": true,
+    "beforeIndexSHA256": "ed19112871795b70159b2baae4a76ccfdaaac1e0fc3f33e59cebfd177a80f30d",
+    "afterIndexSHA256": "e513007214fd7081f66100a9c3e92fc701d3f8456d4300dc2d3889d030c0719c",
+    "exclusionsFile": "docs/source-audit-1-60/worlddrop_boe_fallback_exclusions.json",
+    "generatorProtection": "ReviewedForeverexclusionsprecedeClassic/AHledger;exactID/name+non-green/non-BoEfacts+twofingerprints validated",
+    "targetedTests": "Actualcold-index4768visible/727hidden/live4768greenBoEhidden;offlinefullgenerator102staleeligibleIDs\u2192101preservedexcept4768/invalidgreenBoEexclusionfailsbeforenetwork",
+    "workflow": "Existingnon-releaseworkflow addssecondofflinePythonregression/generator syntax;no newworkflow/automation/release. Fullvalidation pending.",
+    "finalLocal": "14Lua+2offlinePython/24modules/fourreports/generator+capture+reconciler syntax PASS;17localPASS",
+    "ci": "pending"
+  }
 }

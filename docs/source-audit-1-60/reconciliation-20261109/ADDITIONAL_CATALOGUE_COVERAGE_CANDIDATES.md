@@ -1,6 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
-Current pending total: **201 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AQ below; original-count sections are historical.
+Current pending total: **210 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AU below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
@@ -61,3 +61,7 @@ Mandatory fresh validation after17 source-note readability edits captures11 addi
 ## 8AQ upstream extension —201 pending candidates
 
 Fresh actual reconciliation adds7 Playfulls IDs:canonical13402 Timmy’s Galoshes gets acommunity Timmy reference,while13384 Rainbow Girdle,13537 Chillhide Bracers,18372 Blade of the New Moon,18392 Distracting Dagger,18395 Emerald Flame Ring,22411 Helm of the Executioner are alloutsidecanonical/disjoint195→201pending9A. Names/source fields are feed references,not eligible additions/currentloot/newgamecontent. All23434priorrawrows and9157fullsource-definitionobjects/sk exact;only metadata st changes. See checkpoint8aq_raw_upstream_review.json and checkpoint8aq_upstream_scope_review.json. Timmy item names10808,but full NPC loot omits13402;communityonly/noindependentlive/rates or sixexception closure. Everloot1416/1204relations/counters exact. Tencloak andsystematicBackscope audit requirements remain.
+
+## 8AU initial fresh upstream extension —210 pending candidates
+
+Nine newPlayfulls IDs are outsidecanonical/disjoint201:10847Dragon’sCall,12554HandsExaltedHerald,14022BarovPeasantCaller,18375BracersEclipse,18394DemonHowlWristguards,280022ScaleguardScimitar,281598Rusthowl’sWornCollar,286597CalmAirBand,286609Krellack’sCarapace. Exactfeednames/sourcefields are preserved;no automaticadoption/currentloot/newgameitem claim. See checkpoint8au_raw_upstream_review.json/checkpoint8au_delta_scope_review.json. Separate full72-item Everloot delta scope finds onlyalreadycanonical15477newobservation;71others excludeunderexistingquality/class/slot policy,includingfourpoorqualitycloaks. This doesnotresolve systemicBackscope deficiency oradd71newgear candidates. All210needindividual9Aidentity/version/scope/eligibility/acquisition audits.

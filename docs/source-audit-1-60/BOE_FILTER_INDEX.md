@@ -1,6 +1,6 @@
 # Conservative green BoE world-drop filter index
 
-- Total items: **2341**
+- Total items: **2340**
 - These are only GENERIC WORLD DROPS; crafting, quest, dungeon and vendor items were excluded.
 - Default overlay rule uses GetItemInfo when loaded; this index is only the offline fallback.
 - The full guide and user Hidden/Acquired statuses are unchanged.
@@ -18,3 +18,9 @@
 - no-classic-record: 82
 - not-green-boe: 446
 - targetable: 14
+
+## Reviewed Forever exception — checkpoint 8AU, 10 November 2026
+
+The earlier2,341-entry generated baseline is retained except for **4768 Adept’s Gloves**. Current published Forever item and hash-matched client-cache tooltips identify Rare/Bind on Pickup. Its older Classic/AHledger classification could hide it while client metadata was uncached. [Reviewed exclusions](worlddrop_boe_fallback_exclusions.json) prevents regeneration from obsolete inputs reintroducing this entry. Exactly2,340other IDs are unchanged;the complete2,341-entry retained-cache audit found only this contradiction.
+
+This was a targeted reviewed correction,not a new fetch/regeneration of the five historical feeds fingerprinted above. Current publication fingerprints/reproduction/full cache audit are in [checkpoint8AU](reconciliation-20261109/checkpoint8au_fallback_review.json). Published facts remain current-live-unverified. Loaded GetItemInfo still wins,including if it supplies green/BoE data for this ID;ordinary green-BoE fallback entries remain suppressed. No gear identity/stat/class/equip/settings or recipe change. The actual-index Lua regression and an offline real-generator fixture verify the exception,unchanged peers,and live overrides.

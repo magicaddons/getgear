@@ -53,6 +53,21 @@ assert(addon:ShouldShowOverlayWorldBoEDrops(world(99999))==true,
 GetItemInfo=function() return "Changed item","item:1121",4,24,19,"Weapon","Staff",1,"INVTYPE_2HWEAPON",0,10,2,10,1 end
 assert(addon:ShouldShowOverlayWorldBoEDrops(world(1121))==true,
     "Live client must override an obsolete Classic-reference fallback")
+-- Exercise the actual shipped fallback too: current Forever publications
+-- identify Adept's Gloves as Rare/BoP, unlike its older Classic metadata.
+assert(loadfile(root.."/WorldDropBoEIndex.lua"))("GetGear",addon)
+GetItemInfo=function() return nil end
+assert(addon:ShouldShowOverlayWorldBoEDrops(world(4768))==true,
+    "Uncached Adept's Gloves must not inherit the stale Classic green-BoE classification")
+assert(addon:ShouldShowOverlayWorldBoEDrops(world(727))==false,
+    "Other actual provisional green-BoE entries must remain suppressed")
+GetItemInfo=function(id)
+    if id==4768 then
+        return "Adept's Gloves","item:4768",2,17,12,"Armor","Cloth",1,"INVTYPE_HAND",0,0,4,1,2
+    end
+end
+assert(addon:ShouldShowOverlayWorldBoEDrops(world(4768))==false,
+    "Loaded green-BoE client facts must still override a published fallback exclusion")
 -- Shared state isn't mutated by the presentation-only filter.
 assert(addon.db.overlay.hideGreenBoEWorldDrops==true)
 local ui=assert(io.open(root.."/UI.lua")):read("*a")

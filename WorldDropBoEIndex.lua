@@ -38,7 +38,7 @@ GetGear.WorldDropGreenBoEIndex = {
     [4564]=true, [4566]=true, [4567]=true, [4568]=true, [4569]=true, [4570]=true, [4571]=true, [4575]=true, [4576]=true, [4577]=true,
     [4660]=true, [4661]=true, [4676]=true, [4697]=true, [4699]=true, [4705]=true, [4707]=true, [4708]=true, [4709]=true, [4712]=true,
     [4714]=true, [4717]=true, [4718]=true, [4720]=true, [4721]=true, [4723]=true, [4724]=true, [4725]=true, [4727]=true, [4729]=true,
-    [4731]=true, [4733]=true, [4734]=true, [4736]=true, [4737]=true, [4738]=true, [4767]=true, [4768]=true, [4785]=true, [4810]=true,
+    [4731]=true, [4733]=true, [4734]=true, [4736]=true, [4737]=true, [4738]=true, [4767]=true, [4785]=true, [4810]=true,
     [4861]=true, [4949]=true, [4998]=true, [4999]=true, [5001]=true, [5002]=true, [5003]=true, [5007]=true, [5009]=true, [5011]=true,
     [5028]=true, [5029]=true, [5069]=true, [5071]=true, [5079]=true, [5112]=true, [5180]=true, [5182]=true, [5207]=true, [5212]=true,
     [5213]=true, [5214]=true, [5215]=true, [5216]=true, [5245]=true, [5256]=true, [5422]=true, [5425]=true, [5608]=true, [5624]=true,

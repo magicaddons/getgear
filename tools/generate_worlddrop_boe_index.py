@@ -6,6 +6,8 @@ The inclusion test requires ALL of:
   - Classic's published item metadata says Uncommon + Binds when equipped;
   - a separate Forever item catalogue independently says quality UNCOMMON;
   - exact name agreement between Classic and GetGear (normalised punctuation).
+Reviewed Forever non-green/non-BoE exceptions take precedence over those
+provisional references. They do not override loaded live-client metadata.
 This is a fallback when Forever's own GetItemInfo isn't cached. Live client
 quality/bind always take priority and can override it. No server loot claims.
 """
@@ -13,6 +15,25 @@ import csv,json,urllib.request,re,hashlib,collections,pathlib,sys
 root=pathlib.Path(".")
 source=root/"docs/source-audit-1-60/all_items.csv"
 assert source.exists(), "Run 1-60 evidence audit before generating world-drop BoE index"
+def reviewed_exclusions(path):
+    records=json.loads(path.read_text(encoding="utf8"))
+    assert isinstance(records,list), "Reviewed fallback exclusions must be a list"
+    result={}
+    for record in records:
+        assert isinstance(record,dict), "Invalid reviewed fallback exclusion"
+        iid=record.get("itemID")
+        assert type(iid) is int and iid>0 and iid not in result, "Invalid/duplicate exclusion ID"
+        assert isinstance(record.get("name"),str) and record["name"].strip(), "Missing exclusion name"
+        quality,binding=record.get("quality"),record.get("binding")
+        assert type(quality) is int and quality>=0 and type(binding) is int and binding>=0, "Missing published item facts"
+        assert quality!=2 or binding!=2, "A green BoE cannot be excluded by this register"
+        hashes=record.get("sourceSHA256")
+        assert isinstance(hashes,dict) and record.get("sourceURL") in hashes and len(hashes)>=2, "Missing independent publication fingerprints"
+        assert all(isinstance(url,str) and url.startswith("https://") and isinstance(sha,str) and re.fullmatch(r"[0-9a-f]{64}",sha) for url,sha in hashes.items()), "Invalid publication fingerprint"
+        result[iid]=record
+    return result
+exclusionsPath=root/"docs/source-audit-1-60/worlddrop_boe_fallback_exclusions.json"
+exclusions=reviewed_exclusions(exclusionsPath)
 def pull(url):
     req=urllib.request.Request(url,headers={"User-Agent":"GetGear-DataQualityIndex/1.0","Accept":"application/json"})
     with urllib.request.urlopen(req,timeout=40) as resp:data=resp.read(30000000)
@@ -48,6 +69,9 @@ for row in records:
         rejects["targetable"]+=1;continue
     if row.get("profession"):rejects["crafted"]+=1;continue
     iid=int(row["itemID"])
+    if iid in exclusions:
+        assert canon(exclusions[iid]["name"])==canon(row["name"]), "Reviewed exclusion item/name mismatch"
+        rejects["reviewed-forever-non-green-or-non-boe"]+=1;continue
     other=byClassic.get(iid)
     if not other:rejects["no-classic-record"]+=1;continue
     if canon(other.get("name"))!=canon(row["name"]):
@@ -76,6 +100,7 @@ audit.write_text("# Conservative green BoE world-drop filter index\n\n"+
     "- Default overlay rule uses GetItemInfo when loaded; this index is only the offline fallback.\n"+
     "- The full guide and user Hidden/Acquired statuses are unchanged.\n"+
     "- Classic binding metadata is a provisional reference, not verified live Forever binding.\n\n"+
+    "- [Reviewed Forever exceptions](worlddrop_boe_fallback_exclusions.json) override stale provisional references; loaded live-client metadata still wins.\n\n"+
     "## Data provenance\n"+
     f"- [Classic item reference]({classicUrl}), SHA256 "+classic_sha+"\n"+
     "".join(f"- [Forever quality catalogue]({url}), SHA256 {sha}\n" for url,sha in sources)+

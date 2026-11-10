@@ -1,6 +1,6 @@
 # Checkpoint 8AU — 72 world-drop cases at catalogue levels 12–13
 
-Publication research preserved 10 November 2026 UTC;metadata integration,one confirmed cold-client fallback repair,fresh full local/CI/bot validation pending. Previous full PASS8AT:[42833637279](https://github.com/magicaddons/getgear/actions/runs/42833637279),source `426c317a20dd1cbd0841cbc92caebc7e89b1687e`,inspected bot `25f9313584a5dc9d030b8d91071d73512221b88c`.
+Integrated with exact fallback repair and final full sequential local PASS 10 November 2026 UTC;non-release CI/bot review pending. Previous full PASS8AT:[42833637279](https://github.com/magicaddons/getgear/actions/runs/42833637279),source `426c317a20dd1cbd0841cbc92caebc7e89b1687e`,inspected bot `25f9313584a5dc9d030b8d91071d73512221b88c`.
 
 ## Scope and evidence
 
@@ -39,12 +39,24 @@ Paper19424 unexpectedly names Ansekhwa11869,and his full loot table independentl
 
 45Everloot observations across29items:43NPC/twoLargeBatteredChest75293 object edges,buildnull/3–6installs.43own item tables list the actor;31have independent full reverse support(29NPC/twoobject). Two actors are absent from returned200-row item lists:2079→BristlebackThornweaver3261 and3196→Verog3395;their full NPC tables include the gear and the API reports agree. Possibly capped item lists are not negative inventories. Preserve attributed observations without personal/currentbuild/exclusive-source/rate claims. Data:[Everloot](https://everloot.app),[CC BY-SA4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
-## Confirmed fallback defect — repair pending
+## Confirmed fallback defect — exact repair, final local PASS
 
 [Fallback review](checkpoint8au_fallback_review.json) reproduces a cold-client false hide of4768using the actualGearCompare andactualWorldDropBoEIndex with uncachedGetItemInfo. Both the actual current full item and retained hash-matched Forever cache show Rare/BoP,yet the older provisional Classic/AHledger index includes4768. Loaded client data already correctly overrides;the defect is fallback-only. EquipmentCache tuple6is a sourceCode,not rarity,no catalogue rarity rewrite.
 
-The complete2341-entry fallback-vs-cache audit finds **only4768** contradictory;all2341IDs are present. Repair should remove that exact entry,retain2340others,prevent an obsolete-input generator rebuild reintroducing it,and add meaningful actual-index/cold-client/live-override and offline-generator regressions. No broader filter/class/stat/equip/settings changes. Current live client remains authoritative,including if it reports greenBoE in future. This genuine verified deficiency warrants the bounded correction inside8AU. The before-fix expected failing local reproduction is not a failed CI run;no repair/source commit has yet been pushed.
+The complete2341-entry fallback-vs-cache audit finds **only4768** contradictory;all2341IDs are present. The implemented repair removes that exact entry,retains2340others,prevents an obsolete-input generator rebuild reintroducing it,and adds meaningful actual-index/cold-client/live-override and offline-generator regressions. No broader filter/class/stat/equip/settings changes. Current live client remains authoritative,including if it reports greenBoE in future. This genuine verified deficiency warrants the bounded correction inside8AU. The before-fix expected failing local reproduction is not a failed CI run;targeted and full final local regressions pass,with non-release CI/direct-bot review still required.
 
 ## Resume
 
 Integrate72 source records/preserve3225prior objects;complete the exact fallback repair/provenance/regressions,then fresh actual same-run capture exit0/fulllocal and non-release CI/bot review. Keep137source fingerprints and all unresolved boundaries above. Registry3225/index4696/display4695/books759;frozen2677includes72untilvalidation. Next8AV:all87world-drop cases at cataloguelevels14–15(38+49),numeric item-ID order,verifiedqueue. Thenhigherworld/9A201candidates/systematicBackscopeaudit/finalintegrity/acceptanceplan. Sixdungeonexceptions/954livebookroutes remain open. No main/Beta8/build/package/tag/release/billing action.
+
+## Final local integration and upstream review
+
+[Local results](checkpoint8au_local_results.txt):final8aufinal actualcapture exited0 before14Lua+2offlinePython/24modules/fourreports/3toolsyntax PASS(17localPASS). [Fallback repair](checkpoint8au_fallback_review.json):only4768removed/2340peers exact;reviewed data registry,generator protection,actual-index/liveoverride and offline real-generator fixture pass. NoGearComparelogic change or lost defaultgreen-BoE behavior.
+
+[Additional delta scope](checkpoint8au_delta_scope_review.json) fingerprints73more full pages(72items/oneNPC;72new/onecached). One already-reviewed15477gets a new attributed Dustrunner3113report,exactitem+NPC corroborated,3installs/buildnull/lastrecorded5Nov. Its original details/fingerprints remain;3224otherpriorobjects exact.71other newobserved item IDs are excluded byexistingquality/class/slotpolicy:40poor/commongear,10consumables,fourtradegoods,fivequestitems,12misc/junk/key. This neither importsnewgear nor changesoriginal954book/recipe scope. Fourpoorcloaks do notcloseBackscope audit. Core137+delta73=210distinctfullresponses,not210completednewqueuecases.
+
+[Initial raw delta](checkpoint8au_raw_upstream_review.json):PF+9outside/disjoint201→210pending9A,oneFacingTruthnavigationpathenrichment,4998index-onlyrows,51uninterpretedfield10changes(selected0),fourstat-summarytext/rawtagcells867/280604notadoptedasgame/effect/class/stat changes.9156priorfullsourceRows exact/onepathenriched/oneTheLastBarovdefinition added. EV+133edges(109itemNPC2itemobject22NPClocation)/26updates(22lastSeen7installs3overlap),no removed/build/firstSeen.45coreobservations unchanged.
+
+[Final raw comparison](checkpoint8aufinal_raw_upstream_review.json):23450/9158/1549raw1315qualified completePFresponseobjects/bytes/hash andEVedgefields exactunchanged frominitialreview. Eightfinal actualsame-runHTTPbodies/provenance/registryhash match. Original initial/final captures/reviews remain separate;no replay or diagnosticrefetch. [Final companion remaps](checkpoint8aufinal_companion_remap_review.json) and[semantic comparison](checkpoint8au_upstream_review.json):73summarycells(72new+15477update),only15477observed-count fact,1616sourceRow-onlycells across8CSVs,noothersemantics.
+
+Registry3297/index4768/display4767/books759/crafts1254/ingredients4857/7707identities36341objectives/filters/settings/sixdungeonexceptions preserved. Frozenremaining2605worlddrop;8AV87levels14–15(38+49)marked,CI/bot stillrequired beforecontinuing.9A210candidate/systematicBack audit and954livebookroutes remain. No main/release action.
