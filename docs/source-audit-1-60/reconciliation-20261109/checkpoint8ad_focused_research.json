@@ -1,0 +1,73 @@
+{
+  "reviewedOn": "2026-11-10",
+  "refinementQueryCount": 4,
+  "rankRefinementFacts": [
+    {
+      "url": "https://forever-codex.com/items/?id=16538",
+      "rank": 12
+    },
+    {
+      "url": "https://forever-codex.com/items/?id=16546",
+      "rank": 12
+    },
+    {
+      "url": "https://questcorehq.com/wowdb/forever/item/16538/generals-silk-cuffs",
+      "rank": 12
+    },
+    {
+      "url": "https://questcorehq.com/wowdb/forever/item/16546/generals-plate-armguards",
+      "rank": 12
+    },
+    {
+      "url": "https://forever-codex.com/items/?id=16482",
+      "rank": 12
+    },
+    {
+      "url": "https://questcorehq.com/wowdb/forever/item/16537/generals-silk-sash",
+      "rank": 12
+    },
+    {
+      "url": "https://questcorehq.com/wowdb/forever/item/16482/marshals-plate-girdle",
+      "rank": 12
+    }
+  ],
+  "readers": [
+    {
+      "url": "https://questcorehq.com/wowdb/forever/item/16482/marshals-plate-girdle",
+      "finding": "Focused numericID16482 record shows explicit rank12, no seller table; footer historical VMaNGOS patch1.8. Generic Buyfor4g12s39c is not a merchant quote/current acceptance."
+    },
+    {
+      "url": "https://moredots.io/item/19952",
+      "finding": "Cached discovery showed one AllTheThings5.3.15/source-only restricted/oldbuild input bundle at internalObject180327, current-build verification incomplete. Focused actual reader now says no known acquisition data. PrimaryObject180327HTTP404; no current object identity or alternative exchange asserted."
+    }
+  ],
+  "excludedNavigationCount453": "Codex total number of PvP-rank items, not a selected rank; explicitly excluded.",
+  "failedFullHTTP": [
+    {
+      "kind": "object",
+      "id": 180327,
+      "status": 404
+    },
+    {
+      "kind": "item",
+      "id": 18705,
+      "status": 403
+    },
+    {
+      "kind": "npc",
+      "id": 14494,
+      "status": 403
+    },
+    {
+      "kind": "npc",
+      "id": 14524,
+      "status": 403
+    },
+    {
+      "kind": "npc",
+      "id": 14525,
+      "status": 403
+    }
+  ],
+  "fallbackScope": "Connected web18705 returns legacy comments, including Thottbot; these do not independently confirm current Forever Onyxia loot/rates. NPC fallbacks inspected separately; no full HTTP response hash invented."
+}
