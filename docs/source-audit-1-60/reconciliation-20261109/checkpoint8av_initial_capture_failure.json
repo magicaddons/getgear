@@ -1,0 +1,55 @@
+{
+  "status": "Expected guard stopped local reconciliation before output/test claim;corrected1189summary explicitly saysunverified. Actualfresh8avfixed rerunexit0/fullsuitePASS;nofailedCI.",
+  "exception": "AssertionError: reviewed summary must contain unverified;1189 used uncorroborated",
+  "responses": [
+    {
+      "bytes": 989635,
+      "sha256": "289efe41ebdf30adf9c10d6260d8276ba55c0ebb8d86d2d2c05edb7720f53a6c",
+      "capturedUTC": "2026-11-10T18:56:10.064314+00:00",
+      "url": "https://playfulls.com/db/meta.289efe41eb.json"
+    },
+    {
+      "bytes": 1334801,
+      "sha256": "429f648bd3500d6eee3f13f4a19511c95f70e0a5731a97e9fcf4852dcb50ebf7",
+      "capturedUTC": "2026-11-10T18:56:10.248872+00:00",
+      "url": "https://playfulls.com/db/gear.429f648bd3.json"
+    },
+    {
+      "bytes": 464365,
+      "sha256": "0f9d31efd88b209a131cbefeec37b5e7743379dd56cf838828e746798683eca0",
+      "capturedUTC": "2026-11-10T18:56:10.451730+00:00",
+      "url": "https://playfulls.com/db/goods.0f9d31efd8.json"
+    },
+    {
+      "bytes": 446192,
+      "sha256": "61189f63ec3e723ce98e15bd27153134f1460b0350437ff95012cff1ad3ef473",
+      "capturedUTC": "2026-11-10T18:56:10.588682+00:00",
+      "url": "https://playfulls.com/db/other.61189f63ec.json"
+    },
+    {
+      "bytes": 103443,
+      "sha256": "f255ac0f83150a3e4b1155ea53c84749a88387531a87748735ead37742273e49",
+      "capturedUTC": "2026-11-10T18:56:15.651078+00:00",
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500"
+    },
+    {
+      "bytes": 103546,
+      "sha256": "d2da0e00147cf94c14646cd40c6f012382fc8f0a4c160d8b63809b9ada97bd82",
+      "capturedUTC": "2026-11-10T18:56:19.529845+00:00",
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500"
+    },
+    {
+      "bytes": 103400,
+      "sha256": "fc0cef98387239f3dced7240c99fa32555711ce8e9bf6645174d79c2c0fa5319",
+      "capturedUTC": "2026-11-10T18:56:22.767386+00:00",
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000"
+    },
+    {
+      "bytes": 10711,
+      "sha256": "2e2faff8639bd982c0d0c304aa1ec03fc5c5c376036165b1dd8500e7cc0e8dc7",
+      "capturedUTC": "2026-11-10T18:56:25.847652+00:00",
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500"
+    }
+  ],
+  "scope": "These are original actual partial-run HTTP bodies,not PASS validation/currentlive proof. No replay/fallback/diagnosticrefetch. Subsequentrun actualfreshsame-run bodies separate."
+}

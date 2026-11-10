@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8AU finalactual capture after15477newobservation append",
-  "capturedUTC": "2026-11-10T18:34:49.337922+00:00",
+  "capturedForCheckpoint": "8AV actual8avfixedcapture after required unresolved-summary wording correction",
+  "capturedUTC": "2026-11-10T18:57:08.799876+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23450,
@@ -34,10 +34,10 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "9newoutside/disjoint201\u2192210pending9A;one255941FacingTruthnavigationpathenrichment(notquest/gatechange);4998index-onlyrows/51uninterpretedfield10changes selected0.4otherrawcells867/280604stat-summarytext/rawtags,notcanonicalstat/class/effectchanges.9156priorfullsourceRows exact/onepathenriched/oneTheLastBarovdefinition added;wholeoldrowlengths exact. FinalrefreshcompletePFresponseobjects/bytes/hash exactunchanged frominitial8AU;original9ID/path/4presentationcell/51raw10/4998offsetdelta preservedseparately."
+    "comparison": "8AUfinal\u21928AV completePFresponseobjects/bytes/hash unchanged,23450/9158,allrows/defs/rawfields exact;210 candidates unchanged."
   },
   "everloot": {
-    "total": 1549,
+    "total": 1550,
     "qualifyingItemRelationships": 1315,
     "attribution": {
       "licence": "CC BY-SA 4.0",
@@ -52,32 +52,32 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "4c83564f39d19b84b82c8124d022ab37e426d6db9fb77a73555919e87ebbbbbd",
+        "sha256": "0b827cc64ffcd142e5ce44e10f1f8f4ba66ab3847185d6eb37802428d03eab96",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T18:20:14.094Z"
+        "dataAsOf": "2026-11-10T18:50:15.449Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103546,
-        "sha256": "46eef084aa3f10d7df92c4c11c20fc4ae81aefa6f63dbb92e4889e632660e12e",
+        "sha256": "3f2ade1ec957c923633ce42870c56c2166c02a9a081ff12be630e220c27b591f",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T18:20:14.094Z"
+        "dataAsOf": "2026-11-10T18:50:15.449Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103400,
-        "sha256": "cea38946b85ecb0c2f981a936afa6505899d1641ff28d9b99d0813003384eb55",
+        "sha256": "4116798c515f197d89fe0c5414f42fd721e390811d3eec99fef260f6d0d68166",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T18:20:14.094Z"
+        "dataAsOf": "2026-11-10T18:50:15.449Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
-        "bytes": 10506,
-        "sha256": "55ae39dd17ead635330c002208ebc3482f4deca89e59bcf064d8431fef6a7603",
+        "bytes": 10711,
+        "sha256": "fbcf15cb2b141e15ffb6b2995471804f4fe2054ed86ca359ddddbe20ed39b672",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-10T18:20:14.094Z"
+        "dataAsOf": "2026-11-10T18:50:15.449Z"
       }
     ],
-    "comparison": "133new=109itemNPC+2itemobject+22NPClocation/26priorupdates(22lastSeen7installcells,3overlap)/0removed-build-firstSeen.72uniqueitemIDs fullprimaryscope=1canonical15477new3-installDustrunner3113(fullitem+NPC)+71excludedexistingquality/class/slotpolicy.45selected8AUobservations unchanged.8actualsame-runbodies/hashmatch;botbytesnotinferred. Finalrefresh1549/1315 exactedgefields/build/install/first-lastseen unchanged frominitial8AU;0new/removed/updatedselectededges. FourfreshactualAPIpages;botbytesnotinferred."
+    "comparison": "8AUfinal\u21928AV one newNPC4198located_inzone1442/buildnull3installs;priorNPC11862samezoneinstall3\u21924/lastSeen only;no newitem/drop relationship/build/firstSeen/removal changes.56selectededges33items unchanged;55ownitemactors54fullreverse(14129\u2192268624 absentbothreturnedlists/14727\u21923282oldfull403).Eightactualsame-runoriginalbodies/hashmatch;botbytesnotinferred."
   }
 }
