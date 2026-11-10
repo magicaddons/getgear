@@ -1,0 +1,9 @@
+# Checkpoint8AL — publication research preserved, integration pending
+
+## Checkpoint8AL research preserved — integration pending
+
+7BlessedQirajiquestweapons21242/21244/21268/21269/21272/21273/21275:7exactqueries/26fullprimarysources(7gear/2quests/3inputs/13NPC/1reusedfaction). Armaments21232→8789/Arygos15380 choose1of4(Axe/Pugio/Bulwark/Musket);Regalia21237→8790/Merithra15378 choose1of3(WarHammer+twostaves). Eachrequires1boundtoken+3ElementiumORE18562,notbars17771/Thunderfury10barcost/learnedcraft/wielderMining.20tokenNPCreversejoins across10sharedactors/1oreBlackwingTechnician13996join identifyinputs,notfinishedweaponloot/rates/10independentencounters. BothactorNPCpages independentlystart/endexactquests butmapsempty;TempleAQcontextonly/no guessedwaypoint. Min60/Both/repeatable/200Nozdormugain notcurrentacceptance/rep/classgate. FourplainUniquegear notcopiedtoother3;no namedfamilylimit/oldferalstatadoption.
+
+Read CHECKPOINT8AL_IN_PROGRESS.md/working_evidence/discovery_index. Environmenttransition07:14preservedworkspace/cache,oldterminalhandles/transientsearchpayloadlost;indexpreservesactuallyobservedURLs/querystringswithnullbodyflags,notclaimedrerun. Primary26responses hash-checked. Ownboundedlease reestablished after lockprobe showednoowner;no otherworkerlockremoved. **Resumeintegrate7**,preserve2852priorobjects/canonicaleligibility/strongersources;freshsame-runHTTPcapture WAITexit0/full14Lua+offlinePython/24modules/fourreports/local+CI/bot;then8AM45AQclassarmour21329–21391. Registry2852/index4479/frozen3050/7still8AL unchanged. LatestfullPASS8AK42773331069/botb72a360;121separate9Acandidates/23366-9153diagnosticbaseline/liveexceptions remain. No release/mainaction.
+
+Exact input quantities,one-choice outputs andindependentactor/inputNPCjoins aredurablefacts. No runtime/queueadvance;nofullarticleprose retained. Do not repeat verifiedprimaryreads orcopyinputloot tofinishedgear.

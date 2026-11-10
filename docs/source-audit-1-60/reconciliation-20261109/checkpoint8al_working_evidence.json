@@ -1,0 +1,4029 @@
+{
+  "status": "Publication research complete;integration/fullvalidation/queueadvance pending",
+  "baseline": "462b3f557832e874819b779a76e4b01e6765c3e8",
+  "reviewedOn": "2026-11-10",
+  "counts": {
+    "selected": 7,
+    "discoveryQueries": 7,
+    "fullPrimarySourcePages": 26,
+    "gearPages": 7,
+    "questPages": 2,
+    "inputItemPages": 3,
+    "npcPages": 13,
+    "reusedFactionPages": 1,
+    "tokenNPCReverseJoins": 20,
+    "oreNPCReverseJoins": 1,
+    "actorQuestStartEndJoins": 4,
+    "independentFactionQuestGainJoins": 2,
+    "plainUniqueGear": 4,
+    "currentLiveVerified": 0
+  },
+  "items": {
+    "21242": {
+      "url": "https://www.wowhead.com/forever/item=21242",
+      "bytes": 227636,
+      "sha256": "f4c669e6bdf8c11927abf47b0473537a1e0abd3b473c42345504a872153170f5",
+      "title": "Blessed Qiraji War Axe - Item - Forever",
+      "identity": {
+        "id": 21242,
+        "name": "Blessed Qiraji War Axe",
+        "level": 79,
+        "reqlevel": 60,
+        "quality": 4,
+        "slot": 13,
+        "subclass": 0,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Critical Strike Rating 14 added",
+            "Critical Strike % 1 removed"
+          ],
+          "notShown": []
+        }
+      },
+      "tooltipText": "Blessed Qiraji War Axe      Item Level  79   Binds when picked up     One-Hand    Axe        \n       110 - 205 Damage  \n     Speed  2.60 \n   (60.58 damage per second)   +9 Stamina    +10 Intellect         Durability 105 / 105      Requires Level  60   Equip: Improves your chance to get a critical strike by 1.0%.   Equip: + 14 Attack Power.    \"The weapon is infused and reinforced with Elementium.\"     Sell Price:  16   40   24",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "canonicalClasses": "ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "binding": "BoP",
+      "plainUnique": false,
+      "namedUniqueEquipped": false,
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false,
+      "rewardRows": [
+        {
+          "category": 3428,
+          "category2": 3,
+          "id": 8789,
+          "itemchoices": [
+            [
+              21242,
+              1
+            ],
+            [
+              21272,
+              1
+            ],
+            [
+              21244,
+              1
+            ],
+            [
+              21269,
+              1
+            ]
+          ],
+          "level": 60,
+          "name": "Imperial Qiraji Armaments",
+          "reprewards": [
+            [
+              910,
+              200
+            ]
+          ],
+          "reqlevel": 60,
+          "side": 3,
+          "type": 62,
+          "wflags": 1,
+          "xp": 6600,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "popularity": 53
+        }
+      ],
+      "otherListNames": [
+        "outfits"
+      ]
+    },
+    "21244": {
+      "url": "https://www.wowhead.com/forever/item=21244",
+      "bytes": 222995,
+      "sha256": "9c21bf6b7f18cb15cc0dd61bf733259c579fe0a5c49d72b52ef13eaed5b9742b",
+      "title": "Blessed Qiraji Pugio - Item - Forever",
+      "identity": {
+        "id": 21244,
+        "name": "Blessed Qiraji Pugio",
+        "level": 79,
+        "reqlevel": 60,
+        "quality": 4,
+        "slot": 13,
+        "subclass": 15,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Critical Strike Rating 14 added",
+            "Hit Rating 10 added",
+            "Critical Strike % 1 removed",
+            "Hit % 1 removed"
+          ],
+          "notShown": []
+        }
+      },
+      "tooltipText": "Blessed Qiraji Pugio      Item Level  79   Binds when picked up     One-Hand    Dagger        \n       72 - 134 Damage  \n     Speed  1.70 \n   (60.59 damage per second)   +7 Stamina         Durability 75 / 75      Requires Level  60   Equip: Improves your chance to hit by 1.0%.   Equip: Improves your chance to get a critical strike by 1.0%.   Equip: + 18 Attack Power.    \"The weapon is infused and reinforced with Elementium.\"     Sell Price:  16   52   47",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "canonicalClasses": "PRIEST:60,MAGE:60,WARLOCK:60,DRUID:60,ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "binding": "BoP",
+      "plainUnique": false,
+      "namedUniqueEquipped": false,
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false,
+      "rewardRows": [
+        {
+          "category": 3428,
+          "category2": 3,
+          "id": 8789,
+          "itemchoices": [
+            [
+              21242,
+              1
+            ],
+            [
+              21272,
+              1
+            ],
+            [
+              21244,
+              1
+            ],
+            [
+              21269,
+              1
+            ]
+          ],
+          "level": 60,
+          "name": "Imperial Qiraji Armaments",
+          "reprewards": [
+            [
+              910,
+              200
+            ]
+          ],
+          "reqlevel": 60,
+          "side": 3,
+          "type": 62,
+          "wflags": 1,
+          "xp": 6600,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "popularity": 53
+        }
+      ],
+      "otherListNames": [
+        "transmog-with",
+        "outfits"
+      ]
+    },
+    "21268": {
+      "url": "https://www.wowhead.com/forever/item=21268",
+      "bytes": 270931,
+      "sha256": "7c3db6b7a081c49519979b6a9e72e02f81b9251bdaa9fb143a3b596125192f65",
+      "title": "Blessed Qiraji War Hammer - Item - Forever",
+      "identity": {
+        "id": 21268,
+        "name": "Blessed Qiraji War Hammer",
+        "level": 79,
+        "reqlevel": 60,
+        "quality": 4,
+        "slot": 13,
+        "subclass": 4,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Bonus armor 70 added",
+            "Defense Rating 8 added",
+            "Armor 70 removed",
+            "Defense 8 removed",
+            "Attack Power in feral forms 280 removed"
+          ],
+          "notShown": []
+        }
+      },
+      "tooltipText": "Blessed Qiraji War Hammer      Item Level  79   Binds when picked up     One-Hand    Mace        \n       89 - 166 Damage  \n     Speed  2.10 \n   (60.71 damage per second)   +10 Strength    +12 Stamina    +70 Armor         Durability 105 / 105      Requires Level  60   Equip: Increased Defense + 8.    \"The weapon is infused and reinforced with Elementium.\"     Sell Price:  17   21   35",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "canonicalClasses": "PRIEST:60,DRUID:60,ROGUE:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "binding": "BoP",
+      "plainUnique": false,
+      "namedUniqueEquipped": false,
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false,
+      "rewardRows": [
+        {
+          "category": 3428,
+          "category2": 3,
+          "id": 8790,
+          "itemchoices": [
+            [
+              21273,
+              1
+            ],
+            [
+              21275,
+              1
+            ],
+            [
+              21268,
+              1
+            ]
+          ],
+          "level": 60,
+          "name": "Imperial Qiraji Regalia",
+          "reprewards": [
+            [
+              910,
+              200
+            ]
+          ],
+          "reqlevel": 60,
+          "side": 3,
+          "type": 62,
+          "wflags": 1,
+          "xp": 6600,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "popularity": 58
+        }
+      ],
+      "otherListNames": [
+        "outfits"
+      ]
+    },
+    "21269": {
+      "url": "https://www.wowhead.com/forever/item=21269",
+      "bytes": 223912,
+      "sha256": "132f72e42cc183cc5a4d8643164da66f4a4bf757fd372c0727f4b105b4e458a2",
+      "title": "Blessed Qiraji Bulwark - Item - Forever",
+      "identity": {
+        "id": 21269,
+        "name": "Blessed Qiraji Bulwark",
+        "level": 79,
+        "reqlevel": 60,
+        "quality": 4,
+        "slot": 14,
+        "subclass": 6,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed",
+            "effects_changed"
+          ],
+          "lines": [
+            "Defense Rating 8 added",
+            "Block Rating 15 added",
+            "Block 3 removed",
+            "Defense 8 removed",
+            "Block % 3 removed",
+            "Effects removed"
+          ],
+          "notShown": []
+        }
+      },
+      "tooltipText": "Blessed Qiraji Bulwark      Item Level  79   Binds when picked up Unique     Off Hand    Shield        2964 Armor  55 Block   +20 Stamina    + 15 Block Value        Durability 120 / 120      Requires Level  60   Equip: Increased Defense + 8.   Equip: Increases your chance to Block attacks with a shield by 3.0%.    \"The shield is infused and reinforced with Elementium.\"     Sell Price:  11   5   63",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "canonicalClasses": "SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "binding": "BoP",
+      "plainUnique": true,
+      "namedUniqueEquipped": false,
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false,
+      "rewardRows": [
+        {
+          "category": 3428,
+          "category2": 3,
+          "id": 8789,
+          "itemchoices": [
+            [
+              21242,
+              1
+            ],
+            [
+              21272,
+              1
+            ],
+            [
+              21244,
+              1
+            ],
+            [
+              21269,
+              1
+            ]
+          ],
+          "level": 60,
+          "name": "Imperial Qiraji Armaments",
+          "reprewards": [
+            [
+              910,
+              200
+            ]
+          ],
+          "reqlevel": 60,
+          "side": 3,
+          "type": 62,
+          "wflags": 1,
+          "xp": 6600,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "popularity": 53
+        }
+      ],
+      "otherListNames": [
+        "transmog-with",
+        "outfits"
+      ]
+    },
+    "21272": {
+      "url": "https://www.wowhead.com/forever/item=21272",
+      "bytes": 215799,
+      "sha256": "d3b15ff7975538d73a1b0d0d06b2be0ed45a663b29e0ef995f74c48053fc8326",
+      "title": "Blessed Qiraji Musket - Item - Forever",
+      "identity": {
+        "id": 21272,
+        "name": "Blessed Qiraji Musket",
+        "level": 79,
+        "reqlevel": 60,
+        "quality": 4,
+        "slot": 15,
+        "subclass": 3,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "tooltipText": "Blessed Qiraji Musket      Item Level  79   Binds when picked up Unique     Ranged    Gun        \n       86 - 160 Damage  \n     Speed  2.60 \n   (47.31 damage per second)   +10 Stamina    + 31 Ranged Attack Power        Durability 90 / 90      Requires Level  60    \"The weapon is infused and reinforced with Elementium.\"     Sell Price:  13   9   49",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "canonicalClasses": "ROGUE:60,HUNTER:60,WARRIOR:60",
+      "binding": "BoP",
+      "plainUnique": true,
+      "namedUniqueEquipped": false,
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false,
+      "rewardRows": [
+        {
+          "category": 3428,
+          "category2": 3,
+          "id": 8789,
+          "itemchoices": [
+            [
+              21242,
+              1
+            ],
+            [
+              21272,
+              1
+            ],
+            [
+              21244,
+              1
+            ],
+            [
+              21269,
+              1
+            ]
+          ],
+          "level": 60,
+          "name": "Imperial Qiraji Armaments",
+          "reprewards": [
+            [
+              910,
+              200
+            ]
+          ],
+          "reqlevel": 60,
+          "side": 3,
+          "type": 62,
+          "wflags": 1,
+          "xp": 6600,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "popularity": 53
+        }
+      ],
+      "otherListNames": []
+    },
+    "21273": {
+      "url": "https://www.wowhead.com/forever/item=21273",
+      "bytes": 234884,
+      "sha256": "7d4bec9acedf0d9e40df2deb97dfce569152f4efa295d08d4dbef5af339a2329",
+      "title": "Blessed Qiraji Acolyte Staff - Item - Forever",
+      "identity": {
+        "id": 21273,
+        "name": "Blessed Qiraji Acolyte Staff",
+        "level": 79,
+        "reqlevel": 60,
+        "quality": 4,
+        "slot": 17,
+        "subclass": 10,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed",
+            "damage_changed",
+            "effects_changed"
+          ],
+          "lines": [
+            "Damage 140 - 211 instead of 132 - 227",
+            "Critical Strike Rating 14 added",
+            "Hit Rating 20 added",
+            "Spell Power 108 instead of 76",
+            "Spell Critical Strike % 1 removed",
+            "Spell Hit % 2 removed",
+            "Effects removed"
+          ],
+          "notShown": []
+        }
+      },
+      "tooltipText": "Blessed Qiraji Acolyte Staff      Item Level  79   Binds when picked up Unique     Two-Hand    Staff        \n       140 - 211 Damage  \n     Speed  3.00 \n   (58.50 damage per second)   +32 Stamina    +33 Intellect         Durability 120 / 120      Requires Level  60   Equip: Improves your chance to hit by 2.0%.   Equip: Improves your chance to get a critical strike by 1.0%.   Equip: Increases damage and healing done by magical spells and effects by up to   108 .    \"The weapon is infused and reinforced with Elementium.\"     Sell Price:  21   90   3",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "canonicalClasses": "PRIEST:60,MAGE:60,WARLOCK:60,DRUID:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "binding": "BoP",
+      "plainUnique": true,
+      "namedUniqueEquipped": false,
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false,
+      "rewardRows": [
+        {
+          "category": 3428,
+          "category2": 3,
+          "id": 8790,
+          "itemchoices": [
+            [
+              21273,
+              1
+            ],
+            [
+              21275,
+              1
+            ],
+            [
+              21268,
+              1
+            ]
+          ],
+          "level": 60,
+          "name": "Imperial Qiraji Regalia",
+          "reprewards": [
+            [
+              910,
+              200
+            ]
+          ],
+          "reqlevel": 60,
+          "side": 3,
+          "type": 62,
+          "wflags": 1,
+          "xp": 6600,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "popularity": 45
+        }
+      ],
+      "otherListNames": [
+        "transmog-with",
+        "outfits",
+        "see-also"
+      ]
+    },
+    "21275": {
+      "url": "https://www.wowhead.com/forever/item=21275",
+      "bytes": 217007,
+      "sha256": "cd0a68d18caf0b708b774ea912eaee14f0fbb9f65509b53a394f00134eb6a647",
+      "title": "Blessed Qiraji Augur Staff - Item - Forever",
+      "identity": {
+        "id": 21275,
+        "name": "Blessed Qiraji Augur Staff",
+        "level": 79,
+        "reqlevel": 60,
+        "quality": 4,
+        "slot": 17,
+        "subclass": 10,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed",
+            "damage_changed"
+          ],
+          "lines": [
+            "Damage 140 - 211 instead of 132 - 227",
+            "Healing 203 instead of 143",
+            "Spell Damage 67 added"
+          ],
+          "notShown": []
+        }
+      },
+      "tooltipText": "Blessed Qiraji Augur Staff      Item Level  79   Binds when picked up Unique     Two-Hand    Staff        \n       140 - 211 Damage  \n     Speed  3.00 \n   (58.50 damage per second)   +23 Stamina    +24 Intellect    Restores + 15 mana per 5 sec.        Durability 120 / 120      Requires Level  60   Equip: Increases healing done by up to   203  and damage done by up to   67  for all magical spells and effects.    \"The weapon is infused and reinforced with Elementium.\"     Sell Price:  19   95   83",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "canonicalClasses": "PRIEST:60,MAGE:60,WARLOCK:60,DRUID:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "binding": "BoP",
+      "plainUnique": true,
+      "namedUniqueEquipped": false,
+      "unavailablePageFlag": false,
+      "crossVersionWarning": false,
+      "rewardRows": [
+        {
+          "category": 3428,
+          "category2": 3,
+          "id": 8790,
+          "itemchoices": [
+            [
+              21273,
+              1
+            ],
+            [
+              21275,
+              1
+            ],
+            [
+              21268,
+              1
+            ]
+          ],
+          "level": 60,
+          "name": "Imperial Qiraji Regalia",
+          "reprewards": [
+            [
+              910,
+              200
+            ]
+          ],
+          "reqlevel": 60,
+          "side": 3,
+          "type": 62,
+          "wflags": 1,
+          "xp": 6600,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "popularity": 58
+        }
+      ],
+      "otherListNames": [
+        "transmog-with",
+        "outfits",
+        "see-also"
+      ]
+    }
+  },
+  "quests": {
+    "8789": {
+      "url": "https://www.wowhead.com/forever/quest=8789",
+      "bytes": 112773,
+      "sha256": "ef1c3dfcc5429001ec9d920c5ff0447e016147bb3a59fe35a5fc2918859ee827",
+      "title": "Imperial Qiraji Armaments - Quest - Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": 3428,
+        "category2": 3,
+        "id": 8789,
+        "itemchoices": [
+          [
+            21242,
+            1
+          ],
+          [
+            21272,
+            1
+          ],
+          [
+            21244,
+            1
+          ],
+          [
+            21269,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Imperial Qiraji Armaments",
+        "reprewards": [
+          [
+            910,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 62,
+        "wflags": 1,
+        "xp": 6600,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=15380/arygos]Arygos[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=15380/arygos]Arygos[/url][/icon][/li][li]Repeatable[/li][li]Sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ],
+      "explicitRepeatable": true,
+      "actors": [
+        {
+          "role": "start",
+          "npcID": 15380,
+          "name": "Arygos"
+        },
+        {
+          "role": "end",
+          "npcID": 15380,
+          "name": "Arygos"
+        }
+      ],
+      "objectiveInputs": [
+        {
+          "itemID": 21232,
+          "name": "Imperial Qiraji Armaments",
+          "quantity": 1
+        },
+        {
+          "itemID": 18562,
+          "name": "Elementium Ore",
+          "quantity": 3
+        }
+      ],
+      "questLocationContext": "Temple of Ahn'Qiraj; precise point unverified"
+    },
+    "8790": {
+      "url": "https://www.wowhead.com/forever/quest=8790",
+      "bytes": 117079,
+      "sha256": "c6f428912b10e00b4fc2b5f441c837e46c736b855c9b60de957ff5e08e152320",
+      "title": "Imperial Qiraji Regalia - Quest - Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": 3428,
+        "category2": 3,
+        "id": 8790,
+        "itemchoices": [
+          [
+            21273,
+            1
+          ],
+          [
+            21275,
+            1
+          ],
+          [
+            21268,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Imperial Qiraji Regalia",
+        "reprewards": [
+          [
+            910,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 62,
+        "wflags": 1,
+        "xp": 6600,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=15378/merithra-of-the-dream]Merithra of the Dream[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=15378/merithra-of-the-dream]Merithra of the Dream[/url][/icon][/li][li]Repeatable[/li][li]Sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ],
+      "explicitRepeatable": true,
+      "actors": [
+        {
+          "role": "start",
+          "npcID": 15378,
+          "name": "Merithra of the Dream"
+        },
+        {
+          "role": "end",
+          "npcID": 15378,
+          "name": "Merithra of the Dream"
+        }
+      ],
+      "objectiveInputs": [
+        {
+          "itemID": 21237,
+          "name": "Imperial Qiraji Regalia",
+          "quantity": 1
+        },
+        {
+          "itemID": 18562,
+          "name": "Elementium Ore",
+          "quantity": 3
+        }
+      ],
+      "questLocationContext": "Temple of Ahn'Qiraj; precise point unverified"
+    }
+  },
+  "inputs": {
+    "18562": {
+      "url": "https://www.wowhead.com/forever/item=18562",
+      "bytes": 104398,
+      "sha256": "a4175361a38f6919174e9f71ffbd8e379f59c89cb31127d0a40f12b2ff5b81d0",
+      "title": "Elementium Ore - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 18562,
+        "name": "Elementium Ore",
+        "level": 60,
+        "quality": 4,
+        "classs": 7,
+        "subclass": 7,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "details_changed"
+          ],
+          "lines": [
+            "Stack size 20 instead of 10"
+          ],
+          "notShown": []
+        }
+      },
+      "tooltipText": "Elementium Ore      Item Level  60                Crafting Reagent     Max Stack: 20  Sell Price:  10   Dropped by: Blackwing Technician  Drop Chance: 33.40%",
+      "binding": "No explicit binding line read",
+      "selectedLists": {
+        "dropped-by": [
+          {
+            "classification": 1,
+            "displayName": "Blackwing Technician",
+            "displayNames": [],
+            "id": 13996,
+            "location": [
+              2677
+            ],
+            "maxlevel": 60,
+            "minlevel": 59,
+            "name": "Blackwing Technician",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 7,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 51983,
+            "outof": 155661,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9,
+                186
+              ],
+              "0": {
+                "count": 51983,
+                "outof": 155661
+              },
+              "9": {
+                "count": 51957,
+                "outof": 155588
+              },
+              "186": {
+                "count": 26,
+                "outof": 73
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 51983,
+                    "outof": 155661
+                  },
+                  "9": {
+                    "count": 51957,
+                    "outof": 155588
+                  },
+                  "186": {
+                    "count": 26,
+                    "outof": 73
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "objective-of": [
+          {
+            "category": 440,
+            "category2": 1,
+            "id": 8728,
+            "level": 60,
+            "name": "The Good News and The Bad News",
+            "reprewards": [
+              [
+                910,
+                100
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "category": 3428,
+            "category2": 3,
+            "id": 8789,
+            "itemchoices": [
+              [
+                21242,
+                1
+              ],
+              [
+                21272,
+                1
+              ],
+              [
+                21244,
+                1
+              ],
+              [
+                21269,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "reprewards": [
+              [
+                910,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "type": 62,
+            "wflags": 1,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "category": 3428,
+            "category2": 3,
+            "id": 8790,
+            "itemchoices": [
+              [
+                21273,
+                1
+              ],
+              [
+                21275,
+                1
+              ],
+              [
+                21268,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "reprewards": [
+              [
+                910,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "type": 62,
+            "wflags": 1,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    "21232": {
+      "url": "https://www.wowhead.com/forever/item=21232",
+      "bytes": 71962,
+      "sha256": "9113248f7a53804c64aa867471f8112e74c74e88916f24f9b89bd2588a3640b1",
+      "title": "Imperial Qiraji Armaments - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 21232,
+        "name": "Imperial Qiraji Armaments",
+        "level": 60,
+        "reqlevel": 60,
+        "quality": 4,
+        "classs": 12,
+        "subclass": 0,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "tooltipText": "Imperial Qiraji Armaments      Item Level  60   Binds when picked up            Requires Level  60   \"Ceremonial Armaments of the Qiraji Lords. Used by Qiraji infantry.\"",
+      "binding": "BoP",
+      "selectedLists": {
+        "dropped-by": [
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Emperor Vek'nilash",
+            "displayNames": [],
+            "id": 15275,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Emperor Vek'nilash",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 805,
+            "outof": 15284,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 805,
+                "outof": 15284
+              },
+              "9": {
+                "count": 805,
+                "outof": 15284
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 805,
+                    "outof": 15284
+                  },
+                  "9": {
+                    "count": 805,
+                    "outof": 15284
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Emperor Vek'lor",
+            "displayNames": [],
+            "id": 15276,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Emperor Vek'lor",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 757,
+            "outof": 15030,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 757,
+                "outof": 15030
+              },
+              "9": {
+                "count": 757,
+                "outof": 15030
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 757,
+                    "outof": 15030
+                  },
+                  "9": {
+                    "count": 757,
+                    "outof": 15030
+                  }
+                }
+              }
+            },
+            "popularity": 27
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Viscidus",
+            "displayNames": [],
+            "id": 15299,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Viscidus",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 556,
+            "outof": 9770,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 556,
+                "outof": 9770
+              },
+              "9": {
+                "count": 556,
+                "outof": 9770
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 556,
+                    "outof": 9770
+                  },
+                  "9": {
+                    "count": 556,
+                    "outof": 9770
+                  }
+                }
+              }
+            },
+            "popularity": 6
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Princess Huhuran",
+            "displayNames": [],
+            "id": 15509,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Princess Huhuran",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 937,
+            "outof": 17101,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 937,
+                "outof": 17101
+              },
+              "9": {
+                "count": 937,
+                "outof": 17101
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 937,
+                    "outof": 17101
+                  },
+                  "9": {
+                    "count": 937,
+                    "outof": 17101
+                  }
+                }
+              }
+            },
+            "popularity": 193
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Fankriss the Unyielding",
+            "displayNames": [],
+            "id": 15510,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Fankriss the Unyielding",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 917,
+            "outof": 17291,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 917,
+                "outof": 17291
+              },
+              "9": {
+                "count": 917,
+                "outof": 17291
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 917,
+                    "outof": 17291
+                  },
+                  "9": {
+                    "count": 917,
+                    "outof": 17291
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Lord Kri",
+            "displayNames": [],
+            "id": 15511,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Lord Kri",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 156,
+            "outof": 2813,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 156,
+                "outof": 2813
+              },
+              "9": {
+                "count": 156,
+                "outof": 2813
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 156,
+                    "outof": 2813
+                  },
+                  "9": {
+                    "count": 156,
+                    "outof": 2813
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Battleguard Sartura",
+            "displayNames": [],
+            "id": 15516,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Battleguard Sartura",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 907,
+            "outof": 16837,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 907,
+                "outof": 16837
+              },
+              "9": {
+                "count": 907,
+                "outof": 16837
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 907,
+                    "outof": 16837
+                  },
+                  "9": {
+                    "count": 907,
+                    "outof": 16837
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Ouro",
+            "displayNames": [],
+            "id": 15517,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Ouro",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 241,
+            "outof": 5004,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 241,
+                "outof": 5004
+              },
+              "9": {
+                "count": 241,
+                "outof": 5004
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 241,
+                    "outof": 5004
+                  },
+                  "9": {
+                    "count": 241,
+                    "outof": 5004
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Princess Yauj",
+            "displayNames": [],
+            "id": 15543,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Princess Yauj",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 84,
+            "outof": 1359,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 84,
+                "outof": 1359
+              },
+              "9": {
+                "count": 84,
+                "outof": 1359
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 84,
+                    "outof": 1359
+                  },
+                  "9": {
+                    "count": 84,
+                    "outof": 1359
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Vem",
+            "displayNames": [],
+            "id": 15544,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Vem",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 548,
+            "outof": 10821,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 548,
+                "outof": 10821
+              },
+              "9": {
+                "count": 548,
+                "outof": 10821
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 548,
+                    "outof": 10821
+                  },
+                  "9": {
+                    "count": 548,
+                    "outof": 10821
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "objective-of": [
+          {
+            "category": 3428,
+            "category2": 3,
+            "id": 8789,
+            "itemchoices": [
+              [
+                21242,
+                1
+              ],
+              [
+                21272,
+                1
+              ],
+              [
+                21244,
+                1
+              ],
+              [
+                21269,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "reprewards": [
+              [
+                910,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "type": 62,
+            "wflags": 1,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    "21237": {
+      "url": "https://www.wowhead.com/forever/item=21237",
+      "bytes": 79896,
+      "sha256": "c9174e932d54d8aff5b1f5dc56b98f12047671b90a554a88ef1948f43bec226c",
+      "title": "Imperial Qiraji Regalia - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 21237,
+        "name": "Imperial Qiraji Regalia",
+        "level": 60,
+        "reqlevel": 60,
+        "quality": 4,
+        "classs": 12,
+        "subclass": 0,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "tooltipText": "Imperial Qiraji Regalia      Item Level  60   Binds when picked up            Requires Level  60   \"Regalia of Qiraji Nobility. Used by Qiraji spell casters.\"",
+      "binding": "BoP",
+      "selectedLists": {
+        "dropped-by": [
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Emperor Vek'nilash",
+            "displayNames": [],
+            "id": 15275,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Emperor Vek'nilash",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 746,
+            "outof": 15284,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 746,
+                "outof": 15284
+              },
+              "9": {
+                "count": 746,
+                "outof": 15284
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 746,
+                    "outof": 15284
+                  },
+                  "9": {
+                    "count": 746,
+                    "outof": 15284
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Emperor Vek'lor",
+            "displayNames": [],
+            "id": 15276,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Emperor Vek'lor",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 794,
+            "outof": 15030,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 794,
+                "outof": 15030
+              },
+              "9": {
+                "count": 794,
+                "outof": 15030
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 794,
+                    "outof": 15030
+                  },
+                  "9": {
+                    "count": 794,
+                    "outof": 15030
+                  }
+                }
+              }
+            },
+            "popularity": 27
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Viscidus",
+            "displayNames": [],
+            "id": 15299,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Viscidus",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 511,
+            "outof": 9770,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 511,
+                "outof": 9770
+              },
+              "9": {
+                "count": 511,
+                "outof": 9770
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 511,
+                    "outof": 9770
+                  },
+                  "9": {
+                    "count": 511,
+                    "outof": 9770
+                  }
+                }
+              }
+            },
+            "popularity": 6
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Princess Huhuran",
+            "displayNames": [],
+            "id": 15509,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Princess Huhuran",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 901,
+            "outof": 17101,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 901,
+                "outof": 17101
+              },
+              "9": {
+                "count": 901,
+                "outof": 17101
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 901,
+                    "outof": 17101
+                  },
+                  "9": {
+                    "count": 901,
+                    "outof": 17101
+                  }
+                }
+              }
+            },
+            "popularity": 193
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Fankriss the Unyielding",
+            "displayNames": [],
+            "id": 15510,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Fankriss the Unyielding",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 947,
+            "outof": 17291,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 947,
+                "outof": 17291
+              },
+              "9": {
+                "count": 947,
+                "outof": 17291
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 947,
+                    "outof": 17291
+                  },
+                  "9": {
+                    "count": 947,
+                    "outof": 17291
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Lord Kri",
+            "displayNames": [],
+            "id": 15511,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Lord Kri",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 148,
+            "outof": 2813,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 148,
+                "outof": 2813
+              },
+              "9": {
+                "count": 148,
+                "outof": 2813
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 148,
+                    "outof": 2813
+                  },
+                  "9": {
+                    "count": 148,
+                    "outof": 2813
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Battleguard Sartura",
+            "displayNames": [],
+            "id": 15516,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Battleguard Sartura",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 911,
+            "outof": 16837,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 911,
+                "outof": 16837
+              },
+              "9": {
+                "count": 911,
+                "outof": 16837
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 911,
+                    "outof": 16837
+                  },
+                  "9": {
+                    "count": 911,
+                    "outof": 16837
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Ouro",
+            "displayNames": [],
+            "id": 15517,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Ouro",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 253,
+            "outof": 5004,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 253,
+                "outof": 5004
+              },
+              "9": {
+                "count": 253,
+                "outof": 5004
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 253,
+                    "outof": 5004
+                  },
+                  "9": {
+                    "count": 253,
+                    "outof": 5004
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Princess Yauj",
+            "displayNames": [],
+            "id": 15543,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Princess Yauj",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 64,
+            "outof": 1359,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 64,
+                "outof": 1359
+              },
+              "9": {
+                "count": 64,
+                "outof": 1359
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 64,
+                    "outof": 1359
+                  },
+                  "9": {
+                    "count": 64,
+                    "outof": 1359
+                  }
+                }
+              }
+            }
+          },
+          {
+            "boss": 1,
+            "classification": 3,
+            "displayName": "Vem",
+            "displayNames": [],
+            "id": 15544,
+            "location": [
+              3428
+            ],
+            "maxlevel": 9999,
+            "minlevel": 9999,
+            "name": "Vem",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 10,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 630,
+            "outof": 10821,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                0,
+                9
+              ],
+              "0": {
+                "count": 630,
+                "outof": 10821
+              },
+              "9": {
+                "count": 630,
+                "outof": 10821
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 630,
+                    "outof": 10821
+                  },
+                  "9": {
+                    "count": 630,
+                    "outof": 10821
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "objective-of": [
+          {
+            "category": 3428,
+            "category2": 3,
+            "id": 8790,
+            "itemchoices": [
+              [
+                21273,
+                1
+              ],
+              [
+                21275,
+                1
+              ],
+              [
+                21268,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "reprewards": [
+              [
+                910,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "type": 62,
+            "wflags": 1,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "npcs": {
+    "13996": {
+      "url": "https://www.wowhead.com/forever/npc=13996",
+      "bytes": 314798,
+      "sha256": "b1905dd6bf7b5ea84f1832b238f3e01f721a2eea4ac524ce18804ce31e9641bc",
+      "title": "Blackwing Technician - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 7,
+            "displayName": "Elementium Ore",
+            "flags2": -2147459068,
+            "id": 18562,
+            "level": 60,
+            "name": "Elementium Ore",
+            "quality": 4,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Blackwing Technician",
+                "t": 1,
+                "ti": 13996,
+                "z": 2677
+              }
+            ],
+            "subclass": 7,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "details_changed"
+              ],
+              "lines": [
+                "Stack size 20 instead of 10"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                9,
+                186
+              ],
+              "0": {
+                "count": 51983,
+                "outof": 155661
+              },
+              "9": {
+                "count": 51957,
+                "outof": 155588
+              },
+              "186": {
+                "count": 26,
+                "outof": 73
+              }
+            },
+            "count": 51983,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 51983,
+                    "outof": 155661
+                  },
+                  "9": {
+                    "count": 51957,
+                    "outof": 155588
+                  },
+                  "186": {
+                    "count": 26,
+                    "outof": 73
+                  }
+                }
+              }
+            },
+            "outof": 155661
+          }
+        ]
+      }
+    },
+    "15275": {
+      "url": "https://www.wowhead.com/forever/npc=15275",
+      "bytes": 93624,
+      "sha256": "9c96395c038777839a306ffd71fda0c10de7b15decf53ca6da63c97c856b03b4",
+      "title": "Emperor Vek'nilash - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 805,
+                "outof": 15284
+              },
+              "9": {
+                "count": 805,
+                "outof": 15284
+              }
+            },
+            "count": 805,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 805,
+                    "outof": 15284
+                  },
+                  "9": {
+                    "count": 805,
+                    "outof": 15284
+                  }
+                }
+              }
+            },
+            "outof": 15284
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 746,
+                "outof": 15284
+              },
+              "9": {
+                "count": 746,
+                "outof": 15284
+              }
+            },
+            "count": 746,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 746,
+                    "outof": 15284
+                  },
+                  "9": {
+                    "count": 746,
+                    "outof": 15284
+                  }
+                }
+              }
+            },
+            "outof": 15284
+          }
+        ]
+      }
+    },
+    "15276": {
+      "url": "https://www.wowhead.com/forever/npc=15276",
+      "bytes": 97142,
+      "sha256": "3cd1a67e9e4e3b3f354e2e8f964c08e7e0ea3b6fa462a4ace9f49789da35c8d8",
+      "title": "Emperor Vek'lor - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 757,
+                "outof": 15030
+              },
+              "9": {
+                "count": 757,
+                "outof": 15030
+              }
+            },
+            "count": 757,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 757,
+                    "outof": 15030
+                  },
+                  "9": {
+                    "count": 757,
+                    "outof": 15030
+                  }
+                }
+              }
+            },
+            "outof": 15030
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 794,
+                "outof": 15030
+              },
+              "9": {
+                "count": 794,
+                "outof": 15030
+              }
+            },
+            "count": 794,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 794,
+                    "outof": 15030
+                  },
+                  "9": {
+                    "count": 794,
+                    "outof": 15030
+                  }
+                }
+              }
+            },
+            "outof": 15030
+          }
+        ]
+      }
+    },
+    "15299": {
+      "url": "https://www.wowhead.com/forever/npc=15299",
+      "bytes": 161312,
+      "sha256": "a697deb676c76571e3302b7811595d576fce3baf0b2cf07e60f6c5321eb6f60f",
+      "title": "Viscidus - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 556,
+                "outof": 9770
+              },
+              "9": {
+                "count": 556,
+                "outof": 9770
+              }
+            },
+            "count": 556,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 556,
+                    "outof": 9770
+                  },
+                  "9": {
+                    "count": 556,
+                    "outof": 9770
+                  }
+                }
+              }
+            },
+            "outof": 9770
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 511,
+                "outof": 9770
+              },
+              "9": {
+                "count": 511,
+                "outof": 9770
+              }
+            },
+            "count": 511,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 511,
+                    "outof": 9770
+                  },
+                  "9": {
+                    "count": 511,
+                    "outof": 9770
+                  }
+                }
+              }
+            },
+            "outof": 9770
+          }
+        ]
+      }
+    },
+    "15378": {
+      "url": "https://www.wowhead.com/forever/npc=15378",
+      "bytes": 74594,
+      "sha256": "195c67594ad19c479ab56c823f193b76d05c4f7df9f9d0e3a18bf6e0e64b82e8",
+      "title": "Merithra of the Dream - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [],
+        "starts": [
+          {
+            "category": 3428,
+            "category2": 3,
+            "id": 8790,
+            "itemchoices": [
+              [
+                21273,
+                1
+              ],
+              [
+                21275,
+                1
+              ],
+              [
+                21268,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "reprewards": [
+              [
+                910,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "type": 62,
+            "wflags": 1,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ],
+        "ends": [
+          {
+            "category": 3428,
+            "category2": 3,
+            "id": 8790,
+            "itemchoices": [
+              [
+                21273,
+                1
+              ],
+              [
+                21275,
+                1
+              ],
+              [
+                21268,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "reprewards": [
+              [
+                910,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "type": 62,
+            "wflags": 1,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    "15380": {
+      "url": "https://www.wowhead.com/forever/npc=15380",
+      "bytes": 64558,
+      "sha256": "9ac7c5affcdcd4bec3dfe8ac4164c11ecebea588f690ddd2438b1d2670fa7ca4",
+      "title": "Arygos - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "starts": [
+          {
+            "category": 3428,
+            "category2": 3,
+            "id": 8789,
+            "itemchoices": [
+              [
+                21242,
+                1
+              ],
+              [
+                21272,
+                1
+              ],
+              [
+                21244,
+                1
+              ],
+              [
+                21269,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "reprewards": [
+              [
+                910,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "type": 62,
+            "wflags": 1,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ],
+        "ends": [
+          {
+            "category": 3428,
+            "category2": 3,
+            "id": 8789,
+            "itemchoices": [
+              [
+                21242,
+                1
+              ],
+              [
+                21272,
+                1
+              ],
+              [
+                21244,
+                1
+              ],
+              [
+                21269,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "reprewards": [
+              [
+                910,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "type": 62,
+            "wflags": 1,
+            "xp": 6600,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      }
+    },
+    "15509": {
+      "url": "https://www.wowhead.com/forever/npc=15509",
+      "bytes": 166523,
+      "sha256": "901f60d27fde62239e10db1d03d08b492ab49b612b46a3b5c270b6bb117c8203",
+      "title": "Princess Huhuran - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 937,
+                "outof": 17101
+              },
+              "9": {
+                "count": 937,
+                "outof": 17101
+              }
+            },
+            "count": 937,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 937,
+                    "outof": 17101
+                  },
+                  "9": {
+                    "count": 937,
+                    "outof": 17101
+                  }
+                }
+              }
+            },
+            "outof": 17101
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 901,
+                "outof": 17101
+              },
+              "9": {
+                "count": 901,
+                "outof": 17101
+              }
+            },
+            "count": 901,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 901,
+                    "outof": 17101
+                  },
+                  "9": {
+                    "count": 901,
+                    "outof": 17101
+                  }
+                }
+              }
+            },
+            "outof": 17101
+          }
+        ]
+      }
+    },
+    "15510": {
+      "url": "https://www.wowhead.com/forever/npc=15510",
+      "bytes": 128263,
+      "sha256": "181fb76b275a8cc4401523435f2db9eae00f107ec45c07c6685373188dd0b06c",
+      "title": "Fankriss the Unyielding - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 917,
+                "outof": 17291
+              },
+              "9": {
+                "count": 917,
+                "outof": 17291
+              }
+            },
+            "count": 917,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 917,
+                    "outof": 17291
+                  },
+                  "9": {
+                    "count": 917,
+                    "outof": 17291
+                  }
+                }
+              }
+            },
+            "outof": 17291
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 947,
+                "outof": 17291
+              },
+              "9": {
+                "count": 947,
+                "outof": 17291
+              }
+            },
+            "count": 947,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 947,
+                    "outof": 17291
+                  },
+                  "9": {
+                    "count": 947,
+                    "outof": 17291
+                  }
+                }
+              }
+            },
+            "outof": 17291
+          }
+        ]
+      }
+    },
+    "15511": {
+      "url": "https://www.wowhead.com/forever/npc=15511",
+      "bytes": 104339,
+      "sha256": "e019c46649e9adb01e0efe398b79b2be40649a00550160feb6f1d80271107fcd",
+      "title": "Lord Kri - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 156,
+                "outof": 2813
+              },
+              "9": {
+                "count": 156,
+                "outof": 2813
+              }
+            },
+            "count": 156,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 156,
+                    "outof": 2813
+                  },
+                  "9": {
+                    "count": 156,
+                    "outof": 2813
+                  }
+                }
+              }
+            },
+            "outof": 2813
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 148,
+                "outof": 2813
+              },
+              "9": {
+                "count": 148,
+                "outof": 2813
+              }
+            },
+            "count": 148,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 148,
+                    "outof": 2813
+                  },
+                  "9": {
+                    "count": 148,
+                    "outof": 2813
+                  }
+                }
+              }
+            },
+            "outof": 2813
+          }
+        ]
+      }
+    },
+    "15516": {
+      "url": "https://www.wowhead.com/forever/npc=15516",
+      "bytes": 150134,
+      "sha256": "05bc48d113a18d6d8f861978f8212c832f2b5d55f1e5074b62629d8b9bf0ba5c",
+      "title": "Battleguard Sartura - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 907,
+                "outof": 16837
+              },
+              "9": {
+                "count": 907,
+                "outof": 16837
+              }
+            },
+            "count": 907,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 907,
+                    "outof": 16837
+                  },
+                  "9": {
+                    "count": 907,
+                    "outof": 16837
+                  }
+                }
+              }
+            },
+            "outof": 16837
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 911,
+                "outof": 16837
+              },
+              "9": {
+                "count": 911,
+                "outof": 16837
+              }
+            },
+            "count": 911,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 911,
+                    "outof": 16837
+                  },
+                  "9": {
+                    "count": 911,
+                    "outof": 16837
+                  }
+                }
+              }
+            },
+            "outof": 16837
+          }
+        ]
+      }
+    },
+    "15517": {
+      "url": "https://www.wowhead.com/forever/npc=15517",
+      "bytes": 149371,
+      "sha256": "ef4937e458e68dea1d6fc492b721742c922eb5d1766190bb081fb523e8bf92f0",
+      "title": "Ouro - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 241,
+                "outof": 5004
+              },
+              "9": {
+                "count": 241,
+                "outof": 5004
+              }
+            },
+            "count": 241,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 241,
+                    "outof": 5004
+                  },
+                  "9": {
+                    "count": 241,
+                    "outof": 5004
+                  }
+                }
+              }
+            },
+            "outof": 5004
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 253,
+                "outof": 5004
+              },
+              "9": {
+                "count": 253,
+                "outof": 5004
+              }
+            },
+            "count": 253,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 253,
+                    "outof": 5004
+                  },
+                  "9": {
+                    "count": 253,
+                    "outof": 5004
+                  }
+                }
+              }
+            },
+            "outof": 5004
+          }
+        ]
+      }
+    },
+    "15543": {
+      "url": "https://www.wowhead.com/forever/npc=15543",
+      "bytes": 95296,
+      "sha256": "a672f1a199f94d9cd3df0e8a4ac67abb0ab59ed10260527a9a08787ee1e9b8e7",
+      "title": "Princess Yauj - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 84,
+                "outof": 1359
+              },
+              "9": {
+                "count": 84,
+                "outof": 1359
+              }
+            },
+            "count": 84,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 84,
+                    "outof": 1359
+                  },
+                  "9": {
+                    "count": 84,
+                    "outof": 1359
+                  }
+                }
+              }
+            },
+            "outof": 1359
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 64,
+                "outof": 1359
+              },
+              "9": {
+                "count": 64,
+                "outof": 1359
+              }
+            },
+            "count": 64,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 64,
+                    "outof": 1359
+                  },
+                  "9": {
+                    "count": 64,
+                    "outof": 1359
+                  }
+                }
+              }
+            },
+            "outof": 1359
+          }
+        ]
+      }
+    },
+    "15544": {
+      "url": "https://www.wowhead.com/forever/npc=15544",
+      "bytes": 94409,
+      "sha256": "99f3ca9183fc29ed2d833900b16522519cb4a8d6917b64c8a230b509c9973d82",
+      "title": "Vem - NPC - Forever",
+      "reusedCachedResponse": false,
+      "maps": [],
+      "selectedLists": {
+        "drops": [
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Armaments",
+            "flags2": 24580,
+            "id": 21232,
+            "level": 60,
+            "name": "Imperial Qiraji Armaments",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 548,
+                "outof": 10821
+              },
+              "9": {
+                "count": 548,
+                "outof": 10821
+              }
+            },
+            "count": 548,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 548,
+                    "outof": 10821
+                  },
+                  "9": {
+                    "count": 548,
+                    "outof": 10821
+                  }
+                }
+              }
+            },
+            "outof": 10821
+          },
+          {
+            "classs": 12,
+            "displayName": "Imperial Qiraji Regalia",
+            "flags2": 24580,
+            "id": 21237,
+            "level": 60,
+            "name": "Imperial Qiraji Regalia",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 0,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "z": 3428
+              }
+            ],
+            "subclass": 0,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 630,
+                "outof": 10821
+              },
+              "9": {
+                "count": 630,
+                "outof": 10821
+              }
+            },
+            "count": 630,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 630,
+                    "outof": 10821
+                  },
+                  "9": {
+                    "count": 630,
+                    "outof": 10821
+                  }
+                }
+              }
+            },
+            "outof": 10821
+          }
+        ]
+      }
+    }
+  },
+  "inputNPCJoins": [
+    {
+      "inputID": 21232,
+      "npcID": 15275,
+      "npcName": "Emperor Vek'nilash",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15276,
+      "npcName": "Emperor Vek'lor",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15299,
+      "npcName": "Viscidus",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15509,
+      "npcName": "Princess Huhuran",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15510,
+      "npcName": "Fankriss the Unyielding",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15511,
+      "npcName": "Lord Kri",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15516,
+      "npcName": "Battleguard Sartura",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15517,
+      "npcName": "Ouro",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15543,
+      "npcName": "Princess Yauj",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21232,
+      "npcID": 15544,
+      "npcName": "Vem",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15275,
+      "npcName": "Emperor Vek'nilash",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15276,
+      "npcName": "Emperor Vek'lor",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15299,
+      "npcName": "Viscidus",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15509,
+      "npcName": "Princess Huhuran",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15510,
+      "npcName": "Fankriss the Unyielding",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15511,
+      "npcName": "Lord Kri",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15516,
+      "npcName": "Battleguard Sartura",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15517,
+      "npcName": "Ouro",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15543,
+      "npcName": "Princess Yauj",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 21237,
+      "npcID": 15544,
+      "npcName": "Vem",
+      "scope": "Publishedinputloot reversejoin,notfinishedweaponloot/livepercent/independentencountercount."
+    },
+    {
+      "inputID": 18562,
+      "npcID": 13996,
+      "npcName": "Blackwing Technician",
+      "scope": "Publishedoreinputreference,notfinishedweaponloot/33.40percentcurrentrate."
+    }
+  ],
+  "reusedFactionPage": {
+    "url": "https://www.wowhead.com/forever/faction=910",
+    "bytes": 217010,
+    "sha256": "36fb1f0df2ad7b08ee99dbfb62c6f33ab341624c28a1a55484afaff0eafde27a",
+    "title": "Brood of Nozdormu - Faction - Forever",
+    "reusedCachedResponse": true,
+    "selectedQuestGainRows": [
+      {
+        "category": 3428,
+        "category2": 3,
+        "id": 8789,
+        "itemchoices": [
+          [
+            21242,
+            1
+          ],
+          [
+            21272,
+            1
+          ],
+          [
+            21244,
+            1
+          ],
+          [
+            21269,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Imperial Qiraji Armaments",
+        "reprewards": [
+          [
+            910,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 62,
+        "wflags": 1,
+        "xp": 6600,
+        "reputation": 200,
+        "popularity": 53
+      },
+      {
+        "category": 3428,
+        "category2": 3,
+        "id": 8790,
+        "itemchoices": [
+          [
+            21273,
+            1
+          ],
+          [
+            21275,
+            1
+          ],
+          [
+            21268,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Imperial Qiraji Regalia",
+        "reprewards": [
+          [
+            910,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 62,
+        "wflags": 1,
+        "xp": 6600,
+        "reputation": 200,
+        "popularity": 58
+      }
+    ],
+    "selectedQuestCompletionGateRows": [],
+    "scope": "Fullfactionresponse read8AK,reusedfornew2quests.200rep isgain notgate;omissionfromobjective-of notproofunrestrictedcurrentaccess. No independentcurrentminimumrep/purchaseclassgate assumed."
+  },
+  "discoveryIndex": "checkpoint8al_discovery_index.json",
+  "limits": "WarHammer21268 usesRegalia21237/quest8790 withtwoStaves,notArmamentsbyname. FourArmamentschoices1of4/threeRegaliachoices1of3;repeatablepublicationnotcurrentfrequency/stock/cooldown/retention. Exactcost1boundtoken+3ElementiumORE18562,not3bars17771/10barThunderfuryrequirement orlearnedcraft/wielderMining. Orepagenobindingline nottrade/AHguarantee;boundtokensnotgear/materialsourceTypeconversion. Tokensshare10publishedNPCactorsincludingTwins/BugTrio,not10independentencounters/extra guaranteedlootrolls;20reversejoins identifyinputs,neverfinishedweapondrops/currentrates. No usableindependentactorNPCmaps;TempleAQcontextfromquests,notcurrentwaypoint/spawn/phase. QuestBoth/min60/200Nozdormugain notgearHorde-only/class/repacceptancegate fromNPCreaction/names. 4plainUniquegear(Bulwark/Musket/twostaves)notcopiedtoother3;no namedfamilylimit. No currentoldFeralAP/stat/BoE/recipe/material/filter/classmutation. Environmenttransition preservedHTTPfiles butlosttransientsearchpayload/oldterminalhandles;discoveryindex recoversactuallyobservedURLs/querystrings with explicitnullbodyflags,notclaimedrerun. Ownboundedlocallease reestablishedwithoutremovinganotherworkerlock.",
+  "nextIntegration": "Integrate7qualifiedquest-tokenchoices preserving2852priorobjects/strongersources/canonicaleligibility;freshsame-runHTTPcapture waitexit0/full14Lua+offlinePython/24modules/fourreports/local+CI/bot.7still8AL/frozen3050;afterPASS8AM45AQclassarmour21329\u201321391,thenAQclassweapons/jewellery."
+}
