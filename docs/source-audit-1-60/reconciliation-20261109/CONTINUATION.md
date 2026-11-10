@@ -1,8 +1,8 @@
 # GetGear unattended research continuation
 
-## Latest verified checkpoint — 8AE, 10 November 2026 UTC
+## Latest verified checkpoint — 8AF, 10 November 2026 UTC
 
-Full local/nonreleaseCI42761883642 PASS; sourcee349135a18c4a2de272a95fde7a8200f9c992e97, inspected finalbot87b917993106fc0631e12b0ef4b7ccd8ca66853b.14Lua+offlinePython/24modules/fourreports/helper syntax. Equipment2475/index4124/display4123/books759;frozenremaining3427. **Resume8AF100 IDs272539–272809**,markedqueue;then250undocumented60/quest190/world2887.8AE37unavailable/1seasonal/10Exaltedjoins/2othercreation/50gaps qualified;do not repeat. Bot15newfeedIDs split1canonical11633emptysource+14outside→104pending9Acandidates;Playfulls23349/9153,allpriorfacts/definitionsunchanged,no runtimechange. Use repository actualHTTPcapturehelper toavoidduplicaterequests;429pause below is historical/resolved. All current-live book/dungeon/access exceptions/main/Beta8 protections remain.
+Full local/nonreleaseCI42763387167 PASS; sourcea4be134ac977b239369a24c2cf5456a3ddc4c749, inspected finalbot380b50a4512449639c559392995de04f1d42c02c.14Lua+offlinePython/24modules/fourreports/helper syntax. Equipment2575/index4224/display4223/books759;frozenremaining3327. **Resume8AG100 IDs272818–274183**,markedqueue;then150undocumented60/quest190/world2887.8AF21primaryrank14/secondaryunnamedlocationleads+79armourorigin/rank gaps;do not repeat. Bot3newoutsideIDs→107pending9Acandidates;23352/9153baseline,26outsidecanonicalindex-onlyremaps/14definitionpositionsreordered/same9153factmultiset,no runtimechange. Use repository actualHTTPcapturehelper toavoidduplicaterequests;429pause below is historical/resolved. All current-live book/dungeon/access exceptions/main/Beta8 protections remain.
 
 ## Current authority and protected baseline
 
@@ -319,3 +319,9 @@ BotfreshPlayfulls23349/9153 adds15IDs:1alreadycanonical11633SpiderfangCarapaceem
 ## Checkpoint8AF integrated — GitHub pending
 
 100Premier60 cases integrated:21exactprimarytooltiprank14+secondaryunnamedlocationleads(21Dalaran/10HallLegends/1ChampionsHall),79classlockedarmourrank/origin gaps;noprimaryacquisition/availabilityflags. No currentactor/charge/gate/retirement inferred;Tomesoffhands/Clawhands/SpellbladeDagger/ShieldWallnotEngineeringboundariesretained. Full14Lua+offlinePython/24modules/fourreportslocalPASS;CIpending.2475priorobjectsexact;100summarycellsonly/all6dungeonexceptionsintact. Equipment2575/index4224/display4223/books759/crafts1254/ingredients4857.7actualsame-runHTTPcapturesmatchprovenance/noextrarequests;23349/9153/1399raw1199qualifiedexactfactsunchanged;104pending9Acandidatesseparate. Remaining3327(undoc250/quest190/world2887);next8AG100IDs272818–274183 afterCI/bot. See CHECKPOINT8AF_LEVEL60_UNDOCUMENTED_THIRD100.md/evidence/local/rawreview. No release/mainaction.
+
+## Checkpoint8AF validated — next8AG
+
+Full local/GitHub PASS:[42763387167](https://github.com/magicaddons/getgear/actions/runs/42763387167),source a4be134ac977b239369a24c2cf5456a3ddc4c749;inspected directbot/finalvalidated380b50a4512449639c559392995de04f1d42c02c.14Lua+offlinePython/24modules/fourreports,15CItestPASS/helper syntax. BotREADMEfeedcount/provenanceonly,no runtime/report/indexchange. Equipment2575/index4224/display4223/books759,crafts1254/ingredients4857;2475priorobjectsexact/100summariesonly/all6dungeonexceptionsintact.21primarytooltiprank14+secondaryunnamedlocationleads/79armourorigin-rank gaps;79classmasks/noacceptedcurrentactor/charge/gateinvented.
+
+FreshbotPlayfulls23352/9153 adds3outsidecanonicalIDs12552/18350/18729→107pending9Acandidates,unique/disjoint/noautomaticadoption.26outsidecanonicalindex-onlyremaps/14definitionpositionsreordered,same9153resolveddefinitionmultiset;0prioracquisitionfacts/names/field10changes. Changedcontentaddressedfilesfetchedonce/hashmatchedtobotprovenance;Everloot1399/1199exactlocal8AFsame-runcapture reused,nobotresponse-byteidentityclaim oradditionalAPIrefetch. Snapshotsrefreshed. Remaining3327(undoc250/quest190/world2887);next8AG:first100undocumented60 IDs272818–274183,markedqueue,then150. Remote maincf7fa410/Beta8tag0a088935→source543e5a24recheckedunchanged10Nov05:38UTC. No release/mainaction.

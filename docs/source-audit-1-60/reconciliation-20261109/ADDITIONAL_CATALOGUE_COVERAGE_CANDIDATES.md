@@ -21,3 +21,7 @@ Exact8O→8X full-source comparison adds **11824 Cyclopean Band,18320 Demondash 
 ##8AEbot extension —104 total pending candidates
 
 15 newly indexed IDs include one alreadycanonical11633SpiderfangCarapace with empty publishedsources,notnewscope/sourcecorrection. Other14 areoutsidecanonical andbring90→104unique/disjoint9Acandidates. Exacttypednames/sourcehints/hashsetsin checkpoint8ae_bot_raw_upstream_review.json;allrequireindividualscope/identity/version/eligibility/acquisitionauditbeforeadoption/completion. No currentloot/newgameitem/automaticrecipeclaim.23349/9153diagnosticbaseline;0previousfacts/names/offsets/field10changes/all9153definitionsandrawhashesunchanged. BotREADMEcount/provenanceonly,no runtime/report/indexchange.
+
+##8AFbot extension —107 total pending candidates
+
+Three newly indexed IDs12552BlisterbaneWrap/18350AmplifyingCloak/18729ScreechingBow alloutsidecanonical;104→107unique/disjoint9Acandidates,notautomaticadoption/currentloot/newgameitemclaims. Exacttypedsourcehints/fingerprints in checkpoint8af_bot_raw_upstream_review.json.26outsidecanonicalindex-onlyremaps/14definitionpositionsreordered,9153resolveddefinitionmultisetunchanged;0previousacquisitionfacts/names/field10changes.23352/9153snapshotrefreshed;botREADME/provenanceonly,no runtime/report/indexchange. All107stillrequireindividualscope/identity/version/eligibility/acquisitionaudit.

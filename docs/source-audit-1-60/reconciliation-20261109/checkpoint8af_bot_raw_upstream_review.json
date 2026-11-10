@@ -1,0 +1,398 @@
+{
+  "capturedUTC": "2026-11-10T05:39:48.295990+00:00",
+  "method": "Exact full factual snapshot comparison8AEbot\u21928AFbot; changed content-addressed Playfulls files fetched once/hash-matched to bot provenance; unchanged captures reused. Everloot uses8AE local same-run capture, not bot response-byte identity; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23349,
+    "afterItems": 23352,
+    "beforeDefinitions": 9153,
+    "afterDefinitions": 9153,
+    "newItems": [
+      {
+        "itemID": 12552,
+        "name": "Blisterbane Wrap",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18350,
+        "name": "Amplifying Cloak",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Magister Kalendris",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "382d122175cc0851d6171728cbeb0e758cd291a7edfae0cb9b885fd13fa1a689"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18729,
+        "name": "Screeching Bow",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Baroness Anastari",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "df6ccfe113462d21c332c86423bc5ce18f792a3deed56e22ed275db540027376"
+          }
+        ],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 26,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.173b456e67.json",
+        "bytes": 988994,
+        "sha256": "173b456e679bc6cfdc285b4c572e329da2ab84e5aa09c0ea24c5b32d719ee814",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.e4c4cef6f5.json",
+        "bytes": 1323162,
+        "sha256": "e4c4cef6f55d5960c2284b141e52537ffd35484a7874b714a51b1c47022d9219",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.95a30cfe67.json",
+        "bytes": 464371,
+        "sha256": "95a30cfe676ec047c38ea8892ac4b7ff0def74b3fc2d073f78aee95b03a84de8",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.c8a8762270.json",
+        "bytes": 446193,
+        "sha256": "c8a8762270b908c9f32f2d4a7d0a0e3a1b3be0b9ccfc317f72edbbddde731ce4",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1399,
+    "afterRaw": 1399,
+    "qualifying": 1199,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "03f2cecf65c9700b74661a72c65ff257c0ed353f5c9f93e1c8d920efef37f3e4",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T05:30:14.462Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103653,
+        "sha256": "01dddc3bbfc19015d46ce39ad058c96182577f3ddbb448873ba6cd00ff60054c",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T05:30:14.462Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 82469,
+        "sha256": "9eb620e0ef9e41760ddf80789fafce5c8030a8d50920320406fbe8553a656739",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T05:30:14.462Z"
+      }
+    ]
+  },
+  "sourceIndexOnlyRows": [
+    {
+      "itemID": 18352,
+      "name": "Petrified Bark Shield",
+      "before": [
+        7495
+      ],
+      "after": [
+        7496
+      ]
+    },
+    {
+      "itemID": 18353,
+      "name": "Stoneflower Staff",
+      "before": [
+        7495
+      ],
+      "after": [
+        7496
+      ]
+    },
+    {
+      "itemID": 18354,
+      "name": "Pimgib's Collar",
+      "before": [
+        7496
+      ],
+      "after": [
+        7497
+      ]
+    },
+    {
+      "itemID": 18366,
+      "name": "Gordok's Handguards",
+      "before": [
+        7506
+      ],
+      "after": [
+        7507
+      ]
+    },
+    {
+      "itemID": 18367,
+      "name": "Gordok's Gauntlets",
+      "before": [
+        7506
+      ],
+      "after": [
+        7507
+      ]
+    },
+    {
+      "itemID": 18368,
+      "name": "Gordok's Gloves",
+      "before": [
+        7506
+      ],
+      "after": [
+        7507
+      ]
+    },
+    {
+      "itemID": 18369,
+      "name": "Gordok's Handwraps",
+      "before": [
+        7506
+      ],
+      "after": [
+        7507
+      ]
+    },
+    {
+      "itemID": 18370,
+      "name": "Vigilance Charm",
+      "before": [
+        7507
+      ],
+      "after": [
+        7508
+      ]
+    },
+    {
+      "itemID": 18371,
+      "name": "Mindtap Talisman",
+      "before": [
+        7508
+      ],
+      "after": [
+        7495
+      ]
+    },
+    {
+      "itemID": 18374,
+      "name": "Flamescarred Shoulders",
+      "before": [
+        7508
+      ],
+      "after": [
+        7495
+      ]
+    },
+    {
+      "itemID": 18377,
+      "name": "Quickdraw Gloves",
+      "before": [
+        7507
+      ],
+      "after": [
+        7508
+      ]
+    },
+    {
+      "itemID": 18379,
+      "name": "Odious Greaves",
+      "before": [
+        7507
+      ],
+      "after": [
+        7508
+      ]
+    },
+    {
+      "itemID": 18389,
+      "name": "Cloak of the Cosmos",
+      "before": [
+        7507
+      ],
+      "after": [
+        7508
+      ]
+    },
+    {
+      "itemID": 18390,
+      "name": "Tanglemoss Leggings",
+      "before": [
+        7495
+      ],
+      "after": [
+        7496
+      ]
+    },
+    {
+      "itemID": 18466,
+      "name": "Royal Seal of Eldre'Thalas",
+      "before": [
+        7498
+      ],
+      "after": [
+        7499
+      ]
+    },
+    {
+      "itemID": 18467,
+      "name": "Royal Seal of Eldre'Thalas",
+      "before": [
+        7501
+      ],
+      "after": [
+        7502
+      ]
+    },
+    {
+      "itemID": 22309,
+      "name": "Pattern: Big Bag of Enchantment",
+      "before": [
+        7508
+      ],
+      "after": [
+        7495
+      ]
+    },
+    {
+      "itemID": 18356,
+      "name": "Garona: A Study on Stealth and Treachery",
+      "before": [
+        7497
+      ],
+      "after": [
+        7498
+      ]
+    },
+    {
+      "itemID": 18357,
+      "name": "Codex of Defense",
+      "before": [
+        7498
+      ],
+      "after": [
+        7499
+      ]
+    },
+    {
+      "itemID": 18358,
+      "name": "The Arcanist's Cookbook",
+      "before": [
+        7499
+      ],
+      "after": [
+        7500
+      ]
+    },
+    {
+      "itemID": 18359,
+      "name": "The Light and How to Swing It",
+      "before": [
+        7500
+      ],
+      "after": [
+        7501
+      ]
+    },
+    {
+      "itemID": 18360,
+      "name": "Harnessing Shadows",
+      "before": [
+        7501
+      ],
+      "after": [
+        7502
+      ]
+    },
+    {
+      "itemID": 18361,
+      "name": "The Greatest Race of Hunters",
+      "before": [
+        7502
+      ],
+      "after": [
+        7503
+      ]
+    },
+    {
+      "itemID": 18362,
+      "name": "Holy Bologna: What the Light Won't Tell You",
+      "before": [
+        7503
+      ],
+      "after": [
+        7504
+      ]
+    },
+    {
+      "itemID": 18363,
+      "name": "Frost Shock and You",
+      "before": [
+        7504
+      ],
+      "after": [
+        7505
+      ]
+    },
+    {
+      "itemID": 18364,
+      "name": "The Emerald Dream",
+      "before": [
+        7505
+      ],
+      "after": [
+        7506
+      ]
+    }
+  ],
+  "definitionAudit": {
+    "total": 9153,
+    "reorderedPositions": 14,
+    "changedRawRowHashesAtPositions": 14,
+    "addedResolvedDefinitionMultiset": 0,
+    "removedResolvedDefinitionMultiset": 0,
+    "interpretation": "Same9153resolveddefinitionmultiset;14positions reordered,26outsidecanonicalitemsourceindicesremapped,0acquisitionfactchanges."
+  },
+  "interpretation": "3newfeedIDsalloutsidecanonical\u2192107pending9Acandidates;0removed/priornames/resolvedfacts/field10changes.26index-onlyrowsalloutsidecanonical;14source-definitionpositionsreorderedwithunchangedfullresolvedmultiset. BotREADMEcount/provenanceonly,no runtime/canonicalreport/indexchange. Everlootcomparisonreuses8AFlocalsame-runcapture,notbotresponsebyteidentity/noadditionalAPIrefetch."
+}

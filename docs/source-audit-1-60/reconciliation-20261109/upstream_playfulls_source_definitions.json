@@ -1,5 +1,5 @@
 {
-  "sourceURL": "https://playfulls.com/database",
+  "sourceURL": "https://playfulls.com/db/meta.173b456e67.json",
   "method": "Factual fields used by acquisition reader; source note prose omitted and fingerprinted. Raw field10 is uninterpreted, not a loot/availability claim. Raw row fingerprint changes are diagnostic, not automatically changed acquisition facts.",
   "definitions": [
     {
@@ -74956,6 +74956,16 @@
       "sourceRow": 7495,
       "type": "boss",
       "label": "Boss drop",
+      "npc": "Magister Kalendris",
+      "zone": "Dire Maul",
+      "path": "loot-tables/dungeons/dire-maul",
+      "noteSHA256": "382d122175cc0851d6171728cbeb0e758cd291a7edfae0cb9b885fd13fa1a689",
+      "rawRowSHA256": "b18574523d2feb448b57bdc3141ab9e81564ac0eed890ca4afb8549ec3542d06"
+    },
+    {
+      "sourceRow": 7496,
+      "type": "boss",
+      "label": "Boss drop",
       "npc": "Tendris Warpwood",
       "zone": "Dire Maul",
       "path": "loot-tables/dungeons/dire-maul",
@@ -74963,7 +74973,7 @@
       "rawRowSHA256": "99871b1a82088dcfc7e219cf7bb5687e1db1e177a479a36413d1816bfff22c8c"
     },
     {
-      "sourceRow": 7496,
+      "sourceRow": 7497,
       "type": "dungeon",
       "label": "Dungeon drop",
       "npc": "Pimgib",
@@ -74973,7 +74983,7 @@
       "rawRowSHA256": "cc2babe5b3f5de33ffac50ff9a93df090b41331a125a2f8eb1cbbfab98352131"
     },
     {
-      "sourceRow": 7497,
+      "sourceRow": 7498,
       "type": "quest",
       "label": "Quest",
       "npc": "Garona: A Study on Stealth and Treachery",
@@ -74983,7 +74993,7 @@
       "rawRowSHA256": "07a20899d8f0547b88eddf265dffb76e92cdb9847ab756c85203cae229eb911c"
     },
     {
-      "sourceRow": 7498,
+      "sourceRow": 7499,
       "type": "quest",
       "label": "Quest",
       "npc": "Codex of Defense",
@@ -74993,7 +75003,7 @@
       "rawRowSHA256": "f367e78008fe92ac57be7fda3d58a9aa5435b52acce75764bca10bd5c4005875"
     },
     {
-      "sourceRow": 7499,
+      "sourceRow": 7500,
       "type": "quest",
       "label": "Quest",
       "npc": "The Arcanist's Cookbook",
@@ -75003,7 +75013,7 @@
       "rawRowSHA256": "f78ccc06e74af70d21a469831108b48393d182c29900e0364e4ad8c39b3e2867"
     },
     {
-      "sourceRow": 7500,
+      "sourceRow": 7501,
       "type": "quest",
       "label": "Quest",
       "npc": "The Light and How To Swing It",
@@ -75013,7 +75023,7 @@
       "rawRowSHA256": "323fcef0177dd74add9cb037684225a37afb2682daeea0ebaca7087ed79b4731"
     },
     {
-      "sourceRow": 7501,
+      "sourceRow": 7502,
       "type": "quest",
       "label": "Quest",
       "npc": "Harnessing Shadows",
@@ -75023,7 +75033,7 @@
       "rawRowSHA256": "edbe11749173935249b2e43dbd22a9820b73dc35dbf6975142985a05fe920935"
     },
     {
-      "sourceRow": 7502,
+      "sourceRow": 7503,
       "type": "quest",
       "label": "Quest",
       "npc": "The Greatest Race of Hunters",
@@ -75033,7 +75043,7 @@
       "rawRowSHA256": "68812397dbad9bd882a90235090f669ad005961024aa8ecc561720dd28631262"
     },
     {
-      "sourceRow": 7503,
+      "sourceRow": 7504,
       "type": "quest",
       "label": "Quest",
       "npc": "Holy Bologna: What the Light Won't Tell You",
@@ -75043,7 +75053,7 @@
       "rawRowSHA256": "214cc08a76f31305e93718bc284a07333ccb8b9c0d72823a87f9ab63cf531219"
     },
     {
-      "sourceRow": 7504,
+      "sourceRow": 7505,
       "type": "quest",
       "label": "Quest",
       "npc": "Frost Shock and You",
@@ -75053,7 +75063,7 @@
       "rawRowSHA256": "7a43b503d502cb2614383393223b53e249d2dbbf6fceff8d10c5a1260aa69893"
     },
     {
-      "sourceRow": 7505,
+      "sourceRow": 7506,
       "type": "quest",
       "label": "Quest",
       "npc": "The Emerald Dream...",
@@ -75063,7 +75073,7 @@
       "rawRowSHA256": "4b88002a89bac392357b0346f3ed2476c4cc9c6d95e643c0105c663c77d241fb"
     },
     {
-      "sourceRow": 7506,
+      "sourceRow": 7507,
       "type": "quest",
       "label": "Quest",
       "npc": "Unfinished Gordok Business",
@@ -75073,7 +75083,7 @@
       "rawRowSHA256": "cd9034c28efa5c815950364eb6864a806e96f5dbb3740f7b938391c93054ec77"
     },
     {
-      "sourceRow": 7507,
+      "sourceRow": 7508,
       "type": "boss",
       "label": "Boss drop",
       "npc": "Immol'thar",
@@ -75081,16 +75091,6 @@
       "path": "loot-tables/dungeons/dire-maul",
       "noteSHA256": "b0f9a6d81f40e3f15012aedf10cd05ef05977333dfde094c81799a08bc901df3",
       "rawRowSHA256": "f35a5963c76b2b89e7127206e890074decc2da1eff73607f777ff2086579ca4e"
-    },
-    {
-      "sourceRow": 7508,
-      "type": "boss",
-      "label": "Boss drop",
-      "npc": "Magister Kalendris",
-      "zone": "Dire Maul",
-      "path": "loot-tables/dungeons/dire-maul",
-      "noteSHA256": "382d122175cc0851d6171728cbeb0e758cd291a7edfae0cb9b885fd13fa1a689",
-      "rawRowSHA256": "b18574523d2feb448b57bdc3141ab9e81564ac0eed890ca4afb8549ec3542d06"
     },
     {
       "sourceRow": 7509,

@@ -1,40 +1,40 @@
 {
-  "capturedForCheckpoint": "8AEbot Playfulls/8Y Everloot factual baseline retained",
-  "capturedUTC": "2026-11-10T05:25:41.182684+00:00",
+  "capturedForCheckpoint": "8AFbot Playfulls/8Y Everloot factual baseline retained",
+  "capturedUTC": "2026-11-10T05:39:48.295990+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23349,
+    "itemCount": 23352,
     "sourceDefinitions": 9153,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.77786170c2.json",
+        "url": "https://playfulls.com/db/meta.173b456e67.json",
         "bytes": 988994,
-        "sha256": "77786170c2a3e2e6c37cd032aedd0103d8a874cd99b39319282628e0b1d87b5e",
+        "sha256": "173b456e679bc6cfdc285b4c572e329da2ab84e5aa09c0ea24c5b32d719ee814",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.27dfc3df89.json",
-        "bytes": 1322843,
-        "sha256": "27dfc3df8955986c74155cadc1e907544456ba55b4859ec21895d352ff780528",
+        "url": "https://playfulls.com/db/gear.e4c4cef6f5.json",
+        "bytes": 1323162,
+        "sha256": "e4c4cef6f55d5960c2284b141e52537ffd35484a7874b714a51b1c47022d9219",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/goods.53b6748bf5.json",
+        "url": "https://playfulls.com/db/goods.95a30cfe67.json",
         "bytes": 464371,
-        "sha256": "53b6748bf500cb1345cbff7010487ef185e0bd244076dbac75e376b6b0b0d6f7",
+        "sha256": "95a30cfe676ec047c38ea8892ac4b7ff0def74b3fc2d073f78aee95b03a84de8",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/other.02167da97a.json",
+        "url": "https://playfulls.com/db/other.c8a8762270.json",
         "bytes": 446193,
-        "sha256": "02167da97ac49c3ed4dc7f78f9c532bf3a77a2e4511b38a313d03de79cec9251",
+        "sha256": "c8a8762270b908c9f32f2d4a7d0a0e3a1b3be0b9ccfc317f72edbbddde731ce4",
         "matchesRecordedFingerprint": true
       }
     ],
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "8AD\u21928AEbot15newIDs:1canonical11633no source/14outside\u2192104pending9A.0previous names/resolvedfacts/offset/field10changes;all9153definitions/rawhashesunchanged. No runtimeupdate/currentlootclaim. Changedcontentaddressedfilesfetchedonce/hashmatched;unchangedcapturesreused."
+    "comparison": "8AEbot\u21928AFbot:3newIDsalloutside\u2192107pending9A;0previousacquisitionfacts/names/field10changes.26outsidecanonicalsourceindicesremapped;14definitionpositionsreorderedwithunchanged9153resolveddefinitionmultiset. Snapshotsupdated23352/9153;no runtimechange/currentlootclaim. Changedcontentaddressedfilesfetchedonce/hashmatched;Everlootlocalcapture reusedwithoutadditionalrequests."
   },
   "everloot": {
     "total": 1399,

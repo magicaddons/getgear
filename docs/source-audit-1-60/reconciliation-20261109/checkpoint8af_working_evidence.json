@@ -1,5 +1,5 @@
 {
-  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
+  "status": "Complete at publication-research level;full local/nonreleaseCI PASS;directbot reviewed",
   "baseline": "475ab66a49450b094f0969fca8f7e09edc6588cd",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -4949,8 +4949,15 @@
     "nextLast": "274183",
     "priorObjectsExact": 2475,
     "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
-    "ci": "pending",
+    "ci": "success;15testPASS=14Lua+offlinePython/24modules/fourreports;capturehelpersyntaxchecked",
     "rawComparison": "checkpoint8af_raw_upstream_review.json",
-    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;no duplicatediagnosticrequests/replay/fallback"
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;no duplicatediagnosticrequests/replay/fallback",
+    "sourceCommit": "a4be134ac977b239369a24c2cf5456a3ddc4c749",
+    "ciRun": 42763387167,
+    "ciJob": 129654103529,
+    "validatedFinalHEAD": "380b50a4512449639c559392995de04f1d42c02c",
+    "botReview": "READMEfeedcount/provenanceonly;3newoutsideIDs\u2192107pending9A;26outsidecanonicalindex-onlyremaps/14definitionpositionsreordered/same9153resolvedmultiset;no runtime/report/indexchange",
+    "additionalCandidates": 107,
+    "botRawReview": "checkpoint8af_bot_raw_upstream_review.json"
   }
 }
