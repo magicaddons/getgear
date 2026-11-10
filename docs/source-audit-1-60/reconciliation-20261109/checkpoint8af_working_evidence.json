@@ -1,5 +1,5 @@
 {
-  "status": "Publication research preserved;integration/fullvalidation/queueadvance pending",
+  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
   "baseline": "475ab66a49450b094f0969fca8f7e09edc6588cd",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -4937,5 +4937,20 @@
     "selectedQualifyingObservedEdges": 0,
     "limits": "Exact preceding public feed rows, not proof unavailable or future feed facts;repeatfactverificationduringnormalfreshreconcile."
   },
-  "limits": "21primarypublishedrank14requirements are distinct from current purchase acceptance, while79armournotooltiprank doesnotproveungatedpurchase.21secondaryunnamedcity/hall lists not NPC identities/inventories/cost/stock/faction/current routes. Secondaryrankomission not primaryrequirementoverride. No old-to-Premier version mapping/blue input/seal cost/currentcurrency inferred. Genericbuyvalues/clientcache/speculation/beta-cap20 not current source/availability. Dated9Novcapitalvendoroutage not fresh10Nov live status/permanentretirement/everyBGclosure. BothTomes272685/86 heldoffhandnotrecipelearning;RightClaw272597MainHand vsLeft272598OffHand,Spellblade272683Dagger notSword,ShieldWall272591notcraft justbecauseForceReactiveDiskappearance/proc. No sourceType/stat/equip/class/material/recipe/filter mutation."
+  "limits": "21primarypublishedrank14requirements are distinct from current purchase acceptance, while79armournotooltiprank doesnotproveungatedpurchase.21secondaryunnamedcity/hall lists not NPC identities/inventories/cost/stock/faction/current routes. Secondaryrankomission not primaryrequirementoverride. No old-to-Premier version mapping/blue input/seal cost/currentcurrency inferred. Genericbuyvalues/clientcache/speculation/beta-cap20 not current source/availability. Dated9Novcapitalvendoroutage not fresh10Nov live status/permanentretirement/everyBGclosure. BothTomes272685/86 heldoffhandnotrecipelearning;RightClaw272597MainHand vsLeft272598OffHand,Spellblade272683Dagger notSword,ShieldWall272591notcraft justbecauseForceReactiveDiskappearance/proc. No sourceType/stat/equip/class/material/recipe/filter mutation.",
+  "integrationOutcome": {
+    "equipmentRegistry": 2575,
+    "index": 4224,
+    "display": 4223,
+    "books": 759,
+    "remaining": 3327,
+    "nextCheckpoint": "8AG first100 of250 remaining undocumented60",
+    "nextFirst": "272818",
+    "nextLast": "274183",
+    "priorObjectsExact": 2475,
+    "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
+    "ci": "pending",
+    "rawComparison": "checkpoint8af_raw_upstream_review.json",
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;no duplicatediagnosticrequests/replay/fallback"
+  }
 }
