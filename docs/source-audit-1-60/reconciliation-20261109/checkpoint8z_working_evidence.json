@@ -1,5 +1,5 @@
 {
-  "status": "Publication research preserved; integration/full validation/queue advance pending",
+  "status": "Publication research integrated and validated; original preservation snapshot retained",
   "baseline": "03dfce6",
   "reviewedOn": "2026-11-09",
   "counts": {
@@ -2376,5 +2376,19 @@
     "qualifyingSelectedEdges": 0,
     "threshold": ">=3 installs",
     "limits": "Generator public source coverage only, not no-source/unavailability proof."
+  },
+  "integrationOutcome": {
+    "sourceCommit": "9e572770bfc472385fcec507193f1c577d0a9665",
+    "ciRun": "https://github.com/magicaddons/getgear/actions/runs/42754551200",
+    "validatedBotHead": "e38d38634bb2f368cb007d4c7262f727fcd9283d",
+    "fullRegression": "14 PASS;24 modules;four reports; local and CI",
+    "equipmentRegistry": 2129,
+    "index": 3778,
+    "display": 3777,
+    "frozenRemaining": 3773,
+    "next": "8AA:first100 of145undocumented58 IDs12616\u201317616 marked queue",
+    "rawFeedReview": "checkpoint8z_bot_raw_upstream_review.json",
+    "generatedReview": "checkpoint8z_bot_generated_review.json",
+    "pendingCoverageCandidates": 72
   }
 }
