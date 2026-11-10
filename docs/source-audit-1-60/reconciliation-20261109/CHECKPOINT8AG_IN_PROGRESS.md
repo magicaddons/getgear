@@ -1,0 +1,7 @@
+# Checkpoint8AG — research preserved, integration pending
+
+## Checkpoint8AG research preserved — integration pending
+
+100 exact60 identities/105queries/81classmasks;one272957Bryanna263569 merchantjoin/cost194609/2799Exalted7,99noacquisitiontables,100noavailabilityflags.18primarytooltiprank14cases(17weapons/1shield),17same-IDsecondaryunnamedlocationleads(17Dalaran/13ChampionsHall/16pins),272849noleadnotinherited/272846missingpinnotborrowed.81armourorigin-rank gaps. MagebladeDagger/RightMainFist-LeftOffFist/Gun/Aegisnotprofessions;setnamesnotcraft/specgates. Reused174NPC96inventoriesonejoin;9Novprimaryguide0selectedPremierIDs;newgeneralDaybreakappearance/sealsclaimnotID→currentactor/charge evidence. Proof CHECKPOINT8AG_IN_PROGRESS.md/working_evidence/discovery_index. All100still8AG,registry2575/index4224/remaining3327/latestfullPASS8AF42763387167/bot380b50a. Resumeintegrate100/preserve2575earlierobjects/freshsame-runHTTPcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot,then8AHnext100of150undoc60.107separate9Acandidates/liveexceptionsopen. No release/mainaction.
+
+Self-contained per-item identities/fullhashes/requirements/exactmerchantjoin/secondarylocations and bounds retained. No runtime/queue advance;do not repeat saved research.
