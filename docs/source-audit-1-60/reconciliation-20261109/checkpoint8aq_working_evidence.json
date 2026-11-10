@@ -1,0 +1,1268 @@
+{
+  "status": "Publication research preserved;fourruntime integration/freshvalidation/CI/bot pending",
+  "baseline": "469f6303fea3cdcbefc60f73af3e695ebc163050",
+  "reviewedOn": "2026-11-10",
+  "counts": {
+    "selected": 4,
+    "fullPrimaryPages": 34,
+    "newFullPages": 33,
+    "reusedFullNPCPages": 1,
+    "gearQuestRewardJoins": 4,
+    "providedToolQuestJoins": 8,
+    "cleansingNPCQuestJoins": 4,
+    "splinterNPCReverseJoins": 12,
+    "splinterContainerReverseJoins": 1,
+    "headNPCReverseJoins": 1,
+    "baseNPCReverseJoins": 0,
+    "earlyQuestActorReferences": 3,
+    "finalQuestExplicitActorReferences": 0,
+    "currentLiveVerified": 0
+  },
+  "items": {
+    "22632": {
+      "url": "https://www.wowhead.com/forever/item=22632",
+      "bytes": 241038,
+      "sha256": "4933d984e619e18c0ca780a87cd66e8b1bdf76229509d97e1bcb57024e0b7a2a",
+      "title": "Atiesh, Greatstaff of the Guardian - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22632,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "level": 90,
+        "reqlevel": 60,
+        "quality": 5,
+        "classs": 2,
+        "subclass": 10,
+        "slot": 17,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "className": "Druid",
+      "canonicalClasses": "DRUID:60",
+      "rewardRow": {
+        "category": -344,
+        "category2": 7,
+        "id": 9269,
+        "itemrewards": [
+          [
+            22632,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 81,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "popularity": 105
+      },
+      "binding": "BoP",
+      "plainUnique": false,
+      "primaryUnavailable": false,
+      "seasonalWarning": false,
+      "portalUseSpell": 28148,
+      "portalCooldownMinutes": 1
+    },
+    "22631": {
+      "url": "https://www.wowhead.com/forever/item=22631",
+      "bytes": 262926,
+      "sha256": "5fa6a4963cfb72d7c57f1a04d0cbf40f98c8077907781f766eafc5ebb526e061",
+      "title": "Atiesh, Greatstaff of the Guardian - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22631,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "level": 90,
+        "reqlevel": 60,
+        "quality": 5,
+        "classs": 2,
+        "subclass": 10,
+        "slot": 17,
+        "reqclass": 16,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Spell Power 120 added",
+            "Healing 242 instead of 362",
+            "Spell Damage 120 removed"
+          ],
+          "notShown": []
+        }
+      },
+      "className": "Priest",
+      "canonicalClasses": "PRIEST:60",
+      "rewardRow": {
+        "category": -344,
+        "category2": 7,
+        "id": 9257,
+        "itemrewards": [
+          [
+            22631,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 81,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "popularity": 94
+      },
+      "binding": "BoP",
+      "plainUnique": false,
+      "primaryUnavailable": false,
+      "seasonalWarning": false,
+      "portalUseSpell": 28148,
+      "portalCooldownMinutes": 1
+    },
+    "22630": {
+      "url": "https://www.wowhead.com/forever/item=22630",
+      "bytes": 280315,
+      "sha256": "73afd763a473c84eb3843ac340101852e584bfefa43815bec1f37ea42fe3d96f",
+      "title": "Atiesh, Greatstaff of the Guardian - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22630,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "level": 90,
+        "reqlevel": 60,
+        "quality": 5,
+        "classs": 2,
+        "subclass": 10,
+        "slot": 17,
+        "reqclass": 256,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed",
+            "effects_changed"
+          ],
+          "lines": [
+            "Critical Strike Rating 28 added",
+            "Spell Critical Strike % 2 removed",
+            "Effects changed"
+          ],
+          "notShown": []
+        }
+      },
+      "className": "Warlock",
+      "canonicalClasses": "WARLOCK:60",
+      "rewardRow": {
+        "category": -344,
+        "category2": 7,
+        "id": 9271,
+        "itemrewards": [
+          [
+            22630,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 81,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "popularity": 133
+      },
+      "binding": "BoP",
+      "plainUnique": false,
+      "primaryUnavailable": false,
+      "seasonalWarning": false,
+      "portalUseSpell": 28148,
+      "portalCooldownMinutes": 1
+    },
+    "22589": {
+      "url": "https://www.wowhead.com/forever/item=22589",
+      "bytes": 281186,
+      "sha256": "f7773a680c1377765fe057f9e336b6501dd78bb7e703b65d774647aa9d57f0fc",
+      "title": "Atiesh, Greatstaff of the Guardian - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22589,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "level": 90,
+        "reqlevel": 60,
+        "quality": 5,
+        "classs": 2,
+        "subclass": 10,
+        "slot": 17,
+        "reqclass": 128,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Hit Rating 20 added",
+            "Spell Hit % 2 removed"
+          ],
+          "notShown": []
+        }
+      },
+      "className": "Mage",
+      "canonicalClasses": "MAGE:60",
+      "rewardRow": {
+        "category": -344,
+        "category2": 7,
+        "id": 9270,
+        "itemrewards": [
+          [
+            22589,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 81,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "popularity": 128
+      },
+      "binding": "BoP",
+      "plainUnique": false,
+      "primaryUnavailable": false,
+      "seasonalWarning": false,
+      "portalUseSpell": 28148,
+      "portalCooldownMinutes": 1
+    }
+  },
+  "quests": {
+    "9269": {
+      "url": "https://www.wowhead.com/forever/quest=9269",
+      "bytes": 53870,
+      "sha256": "c6c602e50875a40ce96cc17a1a3d3f1a34a0d53a9a605ef5aa895b1693488f99",
+      "title": "Atiesh, Greatstaff of the Guardian - Quest - Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 9269,
+        "itemrewards": [
+          [
+            22632,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 81,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "cleansingObjective": {
+        "type": "NPC credit",
+        "npcID": 16387,
+        "quantity": 1,
+        "zoneID": 2017,
+        "zoneName": "Stratholme",
+        "coordinatesAbsent": true
+      },
+      "providedToolItemID": 22737,
+      "providedToolQuantity": 1,
+      "narrativeContact": "Anachronos at Caverns of Time/Tanaris; no explicit NPC start/end infobox fields on finalquests",
+      "explicitActorReferences": [],
+      "explicitClassMask": null,
+      "repeatableLabel": false
+    },
+    "9271": {
+      "url": "https://www.wowhead.com/forever/quest=9271",
+      "bytes": 51901,
+      "sha256": "6912ca0c6a5b221601f69f021c5a126dd962f8bbaa8c074bac8097d58d65908d",
+      "title": "Atiesh, Greatstaff of the Guardian - Quest - Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 9271,
+        "itemrewards": [
+          [
+            22630,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 81,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "cleansingObjective": {
+        "type": "NPC credit",
+        "npcID": 16387,
+        "quantity": 1,
+        "zoneID": 2017,
+        "zoneName": "Stratholme",
+        "coordinatesAbsent": true
+      },
+      "providedToolItemID": 22737,
+      "providedToolQuantity": 1,
+      "narrativeContact": "Anachronos at Caverns of Time/Tanaris; no explicit NPC start/end infobox fields on finalquests",
+      "explicitActorReferences": [],
+      "explicitClassMask": null,
+      "repeatableLabel": false
+    },
+    "9270": {
+      "url": "https://www.wowhead.com/forever/quest=9270",
+      "bytes": 58358,
+      "sha256": "f869e1ad708b415561b96561a146be9fa12b500093def74baec6cc9fd41eb055",
+      "title": "Atiesh, Greatstaff of the Guardian - Quest - Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 9270,
+        "itemrewards": [
+          [
+            22589,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 81,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "cleansingObjective": {
+        "type": "NPC credit",
+        "npcID": 16387,
+        "quantity": 1,
+        "zoneID": 2017,
+        "zoneName": "Stratholme",
+        "coordinatesAbsent": true
+      },
+      "providedToolItemID": 22737,
+      "providedToolQuantity": 1,
+      "narrativeContact": "Anachronos at Caverns of Time/Tanaris; no explicit NPC start/end infobox fields on finalquests",
+      "explicitActorReferences": [],
+      "explicitClassMask": null,
+      "repeatableLabel": false
+    },
+    "9257": {
+      "url": "https://www.wowhead.com/forever/quest=9257",
+      "bytes": 50359,
+      "sha256": "df772b69c785554277a4af7432da12661dbd08cb9a41d3001db55eecc3141c78",
+      "title": "Atiesh, Greatstaff of the Guardian - Quest - Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 9257,
+        "itemrewards": [
+          [
+            22631,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 81,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "cleansingObjective": {
+        "type": "NPC credit",
+        "npcID": 16387,
+        "quantity": 1,
+        "zoneID": 2017,
+        "zoneName": "Stratholme",
+        "coordinatesAbsent": true
+      },
+      "providedToolItemID": 22737,
+      "providedToolQuantity": 1,
+      "narrativeContact": "Anachronos at Caverns of Time/Tanaris; no explicit NPC start/end infobox fields on finalquests",
+      "explicitActorReferences": [],
+      "explicitClassMask": null,
+      "repeatableLabel": false
+    }
+  },
+  "auxiliary": {
+    "npc:16387": {
+      "url": "https://www.wowhead.com/forever/npc=16387",
+      "bytes": 66172,
+      "sha256": "571818ee2ab6a7f0a089590dc12a8a7d8d33c47eb7cd38536baa39c5fbce0673",
+      "title": "Atiesh - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [],
+      "selectedQuestObjectiveRows": [
+        {
+          "questID": 9257,
+          "name": "Atiesh, Greatstaff of the Guardian"
+        },
+        {
+          "questID": 9269,
+          "name": "Atiesh, Greatstaff of the Guardian"
+        },
+        {
+          "questID": 9270,
+          "name": "Atiesh, Greatstaff of the Guardian"
+        },
+        {
+          "questID": 9271,
+          "name": "Atiesh, Greatstaff of the Guardian"
+        }
+      ],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "spell:28148": {
+      "url": "https://www.wowhead.com/forever/spell=28148",
+      "bytes": 75052,
+      "sha256": "345c9663fe63bb476ba55e0bfab04b77f5d835379fd74d4f2379012e955eae3f",
+      "title": "Portal: Karazhan - Spell - Forever",
+      "reusedCachedResponse": false,
+      "usedByItemIDs": [
+        22631,
+        22589,
+        22630,
+        22632
+      ],
+      "recipeRows": [],
+      "scope": "Item-use/effect relationship,not player-learned profession craft or current dungeon access"
+    },
+    "item:22737": {
+      "url": "https://www.wowhead.com/forever/item=22737",
+      "bytes": 89477,
+      "sha256": "f38ec7f9665f9cddc2f37cbef300ffcc7bbe917cbe246514cb6a3ce08c02d654",
+      "title": "Atiesh, Greatstaff of the Guardian - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22737,
+        "name": "Atiesh, Greatstaff of the Guardian",
+        "level": 60,
+        "reqlevel": 60,
+        "quality": 5,
+        "classs": 12,
+        "subclass": 0,
+        "slot": 0,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "bindingBoP": true,
+      "questItem": false,
+      "plainUnique": true,
+      "relations": {
+        "provided-for": [
+          {
+            "id": 9257,
+            "name": "Atiesh, Greatstaff of the Guardian"
+          },
+          {
+            "id": 9269,
+            "name": "Atiesh, Greatstaff of the Guardian"
+          },
+          {
+            "id": 9270,
+            "name": "Atiesh, Greatstaff of the Guardian"
+          },
+          {
+            "id": 9271,
+            "name": "Atiesh, Greatstaff of the Guardian"
+          }
+        ],
+        "objective-of": [
+          {
+            "id": 9257,
+            "name": "Atiesh, Greatstaff of the Guardian"
+          },
+          {
+            "id": 9269,
+            "name": "Atiesh, Greatstaff of the Guardian"
+          },
+          {
+            "id": 9270,
+            "name": "Atiesh, Greatstaff of the Guardian"
+          },
+          {
+            "id": 9271,
+            "name": "Atiesh, Greatstaff of the Guardian"
+          }
+        ]
+      }
+    },
+    "item:22733": {
+      "url": "https://www.wowhead.com/forever/item=22733",
+      "bytes": 64194,
+      "sha256": "85272745edfb5fe8827084e9c0bf62f68defe4fa79df11d6e3c5e0d67b0c6ae1",
+      "title": "Staff Head of Atiesh - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22733,
+        "name": "Staff Head of Atiesh",
+        "level": 1,
+        "quality": 5,
+        "classs": 12,
+        "subclass": 0,
+        "slot": 0,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "bindingBoP": false,
+      "questItem": true,
+      "plainUnique": true,
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 15990,
+            "name": "Kel'Thuzad"
+          }
+        ],
+        "objective-of": [
+          {
+            "id": 9251,
+            "name": "Atiesh, the Befouled Greatstaff"
+          }
+        ]
+      }
+    },
+    "item:22734": {
+      "url": "https://www.wowhead.com/forever/item=22734",
+      "bytes": 68733,
+      "sha256": "366071ef6d81707df69340a42a83b247c5e71a22734fde9006e7538fc232698d",
+      "title": "Base of Atiesh - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22734,
+        "name": "Base of Atiesh",
+        "level": 1,
+        "quality": 5,
+        "classs": 12,
+        "subclass": 0,
+        "slot": 0,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "bindingBoP": false,
+      "questItem": true,
+      "plainUnique": true,
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 15727,
+            "name": "C'Thun"
+          }
+        ],
+        "objective-of": [
+          {
+            "id": 9251,
+            "name": "Atiesh, the Befouled Greatstaff"
+          }
+        ]
+      }
+    },
+    "item:22726": {
+      "url": "https://www.wowhead.com/forever/item=22726",
+      "bytes": 105352,
+      "sha256": "25aec253c2bfa551a572d2cb9f53896b1d457b7278dd247f78491ed8f30be14e",
+      "title": "Splinter of Atiesh - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22726,
+        "name": "Splinter of Atiesh",
+        "level": 60,
+        "reqlevel": 60,
+        "quality": 5,
+        "classs": 12,
+        "subclass": 0,
+        "slot": 0,
+        "reqclass": 1424,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "bindingBoP": true,
+      "questItem": false,
+      "plainUnique": false,
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 15928,
+            "name": "Thaddius"
+          },
+          {
+            "id": 15931,
+            "name": "Grobbulus"
+          },
+          {
+            "id": 15932,
+            "name": "Gluth"
+          },
+          {
+            "id": 15936,
+            "name": "Heigan the Unclean"
+          },
+          {
+            "id": 15952,
+            "name": "Maexxna"
+          },
+          {
+            "id": 15953,
+            "name": "Grand Widow Faerlina"
+          },
+          {
+            "id": 15954,
+            "name": "Noth the Plaguebringer"
+          },
+          {
+            "id": 15956,
+            "name": "Anub'Rekhan"
+          },
+          {
+            "id": 16011,
+            "name": "Loatheb"
+          },
+          {
+            "id": 16028,
+            "name": "Patchwerk"
+          },
+          {
+            "id": 16060,
+            "name": "Gothik the Harvester"
+          },
+          {
+            "id": 16061,
+            "name": "Instructor Razuvious"
+          }
+        ],
+        "contained-in-object": [
+          {
+            "id": 181366,
+            "name": "Four Horsemen Chest"
+          }
+        ],
+        "creates": [
+          {
+            "id": 22727,
+            "name": "Frame of Atiesh"
+          }
+        ],
+        "reagent-for": [
+          {
+            "id": 28324,
+            "name": "Forming Frame of Atiesh",
+            "reagents": [
+              [
+                22726,
+                39
+              ]
+            ],
+            "creates": [
+              22727,
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "item:22727": {
+      "url": "https://www.wowhead.com/forever/item=22727",
+      "bytes": 125123,
+      "sha256": "690677c32f439e40b6fb6b02dd898a2bd51240430c365c8e28599c19ad024691",
+      "title": "Frame of Atiesh - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 22727,
+        "name": "Frame of Atiesh",
+        "level": 60,
+        "reqlevel": 60,
+        "quality": 5,
+        "classs": 12,
+        "subclass": 0,
+        "slot": 0,
+        "side": 2,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "bindingBoP": true,
+      "questItem": false,
+      "plainUnique": true,
+      "relations": {
+        "created-by-spell": [
+          {
+            "id": 28324,
+            "name": "Forming Frame of Atiesh",
+            "reagents": [
+              [
+                22726,
+                39
+              ]
+            ],
+            "creates": [
+              22727,
+              0,
+              0
+            ]
+          }
+        ],
+        "starts": [
+          {
+            "id": 9250,
+            "name": "Frame of Atiesh"
+          }
+        ],
+        "provided-for": [
+          {
+            "id": 9250,
+            "name": "Frame of Atiesh"
+          }
+        ],
+        "objective-of": [
+          {
+            "id": 9250,
+            "name": "Frame of Atiesh"
+          }
+        ]
+      }
+    },
+    "spell:28354": {
+      "url": "https://www.wowhead.com/forever/spell=28354",
+      "bytes": 53521,
+      "sha256": "dce5a145454a06c44b5fda2e4bcf1a57e1e83fb1e0abbdc83f783accfa124c87",
+      "title": "Exorcise Atiesh - Spell - Forever",
+      "reusedCachedResponse": false,
+      "usedByItemIDs": [
+        22737
+      ],
+      "recipeRows": [],
+      "scope": "Item-use/effect relationship,not player-learned profession craft or current dungeon access"
+    },
+    "quest:9251": {
+      "url": "https://www.wowhead.com/forever/quest=9251",
+      "bytes": 58588,
+      "sha256": "3b19f2930ca2164793cf58e44a37e1b7a895c0f8fe9c5cf8b4e5f46fd6bfe56b",
+      "title": "Atiesh, the Befouled Greatstaff - Quest - Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 9251,
+        "level": 60,
+        "name": "Atiesh, the Befouled Greatstaff",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 2,
+        "type": 62,
+        "xp": 6600,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        9250
+      ],
+      "actors": [
+        {
+          "role": "start",
+          "npcID": 15192
+        },
+        {
+          "role": "end",
+          "npcID": 15192
+        }
+      ],
+      "itemObjectiveIDs": [
+        22733,
+        22734
+      ],
+      "objectiveQuantities": [
+        1,
+        1
+      ],
+      "inlineProvidedItemIDs": [],
+      "repeatableLabel": false
+    },
+    "npc:15727": {
+      "url": "https://www.wowhead.com/forever/npc=15727",
+      "bytes": 238070,
+      "sha256": "ebd5535764a91a715b32fbe398625cbc9c0653bd4ad7b578ce64027af7ce39d3",
+      "title": "C'Thun - NPC - Forever",
+      "reusedCachedResponse": true,
+      "inputLootRows": [],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "spell:28324": {
+      "url": "https://www.wowhead.com/forever/spell=28324",
+      "bytes": 64005,
+      "sha256": "39ad8e6239fe2de01b3039808ba658b4ef3ada1ceafaef872d70cb425dfa7340",
+      "title": "Forming Frame of Atiesh - Spell - Forever",
+      "reusedCachedResponse": false,
+      "usedByItemIDs": [
+        22726
+      ],
+      "recipeRows": [
+        {
+          "id": 28324,
+          "name": "Forming Frame of Atiesh",
+          "reagents": [
+            [
+              22726,
+              39
+            ]
+          ],
+          "creates": [
+            22727,
+            0,
+            0
+          ],
+          "cat": -26
+        }
+      ],
+      "scope": "Item-use/effect relationship,not player-learned profession craft or current dungeon access"
+    },
+    "quest:9250": {
+      "url": "https://www.wowhead.com/forever/quest=9250",
+      "bytes": 53191,
+      "sha256": "a48729e7fd5676ad4ba9aede1827169857d12dd99fd464e8e836861baddbad70",
+      "title": "Frame of Atiesh - Quest - Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 9250,
+        "level": 60,
+        "name": "Frame of Atiesh",
+        "reprewards": [
+          [
+            910,
+            200
+          ],
+          [
+            529,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 2,
+        "type": 62,
+        "xp": 6600,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        9251
+      ],
+      "actors": [
+        {
+          "role": "end",
+          "npcID": 15192
+        }
+      ],
+      "itemObjectiveIDs": [
+        22727
+      ],
+      "objectiveQuantities": [
+        1
+      ],
+      "inlineProvidedItemIDs": [
+        22727
+      ],
+      "repeatableLabel": false
+    },
+    "npc:15990": {
+      "url": "https://www.wowhead.com/forever/npc=15990",
+      "bytes": 191732,
+      "sha256": "e84410bffe650035f78f64882e622a0d61d09cfa0f9122c8b17f7b93586a9233",
+      "title": "Kel'Thuzad - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22733,
+          "name": "Staff Head of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:15928": {
+      "url": "https://www.wowhead.com/forever/npc=15928",
+      "bytes": 91264,
+      "sha256": "cf47893a1051690d4f0aa21f93bc3c59f9806207ff06dc555e8f04f16d77d800",
+      "title": "Thaddius - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:15931": {
+      "url": "https://www.wowhead.com/forever/npc=15931",
+      "bytes": 126985,
+      "sha256": "40d2f96b8cf135e267dc702bd7bd07312df367924a669db7a602d3ae1d65c944",
+      "title": "Grobbulus - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:15932": {
+      "url": "https://www.wowhead.com/forever/npc=15932",
+      "bytes": 91036,
+      "sha256": "0b46892289d23b1c1966474a5060feae0c1734c4d0fc69b8fb96f95a0d65cc1c",
+      "title": "Gluth - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:15936": {
+      "url": "https://www.wowhead.com/forever/npc=15936",
+      "bytes": 120660,
+      "sha256": "bc5e71debe21f4a838918b8561a722b686a44bebc4da358a53cd4631a18e8a08",
+      "title": "Heigan the Unclean - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:15952": {
+      "url": "https://www.wowhead.com/forever/npc=15952",
+      "bytes": 103767,
+      "sha256": "56adaf45459bed6cc9bbcd3801335267c50cfbc3946346aaf7bbef3951912e92",
+      "title": "Maexxna - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:15956": {
+      "url": "https://www.wowhead.com/forever/npc=15956",
+      "bytes": 83751,
+      "sha256": "86faad5e21525846219c396fe1057ba5bae57494e0ba279f04ce9231270f3491",
+      "title": "Anub'Rekhan - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:15954": {
+      "url": "https://www.wowhead.com/forever/npc=15954",
+      "bytes": 74277,
+      "sha256": "ffc5d092ae6dd80249e17d499d4d6823184f2cb2c7b9b3cc8f9aa33e8d9b5898",
+      "title": "Noth the Plaguebringer - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:15953": {
+      "url": "https://www.wowhead.com/forever/npc=15953",
+      "bytes": 199534,
+      "sha256": "7e297c5863d771ed9d9ba83bf6c2e371157cb9995d199a604b5d14948ef7e411",
+      "title": "Grand Widow Faerlina - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:16011": {
+      "url": "https://www.wowhead.com/forever/npc=16011",
+      "bytes": 107479,
+      "sha256": "e51f6fc7b5807891d57b68fcb15a72de1a420fa036ec38697e8489a62fe7458c",
+      "title": "Loatheb - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:16061": {
+      "url": "https://www.wowhead.com/forever/npc=16061",
+      "bytes": 93980,
+      "sha256": "6498bfa17389fb05f0eaf31b5d7254179daf09a8bd5aabb863dc2ac6cb436d30",
+      "title": "Instructor Razuvious - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:16028": {
+      "url": "https://www.wowhead.com/forever/npc=16028",
+      "bytes": 138930,
+      "sha256": "f32ed91683c6ac8ab46634d497e5bc3f0e91a6de63a50526d5ddd607cb883789",
+      "title": "Patchwerk - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "npc:16060": {
+      "url": "https://www.wowhead.com/forever/npc=16060",
+      "bytes": 125874,
+      "sha256": "8c5db5f28636e853bd230142101a82698f18acb23d1da3dd5cde02bc728d3f6e",
+      "title": "Gothik the Harvester - NPC - Forever",
+      "reusedCachedResponse": false,
+      "inputLootRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "selectedQuestObjectiveRows": [],
+      "scope": "Published reverse list only,not independent current live observation or rates; other loot omitted"
+    },
+    "object:181366": {
+      "url": "https://www.wowhead.com/forever/object=181366",
+      "bytes": 67106,
+      "sha256": "0205142a17b23c601d2f1ee570a9d40b969b0ce8c0e8bf4634df35b0225c39f8",
+      "title": "Four Horsemen Chest - Object - Forever",
+      "reusedCachedResponse": false,
+      "inputContainsRows": [
+        {
+          "itemID": 22726,
+          "name": "Splinter of Atiesh"
+        }
+      ],
+      "scope": "Chest is container,not an NPC; no rates/live guarantee"
+    }
+  },
+  "assembly": {
+    "publishedSplinterTotal": 40,
+    "spellID": 28324,
+    "rawAdditionalReagents": [
+      [
+        22726,
+        39
+      ]
+    ],
+    "frameID": 22727,
+    "earlyQuestIDs": [
+      9250,
+      9251
+    ],
+    "headID": 22733,
+    "headQty": 1,
+    "headNPC": 15990,
+    "baseID": 22734,
+    "baseQty": 1,
+    "baseNPCItemSideOnly": 15727,
+    "providedToolID": 22737,
+    "exorciseSpell": 28354,
+    "toolCooldownMinutes": 15,
+    "cleansingNPC": 16387,
+    "finalQuestIDs": [
+      9257,
+      9269,
+      9270,
+      9271
+    ]
+  },
+  "limits": "Fourfixed/classspecificsame-name finishedIDs,notfourchoicequest/directstaffloot.40publishedtotalvs39rawspellreagents retained,not39total/free learnedcraft/extra40onfinalquest. Splinterinputmask1424=fourcasterclassesnotall9.12NPC+1containerreversejoins forSplinters andKTforhead;Cthunbaseprimaryitemreferenceonly,actualreusedfullNPCtableomitsbase;no2sidedbase/live/rateproof. Early9250/9251Horde vsfourfinalBoth isunresolvedpublicationinconsistency;no gearfactionmutation orconfirmedAllianceacceptance. Earlyactor15192questside3refs only;known8QfullNPC403reusedfailureknowledge/notnewretry/hash/map. Finalsnoexplicitstart/endNPCfields;Anachronosnarrativeonly,notindependentNPCinventory. Frameinlineprovidedbegins9250notfreeinput;9251head+base1each,questJSONnoexplicittoolreward soformallinktofinaltoolgrant remainsincomplete. Tool22737unique/15minitemeffect distinctfourfinishedIDs/noUnique/1minportal;NPC16387objectivecreditnotitemturnin/directstaffloot. Portal28148usedbyallfournotcraft/learnedrecipe/currentKarazhanaccess. Gains200Noz910+200Dawn529notstanding/equipgate. Req60vsitem90,BoP/Legendary/classmaskretained;norepeat/availabilitylabelnotcurrentavailability/ownership/replacementproof. SecondaryClassicdamage225\u2013338vsprimary130\u2013243notusedtorewritestats. Currentraidphase/supply/trigger/acceptance/reward/retentionneedsingame.195outsidecanonical9A+systematicBackscopeaudit remain.",
+  "next": "Integrate4 preserving3011priorobjects/currenteligibility/facts;freshsame-runactualHTTPcapture mustexit0 thenfullsuite/semantic/rawreviews/nonreleaseCI/bot. AfterPASSmarkfourdone;8AR82worlddropcaseslevels1\u20137 numericsort,thenrestworld/9Acoverageaudit. Frozen2891 remains pending untilvalidation;no release/main action."
+}
