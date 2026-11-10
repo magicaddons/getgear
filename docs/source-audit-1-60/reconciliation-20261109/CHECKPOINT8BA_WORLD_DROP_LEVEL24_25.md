@@ -1,0 +1,41 @@
+# Checkpoint 8BA — 95 acquisition cases at levels 24–25
+
+Publication research recovered and preserved on 11 November 2026 (Adelaide). Integration, fresh reconciliation and local/CI validation are pending. Latest completed validation is checkpoint 8AZ, source `67b2614cdfd7a1130bdf581296fc42b54ca46df9`, [CI 42894684782](https://github.com/magicaddons/getgear/actions/runs/42894684782), inspected direct bot `517bafa4c8d65b5348cc71385be1d3dd8b9c185e`, closure `c36a118c97b3e0f32129417017e5f13d80a4bdae`.
+
+## Evidence and confidence
+
+[Working evidence](checkpoint8ba_working_evidence.json) locks 95 exact queued identities (47 at level 24, 48 at 25), with 205 unique complete primary response fingerprints: 140 newly read and 65 explicitly reused. Eight actual prior 8AZ feed responses are reused. [Discovery](checkpoint8ba_discovery_index.json) records 95 exact-ID/name queries, four shared queries and two secondary opens. Search projections and secondary cache-observation badges are not current loot observations.
+
+There are 79 broad drop references, 15 named-enemy cases and one physical-container case, with 1,066 exact NPC reverse joins, 104 object joins across five world-object IDs, and 58 physical-container joins across 41 equipment cases. Five physical containers are distinct from world objects. Nineteen fished-in tables do not impose wearer Fishing requirements. All named-enemy relationships independently match full NPC loot. No full read failed. The batch has 83 Uncommon/12 Rare, 91 BoE/four BoP (10298, 273811, 282710, 285338), two plain Unique rings (13094, 13097), and no explicit class masks or primary unavailable/SoD warnings. No qualifying attributed Everloot relationship exists for these selected IDs in the reused capture; this is not proof of no drops.
+
+## Sparklematic box, inputs and ring
+
+[Gnomeregan Band 10298](https://www.wowhead.com/forever/item=10298) has no own enemy-drop table. Its exact [Sparklematic-Wrapped Box 9363](https://www.wowhead.com/forever/item=9363) reference independently reverses in the box's 19-row contents table. The box is Common/BoP, says Right Click to Open, and has structured required level 25 while its rendered tooltip has no Requires line. Actual opening conditions remain unverified. The ring is independently BoP/equip 25; the box's item level 1 is not the ring's equip level.
+
+Nine complete quest pages are independently matched at both start and end to three separate same-name Sparklematic object IDs (18 joins):
+
+| Object | Initial paid reference | Box completion reference | Paid repeat/box reference |
+| --- | --- | --- | --- |
+| [142487](https://www.wowhead.com/forever/object=142487) | [2951](https://www.wowhead.com/forever/quest=2951) | [2952](https://www.wowhead.com/forever/quest=2952) | [2953](https://www.wowhead.com/forever/quest=2953) |
+| [175084](https://www.wowhead.com/forever/object=175084) | [4601](https://www.wowhead.com/forever/quest=4601) | [4605](https://www.wowhead.com/forever/quest=4605) | [4603](https://www.wowhead.com/forever/quest=4603) |
+| [175085](https://www.wowhead.com/forever/object=175085) | [4602](https://www.wowhead.com/forever/quest=4602) | [4606](https://www.wowhead.com/forever/quest=4606) | [4604](https://www.wowhead.com/forever/quest=4604) |
+
+All nine publish minimum 25/display 30/Both. Six initial/repeat pages explicitly require one physical [Grime-Encrusted Object 9308](https://www.wowhead.com/forever/item=9308) and three silver (300 copper), corroborated by objective markup and required-money HTML. Three completion pages lack a separate input row; their completion text describes the machine stopping and presenting a box. That omission does not prove free boxes or independently establish current chain ordering/prerequisite flags. Six reward pages each give one fixed box, not a guaranteed ring. Three repeat pages explicitly say Repeatable; actual current repetition and acceptance remain unverified. These are alternative same-machine references, not nine additive fees or an independently verified nine-quest current sequence.
+
+The physical input's 17 named NPC origins all independently reverse in full NPC inventories. They are origins of 9308, not direct loot sources of finished ring 10298. Neither engineering-themed prose, incidental ore/stone/gem contents nor comments about engineers establishes a wearer Engineering requirement, a newly learned recipe or a ring crafting ingredient. All three machines lack usable map footprints; no current waypoint is invented. Do not substitute different Grime-Encrusted Ring/clean-ring quest IDs from the same machine.
+
+## Named enemies and secondary provenance
+
+[Repurposed Rack 273811](https://www.wowhead.com/forever/item=273811) independently matches [Hamhock 1717](https://www.wowhead.com/forever/npc=1717). It is a BoP shield, not a held-off-hand item merely because both appear in an off-hand slot. Spell-power Equip is an effect, not a craft or additional class mask. A [secondary page](https://bindonforever.com/item/273811) labels its item properties as server-cache observed but explicitly attributes loot to unverified QuestieDB data. An older secondary build shows different stats; neither that snapshot nor the observation badge justifies changing canonical stats or claiming personally observed live loot.
+
+[Humbert's Helm 4724](https://www.wowhead.com/forever/item=4724) specifically matches Dun Garok Rifleman 2345, while [Humbert's Pants 4723](https://www.wowhead.com/forever/item=4723) matches Dun Garok Priest 2346. These are different from [Dun Garok Rifle 282710](https://www.wowhead.com/forever/item=282710), independently matched to Tamra Stormpike 14275. Tamra's page shows a hostile Horde reaction, not a confirmed Alliance-friendly reaction or gear faction/standing gate. The two Humbert NPC pages separately show friendly Alliance/hostile Horde reactions. [Kodohide Legguards 285338](https://www.wowhead.com/forever/item=285338) independently matches Brontus 5827; neutral reactions are not proof of current attackability, patrol or guaranteed spawn. No copied actor source or wearer faction rule is introduced.
+
+Flesh Piercer 3336 and Naraxis' Fang 4449 on-hit effects are equipment effects, not learned professions. Full Naraxis 574 loot independently lists both Fang 4449 and Husk 4448 without guaranteeing both per kill. Kazon 584 independently lists both Maul 2058 and Pauldrons 3231; names do not automatically classify every actor as a boss.
+
+Previously completed War Effort 21510 twelve-quest/21-NPC acquisition research is explicitly reused from 8AX; Heavy Bronze Lockbox/Highland Horror origin is reused from 8AY. Alternative costs are not combined fees or wearer professions, crate binding does not transfer to BoE gear, and no current phase, spawn, opening, rate or guaranteed gear roll is asserted.
+
+## Resume
+
+Integrate these 95 while preserving all 3,766 prior metadata objects, existing observations, identities, stats, class/equip rules, filters, settings, recipes and ingredients. Run fresh same-run capture through exit zero, then the full local suite and non-release CI, inspect the direct bot commit and close the checkpoint. Current frozen remaining 2,136 includes these 95; after completion it becomes 2,041. Next is **8BB: 102 cases at catalogue levels 26–27 (55+47), numeric item-ID order**, verified against the queue.
+
+The 219 separate coverage candidates, systematic full-cache/feed all-slot audit including ten omitted cloaks, six dungeon exceptions, 954 current-live book routes and current access/use/retention uncertainties remain. Count validation is not exhaustive coverage or live acceptance. One existing automation remains enabled; no new automation, release, package, main/Beta 8 or billing action is authorised.
