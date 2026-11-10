@@ -1,0 +1,37 @@
+{
+  "status": "Confirmed cold-client fallback defect;repair/regressions/integration pending",
+  "baseline": "0e5e077b44999954d93cf4e6c0492ceac6455aae",
+  "itemID": 4768,
+  "name": "Adept's Gloves",
+  "publishedQuality": 3,
+  "publishedBinding": 1,
+  "currentLiveVerified": false,
+  "primary": {
+    "url": "https://www.wowhead.com/forever/item=4768",
+    "bytes": 207078,
+    "sha256": "06d2ed632cd2be5158b66427a100da14c4b0ed056d59920cf7e99b80e23c09b2"
+  },
+  "cache": {
+    "url": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+    "bytes": 18590138,
+    "sha256": "86a387d5274635ebff1589b8702792fc8c0bfdb55df2ae29ec31a4c894f18e3a",
+    "entryLastUpdatedAt": "2026-11-07T13:50:25.908Z"
+  },
+  "audit": {
+    "indexCount": 2341,
+    "compared": 2341,
+    "missingIDs": [],
+    "contradictions": [
+      {
+        "itemID": 4768,
+        "name": "Adept's Gloves",
+        "publishedQuality": 3,
+        "publishedBinding": "BoP",
+        "hasPrimaryFullPage": true
+      }
+    ],
+    "scope": "ActualretainedhashmatchedForevercachetooltipfacts vsClassic+olderAHledgerfallback;notlive/proposedautomaticchanges. Header q meansquality;EquipmentCache tuple6issourceCode,notquality."
+  },
+  "reproduction": "ActualGearCompare+actualWorldDropBoEIndex with GetItemInfo=nil hides4768;expected-visible regression fails beforechanges. LoadedliveRare/BoP wouldcorrectlyoverride;defectisprovisionalfallbackonly.",
+  "scope": "EquipmentCache tuple6=sourceCode,notquality;no catalogueidentity/stat/class/equipcorrection needed. Removeexact4768from2341fallback;retain2340others. ProtectgeneratoragainstobsoleteClassic/AHledgerinputswithreviewedexclusion;meaningful actualindex/live-override andofflinegeneratorregressions. No unrelatedfilterchange/release/main action."
+}
