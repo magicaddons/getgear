@@ -1,5 +1,5 @@
 {
-  "status": "Integrated; full sequential local PASS; non-release CI/bot pending",
+  "status": "Complete at publication-research level; full sequential local/non-release CI PASS; direct bot reviewed; live access unverified",
   "baseline": "102a20d3f188ecbec7a1b07a56948f1ed3f934fc",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -17084,9 +17084,14 @@
     "nextLast": "21417",
     "priorObjectsExact": 2859,
     "local": "Sequential14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
-    "ci": "pending",
+    "ci": "success;15 timestamped test PASS lines:14Lua+offlinePython;24modules/fourreports/helper syntax",
     "additionalCandidates": 121,
     "rawComparison": "checkpoint8am_raw_upstream_review.json",
-    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticrequests/replay/fallback"
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticrequests/replay/fallback",
+    "sourceCommit": "8c9850510e30e09b4d76c40d2ef63d32c8a6ca5a",
+    "ciRun": 42777593227,
+    "ciJob": 129699637047,
+    "validatedFinalHEAD": "905e3d8fcdb9cb4701945b9e462f83eb845b27d9",
+    "botReview": "Only run time/three Everloot response hashes; no runtime/report/index/count changes; bot response byte identity not independently captured"
   }
 }
