@@ -45,3 +45,9 @@ Fresh unchanged-generator reconciliation and14 Lua regressions plus offline Pyth
 All seven actual original HTTP responses match generated provenance bytes/hashes; no diagnostic refetch, replay or fallback. Playfulls23352/9153 and Everloot1399raw1199qualified exact facts/counters are unchanged, with no selected observed edges. The107 outside-canonical9A candidates remain separate and unvalidated.
 
 **NonreleaseCI/bot review pending.** Frozenremaining3227:undocumented150,quest190,world2887. **Next8AH:first100 undocumented60 IDs274184–280917**, marked after localPASS; then50 undocumented60 remain. Current-live book/dungeon/access/retention exceptions remain open. No main/Beta8/build/package/tag/release/merge action.
+
+## Checkpoint8AG validated — next8AH
+
+Full local/GitHub PASS:[42764864014](https://github.com/magicaddons/getgear/actions/runs/42764864014),sourcebe6329a1f64441d77d474550f9dd6b21c7558459;inspected directbot/finalvalidated277eb219d3a8ea6537d54145d948ab6b9109e8bb.14Lua+offlinePython/24modules/fourreports,15CItestPASS/helper syntax. Botonlytimestamp/threehashes,no runtime/report/index/countchange. Equipment2675/index4324/display4323/books759,crafts1254/ingredients4857;2575priorobjectsexact/100summariesonly/all6dungeonexceptionsintact. One272957exactBryanna2799Exalted7/cost194609join;18primaryrank14requirements/17secondaryunnamedlocations/81armourorigin-rank gapsqualified. Glaive272849nolead/HandCannon272846nopin/MagebladeDagger/FistHandBlades/generalappearanceclaimnotfunctionalpurchase retained.
+
+23352/9153/1399raw1199qualifiedexactfacts/countersunchanged;7same-runoriginalHTTPbyte/hashsetsmatchprovenance,noextradiagnosticrequest/replay/fallback.107outsidecanonical9Acandidatesremainseparate/unvalidated. Remaining3227(undoc150/quest190/world2887);next8AH:first100undocumented60 IDs274184–280917,markedqueue,then50. Originalcurrent-livebook/dungeon/access/supply/retentionexceptionsopen. No release/mainaction.

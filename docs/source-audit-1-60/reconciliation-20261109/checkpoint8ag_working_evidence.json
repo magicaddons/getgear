@@ -1,5 +1,5 @@
 {
-  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
+  "status": "Complete at publication-research level;full local/nonreleaseCI PASS;directbot reviewed",
   "baseline": "81f9b800eb34a994efbd1b43b457570f957726bc",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -5067,8 +5067,14 @@
     "nextLast": "280917",
     "priorObjectsExact": 2575,
     "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
-    "ci": "pending",
+    "ci": "success;15testPASS=14Lua+offlinePython/24modules/fourreports;capturehelpersyntaxchecked",
     "rawComparison": "checkpoint8ag_raw_upstream_review.json",
-    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;no duplicatediagnosticrequests/replay/fallback"
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;no duplicatediagnosticrequests/replay/fallback",
+    "sourceCommit": "be6329a1f64441d77d474550f9dd6b21c7558459",
+    "ciRun": 42764864014,
+    "ciJob": 129658856333,
+    "validatedFinalHEAD": "277eb219d3a8ea6537d54145d948ab6b9109e8bb",
+    "botReview": "Onlytimestamp/threeEverlootresponsehashes;no runtime/report/index/countchange",
+    "additionalCandidates": 107
   }
 }

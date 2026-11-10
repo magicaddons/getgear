@@ -1,8 +1,8 @@
 # GetGear unattended research continuation
 
-## Latest verified checkpoint — 8AF, 10 November 2026 UTC
+## Latest verified checkpoint — 8AG, 10 November 2026 UTC
 
-Full local/nonreleaseCI42763387167 PASS; sourcea4be134ac977b239369a24c2cf5456a3ddc4c749, inspected finalbot380b50a4512449639c559392995de04f1d42c02c.14Lua+offlinePython/24modules/fourreports/helper syntax. Equipment2575/index4224/display4223/books759;frozenremaining3327. **Resume8AG100 IDs272818–274183**,markedqueue;then150undocumented60/quest190/world2887.8AF21primaryrank14/secondaryunnamedlocationleads+79armourorigin/rank gaps;do not repeat. Bot3newoutsideIDs→107pending9Acandidates;23352/9153baseline,26outsidecanonicalindex-onlyremaps/14definitionpositionsreordered/same9153factmultiset,no runtimechange. Use repository actualHTTPcapturehelper toavoidduplicaterequests;429pause below is historical/resolved. All current-live book/dungeon/access exceptions/main/Beta8 protections remain.
+Full local/nonreleaseCI42764864014 PASS; sourcebe6329a1f64441d77d474550f9dd6b21c7558459, inspected finalbot277eb219d3a8ea6537d54145d948ab6b9109e8bb.14Lua+offlinePython/24modules/fourreports/helper syntax. Equipment2675/index4324/display4323/books759;frozenremaining3227. **Resume8AH100 IDs274184–280917**,markedqueue;then50undocumented60/quest190/world2887.8AGoneExaltedmerchant/18rank14requirements17unnamedlocationleads/81armourgapsqualified;do not repeat.107pending9Acandidates;23352/9153/1399raw1199qualifiedfactsexact,no botruntimechange. Use repository actualHTTPcapturehelper toavoidduplicaterequests;429pause below historical/resolved. All current-live book/dungeon/access exceptions/main/Beta8 protections remain.
 
 ## Current authority and protected baseline
 
@@ -333,3 +333,9 @@ FreshbotPlayfulls23352/9153 adds3outsidecanonicalIDs12552/18350/18729→107pendi
 ## Checkpoint8AG integrated — GitHub pending
 
 100cases integrated:one272957BryannaExalted7/cost194609exactmerchantjoin;18primarytooltiprank14cases,17secondaryunnamedlocationleads(17Dalaran/13ChampionsHall/16pins),272849nolead/272846nopinnotinherited;81classlockedarmourorigin-rank gaps.81masks;no currentactor/charge/gate/spec/retirement invented;MagebladeDagger/HandBladeFists/Gun/Aegisnotprofessionboundariesretained. Full14Lua+offlinePython/24modules/fourreportslocalPASS;CIpending.2575priorobjectsexact;100summarycellsonly/all6dungeonexceptionsintact. Equipment2675/index4324/display4323/books759/crafts1254/ingredients4857.7actualHTTPcapturesmatchprovenance/noextrarequests;23352/9153/1399raw1199qualifiedexactfactsunchanged;107pending9Acandidatesseparate. Remaining3227(undoc150/quest190/world2887);next8AH100IDs274184–280917 afterCI/bot. See CHECKPOINT8AG_LEVEL60_UNDOCUMENTED_FOURTH100.md/proof/local/rawreview. No release/mainaction.
+
+## Checkpoint8AG validated — next8AH
+
+Full local/GitHub PASS:[42764864014](https://github.com/magicaddons/getgear/actions/runs/42764864014),sourcebe6329a1f64441d77d474550f9dd6b21c7558459;inspected directbot/finalvalidated277eb219d3a8ea6537d54145d948ab6b9109e8bb.14Lua+offlinePython/24modules/fourreports,15CItestPASS/helper syntax. Botonlytimestamp/threehashes,no runtime/report/index/countchange. Equipment2675/index4324/display4323/books759,crafts1254/ingredients4857;2575priorobjectsexact/100summariesonly/all6dungeonexceptionsintact. One272957exactBryanna2799Exalted7/cost194609join;18primaryrank14requirements/17secondaryunnamedlocations/81armourorigin-rank gapsqualified. Glaive272849nolead/HandCannon272846nopin/MagebladeDagger/FistHandBlades/generalappearanceclaimnotfunctionalpurchase retained.
+
+23352/9153/1399raw1199qualifiedexactfacts/countersunchanged;7same-runoriginalHTTPbyte/hashsetsmatchprovenance,noextradiagnosticrequest/replay/fallback.107outsidecanonical9Acandidatesremainseparate/unvalidated. Remaining3227(undoc150/quest190/world2887);next8AH:first100undocumented60 IDs274184–280917,markedqueue,then50. Originalcurrent-livebook/dungeon/access/supply/retentionexceptionsopen. No release/mainaction.
