@@ -1,5 +1,5 @@
 {
-  "status": "Integrated;freshcaptureexit0/fullsequentiallocalPASS/feed delta fullyreviewed;nonreleaseCI/directbotpending",
+  "status": "Complete at publication-research level;full sequential local/nonreleaseCI PASS;directbot inspected;9-IDfeed delta fullyreviewed/219candidates;chargedshield/currentlive exceptions retained",
   "baseline": "c82fa7965d7cad56529afd564f83752639117214",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -121819,7 +121819,7 @@
     }
   ],
   "limits": "78broad25named/89Uncommon14Rare/101BoE2BoP285348285350/5Unique10771462219422366199/nomasksprimaryflags. OutrunnerHannah5799HealingRod285348vsMarcus5800Staff285350fullreverse/level24RareElite/Darnassus69/friendlyAlliancehostileHorde/twoBarrensfootprints12and15notcurrentpatrol. NPCaccesscluesnotAlliancegear/Horderequip/factionstanding/honorrank/classgates;BoPnotordinaryunboundAHtrade. Necrology2292sevenexactpublishedNPCjoinsnot7bosses/allSFKenemycurrent0.02%;secondaryConfirmedingameitemcachebadgeisnotindependentallloot/statrewrite. BlackHusk4444LeechWidow1112reverse andfullAbolishPoison14253usedby4444/Use5min5charges/attempt1thenperiodic8sec;effectnotDruidShaman/regularprofession/recipe orretention-refillafterlastchargeguarantee. Killmaim13016onhitnotcraft. Physical70refs40gear/69reversejoins sixitems20Heavy4633/19Ornate4632/15War21510/11Minor19298/2Mysterious19425/2Catfish6647;one21509knownunread. NewHeavy4633Locked/143contents/200droprowspossiblycapped;no establishedopeningthreshold/fee/wearerRogue. FullHighlandHorror260808+fullbox independentcontainerorigin;no usableNPCmap/secondaryoneofoneWetlandswindow/unreadfullwebnotcurrentdropchanceorfinishedgearlootproof. War2151012quests21NPCjoins/structuredreq20tooltipomission/8612ONE21438explicitreused8AX;Minor515vlegacy19182reused8AV/Mysteriousfourfortune-paper-endobjectAnsekhwaanomalyreused8AU/notfreeinputs/all4fee/currentevent/guaranteed3055or9813/crateBoPUniquenotgear. NineobjectIDsinclude744477444840962852distinctsamenames/noAlliancefactiongate/same-modelrules.16fished-innotwearerFishing. TwoattributedEVobs9818\u21923873(3installs)own+fullpositive;14177\u2192Owatanka3473(4installs)bothown115row/fullNPC47rowomit,report+omissionsretained/notcurrentcertainty/absenceproof. No newprimaryfailures/oneold21509full403notretry;oneTavernwebprojectionunread/nohash.9A210candidates/systematicBackscopeaudit/sixdungeon/954livebookexceptions remain.",
-  "next": "FinishnonreleaseCI16testPASS/directbotreview,then8AZ104worlddrop cataloguelevels22\u201323(55+49)numericIDorder markedqueue. Remaining2240allworld;9A219+systematicBackscopeaudit/finalintegrity/acceptanceplan remain. Original9IDdelta review preserved,do not rerun it aftersnapshotupdate.",
+  "next": "8AY complete. Resume8AZ104worlddrop cataloguelevels22\u201323(55+49)numericIDorder/markedqueue.3662registry/5133index/2240remainingallworld/219candidates+systematicBackaudit. Do not repeat completed cases/rerun mutators/rawreview afterupdatedsnapshots absent genuinely new evidence.",
   "upstreamDelta": "checkpoint8ay_feed_delta_review.json:9outside/disjoint210\u2192219pendingcandidates,23459items9160definitions/all9158oldfullsourceRows exact;13577indexrows/116unknownfield10selected0/12statfacetcountcells(not timestamps)/3352audit sourceRow-onlycells/noothersemantics;1550EV1315qualifiedunchanged. Originalrawreview retained;do not rerun it aftersnapshotupdate. Runtime103metadata unchanged by this documentation-only delta review.",
   "integrationOutcome": {
     "equipmentRegistry": 3662,
@@ -121830,12 +121830,17 @@
     "nextCheckpoint": "8AZ104worlddrop cataloguelevels22\u201323(55+49)numericIDorder",
     "priorObjectsExact": 3559,
     "local": "14Lua+2offlinePython/24modules/fourreports/3toolsyntax PASS;17localPASS",
-    "ci": "pending;expected16CItestPASS",
+    "ci": "success;16timestampedtestPASS=14Lua+2offlinePython;24modules/fourreports/3toolsyntax",
     "additionalCandidates": 219,
     "rawComparison": "checkpoint8ay_raw_upstream_review.json",
     "feedDelta": "checkpoint8ay_feed_delta_review.json",
     "companionOffsets": "checkpoint8ay_companion_remap_review.json:3352sourceRow-onlycells/noothersemantics",
     "httpCapture": "8actualfreshsame-runresponses/hashmatch/no replayfallbackdiagnosticrefetch",
-    "fallback": "2340IDs byteunchanged"
+    "fallback": "2340IDs byteunchanged",
+    "sourceCommit": "c74b8de4f42ae11e70f9b7d6914b90290e328082",
+    "ciRun": 42890380075,
+    "ciJob": 130089630549,
+    "validatedFinalHEAD": "5797b4f3c94647cd03829bade5cef317f491bc4a",
+    "botReview": "Only reconciliation time/four Everloot response hashes; PF fingerprints/runtime/reports/counts unchanged. Actual local8AY facts/counters retained; bot API bytes not independently captured, no equal-counter inference from same counts/extra diagnostic requests."
   }
 }
