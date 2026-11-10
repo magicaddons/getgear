@@ -1,0 +1,11 @@
+# Checkpoint8AK — publication research preserved, integration pending
+
+## Checkpoint8AK research preserved — integration pending
+
+15legacyNozdormurings21196–21210:19queries/49fullprimaryresponses(15items/18quests/15DNDspells/1faction).15independentfaction910 item-standingjoins3–7 and15quest100rep-gainjoins,notacceptedquest/purchasegates.12exactprevious-ringquantity1reversejoins;3repeatablefinal-ring+45scarab switchinputs/6one-choice incominglinks,eachswitchusesdifferentthree15-countscarabs. All15exactUnique+familyUniqueEquipped1;per-IDownershipnotonecarriedacrossallpaths;no class/spec gates fromTANK/DPS/CASTER DNDnames.15DNDCreateItemeffects have no clearplayertrigger/learning/lost-ringreplacementproof.
+
+Quest8751/8756Horde-marked versus16othersBoth,allquestmapperreactAlliance-1/Horde1,and8765missingstartentry retainedascurrentaccessdiscrepancies;no gearfaction/class/eligibilitymutation. Initialno-recoursewarningqualifiedbythreeactualrepeatableswitchquests;notpermanentlock/free-currentservice. QuestmapperTanaris65.2,50 isnewquest-sidepublishedmap,notindependentNPC/currentspawn. Reused8QknownNPC15192/eightscarab403failureswithoutretry/fictitiousfullhash/inputfarmclaim;no new35ringresearch orcopiedcosts/gates.
+
+Read CHECKPOINT8AK_IN_PROGRESS.md/working_evidence/discovery_index. **Resumeintegrate15**,preserve2837priorobjects/canonicaleligibility/strongersources;freshsame-runHTTPcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot;then8ALsevenBlessedQirajiweapons21242–21275 beforeAQclassarmour. Registry2837/index4479/frozen3065/15still8AK unchanged. LatestfullPASS8AJ42771400963/bot90cc64e;121separate9Acandidates/23366-9153diagnosticbaseline/liveexceptions remain. No release/mainaction.
+
+48item/quest/spell receipts plus independentfullfactionresponse checked against actualcachedHTTPbytes. No runtime/queueadvance;do not repeat savednewringIDs orknownblockedNPC/scarabreads. Exact parsedinputIDs/quantities andchoice targets are durable in working_evidence.
