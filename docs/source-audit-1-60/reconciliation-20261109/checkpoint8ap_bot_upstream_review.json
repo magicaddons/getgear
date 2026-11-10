@@ -1,0 +1,151 @@
+{
+  "status": "CI PASS/directbot inspected;3changedPFshards actualbytes/hashmatch;no acquisition/identity/index/otherrawfield changes",
+  "bot": "51f78a04edf0f30ec266cdbd2b86c19584590e4d",
+  "source": "51f710db22105ccd5ad34f9bd57e9bb8bc4a7df4",
+  "ciRun": 42821733151,
+  "ciJob": 129848680278,
+  "playfulls": {
+    "items": 23434,
+    "definitions": 9157,
+    "newIDs": [],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyIDs": [],
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 1168,
+        "name": "Skullflame Shield",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "itemID": 10095,
+        "name": "Councillor's Boots",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "itemID": 10118,
+        "name": "Ornate Breastplate",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "itemID": 12025,
+        "name": "Selenium Chain",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "itemID": 15187,
+        "name": "Praetorian Pauldrons",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "itemID": 15645,
+        "name": "Ironhide Helmet",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "itemID": 16039,
+        "name": "Ta'Kierthan Songblade",
+        "before": 2,
+        "after": 6
+      },
+      {
+        "itemID": 264156,
+        "name": "Craftsman's Writ: Felcloth Boots",
+        "before": 1,
+        "after": 5
+      },
+      {
+        "itemID": 11417,
+        "name": "Feathery Wing",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "itemID": 12430,
+        "name": "Frostsaber E'ko",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "itemID": 12432,
+        "name": "Shardtooth E'ko",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "itemID": 12433,
+        "name": "Wildkin E'ko",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "itemID": 12434,
+        "name": "Chillwind E'ko",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "itemID": 19936,
+        "name": "Dried Scorpid Carapace",
+        "before": 0,
+        "after": 4
+      },
+      {
+        "itemID": 274041,
+        "name": "Document Box",
+        "before": 1,
+        "after": 5
+      }
+    ],
+    "otherRawFieldChanges": [],
+    "selectedField10Changes": [],
+    "captureResponses": [
+      {
+        "url": "https://playfulls.com/db/gear.3ac37d47f1.json",
+        "bytes": 1332917,
+        "sha256": "3ac37d47f1f99abc0f57296acbd2021e8db0c1f654c4e002cdd86c41fa5312da",
+        "matchesBotRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.fccef921c6.json",
+        "bytes": 464365,
+        "sha256": "fccef921c6f6e52b6114d46189bf434c464c679148f7582336a9789d3b7d7efd",
+        "matchesBotRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.1b23cb60a8.json",
+        "bytes": 446192,
+        "sha256": "1b23cb60a8757ade49e3c374c663ad708620ffbfa3d77ad4acc14b7a0a241425",
+        "matchesBotRecordedFingerprint": true
+      }
+    ],
+    "metadataReused": {
+      "url": "https://playfulls.com/db/meta.1ae458dd02.json",
+      "sha256": "1ae458dd020a31d79cb786145e5256d348c377386e998337b7bff03199698555",
+      "matchesBotRecordedFingerprint": true
+    }
+  },
+  "everloot": {
+    "raw": 1416,
+    "qualified": 1204,
+    "botResponseHashesChanged": true,
+    "botResponseBytesIndependentlyCaptured": false,
+    "scope": "No report/countchanges;local8APfactualedges/counters retained. No bot API responsebyteidentity/factualcounter equality inferred fromsamecounts."
+  },
+  "databaseHTML": {
+    "hashChanged": true,
+    "independentlyFetched": false,
+    "scope": "Botrecordedhash not independentHTMLread;newJSONshardURLs takenfromactualbotprovenance/hashmatchedcontentaddressedbytes."
+  },
+  "method": "FetchONLY3changedcontentaddressedshardsonce;reuseunchangedactualmetaresponse,notextraunchangedfeedreads;neverinferloot/availabilityfromuninterpretedfield10.",
+  "wholeRawRowsExceptField10Exact": true,
+  "capturedUTC": "2026-11-10T13:12:21.651207+00:00",
+  "snapshotUpdate": "PF15uninterpretedfield10cells refreshed fromactualhashmatchedbotshards;otherrawrowfields/definitionmetadata/candidates unchanged. EVlocal8AP actualfactualbaseline retained,notinferredbotbytes."
+}

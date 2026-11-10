@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8AO final readability local actual-capture Playfulls/Everloot factual baselines",
-  "capturedUTC": "2026-11-10T12:35:40.335352+00:00",
+  "capturedForCheckpoint": "8AP inspected bot Playfulls/8AP local Everloot factual baselines",
+  "capturedUTC": "2026-11-10T13:12:21.651207+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23434,
@@ -13,28 +13,28 @@
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.ee051c2a95.json",
+        "url": "https://playfulls.com/db/gear.3ac37d47f1.json",
         "bytes": 1332917,
-        "sha256": "ee051c2a95bb7e9cefd6fe711cb3130f56bc9a355d204fbc8bf4ed3b7b424336",
+        "sha256": "3ac37d47f1f99abc0f57296acbd2021e8db0c1f654c4e002cdd86c41fa5312da",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/goods.442f8a784e.json",
+        "url": "https://playfulls.com/db/goods.fccef921c6.json",
         "bytes": 464365,
-        "sha256": "442f8a784e46083a0a22585b607f3c17fd7701bafcf07a1dcc74eddc79fcc68c",
+        "sha256": "fccef921c6f6e52b6114d46189bf434c464c679148f7582336a9789d3b7d7efd",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/other.8599f03e7a.json",
+        "url": "https://playfulls.com/db/other.1b23cb60a8.json",
         "bytes": 446192,
-        "sha256": "8599f03e7a6dc0f3466f24bad59940dbbf9d66251feaf93abc286c527926c219",
+        "sha256": "1b23cb60a8757ade49e3c374c663ad708620ffbfa3d77ad4acc14b7a0a241425",
         "matchesRecordedFingerprint": true
       }
     ],
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "8AOinitial\u2192finalreadability:11newoutsidecanonical/disjoint184\u2192195pending9A;no old rowname/source/index/field10 ordefinition changes. Combinedsince8AN54newPF=4canonical50outside;original43delta retainedcheckpoint8ao_raw_upstream_review.json,final11checkpoint8aofinal_raw_upstream_review.json.17note-details-only edits,no acquisition fact/eligibility changes."
+    "comparison": "8AP local\u2192bot:ONLY3changedshards fetchedonce/fullbytes/hashmatch;unchangedmeta actualcapture reused. All23434 rawrows except15uninterpretedfield10 exact/selected0;names/acquisition/indices/otherfields unchanged. No currentloot/availability/events inferred. Snapshot updates15rawField10cells only;195candidates unchanged."
   },
   "everloot": {
     "total": 1416,
@@ -52,25 +52,25 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "fd92ea6f82e4cb7df675c0512b1aa064fcb346c9a81911cbbc236c2e7a9e8351",
+        "sha256": "d1ac88c52eb95da0d0309a33a2e009f19640ad2cf5c6fafc21550e011fd7909b",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T12:00:14.623Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103652,
-        "sha256": "efd759ada0699fa4d4458f207d697cc04325615c0bfbf110030c23e22bd134c3",
+        "sha256": "81915903c502efc77012d567f6a11163c2abe75b843b2a533a38e4c50a187772",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T12:00:14.623Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 85987,
-        "sha256": "901d32bd2c58550beaf47d68852769449d95efddd1324750901d1990a5e4d99f",
+        "sha256": "591e33f7f2a6b6375d9b30be9890593d33b1bb82157ddf93046e12f69ef4d2b1",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T12:00:14.623Z"
       }
     ],
-    "comparison": "Finalreadability1416raw1204qualified exactedges/counters unchanged from8AOinitial;no new/removed/updated/selectededges. Original8AN\u21928AO17new/13update delta retainedseparately,noterased."
+    "comparison": "8AP local actualcapture1416raw1204qualified exactfacts/counters unchanged from8AOfinal baseline. Bot3APIhashes changed/samecounts/no reports;botresponsebytes not independentlycaptured,no claimbotcounter equality fromcounts. Localactualbaseline retained."
   }
 }
