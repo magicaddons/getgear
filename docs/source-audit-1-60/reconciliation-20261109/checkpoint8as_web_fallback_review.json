@@ -1,0 +1,75 @@
+{
+  "method": "Connected-web rendered/search projections, not original full HTTP response bytes; no HTTP fingerprints invented. All raw tool outputs retained temporarily; durable projection omits source article/comment prose.",
+  "readableProjections": [
+    {
+      "url": "https://www.wowhead.com/forever/item=5349/conjured-muffin",
+      "facts": {
+        "itemID": 5349,
+        "name": "Conjured Muffin",
+        "itemLevel": 5,
+        "conjuredItem": true
+      },
+      "scope": "Rendered identity/type only,not independent full staff creation reversejoin orlearnedCooking/Mage requirement onStaff1933."
+    },
+    {
+      "url": "https://www.wowhead.com/forever/spell=7620/fishing",
+      "facts": {
+        "spellID": 7620,
+        "name": "Fishing",
+        "summonObjectID": 35591,
+        "learnSkill": "Fishing",
+        "requiresFishingPole": true
+      },
+      "scope": "Published Fishing spell/object identity supports fishing-related35591 report,not chest/NPC/current6550loot,catchchance/location/skillthreshold orweaponwearerprofessiongate. Oldcomments/numericguidance notadopted."
+    },
+    {
+      "url": "https://db.thealphaproject.eu/?action=show_go&id=35591",
+      "facts": {
+        "objectID": 35591,
+        "name": "Fishing Bobber",
+        "type": 17,
+        "typeName": "Fishing Node",
+        "version": "Alpha0.5.3"
+      },
+      "scope": "Explicitlyhistoricalobjectidentity,notcurrentForeverloot/map/faction/phaseproof."
+    },
+    {
+      "url": "https://classicdb.ch/?spell=7620",
+      "facts": {
+        "spellID": 7620,
+        "name": "Fishing",
+        "summonObjectID": 35591,
+        "objectName": "Fishing Bobber"
+      },
+      "scope": "HistoricalClassicidentity corroboration only,notcurrentForeverloot/rates/equipgate."
+    }
+  ],
+  "unreadableWebURLs": [
+    "https://www.wowhead.com/forever/object=35591",
+    "https://www.wowhead.com/forever/item=6353",
+    "https://www.wowhead.com/forever/item=20708",
+    "https://www.wowhead.com/forever/item=21509",
+    "https://www.wowhead.com/forever/spell=8736",
+    "https://www.wowhead.com/forever/spell=423187",
+    "https://www.wowhead.com/forever/spell=416049"
+  ],
+  "searchOnlySpellProjection": {
+    "url": "https://www.wowhead.com/forever/spell=416049/engrave-pants-lacerate",
+    "facts": {
+      "spellID": 416049,
+      "name": "Engrave Pants - Lacerate",
+      "class": "Druid",
+      "requiresEquippedSlot": "Pants"
+    },
+    "scope": "Search-rendered publishedruneeffect matches210195teaches-ability,not fullHTTPread/currentForeverruneimplementation/physicalgearcraft;genericTradeskillrecipeflagnot1255thcraft."
+  },
+  "correction": "The two APIobject observations are oneBatteredChest106319 andone35591FishingBobber-relatedreport,not twochests/containers. The rawAPItypedobject relation itself is unchanged;no guessedNPC or currentfishingloottable added.",
+  "counts": {
+    "readableWebProjections": 4,
+    "unreadableWebResults": 7,
+    "exactQueries": 101,
+    "sharedQueries": 8,
+    "freshDirectFull403": 31,
+    "currentLiveVerifiedByResearcher": 0
+  }
+}
