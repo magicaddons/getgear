@@ -1,5 +1,5 @@
 {
-  "status": "Publication research preserved; integration/full validation/queue advance pending",
+  "status": "Publication research integrated and validated; original preservation snapshot retained",
   "baseline": "562af22",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -6758,5 +6758,19 @@
     "threshold": ">=3 installs",
     "limits": "Public source coverage, not impossibility/unavailability proof."
   },
-  "freshUpstreamFollowup": "checkpoint8aa_raw_upstream_review.json"
+  "freshUpstreamFollowup": "checkpoint8aa_raw_upstream_review.json",
+  "integrationOutcome": {
+    "sourceCommit": "de75e8e7ec8fb1b6338bc165531e86836aefea3f",
+    "ciRun": "https://github.com/magicaddons/getgear/actions/runs/42756875646",
+    "validatedBotHead": "d25cab1bf0a1c9820e99ce026c6132335406473e",
+    "fullRegression": "14 Lua plus offlinePython source-boundary check;24modules;fourreports;local and CI",
+    "equipmentRegistry": 2229,
+    "index": 3878,
+    "display": 3877,
+    "frozenRemaining": 3673,
+    "next": "8AB:all45 remaining undocumented58 IDs17617\u2013271936 marked queue",
+    "rawFeedReview": "checkpoint8aa_raw_upstream_review.json",
+    "pendingCoverageCandidates": 90,
+    "originalDungeonFollowups": 6
+  }
 }
