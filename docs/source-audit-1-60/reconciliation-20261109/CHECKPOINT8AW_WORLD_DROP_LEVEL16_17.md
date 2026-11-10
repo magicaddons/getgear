@@ -1,6 +1,6 @@
 # Checkpoint 8AW — 83 queued cases at catalogue levels 16–17
 
-Publication research preserved10November2026UTC; runtime integration/fresh reconciliation/full local/non-releaseCI/bot review pending. Latest full PASS8AV: [CI42880798184](https://github.com/magicaddons/getgear/actions/runs/42880798184),source `bead889b6316be7f677d8b42de098c9e36f6667d`,inspected directbot `4785d73b3f6bec950da4e02cea22b662a121c8bd`. No release authorised.
+Integrated with fresh reconciliation/full sequential local PASS10November2026UTC;non-releaseCI/bot review pending. Latest full PASS8AV: [CI42880798184](https://github.com/magicaddons/getgear/actions/runs/42880798184),source `bead889b6316be7f677d8b42de098c9e36f6667d`,inspected directbot `4785d73b3f6bec950da4e02cea22b662a121c8bd`. No release authorised.
 
 ## Evidence and confidence
 
@@ -35,3 +35,13 @@ Minor Prize/Gelvas14828 typed fivecurrency515/0coin/noitem cost and distinct leg
 ## Validation and resume
 
 Zero new full read failures. Five earlier failed URLs explicitly reused:21509,250484,250618,250626,255964. All210outside-canonical candidates,systematicfull-cache/feedBack-slotcoverage audit/tenomittedcloaks,six dungeon exceptions and954current-livebook routes remain open. Count validation is not exhaustive gear coverage. **Resume integration of these83 records**,preserve3384priorobjects andoriginalstats/classes/equip/filters/settings/recipes,thenfreshsame-run HTTPcaptureexit0/full17localPASS+16CItestPASS/directbotreview. Frozen2518includes83pending. Next8AX92worlddrop cataloguelevels18–19(47+45)numericIDorder,verifiedqueue. No main/Beta8/build/package/tag/release/billing action.
+
+## Checkpoint 8AW integrated — full local PASS, CI pending
+
+83newmetadata/3384priorobjects exact;194fullprimaryresponses111new83explicitreused/eight8AVfixedfeedresponses/83exact4sharedqueries.58broad25named/1527NPC98objectreversejoins/nineobjects.25attributedEverlootNPCobservations19items/buildnull3–6installs/19ownactors16fullreverse;fourbothreturnedlistomissions explicit(15893→3653/3669,4568→3671,15506→3670),twoown200rowomissionspositivefullNPC(4576→3261/3193→4129),fiveunreadobservededges/fourknownactorsnotretry. DeathBindings286981fouritemactors/only250624fullreverse/threeunread/nomapnotgenericSkeletonorboss.66Uncommon17Rare/80BoE3BoP5183/282639/285345/twoUnique2879/12985/no masksprimaryflags;possessionnoteone-time/effectsnotcrafts.
+
+59physicalcontainerleads32cases/54reversejoins sixcontainers:4632x28/19298x20/21113x2/6647x2/6354x1/8366x1;five21509knownunread. Fish6647/8366BoPUncommon/nocurrentuse15/25notBoEringbinding/equip;6354LockednotwearerRogue/verifiedopeningthresholdfee. MinorPrizecurrency515vlegacyphysical19182explicitreused8AV/notcombinedfee/freecurrency/currentevent.6570→434onefullpickpocketreversejoin/separatekill/noRogueequip/10fished-innotwearerFishing. Zero newdirectfailures/fiveolder403URLs reused/nohash/retry/negativeinventory/retirement.
+
+Actualfresh8AWcaptureexit0→sequentialfull17localPASS=14Lua+2offlinePython+files/syntax/24modules/fourreports/3tools. Eightactualsame-runHTTPbodies/provenance/registryhash match;PF23450/9158completeobjects/bytes/hash unchanged from8AV;EV1550raw1315qualified allrelations/build/install/first-lastseen unchanged/25selectededges exact.83summarycells only/zeroothersemantics-offsets/fivecompanionreports+210candidates+EVsnapshot byteexact/fallback2340 unchanged. Registry3467/index4938/display4937/books759/crafts1254/ingredients4857/7707identities36341objectives/filtersettings/sixdungeonexceptions intact.
+
+Frozenremaining2435allworlddrop; **next8AX92cataloguelevels18–19(47+45)numericIDorder**,markedqueue afterlocalPASS;finishCI/directbotfirst. Read CHECKPOINT8AW_WORLD_DROP_LEVEL16_17.md/working/local/raw/discovery.9A210candidates/systematicBackscopeaudit/954livebookexceptions remain. Originalboundedleaseworker/singleexistingautomation/no duplicates/newautomation/main/Beta8/build/package/tag/release/billing action.
