@@ -12,6 +12,7 @@ on:
       - AcquisitionEvidence.lua
       - GetGear.toc
       - tests/beta7-acquisition-reconciled.lua
+      - tests/reconcile-dungeon-link-guards.py
       - tests/beta7-evidence.lua
       - GearCompare.lua
       - Core.lua
@@ -41,6 +42,7 @@ jobs:
         run: |
           set -euo pipefail
           python3 -m py_compile tools/reconcile_acquisition_1_60.py
+          python3 tests/reconcile-dungeon-link-guards.py
           python3 tools/reconcile_acquisition_1_60.py
           test -s AcquisitionEvidenceIndex.lua
           test -s docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv

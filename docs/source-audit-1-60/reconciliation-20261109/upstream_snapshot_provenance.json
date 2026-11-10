@@ -1,40 +1,40 @@
 {
-  "capturedForCheckpoint": "8Z Playfulls/8Y Everloot baseline retained",
-  "capturedUTC": "2026-11-10T04:15:37.401413+00:00",
+  "capturedForCheckpoint": "8AA Playfulls/8Y Everloot baseline retained",
+  "capturedUTC": "2026-11-10T04:27:07.863698+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23313,
+    "itemCount": 23334,
     "sourceDefinitions": 9153,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.f0cd02f520.json",
-        "bytes": 988971,
-        "sha256": "f0cd02f52052bb6a07866aeb968e6dd2ddfa658fb918a7d92139950727834615",
+        "url": "https://playfulls.com/db/meta.b4d62c8d8f.json",
+        "bytes": 988994,
+        "sha256": "b4d62c8d8f1665c7d66069e36c810c61b83833b5b4c4313b5f9559c07aca4c01",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.516c07eeab.json",
-        "bytes": 1318626,
-        "sha256": "516c07eeab4d9edc2e83234492b4326522be0144b26d5ade4b6f3a317682ac10",
+        "url": "https://playfulls.com/db/gear.ab1f787eb2.json",
+        "bytes": 1321109,
+        "sha256": "ab1f787eb2f1b9b9812726f93aabf08a9e1be644e166b775b58165f4cf59a338",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/goods.806cdd8693.json",
+        "url": "https://playfulls.com/db/goods.421b112e64.json",
         "bytes": 464371,
-        "sha256": "806cdd8693f466f14f034f728238f2179e72a6cae7da94edd23a07f02704dd07",
+        "sha256": "421b112e647ecfbda1db5850861e6adc5ca3e2ad8d64fdca32d27a8763ca5219",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/other.032539dc39.json",
+        "url": "https://playfulls.com/db/other.6e87304986.json",
         "bytes": 446193,
-        "sha256": "032539dc398c4b0c5a7d921c8a7f067c1ebe07a811bcad9bef1a14854370796a",
+        "sha256": "6e873049869fc6ada82f4c2d57c10deb52ca6c2a7f8fba36f122faba014546e2",
         "matchesRecordedFingerprint": true
       }
     ],
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "Exact8X\u21928Z:30 added IDs/1 definition/0 prior names or resolved source facts/0 removed;3054 index-only row shifts/89 uninterpretedfield10 changes. All30 outsidecanonical. Six generated CSVs1439 sourceRow-only cells/0 semantics. Diagnostic only."
+    "comparison": "Exact8Z\u21928AA:21 newly indexed IDs,3alreadycanonical/18outsidecanonical.0 previously indexed source facts/names/offset/field10 changes;9153 definitions unchanged. Three canonical community-source changes qualified;14525 stays queued after conservative guard repair. Diagnostic only."
   },
   "everloot": {
     "total": 1399,

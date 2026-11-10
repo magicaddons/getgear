@@ -24,6 +24,16 @@ EVER_URL="https://everloot.app/api/edges?evidence=observed&limit=500"
 LEVELS={"observed":5,"forever":4,"published-forever-dungeon-journal":4,"reported":3,
         "published-forever":3,"classic-reference":1,"client":1}
 PROFESSIONS=("Blacksmithing","Leatherworking","Tailoring","Enchanting","Engineering","Alchemy","Cooking","First Aid")
+# These individually reviewed item-to-NPC gaps must not disappear merely
+# because a community list adds a boss label. Keep that publication as a
+# lead until the named actor has independent item evidence. Explicit primary
+# journal/role reviews are handled separately before evidence_route.
+DUNGEON_LINKS_REQUIRING_CORROBORATION = {
+    10801:"Slitherscale Boots",
+    14525:"Boneclenched Gauntlets",
+    23173:"Abomination Skin Leggings",
+    273044:"Arcanowisp Robes",
+}
 # Explicit per-item WoW Forever Dungeon Journal links, NOT extrapolated
 # from Classic NPC rank or an encounter name alone. Each journal page directly
 # lists the *finished equipment* against the named rare-boss loot table.
@@ -216,6 +226,16 @@ def evidence_route(catalogue,sources,cacheitem,observed,classic_leads,bossnames)
         zone=pf["zone"] or zone
         actor=pf["npc"] or "dungeon enemies"
         role=pfkind
+        pending_name=DUNGEON_LINKS_REQUIRING_CORROBORATION.get(int(catalogue["itemID"]))
+        if (pfkind=="boss" and pending_name
+            and not any(norm(m["name"])==norm(actor) for m in matched)):
+            assert norm(catalogue["name"])==norm(pending_name),(
+                "Pending dungeon-link identity changed",catalogue["itemID"],catalogue["name"])
+            return dict(role="dungeon-enemy",actor=actor,zone=zone,
+                        confidence="forever-community-reference",
+                        summary=f"{zone} | Enemy: {actor} "
+                                "(published boss lead; item-to-NPC link/live drop unverified)",
+                        sourceURL=PLAY_URL,observations=matched,foreverBoss=forever)
         if pfkind=="boss-reference":role="boss"
         elif pfkind=="dungeon-enemy":
             # If a specific Classic loot NPC is independently listed as a

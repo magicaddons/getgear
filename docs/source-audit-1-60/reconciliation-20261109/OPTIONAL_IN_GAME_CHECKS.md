@@ -11,7 +11,7 @@ These are **optional**, not prerequisites for continued research. Check an item 
 | 47 | 11946 | Fire Opal Necklace | Blackrock Depths | container-lead (historic-container-reference) |
 | 47 | 10801 | Slitherscale Boots | Sunken Temple | dungeon-enemy (forever-community-reference) |
 | 48 | 11945 | Dark Iron Ring | Blackrock Depths | container-lead (historic-container-reference) |
-| 57 | 14525 | Boneclenched Gauntlets | Scholomance | dungeon-enemy (forever-reference-unverified) |
+| 57 | 14525 | Boneclenched Gauntlets | Scholomance | dungeon-enemy (forever-community-reference) |
 
 ## Recipe verification
 
