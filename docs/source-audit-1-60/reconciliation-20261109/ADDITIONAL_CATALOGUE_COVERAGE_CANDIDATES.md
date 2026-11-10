@@ -1,6 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
-Current pending total: **184 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AO below; original-count sections are historical.
+Current pending total: **195 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AO below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
@@ -53,3 +53,7 @@ Fresh mandatory final reconciliation adds43 Playfulls IDs:four already canonical
 Playfulls23,423/9,157 with three new definitions/all9,154 prior resolveddefinitions preserved;2,285positions/5,312index-onlyrows/54uninterpretedfield10changes(none8AO),no prior resolved acquisition/name changes. Actualcanonical additions:811 generic worlddrop and18722 communityMagistrateBarthilas lead;276399/276419 source lists empty. DeathGrips primary item agrees on10435 but fullNPCdrops omits18722,so no two-sided/current-observed claim.
 
 Everloot1,416raw/1,204qualified adds17relations(5item/12NPC-location),13counter-time updates,0removed/build/selected8AOedges. [Seven-source scope review](checkpoint8ao_feed_scope_review.json) confirms2763 poorquality0dagger below existingautomaticquality>=2 policy;16784/16745/16744/16762 are questclass12/slot0non-equipment. These do not become extra gear candidates or imply currentrates. Same-run captured bytes only, no extra diagnosticfeedrequests.
+
+## 8AO final source-note validation extension —195 pending candidates
+
+Mandatory fresh validation after17 source-note readability edits captures11 additional Playfulls IDs,alloutsidecanonical/disjoint184:13348 Demonshear,13393 Malown’s Slam,13525 Darkbind Fingers,13532 Darkspinner Claws,18310 Fiendish Machete,18351 Magically Sealed Bracers,18535 Milli’s Shield,18536 Milli’s Lexicon,276455 Swordsmith Mitts,276456 Plague Defiled Buckler,284231 Sayaad Charm. Three have empty sources276455/276456/284231;others are published community hints,not currentloot/adoption. [Final raw comparison](checkpoint8aofinal_raw_upstream_review.json) retains exactfacts.23,434/9,157;allold rows/definitions/index/field10 unchanged;Everloot1,416/1,204 exactedges/counters unchanged. Earlier43-ID delta remains in its separate review. Tencloak/scope audit and systematicBackcoverage requirements remain.

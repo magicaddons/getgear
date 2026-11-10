@@ -1,21 +1,21 @@
 {
-  "capturedForCheckpoint": "8AO final local actual-capture Playfulls/Everloot factual baselines",
-  "capturedUTC": "2026-11-10T12:22:29.514873+00:00",
+  "capturedForCheckpoint": "8AO final readability local actual-capture Playfulls/Everloot factual baselines",
+  "capturedUTC": "2026-11-10T12:35:40.335352+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23423,
+    "itemCount": 23434,
     "sourceDefinitions": 9157,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.21f84fc487.json",
+        "url": "https://playfulls.com/db/meta.1ae458dd02.json",
         "bytes": 989497,
-        "sha256": "21f84fc4877987a345bdac47b489fa7ba545cffc5a18fae85a6a58acd2ff453d",
+        "sha256": "1ae458dd020a31d79cb786145e5256d348c377386e998337b7bff03199698555",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.f240739399.json",
-        "bytes": 1331766,
-        "sha256": "f240739399e96b21e8631f0a7028a11c7b00ca76a230900d4e17f8e03c2a537f",
+        "url": "https://playfulls.com/db/gear.ee051c2a95.json",
+        "bytes": 1332917,
+        "sha256": "ee051c2a95bb7e9cefd6fe711cb3130f56bc9a355d204fbc8bf4ed3b7b424336",
         "matchesRecordedFingerprint": true
       },
       {
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "8AO final local actual-capture baseline:43newPF IDs(4canonical/39outside\u2192184candidates);3newdefinitions/all9154priorresolveddefinitions preserved;2285positions/5312index-onlyrows;54uninterpretedfield10changes(none8AO),notavailability/events. Two actualcanonical source changes811worlddrop/18722communityMagistratelead,notliveconfirmation;NPCreverseomission explicit. Everloot17newedges(5itemrelations/12NPClocations),13countertimeupdates(9installs/5lastSeen/1overlap),0removed/build/firstSeenchanges/selectededges. No diagnosticrefetches;finalreconcile followedwordingcorrection beforetests."
+    "comparison": "8AOinitial\u2192finalreadability:11newoutsidecanonical/disjoint184\u2192195pending9A;no old rowname/source/index/field10 ordefinition changes. Combinedsince8AN54newPF=4canonical50outside;original43delta retainedcheckpoint8ao_raw_upstream_review.json,final11checkpoint8aofinal_raw_upstream_review.json.17note-details-only edits,no acquisition fact/eligibility changes."
   },
   "everloot": {
     "total": 1416,
@@ -52,25 +52,25 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "b2fd0ece8fc160ebeef9a9d5bd3e53dffd9d0d260f8df1f16062e817e7569fbb",
+        "sha256": "fd92ea6f82e4cb7df675c0512b1aa064fcb346c9a81911cbbc236c2e7a9e8351",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T12:00:14.623Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103652,
-        "sha256": "7708980be1d9b5549325b6eca64b9678cf49764b15c1f3cb52b0aa2cfa7be0b3",
+        "sha256": "efd759ada0699fa4d4458f207d697cc04325615c0bfbf110030c23e22bd134c3",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T12:00:14.623Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 85987,
-        "sha256": "c765d88542bf5db656e93df3f59639b3ceb06688528c3c2c251f83795d70cae0",
+        "sha256": "901d32bd2c58550beaf47d68852769449d95efddd1324750901d1990a5e4d99f",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-10T12:00:14.623Z"
       }
     ],
-    "comparison": "8ANlocal\u21928AOfinal:17new exactedges(5item/12NPClocation),13updates(9installs/5lastSeen,oneoverlap),0removed/changedbuild/firstSeen/selected8AOedges. 1416raw/1204qualified. Exactscope exclusions incheckpoint8ao_feed_scope_review.json;notpersonalcurrentloot/rates."
+    "comparison": "Finalreadability1416raw1204qualified exactedges/counters unchanged from8AOinitial;no new/removed/updated/selectededges. Original8AN\u21928AO17new/13update delta retainedseparately,noterased."
   }
 }

@@ -1,6 +1,6 @@
 # Checkpoint 8AO — 17 AQ-chain and Fallen God rewards
 
-Status: complete publication research/integration and full sequential local PASS; non-release CI/bot review pending. Current actor/phase access, conditional objectives, exchange acceptance and retention remain unverified.
+Status: initial local/CI42816670153 PASS/directbot reviewed;17 source-note readability edits final localPASS;final non-release CI/bot review pending. Current actor/phase access, conditional objectives, exchange acceptance and retention remain unverified.
 
 ## Scope, evidence and progress
 
@@ -64,3 +64,9 @@ Environment resumption12:18 retained committed research atd5b34a9;remote clean/s
 - Across eight reports:17 additive summaries,two actual canonical source changes811/18722,and1,739offset-only cells(667primary/1,072companions). No other derived semantics. Fourteen Lua regressions/offline Python guard/24modules/fourreports/helper syntax PASS. Prior2,922 registry objects,7,707 identities/36,341 class objectives,1,254crafts/4,857ingredients/settings/filters/six exceptions retained.
 
 Queue conservation5,688=2,725researched+2,963pending;registry214+2,725=2,939. Next72Tier3 thenfourAtiesh. Current live954book/sixdungeon/phase/access/conditional-cost/retention exceptions remain. Main/Beta8 tag/source rechecked10Nov12:31UTC unchanged. No build/package/tag/release/main/billing action. Existing single two-hour automation only;no usage meter/refresh guarantee/purchase/reset claim.
+
+## Checkpoint 8AO final source-note local PASS — final GitHub pending
+
+Initial source04531aa9194486ff4c39b1df804b31c56b6cb515 passedCI42816670153/job129831380955;all15timestampedPASS/24modules/fourreports verified. Directbot05f51fc482cb83d517801deb47b4089211d9b9e6 inspected:onlyruntime/threeEverloot responsehashes,no runtime/report/count changes. Then17details-only readability edits removed checkpoint/catalogue bookkeeping from in-game notes;allother2939registryfields and2922priorobjects exact. Acquisition facts,confidence,URLs,gates,summary cells and eight generatedreport bytes unchanged. Fresh finalcapture8aofinal exit0→full14Lua+offlinePython/24modules/fourreports/helper syntax/semantic/raw review PASS. No failedCI. The rejected8ao_final argument made noHTTPrequests;corrected alphanumeric label completed.
+
+Fresh finalPlayfulls adds11outsidecanonical/disjoint184→**195pending9A**,23434items/9157definitions;no olditemname/acquisition/index/field10 changes. Meta contentaddress changed,but all9157 full definitionobjects/rawrow hashes exact;sourceURL updated toactualcapturedaddress. Everloot1416raw/1204qualified exactedges/counters unchanged. Earlier43-ID/17newedge/13update delta retainedseparatecheckpoint8ao_raw_upstream_review.json,not erased byfinalcomparison. Finalproof checkpoint8ao_note_readability_review.json/checkpoint8aofinal_local_results.txt/raw/upstream review;7actualsame-run finalcaptures/hashsets checked/no diagnosticrefetch. Registry2939/index4486/display4485/books759/crafts1254/ingredients4857/remaining2963/next8AP72 unchanged. Finish finalsourceCI/bot beforeTier3;scope/cloak/current-live exceptions remain. No main/Beta8/release/billing action.

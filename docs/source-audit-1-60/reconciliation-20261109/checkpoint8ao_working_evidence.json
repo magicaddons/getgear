@@ -1,5 +1,5 @@
 {
-  "status": "Integrated; full sequential local PASS; non-release CI/bot pending",
+  "status": "Initial local/CI PASS;17source-note readability edits final localPASS;finalnonreleaseCI/botpending",
   "baseline": "adcb88717a299b99c4b4f1ffc08d5d9647d8f9e1",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -25,7 +25,7 @@
     "chapterReagentJoins": 8,
     "plainUniqueGear": 6,
     "currentLiveVerified": 0,
-    "pendingCandidates": 184,
+    "pendingCandidates": 195,
     "newOutsideSiblingCloaks": 10
   },
   "items": {
@@ -17494,13 +17494,20 @@
     "nextLast": "22519",
     "priorObjectsExact": 2922,
     "local": "Sequential14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
-    "ci": "pending",
-    "additionalCandidates": 184,
+    "ci": "initial42816670153success/bot05f51fc;finalsource-noteCIpending",
+    "additionalCandidates": 195,
     "fullCaseSources": 82,
     "fullDeltaSources": 7,
     "rawComparison": "checkpoint8ao_raw_upstream_review.json",
     "derivedComparison": "checkpoint8ao_derived_review.json",
     "upstreamDelta": "43PFnew=4canonical39outside\u2192184candidates;3defs/all9154priorpreserved;5312indices/2285positions/54field10;2actualcanonicalchanges811/18722;1739offsetcells.17Everlootnew/13updates\u21921416/1204;0removed/build/selectededges.",
-    "httpCapture": "7finaloriginalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticfetch/replay/fallback"
+    "httpCapture": "7finaloriginalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticfetch/replay/fallback",
+    "initialSource": "04531aa9194486ff4c39b1df804b31c56b6cb515",
+    "initialCI": 42816670153,
+    "initialValidatedBot": "05f51fc482cb83d517801deb47b4089211d9b9e6",
+    "finalReadability": "17details-only/allotherfields/2922priorobjects exact;8reportbytes unchanged;full final localPASS/CIpending",
+    "finalReadabilityRaw": "checkpoint8aofinal_raw_upstream_review.json",
+    "finalReadabilityLocal": "checkpoint8aofinal_local_results.txt",
+    "currentFactualBaseline": "8AOfinalreadability23434/9157/1416raw1204qualified"
   }
 }

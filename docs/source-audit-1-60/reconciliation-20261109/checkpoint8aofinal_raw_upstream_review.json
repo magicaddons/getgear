@@ -1,0 +1,223 @@
+{
+  "capturedUTC": "2026-11-10T12:36:04.927963+00:00",
+  "method": "Exact full factual snapshot comparison: retained8AOlocal Playfulls/Everloot factual baselines to8AOfinal readability pass; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23423,
+    "afterItems": 23434,
+    "beforeDefinitions": 9157,
+    "afterDefinitions": 9157,
+    "newItems": [
+      {
+        "itemID": 13348,
+        "name": "Demonshear",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Balnazzar",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "bc76d2516e8dc4ccd44e1866295fcbaf043afe11167ac7276732c0ef021ec97c"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13393,
+        "name": "Malown's Slam",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Postmaster Malown",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "a0b774804662f2db9cf608eb425dc1225cf2252797ada8497877f033306a6049"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13525,
+        "name": "Darkbind Fingers",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Maleki the Pallid",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "b4409002dc5fb383dcae81b77024c17ac77b51de2b0f19b988ad895f0582c986"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13532,
+        "name": "Darkspinner Claws",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Nerub'enkan",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "db40c508ae2287c8b3865180c121486d2948762444ed0317d015d11fd828c2da"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18310,
+        "name": "Fiendish Machete",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Alzzin the Wildshaper",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "3894c224c587160bc3936ba6b52d94557a0606ab6d76eae284d2ae0beaf86af8"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18351,
+        "name": "Magically Sealed Bracers",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Magister Kalendris",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "382d122175cc0851d6171728cbeb0e758cd291a7edfae0cb9b885fd13fa1a689"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18535,
+        "name": "Milli's Shield",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Shards of the Felvine",
+            "zone": "Moonglade",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18536,
+        "name": "Milli's Lexicon",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Shards of the Felvine",
+            "zone": "Moonglade",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 276455,
+        "name": "Swordsmith Mitts",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 276456,
+        "name": "Plague Defiled Buckler",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 284231,
+        "name": "Sayaad Charm",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.1ae458dd02.json",
+        "bytes": 989497,
+        "sha256": "1ae458dd020a31d79cb786145e5256d348c377386e998337b7bff03199698555",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.ee051c2a95.json",
+        "bytes": 1332917,
+        "sha256": "ee051c2a95bb7e9cefd6fe711cb3130f56bc9a355d204fbc8bf4ed3b7b424336",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.442f8a784e.json",
+        "bytes": 464365,
+        "sha256": "442f8a784e46083a0a22585b607f3c17fd7701bafcf07a1dcc74eddc79fcc68c",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.8599f03e7a.json",
+        "bytes": 446192,
+        "sha256": "8599f03e7a6dc0f3466f24bad59940dbbf9d66251feaf93abc286c527926c219",
+        "matchesRecordedFingerprint": true
+      }
+    ],
+    "all9157FullDefinitionObjectsUnchanged": true,
+    "metadataURLChangedWithSameDefinitions": true
+  },
+  "everloot": {
+    "beforeRaw": 1416,
+    "afterRaw": 1416,
+    "qualifying": 1204,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "fd92ea6f82e4cb7df675c0512b1aa064fcb346c9a81911cbbc236c2e7a9e8351",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103652,
+        "sha256": "efd759ada0699fa4d4458f207d697cc04325615c0bfbf110030c23e22bd134c3",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 85987,
+        "sha256": "901d32bd2c58550beaf47d68852769449d95efddd1324750901d1990a5e4d99f",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      }
+    ]
+  },
+  "snapshotUpdate": "11newoutsidecanonical/disjoint184\u2192195pending9A;old23423rowfacts/indices/field10 and9157definitions unchanged. Finalreadability snapshot23434/9157;Everloot1416/1204 exactedges/counters unchanged. Original8AO43new/2canonical-report-fact/17Everlootnew/13updated delta preserved in its original separate review."
+}
