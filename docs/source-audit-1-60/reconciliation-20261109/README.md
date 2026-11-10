@@ -7,7 +7,7 @@ This is a comprehensive **evidence reconciliation**; it does not assert that all
 - All **1,252 / 1,252** previously indexed crafting recipes examined.
 - **2 supplementary published crafts** audited separately (1,254 runtime crafts in total); original ingredient lists remain unchanged.
 - All **577 / 577** historically dungeon-associated records examined, including **24** crafted items with possible dungeon pattern routes and **1** item incorrectly catalogued as dungeon loot.
-- New, conservative in-addon acquisition summaries generated: **4,224**.
+- New, conservative in-addon acquisition summaries generated: **4,324**.
 - Combined Forever cache entries: **10,315**; Playfulls item entries: **23,352**.
 - Published player-observed relationships: **1,199**.
 - True dungeon-equipment records: **552**; still requiring encounter or container-loot confirmation: **6**.
