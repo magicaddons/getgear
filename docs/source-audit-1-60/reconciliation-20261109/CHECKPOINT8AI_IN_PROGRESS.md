@@ -1,0 +1,7 @@
+# Checkpoint8AI — research preserved, integration pending
+
+## Checkpoint8AI research preserved — integration pending
+
+Final50undocumented60 exactidentities/52queries:49fullprimary404 with exact aggregatecacheunknownorigin records,one284716BandBetterHalf primary ring/noacquisition.49classprojections match7Priest/18Paladin/18Shaman/6Druid;32different-IDnamesakes notcraft/source/binding transfer. Ringset2131/FirstMate284715equip17preexistingMrSmite reference doesnotattribute284716;actual21Sepnews explicitlyBetterHalforiginunknown, misleadingsecondarysearchsnippet resolvedbyactualpageUnknownrow. RingUniqueEquippednotownership/Watcherfamily;primarysell45322c vssecondary9s3c notpurchaseprice/statcorrection. Reused8AHactualaggregatecache fingerprints/174NPC96inventories0matches;no fake itemHTTP404 hashes/unavailable/Hyjalboss inference. Proof CHECKPOINT8AI_IN_PROGRESS.md/working_evidence/discovery_index. Registry2775/index4424/remaining3127 unchanged;50still8AI. Resumeintegrate50/preserve2775priorobjects/freshsame-runHTTPcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot;then8AJfirst12quest60IDs19019–21188 before15legacyNozdormurings. LatestfullPASS8AH42767428623/bot2d2489de;107separate9Acandidates/liveexceptionsopen. No release/mainaction.
+
+No queue advance;one full item response hash and actual aggregate fingerprints only. Missing49itempages have no successful responsehash. Do not repeat saved research.
