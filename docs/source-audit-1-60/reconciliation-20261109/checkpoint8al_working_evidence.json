@@ -1,5 +1,5 @@
 {
-  "status": "Publication research complete;integration/fullvalidation/queueadvance pending",
+  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
   "baseline": "462b3f557832e874819b779a76e4b01e6765c3e8",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -4025,5 +4025,21 @@
   },
   "discoveryIndex": "checkpoint8al_discovery_index.json",
   "limits": "WarHammer21268 usesRegalia21237/quest8790 withtwoStaves,notArmamentsbyname. FourArmamentschoices1of4/threeRegaliachoices1of3;repeatablepublicationnotcurrentfrequency/stock/cooldown/retention. Exactcost1boundtoken+3ElementiumORE18562,not3bars17771/10barThunderfuryrequirement orlearnedcraft/wielderMining. Orepagenobindingline nottrade/AHguarantee;boundtokensnotgear/materialsourceTypeconversion. Tokensshare10publishedNPCactorsincludingTwins/BugTrio,not10independentencounters/extra guaranteedlootrolls;20reversejoins identifyinputs,neverfinishedweapondrops/currentrates. No usableindependentactorNPCmaps;TempleAQcontextfromquests,notcurrentwaypoint/spawn/phase. QuestBoth/min60/200Nozdormugain notgearHorde-only/class/repacceptancegate fromNPCreaction/names. 4plainUniquegear(Bulwark/Musket/twostaves)notcopiedtoother3;no namedfamilylimit. No currentoldFeralAP/stat/BoE/recipe/material/filter/classmutation. Environmenttransition preservedHTTPfiles butlosttransientsearchpayload/oldterminalhandles;discoveryindex recoversactuallyobservedURLs/querystrings with explicitnullbodyflags,notclaimedrerun. Ownboundedlocallease reestablishedwithoutremovinganotherworkerlock.",
-  "nextIntegration": "Integrate7qualifiedquest-tokenchoices preserving2852priorobjects/strongersources/canonicaleligibility;freshsame-runHTTPcapture waitexit0/full14Lua+offlinePython/24modules/fourreports/local+CI/bot.7still8AL/frozen3050;afterPASS8AM45AQclassarmour21329\u201321391,thenAQclassweapons/jewellery."
+  "nextIntegration": "Integrate7qualifiedquest-tokenchoices preserving2852priorobjects/strongersources/canonicaleligibility;freshsame-runHTTPcapture waitexit0/full14Lua+offlinePython/24modules/fourreports/local+CI/bot.7still8AL/frozen3050;afterPASS8AM45AQclassarmour21329\u201321391,thenAQclassweapons/jewellery.",
+  "integrationOutcome": {
+    "equipmentRegistry": 2859,
+    "index": 4479,
+    "display": 4478,
+    "books": 759,
+    "remaining": 3043,
+    "nextCheckpoint": "8AM forty-five AQclassarmour questcases21329\u201321391",
+    "nextFirst": "21329",
+    "nextLast": "21391",
+    "priorObjectsExact": 2852,
+    "local": "Sequential14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
+    "ci": "pending",
+    "additionalCandidates": 121,
+    "rawComparison": "checkpoint8al_raw_upstream_review.json",
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticrequests/replay/fallback"
+  }
 }
