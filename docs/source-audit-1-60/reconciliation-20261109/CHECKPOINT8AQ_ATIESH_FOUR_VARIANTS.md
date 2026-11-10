@@ -1,6 +1,6 @@
 # Checkpoint 8AQ — four Atiesh variants
 
-Research preserved 10 November 2026 UTC. Integration and fresh full validation are pending; latest validated runtime remains 8AP, CI [42821733151](https://github.com/magicaddons/getgear/actions/runs/42821733151), source `51f710db22105ccd5ad34f9bd57e9bb8bc4a7df4`, inspected bot `51f78a04edf0f30ec266cdbd2b86c19584590e4d`.
+Integrated with fresh full local PASS 10 November 2026 UTC. Non-release CI/bot review pending; previous fully validated runtime was 8AP, CI [42821733151](https://github.com/magicaddons/getgear/actions/runs/42821733151), source `51f710db22105ccd5ad34f9bd57e9bb8bc4a7df4`, inspected bot `51f78a04edf0f30ec266cdbd2b86c19584590e4d`.
 
 ## Exact identities and rewards
 
@@ -32,3 +32,9 @@ All four are Legendary/BoP/two-hand Staff, equip60/item90, with no plain Unique 
 ## Resume
 
 Integrate four qualified source records, preserve3011 prior objects and all canonical identity/class/stat/filter/craft facts. Fresh actual HTTP capture must exit0 before the full14Lua/offlinePython/syntax/24module/four-report suite and semantic/raw upstream review. Then push non-release source commit, inspect successful CI and direct bot changes, close handover. Frozen remaining2891 includes these4 until validated. Next8AR:82 world-drop cases at catalogue levels1–7, numeric item-ID order; then remaining world cases and9A’s195 separate candidates plus systematic Back-slot scope audit. Six dungeon exceptions/954 current-live book routes remain open. No main/Beta8/build/package/tag/release/billing action.
+
+## Integration and upstream review
+
+Four qualified equipment records added;3011 previous objects exact. Fresh capture exited0 before14Lua+offlinePython/24modules/fourreports/helper syntax PASS. Registry3015/index4486/display4485/books759;1254crafts4857ingredients/7707identities36341objectives/settings/filters preserved. Four summary cells changed plus only one independently reviewed upstream canonical source delta:Timmy13402 community Timmy10808 reference. [Separate scope review](checkpoint8aq_upstream_scope_review.json) records two additional full HTTP fingerprints:primary item namesTimmy;independent full NPC table omitsboots. No two-sided/live/rate claim or sixexception closure. Four unaffected companion reports are byte-exact.
+
+[Raw comparison](checkpoint8aq_raw_upstream_review.json):Playfulls23434→23441 adds7 IDs,onecanonical andsixoutside/disjoint195→201pending9A. All23434 priorrawrows and9157 fullsource-definitionobjects/sk exact;metadatast only changes. [Semantic comparison](checkpoint8aq_upstream_review.json) limits newfacts to13402communitysource fields;no offsets or other facts. Everloot1416raw1204qualified exactrelations/build/install/first-lastseen,zero selectedobservededges. Allseven same-run HTTP bodies match provenance/metadatahash. [Local results](checkpoint8aq_local_results.txt). Frozenremaining2887allworlddrop;8AR82levels1–7 numericIDorder marked. CI/bot review remains required before8AR;no release/main action.

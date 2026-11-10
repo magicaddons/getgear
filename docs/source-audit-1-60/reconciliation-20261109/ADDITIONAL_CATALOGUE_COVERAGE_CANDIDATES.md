@@ -1,6 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
-Current pending total: **195 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AO below; original-count sections are historical.
+Current pending total: **201 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AQ below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
@@ -57,3 +57,7 @@ Everloot1,416raw/1,204qualified adds17relations(5item/12NPC-location),13counter-
 ## 8AO final source-note validation extension —195 pending candidates
 
 Mandatory fresh validation after17 source-note readability edits captures11 additional Playfulls IDs,alloutsidecanonical/disjoint184:13348 Demonshear,13393 Malown’s Slam,13525 Darkbind Fingers,13532 Darkspinner Claws,18310 Fiendish Machete,18351 Magically Sealed Bracers,18535 Milli’s Shield,18536 Milli’s Lexicon,276455 Swordsmith Mitts,276456 Plague Defiled Buckler,284231 Sayaad Charm. Three have empty sources276455/276456/284231;others are published community hints,not currentloot/adoption. [Final raw comparison](checkpoint8aofinal_raw_upstream_review.json) retains exactfacts.23,434/9,157;allold rows/definitions/index/field10 unchanged;Everloot1,416/1,204 exactedges/counters unchanged. Earlier43-ID delta remains in its separate review. Tencloak/scope audit and systematicBackcoverage requirements remain.
+
+## 8AQ upstream extension —201 pending candidates
+
+Fresh actual reconciliation adds7 Playfulls IDs:canonical13402 Timmy’s Galoshes gets acommunity Timmy reference,while13384 Rainbow Girdle,13537 Chillhide Bracers,18372 Blade of the New Moon,18392 Distracting Dagger,18395 Emerald Flame Ring,22411 Helm of the Executioner are alloutsidecanonical/disjoint195→201pending9A. Names/source fields are feed references,not eligible additions/currentloot/newgamecontent. All23434priorrawrows and9157fullsource-definitionobjects/sk exact;only metadata st changes. See checkpoint8aq_raw_upstream_review.json and checkpoint8aq_upstream_scope_review.json. Timmy item names10808,but full NPC loot omits13402;communityonly/noindependentlive/rates or sixexception closure. Everloot1416/1204relations/counters exact. Tencloak andsystematicBackscope audit requirements remain.

@@ -1,0 +1,68 @@
+{
+  "all_items_reconciled.csv": {
+    "additiveSummaryCells": 4,
+    "sourceRowOffsetOnlyCells": 0,
+    "semanticChanges": [
+      {
+        "itemID": "13402",
+        "name": "Timmy's Galoshes",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "boss"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "boss: Timmy the Cruel, Stratholme"
+          },
+          "dungeonConfidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          }
+        }
+      }
+    ]
+  },
+  "dungeon_items_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 0,
+    "semanticChanges": [
+      {
+        "itemID": "13402",
+        "name": "Timmy's Galoshes",
+        "changes": {
+          "confidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          },
+          "PlayfullsRoutes": {
+            "before": [],
+            "after": [
+              {
+                "type": "boss",
+                "npc": "Timmy the Cruel",
+                "zone": "Stratholme",
+                "path": "loot-tables/dungeons/stratholme",
+                "note": "loot-tables/dungeons/stratholme#boss-timmy-the-cruel",
+                "label": "Boss drop"
+              }
+            ]
+          },
+          "sourceURL": {
+            "before": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+            "after": "https://playfulls.com/database"
+          }
+        }
+      }
+    ]
+  },
+  "recipes_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 0,
+    "semanticChanges": []
+  }
+}
