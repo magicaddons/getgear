@@ -1,5 +1,5 @@
 {
-  "status": "Publication research preserved; runtime integration/full local+CI/bot pending",
+  "status": "Integrated; full sequential local PASS; non-release CI/bot pending",
   "baseline": "966dfb34bf7ca6d84d322444a72fb836db92698f",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -8585,5 +8585,22 @@
     "scope": "16 known fullinput403 not retried/nohash. New quests establish exact item objectives, not input binding/farms/current trade."
   },
   "limits": "18fixedone-piece rewards/token1+idol2+two namedscarabs5each. NineCenarion609Honoredrings/nineExaltedweapons completiongates notgear equip;gain100 notgate,notNozdormu910/200. All18no repeatlabel,notone-time/replacementproof. Nineclassmasks matchgear/quest/token;twoPaladinAlliance/twoShamanHorde/14Both primarysides/originalcanonicaleligibility unchanged/currentacceptanceuntested. NineplainUnique ringsvsnineunnamedUniqueEquippedweapons,notsharedfamilyownership across18.18fullDNDspellCreateItemtargets/nolearningoritem-use proof;29037nameSummonSickleactuallycreatesring21393,notweapon21392/noregularcraft/freecreation. FourfullBoPtokens/18inputquest/20inputNPCjoins identifyinputs,notfinishedgear/currentrates/guaranteed supply.16blockedscarab/idolpages reusedwithoutretry/hash;no copiedAQ40idol/standing/actorcost. IndependentWindcaller15498Silithus52,38/Warden15499Silithus51,38.8 publishedmap points notcurrentphase/availability orTemplecategoryinside-spawn. Weaponnames/types preserveMainHand/OneHand/masks;oldferalAP/setbonuses notstat/class/spec/professionchange. No primaryunavailable/seasonalwarning.",
-  "nextIntegration": "Integrate18 preserving2904priorobjects/canonicaleligibility/strongersources;freshsame-runHTTPcapture WAITexit0/full14Lua+offlinePython/24modules/fourreports/local+CI/bot. Frozen2998/18still8AN untilPASS;then8AO17 AQ-chain/fallenGodquestcases21504\u201321712;previouscloaksnotreopened.121separate9Acandidates pending."
+  "nextIntegration": "Full localPASS after actual feed delta/offset review;nonreleaseCI/bot closeout pending. Registry2922/index4486/display4485/remaining2980/next8AO17 marked;135separate9Acandidates. Do not rerun completed mutation/snapshot helpers.",
+  "integrationOutcome": {
+    "equipmentRegistry": 2922,
+    "index": 4486,
+    "display": 4485,
+    "books": 759,
+    "remaining": 2980,
+    "nextCheckpoint": "8AO seventeen AQ-chain/FallenGod quest cases21504\u201321712",
+    "nextFirst": "21504",
+    "nextLast": "21712",
+    "priorObjectsExact": 2904,
+    "local": "Sequential14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
+    "ci": "pending",
+    "additionalCandidates": 135,
+    "rawComparison": "checkpoint8an_raw_upstream_review.json",
+    "upstreamDelta": "14outsideIDs/135candidates;one definition added/all9153priorpreserved;7090indices/2718positions;644report-offsetcells;oneNPC-locationlastSeen only,notloot",
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticrequests/replay/fallback"
+  }
 }
