@@ -1,6 +1,6 @@
 # Checkpoint 8AH — level-60 undocumented acquisition cases, fifth 100
 
-Status: publication research and integration complete; full local validation PASS. Non-release CI and resulting bot commit review pending. This checkpoint does not establish current live acquisition.
+Status: complete at publication-research level; full local/non-release CI42767428623 PASS and direct bot2d2489de659371978519ae16927abed6c35e71ad reviewed. This checkpoint does not establish current live acquisition.
 
 ## Scope and resume point
 
@@ -71,3 +71,11 @@ Both aggregate datasets were actually read and fingerprinted: cache18,590,138byt
 
 Next in-game work must verify named current sellers, ring quest/purchase/earning conditions, actual prices, stock, equip-limit behavior and41 missing-page origins. Existing954 live book routes and six dungeon exceptions remain open. No release build/package/tag/publish, Beta8 replacement, main modification or billing action.
 
+
+## Checkpoint 8AH validated — next 8AI
+
+Full local/GitHub PASS: [42767428623](https://github.com/magicaddons/getgear/actions/runs/42767428623), source a58c8f204786bb839854bbc9c6a13b6d1f4dcf29; inspected direct bot/final validated 2d2489de659371978519ae16927abed6c35e71ad. All14 Lua regressions, offline Python guard,24 modules/four reports/helper syntax pass;15 timestamped CI test-PASS lines inspected. Bot changes only run time/three Everloot response hashes; no runtime/report/index/count changes or claimed independently captured bot response bytes.
+
+100 cases complete:39 Premier armour origin/rank gaps, four primary rank14 tooltips with four unnamed location leads,16 exact Watcher aliases/faction2819 equip-standing joins,41 primary404/cache-identified unknown origins.80 class projections match canonical;28 different-ID namesakes do not transfer crafts/binding/source; both Glory variants remain Warrior. Unique-equipped ring family limit is not ownership/consumption; reference prices and general Honored/unknown quest condition do not establish selected purchases. Canonical names/stats/eligibility preserved, aliases visible in research metadata.
+
+Equipment2,775/index4,424/display4,423/books759;crafts1,254/ingredients4,857. Previous2,675 objects exact;100 summary cells only/all six dungeon exceptions retained. Seven same-run actual HTTP captures match provenance; local Playfulls23,352/9,153 and Everloot1,399raw/1,199qualified exact facts/counters unchanged; zero selected observed edges.107 outside-canonical9A candidates remain separate/unvalidated. Frozen remaining3,127:50 undocumented/190quest/2,887world-drop. **Next8AI: final50 undocumented60 IDs280918–284716**, marked queue. Main/Beta8 tag/source rechecked10Nov06:16UTC unchanged. All current-live book/dungeon/access/supply/retention exceptions remain. No release/main/billing action.
