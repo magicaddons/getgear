@@ -1,6 +1,6 @@
 # Checkpoint 8AR — 82 world-drop queue cases, catalogue levels 1–7
 
-Publication research preserved 10 November 2026 UTC; runtime integration/fresh full validation/CI/bot review pending. Previous fully validated checkpoint8AQ:CI[42825268432](https://github.com/magicaddons/getgear/actions/runs/42825268432),source `2d72b3570342213eef94ad514582703d0b7ca9a9`,inspected bot `f20d2eb0e5d9f33f81e11268d25de93401849430`.
+Integrated with final fresh full local PASS 10 November 2026 UTC;non-release CI/bot review pending. Previous fully validated checkpoint8AQ:CI[42825268432](https://github.com/magicaddons/getgear/actions/runs/42825268432),source `2d72b3570342213eef94ad514582703d0b7ca9a9`,inspected bot `f20d2eb0e5d9f33f81e11268d25de93401849430`.
 
 ## Scope and dispositions
 
@@ -30,4 +30,12 @@ All82 Uncommon;67BoE/15BoP,10plainUnique.73 item pages have no class mask;9 reli
 
 Integrate82 qualified source records while preserving3015 previous registry objects and stronger observed/manual/reported sources. No catalogue eligibility/filter/code weakening. Fresh actual same-run HTTP capture must exit0 before full14Lua+offlinePython/24module/four-report/helper syntax suite,semantic and raw upstream comparisons;then non-release CI completion/direct bot review. Current registry3015/index4486/display4485/books759;frozen2887 includes these82 until localPASS/queue advance.201 outside-canonical9A candidates and systematic Back-slot coverage audit remain distinct. Six dungeon exceptions/954live book routes remain open.
 
-Next after validation:8AS first100 of121 world-drop cases at catalogue levels8–10,numeric item-ID order;then remaining21 and higher levels,9A individual candidates/systematic coverage audit,final integrity and in-game acceptance plan. Main/Beta8/build/package/tag/release/billing restrictions remain.
+Next after validation:8AS101 world-drop cases at all catalogue levels8–10,numeric item-ID order;then higher levels,9A individual candidates/systematic coverage audit,final integrity and in-game acceptance plan. Main/Beta8/build/package/tag/release/billing restrictions remain.
+
+## Local integration validation
+
+Final actual capture8arfinal exited0 before14Lua+offlinePython/24modules/fourreports/helper syntax PASS. [Local results](checkpoint8ar_local_results.txt),[semantic comparison](checkpoint8ar_upstream_review.json):82summarycells only/zeroothersemantic-or-offset changes/fivecompanionreports byte-exact.3015priorobjects exact;registry3097/index4568/display4567/books759/crafts1254/ingredients4857/7707identities36341objectives/filters/settings/sixdungeonexceptions preserved.
+
+[Initial raw comparison](checkpoint8ar_raw_upstream_review.json) and [final raw comparison](checkpoint8arfinal_raw_upstream_review.json) both retain23441/9157completePFresponseobjects/bytes/hash exact,andEverloot1416raw1204qualified exactrelations/build/install/first-lastseen. Five qualified selected observationedges/fouritems unchanged. Seven final actual same-run HTTP bodies match provenance/registryhash. [Readability review](checkpoint8ar_note_readability_review.json) records13pre-CIdetails-only edits:brokerJSONduplication stays audit-only,and observed-build wording simplifies without changing facts/otherfields. Initial capture was not claimedfulltestPASS;final refresh is a fresh required reconciliation,not a replay or automatic failure retry.201outsidecanonicalcandidates unchanged.
+
+Frozenremaining2805allworlddrop. **8AS101cases atalllevels8–10** are queued. Exact counts30+22+49=101 supersede provisional121/100+21 arithmetic in the initial research handover;no case ID was dropped/duplicated. CI/directbot review still required before8AS.
