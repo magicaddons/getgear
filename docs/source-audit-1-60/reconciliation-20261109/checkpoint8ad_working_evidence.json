@@ -1,5 +1,5 @@
 {
-  "status": "Integrated;final full localPASS;nonreleaseCI/bot pending",
+  "status": "Complete at publication-research level;full final local/nonreleaseCI PASS;directbot reviewed",
   "baseline": "6200f9274b7262bcd5d036748b1a213465dd0a70",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -6008,7 +6008,8 @@
     "pending": "Final annotation-text cleanup needs regenerated index/full suite; queue remains8AD and no CI started",
     "network": "Two final attempts stopped on EverlootHTTP429, followed byHEAD confirmingRetry-After675seconds at2026-11-10T05:04:17Z",
     "earliestEverlootRetryUTC": "2026-11-10T05:15:32Z",
-    "independentWork": "User-authorized independent read-only8AE primary/discovery gathering during backoff; no8AE integration/queue advance/overlapping validation. Returnfinish8AD first."
+    "independentWork": "User-authorized independent read-only8AE primary/discovery gathering during backoff; no8AE integration/queue advance/overlapping validation. Returnfinish8AD first.",
+    "resolved": "Backoffrespected;successfulfinalfreshreconcile10Nov05:16/fullsuite andCI42761206604. No outstandingrate-limitblocker;continueusingactualsame-runHTTPcapturestoavoidduplicaterequests."
   },
   "integrationOutcome": {
     "equipmentRegistry": 2375,
@@ -6021,11 +6022,16 @@
     "nextLast": "272538",
     "priorObjectsExact": 2275,
     "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
-    "ci": "pending",
+    "ci": "success;15testPASS=14Lua+offlinePython/24modules/fourreports;capturehelpersyntaxchecked",
     "rawComparison": "checkpoint8ad_raw_upstream_review.json",
     "validationHistory": "FirstfullPASS;two readabilitycleanupregenerationshitEverloot429, respectedRetryAfter675s,no failingCI/sourcepushed;finalunchangedgeneratorcapturedactualHTTPbytes/fullPASS supersedes.",
     "httpCaptureCommand": "python3 tools/capture_acquisition_audit.py 8ad --output-root /tmp/getgear-research",
     "captureValidation": "7 actualoriginalHTTPbyte/hashsets matchgeneratedprovenance,all3Everlootresponses exact;no replay/fallback/extra request;helper syntax checked locally/CI",
-    "uninterpretedField10Changes": 50
+    "uninterpretedField10Changes": 50,
+    "sourceCommit": "fb8e7a80bf9b90d44149a0f91d1e2e5fb7dbb7db",
+    "ciRun": 42761206604,
+    "ciJob": 129647043999,
+    "validatedFinalHEAD": "798d0f5e9bef91cbea0f06de1306f49833f8314d",
+    "botReview": "Onlytimestamp/threeEverlootresponsehashes;no runtime/report/countchanges"
   }
 }
