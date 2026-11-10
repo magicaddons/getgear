@@ -1,5 +1,5 @@
 {
-  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
+  "status": "Complete at publication-research level;full local/nonreleaseCI PASS;directbot reviewed",
   "baseline": "1b39e7a9f822b538bbf0710119fe9c38c3883c5c",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -62,7 +62,12 @@
     "remaining": 3627,
     "nextCheckpoint": "8AD first100 undocumented60 IDs13262\u201320328",
     "local": "14Lua+offlinePython/24modules/fourreports PASS",
-    "ci": "pending",
-    "rawComparison": "checkpoint8ac_raw_upstream_review.json"
+    "ci": "success;15testPASS=14Lua+offlinePython/24modules/fourreports",
+    "rawComparison": "checkpoint8ac_raw_upstream_review.json",
+    "sourceCommit": "61a0971525dba81437c92d26937d61163229943f",
+    "ciRun": 42758522498,
+    "ciJob": 129638456540,
+    "validatedFinalHEAD": "173f2df583f6761371b579e8005d35c3ee6d2aef",
+    "botReview": "Onlytimestamp/threeEverlootresponsehashes;no runtime/report/countchanges"
   }
 }
