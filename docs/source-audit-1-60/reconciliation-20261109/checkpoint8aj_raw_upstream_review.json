@@ -1,0 +1,312 @@
+{
+  "capturedUTC": "2026-11-10T06:47:15.961422+00:00",
+  "method": "Exact full factual snapshot comparison8AFbot\u21928AJ; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23352,
+    "afterItems": 23366,
+    "beforeDefinitions": 9153,
+    "afterDefinitions": 9153,
+    "newItems": [
+      {
+        "itemID": 10631,
+        "name": "Murkwater Gauntlets",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 10634,
+        "name": "Mindseye Circle",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12556,
+        "name": "High Priestess Boots",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Princess Moira Bronzebeard",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "0732c4776ff6393571f6788105d683c5b5b226f106b6c818d2963fd05df808e5"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13346,
+        "name": "Robes of the Exalted",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Baron Rivendare",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "378ceec83cc6a18a6fc132439f338fe088c6c99c17f94868259d2270a95220ed"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13374,
+        "name": "Soulstealer Mantle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ramstein the Gorger",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "ba4cfd3ac00764453cbb8ec45b85baee0d12741c511b6ec043c932e2742dc140"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18311,
+        "name": "Quel'dorai Channeling Rod",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Lethtendris",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "d62c4decd2504f0d7ecc0f5378570b05b2c15d8894b8206d0dede7d5d26a1cd8"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18322,
+        "name": "Waterspout Boots",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Hydrospawn",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "4af5424a99248af587b960735243f990ee13598be589a67951930ebcd270cf1b"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18347,
+        "name": "Well Balanced Axe",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Illyanna Ravenoak",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "933fbe58d35d94771278204ec69e7cf7f7c5244e5ef03e7c43979ceb44742181"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18373,
+        "name": "Chestplate of Tranquility",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Prince Tortheldrin",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e153c7b10b555e7a32734ea20259ff150ad8da3dd781272b44252f1def2cd488"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18384,
+        "name": "Bile-etched Spaulders",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Immol'thar",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "b0f9a6d81f40e3f15012aedf10cd05ef05977333dfde094c81799a08bc901df3"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18737,
+        "name": "Bone Slicing Hatchet",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Maleki the Pallid",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "b4409002dc5fb383dcae81b77024c17ac77b51de2b0f19b988ad895f0582c986"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22409,
+        "name": "Tunic of the Crescent Moon",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Baron Rivendare",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "378ceec83cc6a18a6fc132439f338fe088c6c99c17f94868259d2270a95220ed"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280017,
+        "name": "Octoclaw Chain Boots",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 287033,
+        "name": "Furbolg Berserker's Boots",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 33,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.1400ffdf44.json",
+        "bytes": 988994,
+        "sha256": "1400ffdf44d13f5b08c2808234dffe9e7abf612024983fd749189f6f55ac41ee",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.5553a06c22.json",
+        "bytes": 1324916,
+        "sha256": "5553a06c228c94852fb9b12a516a3debf6448257d8f0998c898992516df16c93",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.de174f22e2.json",
+        "bytes": 464371,
+        "sha256": "de174f22e289d51f83b530d7aef6236f800fc2096ea4473a43b48d8333734786",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.69dea04360.json",
+        "bytes": 446193,
+        "sha256": "69dea04360d831306b38e3a9096705a94ce5721e150ce669af3eb0a0bdba539b",
+        "matchesRecordedFingerprint": true
+      }
+    ],
+    "definitionPositionChanges": 16,
+    "definitionResolvedMultisetUnchanged": true,
+    "outsideCanonicalSourceIndexOnlyIDs": [
+      18350,
+      18352,
+      18353,
+      18354,
+      18356,
+      18357,
+      18358,
+      18359,
+      18360,
+      18361,
+      18362,
+      18363,
+      18364,
+      18366,
+      18367,
+      18368,
+      18369,
+      18370,
+      18371,
+      18374,
+      18377,
+      18379,
+      18380,
+      18382,
+      18383,
+      18386,
+      18388,
+      18389,
+      18390,
+      18396,
+      18466,
+      18467,
+      22309
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1399,
+    "afterRaw": 1399,
+    "qualifying": 1199,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "79c5df939030363b5a5434e9b8ffea3170c1f6f94b15b673730698008ddf216f",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T06:40:16.468Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103653,
+        "sha256": "cb33008e6ad2cd5e24c7fae269feb4b7304c322b20cb1313d9ca27daa755e64c",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T06:40:16.468Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 82469,
+        "sha256": "9f7003f32f9ec6a0908833266d87a54922f7559ee99d6730be067bcdb5776717",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T06:40:16.468Z"
+      }
+    ]
+  },
+  "snapshotUpdate": "Playfulls diagnosticbaseline refreshed8AJlocal;14newoutsidecanonicalpending9Acandidates;16definitionpositions/33outsidecanonicalindex-onlyrows remapped without factualchange. Actualsame-run captures only;Everloot8Yfactualsnapshot retained."
+}

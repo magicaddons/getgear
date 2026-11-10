@@ -1,5 +1,5 @@
 {
-  "status": "Publication research complete;integration/fullvalidation/queueadvance pending",
+  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
   "baseline": "915a1b2f5c9df7289db9dc8cb69020ce304ddf37",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -2733,5 +2733,22 @@
   "nextResearch": [],
   "limits": "No fullsourcearticle/storyprose retained. actorFacts are structuredquestmetadata only;allfullHTTPfingerprints real. Publication source references not currentlive observations. Runtime2825/index4474;frozen3077 unchanged;12still8AJ. LatestfullPASS8AI42768530618/bot2b51ecb. Allrelease/main/Beta8/usage/concurrency restrictions remain.",
   "inputEvidence": "checkpoint8aj_input_evidence.json",
-  "nextIntegration": "Integrate12metadata fromprimaryitems+checkpoint8aj_input_evidence chainFacts;preserve2825priorobjects/eligibility/strongersources,thenfreshactualHTTPcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot. Queue12still8AJ;afterPASSmark8AK15legacyNozdormu21196\u201321210."
+  "nextIntegration": "Integrate12metadata fromprimaryitems+checkpoint8aj_input_evidence chainFacts;preserve2825priorobjects/eligibility/strongersources,thenfreshactualHTTPcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot. Queue12still8AJ;afterPASSmark8AK15legacyNozdormu21196\u201321210.",
+  "integrationOutcome": {
+    "equipmentRegistry": 2837,
+    "index": 4479,
+    "display": 4478,
+    "books": 759,
+    "remaining": 3065,
+    "nextCheckpoint": "8AK fifteen legacyNozdormu quest rings21196\u201321210",
+    "nextFirst": "21196",
+    "nextLast": "21210",
+    "priorObjectsExact": 2825,
+    "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
+    "ci": "pending",
+    "additionalCandidates": 121,
+    "rawComparison": "checkpoint8aj_raw_upstream_review.json",
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticrequests/replay/fallback",
+    "sourceDelta": "14outsidecanonicalnewIDs;33outsideindexrows/16definitionpositions fact-preserving;23366/9153snapshot;0priorfacts/names/field10changes"
+  }
 }

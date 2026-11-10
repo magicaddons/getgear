@@ -1,5 +1,7 @@
 # Additional catalogue coverage candidates — pending audit9A
 
+Current pending total: **121 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8AJ below; original-count sections are historical.
+
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
 This is a separate **coverage question**, not39 completed acquisition cases or an unexplained expansion of the frozen5,688-case queue. Later audit9A, after the existing queue: check exact identity/version, published item/equip/class/quality/stats, whether omission follows existing scope/eligibility rules, and reliable acquisition evidence. Determine which candidates warrant catalogue development, which are excluded with reason, and which remain unconfirmed. Do not invent class gates or automatically adopt Classic/typed/cache names into runtime. A source reference alone does not establish current availability. No main/release/build/package action.
@@ -25,3 +27,9 @@ Exact8O→8X full-source comparison adds **11824 Cyclopean Band,18320 Demondash 
 ##8AFbot extension —107 total pending candidates
 
 Three newly indexed IDs12552BlisterbaneWrap/18350AmplifyingCloak/18729ScreechingBow alloutsidecanonical;104→107unique/disjoint9Acandidates,notautomaticadoption/currentloot/newgameitemclaims. Exacttypedsourcehints/fingerprints in checkpoint8af_bot_raw_upstream_review.json.26outsidecanonicalindex-onlyremaps/14definitionpositionsreordered,9153resolveddefinitionmultisetunchanged;0previousacquisitionfacts/names/field10changes.23352/9153snapshotrefreshed;botREADME/provenanceonly,no runtime/report/indexchange. All107stillrequireindividualscope/identity/version/eligibility/acquisitionaudit.
+
+## 8AJ local feed extension —121 total pending candidates
+
+The fresh same-run feed capture adds14 IDs, all outside canonical and disjoint107 prior candidates. IDs10631/10634/12556/13346/13374/18311/18322/18347/18373/18384/18737/22409 have published community source hints;280017 Octoclaw Chain Boots and287033 Furbolg Berserker’s Boots have empty source lists. These are feed additions, not asserted new game content, current loot, automatic catalogue additions or completed acquisition research. Candidate CSV now121 unique/disjoint IDs; all require later9A audit.
+
+[Exact raw review](checkpoint8aj_raw_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json):23,366 items/9,153 source definitions;33 outside-canonical index-only rows and16 definition positions reordered with the same resolved definition multiset. Zero previous resolved acquisition facts/names/uninterpreted-field10 changes; zero other canonical report semantics. Everloot1,399raw/1,199qualified exact facts/counters unchanged. No duplicate diagnostic feed requests; candidates do not inflate the frozen research queue or modify runtime eligibility.
