@@ -1,5 +1,5 @@
 {
-  "status": "Publication research preserved;integration/fullvalidation/queueadvance pending",
+  "status": "Integrated;full localPASS;nonreleaseCI/bot pending",
   "baseline": "75906981fc1f3948b035c711abc31e10d3eee8d4",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -5819,5 +5819,20 @@
   "discoveryIndex": "checkpoint8ah_discovery_index.json",
   "sharedPolicy": "checkpoint8k_pvp_system_context.json",
   "datedAccessNotice": "checkpoint8y_pvp_access_update.json",
-  "limits": "16aliases exact primary/faction joins match existing independentName discrepancy; preserve original canonical names and class/stat/eligibility.41full primary404s are not availability warnings. Exact aggregate cache facts have only aggregateHTTP hashes; record-projection hash is explicitly not HTTP.28same-name lower-ID crafts/gear cannot supply selected source/binding/profession/materials.39Premierarmour no explicit rank not ungated.4explicitrank14not independently accepted currentpurchase;all4unnamedsecondarylocations, no NPC/price. SecondaryWatchers5/8/12/20goldclientprices not acceptedcost; general Honored/FirstOnesFree159370 discoverycondition not selectednumericNPC/quest/gatejoin. No currentMarinBladewing/Alcaz/HyjalSummitloot inferred. No new recipes/filters/sourceType/stats changed."
+  "limits": "16aliases exact primary/faction joins match existing independentName discrepancy; preserve original canonical names and class/stat/eligibility.41full primary404s are not availability warnings. Exact aggregate cache facts have only aggregateHTTP hashes; record-projection hash is explicitly not HTTP.28same-name lower-ID crafts/gear cannot supply selected source/binding/profession/materials.39Premierarmour no explicit rank not ungated.4explicitrank14not independently accepted currentpurchase;all4unnamedsecondarylocations, no NPC/price. SecondaryWatchers5/8/12/20goldclientprices not acceptedcost; general Honored/FirstOnesFree159370 discoverycondition not selectednumericNPC/quest/gatejoin. No currentMarinBladewing/Alcaz/HyjalSummitloot inferred. No new recipes/filters/sourceType/stats changed.",
+  "integrationOutcome": {
+    "equipmentRegistry": 2775,
+    "index": 4424,
+    "display": 4423,
+    "books": 759,
+    "remaining": 3127,
+    "nextCheckpoint": "8AI final50 remaining undocumented60",
+    "nextFirst": "280918",
+    "nextLast": "284716",
+    "priorObjectsExact": 2675,
+    "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
+    "ci": "pending",
+    "rawComparison": "checkpoint8ah_raw_upstream_review.json",
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;no extra diagnostic requests/replay/fallback"
+  }
 }
