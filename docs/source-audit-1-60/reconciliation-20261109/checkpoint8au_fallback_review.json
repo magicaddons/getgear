@@ -1,5 +1,5 @@
 {
-  "status": "Exact4768fallbackrepair/generatorprotection/targetedtests+fullsequentialfinal localPASS;nonreleaseCI/bot pending",
+  "status": "Complete exact4768repair/generatorprotection with targeted/full local/nonreleaseCI8AU42877799669PASS;directbot2d739491cda28af391070c3f1c942b1d1755be28inspected",
   "baseline": "0e5e077b44999954d93cf4e6c0492ceac6455aae",
   "itemID": 4768,
   "name": "Adept's Gloves",
@@ -47,8 +47,9 @@
     "exclusionsFile": "docs/source-audit-1-60/worlddrop_boe_fallback_exclusions.json",
     "generatorProtection": "ReviewedForeverexclusionsprecedeClassic/AHledger;exactID/name+non-green/non-BoEfacts+twofingerprints validated",
     "targetedTests": "Actualcold-index4768visible/727hidden/live4768greenBoEhidden;offlinefullgenerator102staleeligibleIDs\u2192101preservedexcept4768/invalidgreenBoEexclusionfailsbeforenetwork",
-    "workflow": "Existingnon-releaseworkflow addssecondofflinePythonregression/generator syntax;no newworkflow/automation/release. Fullvalidation pending.",
+    "workflow": "Existing nonrelease workflow adds second offline Python regression/generator syntax;full validation completed in8AU and retained through8AW. No new workflow/automation/release.",
     "finalLocal": "14Lua+2offlinePython/24modules/fourreports/generator+capture+reconciler syntax PASS;17localPASS",
-    "ci": "pending"
+    "ci": "8AU42877799669success/job130045659751/source81c0c01208b4dfb18828b1c3e0443bf4f8c8add2/directbot2d739491cda28af391070c3f1c942b1d1755be28;16CItestPASS=14Lua+2offlinePython",
+    "trackingCorrection": "8AW docs closure corrected stale pending label in this companion proof;8AU validation was already closed/recorded. No repeated research or new code/test claim."
   }
 }
