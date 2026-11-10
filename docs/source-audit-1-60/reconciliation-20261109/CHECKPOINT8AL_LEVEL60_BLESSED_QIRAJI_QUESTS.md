@@ -1,6 +1,6 @@
 # Checkpoint 8AL — seven Blessed Qiraji quest weapons
 
-Status: publication research/integration and full sequential local validation PASS; non-release CI/bot review pending. Current live loot, exchange acceptance and access remain unverified.
+Status: complete at publication-research level; full sequential local/non-release CI42776016786 PASS and direct bot `d46e6125bd6a3506ad076dabe96c0a75b6cfa6b8` reviewed. Current live loot, exchange acceptance and access remain unverified.
 
 ## Scope and next checkpoint
 
@@ -46,3 +46,13 @@ The26 full sources comprise seven gear pages,two quests,three inputs,13 NPCs and
 
 Next in-game testing must verify present actor/phase access, token/ore availability, accepted quantities, reward choice and retention.954 live book routes and six dungeon exceptions remain open. No release build/package/tag/publish, Beta8 replacement, main modification or billing action.
 
+
+## Checkpoint 8AL validated — next 8AM
+
+Seven Blessed Qiraji quest weapons are complete at publication-research level. Full sequential local and [non-release CI 42776016786](https://github.com/magicaddons/getgear/actions/runs/42776016786) PASS; source `f661c58386b5a8b11da9cec17815d4270610e5ae`, inspected direct bot/final validated HEAD `d46e6125bd6a3506ad076dabe96c0a75b6cfa6b8`. All 14 Lua regressions, offline Python guard, 24 modules, four reports and helper syntax passed; 15 timestamped CI test-PASS lines inspected. The bot changed only run time and three Everloot response hashes, with no runtime/report/index/count changes. Its response bytes were not independently captured.
+
+26 full primary sources support exact exchanges: quest8789/Arygos15380 requires one Armaments21232 + three Elementium ORE18562 and chooses one of four; quest8790/Merithra15378 requires one Regalia21237 + three ORE and chooses one of three, including War Hammer21268. Four actor start/end joins, 20 token/NPC and one ore/NPC reverse joins identify inputs, not finished-weapon loot, current rates or ten independent encounters. Both actor maps are empty. The 200 Nozdormu reputation gain is not an acceptance gate. Four plain Unique labels are not copied to the other three items. No bar17771/Thunderfury cost, learned craft, Mining, old feral stats, class or faction change was introduced.
+
+Equipment registry2,859/index4,479/display4,478/books759; crafts1,254/ingredients4,857. Prior2,852 registry objects are exact; seven summary cells only; all six dungeon exceptions remain. All seven IDs were already generically indexed. Seven actual same-run HTTP captures match local provenance. Playfulls23,366/9,153 and Everloot1,399raw/1,199qualified exact facts/counters are unchanged; zero selected observed edges. API data-as-of refresh is not a loot event. The raw-review method label now accurately identifies the retained8AJlocal/8Y factual baselines; this is documentation only.
+
+Frozen remaining3,043 =156quest +2,887world-drop. **Resume8AM:45 AQ class armour cases21329–21391**, marked in the queue. Conservation5,688 =2,645researched +3,043pending; registry214 +2,645 =2,859. All1,162 undocumented publication cases stay complete. 121 separate outside-canonical9A candidates still require identity/version/scope/eligibility/acquisition audits. Current live book, dungeon, actor/phase, input supply, acceptance and retention exceptions remain open. The environment transition retained primary HTTP evidence; discovery preserves observed URLs/query strings with null body flags, not a claimed rerun. No main/Beta8/release/build/package/tag/publish/billing action.
