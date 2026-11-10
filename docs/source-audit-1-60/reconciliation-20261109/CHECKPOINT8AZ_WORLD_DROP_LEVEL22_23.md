@@ -1,0 +1,45 @@
+# Checkpoint 8AZ — 104 cases at catalogue levels 22–23
+
+Publication research preserved10November2026UTC; integration/fresh reconciliation/full local/non-releaseCI/directbot review pending. Latest validated8AY: [CI42890380075](https://github.com/magicaddons/getgear/actions/runs/42890380075),source `c74b8de4f42ae11e70f9b7d6914b90290e328082`,inspected directbot `5797b4f3c94647cd03829bade5cef317f491bc4a`. No release authorised.
+
+## Evidence and confidence
+
+[Working proof](checkpoint8az_working_evidence.json) locks104 queued IDs/names (55level22/49level23):82broad/22named dispositions.218unique full primaryHTTPfingerprints comprise135new/83explicitly reused cached responses; eight original8AYfeed responses andone retained aggregate cache response are explicitly reused. The earlier completed217315quest-variant record is reused separately,not counted as a newly read full page.104exact-ID/name searches/fourshared searches plusanopened secondary contrast are in [discovery](checkpoint8az_discovery_index.json). No original secondary HTTP hash is invented.
+
+1441exact NPC drop reversejoins and104object reversejoins across sixobject IDs. All named actor relationships independently match full NPC loot,including four distinct Dragonmaw Chain Boots1955actors1035/271346/271348/271351 and both Dextren Ward1663gear273817/273820. NPC/item/set names do not imply classes,races,automatic instanceboss status,current drop probability or guaranteed spawn/phase.86Uncommon/18Rare,99BoE/fiveBoP273817/273820/285328/285346/285347. Talon of Vultros4454,Graverobber's Shovel273817 andNightskulker Ring273820alone showplainUnique;possession limits are not one-time acquisition/currentduplicate-retention proof. All104lack an explicit class mask or primary unavailable/Season-of-Discovery item warning; canonical stats/equip/proficiency facts remain unchanged.
+
+One attributed EverlootNPCobservation,Silver-thread Gloves6393→Son of Arugal2529,has3installs/nullbuild and matching ownitem/fullNPCreferences. It is not a personal live observation or measured rate; installs are not assumed unique players/currentbuild confirmation.
+
+## Object mismatch and physical containers
+
+Azora's Will4999namesLarge Iron Bound Chest74447onits own item page,butthefullobject's returned200-row contents omit4999. The table may be capped. Preserve this one-sided lead and its omission without treating it as current loot certainty,an empty inventory,retirement or proof of absence. Other independently matched NPC/object routes remain intact. Orb of Mistmantle13031independently matchesOld Treasure Chest176944;that fullobject has no usablemap or explicitkey infobox. Do not invent an opening gate,current waypoint or NPC/boss source.
+
+68physical-container references across44gear cases all independently reversejoin fivephysicalitems:42Heavy Bronze Lockbox4633,19War Effort21510,threeWatertight Trunk21113,threeCatfish6647,oneOrnate Bronze Lockbox4632. These are possible contents,not guaranteed gear rolls/current rates/learnedrecipes. OldHeavy4633/HighlandHorror260808origin knowledge is explicitly reused8AY,not a fresh live farm/map. War21510's12fixedcratequests/21NPCjoins,ambiguous structured20versustooltipopeningminimum and8612'sONEHordeSignet reward are explicitly reused8AX. Alternative inputs are not combined fees or wearer professions;crateBoPdoesnotmakecontentsBoP. Seventeen fished-in tables do not impose wearerFishing requirements. Similar74447/74448/4096/2852/75298/176944objects retain independent IDs;no copied coordinates/lockpicking thresholds or Alliance equip gate fromnames.
+
+## Shovel acquisition versus its use
+
+[Graverobber's Shovel273817](https://www.wowhead.com/forever/item=273817) is a Rare/BoP/Unique two-handedmace,min23/itemlevel28,with independent full[Dextren Ward1663](https://www.wowhead.com/forever/npc=1663)loot corroboration. The shovel's grave-digging use is not a source of the weapon;neither is its output an input needed to acquire it. The same NPC independently listsNightskulker Ring273820;do not guarantee both pieces perkill or infer current rates frompublished sample percentages.
+
+Full[Equip effect1319047](https://www.wowhead.com/forever/spell=1319047) and[Dig1292560](https://www.wowhead.com/forever/spell=1292560) each independently list273817as used-by item. The item publishes20charges/two-minute cooldown and use atRaven Hill Cemetery/Scarlet Monastery Graveyard. Dig's underlying fullpage shows a five-second cast andCreate Item:[Grave Moss3369](https://www.wowhead.com/forever/item=3369). The itemalso lists3369increates,andfullMoss independently lists1292560increated-by-spell. These are three corroborating creation relationships,not a newly learned regular crafting recipe,Herbalism/equip gate or Moss reagent for the weapon. The rawcreates array3369/0/0andicon placeholders are not proof of zero yield,fixedquantity or success probability. Current usablegrave conditions,yield,charge consumption/refill andweapon retention after20charges remain unverified. Spellcooldownn/adoesnotcancel the item's two-minute use cooldown.
+
+The published12Attack Power/doubleagainstUndead effect is an equipment effect,not a source/class gate;no canonical stat rewrite is made. Poison/bleed/corruption on-hit effects on4446/5752/13032/13057 likewise do not establish learned professions or a new gear recipe.
+
+## Tankard and two distinct Outrunner weapons
+
+[Bael'dun Tankard286541](https://www.wowhead.com/forever/item=286541) is a held-off-hand,min22,independently matched tofullMalgin Barleybrew5848. Full[Drink1133](https://www.wowhead.com/forever/spell=1133) independently lists286541asused-byitem. Published use restores1345manaover27seconds,requiresremainingseated andhasaten-minute cooldown. This is not a Cooking recipe,conjuredphysicalwater or a source of the tankard. Spelllevel35doesnotreplace gearminimum22;current reuse/retention remains unverified rather than guaranteed unlimited supply.
+
+[Outrunner's Sword285346](https://www.wowhead.com/forever/item=285346) specifically matchesThora Feathermoon5798;[Outrunner Bow285347](https://www.wowhead.com/forever/item=285347) specifically matchesAean Swiftriver5797. FullNPCpages describelevel25RareElite/Darnassus69actors,friendlyAlliance/hostileHordereactions andelevenBarrensmapfootprints each. These are source-access clues,not itemfaction/race/standing/honor-rank gates or proof of current attackability/patrol/phase. Do not transfer their sources tootherpatrolmembers. Both areBoP;no ordinaryunboundtrade route is established.
+
+## Precision Bow versions and completed research reuse
+
+The new case is exact[Precision Bow8183](https://www.wowhead.com/forever/item=8183),publishedBoE/min22. A [secondary217315page](https://www.forevertwinking.com/items/precision-bow-217315) callsdifferentID217315a replacement while explicitly inheriting inferredClassicloot. Onegeneric full217315probe returned403;it has no response hash and was not retried. This does not establish absence/retirement of either bow.
+
+The already-retained [public aggregate cache](https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json),18590138bytes/SHA256 `86a387d5274635ebff1589b8702792fc8c0bfdb55df2ae29ec31a4c894f18e3a`,matchescurrentrecordedprovenance and separately represents8183BoE/min22versus217315BoP/min23. This is explicitly reused cache evidence,not a freshly fetched primary217315page or proof of current replacement.
+
+The existing completed7Brecord for217315was publication-researched9November:Scramble79980questchoice,minimum14,withitsownobjectchain/accessuncertainties. It andits originalsourcehashes are explicitly reused unchanged;the questchain is not researched again. Do not merge bindings/equiplevels,transfer the217315quest to8183,inherit old8183loot/rates onto217315,retire8183froma secondary assertion or equatequestminimum14withbow equip22/23. Currentvariantavailability remains unverified.
+
+## Validation and resume
+
+One newly failedgeneric siblingURLread217315,no originalbody hash/unchangedretry/negativeinventory claim. No failedprimaryreadforthe104selectedcases.219additionalcandidates/systematicBack-slotcoverageaudit/tenomittedcloaks/sixdungeon/954current-livebookexceptions remain open;countvalidation isnotexhaustivecoverage.
+
+Resumeintegration of104whilepreserving3662priorobjects/strongersources/canonicalstats/classes/equip/filters/settings/recipes. Freshsame-runHTTPcapturemustexit0beforefull17localPASS/16CItestPASS/directbotreview. Frozen2240includes104pending. Next8BA95worlddrop cataloguelevels24–25(47+48)numericIDorder,verifiedqueue. The20:13:57scheduledwake was skipped asanewinvocationbecause the originalworker was active under its ownverifiedlease;remoteb761849andmatchingbranch/handoverschecked. Singleexistingautomationenabled/selfowned/samethread,nextscheduled22:15:44UTC;no duplicate/newautomation/main/Beta8/build/package/tag/release/billing action.
