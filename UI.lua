@@ -162,6 +162,9 @@ local function NewAcquisitionPin(parent, size)
         if destination.chainUnresolved then
             GameTooltip:AddLine("Quest route incomplete: opens known stages and unresolved prerequisite details.",1,0.70,0.32,true)
         end
+        if destination.requirements and destination.requirements~="" then
+            GameTooltip:AddLine(destination.requirements,0.85,0.87,0.92,true)
+        end
         if (destination.choiceCount or 0)>1 then
             GameTooltip:AddLine("Right-click for other locations ("..destination.choiceCount..").",0.65,0.76,0.88,true)
         end

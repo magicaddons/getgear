@@ -152,6 +152,9 @@ class Evidence:
                 q["evidence"] = provenance
                 if node.get("requiredPhysicalItems"):
                     q["requiredItems"] = node["requiredPhysicalItems"]
+                if isinstance(node.get("sourceRequirements"), list):
+                    q["sourceRequirements"] = [value for value in node["sourceRequirements"] if isinstance(value, str)]
+                    q["sourceRequirementsUnresolved"] = node.get("sourceRequirementsUnresolved") is True
                 for quest_id in node.get("seriesQuestIDs", []):
                     if quest_id not in q["relatedQuests"]:
                         q["relatedQuests"].append(quest_id)
@@ -265,6 +268,10 @@ def build(inputs):
                         existing["instructions"] = entry["instructions"]
                     return
             plan["routes"].append(entry)
+        for research_gap in meta.get("navigationResearchGaps", []):
+            if isinstance(research_gap.get("gap"), str) and isinstance(research_gap.get("detail"), str):
+                gap(research_gap["gap"], source=research_gap.get("sourceID", ""),
+                    quest=research_gap.get("questID", ""), detail=research_gap["detail"])
         book_id = gear.get("recipePatternItemID") or books.get(item_id, {}).get("bookItemID")
         # Reviewed future trainer/special-crafting/unlock routes share the
         # existing source registry and primary NPC/object evidence pool.
@@ -281,10 +288,12 @@ def build(inputs):
                 route("quest", questID=int(quest_id), bookItemID=book_id if craft else None)
                 if not craft:
                     plan["category"] = "quest"
-                if q.get("relatedQuests") and quest_id not in chains:
-                    gap("quest_chain_relationships_unverified", quest=quest_id, detail="Related sequence is not proof of mandatory prerequisites or earliest start.")
+                if q.get("relatedQuests") and not chains.get(quest_id, {}).get("prerequisitesVerified"):
+                    gap("quest_chain_relationships_unverified", quest=quest_id, detail="Published travel order or related quests do not establish exact mandatory prerequisites, earlier unlocks or current availability.")
                 if not q["starts"]:
                     gap("quest_start_missing", quest=quest_id, detail="Do not present a turn-in as the starting NPC.")
+                if q.get("sourceRequirementsUnresolved"):
+                    gap("quest_source_access_unverified", quest=quest_id, detail="A published source requirement is known but its exact access threshold or current availability remains unresolved.")
         source_item = evidence.items.get(book_id if craft and book_id else item_id, {})
         if not own.get("disputed") and not source_item.get("disputed"):
             for seller in rows(source_item.get("sold-by")):
@@ -327,6 +336,16 @@ def build(inputs):
                             route("recipe_drop", source=key, bookItemID=book_id, verification="published-reference",
                                   instructions="Published recipe-book drop, not finished equipment. Current loot and availability unverified.")
             drops = rows(source_item.get("dropped-by"))
+            # A pure fishing source has useful zone directions, not an invented
+            # precise spot. Broad enemy loot with incidental fishing stays generic.
+            if not craft and not drops:
+                for area in rows(source_item.get("fished-in")):
+                    if area.get("id") and area.get("name"):
+                        key, actor = evidence.source("zone", area["id"], area["name"], source_item.get("evidence"))
+                        evidence.append_location(actor, evidence.location(area["name"], area["id"]))
+                        route("fishing", source=key, verification="published-reference",
+                              instructions="Published fishing-zone reference only. Exact spot or school, current fishing conditions, skill and event availability are unverified; no precise marker is established.")
+                        plan["category"] = "fishing"
             # Random loot-table examples must never become a farm destination.
             fixed = len(drops) == 1 or (drops and len(drops) < 10 and all(x.get("classification") in [2, 3, 4] for x in drops))
             if fixed and ("named-enemy" in str(meta.get("confidence", "")) or craft and "book-drop-reference" in str(meta.get("confidence", ""))):

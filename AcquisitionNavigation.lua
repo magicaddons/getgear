@@ -77,16 +77,20 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         local actor=model.sources[key] or {}
         local locations=actor.locations or {}
         local unresolved=q and #(q.relatedQuests or {})>0 and not get(model.chains,route.questID)
+        local requirements=offerText(route)
+        if q and #(q.sourceRequirements or {})>0 then
+            requirements=(requirements~="" and requirements.."; " or "")..table.concat(q.sourceRequirements,"; ")
+        end
         if #locations==0 then
             add({kind="directions",source=key,label=actor.name or key,role=role,questID=q and q.questID,
-                 instructions="Exact location has not been established."..(route.instructions and "\n"..route.instructions or ""),missingLocation=true,requirements=offerText(route)})
+                 instructions="Exact location has not been established."..(route.instructions and "\n"..route.instructions or ""),missingLocation=true,requirements=requirements})
         end
         for _, loc in ipairs(locations) do
             local instance=(model.instances or {})[loc.zone]
             add({kind=instance and "dungeon" or route.kind,dungeon=instance and loc.zone or nil,
                  boss=instance and (actor.name or key) or nil,source=key,label=actor.name or key,zone=loc.zone,uiMapID=loc.uiMapID,
                  x=loc.x,y=loc.y,bounds=loc.bounds,verification=loc.verification,role=role,
-                 questID=q and q.questID,questName=q and q.name,requirements=offerText(route),preferred=preferred,
+                 questID=q and q.questID,questName=q and q.name,requirements=requirements,preferred=preferred,
                  instructions=route.instructions,bookItemID=route.bookItemID,chainUnresolved=unresolved})
         end
     end
@@ -113,7 +117,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                  role=route.recipe and "Obtain recipe in dungeon" or "Dungeon entrance",instructions=route.instructions,
                  verification=route.verification,bookItemID=route.bookItemID})
         elseif route.source then
-            source(route.source,route.kind=="recipe_vendor" and "Recipe vendor" or route.kind=="recipe_drop" and "Obtain recipe book" or route.kind=="trainer" and "Recipe trainer" or route.kind=="crafting_requirement" and "Special crafting location" or route.kind=="unlock" and "Acquisition unlock" or route.kind=="vendor" and "Equipment vendor" or route.kind=="object" and "Acquisition object" or "Published named source",nil,route,false)
+            source(route.source,route.kind=="recipe_vendor" and "Recipe vendor" or route.kind=="recipe_drop" and "Obtain recipe book" or route.kind=="trainer" and "Recipe trainer" or route.kind=="crafting_requirement" and "Special crafting location" or route.kind=="unlock" and "Acquisition unlock" or route.kind=="fishing" and "Fishing zone" or route.kind=="vendor" and "Equipment vendor" or route.kind=="object" and "Acquisition object" or "Published named source",nil,route,false)
         elseif route.location then
             local loc=route.location
             add({kind=route.kind,label=route.label or loc.spot or loc.zone,zone=loc.zone,x=loc.x,y=loc.y,
@@ -152,6 +156,7 @@ function GetGear:GetAcquisitionDirections(gear)
                     local q=get(data().quests,stepID) or {}
                     out[#out+1]=i..". "..(q.name or "Quest").." (#"..stepID..")"..(stepID==id and (state=="unknown" and " — start here; progress unknown" or " — "..state) or "")
                     if q.reqlevel then out[#out+1]="   Minimum quest level: "..q.reqlevel end
+                    for _, requirement in ipairs(q.sourceRequirements or {}) do out[#out+1]="   "..requirement end
                     for _, role in ipairs({"starts","ends"}) do
                         for _, key in ipairs(q[role] or {}) do
                             local a=data().sources[key] or {}
@@ -165,6 +170,7 @@ function GetGear:GetAcquisitionDirections(gear)
             end
             local q=get(data().quests,id) or {}
             if q.reqlevel then out[#out+1]="Published quest minimum level: "..q.reqlevel end
+            for _, requirement in ipairs(q.sourceRequirements or {}) do out[#out+1]=requirement end
             if q.side==1 or q.side==2 then out[#out+1]="Published quest access: "..(q.side==1 and "Alliance" or "Horde") end
             for _, key in ipairs(q.objectives or {}) do
                 local actor=data().sources[key] or {}

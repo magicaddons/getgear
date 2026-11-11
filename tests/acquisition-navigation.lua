@@ -16,6 +16,8 @@ model.quests["10"]={questID=10,name="Simple quest",starts={"npc:1"},ends={"npc:1
 model.quests["11"]={questID=11,name="Second stage",starts={"npc:2"},ends={"npc:1"}}
 local simple=plan(1,{{kind="quest",questID=10}})
 assert(addon:GetAcquisitionMapTarget(simple).source=="npc:1","simple quest starts at quest giver")
+model.quests["10"].sourceRequirements={"Published source profession: Tailoring; exact access threshold unresolved."}
+assert(addon:GetAcquisitionMapTarget(simple).requirements:find("Tailoring",1,true),"source profession is visible without changing gear eligibility")
 model.chains["11"]={steps={10,11},routeVerified=true,prerequisitesVerified=false}
 local chain=plan(2,{{kind="quest",questID=11}})
 assert(addon:GetAcquisitionMapTarget(chain).questID==10,"unknown progress uses beginning")
@@ -62,6 +64,9 @@ assert(not addon:GetAcquisitionMapTarget(random),"generic random drop must not r
 local missing=plan(13,{{kind="vendor",source="npc:3"}})
 assert(not addon:GetAcquisitionMapTarget(missing),"incomplete coordinates must not imply navigation")
 assert(addon:GetAcquisitionDirections(missing):find("unresolved",1,true))
+actor("zone:33","Fishing region","Westfall")
+local fishing=plan(16,{{kind="fishing",source="zone:33"}})
+assert(addon:GetAcquisitionMapTarget(fishing).role=="Fishing zone")
 
 -- Exercise actual adapter lifecycle using frame/API doubles, never game rendering.
 local frames=0
@@ -93,6 +98,8 @@ C_Map.ClearUserWaypoint=function() error("must preserve native waypoint") end
 addon.ShowAcquisitionDirections=function(self,gear,target,anchor,reason) self.reason=reason end
 addon.ShowAcquisitionChoices=function(self,gear,choices) self.choices=choices end
 loadModule("MapNavigation.lua")
+local fishOK,fishMode=addon:OpenAcquisitionMap(fishing)
+assert(fishOK and fishMode=="directions" and frames==0,"zone-only fishing opens directions without a fake marker")
 local ok,mode=addon:OpenAcquisitionMap(vendor);assert(ok and mode=="map")
 local target,marker=addon:GetAcquisitionMarkerState();assert(target.x==40 and marker:IsShown())
 assert(marker.point[4]==400 and marker.point[5]==-400,"normalized map-canvas position")
@@ -173,4 +180,8 @@ assert(lamp and lamp.source=="object:142184" and lamp.bounds and not lamp.x,"new
 assert(addon:GetAcquisitionDirections(addon.ItemCatalog[9359]):find("9249",1,true),"new source preserves exact key context")
 assert(addon:GetAcquisitionDirections(addon.ItemCatalog[2042]):find("#65",1,true),"actual seven-stage Defias travel route")
 assert(addon:GetAcquisitionDirections(addon.ItemCatalog[5780]):find("limited%-stock"),"actual reviewed limited recipe vendor")
-print("PASS acquisition navigation: 13 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests")
+local fish=addon:GetAcquisitionMapTarget(addon.ItemCatalog[19808])
+assert(fish and fish.kind=="fishing" and fish.zone=="Stranglethorn Vale" and not fish.x and not fish.bounds,"new fishing source is zone directions only")
+local maskDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[10025])
+assert(maskDirections:find("#3379",1,true) and maskDirections:find("#3402",1,true) and maskDirections:find("Tailoring",1,true),"quest-unlocked recipe retains researched starting route and source requirements")
+print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests")

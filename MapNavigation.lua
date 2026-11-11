@@ -190,6 +190,9 @@ function GetGear:OpenAcquisitionMap(gear,destination,anchor,choose)
     if target.chainUnresolved then
         return directions("The complete quest route is unresolved. The listed quest NPC is not a verified chain starting point; review the known stages before travelling.")
     end
+    if target.kind=="fishing" and not target.x and not target.bounds then
+        return directions("A published fishing zone is known, but no precise spot or school is established. Use these qualified directions; no marker was guessed.")
+    end
     if type(InCombatLockdown)=="function" and InCombatLockdown() then
         return directions("Map navigation is unavailable during combat. Directions are still available.")
     end

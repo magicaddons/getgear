@@ -33,6 +33,9 @@ with tempfile.TemporaryDirectory() as temp:
     assert "2" not in data["items"], "one random loot table sample cannot establish a named farm"
     assert not data["chains"], "see-also/series IDs cannot become mandatory prerequisite edges"
     assert any(g["gap"] == "quest_chain_relationships_unverified" for g in gaps)
+    (nav.REPORT / "navigation_quest_chains.json").write_text(json.dumps({"10": {"steps": [10], "routeVerified": True, "prerequisitesVerified": False}}))
+    assert any(g["gap"]=="quest_chain_relationships_unverified" for g in nav.build(gear)[2]), "known travel order must not erase unverified prerequisite research"
+    (nav.REPORT / "navigation_quest_chains.json").unlink()
     assert data == nav.build(gear)[0], "offline results must be deterministic"
     # A future research checkpoint expands the same source without UI/item special cases.
     proof["actors"] = [response("npc", 100, name="Vendor", maps={"40": [{
@@ -44,9 +47,11 @@ with tempfile.TemporaryDirectory() as temp:
     assert locations[0]["bounds"] == dict(xMin=20, xMax=50, yMin=30, yMax=60)
     assert coverage[0]["status"] == "directions"
     (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
-        "itemID": 2, "navigationRoutes": [{"kind": "crafting_requirement", "source": "npc:100", "instructions": "Fixture special forge"}]}]))
+        "itemID": 2, "navigationRoutes": [{"kind": "crafting_requirement", "source": "npc:100", "instructions": "Fixture special forge"}],
+        "navigationResearchGaps": [{"gap": "container_quest_relationships_unverified", "sourceID": "item:900", "questID": 999, "detail": "Fixture unresolved prerequisite relationship"}]}]))
     future = nav.build(gear)[0]
     assert future["items"]["2"]["routes"][0]["kind"] == "crafting_requirement", "future reviewed special locations use the same registry/model"
+    assert any(g["sourceID"]=="item:900" and g["questID"]==999 for g in nav.build(gear)[2]), "indirect container quest gaps stay in shared acquisition research tracking"
     (nav.REPORT / "reviewed_equipment_sources.json").write_text("[]")
     proof["actors"].append(response("object", 700, name="Chest fixture", maps={"40": [{"uiMapName": "Westfall", "coords": [[20, 30]]}]}))
     proof["items"].append(response("item", 3, lists={"contained-in-object": [{"id": 700, "name": "Chest fixture"}]}))
@@ -69,5 +74,12 @@ with tempfile.TemporaryDirectory() as temp:
     gear["1"]["profession"]="Fixture profession"
     unresolved=nav.build(gear)
     assert not any(r["kind"]=="dungeon" for p in unresolved[0]["items"].values() for r in p["routes"]), "generic dungeon label is not a navigable entrance"
+    gear["4"] = dict(itemID=4, name="Fishing fixture", sourceType="World drop", eligibility=[511])
+    proof["items"].append(response("item", 4, lists={"fished-in": [{"id": 40, "name": "Westfall"}]}))
+    proof["items"][1]["lists"]["fished-in"]=[{"id": 40, "name": "Westfall"}]
+    path.write_text(json.dumps(proof))
+    fish=nav.build(gear)[0]
+    assert fish["items"]["4"]["routes"][0]["kind"]=="fishing" and "x" not in fish["sources"]["zone:40"]["locations"][0]
+    assert "2" not in fish["items"], "incidental fishing must not give broad random enemy drops a destination"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8BI final local actual capture",
-  "capturedUTC": "2026-11-11T08:32:43.854594+00:00",
+  "capturedForCheckpoint": "8BJ actual local capture",
+  "capturedUTC": "2026-11-11T09:15:53.310655+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23587,
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "All23587priorrawrows/9246fullsourceobjects/entiremetadata and names/resolved sourcefacts exactnavigation-final;no newIDs/index/opaque/stat/display changes. All342outsidecandidates preserved."
+    "comparison": "All23587rawrows/9246fullsources/entiremetadata/names/resolvedfacts exact8BI. Outside345=342prior+3newprimaryquestrewardcandidates,notfeedadoption."
   },
   "everloot": {
     "total": 1550,
@@ -52,33 +52,33 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "f12d083e94c53493aaf592aa5a25f9e790c04f4e340f0e8d7b55dd715214ed15",
+        "sha256": "a33af5dfe62885f653cc8d385c9be19221d53ac718f1caee8233e403ab9a7fbf",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T08:30:17.904Z"
+        "dataAsOf": "2026-11-11T09:10:17.029Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
-        "bytes": 103491,
-        "sha256": "acee2130d3d61408f81adac9f5ae3f48af90501fedbfbfca3ecf683c818032f9",
+        "bytes": 103479,
+        "sha256": "2da8c36664d2306fc7cfdff0b1e8fa66c96136fdc1971cf41a54394b840fa2d4",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T08:30:17.904Z"
+        "dataAsOf": "2026-11-11T09:10:17.029Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
-        "bytes": 103438,
-        "sha256": "a788870f4433710faacd0c8748797c44775f4feb22092f5bf618feebc9465d9e",
+        "bytes": 103463,
+        "sha256": "7948c2044409e00eb3d2caaabf207233c5c2d8c2c1002395d7dfc58760a5a8d3",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T08:30:17.904Z"
+        "dataAsOf": "2026-11-11T09:10:17.029Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
-        "bytes": 34319,
-        "sha256": "233a0a99f355f5f2eb35856af41b16b03b14561b89d6394604619d33e6093f81",
+        "bytes": 35754,
+        "sha256": "ebd446c73c1d9488a28aadac811f06469d8636fe413d25c63bb33726fe8f97f7",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T08:30:17.904Z"
+        "dataAsOf": "2026-11-11T09:10:17.029Z"
       }
     ],
-    "comparison": "OnlyNPC4086located_inzone1442,3install/nullbuild;notitem4086gear/currentNPCpresence/killtime/newloot. Unchanged1424qualifieditemedges/zero8BIselected doesnotproveabsence. Originalone-edge delta retainedcheckpoint8bi_raw_upstream_review/feed_scope_review beforeactualsnapshotadvance;no diagnosticfeedrefetch.",
+    "comparison": "Seven3-install/nullbuild observations:4PrairieWolf2958nongear drops,3Peacebloomobject relations. Old1618gathered-from and new657382contained-in distinctions retained;no NPCkill/retirement/currentpresence/newgear inference. All7ownpositive/5actorpositive/2old1618harvesttablesunavailable;no currentloot/rates/retirement/availability inference. Originaldelta preserved before1672diagnosticadvance.",
     "rawEdges": 1551,
     "qualifyingRelationships": 1316
   }
