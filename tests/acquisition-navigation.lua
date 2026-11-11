@@ -121,6 +121,11 @@ local inside=addon:GetAcquisitionMapTarget(rare);assert(inside.kind=="dungeon" a
 model.sources["npc:2"].locations[1].zone="Westfall"
 addon:ResetAcquisitionNavigation();C_EncounterJournal=nil
 ok,mode=addon:OpenAcquisitionMap(boss);assert(mode=="directions","no guessed entrance")
+model.quests["10"].relatedQuests={999}
+ok,mode=addon:OpenAcquisitionMap(simple);assert(mode=="directions" and addon.reason:find("not a verified chain starting point",1,true),"unknown earlier chain must not pretend final quest is actionable")
+model.quests["10"].relatedQuests=nil
+local popupHidden=0;addon.HideAcquisitionNavigation=function() popupHidden=popupHidden+1 end
+addon:OpenAcquisitionMap(vendor);assert(popupHidden==1,"new map action closes stale directions popup")
 C_Map.OpenWorldMap=nil
 local globalCalls=0;OpenWorldMap=function(id) globalCalls=globalCalls+1;mapID=id;WorldMapFrame:Show() end
 ok,mode=addon:OpenAcquisitionMap(vendor);assert(mode=="map" and globalCalls==1)

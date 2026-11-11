@@ -168,6 +168,7 @@ local function installMarker(target)
 end
 
 function GetGear:OpenAcquisitionMap(gear,destination,anchor,choose)
+    if self.HideAcquisitionNavigation then self:HideAcquisitionNavigation() end
     local choices={}
     for _, target in ipairs(self:GetAcquisitionNavigationChoices(gear)) do
         if not target.missingLocation then choices[#choices+1]=target end
@@ -185,6 +186,9 @@ function GetGear:OpenAcquisitionMap(gear,destination,anchor,choose)
         if self.ShowAcquisitionDirections then self:ShowAcquisitionDirections(gear,target,anchor,reason);return true,"directions" end
         if self.Say then self.Say(reason or self:GetAcquisitionDirections(gear)) end
         return false,"directions-unavailable"
+    end
+    if target.chainUnresolved then
+        return directions("The complete quest route is unresolved. The listed quest NPC is not a verified chain starting point; review the known stages before travelling.")
     end
     if type(InCombatLockdown)=="function" and InCombatLockdown() then
         return directions("Map navigation is unavailable during combat. Directions are still available.")

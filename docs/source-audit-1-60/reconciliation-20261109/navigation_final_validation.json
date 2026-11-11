@@ -1,0 +1,81 @@
+{
+  "status": "local PASS; final non-release CI pending",
+  "firstSourceCommit": "4c7f3d61d5964c8b0793538833ec31490ef75090",
+  "firstCI": 42983282336,
+  "firstJob": 130398459167,
+  "firstInspectedBot": "0d40226db22a6d0c4a32cc32197abc0995a5bbed",
+  "firstBotDiff": "Only provenance time/four Everloot response hashes; no runtime/reports. Bot API bytes not read; no identical-facts inference from counts.",
+  "freshFinalCapture": {
+    "PFItems": 23587,
+    "PFDefinitions": 9246,
+    "allRawRowsAndFullDefinitionsAndMetadataExact": true,
+    "EVRaw": 1664,
+    "EVQualifying": 1424,
+    "allEdgesAndCountersExact": true,
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.f951489510.json",
+        "bytes": 999737,
+        "sha256": "f9514895105915a91254486370d6a6275b317ce07aa86e28a0bc53bd81dfc8aa",
+        "matchesReconciliationFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.f7c0a8c3c7.json",
+        "bytes": 1354129,
+        "sha256": "f7c0a8c3c7e15eaa28695de9490fe7dd922d4ecbaaacfaceb475bc180cef1896",
+        "matchesReconciliationFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.a5ccd2e2ef.json",
+        "bytes": 467080,
+        "sha256": "a5ccd2e2ef029ced0d8ce08545b4e716f46eb2c258997fc1668e41de0f62df04",
+        "matchesReconciliationFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.a9b9d83dd0.json",
+        "bytes": 446765,
+        "sha256": "a9b9d83dd0648069a4fc81f5264a87336092b1de1c35792bafc278943b8a5a23",
+        "matchesReconciliationFingerprint": true
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "3015028fef72de598931c290726428deb135e3f9eddfece09b6d291563ea364b",
+        "matchesReconciliationFingerprint": true
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103491,
+        "sha256": "5a55dd7f8ad228d5849b5582bf88b515e0a773b0d83a941225a71f803bd18426",
+        "matchesReconciliationFingerprint": true
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103438,
+        "sha256": "8a4e789f484826b4a63525e5a3e3c9df210b8a22adee0586af00ef2ffe812266",
+        "matchesReconciliationFingerprint": true
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 34114,
+        "sha256": "754be8bf400dcd23c5fe6b8fe5740b4e9691b304e8249386808a0beab95cbd37",
+        "matchesReconciliationFingerprint": true
+      }
+    ]
+  },
+  "localPASS": 19,
+  "sourceScenarios": 13,
+  "TOCModules": 26,
+  "renderingVerified": 0,
+  "finalAudit": {
+    "not_applicable": 2588,
+    "directions": 1266,
+    "missing": 3172,
+    "verified_coordinate_data": 681
+  },
+  "polish": [
+    "Close stale source/directions popup on another navigation action",
+    "Unresolved quest sequence opens qualified instructions, not a misleading final-stage marker",
+    "Generic dungeon-pattern labels are gaps, not identified entrances; split multiple identified dungeons into choices"
+  ]
+}

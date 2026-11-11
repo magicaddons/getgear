@@ -57,5 +57,9 @@ with tempfile.TemporaryDirectory() as temp:
     assert coverage[1]["status"] == "missing", "unfinished research is a gap, not a verified route"
     assert not nav.coordinate(True) and not nav.coordinate(-1) and not nav.coordinate(101)
     assert "\\u0001" not in nav.lua("\1"), "generated Lua must use Lua 5.1 escapes"
+    (nav.REPORT / "dungeon_items_reconciled.csv").write_text("itemID,dungeon,reconciledRole\n1,Dungeon pattern drops — exact boss unconfirmed,crafted-pattern\n")
+    gear["1"]["profession"]="Fixture profession"
+    unresolved=nav.build(gear)
+    assert not any(r["kind"]=="dungeon" for p in unresolved[0]["items"].values() for r in p["routes"]), "generic dungeon label is not a navigable entrance"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

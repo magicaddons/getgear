@@ -1,6 +1,6 @@
 # Acquisition navigation restoration and handover
 
-Status: implemented; full local validation passed. Non-release CI and its generated commit must be reviewed before closure. No package or release authorised. Original acquisition research remains active.
+Status: implemented; full local validation passed. Initial non-release CI passed; final routing/audit corrections await their own CI review. No package or release authorised. Original acquisition research remains active.
 
 ## What happened to the button
 
@@ -21,8 +21,8 @@ All 7,707 catalogue IDs and 36,341 objectives across nine classes were audited. 
 | Coverage | Items | Meaning |
 | --- | ---: | --- |
 | Published coordinate data | 681 | Cited published point data exists; actual client map resolution/rendering still needs testing. |
-| Useful directions | 1,283 | Named areas/roaming footprints, zone guidance or client-resolved dungeon entrances; precise fixed marker not established. |
-| Missing useful location data | 3,155 | No safe actionable location; missing data is not implemented navigation. |
+| Useful directions | 1,266 | Named areas/roaming footprints, zone guidance or client-resolved dungeon entrances; precise fixed marker not established. |
+| Missing useful location data | 3,172 | No safe actionable location; missing data is not implemented navigation. |
 | No applicable fixed destination | 2,588 | Broad random drops without a justified named target. |
 
 Actual in-game rendering verified: **0**. Machine-readable [per-item coverage](navigation_coverage.csv), [nine-class/category totals](navigation_audit.json) and [shared research gaps](navigation_research_gaps.csv) retain every classification. Gap rows are not unique items and can overlap.
@@ -66,12 +66,12 @@ Install source files only through the next explicitly authorised build process; 
 | --- | --- |
 | Simple quest | `/getgear map 263329` (Flutterfly Swatter): display its published quest source; verify NPC/zone and tooltip against the guide. |
 | Long chain | `/getgear map 2042` (Staff of Westfall): with no reliable progress use Gryan/Westfall and ordered seven-stage instructions. With65 complete, select132; with a stage active use the client's next objective when available. Verify unknown prerequisite warning. |
-| Different start/end | `/getgear map 21530`: choose start versus turn-in for Nefarius's Corruption; ensure NPC roles remain distinct. Also inspect65 within the Defias route (Westfall start/Redridge turn-in). |
+| Different start/end | `/getgear map 2042`: inspect65 within the Defias route (Westfall/Gryan start; Redridge/Wiley turn-in). Use the alternate-location chooser to verify distinct roles. |
 | Direct vendor/multiple choices | `/getgear map 2506`: choose among ten researched merchants; verify the chosen zone/name updates, then right-click the normal item pin to choose another. |
 | Limited recipe vendor | `/getgear map 5780`: identify named recipe vendors, published limited-stock qualification and written fallback where exact coordinates are missing. Do not expect live stock to be known. |
 | ACA | `/getgear map 250513` and `/getgear map 220606`: inspect Stondry/Alynsia, Redridge coordinates and Merchant's Favor; verify recipe learning versus finished crafting and Honored text on the idol. |
 | Dungeon boss | `/getgear map 1155`: choose Blackfathom Deeps entrance/other researched alternatives; confirm Kelris directions and no guessed boss-floor pin. |
-| Dungeon recipe | Preview a dungeon-recipe entry (e.g.250489): entrance plus recipe-book source, never a claim the finished craft drops. If no native entrance exists, expect directions. |
+| Dungeon recipe | Preview a dungeon-recipe entry (e.g.252455): entrance plus recipe-book source, never a claim the finished craft drops. If no native entrance exists, expect directions. |
 | Dungeon quest | `/getgear map 2042`: start the outside quest before the dungeon; distinguish VanCleef objective from Gryan's start/turn-in. |
 | Rare | `/getgear map 1404`: Prince Nazjak's published Arathi area; shade a region rather than invent a precise spawn. |
 | Object | `/getgear map 18706`: named Arena Master object source; use directions if no reliable position is available. |
@@ -87,3 +87,9 @@ Fresh required reconciliation detected genuine upstream changes: Playfulls 23,48
 Next: close navigation CI/bot review and document any manual-only exceptions, then resume original 8BI at remaining discovery batches 6–24 (76 queries), preserving the 100 own item reads / 24 completed searches in checkpoint8bi_partial_evidence.json. No 8BI cases were marked individually complete or integrated by navigation work. Registry 4,584 / index 6,055 / display 6,054 / books 759, 7,707 identities / 36,341 objectives / 1,254 crafts / 4,857 ingredients remain. Six dungeon exceptions, 954 current-live recipe routes, all-slot/Back audit and current-live availability remain open. Single existing continuation automation retained; no duplicate automation or billing action.
 
 Beta readiness: source implementation is ready for review and client acceptance testing after successful CI. Inclusion in the next beta depends on the manual map/overlay checks above. This is not a release or a claim that missing location/chain research is complete.
+
+## Final routing review
+
+Initial source4c7f3d6 passed [CI42983282336](https://github.com/magicaddons/getgear/actions/runs/42983282336),18 test checks; inspected direct bot0d40226 changed only provenance time/four API hashes. Fresh final capture retained exact PF23,587/9,246 raw rows/metadata/source objects and EV1,664/1,424 full relations/counters. Final19localPASS repeated after targeted corrections.
+
+Selecting another pin closes the old source/directions popup. A known related quest sequence without a researched starting route now opens qualified directions instead of a misleading reward-quest marker. Generic dungeon-pattern labels without an identified dungeon were recategorised as missing; multiple identified dungeons have separate choices. Final audit681point-data/1,266directions/3,172missing/2,588notapplicable;6,339overlapping gap rows. See navigation_final_validation.json. Final code CI/bot review remains the next gate.

@@ -4,7 +4,7 @@ PASS required files 4/4, syntax 26 modules
 PASS Beta4 canonical catalogue: 7707 records, 36341 class entries, 9 classes, 259 research overrides, quest/gates, 0 spec profiles
 PASS Beta7 Warrior lvl15 hides leather and four earlier items; aged/role gates, late quests, boundary, status, all-valid, materials and preview
 PASS Beta4 C_Traits Fire/Frost/Arcane dominance, mixed stat safety, ambiguity and API fallback, expanded/preview and conservative pure-school items
-PASS Beta4 stress: 26 Lua files, 45 class/level checks, 0 item-cache requests, load 0.30s, filtering 0.95s
+PASS Beta4 stress: 26 Lua files, 45 class/level checks, 0 item-cache requests, load 0.27s, filtering 1.01s
 PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 8 corrected items, explicit trash/recipe provenance, map/mat evidence
 PASS Beta7 material names: belt names, all class recipes, 1254 crafts, 4857 ingredients without client item cache
 PASS full Beta7: 7707 items, 36341 class objectives, nine classes, 1060 new recipes, 43 corrections, 415 named dungeon enemies (not necessarily bosses), 55 vendor, 27 quest
@@ -18,5 +18,4 @@ PASS full acquisition reconciliation: 6055 item-ID sources; 6054 new displayed r
 PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved
 PASS acquisition navigation: 13 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests
 
-Fresh source reconciliation: navigation HTTP capture exit0;8 actual responses/fingerprints retained; no replay or duplicate diagnostic refetch.
-Syntax:26 TOC Lua modules, exporter syntax,4 Python tools. Rendering:0 in-game observations; manual matrix outstanding.
+Final navigation capture exit0 before full tests;8 exact same-run HTTP fingerprints;PF23587/9246 whole raw rows/definitions/metadata exact earlier navigation capture;EV1664/1424 whole edges/counters exact. Four Python tools and Lua exporter syntax checked. Actual in-game rendering remains unverified.

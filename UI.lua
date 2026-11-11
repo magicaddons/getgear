@@ -159,6 +159,9 @@ local function NewAcquisitionPin(parent, size)
         elseif destination.verification~="client" then
             GameTooltip:AddLine("Published reference; current presence, stock, loot and access remain unverified.",1,0.70,0.32,true)
         end
+        if destination.chainUnresolved then
+            GameTooltip:AddLine("Quest route incomplete: opens known stages and unresolved prerequisite details.",1,0.70,0.32,true)
+        end
         if (destination.choiceCount or 0)>1 then
             GameTooltip:AddLine("Right-click for other locations ("..destination.choiceCount..").",0.65,0.76,0.88,true)
         end
@@ -191,6 +194,9 @@ end
 -- A single lazy popup for source choices or directions. No additional controls
 -- or permanent text are added to compact objective rows.
 local navigationPopup
+function GetGear:HideAcquisitionNavigation()
+    if navigationPopup then navigationPopup:Hide() end
+end
 local function NavigationPopup()
     if navigationPopup then return navigationPopup end
     local f=CreateFrame("Frame","GetGearNavigationPopup",UIParent,"BackdropTemplate")

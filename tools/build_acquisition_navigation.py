@@ -229,6 +229,7 @@ def build(inputs):
     equipment = {r["itemID"]: r for r in json.loads((REPORT / "reviewed_equipment_sources.json").read_text())}
     books = {r["itemID"]: r for r in json.loads((REPORT / "reviewed_recipe_sources.json").read_text())}
     dungeon_rows = {int(r["itemID"]): r for r in read_csv(REPORT / "dungeon_items_reconciled.csv")}
+    known_dungeons = {r["dungeon"] for r in dungeon_rows.values() if r.get("reconciledRole") not in ["crafted-item", "crafted-pattern"] and r.get("dungeon")}
     pending = {int(r["itemID"]): r for r in read_csv(REPORT / "remaining_equipment_research_queue.csv")}
     merchants = collections.defaultdict(list)
     merchant_paths = set(REPORT.glob("checkpoint*merchant_references.csv")) | set(REPORT.glob("checkpoint*vendor_references.csv"))
@@ -240,7 +241,7 @@ def build(inputs):
     chains_path = REPORT / "navigation_quest_chains.json"
     chains = json.loads(chains_path.read_text()) if chains_path.exists() else {}
     data = dict(version=1, sources=evidence.sources, quests=evidence.quests, items={}, maps={}, chains=chains,
-                instances={row["dungeon"]: True for row in dungeon_rows.values() if row.get("dungeon")})
+                instances={name: True for name in known_dungeons})
     coverage, gaps = [], []
     for raw_id, gear in sorted(inputs.items(), key=lambda pair: int(pair[0])):
         item_id = int(raw_id)
@@ -335,9 +336,13 @@ def build(inputs):
                         route("object", source=key, verification="published-reference")
         if dungeon and dungeon.get("reconciledRole") not in ["crafted-item"]:
             plan["category"] = "dungeon_recipe" if craft else "dungeon"
-            route("dungeon", dungeon=dungeon.get("dungeon", ""), boss=dungeon.get("enemy", ""),
-                  verification=dungeon.get("confidence"), recipe=craft, bookItemID=book_id,
-                  instructions=dungeon.get("sourceSummary"))
+            names = [name.strip() for name in dungeon.get("dungeon", "").split(" / ") if name.strip() in known_dungeons]
+            if not names:
+                gap("dungeon_identity_unverified", detail="A generic dungeon-pattern label is not an identified destination.")
+            for name in names:
+                route("dungeon", dungeon=name, boss=dungeon.get("enemy", ""),
+                      verification=dungeon.get("confidence"), recipe=craft, bookItemID=book_id,
+                      instructions=("Published possible recipe source; exact drop actor/current availability unverified. " if craft else "") + (dungeon.get("sourceSummary") or ""))
             gap("dungeon_floor_or_access_unverified", detail="Use client entrance; no inferred boss-floor coordinates, keys or unlocks.")
         legacy = gear.get("acquisitionLocation")
         if isinstance(legacy, dict) and legacy.get("zone"):

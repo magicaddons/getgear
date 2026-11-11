@@ -63,6 +63,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     local function source(key,role,q,route,preferred)
         local actor=model.sources[key] or {}
         local locations=actor.locations or {}
+        local unresolved=q and #(q.relatedQuests or {})>0 and not get(model.chains,route.questID)
         if #locations==0 then
             add({kind="directions",source=key,label=actor.name or key,role=role,questID=q and q.questID,
                  instructions="Exact location has not been established."..(route.instructions and "\n"..route.instructions or ""),missingLocation=true,requirements=offerText(route)})
@@ -73,7 +74,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                  boss=instance and (actor.name or key) or nil,source=key,label=actor.name or key,zone=loc.zone,uiMapID=loc.uiMapID,
                  x=loc.x,y=loc.y,bounds=loc.bounds,verification=loc.verification,role=role,
                  questID=q and q.questID,questName=q and q.name,requirements=offerText(route),preferred=preferred,
-                 instructions=route.instructions,bookItemID=route.bookItemID})
+                 instructions=route.instructions,bookItemID=route.bookItemID,chainUnresolved=unresolved})
         end
     end
     local questRoutes=0

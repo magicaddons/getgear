@@ -2,12 +2,12 @@
   "items": 7707,
   "statuses": {
     "not_applicable": 2588,
-    "directions": 1283,
-    "missing": 3155,
+    "directions": 1266,
+    "missing": 3172,
     "verified_coordinate_data": 681
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 6301,
+  "gapRows": 6339,
   "categories": {
     "world_drop": 2887,
     "dungeon": 552,
@@ -20,7 +20,7 @@
   },
   "routeKinds": {
     "named_drop": 270,
-    "dungeon": 576,
+    "dungeon": 561,
     "legacy": 59,
     "quest": 268,
     "vendor": 1908,
@@ -31,57 +31,57 @@
   },
   "classes": {
     "PRIEST": {
-      "directions": 561,
+      "directions": 552,
       "not_applicable": 985,
-      "missing": 865,
+      "missing": 874,
       "verified_coordinate_data": 216
     },
     "MAGE": {
       "not_applicable": 962,
-      "directions": 541,
-      "missing": 751,
+      "directions": 532,
+      "missing": 760,
       "verified_coordinate_data": 217
     },
     "WARLOCK": {
       "not_applicable": 962,
-      "directions": 536,
-      "missing": 747,
+      "directions": 527,
+      "missing": 756,
       "verified_coordinate_data": 216
     },
     "DRUID": {
       "not_applicable": 1477,
-      "directions": 796,
-      "missing": 1243,
+      "directions": 782,
+      "missing": 1257,
       "verified_coordinate_data": 342
     },
     "ROGUE": {
       "not_applicable": 1451,
-      "directions": 786,
-      "missing": 1087,
+      "directions": 772,
+      "missing": 1101,
       "verified_coordinate_data": 315
     },
     "HUNTER": {
       "not_applicable": 1996,
-      "directions": 1022,
-      "missing": 1445,
+      "directions": 1005,
+      "missing": 1462,
       "verified_coordinate_data": 403
     },
     "SHAMAN": {
       "not_applicable": 2144,
-      "directions": 1030,
-      "missing": 1508,
+      "directions": 1013,
+      "missing": 1525,
       "verified_coordinate_data": 427
     },
     "WARRIOR": {
       "not_applicable": 2454,
-      "directions": 1190,
-      "missing": 1689,
+      "directions": 1173,
+      "missing": 1706,
       "verified_coordinate_data": 452
     },
     "PALADIN": {
       "not_applicable": 2441,
-      "directions": 1051,
-      "missing": 1591,
+      "directions": 1034,
+      "missing": 1608,
       "verified_coordinate_data": 442
     }
   },
@@ -535,7 +535,7 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "263a54bd6766ea329d552675dbb9ddd60de6f3077391e6ed4b8c75c96922a355"
+      "sha256": "9d5c863a1292596b056f8817bd95adb291a1a8f502a291654729f9ce18a9fe3a"
     }
   ],
   "catalogueExportSHA256": "687281b7610bf4d14af217d8092e3b99e395fdbe4dcb135f9d77d1fc15fde2a3"
