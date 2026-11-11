@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8BR final actual local8br3 capture",
-  "capturedUTC": "2026-11-11T16:39:02.675269+00:00",
+  "capturedForCheckpoint": "8BR CI-setup repair final actual local8br4",
+  "capturedUTC": "2026-11-11T16:56:50.055862+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23610,
@@ -34,11 +34,11 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "Two newoutsideleads independentlyfullchecked/candidate396\u2192398;all priorresolvedsource/displayfacts/fullsourceobjects andrawfieldsexcept34opaque10cells exact8BQ. Entiremetadataexceptstatfacets exact. Originaldelta retained beforePFacquisition/displayadvance;source/displaydefinitionfilesbyteexact. Final8br3allrawfacts-entiremetadata exact8br2 after strict fullquestreward guard;no furtherPFsnapshotadvance."
+    "comparison": "Two newoutsideleads independentlyfullchecked/candidate396\u2192398;all priorresolvedsource/displayfacts/fullsourceobjects andrawfieldsexcept34opaque10cells exact8BQ. Entiremetadataexceptstatfacets exact. Originaldelta retained beforePFacquisition/displayadvance;source/displaydefinitionfilesbyteexact. Final8br3allrawfacts-entiremetadata exact8br2 after strict fullquestreward guard;no furtherPFsnapshotadvance. CIsetup8br4fullrawfacts-entiremetadata exact8br3/PFfactualsnapshotsunchanged."
   },
   "everloot": {
-    "total": 1675,
-    "qualifyingItemRelationships": 1434,
+    "total": 1676,
+    "qualifyingItemRelationships": 1435,
     "attribution": {
       "licence": "CC BY-SA 4.0",
       "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -52,34 +52,34 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "15ed6437156899f04d64ac7e075f80784fc7b735c6ebf42d21520e50e242887e",
+        "sha256": "d705d6d8f9e025f61655ef7dbf92028cff9b41dda95440b922bfa62587d0bd65",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T14:50:15.543Z"
+        "dataAsOf": "2026-11-11T16:50:16.495Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103479,
-        "sha256": "6ee225a0f11966eba9d8421bf9a74f535fc8caec98d7737de5be81e4dfcfa188",
+        "sha256": "cb86f713761b894ae3db7a1b4d0699b1d050f7b7367c9f6a1d491e9df70862ae",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T14:50:15.543Z"
+        "dataAsOf": "2026-11-11T16:50:16.495Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
-        "bytes": 103466,
-        "sha256": "eb368084b82c227de0bba3f1b21fd5512169d32ed93c8c346243fde4105dc783",
+        "bytes": 103465,
+        "sha256": "49646c09abac7da062cbedcc83fb707ff26dfb91031d949c89f4cb78eacf7e22",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T14:50:15.543Z"
+        "dataAsOf": "2026-11-11T16:50:16.495Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
-        "bytes": 36367,
-        "sha256": "56de65d1a61c631b6916b5a431c7b6e91a88e0846f8517a62586bf92bcd9070b",
+        "bytes": 36572,
+        "sha256": "d7cd4304e6808e3e40428ce67b8083c8c25270aa3001ac9de17371f3976ba17f",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T14:50:15.543Z"
+        "dataAsOf": "2026-11-11T16:50:16.495Z"
       }
     ],
-    "comparison": "3newitem\u2192AshenvaleBear3809relations(15112gear/2940junk/3730reagent),all3installs/buildnull;4prioronlyinstall-lastSeenupdates/zero removedselected/build-firstSeen changes. Onecanonical15112observed-edgecell1\u21922;all own/fullactorjoinspositive/publicationClassicqualifications retained. Originaldelta savedbeforeactualEVsnapshotadvance/no diagnosticrefetch. Final8br3entirerelations-fields exact8br2/no furtherEVsnapshotadvance;initialdelta remainsseparate.",
-    "rawEdges": 1675,
-    "qualifyingRelationships": 1434
+    "comparison": "3newitem\u2192AshenvaleBear3809relations(15112gear/2940junk/3730reagent),all3installs/buildnull;4prioronlyinstall-lastSeenupdates/zero removedselected/build-firstSeen changes. Onecanonical15112observed-edgecell1\u21922;all own/fullactorjoinspositive/publicationClassicqualifications retained. Originaldelta savedbeforeactualEVsnapshotadvance/no diagnosticrefetch. Final8br3entirerelations-fields exact8br2/no furtherEVsnapshotadvance;initialdelta remainsseparate. CIsetup8br4oneadditionalobservedSoothingSpices3713sold_byAza'bek248198/3installsbuildnull/fullown+NPCpositivewith160vs168copperdiscrepancy/notverifiedchargedprice;fivepriorcounter-timeupdates/no newgear/craft/ingredient/selectedchange. Originaladditionaldelta savedbeforeEVadvance.",
+    "rawEdges": 1676,
+    "qualifyingRelationships": 1435
   }
 }

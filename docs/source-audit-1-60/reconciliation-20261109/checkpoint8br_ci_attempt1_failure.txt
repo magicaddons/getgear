@@ -1,0 +1,9 @@
+Run 43060773179, attempt1, job130662420190, source c2c54fe35455695cb62783fa20503d464184edfa.
+Infrastructure failure in Install Lua before reconciliation, syntax or tests; those steps were skipped. No test PASS claimed. Same-commit non-release retry is authorised by the current checkpoint workflow.
+2026-11-11T16:45:02.0711973Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/resolute/InRelease  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:45:02.0713558Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/resolute-updates/InRelease  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:45:02.0785065Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/resolute-backports/InRelease  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:45:02.0786929Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/resolute-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:46:23.7836653Z E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/universe/l/lua5.4/lua5.4_5.4.8-1build1_amd64v3.deb  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:46:23.7838141Z E: Unable to fetch some archives, maybe run apt update or try with --fix-missing?
+2026-11-11T16:46:23.7870877Z ##[error]Process completed with exit code 100.

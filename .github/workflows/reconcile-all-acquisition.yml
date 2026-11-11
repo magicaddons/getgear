@@ -44,10 +44,22 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Install Lua
+      - name: Install pinned Lua validation tools
+        shell: bash
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -qq -y lua5.4
+          set -euo pipefail
+          # Same prebuilt Lua used for local validation. Extract into the job's
+          # temporary directory; do not depend on Ubuntu mirror index refreshes.
+          lua_deb="$RUNNER_TEMP/getgear-lua5.4.deb"
+          lua_root="$RUNNER_TEMP/getgear-lua5.4"
+          curl --fail --show-error --location --retry 2 --connect-timeout 20 --max-time 90 \
+            'https://deb.debian.org/debian/pool/main/l/lua5.4/lua5.4_5.4.7-1+b2_amd64.deb' \
+            --output "$lua_deb"
+          printf '%s  %s\n' 'da5947f8274bdcd0dd6d1aaf6d780bc7537827455d456d07dc9c14daf702f1df' "$lua_deb" | sha256sum --check -
+          dpkg-deb --extract "$lua_deb" "$lua_root"
+          echo "$lua_root/usr/bin" >> "$GITHUB_PATH"
+          "$lua_root/usr/bin/lua5.4" -v
+          "$lua_root/usr/bin/luac5.4" -v
       - name: Reconcile public Forever sources by item ID
         shell: bash
         run: |
