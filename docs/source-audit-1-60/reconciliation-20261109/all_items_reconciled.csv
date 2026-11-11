@@ -21,7 +21,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 865,Leaden Mace,26,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 866,Monk's Staff,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 867,Gloves of Holy Might,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-868,Ardent Custodian,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+868,Ardent Custodian,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 869,Dazzling Longsword,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 870,Fiery War Axe,35,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 871,Flurry Axe,42,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -46,7 +46,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 1076,Defias Renegade Ring,21,Dungeon (loot table unverified),classic-reference,Dungeon,The Stockade,dungeon,1,"dungeon: Trash mobs, Stormwind Stockade",0,True,trash,forever-community-reference,,Stormwind Stockade | Trash drop (Forever reference; live unverified),False
 1077,Defias Mage Ring,21,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Defias Enchanter, Duskwood",0,False,,,,Published enemy reference: Defias Enchanter (current acquisition unverified).,False
 1121,Feet of the Lynx,19,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-1155,Rod of the Sleepwalker,24,Dungeon,observed,Dungeon,Blackfathom Deeps,boss,1,"boss: Twilight Lord Kelris, Blackfathom Deeps",0,True,boss,forever-community-reference,,,False
+1155,Rod of the Sleepwalker,24,Dungeon,observed,Dungeon,Blackfathom Deeps,boss,1,"boss: Twilight Lord Kelris, Blackfathom Deeps",1,True,boss,forever-observed-npc,,,False
 1156,Lavishly Jeweled Ring,17,Dungeon (loot table unverified),client,Dungeon,The Deadmines,boss,1,"boss: Gilnid, Deadmines",0,True,boss,forever-community-reference,,Deadmines | Boss: Gilnid (Forever reference; live unverified),False
 1189,Overseer's Ring,15,World drop (route unverified),classic-reference,Drop,Drops,,0,,0,False,,,,Published item; acquisition origin unresolved (secondary Riverpaw Overseer lead unverified).,False
 1203,Aegis of Stormwind,49,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
@@ -107,8 +107,8 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 1602,Sickle Axe,34,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Crushridge Warmonger, Alterac Mountains",0,False,,,,Published enemy reference: Crushridge Warmonger (current acquisition unverified).,False
 1607,Soulkeeper,49,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 1608,Skullcrusher Mace,42,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
-1613,Spiritchaser Staff,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
-1624,Skullsplitter Helm,38,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Skullsplitter Berserker, Skullsplitter Headhunter, Stranglethorn Vale",0,False,,,,,False
+1613,Spiritchaser Staff,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+1624,Skullsplitter Helm,38,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Skullsplitter Berserker, Skullsplitter Headhunter, Stranglethorn Vale",0,False,,,,"Published enemy reference: Skullsplitter Headhunter, Skullsplitter Berserker (current acquisition unverified).",False
 1625,Exquisite Flamberge,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 1639,Grinning Axe,44,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
 1640,Monstrous War Axe,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -117,11 +117,11 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 1678,Black Ogre Kickers,36,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Lo'Grosh, Alterac Mountains",0,False,,,,Published enemy reference: Lo'Grosh (current acquisition unverified).,False
 1679,Korg Bat,31,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Roloch, Stranglethorn Vale",0,False,,,,"Published enemy reference: Mosh'Ogg Brute, Roloch (current acquisition unverified).",False
 1713,Ankh of Life,40,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
-1714,Necklace of Calisea,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
-1715,Polished Jazeraint Armor,39,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
+1714,Necklace of Calisea,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+1715,Polished Jazeraint Armor,39,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 1716,Robe of the Magi,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 1717,Double Link Tunic,25,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-1718,Basilisk Hide Pants,38,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
+1718,Basilisk Hide Pants,38,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 1720,Tanglewood Staff,41,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
 1721,Viking Warhammer,49,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 1722,Thornstone Sledgehammer,37,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -153,9 +153,9 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 1975,Pysan's Old Greatsword,23,Dungeon (loot table unverified),classic-reference,Dungeon,Razorfen Kraul,dungeon,1,"dungeon: Trash mobs, Razorfen Kraul",0,True,trash,forever-community-reference,,Razorfen Kraul | Trash drop (Forever reference; live unverified),False
 1976,Slaghammer,24,Dungeon (loot table unverified),classic-reference,Dungeon,Razorfen Kraul,dungeon,1,"dungeon: Trash mobs, Razorfen Kraul",0,True,trash,forever-community-reference,,Razorfen Kraul | Trash drop (Forever reference; live unverified),False
 1978,Wolfclaw Gloves,22,Dungeon (loot table unverified),classic-reference,Dungeon,Razorfen Kraul,dungeon,1,"dungeon: Trash mobs, Razorfen Kraul",0,True,trash,forever-community-reference,,Razorfen Kraul | Trash drop (Forever reference; live unverified),False
-1980,Underworld Band,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-1981,Icemail Jerkin,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-1982,Nightblade,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+1980,Underworld Band,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+1981,Icemail Jerkin,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+1982,Nightblade,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 1986,Gutrender,36,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Mosh'Ogg Warmonger, Stranglethorn Vale",0,False,,,,Published enemy reference: Mosh'Ogg Warmonger (current acquisition unverified).,False
 1988,Chief Brigadier Gauntlets,33,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 1990,Ballast Maul,31,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -174,7 +174,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 2018,Skeletal Longsword,22,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Skeletal Raider, Duskwood",0,False,,,,Published enemy reference: Skeletal Raider (current acquisition unverified).,False
 2020,Hollowfang Blade,13,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Pygmy Venom Web Spider, Duskwood",0,False,,,,Published enemy reference: Pygmy Venom Web Spider (current acquisition unverified).,False
 2021,Green Carapace Shield,16,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Green Recluse, Duskwood",0,False,,,,Published enemy reference: Green Recluse (current acquisition unverified).,False
-2034,Scholarly Robes,20,Dungeon (loot table unverified),classic-reference,Dungeon,Blackfathom Deeps,dungeon,1,"dungeon: Trash mobs, Blackfathom Deeps",0,True,trash,forever-community-reference,,Blackfathom Deeps | Trash drop (Forever reference; live unverified),False
+2034,Scholarly Robes,20,Dungeon (loot table unverified),classic-reference,Dungeon,Blackfathom Deeps,dungeon,1,"dungeon: Trash mobs, Blackfathom Deeps",1,True,trash,forever-community-reference,,Blackfathom Deeps | Trash drop (Forever reference; live unverified),False
 2035,Sword of the Night Sky,21,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Heggin Stonewhisker, The Barrens",0,False,,,,Published enemy reference: Heggin Stonewhisker (current acquisition unverified).,False
 2039,Plains Ring,24,Dungeon (loot table unverified),classic-reference,Dungeon,Razorfen Kraul,dungeon,1,"dungeon: Trash mobs, Razorfen Kraul",0,True,trash,forever-community-reference,,Razorfen Kraul | Trash drop (Forever reference; live unverified),False
 2042,Staff of Westfall,14,Quest,classic-reference,Quest,Quest Rewards,quest,1,"quest: The Defias Brotherhood, The Deadmines (Alliance)",0,False,,,,"Quest reference: The Defias Brotherhood #166 (Alliance, minimum 14) (current eligibility/chain unverified).",False
@@ -258,7 +258,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 2721,Holy Shroud,27,World drop,client,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 2800,Black Velvet Robes,21,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 2801,Blade of Hanna,59,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-2802,Blazing Emblem,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
+2802,Blazing Emblem,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 2807,Guillotine Axe,18,Dungeon (loot table unverified),classic-reference,Dungeon,Shadowfang Keep,dungeon,1,"dungeon: Trash mobs, Shadowfang Keep",0,True,trash,forever-community-reference,,Shadowfang Keep | Trash drop (Forever reference; live unverified),False
 2815,Curve-bladed Ripper,40,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
 2816,Death Speaker Scepter,28,Dungeon drop (Classic-only source),classic-reference,Dungeon,Razorfen Kraul,boss,1,"boss: Death Speaker Jargba, Razorfen Kraul",0,True,boss,forever-community-reference,,,False
@@ -334,7 +334,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 3027,Heavy Recurve Bow,20,Weapon vendor (Classic reference),classic-reference,,,vendor,12,"vendor: Avette Fellwood, Duskwood (Alliance)",0,False,,,,Heavy Recurve Bow (#3027); published merchant references: Avette Fellwood — Duskwood; Lina Stover — Stormwind City; Frederick Stover — Stormwind City; all retrieved merchants in Guide (live stock/price/access unverified).,False
 3036,Heavy Shortbow,10,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,7,"worlddrop: , ",1,False,,,,Published player-observed sources: Skeletal Soldier #250626 (Everloot; build/current access unverified).,False
 3037,Whipwood Recurve Bow,29,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-3039,Short Ash Bow,18,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",1,False,,,,Published player-observed sources: Haunted Servitor #3875 (Everloot; build/current access unverified).,False
+3039,Short Ash Bow,18,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",2,False,,,,Published player-observed sources: Haunted Servitor #3875 (Everloot; build/current access unverified).,False
 3040,Hunter's Muzzle Loader,14,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",2,False,,,,"Published player-observed sources: Druid of the Fang #3840, Deviate Guardian #3637 (Everloot; build/current access unverified).",False
 3041,Mage-Eye Blunderbuss,26,World drop (route unverified),classic-reference,Drop;Quest,Drops;Quest Rewards,object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 3042,"BKP ""Sparrow"" Smallbore",28,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -359,7 +359,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 3184,Hook Dagger,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",3,False,,,,"Published player-observed sources: Deviate Ravager #3636, Deviate Shambler #5761, Evolving Ectoplasm #3640 (Everloot; build/current access unverified).",False
 3185,Acrobatic Staff,29,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 3186,Viking Sword,25,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-3187,Sacrificial Kris,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+3187,Sacrificial Kris,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 3188,Coral Claymore,12,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Slark, Elwynn Forest",0,False,,,,Published enemy reference: Slark (current acquisition unverified).,False
 3191,Arced War Axe,21,Dungeon (loot table unverified),client,Dungeon,Shadowfang Keep,boss,1,"boss: Commander Springvale, Shadowfang Keep",0,True,boss,forever-community-reference,,Shadowfang Keep | Boss: Commander Springvale (Forever reference; live unverified),False
 3192,Short Bastard Sword,7,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,7,"worlddrop: , ",0,False,,,,Published world-drop references: Short Bastard Sword (broad loot list; current routes unverified).,False
@@ -368,7 +368,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 3195,Barbaric Battle Axe,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published world-drop references: Barbaric Battle Axe (broad loot list; current routes unverified).,False
 3196,Edged Bastard Sword,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",4,False,,,,"Published player-observed sources: Deviate Ravager #3636, Evolving Ectoplasm #3640, Razormane Flesheater #267308, Verog the Dervish #3395 (Everloot; build/current access unverified).",False
 3197,Stonecutter Claymore,30,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-3198,Battering Hammer,18,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+3198,Battering Hammer,18,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,11,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 3199,Battle Slayer,17,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 3201,Barbarian War Axe,23,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 3202,Forest Leather Bracers,19,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -416,7 +416,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 3416,Martyr's Chain,23,Dungeon (loot table unverified),classic-reference,Dungeon,Blackfathom Deeps,dungeon,1,"dungeon: Trash mobs, Blackfathom Deeps",0,True,trash,forever-community-reference,,Blackfathom Deeps | Trash drop (Forever reference; live unverified),False
 3417,Onyx Claymore,23,Dungeon (loot table unverified),classic-reference,Dungeon,Blackfathom Deeps,dungeon,1,"dungeon: Trash mobs, Blackfathom Deeps",0,True,trash,forever-community-reference,,Blackfathom Deeps | Trash drop (Forever reference; live unverified),False
 3429,Guardsman Belt,19,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Jailor Eston, Jailor Marlgen, Hillsbrad Foothills",0,False,,,,"Published enemy reference: Jailor Eston, Jailor Marlgen (current acquisition unverified).",False
-3430,Sniper Rifle,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+3430,Sniper Rifle,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 3456,Dog Whistle,25,Dungeon (loot table unverified),client,Dungeon,Scarlet Monastery,boss,1,"boss: Houndmaster Loksey, Scarlet Monastery",0,True,boss,forever-community-reference,,Scarlet Monastery | Boss: Houndmaster Loksey (Forever reference; live unverified),False
 3469,Copper Chain Boots,4,Blacksmithing,client,Crafted,Crafted,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference,,False
 3471,Copper Chain Vest,5,Blacksmithing,client,Crafted;Drop,Crafted;Drops,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference-with-pattern-item,"Plans: Copper Chain Vest (#3609), Blacksmithing 30; quest references: Alliance: Supplying the Front (#1578) from Tormus Deepforge, Ironforge (published; current availability/prerequisites unverified). Also a generic drop reference; no targeted farm verified.",False
@@ -483,7 +483,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 4044,Aurora Pants,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4045,Mistscape Bracers,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4046,Mistscape Pants,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
-4047,Mistscape Boots,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+4047,Mistscape Boots,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4048,Emblazoned Hat,26,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4049,Emblazoned Bracers,23,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4050,Emblazoned Leggings,26,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -497,7 +497,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 4060,Glyphed Leggings,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4061,Imperial Leather Bracers,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4062,Imperial Leather Pants,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
-4063,Imperial Leather Gloves,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+4063,Imperial Leather Gloves,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4064,Emblazoned Buckler,25,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4065,Combat Shield,31,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4066,Insignia Buckler,30,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -516,7 +516,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 4079,Chief Brigadier Leggings,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4080,Blackforge Cowl,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
 4082,Blackforge Breastplate,42,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
-4083,Blackforge Gauntlets,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
+4083,Blackforge Gauntlets,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4084,Blackforge Leggings,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 4087,Trueshot Bow,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4088,Dreadblade,42,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
@@ -634,9 +634,9 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 4729,Aurora Mantle,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4731,Glyphed Epaulets,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4733,Blackforge Pauldrons,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
-4734,Mistscape Mantle,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+4734,Mistscape Mantle,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4736,Mistscape Sash,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-4737,Imperial Leather Spaulders,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+4737,Imperial Leather Spaulders,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4738,Imperial Leather Belt,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 4763,Blackwood Recurve Bow,4,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,Blackwood Recurve Bow (#4763): published identity; named acquisition origin still unresolved (current availability unverified).,False
 4765,Enamelled Broadsword,9,Vendor (availability unverified),reported,Vendor,Vendors,vendor,4,"vendor: Morhan Coppertongue, Loch Modan (Alliance)",0,False,,,,Enamelled Broadsword (#4765); published merchant references: Morhan Coppertongue — Loch Modan; Nargal Deatheye — The Barrens; Lizzarik — The Barrens; all retrieved merchants in Guide (live stock/price/access unverified).,False
@@ -731,7 +731,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 5541,Iridescent Hammer,23,Blacksmithing,client,Crafted,Crafted,crafted,1,"crafted: Blacksmithing, ",0,False,,,trainer-reference-with-pattern-item,"Plans: Iridescent Hammer (#5543), Blacksmithing 115; broad published book-drop table; location examples: Alterac Mountains, Arathi Highlands, Ashenvale; more named enemies/locations in Guide (live unverified; non-exhaustive references).",False
 5542,Pearl-clasped Cloak,14,Tailoring,classic-reference,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference,,False
 5596,Ashwood Bow,1,Quest reward,observed,,,quest,1,"quest: Crown of the Earth, Teldrassil (Alliance)",0,False,,,,"Quest choice: Crown of the Earth #935 — Corithras Moonrage, Dolanaar → Fandral Staghelm, Darnassus (published; current eligibility/chain unverified).",False
-5608,Living Cowl,39,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Tangled Horror, Molt Thorn, Swamp of Sorrows",0,False,,,,,False
+5608,Living Cowl,39,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Tangled Horror, Molt Thorn, Swamp of Sorrows",0,False,,,,"Published enemy reference: Tangled Horror, Molt Thorn (current acquisition unverified).",False
 5624,Circlet of the Order,33,World drop (route unverified),classic-reference,Drop,Drops,zonedrop,1,"zonedrop: Stromgarde Defender, Arathi Highlands",0,False,,,,Published enemy reference: Stromgarde Defender (current acquisition unverified).,False
 5739,Barbaric Harness,33,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False
 5743,Prismstone Ring,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,Origin unresolved: Prismstone Ring exact ID; no supported named route (current availability unverified).,False
@@ -840,14 +840,14 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 6421,Glyphed Belt,33,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 6422,Glyphed Helm,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 6423,Blackforge Greaves,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
-6425,Blackforge Girdle,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
-6426,Blackforge Bracers,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+6425,Blackforge Girdle,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+6426,Blackforge Bracers,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 6427,Mistscape Robe,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
-6428,Mistscape Gloves,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
-6429,Mistscape Wizard Hat,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+6428,Mistscape Gloves,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+6429,Mistscape Wizard Hat,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 6430,Imperial Leather Breastplate,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
-6431,Imperial Leather Boots,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
-6433,Imperial Leather Helm,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+6431,Imperial Leather Boots,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+6433,Imperial Leather Helm,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 6447,Worn Turtle Shell Shield,16,Dungeon (loot table unverified),client,Dungeon,Wailing Caverns,boss,1,"boss: Kresh, Wailing Caverns",1,True,boss,forever-observed-npc,,Wailing Caverns | Boss: Kresh (Forever observed),False
 6448,Tail Spike,16,Dungeon (loot table unverified),client,Dungeon,Wailing Caverns,boss,1,"boss: Skum, Wailing Caverns",1,True,boss,forever-observed-npc,,Wailing Caverns | Boss: Skum (Forever observed),False
 6459,Savage Trodders,18,Dungeon (loot table unverified),client,Dungeon,Wailing Caverns,boss,1,"boss: Lord Serpentis, Wailing Caverns",1,True,boss,forever-observed-npc,,Wailing Caverns | Boss: Lord Serpentis (Forever observed),False
@@ -974,7 +974,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 6788,Kolkar Hunter's Belt,35,Quest reward (eligibility unverified),classic-reference,Quest,Quest Rewards,quest,1,"quest: Khan Hratha, Desolace",0,False,,,,"Quest reference: Khan Hratha #1381 (Both, minimum 30) / Khan Hratha #96222 (Both, minimum 35) (current eligibility/chain unverified).",False
 6898,Orb of Soran'ruk,20,Quest,classic-reference,Quest,Quest Rewards,quest,1,"quest: The Orb of Soran'ruk, The Barrens",0,False,,,,"Quest reference: The Orb of Soran'ruk #1740 (Both, minimum 20) (current eligibility/chain unverified).",False
 6902,Bands of Serra'kis,22,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Old Serra'kis, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Old Serra'kis (Forever reference; live unverified),False
-6903,Gaze Dreamer Pants,23,Dungeon,observed,Dungeon,Blackfathom Deeps,boss,1,"boss: Twilight Lord Kelris, Blackfathom Deeps",0,True,boss,forever-community-reference,,,False
+6903,Gaze Dreamer Pants,23,Dungeon,observed,Dungeon,Blackfathom Deeps,boss,1,"boss: Twilight Lord Kelris, Blackfathom Deeps",1,True,boss,forever-observed-npc,,,False
 6904,Bite of Serra'kis,23,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Old Serra'kis, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Old Serra'kis (Forever reference; live unverified),False
 6905,Reef Axe,22,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Gelihast, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Gelihast (Forever reference; live unverified),False
 6906,Algae Fists,23,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Gelihast, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Gelihast (Forever reference; live unverified),False
@@ -1093,7 +1093,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 7466,Vermilion Band,32,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,Origin unresolved: Vermilion Band exact ID; no supported named route (current availability unverified).,False
 7467,Vermilion Necklace,30,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,Vermilion Necklace (#7467): published identity; named acquisition origin still unresolved (current availability unverified).,False
 7468,Regal Robe,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
-7469,Regal Leggings,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
+7469,Regal Leggings,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7470,Regal Wizard Hat,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7471,Regal Gloves,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7472,Regal Boots,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -1101,23 +1101,23 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 7475,Regal Cuffs,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7476,Regal Sash,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7477,Ranger Tunic,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
-7478,Ranger Leggings,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+7478,Ranger Leggings,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7479,Ranger Helm,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7480,Ranger Gloves,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7481,Ranger Boots,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7482,Ranger Shoulders,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7484,Ranger Wristguards,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7485,Ranger Cord,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-7486,Captain's Breastplate,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
-7487,Captain's Leggings,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+7486,Captain's Breastplate,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+7487,Captain's Leggings,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7488,Captain's Circlet,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7489,Captain's Gauntlets,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7490,Captain's Boots,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-7491,Captain's Shoulderguards,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+7491,Captain's Shoulderguards,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7493,Captain's Bracers,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7494,Captain's Waistguard,36,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-7495,Captain's Buckler,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
-7496,Field Plate Shield,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+7495,Captain's Buckler,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+7496,Field Plate Shield,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7497,Ivory Band,35,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,Origin unresolved: Ivory Band exact ID; no supported named route (current availability unverified).,False
 7507,Arcane Orb,1,Quest reward (eligibility unverified),client,Quest,Quest Rewards,quest,2,"quest: Mage-tastic Gizmonitor, Ironforge (Alliance)",0,False,,,,"Quest reference: Mage-tastic Gizmonitor #1880 (Alliance, minimum 10) / The Balnir Farmstead #1882 (Horde, minimum 10) (current eligibility/chain unverified).",False
 7508,Ley Orb,1,Quest reward (eligibility unverified),client,Quest,Quest Rewards,quest,2,"quest: Mirror Lake, Stormwind City (Alliance)",0,False,,,,"Quest reference: Mirror Lake #1861 (Alliance, minimum 10) / Ju-Ju Heaps #1884 (Horde, minimum 10) (current eligibility/chain unverified).",False
@@ -1150,7 +1150,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 7546,Champion's Girdle,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 7547,Onyx Ring,41,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,Origin unresolved: Onyx Ring exact ID (publication searched; current acquisition unverified).,False
 7548,Onyx Choker,41,Source not documented,classic-reference,Other,Unknown source,,0,,0,False,,,,Origin unresolved: Onyx Choker exact ID (publication searched; current acquisition unverified).,False
-7552,Falcon's Hook,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+7552,Falcon's Hook,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7553,Band of the Unicorn,43,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 7554,Willow Branch,14,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 7555,Regal Star,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
@@ -1297,7 +1297,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 8176,Nightscape Headband,36,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False
 8178,Training Sword,5,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,6,"worlddrop: , ",0,False,,,,Published world-drop references: Training Sword (broad loot list; current routes unverified).,False
 8180,Hunting Bow,6,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,7,"worlddrop: , ",0,False,,,,Published world-drop references: Hunting Bow (broad loot list; current routes unverified).,False
-8183,Precision Bow,22,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+8183,Precision Bow,22,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 8184,Firestarter,24,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 8185,Turtle Scale Leggings,42,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False
 8186,Dire Wand,21,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -1308,8 +1308,8 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 8191,Turtle Scale Helm,41,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False
 8192,Nightscape Shoulders,37,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Nightscape Shoulders (#8409), Leatherworking 185; published vendor references: Jangdor Swiftstrider — Feralas; Nioma — The Hinterlands (live stock/access unverified).",False
 8193,Nightscape Pants,41,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False
-8194,Goblin Nutcracker,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
-8196,Ebon Scimitar,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+8194,Goblin Nutcracker,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+8196,Ebon Scimitar,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 8197,Nightscape Boots,42,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False
 8198,Turtle Scale Bracers,37,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,trainer-reference,,False
 8199,Battlefield Destroyer,42,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
@@ -1521,7 +1521,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 9766,Greenweave Sash,17,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Deviate Viper #5755 (Everloot; build/current access unverified).,False
 9767,Greenweave Sandals,18,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",1,False,,,,Published player-observed sources: Druid of the Fang #3840 (Everloot; build/current access unverified).,False
 9768,Greenweave Bracers,16,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,4,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-9769,Greenweave Branch,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+9769,Greenweave Branch,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9771,Greenweave Gloves,20,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9772,Greenweave Leggings,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9773,Greenweave Robe,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -1614,19 +1614,19 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 9871,Renegade Leggings,32,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9872,Renegade Pauldrons,32,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9873,Renegade Shield,32,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-9874,Sorcerer Drape,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
+9874,Sorcerer Drape,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9875,Sorcerer Sash,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9876,Sorcerer Slippers,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9878,Sorcerer Hat,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9879,Sorcerer Bracelets,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9880,Sorcerer Gloves,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9881,Sorcerer Mantle,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-9882,Sorcerer Sphere,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
+9882,Sorcerer Sphere,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9883,Sorcerer Pants,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-9884,Sorcerer Robe,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
+9884,Sorcerer Robe,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9885,Huntsman's Boots,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9886,Huntsman's Bands,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-9887,Huntsman's Armor,38,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
+9887,Huntsman's Armor,38,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9889,Huntsman's Cap,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9891,Huntsman's Belt,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9892,Huntsman's Gloves,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -1642,32 +1642,32 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 9903,Jazeraint Leggings,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9904,Jazeraint Pauldrons,36,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9905,Royal Blouse,43,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
-9906,Royal Sash,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
-9907,Royal Boots,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
-9909,Royal Bands,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
-9910,Royal Gloves,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
+9906,Royal Sash,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+9907,Royal Boots,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+9909,Royal Bands,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+9910,Royal Gloves,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9911,Royal Trousers,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 9912,Royal Amice,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
 9913,Royal Gown,43,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 9914,Royal Scepter,43,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 9915,Royal Headband,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
-9916,Tracker's Belt,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
-9917,Tracker's Boots,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+9916,Tracker's Belt,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+9917,Tracker's Boots,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9918,Brigade Defender,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
-9920,Tracker's Gloves,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+9920,Tracker's Gloves,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9921,Tracker's Headband,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
 9922,Tracker's Leggings,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 9923,Tracker's Shoulderpads,40,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
 9924,Tracker's Tunic,43,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
-9925,Tracker's Wristguards,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
-9926,Brigade Boots,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+9925,Tracker's Wristguards,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+9926,Brigade Boots,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9927,Brigade Bracers,37,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9928,Brigade Breastplate,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
-9930,Brigade Gauntlets,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
-9931,Brigade Girdle,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
-9932,Brigade Circlet,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+9930,Brigade Gauntlets,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+9931,Brigade Girdle,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+9932,Brigade Circlet,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9933,Brigade Leggings,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,,False
-9934,Brigade Pauldrons,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+9934,Brigade Pauldrons,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 9935,Embossed Plate Shield,40,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
 9936,Abjurer's Boots,44,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 9937,Abjurer's Bands,43,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
@@ -1942,7 +1942,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 10280,Emerald Legplates,54,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
 10281,Emerald Pauldrons,53,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 10282,Emerald Vambraces,51,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
-10287,Greenweave Mantle,21,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+10287,Greenweave Mantle,21,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 10288,Sage's Circlet,26,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 10289,Durable Hat,27,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 10298,Gnomeregan Band,25,World drop (route unverified),classic-reference,Drop,Drops,container;dungeon,2,"dungeon: Holdout Medic, Caverndeep Ambusher, Irradiated Pillager +1, Gnomeregan",0,False,,,,Published Sparklematic box-content reference (current acquisition unverified).,False
@@ -2079,7 +2079,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 11970,Spinel Ring,29,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11971,Amethyst Band,32,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11972,Carnelian Loop,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-11973,Hematite Link,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+11973,Hematite Link,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11974,Aquamarine Ring,41,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 11975,Topaz Ring,44,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 11976,Sardonyx Knuckle,47,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
@@ -2093,14 +2093,14 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 11984,Cobalt Ring,24,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11985,Cerulean Ring,30,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11986,Thallium Hoop,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-11987,Iridium Circle,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+11987,Iridium Circle,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11988,Tellurium Band,42,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 11989,Vanadium Loop,46,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 11990,Selenium Loop,50,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
 11991,Quicksilver Ring,54,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
 11992,Vermilion Band,58,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,,False
 11993,Clay Ring,17,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-11994,Coral Band,20,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+11994,Coral Band,20,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11995,Ivory Band,23,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11996,Basalt Ring,29,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 11997,Greenstone Circle,33,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -2133,7 +2133,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 12028,Basalt Necklace,27,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 12029,Greenstone Talisman,30,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 12030,Jet Chain,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-12031,Lodestone Necklace,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,,False
+12031,Lodestone Necklace,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 12032,Onyx Choker,43,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
 12034,Marble Necklace,48,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
 12035,Obsidian Pendant,52,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
@@ -2280,7 +2280,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 13026,Heaven's Light,40,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
 13027,Bonesnapper,48,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
 13028,Bludstone Hammer,56,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-13029,Umbral Crystal,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+13029,Umbral Crystal,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13030,Basilisk Bone,46,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
 13031,Orb of Mistmantle,23,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13032,Sword of Corruption,22,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -2301,14 +2301,14 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 13047,Twig of the World Tree,53,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
 13048,Looming Gavel,26,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13049,Deanship Claymore,26,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-13051,Witchfury,39,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
+13051,Witchfury,39,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13052,Warmonger,47,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 13053,Doombringer,55,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
 13054,Grim Reaper,35,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13055,Bonechewer,43,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 13056,Frenzied Striker,51,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
 13057,Bloodpike,23,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-13058,Khoo's Point,39,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
+13058,Khoo's Point,39,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13059,Stoneraven,47,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 13060,The Needler,55,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 13062,Thunderwood,22,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -2340,11 +2340,11 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 13091,Medallion of Grand Marshal Morris,52,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,,False
 13093,Blush Ember Ring,32,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13094,The Queen's Jewel,25,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-13095,Assault Band,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
+13095,Assault Band,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13096,Band of the Hierophant,55,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
 13097,Thunderbrow Ring,24,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13099,Moccasins of the White Hare,24,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-13100,Furen's Boots,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,,False
+13100,Furen's Boots,39,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13101,Wolfrunner Shoes,54,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
 13102,Cassandra's Grace,42,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 13103,Pads of the Venom Spider,33,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -2371,7 +2371,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 13129,Firemane Leggings,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,9,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13130,Windrunner Legguards,51,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 13131,Sparkleshell Mantle,24,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,12,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-13132,Skeletal Shoulders,38,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,,False
+13132,Skeletal Shoulders,38,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 13133,Drakesfire Epaulets,56,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,,False
 13134,Belt of the Gladiator,44,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 13135,Lordly Armguards,54,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,4,"worlddrop: , ",0,False,,,,,False
@@ -2433,7 +2433,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14122,Ritual Bands,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",3,False,,,,"Published player-observed sources: Deviate Guardian #3637, Deviate Crocolisk #5053, Razormane Flesheater #267308 (Everloot; build/current access unverified).",False
 14124,Ritual Gloves,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,Published player-observed sources: Deviate Ravager #3636 (Everloot; build/current access unverified).,False
 14125,Ritual Leggings,16,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14127,Ritual Shroud,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14127,Ritual Shroud,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14128,Wizardweave Robe,55,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Wizardweave Robe (#14500), Tailoring 255; published book-drop leads: Eastern Plaguelands: Dark Caster (NPC 8526) (published; live unverified; non-exhaustive).",False
 14129,Ritual Sandals,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,Published player-observed sources: Razormane Raider #268624 (Everloot; build/current access unverified).,False
 14130,Wizardweave Turban,56,Tailoring,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Tailoring, ",0,False,,,trainer-reference-with-pattern-item,"Pattern: Wizardweave Turban (#14505), Tailoring 260; published book-drop leads: Eastern Plaguelands: Dark Caster (NPC 8526) (published; live unverified; non-exhaustive).",False
@@ -2530,23 +2530,23 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14238,Darkmist Boots,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14240,Darkmist Bands,35,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14241,Darkmist Handguards,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14242,Darkmist Pants,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14243,Darkmist Mantle,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14242,Darkmist Pants,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14243,Darkmist Mantle,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14244,Darkmist Wraps,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14245,Darkmist Girdle,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14246,Darkmist Wizard Hat,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14247,Lunar Mantle,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14246,Darkmist Wizard Hat,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14247,Lunar Mantle,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14248,Lunar Bindings,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14249,Lunar Vest,42,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14250,Lunar Slippers,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14252,Lunar Coronet,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14253,Lunar Handwraps,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14253,Lunar Handwraps,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14254,Lunar Raiment,42,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14255,Lunar Belt,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14257,Lunar Leggings,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14258,Bloodwoven Cord,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14259,Bloodwoven Boots,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14260,Bloodwoven Bracers,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14260,Bloodwoven Bracers,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14262,Bloodwoven Mitts,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14263,Bloodwoven Mask,43,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14264,Bloodwoven Pants,43,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -2619,13 +2619,13 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14364,Mystic's Slippers,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,Published player-observed sources: Searing Blade Cultist #11322 (Everloot; build/current access unverified).,False
 14366,Mystic's Bracelets,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Mystic's Bracelets (broad loot list; current routes unverified).,False
 14367,Mystic's Gloves,14,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",4,False,,,,"Published player-observed sources: Deviate Shambler #5761, Evolving Ectoplasm #3640, Deviate Viper #5755, Nightmare Ectoplasm #5763 (Everloot; build/current access unverified).",False
-14369,Mystic's Wrap,18,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14369,Mystic's Wrap,18,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14370,Mystic's Woolies,14,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14371,Mystic's Robe,18,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14372,Sanguine Armor,23,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14373,Sanguine Belt,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14373,Sanguine Belt,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14374,Sanguine Sandals,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14375,Sanguine Cuffs,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14375,Sanguine Cuffs,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14377,Sanguine Handwraps,21,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14378,Sanguine Mantle,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14379,Sanguine Trousers,24,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -2648,23 +2648,23 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14414,Stonecloth Belt,29,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14415,Stonecloth Britches,32,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14416,Stonecloth Bindings,29,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14417,Silksand Tunic,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14417,Silksand Tunic,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14418,Silksand Boots,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14419,Silksand Bracers,33,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14421,Silksand Circlet,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14422,Silksand Gloves,35,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14423,Silksand Shoulder Pads,35,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14424,Silksand Legwraps,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14425,Silksand Wraps,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14425,Silksand Wraps,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14426,Silksand Girdle,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14427,Windchaser Wraps,44,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14428,Windchaser Footpads,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14429,Windchaser Cuffs,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14431,Windchaser Handguards,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14428,Windchaser Footpads,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14429,Windchaser Cuffs,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14431,Windchaser Handguards,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14432,Windchaser Amice,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14433,Windchaser Woolies,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14434,Windchaser Robes,44,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14435,Windchaser Cinch,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14435,Windchaser Cinch,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14436,Windchaser Coronet,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14437,Venomshroud Vest,49,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14438,Venomshroud Boots,43,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -2708,7 +2708,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14569,Bristlebark Bindings,17,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14570,Bristlebark Blouse,23,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14572,Bristlebark Gloves,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14573,Bristlebark Amice,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14573,Bristlebark Amice,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14574,Bristlebark Britches,21,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14578,Dokebi Cord,24,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14579,Dokebi Boots,26,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -2729,10 +2729,10 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14598,Warden's Waistband,35,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14599,Warden's Footpads,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14600,Warden's Wristbands,35,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14601,Warden's Wraps,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14601,Warden's Wraps,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14603,Warden's Mantle,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14604,Warden's Wizard Hat,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14605,Warden's Woolies,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14605,Warden's Woolies,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14606,Warden's Gloves,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14607,Hawkeye's Buckler,32,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14608,Dokebi Buckler,26,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -2743,7 +2743,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14624,Deathbone Chestplate,56,Dungeon (loot table unverified),client,Dungeon,Scholomance,boss,1,"boss: Instructor Malicia, Scholomance",0,True,boss,forever-community-reference,,Scholomance | Boss: Instructor Malicia (Forever reference; live unverified),False
 14652,Scorpashi Sash,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14653,Scorpashi Slippers,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14654,Scorpashi Wristbands,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14654,Scorpashi Wristbands,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14655,Scorpashi Breastplate,44,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14657,Scorpashi Gloves,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14658,Scorpashi Skullcap,44,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -2780,11 +2780,11 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14727,War Paint Legguards,14,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",3,False,,,,"Published player-observed sources: Druid of the Fang #3840, Venture Co. Mercenary #3282, Sludge Beast #3295 (Everloot; build/current access unverified).",False
 14729,War Paint Shield,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",2,False,,,,"Published player-observed sources: Druid of the Fang #3840, Deviate Shambler #5761 (Everloot; build/current access unverified).",False
 14730,War Paint Chestpiece,18,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14742,Hulking Boots,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14742,Hulking Boots,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14743,Hulking Bands,17,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14744,Hulking Chestguard,23,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14746,Hulking Belt,17,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14747,Hulking Gauntlets,18,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14747,Hulking Gauntlets,18,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14748,Hulking Leggings,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14749,Hulking Spaulders,21,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14750,Slayer's Cuffs,23,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -2803,15 +2803,15 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14765,Enduring Circlet,33,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14766,Enduring Breeches,32,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14767,Enduring Pauldrons,33,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14768,Ravager's Armor,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14768,Ravager's Armor,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14769,Ravager's Sandals,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14770,Ravager's Armguards,35,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14772,Ravager's Handwraps,35,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14773,Ravager's Cord,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-14774,Ravager's Crown,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14775,Ravager's Woolies,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14776,Ravager's Mantle,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14777,Ravager's Shield,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14774,Ravager's Crown,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14775,Ravager's Woolies,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14776,Ravager's Mantle,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+14777,Ravager's Shield,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14778,Khan's Bindings,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14779,Khan's Chestpiece,44,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14780,Khan's Buckler,44,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -2849,7 +2849,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 14816,Warstrike Legguards,57,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14817,Warstrike Shoulder Pads,57,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14821,Symbolic Breastplate,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-14825,Symbolic Crest,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+14825,Symbolic Crest,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 14826,Symbolic Gauntlets,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14827,Symbolic Belt,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 14828,Symbolic Greaves,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -3052,7 +3052,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15121,Robust Boots,23,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15122,Robust Bracers,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15123,Robust Buckler,23,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15125,Robust Gloves,24,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15125,Robust Gloves,24,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15126,Robust Leggings,24,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15127,Robust Shoulders,25,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15128,Robust Tunic,26,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -3079,19 +3079,19 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15152,Nocturnal Shoes,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15154,Nocturnal Sash,33,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15155,Nocturnal Gloves,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15156,Nocturnal Cap,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15156,Nocturnal Cap,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15157,Nocturnal Leggings,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15158,Nocturnal Shoulder Pads,35,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15159,Nocturnal Tunic,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15160,Nocturnal Wristbands,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15161,Imposing Belt,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15161,Imposing Belt,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15162,Imposing Boots,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15163,Imposing Bracers,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15163,Imposing Bracers,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15164,Imposing Vest,42,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15166,Imposing Gloves,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15167,Imposing Bandana,43,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15168,Imposing Pants,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15169,Imposing Shoulders,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15169,Imposing Shoulders,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15170,Potent Armor,47,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15171,Potent Boots,45,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15172,Potent Bands,42,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -3117,7 +3117,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15195,Grand Breastplate,57,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15200,Senior Sergeant's Insignia,30,Vendor (availability unverified),classic-reference,PvP;Vendor,Vendors;PvP,pvp;vendor,2,"vendor: Sergeant Ba'sha, Orgrimmar (Horde)",0,False,,,,Senior Sergeant's Insignia (#15200); published merchant references: Sergeant Ba'sha — Orgrimmar (live stock/price/access unverified).,False
 15210,Raider Shortsword,11,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,8,"worlddrop: , ",0,False,,,,Published world-drop references: Raider Shortsword (broad loot list; current routes unverified).,False
-15211,Militant Shortsword,17,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,11,"worlddrop: , ",1,False,,,,Published player-observed sources: Druid of the Fang #3840 (Everloot; build/current access unverified).,False
+15211,Militant Shortsword,17,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,11,"worlddrop: , ",2,False,,,,Published player-observed sources: Druid of the Fang #3840 (Everloot; build/current access unverified).,False
 15212,Fighter Broadsword,22,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15213,Mercenary Blade,31,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15214,Nobles Brand,35,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -3155,9 +3155,9 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15246,Demon Blade,57,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,,False
 15247,Bloodstrike Dagger,59,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,,False
 15248,Gleaming Claymore,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,12,"worlddrop: , ",3,False,,,,"Published player-observed sources: Druid of the Fang #3840, Deviate Dreadfang #5056, Sludge Beast #3295 (Everloot; build/current access unverified).",False
-15249,Polished Zweihander,21,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15249,Polished Zweihander,21,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,11,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15250,Glimmering Flamberge,27,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15251,Headstriker Sword,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,,False
+15251,Headstriker Sword,38,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15252,Tusker Sword,44,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,6,"worlddrop: , ",0,False,,,,,False
 15253,Beheading Blade,47,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,5,"worlddrop: , ",0,False,,,,,False
 15254,Dark Espadon,49,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
@@ -3207,13 +3207,13 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15307,Feral Buckler,14,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",1,False,,,,Published player-observed sources: Bristleback Geomancer #3263 (Everloot; build/current access unverified).,False
 15308,Feral Cord,12,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Feral Cord (broad loot list; current routes unverified).,False
 15310,Feral Gloves,13,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",0,False,,,,Published world-drop references: Feral Gloves (broad loot list; current routes unverified).,False
-15311,Feral Harness,17,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15311,Feral Harness,17,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15312,Feral Leggings,15,World drop (route unverified),classic-reference,Drop,Drops,object;worlddrop,3,"worlddrop: , ",2,False,,,,"Published player-observed sources: Deviate Ravager #3636, Sunscale Scytheclaw #3256 (Everloot; build/current access unverified).",False
 15322,Smoothbore Gun,34,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,10,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15323,Percussion Shotgun,45,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 15324,Burnside Rifle,51,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
 15325,Sharpshooter Harquebus,55,World drop (route unverified),classic-reference,Drop,Drops,container;object;worlddrop,7,"worlddrop: , ",0,False,,,,,False
-15329,Wrangler's Belt,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15329,Wrangler's Belt,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15330,Wrangler's Boots,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15331,Wrangler's Wristbands,18,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15332,Wrangler's Buckler,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -3249,11 +3249,11 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15367,Trickster's Protector,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15368,Trickster's Pauldrons,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15369,Wolf Rider's Belt,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15370,Wolf Rider's Boots,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15372,Wolf Rider's Gloves,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15370,Wolf Rider's Boots,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15372,Wolf Rider's Gloves,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15373,Wolf Rider's Headgear,42,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15374,Wolf Rider's Leggings,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15375,Wolf Rider's Shoulder Pads,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15374,Wolf Rider's Leggings,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15375,Wolf Rider's Shoulder Pads,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15376,Wolf Rider's Padded Armor,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15377,Wolf Rider's Wristbands,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15378,Rageclaw Belt,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -3315,7 +3315,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15512,Grunt's Shield,19,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15513,Grunt's Pauldrons,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15514,Grunt's Chestpiece,21,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15515,Spiked Chain Belt,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15515,Spiked Chain Belt,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15516,Spiked Chain Slippers,22,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15517,Spiked Chain Wristbands,20,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15518,Spiked Chain Breastplate,25,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -3330,7 +3330,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15529,Sentry's Leggings,24,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15530,Sentry's Shield,26,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15531,Sentry's Shoulderguards,25,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15532,Sentry's Armsplints,21,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15532,Sentry's Armsplints,21,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",1,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15533,Sentry's Headdress,26,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15534,Wicked Chain Boots,26,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15535,Wicked Chain Bracers,24,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
@@ -3379,25 +3379,25 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15584,Sparkleshell Shield,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15589,Steadfast Stompers,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15590,Steadfast Bracelets,32,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15591,Steadfast Breastplate,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15592,Steadfast Buckler,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15591,Steadfast Breastplate,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15592,Steadfast Buckler,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15593,Steadfast Coronet,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15595,Steadfast Gloves,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15596,Steadfast Legplates,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15597,Steadfast Shoulders,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15598,Steadfast Girdle,33,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15599,Ancient Greaves,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15599,Ancient Greaves,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15600,Ancient Vambraces,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15601,Ancient Chestpiece,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15602,Ancient Crown,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15604,Ancient Defender,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15605,Ancient Gauntlets,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15606,Ancient Belt,36,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15607,Ancient Legguards,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15608,Ancient Pauldrons,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15607,Ancient Legguards,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15608,Ancient Pauldrons,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15609,Bonelink Armor,42,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15610,Bonelink Bracers,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
-15612,Bonelink Gauntlets,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15610,Bonelink Bracers,38,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
+15612,Bonelink Gauntlets,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15613,Bonelink Belt,37,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15614,Bonelink Sabatons,40,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15615,Bonelink Helmet,41,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
@@ -3503,7 +3503,7 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 15947,Sanguine Star,23,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15962,Satyr's Rod,28,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15963,Stonecloth Branch,34,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
-15964,Silksand Star,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
+15964,Silksand Star,39,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,Published broad drop reference (current acquisition and rates unverified).,False
 15965,Windchaser Orb,44,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15966,Venomshroud Orb,49,World drop (route unverified),classic-reference,Drop,Drops,worlddrop,1,"worlddrop: , ",0,False,,,,,False
 15967,Highborne Star,54,World drop (route unverified),classic-reference,Drop,Drops,container;worlddrop,2,"worlddrop: , ",0,False,,,,,False
@@ -6978,10 +6978,10 @@ itemID,name,level,existingSourceType,existingConfidence,ForeverCacheTypes,Foreve
 273829,Concealed Hand Crossbow,26,Dungeon,observed,Dungeon,The Stockade,boss,1,"boss: Bazil Thredd, Stormwind Stockade",0,True,boss,forever-community-reference,,,False
 273839,Spiked Shell Band,22,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Ghamoo-ra, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Ghamoo-ra (Forever reference; live unverified),False
 273840,Cursed Murloc Eye,24,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Gelihast, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Gelihast (Forever reference; live unverified),False
-273841,Twilight Maul,23,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Lorgus Jett, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Lorgus Jett (Forever reference; live unverified),False
-273842,Treacherous Treads,23,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Lorgus Jett, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Lorgus Jett (Forever reference; live unverified),False
+273841,Twilight Maul,23,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Lorgus Jett, Blackfathom Deeps",1,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Lorgus Jett (Forever reference; live unverified),False
+273842,Treacherous Treads,23,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Lorgus Jett, Blackfathom Deeps",1,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Lorgus Jett (Forever reference; live unverified),False
 273843,Fallenroot Longbow,23,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Lorgus Jett, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Lorgus Jett (Forever reference; live unverified),False
-273846,Twilight Lord Girdle,25,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Twilight Lord Kelris, Blackfathom Deeps",0,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever reference; live unverified),False
+273846,Twilight Lord Girdle,25,Dungeon (loot table unverified),client,Dungeon,Blackfathom Deeps,boss,1,"boss: Twilight Lord Kelris, Blackfathom Deeps",1,True,boss,forever-community-reference,,Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever reference; live unverified),False
 273884,Grovekeeper Trousers,60,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,vendor-reference,"Pattern: Grovekeeper Trousers (#273952), Leatherworking 300; Aisarra Nightmeadow — Mount Hyjal; listed 8 x Malleable Essence of Nature. Published gate: Friendly Guardians of Hyjal + completion of Friendly Advice (live stock/access unverified).",False
 273885,Grovekeeper Grips,60,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,vendor-reference,"Pattern: Grovekeeper Grips (#273953), Leatherworking 300; Aisarra Nightmeadow — Mount Hyjal; listed 6 x Malleable Essence of Nature. Published gate: further Guardians of Hyjal reputation + Gloves specialisation (exact rank unspecified) (live stock/access unverified).",False
 273886,Grovekeeper Shoulderpads,60,Leatherworking,published-client-recipe,Crafted,Crafted,crafted,1,"crafted: Leatherworking, ",0,False,,,vendor-reference,"Pattern: Grovekeeper Shoulderpads (#273954), Leatherworking 300; Aisarra Nightmeadow — Mount Hyjal; listed 6 x Malleable Essence of Nature. Published gate: further Guardians of Hyjal reputation + Shoulders specialisation (exact rank unspecified) (live stock/access unverified).",False

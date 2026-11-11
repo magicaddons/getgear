@@ -1,0 +1,4619 @@
+{
+  "status": "Completeauxiliaryfeedandsemanticreview/documentationonlyafterfresh17localPASS/no runtimeinputmutation",
+  "beforeRaw": 1569,
+  "afterRaw": 1664,
+  "beforeQualifiedItemEdges": 1330,
+  "afterQualifiedItemEdges": 1424,
+  "addedItemDropEdges": 94,
+  "addedNPCDropEdges": 91,
+  "addedObjectContentsEdges": 3,
+  "addedNPCLocationEdges": 1,
+  "updatedOldEdges": 18,
+  "updatedOldItemCounters": 4,
+  "updatedOldNPCLocations": 14,
+  "allNewEdgesBuildNull": true,
+  "allNewEdgesInstalls": 3,
+  "addedEdges": [
+    {
+      "fromKind": "item",
+      "fromId": 5524,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:21:46.000Z",
+      "lastSeen": "2026-11-11T01:19:30.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 17057,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:14:46.000Z",
+      "lastSeen": "2026-11-10T09:09:39.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 6308,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:14:46.000Z",
+      "lastSeen": "2026-11-09T21:14:46.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 14747,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:22:42.000Z",
+      "lastSeen": "2026-11-09T21:22:42.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3039,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:54:08.000Z",
+      "lastSeen": "2026-11-10T08:54:08.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2219,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:56:27.000Z",
+      "lastSeen": "2026-11-10T08:56:27.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1822,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:09:39.000Z",
+      "lastSeen": "2026-11-10T09:09:39.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3612,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:10:57.000Z",
+      "lastSeen": "2026-11-10T09:10:57.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 15532,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:19:04.000Z",
+      "lastSeen": "2026-11-11T01:19:04.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 929,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4805,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:02:31.000Z",
+      "lastSeen": "2026-11-11T02:02:31.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 17057,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:06:09.000Z",
+      "lastSeen": "2026-11-11T02:35:34.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5524,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:07:34.000Z",
+      "lastSeen": "2026-11-11T02:35:34.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1821,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:06:09.000Z",
+      "lastSeen": "2026-11-09T21:06:09.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1775,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:07:34.000Z",
+      "lastSeen": "2026-11-09T21:07:34.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 15211,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:23:27.000Z",
+      "lastSeen": "2026-11-09T21:23:27.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 14369,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:52:16.000Z",
+      "lastSeen": "2026-11-10T08:52:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3198,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:52:33.000Z",
+      "lastSeen": "2026-11-10T08:52:33.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 15311,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:53:23.000Z",
+      "lastSeen": "2026-11-10T08:53:23.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 9769,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:11:58.000Z",
+      "lastSeen": "2026-11-10T09:11:58.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1801,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:20:26.000Z",
+      "lastSeen": "2026-11-10T09:20:26.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 6308,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:15:48.000Z",
+      "lastSeen": "2026-11-11T01:15:48.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3379,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4807,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:35:34.000Z",
+      "lastSeen": "2026-11-11T02:35:34.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2592,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4798,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:11:01.000Z",
+      "lastSeen": "2026-11-10T08:34:19.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3770,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4798,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:11:01.000Z",
+      "lastSeen": "2026-11-10T09:21:44.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 4306,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4798,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:25:05.000Z",
+      "lastSeen": "2026-11-09T21:25:05.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5524,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:17:15.000Z",
+      "lastSeen": "2026-11-11T02:06:23.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 17057,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:17:15.000Z",
+      "lastSeen": "2026-11-11T02:06:23.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1468,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:19:32.000Z",
+      "lastSeen": "2026-11-11T02:05:05.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 730,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:17:15.000Z",
+      "lastSeen": "2026-11-10T08:21:54.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5784,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:17:15.000Z",
+      "lastSeen": "2026-11-09T21:19:32.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 17058,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:24:08.000Z",
+      "lastSeen": "2026-11-11T02:06:23.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1778,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:17:15.000Z",
+      "lastSeen": "2026-11-09T21:17:15.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 14127,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:04:17.000Z",
+      "lastSeen": "2026-11-10T09:04:17.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 15329,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:05:02.000Z",
+      "lastSeen": "2026-11-10T09:05:02.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 6308,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:05:05.000Z",
+      "lastSeen": "2026-11-11T02:05:05.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2765,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4819,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:06:23.000Z",
+      "lastSeen": "2026-11-11T02:06:23.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2592,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4810,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:17:17.000Z",
+      "lastSeen": "2026-11-10T09:18:18.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 4542,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4810,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:18:18.000Z",
+      "lastSeen": "2026-11-10T09:18:18.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 15515,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4810,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:43:49.000Z",
+      "lastSeen": "2026-11-10T08:43:49.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 14573,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4810,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:38:09.000Z",
+      "lastSeen": "2026-11-11T01:38:09.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2592,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4811,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:36:28.000Z",
+      "lastSeen": "2026-11-11T01:34:46.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2674,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:27:17.000Z",
+      "lastSeen": "2026-11-10T09:37:18.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 17057,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:27:17.000Z",
+      "lastSeen": "2026-11-10T09:37:18.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1775,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4811,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:15:30.000Z",
+      "lastSeen": "2026-11-10T09:15:30.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5569,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:27:17.000Z",
+      "lastSeen": "2026-11-10T09:27:17.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2675,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:37:18.000Z",
+      "lastSeen": "2026-11-10T09:37:18.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 11994,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:37:23.000Z",
+      "lastSeen": "2026-11-10T09:37:23.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2034,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4811,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:36:28.000Z",
+      "lastSeen": "2026-11-10T08:36:28.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1748,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4811,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:39:09.000Z",
+      "lastSeen": "2026-11-10T08:39:09.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 8183,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4811,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:45:50.000Z",
+      "lastSeen": "2026-11-10T08:45:50.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 10287,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:09:26.000Z",
+      "lastSeen": "2026-11-10T09:09:26.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 248707,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:13:12.000Z",
+      "lastSeen": "2026-11-11T02:13:12.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5524,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:13:33.000Z",
+      "lastSeen": "2026-11-11T02:13:33.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 14375,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4823,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:13:37.000Z",
+      "lastSeen": "2026-11-11T02:13:37.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5504,
+      "rel": "dropped_by",
+      "toKind": "object",
+      "toId": 19018,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:05:12.000Z",
+      "lastSeen": "2026-11-11T01:30:07.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5524,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4825,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:01:46.000Z",
+      "lastSeen": "2026-11-10T09:40:54.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5784,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4818,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:46:11.000Z",
+      "lastSeen": "2026-11-11T01:10:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 4555,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4825,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:01:46.000Z",
+      "lastSeen": "2026-11-10T09:40:54.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5524,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4818,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:10:16.000Z",
+      "lastSeen": "2026-11-11T01:13:26.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3712,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4825,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:12:50.000Z",
+      "lastSeen": "2026-11-11T02:15:53.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1780,
+      "rel": "dropped_by",
+      "toKind": "object",
+      "toId": 19018,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T21:05:12.000Z",
+      "lastSeen": "2026-11-09T21:05:12.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 17057,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4818,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:46:11.000Z",
+      "lastSeen": "2026-11-10T08:46:11.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1468,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4818,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:46:11.000Z",
+      "lastSeen": "2026-11-10T08:46:11.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 262888,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4818,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:47:11.000Z",
+      "lastSeen": "2026-11-10T08:47:11.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5500,
+      "rel": "dropped_by",
+      "toKind": "object",
+      "toId": 19018,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:27:07.000Z",
+      "lastSeen": "2026-11-10T09:27:07.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 4542,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4814,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:33:16.000Z",
+      "lastSeen": "2026-11-10T09:33:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 4556,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4825,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:40:54.000Z",
+      "lastSeen": "2026-11-10T09:40:54.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 4306,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4814,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:48:14.000Z",
+      "lastSeen": "2026-11-10T08:48:14.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5524,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4803,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:39:16.000Z",
+      "lastSeen": "2026-11-10T09:39:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1820,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4803,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:06:06.000Z",
+      "lastSeen": "2026-11-11T01:06:06.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 6308,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4818,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:10:16.000Z",
+      "lastSeen": "2026-11-11T01:10:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 15249,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4814,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:42:36.000Z",
+      "lastSeen": "2026-11-11T01:42:36.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 15125,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4825,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:12:50.000Z",
+      "lastSeen": "2026-11-11T02:12:50.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5470,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 3238,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-08T23:29:50.000Z",
+      "lastSeen": "2026-11-10T22:44:21.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5133,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 3238,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-07T19:09:15.000Z",
+      "lastSeen": "2026-11-08T23:34:56.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3174,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4263,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-08T14:43:13.000Z",
+      "lastSeen": "2026-11-08T22:08:20.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5465,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4263,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-08T14:43:13.000Z",
+      "lastSeen": "2026-11-11T01:26:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3167,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4263,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-08T14:43:13.000Z",
+      "lastSeen": "2026-11-08T22:08:20.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2592,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4799,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:28:59.000Z",
+      "lastSeen": "2026-11-11T02:35:50.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1205,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4799,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:59:59.000Z",
+      "lastSeen": "2026-11-10T08:59:59.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1800,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4799,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:59:59.000Z",
+      "lastSeen": "2026-11-10T08:59:59.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 248687,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 3238,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-08T23:34:56.000Z",
+      "lastSeen": "2026-11-08T23:34:56.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 14373,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4799,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:20:50.000Z",
+      "lastSeen": "2026-11-10T08:20:50.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1210,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4263,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-08T22:08:18.000Z",
+      "lastSeen": "2026-11-08T22:08:18.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1475,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4263,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-08T22:11:25.000Z",
+      "lastSeen": "2026-11-08T22:11:25.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 14742,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4799,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:23:05.000Z",
+      "lastSeen": "2026-11-11T01:23:05.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 3311,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4263,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:26:16.000Z",
+      "lastSeen": "2026-11-11T01:26:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 273842,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 12902,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:37:31.000Z",
+      "lastSeen": "2026-11-10T09:21:36.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 5881,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4832,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:56:16.000Z",
+      "lastSeen": "2026-11-10T09:36:19.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 1155,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4832,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T09:36:19.000Z",
+      "lastSeen": "2026-11-10T09:36:19.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 6903,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4832,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:56:16.000Z",
+      "lastSeen": "2026-11-10T08:56:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 2592,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4832,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T08:56:16.000Z",
+      "lastSeen": "2026-11-10T08:56:16.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 273846,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 4832,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T01:45:25.000Z",
+      "lastSeen": "2026-11-11T01:45:25.000Z"
+    },
+    {
+      "fromKind": "item",
+      "fromId": 273841,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 12902,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-11T02:34:58.000Z",
+      "lastSeen": "2026-11-11T02:34:58.000Z"
+    },
+    {
+      "fromKind": "npc",
+      "fromId": 12718,
+      "rel": "located_in",
+      "toKind": "zone",
+      "toId": 1440,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-10T03:12:39.000Z",
+      "lastSeen": "2026-11-10T23:32:11.000Z"
+    }
+  ],
+  "updatedEdges": [
+    {
+      "key": [
+        "item",
+        "5570",
+        "dropped_by",
+        "object",
+        "19541"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-08T22:52:54.000Z",
+          "after": "2026-11-11T01:24:00.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "item",
+        "5601",
+        "dropped_by",
+        "object",
+        "19541"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        }
+      }
+    },
+    {
+      "key": [
+        "item",
+        "5602",
+        "dropped_by",
+        "object",
+        "19541"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        }
+      }
+    },
+    {
+      "key": [
+        "item",
+        "16762",
+        "dropped_by",
+        "object",
+        "177964"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T09:25:04.000Z",
+          "after": "2026-11-11T01:30:27.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "3368",
+        "located_in",
+        "zone",
+        "1454"
+      ],
+      "changes": {
+        "lastSeen": {
+          "before": "2026-11-06T20:45:11.000Z",
+          "after": "2026-11-11T01:44:36.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "3341",
+        "located_in",
+        "zone",
+        "1413"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-08T23:20:23.000Z",
+          "after": "2026-11-10T22:49:20.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "12867",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T03:12:12.000Z",
+          "after": "2026-11-10T23:31:35.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "11820",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T03:11:56.000Z",
+          "after": "2026-11-10T23:25:17.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "12616",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T05:41:05.000Z",
+          "after": "2026-11-10T23:28:03.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "12724",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T03:10:04.000Z",
+          "after": "2026-11-10T23:30:04.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "12696",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-08T23:56:26.000Z",
+          "after": "2026-11-10T23:26:49.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "6028",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T04:09:52.000Z",
+          "after": "2026-11-10T23:28:16.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "12737",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T03:10:49.000Z",
+          "after": "2026-11-10T23:28:36.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "11901",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T07:29:43.000Z",
+          "after": "2026-11-10T23:51:23.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "12757",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T07:29:55.000Z",
+          "after": "2026-11-10T23:54:10.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "12721",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T07:30:03.000Z",
+          "after": "2026-11-10T23:54:39.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "12736",
+        "located_in",
+        "zone",
+        "1440"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-10T07:31:08.000Z",
+          "after": "2026-11-10T23:51:59.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "7731",
+        "located_in",
+        "zone",
+        "1442"
+      ],
+      "changes": {
+        "installs": {
+          "before": "3",
+          "after": "4"
+        },
+        "lastSeen": {
+          "before": "2026-11-09T08:24:05.000Z",
+          "after": "2026-11-11T01:39:04.000Z"
+        }
+      }
+    }
+  ],
+  "items": {
+    "10287": {
+      "url": "https://www.wowhead.com/forever/item=10287",
+      "bytes": 254647,
+      "sha256": "44cee6228703cfe617d9ba459822e271b1677f5debc714191392fe7f33e565b6",
+      "title": "Greenweave Mantle - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 10287,
+        "name": "Greenweave Mantle",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 3,
+        "quality": 2,
+        "level": 26,
+        "reqlevel": 21
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 147,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "11994": {
+      "url": "https://www.wowhead.com/forever/item=11994",
+      "bytes": 251127,
+      "sha256": "2d6b1f5a97d47ef6b82ca99745e637ccacafbc362fc047e6f8ee1bd9503921f3",
+      "title": "Coral Band - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 11994,
+        "name": "Coral Band",
+        "classs": 4,
+        "subclass": -2,
+        "slot": 11,
+        "quality": 2,
+        "level": 25,
+        "reqlevel": 20
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 194,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "14127": {
+      "url": "https://www.wowhead.com/forever/item=14127",
+      "bytes": 252792,
+      "sha256": "2533eb723956d88f949fa5d427faf4d1e25a2db4b8a8e836eb49ca0aa40c0853",
+      "title": "Ritual Shroud - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 14127,
+        "name": "Ritual Shroud",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 5,
+        "quality": 2,
+        "level": 24,
+        "reqlevel": 19
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 95,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "14369": {
+      "url": "https://www.wowhead.com/forever/item=14369",
+      "bytes": 255135,
+      "sha256": "2d39a8792bded67af111573ebf37c223a1d59d8b8c828440cc8d63f1da855c20",
+      "title": "Mystic's Wrap - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 14369,
+        "name": "Mystic's Wrap",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 5,
+        "quality": 2,
+        "level": 23,
+        "reqlevel": 18
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 98,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "14373": {
+      "url": "https://www.wowhead.com/forever/item=14373",
+      "bytes": 275140,
+      "sha256": "8b88a638db8ca3e7b1669c3c8dd199546ebc453fb2b2d2e538f538260f35b963",
+      "title": "Sanguine Belt - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 14373,
+        "name": "Sanguine Belt",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 6,
+        "quality": 2,
+        "level": 25,
+        "reqlevel": 20
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 125,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "14375": {
+      "url": "https://www.wowhead.com/forever/item=14375",
+      "bytes": 231543,
+      "sha256": "f81d97fc0669b8bb8afffe0abe73de201e182bac9eb5658ec834b1b6f271a3e4",
+      "title": "Sanguine Cuffs - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 14375,
+        "name": "Sanguine Cuffs",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 9,
+        "quality": 2,
+        "level": 25,
+        "reqlevel": 20
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 124,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "14573": {
+      "url": "https://www.wowhead.com/forever/item=14573",
+      "bytes": 259463,
+      "sha256": "686877b6623c233496ad867a02f2debe92610fded3cd432fac7647f3e54f0952",
+      "title": "Bristlebark Amice - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 14573,
+        "name": "Bristlebark Amice",
+        "classs": 4,
+        "subclass": 2,
+        "slot": 3,
+        "quality": 2,
+        "level": 27,
+        "reqlevel": 22
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 110,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1468": {
+      "url": "https://www.wowhead.com/forever/item=1468",
+      "bytes": 78701,
+      "sha256": "c062bbfa056de8175d51b6f6eeb2617f95292a10e55b14f0c48c66d1df953b75",
+      "title": "Murloc Fin - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1468,
+        "name": "Murloc Fin",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 16
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 25,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "14742": {
+      "url": "https://www.wowhead.com/forever/item=14742",
+      "bytes": 247142,
+      "sha256": "387a453ae6619780eaa6ce9f990cc023c288924e7c491986fe8bd09cb547daa6",
+      "title": "Hulking Boots - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 14742,
+        "name": "Hulking Boots",
+        "classs": 4,
+        "subclass": 3,
+        "slot": 8,
+        "quality": 2,
+        "level": 24,
+        "reqlevel": 19
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 113,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "14747": {
+      "url": "https://www.wowhead.com/forever/item=14747",
+      "bytes": 262412,
+      "sha256": "6338db2ac15bb6fa95a98fcf359f64f6a26b634c039991003057d5fd015574c8",
+      "title": "Hulking Gauntlets - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 14747,
+        "name": "Hulking Gauntlets",
+        "classs": 4,
+        "subclass": 3,
+        "slot": 10,
+        "quality": 2,
+        "level": 23,
+        "reqlevel": 18
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 105,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1155": {
+      "url": "https://www.wowhead.com/forever/item=1155",
+      "bytes": 278850,
+      "sha256": "a3c32ea238819bacbf353a06af9e22d092fe61ebe6123dd8ca3cf7473148d02c",
+      "title": "Rod of the Sleepwalker - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1155,
+        "name": "Rod of the Sleepwalker",
+        "classs": 2,
+        "subclass": 10,
+        "slot": 17,
+        "quality": 3,
+        "level": 29,
+        "reqlevel": 24
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 1,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "15125": {
+      "url": "https://www.wowhead.com/forever/item=15125",
+      "bytes": 238365,
+      "sha256": "91d0bf0a1e51252fce76ad2bd5aac2d03f75de0c02f726bbe71851493ba0e417",
+      "title": "Robust Gloves - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 15125,
+        "name": "Robust Gloves",
+        "classs": 4,
+        "subclass": 2,
+        "slot": 10,
+        "quality": 2,
+        "level": 29,
+        "reqlevel": 24
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 86,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "15211": {
+      "url": "https://www.wowhead.com/forever/item=15211",
+      "bytes": 290454,
+      "sha256": "4493b6c907d93f46a162bf2817719bb5cdaba8521cbad376fc8f8d44270f3f56",
+      "title": "Militant Shortsword - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 15211,
+        "name": "Militant Shortsword",
+        "classs": 2,
+        "subclass": 7,
+        "slot": 13,
+        "quality": 2,
+        "level": 22,
+        "reqlevel": 17
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "15249": {
+      "url": "https://www.wowhead.com/forever/item=15249",
+      "bytes": 269834,
+      "sha256": "c9fec18f81d0836d011d921dffcca0640c401b69405cc79bb018c3178098154c",
+      "title": "Polished Zweihander - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 15249,
+        "name": "Polished Zweihander",
+        "classs": 2,
+        "subclass": 8,
+        "slot": 17,
+        "quality": 2,
+        "level": 26,
+        "reqlevel": 21
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "15311": {
+      "url": "https://www.wowhead.com/forever/item=15311",
+      "bytes": 262974,
+      "sha256": "700dd5dff0ca7ced982088db4476a1ca1b4839b5aab2a24c1a693352ab98a5cd",
+      "title": "Feral Harness - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 15311,
+        "name": "Feral Harness",
+        "classs": 4,
+        "subclass": 2,
+        "slot": 5,
+        "quality": 2,
+        "level": 22,
+        "reqlevel": 17
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 116,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "15329": {
+      "url": "https://www.wowhead.com/forever/item=15329",
+      "bytes": 261172,
+      "sha256": "ac623bd1f18a95df1a9bc4cdc7571ef16034730ebf3d177f69e45a9c2634f1dc",
+      "title": "Wrangler's Belt - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 15329,
+        "name": "Wrangler's Belt",
+        "classs": 4,
+        "subclass": 2,
+        "slot": 6,
+        "quality": 2,
+        "level": 24,
+        "reqlevel": 19
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 119,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "15515": {
+      "url": "https://www.wowhead.com/forever/item=15515",
+      "bytes": 238380,
+      "sha256": "6488d4db3c39a298bfefb7cfa4901ab501f38ef39931b40d9edeb59b0aca297b",
+      "title": "Spiked Chain Belt - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 15515,
+        "name": "Spiked Chain Belt",
+        "classs": 4,
+        "subclass": 3,
+        "slot": 6,
+        "quality": 2,
+        "level": 25,
+        "reqlevel": 20
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 120,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "15532": {
+      "url": "https://www.wowhead.com/forever/item=15532",
+      "bytes": 230408,
+      "sha256": "d1b2b9385a178f28945c9aabe734934cb543044f29634a035946ca6a8c7a891b",
+      "title": "Sentry's Armsplints - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 15532,
+        "name": "Sentry's Armsplints",
+        "classs": 4,
+        "subclass": 3,
+        "slot": 9,
+        "quality": 2,
+        "level": 26,
+        "reqlevel": 21
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 106,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1210": {
+      "url": "https://www.wowhead.com/forever/item=1210",
+      "bytes": 304371,
+      "sha256": "700d959b9190865bbc1be520dcc471a5978370a25d1c55e9e2d7879909b00142",
+      "title": "Shadowgem - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1210,
+        "name": "Shadowgem",
+        "classs": 7,
+        "subclass": 11,
+        "slot": 0,
+        "quality": 2,
+        "level": 20
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 202,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1475": {
+      "url": "https://www.wowhead.com/forever/item=1475",
+      "bytes": 78119,
+      "sha256": "aaa6d4b809e4f5c0ac59d1468c366005141ccd6a82337c5453992c50f8e9d9e5",
+      "title": "Small Venom Sac - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1475,
+        "name": "Small Venom Sac",
+        "classs": 7,
+        "subclass": 11,
+        "slot": 0,
+        "quality": 1,
+        "level": 1
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 26,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1205": {
+      "url": "https://www.wowhead.com/forever/item=1205",
+      "bytes": 272505,
+      "sha256": "f8627bd91c9c468f7062926c83384eb5d4f2d317076143b1164e0424b0c7717d",
+      "title": "Melon Juice - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1205,
+        "name": "Melon Juice",
+        "classs": 0,
+        "subclass": 5,
+        "slot": 0,
+        "quality": 1,
+        "level": 25,
+        "reqlevel": 15
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 203,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "17057": {
+      "url": "https://www.wowhead.com/forever/item=17057",
+      "bytes": 117110,
+      "sha256": "3657de2fbbb219f5542a12fd634398f65fc4aee20517a9fabc50e706409ab281",
+      "title": "Shiny Fish Scales - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 17057,
+        "name": "Shiny Fish Scales",
+        "classs": 15,
+        "subclass": 1,
+        "slot": 0,
+        "quality": 1,
+        "level": 1
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 100,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "17058": {
+      "url": "https://www.wowhead.com/forever/item=17058",
+      "bytes": 104547,
+      "sha256": "8aa801108d9a137d54e50d3fb2ec293a93b075cb7a279fb2d4704adce2a07f9c",
+      "title": "Fish Oil - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 17058,
+        "name": "Fish Oil",
+        "classs": 15,
+        "subclass": 1,
+        "slot": 0,
+        "quality": 1,
+        "level": 1
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 68,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1778": {
+      "url": "https://www.wowhead.com/forever/item=1778",
+      "bytes": 284853,
+      "sha256": "13de6c7e1087dd2223ebc29df0f9c54d42509466ce3968fc9a809aba6bb73795",
+      "title": "Brocade Vest - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1778,
+        "name": "Brocade Vest",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 5,
+        "quality": 0,
+        "level": 23,
+        "reqlevel": 18
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 201,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1800": {
+      "url": "https://www.wowhead.com/forever/item=1800",
+      "bytes": 272109,
+      "sha256": "dcce0b0ecda9f9fdf4917ca181e11ba102ba4676628abb7264441a7cd9d39bfd",
+      "title": "Rawhide Pants - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1800,
+        "name": "Rawhide Pants",
+        "classs": 4,
+        "subclass": 2,
+        "slot": 7,
+        "quality": 0,
+        "level": 24,
+        "reqlevel": 19
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1801": {
+      "url": "https://www.wowhead.com/forever/item=1801",
+      "bytes": 270650,
+      "sha256": "aa2ae182ec1acec57add67ddaf60d7cd2846d3ced1f3b78c7b42131d28d3e562",
+      "title": "Rawhide Shoulderpads - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1801,
+        "name": "Rawhide Shoulderpads",
+        "classs": 4,
+        "subclass": 2,
+        "slot": 3,
+        "quality": 0,
+        "level": 25,
+        "reqlevel": 20
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1820": {
+      "url": "https://www.wowhead.com/forever/item=1820",
+      "bytes": 263605,
+      "sha256": "eaf407a8d447c63c8cd3677b68c069981db5c9aa0a77c83edd4ee746d406c9d2",
+      "title": "Wooden Maul - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1820,
+        "name": "Wooden Maul",
+        "classs": 2,
+        "subclass": 5,
+        "slot": 17,
+        "quality": 0,
+        "level": 22,
+        "reqlevel": 17
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1748": {
+      "url": "https://www.wowhead.com/forever/item=1748",
+      "bytes": 306106,
+      "sha256": "0c35285fd9ca353535a5a322a1d5fd008ba7902d02043e2532df964036ee177a",
+      "title": "Linked Chain Bracers - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1748,
+        "name": "Linked Chain Bracers",
+        "classs": 4,
+        "subclass": 3,
+        "slot": 9,
+        "quality": 0,
+        "level": 22,
+        "reqlevel": 17
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 201,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1822": {
+      "url": "https://www.wowhead.com/forever/item=1822",
+      "bytes": 267015,
+      "sha256": "273651d915d631d8da1df661e1f552adf0f438e26a0494f381f0fc17d583a82c",
+      "title": "Cedar Walking Stick - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1822,
+        "name": "Cedar Walking Stick",
+        "classs": 2,
+        "subclass": 10,
+        "slot": 17,
+        "quality": 0,
+        "level": 23,
+        "reqlevel": 18
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 201,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1821": {
+      "url": "https://www.wowhead.com/forever/item=1821",
+      "bytes": 272015,
+      "sha256": "9bfa87fb5b0ca91a5a88f25e1ebb32b5cee80edc8dc71307a9eb3c5662cfbd7b",
+      "title": "Warped Blade - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1821,
+        "name": "Warped Blade",
+        "classs": 2,
+        "subclass": 7,
+        "slot": 21,
+        "quality": 0,
+        "level": 24,
+        "reqlevel": 19
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 201,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1775": {
+      "url": "https://www.wowhead.com/forever/item=1775",
+      "bytes": 289496,
+      "sha256": "c0edc9cd897b529473dbbcc9b99ddaf71a1c34f4b342b918279c30220bb4f14b",
+      "title": "Brocade Gloves - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1775,
+        "name": "Brocade Gloves",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 10,
+        "quality": 0,
+        "level": 25,
+        "reqlevel": 20
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 202,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "2034": {
+      "url": "https://www.wowhead.com/forever/item=2034",
+      "bytes": 191295,
+      "sha256": "a0c2c371b875ac54426cfa5e46f1b61654a0b9270c13fb13ec2e96d09fc76184",
+      "title": "Scholarly Robes - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 2034,
+        "name": "Scholarly Robes",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 5,
+        "quality": 3,
+        "level": 25,
+        "reqlevel": 20
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 6,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "248687": {
+      "url": "https://www.wowhead.com/forever/item=248687",
+      "bytes": 148276,
+      "sha256": "5b62b0734040b75b60d7f466a624c6d40e0537ce326902a3e5b987e7ccbe1ee0",
+      "title": "Waylaid Crate: Journeyman Ore - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 248687,
+        "name": "Waylaid Crate: Journeyman Ore",
+        "classs": 0,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 1,
+        "reqlevel": 10
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "1780": {
+      "url": "https://www.wowhead.com/forever/item=1780",
+      "bytes": 303053,
+      "sha256": "831f7526a76ae35e79a2dac8caa641e0ea685b04c50c2cc91c0a7fea481987cf",
+      "title": "Cross-stitched Sandals - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 1780,
+        "name": "Cross-stitched Sandals",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 8,
+        "quality": 0,
+        "level": 29,
+        "reqlevel": 24
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "2219": {
+      "url": "https://www.wowhead.com/forever/item=2219",
+      "bytes": 274021,
+      "sha256": "d20688a765c493716527da697078aab1ed5279d6f406eead501e6ba82fe00b8a",
+      "title": "Small Round Shield - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 2219,
+        "name": "Small Round Shield",
+        "classs": 4,
+        "subclass": 6,
+        "slot": 14,
+        "quality": 0,
+        "level": 22,
+        "reqlevel": 17
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 201,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "248707": {
+      "url": "https://www.wowhead.com/forever/item=248707",
+      "bytes": 149840,
+      "sha256": "9ad87cd38186e93f913322aaeca76c20d0f6f0041c3de1d9a3321c8726e4fa40",
+      "title": "Waylaid Crate: Journeyman Parts - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 248707,
+        "name": "Waylaid Crate: Journeyman Parts",
+        "classs": 0,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 2,
+        "level": 1,
+        "reqlevel": 10
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "2592": {
+      "url": "https://www.wowhead.com/forever/item=2592",
+      "bytes": 219581,
+      "sha256": "06d0fbac79b522c93c19af97dee1b1c4c212830c1bb7e57687bbf2222d562b28",
+      "title": "Wool Cloth - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 2592,
+        "name": "Wool Cloth",
+        "classs": 7,
+        "subclass": 5,
+        "slot": 0,
+        "quality": 1,
+        "level": 15
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "2675": {
+      "url": "https://www.wowhead.com/forever/item=2675",
+      "bytes": 72156,
+      "sha256": "264520402cf3e6eecdd7556ab4244e6a639c48b9de198874c438708084ce7315",
+      "title": "Crawler Claw - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 2675,
+        "name": "Crawler Claw",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 13
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 16,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "2674": {
+      "url": "https://www.wowhead.com/forever/item=2674",
+      "bytes": 74820,
+      "sha256": "07f39ac041898240019afb9c791fafb65e5fbf168172ea531be20064733db913",
+      "title": "Crawler Meat - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 2674,
+        "name": "Crawler Meat",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 13
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 15,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "262888": {
+      "url": "https://www.wowhead.com/forever/item=262888",
+      "bytes": 155368,
+      "sha256": "0b7b757d0b87d6ee930265a49e3b22261e6c3f42e5506a01ebd78a000249b8e5",
+      "title": "Sealed Journeyman's Writ - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 262888,
+        "name": "Sealed Journeyman's Writ",
+        "classs": 0,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 3,
+        "level": 1,
+        "reqlevel": 10
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "273841": {
+      "url": "https://www.wowhead.com/forever/item=273841",
+      "bytes": 184161,
+      "sha256": "e0473c1b5c88736b51d909de115c9f951215e3f509e4a7aa1e94472b9a548850",
+      "title": "Twilight Maul - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 273841,
+        "name": "Twilight Maul",
+        "classs": 2,
+        "subclass": 5,
+        "slot": 17,
+        "quality": 3,
+        "level": 28,
+        "reqlevel": 23
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 1,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3039": {
+      "url": "https://www.wowhead.com/forever/item=3039",
+      "bytes": 259905,
+      "sha256": "84c5004a2f45e4baf69169c841bf0fc44f666f6a41a4bd350642752057c9d945",
+      "title": "Short Ash Bow - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 3039,
+        "name": "Short Ash Bow",
+        "classs": 2,
+        "subclass": 2,
+        "slot": 15,
+        "quality": 2,
+        "level": 23,
+        "reqlevel": 18
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3167": {
+      "url": "https://www.wowhead.com/forever/item=3167",
+      "bytes": 62179,
+      "sha256": "f18561b73a502bdcf5283db5b1507b83437a8752c721350466f1fdde07d2dbdd",
+      "title": "Thick Spider Hair - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 3167,
+        "name": "Thick Spider Hair",
+        "classs": 15,
+        "subclass": 0,
+        "slot": 0,
+        "quality": 0,
+        "level": 1
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 14,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "273842": {
+      "url": "https://www.wowhead.com/forever/item=273842",
+      "bytes": 209161,
+      "sha256": "1b10a9a597f49ea1b3059ca53b4d8ef7e5ac5ad7d53a7ef32aa70d9cadadbb28",
+      "title": "Treacherous Treads - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 273842,
+        "name": "Treacherous Treads",
+        "classs": 4,
+        "subclass": 3,
+        "slot": 8,
+        "quality": 3,
+        "level": 28,
+        "reqlevel": 23
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 1,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3198": {
+      "url": "https://www.wowhead.com/forever/item=3198",
+      "bytes": 277191,
+      "sha256": "1d321d333513e82506ee1d914d96ed104a8e95e9cdcf98b7660c4e51c6175ec0",
+      "title": "Battering Hammer - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 3198,
+        "name": "Battering Hammer",
+        "classs": 2,
+        "subclass": 5,
+        "slot": 17,
+        "quality": 2,
+        "level": 23,
+        "reqlevel": 18
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "273846": {
+      "url": "https://www.wowhead.com/forever/item=273846",
+      "bytes": 222342,
+      "sha256": "b3da58c347f2eac9d77bf90a7a1690d08dfff29b71496b6c5383c021f5c2c179",
+      "title": "Twilight Lord Girdle - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 273846,
+        "name": "Twilight Lord Girdle",
+        "classs": 4,
+        "subclass": 3,
+        "slot": 6,
+        "quality": 3,
+        "level": 30,
+        "reqlevel": 25
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 1,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3174": {
+      "url": "https://www.wowhead.com/forever/item=3174",
+      "bytes": 78683,
+      "sha256": "2e9ace8651d56081ec56293cab8b6432cf853934879bc82a85588b0d761feca6",
+      "title": "Spider Ichor - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 3174,
+        "name": "Spider Ichor",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 10
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 32,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3311": {
+      "url": "https://www.wowhead.com/forever/item=3311",
+      "bytes": 263223,
+      "sha256": "bde45080566eabb8df8bdca76b254c606a23816eb82c7711340607bcffdfc7f5",
+      "title": "Ceremonial Leather Ankleguards - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 3311,
+        "name": "Ceremonial Leather Ankleguards",
+        "classs": 4,
+        "subclass": 2,
+        "slot": 8,
+        "quality": 1,
+        "level": 15,
+        "reqlevel": 10
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 107,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "2765": {
+      "url": "https://www.wowhead.com/forever/item=2765",
+      "bytes": 271387,
+      "sha256": "1b3d10281ba3751573915f6464e98837eaff959d25c02774b86902d208c36664",
+      "title": "Hunting Knife - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 2765,
+        "name": "Hunting Knife",
+        "classs": 2,
+        "subclass": 15,
+        "slot": 13,
+        "quality": 0,
+        "level": 23,
+        "reqlevel": 18
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3612": {
+      "url": "https://www.wowhead.com/forever/item=3612",
+      "bytes": 162187,
+      "sha256": "f5d8f7a9b9aefc6f2735b057fd5aa494800ae359838d39da61e5ec577c476c18",
+      "title": "Plans: Green Iron Gauntlets - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 3612,
+        "name": "Plans: Green Iron Gauntlets",
+        "classs": 9,
+        "subclass": 4,
+        "slot": 0,
+        "quality": 2,
+        "level": 30
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": true,
+      "ownEnemyReturnedRows": 204,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3712": {
+      "url": "https://www.wowhead.com/forever/item=3712",
+      "bytes": 85748,
+      "sha256": "032f0138865d1d5870fcd3013bb23300183cb4e1380c75f71afc6b57687ab5ca",
+      "title": "Turtle Meat - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 3712,
+        "name": "Turtle Meat",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 30
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 26,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3379": {
+      "url": "https://www.wowhead.com/forever/item=3379",
+      "bytes": 270249,
+      "sha256": "3647a26bcb68a24421e0e7f91f4f1820fe0cb3b0a7d2ccf5146d7690c404ba41",
+      "title": "Brocade Bracers - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 3379,
+        "name": "Brocade Bracers",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 9,
+        "quality": 0,
+        "level": 22,
+        "reqlevel": 17
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "4306": {
+      "url": "https://www.wowhead.com/forever/item=4306",
+      "bytes": 218189,
+      "sha256": "0776cae51077b0f6e7fa8bfcbf1bf34d90d4ed5c8ce09deb298302f99d6c7b94",
+      "title": "Silk Cloth - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 4306,
+        "name": "Silk Cloth",
+        "classs": 7,
+        "subclass": 5,
+        "slot": 0,
+        "quality": 1,
+        "level": 30
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "4542": {
+      "url": "https://www.wowhead.com/forever/item=4542",
+      "bytes": 275069,
+      "sha256": "984f99bde8f8c7d200e49df9ee13c547e0305d79ecad8f0435957ae86673649b",
+      "title": "Moist Cornbread - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 4542,
+        "name": "Moist Cornbread",
+        "classs": 0,
+        "subclass": 5,
+        "slot": 0,
+        "quality": 1,
+        "level": 25,
+        "reqlevel": 15
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 86,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "3770": {
+      "url": "https://www.wowhead.com/forever/item=3770",
+      "bytes": 328568,
+      "sha256": "73f4b08f1de729c943bc284a9551acf12600bcb9f48f97cd65f6b04856197333",
+      "title": "Mutton Chop - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 3770,
+        "name": "Mutton Chop",
+        "classs": 0,
+        "subclass": 5,
+        "slot": 0,
+        "quality": 1,
+        "level": 25,
+        "reqlevel": 15
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 184,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5465": {
+      "url": "https://www.wowhead.com/forever/item=5465",
+      "bytes": 83600,
+      "sha256": "646d5209b0353aef68d7c409ce9da6304700e4400f7c3811cba372cbb4e60fe5",
+      "title": "Small Spider Leg - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 5465,
+        "name": "Small Spider Leg",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 5
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 66,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "4555": {
+      "url": "https://www.wowhead.com/forever/item=4555",
+      "bytes": 70983,
+      "sha256": "979f5c8898481e64784b974bfb0a78e2f2a4996191309fe82cc305121d975d55",
+      "title": "Thick Scaly Tail - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 4555,
+        "name": "Thick Scaly Tail",
+        "classs": 15,
+        "subclass": 0,
+        "slot": 0,
+        "quality": 0,
+        "level": 1
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 28,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "4556": {
+      "url": "https://www.wowhead.com/forever/item=4556",
+      "bytes": 72637,
+      "sha256": "a4eb385092b6afa612d55dc72b4b67a3420044bd51edff87544d119d6302b30b",
+      "title": "Speckled Shell Fragment - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 4556,
+        "name": "Speckled Shell Fragment",
+        "classs": 15,
+        "subclass": 0,
+        "slot": 0,
+        "quality": 0,
+        "level": 1
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 25,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5133": {
+      "url": "https://www.wowhead.com/forever/item=5133",
+      "bytes": 69878,
+      "sha256": "62194324a381924e2f402950e34f5e104c4eb24ff2d62f44374f79853a6022ac",
+      "title": "Seeping Gizzard - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 5133,
+        "name": "Seeping Gizzard",
+        "classs": 15,
+        "subclass": 0,
+        "slot": 0,
+        "quality": 0,
+        "level": 1
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 21,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5470": {
+      "url": "https://www.wowhead.com/forever/item=5470",
+      "bytes": 62132,
+      "sha256": "50db98d574d6bc787e55c39dc0cf4b585619cdaacc29be3447a7e78f2bb6b6e6",
+      "title": "Thunder Lizard Tail - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 5470,
+        "name": "Thunder Lizard Tail",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 22
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 8,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5500": {
+      "url": "https://www.wowhead.com/forever/item=5500",
+      "bytes": 142493,
+      "sha256": "1c351d74d8ad2b535bbb43184d1f56122afebd181639bafc2b7fad761a0edb56",
+      "title": "Iridescent Pearl - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 5500,
+        "name": "Iridescent Pearl",
+        "classs": 7,
+        "subclass": 11,
+        "slot": 0,
+        "quality": 2,
+        "level": 25
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 6,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5504": {
+      "url": "https://www.wowhead.com/forever/item=5504",
+      "bytes": 83189,
+      "sha256": "245346ef91d7aa28c7cf9bb0e663ac6daaac2547eeede39bb02ab378af20278e",
+      "title": "Tangy Clam Meat - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 5504,
+        "name": "Tangy Clam Meat",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 23
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 25,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5524": {
+      "url": "https://www.wowhead.com/forever/item=5524",
+      "bytes": 97342,
+      "sha256": "be0365de5db271bc14cb55944ed4976c21a4c92bd6f8f0f2440bd7d7386260f3",
+      "title": "Thick-shelled Clam - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 5524,
+        "name": "Thick-shelled Clam",
+        "classs": 7,
+        "subclass": 11,
+        "slot": 0,
+        "quality": 1,
+        "level": 20
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 50,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5569": {
+      "url": "https://www.wowhead.com/forever/item=5569",
+      "bytes": 67055,
+      "sha256": "c66e6dcbb32029e2d901b449e1f817a2c285e370eb2214e09f950b8407fb712a",
+      "title": "Seaweed - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 5569,
+        "name": "Seaweed",
+        "classs": 15,
+        "subclass": 0,
+        "slot": 0,
+        "quality": 0,
+        "level": 20
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 22,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5784": {
+      "url": "https://www.wowhead.com/forever/item=5784",
+      "bytes": 86708,
+      "sha256": "660eba51b5e390bb9f70d00073e17528f2578b3d24cd142217cd4568eb51e3f8",
+      "title": "Slimy Murloc Scale - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 5784,
+        "name": "Slimy Murloc Scale",
+        "classs": 7,
+        "subclass": 6,
+        "slot": 0,
+        "quality": 1,
+        "level": 15
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 41,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "5881": {
+      "url": "https://www.wowhead.com/forever/item=5881",
+      "bytes": 61159,
+      "sha256": "2d7d27da35aaedf2ef2ad1ee8fcabbc3abf935aa1fc500effaa39095fbb83d34",
+      "title": "Head of Kelris - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 5881,
+        "name": "Head of Kelris",
+        "classs": 12,
+        "subclass": 0,
+        "slot": 0,
+        "quality": 1,
+        "level": 1
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 2,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "8183": {
+      "url": "https://www.wowhead.com/forever/item=8183",
+      "bytes": 264118,
+      "sha256": "a393821b71beb9ec88f2ce94d47e5b9d70fe84511d0b80019fda0ec8390985c8",
+      "title": "Precision Bow - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 8183,
+        "name": "Precision Bow",
+        "classs": 2,
+        "subclass": 2,
+        "slot": 15,
+        "quality": 2,
+        "level": 27,
+        "reqlevel": 22
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 200,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "6308": {
+      "url": "https://www.wowhead.com/forever/item=6308",
+      "bytes": 225240,
+      "sha256": "0e6193cb3ba386c1d5da396c1c7a7f2099df86f7ffb28ba00d95d4208d7d5f42",
+      "title": "Raw Bristle Whisker Catfish - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 6308,
+        "name": "Raw Bristle Whisker Catfish",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 25,
+        "reqlevel": 15
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 56,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "9769": {
+      "url": "https://www.wowhead.com/forever/item=9769",
+      "bytes": 215090,
+      "sha256": "e9c66c618c3342df5053c1c8b08c2f3303091698b0648a897a6f8adffab35441",
+      "title": "Greenweave Branch - Item - Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 9769,
+        "name": "Greenweave Branch",
+        "classs": 4,
+        "subclass": -5,
+        "slot": 23,
+        "quality": 2,
+        "level": 27,
+        "reqlevel": 22
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 104,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "730": {
+      "url": "https://www.wowhead.com/forever/item=730",
+      "bytes": 107858,
+      "sha256": "7a054f717b6f241b88bb0cea19cf140dc96871e559317210877d1b79252d0449",
+      "title": "Murloc Eye - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 730,
+        "name": "Murloc Eye",
+        "classs": 7,
+        "subclass": 8,
+        "slot": 0,
+        "quality": 1,
+        "level": 11
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 53,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "6903": {
+      "url": "https://www.wowhead.com/forever/item=6903",
+      "bytes": 228319,
+      "sha256": "40eb04b9a8273641eb5619cbb13bf47612f97128cfc8edd24826b8a4c49ea715",
+      "title": "Gaze Dreamer Pants - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 6903,
+        "name": "Gaze Dreamer Pants",
+        "classs": 4,
+        "subclass": 1,
+        "slot": 7,
+        "quality": 3,
+        "level": 28,
+        "reqlevel": 23
+      },
+      "canonicalGear": true,
+      "eligibleGearPolicy": true,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 1,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    },
+    "929": {
+      "url": "https://www.wowhead.com/forever/item=929",
+      "bytes": 334061,
+      "sha256": "782eead6cee2139e9427866092e19aa12a16f02e74f15daa3ef4777037cadb3e",
+      "title": "Healing Potion - Item - Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 929,
+        "name": "Healing Potion",
+        "classs": 0,
+        "subclass": 1,
+        "slot": 0,
+        "quality": 1,
+        "level": 22,
+        "reqlevel": 12
+      },
+      "canonicalGear": false,
+      "eligibleGearPolicy": false,
+      "inReviewedBookQueue": false,
+      "ownEnemyReturnedRows": 204,
+      "scope": "Reported-source identity/policy check;poor/common wearables excluded by original quality>=2policy;slot0notnewgear. Sourcebook3612notfinished3485drop/currentpersonalbuildproof."
+    }
+  },
+  "actors": {
+    "npc:12718": {
+      "url": "https://www.wowhead.com/forever/npc=12718",
+      "bytes": 66873,
+      "sha256": "c06bca817f80f1eaf00abde70a8658166e85c24d29f083de705cc058774425b5",
+      "title": "Gurda Ragescar - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [
+        {
+          "zoneID": 331,
+          "uiMapID": 1440,
+          "name": "Ashenvale",
+          "pointCount": 1
+        }
+      ],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:12902": {
+      "url": "https://www.wowhead.com/forever/npc=12902",
+      "bytes": 298083,
+      "sha256": "5810650d8e9d6b4a1f48376a6bb2649d75a7b2f74e80a5b700f0ec70524e3a05",
+      "title": "Lorgus Jett - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:3238": {
+      "url": "https://www.wowhead.com/forever/npc=3238",
+      "bytes": 217254,
+      "sha256": "a6762eafb5aac32d605bdbc6b4c5f8ae674bf428729938b11c232356aba4b8c2",
+      "title": "Stormhide - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [
+        {
+          "zoneID": 17,
+          "uiMapID": 1413,
+          "name": "The Barrens",
+          "pointCount": 56
+        }
+      ],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4263": {
+      "url": "https://www.wowhead.com/forever/npc=4263",
+      "bytes": 159725,
+      "sha256": "038eeab9f64863cf65294e6e6f2f5b020525e6701615e885850dd141d7547933",
+      "title": "Deepmoss Hatchling - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [
+        {
+          "zoneID": 406,
+          "uiMapID": 1442,
+          "name": "Stonetalon Mountains",
+          "pointCount": 34
+        }
+      ],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4798": {
+      "url": "https://www.wowhead.com/forever/npc=4798",
+      "bytes": 310866,
+      "sha256": "b59436282188bc7fb654d7bc584b1b9aa37a0c6976f6cbf158d1b5da2cce6543",
+      "title": "Fallenroot Shadowstalker - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4803": {
+      "url": "https://www.wowhead.com/forever/npc=4803",
+      "bytes": 245602,
+      "sha256": "4c2be5415260dbe0355ef098c80a3ca291a7c9284441f79050418a5e3ac8d6db",
+      "title": "Blackfathom Oracle - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [
+        {
+          "zoneID": 331,
+          "uiMapID": 1440,
+          "name": "Ashenvale",
+          "pointCount": 12
+        },
+        {
+          "zoneID": -6,
+          "uiMapID": 1414,
+          "name": "Kalimdor",
+          "pointCount": 5
+        }
+      ],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4799": {
+      "url": "https://www.wowhead.com/forever/npc=4799",
+      "bytes": 335600,
+      "sha256": "8e02da9d20844700e1a9c575f3191f1730df38e043ef8804da91c14f2bedc616",
+      "title": "Fallenroot Hellcaller - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4805": {
+      "url": "https://www.wowhead.com/forever/npc=4805",
+      "bytes": 346901,
+      "sha256": "6870d97a93010546d636318c081ce1ef9243df34c05942217dfedc82f200fc15",
+      "title": "Blackfathom Sea Witch - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4810": {
+      "url": "https://www.wowhead.com/forever/npc=4810",
+      "bytes": 314720,
+      "sha256": "272c8025d8bddb42a5f1aa57c3781512055c46f6de52d83e71f7c6474a443c67",
+      "title": "Twilight Reaver - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4807": {
+      "url": "https://www.wowhead.com/forever/npc=4807",
+      "bytes": 326687,
+      "sha256": "1358b808cf6105c749a0383358f66516074ab87c8f6e964605ec4f0255a978b0",
+      "title": "Blackfathom Myrmidon - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4811": {
+      "url": "https://www.wowhead.com/forever/npc=4811",
+      "bytes": 318049,
+      "sha256": "02b079f24bf03a542cefc298551f12ec43f1c5d9db9362fbb3e48a4370313c7e",
+      "title": "Twilight Aquamancer - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4814": {
+      "url": "https://www.wowhead.com/forever/npc=4814",
+      "bytes": 345204,
+      "sha256": "3e9a1725f8e03d14773b7db2d78493b758dc186fdbf936e1aee9d0b655c274d6",
+      "title": "Twilight Elementalist - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4819": {
+      "url": "https://www.wowhead.com/forever/npc=4819",
+      "bytes": 259046,
+      "sha256": "eeb116d1048b6ab482c8e81898e975f542370023a45365df29ea29456e6be21f",
+      "title": "Blindlight Muckdweller - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4818": {
+      "url": "https://www.wowhead.com/forever/npc=4818",
+      "bytes": 284399,
+      "sha256": "6e79a0bb2c73caa46935cdc5ea0bc1bbb26b56edbf1011fc30093877ef3a66b5",
+      "title": "Blindlight Murloc - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "object:19018": {
+      "url": "https://www.wowhead.com/forever/object=19018",
+      "bytes": 52309,
+      "sha256": "01f5739fcf851cfc4f4340c03911545c3cd877cb116d93fa78961ee60d790f68",
+      "title": "Giant Clam - Object - Forever",
+      "reusedCachedResponse": true,
+      "publishedAreas": [
+        {
+          "zoneID": 11,
+          "uiMapID": 1437,
+          "name": "Wetlands",
+          "pointCount": 50
+        },
+        {
+          "zoneID": 331,
+          "uiMapID": 1440,
+          "name": "Ashenvale",
+          "pointCount": 6
+        }
+      ],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4823": {
+      "url": "https://www.wowhead.com/forever/npc=4823",
+      "bytes": 250088,
+      "sha256": "428674958ba00b1e6deacc9b8f891360383b3a30e4d073658239c86e2dd9ecde",
+      "title": "Barbed Crustacean - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4832": {
+      "url": "https://www.wowhead.com/forever/npc=4832",
+      "bytes": 284817,
+      "sha256": "28634ba04caf0b785ab7cf29db2ab2fb7e72e3529665d29e46e20aa914477127",
+      "title": "Twilight Lord Kelris - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    },
+    "npc:4825": {
+      "url": "https://www.wowhead.com/forever/npc=4825",
+      "bytes": 272930,
+      "sha256": "f7700e44e2511a5040527d706f5a896c9f228383c88de984a7d3907a016eeb7c",
+      "title": "Aku'mai Snapjaw - NPC - Forever",
+      "reusedCachedResponse": false,
+      "publishedAreas": [],
+      "scope": "Exactkind-ID-name/fullinventory,notautomaticboss/currentpin/rate. Object19018contentsnotNPCkill;NPC12718locationnotitemID."
+    }
+  },
+  "fullPrimaryReverseJoins": [
+    {
+      "itemID": 5524,
+      "itemName": "Thick-shelled Clam",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 17057,
+      "itemName": "Shiny Fish Scales",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 6308,
+      "itemName": "Raw Bristle Whisker Catfish",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 14747,
+      "itemName": "Hulking Gauntlets",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 3039,
+      "itemName": "Short Ash Bow",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 2219,
+      "itemName": "Small Round Shield",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 1822,
+      "itemName": "Cedar Walking Stick",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 3612,
+      "itemName": "Plans: Green Iron Gauntlets",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 15532,
+      "itemName": "Sentry's Armsplints",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": true,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 929,
+      "itemName": "Healing Potion",
+      "actorKind": "npc",
+      "actorID": 4805,
+      "actorName": "Blackfathom Sea Witch",
+      "own": false,
+      "reverse": true,
+      "actorRows": 279
+    },
+    {
+      "itemID": 17057,
+      "itemName": "Shiny Fish Scales",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 5524,
+      "itemName": "Thick-shelled Clam",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 1821,
+      "itemName": "Warped Blade",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 1775,
+      "itemName": "Brocade Gloves",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 15211,
+      "itemName": "Militant Shortsword",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 14369,
+      "itemName": "Mystic's Wrap",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 3198,
+      "itemName": "Battering Hammer",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 15311,
+      "itemName": "Feral Harness",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 9769,
+      "itemName": "Greenweave Branch",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 1801,
+      "itemName": "Rawhide Shoulderpads",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 6308,
+      "itemName": "Raw Bristle Whisker Catfish",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 3379,
+      "itemName": "Brocade Bracers",
+      "actorKind": "npc",
+      "actorID": 4807,
+      "actorName": "Blackfathom Myrmidon",
+      "own": true,
+      "reverse": true,
+      "actorRows": 285
+    },
+    {
+      "itemID": 2592,
+      "itemName": "Wool Cloth",
+      "actorKind": "npc",
+      "actorID": 4798,
+      "actorName": "Fallenroot Shadowstalker",
+      "own": true,
+      "reverse": true,
+      "actorRows": 260
+    },
+    {
+      "itemID": 3770,
+      "itemName": "Mutton Chop",
+      "actorKind": "npc",
+      "actorID": 4798,
+      "actorName": "Fallenroot Shadowstalker",
+      "own": true,
+      "reverse": true,
+      "actorRows": 260
+    },
+    {
+      "itemID": 4306,
+      "itemName": "Silk Cloth",
+      "actorKind": "npc",
+      "actorID": 4798,
+      "actorName": "Fallenroot Shadowstalker",
+      "own": false,
+      "reverse": true,
+      "actorRows": 260
+    },
+    {
+      "itemID": 5524,
+      "itemName": "Thick-shelled Clam",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 17057,
+      "itemName": "Shiny Fish Scales",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 1468,
+      "itemName": "Murloc Fin",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 730,
+      "itemName": "Murloc Eye",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 5784,
+      "itemName": "Slimy Murloc Scale",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 17058,
+      "itemName": "Fish Oil",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 1778,
+      "itemName": "Brocade Vest",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 14127,
+      "itemName": "Ritual Shroud",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 15329,
+      "itemName": "Wrangler's Belt",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 6308,
+      "itemName": "Raw Bristle Whisker Catfish",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 2765,
+      "itemName": "Hunting Knife",
+      "actorKind": "npc",
+      "actorID": 4819,
+      "actorName": "Blindlight Muckdweller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 219
+    },
+    {
+      "itemID": 2592,
+      "itemName": "Wool Cloth",
+      "actorKind": "npc",
+      "actorID": 4810,
+      "actorName": "Twilight Reaver",
+      "own": false,
+      "reverse": true,
+      "actorRows": 273
+    },
+    {
+      "itemID": 4542,
+      "itemName": "Moist Cornbread",
+      "actorKind": "npc",
+      "actorID": 4810,
+      "actorName": "Twilight Reaver",
+      "own": true,
+      "reverse": true,
+      "actorRows": 273
+    },
+    {
+      "itemID": 15515,
+      "itemName": "Spiked Chain Belt",
+      "actorKind": "npc",
+      "actorID": 4810,
+      "actorName": "Twilight Reaver",
+      "own": true,
+      "reverse": true,
+      "actorRows": 273
+    },
+    {
+      "itemID": 14573,
+      "itemName": "Bristlebark Amice",
+      "actorKind": "npc",
+      "actorID": 4810,
+      "actorName": "Twilight Reaver",
+      "own": true,
+      "reverse": true,
+      "actorRows": 273
+    },
+    {
+      "itemID": 2592,
+      "itemName": "Wool Cloth",
+      "actorKind": "npc",
+      "actorID": 4811,
+      "actorName": "Twilight Aquamancer",
+      "own": false,
+      "reverse": true,
+      "actorRows": 280
+    },
+    {
+      "itemID": 2674,
+      "itemName": "Crawler Meat",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 17057,
+      "itemName": "Shiny Fish Scales",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 1775,
+      "itemName": "Brocade Gloves",
+      "actorKind": "npc",
+      "actorID": 4811,
+      "actorName": "Twilight Aquamancer",
+      "own": true,
+      "reverse": true,
+      "actorRows": 280
+    },
+    {
+      "itemID": 5569,
+      "itemName": "Seaweed",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 2675,
+      "itemName": "Crawler Claw",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 11994,
+      "itemName": "Coral Band",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 2034,
+      "itemName": "Scholarly Robes",
+      "actorKind": "npc",
+      "actorID": 4811,
+      "actorName": "Twilight Aquamancer",
+      "own": true,
+      "reverse": true,
+      "actorRows": 280
+    },
+    {
+      "itemID": 1748,
+      "itemName": "Linked Chain Bracers",
+      "actorKind": "npc",
+      "actorID": 4811,
+      "actorName": "Twilight Aquamancer",
+      "own": true,
+      "reverse": true,
+      "actorRows": 280
+    },
+    {
+      "itemID": 8183,
+      "itemName": "Precision Bow",
+      "actorKind": "npc",
+      "actorID": 4811,
+      "actorName": "Twilight Aquamancer",
+      "own": true,
+      "reverse": true,
+      "actorRows": 280
+    },
+    {
+      "itemID": 10287,
+      "itemName": "Greenweave Mantle",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 248707,
+      "itemName": "Waylaid Crate: Journeyman Parts",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 5524,
+      "itemName": "Thick-shelled Clam",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 14375,
+      "itemName": "Sanguine Cuffs",
+      "actorKind": "npc",
+      "actorID": 4823,
+      "actorName": "Barbed Crustacean",
+      "own": true,
+      "reverse": true,
+      "actorRows": 201
+    },
+    {
+      "itemID": 5504,
+      "itemName": "Tangy Clam Meat",
+      "actorKind": "object",
+      "actorID": 19018,
+      "actorName": "Giant Clam",
+      "own": true,
+      "reverse": true,
+      "actorRows": 9
+    },
+    {
+      "itemID": 5524,
+      "itemName": "Thick-shelled Clam",
+      "actorKind": "npc",
+      "actorID": 4825,
+      "actorName": "Aku'mai Snapjaw",
+      "own": true,
+      "reverse": true,
+      "actorRows": 208
+    },
+    {
+      "itemID": 5784,
+      "itemName": "Slimy Murloc Scale",
+      "actorKind": "npc",
+      "actorID": 4818,
+      "actorName": "Blindlight Murloc",
+      "own": true,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 4555,
+      "itemName": "Thick Scaly Tail",
+      "actorKind": "npc",
+      "actorID": 4825,
+      "actorName": "Aku'mai Snapjaw",
+      "own": true,
+      "reverse": true,
+      "actorRows": 208
+    },
+    {
+      "itemID": 5524,
+      "itemName": "Thick-shelled Clam",
+      "actorKind": "npc",
+      "actorID": 4818,
+      "actorName": "Blindlight Murloc",
+      "own": true,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 3712,
+      "itemName": "Turtle Meat",
+      "actorKind": "npc",
+      "actorID": 4825,
+      "actorName": "Aku'mai Snapjaw",
+      "own": true,
+      "reverse": true,
+      "actorRows": 208
+    },
+    {
+      "itemID": 1780,
+      "itemName": "Cross-stitched Sandals",
+      "actorKind": "object",
+      "actorID": 19018,
+      "actorName": "Giant Clam",
+      "own": true,
+      "reverse": true,
+      "actorRows": 9
+    },
+    {
+      "itemID": 17057,
+      "itemName": "Shiny Fish Scales",
+      "actorKind": "npc",
+      "actorID": 4818,
+      "actorName": "Blindlight Murloc",
+      "own": true,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 1468,
+      "itemName": "Murloc Fin",
+      "actorKind": "npc",
+      "actorID": 4818,
+      "actorName": "Blindlight Murloc",
+      "own": true,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 262888,
+      "itemName": "Sealed Journeyman's Writ",
+      "actorKind": "npc",
+      "actorID": 4818,
+      "actorName": "Blindlight Murloc",
+      "own": true,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 5500,
+      "itemName": "Iridescent Pearl",
+      "actorKind": "object",
+      "actorID": 19018,
+      "actorName": "Giant Clam",
+      "own": true,
+      "reverse": true,
+      "actorRows": 9
+    },
+    {
+      "itemID": 4542,
+      "itemName": "Moist Cornbread",
+      "actorKind": "npc",
+      "actorID": 4814,
+      "actorName": "Twilight Elementalist",
+      "own": true,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 4556,
+      "itemName": "Speckled Shell Fragment",
+      "actorKind": "npc",
+      "actorID": 4825,
+      "actorName": "Aku'mai Snapjaw",
+      "own": true,
+      "reverse": true,
+      "actorRows": 208
+    },
+    {
+      "itemID": 4306,
+      "itemName": "Silk Cloth",
+      "actorKind": "npc",
+      "actorID": 4814,
+      "actorName": "Twilight Elementalist",
+      "own": false,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 5524,
+      "itemName": "Thick-shelled Clam",
+      "actorKind": "npc",
+      "actorID": 4803,
+      "actorName": "Blackfathom Oracle",
+      "own": true,
+      "reverse": true,
+      "actorRows": 224
+    },
+    {
+      "itemID": 1820,
+      "itemName": "Wooden Maul",
+      "actorKind": "npc",
+      "actorID": 4803,
+      "actorName": "Blackfathom Oracle",
+      "own": true,
+      "reverse": true,
+      "actorRows": 224
+    },
+    {
+      "itemID": 6308,
+      "itemName": "Raw Bristle Whisker Catfish",
+      "actorKind": "npc",
+      "actorID": 4818,
+      "actorName": "Blindlight Murloc",
+      "own": true,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 15249,
+      "itemName": "Polished Zweihander",
+      "actorKind": "npc",
+      "actorID": 4814,
+      "actorName": "Twilight Elementalist",
+      "own": true,
+      "reverse": true,
+      "actorRows": 235
+    },
+    {
+      "itemID": 15125,
+      "itemName": "Robust Gloves",
+      "actorKind": "npc",
+      "actorID": 4825,
+      "actorName": "Aku'mai Snapjaw",
+      "own": true,
+      "reverse": true,
+      "actorRows": 208
+    },
+    {
+      "itemID": 5470,
+      "itemName": "Thunder Lizard Tail",
+      "actorKind": "npc",
+      "actorID": 3238,
+      "actorName": "Stormhide",
+      "own": true,
+      "reverse": true,
+      "actorRows": 189
+    },
+    {
+      "itemID": 5133,
+      "itemName": "Seeping Gizzard",
+      "actorKind": "npc",
+      "actorID": 3238,
+      "actorName": "Stormhide",
+      "own": true,
+      "reverse": true,
+      "actorRows": 189
+    },
+    {
+      "itemID": 3174,
+      "itemName": "Spider Ichor",
+      "actorKind": "npc",
+      "actorID": 4263,
+      "actorName": "Deepmoss Hatchling",
+      "own": true,
+      "reverse": true,
+      "actorRows": 121
+    },
+    {
+      "itemID": 5465,
+      "itemName": "Small Spider Leg",
+      "actorKind": "npc",
+      "actorID": 4263,
+      "actorName": "Deepmoss Hatchling",
+      "own": true,
+      "reverse": true,
+      "actorRows": 121
+    },
+    {
+      "itemID": 3167,
+      "itemName": "Thick Spider Hair",
+      "actorKind": "npc",
+      "actorID": 4263,
+      "actorName": "Deepmoss Hatchling",
+      "own": true,
+      "reverse": true,
+      "actorRows": 121
+    },
+    {
+      "itemID": 2592,
+      "itemName": "Wool Cloth",
+      "actorKind": "npc",
+      "actorID": 4799,
+      "actorName": "Fallenroot Hellcaller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 238
+    },
+    {
+      "itemID": 1205,
+      "itemName": "Melon Juice",
+      "actorKind": "npc",
+      "actorID": 4799,
+      "actorName": "Fallenroot Hellcaller",
+      "own": false,
+      "reverse": true,
+      "actorRows": 238
+    },
+    {
+      "itemID": 1800,
+      "itemName": "Rawhide Pants",
+      "actorKind": "npc",
+      "actorID": 4799,
+      "actorName": "Fallenroot Hellcaller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 238
+    },
+    {
+      "itemID": 248687,
+      "itemName": "Waylaid Crate: Journeyman Ore",
+      "actorKind": "npc",
+      "actorID": 3238,
+      "actorName": "Stormhide",
+      "own": true,
+      "reverse": true,
+      "actorRows": 189
+    },
+    {
+      "itemID": 14373,
+      "itemName": "Sanguine Belt",
+      "actorKind": "npc",
+      "actorID": 4799,
+      "actorName": "Fallenroot Hellcaller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 238
+    },
+    {
+      "itemID": 1210,
+      "itemName": "Shadowgem",
+      "actorKind": "npc",
+      "actorID": 4263,
+      "actorName": "Deepmoss Hatchling",
+      "own": false,
+      "reverse": true,
+      "actorRows": 121
+    },
+    {
+      "itemID": 1475,
+      "itemName": "Small Venom Sac",
+      "actorKind": "npc",
+      "actorID": 4263,
+      "actorName": "Deepmoss Hatchling",
+      "own": true,
+      "reverse": true,
+      "actorRows": 121
+    },
+    {
+      "itemID": 14742,
+      "itemName": "Hulking Boots",
+      "actorKind": "npc",
+      "actorID": 4799,
+      "actorName": "Fallenroot Hellcaller",
+      "own": true,
+      "reverse": true,
+      "actorRows": 238
+    },
+    {
+      "itemID": 3311,
+      "itemName": "Ceremonial Leather Ankleguards",
+      "actorKind": "npc",
+      "actorID": 4263,
+      "actorName": "Deepmoss Hatchling",
+      "own": true,
+      "reverse": true,
+      "actorRows": 121
+    },
+    {
+      "itemID": 273842,
+      "itemName": "Treacherous Treads",
+      "actorKind": "npc",
+      "actorID": 12902,
+      "actorName": "Lorgus Jett",
+      "own": true,
+      "reverse": true,
+      "actorRows": 169
+    },
+    {
+      "itemID": 5881,
+      "itemName": "Head of Kelris",
+      "actorKind": "npc",
+      "actorID": 4832,
+      "actorName": "Twilight Lord Kelris",
+      "own": true,
+      "reverse": true,
+      "actorRows": 195
+    },
+    {
+      "itemID": 1155,
+      "itemName": "Rod of the Sleepwalker",
+      "actorKind": "npc",
+      "actorID": 4832,
+      "actorName": "Twilight Lord Kelris",
+      "own": true,
+      "reverse": true,
+      "actorRows": 195
+    },
+    {
+      "itemID": 6903,
+      "itemName": "Gaze Dreamer Pants",
+      "actorKind": "npc",
+      "actorID": 4832,
+      "actorName": "Twilight Lord Kelris",
+      "own": true,
+      "reverse": true,
+      "actorRows": 195
+    },
+    {
+      "itemID": 2592,
+      "itemName": "Wool Cloth",
+      "actorKind": "npc",
+      "actorID": 4832,
+      "actorName": "Twilight Lord Kelris",
+      "own": false,
+      "reverse": true,
+      "actorRows": 195
+    },
+    {
+      "itemID": 273846,
+      "itemName": "Twilight Lord Girdle",
+      "actorKind": "npc",
+      "actorID": 4832,
+      "actorName": "Twilight Lord Kelris",
+      "own": true,
+      "reverse": true,
+      "actorRows": 195
+    },
+    {
+      "itemID": 273841,
+      "itemName": "Twilight Maul",
+      "actorKind": "npc",
+      "actorID": 12902,
+      "actorName": "Lorgus Jett",
+      "own": true,
+      "reverse": true,
+      "actorRows": 169
+    }
+  ],
+  "primaryPages": {
+    "total": 90,
+    "new": 68,
+    "cached": 22
+  },
+  "casePrimaryPages": 183,
+  "totalDistinctPrimaryPages": 273,
+  "totalNewPrimaryPages": 193,
+  "totalCachedPrimaryPages": 80,
+  "newFullReadFailures": 0,
+  "canonicalGearItems": 26,
+  "outsideCanonicalItems": 46,
+  "equipmentCandidatesAdded": 0,
+  "originalQueueCasesAdded": 0,
+  "newCraftsAdded": 0,
+  "sourceRecipeBook": {
+    "bookItemID": 3612,
+    "finishedItemID": 3485,
+    "spellID": 3336,
+    "profession": "Blacksmithing",
+    "publishedBookLearningSkill": 125,
+    "targetNPC": 4805,
+    "targetName": "Blackfathom Sea Witch",
+    "ownAndFullActorMatch": true,
+    "sourceBookNotFinishedGearDrop": true,
+    "original954QueueEntryUnchanged": true,
+    "liveVerified": false
+  },
+  "allowedSemanticChanges": {
+    "all_items_reconciled.csv": {
+      "additiveSummaryCells": 98,
+      "sourceRowOffsetOnlyCells": 0,
+      "semanticChanges": [
+        {
+          "itemID": "1155",
+          "name": "Rod of the Sleepwalker",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            },
+            "dungeonConfidence": {
+              "before": "forever-community-reference",
+              "after": "forever-observed-npc"
+            }
+          }
+        },
+        {
+          "itemID": "2034",
+          "name": "Scholarly Robes",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "3039",
+          "name": "Short Ash Bow",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "itemID": "3198",
+          "name": "Battering Hammer",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "6903",
+          "name": "Gaze Dreamer Pants",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            },
+            "dungeonConfidence": {
+              "before": "forever-community-reference",
+              "after": "forever-observed-npc"
+            }
+          }
+        },
+        {
+          "itemID": "8183",
+          "name": "Precision Bow",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "9769",
+          "name": "Greenweave Branch",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "10287",
+          "name": "Greenweave Mantle",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "11994",
+          "name": "Coral Band",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "14127",
+          "name": "Ritual Shroud",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "14369",
+          "name": "Mystic's Wrap",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "14373",
+          "name": "Sanguine Belt",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "14375",
+          "name": "Sanguine Cuffs",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "14573",
+          "name": "Bristlebark Amice",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "14742",
+          "name": "Hulking Boots",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "14747",
+          "name": "Hulking Gauntlets",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "15125",
+          "name": "Robust Gloves",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "15211",
+          "name": "Militant Shortsword",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 1,
+              "after": 2
+            }
+          }
+        },
+        {
+          "itemID": "15249",
+          "name": "Polished Zweihander",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "15311",
+          "name": "Feral Harness",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "15329",
+          "name": "Wrangler's Belt",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "15515",
+          "name": "Spiked Chain Belt",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "15532",
+          "name": "Sentry's Armsplints",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "273841",
+          "name": "Twilight Maul",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "273842",
+          "name": "Treacherous Treads",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        },
+        {
+          "itemID": "273846",
+          "name": "Twilight Lord Girdle",
+          "changes": {
+            "EverlootObservedEdges": {
+              "before": 0,
+              "after": 1
+            }
+          }
+        }
+      ]
+    },
+    "dungeon_items_reconciled.csv": {
+      "additiveSummaryCells": 0,
+      "sourceRowOffsetOnlyCells": 0,
+      "semanticChanges": [
+        {
+          "itemID": "1155",
+          "name": "Rod of the Sleepwalker",
+          "changes": {
+            "confidence": {
+              "before": "forever-community-reference",
+              "after": "forever-observed-npc"
+            },
+            "sourceSummary": {
+              "before": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever reference; live unverified)",
+              "after": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever observed)"
+            },
+            "playerObservedNPCs": {
+              "before": [],
+              "after": [
+                {
+                  "name": "Twilight Lord Kelris",
+                  "npcID": 4832,
+                  "installs": 3,
+                  "lastSeen": "2026-11-10T09:36:19.000Z",
+                  "evidence": "everloot-3plus-installs"
+                }
+              ]
+            },
+            "needsLiveVerification": {
+              "before": "True",
+              "after": "False"
+            }
+          }
+        },
+        {
+          "itemID": "6903",
+          "name": "Gaze Dreamer Pants",
+          "changes": {
+            "confidence": {
+              "before": "forever-community-reference",
+              "after": "forever-observed-npc"
+            },
+            "sourceSummary": {
+              "before": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever reference; live unverified)",
+              "after": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever observed)"
+            },
+            "playerObservedNPCs": {
+              "before": [],
+              "after": [
+                {
+                  "name": "Twilight Lord Kelris",
+                  "npcID": 4832,
+                  "installs": 3,
+                  "lastSeen": "2026-11-10T08:56:16.000Z",
+                  "evidence": "everloot-3plus-installs"
+                }
+              ]
+            },
+            "needsLiveVerification": {
+              "before": "True",
+              "after": "False"
+            }
+          }
+        }
+      ]
+    },
+    "recipes_reconciled.csv": {
+      "additiveSummaryCells": 0,
+      "sourceRowOffsetOnlyCells": 0,
+      "semanticChanges": [
+        {
+          "itemID": "3485",
+          "name": "Green Iron Gauntlets",
+          "changes": {
+            "evidence": {
+              "before": "forever-community-reference",
+              "after": "forever-observed"
+            },
+            "observedBookAcquisition": {
+              "before": [],
+              "after": [
+                {
+                  "relation": "dropped_by",
+                  "targetID": 4805,
+                  "targetType": "npc",
+                  "targetName": "Blackfathom Sea Witch",
+                  "installs": 3,
+                  "lastSeen": "2026-11-10T09:10:57.000Z"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "playfulls": {
+    "items": 23484,
+    "sourceDefinitions": 9161,
+    "allNamesResolvedAcquisitionFactsFullSourcesEntireMetadataExact": true,
+    "opaqueField10Cells": 111,
+    "opaqueField10SelectedCells": 0
+  },
+  "generatedDungeonFlagQualification": "Existinggenerator setsneedsLiveVerificationFalse for1155/6903whenconfidenceforever-observed-npc. This is thegenerated source-review flag from3installnullbuildreports,notpersonal/currentbuildconfirmation. Actor remains4832Kelris/rolesunchanged/no falseboss. Sixdungeonexceptions/954personalcurrentlivebookverifications remainopen.",
+  "sourceAttribution": {
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+    "source": "https://everloot.app/database/items",
+    "terms": "https://everloot.app/terms#licences"
+  },
+  "scope": "95new=94itemdrops+1NPC12718location/all3installnullbuild.72itemidentities26canonicalgear+46excluded.94fullreverse91NPC/3GiantClam19018object;86ownpositive/8ownomissions(200maycap,202-204no capassumed)allfullactorpositive.26gearEVcells/twoexistingKelrisconfidenceupgrades/twodungeonreportrows/one3485bookacquisitionevidencechangeonly/noidentity-classes-equip-stats-materials-crafts. Fourolditemcounterupdates14oldNPClocations/noorigin-build-firstSeenchange. OriginalbookregistryalreadylistsSeaWitch4805/min125/broad200maycap/preserve954and759counts. No newcandidate/frozenqueuecase/craft.183case+90auxdisjoint273full193new80cached/eightcaseNPC403separate.111opaquePFfield10cellsselected0notstats-availability-events. Preserve95+18rawdelta beforeactualdiagnosticbaselineadvance;do notrerunoldreview/mutatorsafteradvance."
+}
