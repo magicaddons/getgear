@@ -1,0 +1,463 @@
+{
+  "beforeItems": 23484,
+  "afterItems": 23484,
+  "newIDs": [],
+  "removedIDs": [],
+  "fullDefinitionsAdded": [],
+  "fullDefinitionsRemoved": [],
+  "otherChangedRawCells": [],
+  "lengthChanges": [],
+  "sourceIndexCells": [],
+  "uninterpretedField10Cells": [],
+  "metadataChangedKeys": [],
+  "sourceKindsExact": true,
+  "metadataOtherChangedKeys": [],
+  "oldStatFacets": [
+    [
+      "str",
+      "Strength",
+      0,
+      2457
+    ],
+    [
+      "agi",
+      "Agility",
+      0,
+      2047
+    ],
+    [
+      "sta",
+      "Stamina",
+      0,
+      6072
+    ],
+    [
+      "int",
+      "Intellect",
+      0,
+      3363
+    ],
+    [
+      "spi",
+      "Spirit",
+      0,
+      2199
+    ],
+    [
+      "armor",
+      "Armor",
+      1,
+      660
+    ],
+    [
+      "def",
+      "Defense",
+      1,
+      310
+    ],
+    [
+      "dodge",
+      "Dodge",
+      1,
+      90
+    ],
+    [
+      "parry",
+      "Parry",
+      1,
+      17
+    ],
+    [
+      "block",
+      "Block",
+      1,
+      33
+    ],
+    [
+      "bv",
+      "Block Value",
+      1,
+      43
+    ],
+    [
+      "crit",
+      "Critical Strike",
+      2,
+      1020
+    ],
+    [
+      "hit",
+      "Hit",
+      2,
+      488
+    ],
+    [
+      "haste",
+      "Haste",
+      2,
+      102
+    ],
+    [
+      "exp",
+      "Expertise",
+      2,
+      81
+    ],
+    [
+      "ap",
+      "Attack Power",
+      3,
+      542
+    ],
+    [
+      "rap",
+      "Ranged Attack Power",
+      3,
+      35
+    ],
+    [
+      "fap",
+      "Feral Attack Power",
+      3,
+      6
+    ],
+    [
+      "sp",
+      "Spell Damage",
+      4,
+      2260
+    ],
+    [
+      "heal",
+      "Healing",
+      4,
+      2391
+    ],
+    [
+      "shadow",
+      "Shadow Damage",
+      4,
+      92
+    ],
+    [
+      "fire",
+      "Fire Damage",
+      4,
+      75
+    ],
+    [
+      "frost",
+      "Frost Damage",
+      4,
+      54
+    ],
+    [
+      "arcane",
+      "Arcane Damage",
+      4,
+      32
+    ],
+    [
+      "holy",
+      "Holy Damage",
+      4,
+      25
+    ],
+    [
+      "nature",
+      "Nature Damage",
+      4,
+      17
+    ],
+    [
+      "pen",
+      "Spell Penetration",
+      4,
+      75
+    ],
+    [
+      "mp5",
+      "Mana per 5 sec",
+      5,
+      361
+    ],
+    [
+      "hp5",
+      "Health per 5 sec",
+      5,
+      73
+    ],
+    [
+      "rfire",
+      "Fire Resistance",
+      6,
+      171
+    ],
+    [
+      "rnature",
+      "Nature Resistance",
+      6,
+      190
+    ],
+    [
+      "rshadow",
+      "Shadow Resistance",
+      6,
+      131
+    ],
+    [
+      "rfrost",
+      "Frost Resistance",
+      6,
+      139
+    ],
+    [
+      "rarcane",
+      "Arcane Resistance",
+      6,
+      59
+    ],
+    [
+      "proc",
+      "Chance on hit",
+      7,
+      238
+    ],
+    [
+      "use",
+      "Use effect",
+      7,
+      351
+    ],
+    [
+      "run",
+      "Run speed",
+      7,
+      69
+    ]
+  ],
+  "newStatFacets": [
+    [
+      "str",
+      "Strength",
+      0,
+      2457
+    ],
+    [
+      "agi",
+      "Agility",
+      0,
+      2047
+    ],
+    [
+      "sta",
+      "Stamina",
+      0,
+      6072
+    ],
+    [
+      "int",
+      "Intellect",
+      0,
+      3363
+    ],
+    [
+      "spi",
+      "Spirit",
+      0,
+      2199
+    ],
+    [
+      "armor",
+      "Armor",
+      1,
+      660
+    ],
+    [
+      "def",
+      "Defense",
+      1,
+      310
+    ],
+    [
+      "dodge",
+      "Dodge",
+      1,
+      90
+    ],
+    [
+      "parry",
+      "Parry",
+      1,
+      17
+    ],
+    [
+      "block",
+      "Block",
+      1,
+      33
+    ],
+    [
+      "bv",
+      "Block Value",
+      1,
+      43
+    ],
+    [
+      "crit",
+      "Critical Strike",
+      2,
+      1020
+    ],
+    [
+      "hit",
+      "Hit",
+      2,
+      488
+    ],
+    [
+      "haste",
+      "Haste",
+      2,
+      102
+    ],
+    [
+      "exp",
+      "Expertise",
+      2,
+      81
+    ],
+    [
+      "ap",
+      "Attack Power",
+      3,
+      542
+    ],
+    [
+      "rap",
+      "Ranged Attack Power",
+      3,
+      35
+    ],
+    [
+      "fap",
+      "Feral Attack Power",
+      3,
+      6
+    ],
+    [
+      "sp",
+      "Spell Damage",
+      4,
+      2260
+    ],
+    [
+      "heal",
+      "Healing",
+      4,
+      2391
+    ],
+    [
+      "shadow",
+      "Shadow Damage",
+      4,
+      92
+    ],
+    [
+      "fire",
+      "Fire Damage",
+      4,
+      75
+    ],
+    [
+      "frost",
+      "Frost Damage",
+      4,
+      54
+    ],
+    [
+      "arcane",
+      "Arcane Damage",
+      4,
+      32
+    ],
+    [
+      "holy",
+      "Holy Damage",
+      4,
+      25
+    ],
+    [
+      "nature",
+      "Nature Damage",
+      4,
+      17
+    ],
+    [
+      "pen",
+      "Spell Penetration",
+      4,
+      75
+    ],
+    [
+      "mp5",
+      "Mana per 5 sec",
+      5,
+      361
+    ],
+    [
+      "hp5",
+      "Health per 5 sec",
+      5,
+      73
+    ],
+    [
+      "rfire",
+      "Fire Resistance",
+      6,
+      171
+    ],
+    [
+      "rnature",
+      "Nature Resistance",
+      6,
+      190
+    ],
+    [
+      "rshadow",
+      "Shadow Resistance",
+      6,
+      131
+    ],
+    [
+      "rfrost",
+      "Frost Resistance",
+      6,
+      139
+    ],
+    [
+      "rarcane",
+      "Arcane Resistance",
+      6,
+      59
+    ],
+    [
+      "proc",
+      "Chance on hit",
+      7,
+      238
+    ],
+    [
+      "use",
+      "Use effect",
+      7,
+      351
+    ],
+    [
+      "run",
+      "Run speed",
+      7,
+      69
+    ]
+  ]
+}

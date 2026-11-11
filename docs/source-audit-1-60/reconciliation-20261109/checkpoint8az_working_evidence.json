@@ -31,14 +31,15 @@
     "BoP": 5,
     "Uncommon": 86,
     "Rare": 18,
-    "plainUniqueGear": 3,
+    "plainUniqueGear": 2,
     "explicitClassMasks": 0,
     "itemEffectFullReverseJoins": 3,
     "shovelPublishedCharges": 20,
     "shovelMossCreationJoins": 3,
     "newDirectReadFailures": 1,
     "reusedKnownFull403Failures": 0,
-    "currentLiveVerifiedByResearcher": 0
+    "currentLiveVerifiedByResearcher": 0,
+    "uniqueEquippedGear": 1
   },
   "items": {
     "720": {
@@ -96085,7 +96086,7 @@
       "canonicalClasses": "PRIEST:23,MAGE:23,WARLOCK:23,DRUID:23,ROGUE:23,HUNTER:23,SHAMAN:23,WARRIOR:23,PALADIN:23",
       "group": "named-enemy",
       "binding": "BoP",
-      "plainUnique": true,
+      "plainUnique": false,
       "requirements": [
         "Requires Level 23"
       ],
@@ -96113,7 +96114,8 @@
       "reverseObjectIDs": [],
       "unconfirmedObjectIDs": [],
       "reverseItemContainerIDs": [],
-      "reversePickpocketNPCIDs": []
+      "reversePickpocketNPCIDs": [],
+      "uniqueEquipped": true
     },
     "285328": {
       "url": "https://www.wowhead.com/forever/item=285328",
@@ -123328,5 +123330,6 @@
     "ciJob": 130104574626,
     "validatedFinalHEAD": "517bafa4c8d65b5348cc71385be1d3dd8b9c185e",
     "botReview": "Only reconciliationtime and recorded Everlootresponse fingerprints;PF/runtime/reports/counts unchanged. Actual local8AZ facts/counters retained;bot API bytes not independently captured,no equal-counter inference from counts/extra diagnostic fetches."
-  }
+  },
+  "uniqueQualificationErratum": "8BF retained-original-body verification:273820Unique-Equipped,notplainUnique. Sourcehash/acquisition/gearidentity unchanged;4454and273817remainplainUnique."
 }
