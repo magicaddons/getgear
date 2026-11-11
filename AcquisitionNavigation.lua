@@ -105,9 +105,9 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         end
     end
     local questRoutes=0
-    for _, route in ipairs(plan.routes or {}) do if route.kind=="quest" then questRoutes=questRoutes+1 end end
+    for _, route in ipairs(plan.routes or {}) do if route.kind=="quest" or route.kind=="quest_container" then questRoutes=questRoutes+1 end end
     for _, route in ipairs(plan.routes or {}) do
-        if route.kind=="quest" then
+        if route.kind=="quest" or route.kind=="quest_container" then
             local id,state=chooseQuest(route.questID)
             local q=get(model.quests,id) or {questID=id,starts={},ends={}}
             if onQuest(id) then
@@ -156,7 +156,10 @@ function GetGear:GetAcquisitionDirections(gear)
     local out={}
     local plan=get(data().items,gear and gear.itemID)
     for _, route in ipairs(plan and plan.routes or {}) do
-        if route.kind=="quest" then
+        if route.kind=="quest" or route.kind=="quest_container" then
+            if route.kind=="quest_container" then
+                out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the quest rewards the container, not guaranteed equipment."
+            end
             local id,state,chain=chooseQuest(route.questID)
             if chain then
                 out[#out+1]="Quest route (ordered published stages):"

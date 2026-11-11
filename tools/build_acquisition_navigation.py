@@ -51,6 +51,7 @@ class Evidence:
     def __init__(self):
         self.sources = {}
         self.quests = {}
+        self.full_quest_rewards = collections.defaultdict(set)
         self.items = collections.defaultdict(dict)
         self.currencies = {}
         self.maps = collections.defaultdict(set)
@@ -141,6 +142,13 @@ class Evidence:
                 identity = node.get("identity") or node.get("item") or {}
                 if isinstance(identity, dict):
                     item["identity"] = identity
+                # Full-container research retains exact positive contents joins
+                # separately from the item's own acquisition lists.
+                if isinstance(node.get("selectedContains"), list):
+                    item.setdefault("contains", [])
+                    for value in node["selectedContains"]:
+                        if value not in item["contains"]:
+                            item["contains"].append(value)
                 item["disputed"] = item.get("disputed", False) or bool(node.get("crossVersion") or node.get("seasonOfDiscoveryWarning") or node.get("unavailable") or node.get("primaryUnavailable") or node.get("crossVersionWarning"))
                 for field in ["relations", "acquisitionLists", "lists", "tables"]:
                     for relation, values in (node.get(field) or {}).items():
@@ -157,6 +165,10 @@ class Evidence:
                                         self.quest(q["id"], q)
             elif kind == "quest":
                 q = self.quest(source_id, node.get("quest"))
+                full_quest = node.get("quest") or {}
+                for reward in rows(full_quest.get("itemrewards")) + rows(full_quest.get("itemchoices")):
+                    if isinstance(reward, list) and reward and type(reward[0]) is int:
+                        self.full_quest_rewards[str(source_id)].add(reward[0])
                 q.setdefault("name", node.get("title", "Quest #" + str(source_id)).split(" - ")[0])
                 q["evidence"] = provenance
                 if node.get("requiredPhysicalItems"):
@@ -286,6 +298,23 @@ def build(inputs):
         # Reviewed future trainer/special-crafting/unlock routes share the
         # existing source registry and primary NPC/object evidence pool.
         for extra in meta.get("navigationRoutes", []):
+            if extra.get("kind") == "quest_container":
+                quest_id, container_id = extra.get("questID"), extra.get("containerItemID")
+                if type(quest_id) is not int or type(container_id) is not int:
+                    continue
+                q = evidence.quests.get(str(quest_id), {})
+                container = evidence.items.get(container_id, {})
+                if (q.get("evidence") and container.get("evidence") and not container.get("disputed")
+                        and container_id in evidence.full_quest_rewards.get(str(quest_id), set())
+                        and any(isinstance(x, dict) and x.get("id") == item_id for x in rows(container.get("contains")))):
+                    route("quest_container", questID=quest_id, containerItemID=container_id,
+                          instructions=extra.get("instructions"), verification="published-reference")
+                    if not q.get("starts"):
+                        gap("quest_start_missing", quest=quest_id, detail="Container reward quest has no established starting actor.")
+                else:
+                    gap("container_quest_relation_unverified", source="item:" + str(container_id), quest=quest_id,
+                        detail="Require full quest reward and exact full-container contents evidence; no inferred destination.")
+                continue
             if extra.get("kind") in ["trainer", "crafting_requirement", "object", "unlock", "named_drop"] and extra.get("source") in evidence.sources:
                 if not evidence.sources[extra["source"]]["evidence"]:
                     continue
@@ -392,7 +421,7 @@ def build(inputs):
             gap("source_version_disputed", detail="Availability warning must not create a misleading destination.")
         located, exact = False, False
         for entry in plan["routes"]:
-            if entry["kind"] == "quest":
+            if entry["kind"] in ["quest", "quest_container"]:
                 q = evidence.quests[str(entry["questID"])]
                 keys = q["starts"] + q["ends"]
             else:
@@ -409,7 +438,7 @@ def build(inputs):
                     gap("source_coordinates_missing", key, entry.get("questID", ""), "Named source exists; precise location not established.")
                 elif not any(coordinate(x.get("x")) and coordinate(x.get("y")) for x in evidence.sources[key]["locations"]):
                     gap("precise_coordinate_unverified", key, entry.get("questID", ""), "Published area/roaming footprint only; no invented point or centroid.")
-        expected = plan["category"] != "world_drop" or meta.get("originUnknown") is True or "named-enemy" in str(meta.get("confidence", "")) or bool(plan["routes"]) or item_id in partial_hints or bool(own.get("contained-in-object") and not own.get("dropped-by"))
+        expected = plan["category"] != "world_drop" or meta.get("originUnknown") is True or "named-enemy" in str(meta.get("confidence", "")) or bool(plan["routes"]) or bool(meta.get("navigationRoutes")) or item_id in partial_hints or bool(own.get("contained-in-object") and not own.get("dropped-by"))
         status = "verified_coordinate_data" if exact else "directions" if located else "missing" if expected else "not_applicable"
         if status == "missing":
             gap("actionable_location_missing", detail="No safe map target. Keep detailed source evidence; no fabricated marker.")
@@ -428,7 +457,7 @@ def build(inputs):
         for entry in plan["routes"]:
             if entry.get("source"):
                 used_sources.add(entry["source"])
-            if entry["kind"] == "quest":
+            if entry["kind"] in ["quest", "quest_container"]:
                 q = data["quests"][str(entry["questID"])]
                 used_sources.update(q["starts"] + q["ends"] + q["objectives"])
     # Retain quest-chain actors too, without creating duplicate location records.

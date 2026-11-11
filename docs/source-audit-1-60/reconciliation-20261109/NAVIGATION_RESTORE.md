@@ -143,3 +143,13 @@ After8BO:682published point-data/1275directions/3172missing/2578notapplicable;67
 - `/getgear map 17055`: qualify Omgorn/Tanaris as historical Classic guidance; show written directions through the same compact/guide action and no current map marker. Switch from an existing real marker first and ensure it is cleared.
 - 11302: Wasteland/Haunted affects the published shield proc; neither area is an acquisition marker.
 - Authored future `directionsOnly` and `legacy-reference` routes must withhold coordinates even if an NPC record has a position; source text and shared gap tracker remain visible. Client rendering remains unverified.
+
+
+### 8BR manual additions: indirect quest-container alternatives
+
+- `/getgear map 10096`, then10096/10103/10107/10109/10126/10128/10166/10171/10176/10179/10183/10199/10244 from compact overlay and full guide: same single pin/Oralius starting area in Burning Steppes; no invented exact point or input-farm marker.
+- Show Alliance quest minimum50/20DarkIronFannyPacks11468 in Blackrock Depths/return to Oralius forone11883container. Equipment remains level49/BoE/broad-drop eligible; source faction/level/inputs do not become wearer restrictions. Random container contents are not guaranteed gear.
+- Check reliable known/unknown/completed quest progress and unsupported APIs. Earlier prerequisites/current repeatability/access remain qualified; mixed BRD-body versus new BurningSteppes inputmapper points must not appear as confirmed farms.
+- Switch from/to17055historical written guidance and real markers; close/reopen maps/change zones/repeated clicks/native quest markers. Offline tests pass, but no actual Forever rendering or quest acceptance has been confirmed.
+
+A reliable active-client objective waypoint for4286 may supplement the published Oralius start/end area. Do not confuse that client-provided objective with the withheld mixed-source published input mapper.

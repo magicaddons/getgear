@@ -107,5 +107,30 @@ with tempfile.TemporaryDirectory() as temp:
     del reviewed[0]["navigationRoutes"][0]["directionsOnly"]
     (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps(reviewed))
     assert nav.build(gear)[0]["items"]["2"]["routes"][0]["directionsOnly"] is True, "legacy verification itself must withhold a current marker"
+    proof["items"].append(response("item", 900, selectedContains=[{"id": 2, "name": "World fixture"}]))
+    proof["quests"][0]["quest"]["itemrewards"] = [[900, 1]]
+    proof["quests"][0]["quest"]["reqlevel"] = 50
+    path.write_text(json.dumps(proof))
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
+        "itemID": 2, "navigationRoutes": [{"kind": "quest_container", "questID": 10, "containerItemID": 900,
+        "instructions": "One possible content; current quest access and rolls unverified."}]}]))
+    container, coverage, _, _ = nav.build(gear)
+    assert container["items"]["2"]["routes"][0]["kind"] == "quest_container"
+    assert container["items"]["2"]["category"] == "world_drop", "a container alternative must not turn the equipment into a direct quest reward"
+    assert container["quests"]["10"]["reqlevel"] == 50 and coverage[1]["status"] == "directions"
+    assert "npc:100" in container["sources"], "indirect quest actors must survive source pruning"
+    proof["items"][-1]["selectedContains"] = [{"id": 999}]
+    path.write_text(json.dumps(proof))
+    assert not any(r["kind"] == "quest_container" for r in nav.build(gear)[0].get("items", {}).get("2", {}).get("routes", [])), "the full wrapper must contain this exact equipment ID"
+    assert nav.build(gear)[1][1]["status"] == "missing", "a failed authored source is missing evidence, not inapplicable navigation"
+    proof["items"][-1]["selectedContains"] = [{"id": 2}]
+    proof["items"][0]["lists"]["reward-from-q"] = [{"id": 10, "itemrewards": [[900, 1]]}]
+    del proof["quests"][0]["quest"]["itemrewards"]
+    path.write_text(json.dumps(proof))
+    assert "2" not in nav.build(gear)[0]["items"], "a wrapper's quest summary plus a full-page header is not an independently projected full quest reward"
+    proof["quests"][0]["quest"]["itemrewards"] = [[900, 1]]
+    proof["items"][-1]["crossVersionWarning"] = True
+    path.write_text(json.dumps(proof))
+    assert "2" not in nav.build(gear)[0]["items"], "a disputed wrapper must not establish a current container route"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

@@ -1,21 +1,21 @@
 {
-  "capturedForCheckpoint": "8BQ actual final local8bq capture",
-  "capturedUTC": "2026-11-11T13:08:38.582914+00:00",
+  "capturedForCheckpoint": "8BR final actual local8br3 capture",
+  "capturedUTC": "2026-11-11T16:39:02.675269+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23608,
+    "itemCount": 23610,
     "sourceDefinitions": 9246,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.4312e87ed1.json",
+        "url": "https://playfulls.com/db/meta.dca9e4a406.json",
         "bytes": 999737,
-        "sha256": "4312e87ed1f8255c5a3b1e1efb85999c881fe37c3c6135824522654427c8e5dd",
+        "sha256": "dca9e4a406eca98c5814bb44b1bcc63f625cc9be1b4eb00b68b7a3aa3c1af9d4",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.b0bf409a63.json",
-        "bytes": 1356813,
-        "sha256": "b0bf409a636fc3299aa96da2ae5d0c4e4f1c1844db9ff639ba80eb1fe7c87874",
+        "url": "https://playfulls.com/db/gear.f4b4141128.json",
+        "bytes": 1357052,
+        "sha256": "f4b414112863ab8f618da520d7db40f10fc57cdd599118403e4e4bc40d489c97",
         "matchesRecordedFingerprint": true
       },
       {
@@ -25,20 +25,20 @@
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/other.d80c1a3fa6.json",
+        "url": "https://playfulls.com/db/other.6e2900dff4.json",
         "bytes": 446730,
-        "sha256": "d80c1a3fa6ac5d8ca445d9e700be50da760cd3126e4aa5261a1e23101ebd2b3f",
+        "sha256": "6e2900dff4085f77358fe07108686dc5d6beb59c49e7b8f6981d9c4b1f95f7a4",
         "matchesRecordedFingerprint": true
       }
     ],
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "All23608rawitems/9246fullsourceobjects/entiremetadata/resolvedacquisition/displayfacts exact8BPfinalactual-local8bp2;zero newremovedchangedopaque. Every factual snapshot byteexact;no diagnosticrefetch."
+    "comparison": "Two newoutsideleads independentlyfullchecked/candidate396\u2192398;all priorresolvedsource/displayfacts/fullsourceobjects andrawfieldsexcept34opaque10cells exact8BQ. Entiremetadataexceptstatfacets exact. Originaldelta retained beforePFacquisition/displayadvance;source/displaydefinitionfilesbyteexact. Final8br3allrawfacts-entiremetadata exact8br2 after strict fullquestreward guard;no furtherPFsnapshotadvance."
   },
   "everloot": {
-    "total": 1672,
-    "qualifyingItemRelationships": 1431,
+    "total": 1675,
+    "qualifyingItemRelationships": 1434,
     "attribution": {
       "licence": "CC BY-SA 4.0",
       "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -52,34 +52,34 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "7b7a141462a733891f08093e6951c7aaec8e9ebbbc0785f953f42d00fdc6af38",
+        "sha256": "15ed6437156899f04d64ac7e075f80784fc7b735c6ebf42d21520e50e242887e",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T10:10:14.556Z"
+        "dataAsOf": "2026-11-11T14:50:15.543Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103479,
-        "sha256": "f3a17fbf563d43f22c521d37c6f928ee242ff7445993fd92185e195bd04deda2",
+        "sha256": "6ee225a0f11966eba9d8421bf9a74f535fc8caec98d7737de5be81e4dfcfa188",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T10:10:14.556Z"
+        "dataAsOf": "2026-11-11T14:50:15.543Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
-        "bytes": 103463,
-        "sha256": "9ae48b43cb413ea31143a479d15d497b61e75c75069beb8d28bf6f6941ea7964",
+        "bytes": 103466,
+        "sha256": "eb368084b82c227de0bba3f1b21fd5512169d32ed93c8c346243fde4105dc783",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T10:10:14.556Z"
+        "dataAsOf": "2026-11-11T14:50:15.543Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
-        "bytes": 35754,
-        "sha256": "c22f9b6d713f7651c61813777dad97aa81242d4722275c4156c03120b70d0af8",
+        "bytes": 36367,
+        "sha256": "56de65d1a61c631b6916b5a431c7b6e91a88e0846f8517a62586bf92bcd9070b",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-11T10:10:14.556Z"
+        "dataAsOf": "2026-11-11T14:50:15.543Z"
       }
     ],
-    "comparison": "All1672relations/everyretainedfield exactactual8BP;1431qualifying;zero newremovedupdatedselected. Actualfullcomparison,notcounterinference. Snapshotbyteexact/no diagnosticrefetch.",
-    "rawEdges": 1672,
-    "qualifyingRelationships": 1431
+    "comparison": "3newitem\u2192AshenvaleBear3809relations(15112gear/2940junk/3730reagent),all3installs/buildnull;4prioronlyinstall-lastSeenupdates/zero removedselected/build-firstSeen changes. Onecanonical15112observed-edgecell1\u21922;all own/fullactorjoinspositive/publicationClassicqualifications retained. Originaldelta savedbeforeactualEVsnapshotadvance/no diagnosticrefetch. Final8br3entirerelations-fields exact8br2/no furtherEVsnapshotadvance;initialdelta remainsseparate.",
+    "rawEdges": 1675,
+    "qualifyingRelationships": 1434
   }
 }

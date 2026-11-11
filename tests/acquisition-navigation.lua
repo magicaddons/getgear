@@ -192,6 +192,10 @@ assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[5028]),"historical Sa
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[285043]),"unknown Snarling Fang origin must not receive a misleading pin")
 local historicalOmgorn=addon:GetAcquisitionMapTarget(addon.ItemCatalog[17055])
 assert(historicalOmgorn and historicalOmgorn.kind=="directions" and historicalOmgorn.verification=="legacy-reference" and not historicalOmgorn.x and not historicalOmgorn.bounds,"Classic-only Changuk reference opens qualified written guidance without a current map target")
+local fanny=addon:GetAcquisitionMapTarget(addon.ItemCatalog[10096])
+assert(fanny and fanny.questID==4286 and fanny.label=="Oralius" and fanny.zone=="Burning Steppes" and not fanny.x,"a full quest-to-container-to-gear join navigates the independently verified starting area, not an invented input farm")
+local fannyDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[10096])
+assert(fannyDirections:find("container #11883",1,true) and fannyDirections:find("minimum level: 50",1,true) and fannyDirections:find("Alliance",1,true) and fannyDirections:find("Required item: 20 Dark Iron Fanny Pack",1,true),"indirect quest directions distinguish the random container, source level/faction and exact physical inputs from wearer eligibility")
 for _,id in ipairs({4478,5029}) do
  local target=addon:GetAcquisitionMapTarget(addon.ItemCatalog[id])
  assert(target and target.bounds and not target.x,"new named rare routes retain published roaming areas rather than fake precise points")
