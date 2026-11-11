@@ -181,6 +181,12 @@ for _,id in ipairs({4478,5029}) do
  local target=addon:GetAcquisitionMapTarget(addon.ItemCatalog[id])
  assert(target and target.bounds and not target.x,"new named rare routes retain published roaming areas rather than fake precise points")
 end
+for _,id in ipairs({18709,18710,18711,18712}) do
+ local target=addon:GetAcquisitionMapTarget(addon.ItemCatalog[id])
+ assert(target and target.source=="object:179697" and target.bounds and not target.x,"researched Arena bracers share the published chest area without a fake precise point")
+end
+assert(addon:GetAcquisitionDirections(addon.ItemCatalog[18712]):find("Arena Spoils possible contents",1,true),"independently positive wrapper route remains qualified as possible contents")
+assert(not addon:GetAcquisitionDirections(addon.ItemCatalog[18711]):find("Arena Spoils possible contents",1,true),"a one-sided wrapper reference cannot become a positively verified container route")
 assert(addon:GetAcquisitionMapTarget(addon.ItemCatalog[250513]),"ACA plans retain researched navigation")
 local lamp=addon:GetAcquisitionMapTarget(addon.ItemCatalog[9359])
 assert(lamp and lamp.source=="object:142184" and lamp.bounds and not lamp.x,"new researched Captain's Chest remains an area, not a fake point")
