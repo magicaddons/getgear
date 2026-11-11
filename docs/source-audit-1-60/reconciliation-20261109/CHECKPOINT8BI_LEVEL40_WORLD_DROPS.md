@@ -1,6 +1,6 @@
 # Checkpoint 8BI — 100 level-40 acquisition cases
 
-Status: publication research and integration complete; full local19PASS. Non-release CI/direct generated-commit review pending. No release authorised.
+Status: publication research/integration verified; full local 19 PASS and non-release CI 18 PASS; generated commit inspected. No release authorised.
 
 ## Scope and preserved progress
 
@@ -43,3 +43,9 @@ Runtime integration adds100 summary cells only. All eight companion reports are 
 After successful18-test non-release CI and complete generated-commit inspection, proceed automatically to **8BJ:78 cases =17 remaining level40 +61 level41**, numeric ID order within level. Already marked in remaining_equipment_research_queue.csv. Frozen5,688 queue now4,470 publication-researched +1,218 pending. Preserve the100 completed8BI cases and earlier checkpoints; do not repeat their source reads absent a real deficiency. Continue adding newly discovered locations and chain links to the same navigation model/gaps.
 
 342 outside candidates, systematic all-slot/Back scope audit, ten omitted cloaks, six dungeon exceptions,954 current-live recipe routes and manual map/overlay acceptance remain independent open work. Existing single automation retained; no main/Beta8/build/package/tag/release/billing action.
+
+## Verified closure
+
+Source `2466d48a8c0f459ba346f98fc69116b9d2256d4e`; [CI42988799050](https://github.com/magicaddons/getgear/actions/runs/42988799050), job130416310035, SUCCESS/18 timestamped testPASS (15Lua+3offlinePython),26modules/four tools/exporter syntax. Inspected direct bot/final validated `7bac831c930959f93d059ade6a09513f24f48274`: only provenance timestamp/four API hashes;no runtime/reports/counts. Actual bot API bytes not fetched; retain final-local actual1665/1424 factual snapshot,not equality from counters. Full [validation record](checkpoint8bi_validation.json) and [CI evidence](checkpoint8bi_ci_results.txt). Working evidence retains its source-commit pre-CI state as an immutable evidence input; this record closes that gate.
+
+8BI is complete at publication-research level; continue8BJ78. No actual client rendering/current-live acquisition claim. Maincf7fa410/Beta8tag0a088935→543e5a24unchanged on current remote check;no package/release/billing action.
