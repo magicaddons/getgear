@@ -1,6 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
-Current pending total: **345 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8BE below; original-count sections are historical.
+Current pending total: **363 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8BE below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
@@ -85,3 +85,7 @@ Twenty new feed IDs are outside the frozen catalogue and disjoint from all224pri
 ## 8BJ — three full primary quest-reward candidates,345 total
 
 10461 Shadowy Bracers and10462 Shadowy Belt (Uncommon/BoP Cloth; structured40/no rendered Requires;Tailoring source quests3379/3385,not wearer gates) and287074 Lard's Lunch Slicer (Uncommon/BoP Thrown/equip44/item49;Horde7840) each have independently joined own/full quest rewards. Original342rows exact;three appended pending9Aidentity/version/eligibility/fullslot/Back/Thrownscope review,not active catalogue additions. See checkpoint8bj_working_evidence.json and CHECKPOINT8BJ_LEVEL40_41_WORLD_DROPS.md. New anonymous herb/food/quest/junk observations do not add gear candidates.
+
+## 8BJ inspected CI feed extension —363 pending candidates
+
+18newactualPlayfulls IDs are alloutsidecanonical/disjoint345:12609,12929,13260,13396,13399,17061,18102,18393,18468,18473,18483,18498,18507,18680,20133,20134,227935,278570. Published names/source leads retained in existingCSV;no automatic active catalogue adoption/currentloot claim. Fourexactbot meta/shard body byte/SHA matches;all9246fullsourceobjects/23587priorresolvedfacts unchanged,43opaque10cellsselected0. See checkpoint8bj_bot_upstream_review.json. Source scope/identity/version/eligibility/fullslot/Back/Thrown audit remains required;do not inflate frozen5688queue.

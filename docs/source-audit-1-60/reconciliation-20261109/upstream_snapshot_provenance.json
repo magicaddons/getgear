@@ -1,40 +1,40 @@
 {
-  "capturedForCheckpoint": "8BJ actual local capture",
+  "capturedForCheckpoint": "8BJinspectedbotPlayfulls/localactualEverloot",
   "capturedUTC": "2026-11-11T09:15:53.310655+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23587,
+    "itemCount": 23605,
     "sourceDefinitions": 9246,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.f951489510.json",
-        "bytes": 999737,
-        "sha256": "f9514895105915a91254486370d6a6275b317ce07aa86e28a0bc53bd81dfc8aa",
-        "matchesRecordedFingerprint": true
-      },
-      {
-        "url": "https://playfulls.com/db/gear.f7c0a8c3c7.json",
-        "bytes": 1354129,
-        "sha256": "f7c0a8c3c7e15eaa28695de9490fe7dd922d4ecbaaacfaceb475bc180cef1896",
-        "matchesRecordedFingerprint": true
-      },
-      {
-        "url": "https://playfulls.com/db/goods.a5ccd2e2ef.json",
+        "url": "https://playfulls.com/db/goods.63f4057e9a.json",
         "bytes": 467080,
-        "sha256": "a5ccd2e2ef029ced0d8ce08545b4e716f46eb2c258997fc1668e41de0f62df04",
-        "matchesRecordedFingerprint": true
+        "sha256": "63f4057e9a7daf0d1344f460f1206ffd22602063f80b9b6cadcf84630bf1c7d3",
+        "matchesBot": true
       },
       {
-        "url": "https://playfulls.com/db/other.a9b9d83dd0.json",
+        "url": "https://playfulls.com/db/gear.e6a582c4bd.json",
+        "bytes": 1356331,
+        "sha256": "e6a582c4bd5e969081585f5ea1b605a91bc5e1934924678792f6c26795aeafd4",
+        "matchesBot": true
+      },
+      {
+        "url": "https://playfulls.com/db/meta.29d9278241.json",
+        "bytes": 999737,
+        "sha256": "29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f",
+        "matchesBot": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.98a68c9cf1.json",
         "bytes": 446765,
-        "sha256": "a9b9d83dd0648069a4fc81f5264a87336092b1de1c35792bafc278943b8a5a23",
-        "matchesRecordedFingerprint": true
+        "sha256": "98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60",
+        "matchesBot": true
       }
     ],
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "All23587rawrows/9246fullsources/entiremetadata/names/resolvedfacts exact8BI. Outside345=342prior+3newprimaryquestrewardcandidates,notfeedadoption."
+    "comparison": "18newIDs all outside originalcatalogue/disjoint345;43oldopaque-field10cells selected0,notstat-loot-event-availability facts;allotherpriorrawfields/fullsourceobjects/metadataexceptst exact. No addon/source/nav/report changes except READMEtotal/provenance. EVactualbotAPIbytesnotread/local1672-1431baseline retained honestly."
   },
   "everloot": {
     "total": 1550,
@@ -78,7 +78,7 @@
         "dataAsOf": "2026-11-11T09:10:17.029Z"
       }
     ],
-    "comparison": "Seven3-install/nullbuild observations:4PrairieWolf2958nongear drops,3Peacebloomobject relations. Old1618gathered-from and new657382contained-in distinctions retained;no NPCkill/retirement/currentpresence/newgear inference. All7ownpositive/5actorpositive/2old1618harvesttablesunavailable;no currentloot/rates/retirement/availability inference. Originaldelta preserved before1672diagnosticadvance.",
+    "comparison": "Seven3-install/nullbuild observations:4PrairieWolf2958nongear drops,3Peacebloomobject relations. Old1618gathered-from and new657382contained-in distinctions retained;no NPCkill/retirement/currentpresence/newgear inference. All7ownpositive/5actorpositive/2old1618harvesttablesunavailable;no currentloot/rates/retirement/availability inference. Originaldelta preserved before1672diagnosticadvance. Bot43002009931APIhasheschanged/same1672raw1431qualified;botAPIbodybytesnotindependentlyread,no inference of factualcounterequivalence;actuallocal8BJedges retained.",
     "rawEdges": 1551,
     "qualifyingRelationships": 1316
   }

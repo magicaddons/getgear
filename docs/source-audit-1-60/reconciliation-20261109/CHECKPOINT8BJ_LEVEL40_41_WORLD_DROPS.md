@@ -1,6 +1,6 @@
 # Checkpoint 8BJ — final level40 and all level41 cases
 
-Status:78 publication-researched cases integrated; full local19PASS. Non-release CI/direct generated commit inspection pending. No release authorised.
+Status: 78 publication-researched cases integrated and verified; full local 19 PASS / non-release CI 18 PASS; generated commit inspected. No release authorised.
 
 ## Scope and confidence
 
@@ -59,3 +59,11 @@ Exactly78 new summary cells, all eight companion reports byte-exact, source regi
 After18-test non-release CI and complete generated-commit inspection, continue **8BK:all63 remaining level42 cases**, numeric ID order, already marked queue. Frozen5,688=4,548 publication-researched +1,140 pending. Do not repeat8B–8BJ cases, completed side chains or unchanged known failed URLs. Continue discovered locations/chain links through this same model/gap register.
 
 345 outside candidates, all-slot/Back/Thrown scope audit, ten omitted cloaks, six dungeon links,954 current-live recipe routes, actual map/client acceptance and final integrity/recommendations remain independent open work. No main/Beta8/package/build/tag/release/billing action. Single existing continuation automation retained.
+
+## Verified closure and bot-source review
+
+Source `53209c8078cfcd80cc7baf6f2f3be8ccb0ed48b1`; [CI43002009931](https://github.com/magicaddons/getgear/actions/runs/43002009931), job130460195211, SUCCESS/18timestamped testPASS (15Lua+3offlinePython),26modules/four tools/exporter syntax. Inspected direct bot/final validated `91d300360d99b404f59788d902e580d36a11feac`: README/provenance only.
+
+Four changed content-addressed Playfulls bodies independently read once and actual byte/SHA matched:23,587→23,605items/9,246definitions,18newIDsalloutsidecatalogue/disjoint345candidates,43prioropaque-field10changes/selected0,all other old raw fields/full sources exact;metadataonlyst. Originaldelta retainedbefore advancing actual diagnosticPFsnapshot. All18 outside feed references appended pending9A:345→363 candidates,no active equipment or frozen queue additions. Actual bot Everloot API bodies were not read; retain actual local1,672raw/1,431qualified factual baseline rather than infer identical facts from counters. See [bot review](checkpoint8bj_bot_upstream_review.json), [validation](checkpoint8bj_validation.json) and [CI evidence](checkpoint8bj_ci_results.txt).
+
+Actual runtime/source/nav/report counts unchanged. Known failed URL knowledge127 intact. The old lease expired between turns;10:16UTCcheckfoundnoactiveholder and reacquired the same conversation lock. No usage-allowance exhaustion cause is inferred from that gap; tools expose no quota meter or refresh guarantee. Main/Beta8refs rechecked unchanged;no package/release/billing action. Continue8BK63.

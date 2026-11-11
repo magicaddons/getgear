@@ -20,10 +20,10 @@ All 7,707 catalogue IDs and 36,341 objectives across nine classes were audited. 
 
 | Coverage | Items | Meaning |
 | --- | ---: | --- |
-| Published coordinate data | 681 | Cited published point data exists; actual client map resolution/rendering still needs testing. |
-| Useful directions | 1,266 | Named areas/roaming footprints, zone guidance or client-resolved dungeon entrances; precise fixed marker not established. |
-| Missing useful location data | 3,172 | No safe actionable location; missing data is not implemented navigation. |
-| No applicable fixed destination | 2,588 | Broad random drops without a justified named target. |
+| Published coordinate data | 682 | Cited published point data exists; actual client map resolution/rendering still needs testing. |
+| Useful directions | 1,269 | Named areas/roaming footprints, zone guidance or client-resolved dungeon entrances; precise fixed marker not established. |
+| Missing useful location data | 3,170 | No safe actionable location; missing data is not implemented navigation. |
+| No applicable fixed destination | 2,586 | Broad random drops without a justified named target. |
 
 Actual in-game rendering verified: **0**. Machine-readable [per-item coverage](navigation_coverage.csv), [nine-class/category totals](navigation_audit.json) and [shared research gaps](navigation_research_gaps.csv) retain every classification. Gap rows are not unique items and can overlap.
 
@@ -48,7 +48,7 @@ The generator validates map candidates against client names and can discover new
 
 Verified against Gethe/wow-ui-source's `forever` branch commit 4cd0ab752a77164f654ccbca9d0c1fe8dafceebe, with four Git blob IDs retained in the proof. C_Map.OpenWorldMap is present and restricted; it is **not** incorrectly dismissed as retail-only. Guarded fallbacks use global OpenWorldMap and WorldMapFrame.SetMapID. C_Map.GetMapInfo/GetMapChildrenInfo, C_EncounterJournal.GetDungeonEntrancesForMap, character quest APIs, WorldMapFrame:GetCanvas/GetMapID/OnHide are present in this source. Runtime capability checks and pcall remain necessary. Combat/unavailable APIs show written guidance.
 
-This confirms published API support, not operation on the user's exact installed client. Localised map-name differences, map-canvas clipping/strata/scale, protected UI behaviour and entrance coverage require actual Forever checks. No accurate dungeon-floor/boss coordinates, keys or unlocks are asserted where unavailable. Primary published maps may contain historical footprints. Only one quest travel chain is currently assembled; other chain gaps remain open.
+This confirms published API support, not operation on the user's exact installed client. Localised map-name differences, map-canvas clipping/strata/scale, protected UI behaviour and entrance coverage require actual Forever checks. No accurate dungeon-floor/boss coordinates, keys or unlocks are asserted where unavailable. Primary published maps may contain historical footprints. Published Defias and Nilith travel sequences are assembled, with separate prefixes for different rewards; mandatory prerequisites/earlier unlock gaps remain open.
 
 ## Automated validation
 
@@ -123,4 +123,6 @@ The automatic audit changes one item from missing to useful directions:681point-
 
 Drake-scale Vest1677 now has the published Mosh'Ogg Lord680 area (Stranglethorn49.4–52.6/26.6–31.2). Rockhide Strongfish19808 has a pure fishing-zone reference and opens qualified directions,never a fabricated point/school/mandatory event. Full Nilith3379→3385→3402 travel order now supports quest-unlocked Shadoweave Mask10025/Pattern10463, with Tailoring source label versus separate200book learning skill. Earlier mandatory/current unlocks and exact source skill remain unresolved. See CHECKPOINT8BJ_LEVEL40_41_WORLD_DROPS.md.
 
-New source requirements appear in detailed guidance/hover; indirect container-quest unknowns and known-order-but-unverified-prerequisite gaps stay in the same generated research CSV. This extends future reconciliation,not only the original dataset. Manual additions: `/getgear map 1677`, `/getgear map 19808` (directions only/no precise marker), `/getgear map 10025` (published Nilith starting route/requirements, recipe book versus finished craft). Actual rendering remains0 verified;19localPASS/non-releaseCIpending.
+New source requirements appear in detailed guidance/hover; indirect container-quest unknowns and known-order-but-unverified-prerequisite gaps stay in the same generated research CSV. This extends future reconciliation,not only the original dataset. Manual additions: `/getgear map 1677`, `/getgear map 19808` (directions only/no precise marker), `/getgear map 10025` (published Nilith starting route/requirements, recipe book versus finished craft). Actual rendering remains0 verified;19localPASS and [CI43002009931](https://github.com/magicaddons/getgear/actions/runs/43002009931)18testPASS, generated bot91d3003 inspected.
+
+Current regenerated coverage after8BJ:682published point-data/1269directions/3170missing/2586notapplicable;6397overlapping gap rows/rendering0. This is source-data coverage,not in-game rendering verification. Manual tests remain the beta acceptance gate.
