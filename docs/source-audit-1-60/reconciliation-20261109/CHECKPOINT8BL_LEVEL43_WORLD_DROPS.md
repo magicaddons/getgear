@@ -38,3 +38,7 @@ Shared navigation: **682published point-data /1,271directions /3,172missing /2,5
 Finish non-release CI/direct bot inspection, then **8BM:all54pendinglevel44world-drop cases, numeric item-ID order**, already marked in the queue. Do not repeat8B–8BL source research or unchanged failed URLs.363 outside-scope candidates, systematicALLslot/Back/Thrown and ten omitted-cloak checks, six dungeon link exceptions,954 current-live book routes, manual navigation acceptance and final integrity remain open. Candidate discovery is not catalogue adoption.
 
 Source proof remains immutable through documentation closure; final CI validation supersedes its historical pending status. Continue the same worker/existing automation. No main/Beta8/build/package/tag/release/billing action.
+
+## Verified CI closure
+
+Source `6ecb56e1b7096bdde6e0dd571cd100aa0aacca4d`; [CI43006958306](https://github.com/magicaddons/getgear/actions/runs/43006958306),job130476710350:success/18timestampedPASS. Inspected directbot/final validated generated HEAD `c43e5d734d84ff6156ea438671e1ac6e5e1d7776`:onlyprovenancefourEverlootfingerprints/time,allotherJSON/runtime/report/audit bytes unchanged. BotAPIbytes unread;actual local fullfacts retained without counter inference. Final `checkpoint8bl_validation.json` supersedes immutable pre-integration and local CI-pending statuses. Discovery-source projections retain URL/title/warnings/tool-text digest rather than full copied search excerpts;primaryproof/runtime unchanged. Documentation closure uses targeted checks,not a new full run. Continue8BM54.
