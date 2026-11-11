@@ -1,6 +1,6 @@
 # Acquisition navigation restoration and handover
 
-Status: implemented; full local validation passed. Initial non-release CI passed; final routing/audit corrections await their own CI review. No package or release authorised. Original acquisition research remains active.
+Status: implemented; full local and final non-release CI validation passed, generated commit inspected. Actual Forever rendering/manual acceptance remains outstanding. No package or release authorised. Original acquisition research remains active.
 
 ## What happened to the button
 
@@ -56,7 +56,7 @@ Full local 19 PASS:15 Lua regressions (including new 13-source navigation scenar
 
 Navigation tests cover simple quest, multi-stage chain, distinct start/end NPCs, equipment vendor, limited recipe vendor, ACA, dungeon boss, dungeon recipe, dungeon quest, multiple sources, rare NPC, broad random drop and missing data. They exercise shared actual UI factory, progress unknown/active/incomplete, point/area handling, invalid coordinates, entrance caching, repeated clicks, map changes/return, resizing, close cleanup, combat/missing-API fallbacks and native waypoint preservation. Offline generator tests prove future evidence propagation and reject fake centroids, inferred prerequisite edges, unreviewed partial research and disputed versions. These are behavior/API doubles, not game rendering tests.
 
-Results: [navigation_local_results.txt](navigation_local_results.txt). GitHub validation status will be appended below after the run finishes.
+Results: [navigation_local_results.txt](navigation_local_results.txt). Final GitHub validation and bot review are recorded below.
 
 ## Exact in-game acceptance tests
 
@@ -90,6 +90,25 @@ Beta readiness: source implementation is ready for review and client acceptance 
 
 ## Final routing review
 
-Initial source4c7f3d6 passed [CI42983282336](https://github.com/magicaddons/getgear/actions/runs/42983282336),18 test checks; inspected direct bot0d40226 changed only provenance time/four API hashes. Fresh final capture retained exact PF23,587/9,246 raw rows/metadata/source objects and EV1,664/1,424 full relations/counters. Final19localPASS repeated after targeted corrections.
+Initial source4c7f3d6 passed [CI 42983282336](https://github.com/magicaddons/getgear/actions/runs/42983282336),18 test checks; inspected direct bot 0d40226 changed only provenance time/four API hashes. Fresh final capture retained exact PF 23,587 / 9,246 raw rows/metadata/source objects and EV 1,664 / 1,424 full relations/counters. Final 19 local PASS repeated after targeted corrections.
 
-Selecting another pin closes the old source/directions popup. A known related quest sequence without a researched starting route now opens qualified directions instead of a misleading reward-quest marker. Generic dungeon-pattern labels without an identified dungeon were recategorised as missing; multiple identified dungeons have separate choices. Final audit681point-data/1,266directions/3,172missing/2,588notapplicable;6,339overlapping gap rows. See navigation_final_validation.json. Final code CI/bot review remains the next gate.
+Selecting another pin closes the old source/directions popup. A known related quest sequence without a researched starting route now opens qualified directions instead of a misleading reward-quest marker. Generic dungeon-pattern labels without an identified dungeon were recategorised as missing; multiple identified dungeons have separate choices. Final audit: 681 point data / 1,266 directions / 3,172 missing / 2,588 not applicable; 6,339 overlapping gap rows. See navigation_final_validation.json. Final code CI/bot review passed; manual acceptance is the remaining navigation gate.
+
+## Verified final code checkpoint
+
+Source `2cc132a6ce6a8b89dd3e6bee934cfbd7e672693d`; [non-release CI 42984155730](https://github.com/magicaddons/getgear/actions/runs/42984155730), job 130401250893, SUCCESS / 18 timestamped test PASS (15 Lua + 3 offline Python), 26 modules/four Python tools/exporter syntax. Inspected direct bot/final validated `c74372c6b44e1a405fd55a3fa551570fd9b8a1cc`: only provenance timestamp/four API hashes, no runtime/report/count changes. Actual bot API response bodies were not independently fetched; equal counters are not treated as factual equivalence. Final-local actual factual snapshots retained. Main/Beta8 remote refs unchanged at 08:06:58 UTC / 18:36:58 Adelaide. No ZIP/package/tag/release or billing change.
+
+Source is ready for the next beta subject to the manual acceptance matrix; rendering is not yet confirmed. Original 8BI research may resume independently.
+
+| Acquisition category | Published point data | Directions | Missing | Not applicable |
+| --- | ---: | ---: | ---: | ---: |
+| world_drop | 7 | 262 | 30 | 2588 |
+| dungeon | 9 | 543 | 0 | 0 |
+| quest | 43 | 34 | 184 | 0 |
+| crafting | 136 | 163 | 931 | 0 |
+| vendor | 437 | 259 | 800 | 0 |
+| unknown | 45 | 0 | 1210 | 0 |
+| reputation | 0 | 2 | 0 | 0 |
+| dungeon_recipe | 4 | 3 | 17 | 0 |
+
+Categories retain original catalogue classification, with researched quest/dungeon overrides. Some original “unknown” entries retain previously researched location metadata; a point-data entry is not proof of live availability or a complete prerequisite route. The CSV and shared gap register provide item-level qualifications.

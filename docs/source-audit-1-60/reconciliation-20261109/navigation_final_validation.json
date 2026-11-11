@@ -1,5 +1,5 @@
 {
-  "status": "local PASS; final non-release CI pending",
+  "status": "local and final non-release CI PASS; bot reviewed; actual client rendering/manual acceptance outstanding",
   "firstSourceCommit": "4c7f3d61d5964c8b0793538833ec31490ef75090",
   "firstCI": 42983282336,
   "firstJob": 130398459167,
@@ -77,5 +77,17 @@
     "Close stale source/directions popup on another navigation action",
     "Unresolved quest sequence opens qualified instructions, not a misleading final-stage marker",
     "Generic dungeon-pattern labels are gaps, not identified entrances; split multiple identified dungeons into choices"
-  ]
+  ],
+  "finalSource": "2cc132a6ce6a8b89dd3e6bee934cfbd7e672693d",
+  "finalCI": 42984155730,
+  "finalJob": 130401250893,
+  "finalCIPASS": 18,
+  "finalInspectedBot": "c74372c6b44e1a405fd55a3fa551570fd9b8a1cc",
+  "finalBotDiff": "Only provenance time/four Everloot response hashes; no runtime/reports/counts. Bot response bytes not independently read. Actual final-local snapshot retained.",
+  "protectedRefs": {
+    "verifiedUTC": "2026-11-11 08:06:58 UTC",
+    "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "Beta8Tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "Beta8Commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  }
 }
