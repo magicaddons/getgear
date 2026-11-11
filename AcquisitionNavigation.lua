@@ -41,7 +41,11 @@ local function offerText(route)
             for _, p in ipairs(type(price[2])=="table" and price[2] or {}) do
                 if type(p)=="table" and p[1] and p[2] then
                     local info=C_CurrencyInfo and call(C_CurrencyInfo.GetCurrencyInfo,p[1])
-                    parts[#parts+1]=tostring(p[2]).." "..(type(info)=="table" and info.name or "currency #"..tostring(p[1]))
+                    local published=get(data().currencies,p[1])
+                    local name=type(info)=="table" and info.name
+                    if type(name)~="string" or name=="" then name=type(published)=="table" and published.name end
+                    if type(name)~="string" or name=="" then name="currency #"..tostring(p[1]) end
+                    parts[#parts+1]=tostring(p[2]).." "..name
                 end
             end
             for _, p in ipairs(type(price[3])=="table" and price[3] or {}) do
@@ -179,7 +183,14 @@ function GetGear:GetAcquisitionDirections(gear)
             end
             if route.bookItemID then out[#out+1]="Quest reward is recipe book #"..route.bookItemID..", not the finished equipment." end
             if q.requiredItems then
-                out[#out+1]="This quest requires physical items; see acquisition evidence below for quantities and current requirements."
+                local listed=false
+                for _, item in ipairs(q.requiredItems) do
+                    if type(item)=="table" and type(item.name)=="string" and type(item.quantity)=="number" and item.quantity>0 then
+                        out[#out+1]=(item.provided==true and "Provided by quest: " or "Required item: ")..item.quantity.." "..item.name
+                        listed=true
+                    end
+                end
+                if not listed then out[#out+1]="This quest requires physical items; see acquisition evidence below for quantities and current requirements." end
             end
         end
     end

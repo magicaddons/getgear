@@ -16,6 +16,9 @@ model.quests["10"]={questID=10,name="Simple quest",starts={"npc:1"},ends={"npc:1
 model.quests["11"]={questID=11,name="Second stage",starts={"npc:2"},ends={"npc:1"}}
 local simple=plan(1,{{kind="quest",questID=10}})
 assert(addon:GetAcquisitionMapTarget(simple).source=="npc:1","simple quest starts at quest giver")
+model.quests["10"].requiredItems={{itemID=1000,name="Provided husk",quantity=1,provided=true},{itemID=1001,name="Collected fragment",quantity=2}}
+local inputs=addon:GetAcquisitionDirections(simple)
+assert(inputs:find("Provided by quest: 1 Provided husk",1,true) and inputs:find("Required item: 2 Collected fragment",1,true),"quest-provided deliveries remain distinct from external collection requirements")
 model.quests["10"].sourceRequirements={"Published source profession: Tailoring; exact access threshold unresolved."}
 assert(addon:GetAcquisitionMapTarget(simple).requirements:find("Tailoring",1,true),"source profession is visible without changing gear eligibility")
 model.chains["11"]={steps={10,11},routeVerified=true,prerequisitesVerified=false}
@@ -47,6 +50,13 @@ assert(addon:GetAcquisitionDirections(aca):find("240 Merchant's Favor",1,true))
 assert(addon:GetAcquisitionDirections(aca):find("Honored",1,true))
 local wrapped=plan(14,{{kind="vendor",source="npc:1",offer={cost={{0,{{515,12}},{}}}}}})
 assert(addon:GetAcquisitionDirections(wrapped):find("12 currency #515",1,true),"primary wrapped currency price")
+addon.AcquisitionNavigationData.currencies={["515"]={name="Darkmoon Prize Ticket",verification="published-reference"}}
+assert(addon:GetAcquisitionDirections(wrapped):find("12 Darkmoon Prize Ticket",1,true),"published currency name works without a retail currency API")
+C_CurrencyInfo={GetCurrencyInfo=function() return {name=""} end}
+assert(addon:GetAcquisitionDirections(wrapped):find("12 Darkmoon Prize Ticket",1,true),"empty client currency names retain the published fallback")
+C_CurrencyInfo.GetCurrencyInfo=function() return {name="Localized ticket"} end
+assert(addon:GetAcquisitionDirections(wrapped):find("12 Localized ticket",1,true),"valid client currency names take precedence")
+C_CurrencyInfo=nil
 local prices=plan(15,{{kind="vendor",source="npc:1",offer={cost={{100,{},{}},{0,{},{{9249,1}}}}}}})
 assert(addon:GetAcquisitionDirections(prices):find("0g 1s 0c OR 1 item #9249",1,true),"alternative prices are not summed")
 local boss=plan(7,{{kind="dungeon",dungeon="The Deadmines",boss="Boss fixture"}})

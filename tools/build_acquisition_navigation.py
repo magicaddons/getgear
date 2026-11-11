@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs/source-audit-1-60/reconciliation-20261109"
 CLASSES = ["PRIEST", "MAGE", "WARLOCK", "DRUID", "ROGUE", "HUNTER", "SHAMAN", "WARRIOR", "PALADIN"]
-ENTITY = re.compile(r"/(?:forever/)?(npc|object|quest|item)(?:=|/)(\d+)")
+ENTITY = re.compile(r"/(?:forever/)?(npc|object|quest|item|currency)(?:=|/)(\d+)")
 
 
 def lua(value):
@@ -52,6 +52,7 @@ class Evidence:
         self.sources = {}
         self.quests = {}
         self.items = collections.defaultdict(dict)
+        self.currencies = {}
         self.maps = collections.defaultdict(set)
         self.inputs = []
 
@@ -126,6 +127,14 @@ class Evidence:
                             self.append_location(source, self.location(area.get("uiMapName") or area.get("name"), area_id, area))
                 for area in (rows(maps) + rows(node.get("publishedLocationFootprints")) + rows(node.get("publishedAreas"))):
                     self.append_location(source, self.location(area.get("name") or area.get("zone"), area.get("zoneID"), area))
+            elif kind == "currency":
+                name = node.get("currencyName")
+                title = node.get("title", "")
+                if not name and title.endswith(" - Currency - Forever"):
+                    name = title.removesuffix(" - Currency - Forever")
+                if isinstance(name, str) and name.strip():
+                    self.currencies[str(source_id)] = dict(name=name.strip(), evidence=provenance,
+                                                           verification="published-reference")
             elif kind == "item":
                 item = self.items[source_id]
                 item["evidence"] = provenance
@@ -244,6 +253,7 @@ def build(inputs):
     chains_path = REPORT / "navigation_quest_chains.json"
     chains = json.loads(chains_path.read_text()) if chains_path.exists() else {}
     data = dict(version=1, sources=evidence.sources, quests=evidence.quests, items={}, maps={}, chains=chains,
+                currencies=evidence.currencies,
                 instances={name: True for name in known_dungeons})
     coverage, gaps = [], []
     for raw_id, gear in sorted(inputs.items(), key=lambda pair: int(pair[0])):

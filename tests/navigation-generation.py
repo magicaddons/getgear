@@ -88,5 +88,13 @@ with tempfile.TemporaryDirectory() as temp:
     fish=nav.build(gear)[0]
     assert fish["items"]["4"]["routes"][0]["kind"]=="fishing" and "x" not in fish["sources"]["zone:40"]["locations"][0]
     assert "2" not in fish["items"], "incidental fishing must not give broad random enemy drops a destination"
+    proof["currencies"] = [response("currency", 515, title="Darkmoon Prize Ticket - Currency - Forever")]
+    path.write_text(json.dumps(proof))
+    currency = nav.build(gear)[0]["currencies"]["515"]
+    assert currency["name"] == "Darkmoon Prize Ticket" and currency["verification"] == "published-reference"
+    assert currency["evidence"]["url"].endswith("currency=515"), "future currency labels retain primary proof without hardcoded UI names"
+    proof["quests"][0]["requiredPhysicalItems"] = [{"itemID": 1000, "name": "Provided husk", "quantity": 1, "provided": True}]
+    path.write_text(json.dumps(proof))
+    assert nav.build(gear)[0]["quests"]["10"]["requiredItems"][0]["provided"] is True, "source-provided items retain their meaning through generation"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

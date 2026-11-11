@@ -7,7 +7,7 @@
     "verified_coordinate_data": 682
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 6643,
+  "gapRows": 6758,
   "categories": {
     "world_drop": 2886,
     "dungeon": 552,
@@ -88,7 +88,7 @@
     }
   },
   "sourceRecords": 607,
-  "questRecords": 481,
+  "questRecords": 499,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
     {
@@ -320,6 +320,10 @@
       "sha256": "ea554702ddbad983f5fbd0adeb55740dd08b4424b57d2d518d29e3337cb4b3b6"
     },
     {
+      "file": "checkpoint8bo_working_evidence.json",
+      "sha256": "c2b4541c8aef09a7517dbfa9098ce6fc3702db2d210f16fee05f563fdadc5329"
+    },
+    {
       "file": "checkpoint8c_publication_evidence.json",
       "sha256": "0f34a207b621d4ae05e75eb8b7a9a7c40dc2f82e9819ce0428d413dabe9c80fe"
     },
@@ -537,7 +541,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json",
-      "sha256": "bbf5274a256ddffd7d4bdba03cd133b9f910ed753961e2aba2d50e8fc33abc2c"
+      "sha256": "66e0f36653f43ad1a7fd7fdabcf5b35a4373fc52d63f46cf2aad4b38b63d6600"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json",
@@ -549,7 +553,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/remaining_equipment_research_queue.csv",
-      "sha256": "3a085e8eada19763ee8bae49b7fe9d879f7b83ef56422c180a62f19cef80a567"
+      "sha256": "03b6dd2c8d5874aad5ce1e3ed9b42e4b7743bff966b8f7f4e0772643af1d7317"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
@@ -561,8 +565,8 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "2046f516d66ec5a9509d99154fce597258bcc1855a0f5111efe6e9c52ce0f073"
+      "sha256": "b092bf1f546d1320e80b7100a08fc713d8922d98da2109da73332b850f06e787"
     }
   ],
-  "catalogueExportSHA256": "8ec2a55ea45eab6429083428ae680bd3420707303b62bf701dba2fd85341878f"
+  "catalogueExportSHA256": "7a0c2fb348da48535a025329a1861c77cea491d53d1c245a977f8a4cdcebc16c"
 }
