@@ -96,5 +96,16 @@ with tempfile.TemporaryDirectory() as temp:
     proof["quests"][0]["requiredPhysicalItems"] = [{"itemID": 1000, "name": "Provided husk", "quantity": 1, "provided": True}]
     path.write_text(json.dumps(proof))
     assert nav.build(gear)[0]["quests"]["10"]["requiredItems"][0]["provided"] is True, "source-provided items retain their meaning through generation"
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
+        "itemID": 2, "originUnknown": True, "navigationRoutes": [{"kind": "named_drop", "source": "npc:100",
+        "directionsOnly": True, "verification": "legacy-reference", "instructions": "Historical source; current acquisition unverified."}]}]))
+    written, coverage, gaps, _ = nav.build(gear)
+    assert written["items"]["2"]["routes"][0]["directionsOnly"] is True
+    assert coverage[1]["status"] == "directions", "withheld markers cannot count as working point navigation even when coordinates exist"
+    assert any(g["itemID"]==2 and g["gap"]=="map_target_withheld" for g in gaps)
+    reviewed = json.loads((nav.REPORT / "reviewed_equipment_sources.json").read_text())
+    del reviewed[0]["navigationRoutes"][0]["directionsOnly"]
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps(reviewed))
+    assert nav.build(gear)[0]["items"]["2"]["routes"][0]["directionsOnly"] is True, "legacy verification itself must withhold a current marker"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

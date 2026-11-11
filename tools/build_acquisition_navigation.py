@@ -286,11 +286,13 @@ def build(inputs):
         # Reviewed future trainer/special-crafting/unlock routes share the
         # existing source registry and primary NPC/object evidence pool.
         for extra in meta.get("navigationRoutes", []):
-            if extra.get("kind") in ["trainer", "crafting_requirement", "object", "unlock"] and extra.get("source") in evidence.sources:
+            if extra.get("kind") in ["trainer", "crafting_requirement", "object", "unlock", "named_drop"] and extra.get("source") in evidence.sources:
                 if not evidence.sources[extra["source"]]["evidence"]:
                     continue
                 route(extra["kind"], source=extra["source"], instructions=extra.get("instructions"),
-                      verification="published-reference", bookItemID=book_id if craft else None)
+                      verification="legacy-reference" if extra.get("verification") == "legacy-reference" else "published-reference",
+                      directionsOnly=True if extra.get("directionsOnly") is True or extra.get("verification") == "legacy-reference" else None,
+                      bookItemID=book_id if craft else None)
         # Reward relationships are read from explicit primary reward arrays, never item-provided state.
         for quest_id, q in evidence.quests.items():
             rewards = rows(q.get("itemrewards")) + rows(q.get("itemchoices"))
@@ -399,8 +401,10 @@ def build(inputs):
             if entry.get("location"):
                 locations.append(entry["location"])
             located = located or bool(locations) or entry["kind"] == "dungeon"
-            exact = exact or any(coordinate(x.get("x")) and coordinate(x.get("y")) and x.get("verification") == "published-reference" for x in locations)
+            exact = exact or (not entry.get("directionsOnly") and any(coordinate(x.get("x")) and coordinate(x.get("y")) and x.get("verification") == "published-reference" for x in locations))
             for key in keys:
+                if entry.get("directionsOnly"):
+                    gap("map_target_withheld", key, entry.get("questID", ""), "Qualified written guidance only; do not promote this reference to a current map target.")
                 if not evidence.sources.get(key, {}).get("locations"):
                     gap("source_coordinates_missing", key, entry.get("questID", ""), "Named source exists; precise location not established.")
                 elif not any(coordinate(x.get("x")) and coordinate(x.get("y")) for x in evidence.sources[key]["locations"]):

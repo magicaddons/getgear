@@ -1,13 +1,13 @@
 {
   "items": 7707,
   "statuses": {
-    "not_applicable": 2578,
-    "directions": 1275,
+    "not_applicable": 2577,
+    "directions": 1276,
     "missing": 3172,
     "verified_coordinate_data": 682
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 6758,
+  "gapRows": 6865,
   "categories": {
     "world_drop": 2886,
     "dungeon": 552,
@@ -20,7 +20,7 @@
     "dungeon_recipe": 24
   },
   "routeKinds": {
-    "named_drop": 273,
+    "named_drop": 274,
     "dungeon": 561,
     "legacy": 59,
     "quest": 269,
@@ -33,8 +33,8 @@
   },
   "classes": {
     "PRIEST": {
-      "directions": 556,
-      "not_applicable": 980,
+      "directions": 557,
+      "not_applicable": 979,
       "missing": 874,
       "verified_coordinate_data": 217
     },
@@ -51,14 +51,14 @@
       "verified_coordinate_data": 217
     },
     "DRUID": {
-      "not_applicable": 1471,
-      "directions": 787,
+      "not_applicable": 1470,
+      "directions": 788,
       "missing": 1257,
       "verified_coordinate_data": 343
     },
     "ROGUE": {
-      "not_applicable": 1446,
-      "directions": 777,
+      "not_applicable": 1445,
+      "directions": 778,
       "missing": 1100,
       "verified_coordinate_data": 316
     },
@@ -69,25 +69,25 @@
       "verified_coordinate_data": 404
     },
     "SHAMAN": {
-      "not_applicable": 2135,
-      "directions": 1021,
+      "not_applicable": 2134,
+      "directions": 1022,
       "missing": 1525,
       "verified_coordinate_data": 428
     },
     "WARRIOR": {
-      "not_applicable": 2445,
-      "directions": 1182,
+      "not_applicable": 2444,
+      "directions": 1183,
       "missing": 1705,
       "verified_coordinate_data": 453
     },
     "PALADIN": {
-      "not_applicable": 2432,
-      "directions": 1043,
+      "not_applicable": 2431,
+      "directions": 1044,
       "missing": 1607,
       "verified_coordinate_data": 443
     }
   },
-  "sourceRecords": 607,
+  "sourceRecords": 608,
   "questRecords": 499,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
@@ -324,6 +324,10 @@
       "sha256": "c2b4541c8aef09a7517dbfa9098ce6fc3702db2d210f16fee05f563fdadc5329"
     },
     {
+      "file": "checkpoint8bp_working_evidence.json",
+      "sha256": "f9f6b07cea5914489ac4a226c5f1b2fe54dc914836cae02b1560e1964a0b9ace"
+    },
+    {
       "file": "checkpoint8c_publication_evidence.json",
       "sha256": "0f34a207b621d4ae05e75eb8b7a9a7c40dc2f82e9819ce0428d413dabe9c80fe"
     },
@@ -541,7 +545,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json",
-      "sha256": "66e0f36653f43ad1a7fd7fdabcf5b35a4373fc52d63f46cf2aad4b38b63d6600"
+      "sha256": "42c6a252f5b1c28d9d765dbf70e23bbb5a606fc75a07478b1565e92e3705e072"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json",
@@ -553,7 +557,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/remaining_equipment_research_queue.csv",
-      "sha256": "03b6dd2c8d5874aad5ce1e3ed9b42e4b7743bff966b8f7f4e0772643af1d7317"
+      "sha256": "2e07baf260a0f2da6e0a15e9c9fa04a11878f801b754e64673d5134f6f1ffcbb"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
@@ -565,8 +569,8 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "b092bf1f546d1320e80b7100a08fc713d8922d98da2109da73332b850f06e787"
+      "sha256": "0a42a67fe30750d73d6f51f8b8468fd65da8a2bc6c82446f75a71eb91f95d79a"
     }
   ],
-  "catalogueExportSHA256": "7a0c2fb348da48535a025329a1861c77cea491d53d1c245a977f8a4cdcebc16c"
+  "catalogueExportSHA256": "92a3463827213a1bf467ace9c2bd963601ba2cda5f2909d18eb92a65a4275216"
 }

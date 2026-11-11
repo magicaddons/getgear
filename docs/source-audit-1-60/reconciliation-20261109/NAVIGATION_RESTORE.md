@@ -136,3 +136,10 @@ Current regenerated coverage after8BJ:682published point-data/1269directions/317
 - View Lord’sBoots10082for AQ50crate21513versus older crate/MithrilLockbox/ReinforcedLockedChest references, and VanadiumLoop11989for HeavyJunkbox. Current opening/phase/stock conditions remain unverified;13918has no established origin. Random world-drop entries must retain qualified guide information without an arbitrary farm pin.
 
 After8BO:682published point-data/1275directions/3172missing/2578notapplicable;6758overlapping gaps/rendering0. Seventeen new cloaks are candidate-register additions pending the broader Back-slot/eligibility review; active catalogue remains7707. Existing full manual matrix/API limitations remain required. Latest final validation is recorded in checkpoint8bo_validation.json after CI closure; implementation tests do not establish actual client rendering or live loot.
+
+
+### 8BP manual additions (not yet tested in game)
+
+- `/getgear map 17055`: qualify Omgorn/Tanaris as historical Classic guidance; show written directions through the same compact/guide action and no current map marker. Switch from an existing real marker first and ensure it is cleared.
+- 11302: Wasteland/Haunted affects the published shield proc; neither area is an acquisition marker.
+- Authored future `directionsOnly` and `legacy-reference` routes must withhold coordinates even if an NPC record has a position; source text and shared gap tracker remain visible. Client rendering remains unverified.

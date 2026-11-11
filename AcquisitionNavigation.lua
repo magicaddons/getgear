@@ -85,6 +85,12 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         if q and #(q.sourceRequirements or {})>0 then
             requirements=(requirements~="" and requirements.."; " or "")..table.concat(q.sourceRequirements,"; ")
         end
+        if route.directionsOnly==true then
+            add({kind="directions",source=key,label=actor.name or key,role=role,
+                 zone=locations[1] and locations[1].zone,verification=route.verification,
+                 instructions=route.instructions,requirements=requirements})
+            return
+        end
         if #locations==0 then
             add({kind="directions",source=key,label=actor.name or key,role=role,questID=q and q.questID,
                  instructions="Exact location has not been established."..(route.instructions and "\n"..route.instructions or ""),missingLocation=true,requirements=requirements})

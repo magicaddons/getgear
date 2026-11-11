@@ -57,6 +57,9 @@ assert(addon:GetAcquisitionDirections(wrapped):find("12 Darkmoon Prize Ticket",1
 C_CurrencyInfo.GetCurrencyInfo=function() return {name="Localized ticket"} end
 assert(addon:GetAcquisitionDirections(wrapped):find("12 Localized ticket",1,true),"valid client currency names take precedence")
 C_CurrencyInfo=nil
+local historical=plan(16,{{kind="named_drop",source="npc:1",directionsOnly=true,verification="legacy-reference",instructions="Current source unverified."}})
+local historicalTarget=addon:GetAcquisitionMapTarget(historical)
+assert(historicalTarget and historicalTarget.kind=="directions" and not historicalTarget.x and not historicalTarget.bounds,"historical written guidance must not expose a marker even when the NPC has coordinates")
 local prices=plan(15,{{kind="vendor",source="npc:1",offer={cost={{100,{},{}},{0,{},{{9249,1}}}}}}})
 assert(addon:GetAcquisitionDirections(prices):find("0g 1s 0c OR 1 item #9249",1,true),"alternative prices are not summed")
 local boss=plan(7,{{kind="dungeon",dungeon="The Deadmines",boss="Boss fixture"}})
@@ -187,6 +190,8 @@ assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[1713]),"Ankh of Life 
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[8122]),"two sparse historical loot samples do not establish a dedicated Heraldic Headpiece farm")
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[5028]),"historical Sakrasis name/drop claims must not create a scepter destination")
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[285043]),"unknown Snarling Fang origin must not receive a misleading pin")
+local historicalOmgorn=addon:GetAcquisitionMapTarget(addon.ItemCatalog[17055])
+assert(historicalOmgorn and historicalOmgorn.kind=="directions" and historicalOmgorn.verification=="legacy-reference" and not historicalOmgorn.x and not historicalOmgorn.bounds,"Classic-only Changuk reference opens qualified written guidance without a current map target")
 for _,id in ipairs({4478,5029}) do
  local target=addon:GetAcquisitionMapTarget(addon.ItemCatalog[id])
  assert(target and target.bounds and not target.x,"new named rare routes retain published roaming areas rather than fake precise points")
