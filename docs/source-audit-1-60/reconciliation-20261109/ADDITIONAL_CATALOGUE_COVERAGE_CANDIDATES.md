@@ -1,6 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
-Current pending total: **224 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8BA below; original-count sections are historical.
+Current pending total: **244 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8BE below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.
 
@@ -73,3 +73,7 @@ Nine new IDs are outside the frozen catalogue and disjoint from210 prior pending
 ## 8BA fresh feed extension — 224 pending candidates
 
 Five IDs are outside the frozen catalogue and disjoint from all 219 prior candidates: 12546 Aristocratic Cuffs, 12551 Stoneshield Cloak, 13386 Archivist Cape, 22404 Willey’s Back Scratcher, 284091 Scarlet Forgemaster’s Bindings. Exact names/source fields are retained in CSV and checkpoint8ba_feed_delta_review.json. All need individual identity/version/scope/eligibility/acquisition checks; no gear or new current loot is adopted automatically. Three cloak names reinforce the known Back-slot coverage deficiency. They do not replace the required full-cache/feed all-slot audit or ten omitted cloak siblings. All prior 219 candidate objects are preserved.
+
+## 8BE actual feed extension — 244 pending candidates
+
+Twenty new feed IDs are outside the frozen catalogue and disjoint from all224prior candidates:10625,10628,12462,13527,14502,18326,18338,18344,18345,18346,18391,18459,18465,18496,18497,18690,18696,279471,280013,284104. Exact names/source references are in CSV and checkpoint8be_feed_delta_review.json. All require individual identity/version/scope/eligibility/acquisition audits;no automatic gear addition,currentnewgamecontent or Tsuzee boss guarantee is claimed. Heliotrope Cloak18496reinforces the known Back-slot coverage deficiency;full-cache/feedALLslot audit and ten omitted cloak siblings remain mandatory. All224prior candidate rows remain exact. A separately audited new Everloot report3502→1723concerns CommonQuestitemMudsnoutBlossoms,class12/slot0,not newequipment/recipe material/candidate.
