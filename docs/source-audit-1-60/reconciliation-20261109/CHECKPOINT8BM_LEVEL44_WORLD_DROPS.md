@@ -41,3 +41,7 @@ Shared navigation: **682published point-data /1,271directions /3,172missing /2,5
 ## Exact continuation
 
 Finish non-release18testPASS CI and inspect every direct bot change, then **8BN:all61pendinglevel45world-drop cases,numeric item-ID order**, already marked in the queue. Do not repeat8B–8BM source cases, unchanged failed URLs or old snapshot mutators.363outside-scope candidates, systematicALLslot/Back/Thrown/tenomittedcloaks, six dungeon links,954current-live book routes, manual navigation acceptance and final integrity remain open. Candidate discovery is not adoption. Existing single automation/sameworker;no main/Beta8/build/package/tag/release/billing changes.
+
+## Verified CI closure
+
+Source `bd84d45ea4c7a9453c64582d68683bc90d244b62`; [CI43008841342](https://github.com/magicaddons/getgear/actions/runs/43008841342),job130483027475:success/18timestampedPASS. Inspected directbot/finalgeneratedvalidated HEAD `b69301ca2d4f8b9f4d9c53bde55bbc09d761319f`:onlyprovenancefourEverlootfingerprints/time,allotherJSON/runtime/source/report/audit bytes unchanged. BotAPIbytesunread;actual-localfullfacts retained,notcounterinference. Final checkpoint8bm_validation.json overridesimmutablehistoricalproof/localCIpendingfields. Documentationclosure uses targeted evidence/identity/link/diff checks,not a new fullrun. Continue8BN61.
