@@ -1,5 +1,5 @@
 {
-  "status": "Integrated/freshcaptureexit0/fullsequentiallocalPASS/feed delta reviewed;nonreleaseCI/directbotpending",
+  "status": "Complete at publication-research level;fullsequentiallocal/nonreleaseCI PASS/directbot inspected;feed delta reviewed/224candidates;currentlive exceptions remain",
   "baseline": "c36a118c97b3e0f32129417017e5f13d80a4bdae",
   "reviewedOn": "2026-11-10",
   "counts": {
@@ -103445,7 +103445,7 @@
   },
   "failedFullReads": [],
   "limits": "Publicationreferencesnotcurrentloot/phase/spawns/rates/automaticbosses/classorprofessionequipgates. SecondaryRackmetadataobserved/hotfix70862notlootobservation:explicitQuestieDBunverifiedroute;older70124stats5/5vsprimary6/7notadopted. HumbertHelm4724Rifleman2345vsPants4723Priest2346notTamraRifle28271014275source. TamraonlyHreactionnotinferredAlliancefriendliness/gearfactiongate;Brontusneutralreactionsnotguaranteedattackability. Effects3336bleed4449poisonnotlearnedcraft;RepurposedRackshieldspellpowernotnewcraft/class-only. Sparklematiccostandstepsqualified;War12quest21NPCexplicitreused8AX/Heavyorigin8AY.9A219/systematicBackaudit/sixdungeon/954livebooks remain.",
-  "next": "FinishCI16testPASS/directbotreview,then8BB102levels26\u201327(55+47)numericIDorder markedqueue. Remaining2041allworld;9A224+systematicALLslotBackaudit/sixdungeon/954livebooks/finalintegrity/acceptanceplan remain. Original8BArawdelta retained/do not rerun aftersnapshotupdate.",
+  "next": "8BAcomplete. Resume8BB102worlddrop levels26\u201327(55+47)numericIDorder/markedqueue. Registry3861/index5332/remaining2041allworld/224candidates+systematicALLslotBackaudit/sixdungeon/954livebooks. Do not repeatcompletedresearch/rerun8BArawreviewaftersnapshotadvance absentgenuinenewdeficiency.",
   "integrationOutcome": {
     "equipmentRegistry": 3861,
     "index": 5332,
@@ -103455,9 +103455,14 @@
     "nextCheckpoint": "8BB102worlddrop cataloguelevels26\u201327(55+47)numericIDorder",
     "priorObjectsExact": 3766,
     "local": "17localPASS/14Lua+2offlinePython24modules/fourreports/3tools",
-    "ci": "pending16timestampedCItestPASS",
+    "ci": "success16timestampedtestPASS/14Lua+2offlinePython/24modules/fourreports/3toolsyntax",
     "additionalCandidates": 224,
     "feedDelta": "checkpoint8ba_feed_delta_review.json",
-    "httpCapture": "8actualsame-runHTTPresponses/hashmatch/no diagnosticrefetch"
+    "httpCapture": "8actualsame-runHTTPresponses/hashmatch/no diagnosticrefetch",
+    "sourceCommit": "095ec36efac6849a03a4b23521b450b311e1edbd",
+    "ciRun": 42927763960,
+    "ciJob": 130218513171,
+    "validatedFinalHEAD": "9a8357264b6bf23a18ddab3a33dc8e763e0f465b",
+    "botReview": "Onlyreconciliationtime/Everlootfingerprints;PF/runtime/reports/counts unchanged. Actual local8BAfacts/counters retained;botAPIbytesnotindependentlyread/equalcountersnotinferredfromcounts/noextradiagnosticfeedfetch."
   }
 }
