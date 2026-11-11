@@ -395,7 +395,7 @@ def build(inputs):
                     gap("source_coordinates_missing", key, entry.get("questID", ""), "Named source exists; precise location not established.")
                 elif not any(coordinate(x.get("x")) and coordinate(x.get("y")) for x in evidence.sources[key]["locations"]):
                     gap("precise_coordinate_unverified", key, entry.get("questID", ""), "Published area/roaming footprint only; no invented point or centroid.")
-        expected = plan["category"] != "world_drop" or "named-enemy" in str(meta.get("confidence", "")) or bool(plan["routes"]) or item_id in partial_hints or bool(own.get("contained-in-object") and not own.get("dropped-by"))
+        expected = plan["category"] != "world_drop" or meta.get("originUnknown") is True or "named-enemy" in str(meta.get("confidence", "")) or bool(plan["routes"]) or item_id in partial_hints or bool(own.get("contained-in-object") and not own.get("dropped-by"))
         status = "verified_coordinate_data" if exact else "directions" if located else "missing" if expected else "not_applicable"
         if status == "missing":
             gap("actionable_location_missing", detail="No safe map target. Keep detailed source evidence; no fabricated marker.")

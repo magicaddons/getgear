@@ -174,6 +174,12 @@ for _,gear in pairs(addon.ItemCatalog) do if addon:GetAcquisitionMapTarget(gear)
 assert(os.clock()-start<5,"navigation lookup must stay cheap and make no API requests per row")
 assert(destinations>1000)
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[1713]),"Ankh of Life remains a broad random drop")
+assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[5028]),"historical Sakrasis name/drop claims must not create a scepter destination")
+assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[285043]),"unknown Snarling Fang origin must not receive a misleading pin")
+for _,id in ipairs({4478,5029}) do
+ local target=addon:GetAcquisitionMapTarget(addon.ItemCatalog[id])
+ assert(target and target.bounds and not target.x,"new named rare routes retain published roaming areas rather than fake precise points")
+end
 assert(addon:GetAcquisitionMapTarget(addon.ItemCatalog[250513]),"ACA plans retain researched navigation")
 local lamp=addon:GetAcquisitionMapTarget(addon.ItemCatalog[9359])
 assert(lamp and lamp.source=="object:142184" and lamp.bounds and not lamp.x,"new researched Captain's Chest remains an area, not a fake point")

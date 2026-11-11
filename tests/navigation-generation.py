@@ -32,6 +32,13 @@ with tempfile.TemporaryDirectory() as temp:
     assert coverage[0]["status"] == "verified_coordinate_data"
     assert "2" not in data["items"], "one random loot table sample cannot establish a named farm"
     assert not data["chains"], "see-also/series IDs cannot become mandatory prerequisite edges"
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
+        "itemID": 2, "originUnknown": True, "confidence": "published-reference-origin-unverified"}]))
+    unknown, unknown_coverage, unknown_gaps, _ = nav.build(gear)
+    assert "2" not in unknown["items"], "an unknown source must not acquire a random loot sample pin"
+    assert unknown_coverage[1]["status"] == "missing", "unknown origin is a research gap, not inapplicable navigation"
+    assert any(g["itemID"] == 2 and g["gap"] == "actionable_location_missing" for g in unknown_gaps)
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text("[]")
     assert any(g["gap"] == "quest_chain_relationships_unverified" for g in gaps)
     (nav.REPORT / "navigation_quest_chains.json").write_text(json.dumps({"10": {"steps": [10], "routeVerified": True, "prerequisitesVerified": False}}))
     assert any(g["gap"]=="quest_chain_relationships_unverified" for g in nav.build(gear)[2]), "known travel order must not erase unverified prerequisite research"
