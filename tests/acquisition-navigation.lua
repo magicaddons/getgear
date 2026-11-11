@@ -174,6 +174,7 @@ for _,gear in pairs(addon.ItemCatalog) do if addon:GetAcquisitionMapTarget(gear)
 assert(os.clock()-start<5,"navigation lookup must stay cheap and make no API requests per row")
 assert(destinations>1000)
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[1713]),"Ankh of Life remains a broad random drop")
+assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[8122]),"two sparse historical loot samples do not establish a dedicated Heraldic Headpiece farm")
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[5028]),"historical Sakrasis name/drop claims must not create a scepter destination")
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[285043]),"unknown Snarling Fang origin must not receive a misleading pin")
 for _,id in ipairs({4478,5029}) do

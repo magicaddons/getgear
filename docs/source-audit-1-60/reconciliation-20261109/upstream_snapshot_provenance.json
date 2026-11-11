@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8BK successful actual local8bk2 capture",
-  "capturedUTC": "2026-11-11T10:36:13.817497+00:00",
+  "capturedForCheckpoint": "8BL actual successful local capture",
+  "capturedUTC": "2026-11-11T10:47:06.216915+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23605,
@@ -13,15 +13,15 @@
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.e6a582c4bd.json",
+        "url": "https://playfulls.com/db/gear.bf4cb1a848.json",
         "bytes": 1356331,
-        "sha256": "e6a582c4bd5e969081585f5ea1b605a91bc5e1934924678792f6c26795aeafd4",
+        "sha256": "bf4cb1a84827db4dc1b9e5ead15fbf4a5eb6e73e4f55d31c54d249635e1cbd59",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/goods.63f4057e9a.json",
+        "url": "https://playfulls.com/db/goods.c72521f744.json",
         "bytes": 467080,
-        "sha256": "63f4057e9a7daf0d1344f460f1206ffd22602063f80b9b6cadcf84630bf1c7d3",
+        "sha256": "c72521f744f828b7b53b93cf8e12dd4e6d028447c7fb9cba44ac2e3814feb536",
         "matchesRecordedFingerprint": true
       },
       {
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "All23605rawrows/9246fullsources/entiremetadata exact inspected8BJbot bodies. Zero new/removed IDs/names/sourcefacts/opaque cells.363outsidecandidates byte-exact;none adopted."
+    "comparison": "23605rawrows/9246fullsources/names/acquisitionfacts/sourceindices/entiremetadata exact8BK;onlytwoopaque10cells10248/260631selected0changed. No stats/availability/events inferred;originaldelta retainedbeforetwo diagnosticcelladvance. Display/sourceobjects byte-exact.363candidatesunchanged."
   },
   "everloot": {
     "total": 1550,
@@ -52,33 +52,33 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103443,
-        "sha256": "7c7077bfea667030441ce78ad414fc0c2fbd71d9342bbaa48d51bc338c49167d",
+        "sha256": "03edcb6fbe41ebe1898a6ee2ce179238fb4dc38d44018c08a0da712b9be227e3",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-11T10:10:14.556Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103479,
-        "sha256": "3ba2109d9eca2403b1bca4e2851e247f8ccf5f3002215a24193c8609de566204",
+        "sha256": "162fa8acbae17201102d15eedab0a2a306bb591afa7521c24f71c76aea66dfe3",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-11T10:10:14.556Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103463,
-        "sha256": "33acf9b730a02e66e3b26c4c1e2900e682685fdd4a8910f7b918be07125d4ede",
+        "sha256": "1640cf7e7a262531bf5a81421dbcb84b724f74bf2fd2b313919cfcdd4ca09133",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-11T10:10:14.556Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
         "bytes": 35754,
-        "sha256": "afac15c6867408c3ca79631e2ce00ceafa1bcef7be51673e26dc855e61bc363e",
+        "sha256": "8250c493c7b683058378ad6aadf01d09ab61336fbe18b8360b14d5de68acc5cb",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-11T10:10:14.556Z"
       }
     ],
-    "comparison": "1672raw1431qual;five retained relations update lastSeen only, plus NPC12718location install3\u21924. Three item relations2770/2835\u2192coppernode1731 and159\u2192vendor3934, twoNPC locations9087/12718;zero new/removed/build/firstSeen or selected relationships. Timestamp/install changes do not prove new loot/currentbuild. Original5diff preserved before snapshotadvance.",
+    "comparison": "1672raw1431qual;everyrelationandallretainedfields exactactual8BKlocal snapshot. Zero new/removed/updated/selected edges;equalcounts alone were not used.",
     "rawEdges": 1551,
     "qualifyingRelationships": 1316
   }
