@@ -76,7 +76,7 @@ Install source files only through the next explicitly authorised build process; 
 | Rare | `/getgear map 1404`: Prince Nazjak's published Arathi area; shade a region rather than invent a precise spawn. |
 | Object | `/getgear map 18706`: named Arena Master object source; use directions if no reliable position is available. |
 | Random drop |1713 (Ankh of Life) has no normal pin; lookup shows existing acquisition information without a fabricated farm. |
-| Missing location |273884 (Grovekeeper Trousers) and9359 (Southsea Lamp) retain unresolved acquisition/location qualifications. No precise pin; partial8BIresearch is not treated as verified navigation. |
+| Missing location |273884 (Grovekeeper Trousers) retains unresolved acquisition/location qualifications. No precise pin is fabricated. Southsea Lamp9359 acquired a researched Captain's Chest area in checkpoint8BI; test it separately with the object/key case below. |
 
 For point and area cases: start with an existing native user waypoint; click alternating items at least 20 times, switch zones/maps/floors and return, zoom/resize, close with Escape/map toggle, reopen, accept/complete a quest, and retry during combat. Require exactly one correctly labelled GetGear marker/area, no stale marker after close or quest refresh, no accumulated frames, intact native markers/waypoint, normal map controls and no Lua errors. Check small/large overlay sizes and guide pagination, all nine Preview classes, factions and unavailable/API fallback profiles. Inspect profiler for no bulk item requests, repeated entrance scans or expensive per-row map work. Report actual client build/locale and failing item/source ID if anything differs.
 
@@ -112,3 +112,9 @@ Source is ready for the next beta subject to the manual acceptance matrix; rende
 | dungeon_recipe | 4 | 3 | 17 | 0 |
 
 Categories retain original catalogue classification, with researched quest/dungeon overrides. Some original “unknown” entries retain previously researched location metadata; a point-data entry is not proof of live availability or a complete prerequisite route. The CSV and shared gap register provide item-level qualifications.
+
+## New researched destination — checkpoint8BI
+
+Southsea Lamp9359 now uses the existing pin for Captain's Chest142184 in Tanaris (published area76.4–76.5,45.7–45.8). Full chest contents independently name this lamp; Captain's Key9249 independently names this chest in its unlock table. Five full Southsea NPC inventories contain physical footlocker9276,not direct lamp9359; that box can contain the key/lamp/map fragments,not a guaranteed bundle. Keep this separate from Cuergo's Key9275/object142194. Current consumption/access/supply unverified. `/getgear map 9359` should open a labelled area and keep key context in guide/directions. No exact point, live rendering or guaranteed loot is claimed.
+
+The automatic audit changes one item from missing to useful directions:681point-data/1267directions/3171missing/2588notapplicable;6339overlapping gap rows. This demonstrates that subsequent acquisition research updates the shared navigation model. The source formatter also now displays primary wrapped vendor-price alternatives correctly, using OR rather than combined charges.8BIlocal19PASS;non-releaseCIpending. Existing manual map tests remain necessary.

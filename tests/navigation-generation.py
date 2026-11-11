@@ -48,6 +48,14 @@ with tempfile.TemporaryDirectory() as temp:
     future = nav.build(gear)[0]
     assert future["items"]["2"]["routes"][0]["kind"] == "crafting_requirement", "future reviewed special locations use the same registry/model"
     (nav.REPORT / "reviewed_equipment_sources.json").write_text("[]")
+    proof["actors"].append(response("object", 700, name="Chest fixture", maps={"40": [{"uiMapName": "Westfall", "coords": [[20, 30]]}]}))
+    proof["items"].append(response("item", 3, lists={"contained-in-object": [{"id": 700, "name": "Chest fixture"}]}))
+    path.write_text(json.dumps(proof))
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
+        "itemID": 3, "navigationRoutes": [{"kind": "object", "source": "object:700", "instructions": "Published key context"}]}]))
+    shared = [r for r in nav.build(gear)[0]["items"]["3"]["routes"] if r["kind"]=="object"]
+    assert len(shared)==1 and shared[0]["instructions"]=="Published key context", "typed unlock context and primary object relation share one destination"
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text("[]")
     proof["items"][0]["crossVersionWarning"] = True
     path.write_text(json.dumps(proof))
     assert "1" not in nav.build(gear)[0]["items"], "disputed versions must not produce a pin"

@@ -257,9 +257,14 @@ def build(inputs):
                              gap=code, detail=detail, researchCheckpoint=pending.get(item_id, {}).get("nextBatch", ""),
                              researchStatus=pending.get(item_id, {}).get("status", "existing-catalogue")))
         def route(kind, **values):
-            entry = dict(kind=kind, **values)
-            if entry not in plan["routes"]:
-                plan["routes"].append(entry)
+            entry = {key: value for key, value in dict(kind=kind, **values).items() if value is not None}
+            identity = {key: value for key, value in entry.items() if key not in ["instructions", "verification"]}
+            for existing in plan["routes"]:
+                if identity == {key: value for key, value in existing.items() if key not in ["instructions", "verification"]}:
+                    if entry.get("instructions") and not existing.get("instructions"):
+                        existing["instructions"] = entry["instructions"]
+                    return
+            plan["routes"].append(entry)
         book_id = gear.get("recipePatternItemID") or books.get(item_id, {}).get("bookItemID")
         # Reviewed future trainer/special-crafting/unlock routes share the
         # existing source registry and primary NPC/object evidence pool.

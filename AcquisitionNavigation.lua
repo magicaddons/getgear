@@ -29,16 +29,29 @@ local function offerText(route)
     if route.cost and route.currency then out[#out+1]=tostring(route.cost).." "..route.currency end
     local cost=offer.cost
     if type(cost)=="table" then
-        if type(cost[1])=="number" and cost[1]>0 then
-            local n=cost[1];out[#out+1]=string.format("%dg %ds %dc",math.floor(n/10000),math.floor(n/100)%100,n%100)
+        -- Primary item tables wrap price options; older records use one triple.
+        -- Options are alternatives, never additional simultaneous fees.
+        local variants=type(cost[1])=="table" and cost or {cost}
+        local alternatives={}
+        for _, price in ipairs(variants) do
+            local parts={}
+            if type(price[1])=="number" and price[1]>0 then
+                local n=price[1];parts[#parts+1]=string.format("%dg %ds %dc",math.floor(n/10000),math.floor(n/100)%100,n%100)
+            end
+            for _, p in ipairs(type(price[2])=="table" and price[2] or {}) do
+                if type(p)=="table" and p[1] and p[2] then
+                    local info=C_CurrencyInfo and call(C_CurrencyInfo.GetCurrencyInfo,p[1])
+                    parts[#parts+1]=tostring(p[2]).." "..(type(info)=="table" and info.name or "currency #"..tostring(p[1]))
+                end
+            end
+            for _, p in ipairs(type(price[3])=="table" and price[3] or {}) do
+                if type(p)=="table" and p[1] and p[2] then parts[#parts+1]=tostring(p[2]).." item #"..tostring(p[1]) end
+            end
+            if #parts>0 then alternatives[#alternatives+1]=table.concat(parts," + ") end
         end
-        for _, p in ipairs(type(cost[2])=="table" and cost[2] or {}) do
-            local info=C_CurrencyInfo and call(C_CurrencyInfo.GetCurrencyInfo,p[1])
-            out[#out+1]=tostring(p[2]).." "..(type(info)=="table" and info.name or "currency #"..tostring(p[1]))
-        end
-        for _, p in ipairs(type(cost[3])=="table" and cost[3] or {}) do out[#out+1]=tostring(p[2]).." item #"..tostring(p[1]) end
+        if #alternatives>0 then out[#out+1]=table.concat(alternatives," OR ") end
     end
-    if type(offer.avail)=="number" and offer.avail>0 then out[#out+1]="Limited listing; live stock unverified" end
+    if type(offer.avail)=="number" and offer.avail>0 or type(offer.stock)=="number" and offer.stock>0 then out[#out+1]="Limited listing; live stock unverified" end
     if type(offer.standing)=="number" and offer.standing>0 then
         local rank=({"Hated","Hostile","Unfriendly","Neutral","Friendly","Honored","Revered","Exalted"})[offer.standing]
         out[#out+1]="Requires "..(rank or "standing "..offer.standing).." with faction #"..tostring(offer.reqfaction or "unknown")
