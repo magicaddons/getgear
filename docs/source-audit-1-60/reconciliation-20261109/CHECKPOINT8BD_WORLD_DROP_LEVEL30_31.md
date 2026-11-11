@@ -1,0 +1,49 @@
+# Checkpoint 8BD — 104 cases at catalogue levels 30–31
+
+Publication research preserved 11 November 2026. Integration,freshreconciliation,full local/nonreleaseCI/directbotreview are pending. Latest validated8BC:source `1b276f103d7aee8b7f7a238fee6ce534f3835b41`,[CI42931241694](https://github.com/magicaddons/getgear/actions/runs/42931241694),inspectedbot `6240026c1f5dbd21fc647fff6201805d402bcc55`,closure `3ee950e`.
+
+## Evidence and confidence
+
+[Working evidence](checkpoint8bd_working_evidence.json) locks104exactID/name cases (49level30/55level31),with183unique full primary response fingerprints:123new/60explicitcached,eightactual8BCfeedresponses reused. [Discovery](checkpoint8bd_discovery_index.json) records104exactqueries,fourshared queries,additionalquest/input searches,oneopenedsecondary635page,andonefailedsecondary1423open. No original secondary HTTP hashes are invented.
+
+95broad/ninenamed cases,611exact NPC reverse joins,119object joins/eightworldobjects,112physical-container references/51gear/109reversejoins/tenphysicalcontainers,andfivefished-in cases. All named-enemy relationships independently match full inventories.94Uncommon/10Rare,103BoE/oneBoP4614,twoUnique2951/4614,no explicit class masks or unavailable/SoDwarnings. No qualifying selectedEverlootedge occurs in the reusedcapture;that is not no-drop proof. Existing identity,stats,equip/class/proficiency,filters,recipes and materials remain unchanged.4614is absent from the cold green-BoE fallback;no analogous misclassification fix is needed.
+
+## Quest-starting necklace: origin versus quest state
+
+Full [Pendant of Myzrael4614](https://www.wowhead.com/forever/item=4614) is Uncommon/BoP/Unique,neck/equip30/item35,and explicitly begins a quest. Its own full `starts` and `provided-for` tables name the same [Crystal in the Mountains635](https://www.wowhead.com/forever/quest=635),minimum30/display35/Both. The related18silver is a reward,not a fee. Its ordinary published enemy loot remains the origin reference.
+
+One full635read returned403. An opened [secondary635page](https://www.60.tools/quests/635-crystal-in-the-mountains) distinguishes a Forever record from inheritedClassicdetails;an [independentcomparison](https://theforeverera.com/en/quests/635/) explicitly warns that text,rewards and coordinates derive fromClassicandmaydiffer. Shards ofMyzrael is an object/end lead,not an NPCdrop origin. Its reportedArathicoordinates are not adopted as a current waypoint or as an independently read primary object.
+
+The supplied/provided relationship cannot independently establish free acquisition of an item that itself starts that quest. No acceptance-generated free pendant,current input consumption,required quantity,repeatability,indispensableMyzraelprerequisite or gear retention/loss is invented. Quest involvement may affect retaining a wearable item and needs current in-game testing. BoP does not permit ordinary unbound trading;Unique is a possession limit,not one-time-acquisition proof.
+
+## Lesser Darkmoon Prize: twelve wallet tickets, not legacy item fees
+
+Full [Lesser Darkmoon Prize19297](https://www.wowhead.com/forever/item=19297) has40contents and independently matches seven new gear IDs. Its exact full sold-by row and cached full [Gelvas Grimegate14828](https://www.wowhead.com/forever/npc=14828) inventory agree:zero coin,12wallet-currency[DarkmoonPrizeTickets515](https://www.wowhead.com/forever/currency=515),no physical item inputs,standing0,avail−1. The currency's completed full response is explicitly reused8AV. These are published purchase terms,not currentstock,unlimitedsupply,eventdates or freecurrency.
+
+The container is Uncommon/item35,explicitlyRequiresLevel30,right-click,and has no explicit BoP/BoEorUnique line. Its use30differs from each contained gear's equip level;it does not impose wearer professions or guarantee a particular garment/weapon. This is a purchase of a box,not direct merchant stock of all seven pieces or a newly learned craft.
+
+The full box separately names [quest7932](https://www.wowhead.com/forever/quest=7932),minimum30/display60/Both,onefixed19297reward,and flags changed objectives with the oldphysical12ticketrequirement removed. The full merchant lists7932inbothstart/end tables. The full quest itself returned403. Secondaryversions explicitly reuseClassic12physical19182ticketobjectives. Physical19182differs fromwallet515;do not combine them as24tickets,assume current quest inputs/repetition or use item purchase/sell baselines as live gear prices. PriorMinorPrize19298's five-wallet-ticket terms are a different container and are not copied.
+
+## Box of Supplies: one box, not guaranteed gear or a standing gate
+
+Full [Box of Supplies6827](https://www.wowhead.com/forever/item=6827),Common/item40/Unique/right-click,has25contents and independently contains TwilightCuffs7437,NightskyTrousers6405andConjurer'sHood9849. Its structured required30is not rendered as a Requires line;current opening conditions remain unverified. BoxUnique/item40doesnotchange these exact gear identities,binding or equip gates.
+
+The full related row names [The Lost Supplies1423](https://www.wowhead.com/forever/quest=1423),minimum30/display40/Alliance,onefixedbox and+25Stormwind72reputation. That is a gain,not requiredstanding,and its quest access does not make contained BoE gear Alliance-only. No guaranteed three-item bundle or repeatedfreeboxis established.
+
+The full1423quest was unreadable. A historical same-name input-ID6172probe also returned403;that ID is not accepted as independently confirmed current input identity. [Questing.wiki's1423projection](https://questing.wiki/wow-forever/quests/1423/) describes an itemLostSupplies starting the quest and aQuartermasterLungertz turn-in at reportedBlastedLandscoordinates. It explicitly identifies anOctober4correctedQuestieexport with unknownexactbuild/observationdates and no entity IDs for named points. The separateSenseOSfullopenwas inaccessible;its search projection is not counted as a full-page read. Do not invent a current input ID/quantity,farm,actor ID,waypoint,consumptionfee,free supplieditem,currentrepeatability or merchant stock. These three positive gear contents remain possible box rolls,not direct quest gear rewards.
+
+## Seven list omissions and completed route reuse
+
+Full object75297returns174contents but omits own-item references6402/9864/9870;full75296returns253and omits13045. No particular cap is assumed for these lists. Full physicalHoard10569returns206but omits item2951RingofUnderwood,4066InsigniaBucklerand9858Archer'sBuckler,despite each own-item reference. These seven one-sided leads remain qualified,not positive reverse joins,currentcertainty,empty inventories,absence or retirement. Other independently matched routes remain.
+
+The other21selectedHoardreferences independently reverse in full10569contents. Completed8BCresearch describes physical10569versussame-nameworld149502,relatedTrinkets3481min40/display50/Both,andtheSeptember-beta/unknownversionTorch/tower/prerequisiteleads. Its nine unread quest pages and one unread object are explicitly reused without retries or invented current gates/input fees/waypoints. Source access40doesnotreplace gear30–31,item50doesnotestablishanopeningminimum,and a fixedbox is not guaranteed gear.
+
+The22gear references to21511reuse8BB's12quests,fourfullNPCjoins/seventeenunreadformalrefs/fiveunreadNPCs. Initial10/followup5commendationrewards differ from15signets consumed by exchanges;alternativefees are not combined,newrecipes,wearerprofessions or gearfactiongates. Event phase,opening30ambiguity,repetition and acceptance remain unverified. Mysterious19425'sfourfortune-paper/endobject/Ansekhwaanomalyroute is reused8AUwithout freepaper/allfees/currentevent/guaranteedgear claims. WornJunkbox16883independently contains ThalliumChoker12020;8BC'seightkill/elevenpickpocketfullcachedbox-originjoins are reused as distinct actions,not direct finished-11996/12020loot or wearerRogue/currentopeningfee/rateproof.
+
+Strong Iron Lockbox4636is distinct from Iron4634:Locked/item35/170contents/200returned drop rows(possiblycapped). No shared opening skill threshold,key/service fee or wearerRogue/Lockpickingrequirement is inferred. Fishing/container access does not impose wearerFishing or change gearbinding.
+
+## Named actors and next checkpoint
+
+FullMosh'OggBrute1142andRoloch14488independently listKorgBat1679. Four exact actors2255/2567/2570/2907listOgremindRing1993;their names do not make itMage/Shaman-only. Singer2600listsNecklaceofHarmony5180,Nefaru534listsNefariousBuckler4477,andLadyZephris14277listsNagaMaiden'sGown282711. The gown is BoE,not BoP or a loot guarantee from everyNagamob/patrol/faction. Other named pairs retain exact IDs and ordinaryproficiency rules;Poison-tippedBoneSpear1726'son-hitpoison is an effect,not a learnedcraft.
+
+Four new unread full primary URLs:635,7932,1423,andunacceptedlegacyitem6172probe. No body hashes/retries/negativeinventoryclaims. Fifteen prior blocked pages from8BC/8BBare explicitly reused. Resumeintegrate104preserving4070priorobjects;freshcaptureexit0/full17localPASS16CItestPASS/directbot. Frozenremaining1832includes104pending;aftervalidation1728remain. Next **8BE:101worlddrop cataloguelevels32–33(51+50),numericIDorder**.224candidates/systematicALLslotBackaudit/tenomittedcloaks/sixdungeon/954livebooks/currentaccess-use-retentionexceptions remain;countPASSnotexhaustive/livecoverage. Originalworker renewed its own verified lock to82849without removing anotherholder;singleexistingautomation/no duplicate-newautomation-release-main-Beta8-billing action.
