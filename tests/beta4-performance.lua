@@ -17,7 +17,7 @@ for path in toc:gmatch("[^\r\n]+") do
         end
     end
 end
-assert(loaded>=15 and loaded<=24,
+assert(loaded>=15 and loaded<=26,
     "Unexpected active addon file count "..loaded)
 local loadTime=os.clock()-t0
 assert(addon.CatalogueAudit.objectives>30000)

@@ -136,36 +136,41 @@ local function NewAcquisitionPin(parent, size)
     t:SetAllPoints()
     t:SetTexture("Interface\\AddOns\\GetGear\\MapPin")
     b.pinTexture=t
+    b:RegisterForClicks("LeftButtonUp","RightButtonUp")
     b:SetScript("OnEnter",function(self)
-        local destination=self.destination
+        local destination=self.gear and GetGear:GetAcquisitionMapTarget(self.gear)
         if not destination or not GameTooltip then return end
         self.pinTexture:SetVertexColor(1,1,0.82)
         GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
-        GameTooltip:AddLine("Open acquisition location",1,0.84,0.42)
-        GameTooltip:AddLine(destination.spot or destination.zone,1,1,1,true)
+        GameTooltip:AddLine(destination.chooseFirst and "Choose acquisition location" or "Open acquisition location",1,0.84,0.42)
+        GameTooltip:AddLine((destination.role and destination.role..": " or "")..(destination.label or destination.zone or "Directions"),1,1,1,true)
         if destination.x and destination.y then
-            GameTooltip:AddLine(destination.zone .. " (" .. string.format("%.1f",destination.x) .. ", " .. string.format("%.1f",destination.y) .. ")",0.8,0.85,0.93)
-        else
+            GameTooltip:AddLine((destination.zone or "Destination map") .. " (" .. string.format("%.1f",destination.x) .. ", " .. string.format("%.1f",destination.y) .. ")",0.8,0.85,0.93)
+        elseif destination.zone then
             GameTooltip:AddLine(destination.zone .. " - approximate region",0.8,0.85,0.93)
         end
-        if destination.quality=="classic-reference" then
-            GameTooltip:AddLine("Classic location; verify in Forever",1,0.70,0.32,true)
-        elseif destination.quality=="reported" then
-            GameTooltip:AddLine("Community-reported location; not independently confirmed",1,0.70,0.32,true)
-        elseif destination.quality=="zone-only" then
-            GameTooltip:AddLine("Approximate zone only; exact destination unverified",1,0.70,0.32,true)
-        elseif destination.quality~="forever" then
-            GameTooltip:AddLine("Acquisition location not independently verified",1,0.70,0.32,true)
+        if destination.kind=="dungeon" then
+            GameTooltip:AddLine("Uses this client's dungeon entrance location. Boss-floor position is not guessed.",0.8,0.85,0.93,true)
+        elseif destination.bounds and not destination.x then
+            GameTooltip:AddLine("Published area, not an exact NPC position.",0.8,0.85,0.93,true)
         end
-        GameTooltip:AddLine("Opens the map. Replaces your existing user waypoint when allowed.",0.65,0.76,0.88,true)
+        if destination.verification=="legacy-reference" then
+            GameTooltip:AddLine("Classic location; verify in Forever",1,0.70,0.32,true)
+        elseif destination.verification~="client" then
+            GameTooltip:AddLine("Published reference; current presence, stock, loot and access remain unverified.",1,0.70,0.32,true)
+        end
+        if (destination.choiceCount or 0)>1 then
+            GameTooltip:AddLine("Right-click for other locations ("..destination.choiceCount..").",0.65,0.76,0.88,true)
+        end
+        GameTooltip:AddLine("Opens the map or written directions. Your existing waypoint is preserved.",0.65,0.76,0.88,true)
         GameTooltip:Show()
     end)
     b:SetScript("OnLeave",function(self)
         self.pinTexture:SetVertexColor(1,1,1)
         HideItemTooltip()
     end)
-    b:SetScript("OnClick",function(self)
-        if self.gear then GetGear:OpenAcquisitionMap(self.gear) end
+    b:SetScript("OnClick",function(self,button)
+        if self.gear then GetGear:OpenAcquisitionMap(self.gear,nil,self,button=="RightButton") end
     end)
     return b
 end
@@ -181,6 +186,67 @@ local function AssignAcquisitionPin(b,gear)
         b.destination=nil
         b:Hide()
     end
+end
+
+-- A single lazy popup for source choices or directions. No additional controls
+-- or permanent text are added to compact objective rows.
+local navigationPopup
+local function NavigationPopup()
+    if navigationPopup then return navigationPopup end
+    local f=CreateFrame("Frame","GetGearNavigationPopup",UIParent,"BackdropTemplate")
+    f:SetSize(410,330);f:SetPoint("CENTER");f:SetFrameStrata("DIALOG");f:SetClampedToScreen(true)
+    f:SetBackdrop({bgFile="Interface\\DialogFrame\\UI-DialogBox-Background",edgeFile="Interface\\Tooltips\\UI-Tooltip-Border",tile=true,tileSize=16,edgeSize=16,insets={left=4,right=4,top=4,bottom=4}})
+    f.title=NewText(f,"GameFontNormal",350);f.title:SetPoint("TOPLEFT",14,-14)
+    local close=NewButton(f,"X",24,22);close:SetPoint("TOPRIGHT",-8,-8);close:SetScript("OnClick",function() f:Hide() end)
+    f.scroll=CreateFrame("ScrollFrame",nil,f,"UIPanelScrollFrameTemplate");f.scroll:SetPoint("TOPLEFT",14,-44);f.scroll:SetPoint("BOTTOMRIGHT",-30,42)
+    f.content=CreateFrame("Frame",nil,f.scroll);f.content:SetSize(360,240);f.scroll:SetScrollChild(f.content)
+    f.text=NewText(f.content,"GameFontHighlightSmall",350);f.text:SetPoint("TOPLEFT",0,0)
+    f.buttons={}
+    f.previous=NewButton(f,"Previous",88,23);f.previous:SetPoint("BOTTOMLEFT",14,12)
+    f.next=NewButton(f,"Next",88,23);f.next:SetPoint("BOTTOMRIGHT",-14,12)
+    if type(UISpecialFrames)=="table" then table.insert(UISpecialFrames,"GetGearNavigationPopup") end
+    f:Hide();navigationPopup=f
+    return f
+end
+function GetGear:ShowAcquisitionDirections(gear,target,anchor,reason)
+    local f=NavigationPopup()
+    f.title:SetText(gear.name or "Acquisition directions")
+    for _, b in ipairs(f.buttons) do b:Hide() end
+    f.previous:Hide();f.next:Hide();f.text:Show()
+    local text=(reason and reason.."\n\n" or "")..self:GetAcquisitionDirections(gear)
+    if gear.instructions and gear.instructions~="" then text=text.."\n\n"..gear.instructions end
+    local research=gear.acquisitionResearch
+    if research and research.details then text=text.."\n\n"..research.details end
+    f.text:SetText(text);f.content:SetHeight(MeasureText(f.text,240));f.scroll:SetVerticalScroll(0);f:Show()
+end
+function GetGear:ShowAcquisitionChoices(gear,choices,anchor)
+    local f=NavigationPopup()
+    f.title:SetText("Where to obtain "..(gear.name or "this item"))
+    f.text:Hide();f.content:SetHeight(240);f.scroll:SetVerticalScroll(0)
+    local page=1
+    local function render()
+        for _, b in ipairs(f.buttons) do b:Hide() end
+        local first=(page-1)*6+1
+        for n=1,6 do
+            local target=choices[first+n-1]
+            if not target then break end
+            local b=f.buttons[n]
+            if not b then b=NewButton(f.content,"",350,34);b:SetPoint("TOPLEFT",0,-(n-1)*38);f.buttons[n]=b end
+            b:SetText((target.role or "Location")..": "..(target.label or target.zone or "Directions")..(target.zone and " — "..target.zone or ""))
+            b:SetScript("OnClick",function() f:Hide();GetGear:OpenAcquisitionMap(gear,target.id,anchor) end)
+            b:SetScript("OnEnter",function(self)
+                if not GameTooltip then return end
+                GameTooltip:SetOwner(self,"ANCHOR_RIGHT");GameTooltip:AddLine(target.label or "Location",1,0.84,0.42,true)
+                if target.requirements and target.requirements~="" then GameTooltip:AddLine(target.requirements,1,1,1,true) end
+                GameTooltip:AddLine("Published source; current availability unverified.",1,0.7,0.32,true);GameTooltip:Show()
+            end)
+            b:SetScript("OnLeave",HideItemTooltip);b:Show()
+        end
+        f.previous:SetEnabled(page>1);f.next:SetEnabled(page*6<#choices);f.previous:Show();f.next:Show()
+    end
+    f.previous:SetScript("OnClick",function() if page>1 then page=page-1;render() end end)
+    f.next:SetScript("OnClick",function() if page*6<#choices then page=page+1;render() end end)
+    render();f:Show()
 end
 
 local function NewProfessionIcon(parent, size)
@@ -312,6 +378,10 @@ local function Describe(gear, previewMode)
     end
     if previewMode and type(gear.races)=="table" and #gear.races>0 then
         desc = desc .. "\n|cffffba63Race-restricted: " .. table.concat(gear.races, ", ") .. ".|r"
+    end
+    if GetGear.GetAcquisitionDirections then
+        local directions=GetGear:GetAcquisitionDirections(gear)
+        if directions~="" then desc=desc.."\n\n|cffffd36aWhere to go|r\n"..directions end
     end
     return desc
 end

@@ -6,7 +6,7 @@ overlay for targeted dungeon/recipe sources.  Never changes eligibility,
 item stats, reagent lists, or user SavedVariables.  Public data is not treated
 as proof of live realm loot unless independent player observations support it.
 """
-import collections,csv,datetime,hashlib,html,json,pathlib,re,urllib.request,urllib.parse
+import collections,csv,datetime,hashlib,html,json,pathlib,re,sys,urllib.request,urllib.parse
 from html.parser import HTMLParser
 
 ROOT=pathlib.Path(".")
@@ -836,5 +836,9 @@ def main():
     assert roles["container-lead"]==2
     assert len(true_dungeon)==552 and len(unresolved)==6
     assert len(changes)>=100,"Insufficient actionable source evidence; fail closed"
+    # Every reconciliation refreshes shared navigation and its research gaps.
+    # This offline step never guesses locations from generic loot relationships.
+    import subprocess
+    subprocess.run([sys.executable, str(ROOT / "tools/build_acquisition_navigation.py")], check=True)
 
 if __name__=="__main__":main()

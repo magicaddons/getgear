@@ -267,7 +267,7 @@ assert(addon.ItemCatalog[250529].sourceSummary:find("Verdan the Everliving",1,tr
 local ui=assert(io.open(root.."/UI.lua")):read("*a")
 local describeBody=assert(ui:match("local function Describe%(gear, previewMode%)%s*(.-)\nend"))
 local describe=assert(load("return function(gear,previewMode)\n"..describeBody.."\nend",
-    "Describe", "t", {type=type,tostring=tostring,table=table}))()
+    "Describe", "t", {type=type,tostring=tostring,table=table,GetGear=addon}))()
 local detailed=describe(addon.ItemCatalog[250515],false)
 assert(detailed:find("Stondry Darkhammer",1,true)
     and detailed:find("Gor'mak",1,true) and detailed:find("unverified",1,true))

@@ -77,3 +77,7 @@ Five IDs are outside the frozen catalogue and disjoint from all 219 prior candid
 ## 8BE actual feed extension — 244 pending candidates
 
 Twenty new feed IDs are outside the frozen catalogue and disjoint from all224prior candidates:10625,10628,12462,13527,14502,18326,18338,18344,18345,18346,18391,18459,18465,18496,18497,18690,18696,279471,280013,284104. Exact names/source references are in CSV and checkpoint8be_feed_delta_review.json. All require individual identity/version/scope/eligibility/acquisition audits;no automatic gear addition,currentnewgamecontent or Tsuzee boss guarantee is claimed. Heliotrope Cloak18496reinforces the known Back-slot coverage deficiency;full-cache/feedALLslot audit and ten omitted cloak siblings remain mandatory. All224prior candidate rows remain exact. A separately audited new Everloot report3502→1723concerns CommonQuestitemMudsnoutBlossoms,class12/slot0,not newequipment/recipe material/candidate.
+
+## Navigation checkpoint feed review
+
+98 new outside-canonical feed leads added to the existing candidate register:244→342. They are unvalidated candidates, not additions to the7,707 catalogue or the frozen5,688 research queue. Five other new feed IDs are already canonical. See checkpoint_navigation_feed_scope_review.json and navigation_new_upstream_research_leads.json. Preserve systematic all-slot/Back audit, ten omitted cloaks and original8BIresearch.

@@ -1,17 +1,89 @@
-# GetGear acquisition navigation — active implementation
+# Acquisition navigation restoration and handover
 
-Status: investigation complete enough to establish the regression; implementation and navigation validation pending. User authorised implementation11November2026onwork/full-acquisition-reconciliation-20261109;no packaging/release.
+Status: implemented; full local validation passed. Non-release CI and its generated commit must be reviewed before closure. No package or release authorised. Original acquisition research remains active.
 
-## Original functionality
+## What happened to the button
 
-Initial8923044(24October2026)hasUI.NewAcquisitionPininbothdetailedandcompactrows,andAcquisition.lua:GetAcquisitionMapTarget/OpenAcquisitionMap. Commit78d177a(8November2026,cataloguecutover)extractedthehelpertoMapNavigation.lua;gitdiffshowsthepinwasnotremoved. CurrentUIretains22pxcompact/24pxdetailedpinsandMapPin.tga(64x64RGBA)exists.
+The pin was not deleted. Initial commit 8923044 placed `NewAcquisitionPin` in both detailed and compact rows. Commit 78d177a extracted the map helper into MapNavigation.lua. The current UI still had the 22px compact / 24px detailed pin and its 64×64 artwork, but only 111 of 7,707 items had acquisitionLocation (105 point / 6 zone-only records, 71 in Redridge, 12 distinct zones). The old helper recognised only 15 zone names. Reconciled source descriptions usually lacked structured navigation data. This was a data-coverage regression plus a limited adapter, not missing artwork.
 
-CurrentfullTOCloadbaseline:7707items,111acquisitionLocationrecords(105coordinate/6zoneonly),only12populatedzonenames;71locationsRedridge. Thehelperonlyrecognises15names. Mostnewcatalogued/source-reconcileditemscontaindescriptiveevidencewithoutstructurednavigationlocations,soAssignAcquisitionPinhidesit. ExistingmapopeningonlytriesC_Map.OpenWorldMaporanalready-loadedWorldMapFrame:SetMapID;nativewaypointAPIsareoptional/assumedandthehelperhasnosourcechooserorquestprogressionmodel. This is data/coverage plus API/fallback insufficiency,not deleted artwork.
+## Shared implementation
 
-## Implementation direction
+- Keep one context-sensitive pin, existing row geometry and icon asset. Hover describes the destination. Left-click opens one useful destination directly; otherwise it opens a paginated six-source chooser. Right-click selects alternatives. The same resolver powers compact and detailed pins.
+- Detailed cards add “Where to go”. One reusable, closable/Escape-enabled popup holds source choices or scrollable directions when accurate map placement is unavailable. `/getgear map ITEMID` opens the same route for testing or lookup, irrespective of current class filters.
+- Generated AcquisitionNavigationData.lua deduplicates sources, primary location footprints, reward relationships and ordered routes. AcquisitionNavigation.lua selects destinations; MapNavigation.lua adapts the client. Item identities, eligibility, recipe ingredients and SavedVariables are untouched.
+- Published point coordinates receive a labelled GetGear marker; published roaming footprints receive a shaded area, never an invented centroid. Classic-only coordinates open written guidance without claiming a precise Forever pin. Native player waypoints are never replaced.
+- Single marker reused across clicks; hides on other maps, returns on the destination map, clears on close, world entry or quest-progress refresh. Canvas coordinates follow resizing/zoom. No per-row dungeon scan, external addon or native waypoint dependency.
 
-ReuseexistingMapPin/NewAcquisitionPin/MapNavigationandguidecards. Onecontext-sensitiveaction,sharedtypedsource/location/questmodel,progressivedisclosureandlightweightsourcechoices. Preserveoriginalcatalogueidentities/eligibilityandvalidatedsourceevidence. Reusecommittedstructuredresearchproof;neverturnmulti-pointNPCfootprintsintoanunverifiedprecisepin,infermandatoryprerequisitesfromsame-nameseriesalone,orfalselymapgenericrandomdrops. Keepsourceconfidenceandunknownchain/coordinategapsvisible. APIcapabilityguards/clientmanualmatrixrequired;noTomTomorrelianceonretail-onlyAPIs.
+## Source coverage and confidence
 
-## Research preservation
+All 7,707 catalogue IDs and 36,341 objectives across nine classes were audited. Counts are data coverage, not a claim of successful in-game rendering:
 
-Seecheckpoint8bi_partial_evidence.jsonandCONTINUATION.md.100level40ownitems/24searchespreserved;noqueueadvance/integration. Completeauthorisednavigationimplementation/fulllocal+nonreleaseCI/botreview,thenresume8BIqueries6–24andremainingjoins. Gapregisterwillbesavedinthissamefolderandlinkedfromresearchtracking. Existing8BHfullCI42973048416isthelatestcodePASS,notanavigationtestclaim.
+| Coverage | Items | Meaning |
+| --- | ---: | --- |
+| Published coordinate data | 681 | Cited published point data exists; actual client map resolution/rendering still needs testing. |
+| Useful directions | 1,283 | Named areas/roaming footprints, zone guidance or client-resolved dungeon entrances; precise fixed marker not established. |
+| Missing useful location data | 3,155 | No safe actionable location; missing data is not implemented navigation. |
+| No applicable fixed destination | 2,588 | Broad random drops without a justified named target. |
+
+Actual in-game rendering verified: **0**. Machine-readable [per-item coverage](navigation_coverage.csv), [nine-class/category totals](navigation_audit.json) and [shared research gaps](navigation_research_gaps.csv) retain every classification. Gap rows are not unique items and can overlap.
+
+Supported categories include direct vendors, limited recipe vendors, currency/reputation/ACA sources, individual quest starts versus turn-ins, ordered quest routes, dungeon bosses/trash/recipe sources, named rare drops, objects and researched trainers. A missing precise entrance falls back to directions. In-instance NPC locations redirect to the client entrance rather than pretending unsupported floor coordinates are accurate. Recipe learning destinations are separate from finished gear and special crafting locations. Generic crafts do not acquire a destination unless a meaningful source is researched.
+
+The Defias reward route for 6087/2041/2042 now includes 65→132→135→141→142→155→166, NPCs and zones. Five investigation stages have a published order; 142 completion text connects the escort, and 155/166 have their own published order. This supports a travel sequence, **not a fully proven mandatory prerequisite graph or current quest availability**. Character IsOnQuest/IsQuestFlaggedCompleted may select an active/next uncompleted published stage; unavailable/secret/error results fall back to the beginning with progress unknown. Only an active quest uses the client's objective waypoint. Completion never establishes which choice reward was obtained. Unknown chains remain in the shared gap register.
+
+Evidence comes from the existing individually researched source registry, primary response fingerprints, reviewed merchant/book CSV joins and the published Forever client source. Published source facts do not establish current NPC presence, stock, loot, rank, access, phase or supply. No item location or prerequisite was fabricated. Full API/route proof: [checkpoint_navigation_evidence.json](checkpoint_navigation_evidence.json).
+
+## Future discoveries use the same pipeline
+
+Every normal `tools/reconcile_acquisition_1_60.py` run invokes the offline navigation generator after existing integrity guards. Non-release CI validates it and commits the generated navigation data with the evidence reports. This applies to subsequent research, not just today's snapshot.
+
+1. Record new verified source facts in the existing checkpoint evidence JSON/merchant or recipe-source CSVs, retaining exact IDs, URLs, response fingerprints and uncertainty. NPC/object location proof accepts published `maps`/`mapper`, named footprints and zone-only evidence. Never turn a roaming region or generic random-drop sample into a precise destination.
+2. Explicit reward/seller/object relationships automatically populate routes. A reviewed future trainer, special crafting location or unlock can use `navigationRoutes` in the existing reviewed equipment/recipe record, with kind, `source` (`npc:ID`/`object:ID`) and short instructions. It requires a source record with cited primary evidence; no UI coordinates or per-item UI branches.
+3. Put researched ordered quest routes in navigation_quest_chains.json, with source proof, ordered steps, routeVerified and prerequisitesVerified kept distinct. Related/see-also IDs alone never prove prerequisites. Preserve unresolved links in navigation_research_gaps.csv.
+4. Reconcile, run the full required suite and review the coverage/gap diff. Source IDs, current research status/nextBatch and exact next action remain linked to the same acquisition queue. Do not create a second worker, research project or automation.
+
+The generator validates map candidates against client names and can discover newly researched zones from the client's map tree. No new UI-specific zone list is required for future locations. Gap reports are regenerated, including the empty-gap case.
+
+## Forever API and implementation limits
+
+Verified against Gethe/wow-ui-source's `forever` branch commit 4cd0ab752a77164f654ccbca9d0c1fe8dafceebe, with four Git blob IDs retained in the proof. C_Map.OpenWorldMap is present and restricted; it is **not** incorrectly dismissed as retail-only. Guarded fallbacks use global OpenWorldMap and WorldMapFrame.SetMapID. C_Map.GetMapInfo/GetMapChildrenInfo, C_EncounterJournal.GetDungeonEntrancesForMap, character quest APIs, WorldMapFrame:GetCanvas/GetMapID/OnHide are present in this source. Runtime capability checks and pcall remain necessary. Combat/unavailable APIs show written guidance.
+
+This confirms published API support, not operation on the user's exact installed client. Localised map-name differences, map-canvas clipping/strata/scale, protected UI behaviour and entrance coverage require actual Forever checks. No accurate dungeon-floor/boss coordinates, keys or unlocks are asserted where unavailable. Primary published maps may contain historical footprints. Only one quest travel chain is currently assembled; other chain gaps remain open.
+
+## Automated validation
+
+Full local 19 PASS:15 Lua regressions (including new 13-source navigation scenarios), three offline Python regressions and required files / 26-module syntax checks. Exporter and four Python tool syntax checks also pass. The existing stress guard permits the two deliberately added data/model modules while retaining its time, class/filter and zero-bulk-request assertions.
+
+Navigation tests cover simple quest, multi-stage chain, distinct start/end NPCs, equipment vendor, limited recipe vendor, ACA, dungeon boss, dungeon recipe, dungeon quest, multiple sources, rare NPC, broad random drop and missing data. They exercise shared actual UI factory, progress unknown/active/incomplete, point/area handling, invalid coordinates, entrance caching, repeated clicks, map changes/return, resizing, close cleanup, combat/missing-API fallbacks and native waypoint preservation. Offline generator tests prove future evidence propagation and reject fake centroids, inferred prerequisite edges, unreviewed partial research and disputed versions. These are behavior/API doubles, not game rendering tests.
+
+Results: [navigation_local_results.txt](navigation_local_results.txt). GitHub validation status will be appended below after the run finishes.
+
+## Exact in-game acceptance tests
+
+Install source files only through the next explicitly authorised build process; no package was created here. Enable Lua errors and use the actual Forever client. Open the relevant guide card/Preview and compare its pin with the compact objective pin where class/level eligibility allows. The lookup command exercises the same resolver without changing eligibility.
+
+| Test | Action and expected result |
+| --- | --- |
+| Simple quest | `/getgear map 263329` (Flutterfly Swatter): display its published quest source; verify NPC/zone and tooltip against the guide. |
+| Long chain | `/getgear map 2042` (Staff of Westfall): with no reliable progress use Gryan/Westfall and ordered seven-stage instructions. With65 complete, select132; with a stage active use the client's next objective when available. Verify unknown prerequisite warning. |
+| Different start/end | `/getgear map 21530`: choose start versus turn-in for Nefarius's Corruption; ensure NPC roles remain distinct. Also inspect65 within the Defias route (Westfall start/Redridge turn-in). |
+| Direct vendor/multiple choices | `/getgear map 2506`: choose among ten researched merchants; verify the chosen zone/name updates, then right-click the normal item pin to choose another. |
+| Limited recipe vendor | `/getgear map 5780`: identify named recipe vendors, published limited-stock qualification and written fallback where exact coordinates are missing. Do not expect live stock to be known. |
+| ACA | `/getgear map 250513` and `/getgear map 220606`: inspect Stondry/Alynsia, Redridge coordinates and Merchant's Favor; verify recipe learning versus finished crafting and Honored text on the idol. |
+| Dungeon boss | `/getgear map 1155`: choose Blackfathom Deeps entrance/other researched alternatives; confirm Kelris directions and no guessed boss-floor pin. |
+| Dungeon recipe | Preview a dungeon-recipe entry (e.g.250489): entrance plus recipe-book source, never a claim the finished craft drops. If no native entrance exists, expect directions. |
+| Dungeon quest | `/getgear map 2042`: start the outside quest before the dungeon; distinguish VanCleef objective from Gryan's start/turn-in. |
+| Rare | `/getgear map 1404`: Prince Nazjak's published Arathi area; shade a region rather than invent a precise spawn. |
+| Object | `/getgear map 18706`: named Arena Master object source; use directions if no reliable position is available. |
+| Random drop |1713 (Ankh of Life) has no normal pin; lookup shows existing acquisition information without a fabricated farm. |
+| Missing location |273884 (Grovekeeper Trousers) and9359 (Southsea Lamp) retain unresolved acquisition/location qualifications. No precise pin; partial8BIresearch is not treated as verified navigation. |
+
+For point and area cases: start with an existing native user waypoint; click alternating items at least 20 times, switch zones/maps/floors and return, zoom/resize, close with Escape/map toggle, reopen, accept/complete a quest, and retry during combat. Require exactly one correctly labelled GetGear marker/area, no stale marker after close or quest refresh, no accumulated frames, intact native markers/waypoint, normal map controls and no Lua errors. Check small/large overlay sizes and guide pagination, all nine Preview classes, factions and unavailable/API fallback profiles. Inspect profiler for no bulk item requests, repeated entrance scans or expensive per-row map work. Report actual client build/locale and failing item/source ID if anything differs.
+
+## Broader research preserved and next checkpoint
+
+Fresh required reconciliation detected genuine upstream changes: Playfulls 23,484→23,587 items / 9,161→9,246 definitions; 103 new IDs (five canonical,98 unvalidated outside leads), 841 prior resolved acquisition sets changed. Four existing dungeon entries gain independently joined community corroboration without changing their actor/role or live uncertainty. Four recipe report source lists change; current reviewed registries remain exact. Everloot 1,664 raw / 1,424 qualifying relations/counters are unchanged. Exact raw/semantic delta, primary joins and diagnostic snapshot advancement are in checkpoint_navigation_*review/comparison files. Raw cache/stat/index changes were not copied into equipment stats, eligibility or materials. Existing outside candidate register 244→342; frozen queue remains 1,318 pending. No automatic item adoption.
+
+Next: close navigation CI/bot review and document any manual-only exceptions, then resume original 8BI at remaining discovery batches 6–24 (76 queries), preserving the 100 own item reads / 24 completed searches in checkpoint8bi_partial_evidence.json. No 8BI cases were marked individually complete or integrated by navigation work. Registry 4,584 / index 6,055 / display 6,054 / books 759, 7,707 identities / 36,341 objectives / 1,254 crafts / 4,857 ingredients remain. Six dungeon exceptions, 954 current-live recipe routes, all-slot/Back audit and current-live availability remain open. Single existing continuation automation retained; no duplicate automation or billing action.
+
+Beta readiness: source implementation is ready for review and client acceptance testing after successful CI. Inclusion in the next beta depends on the manual map/overlay checks above. This is not a release or a claim that missing location/chain research is complete.

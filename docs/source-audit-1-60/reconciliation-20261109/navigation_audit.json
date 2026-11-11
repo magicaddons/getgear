@@ -1,0 +1,542 @@
+{
+  "items": 7707,
+  "statuses": {
+    "not_applicable": 2588,
+    "directions": 1283,
+    "missing": 3155,
+    "verified_coordinate_data": 681
+  },
+  "inGameRenderingVerified": 0,
+  "gapRows": 6301,
+  "categories": {
+    "world_drop": 2887,
+    "dungeon": 552,
+    "quest": 261,
+    "crafting": 1230,
+    "vendor": 1496,
+    "unknown": 1255,
+    "reputation": 2,
+    "dungeon_recipe": 24
+  },
+  "routeKinds": {
+    "named_drop": 270,
+    "dungeon": 576,
+    "legacy": 59,
+    "quest": 268,
+    "vendor": 1908,
+    "recipe_vendor": 503,
+    "trainer": 3,
+    "recipe_drop": 60,
+    "object": 1
+  },
+  "classes": {
+    "PRIEST": {
+      "directions": 561,
+      "not_applicable": 985,
+      "missing": 865,
+      "verified_coordinate_data": 216
+    },
+    "MAGE": {
+      "not_applicable": 962,
+      "directions": 541,
+      "missing": 751,
+      "verified_coordinate_data": 217
+    },
+    "WARLOCK": {
+      "not_applicable": 962,
+      "directions": 536,
+      "missing": 747,
+      "verified_coordinate_data": 216
+    },
+    "DRUID": {
+      "not_applicable": 1477,
+      "directions": 796,
+      "missing": 1243,
+      "verified_coordinate_data": 342
+    },
+    "ROGUE": {
+      "not_applicable": 1451,
+      "directions": 786,
+      "missing": 1087,
+      "verified_coordinate_data": 315
+    },
+    "HUNTER": {
+      "not_applicable": 1996,
+      "directions": 1022,
+      "missing": 1445,
+      "verified_coordinate_data": 403
+    },
+    "SHAMAN": {
+      "not_applicable": 2144,
+      "directions": 1030,
+      "missing": 1508,
+      "verified_coordinate_data": 427
+    },
+    "WARRIOR": {
+      "not_applicable": 2454,
+      "directions": 1190,
+      "missing": 1689,
+      "verified_coordinate_data": 452
+    },
+    "PALADIN": {
+      "not_applicable": 2441,
+      "directions": 1051,
+      "missing": 1591,
+      "verified_coordinate_data": 442
+    }
+  },
+  "sourceRecords": 598,
+  "questRecords": 469,
+  "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
+  "inputs": [
+    {
+      "file": "checkpoint6k_nightclaw_access_evidence.json",
+      "sha256": "7e23ec857f5c38491d1bfac7efe09d222d6b0086b7e2bf8ec23f43c21895b095"
+    },
+    {
+      "file": "checkpoint6l_location_evidence.json",
+      "sha256": "ecf853c170996c43c9c6e1dc2da9676dd5b74d7cd0652d9133d6b9ee7ce64f7a"
+    },
+    {
+      "file": "checkpoint6m_location_evidence.json",
+      "sha256": "1341b7c99bc4cb0da86e3075e2cd6bbf950758ea5c57d676835df9c881341e85"
+    },
+    {
+      "file": "checkpoint6n_context_evidence.json",
+      "sha256": "ad0ab35c6deb8d1c596cb1a8aac4aafcf3af618c177140709c2eb28dd23b080b"
+    },
+    {
+      "file": "checkpoint6o_supplementary_evidence.json",
+      "sha256": "5f107328a0e51f1d1ec8c88dac0d5e1b7ad7a8d25abcc727815414144150646b"
+    },
+    {
+      "file": "checkpoint6p_location_evidence.json",
+      "sha256": "5a16cb8fc2910f614ad1cc7d70a6536143c89fd931ae533cef197053d78622a9"
+    },
+    {
+      "file": "checkpoint6q_supplementary_evidence.json",
+      "sha256": "cff071e5c7e7fb1d45424e42212c7105d0ce1e3a3d1a15512b5a27f80443de5b"
+    },
+    {
+      "file": "checkpoint6r_location_evidence.json",
+      "sha256": "aeff7d66939e067fea347220b1d0cee621543814eaedd0068a2c2ec9ebc3563b"
+    },
+    {
+      "file": "checkpoint6s_location_evidence.json",
+      "sha256": "49ff077d77bf48debaa6aeb6ffdf27d5d8d51b5e963840c51fb3d09d571acf7c"
+    },
+    {
+      "file": "checkpoint6t_publication_evidence.json",
+      "sha256": "e462f6b3c035d74880c5723c80337813c13aa482c3dec3b3d1860198062f880d"
+    },
+    {
+      "file": "checkpoint6u_publication_evidence.json",
+      "sha256": "ef23ed6019c9b09fc1589f147e1e8c65c1d0d1d7d1f01d3ff962f7572ed3cb32"
+    },
+    {
+      "file": "checkpoint7a_hyjal_publication_evidence.json",
+      "sha256": "929784c14143c9af5d5b5d38877be2785d5e97cd119d9802e71ba1d11ad44d07"
+    },
+    {
+      "file": "checkpoint7b_quest_publication_evidence.json",
+      "sha256": "17c2911350caf2ccc1dc1e4fe55b5d6c86f71089237e81f852007a6b637bccf2"
+    },
+    {
+      "file": "checkpoint7c_vendor_publication_evidence.json",
+      "sha256": "e2527372edddd6522892169bb730b801307a41eefb6b5c75a153311fad0d354a"
+    },
+    {
+      "file": "checkpoint7d_publication_evidence.json",
+      "sha256": "d08671269841807c7f584ff7b44cf505950b2d4ff544a0413baef826a22c960c"
+    },
+    {
+      "file": "checkpoint8aa_working_evidence.json",
+      "sha256": "9c0d049482f7ee875f0ad96f42db9190ede97d89fbbd7e403957bb90e787caea"
+    },
+    {
+      "file": "checkpoint8ab_working_evidence.json",
+      "sha256": "3cc5451ca44b80c7f6dfe58a219484b0247a5e516f88b3aaba8161d0ead9693c"
+    },
+    {
+      "file": "checkpoint8ac_working_evidence.json",
+      "sha256": "8e14ac38eb0ba4983c2330fb0075a3e8166f18c918c8ea50f0fc5953c2523349"
+    },
+    {
+      "file": "checkpoint8ad_working_evidence.json",
+      "sha256": "1409b5c9b36956eb37bd66f209f19b9f99dadb3f027467ba9f0dc8e4f0dac1c5"
+    },
+    {
+      "file": "checkpoint8ae_working_evidence.json",
+      "sha256": "ab3c2e075ded80456aeb1109dcec8f3a0629b0411747344a40ce8256481dbfca"
+    },
+    {
+      "file": "checkpoint8af_working_evidence.json",
+      "sha256": "9ee278152545e6118ef62453b5aa06c505c24cd4205baccedd288e7f06763bd3"
+    },
+    {
+      "file": "checkpoint8ag_working_evidence.json",
+      "sha256": "7709001e144e3078234273640a4518de4c1bd0666c2e29b313ef5d8ba7be4494"
+    },
+    {
+      "file": "checkpoint8ah_working_evidence.json",
+      "sha256": "cdb8646ee997214fe0a59c40f036e4c84b6107a5cc70912cd6b84efc3a34fe73"
+    },
+    {
+      "file": "checkpoint8ai_working_evidence.json",
+      "sha256": "0e4d62d612273c85afe17c56d4532b67957d94106ac79a718152a7d7c9d8dd94"
+    },
+    {
+      "file": "checkpoint8aj_input_evidence.json",
+      "sha256": "8f2d8f91c41c5f8af91f5d40516c7c0c2ce7bd8a54cb9698e5577059ee4e8936"
+    },
+    {
+      "file": "checkpoint8aj_working_evidence.json",
+      "sha256": "a8fe3d04a19ef06a21207d03b3b2120a8d9aa49be285b1cd2d63f8317f90ac75"
+    },
+    {
+      "file": "checkpoint8ak_working_evidence.json",
+      "sha256": "b8d59cc7803cbcdd7a0ee31c40139a77611e8fbe44be4e7c9af3b7b0a442320c"
+    },
+    {
+      "file": "checkpoint8al_working_evidence.json",
+      "sha256": "1a61a3538afb4faa4221b36cb220585535dfe101e5ea2ca7f7062b32f9a05787"
+    },
+    {
+      "file": "checkpoint8am_working_evidence.json",
+      "sha256": "68722bcebf95b5bc3f40bc5a4036834e7515f5061d5b1d6df3149784c0c8c246"
+    },
+    {
+      "file": "checkpoint8an_working_evidence.json",
+      "sha256": "2f2dd50413d1c978bc204903a9da4a9a767c0f52feed62d22750f5db0f670fe4"
+    },
+    {
+      "file": "checkpoint8ao_working_evidence.json",
+      "sha256": "03df50bbcda31545ae13a7a17b09211c2735633583980a270a4dd2786d138d21"
+    },
+    {
+      "file": "checkpoint8ap_working_evidence.json",
+      "sha256": "4954c8c1fadd8b986656f0d68a0ab728f272005cfe2102de56fe1e853f351470"
+    },
+    {
+      "file": "checkpoint8aq_working_evidence.json",
+      "sha256": "885255ee5ed86b35f9ea0051e25b35a9ab55206ea21aea8d3f058098e078f63c"
+    },
+    {
+      "file": "checkpoint8ar_working_evidence.json",
+      "sha256": "f5604944ced85fe91e508f9e3e60083874e1862518dc25e225bfc0901dde044f"
+    },
+    {
+      "file": "checkpoint8as_working_evidence.json",
+      "sha256": "c2e219785a933faa97f47ec9afae9077e1393bb46829a6d99678881d5be689ce"
+    },
+    {
+      "file": "checkpoint8at_working_evidence.json",
+      "sha256": "5ea814d7210dc2ecbe5bd930e8fcf2422a192f0de9e240f0ed624b98b83036ce"
+    },
+    {
+      "file": "checkpoint8au_working_evidence.json",
+      "sha256": "3b9ee4ffadda71b766bb787f12d6467e712c7bdd56ab3bdb50d79e9bad00029b"
+    },
+    {
+      "file": "checkpoint8av_working_evidence.json",
+      "sha256": "5cb1d532a1fdb5a89d15184bb3b8cd466433e57703ba7a057103beae0f967179"
+    },
+    {
+      "file": "checkpoint8aw_working_evidence.json",
+      "sha256": "699ee4951c63062eca86ea4dabc3cc6bf5e7cb1ff3c00ccd10c9923c25f8f2aa"
+    },
+    {
+      "file": "checkpoint8ax_working_evidence.json",
+      "sha256": "9933f3ed3051cbef94e2adba409e39d758d429b610343e7ff7a136c4735384af"
+    },
+    {
+      "file": "checkpoint8ay_working_evidence.json",
+      "sha256": "f5d52aa1583ca73281ead54615f952663745a028a8cbd11973ae328822c2a71f"
+    },
+    {
+      "file": "checkpoint8az_working_evidence.json",
+      "sha256": "1ed154b946df8e72b32ac856171bafb6852bb8d5f7d076ace56dee6393f81bb0"
+    },
+    {
+      "file": "checkpoint8b_publication_evidence.json",
+      "sha256": "53b87cdfb5536e778843b0c53697ea64e2e565fe9aff5a7c330865805c1501b3"
+    },
+    {
+      "file": "checkpoint8ba_working_evidence.json",
+      "sha256": "1f08a5902b4ebfd47c3aae815ae79e113b8e5e1c6fa8393ece8cf3beb0cfc8b9"
+    },
+    {
+      "file": "checkpoint8bb_working_evidence.json",
+      "sha256": "f9be77adf94aa3b9bd91d003e44d378c6a5ef29742b7fedae67e6107ababece9"
+    },
+    {
+      "file": "checkpoint8bc_working_evidence.json",
+      "sha256": "1b9bd858e9a73b58b417917e06eba96d5df24b4cf945e5602393df544c69f799"
+    },
+    {
+      "file": "checkpoint8bd_working_evidence.json",
+      "sha256": "55476b75d467ecb9016d3c69460bda00eadce555a16bd73a5394c58035f01eba"
+    },
+    {
+      "file": "checkpoint8be_working_evidence.json",
+      "sha256": "63c109f312c84670d87f10b27c3b468c81023f767ee097f508c8cc05e3313511"
+    },
+    {
+      "file": "checkpoint8bf_working_evidence.json",
+      "sha256": "46eab20bd32c63c2cccae5ffa9c0351ba3527211f415a4bcc39cb521b51be83d"
+    },
+    {
+      "file": "checkpoint8bg_working_evidence.json",
+      "sha256": "bf21c8e328ba0824e2ff03d0893893346b052f9e0acc8cda0facff56a9d66bde"
+    },
+    {
+      "file": "checkpoint8bh_working_evidence.json",
+      "sha256": "36dfe0b75e0316fd5090f327aae797584ab5775175b116a74912b4820f44c95f"
+    },
+    {
+      "file": "checkpoint8c_publication_evidence.json",
+      "sha256": "0f34a207b621d4ae05e75eb8b7a9a7c40dc2f82e9819ce0428d413dabe9c80fe"
+    },
+    {
+      "file": "checkpoint8d_publication_evidence.json",
+      "sha256": "e78e9242b4b8718f039a58131e332455db0794a11a4de35378d2a71521712e3f"
+    },
+    {
+      "file": "checkpoint8e_publication_evidence.json",
+      "sha256": "bd6b378399a91fd9ac304dfacc74e30ae97b80b4da12f7daadbaf7f5a7afc6d6"
+    },
+    {
+      "file": "checkpoint8f_publication_evidence.json",
+      "sha256": "6924948c003dee8e59af3235676149217b38a78bad7820c02c419ec6a0466c70"
+    },
+    {
+      "file": "checkpoint8f_working_evidence.json",
+      "sha256": "6b99b655ff00ec0af271b38cd91fbe53e8ec3b93572c194fe70aa619662cd025"
+    },
+    {
+      "file": "checkpoint8g_publication_evidence.json",
+      "sha256": "902813c9a3d50f2fe09858f5de94bc8d40b376f99171c383ef9b9ec4cfe76e5d"
+    },
+    {
+      "file": "checkpoint8h_publication_evidence.json",
+      "sha256": "7f2bd7597ed76e8fb7b30392869160f44683abaafaa867c137625d46975b8077"
+    },
+    {
+      "file": "checkpoint8i_publication_evidence.json",
+      "sha256": "9415fdfdff20250cc50561771add9957b45604ef1a0ff9680b6b6dc9bb297a13"
+    },
+    {
+      "file": "checkpoint8j_publication_evidence.json",
+      "sha256": "66f35eaa2fa3bd449de8194a54d19292dfbaa5d9ceda74cb0dfa4fc95906026a"
+    },
+    {
+      "file": "checkpoint8k_publication_evidence.json",
+      "sha256": "8ee8b296e038e7a7f3e2aee5296558ae497eb8492e2cd6ef209c0cad547834ba"
+    },
+    {
+      "file": "checkpoint8l_publication_evidence.json",
+      "sha256": "6cc891c070ab21174560cfd41cbc9b11f66a0f159e5445fd492220cd613913b7"
+    },
+    {
+      "file": "checkpoint8m_publication_evidence.json",
+      "sha256": "bdb22317b835d9832ed79be3c6dc85ab5791ae015acbe510e0303f272903602c"
+    },
+    {
+      "file": "checkpoint8n_publication_evidence.json",
+      "sha256": "30e2f0fd656726fea09c8192c25589fd6d797aba75889687f96e82a547713695"
+    },
+    {
+      "file": "checkpoint8o_working_evidence.json",
+      "sha256": "8a4f3f11bac169496d0e0ec54f53edb12e0fdb7079ea64aa0c7624e6439ecccf"
+    },
+    {
+      "file": "checkpoint8p_publication_evidence.json",
+      "sha256": "b7ed68940b0bef5a88792d9e408b5ebc70527143fda1ac9a7547d47e61580998"
+    },
+    {
+      "file": "checkpoint8q_publication_evidence.json",
+      "sha256": "876e4a2ba2f02f53c0ae23b4d38baeb767a052f2c9340ba291903ee3b91010e0"
+    },
+    {
+      "file": "checkpoint8r_publication_evidence.json",
+      "sha256": "348cc2f33dd3f08d2713420f493bef80f0c275fb610e38de9fc5492e30c589f0"
+    },
+    {
+      "file": "checkpoint8s_publication_evidence.json",
+      "sha256": "80e80e673b4d473b2e2bac1c652d19113424e1b5e92f3a0dbe26dc9bb3b2a8e3"
+    },
+    {
+      "file": "checkpoint8t_publication_evidence.json",
+      "sha256": "29785f56c419bfd4eede70668ca5f79d82eced3d1b2ad86f590a114f9fe4ad34"
+    },
+    {
+      "file": "checkpoint8u_publication_evidence.json",
+      "sha256": "7f7432b63d9e7723dce819d58f89db49dfd20898d9280b7c58f1487e91ac33e7"
+    },
+    {
+      "file": "checkpoint8v_working_evidence.json",
+      "sha256": "8bf097b1670426166855199f1da8864032479d50b5ae5d199f59f6d68977d76d"
+    },
+    {
+      "file": "checkpoint8w_working_evidence.json",
+      "sha256": "01a44e09aca284289b78c546ff602582cb26f7e238f945f505eb07488550e35a"
+    },
+    {
+      "file": "checkpoint8x_working_evidence.json",
+      "sha256": "7a882972ce66c96ed22e4cb4b45b40fa0a6ad5283f8afc4ed60a769c8feb732b"
+    },
+    {
+      "file": "checkpoint8y_working_evidence.json",
+      "sha256": "1dcca60bcc6625ee41d250eda0fa1a7ef1f97d8ea51cad4f6836b92d3e8a8773"
+    },
+    {
+      "file": "checkpoint8z_working_evidence.json",
+      "sha256": "bcbdc9049108ae4efd027ced163bf8367b5dd7f57d5b4cc3f1e0f415248930de"
+    },
+    {
+      "file": "checkpoint_navigation_evidence.json",
+      "sha256": "7ed6add989b1685acf3cb60cdb03c0570db086a40345c9e25d68d0179928a6d7"
+    },
+    {
+      "file": "checkpoint6g_vendor_references.csv",
+      "sha256": "87527a52fe4e32455d4a831b23b14a9784f57e58259c472f89e42111d8b90608"
+    },
+    {
+      "file": "checkpoint6h_vendor_references.csv",
+      "sha256": "eb6cb310b2111388400142966ac804197309772e7e155a2723cac3cca523690b"
+    },
+    {
+      "file": "checkpoint6i-blacksmithing_vendor_references.csv",
+      "sha256": "e612e002642c72bc95fbe08db5190a67c87b63e9ab90f5a4877973976ece3997"
+    },
+    {
+      "file": "checkpoint6i-engineering_vendor_references.csv",
+      "sha256": "0ff953e3c4ec13084fbfb2272d7542aa4ce8cc0a0a423d6d9412c63b60ebf95b"
+    },
+    {
+      "file": "checkpoint6n_vendor_references.csv",
+      "sha256": "0606223c20138455e820c331c0b44f142584c10e1552443a467e582623414b2b"
+    },
+    {
+      "file": "checkpoint6p_vendor_references.csv",
+      "sha256": "d5cce53f73f4ce266f6631be0817b3d49a5e766f079b50d67a61deda041dffca"
+    },
+    {
+      "file": "checkpoint6q_vendor_references.csv",
+      "sha256": "ce8891ffb1f94af89fd6dc0daafe48448507cae3da47f621d95582f784dd229c"
+    },
+    {
+      "file": "checkpoint7c_merchant_references.csv",
+      "sha256": "84403ecc13ca74d44cea635cf9944fc6b5fd1050e7612571bec511f7e0318605"
+    },
+    {
+      "file": "checkpoint8b_merchant_references.csv",
+      "sha256": "d7cc2fe08621a567a50681cc31989da83743a3b75d7d421bff8e76ad78cc5908"
+    },
+    {
+      "file": "checkpoint8d_merchant_references.csv",
+      "sha256": "ebe21b07d0b7bc5bbe62bd009cf120752b33506d8387c03b3a1886839b8026ba"
+    },
+    {
+      "file": "checkpoint8f_merchant_references.csv",
+      "sha256": "67ee38319f8f43494ae62fa6a96f2384ad167affe5716ebada6f8fc0c26a6e3f"
+    },
+    {
+      "file": "checkpoint8g_merchant_references.csv",
+      "sha256": "285c31204c4a16981707a3539338416a8cd5b98d0c91e30a9d4505859fb4545a"
+    },
+    {
+      "file": "checkpoint8h_merchant_references.csv",
+      "sha256": "19d2f8059ff55de27eebd71db1b7fdb8b98ffbd6dc2e9390e4752ba1c21af6fd"
+    },
+    {
+      "file": "checkpoint8i_merchant_references.csv",
+      "sha256": "af49aa99abaa2e60b92685ecf182ead9e10bd20ee8e501feb56ce0664edf87ea"
+    },
+    {
+      "file": "checkpoint8j_merchant_references.csv",
+      "sha256": "72bcf33efb072bad5bda6809715219576d287dd1711ec2855d3fafe6d30a1e97"
+    },
+    {
+      "file": "checkpoint8k_merchant_references.csv",
+      "sha256": "f369f38e848fb922f6b01cd271b12d1ce677b5f6d6cce7e3ab5c27ba5914dc6e"
+    },
+    {
+      "file": "checkpoint8l_merchant_references.csv",
+      "sha256": "d3fca9ee0487206d2e9cfe93bd0262a81e23d11a17a8be34fdc13dcbd6fb75aa"
+    },
+    {
+      "file": "checkpoint8m_merchant_references.csv",
+      "sha256": "82416e61daa97f7d469255902f118c248fed036f8c4baf733ceaa2f7949daecc"
+    },
+    {
+      "file": "checkpoint8n_merchant_references.csv",
+      "sha256": "38ef939e30661d5cc8a4b8552466685043f5042deefdc8f4bf10b5bb6fa82c7d"
+    },
+    {
+      "file": "checkpoint8o_merchant_references.csv",
+      "sha256": "0aa65f5adf6fe755ff6ebd5c9fdda85feee5af46a64aae480e8d070e86ac26ad"
+    },
+    {
+      "file": "checkpoint8p_merchant_references.csv",
+      "sha256": "e73c0b04aa051e2d45662b2073e370bb3caa87429bf983203d74ce2e468c8d4f"
+    },
+    {
+      "file": "checkpoint8q_merchant_references.csv",
+      "sha256": "c65bba3f9e04cb1871340f3ab85ed1f9f226bebb9488c89da8113b2b012d86cd"
+    },
+    {
+      "file": "checkpoint8r_merchant_references.csv",
+      "sha256": "fbd79bd2a615be5b132a3b33220746b8711332ba89fb7c6ee39428900200c1ba"
+    },
+    {
+      "file": "checkpoint8s_merchant_references.csv",
+      "sha256": "d1dda805df0ba4356134778370a6fb51134739f5ac25f159778fb0f33a8440c7"
+    },
+    {
+      "file": "checkpoint8t_merchant_references.csv",
+      "sha256": "9389fe04047ac30546446583470693b4444c26c531ab6417e48b0cec5add1448"
+    },
+    {
+      "file": "checkpoint8u_merchant_references.csv",
+      "sha256": "c4caf456b291a73f6db96266dfc26e60c1133d157b3ebddf20396ca111cc9ef3"
+    },
+    {
+      "file": "checkpoint6s_book_drop_references.csv",
+      "sha256": "acbe0079f73dedd8949a76014254edaad1939a90c45735e90ccdb41975a4f046"
+    },
+    {
+      "file": "checkpoint6u_book_drop_references.csv",
+      "sha256": "1e1c24dd47c6b4e3d7effae31629f226d311274831dc5e09fc533a90c8804200"
+    },
+    {
+      "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json",
+      "sha256": "a3da8497073bbe59a345092030a3bfcaf2c67c4f7555ce61bdd994305eb226c3"
+    },
+    {
+      "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json",
+      "sha256": "1d5928b2c89e564a3a0a3a902bf0cd7fc221c648ab222ee16ed85157dd894ec2"
+    },
+    {
+      "file": "docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv",
+      "sha256": "68c020328f09d5647142b90c0a6a92044b05d728488e72644c5d681538d1aa56"
+    },
+    {
+      "file": "docs/source-audit-1-60/reconciliation-20261109/remaining_equipment_research_queue.csv",
+      "sha256": "f39db509ffe087d974dc17d8931ba0b80619c5dc8df90a5060e2657ab032f5ec"
+    },
+    {
+      "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
+      "sha256": "3b97717fb522ca64488ac08a1c2fe44077ea87b0929265eae0264634c3bcd9a7"
+    },
+    {
+      "file": "tools/export_navigation_inputs.lua",
+      "sha256": "066db12f0b04eb9e9640454c478f32f719515ed0e8a5dbf9255c266d71c9f098"
+    },
+    {
+      "file": "tools/build_acquisition_navigation.py",
+      "sha256": "263a54bd6766ea329d552675dbb9ddd60de6f3077391e6ed4b8c75c96922a355"
+    }
+  ],
+  "catalogueExportSHA256": "687281b7610bf4d14af217d8092e3b99e395fdbe4dcb135f9d77d1fc15fde2a3"
+}

@@ -19,7 +19,7 @@ events:RegisterEvent("PLAYER_REGEN_ENABLED")
 -- Forever can expose different talent-event subsets. Optional registration
 -- must not abort addon loading when a particular event is unavailable.
 for _,name in ipairs({"TRAIT_CONFIG_UPDATED","ACTIVE_TALENT_GROUP_CHANGED",
-                     "PLAYER_TALENT_UPDATE"}) do
+                     "PLAYER_TALENT_UPDATE","QUEST_LOG_UPDATE","QUEST_ACCEPTED","QUEST_TURNED_IN"}) do
     pcall(events.RegisterEvent,events,name)
 end
 
@@ -128,6 +128,7 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
         if GetGear.InitializeUI then GetGear:InitializeUI() end
     elseif event == "PLAYER_ENTERING_WORLD" then
+        if GetGear.ResetAcquisitionNavigation then GetGear:ResetAcquisitionNavigation() end
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or GetGear.level
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
@@ -159,6 +160,16 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         or event == "PLAYER_TALENT_UPDATE" then
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
         if GetGear.RefreshAll then GetGear:RefreshAll() end
+    elseif event == "QUEST_LOG_UPDATE" or event == "QUEST_ACCEPTED" or event == "QUEST_TURNED_IN" then
+        if not GetGear.navigationRefreshPending then
+            GetGear.navigationRefreshPending=true
+            local function refresh()
+                GetGear.navigationRefreshPending=nil
+                if GetGear.ClearAcquisitionMapMarker then GetGear:ClearAcquisitionMapMarker() end
+                if GetGear.RefreshAll then GetGear:RefreshAll() end
+            end
+            if C_Timer and C_Timer.After then C_Timer.After(0.2,refresh) else refresh() end
+        end
     elseif event == "PLAYER_REGEN_DISABLED" or event == "PLAYER_REGEN_ENABLED" then
         if GetGear.RefreshOverlay then GetGear:RefreshOverlay() end
     end
@@ -203,6 +214,13 @@ SlashCmdList.GETGEAR = function(command)
             ..", your bank "..(s.bankKnown and tostring(s.bank) or "not scanned")
             ..", same-realm/faction alts "..s.alts..", other "..s.other)
         else Say("Use /getgear inventory [itemID] to check an item.") end
+    elseif command:sub(1,4)=="map " then
+        local id=tonumber(command:sub(5))
+        local gear=id and GetGear.ItemCatalog and GetGear.ItemCatalog[id]
+        if not gear then Say("Use /getgear map [catalogue itemID].")
+        elseif not GetGear:GetAcquisitionMapTarget(gear) then
+            GetGear:ShowAcquisitionDirections(gear,nil,nil,"No reliable map destination is established for this item.")
+        else GetGear:OpenAcquisitionMap(gear) end
     elseif command == "status" then
         Say("Level " .. tostring(GetGear.level) .. " " .. tostring(GetGear.className or "unknown class")
             .. "; inferred talent tree " .. tostring(GetGear.GetDominantTalentTree and GetGear:GetDominantTalentTree() or "unclassified")
@@ -214,7 +232,7 @@ SlashCmdList.GETGEAR = function(command)
     elseif command == "settings" then
         if GetGear.ShowSettings then GetGear:ShowSettings() end
     elseif command == "help" then
-        Say("/getgear = guide; /getgear inventory [itemID] = cached bags/banks; /getgear bankdiag = bank slot diagnostics; /getgear overlay = tracker; /getgear settings = settings; /getgear notify = alerts; /getgear status = diagnostics")
+        Say("/getgear = guide; /getgear map [itemID] = acquisition navigation; /getgear inventory [itemID] = cached bags/banks; /getgear bankdiag = bank slot diagnostics; /getgear overlay = tracker; /getgear settings = settings; /getgear notify = alerts; /getgear status = diagnostics")
     elseif GetGear.ToggleUI then
         GetGear:ToggleUI()
     end

@@ -9,6 +9,16 @@ on:
       - docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json
       - docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json
       - docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts.json
+      - AcquisitionNavigation.lua
+      - AcquisitionNavigationData.lua
+      - MapNavigation.lua
+      - tools/build_acquisition_navigation.py
+      - tools/export_navigation_inputs.lua
+      - tests/acquisition-navigation.lua
+      - tests/navigation-generation.py
+      - docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json
+      - docs/source-audit-1-60/reconciliation-20261109/checkpoint*evidence.json
+      - docs/source-audit-1-60/reconciliation-20261109/checkpoint*references.csv
       - SourceEnrichment.lua
       - AcquisitionEvidence.lua
       - GetGear.toc
@@ -45,8 +55,11 @@ jobs:
           python3 -m py_compile tools/reconcile_acquisition_1_60.py
           python3 -m py_compile tools/capture_acquisition_audit.py
           python3 -m py_compile tools/generate_worlddrop_boe_index.py
+          python3 -m py_compile tools/build_acquisition_navigation.py
+          luac5.4 -p tools/export_navigation_inputs.lua
           python3 tests/reconcile-dungeon-link-guards.py
           python3 tests/worlddrop-boe-fallback.py
+          python3 tests/navigation-generation.py
           python3 tools/reconcile_acquisition_1_60.py
           test -s AcquisitionEvidenceIndex.lua
           test -s docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv
@@ -78,6 +91,7 @@ jobs:
           lua5.4 tests/overlay-stat-filter.lua .
           lua5.4 tests/overlay-green-boe-filter.lua .
           lua5.4 tests/beta7-acquisition-reconciled.lua .
+          lua5.4 tests/acquisition-navigation.lua .
       - name: Save source register and audit tables (development branch only)
         uses: actions/upload-artifact@v4
         with:
@@ -90,7 +104,7 @@ jobs:
           set -euo pipefail
           git config user.name "GetGear source evidence validator"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add AcquisitionEvidenceIndex.lua docs/source-audit-1-60/reconciliation-20261109
+          git add AcquisitionEvidenceIndex.lua AcquisitionNavigationData.lua docs/source-audit-1-60/reconciliation-20261109
           if ! git diff --cached --quiet; then
             git commit -m "Reconcile all 7,707 equipment acquisitions with public Forever and player evidence"
             git push origin "HEAD:work/full-acquisition-reconciliation-20261109"
