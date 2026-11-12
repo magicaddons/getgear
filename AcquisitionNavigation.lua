@@ -76,6 +76,34 @@ local function appendQuestItems(out,q,prefix)
     if not listed then out[#out+1]=(prefix or "").."This quest requires physical items; see acquisition evidence below for quantities and current requirements." end
 end
 
+local function routesForCharacter(model,plan)
+    local routes=plan and plan.routes or {}
+    local faction=call(UnitFactionGroup,"player")
+    local side=faction=="Alliance" and 1 or faction=="Horde" and 2
+    if not side then return routes end
+    local useful={}
+    for _,route in ipairs(routes) do
+        local restricted=route.offer and route.offer.side
+        local active=false
+        if route.kind=="quest" or route.kind=="quest_container" then
+            local goal=get(model.quests,route.questID) or {}
+            restricted=goal.side
+            active=onQuest(route.questID)
+            if not active and (restricted==1 or restricted==2) then
+                local chain=get(model.chains,route.questID)
+                for _,id in ipairs(chain and chain.steps or {}) do
+                    local q=get(model.quests,id) or {}
+                    -- A shared Both-faction stage alone does not prove access
+                    -- to the other faction's final reward path.
+                    if q.side==restricted and onQuest(id) then active=true;break end
+                end
+            end
+        end
+        if active or restricted~=1 and restricted~=2 or restricted==side then useful[#useful+1]=route end
+    end
+    return useful
+end
+
 function GetGear:GetAcquisitionNavigationChoices(gear)
     if not gear then return {} end
     local model=data()
@@ -84,6 +112,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         plan={routes={{kind="legacy",location=gear.acquisitionLocation,label=gear.acquisitionLocation.spot}}}
     end
     if not plan then return {} end
+    local routes=routesForCharacter(model,plan)
     local choices,seen={},{}
     local function add(target)
         local key=table.concat({target.role or "",target.questID or "",target.source or "",target.zone or "",target.x or "",target.y or "",target.dungeon or "",target.label or ""},"|")
@@ -117,8 +146,8 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         end
     end
     local questRoutes=0
-    for _, route in ipairs(plan.routes or {}) do if route.kind=="quest" or route.kind=="quest_container" then questRoutes=questRoutes+1 end end
-    for _, route in ipairs(plan.routes or {}) do
+    for _, route in ipairs(routes) do if route.kind=="quest" or route.kind=="quest_container" then questRoutes=questRoutes+1 end end
+    for _, route in ipairs(routes) do
         if route.kind=="quest" or route.kind=="quest_container" then
             local id,state=chooseQuest(route.questID)
             local q=get(model.quests,id) or {questID=id,starts={},ends={}}
@@ -176,7 +205,7 @@ end
 function GetGear:GetAcquisitionDirections(gear)
     local out={}
     local plan=get(data().items,gear and gear.itemID)
-    for _, route in ipairs(plan and plan.routes or {}) do
+    for _, route in ipairs(routesForCharacter(data(),plan)) do
         if route.kind=="vendor_container" then
             out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the vendor sells the container, not guaranteed equipment."
         end

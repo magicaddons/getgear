@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8BU actual local8bu capture",
-  "capturedUTC": "2026-11-12T03:14:41.146566+00:00",
+  "capturedForCheckpoint": "8BV final actual local8bv2 capture",
+  "capturedUTC": "2026-11-12T03:30:19.832772+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23629,
@@ -52,28 +52,28 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103442,
-        "sha256": "46a8173502bfbd46e2488e3ca263cb8a53987afd8d4322dca8de8443d9f3097e",
+        "sha256": "7d5f133337bbb4446633d7cdcf369173e9e516f57722c5120b76158e2e8ab219",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T00:10:15.793Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103495,
-        "sha256": "338773dffe88a60c03469e22dde5fb50485e214882c6f46fd7f922df80e53630",
+        "sha256": "e4bc43148581c171923b3066ca40e998a266892b5354870ae94edf7bd93cb6a1",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T00:10:15.793Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103457,
-        "sha256": "18ee00a702f033199e695b85783a356d103bbe967449a6ed68d42eae87f051d2",
+        "sha256": "118482b686ac3569dd3cf946046ce5880b9790e7b3722346d2b78585a58091a8",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T00:10:15.793Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
         "bytes": 39034,
-        "sha256": "cc69f56e15d4b310d0b7dcd602d2c6cde5036d9385e1a3e002898acef52d3f4b",
+        "sha256": "9aba0b537144261ef34d60e714ab7fe9fc09bac1d77367925347739f74b5be6e",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T00:10:15.793Z"
       }
@@ -82,5 +82,5 @@
     "rawEdges": 1688,
     "qualifyingRelationships": 1439
   },
-  "finalCaptureReview": "checkpoint8bu_raw_upstream_review.json and checkpoint8bu_full_raw_comparison.json: PF all full rows/source objects/entire metadata and all EV fields exact actual8BT3. All factual snapshots byte-exact; no baseline advance or duplicate diagnostic requests. Original prior deltas retained separately."
+  "finalCaptureReview": "checkpoint8bv_final_capture_review.json and checkpoint8bv_final_capture_full_raw_comparison.json: first8bv to final8bv2 fullPFraw-entiremetadata andallEVfields unchanged. Originalactual8BU baseline comparison retained separately;factual snapshotsbyte-exact/no diagnosticadvance/refetch."
 }

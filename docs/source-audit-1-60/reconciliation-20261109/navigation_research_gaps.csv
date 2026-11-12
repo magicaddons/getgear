@@ -442,10 +442,10 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 4478,Iridescent Scale Leggings,world_drop,npc:1552,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BK
 4660,Walking Boots,world_drop,npc:599,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8AV
 4676,Skeletal Gauntlets,world_drop,npc:624,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8AU
-4696,Lapidis Tankard of Tidesippe,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-4696,Lapidis Tankard of Tidesippe,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-4696,Lapidis Tankard of Tidesippe,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-4696,Lapidis Tankard of Tidesippe,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
+4696,Lapidis Tankard of Tidesippe,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+4696,Lapidis Tankard of Tidesippe,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+4696,Lapidis Tankard of Tidesippe,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+4696,Lapidis Tankard of Tidesippe,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
 4723,Humbert's Pants,world_drop,npc:2346,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BA
 4724,Humbert's Helm,world_drop,npc:2345,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BA
 4763,Blackwood Recurve Bow,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
@@ -1094,6 +1094,7 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 8282,Valorous Shield,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched-8BO
 8285,Arcane Bands,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
 8291,Arcane Sash,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
+8292,Arcane Cover,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 8311,Alabaster Plate Vambraces,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
 8311,Alabaster Plate Vambraces,world_drop,item:19296,7933,container_quest_cost_unverified,Vendor40currency515positive;legacyquestno physicalobjective/removal recorded. Currentquestcost/phase/acceptance/repeatability unverified;notfree/combined80fee.,,publication-researched
 8314,Alabaster Plate Gauntlets,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
@@ -1455,9 +1456,14 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10100,Councillor's Shoulders,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 10100,Councillor's Shoulders,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 10100,Councillor's Shoulders,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
-10101,Councillor's Pants,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10101,Councillor's Pants,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10101,Councillor's Pants,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10101,Councillor's Pants,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10101,Councillor's Pants,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10101,Councillor's Pants,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10101,Councillor's Pants,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10101,Councillor's Pants,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10101,Councillor's Pants,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10101,Councillor's Pants,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10101,Councillor's Pants,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10103,Councillor's Sash,world_drop,item:10752,93572,container_quest_relationships_unverified,New defense93572 rewards chest; new sphere hand-in93685 has no chest reward. Mandatory linkage/order/current phase unverified.,,publication-researched
 10103,Councillor's Sash,world_drop,item:10752,93572,container_quest_start_missing,No formal start/end actor or faction supplied for new defense; older Kumisha NPC tables omit new IDs. Do not invent a starting NPC.,,publication-researched
 10103,Councillor's Sash,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
@@ -1467,7 +1473,7 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10103,Councillor's Sash,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched
 10103,Councillor's Sash,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched
 10103,Councillor's Sash,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched
-10104,Councillor's Tunic,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
+10104,Councillor's Tunic,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
 10105,Wanderer's Armor,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10106,Wanderer's Boots,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BT
 10106,Wanderer's Boots,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BT
@@ -1504,17 +1510,28 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10111,Wanderer's Hat,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 10111,Wanderer's Hat,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 10111,Wanderer's Hat,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
-10112,Wanderer's Leggings,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10112,Wanderer's Leggings,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10112,Wanderer's Leggings,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10112,Wanderer's Leggings,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10112,Wanderer's Leggings,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10112,Wanderer's Leggings,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10112,Wanderer's Leggings,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10112,Wanderer's Leggings,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10112,Wanderer's Leggings,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10112,Wanderer's Leggings,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10112,Wanderer's Leggings,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10112,Wanderer's Leggings,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10113,Wanderer's Shoulders,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BU
 10113,Wanderer's Shoulders,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BU
 10113,Wanderer's Shoulders,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BU
 10113,Wanderer's Shoulders,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 10113,Wanderer's Shoulders,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
-10118,Ornate Breastplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10118,Ornate Breastplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10118,Ornate Breastplate,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10118,Ornate Breastplate,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10118,Ornate Breastplate,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10118,Ornate Breastplate,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10118,Ornate Breastplate,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10118,Ornate Breastplate,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10118,Ornate Breastplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10118,Ornate Breastplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10118,Ornate Breastplate,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10119,Ornate Greaves,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BU
 10119,Ornate Greaves,world_drop,item:13918,,container_origin_unverified,FullLocked55-content wrapper hasnooriginlist;do notinferfishing/vendor/NPC fromname.,,publication-researched-8BU
 10119,Ornate Greaves,world_drop,item:13918,,container_opening_requirements_unverified,Exact currentopeningthreshold/methods/access unknown.,,publication-researched-8BU
@@ -1598,15 +1615,20 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10137,High Councillor's Boots,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10140,High Councillor's Gloves,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10144,High Councillor's Sash,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10145,Mighty Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
+10145,Mighty Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
 10146,Mighty Boots,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10147,Mighty Armsplints,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10154,Mercurial Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10155,Mercurial Greaves,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10156,Mercurial Bracers,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10164,Templar Chestplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10164,Templar Chestplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10164,Templar Chestplate,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10164,Templar Chestplate,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10164,Templar Chestplate,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10164,Templar Chestplate,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10164,Templar Chestplate,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10164,Templar Chestplate,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10164,Templar Chestplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10164,Templar Chestplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10164,Templar Chestplate,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10165,Templar Gauntlets,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
 10165,Templar Gauntlets,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched
 10165,Templar Gauntlets,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched
@@ -1705,12 +1727,22 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10179,Mystical Boots,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched
 10180,Mystical Belt,world_drop,item:12122,3502,container_quest_relationships_unverified,Published two hand-in references/explicitrepeat known;mandatory initial-order/earlier-current unlock/phase unverified.,,publication-researched-8BP
 10180,Mystical Belt,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched-8BP
-10181,Mystical Armor,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10181,Mystical Armor,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10181,Mystical Armor,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10182,Swashbuckler's Breastplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10182,Swashbuckler's Breastplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10182,Swashbuckler's Breastplate,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10181,Mystical Armor,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10181,Mystical Armor,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10181,Mystical Armor,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10181,Mystical Armor,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10181,Mystical Armor,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10181,Mystical Armor,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10181,Mystical Armor,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10181,Mystical Armor,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10182,Swashbuckler's Breastplate,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10182,Swashbuckler's Breastplate,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10182,Swashbuckler's Breastplate,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10182,Swashbuckler's Breastplate,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10182,Swashbuckler's Breastplate,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10182,Swashbuckler's Breastplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10182,Swashbuckler's Breastplate,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10182,Swashbuckler's Breastplate,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10183,Swashbuckler's Boots,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
 10183,Swashbuckler's Boots,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched
 10183,Swashbuckler's Boots,world_drop,item:19296,7933,container_quest_cost_unverified,Vendor40currency515positive;legacyquestno physicalobjective/removal recorded. Currentquestcost/phase/acceptance/repeatability unverified;notfree/combined80fee.,,publication-researched
@@ -1811,21 +1843,40 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10209,Overlord's Spaulders,world_drop,item:9541,8893,container_quest_relationships_unverified,Published egg/machine/crate/extraordinary-egg/goodies path independently joined; exact current initial/repeat unlock conditions and random rolls remain unverified.,,publication-researched-8BN
 10209,Overlord's Spaulders,world_drop,item:12122,3502,container_quest_relationships_unverified,Published two hand-in references/explicitrepeat known;mandatory initial-order/earlier-current unlock/phase unverified.,,publication-researched-8BN
 10210,Elegant Mantle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10213,Elegant Bracers,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10213,Elegant Bracers,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10213,Elegant Bracers,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10216,Elegant Belt,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10216,Elegant Belt,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10216,Elegant Belt,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10213,Elegant Bracers,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10213,Elegant Bracers,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10213,Elegant Bracers,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10213,Elegant Bracers,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10213,Elegant Bracers,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10213,Elegant Bracers,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10213,Elegant Bracers,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10213,Elegant Bracers,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10213,Elegant Bracers,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10216,Elegant Belt,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10216,Elegant Belt,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10216,Elegant Belt,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10216,Elegant Belt,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10216,Elegant Belt,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10216,Elegant Belt,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10216,Elegant Belt,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10216,Elegant Belt,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10217,Elegant Leggings,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10219,Elegant Circlet,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10221,Nightshade Girdle,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10221,Nightshade Girdle,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10221,Nightshade Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10222,Nightshade Boots,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10223,Nightshade Armguards,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10223,Nightshade Armguards,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10225,Nightshade Gloves,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
+10221,Nightshade Girdle,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10221,Nightshade Girdle,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10221,Nightshade Girdle,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10221,Nightshade Girdle,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10221,Nightshade Girdle,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10221,Nightshade Girdle,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10221,Nightshade Girdle,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10221,Nightshade Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10222,Nightshade Boots,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+10223,Nightshade Armguards,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10223,Nightshade Armguards,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10223,Nightshade Armguards,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10223,Nightshade Armguards,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10223,Nightshade Armguards,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10225,Nightshade Gloves,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
 10226,Nightshade Helmet,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10229,Engraved Bracers,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BT
 10229,Engraved Bracers,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BT
@@ -1836,8 +1887,11 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10229,Engraved Bracers,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
 10229,Engraved Bracers,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
 10230,Engraved Breastplate,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10232,Engraved Gauntlets,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10232,Engraved Gauntlets,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10232,Engraved Gauntlets,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10232,Engraved Gauntlets,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10232,Engraved Gauntlets,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10232,Engraved Gauntlets,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10232,Engraved Gauntlets,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10233,Engraved Girdle,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BU
 10233,Engraved Girdle,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BU
 10233,Engraved Girdle,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BU
@@ -1846,14 +1900,26 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10233,Engraved Girdle,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 10233,Engraved Girdle,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 10233,Engraved Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
-10234,Engraved Boots,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10234,Engraved Boots,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10234,Engraved Boots,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10235,Engraved Helm,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10236,Engraved Leggings,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10237,Engraved Pauldrons,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10237,Engraved Pauldrons,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10237,Engraved Pauldrons,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10234,Engraved Boots,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10234,Engraved Boots,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10234,Engraved Boots,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10234,Engraved Boots,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10234,Engraved Boots,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10234,Engraved Boots,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10234,Engraved Boots,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10234,Engraved Boots,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10235,Engraved Helm,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+10236,Engraved Leggings,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+10237,Engraved Pauldrons,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,item:13918,,container_origin_unverified,FullLocked55-content wrapper hasnooriginlist;do notinferfishing/vendor/NPC fromname.,,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,item:13918,,container_opening_requirements_unverified,Exact currentopeningthreshold/methods/access unknown.,,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10237,Engraved Pauldrons,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10238,Heavy Lamellar Boots,world_drop,item:12122,3502,container_quest_relationships_unverified,Published two hand-in references/explicitrepeat known;mandatory initial-order/earlier-current unlock/phase unverified.,,publication-researched-8BP
 10238,Heavy Lamellar Boots,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched-8BP
 10239,Heavy Lamellar Vambraces,world_drop,item:12122,3502,container_quest_relationships_unverified,Published two hand-in references/explicitrepeat known;mandatory initial-order/earlier-current unlock/phase unverified.,,publication-researched-8BO
@@ -1904,12 +1970,20 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10278,Emerald Girdle,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched
 10278,Emerald Girdle,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched
 10278,Emerald Girdle,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched
-10279,Emerald Helm,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10279,Emerald Helm,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10279,Emerald Helm,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10280,Emerald Legplates,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10281,Emerald Pauldrons,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-10281,Emerald Pauldrons,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+10279,Emerald Helm,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10279,Emerald Helm,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10279,Emerald Helm,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10279,Emerald Helm,world_drop,npc:12384,,vendor_container_current_stock_unverified,Publishedstock1/7g20soffer versus8gbasebuy;currentchargedprice/restock/currentunlockunverified.,,publication-researched-8BV
+10279,Emerald Helm,world_drop,item:15902,6164,vendor_unlock_current_access_unverified,Fullquestbodyreceiptbookshopunlock/min50Both;currentacceptanceandinteractionunverified.,,publication-researched-8BV
+10279,Emerald Helm,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10279,Emerald Helm,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10279,Emerald Helm,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10280,Emerald Legplates,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+10281,Emerald Pauldrons,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BV
+10281,Emerald Pauldrons,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BV
+10281,Emerald Pauldrons,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BV
+10281,Emerald Pauldrons,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+10281,Emerald Pauldrons,world_drop,npc:9177,4286,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 10282,Emerald Vambraces,world_drop,item:21513,,container_quest_access_unverified,Published14alternativequestreferences;currentwar-effortphase/unlocks/NPCpresence/opening/repeatability unverified.,,publication-researched-8BT
 10282,Emerald Vambraces,world_drop,item:11883,4286,container_quest_access_unverified,"Published50Alliance/Oraliusstart-end/20inputsforonebox;earlierunlock/currentacceptance-repeatability/rollsunverified,notwearergates.",,publication-researched-8BT
 10282,Emerald Vambraces,world_drop,item:11468,4286,container_input_location_disputed,BRDquestbodyversusBurningSteppesnewNPCinputmapper;fullinputorigins30positive10omissions/notcurrentfarmproof. OnlyOraliusstart-endareanavigation.,,publication-researched-8BT
@@ -1927,10 +2001,10 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 10373,Imbued Plate Leggings,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10375,Imbued Plate Vambraces,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 10376,Commander's Boots,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10377,Commander's Vambraces,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
+10377,Commander's Vambraces,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
 10379,Commander's Helm,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10380,Commander's Gauntlets,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-10381,Commander's Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
+10381,Commander's Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
 10383,Commander's Pauldrons,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10387,Hyperion Girdle,world_drop,npc:12384,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 10399,Blackened Defias Armor,dungeon,,,dungeon_floor_or_access_unverified,"Use client entrance; no inferred boss-floor coordinates, keys or unlocks.",,existing-catalogue
@@ -2051,6 +2125,8 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 11976,Sardonyx Knuckle,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched-8BP
 11977,Serpentine Loop,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
 11977,Serpentine Loop,world_drop,item:16885,,container_opening_requirements_unverified,PublishedLocked wrapper/killandpickpocketorigins;exact currentopeningthreshold/methods/services/conditions unverified.,,publication-researched
+11978,Jasper Link,world_drop,item:16885,,container_opening_requirements_unverified,PublishedLocked wrapper/killandpickpocketorigins;exact currentopeningthreshold/methods/services/conditions unverified.,,publication-researched-8BV
+11978,Jasper Link,world_drop,item:189420,,container_current_version_unverified,ExplicitSoDMaynotForever fullwrapperwarning;notacceptedcurrentorigin/gearretirement/wearerPlategate.,,publication-researched-8BV
 11989,Vanadium Loop,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched-8BO
 11989,Vanadium Loop,world_drop,item:16885,,container_opening_requirements_unverified,PublishedLocked wrapper/killandpickpocketorigins;exact currentopeningthreshold/methods/services/conditions unverified.,,publication-researched-8BO
 11990,Selenium Loop,world_drop,item:277534,,container_own_reference_omitted,"Fullwrapperpositive/ownitemreferenceomitted;publishedpossiblecontents only,currentconditionsunverified.",,publication-researched
@@ -2062,6 +2138,7 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 12001,Onyx Ring,world_drop,item:10752,93572,container_quest_start_missing,No formal start/end actor or faction supplied for new defense; older Kumisha NPC tables omit new IDs. Do not invent a starting NPC.,,publication-researched-8BN
 12002,Marble Circle,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
 12002,Marble Circle,world_drop,item:13891,,container_origin_unverified,FullBoP55wrapper/eightcontents/nooriginlist;do notinferfishingschool-zone-skill fromname.,,publication-researched
+12004,Obsidian Band,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 12014,Arctic Ring,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
 12014,Arctic Ring,world_drop,item:16885,,container_opening_requirements_unverified,PublishedLocked wrapper/killandpickpocketorigins;exact currentopeningthreshold/methods/services/conditions unverified.,,publication-researched
 12015,Swamp Ring,world_drop,item:16885,,container_opening_requirements_unverified,PublishedLocked wrapper/killandpickpocketorigins;exact currentopeningthreshold/methods/services/conditions unverified.,,publication-researched-8BU
@@ -2181,10 +2258,10 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 13001,Maiden's Circle,world_drop,npc:15306,8352,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 13001,Maiden's Circle,world_drop,npc:15306,8364,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 13001,Maiden's Circle,world_drop,npc:15306,8364,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-13002,Lady Alizabeth's Pendant,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-13002,Lady Alizabeth's Pendant,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-13002,Lady Alizabeth's Pendant,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
-13002,Lady Alizabeth's Pendant,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
+13002,Lady Alizabeth's Pendant,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+13002,Lady Alizabeth's Pendant,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+13002,Lady Alizabeth's Pendant,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
+13002,Lady Alizabeth's Pendant,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BW,not-individually-reviewed
 13003,Lord Alexander's Battle Axe,world_drop,item:21528,8857,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BT
 13003,Lord Alexander's Battle Axe,world_drop,item:21528,8858,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BT
 13003,Lord Alexander's Battle Axe,world_drop,item:21528,8859,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BT
@@ -2194,10 +2271,15 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 13003,Lord Alexander's Battle Axe,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
 13003,Lord Alexander's Battle Axe,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
 13003,Lord Alexander's Battle Axe,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
-13004,Torch of Austen,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13004,Torch of Austen,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13004,Torch of Austen,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13004,Torch of Austen,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+13004,Torch of Austen,world_drop,item:21528,8857,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13004,Torch of Austen,world_drop,item:21528,8858,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13004,Torch of Austen,world_drop,item:21528,8859,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13004,Torch of Austen,world_drop,item:20601,8348,container_quest_current_access_unverified,Published60Both/oneORthree20514inputs;mandatoryearliergraph/reputation/summoning/repeat/phaseunverified.,,publication-researched-8BV
+13004,Torch of Austen,world_drop,item:20601,8363,quest_chain_relationships_unverified,Initialpublished8331-8332-8349-8348 itinerary/8363relationshipnotamandatorycurrentgraph.,,publication-researched-8BV
+13004,Torch of Austen,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13004,Torch of Austen,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13004,Torch of Austen,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13004,Torch of Austen,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 13006,Mass of McGowan,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 13006,Mass of McGowan,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 13006,Mass of McGowan,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
@@ -2313,6 +2395,9 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 13044,Demonslayer,world_drop,npc:15306,8364,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BU
 13046,Blanchard's Stout,world_drop,item:10752,93572,container_quest_relationships_unverified,New defense93572 rewards chest; new sphere hand-in93685 has no chest reward. Mandatory linkage/order/current phase unverified.,,publication-researched-8BN
 13046,Blanchard's Stout,world_drop,item:10752,93572,container_quest_start_missing,No formal start/end actor or faction supplied for new defense; older Kumisha NPC tables omit new IDs. Do not invent a starting NPC.,,publication-researched-8BN
+13047,Twig of the World Tree,world_drop,item:21528,8857,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13047,Twig of the World Tree,world_drop,item:21528,8858,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13047,Twig of the World Tree,world_drop,item:21528,8859,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
 13052,Warmonger,world_drop,item:10752,93572,container_quest_relationships_unverified,New defense93572 rewards chest; new sphere hand-in93685 has no chest reward. Mandatory linkage/order/current phase unverified.,,publication-researched-8BP
 13052,Warmonger,world_drop,item:10752,93572,container_quest_start_missing,No formal start/end actor or faction supplied for new defense; older Kumisha NPC tables omit new IDs. Do not invent a starting NPC.,,publication-researched-8BP
 13052,Warmonger,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched-8BP
@@ -2360,6 +2445,9 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 13067,Hydralick Armor,world_drop,item:21528,8857,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched
 13067,Hydralick Armor,world_drop,item:21528,8858,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched
 13067,Hydralick Armor,world_drop,item:21528,8859,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched
+13070,Sapphiron's Scale Boots,world_drop,item:21528,8857,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13070,Sapphiron's Scale Boots,world_drop,item:21528,8858,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13070,Sapphiron's Scale Boots,world_drop,item:21528,8859,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
 13072,Stonegrip Gauntlets,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 13072,Stonegrip Gauntlets,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
 13072,Stonegrip Gauntlets,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,not-individually-reviewed
@@ -2523,14 +2611,22 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 13144,Serenity Belt,world_drop,item:21528,8857,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched
 13144,Serenity Belt,world_drop,item:21528,8858,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched
 13144,Serenity Belt,world_drop,item:21528,8859,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched
-13146,Shell Launcher Shotgun,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13146,Shell Launcher Shotgun,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13146,Shell Launcher Shotgun,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13146,Shell Launcher Shotgun,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13146,Shell Launcher Shotgun,world_drop,npc:15306,8352,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13146,Shell Launcher Shotgun,world_drop,npc:15306,8352,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13146,Shell Launcher Shotgun,world_drop,npc:15306,8364,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
-13146,Shell Launcher Shotgun,world_drop,npc:15306,8364,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,8BV,not-individually-reviewed
+13146,Shell Launcher Shotgun,world_drop,item:21528,8857,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,item:21528,8858,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,item:21528,8859,container_quest_access_unverified,Publishedprovided-huskdelivery/startanddifferentturnin known;earlierunlocks/currentColossusphase/NPCpresenceunverified.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,item:20601,8348,container_quest_current_access_unverified,Published60Both/oneORthree20514inputs;mandatoryearliergraph/reputation/summoning/repeat/phaseunverified.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,item:20601,8363,quest_chain_relationships_unverified,Initialpublished8331-8332-8349-8348 itinerary/8363relationshipnotamandatorycurrentgraph.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,item:20602,8352,quest_chain_relationships_unverified,Published8343-8341-8351-8352 itinerary/notmandatorycurrentgraph;earlierrep/summon/phase/groupunverified.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,item:20602,8364,container_quest_current_access_unverified,OneORthree20515foreachchest;initial-repeatrelationship/currentacceptance/openingunverified.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,item:20451,,quest_tool_alternative_current_source_unverified,ClassicEverun ringalternative/fullpositive;notcurrentloot-or-prerequisitebypassproof.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,npc:15306,8348,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,npc:15306,8363,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,npc:15306,8352,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,npc:15306,8352,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,npc:15306,8364,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
+13146,Shell Launcher Shotgun,world_drop,npc:15306,8364,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 13164,Heart of the Scale,dungeon,,,dungeon_floor_or_access_unverified,"Use client entrance; no inferred boss-floor coordinates, keys or unlocks.",,existing-catalogue
 13245,Kresh's Back,dungeon,,,dungeon_floor_or_access_unverified,"Use client entrance; no inferred boss-floor coordinates, keys or unlocks.",,existing-catalogue
 13262,Ashbringer,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8AD
@@ -2668,6 +2764,7 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 15236,Moon Cleaver,world_drop,item:19296,7933,container_quest_cost_unverified,Vendor40currency515positive;legacyquestno physicalobjective/removal recorded. Currentquestcost/phase/acceptance/repeatability unverified;notfree/combined80fee.,,publication-researched-8BP
 15237,Corpse Harvester,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
 15237,Corpse Harvester,world_drop,item:19296,7933,container_quest_cost_unverified,Vendor40currency515positive;legacyquestno physicalobjective/removal recorded. Currentquestcost/phase/acceptance/repeatability unverified;notfree/combined80fee.,,publication-researched
+15238,Warlord's Axe,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 15245,Vorpal Dagger,world_drop,item:10752,93572,container_quest_relationships_unverified,New defense93572 rewards chest; new sphere hand-in93685 has no chest reward. Mandatory linkage/order/current phase unverified.,,publication-researched-8BN
 15245,Vorpal Dagger,world_drop,item:10752,93572,container_quest_start_missing,No formal start/end actor or faction supplied for new defense; older Kumisha NPC tables omit new IDs. Do not invent a starting NPC.,,publication-researched-8BN
 15252,Tusker Sword,world_drop,item:10479,3385,container_quest_access_unverified,Published Tailoring quest route/order known; exact source-quest skill and earlier/current unlock conditions remain unverified.,,publication-researched-8BM
@@ -2691,6 +2788,7 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 15263,Royal Mallet,world_drop,item:10752,93572,container_quest_relationships_unverified,New defense93572 rewards chest; new sphere hand-in93685 has no chest reward. Mandatory linkage/order/current phase unverified.,,publication-researched-8BN
 15263,Royal Mallet,world_drop,item:10752,93572,container_quest_start_missing,No formal start/end actor or faction supplied for new defense; older Kumisha NPC tables omit new IDs. Do not invent a starting NPC.,,publication-researched-8BN
 15264,Backbreaker,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
+15265,Painbringer,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 15270,Gigantic War Axe,world_drop,item:10752,93572,container_quest_relationships_unverified,New defense93572 rewards chest; new sphere hand-in93685 has no chest reward. Mandatory linkage/order/current phase unverified.,,publication-researched-8BJ
 15270,Gigantic War Axe,world_drop,item:10752,93572,container_quest_start_missing,No formal start/end actor or faction supplied for new defense; older Kumisha NPC tables omit new IDs. Do not invent a starting NPC.,,publication-researched-8BJ
 15271,Colossal Great Axe,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BT
@@ -2702,6 +2800,7 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 15275,Thaumaturgist Staff,world_drop,item:10752,93572,container_quest_start_missing,No formal start/end actor or faction supplied for new defense; older Kumisha NPC tables omit new IDs. Do not invent a starting NPC.,,publication-researched
 15275,Thaumaturgist Staff,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched
 15275,Thaumaturgist Staff,world_drop,object:160836,,object_location_ambiguous,"Fullobject location IDs[-1,2597,1584,-1]/no mappedcoordinates;do not forceBRD/PVP location,centroid or key.",,publication-researched
+15276,Magus Long Staff,world_drop,object:176224,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BV
 15279,Ivory Wand,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched-8BO
 15279,Ivory Wand,world_drop,item:19296,7933,container_quest_cost_unverified,Vendor40currency515positive;legacyquestno physicalobjective/removal recorded. Currentquestcost/phase/acceptance/repeatability unverified;notfree/combined80fee.,,publication-researched-8BO
 15280,Wizard's Hand,world_drop,item:5758,,container_opening_requirements_unverified,Published Locked wrapper;exact current opening methods/skill/service costs/access unknown.,,publication-researched

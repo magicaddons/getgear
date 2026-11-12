@@ -1,13 +1,13 @@
 {
   "items": 7707,
   "statuses": {
-    "not_applicable": 2433,
-    "directions": 1419,
+    "not_applicable": 2428,
+    "directions": 1424,
     "missing": 3173,
     "verified_coordinate_data": 682
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 7849,
+  "gapRows": 7948,
   "categories": {
     "world_drop": 2885,
     "dungeon": 552,
@@ -29,62 +29,62 @@
     "trainer": 3,
     "quest_container": 171,
     "recipe_drop": 60,
-    "object": 24,
+    "object": 31,
     "vendor_container": 58,
     "fishing": 1
   },
   "classes": {
     "PRIEST": {
-      "directions": 602,
-      "not_applicable": 934,
+      "directions": 606,
+      "not_applicable": 930,
       "missing": 874,
       "verified_coordinate_data": 217
     },
     "MAGE": {
-      "not_applicable": 914,
-      "directions": 578,
+      "not_applicable": 911,
+      "directions": 581,
       "missing": 761,
       "verified_coordinate_data": 218
     },
     "WARLOCK": {
-      "not_applicable": 914,
-      "directions": 573,
+      "not_applicable": 911,
+      "directions": 576,
       "missing": 757,
       "verified_coordinate_data": 217
     },
     "DRUID": {
-      "not_applicable": 1398,
-      "directions": 860,
+      "not_applicable": 1394,
+      "directions": 864,
       "missing": 1257,
       "verified_coordinate_data": 343
     },
     "ROGUE": {
-      "not_applicable": 1370,
-      "directions": 852,
+      "not_applicable": 1367,
+      "directions": 855,
       "missing": 1101,
       "verified_coordinate_data": 316
     },
     "HUNTER": {
-      "not_applicable": 1885,
-      "directions": 1114,
+      "not_applicable": 1881,
+      "directions": 1118,
       "missing": 1463,
       "verified_coordinate_data": 404
     },
     "SHAMAN": {
-      "not_applicable": 2035,
-      "directions": 1121,
+      "not_applicable": 2030,
+      "directions": 1126,
       "missing": 1525,
       "verified_coordinate_data": 428
     },
     "WARRIOR": {
-      "not_applicable": 2306,
-      "directions": 1320,
+      "not_applicable": 2301,
+      "directions": 1325,
       "missing": 1706,
       "verified_coordinate_data": 453
     },
     "PALADIN": {
-      "not_applicable": 2299,
-      "directions": 1176,
+      "not_applicable": 2295,
+      "directions": 1180,
       "missing": 1607,
       "verified_coordinate_data": 443
     }
@@ -350,6 +350,10 @@
       "sha256": "5df5150d9673d676091fc5bb976479512e3492b4cf0ce4b9e5633faee74b39c1"
     },
     {
+      "file": "checkpoint8bv_working_evidence.json",
+      "sha256": "72bb091926170a2e19045369c28b5124bb9e3adfae6775e1ba4d4af4f91465d0"
+    },
+    {
       "file": "checkpoint8c_publication_evidence.json",
       "sha256": "0f34a207b621d4ae05e75eb8b7a9a7c40dc2f82e9819ce0428d413dabe9c80fe"
     },
@@ -567,7 +571,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json",
-      "sha256": "b788ccde86cd5c61ceb8b7f1e0b6957412b7a7cf5fad1e2399e2a65b7d0cf03e"
+      "sha256": "7dd10a15057b557c5d28c60fa16daf162c8763ffb594453c45d186140cba41f1"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json",
@@ -579,7 +583,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/remaining_equipment_research_queue.csv",
-      "sha256": "8c3d736da1cf4cd7025cfab3298078b3f01ab5540ff3853b3938868c260279d1"
+      "sha256": "73f0d401833339f4721b2ab85756e6b2163b3dae192fdec08a49838eba3e7131"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
@@ -594,5 +598,5 @@
       "sha256": "35d384d33546c09000b20cc02143f07e126e157ba20235b4f8cff167a079d7e7"
     }
   ],
-  "catalogueExportSHA256": "8ee8d6dd070e869d863b85723426b9f130eb00a8938f993f5ff81e03f74cba57"
+  "catalogueExportSHA256": "1fc226caf0ceeccb9448a6a1dd7d7a6f8602bfc3d1837994d5f8027173395193"
 }

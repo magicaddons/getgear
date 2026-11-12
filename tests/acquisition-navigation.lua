@@ -67,6 +67,33 @@ local boughtContainer=plan(17,{{kind="vendor_container",source="npc:2",container
 assert(addon:GetAcquisitionMapTarget(boughtContainer).role=="Container vendor","the destination is a container vendor, not direct gear stock")
 local boughtDirections=addon:GetAcquisitionDirections(boughtContainer)
 assert(boughtDirections:find("not guaranteed equipment",1,true) and boughtDirections:find("receipt book",1,true),"random contents and vendor unlock directions remain explicit")
+model.quests["20"]={questID=20,name="Alliance route fixture",side=1,starts={"npc:1"},ends={"npc:1"}}
+model.quests["21"]={questID=21,name="Horde route fixture",side=2,starts={"npc:2"},ends={"npc:2"}}
+local factions=plan(18,{{kind="quest",questID=20},{kind="quest",questID=21}})
+local savedFaction=UnitFactionGroup
+UnitFactionGroup=function()return "Horde" end
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(factions)) do assert(target.questID==21,"known Horde character sees the compatible quest source") end
+assert(not addon:GetAcquisitionDirections(factions):find("Alliance route fixture",1,true),"compact choices and detailed navigation filter the same source paths")
+UnitFactionGroup=function()return "Alliance" end
+assert(addon:GetAcquisitionMapTarget(factions).questID==20,"known Alliance character uses its own source")
+local foreignVendor=plan(19,{{kind="vendor",source="npc:2",offer={side=2}}})
+assert(not addon:GetAcquisitionMapTarget(foreignVendor),"an explicitly other-faction-only vendor is not an actionable destination")
+UnitFactionGroup=function()return "Horde" end
+C_QuestLog={IsOnQuest=function(id)return id==20 end}
+local activeForeign=false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(factions)) do activeForeign=activeForeign or target.questID==20 end
+assert(activeForeign,"reliable active-quest evidence overrides a stale published faction restriction")
+C_QuestLog=nil
+model.quests["22"]={questID=22,name="Shared stage fixture",side=3,starts={"npc:1"},ends={"npc:1"}}
+model.chains["20"]={steps={22,20},routeVerified=true,prerequisitesVerified=false}
+C_QuestLog={IsOnQuest=function(id)return id==22 end}
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(factions)) do assert(target.questID~=22,"an active Both-faction stage cannot establish access to the opposite final reward path") end
+C_QuestLog=nil;model.chains["20"]=nil
+UnitFactionGroup=function()return "Unknown" end
+local unknownA,unknownH=false,false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(factions)) do unknownA=unknownA or target.questID==20;unknownH=unknownH or target.questID==21 end
+assert(unknownA and unknownH,"unknown faction retains qualified alternatives instead of guessing")
+UnitFactionGroup=savedFaction
 assert(addon:GetAcquisitionDirections(recipe):find("Limited listing",1,true))
 local aca=plan(6,{{kind="recipe_vendor",source="npc:1",cost=240,currency="Merchant's Favor",offer={standing=6,reqfaction=3000}}})
 assert(addon:GetAcquisitionDirections(aca):find("240 Merchant's Favor",1,true))
@@ -235,6 +262,16 @@ for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[1
     if target.source=='npc:9023' then assert(target.boss==nil,'Marshal Windsor is a quest actor, not a boss') end
 end
 assert(noteFirst,'reliable completion flags can lead to the note stage without inventing a note-giving NPC')
+UnitFactionGroup=function()return "Horde" end
+local hordeStarter=false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[16309])) do
+    assert(target.questID~=4182 and target.questID~=4264,"Horde navigation excludes the Alliance Drakefire path")
+    hordeStarter=hordeStarter or target.questID==4903 and target.role=="Quest starter item"
+end
+assert(hordeStarter,"the compatible Horde starter-document route remains available")
+UnitFactionGroup=function()return "Alliance" end
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[16309])) do assert(target.questID~=4903,"Alliance navigation excludes the Horde final reward route") end
+UnitFactionGroup=savedFaction
 C_QuestLog=savedQuestAPI
 local vendorSeen=false
 for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[10095])) do

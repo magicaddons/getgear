@@ -182,3 +182,12 @@ A reliable active-client objective waypoint for4286 may supplement the published
 3. Verify actual reputation, Greater Wind Stone/ring+medallion+trappings, group/summoning/phase and repeat rules; independently test whether the Classic Everun ring alternative is currently obtainable and whether it changes unlocks. Do not assume a bypass.
 4. Inspect Ornate Legguards10124's low-level21510 wrapper alternative without changing its equip52 requirement; check event acceptance, opening and source-location disagreement. No disputed current-source pin should appear.
 5. Check a new shared chest content outside this batch (Band of the Cultist20721), positive Arena/Supply Crate alternatives and nameless0,0 negative cases. Retest source chooser/guide scrolling, zone/map changes, native markers, repeated destinations and normal close behaviour. Record actual Forever client/build; no rendering is confirmed by offline tests.
+
+
+## 8BV manual acceptance additions (not performed)
+
+1. On Alliance and Horde characters,open Drakefire16309 from compact and full guide. Alliance should use its Helendis/note itinerary;Horde should use the Goretooth document itinerary. Both-faction intermediate stages must not independently enable the opposite final reward path.
+2. Confirm explicit other-faction-only quest/container/vendor sources are omitted from actionable navigation while gear eligibility and existing settings stay unchanged. Check a Horde character with a Dingy-only Alliance source:no misleading Oralius pin. Where another compatible source exists,that destination remains.
+3. Verify the actual Forever UnitFactionGroup return/capability. Unknown/unavailable API should retain qualified alternatives;current client-active evidence may override stale published source-side metadata without claiming a complete mandatory graph. Test any actual cross-faction quest exception separately.
+4. Check13146 effect/source directions,13070 broad-drop qualification,189420 SoD origin warning and positive Supply Crate alternatives. No current SoD farm pin/gear retirement/wearer Plate requirement or fake0,0 marker should appear.
+5. Retest source chooser/guide scrolling,quest-state changes,map switching,repeated destinations,native markers,one-marker lifecycle and normal close. Record actual client/build;rendering remains unconfirmed until performed.
