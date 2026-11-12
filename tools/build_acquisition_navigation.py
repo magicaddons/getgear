@@ -692,11 +692,15 @@ def build(inputs):
             if entry["kind"] in ["quest", "quest_container"]:
                 q = data["quests"][str(entry["questID"])]
                 used_sources.update(q["starts"] + q["ends"] + q["objectives"])
+                if q.get("objectiveSource") in evidence.sources:
+                    used_sources.add(q["objectiveSource"])
     # Retain quest-chain actors too, without creating duplicate location records.
     for chain in chains.values():
         for quest_id in chain.get("steps", []):
             q = data["quests"].get(str(quest_id), {})
             used_sources.update(q.get("starts", []) + q.get("ends", []) + q.get("objectives", []))
+            if q.get("objectiveSource") in evidence.sources:
+                used_sources.add(q["objectiveSource"])
     data["sources"] = {k: v for k, v in evidence.sources.items() if k in used_sources}
     return data, coverage, gaps, evidence.inputs
 

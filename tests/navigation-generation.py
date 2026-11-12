@@ -25,14 +25,17 @@ with tempfile.TemporaryDirectory() as temp:
     proof = {"items": [response("item", 1, lists={"sold-by": [{"id": 100, "name": "Vendor"}]}),
                         response("item", 2, lists={"dropped-by": [{"id": 100, "name": "Random sample"}]})],
              "quests": [response("quest", 10, quest={"name": "Quest", "itemrewards": [[3, 1]]},
-                                 objectiveZone="Westfall", objectiveSource="npc:100", objectiveInstructions="Published delivery objective.",
+                                 objectiveZone="Westfall", objectiveSource="npc:101", objectiveInstructions="Published delivery objective.",
                                  seriesQuestIDs=[11], objectiveMapper={"objectives": {"40": {
                                      "zone": "Westfall", "levels": [[{"type": 1, "id": 100, "name": "Vendor", "point": "start", "coord": [20, 30]}]]}}})]}
+    proof["objectiveActors"] = [response("npc", 101, name="Objective-only NPC", maps={"40": [{
+        "uiMapName": "Westfall", "uiMapId": 52, "coords": [[61, 62]]}]})]
     path = nav.REPORT / "checkpoint_test_evidence.json"
     path.write_text(json.dumps(proof))
     data, coverage, gaps, _ = nav.build(gear)
     assert coverage[0]["status"] == "verified_coordinate_data"
-    assert data["quests"]["10"]["objectiveInstructions"]=="Published delivery objective." and data["quests"]["10"]["objectiveSource"]=="npc:100" and data["quests"]["10"]["objectiveZone"]=="Westfall", "future full quest objective guidance shares the same generated model"
+    assert data["quests"]["10"]["objectiveInstructions"]=="Published delivery objective." and data["quests"]["10"]["objectiveSource"]=="npc:101" and data["quests"]["10"]["objectiveZone"]=="Westfall", "future full quest objective guidance shares the same generated model"
+    assert data["sources"]["npc:101"]["name"]=="Objective-only NPC", "a future objective-only actor must survive source pruning without being invented as a quest giver"
     assert "2" not in data["items"], "one random loot table sample cannot establish a named farm"
     assert not data["chains"], "see-also/series IDs cannot become mandatory prerequisite edges"
     (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{

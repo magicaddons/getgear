@@ -97,7 +97,7 @@
     }
   },
   "sourceRecords": 790,
-  "questRecords": 554,
+  "questRecords": 557,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
     {
@@ -409,6 +409,10 @@
       "sha256": "42b50bfb484287ebfb13ea182e082a3a5bbdabd2ef945d9fcdc49a54e8015784"
     },
     {
+      "file": "checkpoint8cf_working_evidence.json",
+      "sha256": "611cd684307195505ee0d655d57879b84505f782abfb15e11f68d319d6ed242e"
+    },
+    {
       "file": "checkpoint8d_publication_evidence.json",
       "sha256": "e78e9242b4b8718f039a58131e332455db0794a11a4de35378d2a71521712e3f"
     },
@@ -650,7 +654,7 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "f94c3a63de0d9ef6bf586d2864ad5b66e5303479aedef07c0f9ca4b0175c8b7e"
+      "sha256": "05160d83159bb389acd02ab0f38df62d3f45880797a950c16c8b61f3c451b97b"
     }
   ],
   "catalogueExportSHA256": "cf41374826e9a63649177d9d39c5ca18e006b8b01d524ece438b96e8981c1da9"
