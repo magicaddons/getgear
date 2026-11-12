@@ -64,6 +64,18 @@ local function offerText(route)
     return table.concat(out,"; ")
 end
 
+local function appendQuestItems(out,q,prefix)
+    if type(q.requiredItems)~="table" or next(q.requiredItems)==nil then return end
+    local listed=false
+    for _, item in ipairs(q.requiredItems) do
+        if type(item)=="table" and type(item.name)=="string" and type(item.quantity)=="number" and item.quantity>0 then
+            out[#out+1]=(prefix or "")..(item.startsQuest==true and "Quest starter item: " or item.provided==true and "Provided by quest: " or "Required item: ")..item.quantity.." "..item.name
+            listed=true
+        end
+    end
+    if not listed then out[#out+1]=(prefix or "").."This quest requires physical items; see acquisition evidence below for quantities and current requirements." end
+end
+
 function GetGear:GetAcquisitionNavigationChoices(gear)
     if not gear then return {} end
     local model=data()
@@ -136,7 +148,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                  role=route.recipe and "Obtain recipe in dungeon" or "Dungeon entrance",instructions=route.instructions,
                  verification=route.verification,bookItemID=route.bookItemID})
         elseif route.source then
-            source(route.source,route.kind=="recipe_vendor" and "Recipe vendor" or route.kind=="recipe_drop" and "Obtain recipe book" or route.kind=="trainer" and "Recipe trainer" or route.kind=="crafting_requirement" and "Special crafting location" or route.kind=="unlock" and "Acquisition unlock" or route.kind=="fishing" and "Fishing zone" or route.kind=="vendor" and "Equipment vendor" or route.kind=="object" and "Acquisition object" or "Published named source",nil,route,false)
+            source(route.source,route.kind=="recipe_vendor" and "Recipe vendor" or route.kind=="vendor_container" and "Container vendor" or route.kind=="recipe_drop" and "Obtain recipe book" or route.kind=="trainer" and "Recipe trainer" or route.kind=="crafting_requirement" and "Special crafting location" or route.kind=="unlock" and "Acquisition unlock" or route.kind=="fishing" and "Fishing zone" or route.kind=="vendor" and "Equipment vendor" or route.kind=="object" and "Acquisition object" or "Published named source",nil,route,false)
         elseif route.location then
             local loc=route.location
             add({kind=route.kind,label=route.label or loc.spot or loc.zone,zone=loc.zone,x=loc.x,y=loc.y,
@@ -165,6 +177,9 @@ function GetGear:GetAcquisitionDirections(gear)
     local out={}
     local plan=get(data().items,gear and gear.itemID)
     for _, route in ipairs(plan and plan.routes or {}) do
+        if route.kind=="vendor_container" then
+            out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the vendor sells the container, not guaranteed equipment."
+        end
         if route.kind=="quest" or route.kind=="quest_container" then
             if route.kind=="quest_container" then
                 out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the quest rewards the container, not guaranteed equipment."
@@ -181,6 +196,7 @@ function GetGear:GetAcquisitionDirections(gear)
                     for _, item in ipairs(q.starterItems or {}) do out[#out+1]="   Quest starter item: "..item.name.." (#"..item.itemID..")" end
                     if q.starterInstructions then out[#out+1]="   "..q.starterInstructions end
                     for _, requirement in ipairs(q.sourceRequirements or {}) do out[#out+1]="   "..requirement end
+                    appendQuestItems(out,q,"   ")
                     for _, role in ipairs({"starts","ends"}) do
                         for _, key in ipairs(q[role] or {}) do
                             local a=data().sources[key] or {}
@@ -204,16 +220,7 @@ function GetGear:GetAcquisitionDirections(gear)
                 out[#out+1]="Quest objective: "..(actor.name or key)..(loc and " — "..loc.zone or " — location unresolved")
             end
             if route.bookItemID then out[#out+1]="Quest reward is recipe book #"..route.bookItemID..", not the finished equipment." end
-            if q.requiredItems then
-                local listed=false
-                for _, item in ipairs(q.requiredItems) do
-                    if type(item)=="table" and type(item.name)=="string" and type(item.quantity)=="number" and item.quantity>0 then
-                        out[#out+1]=(item.startsQuest==true and "Quest starter item: " or item.provided==true and "Provided by quest: " or "Required item: ")..item.quantity.." "..item.name
-                        listed=true
-                    end
-                end
-                if not listed then out[#out+1]="This quest requires physical items; see acquisition evidence below for quantities and current requirements." end
-            end
+            if not chain then appendQuestItems(out,q) end
         end
     end
     for _, target in ipairs(self:GetAcquisitionNavigationChoices(gear)) do

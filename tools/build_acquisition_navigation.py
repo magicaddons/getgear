@@ -52,6 +52,7 @@ class Evidence:
         self.sources = {}
         self.quests = {}
         self.full_quest_rewards = collections.defaultdict(set)
+        self.full_npc_sales = collections.defaultdict(dict)
         self.quest_starters = collections.defaultdict(list)
         self.items = collections.defaultdict(dict)
         self.currencies = {}
@@ -122,6 +123,10 @@ class Evidence:
             if kind in ["npc", "object"]:
                 name = node.get("title", "").split(" - ")[0] or node.get("name")
                 _, source = self.source(kind, source_id, name, provenance)
+                if kind == "npc":
+                    for sale in rows((node.get("lists") or {}).get("sells")) + rows(node.get("selectedSells")):
+                        if isinstance(sale, dict) and type(sale.get("id")) is int:
+                            self.full_npc_sales[source_id][sale["id"]] = sale
                 maps = node.get("maps") or node.get("mapper") or {}
                 if isinstance(maps, dict):
                     for area_id, maps_for_area in maps.items():
@@ -143,6 +148,11 @@ class Evidence:
                 identity = node.get("identity") or node.get("item") or {}
                 if isinstance(identity, dict):
                     item["identity"] = identity
+                if isinstance(node.get("containerNavigationRoutes"), list):
+                    item.setdefault("containerNavigationRoutes", [])
+                    for value in node["containerNavigationRoutes"]:
+                        if isinstance(value, dict) and value not in item["containerNavigationRoutes"]:
+                            item["containerNavigationRoutes"].append(value)
                 # Full-container research retains exact positive contents joins
                 # separately from the item's own acquisition lists.
                 if isinstance(node.get("selectedContains"), list):
@@ -280,6 +290,15 @@ def build(inputs):
     data = dict(version=1, sources=evidence.sources, quests=evidence.quests, items={}, maps={}, chains=chains,
                 currencies=evidence.currencies,
                 instances={name: True for name in known_dungeons})
+    container_routes = collections.defaultdict(list)
+    for container_id, container in evidence.items.items():
+        shared = container.get("containerNavigationRoutes", [])
+        if not shared:
+            continue
+        for content in rows(container.get("contains")):
+            if isinstance(content, dict) and type(content.get("id")) is int:
+                container_routes[content["id"]].extend(dict(value, containerItemID=container_id)
+                    for value in shared if value.get("kind") in ["quest_container", "vendor_container"])
     coverage, gaps = [], []
     for raw_id, gear in sorted(inputs.items(), key=lambda pair: int(pair[0])):
         item_id = int(raw_id)
@@ -310,7 +329,29 @@ def build(inputs):
         book_id = gear.get("recipePatternItemID") or books.get(item_id, {}).get("bookItemID")
         # Reviewed future trainer/special-crafting/unlock routes share the
         # existing source registry and primary NPC/object evidence pool.
-        for extra in meta.get("navigationRoutes", []):
+        extras = list(meta.get("navigationRoutes", []))
+        # A newly researched container destination applies to every exact
+        # published content, including earlier and future catalogue entries.
+        # It still passes the same full-source relationship guards below.
+        extras.extend(container_routes.get(item_id, []))
+        for extra in extras:
+            if extra.get("kind") == "vendor_container":
+                container_id, source_key = extra.get("containerItemID"), extra.get("source")
+                container = evidence.items.get(container_id, {}) if type(container_id) is int else {}
+                actor = evidence.sources.get(source_key, {})
+                actor_id = actor.get("sourceID")
+                sale = evidence.full_npc_sales.get(actor_id, {}).get(container_id)
+                if (actor.get("kind") == "npc" and actor.get("evidence") and sale
+                        and container.get("evidence") and not container.get("disputed")
+                        and any(isinstance(x, dict) and x.get("id") == actor_id for x in rows(container.get("sold-by")))
+                        and any(isinstance(x, dict) and x.get("id") == item_id for x in rows(container.get("contains")))):
+                    offer = {k: sale[k] for k in ["cost", "stock", "avail", "standing", "reqfaction", "reqlevel", "side"] if k in sale}
+                    route("vendor_container", source=source_key, containerItemID=container_id, offer=offer,
+                          instructions=extra.get("instructions"), verification="published-reference")
+                else:
+                    gap("container_vendor_relation_unverified", source=source_key or "",
+                        detail="Require full vendor inventory, container seller and exact full-container contents; no inferred equipment sale.")
+                continue
             if extra.get("kind") == "quest_container":
                 quest_id, container_id = extra.get("questID"), extra.get("containerItemID")
                 if type(quest_id) is not int or type(container_id) is not int:
@@ -451,7 +492,7 @@ def build(inputs):
                     gap("source_coordinates_missing", key, entry.get("questID", ""), "Named source exists; precise location not established.")
                 elif not any(coordinate(x.get("x")) and coordinate(x.get("y")) for x in evidence.sources[key]["locations"]):
                     gap("precise_coordinate_unverified", key, entry.get("questID", ""), "Published area/roaming footprint only; no invented point or centroid.")
-        expected = plan["category"] != "world_drop" or meta.get("originUnknown") is True or "named-enemy" in str(meta.get("confidence", "")) or bool(plan["routes"]) or bool(meta.get("navigationRoutes")) or item_id in partial_hints or bool(own.get("contained-in-object") and not own.get("dropped-by"))
+        expected = plan["category"] != "world_drop" or meta.get("originUnknown") is True or "named-enemy" in str(meta.get("confidence", "")) or bool(plan["routes"]) or bool(extras) or item_id in partial_hints or bool(own.get("contained-in-object") and not own.get("dropped-by"))
         status = "verified_coordinate_data" if exact else "directions" if located else "missing" if expected else "not_applicable"
         if status == "missing":
             gap("actionable_location_missing", detail="No safe map target. Keep detailed source evidence; no fabricated marker.")

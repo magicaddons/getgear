@@ -148,4 +148,46 @@ with tempfile.TemporaryDirectory() as temp:
     unnamed, coverage, _, _ = nav.build(gear)
     assert not unnamed["sources"]["object:902"]["locations"] and coverage[-1]["status"] == "missing", "anonymous 0,0 rows without a map namespace are unresolved, not verified coordinates"
 
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    (nav.REPORT / "reviewed_recipe_sources.json").write_text("[]")
+    for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / filename).write_text("itemID\n")
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
+        "itemID": 2, "navigationRoutes": [{"kind": "vendor_container", "source": "npc:100", "containerItemID": 900,
+        "instructions": "Recover the receipt book to unlock the shop; random contents and current stock unverified."}]}]))
+    gear = {"2": dict(itemID=2, name="Random gear", sourceType="World drop", eligibility=[511])}
+    proof = {"items": [response("item", 900, selectedContains=[{"id": 2}],
+                              relations={"sold-by": [{"id": 100, "name": "Vendor"}]})],
+             "actors": [response("npc", 100, name="Vendor",
+                                 maps={"40": [{"uiMapName": "Westfall", "uiMapId": 52, "coords": [[20, 30]]}]},
+                                 selectedSells=[{"id": 900, "avail": 1, "cost": [[72000, [], []]]}])]}
+    path = nav.REPORT / "checkpoint_test_evidence.json"
+    path.write_text(json.dumps(proof))
+    data, coverage, _, _ = nav.build(gear)
+    route = data["items"]["2"]["routes"][0]
+    assert route["kind"] == "vendor_container" and route["offer"]["avail"] == 1
+    assert data["items"]["2"]["category"] == "world_drop", "buying a random container does not make the gear direct vendor stock"
+    assert "npc:100" in data["sources"] and coverage[0]["status"] == "verified_coordinate_data"
+    # Store the researched wrapper destination once; future gear needs no
+    # per-item navigation record or duplicated vendor/quest instructions.
+    proof["items"][0]["containerNavigationRoutes"] = [{
+        "kind": "vendor_container", "source": "npc:100", "instructions": "Unlock the shop first; random contents."}]
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text("[]")
+    path.write_text(json.dumps(proof))
+    assert nav.build(gear)[0]["items"]["2"]["routes"][0]["kind"] == "vendor_container"
+    saved_sales = proof["actors"][0].pop("selectedSells")
+    path.write_text(json.dumps(proof))
+    data, coverage, gaps, _ = nav.build(gear)
+    assert "2" not in data["items"] and coverage[0]["status"] == "missing"
+    assert any(g["gap"] == "container_vendor_relation_unverified" for g in gaps), "a seller summary plus NPC header cannot prove a full vendor inventory"
+    proof["actors"][0]["selectedSells"] = saved_sales
+    proof["items"][0]["selectedContains"] = [{"id": 999}]
+    path.write_text(json.dumps(proof))
+    assert "2" not in nav.build(gear)[0]["items"], "the exact gear must be in the full wrapper"
+    proof["items"][0]["selectedContains"] = [{"id": 2}]
+    proof["items"][0]["crossVersionWarning"] = True
+    path.write_text(json.dumps(proof))
+    assert "2" not in nav.build(gear)[0]["items"], "a disputed wrapper does not establish a current container vendor route"
+
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

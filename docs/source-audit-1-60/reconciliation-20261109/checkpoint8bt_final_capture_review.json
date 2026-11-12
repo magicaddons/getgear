@@ -1,0 +1,88 @@
+{
+  "capturedUTC": "2026-11-12T02:55:14.032506+00:00",
+  "method": "Exact full factual snapshot comparison: actual8BS3 PF23629/EV1688 snapshots to8BT; original8BR deltas preserved separately;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23629,
+    "afterItems": 23629,
+    "beforeDefinitions": 9248,
+    "afterDefinitions": 9248,
+    "newItems": [],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.c41512b4d5.json",
+        "bytes": 999981,
+        "sha256": "c41512b4d5104cb27e1801651402cdff556769c053e8cd5994a539e07fb163d1",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.cd133e9d8c.json",
+        "bytes": 1359233,
+        "sha256": "cd133e9d8caa56a062a2ee261fb7926eadd0a910824b945202a110c45c2a45d1",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.77a729a585.json",
+        "bytes": 467013,
+        "sha256": "77a729a585eb0fd320883ee420f3a209360ad35c569d0eb31c7bbe8adb0ad82a",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.426fc3124a.json",
+        "bytes": 446797,
+        "sha256": "426fc3124a7a46005691f36950ac2c42da26a89c7efc8c3febfabdf7a0d6069b",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1688,
+    "afterRaw": 1688,
+    "qualifying": 1439,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103442,
+        "sha256": "54cf8f10212304c02b12fba2717b70f6edde4b724cd613d428a61033cd79ca21",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T00:10:15.793Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103495,
+        "sha256": "109bdfee5b0e47dc92bbec2b8af8528c208a72408d885cdc39b0d59e57da9b8f",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T00:10:15.793Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103457,
+        "sha256": "e746f70bea6a684914d0d4a588a61c2c7840125bcdccf0eb941b1b0b192e79cc",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T00:10:15.793Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 39034,
+        "sha256": "15c54e6e323953f0dc4bb7d5fe8ace46aad1f4a9e5839cb50d3358d1c1671472",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T00:10:15.793Z"
+      }
+    ]
+  }
+}

@@ -23,6 +23,8 @@ model.quests["10"].sourceRequirements={"Published source profession: Tailoring; 
 assert(addon:GetAcquisitionMapTarget(simple).requirements:find("Tailoring",1,true),"source profession is visible without changing gear eligibility")
 model.chains["11"]={steps={10,11},routeVerified=true,prerequisitesVerified=false}
 local chain=plan(2,{{kind="quest",questID=11}})
+model.quests["10"].requiredItems={}
+assert(not addon:GetAcquisitionDirections(chain):find("requires physical items",1,true),"an empty published input list must not claim an item hand-in")
 assert(addon:GetAcquisitionMapTarget(chain).questID==10,"unknown progress uses beginning")
 C_QuestLog={IsQuestFlaggedCompleted=function(id) return id==10 end,IsOnQuest=function() return false end}
 assert(addon:GetAcquisitionMapTarget(chain).questID==11,"next incomplete character stage")
@@ -60,6 +62,11 @@ assert(dungeonQuestTarget.kind=='dungeon' and dungeonQuestTarget.role=='Quest st
 local vendor=plan(4,{{kind="vendor",source="npc:1",offer={cost={12345}}}})
 assert(addon:GetAcquisitionMapTarget(vendor).role=="Equipment vendor")
 local recipe=plan(5,{{kind="recipe_vendor",source="npc:2",bookItemID=900,offer={avail=1,cost={100}}}})
+local boughtContainer=plan(17,{{kind="vendor_container",source="npc:2",containerItemID=902,offer={avail=1,cost={72000}},
+    instructions="Recover the receipt book before shopping; current stock and rolls unverified."}})
+assert(addon:GetAcquisitionMapTarget(boughtContainer).role=="Container vendor","the destination is a container vendor, not direct gear stock")
+local boughtDirections=addon:GetAcquisitionDirections(boughtContainer)
+assert(boughtDirections:find("not guaranteed equipment",1,true) and boughtDirections:find("receipt book",1,true),"random contents and vendor unlock directions remain explicit")
 assert(addon:GetAcquisitionDirections(recipe):find("Limited listing",1,true))
 local aca=plan(6,{{kind="recipe_vendor",source="npc:1",cost=240,currency="Merchant's Favor",offer={standing=6,reqfaction=3000}}})
 assert(addon:GetAcquisitionDirections(aca):find("240 Merchant's Favor",1,true))
@@ -228,6 +235,24 @@ for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[1
     if target.source=='npc:9023' then assert(target.boss==nil,'Marshal Windsor is a quest actor, not a boss') end
 end
 assert(noteFirst,'reliable completion flags can lead to the note stage without inventing a note-giving NPC')
+C_QuestLog=savedQuestAPI
+local vendorSeen=false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[10095])) do
+    vendorSeen=vendorSeen or target.source=='npc:12384' and target.role=='Container vendor' and target.zone=='Eastern Plaguelands'
+end
+assert(vendorSeen,'new exact grab-bag contents use Augustus through the shared container destination')
+local grabDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[10095])
+assert(grabDirections:find("Receipt Book",1,true) and grabDirections:find("7g 20s 0c",1,true) and grabDirections:find("not guaranteed equipment",1,true),'full directions retain unlock, actual published offer and random-gear qualification')
+local futureVendor=false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[10381])) do futureVendor=futureVendor or target.source=='npc:12384' and target.role=='Container vendor' end
+assert(futureVendor,'the same newly researched destination reaches another exact catalogue content without per-item authoring')
+C_QuestLog=nil
+local huumStart=false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[13003])) do huumStart=huumStart or target.questID==8331 and target.source=='npc:15270' and target.role=='Quest start' end
+assert(huumStart,'unknown progress for the initial Sack exchange starts with the published Huum itinerary')
+local sackDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[13003])
+assert(sackDirections:find('Required item: 1 Abyssal Signet',1,true) and sackDirections:find('Required item: 3 Abyssal Signet',1,true),'one- and three-signets exchanges remain distinct source requirements')
+assert(not actualModel.chains['8348'].prerequisitesVerified,'published Sack travel order must not become a verified mandatory prerequisite graph')
 C_QuestLog=savedQuestAPI
 local fanny=addon:GetAcquisitionMapTarget(addon.ItemCatalog[10096])
 assert(fanny and fanny.questID==4286 and fanny.label=="Oralius" and fanny.zone=="Burning Steppes" and not fanny.x,"a full quest-to-container-to-gear join navigates the independently verified starting area, not an invented input farm")
