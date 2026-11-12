@@ -80,26 +80,35 @@ local function routesForCharacter(model,plan)
     local routes=plan and plan.routes or {}
     local faction=call(UnitFactionGroup,"player")
     local side=faction=="Alliance" and 1 or faction=="Horde" and 2
-    if not side then return routes end
+    local _,_,classID=call(UnitClass,"player")
+    local classBit=type(classID)=="number" and classID>=1 and classID<=32 and classID==math.floor(classID) and 2^(classID-1)
+    if not side and not classBit then return routes end
     local useful={}
     for _,route in ipairs(routes) do
         local restricted=route.offer and route.offer.side
-        local active=false
+        local classMask
+        local activeSide,activeClass=false,false
         if route.kind=="quest" or route.kind=="quest_container" then
             local goal=get(model.quests,route.questID) or {}
             restricted=goal.side
-            active=onQuest(route.questID)
-            if not active and (restricted==1 or restricted==2) then
+            classMask=type(goal.reqclass)=="number" and goal.reqclass>0 and goal.reqclass==math.floor(goal.reqclass) and goal.reqclass
+            activeSide=onQuest(route.questID);activeClass=activeSide
+            if not activeSide and ((restricted==1 or restricted==2) or classMask) then
                 local chain=get(model.chains,route.questID)
                 for _,id in ipairs(chain and chain.steps or {}) do
                     local q=get(model.quests,id) or {}
-                    -- A shared Both-faction stage alone does not prove access
-                    -- to the other faction's final reward path.
-                    if q.side==restricted and onQuest(id) then active=true;break end
+                    if onQuest(id) then
+                        -- Unrestricted/shared stages alone cannot establish
+                        -- access to a restricted final reward path.
+                        if (restricted==1 or restricted==2) and q.side==restricted then activeSide=true end
+                        if classMask and q.reqclass==classMask then activeClass=true end
+                    end
                 end
             end
         end
-        if active or restricted~=1 and restricted~=2 or restricted==side then useful[#useful+1]=route end
+        local sideAllowed=not side or activeSide or restricted~=1 and restricted~=2 or restricted==side
+        local classAllowed=not classBit or not classMask or activeClass or math.floor(classMask/classBit)%2==1
+        if sideAllowed and classAllowed then useful[#useful+1]=route end
     end
     return useful
 end
@@ -177,7 +186,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                  role=route.recipe and "Obtain recipe in dungeon" or "Dungeon entrance",instructions=route.instructions,
                  verification=route.verification,bookItemID=route.bookItemID})
         elseif route.source then
-            source(route.source,route.kind=="recipe_vendor" and "Recipe vendor" or route.kind=="vendor_container" and "Container vendor" or route.kind=="recipe_drop" and "Obtain recipe book" or route.kind=="trainer" and "Recipe trainer" or route.kind=="crafting_requirement" and "Special crafting location" or route.kind=="unlock" and "Acquisition unlock" or route.kind=="fishing" and "Fishing zone" or route.kind=="vendor" and "Equipment vendor" or route.kind=="object" and "Acquisition object" or "Published named source",nil,route,false)
+            source(route.source,route.kind=="recipe_vendor" and "Recipe vendor" or route.kind=="vendor_container" and "Container vendor" or route.kind=="npc_container" and "Container drop source" or route.kind=="recipe_drop" and "Obtain recipe book" or route.kind=="trainer" and "Recipe trainer" or route.kind=="crafting_requirement" and "Special crafting location" or route.kind=="unlock" and "Acquisition unlock" or route.kind=="fishing" and "Fishing zone" or route.kind=="vendor" and "Equipment vendor" or route.kind=="object" and "Acquisition object" or "Published named source",nil,route,false)
         elseif route.location then
             local loc=route.location
             add({kind=route.kind,label=route.label or loc.spot or loc.zone,zone=loc.zone,x=loc.x,y=loc.y,
@@ -206,7 +215,9 @@ function GetGear:GetAcquisitionDirections(gear)
     local out={}
     local plan=get(data().items,gear and gear.itemID)
     for _, route in ipairs(routesForCharacter(data(),plan)) do
-        if route.kind=="vendor_container" then
+        if route.kind=="npc_container" then
+            out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the NPC drops the container, not guaranteed finished equipment."
+        elseif route.kind=="vendor_container" then
             out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the vendor sells the container, not guaranteed equipment."
         end
         if route.kind=="quest" or route.kind=="quest_container" then

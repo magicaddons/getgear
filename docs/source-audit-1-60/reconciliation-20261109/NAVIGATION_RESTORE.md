@@ -191,3 +191,13 @@ A reliable active-client objective waypoint for4286 may supplement the published
 3. Verify the actual Forever UnitFactionGroup return/capability. Unknown/unavailable API should retain qualified alternatives;current client-active evidence may override stale published source-side metadata without claiming a complete mandatory graph. Test any actual cross-faction quest exception separately.
 4. Check13146 effect/source directions,13070 broad-drop qualification,189420 SoD origin warning and positive Supply Crate alternatives. No current SoD farm pin/gear retirement/wearer Plate requirement or fake0,0 marker should appear.
 5. Retest source chooser/guide scrolling,quest-state changes,map switching,repeated destinations,native markers,one-marker lifecycle and normal close. Record actual client/build;rendering remains unconfirmed until performed.
+
+
+## 8BW manual acceptance additions (not performed)
+
+1. On Warrior/Paladin and Mage/other-class characters,inspect a Demon Kissed Sack content (Commander's Girdle10381). Navigation should use published5127class access when classAPI is known,retain qualified paths when unavailable,and honour actual active-quest exceptions. Verify whether current server access agrees with published Warrior/Paladin flags;do not infer quest profession skill from book learning.
+2. Check Lorax63.8,73.8/quest55,Blood12848→Soul12847 corpse use on Goraluk,Unforged12806/object175970 and return. Confirm current class/profession/earlier unlocks and dungeon access. Book260Armorsmith is a separate learning gate;no item-wearer requirement or ordinary crafting transformation should appear. Raw input0,0 must not create a floor pin.
+3. Inspect Bag20603 one/three-Crest alternatives separately from Sack/Signets and Chest/Scepters. Verify actual initial/repeat/summon/reputation/phase/opening rules. No combined fees or inherited ring/medallion prerequisite should be asserted.
+4. Select Zigris Footlocker13247. It must show qualified Classic Blackrock Spire directions without a current precise NPC-farm pin or guaranteed gear/rate. Verify actual NPC/container loot,current wing/floor/keys/group/entry/opening before upgrading confidence.
+5. Check unavailable18674:explicit published warning/current-origin gap,no false destination or permanent-retirement assertion. Check recipe12628's repaired Lorax navigation,negative-Agility Tankard4696/cooldown information,other sources and unchanged gear eligibility/settings.
+6. Retest all nine classes/source selectors,unknown APIs,active quest changes,compact/guide consistency,source chooser/long guide scrolling,zone/map changes,native markers,one-marker lifecycle and normal close. Record actual Forever client/build;offline tests do not confirm rendering or availability.

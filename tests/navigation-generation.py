@@ -189,5 +189,25 @@ with tempfile.TemporaryDirectory() as temp:
     proof["items"][0]["crossVersionWarning"] = True
     path.write_text(json.dumps(proof))
     assert "2" not in nav.build(gear)[0]["items"], "a disputed wrapper does not establish a current container vendor route"
+    proof["items"][0]["crossVersionWarning"] = False
+    proof["items"][0]["containerNavigationRoutes"] = [{"kind": "npc_container", "source": "npc:100"}]
+    proof["items"][0]["relations"] = {"dropped-by": [{"id": 100, "classicEra": 1}]}
+    proof["actors"][0]["selectedDrops"] = [{"id": 900, "classicEra": 1}]
+    path.write_text(json.dumps(proof))
+    npc, coverage, _, _ = nav.build(gear)
+    route = npc["items"]["2"]["routes"][0]
+    assert route["kind"] == "npc_container" and route["verification"] == "legacy-reference" and route["directionsOnly"]
+    assert coverage[0]["status"] == "directions", "a precise NPC point cannot turn Classic-only container loot into a current farm marker"
+    proof["actors"][0].pop("selectedDrops")
+    path.write_text(json.dumps(proof))
+    assert "2" not in nav.build(gear)[0]["items"], "an origin summary plus NPC header cannot prove a full NPC inventory"
+    proof["actors"][0]["selectedDrops"] = [{"id": 900}]
+    proof["items"][0]["selectedContains"] = [{"id": 999}]
+    path.write_text(json.dumps(proof))
+    assert "2" not in nav.build(gear)[0]["items"], "the exact full NPC-dropped wrapper must contain the equipment"
+    proof["items"][0]["selectedContains"] = [{"id": 2}]
+    proof["items"][0]["crossVersionWarning"] = True
+    path.write_text(json.dumps(proof))
+    assert "2" not in nav.build(gear)[0]["items"], "disputed NPC-dropped wrappers remain unresolved"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

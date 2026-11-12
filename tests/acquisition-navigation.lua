@@ -94,6 +94,32 @@ local unknownA,unknownH=false,false
 for _,target in ipairs(addon:GetAcquisitionNavigationChoices(factions)) do unknownA=unknownA or target.questID==20;unknownH=unknownH or target.questID==21 end
 assert(unknownA and unknownH,"unknown faction retains qualified alternatives instead of guessing")
 UnitFactionGroup=savedFaction
+local savedClass=UnitClass
+model.quests["20"].reqclass=3 -- Published Warrior/Paladin quest mask, not gear eligibility.
+model.quests["21"].reqclass=128 -- Mage class ID8 in the client quest mask.
+UnitClass=function()return "Mage","MAGE",8 end
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(factions)) do assert(target.questID==21,"known Mage sees the compatible quest source even with unknown faction") end
+local classContainer=plan(23,{{kind="quest_container",questID=20,containerItemID=903}})
+assert(not addon:GetAcquisitionMapTarget(classContainer),"quest-class access also applies to random-container acquisition, not the gear wearer")
+UnitClass=function()return "Warrior","WARRIOR",1 end
+assert(addon:GetAcquisitionMapTarget(classContainer),"Warrior can navigate the published Warrior/Paladin source")
+UnitClass=function()return "Paladin","PALADIN",2 end
+assert(addon:GetAcquisitionMapTarget(classContainer),"Paladin is independently admitted by the same quest mask")
+UnitClass=function()return "Mage","MAGE",8 end
+C_QuestLog={IsOnQuest=function(id)return id==20 end}
+assert(addon:GetAcquisitionMapTarget(classContainer),"actual active quest can override stale published class access")
+model.chains["20"]={steps={22,20},routeVerified=true,prerequisitesVerified=false}
+C_QuestLog={IsOnQuest=function(id)return id==22 end}
+assert(not addon:GetAcquisitionMapTarget(classContainer),"an unrestricted shared stage does not prove access to a class-restricted final reward")
+C_QuestLog=nil;model.chains["20"]=nil
+UnitClass=nil
+assert(addon:GetAcquisitionMapTarget(classContainer),"missing class API keeps qualified source information without guessing")
+UnitClass=savedClass;model.quests["20"].reqclass=nil;model.quests["21"].reqclass=nil
+local npcContainer=plan(24,{{kind="npc_container",source="npc:2",containerItemID=904,directionsOnly=true,verification="legacy-reference",
+    instructions="Published Classic NPC-to-box-to-gear relation; current acquisition unverified."}})
+local npcContainerTarget=addon:GetAcquisitionMapTarget(npcContainer)
+assert(npcContainerTarget.kind=="directions" and not npcContainerTarget.x and npcContainerTarget.role=="Container drop source","legacy container loot opens qualified directions without a current NPC-farm point")
+assert(addon:GetAcquisitionDirections(npcContainer):find("not guaranteed finished equipment",1,true),"the NPC drops a box rather than guaranteeing its gear contents")
 assert(addon:GetAcquisitionDirections(recipe):find("Limited listing",1,true))
 local aca=plan(6,{{kind="recipe_vendor",source="npc:1",cost=240,currency="Merchant's Favor",offer={standing=6,reqfaction=3000}}})
 assert(addon:GetAcquisitionDirections(aca):find("240 Merchant's Favor",1,true))
@@ -296,6 +322,23 @@ assert(chestFirst,'the distinct Chest of Spoils itinerary starts at Goldleaf Dis
 local chestDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[13044])
 assert(chestDirections:find('Required item: 1 Abyssal Scepter',1,true) and chestDirections:find('Required item: 3 Abyssal Scepter',1,true),'scepter quantities remain separate from signets and alternative exchange fees')
 assert(not actualModel.chains['8352'].prerequisitesVerified,'the Chest published travel sequence also retains mandatory-graph uncertainty')
+assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[18674]),"published-unavailable band with no accepted origin must not gain a fabricated destination")
+UnitClass=function()return "Warrior","WARRIOR",1 end
+local loraxSource,zigrisBox=false,false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[10381])) do
+    loraxSource=loraxSource or target.questID==5127 and target.source=="npc:10918"
+    if target.source=="npc:9736" then
+        assert(target.kind=="directions" and target.verification=="legacy-reference" and not target.x and target.zone=="Blackrock Spire","Classic Footlocker source uses written dungeon directions, not an exact current farm point")
+        zigrisBox=true
+    end
+end
+assert(loraxSource and zigrisBox,"new full source joins propagate through the same container model")
+local demonDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[10381])
+assert(demonDirections:find("Provided by quest: 1 Blood Stained Pike",1,true) and demonDirections:find("Required item: 1 Soul Stained Pike",1,true),"provided quest tool and transformed return item are distinct from ordinary crafting")
+assert(demonDirections:find("Required item: 1 Abyssal Crest",1,true) and demonDirections:find("Required item: 3 Abyssal Crest",1,true),"Bag crest alternatives remain distinct from Signet/Scepter exchanges")
+UnitClass=function()return "Mage","MAGE",8 end
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[10381])) do assert(target.questID~=5127,"known Mage does not get the published Warrior/Paladin-only quest as an actionable source") end
+UnitClass=savedClass
 C_QuestLog=savedQuestAPI
 local fanny=addon:GetAcquisitionMapTarget(addon.ItemCatalog[10096])
 assert(fanny and fanny.questID==4286 and fanny.label=="Oralius" and fanny.zone=="Burning Steppes" and not fanny.x,"a full quest-to-container-to-gear join navigates the independently verified starting area, not an invented input farm")

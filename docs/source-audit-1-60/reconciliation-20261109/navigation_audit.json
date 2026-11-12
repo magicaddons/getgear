@@ -1,13 +1,13 @@
 {
   "items": 7707,
   "statuses": {
-    "not_applicable": 2428,
-    "directions": 1424,
+    "not_applicable": 2378,
+    "directions": 1465,
     "missing": 3173,
-    "verified_coordinate_data": 682
+    "verified_coordinate_data": 691
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 7948,
+  "gapRows": 8462,
   "categories": {
     "world_drop": 2885,
     "dungeon": 552,
@@ -23,74 +23,75 @@
     "named_drop": 274,
     "dungeon": 561,
     "legacy": 59,
-    "quest": 271,
+    "quest": 272,
     "vendor": 1908,
     "recipe_vendor": 503,
     "trainer": 3,
-    "quest_container": 171,
+    "quest_container": 313,
     "recipe_drop": 60,
-    "object": 31,
+    "object": 41,
     "vendor_container": 58,
+    "npc_container": 73,
     "fishing": 1
   },
   "classes": {
     "PRIEST": {
-      "directions": 606,
-      "not_applicable": 930,
-      "missing": 874,
+      "directions": 621,
+      "not_applicable": 914,
+      "missing": 875,
       "verified_coordinate_data": 217
     },
     "MAGE": {
-      "not_applicable": 911,
-      "directions": 581,
-      "missing": 761,
+      "not_applicable": 894,
+      "directions": 597,
+      "missing": 762,
       "verified_coordinate_data": 218
     },
     "WARLOCK": {
-      "not_applicable": 911,
-      "directions": 576,
-      "missing": 757,
+      "not_applicable": 894,
+      "directions": 592,
+      "missing": 758,
       "verified_coordinate_data": 217
     },
     "DRUID": {
-      "not_applicable": 1394,
-      "directions": 864,
-      "missing": 1257,
+      "not_applicable": 1365,
+      "directions": 892,
+      "missing": 1258,
       "verified_coordinate_data": 343
     },
     "ROGUE": {
-      "not_applicable": 1367,
-      "directions": 855,
-      "missing": 1101,
+      "not_applicable": 1337,
+      "directions": 884,
+      "missing": 1102,
       "verified_coordinate_data": 316
     },
     "HUNTER": {
-      "not_applicable": 1881,
-      "directions": 1118,
-      "missing": 1463,
+      "not_applicable": 1839,
+      "directions": 1159,
+      "missing": 1464,
       "verified_coordinate_data": 404
     },
     "SHAMAN": {
-      "not_applicable": 2030,
-      "directions": 1126,
-      "missing": 1525,
+      "not_applicable": 1990,
+      "directions": 1165,
+      "missing": 1526,
       "verified_coordinate_data": 428
     },
     "WARRIOR": {
-      "not_applicable": 2301,
-      "directions": 1325,
+      "not_applicable": 2251,
+      "directions": 1366,
       "missing": 1706,
-      "verified_coordinate_data": 453
+      "verified_coordinate_data": 462
     },
     "PALADIN": {
-      "not_applicable": 2295,
-      "directions": 1180,
+      "not_applicable": 2245,
+      "directions": 1221,
       "missing": 1607,
-      "verified_coordinate_data": 443
+      "verified_coordinate_data": 452
     }
   },
-  "sourceRecords": 641,
-  "questRecords": 544,
+  "sourceRecords": 643,
+  "questRecords": 546,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
     {
@@ -354,6 +355,10 @@
       "sha256": "72bb091926170a2e19045369c28b5124bb9e3adfae6775e1ba4d4af4f91465d0"
     },
     {
+      "file": "checkpoint8bw_working_evidence.json",
+      "sha256": "4cafb8c8c44fc48c91083a86488811e688636ffac6d1863149d17ca522061b06"
+    },
+    {
       "file": "checkpoint8c_publication_evidence.json",
       "sha256": "0f34a207b621d4ae05e75eb8b7a9a7c40dc2f82e9819ce0428d413dabe9c80fe"
     },
@@ -571,7 +576,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json",
-      "sha256": "7dd10a15057b557c5d28c60fa16daf162c8763ffb594453c45d186140cba41f1"
+      "sha256": "ae6c63ac60601c2d2fc85068c503791406c1ee8a08bf66ea88d7637310c41f89"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json",
@@ -583,7 +588,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/remaining_equipment_research_queue.csv",
-      "sha256": "73f0d401833339f4721b2ab85756e6b2163b3dae192fdec08a49838eba3e7131"
+      "sha256": "84ff73534fead1317121ca4b79d4deaf9c1ac1176dd1614fb4a8383e137d51ed"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
@@ -595,8 +600,8 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "35d384d33546c09000b20cc02143f07e126e157ba20235b4f8cff167a079d7e7"
+      "sha256": "9bddd1a500cc7972b29c7a4e5fed619b715c08799f5f4d6471ca2b831bfb4a59"
     }
   ],
-  "catalogueExportSHA256": "1fc226caf0ceeccb9448a6a1dd7d7a6f8602bfc3d1837994d5f8027173395193"
+  "catalogueExportSHA256": "cd8c360a3c788167bc38141dcc3c7215d42d3b05d0e0af2ff9cb66258876cba8"
 }

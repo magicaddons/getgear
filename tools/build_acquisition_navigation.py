@@ -53,6 +53,7 @@ class Evidence:
         self.quests = {}
         self.full_quest_rewards = collections.defaultdict(set)
         self.full_npc_sales = collections.defaultdict(dict)
+        self.full_npc_drops = collections.defaultdict(dict)
         self.quest_starters = collections.defaultdict(list)
         self.items = collections.defaultdict(dict)
         self.currencies = {}
@@ -127,6 +128,9 @@ class Evidence:
                     for sale in rows((node.get("lists") or {}).get("sells")) + rows(node.get("selectedSells")):
                         if isinstance(sale, dict) and type(sale.get("id")) is int:
                             self.full_npc_sales[source_id][sale["id"]] = sale
+                    for drop in rows((node.get("lists") or {}).get("drops")) + rows(node.get("selectedDrops")):
+                        if isinstance(drop, dict) and type(drop.get("id")) is int:
+                            self.full_npc_drops[source_id][drop["id"]] = drop
                 maps = node.get("maps") or node.get("mapper") or {}
                 if isinstance(maps, dict):
                     for area_id, maps_for_area in maps.items():
@@ -298,7 +302,7 @@ def build(inputs):
         for content in rows(container.get("contains")):
             if isinstance(content, dict) and type(content.get("id")) is int:
                 container_routes[content["id"]].extend(dict(value, containerItemID=container_id)
-                    for value in shared if value.get("kind") in ["quest_container", "vendor_container"])
+                    for value in shared if value.get("kind") in ["quest_container", "vendor_container", "npc_container"])
     coverage, gaps = [], []
     for raw_id, gear in sorted(inputs.items(), key=lambda pair: int(pair[0])):
         item_id = int(raw_id)
@@ -335,6 +339,25 @@ def build(inputs):
         # It still passes the same full-source relationship guards below.
         extras.extend(container_routes.get(item_id, []))
         for extra in extras:
+            if extra.get("kind") == "npc_container":
+                container_id, source_key = extra.get("containerItemID"), extra.get("source")
+                container = evidence.items.get(container_id, {}) if type(container_id) is int else {}
+                actor = evidence.sources.get(source_key, {})
+                actor_id = actor.get("sourceID")
+                drop = evidence.full_npc_drops.get(actor_id, {}).get(container_id)
+                own_drop = next((x for x in rows(container.get("dropped-by"))
+                                 if isinstance(x, dict) and x.get("id") == actor_id), None)
+                if (actor.get("kind") == "npc" and actor.get("evidence") and drop and own_drop
+                        and container.get("evidence") and not container.get("disputed")
+                        and any(isinstance(x, dict) and x.get("id") == item_id for x in rows(container.get("contains")))):
+                    legacy = extra.get("verification") == "legacy-reference" or drop.get("classicEra") == 1 or own_drop.get("classicEra") == 1
+                    route("npc_container", source=source_key, containerItemID=container_id,
+                          instructions=extra.get("instructions"), verification="legacy-reference" if legacy else "published-reference",
+                          directionsOnly=True if legacy or extra.get("directionsOnly") is True else None)
+                else:
+                    gap("container_npc_relation_unverified", source=source_key or "",
+                        detail="Require full NPC loot, container origin and exact full-wrapper contents; no direct finished-gear drop inferred.")
+                continue
             if extra.get("kind") == "vendor_container":
                 container_id, source_key = extra.get("containerItemID"), extra.get("source")
                 container = evidence.items.get(container_id, {}) if type(container_id) is int else {}
