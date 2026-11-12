@@ -16,14 +16,14 @@ The pin was not deleted. Initial commit 8923044 placed `NewAcquisitionPin` in bo
 
 ## Source coverage and confidence
 
-All 7,707 catalogue IDs and 36,341 objectives across nine classes were audited. Counts are data coverage, not a claim of successful in-game rendering:
+All 7,707 catalogue IDs and 36,341 objectives across nine classes were audited. Counts below reflect checkpoint8CE final local validation (CI pending); these are data coverage, not a claim of successful in-game rendering:
 
 | Coverage | Items | Meaning |
 | --- | ---: | --- |
-| Published coordinate data | 682 | Cited published point data exists; actual client map resolution/rendering still needs testing. |
-| Useful directions | 1,269 | Named areas/roaming footprints, zone guidance or client-resolved dungeon entrances; precise fixed marker not established. |
-| Missing useful location data | 3,170 | No safe actionable location; missing data is not implemented navigation. |
-| No applicable fixed destination | 2,586 | Broad random drops without a justified named target. |
+| Published coordinate data | 813 | Cited published point data exists; actual client map resolution/rendering still needs testing. |
+| Useful directions | 1,587 | Named areas/roaming footprints, zone guidance or client-resolved dungeon entrances; precise fixed marker not established. |
+| Missing useful location data | 3,151 | No safe actionable location; missing data is not implemented navigation. |
+| No applicable fixed destination | 2,156 | Broad random drops without a justified named target. |
 
 Actual in-game rendering verified: **0**. Machine-readable [per-item coverage](navigation_coverage.csv), [nine-class/category totals](navigation_audit.json) and [shared research gaps](navigation_research_gaps.csv) retain every classification. Gap rows are not unique items and can overlap.
 
@@ -385,3 +385,18 @@ Registry5902/index7373/display7372/books759;all5813priorrecords/7707identities36
 587unique full responses119new468cached(267originalcase/access plusfiveupstreamfollowups and completedcontext);89exact/three sharedqueries/197NPC2object6container1vendorpositivejoins/106NPC3object3containeromissions.215knownfailedURLs/no unchangedretries.88readgear84Epic4Rare/85BoP3BoE;23577binding/availabilitynotinvented.21890fiveClassic/fullomissions,no currentorigin;23577own404/fullKT13omission,notabsence/retirement. Illiyana22753Exalted/Alliance/17g13s58c publishedoffer remainsqualified. Naxx9121/9122/9123Honored60g/Revered30g/Exaltedwaived arealternatives,currentmandatoryaccess/progressunverified;giver16116known403skipped. Compact/guide source requirements and exact fullsale/book guards shared with futureevidence.
 
 Navigation813point-data1584directions3154missing2156NA/17549overlappinggaps/rendering0;84qualifieddirections gains/two honest missingorigins/no lostpointdata. Fulloriginal/finalfeedreview:PFtwooutsideIDs/allprior23618rawrows-and9327fullsourceobjects exact/fivestfacetmetadata lastfields only;EVthreeNPCgeographies344/2046/514 independentlyprimarymatched,no newitemloot/oldedgeupdates. Final8cd3facts exactinitial8cd;fulloriginaldiffs retainedbeforediagnosticadvance. [Final checkpoint record](checkpoint8cd_validation.json) overrideshistoricalpendingstates. Sameworker/existingautomation;no main/Beta8/build/package/release/billing action.
+
+
+## Checkpoint 8CE — 100 additional candidates assessed; final CI review pending
+
+13 November 2026 (Australia/Adelaide). The first 100 additional candidates, IDs 647–12062, have individual identity, equipment-policy, source and navigation dispositions. The original 5,688-case queue remains fully dispositioned, including explicit unresolved exceptions. Additional queue: **496 total, 100 assessed, 396 pending**; the fresh feed adds independently identified 18470 without active adoption. **Next: 8CF, the next 100 numeric pending IDs 12065–13398.** There are also 27 untriaged all-slot leads from full container inventories; deduplicate these against completed work during the systematic Back/Thrown/all-slot audit. The comprehensive objective is still open.
+
+Candidate results: 92 published baseline candidates held for future development review, seven quest rewards without a rendered equip-level requirement, and one version-unconfirmed item (9484). Of the 100, 57 Back headers are unsupported by the current importer; this is a parser coverage gap, not evidence of ineligibility. No candidate was added to active equipment. There are 64 broad-drop cases without a justified direct pin, eight named-source references with published regions/entrance context, seven quest itineraries, and 21 unresolved origins. Candidate-only directions are not counted as working runtime navigation.
+
+The shared model reuses completed 8BJ Nilith routes and the full published 8BS Windsor itinerary. Primary quest tables alone establish separate segments; the earlier full Forever guide supplies the connecting published travel order, with mandatory/current unlocks still unverified. Correct Note starter is item11446→quest4264; unrelated4244 is excluded and retained only as an incidental read. Two distinct information items11464/11465 are preserved. Optional active-quest fallback now gives objective instructions, then the actual turn-in only on a reliable completion boolean. Valid native waypoints retain their existing priority. The same instructions appear in the detailed guide and apply to existing Drakefire acquisition as well as future reviewed rewards.
+
+998 unique full primary projections (332 new,666 cached), plus one excluded incidental body; completed older guide/route evidence is reused. 100 exact discovery queries are lead finding, not live-source confirmation. 2,865 exact full-NPC joins/931 full omissions,123 object joins/32 omissions,195 physical-container joins/45 full omissions/one unread reference. 691 new HTTP403 failures had no body/hash and were not retried; known-failure register906,193 old failed reference edges skipped. No omission/failure is treated as retirement, absence or a capped inventory.
+
+Final actual8ce2 reconciliation exited0 and all19 local checks passed (15Lua,threeofflinePython,26modules,fourtools/exporter). Source registry5902/index7373/display7372/books759 and all existing gear/class/craft/material/filter data are unchanged. Published navigation coverage: **813 point-data,1587 directions,3151 missing,2156 not applicable;17546 overlapping gap rows;actual in-game rendering0**. Three older items273811/273817/273820 gain qualified written directions from shared source geography; no point-data loss. Original/full/final feed comparisons are saved: PF one new outsideID18470/all23620prior rawrows and9327 full source objects exact/four metadata facet counters only; EV eight new NPC geography edges independently primary-matched, no new item-loot edge or old-edge update. Final feed facts match initial8CE before diagnostic baselines advance.
+
+See [case record](CHECKPOINT8CE_OUTSIDE_CANDIDATES_AND_QUEST_OBJECTIVES.md), checkpoint8ce_candidate_assessments.csv, checkpoint8ce_candidate_source_proposals.json, checkpoint8ce_candidate_navigation_gaps.csv, checkpoint8ce_additional_all_slot_leads.json and checkpoint8ce_local_validation.json. Full non-release CI and whole generated-bot review are still required; the final checkpoint8ce_validation.json will override this pending state. Continue automatically after that gate. Same worker/existing two-hour automation; no duplicate automation, main/Beta8/release/billing action.

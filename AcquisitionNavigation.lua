@@ -177,13 +177,34 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
             local id,state=chooseQuest(route.questID)
             local q=get(model.quests,id) or {questID=id,starts={},ends={}}
             if onQuest(id) then
+                local nativeObjective=false
                 local mapID,x,y=call(C_QuestLog.GetNextWaypoint,id)
-                if type(mapID)=="number" and type(x)=="number" and type(y)=="number" and x>=0 and x<=1 and y>=0 and y<=1 then
+                if type(mapID)=="number" and mapID>0 and type(x)=="number" and type(y)=="number" and x>=0 and x<=1 and y>=0 and y<=1 then
                     local info=C_Map and call(C_Map.GetMapInfo,mapID)
+                    nativeObjective=true
                     add({kind="active_quest",questID=id,questName=q.name,role="Active quest objective",
                          label=call(C_QuestLog.GetNextWaypointText,id) or q.name or "Quest #"..id,
                          uiMapID=mapID,zone=info and info.name,x=x*100,y=y*100,
                          clientVerified=true,verification="client",preferred=questRoutes==1})
+                end
+                if not nativeObjective then
+                    if call(C_QuestLog.IsComplete,id)==true then
+                        for _,key in ipairs(q.ends or {}) do source(key,"Quest turn-in",q,route,questRoutes==1) end
+                    elseif q.objectiveInstructions then
+                        local instructions="Published objective guidance; current objective progress is not determined by GetGear.\n"..q.objectiveInstructions
+                        if q.objectiveSource and model.sources[q.objectiveSource] then
+                            local objectiveRoute={}
+                            for key,value in pairs(route) do objectiveRoute[key]=value end
+                            objectiveRoute.instructions=(route.instructions and route.instructions.."\n" or "")..instructions
+                            source(q.objectiveSource,"Published active quest objective",q,objectiveRoute,questRoutes==1)
+                        elseif q.objectiveZone then
+                            local instance=(model.instances or {})[q.objectiveZone]
+                            add({kind=instance and "dungeon" or "directions",dungeon=instance and q.objectiveZone or nil,
+                                 questID=id,questName=q.name,label=q.name or "Quest #"..id,role="Published active quest objective",
+                                 zone=q.objectiveZone,instructions=instructions,verification="published-reference",
+                                 requirements=table.concat(q.sourceRequirements or {},"; "),preferred=questRoutes==1})
+                        end
+                    end
                 end
             end
             if state~="completed" and not onQuest(id) and q.starterZone and q.starterInstructions then
@@ -258,6 +279,7 @@ function GetGear:GetAcquisitionDirections(gear)
                     if q.reqlevel then out[#out+1]="   Minimum quest level: "..q.reqlevel end
                     for _, item in ipairs(q.starterItems or {}) do out[#out+1]="   Quest starter item: "..item.name.." (#"..item.itemID..")" end
                     if q.starterInstructions then out[#out+1]="   "..q.starterInstructions end
+                    if q.objectiveInstructions then out[#out+1]="   Objective: "..q.objectiveInstructions end
                     for _, requirement in ipairs(q.sourceRequirements or {}) do out[#out+1]="   "..requirement end
                     appendQuestItems(out,q,"   ")
                     for _, role in ipairs({"starts","ends"}) do
@@ -272,6 +294,7 @@ function GetGear:GetAcquisitionDirections(gear)
                 out[#out+1]="Quest: "..(q.name or "#"..id).." (#"..id.."). Earlier prerequisites are not established unless listed below."
                 for _, item in ipairs(q.starterItems or {}) do out[#out+1]="Quest starter item: "..item.name.." (#"..item.itemID..")" end
                 if q.starterInstructions then out[#out+1]=q.starterInstructions end
+                if q.objectiveInstructions then out[#out+1]="Objective: "..q.objectiveInstructions end
                 if q.starterOriginUnresolved then out[#out+1]="Starting item origin/location remains unverified. The turn-in NPC is not a starting destination." end
             end
             local q=get(data().quests,id) or {}

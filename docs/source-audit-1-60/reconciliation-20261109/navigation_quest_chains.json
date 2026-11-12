@@ -151,5 +151,63 @@
       "https://www.wowhead.com/forever/quest=8352"
     ],
     "instructions": "Published initial Chest of Spoils itinerary: start with Huum Wildmane at Cenarion Hold, then Aurel Goldleaf, then Bor Wildmane. Minimum 60, Both factions. This route does not establish earlier unlocks, reputation thresholds, current summoning/phase rules or the prerequisite relationship to the separate three-scepters exchange #8364."
+  },
+  "4242": {
+    "steps": [
+      4182,
+      4183,
+      4184,
+      4185,
+      4186,
+      4223,
+      4224,
+      4241,
+      4242
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8ce_working_evidence.json",
+    "instructions": "Published Windsor travel itinerary, reused from completed 8BS: begin with Helendis Riverhorn at Morgan's Vigil in Burning Steppes, follow the ordered exchanges through Lakeshire and Stormwind, then Ragged John and Marshal Windsor in Blackrock Depths. Exact mandatory prerequisites, current unlocks, phase and Note-drop conditions remain unverified. Reliable active quests take priority; completion flags are used only when the client returns actual booleans. Quest-source minimums are distinct from wearer requirements.",
+    "sourceEvidence": "checkpoint8bs_working_evidence.json/newDrakefireChains",
+    "sourceURLs": [
+      "https://www.wowhead.com/forever/guide/raids/onyxias-lair-attunement-guide"
+    ]
+  },
+  "4282": {
+    "steps": [
+      4264,
+      4282
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-segment",
+    "evidence": "checkpoint8ce_working_evidence.json",
+    "instructions": "Published Note 4264 to Shred 4282 segment: obtain and read Note 11446, deliver it to Windsor, then recover the two distinct information items from Angerforge and Argelmach. Earlier Note-drop, unlock and current conditions remain unverified; the provided-for association does not make the starter free."
+  },
+  "4322": {
+    "steps": [
+      4182,
+      4183,
+      4184,
+      4185,
+      4186,
+      4223,
+      4224,
+      4241,
+      4242,
+      4264,
+      4282,
+      4322
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8ce_working_evidence.json",
+    "instructions": "Published Windsor travel itinerary, reused from completed 8BS: begin with Helendis Riverhorn at Morgan's Vigil in Burning Steppes, follow the ordered exchanges through Lakeshire and Stormwind, then Ragged John and Marshal Windsor in Blackrock Depths. The published guide describes returning Abandoned Hope as unlocking the Note, followed by Shred of Hope and Jail Break. Exact mandatory prerequisites, current unlocks, phase and Note-drop conditions remain unverified. Reliable active quests take priority; completion flags are used only when the client returns actual booleans. Quest-source minimums are distinct from wearer requirements.",
+    "sourceEvidence": "checkpoint8bs_working_evidence.json/newDrakefireChains",
+    "sourceURLs": [
+      "https://www.wowhead.com/forever/guide/raids/onyxias-lair-attunement-guide"
+    ]
   }
 }

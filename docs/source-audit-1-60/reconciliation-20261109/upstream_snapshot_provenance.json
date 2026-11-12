@@ -1,21 +1,21 @@
 {
-  "capturedForCheckpoint": "8CD actual final8cd3",
-  "capturedUTC": "2026-11-12T14:37:28.394766+00:00",
+  "capturedForCheckpoint": "8CE actual final8ce2",
+  "capturedUTC": "2026-11-12T15:56:13.246173+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23620,
+    "itemCount": 23621,
     "sourceDefinitions": 9327,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.759a43051b.json",
+        "url": "https://playfulls.com/db/meta.01ed9e751a.json",
         "bytes": 1010610,
-        "sha256": "759a43051b2c2c84e2cf354499ac776f19a581b355375eb1d3f40fb94b07836a",
+        "sha256": "01ed9e751add57687ffb2c39be38ef34a40eac9b8310f5ede1662b4d6e4c6575",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.1ac771abc6.json",
-        "bytes": 1360090,
-        "sha256": "1ac771abc61e37786121f0eb4ab07cb56410a6d3555ce0724ecf28d82414b78c",
+        "url": "https://playfulls.com/db/gear.c7a5b9f6fe.json",
+        "bytes": 1360205,
+        "sha256": "c7a5b9f6fe97730b6e9da0c8ec7b9f7313e86c071863874e21e9d416ccd8c798",
         "matchesRecordedFingerprint": true
       },
       {
@@ -52,35 +52,35 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103442,
-        "sha256": "307739337503b8653c2bee60fc48d9bf5aa7c244eb10a5def7676c4c000979d2",
+        "sha256": "6500abd05665cc6d9a15906975e68b8de452bbbd3371f5f4a5bae9846a8d8e89",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T11:30:14.518Z"
+        "dataAsOf": "2026-11-12T14:50:17.634Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103495,
-        "sha256": "34098cbda72ca97b12aef7f4be554e31a53a04d502a8927002ed9762f0513461",
+        "sha256": "88dce015ac19cb07910478ec6674f9ed87046bd844f8877c8c6fbb4f0f8a03c4",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T11:30:14.518Z"
+        "dataAsOf": "2026-11-12T14:50:17.634Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
-        "bytes": 103457,
-        "sha256": "1171e7c266be1df46c400ea2e78db8c8a9fb074944f26d9b0a7aaf2ffc499135",
+        "bytes": 103456,
+        "sha256": "157dda302b30b455048bb363e53723ccabd9f710105d70d2aa3d33a1890aaa8d",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T11:30:14.518Z"
+        "dataAsOf": "2026-11-12T14:50:17.634Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
-        "bytes": 39647,
-        "sha256": "1a9a183876aac2cd8eb956d3d36f7ddf8686a96e521a1772c35b0b6706dbf35c",
+        "bytes": 41292,
+        "sha256": "0d6916af451d4d1814d3e0f89b7e2364ae32e90be4a2036225d4c251d31ab665",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T11:30:14.518Z"
+        "dataAsOf": "2026-11-12T14:50:17.634Z"
       }
     ],
     "comparison": "No added/removed relations; npc2851 zone1417 installs3\u21924/lastSeen only, no gear source change.",
     "rawEdges": 1688,
     "qualifyingRelationships": 1439
   },
-  "finalCaptureReview": "Original/full/final checkpoint8cd raw comparisons saved before diagnosticadvance. PFtwooutsideIDs18736/284848 plusfive st.lastfieldmetadata deltas;all23618priorrows/full9327sourceobjects otherwiseexact. EVthreeNPC located_inedges344/2046/514 primarygeographypositive;no addeditemloot/oldedgeupdates. No duplicate diagnosticfetch/replay."
+  "finalCaptureReview": "Full original/final comparisons saved before advance. One new outside lead18470; all23620prior rawrows/9327fullsourceobjects exact; four stfacet lastfield counters only. EV8NPC located_in edges independently primary-geography matched, no newitemloot/oldedgeupdate. Final8ce2 facts exactinitial8ce."
 }

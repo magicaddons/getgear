@@ -1,0 +1,201 @@
+{
+  "capturedUTC": "2026-11-12T15:56:41.928093+00:00",
+  "method": "Exact full factual snapshot comparison: actual8CD3 PF23620/EV1691 snapshots to8CD; original8BR deltas preserved separately;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23620,
+    "afterItems": 23621,
+    "beforeDefinitions": 9327,
+    "afterDefinitions": 9327,
+    "newItems": [
+      {
+        "itemID": 18470,
+        "name": "Royal Seal of Eldre'Thalas",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "The Emerald Dream...",
+            "zone": "Dire Maul",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.01ed9e751a.json",
+        "bytes": 1010610,
+        "sha256": "01ed9e751add57687ffb2c39be38ef34a40eac9b8310f5ede1662b4d6e4c6575",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.c7a5b9f6fe.json",
+        "bytes": 1360205,
+        "sha256": "c7a5b9f6fe97730b6e9da0c8ec7b9f7313e86c071863874e21e9d416ccd8c798",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.c731b98083.json",
+        "bytes": 466933,
+        "sha256": "c731b9808385b2f8a49a3b530bc6087f2cca7ccab63c168038101fd55cb24e0f",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.aaf1f7d299.json",
+        "bytes": 446743,
+        "sha256": "aaf1f7d299087f2b2d6b58308a83826143a8fbddec7a5a45528bf7f34d3338c6",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1691,
+    "afterRaw": 1699,
+    "qualifying": 1439,
+    "addedEdges": [
+      {
+        "fromKind": "npc",
+        "fromId": 6726,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1443,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T09:04:06.000Z",
+        "lastSeen": "2026-11-12T11:55:01.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 10079,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:02:37.000Z",
+        "lastSeen": "2026-11-12T13:51:08.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 4317,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:08:10.000Z",
+        "lastSeen": "2026-11-12T14:08:34.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 10537,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:08:41.000Z",
+        "lastSeen": "2026-11-12T14:08:39.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 4877,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:09:01.000Z",
+        "lastSeen": "2026-11-12T14:10:11.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 10539,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:08:26.000Z",
+        "lastSeen": "2026-11-12T14:10:33.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 10377,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:08:13.000Z",
+        "lastSeen": "2026-11-12T14:10:38.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 2986,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:13:10.000Z",
+        "lastSeen": "2026-11-12T14:34:53.000Z"
+      }
+    ],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103442,
+        "sha256": "6500abd05665cc6d9a15906975e68b8de452bbbd3371f5f4a5bae9846a8d8e89",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T14:50:17.634Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103495,
+        "sha256": "88dce015ac19cb07910478ec6674f9ed87046bd844f8877c8c6fbb4f0f8a03c4",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T14:50:17.634Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103456,
+        "sha256": "157dda302b30b455048bb363e53723ccabd9f710105d70d2aa3d33a1890aaa8d",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T14:50:17.634Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 41292,
+        "sha256": "0d6916af451d4d1814d3e0f89b7e2364ae32e90be4a2036225d4c251d31ab665",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T14:50:17.634Z"
+      }
+    ]
+  }
+}

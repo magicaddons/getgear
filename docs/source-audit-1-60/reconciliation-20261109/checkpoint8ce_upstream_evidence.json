@@ -1,0 +1,411 @@
+{
+  "status": "Nine full primary followups matched;no failures/currentloot adoption",
+  "newFull": 9,
+  "cachedFull": 0,
+  "items": {
+    "18470": {
+      "url": "https://www.wowhead.com/forever/item=18470",
+      "bytes": 229588,
+      "sha256": "411c94d32f19677a821130f9fffbf66d1c18c112bee4985d49e27e158cf94f90",
+      "title": "Royal Seal of Eldre'Thalas - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Royal Seal of Eldre'Thalas",
+        "flags2": 16388,
+        "id": 18470,
+        "level": 62,
+        "name": "Royal Seal of Eldre'Thalas",
+        "quality": 3,
+        "reqclass": 1024,
+        "reqlevel": 54,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "c": 2557,
+            "c2": 2,
+            "n": "The Emerald Dream...",
+            "t": 5,
+            "ti": 7506
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Spirit 16 added",
+            "Nature Resistance 15 added",
+            "Spell Power 7 added",
+            "Healing 15 instead of 44",
+            "Fire Resistance 10 removed"
+          ],
+          "notShown": []
+        },
+        "jsonequip": {
+          "quality": 3,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Royal Seal of Eldre'Thalas",
+          "flags2": 16388,
+          "id": 18470,
+          "level": 62,
+          "name": "Royal Seal of Eldre'Thalas",
+          "reqclass": 1024,
+          "reqlevel": 54,
+          "slot": 12,
+          "slotbak": 12,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "c": 2557,
+              "c2": 2,
+              "n": "The Emerald Dream...",
+              "t": 5,
+              "ti": 7506
+            }
+          ],
+          "subclass": -4,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed"
+            ],
+            "lines": [
+              "Spirit 16 added",
+              "Nature Resistance 15 added",
+              "Spell Power 7 added",
+              "Healing 15 instead of 44",
+              "Fire Resistance 10 removed"
+            ],
+            "notShown": []
+          },
+          "classes": 1024,
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "natres": 15,
+          "spi": 16,
+          "splheal": 15,
+          "splpwr": 7,
+          "statsInfo": {
+            "55": {
+              "qty": 0,
+              "alloc": 5555,
+              "socketMult": 0
+            },
+            "41": {
+              "qty": 0,
+              "alloc": 8148,
+              "socketMult": 0
+            },
+            "42": {
+              "qty": 0,
+              "alloc": 2592,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "requirements": [
+        "Classes: Druid"
+      ],
+      "relations": {
+        "reward-from-q": [
+          {
+            "id": 7506,
+            "name": "The Emerald Dream...",
+            "reqlevel": 54,
+            "side": 3,
+            "type": 81
+          }
+        ],
+        "choice-of-quest": []
+      },
+      "scope": "New feed lead independently ID/name/quality3/raw requiredlevel54 matched. Printed Druid/BoP/Unique and no renderedRequiresLevel retained;sourcequestminimum54 not silently a wearerlevel. Current availability/unlocks not confirmed;noactiveadoption."
+    }
+  },
+  "npcs": {
+    "10079": {
+      "url": "https://www.wowhead.com/forever/npc=10079",
+      "bytes": 61535,
+      "sha256": "a62c4020f613c29b69997a27028a2d2f941c110eb7890c43884d2fbd6868a27a",
+      "title": "Brave Moonhorn - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 400,
+          "name": "Thousand Needles",
+          "uiMapID": 1441,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 32.2,
+            "xMax": 32.4,
+            "yMin": 22,
+            "yMax": 23.8
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 10079,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:02:37.000Z",
+        "lastSeen": "2026-11-12T13:51:08.000Z"
+      },
+      "scope": "Independent full primary geography matches anonymous observed3-install located_in reference. No new item-loot/current stock/questgiver/position certainty inferred."
+    },
+    "6726": {
+      "url": "https://www.wowhead.com/forever/npc=6726",
+      "bytes": 57096,
+      "sha256": "20f88356763ad5fb22eb76ed3bb4c97183f330b145c30804d4059e78e3dbea02",
+      "title": "Thalon - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 405,
+          "name": "Desolace",
+          "uiMapID": 1443,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 21.4,
+            "xMax": 21.6,
+            "yMin": 74,
+            "yMax": 74
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 6726,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1443,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T09:04:06.000Z",
+        "lastSeen": "2026-11-12T11:55:01.000Z"
+      },
+      "scope": "Independent full primary geography matches anonymous observed3-install located_in reference. No new item-loot/current stock/questgiver/position certainty inferred."
+    },
+    "4317": {
+      "url": "https://www.wowhead.com/forever/npc=4317",
+      "bytes": 57122,
+      "sha256": "4a6b1335781998512e5207722eba9e63d6ddc3a13ab799b4c80ddba0e9e9aa68",
+      "title": "Nyse - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 400,
+          "name": "Thousand Needles",
+          "uiMapID": 1441,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 45,
+            "xMax": 45,
+            "yMin": 49.2,
+            "yMax": 49.2
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 4317,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:08:10.000Z",
+        "lastSeen": "2026-11-12T14:08:34.000Z"
+      },
+      "scope": "Independent full primary geography matches anonymous observed3-install located_in reference. No new item-loot/current stock/questgiver/position certainty inferred."
+    },
+    "10537": {
+      "url": "https://www.wowhead.com/forever/npc=10537",
+      "bytes": 64431,
+      "sha256": "f58d8c95116d420fb8571ad61fcd2bdd8ff0c428d747c2eff08c02a3a51579f3",
+      "title": "Cliffwatcher Longhorn - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 400,
+          "name": "Thousand Needles",
+          "uiMapID": 1441,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 45.6,
+            "xMax": 45.6,
+            "yMin": 50.4,
+            "yMax": 50.6
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 10537,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:08:41.000Z",
+        "lastSeen": "2026-11-12T14:08:39.000Z"
+      },
+      "scope": "Independent full primary geography matches anonymous observed3-install located_in reference. No new item-loot/current stock/questgiver/position certainty inferred."
+    },
+    "4877": {
+      "url": "https://www.wowhead.com/forever/npc=4877",
+      "bytes": 78037,
+      "sha256": "833cab6c387f6243ab96fbd963109b79959f673fca8dc74192126250d4c152b7",
+      "title": "Jandia - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 400,
+          "name": "Thousand Needles",
+          "uiMapID": 1441,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 46,
+            "xMax": 46,
+            "yMin": 51.4,
+            "yMax": 51.6
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 4877,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:09:01.000Z",
+        "lastSeen": "2026-11-12T14:10:11.000Z"
+      },
+      "scope": "Independent full primary geography matches anonymous observed3-install located_in reference. No new item-loot/current stock/questgiver/position certainty inferred."
+    },
+    "10539": {
+      "url": "https://www.wowhead.com/forever/npc=10539",
+      "bytes": 55962,
+      "sha256": "a3471f331f95575275779dad58bf011888c8b5af3cb629ecfb7bb3e96f72d46d",
+      "title": "Hagar Lightninghoof - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 400,
+          "name": "Thousand Needles",
+          "uiMapID": 1441,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 44.6,
+            "xMax": 44.6,
+            "yMin": 50.2,
+            "yMax": 50.2
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 10539,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:08:26.000Z",
+        "lastSeen": "2026-11-12T14:10:33.000Z"
+      },
+      "scope": "Independent full primary geography matches anonymous observed3-install located_in reference. No new item-loot/current stock/questgiver/position certainty inferred."
+    },
+    "10377": {
+      "url": "https://www.wowhead.com/forever/npc=10377",
+      "bytes": 57446,
+      "sha256": "77c56b83f0b353dcc869d7afcdfd5d969df44fc6f9f05a977a4260a487f095a0",
+      "title": "Elu - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 400,
+          "name": "Thousand Needles",
+          "uiMapID": 1441,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 45,
+            "xMax": 45,
+            "yMin": 49,
+            "yMax": 49
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 10377,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:08:13.000Z",
+        "lastSeen": "2026-11-12T14:10:38.000Z"
+      },
+      "scope": "Independent full primary geography matches anonymous observed3-install located_in reference. No new item-loot/current stock/questgiver/position certainty inferred."
+    },
+    "2986": {
+      "url": "https://www.wowhead.com/forever/npc=2986",
+      "bytes": 72078,
+      "sha256": "76260e615535433f01142ac7446c6d38a171b7aa41d880e16945a9108d4ce7d7",
+      "title": "Dorn Plainstalker - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 400,
+          "name": "Thousand Needles",
+          "uiMapID": 1441,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 53.8,
+            "xMax": 53.8,
+            "yMin": 41.4,
+            "yMax": 41.6
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 2986,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1441,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T11:13:10.000Z",
+        "lastSeen": "2026-11-12T14:34:53.000Z"
+      },
+      "scope": "Independent full primary geography matches anonymous observed3-install located_in reference. No new item-loot/current stock/questgiver/position certainty inferred."
+    }
+  },
+  "scope": "Exact same-run PFnew18470 plusEV8NPClocations. Broader original100case proof independent and immutable;allfullused998=332new666cache,plusincidentalexcluded4244one newbody. No duplicate diagnostic feedfetch."
+}

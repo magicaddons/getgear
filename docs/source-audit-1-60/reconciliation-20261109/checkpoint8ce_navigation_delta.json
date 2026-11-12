@@ -1,0 +1,74 @@
+{
+  "rows": [
+    {
+      "itemID": "273811",
+      "name": "Repurposed Rack",
+      "before": {
+        "itemID": "273811",
+        "name": "Repurposed Rack",
+        "category": "world_drop",
+        "status": "missing",
+        "routeCount": "1",
+        "inGameRenderingVerified": "False",
+        "classes": "SHAMAN,WARRIOR,PALADIN"
+      },
+      "after": {
+        "itemID": "273811",
+        "name": "Repurposed Rack",
+        "category": "world_drop",
+        "status": "directions",
+        "routeCount": "1",
+        "inGameRenderingVerified": "False",
+        "classes": "SHAMAN,WARRIOR,PALADIN"
+      }
+    },
+    {
+      "itemID": "273817",
+      "name": "Graverobber's Shovel",
+      "before": {
+        "itemID": "273817",
+        "name": "Graverobber's Shovel",
+        "category": "world_drop",
+        "status": "missing",
+        "routeCount": "1",
+        "inGameRenderingVerified": "False",
+        "classes": "PRIEST,DRUID,SHAMAN,WARRIOR,PALADIN"
+      },
+      "after": {
+        "itemID": "273817",
+        "name": "Graverobber's Shovel",
+        "category": "world_drop",
+        "status": "directions",
+        "routeCount": "1",
+        "inGameRenderingVerified": "False",
+        "classes": "PRIEST,DRUID,SHAMAN,WARRIOR,PALADIN"
+      }
+    },
+    {
+      "itemID": "273820",
+      "name": "Nightskulker Ring",
+      "before": {
+        "itemID": "273820",
+        "name": "Nightskulker Ring",
+        "category": "world_drop",
+        "status": "missing",
+        "routeCount": "1",
+        "inGameRenderingVerified": "False",
+        "classes": "PRIEST,MAGE,WARLOCK,DRUID,ROGUE,HUNTER,SHAMAN,WARRIOR,PALADIN"
+      },
+      "after": {
+        "itemID": "273820",
+        "name": "Nightskulker Ring",
+        "category": "world_drop",
+        "status": "directions",
+        "routeCount": "1",
+        "inGameRenderingVerified": "False",
+        "classes": "PRIEST,MAGE,WARLOCK,DRUID,ROGUE,HUNTER,SHAMAN,WARRIOR,PALADIN"
+      }
+    }
+  ],
+  "statusChanges": {
+    "('missing', 'directions')": 3
+  },
+  "scope": "Shared source geography/quest context, not active candidate adoption or client rendering."
+}

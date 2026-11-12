@@ -231,7 +231,7 @@ class Evidence:
                 if isinstance(node.get("sourceRequirements"), list):
                     q["sourceRequirements"] = [value for value in node["sourceRequirements"] if isinstance(value, str)]
                     q["sourceRequirementsUnresolved"] = node.get("sourceRequirementsUnresolved") is True
-                for field in ["starterZone", "starterInstructions"]:
+                for field in ["starterZone", "starterInstructions", "objectiveZone", "objectiveSource", "objectiveInstructions"]:
                     if isinstance(node.get(field), str):
                         q[field] = node[field]
                 for quest_id in node.get("seriesQuestIDs", []):

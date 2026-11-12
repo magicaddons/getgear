@@ -7,3 +7,6 @@ checkpoint8ce_primary_read_log.json preserves exact ID/name/header/hash/rawmap/t
 Next:finish exactqueries12–24,eligibility/source/navigation audit. Reuse completed8BJ Nilith chains3379/3385/3402;do not repeat. Windsor4242/4322 route metadata missing despite cached prerequisite pages;investigate actual linkage/firstgiver/Note/4282. Most prerequisite/giver pages alreadycached;skip all906known failedURLs. Do not equate published order with mandatory current graph or assume playerprogress. Then integrate qualified findings and run required fresh19local/18CI/fullbotgate ifsource/runtimeinputs change. Shared current/future location model remains the only navigation system.
 
 Existing worker/single automation;no main/Beta8/build/package/release/billing. Source reads with unavailable locations and quest relationships stay in shared acquisition/navigation research,not false successful markers. Do not restart100primaryreads or launch anotherworker.
+
+
+Integration is now complete and all19 local checks passed. See CHECKPOINT8CE_OUTSIDE_CANDIDATES_AND_QUEST_OBJECTIVES.md and checkpoint8ce_local_validation.json; CI/full generated-commit review remain pending. Older fields above describe the preservation stage. Next after that gate:8CF100 IDs12065–13398,396pending/496total;27additional all-slot leads remain separately untriaged in the same research plan.

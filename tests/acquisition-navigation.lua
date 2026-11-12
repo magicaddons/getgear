@@ -64,6 +64,27 @@ model.sources['npc:instance']={name='Friendly quest giver',locations={{zone='Fix
 model.quests['13']={questID=13,name='Dungeon quest fixture',starts={'npc:instance'},ends={'npc:instance'}}
 local dungeonQuestTarget=addon:GetAcquisitionMapTarget(plan(16,{{kind='quest',questID=13}}))
 assert(dungeonQuestTarget.kind=='dungeon' and dungeonQuestTarget.role=='Quest start' and dungeonQuestTarget.boss==nil,'an in-dungeon quest giver uses entrance navigation without being relabelled a boss')
+model.quests['14']={questID=14,name='Escort fixture',starts={'npc:2'},ends={'npc:1'},
+    objectiveZone='Fixture dungeon',objectiveInstructions='Escort the NPC,then return to the published turn-in.'}
+local escort=plan(30,{{kind='quest',questID=14}})
+C_QuestLog={IsOnQuest=function(id)return id==14 end}
+local escortTarget=addon:GetAcquisitionMapTarget(escort)
+assert(escortTarget.kind=='dungeon' and escortTarget.role=='Published active quest objective' and not escortTarget.x,'unknown active escort progress uses published instance guidance,not an assumed completed turn-in')
+local savedMap=C_Map
+C_Map={GetMapInfo=function()return{name='Westfall'}end}
+C_QuestLog.GetNextWaypoint=function()return 52,.25,.5 end
+assert(addon:GetAcquisitionMapTarget(escort).clientVerified,'a valid native objective retains priority over published guidance and quest-giver references')
+C_QuestLog.GetNextWaypoint=nil;C_QuestLog.IsComplete=function()return true end
+local ready=addon:GetAcquisitionMapTarget(escort)
+assert(ready.role=='Quest turn-in' and ready.source=='npc:1','a reliable completed-objective flag can prefer the actual turn-in')
+C_QuestLog.IsComplete=function()error('unsupported client API')end
+assert(addon:GetAcquisitionMapTarget(escort).kind=='dungeon','an unsupported completion API cannot invent completed progress')
+C_QuestLog.IsComplete=nil;C_QuestLog.GetNextWaypoint=function()return 0,.25,.5 end
+assert(not addon:GetAcquisitionMapTarget(escort).clientVerified,'invalid native map IDs fall back to published guidance')
+C_QuestLog.GetNextWaypoint=nil;model.quests['14'].objectiveSource='npc:2'
+assert(addon:GetAcquisitionMapTarget(escort).source=='npc:2','a published delivery or conversation objective can use its actual NPC')
+assert(addon:GetAcquisitionDirections(escort):find('Escort the NPC',1,true),'the detailed guide retains published objective instructions')
+C_QuestLog=nil;C_Map=savedMap
 local vendor=plan(4,{{kind="vendor",source="npc:1",offer={cost={12345}},sourceRequirements={"Requires Silverwing Sentinels - Exalted"}}})
 assert(addon:GetAcquisitionMapTarget(vendor).role=="Equipment vendor")
 assert(addon:GetAcquisitionMapTarget(vendor).requirements:find("Silverwing Sentinels - Exalted",1,true),"the compact pin retains a published vendor reputation requirement")
@@ -410,4 +431,23 @@ local fish=addon:GetAcquisitionMapTarget(addon.ItemCatalog[19808])
 assert(fish and fish.kind=="fishing" and fish.zone=="Stranglethorn Vale" and not fish.x and not fish.bounds,"new fishing source is zone directions only")
 local maskDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[10025])
 assert(maskDirections:find("#3379",1,true) and maskDirections:find("#3402",1,true) and maskDirections:find("Tailoring",1,true),"quest-unlocked recipe retains researched starting route and source requirements")
+-- Actual shared Windsor data also serves the existing Drakefire acquisition,
+-- even though this checkpoint's outside reward candidates remain inactive.
+assert(actualModel.chains['4322'].steps[1]==4182 and actualModel.chains['4322'].routeVerified and not actualModel.chains['4322'].prerequisitesVerified,'reuse the completed published Windsor itinerary without claiming current mandatory prerequisites')
+assert(not addon.ItemCatalog[12061] and not addon.ItemCatalog[12065],'outside candidate research must not silently activate equipment')
+local beforeWindsorAPI,beforeWindsorFaction=C_QuestLog,UnitFactionGroup
+UnitFactionGroup=function()return "Alliance" end
+C_QuestLog={IsOnQuest=function(id)return id==4322 end}
+local escort=addon:GetAcquisitionMapTarget(addon.ItemCatalog[16309])
+assert(escort and escort.questID==4322 and escort.kind=='dungeon' and escort.dungeon=='Blackrock Depths' and escort.instructions:find('Escort Marshal Windsor',1,true) and not escort.x,'active escort without a native waypoint gives written dungeon guidance, not a premature outdoor turn-in')
+C_QuestLog.IsComplete=function(id)return id==4322 end
+local turnin=addon:GetAcquisitionMapTarget(addon.ItemCatalog[16309])
+assert(turnin and turnin.source=='npc:9560' and turnin.role=='Quest turn-in','actual boolean completion can select Maxwell after the escort')
+C_QuestLog.GetNextWaypoint=function()return 1428,.3,.4 end
+C_QuestLog.GetNextWaypointText=function()return "Client Windsor objective" end
+local native=addon:GetAcquisitionMapTarget(addon.ItemCatalog[16309])
+assert(native and native.clientVerified and native.label=='Client Windsor objective','a valid client objective retains priority over published fallback and turn-in')
+C_QuestLog,UnitFactionGroup=beforeWindsorAPI,beforeWindsorFaction
+local windsorGuide=addon:GetAcquisitionDirections(addon.ItemCatalog[16309])
+assert(windsorGuide:find('Escort Marshal Windsor',1,true) and windsorGuide:find('11464',1,true) and windsorGuide:find('11465',1,true),'same detailed guide retains escort instructions and distinct information item IDs')
 print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests")
