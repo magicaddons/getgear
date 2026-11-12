@@ -120,6 +120,14 @@ local npcContainer=plan(24,{{kind="npc_container",source="npc:2",containerItemID
 local npcContainerTarget=addon:GetAcquisitionMapTarget(npcContainer)
 assert(npcContainerTarget.kind=="directions" and not npcContainerTarget.x and npcContainerTarget.role=="Container drop source","legacy container loot opens qualified directions without a current NPC-farm point")
 assert(addon:GetAcquisitionDirections(npcContainer):find("not guaranteed finished equipment",1,true),"the NPC drops a box rather than guaranteeing its gear contents")
+model.quests["25"]={questID=25,name="Unresolved starting volume",starts={},ends={"npc:1"},
+    starterItems={{itemID=905,name="Starting volume"}},starterOriginUnresolved=true}
+local unresolvedStarter=plan(25,{{kind="quest",questID=25}})
+assert(not addon:GetAcquisitionMapTarget(unresolvedStarter),"an unknown item-start destination must not become a turn-in-only starting pin")
+assert(addon:GetAcquisitionDirections(unresolvedStarter):find("turn-in NPC is not a starting destination",1,true))
+C_QuestLog={IsOnQuest=function(id)return id==25 end}
+assert(addon:GetAcquisitionMapTarget(unresolvedStarter).role=="Quest turn-in","a reliable accepted quest can use the verified turn-in destination")
+C_QuestLog=nil
 assert(addon:GetAcquisitionDirections(recipe):find("Limited listing",1,true))
 local aca=plan(6,{{kind="recipe_vendor",source="npc:1",cost=240,currency="Merchant's Favor",offer={standing=6,reqfaction=3000}}})
 assert(addon:GetAcquisitionDirections(aca):find("240 Merchant's Favor",1,true))

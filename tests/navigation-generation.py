@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Offline proof-boundary checks, including how newly researched data propagates."""
 import importlib.util
+import csv
 import json
 import tempfile
 from pathlib import Path
@@ -209,5 +210,61 @@ with tempfile.TemporaryDirectory() as temp:
     proof["items"][0]["crossVersionWarning"] = True
     path.write_text(json.dumps(proof))
     assert "2" not in nav.build(gear)[0]["items"], "disputed NPC-dropped wrappers remain unresolved"
+
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    for filename in ["reviewed_equipment_sources.json", "reviewed_recipe_sources.json"]:
+        (nav.REPORT / filename).write_text("[]")
+    for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / filename).write_text("itemID\n")
+    gear = {"2": dict(itemID=2, name="Crafted fixture", sourceType="Crafting",
+                     profession="Blacksmithing", recipePatternItemID=900, eligibility=[511])}
+    quest_url = "https://www.wowhead.com/forever/quest=10"
+    proof = {"legacy": {"sourceURL": quest_url, "sha256": "a"*64,
+                       "questDetails": {"id": 10, "name": "Saved recipe quest", "reqlevel": 50, "side": 3,
+                                        "itemrewards": [[900, 1]]}},
+             "actors": [response("npc", 100, name="Saved actor",
+                                mapper={"40": [{"uiMapName": "Westfall", "uiMapId": 52, "coords": [[20, 30]]}]})]}
+    path = nav.REPORT / "checkpoint_test_evidence.json"
+    reference = dict(itemID=2, bookItemID=900, questID=10, questURL=quest_url, questPageSHA256="a"*64,
+                     startKind="npc", startID=100, startName="Saved actor", endKind="npc", endID=100, endName="Saved actor")
+    def save_reference():
+        with (nav.REPORT / "checkpoint_test_quest_references.csv").open("w", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(reference))
+            writer.writeheader()
+            writer.writerow(reference)
+    path.write_text(json.dumps(proof))
+    save_reference()
+    restored, coverage, _, _ = nav.build(gear)
+    assert restored["quests"]["10"]["starts"] == ["npc:100"] and restored["quests"]["10"]["ends"] == ["npc:100"]
+    assert coverage[0]["status"] == "verified_coordinate_data" and restored["items"]["2"]["category"] == "crafting"
+    reference["questPageSHA256"] = "b"*64
+    save_reference()
+    assert "2" not in nav.build(gear)[0]["items"], "a mismatched saved page fingerprint cannot create a source"
+    reference["questPageSHA256"] = "a"*64
+    reference["bookItemID"] = 999
+    save_reference()
+    assert "2" not in nav.build(gear)[0]["items"], "the exact book must be a full legacy quest reward"
+    reference["bookItemID"] = 900
+    save_reference()
+    proof["current"] = response("quest", 10, quest={"id": 10, "name": "Current quest", "itemrewards": [[999, 1]]},
+                                actors=[{"id": 200, "name": "Current actor", "point": "start", "type": 1}])
+    path.write_text(json.dumps(proof))
+    current = nav.build(gear)[0]
+    assert "2" not in current["items"] and current["quests"]["10"]["starts"] == ["npc:200"], "current full metadata/actors must retain precedence"
+    del proof["current"]
+    reference.update(startKind="item", startID=901, startName="Starting volume")
+    save_reference()
+    proof["startingItems"] = [{"itemID": 901, "name": "Starting volume",
+                              "hashes": {"https://www.wowhead.com/forever/item=901": "c"*64,
+                                         "https://www.wowhead.com/forever/item=901&xml": "d"*64},
+                              "tables": {"starts": [{"id": 10}], "provided-for": [{"id": 10}]}}]
+    proof["legacy"]["requiredPhysicalItems"] = [{"itemID": 901, "name": "Starting volume", "quantity": 1, "provided": True}]
+    path.write_text(json.dumps(proof))
+    starter, coverage, _, _ = nav.build(gear)
+    q = starter["quests"]["10"]
+    assert q["starterItems"][0]["itemID"] == 901 and q["requiredItems"][0]["startsQuest"]
+    assert not q["starts"] and q["ends"] == ["npc:100"] and q["starterOriginUnresolved"]
+    assert coverage[0]["status"] == "missing", "a known turn-in does not resolve the first destination for an item-started quest"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

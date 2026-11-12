@@ -1,0 +1,83 @@
+{
+  "all_items_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 0,
+    "semanticChanges": [
+      {
+        "itemID": "271800",
+        "name": "Scavenged Magram Armament",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "quest"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "quest: Khan Jehn, Desolace"
+          }
+        }
+      },
+      {
+        "itemID": "271804",
+        "name": "Soulsplatter Mace",
+        "changes": {
+          "PlayfullsTypes": {
+            "before": "",
+            "after": "quest"
+          },
+          "PlayfullsSourceCount": {
+            "before": 0,
+            "after": 1
+          },
+          "PlayfullsFirstSource": {
+            "before": "",
+            "after": "quest: Khan Jehn, Desolace"
+          }
+        }
+      }
+    ]
+  },
+  "dungeon_items_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 397,
+    "semanticChanges": [
+      {
+        "itemID": "11946",
+        "name": "Fire Opal Necklace",
+        "changes": {
+          "PlayfullsRoutes": {
+            "before": [
+              {
+                "type": "container",
+                "npc": "Fat Sack of Coins",
+                "zone": "",
+                "path": "",
+                "note": "",
+                "label": "Container"
+              }
+            ],
+            "after": [
+              {
+                "type": "container",
+                "npc": "Fat Sack of Coins",
+                "zone": "",
+                "path": "",
+                "note": "item/11937-fat-sack-of-coins",
+                "label": "Container"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "recipes_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 588,
+    "semanticChanges": []
+  }
+}

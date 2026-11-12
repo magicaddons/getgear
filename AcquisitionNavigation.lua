@@ -179,8 +179,10 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                          verification="published-reference",preferred=questRoutes==1})
                 end
             end
-            for _, key in ipairs(q.starts or {}) do source(key,state=="completed" and "Completed quest — start reference" or state=="incomplete" and "Next uncompleted published stage" or "Quest start",q,route,questRoutes==1 and state~="completed") end
-            for _, key in ipairs(q.ends or {}) do source(key,"Quest turn-in",q,route,false) end
+            if not q.starterOriginUnresolved or onQuest(id) then
+                for _, key in ipairs(q.starts or {}) do source(key,state=="completed" and "Completed quest — start reference" or state=="incomplete" and "Next uncompleted published stage" or "Quest start",q,route,questRoutes==1 and state~="completed") end
+                for _, key in ipairs(q.ends or {}) do source(key,"Quest turn-in",q,route,false) end
+            end
         elseif route.kind=="dungeon" then
             add({kind="dungeon",dungeon=route.dungeon,label=route.dungeon.." entrance",boss=route.boss,
                  role=route.recipe and "Obtain recipe in dungeon" or "Dungeon entrance",instructions=route.instructions,
@@ -249,6 +251,7 @@ function GetGear:GetAcquisitionDirections(gear)
                 out[#out+1]="Quest: "..(q.name or "#"..id).." (#"..id.."). Earlier prerequisites are not established unless listed below."
                 for _, item in ipairs(q.starterItems or {}) do out[#out+1]="Quest starter item: "..item.name.." (#"..item.itemID..")" end
                 if q.starterInstructions then out[#out+1]=q.starterInstructions end
+                if q.starterOriginUnresolved then out[#out+1]="Starting item origin/location remains unverified. The turn-in NPC is not a starting destination." end
             end
             local q=get(data().quests,id) or {}
             if q.reqlevel then out[#out+1]="Published quest minimum level: "..q.reqlevel end

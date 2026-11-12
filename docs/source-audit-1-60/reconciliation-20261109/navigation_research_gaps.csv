@@ -907,8 +907,12 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 7913,Barbaric Iron Shoulders,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 7914,Barbaric Iron Breastplate,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 7915,Barbaric Iron Helm,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-7916,Barbaric Iron Boots,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-7917,Barbaric Iron Gloves,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+7916,Barbaric Iron Boots,crafting,,2753,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+7916,Barbaric Iron Boots,crafting,npc:7790,2753,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+7916,Barbaric Iron Boots,crafting,npc:7790,2753,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+7917,Barbaric Iron Gloves,crafting,,2755,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+7917,Barbaric Iron Gloves,crafting,npc:7790,2755,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+7917,Barbaric Iron Gloves,crafting,npc:7790,2755,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
 7918,Heavy Mithril Shoulder,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 7919,Heavy Mithril Gauntlet,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 7920,Mithril Plate Pants,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
@@ -916,9 +920,15 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 7922,Steel Plate Helm,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 7924,Mithril Plate Bracers,crafting,npc:8176,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
 7925,Mithril Plate Gloves,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-7926,Ornate Mithril Pants,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-7927,Ornate Mithril Gloves,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-7928,Ornate Mithril Shoulders,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+7926,Ornate Mithril Pants,crafting,,2761,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+7926,Ornate Mithril Pants,crafting,npc:7802,2761,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+7926,Ornate Mithril Pants,crafting,npc:7802,2761,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+7927,Ornate Mithril Gloves,crafting,,2762,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+7927,Ornate Mithril Gloves,crafting,npc:7802,2762,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+7927,Ornate Mithril Gloves,crafting,npc:7802,2762,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+7928,Ornate Mithril Shoulders,crafting,,2763,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+7928,Ornate Mithril Shoulders,crafting,npc:7802,2763,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+7928,Ornate Mithril Shoulders,crafting,npc:7802,2763,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
 7929,Orcish War Leggings,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 7930,Heavy Mithril Breastplate,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 7931,Mithril Coif,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
@@ -1019,11 +1029,36 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 8207,Tough Scorpid Shoulders,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 8208,Tough Scorpid Helm,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 8209,Tough Scorpid Boots,crafting,npc:5615,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
-8210,Wild Leather Shoulders,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-8211,Wild Leather Vest,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-8212,Wild Leather Leggings,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-8213,Wild Leather Boots,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-8214,Wild Leather Helmet,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+8210,Wild Leather Shoulders,crafting,,2848,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8210,Wild Leather Shoulders,crafting,,2855,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8210,Wild Leather Shoulders,crafting,npc:7852,2848,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8210,Wild Leather Shoulders,crafting,npc:7852,2848,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8210,Wild Leather Shoulders,crafting,npc:7854,2855,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8210,Wild Leather Shoulders,crafting,npc:7854,2855,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8211,Wild Leather Vest,crafting,,2849,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8211,Wild Leather Vest,crafting,,2856,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8211,Wild Leather Vest,crafting,npc:7852,2849,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8211,Wild Leather Vest,crafting,npc:7852,2849,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8211,Wild Leather Vest,crafting,npc:7854,2856,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8211,Wild Leather Vest,crafting,npc:7854,2856,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8212,Wild Leather Leggings,crafting,,2852,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8212,Wild Leather Leggings,crafting,,2859,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8212,Wild Leather Leggings,crafting,npc:7852,2852,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8212,Wild Leather Leggings,crafting,npc:7852,2852,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8212,Wild Leather Leggings,crafting,npc:7854,2859,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8212,Wild Leather Leggings,crafting,npc:7854,2859,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8213,Wild Leather Boots,crafting,,2851,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8213,Wild Leather Boots,crafting,,2858,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8213,Wild Leather Boots,crafting,npc:7852,2851,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8213,Wild Leather Boots,crafting,npc:7852,2851,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8213,Wild Leather Boots,crafting,npc:7854,2858,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8213,Wild Leather Boots,crafting,npc:7854,2858,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8214,Wild Leather Helmet,crafting,,2850,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8214,Wild Leather Helmet,crafting,,2857,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+8214,Wild Leather Helmet,crafting,npc:7852,2850,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8214,Wild Leather Helmet,crafting,npc:7852,2850,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8214,Wild Leather Helmet,crafting,npc:7854,2857,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+8214,Wild Leather Helmet,crafting,npc:7854,2857,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
 8223,Blade of the Basilisk,world_drop,npc:5935,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BF
 8224,Silithid Ripper,world_drop,npc:4132,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BE
 8225,Tainted Pierce,dungeon,,,dungeon_floor_or_access_unverified,"Use client entrance; no inferred boss-floor coordinates, keys or unlocks.",,existing-catalogue
@@ -1123,7 +1158,9 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 8367,Dragonscale Breastplate,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 8708,Hammer of Expertise,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8F
 9359,Southsea Lamp,world_drop,object:142184,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BI
-9366,Golden Scale Gauntlets,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+9366,Golden Scale Gauntlets,crafting,,2758,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+9366,Golden Scale Gauntlets,crafting,npc:7798,2758,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+9366,Golden Scale Gauntlets,crafting,npc:7798,2758,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
 9372,Sul'thraze the Lasher,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8H
 9379,Sang'thraze the Deflector,dungeon,,,dungeon_floor_or_access_unverified,"Use client entrance; no inferred boss-floor coordinates, keys or unlocks.",,existing-catalogue
 9380,Jang'thraze the Protector,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8H
@@ -2678,13 +2715,27 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 12418,Radiant Gloves,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12419,Radiant Boots,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12420,Radiant Leggings,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-12422,Imperial Plate Chest,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-12424,Imperial Plate Belt,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-12425,Imperial Plate Bracers,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-12426,Imperial Plate Boots,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-12427,Imperial Plate Helm,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-12428,Imperial Plate Shoulders,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-12429,Imperial Plate Leggings,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+12422,Imperial Plate Chest,crafting,,7656,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12422,Imperial Plate Chest,crafting,npc:14567,7656,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12422,Imperial Plate Chest,crafting,npc:14567,7656,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12424,Imperial Plate Belt,crafting,,7653,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12424,Imperial Plate Belt,crafting,npc:14567,7653,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12424,Imperial Plate Belt,crafting,npc:14567,7653,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12425,Imperial Plate Bracers,crafting,,7655,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12425,Imperial Plate Bracers,crafting,npc:14567,7655,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12425,Imperial Plate Bracers,crafting,npc:14567,7655,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12426,Imperial Plate Boots,crafting,,7654,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12426,Imperial Plate Boots,crafting,npc:14567,7654,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12426,Imperial Plate Boots,crafting,npc:14567,7654,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12427,Imperial Plate Helm,crafting,,7657,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12427,Imperial Plate Helm,crafting,npc:14567,7657,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12427,Imperial Plate Helm,crafting,npc:14567,7657,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12428,Imperial Plate Shoulders,crafting,,7659,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12428,Imperial Plate Shoulders,crafting,npc:14567,7659,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12428,Imperial Plate Shoulders,crafting,npc:14567,7659,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12429,Imperial Plate Leggings,crafting,,7658,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12429,Imperial Plate Leggings,crafting,npc:14567,7658,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
+12429,Imperial Plate Leggings,crafting,npc:14567,7658,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
 12466,Dawnspire Cord,dungeon,,,dungeon_floor_or_access_unverified,"Use client entrance; no inferred boss-floor coordinates, keys or unlocks.",,existing-catalogue
 12470,Sandstalker Ankleguards,dungeon,,,dungeon_floor_or_access_unverified,"Use client entrance; no inferred boss-floor coordinates, keys or unlocks.",,existing-catalogue
 12584,Grand Marshal's Longsword,vendor,npc:12782,,source_coordinates_missing,Named source exists; precise location not established.,,publication-researched-8K
@@ -2698,13 +2749,22 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 12615,Savage Mail Tunic,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8Z
 12616,Savage Mail Boots,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8AA
 12617,Savage Mail Shoulders,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8AA
+12618,Enchanted Thorium Breastplate,crafting,,7649,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12618,Enchanted Thorium Breastplate,crafting,,7649,quest_start_missing,Do not present a turn-in as the starting NPC.,,existing-catalogue
+12618,Enchanted Thorium Breastplate,crafting,,7649,quest_starter_origin_unverified,"Explicit item-started quest, but no safe starting-item destination; a turn-in is not the first step.",,existing-catalogue
 12618,Enchanted Thorium Breastplate,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+12619,Enchanted Thorium Leggings,crafting,,7650,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12619,Enchanted Thorium Leggings,crafting,,7650,quest_start_missing,Do not present a turn-in as the starting NPC.,,existing-catalogue
+12619,Enchanted Thorium Leggings,crafting,,7650,quest_starter_origin_unverified,"Explicit item-started quest, but no safe starting-item destination; a turn-in is not the first step.",,existing-catalogue
 12619,Enchanted Thorium Leggings,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+12620,Enchanted Thorium Helm,crafting,,7651,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12620,Enchanted Thorium Helm,crafting,,7651,quest_start_missing,Do not present a turn-in as the starting NPC.,,existing-catalogue
+12620,Enchanted Thorium Helm,crafting,,7651,quest_starter_origin_unverified,"Explicit item-started quest, but no safe starting-item destination; a turn-in is not the first step.",,existing-catalogue
 12620,Enchanted Thorium Helm,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12624,Wildthorn Mail,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12625,Dawnbringer Shoulders,crafting,npc:11536,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
 12628,Demon Forged Breastplate,crafting,,5127,quest_source_access_unverified,A published source requirement is known but its exact access threshold or current availability remains unresolved.,,existing-catalogue
-12631,Fiery Plate Gauntlets,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+12631,Fiery Plate Gauntlets,crafting,,5124,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
 12632,Storm Gauntlets,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12633,Whitesoul Helm,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12636,Helm of the Great Chief,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
@@ -2716,10 +2776,12 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 12769,Bleakwood Hew,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12772,Inlaid Thorium Hammer,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12773,Ornate Thorium Handaxe,crafting,npc:11278,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
-12774,Dawn's Edge,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+12774,Dawn's Edge,crafting,,5306,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
 12775,Huge Thorium Battleaxe,crafting,npc:11278,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,existing-catalogue
-12776,Enchanted Battlehammer,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
-12777,Blazing Rapier,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+12776,Enchanted Battlehammer,crafting,,5305,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12776,Enchanted Battlehammer,crafting,,8869,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+12776,Enchanted Battlehammer,crafting,,8869,quest_start_missing,Do not present a turn-in as the starting NPC.,,existing-catalogue
+12777,Blazing Rapier,crafting,,5307,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
 12781,Serenity,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12782,Corruption,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 12783,Heartseeker,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
@@ -3732,6 +3794,9 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 17055,Changuk Smasher,world_drop,npc:8201,,precise_coordinate_unverified,Published area/roaming footprint only; no invented point or centroid.,,publication-researched-8BP
 17142,Shard of the Defiler,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8AD
 17182,"Sulfuras, Hand of Ragnaros",unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8AD
+17193,Sulfuron Hammer,crafting,,7604,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+17193,Sulfuron Hammer,crafting,,7604,quest_start_missing,Do not present a turn-in as the starting NPC.,,existing-catalogue
+17193,Sulfuron Hammer,crafting,,7604,quest_starter_origin_unverified,"Explicit item-started quest, but no safe starting-item destination; a turn-in is not the first step.",,existing-catalogue
 17193,Sulfuron Hammer,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 17223,Thunderstrike,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8AA
 17562,Knight-Lieutenant's Dreadweave Boots,unknown,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,publication-researched-8AA
@@ -6748,6 +6813,8 @@ itemID,name,category,sourceID,questID,gap,detail,researchCheckpoint,researchStat
 252477,Mender's Leather Waistguard,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 252478,Blue Suede Pants,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 252479,Wicked Leather Boots,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
+252480,Blue Suede Armor,crafting,,92817,quest_chain_relationships_unverified,Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.,,existing-catalogue
+252480,Blue Suede Armor,crafting,,92817,quest_start_missing,Do not present a turn-in as the starting NPC.,,existing-catalogue
 252480,Blue Suede Armor,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 252481,Blue Suede Belt,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue
 252482,Blue Suede Hat,crafting,,,actionable_location_missing,No safe map target. Keep detailed source evidence; no fabricated marker.,,existing-catalogue

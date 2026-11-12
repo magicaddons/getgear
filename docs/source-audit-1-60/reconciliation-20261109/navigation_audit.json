@@ -2,12 +2,18 @@
   "items": 7707,
   "statuses": {
     "not_applicable": 2378,
-    "directions": 1465,
-    "missing": 3173,
-    "verified_coordinate_data": 691
+    "directions": 1483,
+    "missing": 3151,
+    "verified_coordinate_data": 695
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 8462,
+  "gapRows": 8529,
+  "legacyRecipeQuestReferences": {
+    "actor_roles_restored": 58,
+    "full_recipe_quests_restored": 33,
+    "current_metadata_preserved": 2,
+    "item_starts_pending_destination": 4
+  },
   "categories": {
     "world_drop": 2885,
     "dungeon": 552,
@@ -23,7 +29,7 @@
     "named_drop": 274,
     "dungeon": 561,
     "legacy": 59,
-    "quest": 272,
+    "quest": 305,
     "vendor": 1908,
     "recipe_vendor": 503,
     "trainer": 3,
@@ -38,59 +44,59 @@
     "PRIEST": {
       "directions": 621,
       "not_applicable": 914,
-      "missing": 875,
-      "verified_coordinate_data": 217
+      "missing": 874,
+      "verified_coordinate_data": 218
     },
     "MAGE": {
       "not_applicable": 894,
       "directions": 597,
-      "missing": 762,
-      "verified_coordinate_data": 218
+      "missing": 761,
+      "verified_coordinate_data": 219
     },
     "WARLOCK": {
       "not_applicable": 894,
       "directions": 592,
-      "missing": 758,
-      "verified_coordinate_data": 217
+      "missing": 757,
+      "verified_coordinate_data": 218
     },
     "DRUID": {
       "not_applicable": 1365,
-      "directions": 892,
-      "missing": 1258,
-      "verified_coordinate_data": 343
+      "directions": 897,
+      "missing": 1252,
+      "verified_coordinate_data": 344
     },
     "ROGUE": {
       "not_applicable": 1337,
-      "directions": 884,
-      "missing": 1102,
-      "verified_coordinate_data": 316
+      "directions": 889,
+      "missing": 1095,
+      "verified_coordinate_data": 318
     },
     "HUNTER": {
       "not_applicable": 1839,
-      "directions": 1159,
-      "missing": 1464,
-      "verified_coordinate_data": 404
+      "directions": 1167,
+      "missing": 1454,
+      "verified_coordinate_data": 406
     },
     "SHAMAN": {
       "not_applicable": 1990,
-      "directions": 1165,
-      "missing": 1526,
-      "verified_coordinate_data": 428
+      "directions": 1173,
+      "missing": 1516,
+      "verified_coordinate_data": 430
     },
     "WARRIOR": {
       "not_applicable": 2251,
-      "directions": 1366,
-      "missing": 1706,
-      "verified_coordinate_data": 462
+      "directions": 1384,
+      "missing": 1684,
+      "verified_coordinate_data": 466
     },
     "PALADIN": {
       "not_applicable": 2245,
-      "directions": 1221,
-      "missing": 1607,
-      "verified_coordinate_data": 452
+      "directions": 1239,
+      "missing": 1585,
+      "verified_coordinate_data": 456
     }
   },
-  "sourceRecords": 643,
+  "sourceRecords": 652,
   "questRecords": 546,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
@@ -463,6 +469,10 @@
       "sha256": "7ed6add989b1685acf3cb60cdb03c0570db086a40345c9e25d68d0179928a6d7"
     },
     {
+      "file": "checkpoint6o_quest_references.csv",
+      "sha256": "1219711650bb3fc1133f545bedc27cd0c57654be20f088afc16b4acb2630d385"
+    },
+    {
       "file": "checkpoint6g_vendor_references.csv",
       "sha256": "87527a52fe4e32455d4a831b23b14a9784f57e58259c472f89e42111d8b90608"
     },
@@ -584,7 +594,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv",
-      "sha256": "6e6b7eff5561a6a79b7e36842dbd87dba16bfa733258514b673d555ab5e6cbb8"
+      "sha256": "2c0a0d212f614200d2ec90176d82e2a61d744da0658ea21622c2c7eb5b7832c2"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/remaining_equipment_research_queue.csv",
@@ -600,7 +610,7 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "9bddd1a500cc7972b29c7a4e5fed619b715c08799f5f4d6471ca2b831bfb4a59"
+      "sha256": "a6d8f6076a5c7ae699e0cb9a251b12b74ba6d18a4810bec02fd7aebc5c893a3f"
     }
   ],
   "catalogueExportSHA256": "cd8c360a3c788167bc38141dcc3c7215d42d3b05d0e0af2ff9cb66258876cba8"

@@ -55,6 +55,9 @@ class Evidence:
         self.full_npc_sales = collections.defaultdict(dict)
         self.full_npc_drops = collections.defaultdict(dict)
         self.quest_starters = collections.defaultdict(list)
+        self.legacy_quests = {}
+        self.modern_quests = set()
+        self.legacy_stats = collections.Counter()
         self.items = collections.defaultdict(dict)
         self.currencies = {}
         self.maps = collections.defaultdict(set)
@@ -115,6 +118,15 @@ class Evidence:
             return
         if not isinstance(node, dict):
             return
+        # Earlier verified item research stored the primary page fingerprint
+        # in a hashes map alongside its extracted tables.
+        if not (node.get("url") or node.get("sourceURL")) and isinstance(node.get("hashes"), dict) and isinstance(node.get("tables"), dict):
+            for candidate, fingerprint in node["hashes"].items():
+                match = re.fullmatch(r"https://www\.wowhead\.com/forever/item=(\d+)", candidate)
+                if match and int(match[1]) == node.get("itemID") and isinstance(fingerprint, str) and re.fullmatch(r"[a-f0-9]{64}", fingerprint):
+                    node = dict(node, url=candidate, sha256=fingerprint,
+                                identity=dict(node.get("equip") or {}, id=node["itemID"], name=node.get("name", "")))
+                    break
         url = node.get("url") or node.get("sourceURL")
         match = ENTITY.search(url) if isinstance(url, str) else None
         if match and node.get("sha256"):
@@ -185,8 +197,13 @@ class Evidence:
                                         if not any(x["itemID"] == source_id for x in self.quest_starters[str(q["id"])]):
                                             self.quest_starters[str(q["id"])].append(starter)
             elif kind == "quest":
+                legacy = node.get("questDetails")
+                if isinstance(legacy, dict) and legacy.get("id") == source_id:
+                    self.legacy_quests[(str(source_id), node["sha256"])] = (legacy, provenance)
                 q = self.quest(source_id, node.get("quest"))
                 full_quest = node.get("quest") or {}
+                if full_quest.get("id") == source_id or "itemrewards" in full_quest or "itemchoices" in full_quest:
+                    self.modern_quests.add(str(source_id))
                 for reward in rows(full_quest.get("itemrewards")) + rows(full_quest.get("itemchoices")):
                     if isinstance(reward, list) and reward and type(reward[0]) is int:
                         self.full_quest_rewards[str(source_id)].add(reward[0])
@@ -244,9 +261,60 @@ def build(inputs):
         body = path.read_bytes()
         evidence.inputs.append(dict(file=path.name, sha256=hashlib.sha256(body).hexdigest()))
         evidence.visit(json.loads(body), path.name)
+    # Reconnect legacy full recipe-quest metadata only through its exact,
+    # previously validated primary-page fingerprint and book reward join.
+    # Current full quest records and established actors retain precedence.
+    for path in sorted(REPORT.glob("checkpoint*quest_references.csv")):
+        references = read_csv(path)
+        if not references or not {"questID", "questURL", "questPageSHA256", "bookItemID", "startKind", "endKind"} <= references[0].keys():
+            continue
+        evidence.inputs.append(dict(file=path.name, sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
+        for reference in references:
+            quest_id = reference["questID"]
+            pair = evidence.legacy_quests.get((quest_id, reference["questPageSHA256"]))
+            if not pair or reference["questURL"] != pair[1]["url"] or not reference["bookItemID"].isdigit():
+                evidence.legacy_stats["unmatched_reference"] += 1
+                continue
+            full_quest, provenance = pair
+            rewards = rows(full_quest.get("itemrewards")) + rows(full_quest.get("itemchoices"))
+            if not any(isinstance(x, list) and x and x[0] == int(reference["bookItemID"]) for x in rewards):
+                evidence.legacy_stats["book_reward_mismatch"] += 1
+                continue
+            if quest_id in evidence.modern_quests:
+                evidence.legacy_stats["current_metadata_preserved"] += 1
+                continue
+            q = evidence.quest(quest_id)
+            for field in ["itemrewards", "itemchoices"]:
+                q.pop(field, None)
+            evidence.quest(quest_id, full_quest)
+            q["evidence"] = provenance
+            q["legacyRecipeQuestReference"] = True
+            evidence.full_quest_rewards[quest_id].update(x[0] for x in rewards if isinstance(x, list) and x and type(x[0]) is int)
+            for role, bucket in [("start", "starts"), ("end", "ends")]:
+                kind, actor_id = reference[role + "Kind"], reference.get(role + "ID", "")
+                if kind not in ["npc", "object"] or not actor_id.isdigit() or int(actor_id) <= 0 or q[bucket]:
+                    continue
+                key, _ = evidence.source(kind, actor_id, reference.get(role + "Name"), provenance)
+                q[bucket].append(key)
+                evidence.legacy_stats["actor_roles_restored"] += 1
+            if reference["startKind"] == "item" and reference.get("startID", "").isdigit():
+                known_starter_destination = bool(q.get("starterZone") and q.get("starterInstructions"))
+                q.setdefault("starterInstructions", "This quest begins with " + reference.get("startName", "a starting item") +
+                             " (#" + reference["startID"] + "). Its acquisition destination is not established here; the turn-in NPC is not the place to begin.")
+                if not known_starter_destination:
+                    q["starterOriginUnresolved"] = True
+                    evidence.legacy_stats["item_starts_pending_destination"] += 1
+            evidence.legacy_stats["full_recipe_quests_restored"] += 1
     for quest_id, starters in evidence.quest_starters.items():
         if quest_id in evidence.quests and evidence.quests[quest_id].get("evidence"):
-            evidence.quests[quest_id]["starterItems"] = starters
+            q = evidence.quests[quest_id]
+            q["starterItems"] = starters
+            starter_ids = {item["itemID"] for item in starters}
+            for item in q.get("requiredItems", []):
+                if isinstance(item, dict) and item.get("itemID") in starter_ids:
+                    item["startsQuest"] = True
+            if not q["starts"] and not (q.get("starterZone") and q.get("starterInstructions")):
+                q["starterOriginUnresolved"] = True
     # A quest mapper's example point is not more precise than the same NPC's
     # independently documented roaming footprint. Preserve the full area.
     for source in evidence.sources.values():
@@ -408,8 +476,12 @@ def build(inputs):
                     plan["category"] = "quest"
                 if q.get("relatedQuests") and not chains.get(quest_id, {}).get("prerequisitesVerified"):
                     gap("quest_chain_relationships_unverified", quest=quest_id, detail="Published travel order or related quests do not establish exact mandatory prerequisites, earlier unlocks or current availability.")
+                elif q.get("legacyRecipeQuestReference") and not chains.get(quest_id, {}).get("prerequisitesVerified"):
+                    gap("quest_chain_relationships_unverified", quest=quest_id, detail="Saved full quest reward/actor references do not establish earlier prerequisites or current unlock rules.")
                 if not q["starts"]:
                     gap("quest_start_missing", quest=quest_id, detail="Do not present a turn-in as the starting NPC.")
+                if q.get("starterOriginUnresolved"):
+                    gap("quest_starter_origin_unverified", quest=quest_id, detail="Explicit item-started quest, but no safe starting-item destination; a turn-in is not the first step.")
                 if q.get("sourceRequirementsUnresolved"):
                     gap("quest_source_access_unverified", quest=quest_id, detail="A published source requirement is known but its exact access threshold or current availability remains unresolved.")
         source_item = evidence.items.get(book_id if craft and book_id else item_id, {})
@@ -500,7 +572,7 @@ def build(inputs):
         for entry in plan["routes"]:
             if entry["kind"] in ["quest", "quest_container"]:
                 q = evidence.quests[str(entry["questID"])]
-                keys = q["starts"] + q["ends"]
+                keys = q["starts"] if q.get("starterOriginUnresolved") else q["starts"] + q["ends"]
             else:
                 keys = [entry["source"]] if entry.get("source") else []
             locations = [loc for key in keys for loc in evidence.sources.get(key, {}).get("locations", [])]
@@ -528,7 +600,7 @@ def build(inputs):
     for name, ids in evidence.maps.items():
         data["maps"][name] = sorted(ids)
     data["audit"] = dict(items=len(coverage), statuses=dict(collections.Counter(r["status"] for r in coverage)),
-                         inGameRenderingVerified=0, gapRows=len(gaps))
+                         inGameRenderingVerified=0, gapRows=len(gaps), legacyRecipeQuestReferences=dict(evidence.legacy_stats))
     used_sources = set()
     for plan in data["items"].values():
         for entry in plan["routes"]:
