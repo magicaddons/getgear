@@ -253,6 +253,12 @@ assert(huumStart,'unknown progress for the initial Sack exchange starts with the
 local sackDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[13003])
 assert(sackDirections:find('Required item: 1 Abyssal Signet',1,true) and sackDirections:find('Required item: 3 Abyssal Signet',1,true),'one- and three-signets exchanges remain distinct source requirements')
 assert(not actualModel.chains['8348'].prerequisitesVerified,'published Sack travel order must not become a verified mandatory prerequisite graph')
+local chestFirst=false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[13044])) do chestFirst=chestFirst or target.questID==8343 and target.source=='npc:15270' end
+assert(chestFirst,'the distinct Chest of Spoils itinerary starts at Goldleaf Discovery, rather than assuming the Sack itinerary is its mandatory prerequisite')
+local chestDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[13044])
+assert(chestDirections:find('Required item: 1 Abyssal Scepter',1,true) and chestDirections:find('Required item: 3 Abyssal Scepter',1,true),'scepter quantities remain separate from signets and alternative exchange fees')
+assert(not actualModel.chains['8352'].prerequisitesVerified,'the Chest published travel sequence also retains mandatory-graph uncertainty')
 C_QuestLog=savedQuestAPI
 local fanny=addon:GetAcquisitionMapTarget(addon.ItemCatalog[10096])
 assert(fanny and fanny.questID==4286 and fanny.label=="Oralius" and fanny.zone=="Burning Steppes" and not fanny.x,"a full quest-to-container-to-gear join navigates the independently verified starting area, not an invented input farm")

@@ -1,13 +1,13 @@
 {
   "items": 7707,
   "statuses": {
-    "not_applicable": 2438,
-    "directions": 1414,
+    "not_applicable": 2433,
+    "directions": 1419,
     "missing": 3173,
     "verified_coordinate_data": 682
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 7686,
+  "gapRows": 7849,
   "categories": {
     "world_drop": 2885,
     "dungeon": 552,
@@ -27,70 +27,70 @@
     "vendor": 1908,
     "recipe_vendor": 503,
     "trainer": 3,
-    "quest_container": 135,
+    "quest_container": 171,
     "recipe_drop": 60,
-    "object": 15,
+    "object": 24,
     "vendor_container": 58,
     "fishing": 1
   },
   "classes": {
     "PRIEST": {
-      "directions": 600,
-      "not_applicable": 936,
+      "directions": 602,
+      "not_applicable": 934,
       "missing": 874,
       "verified_coordinate_data": 217
     },
     "MAGE": {
-      "not_applicable": 917,
-      "directions": 575,
+      "not_applicable": 914,
+      "directions": 578,
       "missing": 761,
       "verified_coordinate_data": 218
     },
     "WARLOCK": {
-      "not_applicable": 917,
-      "directions": 570,
+      "not_applicable": 914,
+      "directions": 573,
       "missing": 757,
       "verified_coordinate_data": 217
     },
     "DRUID": {
-      "not_applicable": 1399,
-      "directions": 859,
+      "not_applicable": 1398,
+      "directions": 860,
       "missing": 1257,
       "verified_coordinate_data": 343
     },
     "ROGUE": {
-      "not_applicable": 1372,
-      "directions": 850,
+      "not_applicable": 1370,
+      "directions": 852,
       "missing": 1101,
       "verified_coordinate_data": 316
     },
     "HUNTER": {
-      "not_applicable": 1888,
-      "directions": 1111,
+      "not_applicable": 1885,
+      "directions": 1114,
       "missing": 1463,
       "verified_coordinate_data": 404
     },
     "SHAMAN": {
-      "not_applicable": 2036,
-      "directions": 1120,
+      "not_applicable": 2035,
+      "directions": 1121,
       "missing": 1525,
       "verified_coordinate_data": 428
     },
     "WARRIOR": {
-      "not_applicable": 2310,
-      "directions": 1316,
+      "not_applicable": 2306,
+      "directions": 1320,
       "missing": 1706,
       "verified_coordinate_data": 453
     },
     "PALADIN": {
-      "not_applicable": 2303,
-      "directions": 1172,
+      "not_applicable": 2299,
+      "directions": 1176,
       "missing": 1607,
       "verified_coordinate_data": 443
     }
   },
   "sourceRecords": 641,
-  "questRecords": 538,
+  "questRecords": 544,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
     {
@@ -346,6 +346,10 @@
       "sha256": "449ec6a46f63f30895d95f804f28a69965eab968923b9b1c063939a864aaaa68"
     },
     {
+      "file": "checkpoint8bu_working_evidence.json",
+      "sha256": "5df5150d9673d676091fc5bb976479512e3492b4cf0ce4b9e5633faee74b39c1"
+    },
+    {
       "file": "checkpoint8c_publication_evidence.json",
       "sha256": "0f34a207b621d4ae05e75eb8b7a9a7c40dc2f82e9819ce0428d413dabe9c80fe"
     },
@@ -563,7 +567,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json",
-      "sha256": "b0fb7ec59ece93d08f5e2ffea1f9c14a8ddfbf2beae0c9fd13fd2f9372faff48"
+      "sha256": "b788ccde86cd5c61ceb8b7f1e0b6957412b7a7cf5fad1e2399e2a65b7d0cf03e"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json",
@@ -575,11 +579,11 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/remaining_equipment_research_queue.csv",
-      "sha256": "a3fc32b00a76e1c4f55d6b54cff9f040726c34004171ec37d04e1c19c01c72ce"
+      "sha256": "8c3d736da1cf4cd7025cfab3298078b3f01ab5540ff3853b3938868c260279d1"
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
-      "sha256": "f710ad00a6fa45a298e9cc64b510c5c4bd9fa45dec672099d16aaab21cfc95cb"
+      "sha256": "2577e2c8390454ece64b16a503b8df2c8409d9afaaadcc23b434d1e0f1d53812"
     },
     {
       "file": "tools/export_navigation_inputs.lua",
@@ -590,5 +594,5 @@
       "sha256": "35d384d33546c09000b20cc02143f07e126e157ba20235b4f8cff167a079d7e7"
     }
   ],
-  "catalogueExportSHA256": "5734e10a9943f2d5c7e6e85bcb5ae3b4dc009196fa1a95f413b5caec1b2575fa"
+  "catalogueExportSHA256": "8ee8d6dd070e869d863b85723426b9f130eb00a8938f993f5ff81e03f74cba57"
 }

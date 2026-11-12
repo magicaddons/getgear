@@ -173,3 +173,12 @@ A reliable active-client objective waypoint for4286 may supplement the published
 4. Verify actual initial/repeat quests, reputation/summoning/phase rules, medallion/trappings/wind-stone use and source inputs. Published travel order is not a claim that those prerequisites are confirmed. Current Duke loot/rates and random gear rolls require separate evidence.
 5. Open another exact grab-bag catalogue content (e.g. Commander's Girdle 10381) and a newly surfaced Dingy Fanny Pack content. Confirm the same shared source is available without per-item UI code. Generic world drops without meaningful destinations still have no misleading farm pin.
 6. For a positive Supply Crate 176224 alternative, confirm the Forever client recognises Zephras Isle and the area; use written directions if it does not. Nameless 0,0 rows and unknown Dark Coffer coordinates must not create a pin. Retest source chooser scrolling, long guide scrolling, map switching, repeated destinations, single-marker lifecycle, native markers and normal map closure.
+
+
+## 8BU manual acceptance additions (not performed)
+
+1. Use Demonslayer13044 in compact overlay and full guide. Confirm distinct Sack and Chest source alternatives, with initial Chest itinerary8343→8341→8351→8352 starting at Huum when progress is unknown. Verify completed/active flags select the correct published stage without claiming mandatory prerequisites.
+2. Check five shards/three signets for ring20451 versus one OR three scepters20515 for the two chest exchanges. Confirm no combined four-scepters fee or guaranteed equipment reward, and no source-level60 gate imposed on gear52.
+3. Verify actual reputation, Greater Wind Stone/ring+medallion+trappings, group/summoning/phase and repeat rules; independently test whether the Classic Everun ring alternative is currently obtainable and whether it changes unlocks. Do not assume a bypass.
+4. Inspect Ornate Legguards10124's low-level21510 wrapper alternative without changing its equip52 requirement; check event acceptance, opening and source-location disagreement. No disputed current-source pin should appear.
+5. Check a new shared chest content outside this batch (Band of the Cultist20721), positive Arena/Supply Crate alternatives and nameless0,0 negative cases. Retest source chooser/guide scrolling, zone/map changes, native markers, repeated destinations and normal close behaviour. Record actual Forever client/build; no rendering is confirmed by offline tests.
