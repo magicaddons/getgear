@@ -84,3 +84,7 @@ Fresh8by capture exit0/eight actual HTTP fingerprints→full19 local PASS. Same-
 Existing map/manual acceptance plan in NAVIGATION_RESTORE.md remains required:actual Forever client APIs/rendering,switch destinations/zones/floors,close/reopen,chooser/tooltip/guide parity,native and other-addon markers,quest-source faction/class/progress and source/gate distinctions. Published coordinates and offline tests do not confirm current server loot or map rendering. No release packaging authorized.
 
 Original5365researched/323pending. **Next8BZ:all56level57numericIDorder**,after18CI PASS/full direct-bot review.493candidates/allslotBackThrown/knowncloaks/sixdungeon954livebooks/3150missing-locationdispositions/manualclientacceptance/finalintegrity remain. Same worker/existing automation;main,Beta8,releases,billing untouched.
+
+## Verified CI closure
+
+Source `40d3e5708702514966efe7fd4de1dca0f8cd05ef`; [CI43187955068](https://github.com/magicaddons/getgear/actions/runs/43187955068),job131079780923:success/18timestampedPASS. Inspected directbot/finalgeneratedvalidated HEAD `71d4c4e9621faccff54dfae0b79025e83be1502b`:onlyprovenancefourEverlootfingerprints/time,allotherJSON/runtime/source/report/audit bytes unchanged. BotAPIbytesunread;actual-localfullfacts retained,notcounterinference. Final checkpoint8by_validation.json overridesimmutablehistoricalproof/localCIpendingfields. Documentationclosure uses targeted evidence/identity/link/diff checks,not a new fullrun. Continue8BZ56.
