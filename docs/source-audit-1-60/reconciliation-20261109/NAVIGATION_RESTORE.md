@@ -291,3 +291,20 @@ Case CHECKPOINT8BZ_LEVEL57_WORLD_DROPS_AND_TEMPESTRIA_GAPS.md/sourceproof/localv
 
 
 8BZ verified:source8dc0011;CI43189344820/job131084407230 SUCCESS18timestampedPASS/full19local. Inspected directbot8a46e767d5a2af50a289ee7997e8a58fee0a0ae1 onlytime/fourEVfingerprints;allotherbytesexact. Final checkpoint8bz_validation.json overrides immutable pending fields;actual-local8bzfacts retained/botbodiesunread. TwoTempestriagaps remainmissing/no mapfarm. Continue8CA52level58.
+
+
+## Checkpoint 8CA integrated — non-release CI gate next
+
+All52 level-58 cases are publication-researched/integrated:50 broad references/one origin-unresolved BoP ring19109/one container-only necklace20695.45Uncommon/sevenRare/51BoE/oneBoP/possessionUnique5267/no selected equipment availability/cross-version/explicit wearer-class flags. All5,635 prior equipment objects/954 recipes exact. Registry5,687/index7,158/displayed7,157/books759. Original5,473 researched/215 pending,about96% of this queue only. **Next8CB:all26 level59 numeric-ID order**,after CI/fullbotreview.
+
+328 case primary responses70new258cached;618 with retained completed context70new548cached;52 exact/six shared discovery queries.1,713 NPC/90 physical-container positive joins/1,560 NPC omissions remain qualified;zero object references/omissions. Zero new failures/213 known failed URLs not retried/47 relevant historical unread references retained. Full content tables checked/no outside lead;493candidatefile byte-exact/no adoption.
+
+DeepRootedRing19109 is primary-confirmed RareBoP58/63,+10Stamina/+10Intellect/+12spell damage-healing,with no acquisition tables. Historical expansion listings/comments suggest Lokholar13256/Ivus13419;fullForeverNPC titles match,but10/9 loot rows omit the ring/no maps. No accepted current drop,AVdestination,retirement,summon fee,quest or reputation proof. OneNA→missing;no marker. Original world-drop queue label is not proof of tradable BoE. Identity/equip/class/filters preserved;current origin unresolved.
+
+AbyssalWarBeads20695 own↔fullSack20601 positive/56Classic-labelled contents;existing oneORthree Signets20514/min60Both/Bor shared route reused,not direct Duke finishedloot/guaranteed necklace/equip60 gate. SwordofZeal6622 full8191UsedBy positive;own effect10damage/150Armor15seconds is equipment metadata,not learnedrecipe/currentproc probability. ScarletKris5267 possessionUnique,notUniqueEquipped/ScarletMonastery-exclusive/Rogue gate.
+
+Fresh8ca exit0/eightactualfingerprints→full19localPASS (15Lua/threeofflinePython/filesandsyntax26modules/fourtools/exporter). PF23618/9327allraw/fullsourceobjects/entiremetadata andEV1688raw1439qual/allfields exactactual8BZ;zero new/removed/updated/opaque/index changes. All factual snapshots/eightcompanionCSVs/954recipes/supplementary/candidates exact;only52principalCSV summarycells.7707identities36341classobjectives1254crafts4857ingredients/settingsfilters preserved.
+
+Navigation813published point-data/1421directions/3153missing/2320NA;16439overlappinggaps/rendering0. Only19109NA→missing;no new location/current farm/successful navigation claimed. Same single compact/guide model and automatic shared destinations for older/future exact evidence remain intact.
+
+Case CHECKPOINT8CA_LEVEL58_WORLD_DROPS_AND_DEEP_ROOTED_GAP.md/sourceproof/localvalidation include exact52IDs,citations,confidence and historical lead exclusions. Nonrelease18CI PASS/fullbotreview next,then automatically8CB26.493candidates/ALLslotBackThrown/knowncloaks/sixdungeon954livebooks/3153missing-locationdispositions/manualclientacceptance/finalintegrity remain. Existingworker/automation;no newautomation/mainBeta8buildpackagereleasebilling.
