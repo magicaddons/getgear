@@ -35,3 +35,7 @@ Fresh8bz exit0/eight actual HTTP fingerprints→full19localPASS. No replay,retry
 Manual Forever client acceptance remains required under NAVIGATION_RESTORE.md,including API/rendering,zone/floor/view changes,multiple destination clicks,normal map close/reopen,one-marker lifecycle,native/other-addon pins and compact/guide parity. Tempestria items must display source uncertainty without an accepted farm marker. Equipment spell descriptions are not current measured combat validation. No build/package/release authorized.
 
 Original5421researched267pending. **Next8CA:all52level58numericIDorder**,after18CI PASS/fullbotreview.493candidates/ALLslotBackThrown/knowncloaks/sixdungeon954livebooks/3152missing-locationdispositions/manualclientacceptance/finalintegrity remain. Same worker/existing automation;no main,Beta8,release or billing action.
+
+## Verified CI closure
+
+Source `8dc00113bd3f4c73bd56a4d1f5c691840b045a73`; [CI43189344820](https://github.com/magicaddons/getgear/actions/runs/43189344820),job131084407230:success/18timestampedPASS. Inspected directbot/finalgeneratedvalidated HEAD `8a46e767d5a2af50a289ee7997e8a58fee0a0ae1`:onlyprovenancefourEverlootfingerprints/time,allotherJSON/runtime/source/report/audit bytes unchanged. BotAPIbytesunread;actual-localfullfacts retained,notcounterinference. Final checkpoint8bz_validation.json overridesimmutablehistoricalproof/localCIpendingfields. Documentationclosure uses targeted evidence/identity/link/diff checks,not a new fullrun. Continue8CA52.
