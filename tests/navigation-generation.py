@@ -132,5 +132,20 @@ with tempfile.TemporaryDirectory() as temp:
     proof["items"][-1]["crossVersionWarning"] = True
     path.write_text(json.dumps(proof))
     assert "2" not in nav.build(gear)[0]["items"], "a disputed wrapper must not establish a current container route"
+    proof["items"].append(response("item", 901, identity={"name": "Starter document"}, lists={"starts": [{"id": 10}]}))
+    proof["quests"][0]["starterZone"] = "Westfall"
+    proof["quests"][0]["starterInstructions"] = "Obtain and read the starting document; current unlocks unverified."
+    path.write_text(json.dumps(proof))
+    starter = nav.build(gear)[0]["quests"]["10"]
+    assert starter["starterItems"][0]["itemID"] == 901 and starter["starterZone"] == "Westfall"
+    proof["items"][-1]["lists"] = {"provided-for": [{"id": 10}]}
+    path.write_text(json.dumps(proof))
+    assert "starterItems" not in nav.build(gear)[0]["quests"]["10"], "a provided quest input is not necessarily a quest-starting item"
+    gear["5"] = dict(itemID=5, name="Unnamed-map chest fixture", sourceType="Chest", eligibility=[511])
+    proof["items"].append(response("item", 5, lists={"contained-in-object": [{"id": 902}]}))
+    proof["actors"].append(response("object", 902, name="Unknown-map chest", maps={"1583": [{"coords": [[0, 0]]}]}))
+    path.write_text(json.dumps(proof))
+    unnamed, coverage, _, _ = nav.build(gear)
+    assert not unnamed["sources"]["object:902"]["locations"] and coverage[-1]["status"] == "missing", "anonymous 0,0 rows without a map namespace are unresolved, not verified coordinates"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

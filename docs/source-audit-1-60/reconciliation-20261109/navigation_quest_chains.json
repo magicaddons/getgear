@@ -47,5 +47,71 @@
     "verification": "published-route",
     "evidence": "checkpoint8bj_working_evidence.json",
     "instructions": "Published travel sequence: Nilith Lokrav in Searing Gorge; Shadoweaver, then The Undermarket investigation, then deliver the news to Vizzklick in Gadgetzan for Pattern: Shadoweave Mask. Tailoring is a source-quest label; exact quest skill/earlier unlocks remain unverified. The pattern's Tailoring200 learning requirement is separate from finished equipment eligibility."
+  },
+  "6502": {
+    "steps": [
+      4182,
+      4183,
+      4184,
+      4185,
+      4186,
+      4223,
+      4224,
+      4241,
+      4242,
+      4264,
+      4282,
+      4322,
+      6402,
+      6403,
+      6501,
+      6502
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "sourceEvidence": "checkpoint8bs_working_evidence.json/newDrakefireChains",
+    "sourceURLs": [
+      "https://www.wowhead.com/forever/quest=6502",
+      "https://www.wowhead.com/forever/guide/raids/onyxias-lair-attunement-guide"
+    ],
+    "instructions": "Alliance published travel itinerary. Begin with Helendis in Burning Steppes at quest minimum level 48; later stages require 50. Exact mandatory prerequisites and current access remain unverified. The same-name quest #99435 has no published faction or formal actors; it is not another accepted requirement or a proven completion alias.",
+    "unresolvedVariantQuestIDs": [
+      99435
+    ]
+  },
+  "6602": {
+    "steps": [
+      4903,
+      4941,
+      4974,
+      6566,
+      6567,
+      6568,
+      6569,
+      6570,
+      6582,
+      6583,
+      6584,
+      6585,
+      6601,
+      6602
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "sourceEvidence": "checkpoint8bs_working_evidence.json/newDrakefireChains",
+    "sourceURLs": [
+      "https://www.wowhead.com/forever/quest=6602",
+      "https://www.wowhead.com/forever/guide/raids/onyxias-lair-attunement-guide"
+    ],
+    "instructions": "Horde published travel itinerary. Begin with the level-55 starting document; the guide identifies Goretooth in Kargath as the first contact. Scryer, Somnus and Chronalis are described as any-order tasks. Their display order is an itinerary, not a serial prerequisite claim. Current document dialogue, unlocks and quest access remain unverified.",
+    "parallelPublishedTasks": [
+      [
+        6582,
+        6583,
+        6584
+      ]
+    ]
   }
 }

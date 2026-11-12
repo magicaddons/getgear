@@ -153,3 +153,13 @@ After8BO:682published point-data/1275directions/3172missing/2578notapplicable;67
 - Switch from/to17055historical written guidance and real markers; close/reopen maps/change zones/repeated clicks/native quest markers. Offline tests pass, but no actual Forever rendering or quest acceptance has been confirmed.
 
 A reliable active-client objective waypoint for4286 may supplement the published Oralius start/end area. Do not confuse that client-provided objective with the withheld mixed-source published input mapper.
+
+
+## 8BS additional client acceptance tests (not yet performed)
+
+1. Open Drakefire Amulet 16309 from compact overlay and full guide with no reliable completion API. Confirm the same source chooser exposes Helendis Riverhorn / Alliance 4182 and written Horde document 12563 / 4903 directions, rather than only final Haleh/Rexxar. Check long guide/chooser scrolling and ordinary map close behaviour.
+2. With reliable completed flags through Alliance 4242, verify note 11446 / 4264 starter guidance appears before Windsor's turn-in. The note must not be described as a free Provided item. With 4264 accepted, GetGear must not tell the player to restart it. Confirm active later quests take priority over earlier incomplete flags.
+3. Check current server prerequisites, 99435/6403 identities and completion behaviour, Goretooth's document interaction, four skull tasks/order, Mazthoril rune access and Drakefire attunement enforcement. Record actual client/build and evidence; do not silently turn published travel order into a mandatory graph.
+4. Check Marshal Windsor and other friendly in-instance quest actors navigate via entrance/directions without a boss label. Genuine researched bosses retain their names. Verify floor/entrance fallback without a dungeon map API and no unsupported coordinates.
+5. Compare all 14 new Fanny Pack alternatives between compact pin and full guide: Oralius / minimum 50 / Alliance / 20 input packs / random wrapper reward, distinct from gear equip level. Confirm no mixed input-mapper farm pin appears.
+6. Bow 13022 and anonymous map rows on 153464/153469 must have no misleading precise pin. Repeatedly alternate valid destinations, switch zones/maps, preserve native quest markers/other addons, close/reopen the map and verify one marker only. Rendering remains unconfirmed until performed in the Forever client.

@@ -98,7 +98,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         for _, loc in ipairs(locations) do
             local instance=(model.instances or {})[loc.zone]
             add({kind=instance and "dungeon" or route.kind,dungeon=instance and loc.zone or nil,
-                 boss=instance and (actor.name or key) or nil,source=key,label=actor.name or key,zone=loc.zone,uiMapID=loc.uiMapID,
+                 boss=instance and route.boss or nil,source=key,label=actor.name or key,zone=loc.zone,uiMapID=loc.uiMapID,
                  x=loc.x,y=loc.y,bounds=loc.bounds,verification=loc.verification,role=role,
                  questID=q and q.questID,questName=q and q.name,requirements=requirements,preferred=preferred,
                  instructions=route.instructions,bookItemID=route.bookItemID,chainUnresolved=unresolved})
@@ -118,6 +118,15 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                          label=call(C_QuestLog.GetNextWaypointText,id) or q.name or "Quest #"..id,
                          uiMapID=mapID,zone=info and info.name,x=x*100,y=y*100,
                          clientVerified=true,verification="client",preferred=questRoutes==1})
+                end
+            end
+            if state~="completed" and not onQuest(id) and q.starterZone and q.starterInstructions then
+                for _, item in ipairs(q.starterItems or {}) do
+                    local requirements=q.reqlevel and "Quest minimum level: "..q.reqlevel or ""
+                    if q.side==1 or q.side==2 then requirements=requirements..(requirements~="" and "; " or "")..(q.side==1 and "Alliance" or "Horde").." quest access" end
+                    add({kind="directions",questID=id,questName=q.name,role="Quest starter item",label=item.name,
+                         zone=q.starterZone,instructions=q.starterInstructions,requirements=requirements,
+                         verification="published-reference",preferred=questRoutes==1})
                 end
             end
             for _, key in ipairs(q.starts or {}) do source(key,state=="completed" and "Completed quest — start reference" or state=="incomplete" and "Next uncompleted published stage" or "Quest start",q,route,questRoutes==1 and state~="completed") end
@@ -169,6 +178,8 @@ function GetGear:GetAcquisitionDirections(gear)
                     local q=get(data().quests,stepID) or {}
                     out[#out+1]=i..". "..(q.name or "Quest").." (#"..stepID..")"..(stepID==id and (state=="unknown" and " — start here; progress unknown" or " — "..state) or "")
                     if q.reqlevel then out[#out+1]="   Minimum quest level: "..q.reqlevel end
+                    for _, item in ipairs(q.starterItems or {}) do out[#out+1]="   Quest starter item: "..item.name.." (#"..item.itemID..")" end
+                    if q.starterInstructions then out[#out+1]="   "..q.starterInstructions end
                     for _, requirement in ipairs(q.sourceRequirements or {}) do out[#out+1]="   "..requirement end
                     for _, role in ipairs({"starts","ends"}) do
                         for _, key in ipairs(q[role] or {}) do
@@ -180,6 +191,8 @@ function GetGear:GetAcquisitionDirections(gear)
             else
                 local q=get(data().quests,id) or {}
                 out[#out+1]="Quest: "..(q.name or "#"..id).." (#"..id.."). Earlier prerequisites are not established unless listed below."
+                for _, item in ipairs(q.starterItems or {}) do out[#out+1]="Quest starter item: "..item.name.." (#"..item.itemID..")" end
+                if q.starterInstructions then out[#out+1]=q.starterInstructions end
             end
             local q=get(data().quests,id) or {}
             if q.reqlevel then out[#out+1]="Published quest minimum level: "..q.reqlevel end
@@ -195,7 +208,7 @@ function GetGear:GetAcquisitionDirections(gear)
                 local listed=false
                 for _, item in ipairs(q.requiredItems) do
                     if type(item)=="table" and type(item.name)=="string" and type(item.quantity)=="number" and item.quantity>0 then
-                        out[#out+1]=(item.provided==true and "Provided by quest: " or "Required item: ")..item.quantity.." "..item.name
+                        out[#out+1]=(item.startsQuest==true and "Quest starter item: " or item.provided==true and "Provided by quest: " or "Required item: ")..item.quantity.." "..item.name
                         listed=true
                     end
                 end

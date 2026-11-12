@@ -41,6 +41,22 @@ for _, t in ipairs(addon:GetAcquisitionNavigationChoices(split)) do
     seenEnd=seenEnd or t.source=="npc:1" and t.role=="Quest turn-in"
 end
 assert(seenStart and seenEnd,"different starting and turn-in NPCs")
+model.quests["12"]={questID=12,name="Document quest",reqlevel=50,side=1,starts={},ends={"npc:1"},
+    starterItems={{itemID=901,name="Starter document"}},starterZone="Westfall",starterInstructions="Obtain and read the document; current unlocks unverified.",
+    requiredItems={{itemID=901,name="Starter document",quantity=1,provided=true,startsQuest=true}}}
+local documentQuest=plan(15,{{kind="quest",questID=12}})
+local documentTarget=addon:GetAcquisitionMapTarget(documentQuest)
+assert(documentTarget.kind=="directions" and documentTarget.label=="Starter document" and not documentTarget.x and not documentTarget.bounds,"unknown quest progress opens starter directions before the turn-in, without inventing a starting NPC or point")
+local documentDirections=addon:GetAcquisitionDirections(documentQuest)
+assert(documentDirections:find("Quest starter item",1,true) and not documentDirections:find("Provided by quest",1,true),"a supplied objective flag must not imply a free quest-starting item")
+C_QuestLog={IsOnQuest=function(id)return id==12 end}
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(documentQuest)) do assert(target.role~="Quest starter item","an accepted quest need not be started again") end
+C_QuestLog=nil
+model.instances={['Fixture dungeon']=true}
+model.sources['npc:instance']={name='Friendly quest giver',locations={{zone='Fixture dungeon',verification='published-reference'}}}
+model.quests['13']={questID=13,name='Dungeon quest fixture',starts={'npc:instance'},ends={'npc:instance'}}
+local dungeonQuestTarget=addon:GetAcquisitionMapTarget(plan(16,{{kind='quest',questID=13}}))
+assert(dungeonQuestTarget.kind=='dungeon' and dungeonQuestTarget.role=='Quest start' and dungeonQuestTarget.boss==nil,'an in-dungeon quest giver uses entrance navigation without being relabelled a boss')
 local vendor=plan(4,{{kind="vendor",source="npc:1",offer={cost={12345}}}})
 assert(addon:GetAcquisitionMapTarget(vendor).role=="Equipment vendor")
 local recipe=plan(5,{{kind="recipe_vendor",source="npc:2",bookItemID=900,offer={avail=1,cost={100}}}})
@@ -65,6 +81,7 @@ assert(addon:GetAcquisitionDirections(prices):find("0g 1s 0c OR 1 item #9249",1,
 local boss=plan(7,{{kind="dungeon",dungeon="The Deadmines",boss="Boss fixture"}})
 local dungeonRecipe=plan(8,{{kind="dungeon",dungeon="The Deadmines",boss="Boss fixture",recipe=true,bookItemID=901}})
 assert(addon:GetAcquisitionMapTarget(boss).kind=="dungeon")
+assert(addon:GetAcquisitionMapTarget(boss).boss=="Boss fixture","explicit researched boss information is retained")
 assert(addon:GetAcquisitionMapTarget(dungeonRecipe).role=="Obtain recipe in dungeon")
 local dungeonQuest=plan(9,{{kind="quest",questID=10},{kind="dungeon",dungeon="The Deadmines"}})
 assert(addon:GetAcquisitionMapTarget(dungeonQuest).source=="npc:1","dungeon quest starts outside")
@@ -192,6 +209,26 @@ assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[5028]),"historical Sa
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[285043]),"unknown Snarling Fang origin must not receive a misleading pin")
 local historicalOmgorn=addon:GetAcquisitionMapTarget(addon.ItemCatalog[17055])
 assert(historicalOmgorn and historicalOmgorn.kind=="directions" and historicalOmgorn.verification=="legacy-reference" and not historicalOmgorn.x and not historicalOmgorn.bounds,"Classic-only Changuk reference opens qualified written guidance without a current map target")
+assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[13022]),"uncorroborated sparse Classic bow references must not create a current farm pin")
+local actualModel=addon.AcquisitionNavigationData
+assert(actualModel.chains['6502'].steps[1]==4182 and actualModel.chains['6602'].steps[1]==4903 and not actualModel.chains['6502'].prerequisitesVerified and not actualModel.chains['6602'].prerequisitesVerified,'Drakefire navigation starts with the published full route, not only Haleh or Rexxar, while retaining prerequisite uncertainty')
+for _,id in ipairs(actualModel.chains['6502'].steps) do assert(id~=99435,'SideNone same-name variant is not invented as another accepted prerequisite') end
+local savedQuestAPI=C_QuestLog;C_QuestLog=nil
+local helendisStart,goretoothDocument=false,false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[16309])) do
+    helendisStart=helendisStart or target.questID==4182 and target.source=='npc:9562' and target.role=='Quest start'
+    goretoothDocument=goretoothDocument or target.questID==4903 and target.kind=='directions' and target.label=="Warlord Goretooth's Command" and not target.x
+end
+assert(helendisStart and goretoothDocument,'unknown progress gives the Alliance starting NPC and qualified Horde starter-document directions')
+local completedEarly={};for _,id in ipairs({4182,4183,4184,4185,4186,4223,4224,4241,4242}) do completedEarly[id]=true end
+C_QuestLog={IsQuestFlaggedCompleted=function(id)return completedEarly[id] or false end,IsOnQuest=function()return false end}
+local noteFirst=false
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[16309])) do
+    noteFirst=noteFirst or target.questID==4264 and target.role=='Quest starter item' and target.kind=='directions' and not target.x
+    if target.source=='npc:9023' then assert(target.boss==nil,'Marshal Windsor is a quest actor, not a boss') end
+end
+assert(noteFirst,'reliable completion flags can lead to the note stage without inventing a note-giving NPC')
+C_QuestLog=savedQuestAPI
 local fanny=addon:GetAcquisitionMapTarget(addon.ItemCatalog[10096])
 assert(fanny and fanny.questID==4286 and fanny.label=="Oralius" and fanny.zone=="Burning Steppes" and not fanny.x,"a full quest-to-container-to-gear join navigates the independently verified starting area, not an invented input farm")
 local fannyDirections=addon:GetAcquisitionDirections(addon.ItemCatalog[10096])

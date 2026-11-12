@@ -52,6 +52,7 @@ class Evidence:
         self.sources = {}
         self.quests = {}
         self.full_quest_rewards = collections.defaultdict(set)
+        self.quest_starters = collections.defaultdict(list)
         self.items = collections.defaultdict(dict)
         self.currencies = {}
         self.maps = collections.defaultdict(set)
@@ -163,6 +164,12 @@ class Evidence:
                                 for q in values:
                                     if isinstance(q, dict) and q.get("id"):
                                         self.quest(q["id"], q)
+                            elif relation == "starts":
+                                for q in values:
+                                    if isinstance(q, dict) and type(q.get("id")) is int:
+                                        starter = dict(itemID=source_id, name=identity.get("name") or node.get("title", "").split(" - ")[0], evidence=provenance)
+                                        if not any(x["itemID"] == source_id for x in self.quest_starters[str(q["id"])]):
+                                            self.quest_starters[str(q["id"])].append(starter)
             elif kind == "quest":
                 q = self.quest(source_id, node.get("quest"))
                 full_quest = node.get("quest") or {}
@@ -176,6 +183,9 @@ class Evidence:
                 if isinstance(node.get("sourceRequirements"), list):
                     q["sourceRequirements"] = [value for value in node["sourceRequirements"] if isinstance(value, str)]
                     q["sourceRequirementsUnresolved"] = node.get("sourceRequirementsUnresolved") is True
+                for field in ["starterZone", "starterInstructions"]:
+                    if isinstance(node.get(field), str):
+                        q[field] = node[field]
                 for quest_id in node.get("seriesQuestIDs", []):
                     if quest_id not in q["relatedQuests"]:
                         q["relatedQuests"].append(quest_id)
@@ -220,6 +230,9 @@ def build(inputs):
         body = path.read_bytes()
         evidence.inputs.append(dict(file=path.name, sha256=hashlib.sha256(body).hexdigest()))
         evidence.visit(json.loads(body), path.name)
+    for quest_id, starters in evidence.quest_starters.items():
+        if quest_id in evidence.quests and evidence.quests[quest_id].get("evidence"):
+            evidence.quests[quest_id]["starterItems"] = starters
     # A quest mapper's example point is not more precise than the same NPC's
     # independently documented roaming footprint. Preserve the full area.
     for source in evidence.sources.values():
