@@ -38,6 +38,16 @@ with tempfile.TemporaryDirectory() as temp:
     assert data["quests"]["10"]["objectiveInstructions"]=="Published delivery objective." and data["quests"]["10"]["objectiveSource"]=="npc:101" and data["quests"]["10"]["objectiveZone"]=="Westfall", "future full quest objective guidance shares the same generated model"
     assert data["sources"]["npc:101"]["name"]=="Objective-only NPC", "a future objective-only actor must survive source pruning without being invented as a quest giver"
     assert data["quests"]["10"]["acquisitionDetails"]==["Qualified alternative book sources."], "future full-guide source details survive generation without invalid entries"
+    proof["quests"][0]["actorZones"]={"npc:100":"Westfall","bad":1,"npc:101":False}
+    path.write_text(json.dumps(proof))
+    assert nav.build(gear)[0]["quests"]["10"]["actorZones"]=={"npc:100":"Westfall"}, "future quest-specific actor regions propagate without malformed or non-string values"
+    proof["quests"][0]["actorZones"]={"npc:100":"Other region"}
+    path.write_text(json.dumps(proof))
+    context_data, context_coverage, _, _=nav.build(gear)
+    assert next(r for r in context_coverage if r["itemID"]==3)["status"]=="directions", "coverage must not count another-region NPC coordinates as this quest's point data"
+    assert context_data["sources"]["npc:100"]["locations"][0]["zone"]=="Westfall", "coverage context does not erase shared source geography"
+    del proof["quests"][0]["actorZones"]
+    path.write_text(json.dumps(proof))
     assert "2" not in data["items"], "one random loot table sample cannot establish a named farm"
     assert not data["chains"], "see-also/series IDs cannot become mandatory prerequisite edges"
     (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
@@ -398,4 +408,23 @@ with tempfile.TemporaryDirectory() as temp:
     variant_data = nav.build({"20133":dict(itemID=20133,name="Skyfury Gauntlets",sourceType="Quest",eligibility=[64])})[0]
     assert [r["questID"] for r in variant_data["items"]["20133"]["routes"]]==[97169], "an old full reward table omitting the exact item cannot borrow the new variant's reward"
     assert "side" not in variant_data["quests"]["97169"], "a missing published faction must not become Both or inherit a same-name legacy faction"
+# A full NPC can establish a missing first quest's actor, not its reward or gates.
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    for filename in ["reviewed_equipment_sources.json", "reviewed_recipe_sources.json"]:
+        (nav.REPORT / filename).write_text("[]")
+    for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / filename).write_text("itemID\n")
+    (nav.REPORT / "navigation_quest_chains.json").write_text(json.dumps({"10":dict(steps=[11,10],routeVerified=False,prerequisitesVerified=False)}))
+    proof = {"items":[variant_response("item",1,identity=dict(id=1,name="Chain reward"),relations={"reward-from-q":[dict(id=10,name="Final stage")]})],
+        "quests":[variant_response("quest",10,quest=dict(id=10,name="Final stage",itemrewards=[[1,1]]))],
+        "npcs":[variant_response("npc",100,title="First actor - NPC - Forever",selectedQuestStarts=[dict(id=11,name="First reference",side=2,reqlevel=47)],
+            publishedLocationFootprints=[dict(name="Azshara",zoneID=16,uiMapID=1447,bounds=dict(xMin=42.4,xMax=42.4,yMin=20.2,yMax=20.2))])]}
+    path=nav.REPORT / "checkpoint_roles_evidence.json";path.write_text(json.dumps(proof))
+    model=nav.build({"1":dict(itemID=1,name="Chain reward",sourceType="Quest",eligibility=[511])})[0]
+    assert model["quests"]["11"]["starts"]==["npc:100"] and "npc:100" in model["sources"], "an unread first quest may retain its independently corroborated full NPC starting actor"
+    assert "side" not in model["quests"]["11"] and "reqlevel" not in model["quests"]["11"], "actor-role references cannot manufacture unread quest eligibility"
+    assert "itemrewards" not in model["quests"]["11"] and not model["chains"]["10"]["routeVerified"], "a known first actor proves neither equipment rewards nor a mandatory graph"
+    proof["npcs"][0]["selectedQuestStarts"]=[];path.write_text(json.dumps(proof))
+    assert not nav.build({"1":dict(itemID=1,name="Chain reward",sourceType="Quest",eligibility=[511])})[0]["quests"].get("11",{}).get("starts"), "missing role evidence must remain a gap"
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

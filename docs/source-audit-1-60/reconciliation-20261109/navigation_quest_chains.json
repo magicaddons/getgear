@@ -428,5 +428,52 @@
         "toQuest": 7486
       }
     ]
+  },
+  "8802": {
+    "steps": [
+      8801,
+      8802
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8ci_working_evidence.json",
+    "instructions": "Obtain Eye of C'Thun, read it to start8801 and speak with Caelestrasz inside the Temple, then take the eye to Anachronos in Tanaris for one reward choice. Exact current raid access/drop/earlier unlocks unverified; unknown progress uses the starting eye, not the final recipient."
+  },
+  "92065": {
+    "steps": [
+      86791,
+      86777,
+      86792,
+      86796,
+      86797,
+      86798,
+      87346,
+      86814,
+      92065
+    ],
+    "routeVerified": false,
+    "prerequisitesVerified": false,
+    "verification": "qualified-starting-itinerary",
+    "evidence": "checkpoint8ci_working_evidence.json",
+    "unverifiedLinks": [
+      {
+        "fromQuest": 86791,
+        "toQuest": 86777
+      }
+    ],
+    "additionalEarlierReference": 86752,
+    "instructions": "Best known initial reference: Missing Blackmaw Scouts86791, formally started by new Gatekeeper Rageroar236573 at Ursolan and returned to Korsa236770, from their independently read full NPC lists. Its own page and earlier Report86752 (HTTP403) were unread; earlier unlocks and its exact mandatory link to86777 are unresolved. Eight later quests reciprocally publish their order. Do not skip the initial gap from completion flags or use same-name Classic rare6651. Current neutral reactions, reputation, dungeon access and eligibility remain unverified; active exact IDs take priority."
+  },
+  "99187": {
+    "steps": [
+      93030,
+      99187
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8ci_working_evidence.json",
+    "instructions": "Begin by speaking with the Knight of Mourning and listening to his tale in Tirisfal Glades, then recover the Reliquary from Blackmaw Hold. Full reciprocal two-stage sequence; formal giver/return roles and earlier unlocks/current Horde Paladin availability remain unverified. An unread full NPC page is not a verified NPC-start marker."
   }
 }

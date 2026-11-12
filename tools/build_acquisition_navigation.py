@@ -140,6 +140,17 @@ class Evidence:
                 name = node.get("title", "").split(" - ")[0] or node.get("name")
                 _, source = self.source(kind, source_id, name, provenance)
                 if kind == "npc":
+                    # A full NPC's selected quest-role rows can corroborate a
+                    # starting destination even when the quest page is unread.
+                    # They establish neither rewards, faction nor prerequisites.
+                    for field, role in [("selectedQuestStarts", "starts"), ("selectedQuestEnds", "ends")]:
+                        for reference in rows(node.get(field)):
+                            if isinstance(reference, dict) and type(reference.get("id")) is int and isinstance(reference.get("name"), str):
+                                quest = self.quest(reference["id"], {"name": reference["name"]})
+                                key = "npc:" + str(source_id)
+                                if key not in quest[role]:
+                                    quest[role].append(key)
+                                quest.setdefault("roleEvidence", []).append(provenance)
                     for sale in rows((node.get("lists") or {}).get("sells")) + rows(node.get("selectedSells")):
                         if isinstance(sale, dict) and type(sale.get("id")) is int:
                             self.full_npc_sales[source_id][sale["id"]] = sale
@@ -233,7 +244,11 @@ class Evidence:
                     q["sourceRequirementsUnresolved"] = node.get("sourceRequirementsUnresolved") is True
                 if isinstance(node.get("acquisitionDetails"), list):
                     q["acquisitionDetails"] = [value for value in node["acquisitionDetails"] if isinstance(value, str)]
-                for field in ["starterZone", "starterInstructions", "objectiveZone", "objectiveSource", "objectiveInstructions"]:
+                if isinstance(node.get("actorZones"), dict):
+                    q["actorZones"] = {key: value for key, value in node["actorZones"].items()
+                                       if isinstance(key, str) and re.fullmatch(r"(?:npc|object):\d+", key)
+                                       and isinstance(value, str) and value.strip()}
+                for field in ["starterZone", "starterInstructions", "objectiveZone", "objectiveSource", "objectiveInstructions", "turnInZone", "turnInInstructions"]:
                     if isinstance(node.get(field), str):
                         q[field] = node[field]
                 for quest_id in node.get("seriesQuestIDs", []):
@@ -653,24 +668,34 @@ def build(inputs):
             gap("source_version_disputed", detail="Availability warning must not create a misleading destination.")
         located, exact = False, False
         for entry in plan["routes"]:
+            q = None
             if entry["kind"] in ["quest", "quest_container"]:
                 q = evidence.quests[str(entry["questID"])]
                 keys = q["starts"] if q.get("starterOriginUnresolved") else q["starts"] + q["ends"]
             else:
                 keys = [entry["source"]] if entry.get("source") else []
-            locations = [loc for key in keys for loc in evidence.sources.get(key, {}).get("locations", [])]
+            source_locations = {}
+            for key in keys:
+                values = evidence.sources.get(key, {}).get("locations", [])
+                zone = (q.get("actorZones") or {}).get(key) if q else None
+                if zone:
+                    values = [loc for loc in values if loc["zone"] == zone] or [dict(zone=zone, verification="published-reference")]
+                source_locations[key] = values
+            locations = [loc for values in source_locations.values() for loc in values]
             if entry.get("location"):
                 locations.append(entry["location"])
             located = located or bool(locations) or entry["kind"] == "dungeon"
+            if q:
+                located = located or bool(q.get("starterZone") and q.get("starterInstructions")) or bool(q.get("turnInZone") and q.get("turnInInstructions"))
             exact = exact or (not entry.get("directionsOnly") and any(x["zone"] not in data["instances"] and coordinate(x.get("x")) and coordinate(x.get("y")) and x.get("verification") == "published-reference" for x in locations))
             for key in keys:
                 if entry.get("directionsOnly"):
                     gap("map_target_withheld", key, entry.get("questID", ""),
                         "NPC/object target withheld; a separately resolved client instance entrance is geographic guidance, not current loot proof."
                         if entry.get("entranceOnly") else "Qualified written guidance only; do not promote this reference to a current map target.")
-                if not evidence.sources.get(key, {}).get("locations"):
+                if not source_locations[key]:
                     gap("source_coordinates_missing", key, entry.get("questID", ""), "Named source exists; precise location not established.")
-                elif not any(coordinate(x.get("x")) and coordinate(x.get("y")) for x in evidence.sources[key]["locations"]):
+                elif not any(coordinate(x.get("x")) and coordinate(x.get("y")) for x in source_locations[key]):
                     gap("precise_coordinate_unverified", key, entry.get("questID", ""), "Published area/roaming footprint only; no invented point or centroid.")
         expected = plan["category"] != "world_drop" or meta.get("originUnknown") is True or "named-enemy" in str(meta.get("confidence", "")) or bool(plan["routes"]) or bool(extras) or item_id in partial_hints or bool(own.get("contained-in-object") and not own.get("dropped-by"))
         status = "verified_coordinate_data" if exact else "directions" if located else "missing" if expected else "not_applicable"

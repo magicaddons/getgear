@@ -1,0 +1,4407 @@
+{
+  "scope": "Shared-model future reviewed-development proposals;zeroactiveadoption. Missing/qualified/candidate-only sources do not count as working navigation.",
+  "navigationCounts": {
+    "published_qualified_quest_itinerary;candidate_not_active": 18,
+    "published_named_region;candidate_not_active": 22,
+    "missing_location_information;candidate_not_active": 40,
+    "not_applicable_existing_equipment_scope": 4,
+    "missing_actor_location;candidate_not_active": 12
+  },
+  "candidates": {
+    "21394": {
+      "itemID": 21394,
+      "name": "Drape of Unyielding Strength",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21394,
+        "name": "Drape of Unyielding Strength",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 1,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8557,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 3,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21394",
+      "sourceSHA256": "b4959c47fcc043c7ee9e5b7b18ba8e84f812411cdd341d18567315d784c68a81",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21397": {
+      "itemID": 21397,
+      "name": "Cape of Eternal Justice",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21397,
+        "name": "Cape of Eternal Justice",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 2,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8695,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 1,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21397",
+      "sourceSHA256": "621be681c2f5ee048be171bc7fb66c825b3c9a2c15a02674b85095b5b7e5f984",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21400": {
+      "itemID": 21400,
+      "name": "Cloak of the Gathering Storm",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21400,
+        "name": "Cloak of the Gathering Storm",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "SHAMAN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 64,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8690,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 2,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21400",
+      "sourceSHA256": "c95c12ad0dc4b2438fef068e37627e1a1aba871d4ed33d7396aa6b33995d0a63",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21403": {
+      "itemID": 21403,
+      "name": "Cloak of the Unseen Path",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21403,
+        "name": "Cloak of the Unseen Path",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "HUNTER"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 4,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8696,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 3,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21403",
+      "sourceSHA256": "231d5a336a7841a9545cc66e436127a7d236ac32ea17d006e39756c2ce7cc80c",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21406": {
+      "itemID": 21406,
+      "name": "Cloak of Veiled Shadows",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21406,
+        "name": "Cloak of Veiled Shadows",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "ROGUE"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 8,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8693,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 3,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21406",
+      "sourceSHA256": "3f1e289bab27d07003211a7e9234846463d71f2ebdb14ca117e42923243ed545",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21409": {
+      "itemID": 21409,
+      "name": "Cloak of Unending Life",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21409,
+        "name": "Cloak of Unending Life",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "DRUID"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 1024,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8692,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 3,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21409",
+      "sourceSHA256": "ce33b21ddcca685acde57f081773deb874a5ec9ab28cd839293d7e26361da6bd",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21412": {
+      "itemID": 21412,
+      "name": "Shroud of Infinite Wisdom",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21412,
+        "name": "Shroud of Infinite Wisdom",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 16,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8689,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 3,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21412",
+      "sourceSHA256": "864be6eae1d0c07ab3e7ed8ee921c303309c7629091fb7dc67810869a5d56aa7",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21415": {
+      "itemID": 21415,
+      "name": "Drape of Vaulted Secrets",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21415,
+        "name": "Drape of Vaulted Secrets",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "MAGE"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 128,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8691,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 3,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21415",
+      "sourceSHA256": "cc949d128578510bad71f5c30bd9db5660100ef7fec22f373960a0a13b0f56fc",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21418": {
+      "itemID": 21418,
+      "name": "Shroud of Unspoken Names",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21418,
+        "name": "Shroud of Unspoken Names",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "WARLOCK"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 256,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8694,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 3,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Revered_Cenarion_Circle_source_gate_not_wearer_gate",
+        "scarab_idol_full_item_reads_403_origins_not_invented",
+        "token_loot_current_availability_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21418",
+      "sourceSHA256": "d8f9e0f0c1bdfee178e3687de968a96f87962ea5b0802b729dfbacbfefc36210",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "21710": {
+      "itemID": 21710,
+      "name": "Cloak of the Fallen God",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21710,
+        "name": "Cloak of the Fallen God",
+        "inventoryType": 16,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8802,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 3,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21710",
+      "sourceSHA256": "84fce94e54183645215d878f6d1b8680ee6f23da20f0372a673c2decf7bb248b",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22225": {
+      "itemID": 22225,
+      "name": "Dragonskin Cowl",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22225,
+        "name": "Dragonskin Cowl",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "unchanged",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10339",
+          "name": "Gyth",
+          "requiresFullDropJoin": true,
+          "verification": "legacy-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1583,
+              "name": "Blackrock Spire",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22225",
+      "sourceSHA256": "d12cbb45f3ecd0625d71130958baacb149751efb9d1a1f47a9095bf8c2a1be98",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22247": {
+      "itemID": 22247,
+      "name": "Faith Healer's Boots",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22247,
+        "name": "Faith Healer's Boots",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10429",
+          "name": "Warchief Rend Blackhand",
+          "requiresFullDropJoin": true,
+          "verification": "legacy-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1583,
+              "name": "Blackrock Spire",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22247",
+      "sourceSHA256": "accc53a56c8c3f87a7404d16f583a313330898d22b8892ff640ba56e1eb0c5c6",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22253": {
+      "itemID": 22253,
+      "name": "Tome of the Lost",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22253,
+        "name": "Tome of the Lost",
+        "inventoryType": 23,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "SHAMAN",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10363",
+          "name": "General Drakkisath",
+          "requiresFullDropJoin": true,
+          "verification": "legacy-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1583,
+              "name": "Blackrock Spire",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22253",
+      "sourceSHA256": "e5c04c425207351126a22c53cab05911fca82f3f4b3fae6be9e5e9a93c58744c",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22257": {
+      "itemID": 22257,
+      "name": "Bloodclot Band",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22257,
+        "name": "Bloodclot Band",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:9027",
+          "name": "Gorosh the Dervish",
+          "requiresFullDropJoin": true,
+          "verification": "legacy-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1584,
+              "name": "Blackrock Depths",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22257",
+      "sourceSHA256": "57c2a1dec778ab69a58fa8e604d68d2efcbd0a53796dbc6bd5fbd0b73ab7ea92",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22267": {
+      "itemID": 22267,
+      "name": "Spellweaver's Turban",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22267,
+        "name": "Spellweaver's Turban",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "unconfirmed",
+        "currentParserReason": "unconfirmed-forever-facts",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-version-unconfirmed",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim",
+        "hold-version-unconfirmed"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22267",
+      "sourceSHA256": "d6571ae2f6b146b3a22babf42287bc16ba2a4ec0fef24a4fc164159acb084a16",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22268": {
+      "itemID": 22268,
+      "name": "Draconic Infused Emblem",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22268,
+        "name": "Draconic Infused Emblem",
+        "inventoryType": 12,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10363",
+          "name": "General Drakkisath",
+          "requiresFullDropJoin": true,
+          "verification": "legacy-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1583,
+              "name": "Blackrock Spire",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22268",
+      "sourceSHA256": "c9299f660136c08ecbf9399fa286106cafed22bcbe5c76b99f7a55b57e5737a0",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22269": {
+      "itemID": 22269,
+      "name": "Shadow Prowler's Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22269,
+        "name": "Shadow Prowler's Cloak",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10363",
+          "name": "General Drakkisath",
+          "requiresFullDropJoin": true,
+          "verification": "legacy-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1583,
+              "name": "Blackrock Spire",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22269",
+      "sourceSHA256": "7d53f80e2dc8674ee84697567488c5ee7fc618e9b49e4c5ff4726a3c4e38350f",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22270": {
+      "itemID": 22270,
+      "name": "Entrenching Boots",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22270,
+        "name": "Entrenching Boots",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 50,
+        "renderedEquipLevel": 50,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:9028",
+          "name": "Grizzle",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1584,
+              "name": "Blackrock Depths",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22270",
+      "sourceSHA256": "4ae5f8013ec2f657f40e37db8103e1fdcf0f7e94640df648db8dd3ae0c9251c8",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22271": {
+      "itemID": 22271,
+      "name": "Leggings of Frenzied Magic",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22271,
+        "name": "Leggings of Frenzied Magic",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:9027",
+          "name": "Gorosh the Dervish",
+          "requiresFullDropJoin": true,
+          "verification": "legacy-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1584,
+              "name": "Blackrock Depths",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22271",
+      "sourceSHA256": "e8c0a502633b3183bcbdb21ce90670b583541e5d732ee27fbb37bae8069f234b",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22395": {
+      "itemID": 22395,
+      "name": "Totem of Rage",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22395,
+        "name": "Totem of Rage",
+        "inventoryType": 28,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "SHAMAN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:9938",
+          "name": "Magmus",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 1584,
+              "name": "Blackrock Depths",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22395",
+      "sourceSHA256": "5ce6a62bd0895eccaee0cc6712ee63ae15af42ae522fc117fab70a2a3477b9ff",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22403": {
+      "itemID": 22403,
+      "name": "Nacreous Shell Necklace",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22403,
+        "name": "Nacreous Shell Necklace",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10997",
+          "name": "Cannon Master Willey",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22403",
+      "sourceSHA256": "ea645dca8be555880a5cb1cb3be9ada4c43e5f8202d3abfb8acc76abac49b228",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22404": {
+      "itemID": 22404,
+      "name": "Willey's Back Scratcher",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22404,
+        "name": "Willey's Back Scratcher",
+        "inventoryType": 21,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10997",
+          "name": "Cannon Master Willey",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22404",
+      "sourceSHA256": "12eface54c8e15618d5ef0dabadea1dce448ba272bd7e73fbca3bb9086306fe0",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22406": {
+      "itemID": 22406,
+      "name": "Redemption",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22406,
+        "name": "Redemption",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10997",
+          "name": "Cannon Master Willey",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22406",
+      "sourceSHA256": "6d9316b0fa15f5bc554d27d4aa811b1f93dfae712177cefb9c2e4ddc9b3bc7a2",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22407": {
+      "itemID": 22407,
+      "name": "Helm of the New Moon",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22407,
+        "name": "Helm of the New Moon",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10997",
+          "name": "Cannon Master Willey",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22407",
+      "sourceSHA256": "be397938e053731aeef99dda25e5dc411bef0ac6147b41e90faf2b90d8cd4d9d",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22409": {
+      "itemID": 22409,
+      "name": "Tunic of the Crescent Moon",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22409,
+        "name": "Tunic of the Crescent Moon",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10440",
+          "name": "Baron Rivendare",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22409",
+      "sourceSHA256": "09536c8acdcf5915cc1c966a08c4b89d19622947a17ad3976a4dec9fb585fa85",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22411": {
+      "itemID": 22411,
+      "name": "Helm of the Executioner",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22411,
+        "name": "Helm of the Executioner",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10440",
+          "name": "Baron Rivendare",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22411",
+      "sourceSHA256": "c77e1d2d7eea802fb21bee8b8601d802fba926e16638b1acec2f2e6be3dd066c",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "22433": {
+      "itemID": 22433,
+      "name": "Don Mauricio's Band of Domination",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 22433,
+        "name": "Don Mauricio's Band of Domination",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:1853",
+          "name": "Darkmaster Gandling",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2057,
+              "name": "Scholomance",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=22433",
+      "sourceSHA256": "221e59fe3bd45cec1736cafb4f51d9e5d541fa1c2f40009d751785050e7758f2",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "23198": {
+      "itemID": 23198,
+      "name": "Idol of Brutality",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 23198,
+        "name": "Idol of Brutality",
+        "inventoryType": 28,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10435",
+          "name": "Magistrate Barthilas",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=23198",
+      "sourceSHA256": "b008205ff2b8a15702bf4011d497b2943d8df4f15584a56d3818dc03269ddcd2",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "226697": {
+      "itemID": 226697,
+      "name": "Red Bag",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 226697,
+        "name": "Red Bag",
+        "inventoryType": 18,
+        "quality": 1,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unconfirmed",
+        "currentParserReason": "unconfirmed-forever-facts",
+        "policyCompatibleClasses": [],
+        "assessment": "excluded-non-equipment-or-unsupported-slot",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "not_applicable_existing_equipment_scope",
+      "gaps": [
+        "unsupported_existing_catalogue_scope_no_gear_adoption",
+        "excluded-non-equipment-or-unsupported-slot"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=226697",
+      "sourceSHA256": "39ede7a77cefce6ba7f4efd36f93004c79eca857272caca6f99116214144cf5e",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "227935": {
+      "itemID": 227935,
+      "name": "Hammer of the Fallen Thane",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 227935,
+        "name": "Hammer of the Fallen Thane",
+        "inventoryType": 21,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "ROGUE",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 84332,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": null,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "primary_quest_version_unconfirmed",
+        "Mysterious_Chest_unlock_unverified",
+        "duplicated_rendered_reward_not_two_hammers",
+        "hold-no-rendered-equip-level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=227935",
+      "sourceSHA256": "8a19df085cbc30a1982407f4ffd0ab984d78d03b57a8ae696da6329a0c77e630",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "260216": {
+      "itemID": 260216,
+      "name": "Ouroboros Ring",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 260216,
+        "name": "Ouroboros Ring",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 92065,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": null,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "initial86791_and_earlier86752_full_reads_403",
+        "initial_mandatory_chain_link_unverified",
+        "new_Rageroar236573_not_Classic6651",
+        "one_of_four_ring_choices",
+        "hold-no-rendered-equip-level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=260216",
+      "sourceSHA256": "6c86a74cade67b8f0d2cce5a23c74ee626235996b816b8932c0565d79fbcdeda",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "260217": {
+      "itemID": 260217,
+      "name": "Eagle's Head Signet",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 260217,
+        "name": "Eagle's Head Signet",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 92065,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": null,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "initial86791_and_earlier86752_full_reads_403",
+        "initial_mandatory_chain_link_unverified",
+        "new_Rageroar236573_not_Classic6651",
+        "one_of_four_ring_choices",
+        "hold-no-rendered-equip-level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=260217",
+      "sourceSHA256": "dd2eb9758a6e2d07fbaefac61e63ed3663803db909559a2c5e1bed770db24628",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "260218": {
+      "itemID": 260218,
+      "name": "Malefactor's End",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 260218,
+        "name": "Malefactor's End",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 92065,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": null,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "initial86791_and_earlier86752_full_reads_403",
+        "initial_mandatory_chain_link_unverified",
+        "new_Rageroar236573_not_Classic6651",
+        "one_of_four_ring_choices",
+        "hold-no-rendered-equip-level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=260218",
+      "sourceSHA256": "26223e12968bd5bc517c61c83ca39ebcc4fea23b9688b7a4539b603d91a0dddb",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "260219": {
+      "itemID": 260219,
+      "name": "Engraved Band",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 260219,
+        "name": "Engraved Band",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 92065,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": null,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "initial86791_and_earlier86752_full_reads_403",
+        "initial_mandatory_chain_link_unverified",
+        "new_Rageroar236573_not_Classic6651",
+        "one_of_four_ring_choices",
+        "hold-no-rendered-equip-level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=260219",
+      "sourceSHA256": "429e96513f62c71d3ed2c208e1cb667a0559aac5aecaa9e0fa957cc4a64cb60f",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "270118": {
+      "itemID": 270118,
+      "name": "Cindercloth Gown",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 270118,
+        "name": "Cindercloth Gown",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 4242,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 1,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "hold-no-rendered-equip-level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=270118",
+      "sourceSHA256": "481403ad796c45999e6914b3788058c5b34820443bf9f9ad967c3a891dc9ce8e",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "270301": {
+      "itemID": 270301,
+      "name": "Ve'han's Research Notes",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 270301,
+        "name": "Ve'han's Research Notes",
+        "inventoryType": 0,
+        "quality": 1,
+        "rawStructuredRequiredLevel": null,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "not-green-or-better",
+        "policyCompatibleClasses": [],
+        "assessment": "excluded-non-equipment-or-unsupported-slot",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "not_applicable_existing_equipment_scope",
+      "gaps": [
+        "unsupported_existing_catalogue_scope_no_gear_adoption",
+        "excluded-non-equipment-or-unsupported-slot"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=270301",
+      "sourceSHA256": "c177ac89375914b41b1d4cefafeb4ed9d5692b0d27c6577ba397fea9b8999d80",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276072": {
+      "itemID": 276072,
+      "name": "Soulwoven Drape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276072,
+        "name": "Soulwoven Drape",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "not-provided",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276072",
+      "sourceSHA256": "0b3b4f531d9fb3613189ab4f2abc69abd77403270bd3740b60ac756bc1624949",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276073": {
+      "itemID": 276073,
+      "name": "Band of the Damned",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276073,
+        "name": "Band of the Damned",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276073",
+      "sourceSHA256": "8d0ca747490de6b2d8b0bad48dc08f48b8840b2959c1b282348f2788a3892fc1",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276403": {
+      "itemID": 276403,
+      "name": "Scarlet Bonebreaker",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276403,
+        "name": "Scarlet Bonebreaker",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": 1535,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276403",
+      "sourceSHA256": "f6e6fe6f2523f3fd5f8fff89a2ad6d437073b05b5ed9518dbcd3f5bde794af79",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276404": {
+      "itemID": 276404,
+      "name": "Masterwork Crimson Hammer",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276404,
+        "name": "Masterwork Crimson Hammer",
+        "inventoryType": 21,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "ROGUE",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276404",
+      "sourceSHA256": "7809e73309e3dffc772ae2228bc4e9c0671196d1734d8c30608d214f299e147e",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276434": {
+      "itemID": 276434,
+      "name": "Black Guard Skullcap",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276434,
+        "name": "Black Guard Skullcap",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11121",
+          "name": "Black Guard Swordsmith",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276434",
+      "sourceSHA256": "12c434ae8b576633d66aae33e975cfd98a3142c9c1beb963805e5c296333fcba",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276455": {
+      "itemID": 276455,
+      "name": "Swordsmith Mitts",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276455,
+        "name": "Swordsmith Mitts",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276455",
+      "sourceSHA256": "6d1cb52c1454c31a6a3a39b30b41666e53842a5bdc419d8458844c22567d4ec7",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276456": {
+      "itemID": 276456,
+      "name": "Plague Defiled Buckler",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276456,
+        "name": "Plague Defiled Buckler",
+        "inventoryType": 14,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11121",
+          "name": "Black Guard Swordsmith",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 2017,
+              "name": "Stratholme",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276456",
+      "sourceSHA256": "ca76a27bdc7f6a2e981d5188fcb30c9024af51c0719d91c5adb67f89f7ff7433",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276744": {
+      "itemID": 276744,
+      "name": "Zarla's Snack Pouch",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276744,
+        "name": "Zarla's Snack Pouch",
+        "inventoryType": 12,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 50,
+        "renderedEquipLevel": 50,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:255702",
+          "name": "Blazeroar",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276744",
+      "sourceSHA256": "3a011e62398573bbceb71faa2831644f729ad4a24e87137757fb4fbe8c3c5f92",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "276745": {
+      "itemID": 276745,
+      "name": "Beastbond Robe",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 276745,
+        "name": "Beastbond Robe",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 50,
+        "renderedEquipLevel": 50,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:255702",
+          "name": "Blazeroar",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276745",
+      "sourceSHA256": "2b2a97d70d7ff279a9a6a094800688c21db8b929ca81dece01160932a9d924ae",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "278570": {
+      "itemID": 278570,
+      "name": "Mardenholde Armbands",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 278570,
+        "name": "Mardenholde Armbands",
+        "inventoryType": 9,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=278570",
+      "sourceSHA256": "174639530cbc424aca6fb279b3566c7c7eed52b01bf162c1cc2abd84d9c385a1",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "279471": {
+      "itemID": 279471,
+      "name": "Alcaz Operative Insignia",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 279471,
+        "name": "Alcaz Operative Insignia",
+        "inventoryType": 0,
+        "quality": 3,
+        "rawStructuredRequiredLevel": null,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [],
+        "assessment": "excluded-non-equipment-or-unsupported-slot",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "not_applicable_existing_equipment_scope",
+      "gaps": [
+        "unsupported_existing_catalogue_scope_no_gear_adoption",
+        "excluded-non-equipment-or-unsupported-slot"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=279471",
+      "sourceSHA256": "f172a47b20593f37db3afff78b1772bdc8d452190bc53bedcf8727da097089e1",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280013": {
+      "itemID": 280013,
+      "name": "Frostfang Mail Vest",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280013,
+        "name": "Frostfang Mail Vest",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:261811",
+          "name": "Tor'Rel",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280013",
+      "sourceSHA256": "2b85360c4c3b603bc96c719e99f3661efd5ec3835986e5060747646f18006cac",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280016": {
+      "itemID": 280016,
+      "name": "Spiderchitin Wrap",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280016,
+        "name": "Spiderchitin Wrap",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:261813",
+          "name": "Venomridge",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280016",
+      "sourceSHA256": "f971e35c83eacb9e99f6233905165e87435c3c9146e96c1c5f52aca1c12e1773",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280017": {
+      "itemID": 280017,
+      "name": "Octoclaw Chain Boots",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280017,
+        "name": "Octoclaw Chain Boots",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:261813",
+          "name": "Venomridge",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280017",
+      "sourceSHA256": "d35579a53e42b78a3a9073536526093fb285e2a16848a66f2820218d3a26e687",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280018": {
+      "itemID": 280018,
+      "name": "Hammer of Thundering Hooves",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280018,
+        "name": "Hammer of Thundering Hooves",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:261812",
+          "name": "Thunderhoof",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280018",
+      "sourceSHA256": "2d959ca2dac195522563e87607f2483e2a0255280792fbd37a5325169d7f079a",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280022": {
+      "itemID": 280022,
+      "name": "Scaleguard Scimitar",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280022,
+        "name": "Scaleguard Scimitar",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "MAGE",
+          "WARLOCK",
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:262127",
+          "name": "Direhorn Matriarch",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280022",
+      "sourceSHA256": "64c3044d1c60e9211de74798d1493d4197b2e8de55e8c94e24d2e3cca351c345",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280028": {
+      "itemID": 280028,
+      "name": "Heartflame Gauntlets",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280028,
+        "name": "Heartflame Gauntlets",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:261974",
+          "name": "Cinder",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280028",
+      "sourceSHA256": "5dfaddb810bbbd79e4df5e5a3e8b708b6e9f80ffd9e724faab631ad2ddf11d0f",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280029": {
+      "itemID": 280029,
+      "name": "Cinderedge Crescent",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280029,
+        "name": "Cinderedge Crescent",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:261974",
+          "name": "Cinder",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280029",
+      "sourceSHA256": "cb56097ad89c4de1452b4dbf0df77b67b5d9cfe730409981c79514a2f72a8619",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280058": {
+      "itemID": 280058,
+      "name": "Impish Chain Hood",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280058,
+        "name": "Impish Chain Hood",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:247206",
+          "name": "Impaan the Imprisoner",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280058",
+      "sourceSHA256": "e67920584ada4ef8a63ffd4be6bb543c64faf0e2bd9072c153c9413216db2ced",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280073": {
+      "itemID": 280073,
+      "name": "Burnished Pridescales",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280073,
+        "name": "Burnished Pridescales",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:247231",
+          "name": "Unbound Spirit",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280073",
+      "sourceSHA256": "f8eeda9797f90619d5cf61d530428ca92ae3cb25ef64e8153833a07f51df0ef0",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280076": {
+      "itemID": 280076,
+      "name": "Horns of Varrox",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280076,
+        "name": "Horns of Varrox",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 57,
+        "renderedEquipLevel": 57,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:247234",
+          "name": "Varrox Bleakhoof",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [
+            {
+              "zoneID": 16554,
+              "name": "Blackmaw Hold",
+              "pointCount": 0,
+              "scope": "Full quest92065 explicitly places Varrox in Blackmaw Hold; full head249692/fullNPC247234 exact joins corroborate identity. Region only, no floor/current access claim.",
+              "questSourceURL": "https://www.wowhead.com/forever/quest=92065",
+              "questSourceSHA256": "29b03f0a949dcfbc85e8ae45a08400ccc7adf55df1cf4351ecd8f77028f76dd8"
+            }
+          ],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280076",
+      "sourceSHA256": "8cab52a6fcd6d11eb9710e8d05c8f1f60c01f4ed4b217555c3a0bcfdc250dd07",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280078": {
+      "itemID": 280078,
+      "name": "Apprentice's Protective Treads",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280078,
+        "name": "Apprentice's Protective Treads",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280078",
+      "sourceSHA256": "c7686528c6a7aeed67c605a5762cf4e4f0a6557599d64dbaf782e5f4708712be",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280080": {
+      "itemID": 280080,
+      "name": "Claymore of Two Moons",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280080,
+        "name": "Claymore of Two Moons",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:269104",
+          "name": "Moontouched Wanderer",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280080",
+      "sourceSHA256": "594d218cfb72299aaeb56e9a72569407d82835fb8886a336df49e995ed40ca6f",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280081": {
+      "itemID": 280081,
+      "name": "Sad-Sack Sandals",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280081,
+        "name": "Sad-Sack Sandals",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280081",
+      "sourceSHA256": "220c6148d39c23c50fa35c22b7060f087feeb35fdd24f5d94e637ac2c7253afc",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280082": {
+      "itemID": 280082,
+      "name": "Staff of Sorrow",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280082,
+        "name": "Staff of Sorrow",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280082",
+      "sourceSHA256": "8955ee00565700635b57d9a711cb4bed8e3c0fd6a24039aae6e77c4911b9f050",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280083": {
+      "itemID": 280083,
+      "name": "Truesight Rifle",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280083,
+        "name": "Truesight Rifle",
+        "inventoryType": 15,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280083",
+      "sourceSHA256": "27ef983c8761a87a65bf61beda550f9676641d0cd60f50fee8975b8cedb642ce",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "280084": {
+      "itemID": 280084,
+      "name": "Furbolg Rib Protector",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 280084,
+        "name": "Furbolg Rib Protector",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:269151",
+          "name": "Sabella No-Eyes",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280084",
+      "sourceSHA256": "b32fd4aed5f50c5b05b5872bb1703036d6bcabe5349ef0b57a86ff69eb3c4ef8",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "281598": {
+      "itemID": 281598,
+      "name": "Rusthowl's Worn Collar",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 281598,
+        "name": "Rusthowl's Worn Collar",
+        "inventoryType": 2,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=281598",
+      "sourceSHA256": "9bede46e890a66962325ef698e721394075529cd73377363f1c6e16e4c133190",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "281599": {
+      "itemID": 281599,
+      "name": "Ragged Colors",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 281599,
+        "name": "Ragged Colors",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "not-provided",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=281599",
+      "sourceSHA256": "5f253d29f202376ef2bc6e01e433a4c3223ae0f0f9f6916387afc09b17ff1053",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "282071": {
+      "itemID": 282071,
+      "name": "Shin Slicers",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 282071,
+        "name": "Shin Slicers",
+        "inventoryType": 8,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 51,
+        "renderedEquipLevel": 51,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=282071",
+      "sourceSHA256": "64d8e81f2203f9e5723e4a5b433ff3b4055bfd0f6166f1b9607d4b50bfcf3ad9",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "282085": {
+      "itemID": 282085,
+      "name": "Dragonblood Greatsword",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 282085,
+        "name": "Dragonblood Greatsword",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 57,
+        "renderedEquipLevel": 57,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=282085",
+      "sourceSHA256": "46887731b2d5abcfe9ad56da23287a11a2133b89eeb0d4f88460a59c0f2c1c97",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "282707": {
+      "itemID": 282707,
+      "name": "Arcanum of Binding",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 282707,
+        "name": "Arcanum of Binding",
+        "inventoryType": 0,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": null,
+        "primaryVersion": "not-provided",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [],
+        "assessment": "excluded-non-equipment-or-unsupported-slot",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "not_applicable_existing_equipment_scope",
+      "gaps": [
+        "unsupported_existing_catalogue_scope_no_gear_adoption",
+        "excluded-non-equipment-or-unsupported-slot"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=282707",
+      "sourceSHA256": "1949a8eb299e79974cab4d6ee565b7609561b7fa2bca2bb270004ecd8138322d",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284066": {
+      "itemID": 284066,
+      "name": "Husk of the Husk",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284066,
+        "name": "Husk of the Husk",
+        "inventoryType": 14,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 59,
+        "renderedEquipLevel": 59,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284066",
+      "sourceSHA256": "e09f0b87857279444a31f127c8baa19b750fe78a8f5614b26b58f3b4185de547",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284072": {
+      "itemID": 284072,
+      "name": "Scarlet Judge's Mace",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284072,
+        "name": "Scarlet Judge's Mace",
+        "inventoryType": 13,
+        "quality": 0,
+        "rawStructuredRequiredLevel": 57,
+        "renderedEquipLevel": 57,
+        "primaryVersion": "new",
+        "currentParserReason": "not-green-or-better",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "ROGUE",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284072",
+      "sourceSHA256": "850ce3c848a0b7714af1b7308168508c74cfbfea4678b1f7bf69177866c54227",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284091": {
+      "itemID": 284091,
+      "name": "Scarlet Forgemaster's Bindings",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284091,
+        "name": "Scarlet Forgemaster's Bindings",
+        "inventoryType": 9,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 59,
+        "renderedEquipLevel": 59,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284091",
+      "sourceSHA256": "9e56146e9e2215b56cf80b7c93243f422f86ac6e7735c6c00ce7d68bb41b0eab",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284097": {
+      "itemID": 284097,
+      "name": "Everstaring Abomination Eye",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284097,
+        "name": "Everstaring Abomination Eye",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284097",
+      "sourceSHA256": "7d4adc1eebdaef65678dfbd19955c81432793fc5dafe676b733d7dfb88f915b7",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284104": {
+      "itemID": 284104,
+      "name": "Cultist's Cuffs",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284104,
+        "name": "Cultist's Cuffs",
+        "inventoryType": 9,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284104",
+      "sourceSHA256": "0cd82e80f25f511935380b65dfe7d25a611968574d3dfa0b568a6568eb73f84a",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284157": {
+      "itemID": 284157,
+      "name": "Ranger Lord's Longsword",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284157,
+        "name": "Ranger Lord's Longsword",
+        "inventoryType": 13,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 57,
+        "renderedEquipLevel": 57,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "MAGE",
+          "WARLOCK",
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284157",
+      "sourceSHA256": "daa04d56a9a42707f0f51b6f787ec191d7cfebab6cc140ede1f95ce2d7b4186b",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284162": {
+      "itemID": 284162,
+      "name": "Mossflayer Witchdoctor's Robe",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284162,
+        "name": "Mossflayer Witchdoctor's Robe",
+        "inventoryType": 5,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284162",
+      "sourceSHA256": "f61ce583e64a669f492e0db3ae5aec2ab5174c683d2647734ef9b1ddaa48334c",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284231": {
+      "itemID": 284231,
+      "name": "Sayaad Charm",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284231,
+        "name": "Sayaad Charm",
+        "inventoryType": 12,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284231",
+      "sourceSHA256": "6f9fee1b14faa504d67fec5665e1d3c0fc70d664656305e0358e8592b9fa30d6",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "284848": {
+      "itemID": 284848,
+      "name": "Diamond Studded Belt",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284848,
+        "name": "Diamond Studded Belt",
+        "inventoryType": 6,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284848",
+      "sourceSHA256": "6ae35178e518a898523ba27b1ddfdd5d90380b72b89de507fc8d4c2261d40373",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "286408": {
+      "itemID": 286408,
+      "name": "Sword of Mourning",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 286408,
+        "name": "Sword of Mourning",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 50,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "MAGE",
+          "WARLOCK",
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 99187,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 2,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "Knight276110_and_inputNPC247209_full_reads_403",
+        "formal_start_return_roles_unverified",
+        "source_Horde_Paladin_min50_not_printed_wearer_level",
+        "hold-no-rendered-equip-level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=286408",
+      "sourceSHA256": "a3a293a6e7d32b7725f2463d768c9d9034229d8a643624bf9b8ecfa72fc92e50",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "286597": {
+      "itemID": 286597,
+      "name": "Calm Air Band",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 286597,
+        "name": "Calm Air Band",
+        "inventoryType": 11,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=286597",
+      "sourceSHA256": "84a5f474724c8d8d146a3afb284bfc1a457028de37d267477f9c91af71dda8aa",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "286609": {
+      "itemID": 286609,
+      "name": "Krellack's Carapace",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 286609,
+        "name": "Krellack's Carapace",
+        "inventoryType": 14,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=286609",
+      "sourceSHA256": "f156c571741d79f7058a0af4f07f727415c6a41b34ced60f886c6df3e2a7c385",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "286612": {
+      "itemID": 286612,
+      "name": "Sand-Covered Silk Sash",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 286612,
+        "name": "Sand-Covered Silk Sash",
+        "inventoryType": 6,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=286612",
+      "sourceSHA256": "a6cc36f69fcffd498916d31522965fb39719fc31fe65422d19c4f02f91ea967a",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "286614": {
+      "itemID": 286614,
+      "name": "Gruff's Tough Tongue",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 286614,
+        "name": "Gruff's Tough Tongue",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=286614",
+      "sourceSHA256": "f1ae9d48c318e0f0ab3409871d2195be31c4cfa81447bba5bd6e43bbd5b35ccc",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287026": {
+      "itemID": 287026,
+      "name": "Escape Plan",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287026,
+        "name": "Escape Plan",
+        "inventoryType": 15,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287026",
+      "sourceSHA256": "329cd67cb97559273b1c16da9bb28d3410cac201b06f0377d04d2885e9e3ead6",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287029": {
+      "itemID": 287029,
+      "name": "Nature Guardian's Legguards",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287029,
+        "name": "Nature Guardian's Legguards",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287029",
+      "sourceSHA256": "6c0f239c09366bf7ed769cf1928a89d050d8c8d2d1cb416516ba5579696d4cea",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287030": {
+      "itemID": 287030,
+      "name": "Blackmaw Bindings",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287030,
+        "name": "Blackmaw Bindings",
+        "inventoryType": 9,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287030",
+      "sourceSHA256": "e8623792a068806ee57a9c27a7761671fa3b5728b3659a076494521b85827ead",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287031": {
+      "itemID": 287031,
+      "name": "Spearfisher's Waders",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287031,
+        "name": "Spearfisher's Waders",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287031",
+      "sourceSHA256": "0843be12e0371fe6da21b91b585cf6b78df7a8c4ce1ebd8f778a6f2b1c315461",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287032": {
+      "itemID": 287032,
+      "name": "Den Champion's Binding",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287032,
+        "name": "Den Champion's Binding",
+        "inventoryType": 6,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 52,
+        "renderedEquipLevel": 52,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287032",
+      "sourceSHA256": "d6cc883d7fa659f83b8687e85e1a248c561f30b1cb958d2468c02fb909c2782e",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287033": {
+      "itemID": 287033,
+      "name": "Furbolg Berserker's Boots",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287033,
+        "name": "Furbolg Berserker's Boots",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287033",
+      "sourceSHA256": "460599fecd6bf4c1b821a4e1f8777e741086eb03308b8fdacfbad34691690194",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287038": {
+      "itemID": 287038,
+      "name": "Naturopathy Footpads",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287038,
+        "name": "Naturopathy Footpads",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287038",
+      "sourceSHA256": "21304de873d69cffa72954c61dd8a8d6bf07a6f4abe8231b7343dd8aa010b2f9",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287040": {
+      "itemID": 287040,
+      "name": "Dinosaur Hide Belt",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287040,
+        "name": "Dinosaur Hide Belt",
+        "inventoryType": 6,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287040",
+      "sourceSHA256": "37054db8566c69f931a9663ab31423b5bf2c49c6efd9d25f06288a62da43a8af",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287041": {
+      "itemID": 287041,
+      "name": "Time-Forgotten Bindings",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287041,
+        "name": "Time-Forgotten Bindings",
+        "inventoryType": 9,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287041",
+      "sourceSHA256": "1cda3e724b19e4b586558fe614cb0f7a53b78cf633ecbbaf573c5c8417c7b4b3",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287043": {
+      "itemID": 287043,
+      "name": "Predaceous Band",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287043,
+        "name": "Predaceous Band",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287043",
+      "sourceSHA256": "54864ef42493bf2acf1ca53ceaf14a911288b95848f71e388835ad33e4b68694",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287044": {
+      "itemID": 287044,
+      "name": "Predator's Shroud",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287044,
+        "name": "Predator's Shroud",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287044",
+      "sourceSHA256": "5531c48fda387e0dbb09c73a1f516466ca343221293721cd2af876d3a92b40a2",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287045": {
+      "itemID": 287045,
+      "name": "Ancient Mattock",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287045,
+        "name": "Ancient Mattock",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:262689",
+          "name": "Ravasaur Juvenile",
+          "requiresFullDropJoin": true,
+          "verification": "published-reference",
+          "publishedLocations": [],
+          "instructions": "Exact own/full-NPC published join;current loot/access/floor remain unverified. Use shared verified geography or written directions only."
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_actor_location;candidate_not_active",
+      "gaps": [
+        "current_loot_availability_unverified",
+        "boss_floor_or_exact_location_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287045",
+      "sourceSHA256": "e3ef2e41fed85b3574cb9dbe970d9a6acbe1db1b012673d60569641c1d774498",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287046": {
+      "itemID": 287046,
+      "name": "Pylon Poker",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287046,
+        "name": "Pylon Poker",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "missing_location_information;candidate_not_active",
+      "gaps": [
+        "own_origin_missing_or_failed_full_reverse_join",
+        "no_target_from_item_name_or_unconfirmed_secondary_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287046",
+      "sourceSHA256": "e3124bffd8b8b992515af08f2d4e3d5bd4a7e338f96e563d5be49aefd9d532d3",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    },
+    "287074": {
+      "itemID": 287074,
+      "name": "Lard's Lunch Slicer",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287074,
+        "name": "Lard's Lunch Slicer",
+        "inventoryType": 25,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 44,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 7840,
+          "requiresFullRewardJoin": true,
+          "verification": "published-reference",
+          "sourceQuestSide": 2,
+          "requiresVersionResolution": false,
+          "requiresAvailabilityResolution": true
+        }
+      ],
+      "rejectedSourceReferences": [],
+      "navigationStatus": "published_qualified_quest_itinerary;candidate_not_active",
+      "gaps": [
+        "current_quest_acceptance_and_earlier_unlocks_unverified",
+        "hold-no-rendered-equip-level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287074",
+      "sourceSHA256": "a1f17c59566a2e4e9c50850f6e1b81b3c0a47458b3e9e33f33cd9f3792ccfb4c",
+      "sharedEvidence": "checkpoint8ci_working_evidence.json",
+      "sharedQuestChains": "navigation_quest_chains.json"
+    }
+  }
+}

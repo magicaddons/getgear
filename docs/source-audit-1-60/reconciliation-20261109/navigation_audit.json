@@ -2,12 +2,12 @@
   "items": 7707,
   "statuses": {
     "not_applicable": 2156,
-    "directions": 1587,
-    "missing": 3151,
-    "verified_coordinate_data": 813
+    "directions": 1581,
+    "missing": 3106,
+    "verified_coordinate_data": 864
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 17546,
+  "gapRows": 17425,
   "legacyRecipeQuestReferences": {
     "actor_roles_restored": 58,
     "full_recipe_quests_restored": 33,
@@ -42,62 +42,62 @@
   },
   "classes": {
     "PRIEST": {
-      "directions": 712,
+      "directions": 707,
       "not_applicable": 783,
-      "missing": 874,
-      "verified_coordinate_data": 258
+      "missing": 834,
+      "verified_coordinate_data": 303
     },
     "MAGE": {
       "not_applicable": 765,
-      "directions": 684,
-      "missing": 764,
-      "verified_coordinate_data": 258
+      "directions": 679,
+      "missing": 724,
+      "verified_coordinate_data": 303
     },
     "WARLOCK": {
       "not_applicable": 765,
-      "directions": 679,
-      "missing": 760,
-      "verified_coordinate_data": 257
+      "directions": 674,
+      "missing": 715,
+      "verified_coordinate_data": 307
     },
     "DRUID": {
       "not_applicable": 1211,
-      "directions": 983,
-      "missing": 1252,
-      "verified_coordinate_data": 412
+      "directions": 978,
+      "missing": 1212,
+      "verified_coordinate_data": 457
     },
     "ROGUE": {
       "not_applicable": 1185,
-      "directions": 973,
-      "missing": 1097,
-      "verified_coordinate_data": 384
+      "directions": 968,
+      "missing": 1057,
+      "verified_coordinate_data": 429
     },
     "HUNTER": {
       "not_applicable": 1672,
-      "directions": 1241,
-      "missing": 1455,
-      "verified_coordinate_data": 498
+      "directions": 1235,
+      "missing": 1415,
+      "verified_coordinate_data": 544
     },
     "SHAMAN": {
       "not_applicable": 1820,
-      "directions": 1256,
-      "missing": 1515,
-      "verified_coordinate_data": 518
+      "directions": 1250,
+      "missing": 1470,
+      "verified_coordinate_data": 569
     },
     "WARRIOR": {
       "not_applicable": 2054,
-      "directions": 1470,
-      "missing": 1683,
-      "verified_coordinate_data": 578
+      "directions": 1464,
+      "missing": 1643,
+      "verified_coordinate_data": 624
     },
     "PALADIN": {
       "not_applicable": 2050,
-      "directions": 1325,
-      "missing": 1585,
-      "verified_coordinate_data": 565
+      "directions": 1319,
+      "missing": 1545,
+      "verified_coordinate_data": 611
     }
   },
-  "sourceRecords": 827,
-  "questRecords": 610,
+  "sourceRecords": 837,
+  "questRecords": 633,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
     {
@@ -425,6 +425,10 @@
       "sha256": "c5b5c7be25beb3099a4261b5030958bdd767f2a492a5e02b5e54eff92f1e44cc"
     },
     {
+      "file": "checkpoint8ci_working_evidence.json",
+      "sha256": "3d2d549e579e8395931438aaf80b0ed9267153d99aa5907adba2b9a31a8be95d"
+    },
+    {
       "file": "checkpoint8d_publication_evidence.json",
       "sha256": "e78e9242b4b8718f039a58131e332455db0794a11a4de35378d2a71521712e3f"
     },
@@ -658,7 +662,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
-      "sha256": "5e1aa2bbf325eb64c2bd3d7aa528d7689ad27ccc201de0518045a790d583e39b"
+      "sha256": "b1b337fb639e92faa168bce0d1984797524483076cae741d519b8a9ffa27f87c"
     },
     {
       "file": "tools/export_navigation_inputs.lua",
@@ -666,7 +670,7 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "03f1244aeb5ddc06fe6b6a0d67c2867b688343f1fdc79d99f25ded8ae8adfec2"
+      "sha256": "92fba930b2887d34f8d0e871d4e9421a7b24b1f0cf9202c0d4502fed4d8d3906"
     }
   ],
   "catalogueExportSHA256": "cf41374826e9a63649177d9d39c5ca18e006b8b01d524ece438b96e8981c1da9"

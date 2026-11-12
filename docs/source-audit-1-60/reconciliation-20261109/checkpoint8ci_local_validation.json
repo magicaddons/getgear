@@ -1,0 +1,176 @@
+{
+  "status": "96 candidate cases dispositioned; final full19localPASS; CI/full bot review pending",
+  "registry": 5902,
+  "index": 7373,
+  "display": 7372,
+  "books": 759,
+  "originalFrozenQueue": {
+    "total": 5688,
+    "dispositioned": 5688,
+    "pending": 0
+  },
+  "outsideQueue": {
+    "total": 498,
+    "assessed": 498,
+    "pending": 0
+  },
+  "additionalAllSlotQueue": {
+    "total": 94,
+    "prior": 45,
+    "new": 49,
+    "assessed": 0,
+    "pending": 94,
+    "nextBatch": "8CJ",
+    "nextCases": 94,
+    "firstID": 1973,
+    "lastID": 287036
+  },
+  "caseCounts": {
+    "selected": 96,
+    "supplemental": 0,
+    "individuallyAssessed": 96,
+    "groups": {
+      "quest-reference": 18,
+      "named-source-reference": 34,
+      "origin-unresolved": 40,
+      "non-equipment-or-unsupported-slot": 4
+    },
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 83,
+      "hold-version-unconfirmed": 1,
+      "excluded-non-equipment-or-unsupported-slot": 4,
+      "hold-no-rendered-equip-level": 8
+    },
+    "primaryFull": 96,
+    "primaryNew": 87,
+    "primaryCached": 9,
+    "caseFullPages": 191,
+    "caseNewPages": 138,
+    "caseCachedPages": 53,
+    "exactQueries": 96,
+    "sharedQueries": 6,
+    "dropReverseJoins": 36,
+    "dropReverseOmissions": 3,
+    "objectReverseJoins": 0,
+    "objectReverseOmissions": 0,
+    "physicalContainerReferences": 0,
+    "inputDropReverseJoins": 11,
+    "inputDropReverseOmissions": 0,
+    "newFailed403": 6,
+    "knownFailedURLs": 922,
+    "oldFailedReferenceEdgesSkipped": 18,
+    "quality": {
+      "4": 10,
+      "3": 70,
+      "1": 2,
+      "2": 13,
+      "0": 1
+    },
+    "BackHeaders": 14,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "sourceProofImmutableSHA256": "3d2d549e579e8395931438aaf80b0ed9267153d99aa5907adba2b9a31a8be95d",
+  "successfulCapture": {
+    "label": "8ci2",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.a58bed597a.json": {
+        "bytes": 1010639,
+        "sha256": "a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4",
+        "workspacePath": "/tmp/getgear-research/8ci2-http-capture/a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4.body",
+        "capturedUTC": "2026-11-12T21:05:13.755730+00:00"
+      },
+      "https://playfulls.com/db/gear.ce85a43eee.json": {
+        "bytes": 1360205,
+        "sha256": "ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9",
+        "workspacePath": "/tmp/getgear-research/8ci2-http-capture/ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9.body",
+        "capturedUTC": "2026-11-12T21:05:14.054253+00:00"
+      },
+      "https://playfulls.com/db/goods.b06e07d3a6.json": {
+        "bytes": 466933,
+        "sha256": "b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82",
+        "workspacePath": "/tmp/getgear-research/8ci2-http-capture/b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82.body",
+        "capturedUTC": "2026-11-12T21:05:14.181071+00:00"
+      },
+      "https://playfulls.com/db/other.3a97362f02.json": {
+        "bytes": 446812,
+        "sha256": "3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9",
+        "workspacePath": "/tmp/getgear-research/8ci2-http-capture/3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9.body",
+        "capturedUTC": "2026-11-12T21:05:14.308498+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103442,
+        "sha256": "f8bdc6c9ae1fe767265eefb4b7b0d80c98de676d61489ff61e1aeaaabf1ebfaf",
+        "workspacePath": "/tmp/getgear-research/8ci2-http-capture/f8bdc6c9ae1fe767265eefb4b7b0d80c98de676d61489ff61e1aeaaabf1ebfaf.body",
+        "capturedUTC": "2026-11-12T21:05:18.256559+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103495,
+        "sha256": "4e9b692492a3c8fb5260db11b9311118dd76e2d75827cd2bf5efd9a63ba19305",
+        "workspacePath": "/tmp/getgear-research/8ci2-http-capture/4e9b692492a3c8fb5260db11b9311118dd76e2d75827cd2bf5efd9a63ba19305.body",
+        "capturedUTC": "2026-11-12T21:05:24.016034+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103456,
+        "sha256": "9a01c59f8a8c50d1a634e628373326978a61d12f9929082ef889e30ac83ee969",
+        "workspacePath": "/tmp/getgear-research/8ci2-http-capture/9a01c59f8a8c50d1a634e628373326978a61d12f9929082ef889e30ac83ee969.body",
+        "capturedUTC": "2026-11-12T21:05:28.850198+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 41700,
+        "sha256": "d278d930f81530af02db356d5a7b6135912c66f02dae9afbf5dfdcb06558e73d",
+        "workspacePath": "/tmp/getgear-research/8ci2-http-capture/d278d930f81530af02db356d5a7b6135912c66f02dae9afbf5dfdcb06558e73d.body",
+        "capturedUTC": "2026-11-12T21:05:33.675586+00:00"
+      }
+    }
+  },
+  "fullLocalPASS": 19,
+  "LuaSuites": 15,
+  "offlinePythonSuites": 3,
+  "modules": 26,
+  "fourToolsAndExporterSyntax": true,
+  "identities": 7707,
+  "classObjectives": 36341,
+  "crafts": 1254,
+  "ingredients": 4857,
+  "activeCatalogueAdoptions": 0,
+  "unchanged": {
+    "reviewed_equipment_sources.json": "byte-exact",
+    "reviewed_recipe_sources.json": "byte-exact",
+    "dungeon_equipment_drops.csv": "byte-exact",
+    "dungeon_items_reconciled.csv": "byte-exact",
+    "dungeon_source_followups.csv": "byte-exact",
+    "recipes_reconciled.csv": "byte-exact",
+    "recipe_source_followups.csv": "byte-exact",
+    "recipe_trainer_book_checks.csv": "byte-exact",
+    "recipe_vendor_book_checks.csv": "byte-exact",
+    "supplementary_crafts_reconciled.csv": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "remaining_equipment_research_queue.csv": "byte-exact",
+    "upstream_everloot_edges_snapshot.csv": "byte-exact",
+    "upstream_playfulls_acquisition_snapshot.csv": "byte-exact",
+    "upstream_playfulls_source_definitions.json": "byte-exact",
+    "upstream_playfulls_display_snapshot.csv": "byte-exact",
+    "upstream_playfulls_display_definitions.json": "byte-exact",
+    "upstream_snapshot_provenance.json": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1581,
+    "missing": 3106,
+    "verified_coordinate_data": 864
+  },
+  "gapRows": 17425,
+  "realClientRendering": 0,
+  "citationCorrections": {
+    "items": 9,
+    "cells": 18
+  },
+  "newSharedItineraries": 3,
+  "prior24ItinerariesExact": true,
+  "navigationDeltaRows": 51,
+  "upstream": "All actual8CI/8CI2 PF23622rawrows/9327fullsourceobjects/entiremetadata and1701fullEVrelationrecords/fields exactactual8CH final8ch5. No new/deleted/source/name/index/opaque/metadata/counter/edge change. Actual8CH diagnostic snapshots retained,not inferred from counts. Original and final comparisons preserved.",
+  "limits": "No active adoption/live/rendering claim. Physical starter/input versus finished reward, new/Classic source, source minimum versus wearer level and own/full joins remain distinct. No scarab/idol friendly-NPC farms, free Eye, four simultaneous rings, duplicated hammer reward, nonwearable gear or invented quest coordinates/gates. Six new403 and18known context skips un-retried.",
+  "verificationSequence": "First actual8ci reconcile/full19 passed before final region-coverage/return prose/data regression additions. Fresh final8ci2 exit0 followed by all19local after all source/code/test changes. Focused builder assertions (unsupported Thrown header) led to explicit informational existing-policy assessment without active adoption. No failed full validation run in8CI."
+}

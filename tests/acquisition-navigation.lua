@@ -68,6 +68,26 @@ model.quests['15']={questID=15,name='Book starter fixture',starts={},ends={'npc:
 local bookStarter=addon:GetAcquisitionMapTarget(plan(31,{{kind='quest',questID=15}}))
 assert(bookStarter and bookStarter.kind=='dungeon' and bookStarter.dungeon=='Fixture dungeon' and bookStarter.role=='Quest starter item' and not bookStarter.x,'a quest book in an independently known dungeon uses entrance navigation without a guessed book-floor point')
 model.sources['npc:instance']={name='Friendly quest giver',locations={{zone='Fixture dungeon',verification='published-reference'}}}
+model.quests['16']={questID=16,name='Published dialogue reference',starts={},ends={},starterZone='Westfall',
+    starterInstructions='Speak with the named knight here; formal starting role and earlier unlocks remain unverified.'}
+local dialogue=addon:GetAcquisitionMapTarget(plan(32,{{kind='quest',questID=16}}))
+assert(dialogue and dialogue.kind=='directions' and dialogue.role=='Published starting directions' and dialogue.zone=='Westfall' and not dialogue.x,'a useful first-action description without a proven giver remains written navigation rather than a fabricated quest-giver pin')
+C_QuestLog={IsQuestFlaggedCompleted=function(id)return id==16 end}
+assert(not addon:GetAcquisitionMapTarget(plan(32,{{kind='quest',questID=16}})),'a completed dialogue quest must not be offered as a new first action')
+model.quests['16'].turnInZone='Westfall';model.quests['16'].turnInInstructions='Return to the dialogue location; formal return actor unverified.'
+C_QuestLog={IsOnQuest=function(id)return id==16 end,IsComplete=function()return true end}
+local returnOnly=addon:GetAcquisitionMapTarget(plan(32,{{kind='quest',questID=16}}))
+assert(returnOnly and returnOnly.role=='Published return directions' and returnOnly.kind=='directions' and not returnOnly.x,'an actually ready quest with no formal recipient can offer qualified written return directions instead of the objective farm')
+C_QuestLog=nil
+model.sources['npc:context']={name='Multi-region actor',locations={{zone='Westfall',uiMapID=52,x=20,y=30},{zone='Fixture dungeon'}}}
+model.quests['17']={questID=17,name='Inside instance',starts={'npc:context'},ends={'npc:context'},actorZones={['npc:context']='Fixture dungeon'}}
+model.chains['17']={steps={17},routeVerified=true}
+local contextQuest=plan(33,{{kind='quest',questID=17}})
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(contextQuest)) do assert(target.zone=='Fixture dungeon' and target.kind=='dungeon' and not target.x,'quest-specific actor context must not become an outdoor map point from the same NPC record') end
+local contextGuide=addon:GetAcquisitionDirections(contextQuest)
+assert(contextGuide:find('Fixture dungeon',1,true) and not contextGuide:find('Westfall',1,true),'compact and full guide use the same quest-specific actor region')
+local unrelated=addon:GetAcquisitionNavigationChoices(plan(34,{{kind='named_drop',source='npc:context'}}))
+assert(unrelated[1].zone=='Westfall' and unrelated[1].x==20,'quest-specific geography does not erase another route or shared NPC location')
 model.quests['13']={questID=13,name='Dungeon quest fixture',starts={'npc:instance'},ends={'npc:instance'}}
 local dungeonQuestTarget=addon:GetAcquisitionMapTarget(plan(16,{{kind='quest',questID=13}}))
 assert(dungeonQuestTarget.kind=='dungeon' and dungeonQuestTarget.role=='Quest start' and dungeonQuestTarget.boss==nil,'an in-dungeon quest giver uses entrance navigation without being relabelled a boss')
@@ -530,5 +550,34 @@ local relic=addon:GetAcquisitionMapTarget({itemID=-5526})
 assert(relic and relic.zone=='Silithus' and relic.instructions:find('Southwind Village',1,true) and not relic.x,'unknown collection coordinates use written Southwind directions, not a fabricated object point')
 assert(not addon.ItemCatalog[18398] and not addon.ItemCatalog[20133],'held supplemental and new variant rewards are not silently installed')
 for _,goal in ipairs(sourceGoals) do actualModel.items[tostring(-goal)]=nil end
+-- Actual 8CI quest data remain shared with candidate-only fixture plans.
+local researchGoals={8802,92065,99187}
+for _,goal in ipairs(researchGoals) do actualModel.items[tostring(-goal)]={routes={{kind='quest',questID=goal}}} end
+local function researchGear(goal)return {itemID=-goal}end
+C_QuestLog=nil
+local eyeStart=addon:GetAcquisitionMapTarget(researchGear(8802))
+assert(eyeStart and eyeStart.questID==8801 and eyeStart.role=='Quest starter item' and eyeStart.kind=='dungeon' and eyeStart.dungeon=="Ahn'Qiraj" and not eyeStart.x,'unknown CThun progress begins with the eye at a native entrance reference, not the final Anachronos recipient')
+C_QuestLog={IsOnQuest=function(id)return id==8801 end,IsComplete=function()return true end}
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(researchGear(8802))) do if target.source=='npc:15379' then assert(target.zone=="Ahn'Qiraj" and not target.x and not target.bounds,'the actual inside-Temple hand-in does not inherit Silithus world bounds') end end
+C_QuestLog=nil
+local blackmawStart=addon:GetAcquisitionMapTarget(researchGear(92065))
+assert(blackmawStart and blackmawStart.questID==86791 and blackmawStart.source=='npc:236573' and blackmawStart.x==42.4,'full NPC quest-role evidence supplies the unread initial reference without substituting Classic rare6651')
+assert(not actualModel.quests['86791'].reqlevel and not actualModel.quests['86791'].side and not actualModel.chains['92065'].routeVerified,'unread initial quest and mandatory link do not inherit eligibility from later stages')
+C_QuestLog={IsOnQuest=function(id)return id==92065 end,IsComplete=function()return false end}
+local blackmawObjective=addon:GetAcquisitionMapTarget(researchGear(92065))
+assert(blackmawObjective and blackmawObjective.kind=='dungeon' and blackmawObjective.dungeon=='Blackmaw Hold','the actual active final task uses independently verified dungeon context')
+C_QuestLog.IsComplete=function()return true end
+assert(addon:GetAcquisitionMapTarget(researchGear(92065)).source=='npc:236573','ready Blackmaw quest returns to the published Rageroar recipient')
+C_QuestLog=nil
+local knightStart=addon:GetAcquisitionMapTarget(researchGear(99187))
+assert(knightStart and knightStart.questID==93030 and knightStart.kind=='directions' and knightStart.zone=='Tirisfal Glades' and not knightStart.x,'an unread full Knight NPC page does not prevent useful qualified starting directions or invent a formal giver pin')
+C_QuestLog={IsOnQuest=function(id)return id==99187 end,IsComplete=function()return true end}
+local knightReturn=addon:GetAcquisitionMapTarget(researchGear(99187))
+assert(knightReturn and knightReturn.role=='Published return directions' and knightReturn.zone=='Tirisfal Glades' and not knightReturn.x,'ready Reliquary task uses qualified return prose rather than repeating the dungeon objective')
+assert(actualModel.instances['Blackmaw Hold'] and actualModel.instances['Alcaz Prison'],'independently published new dungeon definitions share native entrance handling')
+assert(not addon.ItemCatalog[287074] and not addon.ItemCatalog[286408] and not addon.ItemCatalog[260216],'held Thrown and quest candidates are not activated by navigation research')
+for _,goal in ipairs(researchGoals) do actualModel.items[tostring(-goal)]=nil end
+C_QuestLog=nil
+
 C_QuestLog=savedSourceAPI
 print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests")

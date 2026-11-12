@@ -1,0 +1,3815 @@
+{
+  "status": "Untriaged shared acquisition-research followups,notactiveequipment",
+  "scope": "All actual full NPC drop inventories,object/container contents and full zone quest-reward tables read for8CI;not just selected loot rows. Earlier45leads retained and deduplicated. Own-primary eligibility/source review pending.",
+  "previousLeads": 45,
+  "newCount": 49,
+  "totalUntriaged": 94,
+  "counts": {
+    "existing_assessed_candidate_rows": 75,
+    "active_equipment_rows": 386,
+    "non_equipment_or_quality_excluded_rows": 503,
+    "new_all_slot_reference_rows": 49
+  },
+  "leads": [
+    {
+      "itemID": 11702,
+      "name": "Grizzle's Skinner",
+      "quality": 3,
+      "classs": 2,
+      "slot": 21,
+      "rawRequiredLevel": 50,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:9028",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=9028",
+          "sha256": "fdc13e0dedb6870fd0e25efb15e7f6babcd590869d5c1fc599255ed68b04a8b3",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                28765,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Grizzle's Skinner",
+            "displayid": 28765,
+            "dps": 36.46,
+            "flags2": 4,
+            "id": 11702,
+            "level": 55,
+            "name": "Grizzle's Skinner",
+            "quality": 3,
+            "reqlevel": 50,
+            "slot": 21,
+            "slotbak": 21,
+            "speed": 2.4,
+            "subclass": 0,
+            "envChange": {
+              "status": "unconfirmed",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1177,
+                "outof": 2111
+              },
+              "0": {
+                "count": 1183,
+                "outof": 2123
+              }
+            },
+            "count": 1177,
+            "stack": [
+              0,
+              0
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1177,
+                    "outof": 2111
+                  },
+                  "0": {
+                    "count": 1183,
+                    "outof": 2123
+                  }
+                }
+              }
+            },
+            "outof": 2111
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 11703,
+      "name": "Stonewall Girdle",
+      "quality": 3,
+      "classs": 4,
+      "slot": 6,
+      "rawRequiredLevel": 50,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:9028",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=9028",
+          "sha256": "fdc13e0dedb6870fd0e25efb15e7f6babcd590869d5c1fc599255ed68b04a8b3",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                7212,
+                "inv_belt_18"
+              ]
+            },
+            "armor": 324,
+            "armorbonus": 160,
+            "classs": 4,
+            "displayName": "Stonewall Girdle",
+            "displayid": 7212,
+            "flags2": 4,
+            "id": 11703,
+            "level": 55,
+            "name": "Stonewall Girdle",
+            "quality": 3,
+            "reqlevel": 50,
+            "slot": 6,
+            "slotbak": 6,
+            "subclass": 4,
+            "envChange": {
+              "status": "unconfirmed",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1310,
+                "outof": 2111
+              },
+              "0": {
+                "count": 1317,
+                "outof": 2123
+              }
+            },
+            "count": 1310,
+            "stack": [
+              0,
+              0
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1310,
+                    "outof": 2111
+                  },
+                  "0": {
+                    "count": 1317,
+                    "outof": 2123
+                  }
+                }
+              }
+            },
+            "outof": 2111
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 13340,
+      "name": "Cape of the Black Baron",
+      "quality": 3,
+      "classs": 4,
+      "slot": 16,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10440",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10440",
+          "sha256": "720609f58c7fcc42b5d82df55759765856e47fbe9d362ce8ff648f36116f26e0",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                24013,
+                ""
+              ]
+            },
+            "armor": 45,
+            "classs": 4,
+            "displayName": "Cape of the Black Baron",
+            "displayid": 24013,
+            "flags2": 4,
+            "id": 13340,
+            "level": 63,
+            "name": "Cape of the Black Baron",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 16,
+            "slotbak": 16,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "n": "Baron Rivendare",
+                "t": 1,
+                "ti": 10440,
+                "z": 2017
+              }
+            ],
+            "subclass": -6,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 3
+              },
+              "0": {
+                "count": 1,
+                "outof": 3
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 3
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 3
+                  }
+                }
+              }
+            },
+            "outof": 3
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 13344,
+      "name": "Dracorian Gauntlets",
+      "quality": 3,
+      "classs": 4,
+      "slot": 10,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10440",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10440",
+          "sha256": "720609f58c7fcc42b5d82df55759765856e47fbe9d362ce8ff648f36116f26e0",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                16681,
+                "inv_gauntlets_12"
+              ]
+            },
+            "armor": 231,
+            "classs": 4,
+            "displayName": "Dracorian Gauntlets",
+            "displayid": 16681,
+            "flags2": 4,
+            "id": 13344,
+            "level": 63,
+            "name": "Dracorian Gauntlets",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 10,
+            "slotbak": 10,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "n": "Baron Rivendare",
+                "t": 1,
+                "ti": 10440,
+                "z": 2017
+              }
+            ],
+            "subclass": 3,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Spell Power 19 instead of 16"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 3
+              },
+              "0": {
+                "count": 1,
+                "outof": 3
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 3
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 3
+                  }
+                }
+              }
+            },
+            "outof": 3
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 13345,
+      "name": "Seal of Rivendare",
+      "quality": 3,
+      "classs": 4,
+      "slot": 11,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10440",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10440",
+          "sha256": "720609f58c7fcc42b5d82df55759765856e47fbe9d362ce8ff648f36116f26e0",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Seal of Rivendare",
+            "flags2": 4,
+            "id": 13345,
+            "level": 63,
+            "name": "Seal of Rivendare",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 11,
+            "slotbak": 11,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "n": "Baron Rivendare",
+                "t": 1,
+                "ti": 10440,
+                "z": 2017
+              }
+            ],
+            "subclass": -2,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Spell Power 8 added",
+                "Spirit 7 removed"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 3
+              },
+              "0": {
+                "count": 1,
+                "outof": 3
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 3
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 3
+                  }
+                }
+              }
+            },
+            "outof": 3
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 13376,
+      "name": "Royal Tribunal Cloak",
+      "quality": 3,
+      "classs": 4,
+      "slot": 16,
+      "rawRequiredLevel": 54,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10435",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10435",
+          "sha256": "3afb2a57f7525109a92988526d914a9e0ac75a863172ae7c5095e7005d6d0f0d",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                24065,
+                "inv_misc_cape_16"
+              ]
+            },
+            "armor": 42,
+            "classs": 4,
+            "displayName": "Royal Tribunal Cloak",
+            "displayid": 24065,
+            "flags2": 4,
+            "id": 13376,
+            "level": 59,
+            "name": "Royal Tribunal Cloak",
+            "quality": 3,
+            "reqlevel": 54,
+            "slot": 16,
+            "slotbak": 16,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Magistrate Barthilas",
+                "t": 1,
+                "ti": 10435,
+                "z": 2017
+              }
+            ],
+            "subclass": -6,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Stamina 5 instead of 7",
+                "Spell Power 5 added"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 5435,
+                "outof": 37217
+              },
+              "0": {
+                "count": 5469,
+                "outof": 37488
+              }
+            },
+            "count": 5435,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 5435,
+                    "outof": 37217
+                  },
+                  "0": {
+                    "count": 5469,
+                    "outof": 37488
+                  }
+                }
+              }
+            },
+            "outof": 37217
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 13382,
+      "name": "Cannonball Runner",
+      "quality": 3,
+      "classs": 4,
+      "slot": 12,
+      "rawRequiredLevel": 56,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10997",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10997",
+          "sha256": "4c7b37e143766abb5d90621897fdce16efff4ccce1010dcc02812ea8070ad5ab",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Cannonball Runner",
+            "flags2": 4,
+            "id": 13382,
+            "level": 61,
+            "modelviewer": {
+              "displayid": 10753,
+              "type": 1,
+              "typeid": 11199
+            },
+            "name": "Cannonball Runner",
+            "quality": 3,
+            "reqlevel": 56,
+            "slot": 12,
+            "slotbak": 12,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Cannon Master Willey",
+                "t": 1,
+                "ti": 10997,
+                "z": 2017
+              }
+            ],
+            "subclass": -4,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed",
+                "effects_changed"
+              ],
+              "lines": [
+                "Hit Rating 5 added",
+                "Effects changed"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 561,
+                "outof": 3014
+              },
+              "0": {
+                "count": 572,
+                "outof": 3129
+              }
+            },
+            "count": 561,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 561,
+                    "outof": 3014
+                  },
+                  "0": {
+                    "count": 572,
+                    "outof": 3129
+                  }
+                }
+              }
+            },
+            "outof": 3014
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 13951,
+      "name": "Vigorsteel Vambraces",
+      "quality": 3,
+      "classs": 4,
+      "slot": 9,
+      "rawRequiredLevel": 57,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:1853",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=1853",
+          "sha256": "0a92f8db1f85a8c94740d67eb84c2a2dc93040c72d64d7376e706a009eee86c2",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                24749,
+                ""
+              ]
+            },
+            "armor": 283,
+            "classs": 4,
+            "displayName": "Vigorsteel Vambraces",
+            "displayid": 24749,
+            "flags2": 4,
+            "id": 13951,
+            "level": 62,
+            "name": "Vigorsteel Vambraces",
+            "quality": 3,
+            "reqlevel": 57,
+            "slot": 9,
+            "slotbak": 9,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "n": "Darkmaster Gandling",
+                "t": 1,
+                "ti": 1853,
+                "z": 2057
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Hit Rating 3 added"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 904,
+                "outof": 6339
+              },
+              "0": {
+                "count": 904,
+                "outof": 6339
+              }
+            },
+            "count": 904,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 904,
+                    "outof": 6339
+                  },
+                  "0": {
+                    "count": 904,
+                    "outof": 6339
+                  }
+                }
+              }
+            },
+            "outof": 6339
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 18725,
+      "name": "Peacemaker",
+      "quality": 3,
+      "classs": 2,
+      "slot": 17,
+      "rawRequiredLevel": 54,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10435",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10435",
+          "sha256": "3afb2a57f7525109a92988526d914a9e0ac75a863172ae7c5095e7005d6d0f0d",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                31174,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Peacemaker",
+            "displayid": 31174,
+            "dps": 50.44,
+            "flags2": 4,
+            "id": 18725,
+            "level": 59,
+            "name": "Peacemaker",
+            "quality": 3,
+            "reqlevel": 54,
+            "slot": 17,
+            "slotbak": 17,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Magistrate Barthilas",
+                "t": 1,
+                "ti": 10435,
+                "z": 2017
+              }
+            ],
+            "speed": 3.4,
+            "subclass": 6,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Critical Strike Rating 14 added",
+                "Critical Strike % 1 removed"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 5567,
+                "outof": 37217
+              },
+              "0": {
+                "count": 5606,
+                "outof": 37488
+              }
+            },
+            "count": 5567,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 5567,
+                    "outof": 37217
+                  },
+                  "0": {
+                    "count": 5606,
+                    "outof": 37488
+                  }
+                }
+              }
+            },
+            "outof": 37217
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 18726,
+      "name": "Magistrate's Cuffs",
+      "quality": 3,
+      "classs": 4,
+      "slot": 9,
+      "rawRequiredLevel": 54,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10435",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10435",
+          "sha256": "3afb2a57f7525109a92988526d914a9e0ac75a863172ae7c5095e7005d6d0f0d",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                4397,
+                ""
+              ]
+            },
+            "armor": 73,
+            "classs": 4,
+            "displayName": "Magistrate's Cuffs",
+            "displayid": 4397,
+            "flags2": 4,
+            "id": 18726,
+            "level": 59,
+            "name": "Magistrate's Cuffs",
+            "quality": 3,
+            "reqlevel": 54,
+            "slot": 9,
+            "slotbak": 9,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Magistrate Barthilas",
+                "t": 1,
+                "ti": 10435,
+                "z": 2017
+              }
+            ],
+            "subclass": 2,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Defense Rating 7 added",
+                "Mana per 5 sec 4 removed"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 5393,
+                "outof": 37217
+              },
+              "0": {
+                "count": 5427,
+                "outof": 37488
+              }
+            },
+            "count": 5393,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 5393,
+                    "outof": 37217
+                  },
+                  "0": {
+                    "count": 5427,
+                    "outof": 37488
+                  }
+                }
+              }
+            },
+            "outof": 37217
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 18727,
+      "name": "Crimson Felt Hat",
+      "quality": 3,
+      "classs": 4,
+      "slot": 1,
+      "rawRequiredLevel": 54,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10435",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10435",
+          "sha256": "3afb2a57f7525109a92988526d914a9e0ac75a863172ae7c5095e7005d6d0f0d",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                31177,
+                ""
+              ]
+            },
+            "armor": 68,
+            "classs": 4,
+            "displayName": "Crimson Felt Hat",
+            "displayid": 31177,
+            "flags2": 4,
+            "id": 18727,
+            "level": 59,
+            "name": "Crimson Felt Hat",
+            "quality": 3,
+            "reqlevel": 54,
+            "slot": 1,
+            "slotbak": 1,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Magistrate Barthilas",
+                "t": 1,
+                "ti": 10435,
+                "z": 2017
+              }
+            ],
+            "subclass": 1,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Intellect 10 instead of 8",
+                "Spirit 10 instead of 8"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 5664,
+                "outof": 37217
+              },
+              "0": {
+                "count": 5717,
+                "outof": 37488
+              }
+            },
+            "count": 5664,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 5664,
+                    "outof": 37217
+                  },
+                  "0": {
+                    "count": 5717,
+                    "outof": 37488
+                  }
+                }
+              }
+            },
+            "outof": 37217
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 21583,
+      "name": "Cloak of Clarity",
+      "quality": 4,
+      "classs": 4,
+      "slot": 16,
+      "rawRequiredLevel": 60,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:15727",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=15727",
+          "sha256": "ebd5535764a91a715b32fbe398625cbc9c0653bd4ad7b578ce64027af7ce39d3",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                34179,
+                ""
+              ]
+            },
+            "armor": 66,
+            "classs": 4,
+            "displayName": "Cloak of Clarity",
+            "displayid": 34179,
+            "flags2": 24580,
+            "id": 21583,
+            "level": 88,
+            "name": "Cloak of Clarity",
+            "quality": 4,
+            "reqlevel": 60,
+            "slot": 16,
+            "slotbak": 16,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "n": "C'Thun",
+                "t": 1,
+                "ti": 15727,
+                "z": 3428
+              }
+            ],
+            "subclass": -6,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                9
+              ],
+              "0": {
+                "count": 104,
+                "outof": 509
+              },
+              "9": {
+                "count": 104,
+                "outof": 509
+              }
+            },
+            "count": 104,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 104,
+                    "outof": 509
+                  },
+                  "9": {
+                    "count": 104,
+                    "outof": 509
+                  }
+                }
+              }
+            },
+            "outof": 509
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 22208,
+      "name": "Lavastone Hammer",
+      "quality": 3,
+      "classs": 2,
+      "slot": 17,
+      "rawRequiredLevel": 53,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:9938",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=9938",
+          "sha256": "c5f337110319c231ffac1af4bcc492b05843736ed4a423a21acf31b72cf53ddf",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                34556,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Lavastone Hammer",
+            "displayid": 34556,
+            "dps": 49.71,
+            "flags2": 4,
+            "id": 22208,
+            "level": 58,
+            "name": "Lavastone Hammer",
+            "quality": 3,
+            "reqlevel": 53,
+            "slot": 17,
+            "slotbak": 17,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Magmus",
+                "t": 1,
+                "ti": 9938,
+                "z": 1584
+              }
+            ],
+            "speed": 3.4,
+            "subclass": 5,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Strength 13 instead of 10"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 2
+              },
+              "0": {
+                "count": 1,
+                "outof": 2
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 2
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 2
+                  }
+                }
+              }
+            },
+            "outof": 2
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 22266,
+      "name": "Flarethorn",
+      "quality": 3,
+      "classs": 2,
+      "slot": 21,
+      "rawRequiredLevel": 52,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:9027",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=9027",
+          "sha256": "23388ed61b997c9e973484006abb703759589e964096f3b7ee0532b0c70d3302",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                737821,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Flarethorn",
+            "displayid": 737821,
+            "dps": 25,
+            "flags2": 4,
+            "flags5": 256,
+            "id": 22266,
+            "level": 57,
+            "name": "Flarethorn",
+            "quality": 3,
+            "reqlevel": 52,
+            "slot": 21,
+            "slotbak": 21,
+            "speed": 1.8,
+            "subclass": 15,
+            "envChange": {
+              "status": "unconfirmed",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 281,
+                "outof": 1193
+              },
+              "0": {
+                "count": 283,
+                "outof": 1203
+              }
+            },
+            "count": 281,
+            "stack": [
+              0,
+              0
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 281,
+                    "outof": 1193
+                  },
+                  "0": {
+                    "count": 283,
+                    "outof": 1203
+                  }
+                }
+              }
+            },
+            "outof": 1193
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 22400,
+      "name": "Libram of Truth",
+      "quality": 3,
+      "classs": 4,
+      "slot": 28,
+      "rawRequiredLevel": 52,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:9938",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=9938",
+          "sha256": "c5f337110319c231ffac1af4bcc492b05843736ed4a423a21acf31b72cf53ddf",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Libram of Truth",
+            "flags2": 4,
+            "id": 22400,
+            "level": 57,
+            "name": "Libram of Truth",
+            "quality": 3,
+            "reqlevel": 52,
+            "slot": 28,
+            "slotbak": 28,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Magmus",
+                "t": 1,
+                "ti": 9938,
+                "z": 1584
+              }
+            ],
+            "subclass": 7,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "effects_changed",
+                "details_changed"
+              ],
+              "lines": [
+                "Effects: 10 instead of 55",
+                "Unique Unique removed"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 2
+              },
+              "0": {
+                "count": 1,
+                "outof": 2
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 2
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 2
+                  }
+                }
+              }
+            },
+            "outof": 2
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 22405,
+      "name": "Mantle of the Scarlet Crusade",
+      "quality": 3,
+      "classs": 4,
+      "slot": 3,
+      "rawRequiredLevel": 56,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10997",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10997",
+          "sha256": "4c7b37e143766abb5d90621897fdce16efff4ccce1010dcc02812ea8070ad5ab",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                8814,
+                "inv_shoulder_23"
+              ]
+            },
+            "armor": 65,
+            "classs": 4,
+            "displayName": "Mantle of the Scarlet Crusade",
+            "displayid": 8814,
+            "flags2": 4,
+            "id": 22405,
+            "level": 61,
+            "name": "Mantle of the Scarlet Crusade",
+            "quality": 3,
+            "reqlevel": 56,
+            "slot": 3,
+            "slotbak": 3,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Cannon Master Willey",
+                "t": 1,
+                "ti": 10997,
+                "z": 2017
+              }
+            ],
+            "subclass": 1,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Intellect 12 instead of 11",
+                "Spell Power 7 added",
+                "Healing 13 instead of 20"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 477,
+                "outof": 3014
+              },
+              "0": {
+                "count": 518,
+                "outof": 3129
+              }
+            },
+            "count": 477,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 477,
+                    "outof": 3014
+                  },
+                  "0": {
+                    "count": 518,
+                    "outof": 3129
+                  }
+                }
+              }
+            },
+            "outof": 3014
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 22408,
+      "name": "Ritssyn's Wand of Bad Mojo",
+      "quality": 3,
+      "classs": 2,
+      "slot": 15,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10440",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10440",
+          "sha256": "720609f58c7fcc42b5d82df55759765856e47fbe9d362ce8ff648f36116f26e0",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                34899,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Ritssyn's Wand of Bad Mojo",
+            "displayid": 34899,
+            "dps": 63.85,
+            "flags2": 4,
+            "id": 22408,
+            "level": 63,
+            "name": "Ritssyn's Wand of Bad Mojo",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 15,
+            "slotbak": 26,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "n": "Baron Rivendare",
+                "t": 1,
+                "ti": 10440,
+                "z": 2017
+              }
+            ],
+            "speed": 1.3,
+            "subclass": 19,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Stamina 5 instead of 4"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 3
+              },
+              "0": {
+                "count": 1,
+                "outof": 3
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 3
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 3
+                  }
+                }
+              }
+            },
+            "outof": 3
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 22410,
+      "name": "Gauntlets of Deftness",
+      "quality": 3,
+      "classs": 4,
+      "slot": 10,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10440",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10440",
+          "sha256": "720609f58c7fcc42b5d82df55759765856e47fbe9d362ce8ff648f36116f26e0",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                34901,
+                ""
+              ]
+            },
+            "armor": 231,
+            "armorbonus": 60,
+            "classs": 4,
+            "displayName": "Gauntlets of Deftness",
+            "displayid": 34901,
+            "flags2": 4,
+            "id": 22410,
+            "level": 63,
+            "name": "Gauntlets of Deftness",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 10,
+            "slotbak": 10,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "n": "Baron Rivendare",
+                "t": 1,
+                "ti": 10440,
+                "z": 2017
+              }
+            ],
+            "subclass": 3,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Armor 231 instead of 311",
+                "Bonus armor 60 instead of 80",
+                "Agility 20 instead of 23",
+                "Intellect 6 added"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 3
+              },
+              "0": {
+                "count": 1,
+                "outof": 3
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 3
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 3
+                  }
+                }
+              }
+            },
+            "outof": 3
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 22412,
+      "name": "Thuzadin Mantle",
+      "quality": 3,
+      "classs": 4,
+      "slot": 3,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:10440",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=10440",
+          "sha256": "720609f58c7fcc42b5d82df55759765856e47fbe9d362ce8ff648f36116f26e0",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                9316,
+                ""
+              ]
+            },
+            "armor": 67,
+            "classs": 4,
+            "displayName": "Thuzadin Mantle",
+            "displayid": 9316,
+            "flags2": 4,
+            "id": 22412,
+            "level": 63,
+            "name": "Thuzadin Mantle",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 3,
+            "slotbak": 3,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "n": "Baron Rivendare",
+                "t": 1,
+                "ti": 10440,
+                "z": 2017
+              }
+            ],
+            "subclass": 1,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Spell Power 15 instead of 12"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 3
+              },
+              "0": {
+                "count": 1,
+                "outof": 3
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 3
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 3
+                  }
+                }
+              }
+            },
+            "outof": 3
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 260213,
+      "name": "Great Bear Claw",
+      "quality": 2,
+      "classs": 2,
+      "slot": 13,
+      "rawRequiredLevel": 45,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16554",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16554",
+          "sha256": "0651749721e218155606e876e6ccf816640d0c06ef6f382581920aa594d43adf",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                743553,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Great Bear Claw",
+            "displayid": 743553,
+            "dps": 35.83,
+            "flags2": 4,
+            "id": 260213,
+            "level": 60,
+            "name": "Great Bear Claw",
+            "quality": 2,
+            "reqlevel": 45,
+            "slot": 13,
+            "slotbak": 13,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16554,
+                "c2": 2,
+                "n": "Claws That Rend, Tusks that Gore",
+                "t": 5,
+                "ti": 92069
+              }
+            ],
+            "speed": 2.4,
+            "subclass": 13,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 260214,
+      "name": "Staff of Wild Beasts",
+      "quality": 2,
+      "classs": 2,
+      "slot": 17,
+      "rawRequiredLevel": 45,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16554",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16554",
+          "sha256": "0651749721e218155606e876e6ccf816640d0c06ef6f382581920aa594d43adf",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                741071,
+                "inv_staff_29"
+              ]
+            },
+            "classs": 2,
+            "displayName": "Staff of Wild Beasts",
+            "displayid": 741071,
+            "dps": 34.6,
+            "flags2": 4,
+            "flags5": 768,
+            "id": 260214,
+            "level": 60,
+            "name": "Staff of Wild Beasts",
+            "quality": 2,
+            "reqlevel": 45,
+            "slot": 17,
+            "slotbak": 17,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16554,
+                "c2": 2,
+                "n": "Claws That Rend, Tusks that Gore",
+                "t": 5,
+                "ti": 92069
+              }
+            ],
+            "speed": 2.5,
+            "subclass": 10,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 260215,
+      "name": "Wild Malleus",
+      "quality": 2,
+      "classs": 2,
+      "slot": 17,
+      "rawRequiredLevel": 45,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16554",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16554",
+          "sha256": "0651749721e218155606e876e6ccf816640d0c06ef6f382581920aa594d43adf",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                741090,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Wild Malleus",
+            "displayid": 741090,
+            "dps": 46.47,
+            "flags2": 4,
+            "id": 260215,
+            "level": 60,
+            "name": "Wild Malleus",
+            "quality": 2,
+            "reqlevel": 45,
+            "slot": 17,
+            "slotbak": 17,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16554,
+                "c2": 2,
+                "n": "Claws That Rend, Tusks that Gore",
+                "t": 5,
+                "ti": 92069
+              }
+            ],
+            "speed": 3.4,
+            "subclass": 5,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 276746,
+      "name": "Defias Enforcer's Legguards",
+      "quality": 3,
+      "classs": 4,
+      "slot": 7,
+      "rawRequiredLevel": 50,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:255702",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=255702",
+          "sha256": "58ecb4707910e1fa3a7196ccd80b7f9c57d57d9fb8898faa6f1bbfbe29552d41",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                744841,
+                ""
+              ]
+            },
+            "armor": 138,
+            "classs": 4,
+            "displayName": "Defias Enforcer's Legguards",
+            "displayid": 744841,
+            "id": 276746,
+            "level": 55,
+            "name": "Defias Enforcer's Legguards",
+            "quality": 3,
+            "reqlevel": 50,
+            "slot": 7,
+            "slotbak": 7,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "n": "Blazeroar",
+                "t": 1,
+                "ti": 255702,
+                "z": 16620
+              }
+            ],
+            "subclass": 2,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 38,
+                "outof": 105
+              },
+              "0": {
+                "count": 38,
+                "outof": 105
+              }
+            },
+            "count": 38,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 38,
+                    "outof": 105
+                  },
+                  "0": {
+                    "count": 38,
+                    "outof": 105
+                  }
+                }
+              }
+            },
+            "outof": 105
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279448,
+      "name": "Bloodsplattered Bandana",
+      "quality": 2,
+      "classs": 4,
+      "slot": 1,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                15432,
+                ""
+              ]
+            },
+            "armor": 117,
+            "classs": 4,
+            "displayName": "Bloodsplattered Bandana",
+            "displayid": 15432,
+            "id": 279448,
+            "level": 55,
+            "name": "Bloodsplattered Bandana",
+            "quality": 2,
+            "reqlevel": 48,
+            "side": 2,
+            "slot": 1,
+            "slotbak": 1,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16620,
+                "c2": 2,
+                "n": "Blood Red Bandanas",
+                "t": 5,
+                "ti": 96334
+              }
+            ],
+            "subclass": 2,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279473,
+      "name": "Makeshift Belt",
+      "quality": 2,
+      "classs": 4,
+      "slot": 6,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                3553,
+                "inv_misc_bandana_03"
+              ]
+            },
+            "armor": 40,
+            "classs": 4,
+            "displayName": "Makeshift Belt",
+            "displayid": 3553,
+            "id": 279473,
+            "level": 55,
+            "name": "Makeshift Belt",
+            "quality": 2,
+            "reqlevel": 48,
+            "side": 2,
+            "slot": 6,
+            "slotbak": 6,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16620,
+                "c2": 2,
+                "n": "Blood Red Bandanas",
+                "t": 5,
+                "ti": 96334
+              }
+            ],
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279474,
+      "name": "Dustwallow Dirk",
+      "quality": 3,
+      "classs": 2,
+      "slot": 13,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                741036,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Dustwallow Dirk",
+            "displayid": 741036,
+            "dps": 36.47,
+            "id": 279474,
+            "level": 55,
+            "name": "Dustwallow Dirk",
+            "quality": 3,
+            "reqlevel": 48,
+            "slot": 13,
+            "slotbak": 13,
+            "source": [
+              4
+            ],
+            "speed": 1.7,
+            "subclass": 15,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279824,
+      "name": "Kor'kron Battle Gauntlets",
+      "quality": 2,
+      "classs": 4,
+      "slot": 10,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                28352,
+                ""
+              ]
+            },
+            "armor": 328,
+            "classs": 4,
+            "displayName": "Kor'kron Battle Gauntlets",
+            "displayid": 28352,
+            "id": 279824,
+            "level": 55,
+            "name": "Kor'kron Battle Gauntlets",
+            "quality": 2,
+            "reqlevel": 48,
+            "side": 2,
+            "slot": 10,
+            "slotbak": 10,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16620,
+                "c2": 2,
+                "n": "A Little Payback",
+                "t": 5,
+                "ti": 96332
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279825,
+      "name": "Theramore Defender's Gauntlets",
+      "quality": 2,
+      "classs": 4,
+      "slot": 10,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                28352,
+                ""
+              ]
+            },
+            "armor": 328,
+            "classs": 4,
+            "displayName": "Theramore Defender's Gauntlets",
+            "displayid": 28352,
+            "id": 279825,
+            "level": 55,
+            "name": "Theramore Defender's Gauntlets",
+            "quality": 2,
+            "reqlevel": 48,
+            "side": 1,
+            "slot": 10,
+            "slotbak": 10,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16620,
+                "c2": 2,
+                "n": "A Bit of Wet Work",
+                "t": 5,
+                "ti": 96381
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279826,
+      "name": "Marshdweller's Pants",
+      "quality": 2,
+      "classs": 4,
+      "slot": 7,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                27598,
+                ""
+              ]
+            },
+            "armor": 62,
+            "classs": 4,
+            "displayName": "Marshdweller's Pants",
+            "displayid": 27598,
+            "id": 279826,
+            "level": 55,
+            "name": "Marshdweller's Pants",
+            "quality": 2,
+            "reqlevel": 48,
+            "slot": 7,
+            "slotbak": 7,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "z": 16620
+              }
+            ],
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279829,
+      "name": "Naga Scale Spaulders",
+      "quality": 2,
+      "classs": 4,
+      "slot": 3,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                26988,
+                ""
+              ]
+            },
+            "armor": 223,
+            "classs": 4,
+            "displayName": "Naga Scale Spaulders",
+            "displayid": 26988,
+            "id": 279829,
+            "level": 55,
+            "name": "Naga Scale Spaulders",
+            "quality": 2,
+            "reqlevel": 48,
+            "slot": 3,
+            "slotbak": 3,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "z": 16620
+              }
+            ],
+            "subclass": 3,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279831,
+      "name": "Fatebound Buckler",
+      "quality": 3,
+      "classs": 4,
+      "slot": 14,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                18666,
+                ""
+              ]
+            },
+            "armor": 1898,
+            "classs": 4,
+            "displayName": "Fatebound Buckler",
+            "displayid": 18666,
+            "id": 279831,
+            "level": 55,
+            "name": "Fatebound Buckler",
+            "quality": 3,
+            "reqlevel": 48,
+            "slot": 14,
+            "slotbak": 14,
+            "source": [
+              4
+            ],
+            "subclass": 6,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279833,
+      "name": "Courier's Clasp",
+      "quality": 3,
+      "classs": 4,
+      "slot": 2,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16620",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16620",
+          "sha256": "a964c93be3ec8d2186e27e1487e9eca389aa7892176e1fa4a7c76380170feafd",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Courier's Clasp",
+            "id": 279833,
+            "level": 55,
+            "name": "Courier's Clasp",
+            "quality": 3,
+            "reqlevel": 48,
+            "slot": 2,
+            "slotbak": 2,
+            "source": [
+              4
+            ],
+            "subclass": -3,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279891,
+      "name": "Guidance of Ursoc",
+      "quality": 2,
+      "classs": 4,
+      "slot": 16,
+      "rawRequiredLevel": 47,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16554",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16554",
+          "sha256": "0651749721e218155606e876e6ccf816640d0c06ef6f382581920aa594d43adf",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                23553,
+                ""
+              ]
+            },
+            "armor": 37,
+            "classs": 4,
+            "displayName": "Guidance of Ursoc",
+            "displayid": 23553,
+            "id": 279891,
+            "level": 57,
+            "name": "Guidance of Ursoc",
+            "quality": 2,
+            "reqlevel": 47,
+            "side": 2,
+            "slot": 16,
+            "slotbak": 16,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16554,
+                "c2": 2,
+                "n": "The Twin Bears",
+                "t": 5,
+                "ti": 92066
+              }
+            ],
+            "subclass": -6,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279892,
+      "name": "Wisdom of Ursol",
+      "quality": 2,
+      "classs": 4,
+      "slot": 16,
+      "rawRequiredLevel": 47,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16554",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16554",
+          "sha256": "0651749721e218155606e876e6ccf816640d0c06ef6f382581920aa594d43adf",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                23077,
+                ""
+              ]
+            },
+            "armor": 37,
+            "classs": 4,
+            "displayName": "Wisdom of Ursol",
+            "displayid": 23077,
+            "id": 279892,
+            "level": 57,
+            "name": "Wisdom of Ursol",
+            "quality": 2,
+            "reqlevel": 47,
+            "side": 2,
+            "slot": 16,
+            "slotbak": 16,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16554,
+                "c2": 2,
+                "n": "The Twin Bears",
+                "t": 5,
+                "ti": 92066
+              }
+            ],
+            "subclass": -6,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 279893,
+      "name": "Nama's Cherished Necklace",
+      "quality": 2,
+      "classs": 4,
+      "slot": 2,
+      "rawRequiredLevel": 47,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "zone:16554",
+          "relation": "quest-rewards",
+          "url": "https://www.wowhead.com/forever/zone=16554",
+          "sha256": "0651749721e218155606e876e6ccf816640d0c06ef6f382581920aa594d43adf",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Nama's Cherished Necklace",
+            "id": 279893,
+            "level": 57,
+            "name": "Nama's Cherished Necklace",
+            "quality": 2,
+            "reqlevel": 47,
+            "slot": 2,
+            "slotbak": 2,
+            "source": [
+              4
+            ],
+            "sourcemore": [
+              {
+                "c": 16554,
+                "c2": 2,
+                "n": "A Lost Memento",
+                "t": 5,
+                "ti": 92070
+              }
+            ],
+            "subclass": -3,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280012,
+      "name": "Talon of Tor'Rel",
+      "quality": 3,
+      "classs": 2,
+      "slot": 13,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:261811",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=261811",
+          "sha256": "111aa232d72d096474e57bd15579b718d65a1fa09a2de34c22f2aba5279bc41f",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                32356,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Talon of Tor'Rel",
+            "displayid": 32356,
+            "dps": 41.39,
+            "id": 280012,
+            "level": 63,
+            "name": "Talon of Tor'Rel",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 13,
+            "slotbak": 13,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Tor'Rel",
+                "t": 1,
+                "ti": 261811
+              }
+            ],
+            "speed": 1.8,
+            "subclass": 7,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 3,
+                "outof": 10
+              },
+              "0": {
+                "count": 3,
+                "outof": 10
+              }
+            },
+            "count": 3,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 3,
+                    "outof": 10
+                  },
+                  "0": {
+                    "count": 3,
+                    "outof": 10
+                  }
+                }
+              }
+            },
+            "outof": 10
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280014,
+      "name": "Raptorscale Bulwark",
+      "quality": 3,
+      "classs": 4,
+      "slot": 14,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:261811",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=261811",
+          "sha256": "111aa232d72d096474e57bd15579b718d65a1fa09a2de34c22f2aba5279bc41f",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                28269,
+                ""
+              ]
+            },
+            "armor": 2153,
+            "classs": 4,
+            "displayName": "Raptorscale Bulwark",
+            "displayid": 28269,
+            "id": 280014,
+            "level": 63,
+            "name": "Raptorscale Bulwark",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 14,
+            "slotbak": 14,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Tor'Rel",
+                "t": 1,
+                "ti": 261811
+              }
+            ],
+            "subclass": 6,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 5,
+                "outof": 10
+              },
+              "0": {
+                "count": 5,
+                "outof": 10
+              }
+            },
+            "count": 5,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 5,
+                    "outof": 10
+                  },
+                  "0": {
+                    "count": 5,
+                    "outof": 10
+                  }
+                }
+              }
+            },
+            "outof": 10
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280019,
+      "name": "Dinofrill Casque",
+      "quality": 3,
+      "classs": 4,
+      "slot": 1,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:261812",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=261812",
+          "sha256": "ad9ae536d1f14ace2fe75fefb1a959bef62d4a7d4e8a92099a946ff84411ab0f",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                4177,
+                ""
+              ]
+            },
+            "armor": 301,
+            "classs": 4,
+            "displayName": "Dinofrill Casque",
+            "displayid": 4177,
+            "id": 280019,
+            "level": 63,
+            "name": "Dinofrill Casque",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 1,
+            "slotbak": 1,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Thunderhoof",
+                "t": 1,
+                "ti": 261812
+              }
+            ],
+            "subclass": 3,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 6
+              },
+              "0": {
+                "count": 1,
+                "outof": 6
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 6
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 6
+                  }
+                }
+              }
+            },
+            "outof": 6
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280020,
+      "name": "Deep Jungle Rifle",
+      "quality": 3,
+      "classs": 2,
+      "slot": 15,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:261812",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=261812",
+          "sha256": "ad9ae536d1f14ace2fe75fefb1a959bef62d4a7d4e8a92099a946ff84411ab0f",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                741446,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Deep Jungle Rifle",
+            "displayid": 741446,
+            "dps": 32.26,
+            "id": 280020,
+            "level": 63,
+            "name": "Deep Jungle Rifle",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 15,
+            "slotbak": 26,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Thunderhoof",
+                "t": 1,
+                "ti": 261812
+              }
+            ],
+            "speed": 3.1,
+            "subclass": 3,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 6
+              },
+              "0": {
+                "count": 1,
+                "outof": 6
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 6
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 6
+                  }
+                }
+              }
+            },
+            "outof": 6
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280021,
+      "name": "Tooth of the Matriarch",
+      "quality": 3,
+      "classs": 2,
+      "slot": 13,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:262127",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=262127",
+          "sha256": "18e926170e43915f872cad1012b09c31b9677050df8a96eacbb8bb0fd31ffece",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                741037,
+                "inv_sword_13"
+              ]
+            },
+            "classs": 2,
+            "displayName": "Tooth of the Matriarch",
+            "displayid": 741037,
+            "dps": 41.47,
+            "id": 280021,
+            "level": 63,
+            "name": "Tooth of the Matriarch",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 13,
+            "slotbak": 13,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Direhorn Matriarch",
+                "t": 1,
+                "ti": 262127
+              }
+            ],
+            "speed": 1.7,
+            "subclass": 15,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 2,
+                "outof": 7
+              },
+              "0": {
+                "count": 2,
+                "outof": 7
+              }
+            },
+            "count": 2,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 7
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 7
+                  }
+                }
+              }
+            },
+            "outof": 7
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280045,
+      "name": "Regal Direhorn Drape",
+      "quality": 3,
+      "classs": 4,
+      "slot": 16,
+      "rawRequiredLevel": 58,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:262127",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=262127",
+          "sha256": "18e926170e43915f872cad1012b09c31b9677050df8a96eacbb8bb0fd31ffece",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                24159,
+                ""
+              ]
+            },
+            "armor": 45,
+            "classs": 4,
+            "displayName": "Regal Direhorn Drape",
+            "displayid": 24159,
+            "id": 280045,
+            "level": 63,
+            "name": "Regal Direhorn Drape",
+            "quality": 3,
+            "reqlevel": 58,
+            "slot": 16,
+            "slotbak": 16,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Direhorn Matriarch",
+                "t": 1,
+                "ti": 262127
+              }
+            ],
+            "subclass": -6,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 2,
+                "outof": 7
+              },
+              "0": {
+                "count": 2,
+                "outof": 7
+              }
+            },
+            "count": 2,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 7
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 7
+                  }
+                }
+              }
+            },
+            "outof": 7
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280056,
+      "name": "Flameslash Crescent",
+      "quality": 3,
+      "classs": 2,
+      "slot": 17,
+      "rawRequiredLevel": 54,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:247206",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=247206",
+          "sha256": "67cb5e1d117f63c9cfaac3be9aaec2c3df29cd8770625ffcbefce13f5f9a3bfb",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                739831,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Flameslash Crescent",
+            "displayid": 739831,
+            "dps": 50.56,
+            "id": 280056,
+            "level": 59,
+            "name": "Flameslash Crescent",
+            "quality": 3,
+            "reqlevel": 54,
+            "slot": 17,
+            "slotbak": 17,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Impaan the Imprisoner",
+                "t": 1,
+                "ti": 247206
+              }
+            ],
+            "speed": 3.6,
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 2,
+                "outof": 7
+              },
+              "0": {
+                "count": 2,
+                "outof": 7
+              }
+            },
+            "count": 2,
+            "stack": [
+              1,
+              1
+            ],
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 7
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 7
+                  }
+                }
+              }
+            },
+            "outof": 7
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280057,
+      "name": "Robes of Dark Summons",
+      "quality": 3,
+      "classs": 4,
+      "slot": 5,
+      "rawRequiredLevel": 54,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:247206",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=247206",
+          "sha256": "67cb5e1d117f63c9cfaac3be9aaec2c3df29cd8770625ffcbefce13f5f9a3bfb",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                4498,
+                ""
+              ]
+            },
+            "armor": 84,
+            "classs": 4,
+            "displayName": "Robes of Dark Summons",
+            "displayid": 4498,
+            "id": 280057,
+            "level": 59,
+            "name": "Robes of Dark Summons",
+            "quality": 3,
+            "reqlevel": 54,
+            "slot": 5,
+            "slotbak": 20,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Impaan the Imprisoner",
+                "t": 1,
+                "ti": 247206
+              }
+            ],
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 2,
+                "outof": 7
+              },
+              "0": {
+                "count": 2,
+                "outof": 7
+              }
+            },
+            "count": 2,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 7
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 7
+                  }
+                }
+              }
+            },
+            "outof": 7
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280071,
+      "name": "Flamebreak Talisman",
+      "quality": 3,
+      "classs": 4,
+      "slot": 12,
+      "rawRequiredLevel": 56,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:247231",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=247231",
+          "sha256": "46ade05c8cd140396c624ed8a644f56797a89436117d4dfe15321176760069c6",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                0,
+                ""
+              ]
+            },
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Flamebreak Talisman",
+            "id": 280071,
+            "level": 61,
+            "name": "Flamebreak Talisman",
+            "quality": 3,
+            "reqlevel": 56,
+            "slot": 12,
+            "slotbak": 12,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Unbound Spirit",
+                "t": 1,
+                "ti": 247231
+              }
+            ],
+            "subclass": -4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 2,
+                "outof": 8
+              },
+              "0": {
+                "count": 2,
+                "outof": 8
+              }
+            },
+            "count": 2,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 8
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 8
+                  }
+                }
+              }
+            },
+            "outof": 8
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280072,
+      "name": "Cowl of Dark Ambition",
+      "quality": 3,
+      "classs": 4,
+      "slot": 1,
+      "rawRequiredLevel": 56,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:247231",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=247231",
+          "sha256": "46ade05c8cd140396c624ed8a644f56797a89436117d4dfe15321176760069c6",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                747998,
+                ""
+              ]
+            },
+            "armor": 70,
+            "classs": 4,
+            "displayName": "Cowl of Dark Ambition",
+            "displayid": 747998,
+            "id": 280072,
+            "level": 61,
+            "name": "Cowl of Dark Ambition",
+            "quality": 3,
+            "reqlevel": 56,
+            "slot": 1,
+            "slotbak": 1,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Unbound Spirit",
+                "t": 1,
+                "ti": 247231
+              }
+            ],
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 3,
+                "outof": 8
+              },
+              "0": {
+                "count": 3,
+                "outof": 8
+              }
+            },
+            "count": 3,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 3,
+                    "outof": 8
+                  },
+                  "0": {
+                    "count": 3,
+                    "outof": 8
+                  }
+                }
+              }
+            },
+            "outof": 8
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280074,
+      "name": "Scalding Flamehoof",
+      "quality": 3,
+      "classs": 4,
+      "slot": 12,
+      "rawRequiredLevel": 57,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:247234",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=247234",
+          "sha256": "e952a8b1096654de0a670ce66e4384070f9bd969cad99c3cecbfb3bfeca7f8f3",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Scalding Flamehoof",
+            "id": 280074,
+            "level": 62,
+            "name": "Scalding Flamehoof",
+            "quality": 3,
+            "reqlevel": 57,
+            "slot": 12,
+            "slotbak": 12,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Varrox Bleakhoof",
+                "t": 1,
+                "ti": 247234
+              }
+            ],
+            "subclass": -4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 4,
+                "outof": 10
+              },
+              "0": {
+                "count": 4,
+                "outof": 10
+              }
+            },
+            "count": 4,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 4,
+                    "outof": 10
+                  },
+                  "0": {
+                    "count": 4,
+                    "outof": 10
+                  }
+                }
+              }
+            },
+            "outof": 10
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280075,
+      "name": "Bleak Eye Shoulderplates",
+      "quality": 3,
+      "classs": 4,
+      "slot": 3,
+      "rawRequiredLevel": 57,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:247234",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=247234",
+          "sha256": "e952a8b1096654de0a670ce66e4384070f9bd969cad99c3cecbfb3bfeca7f8f3",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                16458,
+                ""
+              ]
+            },
+            "armor": 485,
+            "classs": 4,
+            "displayName": "Bleak Eye Shoulderplates",
+            "displayid": 16458,
+            "id": 280075,
+            "level": 62,
+            "name": "Bleak Eye Shoulderplates",
+            "quality": 3,
+            "reqlevel": 57,
+            "slot": 3,
+            "slotbak": 3,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Varrox Bleakhoof",
+                "t": 1,
+                "ti": 247234
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 4,
+                "outof": 10
+              },
+              "0": {
+                "count": 4,
+                "outof": 10
+              }
+            },
+            "count": 4,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 4,
+                    "outof": 10
+                  },
+                  "0": {
+                    "count": 4,
+                    "outof": 10
+                  }
+                }
+              }
+            },
+            "outof": 10
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 280079,
+      "name": "Lunarlight Robe",
+      "quality": 3,
+      "classs": 4,
+      "slot": 5,
+      "rawRequiredLevel": 52,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:269104",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=269104",
+          "sha256": "6bb540d62cd886ecc3b86c3c8aa2870afc4f96d13c4b5307eefa5086be7a2a71",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                8435,
+                ""
+              ]
+            },
+            "armor": 163,
+            "classs": 4,
+            "displayName": "Lunarlight Robe",
+            "displayid": 8435,
+            "id": 280079,
+            "level": 57,
+            "name": "Lunarlight Robe",
+            "quality": 3,
+            "reqlevel": 52,
+            "slot": 5,
+            "slotbak": 5,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Moontouched Wanderer",
+                "t": 1,
+                "ti": 269104
+              }
+            ],
+            "subclass": 2,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 4
+              },
+              "0": {
+                "count": 1,
+                "outof": 4
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 4
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 4
+                  }
+                }
+              }
+            },
+            "outof": 4
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 287036,
+      "name": "Satyr's Touch",
+      "quality": 3,
+      "classs": 2,
+      "slot": 15,
+      "rawRequiredLevel": 54,
+      "status": "untriaged_own_primary_eligibility_and_source_review",
+      "sourceReferences": [
+        {
+          "source": "npc:255347",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=255347",
+          "sha256": "b236c81e3bd1384c3006bddd36061b3ee170363a23dc9ca63fffb664b09c804c",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                740059,
+                "inv_wand_01"
+              ]
+            },
+            "classs": 2,
+            "displayName": "Satyr's Touch",
+            "displayid": 740059,
+            "dps": 58.42,
+            "id": 287036,
+            "level": 59,
+            "name": "Satyr's Touch",
+            "quality": 3,
+            "reqlevel": 54,
+            "slot": 15,
+            "slotbak": 26,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "z": 16
+              }
+            ],
+            "speed": 1.9,
+            "subclass": 19,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 10
+              },
+              "0": {
+                "count": 1,
+                "outof": 11
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 10
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 11
+                  }
+                }
+              }
+            },
+            "outof": 10
+          }
+        }
+      ]
+    }
+  ]
+}

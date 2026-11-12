@@ -80,6 +80,17 @@ local function appendQuestItems(out,q,prefix)
     if not listed then out[#out+1]=(prefix or "").."This quest requires physical items; see acquisition evidence below for quantities and current requirements." end
 end
 
+local function sourceLocations(actor,q,key)
+    local zone=q and q.actorZones and q.actorZones[key]
+    if not zone then return actor.locations or {} end
+    local locations={}
+    for _,loc in ipairs(actor.locations or {}) do
+        if loc.zone==zone then locations[#locations+1]=loc end
+    end
+    if #locations==0 then locations[1]={zone=zone,verification="published-reference"} end
+    return locations
+end
+
 local function routesForCharacter(model,plan)
     local routes=plan and plan.routes or {}
     local faction=call(UnitFactionGroup,"player")
@@ -133,7 +144,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     end
     local function source(key,role,q,route,preferred)
         local actor=model.sources[key] or {}
-        local locations=actor.locations or {}
+        local locations=sourceLocations(actor,q,key)
         local unresolved=q and #(q.relatedQuests or {})>0 and not get(model.chains,route.questID)
         local requirements=offerText(route)
         if q and #(q.sourceRequirements or {})>0 then
@@ -191,6 +202,11 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                 if not nativeObjective then
                     if call(C_QuestLog.IsComplete,id)==true then
                         for _,key in ipairs(q.ends or {}) do source(key,"Quest turn-in",q,route,questRoutes==1) end
+                        if #(q.ends or {})==0 and q.turnInZone and q.turnInInstructions then
+                            add({kind="directions",questID=id,questName=q.name,label=q.name or "Quest #"..id,
+                                 role="Published return directions",zone=q.turnInZone,instructions=q.turnInInstructions,
+                                 verification="published-reference",preferred=questRoutes==1})
+                        end
                     elseif q.objectiveInstructions then
                         local instructions="Published objective guidance; current objective progress is not determined by GetGear.\n"..q.objectiveInstructions
                         if q.objectiveSource and model.sources[q.objectiveSource] then
@@ -216,6 +232,13 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                     add({kind=instance and "dungeon" or "directions",dungeon=instance and q.starterZone or nil,
                          questID=id,questName=q.name,role="Quest starter item",label=item.name,
                          zone=q.starterZone,instructions=q.starterInstructions,requirements=requirements,
+                         verification="published-reference",preferred=questRoutes==1})
+                end
+                if not q.starterItems or #q.starterItems==0 then
+                    local instance=(model.instances or {})[q.starterZone]
+                    add({kind=instance and "dungeon" or "directions",dungeon=instance and q.starterZone or nil,
+                         questID=id,questName=q.name,role="Published starting directions",label=q.name or "Quest #"..id,
+                         zone=q.starterZone,instructions=q.starterInstructions,
                          verification="published-reference",preferred=questRoutes==1})
                 end
             end
@@ -284,13 +307,15 @@ function GetGear:GetAcquisitionDirections(gear)
                     for _, item in ipairs(q.starterItems or {}) do out[#out+1]="   Quest starter item: "..item.name.." (#"..item.itemID..")" end
                     if q.starterInstructions then out[#out+1]="   "..q.starterInstructions end
                     if q.objectiveInstructions then out[#out+1]="   Objective: "..q.objectiveInstructions end
+                    if q.turnInInstructions then out[#out+1]="   Return: "..q.turnInInstructions end
                     for _, detail in ipairs(q.acquisitionDetails or {}) do out[#out+1]="   "..detail end
                     for _, requirement in ipairs(q.sourceRequirements or {}) do out[#out+1]="   "..requirement end
                     appendQuestItems(out,q,"   ")
                     for _, role in ipairs({"starts","ends"}) do
                         for _, key in ipairs(q[role] or {}) do
                             local a=data().sources[key] or {}
-                            out[#out+1]="   "..(role=="starts" and "Start: " or "Turn-in: ")..(a.name or key)..((a.locations or {})[1] and " — "..a.locations[1].zone or " — location unresolved")
+                            local loc=sourceLocations(a,q,key)[1]
+                            out[#out+1]="   "..(role=="starts" and "Start: " or "Turn-in: ")..(a.name or key)..(loc and " — "..loc.zone or " — location unresolved")
                         end
                     end
                 end
@@ -300,6 +325,7 @@ function GetGear:GetAcquisitionDirections(gear)
                 for _, item in ipairs(q.starterItems or {}) do out[#out+1]="Quest starter item: "..item.name.." (#"..item.itemID..")" end
                 if q.starterInstructions then out[#out+1]=q.starterInstructions end
                 if q.objectiveInstructions then out[#out+1]="Objective: "..q.objectiveInstructions end
+                if q.turnInInstructions then out[#out+1]="Return: "..q.turnInInstructions end
                 for _, detail in ipairs(q.acquisitionDetails or {}) do out[#out+1]=detail end
                 if q.starterOriginUnresolved then out[#out+1]="Starting item origin/location remains unverified. The turn-in NPC is not a starting destination." end
             end
@@ -309,7 +335,7 @@ function GetGear:GetAcquisitionDirections(gear)
             if q.side==1 or q.side==2 then out[#out+1]="Published quest access: "..(q.side==1 and "Alliance" or "Horde") end
             for _, key in ipairs(q.objectives or {}) do
                 local actor=data().sources[key] or {}
-                local loc=(actor.locations or {})[1]
+                local loc=sourceLocations(actor,q,key)[1]
                 out[#out+1]="Quest objective: "..(actor.name or key)..(loc and " — "..loc.zone or " — location unresolved")
             end
             if route.bookItemID then out[#out+1]="Quest reward is recipe book #"..route.bookItemID..", not the finished equipment." end
