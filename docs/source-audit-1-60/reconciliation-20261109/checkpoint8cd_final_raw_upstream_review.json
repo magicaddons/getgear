@@ -1,0 +1,147 @@
+{
+  "capturedUTC": "2026-11-12T14:39:17.648289+00:00",
+  "method": "Exact full factual snapshot comparison: actual8CC4 PF23618/EV1688 snapshots to8CD; original8BR deltas preserved separately;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23618,
+    "afterItems": 23620,
+    "beforeDefinitions": 9327,
+    "afterDefinitions": 9327,
+    "newItems": [
+      {
+        "itemID": 18736,
+        "name": "Plaguehound Leggings",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 284848,
+        "name": "Diamond Studded Belt",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.759a43051b.json",
+        "bytes": 1010610,
+        "sha256": "759a43051b2c2c84e2cf354499ac776f19a581b355375eb1d3f40fb94b07836a",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.1ac771abc6.json",
+        "bytes": 1360090,
+        "sha256": "1ac771abc61e37786121f0eb4ab07cb56410a6d3555ce0724ecf28d82414b78c",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.c731b98083.json",
+        "bytes": 466933,
+        "sha256": "c731b9808385b2f8a49a3b530bc6087f2cca7ccab63c168038101fd55cb24e0f",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.aaf1f7d299.json",
+        "bytes": 446743,
+        "sha256": "aaf1f7d299087f2b2d6b58308a83826143a8fbddec7a5a45528bf7f34d3338c6",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1688,
+    "afterRaw": 1691,
+    "qualifying": 1439,
+    "addedEdges": [
+      {
+        "fromKind": "npc",
+        "fromId": 344,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1433,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T06:55:46.000Z",
+        "lastSeen": "2026-11-12T11:24:28.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 2046,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1429,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-06T15:28:30.000Z",
+        "lastSeen": "2026-11-12T10:52:23.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 514,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1429,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-06T15:12:06.000Z",
+        "lastSeen": "2026-11-12T10:52:33.000Z"
+      }
+    ],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103442,
+        "sha256": "307739337503b8653c2bee60fc48d9bf5aa7c244eb10a5def7676c4c000979d2",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T11:30:14.518Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103495,
+        "sha256": "34098cbda72ca97b12aef7f4be554e31a53a04d502a8927002ed9762f0513461",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T11:30:14.518Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103457,
+        "sha256": "1171e7c266be1df46c400ea2e78db8c8a9fb074944f26d9b0a7aaf2ffc499135",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T11:30:14.518Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 39647,
+        "sha256": "1a9a183876aac2cd8eb956d3d36f7ddf8686a96e521a1772c35b0b6706dbf35c",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T11:30:14.518Z"
+      }
+    ]
+  }
+}

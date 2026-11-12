@@ -425,6 +425,29 @@ def build(inputs):
         # It still passes the same full-source relationship guards below.
         extras.extend(container_routes.get(item_id, []))
         for extra in extras:
+            if extra.get("kind") in ["vendor", "recipe_vendor"] and extra.get("requiresFullSaleJoin"):
+                source_key = extra.get("source")
+                actor = evidence.sources.get(source_key, {})
+                target_id = book_id if craft and book_id else item_id
+                product = evidence.items.get(target_id, {})
+                name = product.get("identity", {}).get("name") if craft else gear["name"]
+                sale = evidence.full_npc_sales.get(actor.get("sourceID"), {}).get(target_id)
+                if (actor.get("kind") == "npc" and actor.get("evidence") and name and sale
+                        and sale.get("name") == name
+                        and any(x.get("id") == actor["sourceID"] for x in rows(product.get("sold-by")) if isinstance(x, dict))):
+                    offer = {k: sale[k] for k in ["cost", "stock", "avail", "standing", "reqfaction", "reqlevel", "side"] if k in sale}
+                    if extra.get("sourceSide") in [1, 2]:
+                        offer["side"] = extra["sourceSide"]
+                    route("recipe_vendor" if craft else "vendor", source=source_key, offer=offer,
+                          sourceRequirements=[x for x in rows(extra.get("sourceRequirements")) if isinstance(x, str)],
+                          instructions=extra.get("instructions"), bookItemID=book_id if craft else None,
+                          verification="published-reference")
+                    if not craft:
+                        plan["category"] = "vendor"
+                else:
+                    gap("full_vendor_join_unverified", source_key or "",
+                        detail="Require exact own seller and independent full vendor inventory ID/name before navigating this reviewed offer.")
+                continue
             if extra.get("kind") == "npc_container":
                 container_id, source_key = extra.get("containerItemID"), extra.get("source")
                 container = evidence.items.get(container_id, {}) if type(container_id) is int else {}
@@ -530,9 +553,15 @@ def build(inputs):
                 if not seller.get("id"):
                     continue
                 source_key, _ = evidence.source("npc", seller["id"], seller.get("name"))
+                if any(x.get("kind") in ["vendor", "recipe_vendor"] and x.get("source") == source_key
+                       and x.get("requiresFullSaleJoin") for x in extras):
+                    continue
                 offer = {k: seller[k] for k in ["cost", "stock", "avail", "standing", "reqfaction", "reqlevel", "side"] if k in seller}
                 route("recipe_vendor" if craft else "vendor", source=source_key, bookItemID=book_id, offer=offer)
             for merchant in merchants.get(book_id if craft and book_id else item_id, []):
+                if any(x.get("kind") in ["vendor", "recipe_vendor"] and x.get("source") == "npc:" + str(merchant["npcID"])
+                       and x.get("requiresFullSaleJoin") for x in extras):
+                    continue
                 actor_hash = merchant.get("npcPageSHA256") or merchant.get("npcSHA256")
                 actor_proof = dict(url=merchant["npcURL"], sha256=actor_hash, file="reviewed merchant reference CSV") if actor_hash and merchant.get("npcURL") else None
                 key, actor = evidence.source("npc", merchant["npcID"], merchant.get("npcName"), actor_proof)

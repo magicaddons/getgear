@@ -284,7 +284,8 @@ with tempfile.TemporaryDirectory() as temp:
     for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
         (nav.REPORT / filename).write_text("itemID\n")
     gear = {"1": dict(itemID=1, name="Raid gear", sourceType="World drop", eligibility=[511]),
-            "2": dict(itemID=2, name="Chest gear", sourceType="Chest", eligibility=[511])}
+            "2": dict(itemID=2, name="Chest gear", sourceType="Chest", eligibility=[511]),
+            "3": dict(itemID=3, name="Vendor gear", sourceType="Vendor", eligibility=[511])}
     def page(kind, entity, **facts):
         return dict(url=f"https://www.wowhead.com/forever/{kind}={entity}", sha256="a"*64, **facts)
     proof = dict(
@@ -296,14 +297,21 @@ with tempfile.TemporaryDirectory() as temp:
                      maps={"9000": [dict(uiMapName="Fixture raid", uiMapId=999, coords=[[20,30]])]}),
                 page("object", 200, title="Chest - Object - Forever",
                      lists={"contains": [dict(id=2, name="Chest gear")]},
-                     maps={"40": [dict(uiMapName="Westfall", uiMapId=52, coords=[[20,30]])]})],
+                     maps={"40": [dict(uiMapName="Westfall", uiMapId=52, coords=[[20,30]])]}),
+                page("npc", 300, title="Vendor - NPC - Forever",
+                     lists={"sells": [dict(id=3,name="Vendor gear",cost=[[12345,[],[]]])]},
+                     maps={"40": [dict(uiMapName="Westfall",uiMapId=52,coords=[[20,30]])]})],
         items=[page("item", 1, identity=dict(id=1,name="Raid gear"),
                     lists={"dropped-by": [dict(id=100,name="Raid source")]}),
                page("item", 2, identity=dict(id=2,name="Chest gear"),
-                    lists={"contained-in-object": [dict(id=200,name="Chest")]})])
+                    lists={"contained-in-object": [dict(id=200,name="Chest")]}),
+               page("item", 3, identity=dict(id=3,name="Vendor gear"),
+                    lists={"sold-by": [dict(id=300,name="Vendor")]})])
     evidence_path = nav.REPORT / "checkpoint_raid_evidence.json"
     reviewed = [dict(itemID=1, originUnknown=True, confidence="published-forever-named-enemy-reference", navigationRoutes=[
-        dict(kind="named_drop", source="npc:100", requiresFullLootJoin=True)])]
+        dict(kind="named_drop", source="npc:100", requiresFullLootJoin=True)]),
+        dict(itemID=3,navigationRoutes=[dict(kind="vendor",source="npc:300",requiresFullSaleJoin=True,
+            sourceSide=1,sourceRequirements=["Requires Silverwing Sentinels - Exalted"])])]
     reviewed_path = nav.REPORT / "reviewed_equipment_sources.json"
     reviewed_path.write_text(json.dumps(reviewed))
     def generate():
@@ -313,6 +321,14 @@ with tempfile.TemporaryDirectory() as temp:
     assert data["instances"]["Fixture raid"] and data["instanceDetails"]["Fixture raid"]["areaID"]==9000
     assert coverage[0]["status"]=="directions", "instance actor coordinates are not verified world entrance coordinates"
     assert coverage[1]["status"]=="verified_coordinate_data", "full object contents and exact own reference can establish a destination"
+    vendor=data["items"]["3"]["routes"][0]
+    assert vendor["offer"]["side"]==1 and vendor["sourceRequirements"]==["Requires Silverwing Sentinels - Exalted"]
+    assert vendor["offer"]["cost"]==[[12345,[],[]]] and data["items"]["3"]["category"]=="vendor"
+    proof["actors"][2]["lists"]["sells"]=[]
+    assert "3" not in generate()[0]["items"], "an authored full vendor join cannot fall through to a one-sided seller pin"
+    proof["actors"][2]["lists"]["sells"]=[dict(id=3,name="Different version")]
+    assert "3" not in generate()[0]["items"], "a different-name vendor row is not this exact equipment"
+    proof["actors"][2]["lists"]["sells"]=[dict(id=3,name="Vendor gear",cost=[[12345,[],[]]])]
     proof["actors"][0]["lists"]["drops"]=[]
     data, coverage, gaps, _=generate()
     assert "1" not in data["items"] and coverage[0]["status"]=="missing"
@@ -334,7 +350,7 @@ with tempfile.TemporaryDirectory() as temp:
     proof["actors"][1]["lists"]["contains"]=[dict(id=2,name="Chest gear",classicEra=1)]
     data, coverage, _, _=generate()
     assert data["items"]["2"]["routes"][0]["directionsOnly"] and coverage[1]["status"]=="directions"
-    reviewed[1]["navigationRoutes"][0]["directionsOnly"]=True
+    reviewed[2]["navigationRoutes"][0]["directionsOnly"]=True
     reviewed_path.write_text(json.dumps(reviewed))
     assert len(generate()[0]["items"]["2"]["routes"])==1, "automatic object discovery must preserve an authored withheld marker"
     proof["zones"][0]["zone"]["id"]=9001
@@ -345,6 +361,15 @@ with tempfile.TemporaryDirectory() as temp:
     proof["zones"][0]["zone"].update(id=9000,instanceType="Dungeon")
     proof["zones"][0]["markup"]=["[ul][li]Instance type: Dungeon[/li][/ul]"]
     assert generate()[0]["instanceDetails"]["Fixture raid"]["kind"]=="dungeon", "future verified dungeon evidence uses the same model as raids"
+    gear["4"]=dict(itemID=4,name="Crafted gear",sourceType="Crafted",profession="Blacksmithing",recipePatternItemID=900,eligibility=[511])
+    proof["items"].append(page("item",900,identity=dict(id=900,name="Plans: Fixture"),lists={"sold-by":[dict(id=300,name="Vendor")]}))
+    proof["actors"][2]["lists"]["sells"].append(dict(id=900,name="Plans: Fixture",cost=[[100,[],[]]]))
+    (nav.REPORT / "reviewed_recipe_sources.json").write_text(json.dumps([dict(itemID=4,navigationRoutes=[
+        dict(kind="recipe_vendor",source="npc:300",requiresFullSaleJoin=True,sourceRequirements=["Published vendor unlock"])])]))
+    recipe=generate()[0]["items"]["4"]["routes"][0]
+    assert recipe["kind"]=="recipe_vendor" and recipe["bookItemID"]==900 and recipe["sourceRequirements"]==["Published vendor unlock"]
+    proof["actors"][2]["lists"]["sells"][-1]["name"]="Crafted gear"
+    assert not any(r.get("source")=="npc:300" for r in generate()[0]["items"].get("4",{}).get("routes",[])), "recipe navigation requires the exact book, not the finished equipment in a vendor row"
     zero=nav.Evidence().location("Fixture raid",9000,{"uiMapId":999,"coords":[[0,0]]})
     assert zero["zone"]=="Fixture raid" and "x" not in zero and "bounds" not in zero, "published 0,0 placeholders retain zone context without becoming a floor or entrance point"
 

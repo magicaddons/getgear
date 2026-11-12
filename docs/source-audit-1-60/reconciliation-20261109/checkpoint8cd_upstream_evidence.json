@@ -1,0 +1,265 @@
+{
+  "status": "Two independent primary item identities retained as pending candidates;three full-primary NPC geography matches propagate through shared model. No active gear adoption.",
+  "newItems": {
+    "item:284848": {
+      "url": "https://www.wowhead.com/forever/item=284848",
+      "bytes": 197858,
+      "sha256": "6ae35178e518a898523ba27b1ddfdd5d90380b72b89de507fc8d4c2261d40373",
+      "title": "Diamond Studded Belt - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 284848,
+        "name": "Diamond Studded Belt",
+        "reqlevel": 42,
+        "level": 47,
+        "quality": 2,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 6
+      },
+      "requirements": [
+        "Requires Level 42"
+      ],
+      "relations": {},
+      "status": "Outside frozen catalogue;class/slot/version/source/eligibility review pending. No active adoption/currentloot/workingnavigation claim.",
+      "navigationGaps": [
+        "No published acquisition list;current origin and location unresolved."
+      ]
+    },
+    "item:18736": {
+      "url": "https://www.wowhead.com/forever/item=18736",
+      "bytes": 252349,
+      "sha256": "f57f405dc3e1a3404eaef05fac953e40561bddaa16727fe6a37150aa526b4348",
+      "title": "Plaguehound Leggings - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 18736,
+        "name": "Plaguehound Leggings",
+        "reqlevel": 57,
+        "level": 62,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 2,
+        "slot": 7
+      },
+      "requirements": [
+        "Requires Level 57"
+      ],
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 10399,
+            "name": "Thuzadin Acolyte",
+            "location": [
+              2017
+            ],
+            "classification": 0,
+            "type": 7,
+            "classicEra": 1
+          },
+          {
+            "id": 10398,
+            "name": "Thuzadin Shadowcaster",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 7,
+            "classicEra": 1
+          },
+          {
+            "id": 10417,
+            "name": "Venom Belcher",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 6,
+            "classicEra": 1
+          },
+          {
+            "id": 10413,
+            "name": "Crypt Beast",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 6,
+            "classicEra": 1
+          },
+          {
+            "id": 10400,
+            "name": "Thuzadin Necromancer",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 7,
+            "classicEra": 1
+          },
+          {
+            "id": 10424,
+            "name": "Crimson Gallant",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 7,
+            "classicEra": 1
+          },
+          {
+            "id": 10421,
+            "name": "Crimson Defender",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 7,
+            "classicEra": 1
+          },
+          {
+            "id": 10412,
+            "name": "Crypt Crawler",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 6,
+            "classicEra": 1
+          },
+          {
+            "id": 10407,
+            "name": "Fleshflayer Ghoul",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 6,
+            "classicEra": 1
+          }
+        ]
+      },
+      "status": "Outside frozen catalogue;class/slot/version/source/eligibility review pending. No active adoption/currentloot/workingnavigation claim.",
+      "navigationGaps": [
+        "Fullsource-specific reversejoins/coordinate or entrance directions require individual candidate review."
+      ]
+    }
+  },
+  "locatedNPCs": {
+    "npc:344": {
+      "url": "https://www.wowhead.com/forever/npc=344",
+      "bytes": 68070,
+      "sha256": "1f9de0b62eeed8e9f8b29dfb53f606a24e8b0585a76323a7ef4cdd320ed538ee",
+      "title": "Magistrate Solomon - NPC - Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 44,
+          "name": "Redridge Mountains",
+          "uiMapID": 1433,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 24.6,
+            "xMax": 30,
+            "yMin": 44.2,
+            "yMax": 44.6
+          }
+        }
+      ],
+      "observedLocationReference": {
+        "fromKind": "npc",
+        "fromId": 344,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1433,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T06:55:46.000Z",
+        "lastSeen": "2026-11-12T11:24:28.000Z"
+      },
+      "scope": "New anonymous location edge agrees with full primary geography;not gearloot,stock,questgraph,currentprecisecoordinateorpersonalclientconfirmation. Shared published geography applies to existing/future independently established routes."
+    },
+    "npc:2046": {
+      "url": "https://www.wowhead.com/forever/npc=2046",
+      "bytes": 65648,
+      "sha256": "1f08b024629c189c2a34a5419c09d400c22e859847bdc424471c01278ed2e26c",
+      "title": "Andrew Krighton - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 12,
+          "name": "Elwynn Forest",
+          "uiMapID": 1429,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 41.6,
+            "xMax": 41.6,
+            "yMin": 65.6,
+            "yMax": 65.6
+          }
+        }
+      ],
+      "observedLocationReference": {
+        "fromKind": "npc",
+        "fromId": 2046,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1429,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-06T15:28:30.000Z",
+        "lastSeen": "2026-11-12T10:52:23.000Z"
+      },
+      "scope": "New anonymous location edge agrees with full primary geography;not gearloot,stock,questgraph,currentprecisecoordinateorpersonalclientconfirmation. Shared published geography applies to existing/future independently established routes."
+    },
+    "npc:514": {
+      "url": "https://www.wowhead.com/forever/npc=514",
+      "bytes": 85045,
+      "sha256": "c0a8feffe2679e52259dc7529bcf6ac4c34f7216c314794eb1f3be980df152af",
+      "title": "Smith Argus - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 12,
+          "name": "Elwynn Forest",
+          "uiMapID": 1429,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 41.6,
+            "xMax": 41.6,
+            "yMin": 65.4,
+            "yMax": 65.6
+          }
+        }
+      ],
+      "observedLocationReference": {
+        "fromKind": "npc",
+        "fromId": 514,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1429,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-06T15:12:06.000Z",
+        "lastSeen": "2026-11-12T10:52:33.000Z"
+      },
+      "scope": "New anonymous location edge agrees with full primary geography;not gearloot,stock,questgraph,currentprecisecoordinateorpersonalclientconfirmation. Shared published geography applies to existing/future independently established routes."
+    }
+  },
+  "counts": {
+    "fullPages": 5,
+    "newPages": 4,
+    "cachedPages": 1,
+    "newCandidates": 2,
+    "newLocationEdges": 3,
+    "qualifyingGearLootEdges": 0
+  },
+  "candidateRegisterBefore": 493,
+  "candidateRegisterAfter": 495,
+  "prior493BytesPreserved": true,
+  "originalFeedDiff": "checkpoint8cd_raw_upstream_review.json",
+  "scope": "Exact original full feed deltas saved before baselineadvance;metadata counts not treated as identicalfacts. Newitem18736nineNPCreferences need candidate review;284848no acquisitionlist. No currentsource/class/slot adoption."
+}

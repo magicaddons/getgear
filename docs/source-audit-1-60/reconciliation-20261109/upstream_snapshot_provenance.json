@@ -1,21 +1,21 @@
 {
-  "capturedForCheckpoint": "8CC actual final successful local8cc4",
-  "capturedUTC": "2026-11-12T10:25:50.790764+00:00",
+  "capturedForCheckpoint": "8CD actual final8cd3",
+  "capturedUTC": "2026-11-12T14:37:28.394766+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23618,
+    "itemCount": 23620,
     "sourceDefinitions": 9327,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.5eb92768f2.json",
+        "url": "https://playfulls.com/db/meta.759a43051b.json",
         "bytes": 1010610,
-        "sha256": "5eb92768f2ec8a703bb2a113d16fddae8785fd3dfeb9a4a95ff77cf4bccacacb",
+        "sha256": "759a43051b2c2c84e2cf354499ac776f19a581b355375eb1d3f40fb94b07836a",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.1ce2fa50c9.json",
-        "bytes": 1359860,
-        "sha256": "1ce2fa50c98288235232c7368476d913dd17dcbb358abbf117482ccc55796150",
+        "url": "https://playfulls.com/db/gear.1ac771abc6.json",
+        "bytes": 1360090,
+        "sha256": "1ac771abc61e37786121f0eb4ab07cb56410a6d3555ce0724ecf28d82414b78c",
         "matchesRecordedFingerprint": true
       },
       {
@@ -52,35 +52,35 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103442,
-        "sha256": "1c95ba7375e5dd8692e78b29018fea81d0a6cc4769c3114e5f5d8601543a7d5c",
+        "sha256": "307739337503b8653c2bee60fc48d9bf5aa7c244eb10a5def7676c4c000979d2",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T10:20:15.827Z"
+        "dataAsOf": "2026-11-12T11:30:14.518Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103495,
-        "sha256": "66a769a6399e80b40d6ae607d9bf2c0963be7cf5ea8ae403c7e36d8b1bdbe823",
+        "sha256": "34098cbda72ca97b12aef7f4be554e31a53a04d502a8927002ed9762f0513461",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T10:20:15.827Z"
+        "dataAsOf": "2026-11-12T11:30:14.518Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103457,
-        "sha256": "14cc58f8b32a59ae54e813e6b17a65b65cf0bbc8b41de3bab355cd8a63ae5121",
+        "sha256": "1171e7c266be1df46c400ea2e78db8c8a9fb074944f26d9b0a7aaf2ffc499135",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T10:20:15.827Z"
+        "dataAsOf": "2026-11-12T11:30:14.518Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
-        "bytes": 39034,
-        "sha256": "afab83da71460341dcc61b94889dc170849235a5f2170445f57a4379afccc62f",
+        "bytes": 39647,
+        "sha256": "1a9a183876aac2cd8eb956d3d36f7ddf8686a96e521a1772c35b0b6706dbf35c",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T10:20:15.827Z"
+        "dataAsOf": "2026-11-12T11:30:14.518Z"
       }
     ],
     "comparison": "No added/removed relations; npc2851 zone1417 installs3\u21924/lastSeen only, no gear source change.",
     "rawEdges": 1688,
     "qualifyingRelationships": 1439
   },
-  "finalCaptureReview": "checkpoint8cc_raw_upstream_review.json/full_raw_comparison.json:PF all raw-fullobjects-entiremetadata exact8CB. EV one npc8719\u2192zone1453 location relation installs4\u21925,lastSeen only;all other fields/relations exact,no selected gear observation. Original full delta retained before diagnostic baselineadvance;final8cc4 fullfacts exactsuccessful8cc2 after future guards/Dungeon support/details dedup. Finalreviewcheckpoint8cc_final_raw_upstream_review.json;no duplicate diagnostic fetch."
+  "finalCaptureReview": "Original/full/final checkpoint8cd raw comparisons saved before diagnosticadvance. PFtwooutsideIDs18736/284848 plusfive st.lastfieldmetadata deltas;all23618priorrows/full9327sourceobjects otherwiseexact. EVthreeNPC located_inedges344/2046/514 primarygeographypositive;no addeditemloot/oldedgeupdates. No duplicate diagnosticfetch/replay."
 }

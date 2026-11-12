@@ -64,8 +64,10 @@ model.sources['npc:instance']={name='Friendly quest giver',locations={{zone='Fix
 model.quests['13']={questID=13,name='Dungeon quest fixture',starts={'npc:instance'},ends={'npc:instance'}}
 local dungeonQuestTarget=addon:GetAcquisitionMapTarget(plan(16,{{kind='quest',questID=13}}))
 assert(dungeonQuestTarget.kind=='dungeon' and dungeonQuestTarget.role=='Quest start' and dungeonQuestTarget.boss==nil,'an in-dungeon quest giver uses entrance navigation without being relabelled a boss')
-local vendor=plan(4,{{kind="vendor",source="npc:1",offer={cost={12345}}}})
+local vendor=plan(4,{{kind="vendor",source="npc:1",offer={cost={12345}},sourceRequirements={"Requires Silverwing Sentinels - Exalted"}}})
 assert(addon:GetAcquisitionMapTarget(vendor).role=="Equipment vendor")
+assert(addon:GetAcquisitionMapTarget(vendor).requirements:find("Silverwing Sentinels - Exalted",1,true),"the compact pin retains a published vendor reputation requirement")
+assert(addon:GetAcquisitionDirections(vendor):find("Silverwing Sentinels - Exalted",1,true),"the guide uses the same published vendor requirement")
 local recipe=plan(5,{{kind="recipe_vendor",source="npc:2",bookItemID=900,offer={avail=1,cost={100}}}})
 local boughtContainer=plan(17,{{kind="vendor_container",source="npc:2",containerItemID=902,offer={avail=1,cost={72000}},
     instructions="Recover the receipt book before shopping; current stock and rolls unverified."}})

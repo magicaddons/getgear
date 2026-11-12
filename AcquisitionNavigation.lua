@@ -26,6 +26,9 @@ local function chooseQuest(goal)
 end
 local function offerText(route)
     local out,offer={},route.offer or {}
+    for _,text in ipairs(route.sourceRequirements or {}) do
+        if type(text)=="string" and text~="" then out[#out+1]=text end
+    end
     if route.cost and route.currency then out[#out+1]=tostring(route.cost).." "..route.currency end
     local cost=offer.cost
     if type(cost)=="table" then
