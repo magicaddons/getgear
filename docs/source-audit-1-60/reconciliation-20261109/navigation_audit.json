@@ -96,8 +96,8 @@
       "verified_coordinate_data": 565
     }
   },
-  "sourceRecords": 790,
-  "questRecords": 557,
+  "sourceRecords": 813,
+  "questRecords": 586,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
     {
@@ -413,6 +413,10 @@
       "sha256": "611cd684307195505ee0d655d57879b84505f782abfb15e11f68d319d6ed242e"
     },
     {
+      "file": "checkpoint8cg_working_evidence.json",
+      "sha256": "69ff115def1860c14674f1ee2f0e1fee1d79b59243ff424c8dc366430023a23b"
+    },
+    {
       "file": "checkpoint8d_publication_evidence.json",
       "sha256": "e78e9242b4b8718f039a58131e332455db0794a11a4de35378d2a71521712e3f"
     },
@@ -646,7 +650,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
-      "sha256": "1154fd768efb8f31ae3f60067f7a5921b96d140dbc5eb14b4e1d3622eebef248"
+      "sha256": "210f35d8e05d7c9ab809dee5a380642218caf6dcf3c3a86f90b09848943716ac"
     },
     {
       "file": "tools/export_navigation_inputs.lua",

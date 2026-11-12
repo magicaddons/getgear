@@ -450,4 +450,31 @@ assert(native and native.clientVerified and native.label=='Client Windsor object
 C_QuestLog,UnitFactionGroup=beforeWindsorAPI,beforeWindsorFaction
 local windsorGuide=addon:GetAcquisitionDirections(addon.ItemCatalog[16309])
 assert(windsorGuide:find('Escort Marshal Windsor',1,true) and windsorGuide:find('11464',1,true) and windsorGuide:find('11465',1,true),'same detailed guide retains escort instructions and distinct information item IDs')
+-- Future candidate fixtures use actual researched quests without installing gear.
+local beforeChainAPI=C_QuestLog
+local temporaryGoals={5944,5466,5102}
+for _,goal in ipairs(temporaryGoals) do
+    assert(not actualModel.items[tostring(-goal)])
+    actualModel.items[tostring(-goal)]={routes={{kind="quest",questID=goal}}}
+end
+C_QuestLog={IsOnQuest=function()return false end,IsQuestFlaggedCompleted=function()return true end}
+local tirionFirst=addon:GetAcquisitionMapTarget({itemID=-5944})
+assert(tirionFirst and tirionFirst.questID==5542 and tirionFirst.source=='npc:1855' and tirionFirst.zone=='Eastern Plaguelands','unverified parallel/terminal links cannot skip the full initial Tirion reference from completion flags')
+local rasFirst=addon:GetAcquisitionMapTarget({itemID=-5466})
+assert(rasFirst and rasFirst.questID==5382 and rasFirst.source=='npc:11216','qualified Ras itinerary starts at Eva when no reliable active stage is known')
+C_QuestLog={IsOnQuest=function(id)return id==5944 end}
+local taelan=addon:GetAcquisitionMapTarget({itemID=-5944})
+assert(taelan and taelan.role=='Published active quest objective' and taelan.instructions:find('Escort Taelan',1,true),'an active Taelan escort uses objective guidance before a turn-in')
+C_QuestLog.IsComplete=function()return true end
+local lordTirion=addon:GetAcquisitionMapTarget({itemID=-5944})
+assert(lordTirion and lordTirion.source=='npc:12126' and lordTirion.zone=='Western Plaguelands' and lordTirion.role=='Quest turn-in','primary terminal Tirion identity/location wins over a conflicting secondary initial-NPC turn-in')
+C_QuestLog=nil
+local command=addon:GetAcquisitionMapTarget({itemID=-5102})
+assert(command and command.questID==5089 and command.role=='Quest starter item' and command.instructions:find('Overlord Wyrmthalak',1,true),'the Alliance Drakkisath route starts with the independently joined command document')
+local commandText=addon:GetAcquisitionDirections({itemID=-5102})
+assert(not commandText:find("Provided by quest: 1 General Drakkisath's Command",1,true),'provided-for does not grant the quest-starting command for free')
+assert(actualModel.chains['5944'].parallelStartingReferences[3]==5544 and not actualModel.chains['5466'].routeVerified,'parallel starting tasks and the unverified Ras segment link remain explicit')
+assert(not addon.ItemCatalog[13544] and not addon.ItemCatalog[13508],'research holds and a non-wearable utility do not silently become equipment')
+for _,goal in ipairs(temporaryGoals) do actualModel.items[tostring(-goal)]=nil end
+C_QuestLog=beforeChainAPI
 print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests")

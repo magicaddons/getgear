@@ -1,0 +1,181 @@
+{
+  "status": "100 selected plus1 supplemental outside candidates individually publication-assessed; final full19localPASS; CI/full bot review pending",
+  "registry": 5902,
+  "index": 7373,
+  "display": 7372,
+  "books": 759,
+  "originalFrozenQueue": {
+    "total": 5688,
+    "dispositioned": 5688,
+    "pending": 0
+  },
+  "outsideQueue": {
+    "total": 497,
+    "assessed": 301,
+    "pending": 196,
+    "nextBatch": "8CH",
+    "nextCases": 100,
+    "firstID": 18347,
+    "lastID": 20134
+  },
+  "caseCounts": {
+    "selected": 100,
+    "supplemental": 1,
+    "individuallyAssessed": 101,
+    "groups": {
+      "named-source-reference": 56,
+      "origin-unresolved": 8,
+      "nonwearable-charged-utility": 1,
+      "quest-reference": 20,
+      "broad-published-reference": 16
+    },
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 65,
+      "hold-version-unconfirmed": 13,
+      "excluded-nonwearable-charged-utility": 1,
+      "hold-no-rendered-equip-level": 20,
+      "hold-primary-unavailable": 2
+    },
+    "primaryFull": 101,
+    "primaryNew": 83,
+    "primaryCached": 18,
+    "caseFullPages": 299,
+    "caseNewPages": 127,
+    "caseCachedPages": 172,
+    "exactQueries": 101,
+    "sharedQueries": 4,
+    "dropReverseJoins": 137,
+    "dropReverseOmissions": 102,
+    "objectReverseJoins": 0,
+    "objectReverseOmissions": 0,
+    "physicalContainerReferences": 4,
+    "physicalContainerReverseJoins": 4,
+    "physicalContainerOmissions": 0,
+    "physicalContainerUnread": 0,
+    "newFailed403": 0,
+    "knownFailedURLs": 916,
+    "oldFailedReferenceEdgesSkipped": 25,
+    "quality": {
+      "3": 89,
+      "4": 5,
+      "2": 7
+    },
+    "BackHeaders": 5,
+    "versionUnconfirmedFlags": 13,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "sourceProofImmutableSHA256": "69ff115def1860c14674f1ee2f0e1fee1d79b59243ff424c8dc366430023a23b",
+  "successfulCapture": {
+    "label": "8cg2",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.01ed9e751a.json": {
+        "bytes": 1010610,
+        "sha256": "01ed9e751add57687ffb2c39be38ef34a40eac9b8310f5ede1662b4d6e4c6575",
+        "workspacePath": "/tmp/getgear-research/8cg2-http-capture/01ed9e751add57687ffb2c39be38ef34a40eac9b8310f5ede1662b4d6e4c6575.body",
+        "capturedUTC": "2026-11-12T16:35:32.469112+00:00"
+      },
+      "https://playfulls.com/db/gear.c7a5b9f6fe.json": {
+        "bytes": 1360205,
+        "sha256": "c7a5b9f6fe97730b6e9da0c8ec7b9f7313e86c071863874e21e9d416ccd8c798",
+        "workspacePath": "/tmp/getgear-research/8cg2-http-capture/c7a5b9f6fe97730b6e9da0c8ec7b9f7313e86c071863874e21e9d416ccd8c798.body",
+        "capturedUTC": "2026-11-12T16:35:32.655288+00:00"
+      },
+      "https://playfulls.com/db/goods.c731b98083.json": {
+        "bytes": 466933,
+        "sha256": "c731b9808385b2f8a49a3b530bc6087f2cca7ccab63c168038101fd55cb24e0f",
+        "workspacePath": "/tmp/getgear-research/8cg2-http-capture/c731b9808385b2f8a49a3b530bc6087f2cca7ccab63c168038101fd55cb24e0f.body",
+        "capturedUTC": "2026-11-12T16:35:32.799806+00:00"
+      },
+      "https://playfulls.com/db/other.aaf1f7d299.json": {
+        "bytes": 446743,
+        "sha256": "aaf1f7d299087f2b2d6b58308a83826143a8fbddec7a5a45528bf7f34d3338c6",
+        "workspacePath": "/tmp/getgear-research/8cg2-http-capture/aaf1f7d299087f2b2d6b58308a83826143a8fbddec7a5a45528bf7f34d3338c6.body",
+        "capturedUTC": "2026-11-12T16:35:32.934594+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103442,
+        "sha256": "05b7b81ed64981f5ea517b69e945d0833a813b2d2bbc0a985d71cb4a908fbfc9",
+        "workspacePath": "/tmp/getgear-research/8cg2-http-capture/05b7b81ed64981f5ea517b69e945d0833a813b2d2bbc0a985d71cb4a908fbfc9.body",
+        "capturedUTC": "2026-11-12T16:35:37.064971+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103495,
+        "sha256": "0625aa83e4dbeb82237d215322f56f9616013a422eb0e9b60f43f55c89b5c095",
+        "workspacePath": "/tmp/getgear-research/8cg2-http-capture/0625aa83e4dbeb82237d215322f56f9616013a422eb0e9b60f43f55c89b5c095.body",
+        "capturedUTC": "2026-11-12T16:35:40.297347+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103456,
+        "sha256": "71e68663685b08d13e79bf5a5ec64b59817a98b67b649e66b7c10eb243ef5d42",
+        "workspacePath": "/tmp/getgear-research/8cg2-http-capture/71e68663685b08d13e79bf5a5ec64b59817a98b67b649e66b7c10eb243ef5d42.body",
+        "capturedUTC": "2026-11-12T16:35:43.830014+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 41292,
+        "sha256": "b9f2eb52984aac1af41e7060d0d2877376c7b36f205d8196c29e5fe90d74611a",
+        "workspacePath": "/tmp/getgear-research/8cg2-http-capture/b9f2eb52984aac1af41e7060d0d2877376c7b36f205d8196c29e5fe90d74611a.body",
+        "capturedUTC": "2026-11-12T16:35:46.781568+00:00"
+      }
+    }
+  },
+  "fullLocalPASS": 19,
+  "LuaSuites": 15,
+  "offlinePythonSuites": 3,
+  "modules": 26,
+  "fourToolsAndExporterSyntax": true,
+  "identities": 7707,
+  "classObjectives": 36341,
+  "crafts": 1254,
+  "ingredients": 4857,
+  "activeCatalogueAdoptions": 0,
+  "unchanged": {
+    "reviewed_equipment_sources.json": "byte-exact",
+    "reviewed_recipe_sources.json": "byte-exact",
+    "dungeon_equipment_drops.csv": "byte-exact",
+    "dungeon_items_reconciled.csv": "byte-exact",
+    "dungeon_source_followups.csv": "byte-exact",
+    "recipes_reconciled.csv": "byte-exact",
+    "recipe_source_followups.csv": "byte-exact",
+    "recipe_trainer_book_checks.csv": "byte-exact",
+    "recipe_vendor_book_checks.csv": "byte-exact",
+    "supplementary_crafts_reconciled.csv": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "remaining_equipment_research_queue.csv": "byte-exact",
+    "navigation_coverage.csv": "byte-exact",
+    "navigation_research_gaps.csv": "byte-exact",
+    "upstream_everloot_edges_snapshot.csv": "byte-exact",
+    "upstream_playfulls_acquisition_snapshot.csv": "byte-exact",
+    "upstream_playfulls_source_definitions.json": "byte-exact",
+    "upstream_playfulls_display_snapshot.csv": "byte-exact",
+    "upstream_playfulls_display_definitions.json": "byte-exact",
+    "upstream_snapshot_provenance.json": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1587,
+    "missing": 3151,
+    "verified_coordinate_data": 813
+  },
+  "gapRows": 17546,
+  "realClientRendering": 0,
+  "newAllSlotLeads": 0,
+  "priorAllSlotLeadsStillOpen": 27,
+  "upstream": "Actual8CG full PF rawrows/9327fullsourceobjects/entiremetadata and1699EVrelation records/fields exact8CE2 factual baseline; no new leads, deleted sources, changed sourcefacts, index-only, opaque or counter changes. Diagnostic baseline8CE2 retained because all facts are exact, not inferred from counts.",
+  "limits": "No active adoption.65 baseline development candidates/20missingprintedlevelholds/13versionholds/two primary-unavailable holds/one nonwearable Eye13508. Includes one supplemental trinket13544 fully publication-assessed, not wearer55. Tirion/Ras cross-segment or parallel mandatory edges unverified; routeVerifiedFalse blocks completion-flag skipping, actual active quests still preferred. Primary5944 ends12126WPL, not1855EPL. Spectral Unique-Equipped/current published use differs from Classic; no live heal/procrate/specific visibility confirmation. Placeholder floor0,0 neverworldpoints. Published references/omissions not current loot certainty or retirement; no failed URLs retried. Actualclientrendering0.",
+  "priorLocalFailure": {
+    "capture": "8cg",
+    "test": "new document starter regression",
+    "cause": "Input projection omitted full item.starts5089; initial18PASS then failed finalLua suite.",
+    "fix": "Retained actual full starts relationship and typed required starter; no fabricated source. Final actual8cg2 capture and all19rerun PASS."
+  },
+  "sourceCandidateDelta": {
+    "before": 496,
+    "after": 497,
+    "newPrimaryID": 13544,
+    "prior496BytesPreserved": true,
+    "supplementAlreadyAssessed": true,
+    "activeAdoptions": 0
+  }
+}

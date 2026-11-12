@@ -209,5 +209,140 @@
     "sourceURLs": [
       "https://www.wowhead.com/forever/guide/raids/onyxias-lair-attunement-guide"
     ]
+  },
+  "4974": {
+    "steps": [
+      4903,
+      4941,
+      4974
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8cg_working_evidence.json",
+    "instructions": "Published travel sequence. Begin with the first listed stage when progress is unknown; reliable active quests take priority. Earlier/current mandatory unlocks remain unverified. Source quest levels/factions are separate from wearer eligibility.",
+    "sourceEvidence": "checkpoint8bs_working_evidence.json/newDrakefireChains; reuse completed Horde prefix"
+  },
+  "5081": {
+    "steps": [
+      5001,
+      5002,
+      5081
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8cg_working_evidence.json",
+    "instructions": "Published travel sequence. Begin with the first listed stage when progress is unknown; reliable active quests take priority. Earlier/current mandatory unlocks remain unverified. Source quest levels/factions are separate from wearer eligibility."
+  },
+  "5102": {
+    "steps": [
+      5089,
+      5102
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8cg_working_evidence.json",
+    "instructions": "Published travel sequence. Begin with the first listed stage when progress is unknown; reliable active quests take priority. Earlier/current mandatory unlocks remain unverified. Source quest levels/factions are separate from wearer eligibility."
+  },
+  "5342": {
+    "steps": [
+      5341,
+      5342
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8cg_working_evidence.json",
+    "instructions": "Published travel sequence. Begin with the first listed stage when progress is unknown; reliable active quests take priority. Earlier/current mandatory unlocks remain unverified. Source quest levels/factions are separate from wearer eligibility."
+  },
+  "5384": {
+    "steps": [
+      5382,
+      5515,
+      5384
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8cg_working_evidence.json",
+    "instructions": "Published travel sequence. Begin with the first listed stage when progress is unknown; reliable active quests take priority. Earlier/current mandatory unlocks remain unverified. Source quest levels/factions are separate from wearer eligibility."
+  },
+  "6041": {
+    "steps": [
+      6026,
+      6041
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8cg_working_evidence.json",
+    "instructions": "Published travel sequence. Begin with the first listed stage when progress is unknown; reliable active quests take priority. Earlier/current mandatory unlocks remain unverified. Source quest levels/factions are separate from wearer eligibility."
+  },
+  "5466": {
+    "steps": [
+      5382,
+      5515,
+      5384,
+      5461,
+      5462,
+      5463,
+      5464,
+      5465,
+      5466
+    ],
+    "routeVerified": false,
+    "prerequisitesVerified": false,
+    "verification": "qualified-starting-itinerary",
+    "evidence": "checkpoint8cg_working_evidence.json",
+    "instructions": "Qualified full starting itinerary: begin with Eva Sarkhoff near Caer Darrow, complete the published three-stage Kirtonos segment, then the separate six-stage Ras segment via Marduke, Stromgarde, Leonid and Menethil's Gift. The connection between segments/current spectral visibility gate is unverified, so completion flags must not skip across it. Spectral Essence (13544) is a fixed published Kirtonos reward with Caer Darrow communication text; current specific NPC-visibility requirements remain unverified. Only an actually active stage overrides the full first reference.",
+    "unverifiedLinks": [
+      {
+        "fromQuest": 5384,
+        "toQuest": 5461
+      }
+    ],
+    "secondaryRouteSource": "https://www.forever-xp.com/quests/5466/"
+  },
+  "5944": {
+    "steps": [
+      5542,
+      5543,
+      5544,
+      5742,
+      5781,
+      5845,
+      5846,
+      5848,
+      5861,
+      5862,
+      5944
+    ],
+    "routeVerified": false,
+    "prerequisitesVerified": false,
+    "verification": "qualified-starting-itinerary",
+    "evidence": "checkpoint8cg_working_evidence.json",
+    "instructions": "Qualified Tirion starting itinerary: begin with Tirion Fordring (1855) in Eastern Plaguelands. The first three separate hound, bat and meat tasks are grouped together for reference; their presentation is not a verified mandatory order or requires-all rule. Continue through Redemption, the memories/honor tasks, Renfray and the Stratholme painting, Myranda's disguise, Taelan and the escort. Initial-task unlocks and the terminal link remain unverified; completion flags must not skip across gaps. Primary5944 ends with Lord Tirion (12126) in Western Plaguelands; reject the secondary guide's initial-Tirion/EPL turn-in. Only an actually active stage overrides the full first reference.",
+    "parallelStartingReferences": [
+      5542,
+      5543,
+      5544
+    ],
+    "unverifiedLinks": [
+      {
+        "fromQuests": [
+          5542,
+          5543,
+          5544
+        ],
+        "toQuest": 5742
+      },
+      {
+        "fromQuest": 5862,
+        "toQuest": 5944
+      }
+    ],
+    "secondaryRouteSource": "https://www.forever-xp.com/quests/5944/"
   }
 }
