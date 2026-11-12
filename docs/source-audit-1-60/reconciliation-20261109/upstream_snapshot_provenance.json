@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "legacy navigation format repair actual navcompat",
-  "capturedUTC": "2026-11-12T08:32:54.923685+00:00",
+  "capturedForCheckpoint": "8BX actual local8bx2 capture",
+  "capturedUTC": "2026-11-12T08:50:59.824122+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23618,
@@ -52,28 +52,28 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103442,
-        "sha256": "df2157f095a377abc0304c7c61667c57b8c8f03530f218d5180cfcd33d1b899e",
+        "sha256": "53f39d22bd2b92a7db914923b935bb83dc254360980ab2d1f0a1160793facee0",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T07:40:17.460Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103495,
-        "sha256": "b052b185d862ad3e76dc53ec322429f9738d3945b8a6dfe1c58758170d9e3425",
+        "sha256": "43cd66fdbe3c394522a819f329f441697582858eeb6856dee25f7c7409fc5c06",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T07:40:17.460Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103457,
-        "sha256": "3e68d80e9dcb362166ba734e46974ea8706c88cfd7d9c09682f82556a9b60b3d",
+        "sha256": "9a564894890b7f44ac3c544f74173ebec91a7a3060bd116bedcda94cc28be1f1",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T07:40:17.460Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
         "bytes": 39034,
-        "sha256": "65c0e8b615935c92d2472c5f9d1e954e4259ad376be79413c19761f46dadffcd",
+        "sha256": "396c557d69b17319d7b34748f34e2bb079407aa89b9f0d21376a14950a578a23",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T07:40:17.460Z"
       }
@@ -82,5 +82,5 @@
     "rawEdges": 1688,
     "qualifyingRelationships": 1439
   },
-  "finalCaptureReview": "checkpointnavcompat_review.json/raw_upstream_review.json/full_raw_comparison.json; actual fetched bytes verified; no duplicate diagnostic requests."
+  "finalCaptureReview": "checkpoint8bx_raw_upstream_review.json/full_raw_comparison.json: entirePF23618/9327raw/sourceobjects/metadata andEV1688raw1439qualfields exact actualnavcompat. No baseline advance/duplicate diagnostic requests. Earlier navcompat original changes retained separately."
 }

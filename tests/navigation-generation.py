@@ -120,6 +120,14 @@ with tempfile.TemporaryDirectory() as temp:
     assert container["items"]["2"]["category"] == "world_drop", "a container alternative must not turn the equipment into a direct quest reward"
     assert container["quests"]["10"]["reqlevel"] == 50 and coverage[1]["status"] == "directions"
     assert "npc:100" in container["sources"], "indirect quest actors must survive source pruning"
+    reviewed = json.loads((nav.REPORT / "reviewed_equipment_sources.json").read_text())
+    reviewed[0]["navigationRoutes"][0]["directionsOnly"] = True
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps(reviewed))
+    withheld, _, withheld_gaps, _ = nav.build(gear)
+    assert withheld["items"]["2"]["routes"][0]["directionsOnly"] is True
+    assert any(g["itemID"] == 2 and g["gap"] == "map_target_withheld" for g in withheld_gaps), "disputed quest-container locations must retain written-only policy"
+    del reviewed[0]["navigationRoutes"][0]["directionsOnly"]
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps(reviewed))
     proof["items"][-1]["selectedContains"] = [{"id": 999}]
     path.write_text(json.dumps(proof))
     assert not any(r["kind"] == "quest_container" for r in nav.build(gear)[0].get("items", {}).get("2", {}).get("routes", [])), "the full wrapper must contain this exact equipment ID"

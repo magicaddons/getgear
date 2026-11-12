@@ -138,6 +138,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         if route.directionsOnly==true then
             add({kind="directions",source=key,label=actor.name or key,role=role,
                  zone=locations[1] and locations[1].zone,verification=route.verification,
+                 questID=q and q.questID,questName=q and q.name,preferred=preferred,
                  instructions=route.instructions,requirements=requirements})
             return
         end

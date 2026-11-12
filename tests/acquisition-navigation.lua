@@ -35,6 +35,11 @@ C_QuestLog.GetNextWaypointText=function() return "Current client objective" end
 C_Map={GetMapInfo=function(id) return {name="Westfall",mapID=id,parentMapID=0} end}
 assert(addon:GetAcquisitionMapTarget(chain).kind=="active_quest")
 C_QuestLog=nil
+addon.AcquisitionNavigationData.quests[26]={questID=26,name="Disputed event source",starts={"npc:1"},ends={"npc:2"}}
+local disputedContainer=plan(26,{{kind="quest_container",questID=26,containerItemID=906,directionsOnly=true,
+    instructions="Published source locations conflict; current event access unverified."}})
+local disputedTarget=addon:GetAcquisitionMapTarget(disputedContainer)
+assert(disputedTarget.kind=="directions" and disputedTarget.questID==26 and not disputedTarget.x,"written-only quest containers retain exact quest identity without promoting disputed coordinates")
 local split=plan(3,{{kind="quest",questID=11}})
 model.chains["11"]=nil
 local seenStart,seenEnd=false,false
@@ -277,7 +282,19 @@ assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[5028]),"historical Sa
 assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[285043]),"unknown Snarling Fang origin must not receive a misleading pin")
 local historicalOmgorn=addon:GetAcquisitionMapTarget(addon.ItemCatalog[17055])
 assert(historicalOmgorn and historicalOmgorn.kind=="directions" and historicalOmgorn.verification=="legacy-reference" and not historicalOmgorn.x and not historicalOmgorn.bounds,"Classic-only Changuk reference opens qualified written guidance without a current map target")
-assert(not addon:GetAcquisitionMapTarget(addon.ItemCatalog[13022]),"uncorroborated sparse Classic bow references must not create a current farm pin")
+local bowContainer=false
+for _,route in ipairs(addon.AcquisitionNavigationData.items["13022"].routes) do
+    assert(route.kind=="quest_container" and route.containerItemID==21528,"sparse uncorroborated bow NPC references must not become a farm destination")
+    bowContainer=true
+end
+assert(bowContainer,"a separately verified full-wrapper/quest reward join can add qualified container navigation without promoting the bow's old NPC claims")
+local charr=addon:GetAcquisitionMapTarget(addon.ItemCatalog[18671])
+assert(charr and charr.kind=="directions" and charr.verification=="legacy-reference" and not charr.x and not charr.bounds,"Classic item-side Baron Charr reference remains written-only despite a full reverse NPC positive")
+local multicolored=addon.AcquisitionNavigationData.items["20692"]
+assert(multicolored and multicolored.routes[1].kind=="quest_container" and multicolored.routes[1].containerItemID==20603,"container-only Multicolored Band retains its supported bag route rather than an invented enemy")
+for _,route in ipairs(addon.AcquisitionNavigationData.items["10105"].routes) do
+    if route.kind=="quest_container" and route.containerItemID==21513 then assert(route.directionsOnly,"disputed war-effort locations stay written-only in real catalogue data") end
+end
 local actualModel=addon.AcquisitionNavigationData
 assert(actualModel.chains['6502'].steps[1]==4182 and actualModel.chains['6602'].steps[1]==4903 and not actualModel.chains['6502'].prerequisitesVerified and not actualModel.chains['6602'].prerequisitesVerified,'Drakefire navigation starts with the published full route, not only Haleh or Rexxar, while retaining prerequisite uncertainty')
 for _,id in ipairs(actualModel.chains['6502'].steps) do assert(id~=99435,'SideNone same-name variant is not invented as another accepted prerequisite') end

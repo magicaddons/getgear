@@ -453,7 +453,8 @@ def build(inputs):
                         and container_id in evidence.full_quest_rewards.get(str(quest_id), set())
                         and any(isinstance(x, dict) and x.get("id") == item_id for x in rows(container.get("contains")))):
                     route("quest_container", questID=quest_id, containerItemID=container_id,
-                          instructions=extra.get("instructions"), verification="published-reference")
+                          instructions=extra.get("instructions"), verification="published-reference",
+                          directionsOnly=True if extra.get("directionsOnly") is True else None)
                     if not q.get("starts"):
                         gap("quest_start_missing", quest=quest_id, detail="Container reward quest has no established starting actor.")
                 else:
