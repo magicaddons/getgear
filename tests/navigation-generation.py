@@ -152,7 +152,9 @@ with tempfile.TemporaryDirectory() as temp:
     assert "starterItems" not in nav.build(gear)[0]["quests"]["10"], "a provided quest input is not necessarily a quest-starting item"
     gear["5"] = dict(itemID=5, name="Unnamed-map chest fixture", sourceType="Chest", eligibility=[511])
     proof["items"].append(response("item", 5, lists={"contained-in-object": [{"id": 902}]}))
-    proof["actors"].append(response("object", 902, name="Unknown-map chest", maps={"1583": [{"coords": [[0, 0]]}]}))
+    proof["actors"].append(response("object", 902, name="Unknown-map chest",
+                                    lists={"contains": [{"id": 5, "name": "Unnamed-map chest fixture"}]},
+                                    maps={"1583": [{"coords": [[0, 0]]}]}))
     path.write_text(json.dumps(proof))
     unnamed, coverage, _, _ = nav.build(gear)
     assert not unnamed["sources"]["object:902"]["locations"] and coverage[-1]["status"] == "missing", "anonymous 0,0 rows without a map namespace are unresolved, not verified coordinates"
@@ -274,5 +276,76 @@ with tempfile.TemporaryDirectory() as temp:
     assert q["starterItems"][0]["itemID"] == 901 and q["requiredItems"][0]["startsQuest"]
     assert not q["starts"] and q["ends"] == ["npc:100"] and q["starterOriginUnresolved"]
     assert coverage[0]["status"] == "missing", "a known turn-in does not resolve the first destination for an item-started quest"
+
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    for filename in ["reviewed_recipe_sources.json", "reviewed_equipment_sources.json"]:
+        (nav.REPORT / filename).write_text("[]")
+    for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / filename).write_text("itemID\n")
+    gear = {"1": dict(itemID=1, name="Raid gear", sourceType="World drop", eligibility=[511]),
+            "2": dict(itemID=2, name="Chest gear", sourceType="Chest", eligibility=[511])}
+    def page(kind, entity, **facts):
+        return dict(url=f"https://www.wowhead.com/forever/{kind}={entity}", sha256="a"*64, **facts)
+    proof = dict(
+        zones=[page("zone", 9000, title="Fixture raid - Zone - WoW Forever",
+                    zone=dict(id=9000, name="Fixture raid", instanceType="Raid"),
+                    markup=["[ul][li]Instance type: Raid[/li][/ul]"])],
+        actors=[page("npc", 100, title="Raid source - NPC - Forever",
+                     lists={"drops": [dict(id=1, name="Raid gear")]},
+                     maps={"9000": [dict(uiMapName="Fixture raid", uiMapId=999, coords=[[20,30]])]}),
+                page("object", 200, title="Chest - Object - Forever",
+                     lists={"contains": [dict(id=2, name="Chest gear")]},
+                     maps={"40": [dict(uiMapName="Westfall", uiMapId=52, coords=[[20,30]])]})],
+        items=[page("item", 1, identity=dict(id=1,name="Raid gear"),
+                    lists={"dropped-by": [dict(id=100,name="Raid source")]}),
+               page("item", 2, identity=dict(id=2,name="Chest gear"),
+                    lists={"contained-in-object": [dict(id=200,name="Chest")]})])
+    evidence_path = nav.REPORT / "checkpoint_raid_evidence.json"
+    reviewed = [dict(itemID=1, originUnknown=True, confidence="published-forever-named-enemy-reference", navigationRoutes=[
+        dict(kind="named_drop", source="npc:100", requiresFullLootJoin=True)])]
+    reviewed_path = nav.REPORT / "reviewed_equipment_sources.json"
+    reviewed_path.write_text(json.dumps(reviewed))
+    def generate():
+        evidence_path.write_text(json.dumps(proof))
+        return nav.build(gear)
+    data, coverage, _, _ = generate()
+    assert data["instances"]["Fixture raid"] and data["instanceDetails"]["Fixture raid"]["areaID"]==9000
+    assert coverage[0]["status"]=="directions", "instance actor coordinates are not verified world entrance coordinates"
+    assert coverage[1]["status"]=="verified_coordinate_data", "full object contents and exact own reference can establish a destination"
+    proof["actors"][0]["lists"]["drops"]=[]
+    data, coverage, gaps, _=generate()
+    assert "1" not in data["items"] and coverage[0]["status"]=="missing"
+    assert any(g["itemID"]==1 and g["gap"]=="full_loot_join_unverified" for g in gaps)
+    proof["actors"][0]["lists"]["drops"]=[dict(id=1,name="Different version")]
+    assert "1" not in generate()[0]["items"], "a same-ID different-name full row cannot establish this exact gear"
+    proof["actors"][0]["lists"]["drops"]=[dict(id=1,name="Raid gear")]
+    proof["items"][0]["lists"]["dropped-by"][0]["classicEra"]=1
+    reviewed[0]["navigationRoutes"][0]["entranceOnly"]=True
+    reviewed_path.write_text(json.dumps(reviewed))
+    route=generate()[0]["items"]["1"]["routes"][0]
+    assert route["verification"]=="legacy-reference" and route["directionsOnly"], "an authored full-join route cannot promote a Classic item-side reference to a current farm"
+    assert route["entranceOnly"], "a separately verified instance can offer native entrance geography while retaining legacy loot qualification"
+    proof["actors"][1]["lists"]["contains"]=[]
+    assert "2" not in generate()[0]["items"], "a one-sided object reference is missing evidence, not implemented navigation"
+    reviewed.append(dict(itemID=2, navigationRoutes=[dict(kind="object",source="object:200",requiresFullLootJoin=True)]))
+    reviewed_path.write_text(json.dumps(reviewed))
+    assert "2" not in generate()[0]["items"], "failed authored full contents cannot fall through to a weaker automatic object pin"
+    proof["actors"][1]["lists"]["contains"]=[dict(id=2,name="Chest gear",classicEra=1)]
+    data, coverage, _, _=generate()
+    assert data["items"]["2"]["routes"][0]["directionsOnly"] and coverage[1]["status"]=="directions"
+    reviewed[1]["navigationRoutes"][0]["directionsOnly"]=True
+    reviewed_path.write_text(json.dumps(reviewed))
+    assert len(generate()[0]["items"]["2"]["routes"])==1, "automatic object discovery must preserve an authored withheld marker"
+    proof["zones"][0]["zone"]["id"]=9001
+    data, _, gaps, _=generate()
+    assert "Fixture raid" not in data["instances"], "zone URL, identity, name and primary instance quickfacts must agree"
+    assert any(g["gap"]=="instance_definition_unverified" for g in gaps)
+    assert not data["items"]["1"]["routes"][0].get("entranceOnly"), "new entrance hints cannot bypass missing instance definitions"
+    proof["zones"][0]["zone"].update(id=9000,instanceType="Dungeon")
+    proof["zones"][0]["markup"]=["[ul][li]Instance type: Dungeon[/li][/ul]"]
+    assert generate()[0]["instanceDetails"]["Fixture raid"]["kind"]=="dungeon", "future verified dungeon evidence uses the same model as raids"
+    zero=nav.Evidence().location("Fixture raid",9000,{"uiMapId":999,"coords":[[0,0]]})
+    assert zero["zone"]=="Fixture raid" and "x" not in zero and "bounds" not in zero, "published 0,0 placeholders retain zone context without becoming a floor or entrance point"
 
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

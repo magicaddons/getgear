@@ -1,0 +1,108 @@
+{
+  "capturedUTC": "2026-11-12T10:21:52.763551+00:00",
+  "method": "Exact full factual snapshot comparison: actual8CB PF23618/EV1688 snapshots to8CC; original8BR deltas preserved separately;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23618,
+    "afterItems": 23618,
+    "beforeDefinitions": 9327,
+    "afterDefinitions": 9327,
+    "newItems": [],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.5eb92768f2.json",
+        "bytes": 1010610,
+        "sha256": "5eb92768f2ec8a703bb2a113d16fddae8785fd3dfeb9a4a95ff77cf4bccacacb",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.1ce2fa50c9.json",
+        "bytes": 1359860,
+        "sha256": "1ce2fa50c98288235232c7368476d913dd17dcbb358abbf117482ccc55796150",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.c731b98083.json",
+        "bytes": 466933,
+        "sha256": "c731b9808385b2f8a49a3b530bc6087f2cca7ccab63c168038101fd55cb24e0f",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.aaf1f7d299.json",
+        "bytes": 446743,
+        "sha256": "aaf1f7d299087f2b2d6b58308a83826143a8fbddec7a5a45528bf7f34d3338c6",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1688,
+    "afterRaw": 1688,
+    "qualifying": 1439,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [
+      {
+        "key": [
+          "npc",
+          "8719",
+          "located_in",
+          "zone",
+          "1453"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T06:43:56.000Z",
+            "after": "2026-11-12T10:05:25.000Z"
+          }
+        }
+      }
+    ],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103442,
+        "sha256": "5bb543196b6a779f2f73cedfce4bf758a9148e517cbd4dadf3708d4c33885f9e",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T10:20:15.827Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103495,
+        "sha256": "7b89e4cf1457de50fabb9dc1d2b7a8413727e3b34c4faa7f5c0fb6b9e24281b9",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T10:20:15.827Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103457,
+        "sha256": "6b8377b8f4a8148472201ae2efdb8f8dc10cbfddd692a32b52c459e4c9d92106",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T10:20:15.827Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 39034,
+        "sha256": "82023bc29e3b6eda4ec9079227079aaa3a3862e3cb2c477f8943de54243314b6",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T10:20:15.827Z"
+      }
+    ]
+  }
+}

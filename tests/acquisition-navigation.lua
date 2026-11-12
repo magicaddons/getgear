@@ -124,6 +124,25 @@ local npcContainer=plan(24,{{kind="npc_container",source="npc:2",containerItemID
     instructions="Published Classic NPC-to-box-to-gear relation; current acquisition unverified."}})
 local npcContainerTarget=addon:GetAcquisitionMapTarget(npcContainer)
 assert(npcContainerTarget.kind=="directions" and not npcContainerTarget.x and npcContainerTarget.role=="Container drop source","legacy container loot opens qualified directions without a current NPC-farm point")
+model.sources["npc:4"]={name="Multi-region reference",locations={
+    {zone="Westfall",x=20,y=30},{zone="Redridge Mountains",x=40,y=50}}}
+local multiRegion=plan(27,{{kind="named_drop",source="npc:4",directionsOnly=true,verification="legacy-reference"}})
+local regionChoices=addon:GetAcquisitionNavigationChoices(multiRegion)
+assert(#regionChoices==2 and regionChoices[1].zone=="Westfall" and regionChoices[2].zone=="Redridge Mountains","written references retain every independently published region")
+for _,target in ipairs(regionChoices) do assert(target.kind=="directions" and not target.x and not target.bounds,"historical regions must not become current farm points") end
+assert(addon:GetAcquisitionDirections(multiRegion):find("Redridge Mountains",1,true),"the full guide retains subsequent regions")
+model.instances["Fixture raid"]=true
+model.sources["npc:5"]={name="Raid source",locations={{zone="Fixture raid",uiMapID=999,x=20,y=30}}}
+local instanceSource=plan(28,{{kind="named_drop",source="npc:5"}})
+local instanceTarget=addon:GetAcquisitionMapTarget(instanceSource)
+assert(instanceTarget.kind=="dungeon" and instanceTarget.dungeon=="Fixture raid" and not instanceTarget.x and not instanceTarget.y and not instanceTarget.uiMapID,"instance source coordinates are not an entrance or an accurate floor target; use the existing client entrance resolver")
+model.sources["npc:6"]={name="Another raid source",locations={{zone="Fixture raid",x=70,y=80}}}
+local sharedEntrance=plan(29,{
+    {kind="named_drop",source="npc:5",directionsOnly=true,verification="legacy-reference",entranceOnly=true},
+    {kind="named_drop",source="npc:6",directionsOnly=true,verification="legacy-reference",entranceOnly=true}})
+local sharedTarget=addon:GetAcquisitionMapTarget(sharedEntrance)
+assert(sharedTarget.kind=="dungeon" and sharedTarget.verification=="legacy-reference" and not sharedTarget.x,"a historical loot reference can locate a client-supplied instance entrance without claiming current NPC loot or coordinates")
+assert(sharedTarget.choiceCount==1 and not sharedTarget.chooseFirst and #addon:GetAcquisitionNavigationChoices(sharedEntrance)==2,"one physical entrance opens directly while the guide retains every source")
 assert(addon:GetAcquisitionDirections(npcContainer):find("not guaranteed finished equipment",1,true),"the NPC drops a box rather than guaranteeing its gear contents")
 model.quests["25"]={questID=25,name="Unresolved starting volume",starts={},ends={"npc:1"},
     starterItems={{itemID=905,name="Starting volume"}},starterOriginUnresolved=true}

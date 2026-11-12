@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs/source-audit-1-60/reconciliation-20261109"
 CLASSES = ["PRIEST", "MAGE", "WARLOCK", "DRUID", "ROGUE", "HUNTER", "SHAMAN", "WARRIOR", "PALADIN"]
-ENTITY = re.compile(r"/(?:forever/)?(npc|object|quest|item|currency)(?:=|/)(\d+)")
+ENTITY = re.compile(r"/(?:forever/)?(npc|object|quest|item|currency|zone)(?:=|/)(\d+)")
 
 
 def lua(value):
@@ -54,6 +54,8 @@ class Evidence:
         self.full_quest_rewards = collections.defaultdict(set)
         self.full_npc_sales = collections.defaultdict(dict)
         self.full_npc_drops = collections.defaultdict(dict)
+        self.full_object_contents = collections.defaultdict(dict)
+        self.instances = {}
         self.quest_starters = collections.defaultdict(list)
         self.legacy_quests = {}
         self.modern_quests = set()
@@ -77,13 +79,14 @@ class Evidence:
         if isinstance(map_id, int) and map_id > 0:
             result["uiMapID"] = map_id
             self.maps[zone].add(map_id)
-        points = [p for p in rows(raw.get("coords")) if isinstance(p, list) and len(p) >= 2 and coordinate(p[0]) and coordinate(p[1])]
+        points = [p for p in rows(raw.get("coords")) if isinstance(p, list) and len(p) >= 2 and coordinate(p[0]) and coordinate(p[1]) and (p[0] != 0 or p[1] != 0)]
         bounds = raw.get("bounds")
         if points:
             bounds = dict(xMin=min(x[0] for x in points), xMax=max(x[0] for x in points),
                           yMin=min(x[1] for x in points), yMax=max(x[1] for x in points))
         if isinstance(bounds, dict) and all(coordinate(bounds.get(k)) for k in ["xMin", "xMax", "yMin", "yMax"]):
-            if bounds["xMin"] <= bounds["xMax"] and bounds["yMin"] <= bounds["yMax"]:
+            if (bounds["xMin"] <= bounds["xMax"] and bounds["yMin"] <= bounds["yMax"]
+                    and any(bounds[k] != 0 for k in ["xMin", "xMax", "yMin", "yMax"])):
                 result["bounds"] = bounds
                 if bounds["xMin"] == bounds["xMax"] and bounds["yMin"] == bounds["yMax"]:
                     result.update(x=bounds["xMin"], y=bounds["yMin"])
@@ -143,6 +146,10 @@ class Evidence:
                     for drop in rows((node.get("lists") or {}).get("drops")) + rows(node.get("selectedDrops")):
                         if isinstance(drop, dict) and type(drop.get("id")) is int:
                             self.full_npc_drops[source_id][drop["id"]] = drop
+                else:
+                    for content in rows((node.get("lists") or {}).get("contains")) + rows(node.get("selectedContains")):
+                        if isinstance(content, dict) and type(content.get("id")) is int:
+                            self.full_object_contents[source_id][content["id"]] = content
                 maps = node.get("maps") or node.get("mapper") or {}
                 if isinstance(maps, dict):
                     for area_id, maps_for_area in maps.items():
@@ -150,6 +157,16 @@ class Evidence:
                             self.append_location(source, self.location(area.get("uiMapName") or area.get("name"), area_id, area))
                 for area in (rows(maps) + rows(node.get("publishedLocationFootprints")) + rows(node.get("publishedAreas"))):
                     self.append_location(source, self.location(area.get("name") or area.get("zone"), area.get("zoneID"), area))
+            elif kind == "zone":
+                zone = node.get("zone") or {}
+                markup = rows(node.get("markup"))
+                if (zone.get("id") == source_id and isinstance(zone.get("name"), str) and zone["name"].strip()
+                        and zone["name"] == node.get("title", "").split(" - Zone - ")[0]
+                        and zone.get("instanceType") in ["Raid", "Dungeon"]
+                        and any(isinstance(s, str) and "[li]Instance type: " + zone["instanceType"] + "[/li]" in s for s in markup)):
+                    self.instances[zone["name"]] = dict(areaID=source_id, kind=zone["instanceType"].lower(), evidence=provenance,
+                        verification="published-reference",
+                        instructions=node.get("navigationInstructions") if isinstance(node.get("navigationInstructions"), str) else None)
             elif kind == "currency":
                 name = node.get("currencyName")
                 title = node.get("title", "")
@@ -361,7 +378,8 @@ def build(inputs):
     chains = json.loads(chains_path.read_text()) if chains_path.exists() else {}
     data = dict(version=1, sources=evidence.sources, quests=evidence.quests, items={}, maps={}, chains=chains,
                 currencies=evidence.currencies,
-                instances={name: True for name in known_dungeons})
+                instances={name: True for name in known_dungeons | set(evidence.instances)},
+                instanceDetails=evidence.instances)
     container_routes = collections.defaultdict(list)
     for container_id, container in evidence.items.items():
         shared = container.get("containerNavigationRoutes", [])
@@ -462,11 +480,32 @@ def build(inputs):
                         detail="Require full quest reward and exact full-container contents evidence; no inferred destination.")
                 continue
             if extra.get("kind") in ["trainer", "crafting_requirement", "object", "unlock", "named_drop"] and extra.get("source") in evidence.sources:
-                if not evidence.sources[extra["source"]]["evidence"]:
+                actor = evidence.sources[extra["source"]]
+                if not actor["evidence"]:
                     continue
+                legacy = extra.get("verification") == "legacy-reference"
+                if extra.get("requiresFullLootJoin") and extra["kind"] in ["object", "named_drop"]:
+                    relation = "contained-in-object" if extra["kind"] == "object" else "dropped-by"
+                    reverse = evidence.full_object_contents if extra["kind"] == "object" else evidence.full_npc_drops
+                    expected_kind = "object" if extra["kind"] == "object" else "npc"
+                    forward = next((x for x in rows(own.get(relation)) if isinstance(x, dict) and x.get("id") == actor["sourceID"]), None)
+                    back = reverse.get(actor["sourceID"], {}).get(item_id)
+                    if not (actor["kind"] == expected_kind and forward and back and back.get("name") == gear["name"]):
+                        gap("full_loot_join_unverified", extra["source"],
+                            detail="Require exact own source and independent full NPC/object contents; a header or unrelated name does not establish this loot.")
+                        continue
+                    legacy = legacy or forward.get("classicEra") == 1 or back.get("classicEra") == 1
+                    instance = any(loc["zone"] in data["instances"] for loc in actor["locations"])
+                    if instance and not craft:
+                        plan["category"] = "dungeon"
+                    if extra.get("entranceOnly") and not instance:
+                        gap("instance_definition_unverified", extra["source"],
+                            detail="Published source region retained; a verified instance definition and client entrance are still required. No floor point is substituted.")
                 route(extra["kind"], source=extra["source"], instructions=extra.get("instructions"),
-                      verification="legacy-reference" if extra.get("verification") == "legacy-reference" else "published-reference",
-                      directionsOnly=True if extra.get("directionsOnly") is True or extra.get("verification") == "legacy-reference" else None,
+                      verification="legacy-reference" if legacy else "published-reference",
+                      directionsOnly=True if extra.get("directionsOnly") is True or legacy else None,
+                      entranceOnly=True if extra.get("entranceOnly") is True and extra.get("requiresFullLootJoin")
+                          and any(loc["zone"] in data["instances"] for loc in evidence.sources[extra["source"]]["locations"]) else None,
                       bookItemID=book_id if craft else None)
         # Reward relationships are read from explicit primary reward arrays, never item-provided state.
         for quest_id, q in evidence.quests.items():
@@ -543,12 +582,24 @@ def build(inputs):
                 for actor in drops:
                     if actor.get("id"):
                         key, _ = evidence.source("npc", actor["id"], actor.get("name"))
+                        if any(x.get("kind") == "named_drop" and x.get("source") == key for x in extras):
+                            continue
                         route("recipe_drop" if craft else "named_drop", source=key, bookItemID=book_id if craft else None, verification="published-reference")
             if not craft and not drops and not source_item.get("sold-by"):
                 for obj in rows(source_item.get("contained-in-object")):
                     if obj.get("id"):
                         key, _ = evidence.source("object", obj["id"], obj.get("name"))
-                        route("object", source=key, verification="published-reference")
+                        if any(r["kind"] == "object" and r.get("source") == key for r in plan["routes"]):
+                            continue
+                        back = evidence.full_object_contents.get(obj["id"], {}).get(item_id)
+                        if not back or back.get("name") != gear["name"]:
+                            gap("full_loot_join_unverified", key,
+                                detail="An object reference needs independently read full exact contents before receiving a destination.")
+                            continue
+                        legacy = obj.get("classicEra") == 1 or back.get("classicEra") == 1
+                        route("object", source=key, verification="legacy-reference" if legacy else "published-reference",
+                              directionsOnly=True if legacy else None,
+                              entranceOnly=True if any(loc["zone"] in data["instances"] for loc in evidence.sources[key]["locations"]) else None)
         if dungeon and dungeon.get("reconciledRole") not in ["crafted-item"]:
             plan["category"] = "dungeon_recipe" if craft else "dungeon"
             names = [name.strip() for name in dungeon.get("dungeon", "").split(" / ") if name.strip() in known_dungeons]
@@ -580,10 +631,12 @@ def build(inputs):
             if entry.get("location"):
                 locations.append(entry["location"])
             located = located or bool(locations) or entry["kind"] == "dungeon"
-            exact = exact or (not entry.get("directionsOnly") and any(coordinate(x.get("x")) and coordinate(x.get("y")) and x.get("verification") == "published-reference" for x in locations))
+            exact = exact or (not entry.get("directionsOnly") and any(x["zone"] not in data["instances"] and coordinate(x.get("x")) and coordinate(x.get("y")) and x.get("verification") == "published-reference" for x in locations))
             for key in keys:
                 if entry.get("directionsOnly"):
-                    gap("map_target_withheld", key, entry.get("questID", ""), "Qualified written guidance only; do not promote this reference to a current map target.")
+                    gap("map_target_withheld", key, entry.get("questID", ""),
+                        "NPC/object target withheld; a separately resolved client instance entrance is geographic guidance, not current loot proof."
+                        if entry.get("entranceOnly") else "Qualified written guidance only; do not promote this reference to a current map target.")
                 if not evidence.sources.get(key, {}).get("locations"):
                     gap("source_coordinates_missing", key, entry.get("questID", ""), "Named source exists; precise location not established.")
                 elif not any(coordinate(x.get("x")) and coordinate(x.get("y")) for x in evidence.sources[key]["locations"]):

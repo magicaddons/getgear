@@ -136,10 +136,18 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
             requirements=(requirements~="" and requirements.."; " or "")..table.concat(q.sourceRequirements,"; ")
         end
         if route.directionsOnly==true then
-            add({kind="directions",source=key,label=actor.name or key,role=role,
-                 zone=locations[1] and locations[1].zone,verification=route.verification,
-                 questID=q and q.questID,questName=q and q.name,preferred=preferred,
-                 instructions=route.instructions,requirements=requirements})
+            local writtenLocations=#locations>0 and locations or {{}}
+            for _,loc in ipairs(writtenLocations) do
+                local context=(model.instanceDetails or {})[loc.zone]
+                local entrance=route.entranceOnly and (model.instances or {})[loc.zone]
+                local instructions=route.instructions
+                if context and context.instructions then instructions=(instructions and instructions.."\n" or "")..context.instructions end
+                add({kind=entrance and "dungeon" or "directions",dungeon=entrance and loc.zone or nil,
+                     entranceOnly=entrance and true or nil,source=key,label=actor.name or key,role=entrance and "Instance entrance" or role,
+                     zone=loc.zone,verification=route.verification,
+                     questID=q and q.questID,questName=q and q.name,preferred=preferred,
+                     instructions=instructions,requirements=requirements})
+            end
             return
         end
         if #locations==0 then
@@ -148,11 +156,15 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         end
         for _, loc in ipairs(locations) do
             local instance=(model.instances or {})[loc.zone]
+            local context=(model.instanceDetails or {})[loc.zone]
+            local instructions=route.instructions
+            if context and context.instructions then instructions=(instructions and instructions.."\n" or "")..context.instructions end
             add({kind=instance and "dungeon" or route.kind,dungeon=instance and loc.zone or nil,
-                 boss=instance and route.boss or nil,source=key,label=actor.name or key,zone=loc.zone,uiMapID=loc.uiMapID,
-                 x=loc.x,y=loc.y,bounds=loc.bounds,verification=loc.verification,role=role,
+                 entranceOnly=instance and route.entranceOnly and true or nil,
+                 boss=instance and route.boss or nil,source=key,label=actor.name or key,zone=loc.zone,uiMapID=not instance and loc.uiMapID or nil,
+                 x=not instance and loc.x or nil,y=not instance and loc.y or nil,bounds=not instance and loc.bounds or nil,verification=loc.verification,role=role,
                  questID=q and q.questID,questName=q and q.name,requirements=requirements,preferred=preferred,
-                 instructions=route.instructions,bookItemID=route.bookItemID,chainUnresolved=unresolved})
+                 instructions=instructions,bookItemID=route.bookItemID,chainUnresolved=unresolved})
         end
     end
     local questRoutes=0
@@ -209,7 +221,12 @@ function GetGear:GetAcquisitionMapTarget(gear)
     if #useful==0 then return end
     local selected=useful[1]
     for _, target in ipairs(useful) do if target.preferred then selected=target;break end end
-    selected.choiceCount=#useful;selected.chooseFirst=#useful>1 and not selected.preferred
+    local sameEntrance=selected.kind=="dungeon" and selected.entranceOnly==true
+    for _,target in ipairs(useful) do
+        if target.kind~="dungeon" or not target.entranceOnly or target.dungeon~=selected.dungeon then sameEntrance=false;break end
+    end
+    selected.choiceCount=sameEntrance and 1 or #useful
+    selected.chooseFirst=not sameEntrance and #useful>1 and not selected.preferred
     selected.spot=selected.label
     return selected
 end
