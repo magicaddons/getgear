@@ -1,0 +1,76 @@
+{
+  "scope": "Documentation/diagnostic followup only,deliberately outside runtime evidence-input filename patterns. SpiritHealer has no acquisition inventory/quest roles; not an upgrade destination or missing gear origin.",
+  "primary": {
+    "url": "https://www.wowhead.com/forever/npc=6491",
+    "bytes": 101569,
+    "sha256": "4b65b7204d1b0bb117250a861754a67c366f06dc7a4cb4ef2d466fec64649145",
+    "title": "Spirit Healer - NPC - WoW Forever",
+    "reusedCachedResponse": false
+  },
+  "primaryAreaID": 1,
+  "primaryUIMapID": 1426,
+  "primaryZone": "Dun Morogh",
+  "fullPublishedFootprint": [
+    {
+      "count": 4,
+      "coords": [
+        [
+          29.4,
+          69.8
+        ],
+        [
+          29.6,
+          69.8
+        ],
+        [
+          47,
+          55
+        ],
+        [
+          54.2,
+          39
+        ]
+      ],
+      "uiMapId": 1426,
+      "uiMapName": "Dun Morogh"
+    }
+  ],
+  "observedGeography": {
+    "fromKind": "npc",
+    "fromId": 6491,
+    "rel": "located_in",
+    "toKind": "zone",
+    "toId": 1426,
+    "evidence": "observed",
+    "build": null,
+    "installs": 3,
+    "firstSeen": "2026-11-05T03:28:14.000Z",
+    "lastSeen": "2026-11-12T20:56:57.000Z"
+  },
+  "observedExactPosition": false,
+  "currentGearLootOrStockClaim": false,
+  "selectedExistingObservedExample": {
+    "itemID": 6564,
+    "npcID": 3875,
+    "primaryOwnFullNPCPositive": true,
+    "edge": {
+      "fromKind": "item",
+      "fromId": 6564,
+      "rel": "dropped_by",
+      "toKind": "npc",
+      "toId": 3875,
+      "evidence": "observed",
+      "build": null,
+      "installs": 3,
+      "firstSeen": "2026-11-09T08:55:21.000Z",
+      "lastSeen": "2026-11-09T08:55:21.000Z"
+    },
+    "scope": "This old unchanged3-install/null-build observation confirms an attributed drop example,not a dedicated farm/currentbuild/personal loot or focused pin for a broad random cloak."
+  },
+  "totalPrimaryIncludingCase": {
+    "full": 763,
+    "new": 250,
+    "cached": 513
+  },
+  "limits": "All1701prior relations exactly retained;newNPC-only observation is not gear item6491. No runtime locations or source-role invention from generic resurrection geography."
+}

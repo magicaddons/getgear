@@ -1,0 +1,125 @@
+{
+  "scope": "Indexed published excerpts and secondary source leads only. Thirty raw full primary403 exceptions remain; no excerpt receives a fabricated raw-bodySHA or modern full quest reward/role join. No failed canonical URL retried.",
+  "queries": 8,
+  "acceptedSecondaryCoordinates": 0,
+  "currentClientConfirmation": 0,
+  "questFindings": {
+    "95264": {
+      "name": "Shaw Needs To Know",
+      "indexedPrimaryURL": "https://www.wowhead.com/forever/quest%3D95264/shaw-needs-to-know",
+      "publishedSide": "Alliance",
+      "sourceMinimum": 48,
+      "returnReference": "Matthias Shaw,Stormwind",
+      "choicesFromIndexedNames": [
+        279474,
+        279831,
+        279833
+      ],
+      "independentSecondaryURL": "https://forever-xp.com/quests/95264/",
+      "qualification": "Own item references and indexed reward names agree; full raw reward table/actors/first chain stage unread. Reject a secondary empty-record claim of standalone/no prerequisite as proof."
+    },
+    "95483": {
+      "name": "Thrall Needs to Know",
+      "indexedPrimaryURL": "https://www.wowhead.com/forever/quest%3D95483/thrall-needs-to-know",
+      "publishedSide": "Horde",
+      "sourceMinimum": 48,
+      "returnReference": "Thrall,Orgrimmar",
+      "choicesFromIndexedNames": [
+        279831,
+        279833,
+        279474
+      ],
+      "secondarySequence": [
+        95454,
+        96369,
+        95483
+      ],
+      "secondaryURL": "https://foreverchanges.pro/quest/95483/thrall-needs-to-know",
+      "qualification": "Secondary three-stage HonorKorkron/BadNewsFolkar/Thrall itinerary is a lead; all three full raw pages403. Not an accepted mandatory graph or final recipient as first action."
+    },
+    "96334": {
+      "name": "Blood Red Bandanas",
+      "indexedPrimaryURL": "https://www.wowhead.com/forever/mx/quest%3D96334/blood-red-bandanas",
+      "publishedSide": "Horde",
+      "sourceMinimum": 48,
+      "objectiveReference": "Collect8 bandanas from Alcaz human guards; indexed prose refers to Eitrigg inOrgrimmar.",
+      "choicesFromIndexedNames": [
+        279448,
+        279473
+      ],
+      "qualification": "Localized indexed primary retains English objective; raw full page unread. No exact input ID,formalstartingrole/current gate,drop rate or precise point invented."
+    },
+    "96332": {
+      "name": "A Little Payback",
+      "secondaryURL": "https://foreverchanges.pro/quest/96332/a-little-payback",
+      "sourceMinimum": 48,
+      "publishedSide": "Horde",
+      "objectiveReference": "Published secondary:15 Strashaz soldiers,8 enchantresses andCaZass head toSergeantUlka.",
+      "choicesFromIndexedNames": [
+        279824,
+        279826,
+        279829
+      ],
+      "qualification": "Specific secondary objective,not independently full-primary body/actor/chain. Names/kill count not promoted to a confirmed farm/current access."
+    },
+    "96381": {
+      "name": "A Bit of Wet Work",
+      "indexedPrimaryURL": "https://www.wowhead.com/forever/quest%3D96381/a-bit-of-wet-work",
+      "publishedSide": "Alliance",
+      "sourceMinimum": 48,
+      "objectiveReference": "AlcazPrison:15 soldiers,8 enchantresses andCaZass head; return referenceSullyMcCleary.",
+      "choicesFromIndexedNames": [
+        279825,
+        279826,
+        279829
+      ],
+      "qualification": "Published indexed objective and choices,not raw full quest/precise NPC point or earlier Jaina-related unlock proof."
+    },
+    "92069": {
+      "name": "Claws That Rend,Tusks that Gore",
+      "indexedPrimaryURL": "https://www.wowhead.com/forever/quest%3D92069/claws-that-rend-tusks-that-gore",
+      "publishedSide": "None",
+      "sourceMinimum": 45,
+      "objectiveReference": "One ClawsGreatBear andoneTusksUnbroken fromWithermaw/Bonesnout; return referenceOgtinc,Azshara.",
+      "choicesFromIndexedNames": [
+        260213,
+        260214,
+        260215
+      ],
+      "qualification": "Source minimum45,not47 copied from another Blackmaw quest or missing printed wearer level. No mandatory questgiver role,current access or guaranteed weapon bossdrop."
+    },
+    "92066": {
+      "name": "The Twin Bears",
+      "secondaryURL": "https://www.60.tools/quests/92066-the-twin-bears",
+      "sourceMinimum": 47,
+      "objectiveReference": "Two cultural totems associated withUrsoc/Ursol informerBlackmawHold,fromsecondarydescription.",
+      "qualification": "Source lacks objectives and item reward rows; do not invent NPC identity,startingpoint,provided totems,earlier unlocks or full reward join."
+    },
+    "92070": {
+      "name": "A Lost Memento",
+      "indexedPrimaryURL": "https://www.wowhead.com/forever/quest%3D92070/a-lost-memento",
+      "publishedSide": "None",
+      "sourceMinimum": 47,
+      "objectiveReference": "Find the owner of FeatheredCharmNecklace; indexed primary describesAzshara.",
+      "choicesFromIndexedNames": [
+        279893
+      ],
+      "qualification": "The reward name alone doesnot identify the starting NPC or inputorigin. No necklace-to-reward equivalence,free provided input or precise point adopted."
+    }
+  },
+  "breadcrumbReport": {
+    "questID": 95284,
+    "name": "The Elite of the Elite",
+    "indexedURL": "https://www.wowhead.com/forever/quest%3D95284/the-elite-of-the-elite",
+    "basis": "Indexed attributed user comment calls it a breadcrumb for96334/96332/95309. This is an unverified player report,not a primary formal prerequisite graph.",
+    "rawFull": "HTTP403; no bodyhash/unchanged retry",
+    "currentAvailability": "unverified"
+  },
+  "rejectedClaims": [
+    "PandaBase standalone/no earlierquests inferred from absent records",
+    "Secondary Stormwind78.21/99.97 place-name marker treated as exactShawNPC position",
+    "Same-name NPC or item/source minimum used as wearer gate",
+    "Comment drop rates/numberofruns treated as validatedcurrentrates",
+    "Encoded indexed source excerpt treated as successful fullrawcanonicalURLread"
+  ]
+}
