@@ -308,3 +308,6 @@ Fresh8ca exit0/eightactualfingerprints→full19localPASS (15Lua/threeofflinePyth
 Navigation813published point-data/1421directions/3153missing/2320NA;16439overlappinggaps/rendering0. Only19109NA→missing;no new location/current farm/successful navigation claimed. Same single compact/guide model and automatic shared destinations for older/future exact evidence remain intact.
 
 Case CHECKPOINT8CA_LEVEL58_WORLD_DROPS_AND_DEEP_ROOTED_GAP.md/sourceproof/localvalidation include exact52IDs,citations,confidence and historical lead exclusions. Nonrelease18CI PASS/fullbotreview next,then automatically8CB26.493candidates/ALLslotBackThrown/knowncloaks/sixdungeon954livebooks/3153missing-locationdispositions/manualclientacceptance/finalintegrity remain. Existingworker/automation;no newautomation/mainBeta8buildpackagereleasebilling.
+
+
+8CAverified:source46402cb;CI43190822637/job131089384906 SUCCESS18timestampedPASS/full19local. Inspected directbot95a37f4761856e36d7140226587db6424e441c7f onlytime/fourEVfingerprints/allotherbytesexact. Final checkpoint8ca_validation.json overrides historicalpending fields;actual-local8cafacts retained/botbodiesunread.19109BoP currentoriginmissing/noAVpin. Continue8CB26level59.
