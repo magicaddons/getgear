@@ -311,3 +311,18 @@ Case CHECKPOINT8CA_LEVEL58_WORLD_DROPS_AND_DEEP_ROOTED_GAP.md/sourceproof/localv
 
 
 8CAverified:source46402cb;CI43190822637/job131089384906 SUCCESS18timestampedPASS/full19local. Inspected directbot95a37f4761856e36d7140226587db6424e441c7f onlytime/fourEVfingerprints/allotherbytesexact. Final checkpoint8ca_validation.json overrides historicalpending fields;actual-local8cafacts retained/botbodiesunread.19109BoP currentoriginmissing/noAVpin. Continue8CB26level59.
+
+
+## Checkpoint 8CB integrated — non-release CI gate next
+
+All26 level-59 cases publication-researched/integrated:25Uncommon/oneEpic/allBoE/noUnique/no selected explicit wearer-class/availability/cross-version flags. All5,687 prior equipment objects/954recipes exact. Registry5,713/index7,184/display7,183/books759. Original5,499 researched/189pending,about97% of this queue only. **Next8CC:first100 of189 remaining level60, numeric-ID order**,markedqueue;after CI/fullbotreview.
+
+190 case primary responses36new154cached;490 with retained completed context36new454cached;26 exact/one shared query.902NPC/23physical-container positive joins/333NPC omissions retained with directional qualification;no object refs. Zero new failures;213known failed URLs not retried/29relevant historical unread references. Allfullcontents checked/no outside lead/candidate493byte-exact/no adoption.
+
+BladeofHanna2801 fullImprovingForm1325535 UsedBy positive. Own published per-melee stack mechanic reaches30stacks for490Physical plus20allstats20seconds. EpicBoE/equip59/item64/96–145damage/2.00speed preserved. This is equipment metadata,not learnedrecipe,HannaNPCsource,permanentstats,guaranteed currentstack/proc/combatAPI result or class gate. Randomring suffixes/names do not establish quest/farm/profession routes.
+
+Fresh8cb capture exit0/eightactualfingerprints→full19localPASS (15Lua/threeofflinePython/filesandsyntax26modules/fourtools/exporter). PF23618/9327allraw/fullsourceobjects/entiremetadata andEV1688raw1439qual/allfields exactactual8CA;zero new/removed/updated/opaque/index changes. Factual snapshots/eightcompanionCSVs/954recipes/supplementary/candidates exact;only26principalCSV summarycells.7707identities36341classobjectives1254crafts4857ingredients/settingsfilters preserved.
+
+CoverageCSV byte-exact:813published point-data/1421directions/3153missing/2320NA;16461overlappinggaps(+22qualifieduncertainties)/rendering0. Existing shared sources already reach these exact contents automatically;no newcoords/navigation success claimed. Same single compact/guide model/sourcefaction-class selection/written-only disputed destinations remain intact.
+
+Case CHECKPOINT8CB_LEVEL59_WORLD_DROPS_AND_BLADE_OF_HANNA.md/sourceproof/localvalidation record all26 IDs,citations,confidence and limits. Nonrelease18CI PASS/fullbotreview next,then automatically8CC100.493candidates/ALLslotBackThrown/knowncloaks/sixdungeon954livebooks/3153missing-locationdispositions/manualclientacceptance/finalintegrity remain. Same worker/existing automation;no newautomation/mainBeta8buildpackagereleasebilling.
