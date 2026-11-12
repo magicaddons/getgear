@@ -58,8 +58,15 @@ local documentDirections=addon:GetAcquisitionDirections(documentQuest)
 assert(documentDirections:find("Quest starter item",1,true) and not documentDirections:find("Provided by quest",1,true),"a supplied objective flag must not imply a free quest-starting item")
 C_QuestLog={IsOnQuest=function(id)return id==12 end}
 for _,target in ipairs(addon:GetAcquisitionNavigationChoices(documentQuest)) do assert(target.role~="Quest starter item","an accepted quest need not be started again") end
+C_QuestLog={IsOnQuest=function()return false end,IsQuestFlaggedCompleted=function(id)return id==12 end}
+local finishedDocument=addon:GetAcquisitionMapTarget(documentQuest)
+assert(finishedDocument and finishedDocument.role=='Completed quest — turn-in reference' and finishedDocument.source=='npc:1','direct single-quest completion allows a known return reference without inventing a starting-item origin or repeat availability')
 C_QuestLog=nil
 model.instances={['Fixture dungeon']=true}
+model.quests['15']={questID=15,name='Book starter fixture',starts={},ends={'npc:2'},
+    starterItems={{itemID=901,name='Quest book'}},starterZone='Fixture dungeon',starterInstructions='Obtain and read the published book; current availability unverified.'}
+local bookStarter=addon:GetAcquisitionMapTarget(plan(31,{{kind='quest',questID=15}}))
+assert(bookStarter and bookStarter.kind=='dungeon' and bookStarter.dungeon=='Fixture dungeon' and bookStarter.role=='Quest starter item' and not bookStarter.x,'a quest book in an independently known dungeon uses entrance navigation without a guessed book-floor point')
 model.sources['npc:instance']={name='Friendly quest giver',locations={{zone='Fixture dungeon',verification='published-reference'}}}
 model.quests['13']={questID=13,name='Dungeon quest fixture',starts={'npc:instance'},ends={'npc:instance'}}
 local dungeonQuestTarget=addon:GetAcquisitionMapTarget(plan(16,{{kind='quest',questID=13}}))
@@ -84,6 +91,11 @@ assert(not addon:GetAcquisitionMapTarget(escort).clientVerified,'invalid native 
 C_QuestLog.GetNextWaypoint=nil;model.quests['14'].objectiveSource='npc:2'
 assert(addon:GetAcquisitionMapTarget(escort).source=='npc:2','a published delivery or conversation objective can use its actual NPC')
 assert(addon:GetAcquisitionDirections(escort):find('Escort the NPC',1,true),'the detailed guide retains published objective instructions')
+model.quests['14'].acquisitionDetails={'Guide-only qualified alternative sources.'}
+assert(addon:GetAcquisitionDirections(escort):find('Guide-only qualified alternative sources.',1,true),'long source details belong in the full guide')
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices(escort)) do
+    assert(not (target.instructions or ''):find('Guide-only',1,true),'long source notes must not expand compact map tooltips')
+end
 C_QuestLog=nil;C_Map=savedMap
 local vendor=plan(4,{{kind="vendor",source="npc:1",offer={cost={12345}},sourceRequirements={"Requires Silverwing Sentinels - Exalted"}}})
 assert(addon:GetAcquisitionMapTarget(vendor).role=="Equipment vendor")
@@ -351,7 +363,7 @@ local completedEarly={};for _,id in ipairs({4182,4183,4184,4185,4186,4223,4224,4
 C_QuestLog={IsQuestFlaggedCompleted=function(id)return completedEarly[id] or false end,IsOnQuest=function()return false end}
 local noteFirst=false
 for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[16309])) do
-    noteFirst=noteFirst or target.questID==4264 and target.role=='Quest starter item' and target.kind=='directions' and not target.x
+    noteFirst=noteFirst or target.questID==4264 and target.role=='Quest starter item' and target.kind=='dungeon' and target.dungeon=='Blackrock Depths' and not target.x
     if target.source=='npc:9023' then assert(target.boss==nil,'Marshal Windsor is a quest actor, not a boss') end
 end
 assert(noteFirst,'reliable completion flags can lead to the note stage without inventing a note-giving NPC')
@@ -457,7 +469,7 @@ for _,goal in ipairs(temporaryGoals) do
     assert(not actualModel.items[tostring(-goal)])
     actualModel.items[tostring(-goal)]={routes={{kind="quest",questID=goal}}}
 end
-C_QuestLog={IsOnQuest=function()return false end,IsQuestFlaggedCompleted=function()return true end}
+C_QuestLog={IsOnQuest=function()return false end,IsQuestFlaggedCompleted=function(id)return id~=5944 and id~=5466 end}
 local tirionFirst=addon:GetAcquisitionMapTarget({itemID=-5944})
 assert(tirionFirst and tirionFirst.questID==5542 and tirionFirst.source=='npc:1855' and tirionFirst.zone=='Eastern Plaguelands','unverified parallel/terminal links cannot skip the full initial Tirion reference from completion flags')
 local rasFirst=addon:GetAcquisitionMapTarget({itemID=-5466})
@@ -477,4 +489,46 @@ assert(actualModel.chains['5944'].parallelStartingReferences[3]==5544 and not ac
 assert(not addon.ItemCatalog[13544] and not addon.ItemCatalog[13508],'research holds and a non-wearable utility do not silently become equipment')
 for _,goal in ipairs(temporaryGoals) do actualModel.items[tostring(-goal)]=nil end
 C_QuestLog=beforeChainAPI
+-- Actual class-book, input transformation and quest-variant metadata.
+local sourceGoals={7500,97169,7486,5526}
+local savedSourceAPI=C_QuestLog
+for _,goal in ipairs(sourceGoals) do
+    assert(not actualModel.items[tostring(-goal)])
+    actualModel.items[tostring(-goal)]={routes={{kind="quest",questID=goal}}}
+end
+C_QuestLog=nil
+local cookbook=addon:GetAcquisitionMapTarget({itemID=-7500})
+assert(cookbook and cookbook.role=='Quest starter item' and cookbook.kind=='dungeon' and cookbook.dungeon=='Dire Maul','a class quest book starts with obtaining/reading the book through the shared dungeon entrance')
+local cookbookGuide=addon:GetAcquisitionDirections({itemID=-7500})
+assert(cookbookGuide:find('Lorekeeper Kildrath',1,true) and cookbookGuide:find('possible book sources',1,true),'full guide retains the exact recipient and qualified multiple book sources')
+assert(not cookbook.instructions:find('possible book sources',1,true),'long book-source alternatives remain outside the compact tooltip')
+C_QuestLog={IsOnQuest=function()return false end,IsQuestFlaggedCompleted=function(id)return id==7500 end}
+for _,target in ipairs(addon:GetAcquisitionNavigationChoices({itemID=-7500})) do
+    assert(target.role~='Quest starter item','a reliable single-quest completion flag must not send the player to farm its starting book again; inactive candidate actors may be pruned')
+end
+assert(addon:GetAcquisitionDirections({itemID=-7500}):find('client reports this reward quest complete',1,true),'full guide labels completed reward references without assuming repeat availability')
+C_QuestLog={IsOnQuest=function()return false end,IsQuestFlaggedCompleted=function(id)return id==7486 end}
+local finishedHero=addon:GetAcquisitionMapTarget({itemID=-7486})
+assert(finishedHero and finishedHero.questID==7486 and finishedHero.role:find('Completed quest',1,true),'direct goal completion needs no inference across unverified prerequisite links')
+C_QuestLog=nil
+
+assert(actualModel.quests['7498'].ends[1]=='npc:14383' and actualModel.quests['7501'].ends[1]=='npc:14382' and actualModel.quests['7504'].ends[1]=='npc:14381','identical reward names cannot collapse three different Lorekeeper recipients')
+assert(actualModel.quests['97168'].side==1 and actualModel.quests['7667'].side==2 and actualModel.quests['97169'].side==nil,'new and legacy faction metadata remain distinct; Side None is not made Both')
+assert(#actualModel.quests['97169'].starts==0 and #actualModel.quests['97168'].starts==0,'published delivery recipients do not become invented formal starting NPCs')
+assert(actualModel.chains['97169'].steps[1]==97168 and actualModel.chains['8258'].steps[1]==7667,'same-name new and legacy stages cannot share completion identities')
+C_QuestLog={IsOnQuest=function(id)return id==97169 end,IsComplete=function()return true end}
+local eld=addon:GetAcquisitionMapTarget({itemID=-97169})
+assert(eld and eld.source=='npc:258098' and eld.zone=='Ironforge' and eld.role=='Quest turn-in','explicit primary objective recipient plus independent NPC geography supports a published return destination')
+C_QuestLog={IsOnQuest=function()return false end,IsQuestFlaggedCompleted=function(id)return id~=7486 end}
+local duke=addon:GetAcquisitionMapTarget({itemID=-7486})
+assert(duke and duke.questID==6804 and duke.source=='npc:13278','unverified Hydraxis cross-segment links cannot skip the initial reference from completion flags')
+C_QuestLog={IsOnQuest=function(id)return id==7486 end}
+local coffer=addon:GetAcquisitionMapTarget({itemID=-7486})
+assert(coffer and coffer.source=='object:179551','the actual active coffer quest navigates its published objective despite an empty direct contents table')
+C_QuestLog={IsOnQuest=function(id)return id==5527 end}
+local relic=addon:GetAcquisitionMapTarget({itemID=-5526})
+assert(relic and relic.zone=='Silithus' and relic.instructions:find('Southwind Village',1,true) and not relic.x,'unknown collection coordinates use written Southwind directions, not a fabricated object point')
+assert(not addon.ItemCatalog[18398] and not addon.ItemCatalog[20133],'held supplemental and new variant rewards are not silently installed')
+for _,goal in ipairs(sourceGoals) do actualModel.items[tostring(-goal)]=nil end
+C_QuestLog=savedSourceAPI
 print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests")

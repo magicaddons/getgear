@@ -26,6 +26,7 @@ with tempfile.TemporaryDirectory() as temp:
                         response("item", 2, lists={"dropped-by": [{"id": 100, "name": "Random sample"}]})],
              "quests": [response("quest", 10, quest={"name": "Quest", "itemrewards": [[3, 1]]},
                                  objectiveZone="Westfall", objectiveSource="npc:101", objectiveInstructions="Published delivery objective.",
+                                 acquisitionDetails=["Qualified alternative book sources.", 123],
                                  seriesQuestIDs=[11], objectiveMapper={"objectives": {"40": {
                                      "zone": "Westfall", "levels": [[{"type": 1, "id": 100, "name": "Vendor", "point": "start", "coord": [20, 30]}]]}}})]}
     proof["objectiveActors"] = [response("npc", 101, name="Objective-only NPC", maps={"40": [{
@@ -36,6 +37,7 @@ with tempfile.TemporaryDirectory() as temp:
     assert coverage[0]["status"] == "verified_coordinate_data"
     assert data["quests"]["10"]["objectiveInstructions"]=="Published delivery objective." and data["quests"]["10"]["objectiveSource"]=="npc:101" and data["quests"]["10"]["objectiveZone"]=="Westfall", "future full quest objective guidance shares the same generated model"
     assert data["sources"]["npc:101"]["name"]=="Objective-only NPC", "a future objective-only actor must survive source pruning without being invented as a quest giver"
+    assert data["quests"]["10"]["acquisitionDetails"]==["Qualified alternative book sources."], "future full-guide source details survive generation without invalid entries"
     assert "2" not in data["items"], "one random loot table sample cannot establish a named farm"
     assert not data["chains"], "see-also/series IDs cannot become mandatory prerequisite edges"
     (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
@@ -378,4 +380,22 @@ with tempfile.TemporaryDirectory() as temp:
     zero=nav.Evidence().location("Fixture raid",9000,{"uiMapId":999,"coords":[[0,0]]})
     assert zero["zone"]=="Fixture raid" and "x" not in zero and "bounds" not in zero, "published 0,0 placeholders retain zone context without becoming a floor or entrance point"
 
+# Identically named old/new quests cannot share a reward solely by name.
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    for filename in ["reviewed_equipment_sources.json", "reviewed_recipe_sources.json"]:
+        (nav.REPORT / filename).write_text("[]")
+    for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / filename).write_text("itemID\n")
+    same_name = "The Darkreaver Menace"
+    def variant_response(kind, entity_id, **facts):
+        return dict(url=f"https://www.wowhead.com/forever/{kind}={entity_id}", sha256="b" * 64, **facts)
+    variant_proof = {"items": [variant_response("item",20133,identity={"id":20133,"name":"Skyfury Gauntlets"},
+        relations={"reward-from-q":[{"id":8258,"name":same_name},{"id":97169,"name":same_name}]})],
+        "quests": [variant_response("quest",8258,quest={"id":8258,"name":same_name,"itemrewards":[[20134,1]],"side":2}),
+                   variant_response("quest",97169,quest={"id":97169,"name":same_name,"itemchoices":[[20133,1],[20134,1]]})]}
+    (nav.REPORT / "checkpoint_variant_evidence.json").write_text(json.dumps(variant_proof))
+    variant_data = nav.build({"20133":dict(itemID=20133,name="Skyfury Gauntlets",sourceType="Quest",eligibility=[64])})[0]
+    assert [r["questID"] for r in variant_data["items"]["20133"]["routes"]]==[97169], "an old full reward table omitting the exact item cannot borrow the new variant's reward"
+    assert "side" not in variant_data["quests"]["97169"], "a missing published faction must not become Both or inherit a same-name legacy faction"
 print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

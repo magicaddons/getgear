@@ -13,23 +13,23 @@
   },
   "https://playfulls.com/database": {
     "bytes": 142394,
-    "sha256": "0de84e6bf8587575701c3968226d6c224c1cdb695a50045984a64617163fe8fc"
+    "sha256": "234ca5f7f86a3666ed1db0fb032069666eda38c06d6175a6bf0543a4de813486"
   },
-  "https://playfulls.com/db/meta.01ed9e751a.json": {
-    "bytes": 1010610,
-    "sha256": "01ed9e751add57687ffb2c39be38ef34a40eac9b8310f5ede1662b4d6e4c6575"
+  "https://playfulls.com/db/meta.a58bed597a.json": {
+    "bytes": 1010639,
+    "sha256": "a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4"
   },
-  "https://playfulls.com/db/gear.c7a5b9f6fe.json": {
+  "https://playfulls.com/db/gear.ce85a43eee.json": {
     "bytes": 1360205,
-    "sha256": "c7a5b9f6fe97730b6e9da0c8ec7b9f7313e86c071863874e21e9d416ccd8c798"
+    "sha256": "ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9"
   },
-  "https://playfulls.com/db/goods.c731b98083.json": {
+  "https://playfulls.com/db/goods.b06e07d3a6.json": {
     "bytes": 466933,
-    "sha256": "c731b9808385b2f8a49a3b530bc6087f2cca7ccab63c168038101fd55cb24e0f"
+    "sha256": "b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82"
   },
-  "https://playfulls.com/db/other.aaf1f7d299.json": {
-    "bytes": 446743,
-    "sha256": "aaf1f7d299087f2b2d6b58308a83826143a8fbddec7a5a45528bf7f34d3338c6"
+  "https://playfulls.com/db/other.3a97362f02.json": {
+    "bytes": 446812,
+    "sha256": "3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9"
   },
   "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json": {
     "bytes": 18590138,
@@ -41,19 +41,19 @@
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500": {
     "bytes": 103442,
-    "sha256": "02735b8bd61ea9fda1a6bfc747dc7bedf11a51025d4037cb8968adda79428971"
+    "sha256": "1f4ba8b1df1159fccc3b09fa82a8eea2f9824198c9d73cae0f626081a44b72ea"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
     "bytes": 103495,
-    "sha256": "2d0e01e0b567e31d5868e3a57172308bd092e2040f3a265f9df6b5213285631a"
+    "sha256": "e801a3a4505bd7db91b30c3befd34b647fc98ef51ccacb36775c370ef26f2e0f"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
     "bytes": 103456,
-    "sha256": "5f9ff86425821fe53bcab5a395ee6e928612297783411fabf5b4f959ac2422b1"
+    "sha256": "3db9e5dcbb76f7a9395d876eb37a5ae30430a9f3f55cf29a742b6df1e26ca841"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
-    "bytes": 41292,
-    "sha256": "7f2d2af8492b2864dba28a9a6071a5b937822ceecf48c8884cdfc1ede723922e"
+    "bytes": 41700,
+    "sha256": "a8810d073779faa8613d4ba74cf9f6065662867dea86eb7c80057ce8cef2cf17"
   },
   "https://www.wowforeverfriends.org/items/items.json": {
     "bytes": 16908600,
@@ -63,7 +63,7 @@
     "bytes": 6121482,
     "sha256": "5c5a4524a3ad6a25c20902291d244baf32bb5f6b33c65c35847c7f5e1dcfb5f1"
   },
-  "lastRunUTC": "2026-11-12T16:41:28.187949+00:00",
+  "lastRunUTC": "2026-11-12T20:42:34.004927+00:00",
   "sourceCrediting": {
     "Everloot": "CC BY-SA 4.0; https://everloot.app; source records credited",
     "Playfulls": "Public community loot reference; https://playfulls.com/methodology; boss loot not live guaranteed",
@@ -72,8 +72,8 @@
     "AHledger": "Forever client recipe acquisition reference, not observed trainer inventories"
   },
   "Everloot": {
-    "dataAsOf": "2026-11-12T14:50:17.634Z",
-    "total": 1699,
+    "dataAsOf": "2026-11-12T20:40:15.204Z",
+    "total": 1701,
     "attribution": {
       "licence": "CC BY-SA 4.0",
       "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -84,7 +84,7 @@
     "complete": true
   },
   "Playfulls": {
-    "items": 23621,
+    "items": 23622,
     "sourceRecords": 3,
     "database": "https://playfulls.com/database"
   },

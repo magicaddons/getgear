@@ -231,6 +231,8 @@ class Evidence:
                 if isinstance(node.get("sourceRequirements"), list):
                     q["sourceRequirements"] = [value for value in node["sourceRequirements"] if isinstance(value, str)]
                     q["sourceRequirementsUnresolved"] = node.get("sourceRequirementsUnresolved") is True
+                if isinstance(node.get("acquisitionDetails"), list):
+                    q["acquisitionDetails"] = [value for value in node["acquisitionDetails"] if isinstance(value, str)]
                 for field in ["starterZone", "starterInstructions", "objectiveZone", "objectiveSource", "objectiveInstructions"]:
                     if isinstance(node.get(field), str):
                         q[field] = node[field]

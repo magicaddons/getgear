@@ -344,5 +344,89 @@
       }
     ],
     "secondaryRouteSource": "https://www.forever-xp.com/quests/5944/"
+  },
+  "5526": {
+    "steps": [
+      5527,
+      5526
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8ch_working_evidence.json",
+    "instructions": "Published two-stage segment. Begin with the first reference when progress is unknown; current earlier unlocks/availability remain unverified. Legacy and new IDs are separate progress, and source minima are not wearer levels."
+  },
+  "8258": {
+    "steps": [
+      7667,
+      8258
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8ch_working_evidence.json",
+    "instructions": "Published two-stage segment. Begin with the first reference when progress is unknown; current earlier unlocks/availability remain unverified. Legacy and new IDs are separate progress, and source minima are not wearer levels."
+  },
+  "97169": {
+    "steps": [
+      97168,
+      97169
+    ],
+    "routeVerified": true,
+    "prerequisitesVerified": false,
+    "verification": "published-route-reference",
+    "evidence": "checkpoint8ch_working_evidence.json",
+    "instructions": "Published two-stage segment. Begin with the first reference when progress is unknown; current earlier unlocks/availability remain unverified. Legacy and new IDs are separate progress, and source minima are not wearer levels."
+  },
+  "8259": {
+    "steps": [
+      7667,
+      8258,
+      8259
+    ],
+    "routeVerified": false,
+    "prerequisitesVerified": false,
+    "verification": "qualified-starting-itinerary",
+    "evidence": "checkpoint8ch_working_evidence.json",
+    "instructions": "Qualified legacy starting reference:MaterialAssistance and the legacy Darkreaver segment are separately published from the additional reward dialog. The exact version/unlock into8259is unverified; completion flags cannot infer that connection. This is not another mandatory stage for the new97169variant.",
+    "unverifiedLinks": [
+      {
+        "fromQuest": 8258,
+        "toQuest": 8259
+      }
+    ]
+  },
+  "7486": {
+    "steps": [
+      6804,
+      6805,
+      6821,
+      6822,
+      6823,
+      6824,
+      7486
+    ],
+    "routeVerified": false,
+    "prerequisitesVerified": false,
+    "verification": "qualified-starting-itinerary",
+    "evidence": "checkpoint8ch_working_evidence.json",
+    "instructions": "Qualified Hydraxis starting itinerary:begin with DukeHydraxis inAzshara. PoisonedWater andStormersRumblers are separate initial references,not a verified serial/requires-all rule. The primary ordered6821\u20136824segment covers Emberseer, MoltenCore objectives,Honoredstanding andfourhands; the final7486coffer reward is separately published. Initial/terminal connections and currentphase remain unverified; completion flags must not skip across gaps. A reliable active stage can override the full first reference. Claim one of the two rings,not both.",
+    "parallelStartingReferences": [
+      6804,
+      6805
+    ],
+    "unverifiedLinks": [
+      {
+        "fromQuests": [
+          6804,
+          6805
+        ],
+        "toQuest": 6821
+      },
+      {
+        "fromQuest": 6824,
+        "toQuest": 7486
+      }
+    ]
   }
 }

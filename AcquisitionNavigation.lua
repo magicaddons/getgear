@@ -14,7 +14,8 @@ local function chooseQuest(goal)
     local chain=get(data().chains,goal)
     local steps=chain and chain.steps or {goal}
     for _, id in ipairs(steps) do if onQuest(id) then return id,"active",chain end end
-    if chain and chain.routeVerified then
+    if C_QuestLog and call(C_QuestLog.IsQuestFlaggedCompleted,goal)==true then return goal,"completed",chain end
+    if not chain or chain.routeVerified then
         for _, id in ipairs(steps) do
             local complete=C_QuestLog and call(C_QuestLog.IsQuestFlaggedCompleted,id)
             if type(complete)~="boolean" then return steps[1],"unknown",chain end
@@ -211,14 +212,16 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                 for _, item in ipairs(q.starterItems or {}) do
                     local requirements=q.reqlevel and "Quest minimum level: "..q.reqlevel or ""
                     if q.side==1 or q.side==2 then requirements=requirements..(requirements~="" and "; " or "")..(q.side==1 and "Alliance" or "Horde").." quest access" end
-                    add({kind="directions",questID=id,questName=q.name,role="Quest starter item",label=item.name,
+                    local instance=(model.instances or {})[q.starterZone]
+                    add({kind=instance and "dungeon" or "directions",dungeon=instance and q.starterZone or nil,
+                         questID=id,questName=q.name,role="Quest starter item",label=item.name,
                          zone=q.starterZone,instructions=q.starterInstructions,requirements=requirements,
                          verification="published-reference",preferred=questRoutes==1})
                 end
             end
-            if not q.starterOriginUnresolved or onQuest(id) then
+            if not q.starterOriginUnresolved or onQuest(id) or state=="completed" then
                 for _, key in ipairs(q.starts or {}) do source(key,state=="completed" and "Completed quest — start reference" or state=="incomplete" and "Next uncompleted published stage" or "Quest start",q,route,questRoutes==1 and state~="completed") end
-                for _, key in ipairs(q.ends or {}) do source(key,"Quest turn-in",q,route,false) end
+                for _, key in ipairs(q.ends or {}) do source(key,state=="completed" and "Completed quest — turn-in reference" or "Quest turn-in",q,route,false) end
             end
         elseif route.kind=="dungeon" then
             add({kind="dungeon",dungeon=route.dungeon,label=route.dungeon.." entrance",boss=route.boss,
@@ -269,6 +272,7 @@ function GetGear:GetAcquisitionDirections(gear)
                 out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the quest rewards the container, not guaranteed equipment."
             end
             local id,state,chain=chooseQuest(route.questID)
+            if state=="completed" then out[#out+1]="The client reports this reward quest complete; repeat availability is not determined." end
             if chain then
                 out[#out+1]="Quest route (ordered published stages):"
                 if chain.instructions then out[#out+1]=chain.instructions end
@@ -280,6 +284,7 @@ function GetGear:GetAcquisitionDirections(gear)
                     for _, item in ipairs(q.starterItems or {}) do out[#out+1]="   Quest starter item: "..item.name.." (#"..item.itemID..")" end
                     if q.starterInstructions then out[#out+1]="   "..q.starterInstructions end
                     if q.objectiveInstructions then out[#out+1]="   Objective: "..q.objectiveInstructions end
+                    for _, detail in ipairs(q.acquisitionDetails or {}) do out[#out+1]="   "..detail end
                     for _, requirement in ipairs(q.sourceRequirements or {}) do out[#out+1]="   "..requirement end
                     appendQuestItems(out,q,"   ")
                     for _, role in ipairs({"starts","ends"}) do
@@ -295,6 +300,7 @@ function GetGear:GetAcquisitionDirections(gear)
                 for _, item in ipairs(q.starterItems or {}) do out[#out+1]="Quest starter item: "..item.name.." (#"..item.itemID..")" end
                 if q.starterInstructions then out[#out+1]=q.starterInstructions end
                 if q.objectiveInstructions then out[#out+1]="Objective: "..q.objectiveInstructions end
+                for _, detail in ipairs(q.acquisitionDetails or {}) do out[#out+1]=detail end
                 if q.starterOriginUnresolved then out[#out+1]="Starting item origin/location remains unverified. The turn-in NPC is not a starting destination." end
             end
             local q=get(data().quests,id) or {}
