@@ -326,3 +326,6 @@ Fresh8cb capture exit0/eightactualfingerprints→full19localPASS (15Lua/threeoff
 CoverageCSV byte-exact:813published point-data/1421directions/3153missing/2320NA;16461overlappinggaps(+22qualifieduncertainties)/rendering0. Existing shared sources already reach these exact contents automatically;no newcoords/navigation success claimed. Same single compact/guide model/sourcefaction-class selection/written-only disputed destinations remain intact.
 
 Case CHECKPOINT8CB_LEVEL59_WORLD_DROPS_AND_BLADE_OF_HANNA.md/sourceproof/localvalidation record all26 IDs,citations,confidence and limits. Nonrelease18CI PASS/fullbotreview next,then automatically8CC100.493candidates/ALLslotBackThrown/knowncloaks/sixdungeon954livebooks/3153missing-locationdispositions/manualclientacceptance/finalintegrity remain. Same worker/existing automation;no newautomation/mainBeta8buildpackagereleasebilling.
+
+
+8CBverified:sourcec131687;CI43192012001/job131093437379 SUCCESS18timestampedPASS/full19local. Inspected directbot0b2907078737bc083fb0a098a8bd72a6f88fc5a3 onlytime/fourEVfingerprints/allotherbytesexact. Final checkpoint8cb_validation.json overrides immutable historicalpending fields;actual-local8cbfacts retained/botbodiesunread. Continue8CCfirst100of189level60numericIDorder. Coverageunchanged/no newrendering orcoordsclaim.
