@@ -1,0 +1,45 @@
+{
+  "scope": "Documentation-only reuse of completed publication geography,not another full primary read/new runtime input or a full zone definition.",
+  "region616": {
+    "name": "Mount Hyjal",
+    "evidenceFile": "checkpoint8ci_working_evidence.json",
+    "npcID": 267182,
+    "primaryURL": "https://www.wowhead.com/forever/npc=267182",
+    "primarySHA256": "0fc7309edaf12d6f96273ac0237f84be2ec08094c76a06fcea7b64085585637f",
+    "publishedFootprints": [
+      {
+        "zoneID": 616,
+        "name": "Mount Hyjal",
+        "uiMapID": 2482,
+        "pointCount": 3,
+        "bounds": {
+          "xMin": 75.8,
+          "xMax": 76.2,
+          "yMin": 32.6,
+          "yMax": 35
+        }
+      }
+    ],
+    "limits": "Zone identity only;not a claim this NPC drops14459,no current unique farm/instance/point inferred from a region descriptor."
+  },
+  "existingNativeInstanceNames": [
+    "Scarlet Monastery",
+    "Zul'Farrak",
+    "Gnomeregan",
+    "Razorfen Downs"
+  ],
+  "instanceBasis": "Read actual existing AcquisitionNavigationData.instances before8CKdata generation;reuse reviewed dungeon reference/native fallback. Current instanceDetails primary kind is absent;five new zone reads403 are not invented full definitions.",
+  "writtenOnlyBroadDescriptors": [
+    14321,
+    15437
+  ],
+  "sourceScopeConflicts": [
+    7753,
+    14602
+  ],
+  "qualifiedRegionCandidates": [
+    9243,
+    9487
+  ],
+  "noForcedWorldRegionMarker": 14459
+}
