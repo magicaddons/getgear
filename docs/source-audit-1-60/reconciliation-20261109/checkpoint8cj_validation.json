@@ -1,0 +1,261 @@
+{
+  "checkpoint": "8CJ",
+  "status": "verified-pushed;continue8CK100of111allslotleads",
+  "sourceCommit": "39c87e4ff50c3c2be9682496868b768698cdf9b7",
+  "finalValidatedGeneratedHead": "2518b346b8cc3a4ffca90afad8320a2b0216ba1a",
+  "CI": {
+    "runID": 43311107190,
+    "jobID": 131507112793,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43311107190",
+    "conclusion": "success",
+    "timestampedTestPASS": 18,
+    "LuaSuites": 15,
+    "offlinePythonSuites": 3,
+    "modules": 26
+  },
+  "local": {
+    "status": "94 all-slot leads individually publication-assessed; actual8cj/full19localPASS;CI/full bot review pending",
+    "registry": 5902,
+    "index": 7373,
+    "display": 7372,
+    "books": 759,
+    "originalFrozenQueue": {
+      "total": 5688,
+      "dispositioned": 5688,
+      "pending": 0
+    },
+    "outsideQueue": {
+      "total": 592,
+      "assessed": 592,
+      "pending": 0,
+      "prior498BytesPreserved": true,
+      "newAssessed94": true
+    },
+    "additionalAllSlotQueue": {
+      "total": 205,
+      "assessed": 94,
+      "pending": 111,
+      "newBackLeads": 89,
+      "nextBatch": "8CK",
+      "nextCases": 100,
+      "firstID": 756,
+      "lastID": 274659,
+      "afterNext": 11
+    },
+    "caseCounts": {
+      "selected": 94,
+      "individuallyAssessed": 94,
+      "groups": {
+        "non-equipment-or-unsupported-slot": 1,
+        "broad-published-reference": 26,
+        "origin-unresolved": 1,
+        "named-source-reference": 50,
+        "object-source-reference": 1,
+        "quest-reference": 15
+      },
+      "eligibility": {
+        "excluded-non-equipment-or-unsupported-slot": 1,
+        "published-all-slot-baseline-pass;future-development-review": 77,
+        "hold-version-unconfirmed": 1,
+        "hold-no-rendered-equip-level": 15
+      },
+      "primaryFull": 94,
+      "primaryNew": 94,
+      "primaryCached": 0,
+      "auxiliaryFull": 668,
+      "auxiliaryNew": 155,
+      "auxiliaryCached": 513,
+      "caseFullPages": 762,
+      "caseNewPages": 249,
+      "caseCachedPages": 513,
+      "exactQueries": 94,
+      "sharedQueries": 8,
+      "dropReverseJoins": 1442,
+      "dropReverseOmissions": 103,
+      "objectReverseJoins": 70,
+      "objectReverseOmissions": 20,
+      "physicalContainerReferences": 79,
+      "physicalContainerReverseJoins": 45,
+      "physicalContainerOmissions": 33,
+      "newFailed403": 30,
+      "knownFailedURLs": 952,
+      "oldFailedReferenceEdgesSkipped": 1138,
+      "oldFailedUniqueURLsSkipped": 393,
+      "quality": {
+        "3": 51,
+        "2": 41,
+        "4": 2
+      },
+      "BackHeaders": 32,
+      "activeAdoptions": 0,
+      "liveVerified": 0,
+      "physicalContainerUnread": 1
+    },
+    "sourceProofImmutableSHA256": "90924a1bce587a50a26ede8b095a02d144dae726619b948e021d6dc9ec28bebf",
+    "diagnosticPrimaryFollowup": {
+      "full": 1,
+      "new": 1,
+      "cached": 0,
+      "NPC": 6491,
+      "totalIncludingCases": 763,
+      "totalNew": 250,
+      "totalCached": 513,
+      "runtimeInput": false
+    },
+    "successfulCapture": {
+      "label": "8cj",
+      "exitCode": 0,
+      "responses": {
+        "https://playfulls.com/db/meta.a58bed597a.json": {
+          "bytes": 1010639,
+          "sha256": "a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4",
+          "workspacePath": "/tmp/getgear-research/8cj-http-capture/a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4.body",
+          "capturedUTC": "2026-11-12T21:24:31.705747+00:00"
+        },
+        "https://playfulls.com/db/gear.ce85a43eee.json": {
+          "bytes": 1360205,
+          "sha256": "ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9",
+          "workspacePath": "/tmp/getgear-research/8cj-http-capture/ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9.body",
+          "capturedUTC": "2026-11-12T21:24:31.913012+00:00"
+        },
+        "https://playfulls.com/db/goods.b06e07d3a6.json": {
+          "bytes": 466933,
+          "sha256": "b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82",
+          "workspacePath": "/tmp/getgear-research/8cj-http-capture/b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82.body",
+          "capturedUTC": "2026-11-12T21:24:32.103288+00:00"
+        },
+        "https://playfulls.com/db/other.3a97362f02.json": {
+          "bytes": 446812,
+          "sha256": "3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9",
+          "workspacePath": "/tmp/getgear-research/8cj-http-capture/3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9.body",
+          "capturedUTC": "2026-11-12T21:24:32.253847+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500": {
+          "bytes": 103442,
+          "sha256": "83b178bc3589ead7f565eea60946ed5ba42d6c79506c9038ddc317c472befac0",
+          "workspacePath": "/tmp/getgear-research/8cj-http-capture/83b178bc3589ead7f565eea60946ed5ba42d6c79506c9038ddc317c472befac0.body",
+          "capturedUTC": "2026-11-12T21:24:38.321420+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+          "bytes": 103495,
+          "sha256": "4d67733a64f7686b30e08d0234fe6eecff26218d3e5745613d4c90330e1c3b0e",
+          "workspacePath": "/tmp/getgear-research/8cj-http-capture/4d67733a64f7686b30e08d0234fe6eecff26218d3e5745613d4c90330e1c3b0e.body",
+          "capturedUTC": "2026-11-12T21:24:41.076664+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+          "bytes": 103456,
+          "sha256": "a04fbf12b14e71492f61328c85d212533e57c9cb333aba50e52adaaa83f1de67",
+          "workspacePath": "/tmp/getgear-research/8cj-http-capture/a04fbf12b14e71492f61328c85d212533e57c9cb333aba50e52adaaa83f1de67.body",
+          "capturedUTC": "2026-11-12T21:24:43.986731+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+          "bytes": 41905,
+          "sha256": "572bac06f41bc1cf5a496162d49ce3e3e10038611fbf8f57a0b7b1ce041141bd",
+          "workspacePath": "/tmp/getgear-research/8cj-http-capture/572bac06f41bc1cf5a496162d49ce3e3e10038611fbf8f57a0b7b1ce041141bd.body",
+          "capturedUTC": "2026-11-12T21:24:47.007262+00:00"
+        }
+      }
+    },
+    "fullLocalPASS": 19,
+    "LuaSuites": 15,
+    "offlinePythonSuites": 3,
+    "modules": 26,
+    "fourToolsAndExporterSyntax": true,
+    "identities": 7707,
+    "classObjectives": 36341,
+    "crafts": 1254,
+    "ingredients": 4857,
+    "activeCatalogueAdoptions": 0,
+    "unchanged": {
+      "reviewed_equipment_sources.json": "byte-exact",
+      "reviewed_recipe_sources.json": "byte-exact",
+      "dungeon_equipment_drops.csv": "byte-exact",
+      "dungeon_items_reconciled.csv": "byte-exact",
+      "dungeon_source_followups.csv": "byte-exact",
+      "recipes_reconciled.csv": "byte-exact",
+      "recipe_source_followups.csv": "byte-exact",
+      "recipe_trainer_book_checks.csv": "byte-exact",
+      "recipe_vendor_book_checks.csv": "byte-exact",
+      "supplementary_crafts_reconciled.csv": "byte-exact",
+      "supplementary_crafts.json": "byte-exact",
+      "remaining_equipment_research_queue.csv": "byte-exact",
+      "navigation_quest_chains.json": "byte-exact",
+      "navigation_coverage.csv": "byte-exact",
+      "navigation_research_gaps.csv": "byte-exact",
+      "upstream_playfulls_acquisition_snapshot.csv": "byte-exact",
+      "upstream_playfulls_source_definitions.json": "byte-exact",
+      "upstream_playfulls_display_snapshot.csv": "byte-exact",
+      "upstream_playfulls_display_definitions.json": "byte-exact"
+    },
+    "navigation": {
+      "not_applicable": 2156,
+      "directions": 1581,
+      "missing": 3106,
+      "verified_coordinate_data": 864
+    },
+    "gapRows": 17425,
+    "realClientRendering": 0,
+    "unchangedPriorItineraries": 27,
+    "upstream": "All PF23622rawrows/9327fullsourceobjects/entiremetadata exactactual8CH and retained snapshot. EV1701\u21921702 onlyNPC6491SpiritHealer located_inUI1426DunMorogh;full independentprimary geographymatched/noequipmentroles. All1701priorfacts exact/qual1439. Old6564\u21923875 observation unchanged;notdedicatedfarm. Originaldelta preserved before diagnostic EVsnapshotadvance. Followup diagnostic-only,notruntimeinput;targetednewbody/geography checks after full19,notanewfullrun claim.",
+    "limits": "Publication research only,no active equipment/craft/recipe/class/filter mutation. Orb1973currentToy/rawslot0 notoldtrinket. TreantsBane18538versionunconfirmed;GordokTribute possiblecontents notguaranteedloot/currentkingrequirements. Broad random cloaks are not dedicated named farms;generic chest/lockbox samples notprecise markers. Eight new reward quest pages andfive breadcrumb/sequencepages unread403; indexed primary/secondary excerpts are separately qualified,not full bodySHA/completegraph/currentavailability. Existing27itineraries unchanged; no initial or final quest roles invented from item names. All primary known failures retained without retry; fullcached response reuse explicit. Missing coordinates and chain edges remain shared research gaps.",
+    "baselineEligibilityRangeCheck": true,
+    "targetedQuestGapRows": 13
+  },
+  "botReview": {
+    "directParentVerified": true,
+    "files": [
+      "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+    ],
+    "changedKeys": [
+      "https://everloot.app/api/edges?evidence=observed&limit=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+      "lastRunUTC",
+      "Everloot"
+    ],
+    "allOtherJSONRuntimeSourceAuditReportBytesUnchanged": true,
+    "botAPIBodiesRead": false,
+    "actualLocalFactualBaselineRetained": true,
+    "EverlootObjectChangeOnly": "dataAsOf;all other fields exact"
+  },
+  "frozenQueue": {
+    "total": 5688,
+    "individuallyAssessed": 5688,
+    "pending": 0,
+    "qualification": "Includes explicit unresolved/unread/version exceptions; not all sources confirmed live."
+  },
+  "outsideQueue": {
+    "total": 592,
+    "assessed": 592,
+    "pending": 0,
+    "prior498BytesPreserved": true,
+    "newAssessed94": true
+  },
+  "additionalAllSlotQueue": {
+    "total": 205,
+    "assessed": 94,
+    "pending": 111,
+    "newBackLeads": 89,
+    "nextBatch": "8CK",
+    "nextCases": 100,
+    "firstID": 756,
+    "lastID": 274659,
+    "afterNext": 11
+  },
+  "next": {
+    "checkpoint": "8CK",
+    "cases": 100,
+    "firstID": 756,
+    "lastID": 274659,
+    "order": "numericID",
+    "queue": "additional_all_slot_research_queue.csv",
+    "scope": "Outside candidate identity/quality/level/class/ALLslot/version/source/navigation review; reuse exact completed evidence before any new reads or adoption."
+  },
+  "protectedRefs": {
+    "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "Beta8tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "Beta8commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  },
+  "limits": "Publication research only,no active equipment/craft/recipe/class/filter mutation. Orb1973currentToy/rawslot0 notoldtrinket. TreantsBane18538versionunconfirmed;GordokTribute possiblecontents notguaranteedloot/currentkingrequirements. Broad random cloaks are not dedicated named farms;generic chest/lockbox samples notprecise markers. Eight new reward quest pages andfive breadcrumb/sequencepages unread403; indexed primary/secondary excerpts are separately qualified,not full bodySHA/completegraph/currentavailability. Existing27itineraries unchanged; no initial or final quest roles invented from item names. All primary known failures retained without retry; fullcached response reuse explicit. Missing coordinates and chain edges remain shared research gaps."
+}
