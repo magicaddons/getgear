@@ -1,6 +1,6 @@
 {
   "checkpoint": "8CY",
-  "status": "freshreconcile/full19localPASS;nonreleaseCI/directbotreviewPENDING",
+  "status": "verified local19PASS/nonreleaseCI18PASS/directbot whole diff reviewed;continue8CZ",
   "baseline": "0fba4c1df744cc16be6c15ea68e6ab5c5abcbcfd",
   "sourceProofSHA256": "61ce6ab6b0ceb7b65b3e8c2ecf4e5481f2524245497428d55251eb380401f117",
   "caseCounts": {
@@ -132,10 +132,22 @@
   },
   "localTestPASS": 19,
   "expectedCIPASS": 18,
-  "CI": null,
-  "sourceCommit": null,
-  "generatedCommit": null,
-  "fullCIAndBotGateComplete": false,
+  "CI": 43406651194,
+  "sourceCommit": "5a2b557d913e8e57688f8232e7073f3725c25b47",
+  "generatedCommit": "dfc312057884f20670c83166f27c1be47df142d3",
+  "fullCIAndBotGateComplete": true,
   "nextCheckpoint": "8CZ final source-exception/gap disposition,wholecatalogueintegrity/report/manualacceptance;pause recurringautomation whenavailableofflineworkcomplete",
-  "limits": "Fourversionholds/onepoorqualityshirt/oneconsumablebook/onebaselineoriginunknown. No live drop/stock/quest acceptance/actualclient rendering confirmation. Future verifiedlocations use sameactor pool evenwhen currentroute prunesunusedactors;not38newactivebuttons. No changes954books/35chains/canonicalgear/materials/settings."
+  "limits": "Fourversionholds/onepoorqualityshirt/oneconsumablebook/onebaselineoriginunknown. No live drop/stock/quest acceptance/actualclient rendering confirmation. Future verifiedlocations use sameactor pool evenwhen currentroute prunesunusedactors;not38newactivebuttons. No changes954books/35chains/canonicalgear/materials/settings.",
+  "CIJob": 131822497647,
+  "CIPASS": 18,
+  "botReview": {
+    "directParent": "5a2b557d913e8e57688f8232e7073f3725c25b47",
+    "changedFiles": [
+      "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+    ],
+    "changedValues": "fourEverlootresponsehashes/lastRunUTC only;allother bytes exact",
+    "APIResponseBodiesIndependentlyRead": false,
+    "actualLocalFactualSnapshotRetained": true,
+    "equalCountersNotTreatedAsFactualEquivalence": true
+  }
 }

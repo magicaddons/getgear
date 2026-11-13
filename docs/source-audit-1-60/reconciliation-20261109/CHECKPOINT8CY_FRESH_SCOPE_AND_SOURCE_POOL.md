@@ -1,6 +1,6 @@
 # Checkpoint 8CY — close fresh feed scope and preserve future source locations
 
-13 November 2026, Australia/Adelaide. Seven marked fresh feed references are individually dispositioned using the full item pages already read in 8CX: no repeated primary HTTP reads or failed-URL retries. Fresh reconciliation 8cy1 exited zero and all 19 local checks passed. Nonrelease CI and whole direct bot review remain pending source push; latest completed CI is 8CX run 43405524024.
+13 November 2026, Australia/Adelaide. Seven marked fresh feed references are individually dispositioned using the full item pages already read in 8CX: no repeated primary HTTP reads or failed-URL retries. Fresh reconciliation 8cy1 exited zero and all 19 local checks passed. Nonrelease [CI 43406651194](https://github.com/magicaddons/getgear/actions/runs/43406651194) passed all 18 timestamped checks (job 131822497647). Source `5a2b557d913e8e57688f8232e7073f3725c25b47`; whole direct bot/final validated `dfc312057884f20670c83166f27c1be47df142d3` inspected. Only four Everloot response hashes and run time change; all other bytes exact. Bot API bodies unread; actual local full factual baseline retained, not inferred from equal counters.
 
 | Item | Disposition |
 | --- | --- |
@@ -26,4 +26,4 @@ The actual eight-response 8cy1 capture contains exactly the same full PF 23,642 
 
 Coverage remains 885 published coordinate-data / 1,581 useful written directions / 3,085 missing / 2,156 not applicable, with 17,404 overlapping gaps and zero actual client rendering tests. All canonical gear, 1,254 crafts, 4,857 ingredients, 954 book objects, 5,902 reviewed gear objects, 35 chains, class objectives, source code, settings and filters remain unchanged. [Validation](checkpoint8cy_validation.json), [local checks](checkpoint8cy_local_results.txt).
 
-After CI/bot closure, **next 8CZ**: final source-exception and coordinate/chain gap dispositions, whole-catalogue integrity, comprehensive handover and exact manual acceptance tests. Do not call missing locations working navigation or equate reference research with current-live stock/loot/quest confirmation. The six dungeon links and 954 book-route live verification remain qualified. No main/Beta 8/build/package/tag/release/billing action. Single existing worker/automation.
+**Next 8CZ**: final source-exception and coordinate/chain gap dispositions, whole-catalogue integrity, comprehensive handover and exact manual acceptance tests. Do not call missing locations working navigation or equate reference research with current-live stock/loot/quest confirmation. The six dungeon links and 954 book-route live verification remain qualified. No main/Beta 8/build/package/tag/release/billing action. Single existing worker/automation.

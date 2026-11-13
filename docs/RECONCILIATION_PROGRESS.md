@@ -1,7 +1,7 @@
 # GetGear acquisition reconciliation — durable checkpoints
 
 <!-- current-research-checkpoint -->
-Current: [8CY](source-audit-1-60/reconciliation-20261109/checkpoint8cy_validation.json), 13 November 2026. All 1,425 candidate / 923 shared / 5,688 original cases dispositioned; stale labels reconciled. Fresh reconcile and 19 local PASS; **CI and whole bot gate pending** (latest completed CI 8CX43405524024). Then **8CZ final exceptions/gaps/integrity/report/manual acceptance**. No active adoption/live-rendering claim. Single worker/existing automation; 1,732 failed URLs, no unchanged retries.
+Verified: [8CY](source-audit-1-60/reconciliation-20261109/checkpoint8cy_validation.json), 13 November 2026; 19 local / 18 CI PASS, run 43406651194, direct bot `dfc3120` fully reviewed. All 1,425 candidate / 923 shared / 5,688 original cases dispositioned; cache 3,130 full sources, no unqueued leads. **Next 8CZ final integrity, source/gap exceptions, report/manual acceptance, automation completion.** Missing/live/rendering limits remain explicit. Single worker/existing automation.
 <!-- /current-research-checkpoint -->
 
 ## Baseline recovered (2026-11-09)
@@ -2283,3 +2283,10 @@ Seven fresh feed cases close using cached full pages: four primary version holds
 496 stale descriptive register pending labels reconciled to exact completed queue/proposal decisions and proof hashes; original source hints preserved. All 1,425 register/main-queue and 923 shared cases now dispositioned; original 5,688-case queue also complete at publication/disposition level. Cache closure 3,130 full source pages, zero unqueued typed/untyped references. 900 outside-catalogue baseline passes remain future-development candidates, not current adopted gear.
 
 Fresh 8cy1 capture exited zero; full 19 local checks PASS. CI/whole bot review PENDING; completed full CI remains 8CX43405524024. Entire PF raw rows/source objects/meta and EV full relation/metadata data exact8CX1 except four generatedAt timestamps. All companion CSV cells byte-exact. Current coverage 885/1581/3085/2156, 17,404 overlapping gaps; real rendering zero. See CHECKPOINT8CY_FRESH_SCOPE_AND_SOURCE_POOL.md and checkpoint8cy_validation.json. **After CI, next 8CZ final exceptions/gap disposition/integrity/report/manual acceptance.** Single worker/existing automation; no main/Beta 8/release/billing change.
+
+
+## Checkpoint 8CY fully verified — next 8CZ final integrity and report
+
+Source `5a2b557d913e8e57688f8232e7073f3725c25b47`; full fresh8cy1 capture / 19 local PASS. [Nonrelease CI 43406651194](https://github.com/magicaddons/getgear/actions/runs/43406651194), job 131822497647, SUCCESS / 18 timestamped PASS. Inspected direct bot/final validated `dfc312057884f20670c83166f27c1be47df142d3` changes only four Everloot hashes/run time; all other bytes exact. Bot API response bodies unread, actual local PF23642/9328/EV1873/1583 full factual snapshots retained; no count-based inference. See checkpoint8cy_validation.json and checkpoint8cy_ci_results.txt. Gate complete.
+
+All 1,425 candidate/main-queue, 923 shared all-slot and 5,688 original cases dispositioned; 3,130-source cache has zero unqueued typed/untyped leads. No further routine checkpoint queue is pending. **Next 8CZ: final whole-catalogue/source-exception/gap audit, comprehensive report, exact in-game acceptance handover and existing automation completion.** Missing facts/current-live availability/rendering remain explicit exceptions, not verified navigation. Current coverage 885/1581/3085/2156; 17,404 overlapping gaps; real rendering zero. No main/Beta 8/release/billing action.
