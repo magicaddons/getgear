@@ -1,0 +1,206 @@
+{
+  "status": "14allslotcasespublication-assessed;finalactual8cm4/full19localPASS;CI/fullbotreviewpending",
+  "registry": 5902,
+  "index": 7373,
+  "display": 7372,
+  "books": 759,
+  "originalFrozenQueue": {
+    "total": 5688,
+    "dispositioned": 5688,
+    "pending": 0
+  },
+  "outsideQueue": {
+    "total": 776,
+    "assessed": 776,
+    "pending": 0,
+    "prior762BytesAndObjectsPreserved": true,
+    "newAssessed14": true
+  },
+  "additionalAllSlotQueue": {
+    "total": 295,
+    "assessed": 278,
+    "pending": 17,
+    "newInventoryAndZoneLeads": 17,
+    "nextBatch": "8CN",
+    "nextCases": 17,
+    "firstID": 267090,
+    "lastID": 287019
+  },
+  "caseCounts": {
+    "selected": 14,
+    "individuallyAssessed": 14,
+    "groups": {
+      "named-source-reference": 5,
+      "quest-reference": 1,
+      "origin-unresolved": 2,
+      "broad-published-reference": 6
+    },
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 12,
+      "hold-version-unconfirmed": 1,
+      "hold-no-rendered-equip-level": 1
+    },
+    "primaryFull": 14,
+    "primaryNew": 10,
+    "primaryCached": 4,
+    "auxiliaryFull": 25,
+    "auxiliaryNew": 18,
+    "auxiliaryCached": 7,
+    "fullZones": 1,
+    "caseFullPages": 50,
+    "caseNewPages": 39,
+    "caseCachedPages": 11,
+    "exactQueries": 14,
+    "sharedQueries": 3,
+    "dropReverseJoins": 58,
+    "dropReverseOmissions": 0,
+    "objectReverseJoins": 0,
+    "objectReverseOmissions": 0,
+    "physicalContainerReferences": 0,
+    "newFailed403": 0,
+    "knownFailedURLs": 1676,
+    "oldFailedReferenceEdgesSkipped": 0,
+    "oldFailedUniqueURLsSkipped": 0,
+    "quality": {
+      "3": 14
+    },
+    "BackHeaders": 0,
+    "explicitNPCDescriptorJoins": 5,
+    "explicitRegionDescriptors": 6,
+    "fullZoneNPCJoins": [
+      {
+        "npcID": 258042,
+        "zoneID": 16842,
+        "name": "Twilight Grunt"
+      },
+      {
+        "npcID": 258104,
+        "zoneID": 16842,
+        "name": "Twilight Lieutenant"
+      }
+    ],
+    "activeAdoptions": 0,
+    "liveVerified": 0,
+    "contextKeyFull": 10,
+    "contextKeyNew": 10,
+    "newQualifiedKeyItineraries": 2
+  },
+  "sourceProofImmutableSHA256": "b0c6922c723956ec1b62d4fd885afedc67683f016843c8e84f0e348c70bf7a4d",
+  "successfulCapture": {
+    "label": "8cm4",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.7acc143c49.json": {
+        "bytes": 1010725,
+        "sha256": "7acc143c49b06aa60a78140e767e15d1830f85b00f0689774669563ad500ee4d",
+        "workspacePath": "/tmp/getgear-research/8cm4-http-capture/7acc143c49b06aa60a78140e767e15d1830f85b00f0689774669563ad500ee4d.body",
+        "capturedUTC": "2026-11-13T02:28:44.658007+00:00"
+      },
+      "https://playfulls.com/db/gear.49966a6566.json": {
+        "bytes": 1360816,
+        "sha256": "49966a6566e44a52d32c48696ccc90c31710ec8336843f1c3acb77e49edf9e38",
+        "workspacePath": "/tmp/getgear-research/8cm4-http-capture/49966a6566e44a52d32c48696ccc90c31710ec8336843f1c3acb77e49edf9e38.body",
+        "capturedUTC": "2026-11-13T02:28:44.809726+00:00"
+      },
+      "https://playfulls.com/db/goods.0dd030350d.json": {
+        "bytes": 466933,
+        "sha256": "0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53",
+        "workspacePath": "/tmp/getgear-research/8cm4-http-capture/0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53.body",
+        "capturedUTC": "2026-11-13T02:28:44.962307+00:00"
+      },
+      "https://playfulls.com/db/other.d4891008c4.json": {
+        "bytes": 446812,
+        "sha256": "d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140",
+        "workspacePath": "/tmp/getgear-research/8cm4-http-capture/d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140.body",
+        "capturedUTC": "2026-11-13T02:28:45.181186+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103442,
+        "sha256": "2fe1e362cc4ac9180acee6fe85d77ffcf1ec1b32754f37ac6d4a39f679397aed",
+        "workspacePath": "/tmp/getgear-research/8cm4-http-capture/2fe1e362cc4ac9180acee6fe85d77ffcf1ec1b32754f37ac6d4a39f679397aed.body",
+        "capturedUTC": "2026-11-13T02:28:49.523875+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103495,
+        "sha256": "02a29f0f5500013f728eebe286c67d329f5ec97d10adba987d362d4714a24327",
+        "workspacePath": "/tmp/getgear-research/8cm4-http-capture/02a29f0f5500013f728eebe286c67d329f5ec97d10adba987d362d4714a24327.body",
+        "capturedUTC": "2026-11-13T02:28:53.461666+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103456,
+        "sha256": "17331cb79b65236dbff53f26e18da4eec2c088da2a5bd46c5e0a07c2dfe5b812",
+        "workspacePath": "/tmp/getgear-research/8cm4-http-capture/17331cb79b65236dbff53f26e18da4eec2c088da2a5bd46c5e0a07c2dfe5b812.body",
+        "capturedUTC": "2026-11-13T02:28:56.221694+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 41905,
+        "sha256": "b93ca7a884909b87168e91d4e20e459e788b7afb29ade0fd320585f3210602b3",
+        "workspacePath": "/tmp/getgear-research/8cm4-http-capture/b93ca7a884909b87168e91d4e20e459e788b7afb29ade0fd320585f3210602b3.body",
+        "capturedUTC": "2026-11-13T02:28:59.519257+00:00"
+      }
+    }
+  },
+  "fullLocalPASS": 19,
+  "LuaSuites": 15,
+  "offlinePythonSuites": 3,
+  "modules": 26,
+  "fourToolsAndExporterSyntax": true,
+  "identities": 7707,
+  "classObjectives": 36341,
+  "crafts": 1254,
+  "ingredients": 4857,
+  "activeCatalogueAdoptions": 0,
+  "unchanged": {
+    "reviewed_equipment_sources.json": "byte-exact",
+    "reviewed_recipe_sources.json": "byte-exact",
+    "all_items_reconciled.csv": "byte-exact",
+    "dungeon_equipment_drops.csv": "byte-exact",
+    "dungeon_items_reconciled.csv": "byte-exact",
+    "dungeon_source_followups.csv": "byte-exact",
+    "recipes_reconciled.csv": "byte-exact",
+    "recipe_source_followups.csv": "byte-exact",
+    "recipe_trainer_book_checks.csv": "byte-exact",
+    "recipe_vendor_book_checks.csv": "byte-exact",
+    "supplementary_crafts_reconciled.csv": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "remaining_equipment_research_queue.csv": "byte-exact",
+    "upstream_playfulls_acquisition_snapshot.csv": "byte-exact",
+    "upstream_playfulls_source_definitions.json": "byte-exact",
+    "upstream_playfulls_display_snapshot.csv": "byte-exact",
+    "upstream_playfulls_display_definitions.json": "byte-exact",
+    "upstream_everloot_edges_snapshot.csv": "byte-exact",
+    "upstream_snapshot_provenance.json": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1581,
+    "missing": 3091,
+    "verified_coordinate_data": 879
+  },
+  "gapRows": 17410,
+  "realClientRendering": 0,
+  "unchangedPriorItineraries": 27,
+  "newQualifiedKeyItineraries": 2,
+  "newFullDungeonDefinition16842": true,
+  "trainerNavigation": {
+    "fullTeachingRows": 23,
+    "canonicalEquipmentOutputs": 17,
+    "accepted": 15,
+    "missingCanonicalSpellMappings": [
+      2844,
+      2845
+    ],
+    "materialsAndBookOriginsUnchanged": true
+  },
+  "wholeModel": {
+    "allPriorItemRoutesSourcesQuestsChainsInstancesMapsUnchanged": true,
+    "newActivePlans": 15,
+    "newSources": 2,
+    "newQuestRecords": 5,
+    "newInstance": 1,
+    "TunkPreciseMarker": false
+  },
+  "upstream": "All23627PFrawrows/9328fullsourceobjects/entiremetadata and1702EVfullrelationfields exact retainedactual8CL2.Qual1439/selected0;diagnosticsretainedbyteexact,no newgear/feed/source/opaque/counterchanges.",
+  "preflight": "InitialguardrejectedunrelatedGuise287011lootactorsversustwozonemembers;noincorrectrouteinstalled. Pointfootprints encodedinexistingboundsformatbeforefinalrun. Trainerfixture negativeabsence corrected;two remainingactualexclusions are missingcanonicalspellIDs,notlabeldifferences.8cm/8cm2 passedbeforetrainerimplementation;8cm3andfinal8cm4full19PASSafterit;final8cm4authoritative.",
+  "limits": "Publicationresearchonly/noactivegearadoption.12baseline/one12059unconfirmed-version-plus-missinglevelhold/one270126missingprintedlevelhold;286590originunknown. Full4132legacyrewardversusno-longer-rewardannotationconflictpreservedoutside-runtimefollowup,noPendantreplacementinvented. Full16842Dungeondefinitionand2exactNPCmemberships,nofloor/entrancecoordinate/continentboundsaspin. Fullzonekeyquests areleads,notmandatorygraph/accessproof. Existing27chainsunchanged. Two qualified key itineraries preserve27olderobjects,notmandatoryprerequisite/accessproof. Mouldings267137Horde/267138Alliance bothindependentlyfullTunk259256positive;continentpointretainedrawonly/no preciseTunkpin. FullKreza/AlphonseRivergladespointsandroles corroborated. FourLeather/12IronBarquestcostsnotregularcraft/ingredients."
+}

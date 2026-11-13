@@ -1,0 +1,1151 @@
+{
+  "scope": "Future-development proposals in the existing shared model;requiresFullLootJoin is the actual source guard. No active gear adoption or working candidate-only map coverage. Dungeon-region context reuses existing instance names/entrance fallback,not new guessed definitions or points.",
+  "navigationCounts": {
+    "published_named_region;candidate_not_active": 5,
+    "held_version_conflict_quest_route;candidate_not_active": 1,
+    "missing_acquisition_origin;candidate_not_active": 2,
+    "qualified_published_dungeon_region_entrance;candidate_not_active": 6
+  },
+  "candidates": {
+    "11755": {
+      "itemID": 11755,
+      "name": "Verek's Collar",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 11755,
+        "name": "Verek's Collar",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 51,
+        "renderedEquipLevel": 51,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:9042",
+          "name": "Verek",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 1584,
+              "name": "Blackrock Depths",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=11755",
+      "sourceSHA256": "1988edaeda113b6aaac48b1794442cae1bc50c18dddffa5c3c3d375d9ce48f3a",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "12059": {
+      "itemID": 12059,
+      "name": "Conqueror's Medallion",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 12059,
+        "name": "Conqueror's Medallion",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": null,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unconfirmed",
+        "currentParserReason": "unconfirmed-forever-facts",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-version-unconfirmed",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "held_version_conflict_quest_route;candidate_not_active",
+      "gaps": [
+        "primary_version_unconfirmed",
+        "missing_printed_equip_level",
+        "quest4132_legacy_reward_vs_no_longer_reward_annotation_conflict",
+        "do_not_substitute_Pendant270126_from_name",
+        "current_quest_prerequisites_and_reward_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=12059",
+      "sourceSHA256": "ee0be73fd4538e33af36a121ff58197d620fd71f9aaad2250e772215e41338aa",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "17707": {
+      "itemID": 17707,
+      "name": "Gemshard Heart",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17707,
+        "name": "Gemshard Heart",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12201",
+          "name": "Princess Theradras",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17707",
+      "sourceSHA256": "951a367dfaee9aebe796f8fbf24a774a49913780ce253a4db4e1e285a0c90ec0",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "17711": {
+      "itemID": 17711,
+      "name": "Elemental Rockridge Leggings",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17711,
+        "name": "Elemental Rockridge Leggings",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12201",
+          "name": "Princess Theradras",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17711",
+      "sourceSHA256": "6fc79e9fe71f3d7e0e69c348e4340d70ac6bd14f173db3916436412a88ce3eff",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "17718": {
+      "itemID": 17718,
+      "name": "Gizlock's Hypertech Buckler",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17718,
+        "name": "Gizlock's Hypertech Buckler",
+        "inventoryType": 14,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:13601",
+          "name": "Tinkerer Gizlock",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17718",
+      "sourceSHA256": "a12dd6be350c782596d6f78df7adb36141617feb2c543c0291e2bbc6163bcff8",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "18387": {
+      "itemID": 18387,
+      "name": "Brightspark Gloves",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18387,
+        "name": "Brightspark Gloves",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11467",
+          "name": "Tsu'zee",
+          "requiresFullLootJoin": true,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18387",
+      "sourceSHA256": "5ff3ba2401e6cc3fdf9db233385f9c6db1413bc632220c7c9ff25c9a87b94778",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "270126": {
+      "itemID": 270126,
+      "name": "Conqueror's Pendant",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 270126,
+        "name": "Conqueror's Pendant",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": null,
+        "renderedEquipLevel": null,
+        "primaryVersion": "not-provided",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "missing_acquisition_origin;candidate_not_active",
+      "gaps": [
+        "full_own_source_unknown_no_named_pin",
+        "no_quest_or_boss_equivalence_from_name",
+        "missing_printed_equip_level"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=270126",
+      "sourceSHA256": "73908e242bbae671b391a9f995ebe34c6373d35c19b17c43bf2cbc8fc1e8a2da",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "286590": {
+      "itemID": 286590,
+      "name": "Silithid Queen's Husk",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 286590,
+        "name": "Silithid Queen's Husk",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "missing_acquisition_origin;candidate_not_active",
+      "gaps": [
+        "full_own_source_unknown_no_named_pin",
+        "no_quest_or_boss_equivalence_from_name"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=286590",
+      "sourceSHA256": "f535afd52ea0e8ce69a52b67b4ec57690b934a25d92f3d43b81a35564d55e66d",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "287009": {
+      "itemID": 287009,
+      "name": "Twilight Enforcer's Legs",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287009,
+        "name": "Twilight Enforcer's Legs",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 39,
+        "renderedEquipLevel": 39,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258042",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            },
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+              "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+              "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+            }
+          ],
+          "instructions": "Published Krol'dok Stronghold source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [
+            "Krol'dok Stronghold"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "full-primary-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287009",
+      "sourceSHA256": "c506eab4809d577a7f7151b89a42ec8a641ad19177cfb9acec2fef8612ab25e7",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "287012": {
+      "itemID": 287012,
+      "name": "Krol'dok Warplate Gauntlets",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287012,
+        "name": "Krol'dok Warplate Gauntlets",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258042",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            },
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+              "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+              "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+            }
+          ],
+          "instructions": "Published Krol'dok Stronghold source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:258104",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            },
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+              "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+              "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+            }
+          ],
+          "instructions": "Published Krol'dok Stronghold source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [
+            "Krol'dok Stronghold"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "full-primary-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287012",
+      "sourceSHA256": "f56c7c4a71a6c36ad99955ca2bc3040ebe72adccb9e46265693d6e0f477db024",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "287013": {
+      "itemID": 287013,
+      "name": "Krol'dok Warplate Legplates",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287013,
+        "name": "Krol'dok Warplate Legplates",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258042",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            },
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+              "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+              "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+            }
+          ],
+          "instructions": "Published Krol'dok Stronghold source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:258104",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            },
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+              "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+              "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+            }
+          ],
+          "instructions": "Published Krol'dok Stronghold source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [
+            "Krol'dok Stronghold"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "full-primary-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287013",
+      "sourceSHA256": "ab0a3ee9e1b2a515b71e8d184e4948f7ba200c7d6adcf4b933a916066ed79148",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "287014": {
+      "itemID": 287014,
+      "name": "Krol'dok Warplate Pauldrons",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287014,
+        "name": "Krol'dok Warplate Pauldrons",
+        "inventoryType": 3,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258042",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            },
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+              "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+              "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+            }
+          ],
+          "instructions": "Published Krol'dok Stronghold source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:258104",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            },
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+              "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+              "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+            }
+          ],
+          "instructions": "Published Krol'dok Stronghold source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [
+            "Krol'dok Stronghold"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "full-primary-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287014",
+      "sourceSHA256": "a1d66c08ec03409305ec5ae479ed7d929e7ae2124def6efd2d34f70a654acccc",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "287020": {
+      "itemID": 287020,
+      "name": "Defias Enforcer's Chest",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287020,
+        "name": "Defias Enforcer's Chest",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:255262",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255267",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255271",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255309",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255377",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:271784",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 16620,
+          "publishedNPCRegionNames": [
+            "Alcaz Prison"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16620
+          },
+          "fullZoneRawStatus": "reuse-completed8CI-full-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287020",
+      "sourceSHA256": "3e75e5e0025b1650af764fac397b1a43eb0cd1c32a85c33310b43a3e6fb6188d",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    },
+    "287021": {
+      "itemID": 287021,
+      "name": "Defias Enforcer's Prowlers",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287021,
+        "name": "Defias Enforcer's Prowlers",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:255262",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255267",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255271",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255276",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255309",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255377",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:255995",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:271784",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Alcaz Prison source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 16620,
+          "publishedNPCRegionNames": [
+            "Alcaz Prison"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16620
+          },
+          "fullZoneRawStatus": "reuse-completed8CI-full-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287021",
+      "sourceSHA256": "05f1e5d46d7e22dd20eb33b24bdf6ae60dd9d66911f5b8879e05ddea34ed0d97",
+      "sharedEvidence": "checkpoint8cm_working_evidence.json"
+    }
+  },
+  "priorCandidateLocationFollowups": {
+    "287011": {
+      "itemID": 287011,
+      "name": "Guise of Battle",
+      "priorAssessment": "8CL;not repeated",
+      "oldEvidence": "checkpoint8cl_working_evidence.json",
+      "newEvidence": "checkpoint8cm_working_evidence.json",
+      "resolvedGap": "area16842 nowfull-primaryDungeonKroldokStronghold;twozonememberslackexactGuise287011lootjoin,noqualifiedactorroute",
+      "routes": [],
+      "activeAdoption": false
+    }
+  }
+}

@@ -427,4 +427,46 @@ with tempfile.TemporaryDirectory() as temp:
     assert "itemrewards" not in model["quests"]["11"] and not model["chains"]["10"]["routeVerified"], "a known first actor proves neither equipment rewards nor a mandatory graph"
     proof["npcs"][0]["selectedQuestStarts"]=[];path.write_text(json.dumps(proof))
     assert not nav.build({"1":dict(itemID=1,name="Chain reward",sourceType="Quest",eligibility=[511])})[0]["quests"].get("11",{}).get("starts"), "missing role evidence must remain a gap"
-print("PASS navigation generation: future evidence propagation, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    for filename in ["reviewed_equipment_sources.json", "reviewed_recipe_sources.json"]:
+        (nav.REPORT / filename).write_text("[]")
+    for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / filename).write_text("itemID\n")
+    recipe_path = nav.REPORT / "recipes_reconciled.csv"
+    recipe_path.write_text("itemID,name,profession,spellID\n1,Training fixture,Blacksmithing,123\n")
+    gear = {"1": dict(itemID=1, name="Training fixture", sourceType="Crafted",
+                     profession="Blacksmithing", recipePatternItemID=55, eligibility=[511])}
+    before = json.loads(json.dumps(gear))
+    teaching = dict(id=123, name="Training fixture", creates=[1, 1, 1], skill=[164],
+                    learnedat=35, trainingcost=100)
+    proof = dict(npcs=[dict(url="https://www.wowhead.com/forever/npc=100", sha256="a"*64,
+                           title="Trainer - NPC - Forever", selectedTeaches=[teaching],
+                           maps={"40": [dict(uiMapName="Westfall", uiMapId=52, coords=[[20, 30]])]})])
+    path = nav.REPORT / "checkpoint_teacher_evidence.json"
+    def teaching_routes():
+        path.write_text(json.dumps(proof))
+        model = nav.build(gear)[0]
+        return model, [r for r in model["items"].get("1", {}).get("routes", []) if r["kind"] == "trainer" and r.get("source")]
+    model, routes = teaching_routes()
+    assert len(routes) == 1 and routes[0]["source"] == "npc:100" and routes[0]["spellID"] == 123
+    assert "Blacksmithing 35" in routes[0]["instructions"] and "100 copper" in routes[0]["instructions"]
+    assert "bookItemID" not in routes[0] and gear == before, "a learned spell is not acquisition of a physical pattern or mutation of gear eligibility"
+    assert model["sources"]["npc:100"]["locations"][0]["x"] == 20, "new full trainer evidence must reach the shared map model"
+    recipe_path.write_text("itemID,name,profession,spellID\n1,Legacy output label,Blacksmithing,123\n")
+    assert len(teaching_routes()[1]) == 1, "a legacy recipe display label must not override exact canonical spell/output IDs and the full teaching row's current name"
+    for field, wrong in [("id", 124), ("name", "Different recipe"), ("creates", [2, 1, 1]),
+                         ("skill", [197]), ("envChange", {"status": "unconfirmed"})]:
+        original = teaching.get(field)
+        teaching[field] = wrong
+        assert not teaching_routes()[1], "mismatched or unconfirmed teaching must not create a destination: " + field
+        if original is None:
+            teaching.pop(field)
+        else:
+            teaching[field] = original
+    proof["npcs"][0]["selectedTeaches"] = []
+    assert not teaching_routes()[1], "an NPC header and coordinates alone do not prove teaching"
+    proof["npcs"][0]["selectedTeaches"] = [teaching]
+    recipe_path.write_text("itemID,name,profession,spellID\n1,Training fixture,Blacksmithing,124\n")
+    assert not teaching_routes()[1], "independent canonical spell mapping is required"
+print("PASS navigation generation: future evidence propagation, exact trainer spell/output/profession joins, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

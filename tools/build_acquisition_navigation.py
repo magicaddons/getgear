@@ -15,6 +15,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs/source-audit-1-60/reconciliation-20261109"
 CLASSES = ["PRIEST", "MAGE", "WARLOCK", "DRUID", "ROGUE", "HUNTER", "SHAMAN", "WARRIOR", "PALADIN"]
+PROFESSION_SKILLS = {"Alchemy": 171, "Blacksmithing": 164, "Enchanting": 333,
+                     "Engineering": 202, "Leatherworking": 165, "Tailoring": 197,
+                     "Cooking": 185, "First Aid": 129}
 ENTITY = re.compile(r"/(?:forever/)?(npc|object|quest|item|currency|zone)(?:=|/)(\d+)")
 
 
@@ -54,6 +57,7 @@ class Evidence:
         self.full_quest_rewards = collections.defaultdict(set)
         self.full_npc_sales = collections.defaultdict(dict)
         self.full_npc_drops = collections.defaultdict(dict)
+        self.full_npc_teaching = collections.defaultdict(list)
         self.full_object_contents = collections.defaultdict(dict)
         self.instances = {}
         self.quest_starters = collections.defaultdict(list)
@@ -157,6 +161,9 @@ class Evidence:
                     for drop in rows((node.get("lists") or {}).get("drops")) + rows(node.get("selectedDrops")):
                         if isinstance(drop, dict) and type(drop.get("id")) is int:
                             self.full_npc_drops[source_id][drop["id"]] = drop
+                    for teaching in rows((node.get("lists") or {}).get("teaches-recipe")) + rows(node.get("selectedTeaches")):
+                        if isinstance(teaching, dict) and teaching not in self.full_npc_teaching[source_id]:
+                            self.full_npc_teaching[source_id].append(teaching)
                 else:
                     for content in rows((node.get("lists") or {}).get("contains")) + rows(node.get("selectedContains")):
                         if isinstance(content, dict) and type(content.get("id")) is int:
@@ -381,6 +388,10 @@ def build(inputs):
                 partial_hints.add(int(raw_id))
     equipment = {r["itemID"]: r for r in json.loads((REPORT / "reviewed_equipment_sources.json").read_text())}
     books = {r["itemID"]: r for r in json.loads((REPORT / "reviewed_recipe_sources.json").read_text())}
+    recipe_path = REPORT / "recipes_reconciled.csv"
+    recipes = {int(r["itemID"]): r for r in read_csv(recipe_path)} if recipe_path.exists() else {}
+    if recipe_path.exists():
+        evidence.inputs.append(dict(file=recipe_path.name, sha256=hashlib.sha256(recipe_path.read_bytes()).hexdigest()))
     dungeon_rows = {int(r["itemID"]): r for r in read_csv(REPORT / "dungeon_items_reconciled.csv")}
     known_dungeons = {r["dungeon"] for r in dungeon_rows.values() if r.get("reconciledRole") not in ["crafted-item", "crafted-pattern"] and r.get("dungeon")}
     pending = {int(r["itemID"]): r for r in read_csv(REPORT / "remaining_equipment_research_queue.csv")}
@@ -434,6 +445,35 @@ def build(inputs):
                 gap(research_gap["gap"], source=research_gap.get("sourceID", ""),
                     quest=research_gap.get("questID", ""), detail=research_gap["detail"])
         book_id = gear.get("recipePatternItemID") or books.get(item_id, {}).get("bookItemID")
+        # A full teaching table identifies the learned spell and its output,
+        # independently of any physical pattern book's acquisition route.
+        recipe = recipes.get(item_id, {})
+        if (craft and recipe.get("profession") == gear["profession"]
+                and str(recipe.get("spellID", "")).isdigit()):
+            spell_id = int(recipe["spellID"])
+            skill_id = PROFESSION_SKILLS.get(gear["profession"])
+            for npc_id, teachings in sorted(evidence.full_npc_teaching.items()):
+                for teaching in teachings:
+                    output = rows(teaching.get("creates"))
+                    if (type(teaching.get("id")) is not int or teaching["id"] != spell_id
+                            or not output or type(output[0]) is not int
+                            or output[0] != item_id or teaching.get("name") != gear["name"]
+                            or skill_id not in rows(teaching.get("skill"))
+                            or (teaching.get("envChange") or {}).get("status") == "unconfirmed"):
+                        continue
+                    details = "Learn this recipe from the published trainer."
+                    minimum, fee = teaching.get("learnedat"), teaching.get("trainingcost")
+                    if type(minimum) is int and 0 <= minimum < 9999:
+                        details += f" Published learning skill: {gear['profession']} {minimum}."
+                    if type(fee) is int and fee >= 0:
+                        details += f" Published training fee: {fee} copper."
+                    details += (" This locates recipe learning, not finished equipment or a physical pattern book."
+                                " Learning skill is not a wearer requirement. Current teaching, price and access remain unverified.")
+                    legacy = teaching.get("classicEra") == 1
+                    route("trainer", source=f"npc:{npc_id}", spellID=spell_id,
+                          verification="legacy-reference" if legacy else "published-reference",
+                          directionsOnly=True if legacy else None, instructions=details)
+                    break
         # Reviewed future trainer/special-crafting/unlock routes share the
         # existing source registry and primary NPC/object evidence pool.
         extras = list(meta.get("navigationRoutes", []))
