@@ -1,0 +1,99 @@
+{
+  "checkpoint": "8CQ",
+  "status": "documentation-only100case research;targetedproofvalidationPASS;readycommitpush",
+  "baseline": "219a55283a196a550064c4bfa4d1e0da9499de77",
+  "sourceProofSHA256": "d8368a3e903796c3d0b71f0227b829d0d72a6e2263dd23e7b18797acf151889b",
+  "caseCounts": {
+    "selected": 100,
+    "assessed": 100,
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 94,
+      "hold-version-unconfirmed": 1,
+      "hold-no-rendered-equip-level": 4,
+      "excluded-non-equipment-or-unsupported-slot": 1
+    },
+    "groups": {
+      "named-source-reference": 71,
+      "broad-published-reference": 15,
+      "vendor-reference": 6,
+      "origin-unresolved": 3,
+      "quest-reference": 4,
+      "non-equipment-or-unsupported-slot": 1
+    },
+    "fullPrimaryResponses": 184,
+    "newPrimaryResponses": 108,
+    "reusedPrimaryResponses": 76,
+    "fullNPC": 81,
+    "fullQuest": 3,
+    "dropReverseJoins": 93,
+    "dropReverseOmissions": 47,
+    "vendorExactJoins": 21,
+    "vendorFullOmissions": 0,
+    "formalQuestRoleJoins": 6,
+    "knownFailedReferenceEdges": 45,
+    "newFailedReads": 0,
+    "knownFailedURLs": 1681,
+    "activeAdoptions": 0,
+    "liveVerified": 0,
+    "BackHeaders": 18,
+    "ThrownHeaders": 1
+  },
+  "targetedChecks": [
+    "184fullresponsehashes",
+    "100eligibility/provenance decisions",
+    "93NPC/21vendor/6questrole joins and47qualifiedomissions",
+    "16knownfailedURLs/45edges skippedwithoutretry",
+    "prior820registerbytes/objects preserved",
+    "exactnext100 shared queue",
+    "actualgeneratortemporary94eligiblefutureinputs",
+    "protectedruntime/sourceinputsbyteexact"
+  ],
+  "proposalCompatibility": {
+    "eligibleFutureInputs": 94,
+    "plans": 78,
+    "statuses": {
+      "directions": 72,
+      "missing": 16,
+      "verified_coordinate_data": 6
+    },
+    "heldQuestRewardsNotAdopted": true,
+    "oneVersionHoldAndOneToyNotAdopted": true,
+    "actualCurrentCoverageUnchanged": true
+  },
+  "outsideQueue": {
+    "total": 920,
+    "assessed": 920,
+    "pending": 0
+  },
+  "additionalAllSlotQueue": {
+    "total": 697,
+    "assessed": 418,
+    "pending": 279,
+    "nextCheckpoint": "8CR",
+    "nextCount": 100,
+    "firstID": 13528,
+    "lastID": 19579,
+    "remainingAfterNext100": 179
+  },
+  "untypedRewardReferenceScopeReview": 345,
+  "lastFullValidation": {
+    "checkpoint": "8CO",
+    "CI": 43365182317,
+    "source": "30c0553283547e0c23539cec03077f78b3407b4e",
+    "generated": "7bbc9b5fb71bdb7c026cc15787d3c043221a2e66",
+    "localPASS": 19,
+    "CIPASS": 18,
+    "newFullSuiteClaim": false,
+    "newCIRequired": false,
+    "reason": "Diagnostic research/proposals/tracking only;no addon/source/generator/runtime inputs changed."
+  },
+  "navigation": {
+    "verified_coordinate_data": 883,
+    "directions": 1581,
+    "missing": 3087,
+    "not_applicable": 2156
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "limits": "Published reference research,not current realm loot/stock/quest acceptance/rendering confirmation. Full omission rows are not assumed caps/absence/retirement. 16previousfailedNPC URLs/45referenceedges skippedwithoutretry;no failedpagehash. Four missing wearer levels are not filled from raw/source quest minima. Piccolo13379iscurrentToy,notTrinket/equipment. Blackblade12592unconfirmed. Historical/broad sparse drops not focused farms;source region names/areaIDs are not floor/UIMapID coordinates. Six limited-stock vendor cloaks retain independent per-seller costs/stock/access,not live stock. No class/ingredient/recipe/canonical equipment/source/quest-chain mutation."
+}
