@@ -1,7 +1,7 @@
 # GetGear acquisition reconciliation — durable checkpoints
 
 <!-- current-research-checkpoint -->
-Current verified checkpoint: [8CN validation](source-audit-1-60/reconciliation-20261109/checkpoint8cn_validation.json) (13 November 2026). Next: **8CO, all13 marked all-slot leads274998–287025**. Preserve the single existing worker/automation; later chronological records below qualify historical entries.
+Current verified checkpoint: [8CO validation](source-audit-1-60/reconciliation-20261109/checkpoint8co_validation.json) (13 November 2026). Next: **8CP, all10 marked all-slot leads14557–286430**. Preserve the single existing worker/automation;later chronological records qualify historical entries.
 <!-- /current-research-checkpoint -->
 
 ## Baseline recovered (2026-11-09)
@@ -2179,3 +2179,14 @@ Full guide exact sixboss identities/independent names adds separately cited writ
 
 
 8CO final actual8co2 reconciliationexit0/full19localPASS(15Lua/threeofflinePython/requiredfiles-syntax26modules/fourtools/exporter). Whole-model check:all existing active plans/sourcefacts/quests/maps/audit exact;only shared Krol'dok instructions+separate guide provenance andoneunordered reported chain94768. Active7707coverage883/1581/3087/2156,gaps17406/render0 unchanged;954recipeobjects/1254crafts/4857ingredients preserved. PF23627→23628one outside14557 lead;allpriorrawrows/9328fullsourceobjects exact,only aggregate facets differ. EV1702fullrecords exact/1439qualified/selected0. Original andfinalrawcomparisons saved before diagnostic advance. Register811=810assessed+1pending;allslot318=308assessed+10pending8CP. Non-release CI/fullbot review pending;no release/main action.
+
+
+## Checkpoint 8CO verified — continue 8CP10 all-slot leads
+
+Source `30c0553283547e0c23539cec03077f78b3407b4e` passed final actual8co2 reconciliationexit0/full19local. [Non-release CI43365182317](https://github.com/magicaddons/getgear/actions/runs/43365182317),job131687801978,SUCCESS18timestampedtestPASS(15Lua/threeofflinePython/26modules/fourtools/exporter). Whole direct bot `7bbc9b5fb71bdb7c026cc15787d3c043221a2e66` inspected:onlyfourEverlootfingerprints/run time;allother runtime/source/audit/reportbytes exact. Bot APIbodies unread;actual local full factual baseline retained,not inferred from counts. No pending8CO gate.
+
+13selected fully assessed(11printed-level passes/2missing-wearer-level holds),plus4unidentified404quest-choice reference holds. Register811=810assessed+1pending(newfeed14557);allslot318=308assessed+10pending. **Next8CP all10 numeric order:14557,274995/274996/274997,275001/275002/275003,286428/286429/286430.** Prior793registerprefix andqueueobjects preserved/zeroactivegearadoption. Original5688dispositions include explicit unknown/unread/versionexceptions;whole research remains open beyond10.
+
+29fullprimary21new8cached,13exactthreecontextqueries,11own/full NPC joins/noomissions. Exact sixpublishedguideboss IDs support written Krol'dok approach;no precise entrance/floor/UIMapID invented. Existing full zone16842 type provenance retained separately from fullguide instructions. Shared sourceZone guard scopes generation/runtime/coverage to real matchingactor geography;future directdungeon/boss/recipe andsource/writtenroutes inheritshared instructions incompactpin/fullguide. Candidate-onlyactors pruned;alloldactiveplans/sourcefacts/quests/maps/auditexact. Single context-sensitive pin retained. 34oldchainobjects exact→35:94768reportedunordered/routeVerifiedfalse/prereqfalse/no completionflagadvancement;Kilgaroutdoor notMuggdungeon. Four literal quest choices quarantined;NYI/NAMEnotinventedNPC/itemidentities. OgreKey271721 exactMuggjoin distinctCompoundKey267089;access roles unresolved. Campfire273101utilityscope/learning200versuskituse220notgearcraft/954bookmutation. Knownfailed1681/no unchangedretry.
+
+Coverage883coordinate-data1581directions3087missing2156NA/17406gaps/render0 unchanged.7707IDs36341objectives1254crafts4857ingredients/954recipeobjects/5902registry7373index7372display759books/settingsfilters intact. PF23627→23628one new outside14557;allpriorrawrows/names/resolvedfacts/9328fullsourceobjects exact,onlyaggregatefacets differ. EV1702fullfields exactactual8CN4/1439qual/selected0. Original/final fulldeltas saved beforediagnostic advance toactual8CO2. Closuretargetedchecks,notanotherfullsuite. Continue10then systematic scope/twomappingholds2844/2845/sixdungeon/954livebooklimits/sharednavigationgaps/finalintegrity/manualacceptance. Sameworker/singleexistingautomation;main/Beta8unchangedremote04:22UTC13Nov;no build/package/release/billingaction.
