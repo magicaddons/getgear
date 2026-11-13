@@ -1,0 +1,65 @@
+{
+  "checkpoint": "8CW",
+  "status": "documentation-only104scope research;targeted evidence and integrity PASS;readycommitpush",
+  "baseline": "d3c2cd9810e87d84f547c740432ada4b1218a07c",
+  "sourceProofSHA256": "fdd9fdd8d637f8fa3cac00b318d470449fa85649489e4bd17ab4959df594d989",
+  "caseCounts": {
+    "selected": 104,
+    "assessed": 104,
+    "equipmentReferences": 42,
+    "eligibility": {
+      "hold-no-rendered-equip-level": 42
+    },
+    "scopeDecisions": {
+      "hold-no-rendered-equip-level": 42,
+      "excluded-nongear-class-from-equipment-scope": 27,
+      "excluded-current-quality-below-existing-candidate-scope": 33,
+      "excluded-food-recipe-outside-equipment-book-scope": 2
+    },
+    "fullOwnItems": 104,
+    "fullPrimaryResponses": 168,
+    "newPrimaryResponses": 119,
+    "reusedPrimaryResponses": 49,
+    "fullNPC": 18,
+    "fullQuest": 45,
+    "fullObject": 1,
+    "formalQuestRoleJoins": 72,
+    "publishedMatchingSeriesSegments": 12,
+    "distinctMatchingPrimarySeries": 2,
+    "newFailedReads": 0,
+    "knownFailedURLs": 1732,
+    "skippedKnownFailedActorEdges": 4,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "targetedChecks": [
+    "168 actualfullbodyhashes/104own scope decisions",
+    "42missingwearerholds/33commonquality/27nongear/twofoodrecipes",
+    "72formalrole joins/rewardprefixes/fullown-fullquestrewardjoins",
+    "3101 cachedsourcebodyhashes/zero unqueued typed or untypedreferences",
+    "all1314priorassessedregistercases unchanged/104priorpendingreferencefacts retained",
+    "1418register and916sharedqueue fullydispositioned/no duplicateIDs/no pendingmarkers",
+    "1732failureledgerunchanged/fourfailedactorreferences skipped",
+    "protectedruntime-sourceinputsbyteexact"
+  ],
+  "lastFullValidation": {
+    "checkpoint": "8CO",
+    "CI": 43365182317,
+    "source": "30c0553283547e0c23539cec03077f78b3407b4e",
+    "generated": "7bbc9b5fb71bdb7c026cc15787d3c043221a2e66",
+    "localPASS": 19,
+    "CIPASS": 18,
+    "newFullSuiteClaim": false,
+    "newCIRequired": false
+  },
+  "nextCheckpoint": "8CX source rank/location/canonical mapping correction with full validation",
+  "navigation": {
+    "verified_coordinate_data": 883,
+    "directions": 1581,
+    "missing": 3087,
+    "not_applicable": 2156
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "limits": "All42supported-quality equipmentreferences lack a printedwearerlevel;questminima not substituted. Currentloot/questacceptance/progression/renderingunverified. Twofoodrecipebooks outsideequipmentbookscope,not newgearcrafts. Physicalquesttools/commonqualitywearables canremain relevantcontextwithoutnewupgradeadoption. FullSeries rowsretainbranching/reward-specificprefixes,not mandatoryunlockproof. FailedactorURLs skipped/no fabricatedbodyhashes/coords. Runtime/catalogue/954books/35chains/ingredients/settingsunchanged."
+}

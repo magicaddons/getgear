@@ -1,7 +1,7 @@
 # GetGear acquisition reconciliation — durable checkpoints
 
 <!-- current-research-checkpoint -->
-Current verified research: [8CV validation](source-audit-1-60/reconciliation-20261109/checkpoint8cv_validation.json), 13 November 2026. Documentation-only; latest full-code validation remains 8CO. Register 1,314 assessed / 104 scope-pending. **Next 8CW: all 104 remaining reward references, IDs 21190–286427**, marked in both existing queues. Failure ledger 8CV: 1,732 URLs. Then source-standing normalization, reusable locations, mappings 2844/2845 and final integrity/manual acceptance. Single worker/existing automation.
+Current verified research: [8CW validation](source-audit-1-60/reconciliation-20261109/checkpoint8cw_validation.json), 13 November 2026. All 1,418 candidate cases / 916 shared queue cases dispositioned; cache audit 3,101 sources, zero unqueued leads. Documentation-only; full-code validation remains 8CO. **Next 8CX: merchant standing normalization, reusable source locations and mappings 2844/2845, then full validation.** Shared failed URLs: 1,732. Then final integrity/exceptions/manual acceptance. Single worker/existing automation.
 <!-- /current-research-checkpoint -->
 
 ## Baseline recovered (2026-11-09)
@@ -2247,3 +2247,12 @@ Documentation-only targetedproofPASS/protectedruntime-sourceinputsbyteexact/all1
 Corrected the cached audit’s bookItemID exclusion and genuine older diagnostic proposal gap/confidence deficiencies; original 8CR–8CT source proofs and all runtime inputs remain exact. See CHECKPOINT8CV_REWARD_SCOPE_AND_BOOK_REUSE.md, checkpoint8cv_partial_research.json and checkpoint8cv_validation.json. Targeted validation passed; latest full validation remains 8CO, 19 local / 18 CI, run 43365182317. No new active adoption, full-suite or rendering claim.
 
 Register 1,418 = 1,314 assessed + 104 scope-pending; shared all-slot queue 916 = 812 assessed + the same 104 pending. **Next 8CW: all 104 references, IDs 21190–286427**, marked in both existing queues. Then source rank normalization, source-only location propagation for existing/future routes, spell mappings 2844/2845, final integrity and manual acceptance. Current navigation 883/1581/3087/2156; 17,406 overlapping gaps; render tests zero. Six dungeon/current-live book exceptions remain qualified. Same worker/single existing automation; no main/Beta 8/release/billing action.
+
+
+## Checkpoint 8CW verified — queued research dispositioned; next 8CX implementation corrections
+
+All 104 remaining references individually scope-assessed: 42 equipment missing printed wearer level, 33 common-quality wearable/tool exclusions, 27 nongear and two food recipes outside equipment-book scope. 168 full responses = 119 new + 49 cached; 72 formal actor joins; two matching Series tables across 12 records retain prefixes/branches. Four known failed actor edges skipped; no new failures, shared ledger 1,732 URLs. Cache-wide closure: 3,101 full source pages / zero unqueued typed equipment or untyped reward references / zero parse errors. See CHECKPOINT8CW_FINAL_REWARD_SCOPE.md and checkpoint8cw_validation.json.
+
+All 1,418 candidate-register cases and 916 shared all-slot queue cases now dispositioned; original 5,688-case queue also dispositioned. No active adoption or live confirmation implied by a hold/exception. Protected runtime inputs unchanged. Latest full validation remains 8CO, 19 local / 18 CI, run 43365182317; targeted 8CW hash/joins/queue/integrity validation passed. Current navigation 883/1581/3087/2156, 17,406 overlapping gaps, real rendering zero.
+
+**Next 8CX:** source-standing basis normalization, reusable source-only location propagation for existing/future routes, and canonical mappings 2844/2845; fresh reconciliation / full local and nonrelease CI / whole bot review. Then final exceptions, integrity and manual acceptance report. Preserve six dungeon/current-live book limits; future discoveries use the same shared research/evidence queues. Single worker/existing automation; no main/Beta 8/release/billing action.
