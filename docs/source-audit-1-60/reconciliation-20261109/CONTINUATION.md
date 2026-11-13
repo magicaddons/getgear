@@ -1,6 +1,10 @@
 # GetGear unattended research continuation
 
-## Latest verified checkpoint — 8BH, 11 November 2026
+<!-- current-research-checkpoint -->
+Current verified checkpoint: [8CM validation](checkpoint8cm_validation.json) (13 November 2026). Next: **8CN, all17 marked all-slot leads267090–287019**. Preserve the single existing worker/automation; later chronological records below qualify historical entries.
+<!-- /current-research-checkpoint -->
+
+## Historical checkpoint — 8BH, 11 November 2026
 
 All98worlddrop cases38–39(50+48)are complete at publication-research level. Fresh8bhcaptureexit0→fullsequential17localPASS;[non-releaseCI42973048416](https://github.com/magicaddons/getgear/actions/runs/42973048416)success/16timestampedCItestPASS=14Lua+2offlinePython/24modules/fourreports/3toolsyntax. Source `d2654f14bdeb4cabc644a87dc8c8e3e242e2276c`,inspected directbot/finalvalidated `89e88db7825870b0337a0838bc521ccb3bc57dcc`,job130365714614. Botonlytime/Everlootfingerprints;PF-runtime-reports-countsunchanged. Actual final-local8BHfacts retained/botAPIbytesnotread/equalcountersnotinferred. Maincf7fa410/Beta8tag0a088935→543e5a24remoteunchanged06:16UTC11Nov.
 
@@ -1947,3 +1951,16 @@ Final [checkpoint record](checkpoint8cl_validation.json) overrides historical pe
 Sharedtrainerteachingjoin added:fullNPCspell/output/currentgearname/profession+independentcanonicalspellmapping;appliesautomaticallytofuturecommittedevidence.23teachingrows/17activeoutputs yield**15actualtrainerdestinations**;2844/2845heldformissingcanonicalspellIDs,notnames. Inputs/bookorigins/ingredients/wearergatesunchanged. Finalactual8cm4exit0/full19localPASS,newnegativetestsincluded;18CI/fullbotreviewpendinguntilcheckpoint8cm_validation.json. Active7707identities36341objectives1254crafts4857ingredients/954recipes/registry5902index7373display7372books759/settingsfilters intact. Wholemodelallpriorplans/sources/quests/chains/maps/instancesexact;add15plans/twoactors/fivequestrecords/twoitineraries/onedungeon. Coverage879publishedcoordinate-data1581directions3091missing2156NA/17410gaps/render0;15missingrowsresolved,not17workingroutes. Candidate-onlydataexcluded.
 
 Allactual8CM4PF23627rawrows/9328fullsourceobjects/entiremetadata and1702EVrelationfieldsexactretainedactual8CL2/qual1439/selected0. No newfeed/source/index/opaque/counterchanges;diagnosticbytesretainedafterfullcomparison. No currentservice/price/drop/quest/APIrenderingclaim. Sameworker/existingautomationonly;mainBeta8buildpackagereleasebillinguntouched.
+
+
+## Checkpoint 8CM verified — continue 8CN17 all-slot leads
+
+Source `bdccaeeb806101c13fe0e400c040313198e6a40f` passed finalactual8cm4 reconciliation/full19local. [Non-release CI43353232857](https://github.com/magicaddons/getgear/actions/runs/43353232857),job131649035760,SUCCESS18timestampedtestPASS(15Lua/threeofflinePython/26modules/fourtools/exporter). Entire direct generated commit `714b33391023ddbf5c89ff63fc1726d3797d8a90` inspected:onlyfourEverlootfingerprints/runtime;allotherruntime/source/audit/reportbytesexact. Bot APIbodiesunread;actualfullfactualbaseline retained,notinferredfromcounts. Nopending8CMgate.
+
+**776registeredcasesassessed/zeropending;sharedallslot295=278assessed+17pending. Next8CN all17 IDs267090–287019,numeric order.** Batch14:12baselinepasses/12059version-and-missinglevelhold/270126missinglevelhold;286590originunknown/zeroactiveadoption. Prior762registerbytes/objects preserved. Original5688dispositions includeunknown/unread/versionexceptions;whole research remains open beyond17.
+
+50fullprimary39new11cached/14exactthreecontextqueries;58NPCpositives/noomissions;nofailedread/retry/1676knownfailedURLs. Full16842Dungeoncontext/twoexactNPCmemberships,notcontinentpointsasfloors. Twoqualifiedkeyitineraries94973→94974/94980→94981 preserve27olderchains. Mouldings267137/267138fullTunkjoins;preciseTunklocationunresolved. FourThickLeather/12IronBars→CompoundKey267089 isquestcost,notregularcraft/wearergate. Mandatorygraph/currentacceptance/keyaccessunverified. FullKreza/AlphonseRivergladescoordinates/roles corroborated.287011areaidentityresolved;differentlootactors/zonemembersnotcombined,noinventedqualifiedroute.
+
+Reusablefullteaching/canonicalspell/output/name/professionguard nowpropagatesnewtrainerdata.23fullteachingrows/17activeoutputs→**15actualactivelearningdestinations**;2844/2845heldformissingcanonicalspellIDs. Learningcosts/skillsnotwearergates/physicalbookorigins. Active7707IDs36341objectives1254crafts4857ingredients/954recipeobjects/settingsfilters/registry5902index7373display7372books759 unchanged. Allpriorruntimeitemplans/sources/quests/chains/instances/mapIDs exact;add15plans/twoactors/fivequestrecords/twoitineraries/onedungeon. Coverage879publishedcoordinate-data1581directions3091missing2156NA/17410gaps/render0;15previouslymissingdestinationsresolved,candidate-onlydataexcluded.
+
+All23627PFrawrows/9328fullsourceobjects/entiremetadata and1702EVfullrelationfields exactretainedactual8CL2/1439qualified/selected0. No newsource/feed/index/opaque/counterchanges;diagnosticbytesretained. Full[checkpoint record](checkpoint8cm_validation.json) supersedeshistoricalpendingentries. Closure targetedproof/link/queue/diffchecks,notanotherfullsuite. Continue8CNautomatically,then systematicALLslotBackThrown/knowncloaks/twocanonicalspellmappingholds/sixdungeon/954livebooklimits/sharednavigationgaps/finalintegrity/manualacceptance. Sameworker/existingautomationonly;no mainBeta8buildpackagereleasebillingaction.
