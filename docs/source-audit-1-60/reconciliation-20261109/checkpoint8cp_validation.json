@@ -1,0 +1,66 @@
+{
+  "checkpoint": "8CP",
+  "status": "documentation-only research checkpoint;targetedproofvalidationPASS;readycommitpush",
+  "baseline": "187da9e3a95ce2d4c21d1c79edf20cbf4a8a4eff",
+  "sourceProofSHA256": "43f4bfb693ef5132f84077a2b975756ecfa571c283d37bcabed740b3f7cbd421",
+  "caseCounts": {
+    "selected": 10,
+    "assessed": 10,
+    "printedLevelBaselinePass": 9,
+    "versionUnconfirmedHold": 1,
+    "fullPrimaryResponses": 21,
+    "newPrimaryResponses": 10,
+    "reusedPrimaryResponses": 11,
+    "dropReverseJoins": 9,
+    "fullInventoryOmissions": 6,
+    "exactDiscoveryQueries": 10,
+    "newFailures": 0,
+    "knownFailedURLs": 1681,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "targetedChecks": [
+    "21 response bodies/fingerprints",
+    "10eligibility/source decisions and6 historical omissions",
+    "all2869cachedsourcefingerprints",
+    "register/queueprefix/exactnext100",
+    "actualgeneratortemporaryfutureproposal9directions+1withheld",
+    "protectedruntime/sourceinputsbyteexact"
+  ],
+  "outsideQueue": {
+    "total": 820,
+    "assessed": 820,
+    "pending": 0
+  },
+  "additionalAllSlotQueue": {
+    "total": 697,
+    "assessed": 318,
+    "pending": 379,
+    "nextCheckpoint": "8CQ",
+    "nextCount": 100,
+    "firstID": 763,
+    "lastID": 13524,
+    "remainingAfterNext100": 279
+  },
+  "untypedRewardReferenceScopeReview": 345,
+  "lastFullValidation": {
+    "checkpoint": "8CO",
+    "source": "30c0553283547e0c23539cec03077f78b3407b4e",
+    "generated": "7bbc9b5fb71bdb7c026cc15787d3c043221a2e66",
+    "CI": 43365182317,
+    "localPASS": 19,
+    "CIPASS": 18,
+    "newFullSuiteClaim": false,
+    "newCIRequired": false,
+    "reason": "Only diagnostic research/proposals/tracking documents changed;no addon/source/generator inputs changed."
+  },
+  "navigation": {
+    "verified_coordinate_data": 883,
+    "directions": 1581,
+    "missing": 3087,
+    "not_applicable": 2156
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "limits": "Nine new-source items printed39/40 with exact full own/boss joins are future-development candidates,not automatic active gear adoption or live drops. LionHorn14557 itemlevel63/printedwearer58,versionunconfirmed;all6ownNPCrefsclassicEra1 andeach fullNPCreturned inventory omitsit. No cap(current rows99/272/100/109/100/137),rate,currentavailability/retirement or focusedfarm inferred. Currenttooltipdefense/proc effects are saved as publishedfacts,not current combat verification. No runtime code/data/gear/class/profession/material mutation."
+}

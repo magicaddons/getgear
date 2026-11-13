@@ -1,0 +1,1890 @@
+{
+  "checkpoint": "8CP",
+  "scope": "Diagnostic research only;not a runtime evidence input or active equipment adoption. Existing shared source model supplies future proposal semantics.",
+  "items": {
+    "14557": {
+      "url": "https://www.wowhead.com/forever/item=14557",
+      "bytes": 204301,
+      "sha256": "12911edc1c3fd8afd96daac090d95d00175053ceba6c7f1937a5450dd7ad91d7",
+      "title": "The Lion Horn of Stormwind - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 14557,
+        "name": "The Lion Horn of Stormwind",
+        "level": 63,
+        "reqlevel": 58,
+        "quality": 4,
+        "classs": 4,
+        "subclass": -4,
+        "slot": 12,
+        "envChange": {
+          "status": "unconfirmed",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 58"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": true,
+      "eligibilityAssessment": {
+        "itemID": 14557,
+        "name": "The Lion Horn of Stormwind",
+        "inventoryType": 12,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 58,
+        "renderedEquipLevel": 58,
+        "primaryVersion": "unconfirmed",
+        "currentParserReason": "unconfirmed-forever-facts",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-version-unconfirmed",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 11659,
+            "name": "Molten Destroyer",
+            "location": [
+              2717
+            ],
+            "classification": 1,
+            "type": 5,
+            "classicEra": 1,
+            "count": 2,
+            "outof": 85325,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 13996,
+            "name": "Blackwing Technician",
+            "location": [
+              2677
+            ],
+            "classification": 1,
+            "type": 7,
+            "classicEra": 1,
+            "count": 2,
+            "outof": 155661,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 10317,
+            "name": "Blackhand Elite",
+            "location": [
+              1583
+            ],
+            "classification": 1,
+            "type": 7,
+            "classicEra": 1,
+            "count": 1,
+            "outof": 26256,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 10417,
+            "name": "Venom Belcher",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 6,
+            "classicEra": 1,
+            "count": 1,
+            "outof": 74536,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 10429,
+            "name": "Warchief Rend Blackhand",
+            "location": [
+              1583
+            ],
+            "classification": 3,
+            "type": 7,
+            "classicEra": 1,
+            "count": 1,
+            "outof": 5866,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 15252,
+            "name": "Qiraji Champion",
+            "location": [
+              3428
+            ],
+            "classification": 1,
+            "type": 10,
+            "classicEra": 1,
+            "count": 1,
+            "outof": 27393,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 6,
+      "dropListPossiblyCappedAt200": false,
+      "group": "origin-unresolved",
+      "primarySourceTypes": [],
+      "primarySourceDescriptors": []
+    },
+    "274995": {
+      "url": "https://www.wowhead.com/forever/item=274995",
+      "bytes": 175220,
+      "sha256": "419401a6c252e3bb89dae789a768128ee4ca4ba158743d549ee4fe3e039ae7c9",
+      "title": "Slavecrusher Scepter - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 274995,
+        "name": "Slavecrusher Scepter",
+        "level": 44,
+        "reqlevel": 39,
+        "quality": 3,
+        "classs": 2,
+        "subclass": 4,
+        "slot": 13,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 39"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 274995,
+        "name": "Slavecrusher Scepter",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 39,
+        "renderedEquipLevel": 39,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "ROGUE",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258966,
+            "name": "Slavecrusher Grox",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 84,
+            "outof": 239,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258966
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Slavecrusher Grox",
+          "t": 1,
+          "ti": 258966
+        }
+      ]
+    },
+    "274996": {
+      "url": "https://www.wowhead.com/forever/item=274996",
+      "bytes": 170088,
+      "sha256": "e28f0c641b9c82d966a6cfa729d4203c6a09517c52cc5789b9472e365c11c008",
+      "title": "Resistance Breaker Spaulder - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 274996,
+        "name": "Resistance Breaker Spaulder",
+        "level": 44,
+        "reqlevel": 39,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 3,
+        "slot": 3,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 39"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 274996,
+        "name": "Resistance Breaker Spaulder",
+        "inventoryType": 3,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 39,
+        "renderedEquipLevel": 39,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258966,
+            "name": "Slavecrusher Grox",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 69,
+            "outof": 239,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258966
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Slavecrusher Grox",
+          "t": 1,
+          "ti": 258966
+        }
+      ]
+    },
+    "274997": {
+      "url": "https://www.wowhead.com/forever/item=274997",
+      "bytes": 169022,
+      "sha256": "7fbf7a0d97284c971f521280cc387207c9857b0f6fb901924128c83bf3ba7f86",
+      "title": "Chain of Binding - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 274997,
+        "name": "Chain of Binding",
+        "level": 44,
+        "reqlevel": 39,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 3,
+        "slot": 6,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 39"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 274997,
+        "name": "Chain of Binding",
+        "inventoryType": 6,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 39,
+        "renderedEquipLevel": 39,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258966,
+            "name": "Slavecrusher Grox",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 85,
+            "outof": 239,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258966
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Slavecrusher Grox",
+          "t": 1,
+          "ti": 258966
+        }
+      ]
+    },
+    "275001": {
+      "url": "https://www.wowhead.com/forever/item=275001",
+      "bytes": 170794,
+      "sha256": "c112c3aff742806a460ea1ba9eee24a03a7c2008f40b7fc591e3f545e81d4c9b",
+      "title": "Bloodied Gutslicer - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275001,
+        "name": "Bloodied Gutslicer",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 2,
+        "subclass": 8,
+        "slot": 17,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275001,
+        "name": "Bloodied Gutslicer",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 259281,
+            "name": "War Handler Ashka",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 109,
+            "outof": 271,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        259281
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "War Handler Ashka",
+          "t": 1,
+          "ti": 259281
+        }
+      ]
+    },
+    "275002": {
+      "url": "https://www.wowhead.com/forever/item=275002",
+      "bytes": 171727,
+      "sha256": "467bdc8730ff3ff3a1b109e9954a784ad11c8c7b627e30ea2413d1cb7be25d58",
+      "title": "War Handler's Gaze - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275002,
+        "name": "War Handler's Gaze",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 2,
+        "slot": 1,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275002,
+        "name": "War Handler's Gaze",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 259281,
+            "name": "War Handler Ashka",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 89,
+            "outof": 271,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        259281
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "War Handler Ashka",
+          "t": 1,
+          "ti": 259281
+        }
+      ]
+    },
+    "275003": {
+      "url": "https://www.wowhead.com/forever/item=275003",
+      "bytes": 175525,
+      "sha256": "d3fad105d07f7741f0754d71870b27e9c5a1926cc49ab63e8c8796ee2dc32557",
+      "title": "Worgbinder's Treads - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275003,
+        "name": "Worgbinder's Treads",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 8,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275003,
+        "name": "Worgbinder's Treads",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 259281,
+            "name": "War Handler Ashka",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 73,
+            "outof": 271,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        259281
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "War Handler Ashka",
+          "t": 1,
+          "ti": 259281
+        }
+      ]
+    },
+    "286428": {
+      "url": "https://www.wowhead.com/forever/item=286428",
+      "bytes": 173103,
+      "sha256": "88306ce02838f13d09f89f9a2f3a4605c8111934cbaf0414f497daee86b2ce42",
+      "title": "Band of Bossman - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 286428,
+        "name": "Band of Bossman",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -2,
+        "slot": 11,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 286428,
+        "name": "Band of Bossman",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 264773,
+            "name": "Bossman Toof",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 87,
+            "outof": 263,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        264773
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Bossman Toof",
+          "t": 1,
+          "ti": 264773
+        }
+      ]
+    },
+    "286429": {
+      "url": "https://www.wowhead.com/forever/item=286429",
+      "bytes": 211866,
+      "sha256": "fc267bde712e502c663b259277c9bd0a7e365975827bf40db58f150c9843db8e",
+      "title": "Big-Belly Belt - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 286429,
+        "name": "Big-Belly Belt",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 1,
+        "slot": 6,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 286429,
+        "name": "Big-Belly Belt",
+        "inventoryType": 6,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 264773,
+            "name": "Bossman Toof",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 89,
+            "outof": 263,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        264773
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Bossman Toof",
+          "t": 1,
+          "ti": 264773
+        }
+      ]
+    },
+    "286430": {
+      "url": "https://www.wowhead.com/forever/item=286430",
+      "bytes": 178838,
+      "sha256": "3119c104ac5b224a28cf666cc3a31d480fcecbc4dcaffa0ff7619303cdfd1996",
+      "title": "Toofbreaker - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 286430,
+        "name": "Toofbreaker",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 2,
+        "subclass": 4,
+        "slot": 13,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 286430,
+        "name": "Toofbreaker",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "ROGUE",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 264773,
+            "name": "Bossman Toof",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 87,
+            "outof": 263,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        264773
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Bossman Toof",
+          "t": 1,
+          "ti": 264773
+        }
+      ]
+    }
+  },
+  "npcs": {
+    "10417": {
+      "url": "https://www.wowhead.com/forever/npc=10417",
+      "bytes": 166132,
+      "sha256": "94c8687c79422a327ea124b0870afa49d88ce76836f0829e2d70eb2df793310e",
+      "title": "Venom Belcher - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 109,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "11659": {
+      "url": "https://www.wowhead.com/forever/npc=11659",
+      "bytes": 150368,
+      "sha256": "53cc051dab4fee4417acd63330b88caa48bba9e7afc5df8d901226a2ace6617f",
+      "title": "Molten Destroyer - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2717,
+          "name": "Molten Core",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 99,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "13996": {
+      "url": "https://www.wowhead.com/forever/npc=13996",
+      "bytes": 314798,
+      "sha256": "b1905dd6bf7b5ea84f1832b238f3e01f721a2eea4ac524ce18804ce31e9641bc",
+      "title": "Blackwing Technician - NPC - Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2677,
+          "name": "Blackwing Lair",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 272,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "10317": {
+      "url": "https://www.wowhead.com/forever/npc=10317",
+      "bytes": 169320,
+      "sha256": "bbcd1a4acbe45b7fe81bcd200abfc139dfd5ce0f3b34d22df816679a10312f7c",
+      "title": "Blackhand Elite - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 100,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258966": {
+      "url": "https://www.wowhead.com/forever/npc=258966",
+      "bytes": 58255,
+      "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+      "title": "Slavecrusher Grox - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 56.3,
+            "xMax": 56.5,
+            "yMin": 63.6,
+            "yMax": 64.1
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 4,
+      "selectedDrops": [
+        {
+          "id": 274995,
+          "name": "Slavecrusher Scepter",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 2,
+          "subclass": 4,
+          "slot": 13,
+          "level": 44,
+          "count": 84,
+          "outof": 239,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 274996,
+          "name": "Resistance Breaker Spaulder",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 3,
+          "slot": 3,
+          "level": 44,
+          "count": 69,
+          "outof": 239,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 274997,
+          "name": "Chain of Binding",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 3,
+          "slot": 6,
+          "level": 44,
+          "count": 85,
+          "outof": 239,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "10429": {
+      "url": "https://www.wowhead.com/forever/npc=10429",
+      "bytes": 294015,
+      "sha256": "45cf63ae937442cb7ebca34f7d701fdc543eac7b4d1fef5b87ba77d12992f928",
+      "title": "Warchief Rend Blackhand - NPC - Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 100,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "259281": {
+      "url": "https://www.wowhead.com/forever/npc=259281",
+      "bytes": 59158,
+      "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+      "title": "War Handler Ashka - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 58.2,
+            "xMax": 58.3,
+            "yMin": 62.4,
+            "yMax": 62.8
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 3,
+      "selectedDrops": [
+        {
+          "id": 275001,
+          "name": "Bloodied Gutslicer",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 2,
+          "subclass": 8,
+          "slot": 17,
+          "level": 45,
+          "count": 109,
+          "outof": 271,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275002,
+          "name": "War Handler's Gaze",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 1,
+          "level": 45,
+          "count": 89,
+          "outof": 271,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275003,
+          "name": "Worgbinder's Treads",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 8,
+          "level": 45,
+          "count": 73,
+          "outof": 271,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "15252": {
+      "url": "https://www.wowhead.com/forever/npc=15252",
+      "bytes": 167496,
+      "sha256": "7b1fb68d5f237176c17591472be8ff3134fb99afccbf8a8c39937af94da5d638",
+      "title": "Qiraji Champion - NPC - Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 3428,
+          "name": "Ahn'Qiraj",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 137,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "264773": {
+      "url": "https://www.wowhead.com/forever/npc=264773",
+      "bytes": 57583,
+      "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+      "title": "Bossman Toof - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 58,
+            "xMax": 58.1,
+            "yMin": 62.2,
+            "yMax": 62.3
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 4,
+      "selectedDrops": [
+        {
+          "id": 286428,
+          "name": "Band of Bossman",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": -2,
+          "slot": 11,
+          "level": 45,
+          "count": 87,
+          "outof": 263,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 286429,
+          "name": "Big-Belly Belt",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 1,
+          "slot": 6,
+          "level": 45,
+          "count": 89,
+          "outof": 263,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 286430,
+          "name": "Toofbreaker",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 2,
+          "subclass": 4,
+          "slot": 13,
+          "level": 45,
+          "count": 87,
+          "outof": 263,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    }
+  },
+  "allPrimaryResponseHeaders": {
+    "item:14557": {
+      "url": "https://www.wowhead.com/forever/item=14557",
+      "title": "The Lion Horn of Stormwind - Item - WoW Forever",
+      "bytes": 204301,
+      "sha256": "12911edc1c3fd8afd96daac090d95d00175053ceba6c7f1937a5450dd7ad91d7",
+      "reusedCachedResponse": false
+    },
+    "item:274996": {
+      "url": "https://www.wowhead.com/forever/item=274996",
+      "title": "Resistance Breaker Spaulder - Item - WoW Forever",
+      "bytes": 170088,
+      "sha256": "e28f0c641b9c82d966a6cfa729d4203c6a09517c52cc5789b9472e365c11c008",
+      "reusedCachedResponse": false
+    },
+    "item:274997": {
+      "url": "https://www.wowhead.com/forever/item=274997",
+      "title": "Chain of Binding - Item - WoW Forever",
+      "bytes": 169022,
+      "sha256": "7fbf7a0d97284c971f521280cc387207c9857b0f6fb901924128c83bf3ba7f86",
+      "reusedCachedResponse": false
+    },
+    "item:274995": {
+      "url": "https://www.wowhead.com/forever/item=274995",
+      "title": "Slavecrusher Scepter - Item - WoW Forever",
+      "bytes": 175220,
+      "sha256": "419401a6c252e3bb89dae789a768128ee4ca4ba158743d549ee4fe3e039ae7c9",
+      "reusedCachedResponse": false
+    },
+    "item:275001": {
+      "url": "https://www.wowhead.com/forever/item=275001",
+      "title": "Bloodied Gutslicer - Item - WoW Forever",
+      "bytes": 170794,
+      "sha256": "c112c3aff742806a460ea1ba9eee24a03a7c2008f40b7fc591e3f545e81d4c9b",
+      "reusedCachedResponse": false
+    },
+    "item:275002": {
+      "url": "https://www.wowhead.com/forever/item=275002",
+      "title": "War Handler's Gaze - Item - WoW Forever",
+      "bytes": 171727,
+      "sha256": "467bdc8730ff3ff3a1b109e9954a784ad11c8c7b627e30ea2413d1cb7be25d58",
+      "reusedCachedResponse": false
+    },
+    "item:275003": {
+      "url": "https://www.wowhead.com/forever/item=275003",
+      "title": "Worgbinder's Treads - Item - WoW Forever",
+      "bytes": 175525,
+      "sha256": "d3fad105d07f7741f0754d71870b27e9c5a1926cc49ab63e8c8796ee2dc32557",
+      "reusedCachedResponse": false
+    },
+    "item:286428": {
+      "url": "https://www.wowhead.com/forever/item=286428",
+      "title": "Band of Bossman - Item - WoW Forever",
+      "bytes": 173103,
+      "sha256": "88306ce02838f13d09f89f9a2f3a4605c8111934cbaf0414f497daee86b2ce42",
+      "reusedCachedResponse": false
+    },
+    "item:286430": {
+      "url": "https://www.wowhead.com/forever/item=286430",
+      "title": "Toofbreaker - Item - WoW Forever",
+      "bytes": 178838,
+      "sha256": "3119c104ac5b224a28cf666cc3a31d480fcecbc4dcaffa0ff7619303cdfd1996",
+      "reusedCachedResponse": false
+    },
+    "item:286429": {
+      "url": "https://www.wowhead.com/forever/item=286429",
+      "title": "Big-Belly Belt - Item - WoW Forever",
+      "bytes": 211866,
+      "sha256": "fc267bde712e502c663b259277c9bd0a7e365975827bf40db58f150c9843db8e",
+      "reusedCachedResponse": false
+    },
+    "npc:10417": {
+      "url": "https://www.wowhead.com/forever/npc=10417",
+      "title": "Venom Belcher - NPC - WoW Forever",
+      "bytes": 166132,
+      "sha256": "94c8687c79422a327ea124b0870afa49d88ce76836f0829e2d70eb2df793310e",
+      "reusedCachedResponse": true
+    },
+    "npc:11659": {
+      "url": "https://www.wowhead.com/forever/npc=11659",
+      "title": "Molten Destroyer - NPC - WoW Forever",
+      "bytes": 150368,
+      "sha256": "53cc051dab4fee4417acd63330b88caa48bba9e7afc5df8d901226a2ace6617f",
+      "reusedCachedResponse": true
+    },
+    "npc:13996": {
+      "url": "https://www.wowhead.com/forever/npc=13996",
+      "title": "Blackwing Technician - NPC - Forever",
+      "bytes": 314798,
+      "sha256": "b1905dd6bf7b5ea84f1832b238f3e01f721a2eea4ac524ce18804ce31e9641bc",
+      "reusedCachedResponse": true
+    },
+    "npc:10317": {
+      "url": "https://www.wowhead.com/forever/npc=10317",
+      "title": "Blackhand Elite - NPC - WoW Forever",
+      "bytes": 169320,
+      "sha256": "bbcd1a4acbe45b7fe81bcd200abfc139dfd5ce0f3b34d22df816679a10312f7c",
+      "reusedCachedResponse": true
+    },
+    "npc:258966": {
+      "url": "https://www.wowhead.com/forever/npc=258966",
+      "title": "Slavecrusher Grox - NPC - WoW Forever",
+      "bytes": 58255,
+      "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+      "reusedCachedResponse": true
+    },
+    "npc:10429": {
+      "url": "https://www.wowhead.com/forever/npc=10429",
+      "title": "Warchief Rend Blackhand - NPC - Forever",
+      "bytes": 294015,
+      "sha256": "45cf63ae937442cb7ebca34f7d701fdc543eac7b4d1fef5b87ba77d12992f928",
+      "reusedCachedResponse": true
+    },
+    "npc:259281": {
+      "url": "https://www.wowhead.com/forever/npc=259281",
+      "title": "War Handler Ashka - NPC - WoW Forever",
+      "bytes": 59158,
+      "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+      "reusedCachedResponse": true
+    },
+    "npc:15252": {
+      "url": "https://www.wowhead.com/forever/npc=15252",
+      "title": "Qiraji Champion - NPC - Forever",
+      "bytes": 167496,
+      "sha256": "7b1fb68d5f237176c17591472be8ff3134fb99afccbf8a8c39937af94da5d638",
+      "reusedCachedResponse": true
+    },
+    "npc:264773": {
+      "url": "https://www.wowhead.com/forever/npc=264773",
+      "title": "Bossman Toof - NPC - WoW Forever",
+      "bytes": 57583,
+      "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+      "reusedCachedResponse": true
+    },
+    "zone:16842": {
+      "url": "https://www.wowhead.com/forever/zone=16842",
+      "bytes": 64354,
+      "sha256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0",
+      "title": "Krol'dok Stronghold - Zone - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "guide:kroldok-overview": {
+      "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+      "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+      "bytes": 132675,
+      "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+      "reusedCachedResponse": true
+    }
+  },
+  "dropReverseJoins": [
+    {
+      "itemID": 274995,
+      "npcID": 258966,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 274996,
+      "npcID": 258966,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 274997,
+      "npcID": 258966,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275001,
+      "npcID": 259281,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275002,
+      "npcID": 259281,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275003,
+      "npcID": 259281,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 286428,
+      "npcID": 264773,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 286429,
+      "npcID": 264773,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 286430,
+      "npcID": 264773,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    }
+  ],
+  "dropReverseOmissions": [
+    {
+      "itemID": 14557,
+      "npcID": 11659,
+      "returnedDropsRows": 99,
+      "scope": "Exact item omitted from full returned inventory; not proof of cap, current absence or retirement."
+    },
+    {
+      "itemID": 14557,
+      "npcID": 13996,
+      "returnedDropsRows": 272,
+      "scope": "Exact item omitted from full returned inventory; not proof of cap, current absence or retirement."
+    },
+    {
+      "itemID": 14557,
+      "npcID": 10317,
+      "returnedDropsRows": 100,
+      "scope": "Exact item omitted from full returned inventory; not proof of cap, current absence or retirement."
+    },
+    {
+      "itemID": 14557,
+      "npcID": 10417,
+      "returnedDropsRows": 109,
+      "scope": "Exact item omitted from full returned inventory; not proof of cap, current absence or retirement."
+    },
+    {
+      "itemID": 14557,
+      "npcID": 10429,
+      "returnedDropsRows": 100,
+      "scope": "Exact item omitted from full returned inventory; not proof of cap, current absence or retirement."
+    },
+    {
+      "itemID": 14557,
+      "npcID": 15252,
+      "returnedDropsRows": 137,
+      "scope": "Exact item omitted from full returned inventory; not proof of cap, current absence or retirement."
+    }
+  ],
+  "eligibility": {
+    "14557": {
+      "itemID": 14557,
+      "name": "The Lion Horn of Stormwind",
+      "inventoryType": 12,
+      "quality": 4,
+      "rawStructuredRequiredLevel": 58,
+      "renderedEquipLevel": 58,
+      "primaryVersion": "unconfirmed",
+      "currentParserReason": "unconfirmed-forever-facts",
+      "policyCompatibleClasses": [
+        "PRIEST",
+        "MAGE",
+        "WARLOCK",
+        "DRUID",
+        "ROGUE",
+        "HUNTER",
+        "SHAMAN",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "hold-version-unconfirmed",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "274995": {
+      "itemID": 274995,
+      "name": "Slavecrusher Scepter",
+      "inventoryType": 13,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 39,
+      "renderedEquipLevel": 39,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "PRIEST",
+        "DRUID",
+        "ROGUE",
+        "SHAMAN",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "274996": {
+      "itemID": 274996,
+      "name": "Resistance Breaker Spaulder",
+      "inventoryType": 3,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 39,
+      "renderedEquipLevel": 39,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "HUNTER",
+        "SHAMAN",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "274997": {
+      "itemID": 274997,
+      "name": "Chain of Binding",
+      "inventoryType": 6,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 39,
+      "renderedEquipLevel": 39,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "HUNTER",
+        "SHAMAN",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "275001": {
+      "itemID": 275001,
+      "name": "Bloodied Gutslicer",
+      "inventoryType": 17,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 40,
+      "renderedEquipLevel": 40,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "HUNTER",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "275002": {
+      "itemID": 275002,
+      "name": "War Handler's Gaze",
+      "inventoryType": 1,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 40,
+      "renderedEquipLevel": 40,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "DRUID",
+        "ROGUE",
+        "HUNTER",
+        "SHAMAN",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "275003": {
+      "itemID": 275003,
+      "name": "Worgbinder's Treads",
+      "inventoryType": 8,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 40,
+      "renderedEquipLevel": 40,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "286428": {
+      "itemID": 286428,
+      "name": "Band of Bossman",
+      "inventoryType": 11,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 40,
+      "renderedEquipLevel": 40,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "PRIEST",
+        "MAGE",
+        "WARLOCK",
+        "DRUID",
+        "ROGUE",
+        "HUNTER",
+        "SHAMAN",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "286429": {
+      "itemID": 286429,
+      "name": "Big-Belly Belt",
+      "inventoryType": 6,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 40,
+      "renderedEquipLevel": 40,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "PRIEST",
+        "MAGE",
+        "WARLOCK",
+        "DRUID",
+        "ROGUE",
+        "HUNTER",
+        "SHAMAN",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    },
+    "286430": {
+      "itemID": 286430,
+      "name": "Toofbreaker",
+      "inventoryType": 13,
+      "quality": 3,
+      "rawStructuredRequiredLevel": 40,
+      "renderedEquipLevel": 40,
+      "primaryVersion": "new",
+      "currentParserReason": null,
+      "policyCompatibleClasses": [
+        "PRIEST",
+        "DRUID",
+        "ROGUE",
+        "SHAMAN",
+        "WARRIOR",
+        "PALADIN"
+      ],
+      "assessment": "published-all-slot-baseline-pass;future-development-review",
+      "activeAdoption": false,
+      "rawClassMask": null,
+      "printedClassRestriction": false,
+      "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+    }
+  },
+  "counts": {
+    "selected": 10,
+    "assessed": 10,
+    "printedLevelBaselinePass": 9,
+    "versionUnconfirmedHold": 1,
+    "fullPrimaryResponses": 21,
+    "newPrimaryResponses": 10,
+    "reusedPrimaryResponses": 11,
+    "dropReverseJoins": 9,
+    "fullInventoryOmissions": 6,
+    "exactDiscoveryQueries": 10,
+    "newFailures": 0,
+    "knownFailedURLs": 1681,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "reuse": {
+    "sharedGuideCheckpoint": "8CO",
+    "sharedZoneCheckpoint": "8CM",
+    "runtimeValidationCheckpoint": "8CO"
+  },
+  "limits": "Nine new-source items printed39/40 with exact full own/boss joins are future-development candidates,not automatic active gear adoption or live drops. LionHorn14557 itemlevel63/printedwearer58,versionunconfirmed;all6ownNPCrefsclassicEra1 andeach fullNPCreturned inventory omitsit. No cap(current rows99/272/100/109/100/137),rate,currentavailability/retirement or focusedfarm inferred. Currenttooltipdefense/proc effects are saved as publishedfacts,not current combat verification. No runtime code/data/gear/class/profession/material mutation.",
+  "next": "8CQ first100 of379deduplicated typed equipment references from offline all-cache completeness audit;remaining279 then untyped quest-reward scope disposition/two mappingholds/sixdungeon/livebooklimits/navigationgaps/finalintegrity/manualacceptance."
+}
