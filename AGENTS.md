@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-Current verified research: [8CW validation](docs/source-audit-1-60/reconciliation-20261109/checkpoint8cw_validation.json), 13 November 2026. All 1,418 candidate cases / 916 shared queue cases dispositioned; cache audit 3,101 sources, zero unqueued leads. Documentation-only; full-code validation remains 8CO. **Next 8CX: merchant standing normalization, reusable source locations and mappings 2844/2845, then full validation.** Shared failed URLs: 1,732. Then final integrity/exceptions/manual acceptance. Single worker/existing automation.
+Current: [8CX implementation](docs/source-audit-1-60/reconciliation-20261109/checkpoint8cx_validation.json), 13 November 2026. Fresh reconciliation / 19 local checks PASS; **nonrelease CI and whole bot review pending**. Completed CI remains 8CO until closure. Then **8CY seven fresh feed scope references**, marked once in both queues; reuse full pages, propagate 38 full source locations, finish exceptions/integrity/manual acceptance. Register 1,418 assessed / seven pending. Single worker/existing automation; 1,732 known failed URLs, no unchanged retries.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
@@ -1858,3 +1858,14 @@ All 104 remaining references individually scope-assessed: 42 equipment missing p
 All 1,418 candidate-register cases and 916 shared all-slot queue cases now dispositioned; original 5,688-case queue also dispositioned. No active adoption or live confirmation implied by a hold/exception. Protected runtime inputs unchanged. Latest full validation remains 8CO, 19 local / 18 CI, run 43365182317; targeted 8CW hash/joins/queue/integrity validation passed. Current navigation 883/1581/3087/2156, 17,406 overlapping gaps, real rendering zero.
 
 **Next 8CX:** source-standing basis normalization, reusable source-only location propagation for existing/future routes, and canonical mappings 2844/2845; fresh reconciliation / full local and nonrelease CI / whole bot review. Then final exceptions, integrity and manual acceptance report. Preserve six dungeon/current-live book limits; future discoveries use the same shared research/evidence queues. Single worker/existing automation; no main/Beta 8/release/billing action.
+
+
+## Checkpoint 8CX implementation — local PASS; CI/bot gate pending
+
+Shared primary merchant standing adapter: source 6=Revered/7=Exalted; raw zero is no listed gate; manual/client one-based ranks unchanged. Real full 274022/280363 calibration plus future generation/display/negative tests. Source-only geography for 254 full actors enriches 17 existing actor locations and seven provenance lists, preserving old positions and roaming footprints. Two independently verified canonical mappings 2844→2737 / 2845→2738 enable exact Alphonse Dumas trainer destinations; no materials/identity/book/class/filter mutation.
+
+Fresh actual 8cx1 capture exited zero, all 19 local checks passed. CI and whole bot review PENDING; latest completed full CI remains 8CO until closure. Current coverage 885 coordinate-data / 1,581 directions / 3,085 missing / 2,156 NA, 17,404 overlapping gaps; real rendering zero. See CHECKPOINT8CX_SOURCE_RANK_LOCATIONS_AND_MAPPINGS.md and checkpoint8cx_validation.json.
+
+Actual feed delta: PF 23,642/9,328 definitions (14 new IDs; all prior resolved facts/source objects preserved, 76 index remaps); EV 1,873/1,583 qualifying, 171 new relations and 57 counter/time updates. 164 full primary checks retain omissions and six unread failed NPCs; no retries or live/current-build guarantees. Seven active anonymous-observation cells/two spell cells are the only semantic companion changes. Original/full deltas preserved before diagnostic snapshots advance to actual local capture.
+
+After CI/bot gate, **next 8CY: seven new feed scope references 12547/18231/22317/22318/22330/285066/288206**, already full-read/cached, marked once in existing queues. Register 1,425=1,418 assessed+7 pending; shared queue 923=916+7. Propagate 38 full feed actor locations via same reusable pipeline, then final exceptions/integrity/manual acceptance. Single worker/existing automation confirmed enabled; no quota-meter/refresh guarantee. No main/Beta 8/build/package/release/billing changes.

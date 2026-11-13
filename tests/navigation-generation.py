@@ -11,6 +11,23 @@ spec = importlib.util.spec_from_file_location("navigation", ROOT / "tools/build_
 nav = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(nav)
 
+for published, client in [(1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8)]:
+    raw = dict(standing=published, reqfaction=1168, stock=1, cost=[50000])
+    offer = nav.published_offer(raw)
+    assert offer == dict(standing=client, publishedStanding=published, reqfaction=1168, stock=1, cost=[50000])
+    assert raw["standing"] == published, "normalization cannot mutate source evidence"
+for unknown in [0, -1, 8, True, False, None, "6", 6.5]:
+    offer = nav.published_offer(dict(standing=unknown, cost=[52631]))
+    assert "standing" not in offer and offer["publishedStanding"] == unknown, "unlisted or malformed source gates cannot acquire a rank label"
+assert nav.published_offer(dict(cost=[50000])) == dict(cost=[50000]), "no merchant gate may be inferred from a separate equipment-use requirement"
+for checkpoint, item_id, field, source_rank, client_rank, label in [
+        ("8ct", 274022, "fullInventoryRow", 6, 7, "Revered"),
+        ("8cu", 280363, "fullSale", 7, 8, "Exalted")]:
+    proof = json.loads((ROOT / "docs/source-audit-1-60/reconciliation-20261109" / f"checkpoint{checkpoint}_partial_research.json").read_text())
+    merchant = next(row[field] for row in proof["vendorExactJoins"] if row["itemID"] == item_id)
+    assert merchant["standing"] == source_rank and any(label in text for text in proof["items"][str(item_id)]["requirements"])
+    assert nav.published_offer(merchant)["standing"] == client_rank, "real independent full merchant/item calibration retains the source's standing convention"
+
 with tempfile.TemporaryDirectory() as temp:
     nav.REPORT = Path(temp)
     for filename in ["reviewed_equipment_sources.json", "reviewed_recipe_sources.json"]:
@@ -526,4 +543,25 @@ with tempfile.TemporaryDirectory() as temp:
     guide["sha256"] = "unread"
     guide_path.write_text(json.dumps(guide))
     assert nav.build({})[0]["instanceDetails"]["Fixture Dungeon"]["instructions"] == "Full zone context.", "unread guide snippets cannot supply runtime directions"
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    for filename in ["reviewed_equipment_sources.json", "reviewed_recipe_sources.json"]:
+        (nav.REPORT / filename).write_text("[]")
+    for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / filename).write_text("itemID\n")
+    product = response("item", 1, lists={"sold-by": [dict(id=100, name="Vendor", standing=6, reqfaction=1168, cost=[52631])]})
+    actor = response("npc", 100, name="Vendor", publishedLocationFootprints=[dict(name="Westfall", zoneID=40, uiMapID=52, bounds=dict(xMin=20, xMax=20, yMin=30, yMax=30))])
+    path = nav.REPORT / "checkpoint_test_evidence.json"
+    path.write_text(json.dumps([product, actor]))
+    gear = {"1": dict(itemID=1, name="Vendor fixture", sourceType="Vendor", eligibility=[511])}
+    data = nav.build(gear)[0]
+    offer = data["items"]["1"]["routes"][0]["offer"]
+    assert offer["standing"] == 7 and offer["publishedStanding"] == 6 and offer["cost"] == [52631], "actual generated seller offers normalize rank without changing source-specific price"
+    # A later source-only location excerpt enriches existing and future items;
+    # it does not invent a new acquisition relationship or adopt equipment.
+    actor["publishedLocationFootprints"][0]["bounds"] = dict(xMin=20, xMax=25, yMin=30, yMax=35)
+    (nav.REPORT / "checkpoint_later_evidence.json").write_text(json.dumps(actor))
+    later = nav.build(gear)[0]
+    assert later["sources"]["npc:100"]["locations"][0]["bounds"] == dict(xMin=20, xMax=25, yMin=30, yMax=35)
+    assert set(later["items"]) == {"1"} and later["items"]["1"]["routes"] == data["items"]["1"]["routes"], "source-only discovery changes geography, not routes or item membership"
 print("PASS navigation generation: future evidence propagation, exact trainer spell/output/profession joins, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

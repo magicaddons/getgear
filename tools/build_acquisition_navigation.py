@@ -50,6 +50,22 @@ def coordinate(value):
     return isinstance(value, (int, float)) and not isinstance(value, bool) and 0 <= value <= 100
 
 
+def published_offer(sale):
+    """Translate primary merchant ranks to the client's one-based standing IDs.
+
+    The source uses 6=Revered and 7=Exalted; zero lists no merchant gate.
+    Keep that raw value for provenance. Hand-authored/client offers already
+    use client ranks and must not pass through this source-only adapter.
+    """
+    offer = {key: sale[key] for key in ["cost", "stock", "avail", "reqfaction", "reqlevel", "side"] if key in sale}
+    if "standing" in sale:
+        standing = sale["standing"]
+        offer["publishedStanding"] = standing
+        if type(standing) is int and 1 <= standing <= 7:
+            offer["standing"] = standing + 1
+    return offer
+
+
 class Evidence:
     def __init__(self):
         self.sources = {}
@@ -530,7 +546,7 @@ def build(inputs):
                 if (actor.get("kind") == "npc" and actor.get("evidence") and name and sale
                         and sale.get("name") == name
                         and any(x.get("id") == actor["sourceID"] for x in rows(product.get("sold-by")) if isinstance(x, dict))):
-                    offer = {k: sale[k] for k in ["cost", "stock", "avail", "standing", "reqfaction", "reqlevel", "side"] if k in sale}
+                    offer = published_offer(sale)
                     if extra.get("sourceSide") in [1, 2]:
                         offer["side"] = extra["sourceSide"]
                     route("recipe_vendor" if craft else "vendor", source=source_key, offer=offer,
@@ -572,7 +588,7 @@ def build(inputs):
                         and container.get("evidence") and not container.get("disputed")
                         and any(isinstance(x, dict) and x.get("id") == actor_id for x in rows(container.get("sold-by")))
                         and any(isinstance(x, dict) and x.get("id") == item_id for x in rows(container.get("contains")))):
-                    offer = {k: sale[k] for k in ["cost", "stock", "avail", "standing", "reqfaction", "reqlevel", "side"] if k in sale}
+                    offer = published_offer(sale)
                     route("vendor_container", source=source_key, containerItemID=container_id, offer=offer,
                           instructions=extra.get("instructions"), verification="published-reference")
                 else:
@@ -658,7 +674,7 @@ def build(inputs):
                 if any(x.get("kind") in ["vendor", "recipe_vendor"] and x.get("source") == source_key
                        and x.get("requiresFullSaleJoin") for x in extras):
                     continue
-                offer = {k: seller[k] for k in ["cost", "stock", "avail", "standing", "reqfaction", "reqlevel", "side"] if k in seller}
+                offer = published_offer(seller)
                 route("recipe_vendor" if craft else "vendor", source=source_key, bookItemID=book_id, offer=offer)
             for merchant in merchants.get(book_id if craft and book_id else item_id, []):
                 if any(x.get("kind") in ["vendor", "recipe_vendor"] and x.get("source") == "npc:" + str(merchant["npcID"])

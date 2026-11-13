@@ -1,0 +1,606 @@
+{
+  "checkpoint": "8CX",
+  "status": "fresh actual reconciliation and19local checks PASS;nonreleaseCI/directbotreviewPENDING",
+  "baseline": "a11a08bbe5577b4e05cb653c7084c514d82b11ae",
+  "scope": "Primary source rank adapter,254source-only actors,two canonical spell mappings;actual upstream delta audited;no active gear adoption.",
+  "targetedChecks": [
+    "59existing source offers preserve raw0 as no listed gate;manual/client ranks unchanged",
+    "actual full primary standing6Revered/7Exalted calibrated,malformed values no gate",
+    "17existing actor geography enrichments/seven provenance enrichments/old published positions retained within full cited footprints",
+    "two new trainer plans2844spell2737/2845spell2738;exact full trainer/output/profession joins",
+    "all1252prior recipe rows/materials exact except two blank spellID corrections;two supplemental crafts unchanged",
+    "954bookobjects/5902gearregistry/35chains/canonicalgear/settings/filters exact",
+    "eightactual same-run responses hashed against reconciler provenance,164fullprimaryfeedresponses",
+    "sevenactive observed-edge cells/two recipe spellcells/one source-index-only recipecell;zero other CSV semantic changes",
+    "allprior1418register cases preserved;sevennewfeedreferences marked once8CY",
+    "full19localPASS afterfinaltestchanges"
+  ],
+  "geographyChanges": [
+    {
+      "source": "npc:14368",
+      "name": "Lorekeeper Lydros",
+      "before": [],
+      "after": [
+        {
+          "zone": "Dire Maul",
+          "verification": "published-reference",
+          "areaID": 2557
+        }
+      ]
+    },
+    {
+      "source": "npc:13216",
+      "name": "Gaelden Hammersmith",
+      "before": [],
+      "after": [
+        {
+          "zone": "Alterac Valley",
+          "verification": "published-reference",
+          "areaID": 2597
+        }
+      ]
+    },
+    {
+      "source": "npc:13218",
+      "name": "Grunnda Wolfheart",
+      "before": [],
+      "after": [
+        {
+          "zone": "Alterac Valley",
+          "verification": "published-reference",
+          "areaID": 2597
+        }
+      ]
+    },
+    {
+      "source": "npc:79",
+      "name": "Narg the Taskmaster",
+      "before": [
+        {
+          "zone": "Elwynn Forest",
+          "verification": "published-reference",
+          "areaID": 12,
+          "bounds": {
+            "xMin": 38.9,
+            "xMax": 41.2,
+            "yMin": 77.4,
+            "yMax": 82.5
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Elwynn Forest",
+          "verification": "published-reference",
+          "areaID": 12,
+          "bounds": {
+            "xMin": 38.9,
+            "xMax": 41.2,
+            "yMin": 77.4,
+            "yMax": 82.5
+          },
+          "uiMapID": 1429
+        }
+      ]
+    },
+    {
+      "source": "npc:99",
+      "name": "Morgaine the Sly",
+      "before": [
+        {
+          "zone": "Elwynn Forest",
+          "verification": "published-reference",
+          "areaID": 12,
+          "bounds": {
+            "xMin": 30.2,
+            "xMax": 31.6,
+            "yMin": 64.4,
+            "yMax": 65.6
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Elwynn Forest",
+          "verification": "published-reference",
+          "areaID": 12,
+          "bounds": {
+            "xMin": 30.2,
+            "xMax": 31.6,
+            "yMin": 64.4,
+            "yMax": 65.6
+          },
+          "uiMapID": 1429
+        }
+      ]
+    },
+    {
+      "source": "npc:1119",
+      "name": "Hammerspine",
+      "before": [
+        {
+          "zone": "Dun Morogh",
+          "verification": "published-reference",
+          "areaID": 1,
+          "bounds": {
+            "xMin": 71.4,
+            "xMax": 73,
+            "yMin": 51.2,
+            "yMax": 53.6
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Dun Morogh",
+          "verification": "published-reference",
+          "areaID": 1,
+          "bounds": {
+            "xMin": 71.4,
+            "xMax": 73,
+            "yMin": 51.2,
+            "yMax": 53.6
+          },
+          "uiMapID": 1426
+        }
+      ]
+    },
+    {
+      "source": "npc:1137",
+      "name": "Edan the Howler",
+      "before": [
+        {
+          "zone": "Dun Morogh",
+          "verification": "published-reference",
+          "areaID": 1,
+          "bounds": {
+            "xMin": 39,
+            "xMax": 43.4,
+            "yMin": 46,
+            "yMax": 49.6
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Dun Morogh",
+          "verification": "published-reference",
+          "areaID": 1,
+          "bounds": {
+            "xMin": 39,
+            "xMax": 43.4,
+            "yMin": 46,
+            "yMax": 49.6
+          },
+          "uiMapID": 1426
+        }
+      ]
+    },
+    {
+      "source": "npc:1260",
+      "name": "Great Father Arctikus",
+      "before": [
+        {
+          "zone": "Dun Morogh",
+          "verification": "published-reference",
+          "areaID": 1,
+          "bounds": {
+            "xMin": 21.1,
+            "xMax": 23.6,
+            "yMin": 50.8,
+            "yMax": 54.6
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Dun Morogh",
+          "verification": "published-reference",
+          "areaID": 1,
+          "bounds": {
+            "xMin": 21.1,
+            "xMax": 23.6,
+            "yMin": 50.8,
+            "yMax": 54.6
+          },
+          "uiMapID": 1426
+        }
+      ]
+    },
+    {
+      "source": "npc:61",
+      "name": "Thuros Lightfingers",
+      "before": [
+        {
+          "zone": "Elwynn Forest",
+          "verification": "published-reference",
+          "areaID": 12,
+          "bounds": {
+            "xMin": 29.6,
+            "xMax": 89.6,
+            "yMin": 58.4,
+            "yMax": 83.6
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Elwynn Forest",
+          "verification": "published-reference",
+          "areaID": 12,
+          "bounds": {
+            "xMin": 29.6,
+            "xMax": 89.6,
+            "yMin": 58.4,
+            "yMax": 83.6
+          },
+          "uiMapID": 1429
+        }
+      ]
+    },
+    {
+      "source": "npc:1425",
+      "name": "Grizlak",
+      "before": [
+        {
+          "zone": "Loch Modan",
+          "verification": "published-reference",
+          "areaID": 38,
+          "bounds": {
+            "xMin": 34.4,
+            "xMax": 36.4,
+            "yMin": 26,
+            "yMax": 27.8
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Loch Modan",
+          "verification": "published-reference",
+          "areaID": 38,
+          "bounds": {
+            "xMin": 34.4,
+            "xMax": 36.4,
+            "yMin": 26,
+            "yMax": 27.8
+          },
+          "uiMapID": 1432
+        }
+      ]
+    },
+    {
+      "source": "npc:521",
+      "name": "Lupos",
+      "before": [
+        {
+          "zone": "Duskwood",
+          "verification": "published-reference",
+          "areaID": 10,
+          "bounds": {
+            "xMin": 19.8,
+            "xMax": 73.6,
+            "yMin": 22.2,
+            "yMax": 32.8
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Duskwood",
+          "verification": "published-reference",
+          "areaID": 10,
+          "bounds": {
+            "xMin": 19.8,
+            "xMax": 73.6,
+            "yMin": 22.2,
+            "yMax": 32.8
+          },
+          "uiMapID": 1431
+        }
+      ]
+    },
+    {
+      "source": "npc:947",
+      "name": "Rohh the Silent",
+      "before": [
+        {
+          "zone": "Redridge Mountains",
+          "verification": "published-reference",
+          "areaID": 44,
+          "bounds": {
+            "xMin": 63,
+            "xMax": 85.6,
+            "yMin": 29.4,
+            "yMax": 57.6
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Redridge Mountains",
+          "verification": "published-reference",
+          "areaID": 44,
+          "bounds": {
+            "xMin": 63,
+            "xMax": 85.6,
+            "yMin": 29.4,
+            "yMax": 57.6
+          },
+          "uiMapID": 1433
+        }
+      ]
+    },
+    {
+      "source": "npc:2600",
+      "name": "Singer",
+      "before": [
+        {
+          "zone": "Arathi Highlands",
+          "verification": "published-reference",
+          "areaID": 45,
+          "bounds": {
+            "xMin": 31.2,
+            "xMax": 33.6,
+            "yMin": 26.2,
+            "yMax": 31.2
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Arathi Highlands",
+          "verification": "published-reference",
+          "areaID": 45,
+          "bounds": {
+            "xMin": 31.2,
+            "xMax": 33.6,
+            "yMin": 26.2,
+            "yMax": 31.2
+          },
+          "uiMapID": 1417
+        }
+      ]
+    },
+    {
+      "source": "npc:534",
+      "name": "Nefaru",
+      "before": [
+        {
+          "zone": "Duskwood",
+          "verification": "published-reference",
+          "areaID": 10,
+          "bounds": {
+            "xMin": 61.4,
+            "xMax": 74.2,
+            "yMin": 76.8,
+            "yMax": 83.6
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Duskwood",
+          "verification": "published-reference",
+          "areaID": 10,
+          "bounds": {
+            "xMin": 61.4,
+            "xMax": 74.2,
+            "yMin": 76.8,
+            "yMax": 83.6
+          },
+          "uiMapID": 1431
+        }
+      ]
+    },
+    {
+      "source": "object:256",
+      "name": "WANTED",
+      "before": [
+        {
+          "zone": "Loch Modan",
+          "verification": "published-reference",
+          "areaID": 38,
+          "bounds": {
+            "xMin": 37.2,
+            "xMax": 37.2,
+            "yMin": 46.4,
+            "yMax": 46.5
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Loch Modan",
+          "verification": "published-reference",
+          "areaID": 38,
+          "bounds": {
+            "xMin": 37.2,
+            "xMax": 37.2,
+            "yMin": 46.4,
+            "yMax": 46.5
+          },
+          "uiMapID": 1432
+        }
+      ]
+    },
+    {
+      "source": "object:610954",
+      "name": "Bounty Available: Vulgara the Insatiable!",
+      "before": [
+        {
+          "zone": "Zephras Isle",
+          "verification": "published-reference",
+          "areaID": 16593,
+          "bounds": {
+            "xMin": 43.4,
+            "xMax": 43.5,
+            "yMin": 45.8,
+            "yMax": 45.8
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Zephras Isle",
+          "verification": "published-reference",
+          "areaID": 16593,
+          "bounds": {
+            "xMin": 43.4,
+            "xMax": 43.5,
+            "yMin": 45.8,
+            "yMax": 45.8
+          },
+          "uiMapID": 2521
+        }
+      ]
+    },
+    {
+      "source": "npc:467",
+      "name": "The Defias Traitor",
+      "before": [
+        {
+          "zone": "Westfall",
+          "verification": "published-reference",
+          "areaID": 40,
+          "bounds": {
+            "xMin": 43.2,
+            "xMax": 57.4,
+            "yMin": 47.4,
+            "yMax": 70
+          }
+        }
+      ],
+      "after": [
+        {
+          "zone": "Westfall",
+          "verification": "published-reference",
+          "areaID": 40,
+          "bounds": {
+            "xMin": 43.1,
+            "xMax": 57.4,
+            "yMin": 47.4,
+            "yMax": 70.2
+          },
+          "uiMapID": 1436
+        },
+        {
+          "zone": "Eastern Kingdoms",
+          "verification": "published-reference",
+          "areaID": -3
+        }
+      ]
+    }
+  ],
+  "sourceProvenanceChanges": [
+    "npc:14368",
+    "npc:1198",
+    "npc:226",
+    "npc:257422",
+    "object:256",
+    "object:610954",
+    "npc:467"
+  ],
+  "sourceOfferChanges": 59,
+  "newTrainerPlanIDs": [
+    2844,
+    2845
+  ],
+  "navigation": {
+    "items": 7707,
+    "statuses": {
+      "not_applicable": 2156,
+      "directions": 1581,
+      "missing": 3085,
+      "verified_coordinate_data": 885
+    },
+    "inGameRenderingVerified": 0,
+    "gapRows": 17404,
+    "legacyRecipeQuestReferences": {
+      "actor_roles_restored": 58,
+      "full_recipe_quests_restored": 33,
+      "current_metadata_preserved": 2,
+      "item_starts_pending_destination": 4
+    }
+  },
+  "freshCapture": {
+    "label": "8cx1",
+    "exitCode": 0,
+    "responseCount": 8,
+    "responses": [
+      {
+        "url": "https://playfulls.com/db/meta.0e7cbeb63a.json",
+        "bytes": 1010725,
+        "sha256": "0e7cbeb63a4294d8ff4570376deca6e571a9574f384f56cdbf2fca0fda1dd5d5"
+      },
+      {
+        "url": "https://playfulls.com/db/gear.7daaa7fa10.json",
+        "bytes": 1362266,
+        "sha256": "7daaa7fa10fdca9829d2f5f43f4a0933d6be3aebe237a1116e84b6cd6bc1a564"
+      },
+      {
+        "url": "https://playfulls.com/db/goods.d1c0ec28ff.json",
+        "bytes": 467019,
+        "sha256": "d1c0ec28ff70e9d2729b33254fdff3d3502e957e10d8e4ecbe02f7363c19cadc"
+      },
+      {
+        "url": "https://playfulls.com/db/other.5de76c51ed.json",
+        "bytes": 446887,
+        "sha256": "5de76c51ed122dea87862e4c33273495735b25badd90f65c72d63fde324614ac"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103440,
+        "sha256": "fa0d8626113b3a776d105b568807d56aed2ea3f935988c505321ad89c02664c4"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103414,
+        "sha256": "fec74cdae5404abd4775f70a1b3e612d7cc2d61a803bc039a3b97bedf41dc00b"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103631,
+        "sha256": "0e6d8ebef7791ed7558710e026f29927537c8ad49da23d024bb7933a817a6014"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 76851,
+        "sha256": "369d71665cfddf2408a8b093936e31dcb9be9a4519000257c94736e3eeec98e1"
+      }
+    ],
+    "noReplayFallbackOrDuplicateDiagnosticFetch": true
+  },
+  "feedDeltaCounts": {
+    "fullResponses": 164,
+    "newResponses": 115,
+    "cachedResponses": 49,
+    "fullOwnItems": 126,
+    "newAnonymousRelations": 171,
+    "newItemRelations": 144,
+    "newNPCLocationRelations": 27,
+    "ownPositive": 118,
+    "ownOmitted": 26,
+    "fullActorPositive": 90,
+    "fullActorOmitted": 8,
+    "unreadActorRelations": 46,
+    "canonicalNewRelations": 7,
+    "knownFailedActorURLsSkipped": 6,
+    "newFailureURLs": 0,
+    "newUnregisteredPFReferences": 7
+  },
+  "localTestPASS": 19,
+  "expectedCIPASS": 18,
+  "CI": null,
+  "sourceCommit": null,
+  "generatedCommit": null,
+  "fullCIAndBotGateComplete": false,
+  "nextCheckpoint": "8CY:seven fresh feed scope references/reusefullpages,38fullfeedactorlocations,then finalexceptions/integrity/manualacceptance",
+  "limits": "Cited coordinates and written reference routes remain unverified in the actual Forever client. No live stock/quest acceptance/current-build loot guarantee.59current source offers have raw0/no gate;positive source rank fix is proven against real independent6/7 publications and future generated fixture,not59currently wrong displayed ranks. Six dungeon links and954book routes retain current-live limits. No new equipment adoption or release.",
+  "protectedRemoteRefsVerifiedUTC": "2026-11-13T09:58:33.433060+00:00",
+  "protectedRemoteRefs": {
+    "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "Beta8Tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "Beta8Commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  }
+}

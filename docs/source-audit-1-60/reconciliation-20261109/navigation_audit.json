@@ -3,11 +3,11 @@
   "statuses": {
     "not_applicable": 2156,
     "directions": 1581,
-    "missing": 3087,
-    "verified_coordinate_data": 883
+    "missing": 3085,
+    "verified_coordinate_data": 885
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 17406,
+  "gapRows": 17404,
   "legacyRecipeQuestReferences": {
     "actor_roles_restored": 58,
     "full_recipe_quests_restored": 33,
@@ -32,7 +32,7 @@
     "quest_container": 2365,
     "quest": 305,
     "vendor": 1909,
-    "trainer": 22,
+    "trainer": 24,
     "recipe_vendor": 503,
     "recipe_drop": 60,
     "object": 45,
@@ -44,8 +44,8 @@
     "PRIEST": {
       "directions": 707,
       "not_applicable": 783,
-      "missing": 828,
-      "verified_coordinate_data": 309
+      "missing": 827,
+      "verified_coordinate_data": 310
     },
     "MAGE": {
       "not_applicable": 765,
@@ -62,38 +62,38 @@
     "DRUID": {
       "not_applicable": 1211,
       "directions": 978,
-      "missing": 1210,
-      "verified_coordinate_data": 459
+      "missing": 1209,
+      "verified_coordinate_data": 460
     },
     "ROGUE": {
       "not_applicable": 1185,
       "directions": 968,
-      "missing": 1054,
-      "verified_coordinate_data": 432
+      "missing": 1052,
+      "verified_coordinate_data": 434
     },
     "HUNTER": {
       "not_applicable": 1672,
       "directions": 1235,
-      "missing": 1401,
-      "verified_coordinate_data": 558
+      "missing": 1400,
+      "verified_coordinate_data": 559
     },
     "SHAMAN": {
       "not_applicable": 1820,
       "directions": 1250,
-      "missing": 1457,
-      "verified_coordinate_data": 582
+      "missing": 1455,
+      "verified_coordinate_data": 584
     },
     "WARRIOR": {
       "not_applicable": 2054,
       "directions": 1464,
-      "missing": 1628,
-      "verified_coordinate_data": 639
+      "missing": 1626,
+      "verified_coordinate_data": 641
     },
     "PALADIN": {
       "not_applicable": 2050,
       "directions": 1319,
-      "missing": 1531,
-      "verified_coordinate_data": 625
+      "missing": 1529,
+      "verified_coordinate_data": 627
     }
   },
   "sourceRecords": 849,
@@ -453,6 +453,10 @@
       "sha256": "c4b8b7815f51af57fa028c703d4ec8ab41916e9c2db2373a8c807f7ae6a6eb61"
     },
     {
+      "file": "checkpoint8cx_working_evidence.json",
+      "sha256": "86ca90d2f14a8e271dcb262431698ad2f6c533b8e7f1d618602c8ea460cb0200"
+    },
+    {
       "file": "checkpoint8d_publication_evidence.json",
       "sha256": "e78e9242b4b8718f039a58131e332455db0794a11a4de35378d2a71521712e3f"
     },
@@ -558,7 +562,7 @@
     },
     {
       "file": "recipes_reconciled.csv",
-      "sha256": "3746d83e11fcf910429be2f8e1d7878537c6e3eff5191f42b395b193d0430c0a"
+      "sha256": "3926d48738ba24726ea6187f0aab4413ac04601c2ce5155fbb91eca9a059e7bd"
     },
     {
       "file": "checkpoint6g_vendor_references.csv",
@@ -698,7 +702,7 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "d3c231aebb6e7669c39a023d44e9ebc4558f6108341fd1f909da0f575a5960a6"
+      "sha256": "e2cfdd76f782c908273f5353e5b2393fae9109f0d8cccec1e8b403648b52dbc0"
     }
   ],
   "catalogueExportSHA256": "cf41374826e9a63649177d9d39c5ca18e006b8b01d524ece438b96e8981c1da9"

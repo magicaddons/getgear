@@ -1,0 +1,4495 @@
+{
+  "checkpoint": "8CX",
+  "scope": "Source-only geography consolidation from completed full-page research. No new item,inventory,quest-role,recipe or loot relationships. Shared actor locations automatically serve current and future exact acquisition routes. Full raw hashes retained;no centroid or guessed floor/entrance.",
+  "sources": [
+    {
+      "url": "https://www.wowhead.com/forever/npc=10417",
+      "title": "Venom Belcher - NPC - WoW Forever",
+      "sha256": "94c8687c79422a327ea124b0870afa49d88ce76836f0829e2d70eb2df793310e",
+      "bytes": 166132,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11659",
+      "title": "Molten Destroyer - NPC - WoW Forever",
+      "sha256": "53cc051dab4fee4417acd63330b88caa48bba9e7afc5df8d901226a2ace6617f",
+      "bytes": 150368,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2717,
+          "name": "Molten Core",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=13996",
+      "title": "Blackwing Technician - NPC - Forever",
+      "sha256": "b1905dd6bf7b5ea84f1832b238f3e01f721a2eea4ac524ce18804ce31e9641bc",
+      "bytes": 314798,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2677,
+          "name": "Blackwing Lair",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10317",
+      "title": "Blackhand Elite - NPC - WoW Forever",
+      "sha256": "bbcd1a4acbe45b7fe81bcd200abfc139dfd5ce0f3b34d22df816679a10312f7c",
+      "bytes": 169320,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=258966",
+      "title": "Slavecrusher Grox - NPC - WoW Forever",
+      "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+      "bytes": 58255,
+      "publishedLocationFootprints": [
+        {
+          "name": "Eastern Kingdoms",
+          "zoneID": -3
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10429",
+      "title": "Warchief Rend Blackhand - NPC - Forever",
+      "sha256": "45cf63ae937442cb7ebca34f7d701fdc543eac7b4d1fef5b87ba77d12992f928",
+      "bytes": 294015,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=259281",
+      "title": "War Handler Ashka - NPC - WoW Forever",
+      "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+      "bytes": 59158,
+      "publishedLocationFootprints": [
+        {
+          "name": "Eastern Kingdoms",
+          "zoneID": -3
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=15252",
+      "title": "Qiraji Champion - NPC - Forever",
+      "sha256": "7b1fb68d5f237176c17591472be8ff3134fb99afccbf8a8c39937af94da5d638",
+      "bytes": 167496,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 3428,
+          "name": "Ahn'Qiraj",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=264773",
+      "title": "Bossman Toof - NPC - WoW Forever",
+      "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+      "bytes": 57583,
+      "publishedLocationFootprints": [
+        {
+          "name": "Eastern Kingdoms",
+          "zoneID": -3
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10076",
+      "title": "High Priestess of Thaurissan - NPC - Forever",
+      "sha256": "12fab2fcc25054c5e94ce155aa4a529c559951a11429e30e3a35660a22464e26",
+      "bytes": 73831,
+      "publishedLocationFootprints": []
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10376",
+      "title": "Crystal Fang - NPC - WoW Forever",
+      "sha256": "6ba31d0b398df881cfc69792fe0aa57bf810d7d0fdd25729f72d5fbe95f8ea17",
+      "bytes": 92521,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10043",
+      "title": "Ribbly's Crony - NPC - Forever",
+      "sha256": "67f2885f386e38101ab5088fac55a682b9df5afab3fff138ab3b3cf1a9943fe3",
+      "bytes": 201229,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10268",
+      "title": "Gizrul the Slavener - NPC - WoW Forever",
+      "sha256": "220e03c9c1889cbdb41a602a360a783f478c0fad61ca4707df1d1ed0d2c92125",
+      "bytes": 153303,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10363",
+      "title": "General Drakkisath - NPC - Forever",
+      "sha256": "7a2ee017227984a91bd21041e31fb48875127bc4d63b5fc9f1dd06de1aabeff2",
+      "bytes": 339666,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10393",
+      "title": "Skul - NPC - WoW Forever",
+      "sha256": "c1a7f7a0225561a15b4be42d9314601a6c82c934ced876695935cad6859c31c5",
+      "bytes": 162761,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10439",
+      "title": "Ramstein the Gorger - NPC - WoW Forever",
+      "sha256": "20767dbbd14d4d8a4d32e9454d3afb1b2e28edbc33cfc57a6f548916863ffa5a",
+      "bytes": 206113,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10516",
+      "title": "The Unforgiven - NPC - Forever",
+      "sha256": "932a24586dc59b936feec3b07e67fda58d79b46ce543b93c220bdddf324cce4c",
+      "bytes": 145148,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10584",
+      "title": "Urok Doomhowl - NPC - WoW Forever",
+      "sha256": "200297bf65b4fd47b9f6a7bec30e4a36c54c3cfda2c2440429e3edef83a36f5d",
+      "bytes": 131464,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10558",
+      "title": "Hearthsinger Forresten - NPC - WoW Forever",
+      "sha256": "ac50ca849e632750a248dca41f4912f0f5f7ae5d3297296af4f9d52e59bf05b6",
+      "bytes": 196510,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10438",
+      "title": "Maleki the Pallid - NPC - WoW Forever",
+      "sha256": "10c5305d39e6038004fac0b6d05ab7fe04e5d08da50dc73dde4b37d97f2294f7",
+      "bytes": 182667,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10811",
+      "title": "Archivist Galford - NPC - Forever",
+      "sha256": "f1e1f3030c2d4fdd338964d67c33eccde7759000a31e18d1df8533f912b56f4f",
+      "bytes": 92513,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10812",
+      "title": "Grand Crusader Dathrohan - NPC - WoW Forever",
+      "sha256": "6066b4f58aa835fe9ae1618abf53f6dbaaec93fa400446b8045d50b50ef06a0d",
+      "bytes": 160379,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10813",
+      "title": "Balnazzar - NPC - Forever",
+      "sha256": "a369d4a464125ae4f60c10d9f9032bbbe40d9ce8ac889e19828410474d17a6e5",
+      "bytes": 139453,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1119",
+      "title": "Hammerspine - NPC - Forever",
+      "sha256": "ac7e59cbf45b0b9bf80faf4069aeae5a17e40779d8f9d216238b3caf0440a666",
+      "bytes": 93569,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1,
+          "name": "Dun Morogh",
+          "uiMapID": 1426,
+          "pointCount": 8,
+          "bounds": {
+            "xMin": 71.4,
+            "xMax": 73,
+            "yMin": 51.2,
+            "yMax": 53.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10808",
+      "title": "Timmy the Cruel - NPC - Forever",
+      "sha256": "f773b4c25775403f2f9b3668bff2e0ba9e226eeccf48e1b7c6b68f9d2ab9cb08",
+      "bytes": 132136,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1137",
+      "title": "Edan the Howler - NPC - Forever",
+      "sha256": "c7f9759e6d080fdb43401d80c3b79436d76922a471449a7b06ea80deefda053e",
+      "bytes": 107466,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1,
+          "name": "Dun Morogh",
+          "uiMapID": 1426,
+          "pointCount": 8,
+          "bounds": {
+            "xMin": 39,
+            "xMax": 43.4,
+            "yMin": 46,
+            "yMax": 49.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11664",
+      "title": "Flamewaker Elite - NPC - WoW Forever",
+      "sha256": "44066edf909cabfd738a123824b25c18dbbb5f9a08c1fb17d2df74aea0d562d9",
+      "bytes": 197551,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2717,
+          "name": "Molten Core",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11665",
+      "title": "Lava Annihilator - NPC - WoW Forever",
+      "sha256": "b66955793b660e1e5b37f2d3cb5099894ae5d8f108d55bed6622b45f3652417d",
+      "bytes": 153667,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2717,
+          "name": "Molten Core",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=12101",
+      "title": "Lava Surger - NPC - WoW Forever",
+      "sha256": "bd810c670536961291b13b0a146904d835ccc17d4b80f2e16c97389ee0f0e923",
+      "bytes": 155119,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2717,
+          "name": "Molten Core",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11673",
+      "title": "Ancient Core Hound - NPC - WoW Forever",
+      "sha256": "de4214027bc97531d7e9d4f650ccc1cd948d16adee2d15a362602b04cb131c53",
+      "bytes": 177234,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2717,
+          "name": "Molten Core",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1260",
+      "title": "Great Father Arctikus - NPC - Forever",
+      "sha256": "e79cb7f9adc781b942fa1355e9752dc0fa8640bef02675ccd523d2b9a5e00ac5",
+      "bytes": 125693,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1,
+          "name": "Dun Morogh",
+          "uiMapID": 1426,
+          "pointCount": 10,
+          "bounds": {
+            "xMin": 21.1,
+            "xMax": 23.6,
+            "yMin": 50.8,
+            "yMax": 54.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10596",
+      "title": "Mother Smolderweb - NPC - WoW Forever",
+      "sha256": "ef534df7e5a50e0686a0235c4080c0dc6eb6366a933db709e095cf45e8d30c4c",
+      "bytes": 229848,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1454",
+      "title": "Jennabink Powerseam - NPC - Forever",
+      "sha256": "bab0cd4b9a7b3f2d7b7fd119613fad64afa0609a51fd204d3707bbde6b5c7f3d",
+      "bytes": 62062,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 11,
+          "name": "Wetlands",
+          "uiMapID": 1437,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 8,
+            "xMax": 8,
+            "yMin": 55.8,
+            "yMax": 55.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1552",
+      "title": "Scale Belly - NPC - Forever",
+      "sha256": "2b1fab3dc7591f2f4c57a99940852df2bd1070dbc9e30f9eff766a1f2c58dbb8",
+      "bytes": 115068,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 33,
+          "name": "Stranglethorn Vale",
+          "uiMapID": 1434,
+          "pointCount": 8,
+          "bounds": {
+            "xMin": 43.2,
+            "xMax": 44,
+            "yMin": 45.4,
+            "yMax": 49.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1425",
+      "title": "Grizlak - NPC - Forever",
+      "sha256": "3393634de2cf99a6740a80d5c4fbd736976db57d80320b15f0762096f2c0fc7a",
+      "bytes": 111674,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 38,
+          "name": "Loch Modan",
+          "uiMapID": 1432,
+          "pointCount": 6,
+          "bounds": {
+            "xMin": 34.4,
+            "xMax": 36.4,
+            "yMin": 26,
+            "yMax": 27.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=2600",
+      "title": "Singer - NPC - Forever",
+      "sha256": "4f7871b805605ba3fadc0eb2b3e8d88965ff8a4f01995308e208aada62920452",
+      "bytes": 88924,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 45,
+          "name": "Arathi Highlands",
+          "uiMapID": 1417,
+          "pointCount": 10,
+          "bounds": {
+            "xMin": 31.2,
+            "xMax": 33.6,
+            "yMin": 26.2,
+            "yMax": 31.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=2606",
+      "title": "Nimar the Slayer - NPC - Forever",
+      "sha256": "a4d5cd03226dd23443f3f00a72ab3a81594627531adeccc1d8192f11f2b4ef58",
+      "bytes": 152860,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 45,
+          "name": "Arathi Highlands",
+          "uiMapID": 1417,
+          "pointCount": 89,
+          "bounds": {
+            "xMin": 59,
+            "xMax": 73.6,
+            "yMin": 53.4,
+            "yMax": 75.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3486",
+      "title": "Halija Whitestrider - NPC - Forever",
+      "sha256": "b00d792319836557055668497c32e5920a79cd654264e66c05b7f0bf2c370c0a",
+      "bytes": 62859,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 17,
+          "name": "The Barrens",
+          "uiMapID": 1413,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 52.2,
+            "xMax": 52.2,
+            "yMin": 31.8,
+            "yMax": 31.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3493",
+      "title": "Grazlix - NPC - Forever",
+      "sha256": "96e63eaacf84a78d616639c822bcdeac1994ea2aaeca79622ea5eaca5a03ced0",
+      "bytes": 58301,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 17,
+          "name": "The Barrens",
+          "uiMapID": 1413,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 62.2,
+            "xMax": 62.2,
+            "yMin": 38.4,
+            "yMax": 38.4
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3543",
+      "title": "Robert Aebischer - NPC - Forever",
+      "sha256": "41255e60e3ddd0b0f528b2fedd1a3d2ae72b0ac42babf72070e6d3e906584bba",
+      "bytes": 64378,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 267,
+          "name": "Hillsbrad Foothills",
+          "uiMapID": 1424,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 51.2,
+            "xMax": 51.2,
+            "yMin": 57,
+            "yMax": 57
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3682",
+      "title": "Vrang Wildgore - NPC - Forever",
+      "sha256": "4ec96b1a774467430f3043362f3c003ec59599c790877302a0ec321886d2509b",
+      "bytes": 57169,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 17,
+          "name": "The Barrens",
+          "uiMapID": 1413,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 43.8,
+            "xMax": 43.8,
+            "yMin": 12.2,
+            "yMax": 12.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=462",
+      "title": "Vultros - NPC - Forever",
+      "sha256": "50c6ea1ac72a7e42d3f591263778c1a6a6d77c47734ec0f1503b87375a2eba90",
+      "bytes": 196041,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 40,
+          "name": "Westfall",
+          "uiMapID": 1436,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 51.8,
+            "xMax": 52.4,
+            "yMin": 24.3,
+            "yMax": 27.1
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=521",
+      "title": "Lupos - NPC - Forever",
+      "sha256": "42b105935b813c5ea4c1a820007e81bbe0592c76d7259b261ea20472041f1190",
+      "bytes": 167292,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 10,
+          "name": "Duskwood",
+          "uiMapID": 1431,
+          "pointCount": 150,
+          "bounds": {
+            "xMin": 19.8,
+            "xMax": 73.6,
+            "yMin": 22.2,
+            "yMax": 32.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=534",
+      "title": "Nefaru - NPC - Forever",
+      "sha256": "25c120759353916db308e8e67e9fc73c7be3c951d44dd25c6044b01ce4a08a84",
+      "bytes": 72352,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 10,
+          "name": "Duskwood",
+          "uiMapID": 1431,
+          "pointCount": 10,
+          "bounds": {
+            "xMin": 61.4,
+            "xMax": 74.2,
+            "yMin": 76.8,
+            "yMax": 83.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=5722",
+      "title": "Hazzas - NPC - Forever",
+      "sha256": "18eb5b36697ff8725f1f9e9c4ff2b7f59550441003d5cbea666ee7ea0cab09d9",
+      "bytes": 105425,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1477,
+          "name": "The Temple of Atal'Hakkar",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=61",
+      "title": "Thuros Lightfingers - NPC - Forever",
+      "sha256": "ce7737b7f88340317d1bc31a8891290c4f087690335c0a81db607276327e4c23",
+      "bytes": 125610,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 12,
+          "name": "Elwynn Forest",
+          "uiMapID": 1429,
+          "pointCount": 8,
+          "bounds": {
+            "xMin": 29.6,
+            "xMax": 89.6,
+            "yMin": 58.4,
+            "yMax": 83.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=79",
+      "title": "Narg the Taskmaster - NPC - Forever",
+      "sha256": "ce955b496249a9ef0779d548c341cfa6af651d954d17232cf42bf37fd2187eb5",
+      "bytes": 132299,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 12,
+          "name": "Elwynn Forest",
+          "uiMapID": 1429,
+          "pointCount": 10,
+          "bounds": {
+            "xMin": 38.9,
+            "xMax": 41.2,
+            "yMin": 77.4,
+            "yMax": 82.5
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8889",
+      "title": "Anvilrage Overseer - NPC - Forever",
+      "sha256": "3dd421aafa0087984c74b9809911fbf5640897b6d2af29b10ac5915b0dbc084a",
+      "bytes": 165484,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8891",
+      "title": "Anvilrage Guardsman - NPC - Forever",
+      "sha256": "5209f57822c66cb48946379dd6b34b7ac2ed75c10cc1cd2e43b5ffa4bbd6addf",
+      "bytes": 187445,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8892",
+      "title": "Anvilrage Footman - NPC - Forever",
+      "sha256": "b15fbaf1e1ce11c6059afba500ede760e75524f5ecd7dce7febcecd75b76d8a8",
+      "bytes": 179030,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8893",
+      "title": "Anvilrage Soldier - NPC - Forever",
+      "sha256": "24365e3bede4022fd47486545bbf984c9b0f0a4b7ccdfb4fe6da2c8ab1ce3786",
+      "bytes": 193442,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8894",
+      "title": "Anvilrage Medic - NPC - Forever",
+      "sha256": "a92b27f6f5b40ed143e17dc991005be07d98375120170b881dba2b77b945dbc8",
+      "bytes": 204553,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8895",
+      "title": "Anvilrage Officer - NPC - Forever",
+      "sha256": "9bb1a9f61a38a238d63ab5af89d7c3d9073911400f715ed089db3bf70480bd30",
+      "bytes": 215470,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8898",
+      "title": "Anvilrage Marshal - NPC - Forever",
+      "sha256": "a48004464bcf016a22732ef574930b0b72002cf8a21f5895abd65100f5d3ec29",
+      "bytes": 202652,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8899",
+      "title": "Doomforge Dragoon - NPC - Forever",
+      "sha256": "5194b799a1f292fab12e0a9202c5fb1c3cbffc84cb0ba8d755ea0b95216f0611",
+      "bytes": 203551,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8903",
+      "title": "Anvilrage Captain - NPC - Forever",
+      "sha256": "2af48bdf35a079b138c0a05f3c406964a81ad0f5b9c3fb0d476e850a74fe003e",
+      "bytes": 192340,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8905",
+      "title": "Warbringer Construct - NPC - Forever",
+      "sha256": "217ab4e174ab4e976a0800845f7b22d2f9ad3954ef860cf1da052a6749ae075f",
+      "bytes": 161358,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8910",
+      "title": "Blazing Fireguard - NPC - Forever",
+      "sha256": "aca27cf2870600c84e2d6821ff9f36ab2bc0251f806871b3f399b936b79a2ec2",
+      "bytes": 206424,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8911",
+      "title": "Fireguard Destroyer - NPC - Forever",
+      "sha256": "782260204c5b8b23afcc169d75bf68cca1324169f137e7dc2fd4bf38475e894c",
+      "bytes": 166338,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8929",
+      "title": "Princess Moira Bronzebeard - NPC - Forever",
+      "sha256": "e7a70efcb6682e8537c794e55b599fa93d5ea9dd9bdbfd82a2ff21cf5b512554",
+      "bytes": 201981,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8983",
+      "title": "Golem Lord Argelmach - NPC - Forever",
+      "sha256": "05f0683263be4f6d04b16dd87406b8eb1d86fd536cc853f00aaa5f794f4b5687",
+      "bytes": 273079,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9017",
+      "title": "Lord Incendius - NPC - Forever",
+      "sha256": "e813ced4e577f03d3bab2dedc9db7a3d6ffcb8f7a1da0e62835a8255e33e0467",
+      "bytes": 173574,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9019",
+      "title": "Emperor Dagran Thaurissan - NPC - Forever",
+      "sha256": "7357d226d4bf62a398ed45f4eef63fce55e5cb710ae3a1ff7de6a877042dd5c7",
+      "bytes": 146019,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9029",
+      "title": "Eviscerator - NPC - Forever",
+      "sha256": "198cb395d0b41bb1e05c944121321981985e80ae8fcb4073f087e2cc2fb10017",
+      "bytes": 92435,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9030",
+      "title": "Ok'thor the Breaker - NPC - Forever",
+      "sha256": "41cd4b4854ed8fdd5f6b8e8b04e76174ba836ce13a6bd9e035b7b5c1a38bb9ef",
+      "bytes": 121823,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9031",
+      "title": "Anub'shiah - NPC - Forever",
+      "sha256": "59158be43a63d643985e0535d36051a85231900d33ed9692ca0b26334280281b",
+      "bytes": 77322,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9032",
+      "title": "Hedrum the Creeper - NPC - Forever",
+      "sha256": "51210114f8c7ed2dad6663aacf9dc07ea17a59b54b1629c457e458a2b864f340",
+      "bytes": 75766,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9033",
+      "title": "General Angerforge - NPC - Forever",
+      "sha256": "e4b1b8740e4f43a73aca26b3e5e1e4211de47fac0ff607b5ae46030986d42bb9",
+      "bytes": 209101,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9056",
+      "title": "Fineous Darkvire - NPC - Forever",
+      "sha256": "fadcb62b471270dc05802c1a792efb05f3cb04fe91ecbc1e4f3d08128c7c2541",
+      "bytes": 174550,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9196",
+      "title": "Highlord Omokk - NPC - WoW Forever",
+      "sha256": "0f292c9a90cfa88d62e1cf5452f6d04e288661ca08052577955d45d7a39f8a64",
+      "bytes": 149309,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9217",
+      "title": "Spirestone Lord Magus - NPC - WoW Forever",
+      "sha256": "c17491e5029abd6ed0a2b609da68368c4a842d5d55be2648fb76bbdbd06df3df",
+      "bytes": 109607,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9218",
+      "title": "Spirestone Battle Lord - NPC - WoW Forever",
+      "sha256": "c1006668e18dacc3d5c4d77989b0053ed3b70b50e0c0bf01884b468a27fd6325",
+      "bytes": 93710,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1115",
+      "title": "Rockjaw Skullthumper - NPC - WoW Forever",
+      "sha256": "64994621a2070840e9791196582abe05e39821210823396ecf7d2e9f39179050",
+      "bytes": 207170,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1,
+          "name": "Dun Morogh",
+          "uiMapID": 1426,
+          "pointCount": 33,
+          "bounds": {
+            "xMin": 67.2,
+            "xMax": 72.8,
+            "yMin": 50.3,
+            "yMax": 60.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9237",
+      "title": "War Master Voone - NPC - Forever",
+      "sha256": "6f36efbc73808a3653c7faef459024d37f2a95f098b9c34e1bb69f5dc9a2df17",
+      "bytes": 122455,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9319",
+      "title": "Houndmaster Grebmar - NPC - Forever",
+      "sha256": "56efcb687df707ab8e2ba8a1823801ec63e078e3bf4be997c0eed7a89b6c8eb3",
+      "bytes": 145024,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=947",
+      "title": "Rohh the Silent - NPC - Forever",
+      "sha256": "2288f2ee59dc8eb060f01297e0eaa2f3fbc53fc96ad514bb2c20b66c4eb1be5b",
+      "bytes": 209929,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 44,
+          "name": "Redridge Mountains",
+          "uiMapID": 1433,
+          "pointCount": 93,
+          "bounds": {
+            "xMin": 63,
+            "xMax": 85.6,
+            "yMin": 29.4,
+            "yMax": 57.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9541",
+      "title": "Blackbreath Crony - NPC - Forever",
+      "sha256": "32563b53fe5ff28fc75f527ac369bcac7e22bf52cde5276d7163c4e4d1358583",
+      "bytes": 194019,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9554",
+      "title": "Hammered Patron - NPC - Forever",
+      "sha256": "a7875941085b921a46614886840169d35803d1e994503d5b79d03d91d0735982",
+      "bytes": 165805,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9568",
+      "title": "Overlord Wyrmthalak - NPC - Forever",
+      "sha256": "a2aebbae13c0fff81f45e147ea375299e8ca5d279bfa1723812ebd45ded0402a",
+      "bytes": 250819,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9596",
+      "title": "Bannok Grimaxe - NPC - WoW Forever",
+      "sha256": "9621c0e58adb00719cff23bc0ab425cd0b464fa6e0785aeb696ad285e3c18791",
+      "bytes": 138175,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9677",
+      "title": "Ograbisi - NPC - Forever",
+      "sha256": "7ffbffd5f253d5d84981e9b4b8ba6cad5309dd5ef7e69647537bf680e41f5698",
+      "bytes": 147869,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=99",
+      "title": "Morgaine the Sly - NPC - Forever",
+      "sha256": "599ba0113e992b3c09b617aa2182a934e0bb50ef4f868878ed599383564c74e9",
+      "bytes": 187979,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 12,
+          "name": "Elwynn Forest",
+          "uiMapID": 1429,
+          "pointCount": 7,
+          "bounds": {
+            "xMin": 30.2,
+            "xMax": 31.6,
+            "yMin": 64.4,
+            "yMax": 65.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9219",
+      "title": "Spirestone Butcher - NPC - WoW Forever",
+      "sha256": "22571980f35bda67483f49f614ddf07f9fde42a302ad08120a9f20b344abaa08",
+      "bytes": 95473,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3096",
+      "title": "Captured Servant of Azora - NPC - WoW Forever",
+      "sha256": "4e0c2c1b35b0eaf15576b7e7546e1cb401fe6f3e3a94b233a3e902f58fa06ecf",
+      "bytes": 70270,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 44,
+          "name": "Redridge Mountains",
+          "uiMapID": 1433,
+          "pointCount": 7,
+          "bounds": {
+            "xMin": 69.2,
+            "xMax": 74.6,
+            "yMin": 79.2,
+            "yMax": 79.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=226",
+      "title": "Morg Gnarltree - NPC - WoW Forever",
+      "sha256": "d08ef1c4d929d5b9a9e9da482e48e96ad9b7f241f71c336201eef93220508fb2",
+      "bytes": 67666,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 10,
+          "name": "Duskwood",
+          "uiMapID": 1431,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 73.8,
+            "xMax": 73.8,
+            "yMin": 48.4,
+            "yMax": 48.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11036",
+      "title": "Leonid Barthalomew the Revered - NPC - Forever",
+      "sha256": "972c94e194e636c9eba450aefaba0625db6e6f771de7934aaaf13fe2acb069cf",
+      "bytes": 283641,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 81.6,
+            "xMax": 81.6,
+            "yMin": 57.8,
+            "yMax": 57.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11033",
+      "title": "Smokey LaRue - NPC - WoW Forever",
+      "sha256": "60c75c45eed94d62de1d5672e5340136f270c11283ffc9f9926845db208a70fe",
+      "bytes": 63281,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 80.4,
+            "xMax": 80.6,
+            "yMin": 58,
+            "yMax": 58
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11035",
+      "title": "Betina Bigglezink - NPC - WoW Forever",
+      "sha256": "bea92933a15d78785e306f75fa1a0141cce19352d23a3bdba944f1a12c82e1ac",
+      "bytes": 73521,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 81.4,
+            "xMax": 81.4,
+            "yMin": 59.4,
+            "yMax": 59.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10437",
+      "title": "Nerub'enkan - NPC - WoW Forever",
+      "sha256": "bebad45ac7c65c644a80f37d422b7542126697a979e800117dc0150a28c7eb2c",
+      "bytes": 154271,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10436",
+      "title": "Baroness Anastari - NPC - Forever",
+      "sha256": "62ce5bc454894766d9be2182bf52bbb951dbee3babd15a9896f1323ef050c027",
+      "bytes": 233655,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10433",
+      "title": "Marduk Blackpool - NPC - WoW Forever",
+      "sha256": "12a7a7ed74369e6f0c0e87289c8b0884e14bc4965a05bcda3feb8da65341271a",
+      "bytes": 190387,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10469",
+      "title": "Scholomance Adept - NPC - WoW Forever",
+      "sha256": "6197ed559ee5a1cf06cfe808765554f4698517aae2f6d7b19d83d34a8d085340",
+      "bytes": 204807,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10488",
+      "title": "Risen Construct - NPC - WoW Forever",
+      "sha256": "b5fd28c5e620f51603de5e4f6d2fdbaae033a26015d22e84a596c5bfb52dfffb",
+      "bytes": 190744,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10478",
+      "title": "Splintered Skeleton - NPC - WoW Forever",
+      "sha256": "6fa9a3dd7199604355beff49c13ea50b350a7908a60b6e948eff1303917b8482",
+      "bytes": 153490,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10477",
+      "title": "Scholomance Necromancer - NPC - WoW Forever",
+      "sha256": "309af8148030a72688535feb4c58160ab49cc188fed507fdd56b2b5b22d852f1",
+      "bytes": 166239,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10489",
+      "title": "Risen Guard - NPC - WoW Forever",
+      "sha256": "a46eb36d126d3796965cf4027a70917ac75727e1851d99b3073beba596cecf29",
+      "bytes": 184875,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10495",
+      "title": "Diseased Ghoul - NPC - WoW Forever",
+      "sha256": "adcc3fcf5ed4bf5b4f9ba3bbdc791d520cabbdeae891691f59e32bef844b1034",
+      "bytes": 161918,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10491",
+      "title": "Risen Bonewarder - NPC - WoW Forever",
+      "sha256": "f8e8603059fb112ad4b266be9ded27cb6b805b5ba53fc0f14de4484003196521",
+      "bytes": 182175,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10498",
+      "title": "Spectral Tutor - NPC - WoW Forever",
+      "sha256": "77bf0d1373940eb0b0b8108ee890c6c47d2afb93c6d686b407a717eabe910bdb",
+      "bytes": 172968,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10502",
+      "title": "Lady Illucia Barov - NPC - WoW Forever",
+      "sha256": "f0718419cdfad9eab70fd9a06d5c66a6700bca2c87b7aa09fab54e741ee4384f",
+      "bytes": 213892,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10504",
+      "title": "Lord Alexei Barov - NPC - WoW Forever",
+      "sha256": "02a0bcd5f1130814203f189566cc75941ed74f4e6073afac6e453a32d40a4c8b",
+      "bytes": 289342,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10507",
+      "title": "The Ravenian - NPC - WoW Forever",
+      "sha256": "faca95872dd4a0fb60d4b261f1b1daefcaaf37c94b0b9091aec8018445534898",
+      "bytes": 212362,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10506",
+      "title": "Kirtonos the Herald - NPC - WoW Forever",
+      "sha256": "bec1e91940d9e88bbe74e6c78ac58e6ebb2b769527f2daa88481dd7ce44d097a",
+      "bytes": 216904,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10505",
+      "title": "Instructor Malicia - NPC - WoW Forever",
+      "sha256": "a8f62ddcfb8bc0736b365e0b7a387037f97795b08d3057f458a4763fefc99ff0",
+      "bytes": 241846,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10809",
+      "title": "Stonespine - NPC - WoW Forever",
+      "sha256": "75db4a181a59defd856cb532820df6e2b63cfc4247a7582dfec114352c561bce",
+      "bytes": 93394,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10826",
+      "title": "Lord Darkscythe - NPC - WoW Forever",
+      "sha256": "1307a6f1ae357bbc78b86a2aa6727333048847281808cac64cd9821b0c8c8e8a",
+      "bytes": 152098,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 54,
+          "bounds": {
+            "xMin": 23,
+            "xMax": 44,
+            "yMin": 23.2,
+            "yMax": 37.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10901",
+      "title": "Lorekeeper Polkelt - NPC - Forever",
+      "sha256": "ccfa97ce6131d6b9706ff82a7746345b735aecfb7563d9cd993d0ade90a56800",
+      "bytes": 251405,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11486",
+      "title": "Prince Tortheldrin - NPC - Forever",
+      "sha256": "917d5e3f53018615c126b71b1bd26320727a93b1e54db7a7d0c46db8fc0930d8",
+      "bytes": 136255,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11261",
+      "title": "Doctor Theolen Krastinov - NPC - WoW Forever",
+      "sha256": "356968e24156568bdf5307e9b760beb3603b570c5e65824f43987b8f5c0131dd",
+      "bytes": 257061,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11487",
+      "title": "Magister Kalendris - NPC - WoW Forever",
+      "sha256": "db31af7c47b464e3a882faa3f44b067062e513d62a21a86cacb23fa267b0c58b",
+      "bytes": 196764,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10508",
+      "title": "Ras Frostwhisper - NPC - WoW Forever",
+      "sha256": "8263a12b19a349e3fdbae185dbb22c344e88ae7f8396e6470c09f95eb2235e97",
+      "bytes": 218700,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11489",
+      "title": "Tendris Warpwood - NPC - WoW Forever",
+      "sha256": "47ea34ce7057358527fca9c0c5e23905acb1b8a9184e447bde7435a99d72f919",
+      "bytes": 160214,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11488",
+      "title": "Illyanna Ravenoak - NPC - Forever",
+      "sha256": "67034197e6a9c9fa35ed4ca745b860375ec055ee66bea8575dda2f61526c7c5f",
+      "bytes": 123141,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11501",
+      "title": "King Gordok - NPC - Forever",
+      "sha256": "ed9836e4a7b5218b9290f538864a75ece32df1dd961e65e06fe5ea5a1a4b9065",
+      "bytes": 159375,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11496",
+      "title": "Immol'thar - NPC - WoW Forever",
+      "sha256": "ad9ea3ff462de86c8ae31130d5484bb692fb6acc1a437550293e33e485344d38",
+      "bytes": 115363,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11555",
+      "title": "Gorn One Eye - NPC - Forever",
+      "sha256": "e833caa63a0569a538661aceea492f5280a69d7ee2c904d12b833c649b8be4c1",
+      "bytes": 81102,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 361,
+          "name": "Felwood",
+          "uiMapID": 1448,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 65.2,
+            "xMax": 65.4,
+            "yMin": 2.4,
+            "yMax": 2.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=12017",
+      "title": "Broodlord Lashlayer - NPC - WoW Forever",
+      "sha256": "dcff3b2b2b3602ee57ff6034fe409a058c822e16dde4d4213c2514c702b88ad6",
+      "bytes": 142364,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2677,
+          "name": "Blackwing Lair",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=12805",
+      "title": "Officer Areyn - NPC - Forever",
+      "sha256": "06ea504880d1f4fdffffa9a26cf633b3bf9de666170f57b9919b8f94fcb05e6b",
+      "bytes": 105579,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1519,
+          "name": "Stormwind City",
+          "uiMapID": 1453,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 73.4,
+            "xMax": 73.8,
+            "yMin": 52.4,
+            "yMax": 53.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11622",
+      "title": "Rattlegore - NPC - WoW Forever",
+      "sha256": "6d096a4fac89b6145f396c17b2c186bf471f5587d1b38599c569c4fa3e8ddda1",
+      "bytes": 218130,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=13216",
+      "title": "Gaelden Hammersmith - NPC - Forever",
+      "sha256": "6a1d842af38d7b7a911bd57c7115f367f2989e4b7855ee858e8caa4f95ac6b62",
+      "bytes": 114340,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2597,
+          "name": "Alterac Valley",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=12799",
+      "title": "Sergeant Ba'sha - NPC - Forever",
+      "sha256": "85bc08f8f4d38c4023aec9e4a1d8231f418f13c438c1498fc08f734dc2daa140",
+      "bytes": 103199,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1637,
+          "name": "Orgrimmar",
+          "uiMapID": 1454,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 41.4,
+            "xMax": 41.6,
+            "yMin": 68.4,
+            "yMax": 69.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=13218",
+      "title": "Grunnda Wolfheart - NPC - Forever",
+      "sha256": "2a14fa75d5cc6e40d3c9cd90a64e0c02cd6b5b54e73535573f9861e069a02e03",
+      "bytes": 100432,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2597,
+          "name": "Alterac Valley",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=13219",
+      "title": "Jekyll Flandring - NPC - Forever",
+      "sha256": "94e42328cdb6fe872489163b6e0d0a72886297136dfb12aa1ae36127b230e260",
+      "bytes": 117770,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 36,
+          "name": "Alterac Mountains",
+          "uiMapID": 1416,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 62.8,
+            "xMax": 62.8,
+            "yMin": 59.4,
+            "yMax": 59.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14324",
+      "title": "Cho'Rush the Observer - NPC - WoW Forever",
+      "sha256": "0c81192f9873098d038024e088172bb1bdb993c239c670748995feb46aa86640",
+      "bytes": 320516,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=13217",
+      "title": "Thanthaldis Snowgleam - NPC - Forever",
+      "sha256": "9ce2c0773cce665c7e4a0fabb5e65d7a51c6f472bf5550b7f13f5dd80f244a3d",
+      "bytes": 120868,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 36,
+          "name": "Alterac Mountains",
+          "uiMapID": 1416,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 39.4,
+            "xMax": 39.6,
+            "yMin": 81.4,
+            "yMax": 81.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14461",
+      "title": "Baron Charr - NPC - Forever",
+      "sha256": "7b3bf001925d2312aa535093639c1d188b5e17288b4f1dc063fffe3c29fabf14",
+      "bytes": 127228,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 490,
+          "name": "Un'Goro Crater",
+          "uiMapID": 1449,
+          "pointCount": 109,
+          "bounds": {
+            "xMin": 37.8,
+            "xMax": 63.6,
+            "yMin": 2.8,
+            "yMax": 73
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=8217",
+      "title": "Mith'rethis the Enchanter - NPC - Forever",
+      "sha256": "d4ba9819def1959d141a2670e3ee98e718efbda35ef6940083f07f2c5d2c6115",
+      "bytes": 128382,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 47,
+          "name": "The Hinterlands",
+          "uiMapID": 1425,
+          "pointCount": 55,
+          "bounds": {
+            "xMin": 57,
+            "xMax": 66.8,
+            "yMin": 63.6,
+            "yMax": 82.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9537",
+      "title": "Hurley Blackbreath - NPC - Forever",
+      "sha256": "5b8e9b62b238f6acbef8bd5ace9253786a015baec5e2a2e284fe5bf191e0fec8",
+      "bytes": 113494,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14753",
+      "title": "Illiyana Moonblaze - NPC - Forever",
+      "sha256": "d80bbb4202fcce3e644e74d77eae68c2744cef32384092b0140d94544b3f4e93",
+      "bytes": 217236,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 331,
+          "name": "Ashenvale",
+          "uiMapID": 1440,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 61.4,
+            "xMax": 61.6,
+            "yMin": 83.8,
+            "yMax": 83.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14754",
+      "title": "Kelm Hargunth - NPC - Forever",
+      "sha256": "9774815aed89f30cfd0202747ed767712e81638ef96fa0af05cab8103ca85ed9",
+      "bytes": 170720,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 17,
+          "name": "The Barrens",
+          "uiMapID": 1413,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 46.6,
+            "xMax": 46.6,
+            "yMin": 8.4,
+            "yMax": 8.4
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10432",
+      "title": "Vectus - NPC - WoW Forever",
+      "sha256": "fe9fdd3dd4c95605d6ef83c2344ce8af3c249a26798dae2419ba2e4ce31ac997",
+      "bytes": 211691,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10257",
+      "title": "Bijou - NPC - WoW Forever",
+      "sha256": "2ad1be7fe7d7c1e5dd1c205096a7d7753bb8f4a24cab9f988ee032cd8413e06f",
+      "bytes": 62093,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11216",
+      "title": "Eva Sarkhoff - NPC - WoW Forever",
+      "sha256": "ae1ef861e50eaa6f4193b7c50a32f719d858725e6443c298b0da27a513ce6e3d",
+      "bytes": 76669,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 28,
+          "name": "Western Plaguelands",
+          "uiMapID": 1422,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 70.2,
+            "xMax": 70.2,
+            "yMin": 73.8,
+            "yMax": 73.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10799",
+      "title": "Warosh - NPC - WoW Forever",
+      "sha256": "a9d1b4c6e90d02593fa4f40744f3c9ea7779fa344c5ce8d135822a7c6be755ee",
+      "bytes": 54339,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14355",
+      "title": "Azj'Tordin - NPC - WoW Forever",
+      "sha256": "202f7d565ba80facd331a92b2d84b2a131cfb20341b2eef688a6507a370c4304",
+      "bytes": 57596,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 357,
+          "name": "Feralas",
+          "uiMapID": 1444,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 76.8,
+            "xMax": 76.8,
+            "yMin": 37.4,
+            "yMax": 37.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11878",
+      "title": "Nathanos Blightcaller - NPC - WoW Forever",
+      "sha256": "7118a00f5a55bf199c8e47af5c57ab76ae225163485db0f853b8476bbc79a2fa",
+      "bytes": 164115,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 26.4,
+            "xMax": 26.6,
+            "yMin": 74.4,
+            "yMax": 74.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10917",
+      "title": "Aurius - NPC - WoW Forever",
+      "sha256": "8e9c0fb50d6aecafaf30842f78587f6059d74b703fc68893fb168ece8e968fbb",
+      "bytes": 113248,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14358",
+      "title": "Shen'dralar Ancient - NPC - WoW Forever",
+      "sha256": "b54a2e188ecef19fabd051b4ab0299815ad746c36e112db356b78b4aace419bf",
+      "bytes": 63066,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=2285",
+      "title": "Count Remington Ridgewell - NPC - WoW Forever",
+      "sha256": "7d76bcb7cf05fa24866fecb30669c20d1ad6dd82de8cb9537aa3a18bc4d5e260",
+      "bytes": 65166,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1519,
+          "name": "Stormwind City",
+          "uiMapID": 1453,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 74,
+            "xMax": 77,
+            "yMin": 29.2,
+            "yMax": 47.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=7776",
+      "title": "Talo Thornhoof - NPC - WoW Forever",
+      "sha256": "cdc4c80fc4aff81e3d217dee7498392fd659fc482ef43610527811889ff1aeac",
+      "bytes": 66839,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 357,
+          "name": "Feralas",
+          "uiMapID": 1444,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 76,
+            "xMax": 76,
+            "yMin": 43.8,
+            "yMax": 43.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=7877",
+      "title": "Latronicus Moonspear - NPC - WoW Forever",
+      "sha256": "dc26babf9efbfd6b6f5928ec6a5521fed1281a3276203fcb811e0c0d30e262e3",
+      "bytes": 65934,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 357,
+          "name": "Feralas",
+          "uiMapID": 1444,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 30.4,
+            "xMax": 30.4,
+            "yMin": 46,
+            "yMax": 46
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9078",
+      "title": "Shadowmage Vivian Lagrave - NPC - WoW Forever",
+      "sha256": "0f09bb68af0b14ce3168c6f6408eff7c465d496dea12eb6d71365eacd65e6ec7",
+      "bytes": 61244,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 3,
+          "name": "Badlands",
+          "uiMapID": 1418,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 3,
+            "xMax": 3,
+            "yMin": 47.4,
+            "yMax": 47.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9562",
+      "title": "Helendis Riverhorn - NPC - Forever",
+      "sha256": "eb792bfc0e73411f09b80df8ab0725f6e2ce7f6da051d7e1bfe757e6c5c6c782",
+      "bytes": 67123,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 46,
+          "name": "Burning Steppes",
+          "uiMapID": 1428,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 85.4,
+            "xMax": 85.6,
+            "yMin": 68.8,
+            "yMax": 69
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9563",
+      "title": "Ragged John - NPC - Forever",
+      "sha256": "f8539afd5809d09ff0a35bc820c06a57bc9b09ce4f77a9af78243a51e291523a",
+      "bytes": 68776,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 46,
+          "name": "Burning Steppes",
+          "uiMapID": 1428,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 65,
+            "xMax": 65,
+            "yMin": 23.6,
+            "yMax": 23.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14902",
+      "title": "Jin'rokh the Breaker - NPC - WoW Forever",
+      "sha256": "156ecd74769341bae1342c4f22f652708d189881346fb8c78257c5b3590a2fa1",
+      "bytes": 74804,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 33,
+          "name": "Stranglethorn Vale",
+          "uiMapID": 1434,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 15.2,
+            "xMax": 15.2,
+            "yMin": 14.4,
+            "yMax": 14.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9080",
+      "title": "Lexlort - NPC - WoW Forever",
+      "sha256": "de29d77fe9b73218e3088f797c0af6ad927159f73e93ecf49e2f6bef07dbb4c6",
+      "bytes": 62115,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 3,
+          "name": "Badlands",
+          "uiMapID": 1418,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 5.8,
+            "xMax": 5.8,
+            "yMin": 47.4,
+            "yMax": 47.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9081",
+      "title": "Galamav the Marksman - NPC - WoW Forever",
+      "sha256": "f0ed671179bf2ba6df4b90b15872b783c1420a3cd77c63b1f835d0b9abebd0ba",
+      "bytes": 67228,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 3,
+          "name": "Badlands",
+          "uiMapID": 1418,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 5.8,
+            "xMax": 5.8,
+            "yMin": 47.4,
+            "yMax": 47.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=9565",
+      "title": "Mayara Brightwing - NPC - WoW Forever",
+      "sha256": "9a14373f5ee828d1aa8ea3e0f4f2d4c115a0569ee190ba74695d31680e03cecd",
+      "bytes": 61214,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 46,
+          "name": "Burning Steppes",
+          "uiMapID": 1428,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 84.8,
+            "xMax": 84.8,
+            "yMin": 69,
+            "yMax": 69
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=176944",
+      "title": "Old Treasure Chest - Object - Forever",
+      "sha256": "4f1ada305db1fa72db1b2bb3104a7f54bbb02409501f017b5311d3e4c5c3c489",
+      "bytes": 124884,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=179517",
+      "title": "Treasure of the Shen'dralar - Object - WoW Forever",
+      "sha256": "6f24c61f9dbd329c42a9bf2ae6a791f7ece6042e027e7c6c289a3e7a1f1600db",
+      "bytes": 56567,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10430",
+      "title": "The Beast - NPC - Forever",
+      "sha256": "e38a0464268dbfb3524a0431b67a71ac7a4572a99c1dd1ac4cb8daa5350b29f9",
+      "bytes": 185333,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10503",
+      "title": "Jandice Barov - NPC - WoW Forever",
+      "sha256": "28a8c2148b3c9a74b6606a6a8695408e9eb3ea591e99d47fb683e5f5b1a06b0a",
+      "bytes": 233550,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=15126",
+      "title": "Rutherford Twing - NPC - Forever",
+      "sha256": "8392f592d4bf5c41e2c24e151a390cbf3fb1b323825d9b1f37985d46832b6323",
+      "bytes": 212022,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 45,
+          "name": "Arathi Highlands",
+          "uiMapID": 1417,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 73.4,
+            "xMax": 73.4,
+            "yMin": 29.8,
+            "yMax": 29.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=15127",
+      "title": "Samuel Hawke - NPC - Forever",
+      "sha256": "e0a81bf4965c15abc0789cada96651648c975217bc6789328f7116ff0e96d648",
+      "bytes": 203415,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 45,
+          "name": "Arathi Highlands",
+          "uiMapID": 1417,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 46,
+            "xMax": 46,
+            "yMin": 45.2,
+            "yMax": 45.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=15931",
+      "title": "Grobbulus - NPC - Forever",
+      "sha256": "40d2f96b8cf135e267dc702bd7bd07312df367924a669db7a602d3ae1d65c944",
+      "bytes": 126985,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 3456,
+          "name": "Naxxramas",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=16118",
+      "title": "Kormok - NPC - WoW Forever",
+      "sha256": "b4f825361ce5fbfc12c1cb121fd101dd8a4155916253935a568d04cd8fe1dcf1",
+      "bytes": 167670,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2057,
+          "name": "Scholomance",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=16097",
+      "title": "Isalien - NPC - WoW Forever",
+      "sha256": "a1ff07f74dd46267df67660c796a6dd4b4107ba0b26c1b49d8bd82c3e27f01fb",
+      "bytes": 174342,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=16080",
+      "title": "Mor Grayhoof - NPC - WoW Forever",
+      "sha256": "947dd158c7f03917703347cfa8b509206d3825fee2d6d33abed9a4f57d0d6e26",
+      "bytes": 131808,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=16042",
+      "title": "Lord Valthalak - NPC - WoW Forever",
+      "sha256": "c414a9581681e332aeaf5a3462d382f48b248e9f806c9127a3de60990ea18fcb",
+      "bytes": 237202,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1583,
+          "name": "Blackrock Spire",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=181083",
+      "title": "Sothos and Jarien's Heirlooms - Object - WoW Forever",
+      "sha256": "f8a221f95828e912f8189a5f8b19073da64473e10afbd0d695e8a63ae40a51d4",
+      "bytes": 76067,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10817",
+      "title": "Duggan Wildhammer - NPC - WoW Forever",
+      "sha256": "d7cfe48405e707650eb1d7a5a349617041fe9777d86de78afc9f68d527dde469",
+      "bytes": 166093,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 48,
+          "bounds": {
+            "xMin": 14.4,
+            "xMax": 49.4,
+            "yMin": 58.2,
+            "yMax": 88.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1037",
+      "title": "Dragonmaw Battlemaster - NPC - WoW Forever",
+      "sha256": "20c3eb92e02a3657453ad6cdfd71f821b8aa646ff70c16f92ed313e0255811ed",
+      "bytes": 132879,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 11,
+          "name": "Wetlands",
+          "uiMapID": 1437,
+          "pointCount": 54,
+          "bounds": {
+            "xMin": 42.2,
+            "xMax": 53.2,
+            "yMin": 40.6,
+            "yMax": 54.3
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11032",
+      "title": "Malor the Zealous - NPC - WoW Forever",
+      "sha256": "9593bcd1009ebade1bc84a113061921709c81fb54205de43d1ef7e49ea30b8be",
+      "bytes": 167776,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14222",
+      "title": "Araga - NPC - WoW Forever",
+      "sha256": "9507fb05bf9292e7d97508921902c3e632fdb827cfbc560c46aa1eb6530227b4",
+      "bytes": 176127,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 36,
+          "name": "Alterac Mountains",
+          "uiMapID": 1416,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 30,
+            "xMax": 38.8,
+            "yMin": 71.2,
+            "yMax": 89
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1298",
+      "title": "Frederick Stover - NPC - Forever",
+      "sha256": "1a5263399f2e58382d413415ea71cda57f7b14d3dfff06e2458c940b1fb5964b",
+      "bytes": 67693,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1519,
+          "name": "Stormwind City",
+          "uiMapID": 1453,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 50.2,
+            "xMax": 58.6,
+            "yMin": 57.4,
+            "yMax": 69
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14232",
+      "title": "Dart - NPC - WoW Forever",
+      "sha256": "40b4e8bff5df6e16ff054d0cb7b38e9ccb7d9d2fe6ecc722e5bc952e0c2539ac",
+      "bytes": 126384,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 15,
+          "name": "Dustwallow Marsh",
+          "uiMapID": 1445,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 46.8,
+            "xMax": 47,
+            "yMin": 17.4,
+            "yMax": 18.9
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14339",
+      "title": "Death Howl - NPC - WoW Forever",
+      "sha256": "82247290dd2590a1639081aec3674221fe5cc1a2f6fe803062afb60ebf2b6e63",
+      "bytes": 137732,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 361,
+          "name": "Felwood",
+          "uiMapID": 1448,
+          "pointCount": 16,
+          "bounds": {
+            "xMin": 47.4,
+            "xMax": 56.8,
+            "yMin": 76.2,
+            "yMax": 90
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=227853",
+      "title": "Pix Xizzix - NPC - Forever",
+      "sha256": "609195a2db255c1d0705ff5fffa77e57537321eede9d863d5da790c95102f850",
+      "bytes": 87042,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 33,
+          "name": "Stranglethorn Vale",
+          "uiMapID": 1434,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 28.4,
+            "xMax": 28.4,
+            "yMin": 75.8,
+            "yMax": 75.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=233335",
+      "title": "Rune Broker - NPC - Forever",
+      "sha256": "4017d36fa7f50acc09f9f4b33e26983548d790d6be555643688785a77a58728b",
+      "bytes": 281339,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1,
+          "name": "Dun Morogh",
+          "uiMapID": 1426,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 29.4,
+            "xMax": 29.6,
+            "yMin": 72,
+            "yMax": 72
+          }
+        },
+        {
+          "zoneID": 12,
+          "name": "Elwynn Forest",
+          "uiMapID": 1429,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 48,
+            "xMax": 48.2,
+            "yMin": 41.4,
+            "yMax": 41.6
+          }
+        },
+        {
+          "zoneID": 141,
+          "name": "Teldrassil",
+          "uiMapID": 1438,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 58.8,
+            "xMax": 58.8,
+            "yMin": 43.8,
+            "yMax": 43.8
+          }
+        },
+        {
+          "zoneID": 1519,
+          "name": "Stormwind City",
+          "uiMapID": 1453,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 57.4,
+            "xMax": 57.6,
+            "yMin": 26.8,
+            "yMax": 27
+          }
+        },
+        {
+          "zoneID": 1537,
+          "name": "Ironforge",
+          "uiMapID": 1455,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 53,
+            "xMax": 53.8,
+            "yMin": 12.2,
+            "yMax": 13.6
+          }
+        },
+        {
+          "zoneID": 1657,
+          "name": "Darnassus",
+          "uiMapID": 1457,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 28.4,
+            "xMax": 29,
+            "yMin": 38.4,
+            "yMax": 39
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=233428",
+      "title": "Rune Broker - NPC - Forever",
+      "sha256": "5f0565dd6ae142b8b218b7392e1ed8f722ae864b2412532752840277867757c9",
+      "bytes": 281104,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 14,
+          "name": "Durotar",
+          "uiMapID": 1411,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 42.8,
+            "xMax": 42.8,
+            "yMin": 68,
+            "yMax": 68
+          }
+        },
+        {
+          "zoneID": 85,
+          "name": "Tirisfal Glades",
+          "uiMapID": 1420,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 31.4,
+            "xMax": 31.4,
+            "yMin": 66.4,
+            "yMax": 66.6
+          }
+        },
+        {
+          "zoneID": 215,
+          "name": "Mulgore",
+          "uiMapID": 1412,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 44.4,
+            "xMax": 44.4,
+            "yMin": 76.6,
+            "yMax": 76.6
+          }
+        },
+        {
+          "zoneID": 1497,
+          "name": "Undercity",
+          "uiMapID": 1458,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 79.2,
+            "xMax": 79.8,
+            "yMin": 19.4,
+            "yMax": 20.6
+          }
+        },
+        {
+          "zoneID": 1637,
+          "name": "Orgrimmar",
+          "uiMapID": 1454,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 49.2,
+            "xMax": 49.6,
+            "yMin": 46.2,
+            "yMax": 46.8
+          }
+        },
+        {
+          "zoneID": 1638,
+          "name": "Thunder Bluff",
+          "uiMapID": 1456,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 22.6,
+            "xMax": 22.8,
+            "yMin": 12.8,
+            "yMax": 13.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=255247",
+      "title": "Swarming Imp - NPC - Forever",
+      "sha256": "865fb277ffdf8e79e8e2ce9e46b1814becb68da2d80cc8f574384de16788b636",
+      "bytes": 58094,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16,
+          "name": "Azshara",
+          "uiMapID": 1447,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 35.2,
+            "xMax": 36.6,
+            "yMin": 24.4,
+            "yMax": 29.4
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=255897",
+      "title": "Friz Frazzlespark - NPC - Forever",
+      "sha256": "928ce5f5bfbfbe38126114f4cd37af1c5e728215834e733186e37ab639e7a884",
+      "bytes": 80315,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16591,
+          "name": "Riverglades",
+          "uiMapID": 2548,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 77,
+            "xMax": 77,
+            "yMin": 52.8,
+            "yMax": 52.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=255391",
+      "title": "Overseer Wrex - NPC - WoW Forever",
+      "sha256": "c2fc695392baf283348faad9f57a40515414e7fd4e49c375dfeffbda38eeaf43",
+      "bytes": 64875,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1198",
+      "title": "Rallic Finn - NPC - WoW Forever",
+      "sha256": "b1c72f02d5f6e8e152b0e7d6c26c3a19e302ea419da8cff2d6ccc37b4943f228",
+      "bytes": 61776,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 12,
+          "name": "Elwynn Forest",
+          "uiMapID": 1429,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 83.2,
+            "xMax": 83.2,
+            "yMin": 66,
+            "yMax": 66
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=255997",
+      "title": "Tidemistress Ca'zass - NPC - WoW Forever",
+      "sha256": "2c6236126f0fbc234da9533443ea9c982076aec9e3b4c35554d619b9ceb2bb1f",
+      "bytes": 58778,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11058",
+      "title": "Ezra Grimm - NPC - WoW Forever",
+      "sha256": "0a228e751e9c1c39c319957bd3d1f698a59284bdd39e8fade1b4faf12194f545",
+      "bytes": 99730,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=260042",
+      "title": "Captain Dreadrise - NPC - Forever",
+      "sha256": "ce9a23f47ec0196a19b922795f5e0f555cf26f5fb4c3d4b1661f15335333d39b",
+      "bytes": 47938,
+      "publishedLocationFootprints": []
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=263569",
+      "title": "Bryanna Embreeze - NPC - Forever",
+      "sha256": "89f7917b426e6a9511085bd7e2dbe49b69afa12c18321f62ec0c3152001ce4bf",
+      "bytes": 91817,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 17,
+          "name": "The Barrens",
+          "uiMapID": 1413,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 63.4,
+            "xMax": 63.4,
+            "yMin": 58.6,
+            "yMax": 58.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=263570",
+      "title": "Creeg Bothunk - NPC - Forever",
+      "sha256": "d218768609758ec9e375c6caa73ca9456472f22e390e71721ead16f2fb71eb2c",
+      "bytes": 97808,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 17,
+          "name": "The Barrens",
+          "uiMapID": 1413,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 65,
+            "xMax": 65,
+            "yMin": 34.4,
+            "yMax": 34.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=265575",
+      "title": "Gezzy Gunkgear - NPC - Forever",
+      "sha256": "3dff58f0ca81e36ccb029e45cd18f957752724cd417156d61897bebf64ffcbd4",
+      "bytes": 48097,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 33,
+          "name": "Stranglethorn Vale",
+          "uiMapID": 1434,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 28.2,
+            "xMax": 28.2,
+            "yMin": 74.8,
+            "yMax": 74.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=265576",
+      "title": "Rettrick - NPC - Forever",
+      "sha256": "37dbf601465d11d24cb002a7bac5ffb4605fbae8f26d66e166c4c7bab0060254",
+      "bytes": 48081,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 440,
+          "name": "Tanaris",
+          "uiMapID": 1446,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 51.6,
+            "xMax": 51.6,
+            "yMin": 28.6,
+            "yMax": 28.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3015",
+      "title": "Kuna Thunderhorn - NPC - Forever",
+      "sha256": "d959fdb581bec44bb71dfa773a0e435441ec18e0364f5ae96e644741ce3e48e5",
+      "bytes": 61985,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1638,
+          "name": "Thunder Bluff",
+          "uiMapID": 1456,
+          "pointCount": 7,
+          "bounds": {
+            "xMin": 46.4,
+            "xMax": 46.8,
+            "yMin": 44.4,
+            "yMax": 46.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3410",
+      "title": "Jin'sora - NPC - Forever",
+      "sha256": "4d29869dbfce55081f610e989278b5465c9ec467f808e5fac752f0720ea1bb8d",
+      "bytes": 59131,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1637,
+          "name": "Orgrimmar",
+          "uiMapID": 1454,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 77.4,
+            "xMax": 77.8,
+            "yMin": 38.4,
+            "yMax": 38.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=4173",
+      "title": "Landria - NPC - Forever",
+      "sha256": "1333b95a3f41bdeefb3de798f4a1a92fc8683a444b04493e3fa404a21c75136f",
+      "bytes": 56171,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1657,
+          "name": "Darnassus",
+          "uiMapID": 1457,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 63,
+            "xMax": 63.2,
+            "yMin": 66.4,
+            "yMax": 67.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=4604",
+      "title": "Abigail Sawyer - NPC - Forever",
+      "sha256": "154ec9fb7d17609d8104b5d14016c69dcb050d8d233c18a6d63f4f9a2175aab5",
+      "bytes": 55129,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1497,
+          "name": "Undercity",
+          "uiMapID": 1458,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 54.8,
+            "xMax": 55,
+            "yMin": 37.4,
+            "yMax": 38.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=5122",
+      "title": "Skolmin Goldfury - NPC - Forever",
+      "sha256": "42f1aa3999a0fe9980b123cc4ec7db91886c24bf8e7ef0257f76ca123b4dacda",
+      "bytes": 59262,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1537,
+          "name": "Ironforge",
+          "uiMapID": 1455,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 71.2,
+            "xMax": 72.6,
+            "yMin": 65.4,
+            "yMax": 67.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=256236",
+      "title": "The Questioner - NPC - WoW Forever",
+      "sha256": "74d0fb9328389d56289f8b5f07998ebff662854ab2561d41ccb9140e4cc98ab1",
+      "bytes": 56391,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=257422",
+      "title": "Railee Thriceforged - NPC - WoW Forever",
+      "sha256": "e057d3f8668a7c027eb634f2819a2bcd153ed7bd7c30c0182120bd66c9f1d772",
+      "bytes": 62812,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 59,
+            "xMax": 59,
+            "yMin": 75.4,
+            "yMax": 75.4
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=257016",
+      "title": "Katerina the Cleaner - NPC - WoW Forever",
+      "sha256": "d5a3a819cce4a2dca40a3b529f22ec70cd0cc9ec44548e7b025f528785629998",
+      "bytes": 62068,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=251902",
+      "title": "Illaya Amberwind - NPC - Forever",
+      "sha256": "0c46299bc17c61bf2ec9d3b1afa40d38bceaacba91e940c903501a6058bd2547",
+      "bytes": 49437,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 43.4,
+            "xMax": 43.6,
+            "yMin": 44.8,
+            "yMax": 44.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11802",
+      "title": "Dendrite Starblaze - NPC - Forever",
+      "sha256": "45b25620a68ff944c17e443fc995a85d9276599c0bd9a4f906454c436da6b031",
+      "bytes": 73193,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 493,
+          "name": "Moonglade",
+          "uiMapID": 1450,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 56.2,
+            "xMax": 56.2,
+            "yMin": 30.4,
+            "yMax": 30.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=252172",
+      "title": "Danarii Bellowveil - NPC - Forever",
+      "sha256": "e4baf8a1ff424b68162657d4a1998bb83f6f682560efd64deb6e26f43b40d667",
+      "bytes": 45015,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 45.2,
+            "xMax": 45.2,
+            "yMin": 45.2,
+            "yMax": 45.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=251684",
+      "title": "Strange Hermit - NPC - WoW Forever",
+      "sha256": "4e92040df3f796ae0bf1ad6790770e80fa2ffe50a91a7af78f3dee14b4da036e",
+      "bytes": 70016,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 54,
+            "xMax": 54,
+            "yMin": 39,
+            "yMax": 39
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=252378",
+      "title": "Yorana Windyreed - NPC - WoW Forever",
+      "sha256": "0650a6627c30f174c2336d4217fc8015c916cb97ca59f3a82be44b8d0c77ae1e",
+      "bytes": 58427,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 69.4,
+            "xMax": 69.6,
+            "yMin": 67,
+            "yMax": 67.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=251968",
+      "title": "Ayessa Dawnsinger - NPC - WoW Forever",
+      "sha256": "7c8339349a773c4b0ce79eeb052b033ea8d49a49daa25176c78ac6d08022e302",
+      "bytes": 68764,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 59,
+            "xMax": 59,
+            "yMin": 79.6,
+            "yMax": 79.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=252383",
+      "title": "Valennia Stormfist - NPC - WoW Forever",
+      "sha256": "2aa630f229a96ebd0bb7fded953e21e37fd072bae227a40e7ca32c9ffc3e105a",
+      "bytes": 71490,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 66.2,
+            "xMax": 66.2,
+            "yMin": 76.6,
+            "yMax": 76.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=252475",
+      "title": "Elaadrin Evengale - NPC - WoW Forever",
+      "sha256": "b234cb1092cf12fbb3931067d7d2f7ea5754df38bdc7abbec2ace8a74c6dd0e6",
+      "bytes": 69852,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 66.4,
+            "xMax": 66.6,
+            "yMin": 79.8,
+            "yMax": 79.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=253372",
+      "title": "Dead Cultist - NPC - WoW Forever",
+      "sha256": "6e72474cb7da31ba854fe0d6f60aec139781d89bf465935168ca24e108c5c167",
+      "bytes": 55040,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 56,
+            "xMax": 56,
+            "yMin": 58.8,
+            "yMax": 58.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=252476",
+      "title": "Talaanis Shadowsong - NPC - WoW Forever",
+      "sha256": "2ed74ff757fd4f510a8718c396d5118846014ada9449d918e9c8b592a0f878ba",
+      "bytes": 61023,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 66.2,
+            "xMax": 66.2,
+            "yMin": 76.4,
+            "yMax": 76.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3033",
+      "title": "Turak Runetotem - NPC - Forever",
+      "sha256": "3e49189fbdda94e46b27a48f63e3262362f1e2e6d165189d49a01e7ae4212669",
+      "bytes": 225312,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1638,
+          "name": "Thunder Bluff",
+          "uiMapID": 1456,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 76.4,
+            "xMax": 76.6,
+            "yMin": 27.4,
+            "yMax": 27.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=4217",
+      "title": "Mathrengyl Bearwalker - NPC - Forever",
+      "sha256": "16d88ee7947815dd99c91154b15a1c9e235e4bd216760aeec4f54e74f3755649",
+      "bytes": 250063,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1657,
+          "name": "Darnassus",
+          "uiMapID": 1457,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 34.8,
+            "xMax": 35.2,
+            "yMin": 7.4,
+            "yMax": 8.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=253590",
+      "title": "Valennia Stormfist - NPC - WoW Forever",
+      "sha256": "bc44a2938862666c1c205d2b63981ae9e3652a35f5bf38bcbfdb936bff186934",
+      "bytes": 55591,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 65.2,
+            "xMax": 65.2,
+            "yMin": 50.4,
+            "yMax": 50.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=259012",
+      "title": "Ealaane Nimbuswalker - NPC - WoW Forever",
+      "sha256": "4c921fed095086763e0beb652cb5cc4911963fac01537515484e4752bad07390",
+      "bytes": 57104,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 65.8,
+            "xMax": 65.8,
+            "yMin": 74.4,
+            "yMax": 74.4
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=254151",
+      "title": "Vayn Moongaze - NPC - WoW Forever",
+      "sha256": "2b94ca3a48c8199e2ef489044c3d0722a383cf9e01601abff0b14e1ca1aaf0a6",
+      "bytes": 99351,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 63.3,
+            "xMax": 64.1,
+            "yMin": 36,
+            "yMax": 38.1
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1748",
+      "title": "Highlord Bolvar Fordragon - NPC - Forever",
+      "sha256": "54cb9df3464ae677fb636c1d8d8bad50d3c56628da0f26a94a5c3933c4fb1530",
+      "bytes": 115523,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1519,
+          "name": "Stormwind City",
+          "uiMapID": 1453,
+          "pointCount": 6,
+          "bounds": {
+            "xMin": 77.4,
+            "xMax": 80,
+            "yMin": 18,
+            "yMax": 38.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=4949",
+      "title": "Thrall - NPC - Forever",
+      "sha256": "8b4a791679869cf35d918efb4373ed65fc256f02fec12ca9109c7aea732846a3",
+      "bytes": 135676,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1637,
+          "name": "Orgrimmar",
+          "uiMapID": 1454,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 32,
+            "xMax": 32,
+            "yMin": 37.8,
+            "yMax": 37.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=610954",
+      "title": "Bounty Available: Vulgara the Insatiable! - Object - WoW Forever",
+      "sha256": "3efdc4e54ab756f3100144fcc9f44d4d3ef038d77a71c86ca09b039cab1cc9a4",
+      "bytes": 53649,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 43.4,
+            "xMax": 43.5,
+            "yMin": 45.8,
+            "yMax": 45.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1187",
+      "title": "Daryl the Youngling - NPC - Forever",
+      "sha256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+      "bytes": 56060,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 38,
+          "name": "Loch Modan",
+          "uiMapID": 1432,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 83.4,
+            "xMax": 83.4,
+            "yMin": 65.2,
+            "yMax": 65.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11079",
+      "title": "Wynd Nightchaser - NPC - Forever",
+      "sha256": "88442b11094244a82abdf0490fb2ab7cae43d2cfdac8af74dad4357ead924a69",
+      "bytes": 48189,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 618,
+          "name": "Winterspring",
+          "uiMapID": 1452,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 52,
+            "xMax": 52,
+            "yMin": 30.2,
+            "yMax": 30.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1139",
+      "title": "Magistrate Bluntnose - NPC - Forever",
+      "sha256": "8f32ca1b508ec865793c92810fd5201a4c6e089073f52ce58ec116d84abc1c39",
+      "bytes": 46975,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 38,
+          "name": "Loch Modan",
+          "uiMapID": 1432,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 34.6,
+            "xMax": 34.6,
+            "yMin": 43.2,
+            "yMax": 44.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1217",
+      "title": "Glorin Steelbrow - NPC - Forever",
+      "sha256": "e0f240108ff0d44b921528bab4d7bcd13ec1f63b2ded5fb007df0759a275875d",
+      "bytes": 48510,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 11,
+          "name": "Wetlands",
+          "uiMapID": 1437,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 10.6,
+            "xMax": 10.6,
+            "yMin": 60.4,
+            "yMax": 60.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1284",
+      "title": "Archbishop Benedictus - NPC - Forever",
+      "sha256": "01d3ad1fb2c6e73be13154693b1b61e654f2bf792ab5368afe4af03815c0ba2b",
+      "bytes": 91492,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1519,
+          "name": "Stormwind City",
+          "uiMapID": 1453,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 39.4,
+            "xMax": 39.6,
+            "yMin": 27.4,
+            "yMax": 27.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=15176",
+      "title": "Vargus - NPC - Forever",
+      "sha256": "e17e6e64a7c5bf9791ab13dfcb90aabe396886704878255981f8cb64d06c8ce1",
+      "bytes": 75094,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1377,
+          "name": "Silithus",
+          "uiMapID": 1451,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 51.2,
+            "xMax": 51.2,
+            "yMin": 38.8,
+            "yMax": 38.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=234",
+      "title": "Gryan Stoutmantle - NPC - Forever",
+      "sha256": "1b420412c9abba38337dbfc6d92ed368df0b7c9db674456076da31d66fa66d35",
+      "bytes": 75977,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 40,
+          "name": "Westfall",
+          "uiMapID": 1436,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 56.2,
+            "xMax": 56.2,
+            "yMin": 47.4,
+            "yMax": 47.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=2078",
+      "title": "Athridas Bearmantle - NPC - Forever",
+      "sha256": "86ee874deb2e0c8ed64f59553c77d49cd863ba35bb5fd9d3999279f139990e44",
+      "bytes": 50457,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 141,
+          "name": "Teldrassil",
+          "uiMapID": 1438,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 56,
+            "xMax": 56,
+            "yMin": 57.4,
+            "yMax": 57.4
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=263",
+      "title": "Lord Ello Ebonlocke - NPC - Forever",
+      "sha256": "337532504589f43fd9e547ce7fd7cd1ca8901781da515195aca2a1c8c274c1d6",
+      "bytes": 59820,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 10,
+          "name": "Duskwood",
+          "uiMapID": 1431,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 71.8,
+            "xMax": 72,
+            "yMin": 46.4,
+            "yMax": 46.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=3516",
+      "title": "Arch Druid Fandral Staghelm - NPC - Forever",
+      "sha256": "9db5460d9cd8b9cbff9763e08f4f813c54a95b1e72dfed1f9b3b06dbe69a120e",
+      "bytes": 107556,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1657,
+          "name": "Darnassus",
+          "uiMapID": 1457,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 34.4,
+            "xMax": 34.8,
+            "yMin": 8.4,
+            "yMax": 8.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=5397",
+      "title": "Uthek the Wise - NPC - Forever",
+      "sha256": "e11cf28ef403e2d4c53e1d6e5c7b4cb4c671710bcf4e24dd4d423a254cdfccc0",
+      "bytes": 64676,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 405,
+          "name": "Desolace",
+          "uiMapID": 1443,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 36.2,
+            "xMax": 36.2,
+            "yMin": 79.2,
+            "yMax": 79.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=253066",
+      "title": "Umarak - NPC - Forever",
+      "sha256": "d5e299ef35873b07f10b4a63bb649570c8a428153fd3e1d4705c91910b9fa93b",
+      "bytes": 44757,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 405,
+          "name": "Desolace",
+          "uiMapID": 1443,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 43.4,
+            "xMax": 43.6,
+            "yMin": 78.6,
+            "yMax": 78.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=5398",
+      "title": "Warug - NPC - Forever",
+      "sha256": "2772db3d0874454e9c789391e3101c2dc59eaa9a3ebe88e7ba3a0b67b76f0860",
+      "bytes": 61867,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 405,
+          "name": "Desolace",
+          "uiMapID": 1443,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 74.8,
+            "xMax": 74.8,
+            "yMin": 68,
+            "yMax": 68
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=5768",
+      "title": "Ebru - NPC - Forever",
+      "sha256": "b5e7c9149f479daefebc341d106cc256e752e678313013158d2409ab50cfcbc4",
+      "bytes": 86705,
+      "publishedLocationFootprints": [
+        {
+          "name": "Kalimdor",
+          "zoneID": -6
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=14368",
+      "title": "Lorekeeper Lydros - NPC - WoW Forever",
+      "sha256": "a447b7109caaafccecf5e96ac109211b64a6b44e127f1b215930edada7630a3c",
+      "bytes": 77275,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=7802",
+      "title": "Galvan the Ancient - NPC - Forever",
+      "sha256": "599c881bf1099ba3b9f50bad806c4b3b3cf06b3c26957971ccc354034dd2b34c",
+      "bytes": 76067,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 33,
+          "name": "Stranglethorn Vale",
+          "uiMapID": 1434,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 50.4,
+            "xMax": 50.6,
+            "yMin": 20.4,
+            "yMax": 20.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=6171",
+      "title": "Duthorian Rall - NPC - WoW Forever",
+      "sha256": "679e2a8804d69a86fd8b1835367b49feedb981021d64ffd03ceb677c3c7040b2",
+      "bytes": 63371,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1519,
+          "name": "Stormwind City",
+          "uiMapID": 1453,
+          "pointCount": 7,
+          "bounds": {
+            "xMin": 39.4,
+            "xMax": 50.6,
+            "yMin": 29.4,
+            "yMax": 47.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=6182",
+      "title": "Daphne Stilwell - NPC - WoW Forever",
+      "sha256": "19528d4cd1d3215c5d474eeda0c512e5924b30c7ac6fef7240e52aa18f4cfdef",
+      "bytes": 109358,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 40,
+          "name": "Westfall",
+          "uiMapID": 1436,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 41.4,
+            "xMax": 42.6,
+            "yMin": 88.4,
+            "yMax": 88.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11140",
+      "title": "Egan - NPC - WoW Forever",
+      "sha256": "f920aa0194122c1503776181d9890580e7be5639d842745d6b773abe4445d88f",
+      "bytes": 61678,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 14.4,
+            "xMax": 14.6,
+            "yMin": 33.4,
+            "yMax": 33.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10684",
+      "title": "Remorseful Highborne - NPC - Forever",
+      "sha256": "ee530d5835aedfdaac5f403b052f801512ff2dbf3c517d13aded2e4720e4a307",
+      "bytes": 62815,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 618,
+          "name": "Winterspring",
+          "uiMapID": 1452,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 56,
+            "xMax": 56.2,
+            "yMin": 43.4,
+            "yMax": 44.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=10304",
+      "title": "Aurora Skycaller - NPC - Forever",
+      "sha256": "fb45d2322d251a87a713e091e6f1ec6943c55e3fa26879ec0c63665f34bcf47b",
+      "bytes": 63012,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 53.4,
+            "xMax": 53.6,
+            "yMin": 22,
+            "yMax": 22
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=253177",
+      "title": "Nerlokh - NPC - Forever",
+      "sha256": "8b976e109f5ada504af4c877be66421bc0da3938f468df2391610eab5ac42dca",
+      "bytes": 48186,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 405,
+          "name": "Desolace",
+          "uiMapID": 1443,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 58.4,
+            "xMax": 58.4,
+            "yMin": 88.6,
+            "yMax": 88.6
+          }
+        },
+        {
+          "zoneID": 16651,
+          "name": "Shen'dralas",
+          "uiMapID": 2652,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 20.8,
+            "xMax": 21,
+            "yMin": 22,
+            "yMax": 22.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=2107",
+      "title": "Gaerolas Talvethren - NPC - WoW Forever",
+      "sha256": "e46bafa1d58ed22448a0b24b0fb90a64d703683912256809846f767640e7460b",
+      "bytes": 56453,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 141,
+          "name": "Teldrassil",
+          "uiMapID": 1438,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 66.2,
+            "xMax": 66.2,
+            "yMin": 58.4,
+            "yMax": 58.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=1239",
+      "title": "First Mate Fitzsimmons - NPC - WoW Forever",
+      "sha256": "d1a8998099b3f89e570992b274f73608224dad0351271d434042db331fa1b2f3",
+      "bytes": 65116,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 11,
+          "name": "Wetlands",
+          "uiMapID": 1437,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 10.8,
+            "xMax": 10.8,
+            "yMin": 59.4,
+            "yMax": 59.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=11038",
+      "title": "Caretaker Alen - NPC - WoW Forever",
+      "sha256": "0be30a44281f4b8bac13c2ccec1c39d2b2501523c00b21511e27e71cfdc5ddfa",
+      "bytes": 105224,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 139,
+          "name": "Eastern Plaguelands",
+          "uiMapID": 1423,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 79.4,
+            "xMax": 79.6,
+            "yMin": 63.4,
+            "yMax": 63.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=6181",
+      "title": "Jordan Stilwell - NPC - Forever",
+      "sha256": "a2dcda477ace7e4e7ff7d8782691b4ffd8f2cabe852f61b136e9faae8ebb80e3",
+      "bytes": 63700,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1,
+          "name": "Dun Morogh",
+          "uiMapID": 1426,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 52.4,
+            "xMax": 52.6,
+            "yMin": 36.8,
+            "yMax": 36.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=467",
+      "title": "The Defias Traitor - NPC - WoW Forever",
+      "sha256": "dca97da9f20441ef9fd1917ab32b24983b407735e416e589a0190afe23d1895d",
+      "bytes": 76254,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 40,
+          "name": "Westfall",
+          "uiMapID": 1436,
+          "pointCount": 16,
+          "bounds": {
+            "xMin": 43.1,
+            "xMax": 57.4,
+            "yMin": 47.4,
+            "yMax": 70.2
+          }
+        },
+        {
+          "name": "Eastern Kingdoms",
+          "zoneID": -3
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=5396",
+      "title": "Captain Pentigast - NPC - WoW Forever",
+      "sha256": "c77f21e030fb37dcea71e8f344dbc45665f6a02068a516fa3c6da0f9954efbec",
+      "bytes": 54354,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 405,
+          "name": "Desolace",
+          "uiMapID": 1443,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 66.4,
+            "xMax": 66.6,
+            "yMin": 10.8,
+            "yMax": 11
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=5412",
+      "title": "Gurda Wildmane - NPC - WoW Forever",
+      "sha256": "35cfce871a1a4009343f4896aa0fbfbaccd0496427bc4e6ee4e6bedff812d47d",
+      "bytes": 62303,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 405,
+          "name": "Desolace",
+          "uiMapID": 1443,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 56.2,
+            "xMax": 56.2,
+            "yMin": 59.4,
+            "yMax": 59.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=256",
+      "title": "WANTED - Object - WoW Forever",
+      "sha256": "2de93a7b4e9bdea99307804cb11eefee546772d4bc1ed8cf3c98811c7c5afd33",
+      "bytes": 54684,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 38,
+          "name": "Loch Modan",
+          "uiMapID": 1432,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 37.2,
+            "xMax": 37.2,
+            "yMin": 46.4,
+            "yMax": 46.5
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=424005",
+      "title": "Pocket Litter - Object - WoW Forever",
+      "sha256": "fd0c80757666a667f558a8594192014b598896e62a6b1394e92149f071800704",
+      "bytes": 69286,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 406,
+          "name": "Stonetalon Mountains",
+          "uiMapID": 1442,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 40.7,
+            "xMax": 40.8,
+            "yMin": 52.4,
+            "yMax": 52.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=424012",
+      "title": "Mound of Dirt - Object - WoW Forever",
+      "sha256": "dae2d494a31f415c549f6e0ce6226eea2fc9094b0cba65e91df46a64b9dd7575",
+      "bytes": 59773,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 406,
+          "name": "Stonetalon Mountains",
+          "uiMapID": 1442,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 39.6,
+            "xMax": 39.6,
+            "yMin": 49.9,
+            "yMax": 49.9
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=112948",
+      "title": "Intrepid's Locked Strongbox - Object - WoW Forever",
+      "sha256": "74a54cb11a0f255b55fd3dfcc1f2fb22e6705a16b3b90151404f19bd2df2d1b6",
+      "bytes": 55696,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 11,
+          "name": "Wetlands",
+          "uiMapID": 1437,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 14.3,
+            "xMax": 14.5,
+            "yMin": 24,
+            "yMax": 24.1
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=406918",
+      "title": "Messenger Bag - Object - WoW Forever",
+      "sha256": "7ac5d8637bb8273389f211c6a34014090f2e3a58dbb0481b9a8f3b9dc81aafa8",
+      "bytes": 56577,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 45,
+          "name": "Arathi Highlands",
+          "uiMapID": 1417,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 22.4,
+            "xMax": 22.5,
+            "yMin": 24.2,
+            "yMax": 24.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=415106",
+      "title": "Burned-Out Remains - Object - WoW Forever",
+      "sha256": "969e138805bbc07dd850c8c61c57ba144a102f01fb798a78330629f83ec57cd4",
+      "bytes": 63889,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 17,
+          "name": "The Barrens",
+          "uiMapID": 1413,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 46.3,
+            "xMax": 46.3,
+            "yMin": 73.9,
+            "yMax": 73.9
+          }
+        },
+        {
+          "zoneID": 40,
+          "name": "Westfall",
+          "uiMapID": 1436,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 37.4,
+            "xMax": 37.5,
+            "yMin": 50.6,
+            "yMax": 50.7
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=424006",
+      "title": "Hastily Rolled-Up Satchel - Object - WoW Forever",
+      "sha256": "7e1d8be5bf497509ae9dd8bcfc4cfc726288334e06ed4088c4eb4877b3b97712",
+      "bytes": 55155,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 45,
+          "name": "Arathi Highlands",
+          "uiMapID": 1417,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 22.4,
+            "xMax": 22.5,
+            "yMin": 24.2,
+            "yMax": 24.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=424007",
+      "title": "Carved Figurine - Object - WoW Forever",
+      "sha256": "48b33f403f3e45c5ec73f77e105b6876d60597da96a846d102aca4fcd7fdf1fe",
+      "bytes": 53872,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 38,
+          "name": "Loch Modan",
+          "uiMapID": 1432,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 49.4,
+            "xMax": 49.5,
+            "yMin": 12.8,
+            "yMax": 12.9
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/object=415107",
+      "title": "Burned-Out Remains - Object - WoW Forever",
+      "sha256": "4969e682bf3cde55c4cbb7ee4c9f7f2a2cfb5397680114f1ccdf0bac73ee3628",
+      "bytes": 71346,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 40,
+          "name": "Westfall",
+          "uiMapID": 1436,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 37.4,
+            "xMax": 37.5,
+            "yMin": 50.4,
+            "yMax": 50.7
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=236573",
+      "title": "Gatekeeper Rageroar - NPC - WoW Forever",
+      "sha256": "6ed41a9d8542961cd9170ee6d652da54f98fb45d7b4f2507b3a4dcaa78085f79",
+      "bytes": 55307,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16,
+          "name": "Azshara",
+          "uiMapID": 1447,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 42.4,
+            "xMax": 42.4,
+            "yMin": 20.2,
+            "yMax": 20.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=236770",
+      "title": "Korsa - NPC - WoW Forever",
+      "sha256": "339b44912075710506332b7f0f61bbe7f074598b0072266ed925d2a23ab18a9b",
+      "bytes": 54456,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16,
+          "name": "Azshara",
+          "uiMapID": 1447,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 62.8,
+            "xMax": 63,
+            "yMin": 21.4,
+            "yMax": 21.6
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=16013",
+      "title": "Deliana - NPC - WoW Forever",
+      "sha256": "877b22635972d7337ebfb2c70aa3e413f4fd98706d10d2195a5d85ccbbb9c14b",
+      "bytes": 151418,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1537,
+          "name": "Ironforge",
+          "uiMapID": 1455,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 42.4,
+            "xMax": 43.6,
+            "yMin": 51.4,
+            "yMax": 53.2
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=265003",
+      "title": "Thom Filch - NPC - Forever",
+      "sha256": "16d7e2b47bde674521a35e8d2cbb1608bd27f0ca621880da1b77c2a00c626231",
+      "bytes": 51281,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1537,
+          "name": "Ironforge",
+          "uiMapID": 1455,
+          "pointCount": 6,
+          "bounds": {
+            "xMin": 31.4,
+            "xMax": 32.6,
+            "yMin": 44.4,
+            "yMax": 45.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=16016",
+      "title": "Anthion Harmon - NPC - WoW Forever",
+      "sha256": "c2644fe95d854e6e3e7ea0de1539c58a068a4ada7bdd61c4b87faedbe63fa402",
+      "bytes": 89832,
+      "publishedLocationFootprints": [
+        {
+          "name": "Eastern Kingdoms",
+          "zoneID": -3
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=16012",
+      "title": "Mokvar - NPC - WoW Forever",
+      "sha256": "3c8dc9611712665686ebfa548ee386fab3def33914b8f578f00a99776df0db6a",
+      "bytes": 108157,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1637,
+          "name": "Orgrimmar",
+          "uiMapID": 1454,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 34.4,
+            "xMax": 35.2,
+            "yMin": 37.4,
+            "yMax": 38
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=252377",
+      "title": "Seena Skybreaker - NPC - WoW Forever",
+      "sha256": "a161b06a7d5c102bbda0c8a4fef6489c9318f2863abb20ccc79c20c58574a325",
+      "bytes": 141040,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 1,
+          "bounds": {
+            "xMin": 59.8,
+            "xMax": 59.8,
+            "yMin": 72.8,
+            "yMax": 72.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=237007",
+      "title": "Graal - NPC - WoW Forever",
+      "sha256": "638739b45f83d1a61cb2d9999d3eee861b18fb65e6a1a1132611ea38f84cbec2",
+      "bytes": 51981,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16,
+          "name": "Azshara",
+          "uiMapID": 1447,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 62.8,
+            "xMax": 66.8,
+            "yMin": 14.4,
+            "yMax": 17.8
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=16033",
+      "title": "Bodley - NPC - WoW Forever",
+      "sha256": "f51bc9ea195cf4ecc1f3ad0184ef6b5332bf88059750ff8f5e88e2665baaf97e",
+      "bytes": 76404,
+      "publishedLocationFootprints": []
+    }
+  ]
+}

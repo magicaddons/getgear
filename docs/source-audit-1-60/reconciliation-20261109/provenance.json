@@ -12,24 +12,24 @@
     "sha256": "aef5079582fab365a0f12f712d0260a0c65992633919e01652b5450dfe00ba04"
   },
   "https://playfulls.com/database": {
-    "bytes": 142394,
-    "sha256": "3bd9c6076f787aea935233ff55ae678c1542d8dbd6f5d5e27f7a0d4912ff2d79"
+    "bytes": 142458,
+    "sha256": "195d5ab0363fb3b4bb22c46e05f2cb87ade8a7b5d708321792bf284928988459"
   },
-  "https://playfulls.com/db/meta.7f7d5e4131.json": {
+  "https://playfulls.com/db/meta.0e7cbeb63a.json": {
     "bytes": 1010725,
-    "sha256": "7f7d5e4131f309e16aad68ab3ee23dec483f1b218e8ae6a319439dfeeef92e1a"
+    "sha256": "0e7cbeb63a4294d8ff4570376deca6e571a9574f384f56cdbf2fca0fda1dd5d5"
   },
-  "https://playfulls.com/db/gear.3dd56ea4d7.json": {
-    "bytes": 1360916,
-    "sha256": "3dd56ea4d7bb69ad1c99b6046db30984ac3e2bf83adbb3b0bd11bfdc19a63cfd"
+  "https://playfulls.com/db/gear.7daaa7fa10.json": {
+    "bytes": 1362266,
+    "sha256": "7daaa7fa10fdca9829d2f5f43f4a0933d6be3aebe237a1116e84b6cd6bc1a564"
   },
-  "https://playfulls.com/db/goods.0dd030350d.json": {
-    "bytes": 466933,
-    "sha256": "0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53"
+  "https://playfulls.com/db/goods.d1c0ec28ff.json": {
+    "bytes": 467019,
+    "sha256": "d1c0ec28ff70e9d2729b33254fdff3d3502e957e10d8e4ecbe02f7363c19cadc"
   },
-  "https://playfulls.com/db/other.d4891008c4.json": {
-    "bytes": 446812,
-    "sha256": "d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140"
+  "https://playfulls.com/db/other.5de76c51ed.json": {
+    "bytes": 446887,
+    "sha256": "5de76c51ed122dea87862e4c33273495735b25badd90f65c72d63fde324614ac"
   },
   "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json": {
     "bytes": 18590138,
@@ -40,20 +40,20 @@
     "sha256": "327e721b2e734dc25f29e60cd2189ac3d93bf610d030c7a80b249ccdd8124b08"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500": {
-    "bytes": 103442,
-    "sha256": "baaaaa7031445e0251417b742297e673b74110331d0fa52b0154796148c32273"
+    "bytes": 103440,
+    "sha256": "fa0d8626113b3a776d105b568807d56aed2ea3f935988c505321ad89c02664c4"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
-    "bytes": 103495,
-    "sha256": "0218c8f1d29cec8af827366814610ef74a2ee87244e62ae00a89d6cba34b38a9"
+    "bytes": 103414,
+    "sha256": "fec74cdae5404abd4775f70a1b3e612d7cc2d61a803bc039a3b97bedf41dc00b"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
-    "bytes": 103456,
-    "sha256": "e04016e567c5b97780b19b8a0a1a219d8e7ee97eae8ca61dc236d793ece1cad1"
+    "bytes": 103631,
+    "sha256": "0e6d8ebef7791ed7558710e026f29927537c8ad49da23d024bb7933a817a6014"
   },
   "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
-    "bytes": 41905,
-    "sha256": "dd8cd4543424c0f49b46fec21b57febfac38c9a987562a2f1b0efec2b2ac8043"
+    "bytes": 76851,
+    "sha256": "369d71665cfddf2408a8b093936e31dcb9be9a4519000257c94736e3eeec98e1"
   },
   "https://www.wowforeverfriends.org/items/items.json": {
     "bytes": 16908600,
@@ -63,7 +63,7 @@
     "bytes": 6121482,
     "sha256": "5c5a4524a3ad6a25c20902291d244baf32bb5f6b33c65c35847c7f5e1dcfb5f1"
   },
-  "lastRunUTC": "2026-11-13T04:23:52.118544+00:00",
+  "lastRunUTC": "2026-11-13T09:50:57.762225+00:00",
   "sourceCrediting": {
     "Everloot": "CC BY-SA 4.0; https://everloot.app; source records credited",
     "Playfulls": "Public community loot reference; https://playfulls.com/methodology; boss loot not live guaranteed",
@@ -72,8 +72,8 @@
     "AHledger": "Forever client recipe acquisition reference, not observed trainer inventories"
   },
   "Everloot": {
-    "dataAsOf": "2026-11-12T23:20:14.015Z",
-    "total": 1702,
+    "dataAsOf": "2026-11-13T09:50:15.898Z",
+    "total": 1873,
     "attribution": {
       "licence": "CC BY-SA 4.0",
       "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -84,7 +84,7 @@
     "complete": true
   },
   "Playfulls": {
-    "items": 23628,
+    "items": 23642,
     "sourceRecords": 3,
     "database": "https://playfulls.com/database"
   },
