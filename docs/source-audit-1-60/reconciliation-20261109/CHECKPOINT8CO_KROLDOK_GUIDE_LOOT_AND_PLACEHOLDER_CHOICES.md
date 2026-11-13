@@ -1,0 +1,40 @@
+# Checkpoint 8CO — Krol'dok loot, shared entrance directions and omitted quest choices
+
+13 November 2026 (Australia/Adelaide). Status: final fresh8co2 reconciliation exited0 and all19local checks passed. Non-release CI and whole generated-commit review remain pending;latest fully verified checkpoint remains8CN until those gates complete.
+
+All13 selected all-slot cases are individually assessed. Eleven full own item pages and full NPC inventories agree on exact equipment identity/source joins: Zarmok258972→274998/274999/275000; Nar'gurk258964→275004/275005/275006; Overlord Mugg258968→275007/275008/275009/275010; Strashaz Enchantress255373→287025. Full item/tooltip policy passes11;275050 Cloak of the Cult and275051 Twilight Barrier lack printed wearer levels and remain on hold. Their quest94768 Bring Me His Head offers alternative rewards;source minimum38 is not equipment eligibility. Its target is outdoor Overlord Kilgar,not dungeon Overlord Mugg.
+
+## Evidence and confidence
+
+[Full response fingerprints and assessments](checkpoint8co_partial_research.json) preserve29 full source responses(21new/8cached including the reused completed full zone),11 exact reverse joins/no omissions,13 exact discovery queries/three context queries. [Discovery ledger](checkpoint8co_discovery_index.json). Primary item/NPC tables establish published references only; current server loot,rates,access and availability remain unverified. Raw count/outof is not an accepted drop guarantee.
+
+The [full dungeon overview](https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards) was read in full,132675bytes,SHA256 `8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58`. Exact typed NPC links and independent full names establish its six published boss sections:Slavecrusher Grox258966,Zarmok258972,War Handler Ashka259281,Nar'gurk258964,Bossman Toof264773,Overlord Mugg258968. Snarlfang259283 and Terrorhowl259285 are associated pets,not two additional boss sections. A guide section is not an independently observed current encounter/loot event.
+
+Written approach: portal north of Sunnyglade in Riverglades,east of the closed city approach. Horde approach via known Rog'mar flight point or from Badlands;Alliance via known Farholde Keep flight point then north,or from Redridge. No exact entrance/floor coordinates are supplied or invented. Existing full zone16842 establishes dungeon type independently;the guide adds separately cited prose to that existing model. Actual client entrance discovery remains conditional on client support. Coarse continent mapper footprints for new dungeon actors are explicitly nonprecise. Independent outdoor positions remain unchanged.
+
+## Genuine completeness deficiency and held references
+
+The previously read full zone's rendered reward list omits four IDs present in its structured quest itemchoice arrays. Full quests94969(Alliance) and95056(Horde),both Krol'dok No More!, independently confirm alternative choices279851/279929 and279861/279862 respectively. All four own item pages returned404;rendered choices are literal Item #ID placeholders. No item names,gear type,equip level or coordinates are invented. Full Horde text includes NAME/NYI;Alliance prose mentions Marcus Tilwell but supplies no formal starter/recipient actor ID. These are four individually assessed reference holds in the existing catalogue research register,not four usable equipment records or functioning routes. [Exact exceptions](checkpoint8co_choice_reference_exceptions.json). Primary404 is not proof of retirement;failed URLs1681 are retained without unchanged retry/body hashes.
+
+Full item271721 Krol'dok Ogre Key and full Mugg loot table give an exact positive join. It is distinct from previously researched Compound Key267089. Their mandatory access roles and any interchangeability remain unresolved. No new equipment craft/ingredient/unlock gate is invented. Full item273101 Blueprint: Expert Campfire and Grox inventory agree;Cooking200 learning differs from Cooking220 kit use. This campsite utility recipe is outside the954 equipment-book cases and does not become a new gear recipe.
+
+## Shared navigation changes
+
+One context-sensitive compact pin remains. Shared instance instructions now reach direct dungeon/boss/recipe routes as well as named-source and written-only entrance routes and the detailed guide. Newly researched instructions can propagate through the existing evidence generator without item-specific UI changes. Guide-only evidence cannot type a dungeon or install coordinates;name+areaID must match an independent full typed zone and both provenance records remain distinct.
+
+Optional sourceZone selects an acquisition's actual matching source geography. The generator rejects a requested region absent from independent actor geography;the runtime cannot borrow another zone's coordinates. Future candidate proposals use this field and the existing requiresFullLootJoin guard. No candidate equipment is automatically adopted or added to current map coverage.
+
+A reported reference graph is added for94768 using the already recorded single Powdercake contributor's unlock report. It is unordered,routeVerifiedfalse/prerequisitesVerifiedfalse. Existing34 chain records remain exact. Completion flags cannot advance this reported graph;actual active quests take priority. Earlier unlocks and the parallel group94748/94745/95432 remain unresolved.
+
+## Remaining work and exact continuation
+
+The existing register advances793→810 assessed:13 selected equipment cases plus4 supplemental placeholder holds. The shared all-slot queue advances308→317:308assessed,9pending8CP. New gear references,from full Grox/Ashka/Toof inventories and typed guide item links:274995/274996/274997,275001/275002/275003,286428/286429/286430. These9 await own item eligibility/source/version/navigation review;not automatic adoption. [Shared leads](checkpoint8co_additional_all_slot_leads.json),[candidate assessments](checkpoint8co_candidate_assessments.csv),[navigation gaps](checkpoint8co_candidate_navigation_gaps.csv).
+
+After successful final capture/full19local/non-release18CI/wholebotreview,commit and push verified8CO then continue8CP all9 in numericID order. Broader remaining work includes systematic scope completion,two canonical spell mapping holds2844/2845,six dungeon acquisition exceptions,live book/access limits,shared coordinate/chain gaps,final integrity and in-game acceptance handover. Published reference completion does not mean every origin is known or in-game navigation has been rendered successfully. No main/Beta8/build/package/tag/release/billing action.
+
+## Required in-game checks
+
+Open a Krol'dok acquisition from the compact pin and detailed guide;confirm shared approach directions appear and any native entrance focus is correct. Repeat between two different dungeons,close maps normally,and check that only one custom destination exists. If no native entrance resolves,expect useful written directions and no fabricated floor pin. Test source-specific region selection with a qualifying published route. For94768 test unknown progress,an actual active prerequisite,and the actual active reward quest;the reported group must never claim a known mandatory order or advance from completion flags alone. Placeholder rewards and unadopted candidate gear must not appear as implemented routes. Existing quest/vendor/ACA/recipe/rare/world-drop regressions remain covered by the full suite;actual Forever rendering requires manual testing.
+
+
+8CO initial actual feed comparison also found new outside item14557 The Lion Horn of Stormwind (broad world-drop descriptor). All prior resolved facts/source objects exact. Added once to the shared queue,not yet assessed:register811=810assessed+1pending;allslot318=308assessed+10pending8CP. Next8CP all10 numeric order:14557,274995/274996/274997,275001/275002/275003,286428/286429/286430. This supersedes earlier nine-case pending counts;no repeat assessment or active adoption.

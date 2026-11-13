@@ -1,0 +1,314 @@
+{
+  "scope": "Shared future-propagating instance directions and six new full NPC identities;selected candidate loot research in checkpoint8co_partial_research.json is not active gear adoption.",
+  "guide": {
+    "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+    "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+    "bytes": 132675,
+    "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+    "reusedCachedResponse": false,
+    "instanceNavigationGuidance": [
+      {
+        "name": "Krol'dok Stronghold",
+        "areaID": 16842,
+        "instructions": "Published guide approach: find the Krol'dok Stronghold portal north of Sunnyglade in Riverglades, east of the closed city approach. Horde: approach from Rog'mar if its flight point is known, otherwise from the Badlands. Alliance: travel north from Farholde Keep if its flight point is known, otherwise approach from Redridge. These are written regional directions; exact entrance coordinates, current access and in-instance floors remain unverified."
+      }
+    ]
+  },
+  "npcs": {
+    "258966": {
+      "url": "https://www.wowhead.com/forever/npc=258966",
+      "bytes": 58255,
+      "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+      "title": "Slavecrusher Grox - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 56.3,
+            "xMax": 56.5,
+            "yMin": 63.6,
+            "yMax": 64.1
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 4,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "258972": {
+      "url": "https://www.wowhead.com/forever/npc=258972",
+      "bytes": 59556,
+      "sha256": "0e1f484b9364ed21045ff8412aca2b7c9d7d3bb7d6c81e8f1da5737719636a16",
+      "title": "Twilight Commander Zarmok - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 56.8,
+            "xMax": 57,
+            "yMin": 63.4,
+            "yMax": 63.6
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 5,
+      "selectedDrops": [
+        {
+          "id": 274998,
+          "name": "Shadowlight Athame",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 2,
+          "subclass": 15,
+          "slot": 21,
+          "level": 45,
+          "count": 108,
+          "outof": 333,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 274999,
+          "name": "Shadecaster's Leggings",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 1,
+          "slot": 7,
+          "level": 45,
+          "count": 111,
+          "outof": 333,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275000,
+          "name": "Zarmok's Plated Signet",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": -2,
+          "slot": 11,
+          "level": 45,
+          "count": 110,
+          "outof": 333,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "259281": {
+      "url": "https://www.wowhead.com/forever/npc=259281",
+      "bytes": 59158,
+      "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+      "title": "War Handler Ashka - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 58.2,
+            "xMax": 58.3,
+            "yMin": 62.4,
+            "yMax": 62.8
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 3,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "259283": {
+      "url": "https://www.wowhead.com/forever/npc=259283",
+      "bytes": 53418,
+      "sha256": "68d6042c862327b5c75b6eea2b9c880add5401036592a1bb874723a98a95e6c5",
+      "title": "Snarlfang - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 58.1,
+            "xMax": 58.3,
+            "yMin": 62.4,
+            "yMax": 62.8
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 0,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "259285": {
+      "url": "https://www.wowhead.com/forever/npc=259285",
+      "bytes": 53490,
+      "sha256": "a87dd9dcd93b6b887919abb3cffc1fba39642945787025fafef8405744fda7e9",
+      "title": "Terrorhowl - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 58.1,
+            "xMax": 58.3,
+            "yMin": 62.4,
+            "yMax": 62.8
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 0,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "264773": {
+      "url": "https://www.wowhead.com/forever/npc=264773",
+      "bytes": 57583,
+      "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+      "title": "Bossman Toof - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 58,
+            "xMax": 58.1,
+            "yMin": 62.2,
+            "yMax": 62.3
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 4,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    }
+  }
+}

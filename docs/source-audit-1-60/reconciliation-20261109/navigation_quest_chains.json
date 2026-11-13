@@ -606,5 +606,32 @@
       "https://www.wowhead.com/forever/quest=94744"
     ],
     "instructions": "Reported prerequisite references, not a verified mandatory order. The full primary page adds Clugfist's Decree before The Wayward Warrior; earlier Bolder'ok unlocks remain unknown. One contributor reports Break Their Chains, Carving a Path and Rise Up as a group with no established relative order, followed by Bring Me His Head and the relevant dungeon unlock/return. Treat the listed numbers as references. Actual active quests take priority; completion flags cannot advance this unverified graph. See full stage objectives and the shared uncertainty record."
+  },
+  "94768": {
+    "steps": [
+      95428,
+      94744,
+      94748,
+      94745,
+      95432,
+      94768
+    ],
+    "ordered": false,
+    "routeVerified": false,
+    "prerequisitesVerified": false,
+    "verification": "reported-unverified-unlock-references",
+    "evidence": "checkpoint8cn_working_evidence.json",
+    "reportedUnorderedGroups": [
+      [
+        94748,
+        94745,
+        95432
+      ]
+    ],
+    "sourceURLs": [
+      "https://www.wowhead.com/forever/quest=94968/eye-of-mugg#comments:id=6470059",
+      "https://www.wowhead.com/forever/quest=94744"
+    ],
+    "instructions": "One contributor reports these prerequisite references before Bring Me His Head. The relative order and mandatory status of Break Their Chains, Carving a Path and Rise Up remain unverified. Actual active quests take priority; completion flags cannot advance this graph. The final objective is Overlord Kilgar in the outdoor Twilight's Shroud, followed by Da'grosh; it is not Overlord Mugg in Krol'dok Stronghold. Earlier Bolder'ok unlocks remain unresolved."
   }
 }

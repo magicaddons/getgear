@@ -60,6 +60,7 @@ class Evidence:
         self.full_npc_teaching = collections.defaultdict(list)
         self.full_object_contents = collections.defaultdict(dict)
         self.instances = {}
+        self.instance_guidance = []
         self.quest_starters = collections.defaultdict(list)
         self.legacy_quests = {}
         self.modern_quests = set()
@@ -149,6 +150,13 @@ class Evidence:
                                 identity=dict(node.get("equip") or {}, id=node["itemID"], name=node.get("name", "")))
                     break
         url = node.get("url") or node.get("sourceURL")
+        if (isinstance(url, str) and re.fullmatch(r"https://www\.wowhead\.com/forever/guide/[a-z0-9-]+", url)
+                and re.fullmatch(r"[a-f0-9]{64}", str(node.get("sha256", "")))):
+            for guidance in rows(node.get("instanceNavigationGuidance")):
+                if (isinstance(guidance, dict) and isinstance(guidance.get("name"), str)
+                        and type(guidance.get("areaID")) is int
+                        and isinstance(guidance.get("instructions"), str) and guidance["instructions"].strip()):
+                    self.instance_guidance.append((guidance, dict(url=url, sha256=node["sha256"], file=evidence_file)))
         match = ENTITY.search(url) if isinstance(url, str) else None
         if match and node.get("sha256"):
             kind, raw_id = match.groups()
@@ -319,6 +327,17 @@ def build(inputs):
         body = path.read_bytes()
         evidence.inputs.append(dict(file=path.name, sha256=hashlib.sha256(body).hexdigest()))
         evidence.visit(json.loads(body), path.name)
+    # A published guide supplements an independently typed full zone. It cannot
+    # invent an instance definition, entrance coordinate, floor or UI map ID.
+    for guidance, provenance in evidence.instance_guidance:
+        instance = evidence.instances.get(guidance["name"])
+        if instance and instance["areaID"] == guidance["areaID"]:
+            text = guidance["instructions"].strip()
+            if text not in (instance.get("instructions") or ""):
+                instance["instructions"] = ((instance.get("instructions") or "") + "\n" + text).strip()
+            citations = instance.setdefault("guidanceEvidence", [])
+            if provenance not in citations:
+                citations.append(provenance)
     # Reconnect legacy full recipe-quest metadata only through its exact,
     # previously validated primary-page fingerprint and book reward join.
     # Current full quest records and established actors retain precedence.
@@ -582,6 +601,12 @@ def build(inputs):
                 actor = evidence.sources[extra["source"]]
                 if not actor["evidence"]:
                     continue
+                source_zone = extra.get("sourceZone")
+                if source_zone is not None and (not isinstance(source_zone, str)
+                        or not any(loc["zone"] == source_zone for loc in actor["locations"])):
+                    gap("source_region_unverified", extra["source"],
+                        detail="The requested acquisition region has no matching full actor geography; no alternate-region point is substituted.")
+                    continue
                 legacy = extra.get("verification") == "legacy-reference"
                 if extra.get("requiresFullLootJoin") and extra["kind"] in ["object", "named_drop"]:
                     relation = "contained-in-object" if extra["kind"] == "object" else "dropped-by"
@@ -601,6 +626,7 @@ def build(inputs):
                         gap("instance_definition_unverified", extra["source"],
                             detail="Published source region retained; a verified instance definition and client entrance are still required. No floor point is substituted.")
                 route(extra["kind"], source=extra["source"], instructions=extra.get("instructions"),
+                      sourceZone=source_zone,
                       verification="legacy-reference" if legacy else "published-reference",
                       directionsOnly=True if extra.get("directionsOnly") is True or legacy else None,
                       entranceOnly=True if extra.get("entranceOnly") is True and extra.get("requiresFullLootJoin")
@@ -736,7 +762,7 @@ def build(inputs):
             source_locations = {}
             for key in keys:
                 values = evidence.sources.get(key, {}).get("locations", [])
-                zone = (q.get("actorZones") or {}).get(key) if q else None
+                zone = (q.get("actorZones") or {}).get(key) if q else entry.get("sourceZone")
                 if zone:
                     values = [loc for loc in values if loc["zone"] == zone] or [dict(zone=zone, verification="published-reference")]
                 source_locations[key] = values

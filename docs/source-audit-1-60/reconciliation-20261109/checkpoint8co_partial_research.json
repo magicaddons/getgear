@@ -1,0 +1,2551 @@
+{
+  "status": "13selectedpublication-assessed+4placeholderexceptions;integration-validationpending",
+  "baseline": "7c7b95e4aa2fe8b602ab092f2e4ad1c359e4c48a",
+  "reviewedOn": "2026-11-13 Australia/Adelaide",
+  "counts": {
+    "selected": 13,
+    "individuallyAssessed": 13,
+    "supplementalPlaceholderReferences": 4,
+    "groups": {
+      "named-source-reference": 11,
+      "quest-reference": 2
+    },
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 11,
+      "hold-no-rendered-equip-level": 2
+    },
+    "caseFullPages": 29,
+    "caseNewPages": 21,
+    "caseCachedPages": 8,
+    "fullNPC": 9,
+    "fullQuest": 3,
+    "physicalContextItems": 2,
+    "dropReverseJoins": 11,
+    "dropReverseOmissions": 0,
+    "exactQueries": 13,
+    "sharedQueries": 3,
+    "newFailed404": 4,
+    "knownFailedURLs": 1681,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "items": {
+    "274998": {
+      "url": "https://www.wowhead.com/forever/item=274998",
+      "bytes": 171124,
+      "sha256": "f10a7362a29c2830f1ea1b76fce10aab2c629b2fff6d84e977fe456dd104a5de",
+      "title": "Shadowlight Athame - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 274998,
+        "name": "Shadowlight Athame",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 2,
+        "subclass": 15,
+        "slot": 21,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 274998,
+        "name": "Shadowlight Athame",
+        "inventoryType": 21,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258972,
+            "name": "Twilight Commander Zarmok",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 108,
+            "outof": 333,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258972
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Twilight Commander Zarmok",
+          "t": 1,
+          "ti": 258972
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258972,
+          "name": "Twilight Commander Zarmok",
+          "primaryDescriptor": {
+            "n": "Twilight Commander Zarmok",
+            "t": 1,
+            "ti": 258972
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "274999": {
+      "url": "https://www.wowhead.com/forever/item=274999",
+      "bytes": 170304,
+      "sha256": "e48748e6e0da0e80d70f55c3456a2f8be1ffe7221436c3305f85ca6bd7ee63e6",
+      "title": "Shadecaster's Leggings - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 274999,
+        "name": "Shadecaster's Leggings",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 1,
+        "slot": 7,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 274999,
+        "name": "Shadecaster's Leggings",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258972,
+            "name": "Twilight Commander Zarmok",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 111,
+            "outof": 333,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258972
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Twilight Commander Zarmok",
+          "t": 1,
+          "ti": 258972
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258972,
+          "name": "Twilight Commander Zarmok",
+          "primaryDescriptor": {
+            "n": "Twilight Commander Zarmok",
+            "t": 1,
+            "ti": 258972
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275000": {
+      "url": "https://www.wowhead.com/forever/item=275000",
+      "bytes": 168331,
+      "sha256": "2f598a734b39eaa96ce54fed6d4edc4e3510cce46162686249971bdfeda851ce",
+      "title": "Zarmok's Plated Signet - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275000,
+        "name": "Zarmok's Plated Signet",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -2,
+        "slot": 11,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275000,
+        "name": "Zarmok's Plated Signet",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258972,
+            "name": "Twilight Commander Zarmok",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 110,
+            "outof": 333,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258972
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Twilight Commander Zarmok",
+          "t": 1,
+          "ti": 258972
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258972,
+          "name": "Twilight Commander Zarmok",
+          "primaryDescriptor": {
+            "n": "Twilight Commander Zarmok",
+            "t": 1,
+            "ti": 258972
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275004": {
+      "url": "https://www.wowhead.com/forever/item=275004",
+      "bytes": 174117,
+      "sha256": "6cde82344610f0c1bc64ef5631a95b1823b06dec246e6fe040eee09f0c53ac8e",
+      "title": "Chain of the Corruptor - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275004,
+        "name": "Chain of the Corruptor",
+        "level": 46,
+        "reqlevel": 41,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -3,
+        "slot": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 41"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275004,
+        "name": "Chain of the Corruptor",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258964,
+            "name": "Nar'gurk",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 111,
+            "outof": 305,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258964
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Nar'gurk",
+          "t": 1,
+          "ti": 258964
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258964,
+          "name": "Nar'gurk",
+          "primaryDescriptor": {
+            "n": "Nar'gurk",
+            "t": 1,
+            "ti": 258964
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275005": {
+      "url": "https://www.wowhead.com/forever/item=275005",
+      "bytes": 174001,
+      "sha256": "9e2c36155deb038f824aa40f32989a11a23c8ddffca9987af24d232ce653d015",
+      "title": "Krol'dok Warplate Chest - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275005,
+        "name": "Krol'dok Warplate Chest",
+        "level": 46,
+        "reqlevel": 41,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 5,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 41"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275005,
+        "name": "Krol'dok Warplate Chest",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258964,
+            "name": "Nar'gurk",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 83,
+            "outof": 305,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258964
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Nar'gurk",
+          "t": 1,
+          "ti": 258964
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258964,
+          "name": "Nar'gurk",
+          "primaryDescriptor": {
+            "n": "Nar'gurk",
+            "t": 1,
+            "ti": 258964
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275006": {
+      "url": "https://www.wowhead.com/forever/item=275006",
+      "bytes": 173225,
+      "sha256": "42bf9b4bd6a0e1e7953866c1b498a3c853db812580bf3cbad2dd68660f8aac55",
+      "title": "Krol'dok Warplate Helmet - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275006,
+        "name": "Krol'dok Warplate Helmet",
+        "level": 46,
+        "reqlevel": 41,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 1,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 41"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275006,
+        "name": "Krol'dok Warplate Helmet",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258964,
+            "name": "Nar'gurk",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 93,
+            "outof": 305,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258964
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Nar'gurk",
+          "t": 1,
+          "ti": 258964
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258964,
+          "name": "Nar'gurk",
+          "primaryDescriptor": {
+            "n": "Nar'gurk",
+            "t": 1,
+            "ti": 258964
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275007": {
+      "url": "https://www.wowhead.com/forever/item=275007",
+      "bytes": 171895,
+      "sha256": "1db303ecad20961427ac5c7c79ae8290f262a617234ed12d2997033b60bac017",
+      "title": "Mugg's Jabber - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275007,
+        "name": "Mugg's Jabber",
+        "level": 47,
+        "reqlevel": 42,
+        "quality": 3,
+        "classs": 2,
+        "subclass": 13,
+        "slot": 13,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 42"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275007,
+        "name": "Mugg's Jabber",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258968,
+            "name": "Overlord Mugg",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 73,
+            "outof": 326,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258968
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Overlord Mugg",
+          "t": 1,
+          "ti": 258968
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258968,
+          "name": "Overlord Mugg",
+          "primaryDescriptor": {
+            "n": "Overlord Mugg",
+            "t": 1,
+            "ti": 258968
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275008": {
+      "url": "https://www.wowhead.com/forever/item=275008",
+      "bytes": 170966,
+      "sha256": "3ecc6f569ccd4e2abbc9d727fdbcca777cd7311e9e50873e335cdcb4eb2351e4",
+      "title": "Mugg's Crosser - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275008,
+        "name": "Mugg's Crosser",
+        "level": 47,
+        "reqlevel": 42,
+        "quality": 3,
+        "classs": 2,
+        "subclass": 13,
+        "slot": 13,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 42"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275008,
+        "name": "Mugg's Crosser",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258968,
+            "name": "Overlord Mugg",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 77,
+            "outof": 326,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258968
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Overlord Mugg",
+          "t": 1,
+          "ti": 258968
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258968,
+          "name": "Overlord Mugg",
+          "primaryDescriptor": {
+            "n": "Overlord Mugg",
+            "t": 1,
+            "ti": 258968
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275009": {
+      "url": "https://www.wowhead.com/forever/item=275009",
+      "bytes": 170355,
+      "sha256": "bbd016b37b21aa6c569373619b6f95ab5acb473e81de7bc84f48f684021f3aed",
+      "title": "Emblem of Slamming - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275009,
+        "name": "Emblem of Slamming",
+        "level": 47,
+        "reqlevel": 42,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -4,
+        "slot": 12,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 42"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275009,
+        "name": "Emblem of Slamming",
+        "inventoryType": 12,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258968,
+            "name": "Overlord Mugg",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 66,
+            "outof": 326,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258968
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Overlord Mugg",
+          "t": 1,
+          "ti": 258968
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258968,
+          "name": "Overlord Mugg",
+          "primaryDescriptor": {
+            "n": "Overlord Mugg",
+            "t": 1,
+            "ti": 258968
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275010": {
+      "url": "https://www.wowhead.com/forever/item=275010",
+      "bytes": 175429,
+      "sha256": "6dba91a9d0eae111deaa1392128b3eac03613f3b7827979d3b3f3b963a293442",
+      "title": "Strongly Scented Hood - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 275010,
+        "name": "Strongly Scented Hood",
+        "level": 47,
+        "reqlevel": 42,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 1,
+        "slot": 1,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 42"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275010,
+        "name": "Strongly Scented Hood",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258968,
+            "name": "Overlord Mugg",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 93,
+            "outof": 326,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        258968
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Overlord Mugg",
+          "t": 1,
+          "ti": 258968
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 258968,
+          "name": "Overlord Mugg",
+          "primaryDescriptor": {
+            "n": "Overlord Mugg",
+            "t": 1,
+            "ti": 258968
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275050": {
+      "url": "https://www.wowhead.com/forever/item=275050",
+      "bytes": 217522,
+      "sha256": "c2c5ac1df016b92d2fcec67fd1a492db6275b9e086b34c37384e46c706e41af7",
+      "title": "Cloak of the Cult - Item - WoW Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 275050,
+        "name": "Cloak of the Cult",
+        "level": 46,
+        "reqlevel": 38,
+        "quality": 2,
+        "classs": 4,
+        "subclass": -6,
+        "slot": 16,
+        "side": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275050,
+        "name": "Cloak of the Cult",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 38,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "reward-from-q": [
+          {
+            "id": 94768,
+            "name": "Bring Me His Head",
+            "reqlevel": 38,
+            "side": 2,
+            "type": 1,
+            "level": 46,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 0,
+      "dropListPossiblyCappedAt200": false,
+      "group": "quest-reference",
+      "primarySourceTypes": [
+        4
+      ],
+      "primarySourceDescriptors": [
+        {
+          "c": 16591,
+          "c2": 0,
+          "n": "Bring Me His Head",
+          "t": 5,
+          "ti": 94768
+        }
+      ],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": []
+    },
+    "275051": {
+      "url": "https://www.wowhead.com/forever/item=275051",
+      "bytes": 180505,
+      "sha256": "c41d6749897a53280309c4187179e18ee5e54aa18b8d3b50bd4cbe21af1b4e38",
+      "title": "Twilight Barrier - Item - WoW Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 275051,
+        "name": "Twilight Barrier",
+        "level": 46,
+        "reqlevel": 38,
+        "quality": 2,
+        "classs": 4,
+        "subclass": 6,
+        "slot": 14,
+        "side": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 275051,
+        "name": "Twilight Barrier",
+        "inventoryType": 14,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 38,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "reward-from-q": [
+          {
+            "id": 94768,
+            "name": "Bring Me His Head",
+            "reqlevel": 38,
+            "side": 2,
+            "type": 1,
+            "level": 46,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 0,
+      "dropListPossiblyCappedAt200": false,
+      "group": "quest-reference",
+      "primarySourceTypes": [
+        4
+      ],
+      "primarySourceDescriptors": [
+        {
+          "c": 16591,
+          "c2": 0,
+          "n": "Bring Me His Head",
+          "t": 5,
+          "ti": 94768
+        }
+      ],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": []
+    },
+    "287025": {
+      "url": "https://www.wowhead.com/forever/item=287025",
+      "bytes": 180891,
+      "sha256": "4cfc6efc57925907e239045fdf3c2d3bdfbaed56419cddc8e388c558a936e814",
+      "title": "Enchantresses' Spire - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 287025,
+        "name": "Enchantresses' Spire",
+        "level": 54,
+        "reqlevel": 49,
+        "quality": 3,
+        "classs": 2,
+        "subclass": 10,
+        "slot": 17,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 49"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 287025,
+        "name": "Enchantresses' Spire",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 255373,
+            "name": "Strashaz Enchantress",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 5,
+            "outof": 62,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        255373
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "dd": -1,
+          "n": "Strashaz Enchantress",
+          "t": 1,
+          "ti": 255373,
+          "z": 16620
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 255373,
+          "name": "Strashaz Enchantress",
+          "primaryDescriptor": {
+            "dd": -1,
+            "n": "Strashaz Enchantress",
+            "t": 1,
+            "ti": 255373,
+            "z": 16620
+          },
+          "independentFullOwnNPCPositive": true
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    }
+  },
+  "npcs": {
+    "258968": {
+      "url": "https://www.wowhead.com/forever/npc=258968",
+      "bytes": 63084,
+      "sha256": "751d8ce8b261b50114cc21b81827cdeab3099a5a71e0a7cfc8f31e5210ac4617",
+      "title": "Overlord Mugg - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 58.4,
+            "xMax": 58.5,
+            "yMin": 60.9,
+            "yMax": 60.9
+          },
+          "coordinateScope": "continent-only",
+          "precisionQualification": "Full quest and physical-input joins locate this actor inside Krol'dok; the coarse continent mapper does not verify its dungeon-floor position."
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+        }
+      ],
+      "returnedDropsRows": 6,
+      "selectedDrops": [
+        {
+          "id": 275007,
+          "name": "Mugg's Jabber",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 42,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 2,
+          "subclass": 13,
+          "slot": 13,
+          "level": 47,
+          "count": 73,
+          "outof": 326,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275008,
+          "name": "Mugg's Crosser",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 42,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 2,
+          "subclass": 13,
+          "slot": 13,
+          "level": 47,
+          "count": 77,
+          "outof": 326,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275009,
+          "name": "Emblem of Slamming",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 42,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": -4,
+          "slot": 12,
+          "level": 47,
+          "count": 66,
+          "outof": 326,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275010,
+          "name": "Strongly Scented Hood",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 42,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 1,
+          "slot": 1,
+          "level": 47,
+          "count": 93,
+          "outof": 326,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "selectedQuestStarts": [],
+      "selectedQuestEnds": [],
+      "selectedTeaches": [],
+      "selectedSells": []
+    },
+    "255373": {
+      "url": "https://www.wowhead.com/forever/npc=255373",
+      "bytes": 77806,
+      "sha256": "13da5067e905a2c510ca1d3adc8486a9ae9eecb1d57701cfc4f4ccb272ee7b4e",
+      "title": "Strashaz Enchantress - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 24,
+      "selectedDrops": [
+        {
+          "id": 287025,
+          "name": "Enchantresses' Spire",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 2,
+          "subclass": 10,
+          "slot": 17,
+          "level": 54,
+          "count": 5,
+          "outof": 62,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258964": {
+      "url": "https://www.wowhead.com/forever/npc=258964",
+      "bytes": 71741,
+      "sha256": "15dba85c585048f4f71400f893b3b5143c1750541ae66ed169eb069e888569bf",
+      "title": "Nar'gurk - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 56.8,
+            "xMax": 56.9,
+            "yMin": 62.9,
+            "yMax": 62.9
+          },
+          "coordinateScope": "continent-only",
+          "precisionQualification": "Full quest and physical-input joins locate this actor inside Krol'dok; the coarse continent mapper does not verify its dungeon-floor position."
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+        }
+      ],
+      "returnedDropsRows": 4,
+      "selectedDrops": [
+        {
+          "id": 275004,
+          "name": "Chain of the Corruptor",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": -3,
+          "slot": 2,
+          "level": 46,
+          "count": 111,
+          "outof": 305,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275005,
+          "name": "Krol'dok Warplate Chest",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 5,
+          "level": 46,
+          "count": 83,
+          "outof": 305,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275006,
+          "name": "Krol'dok Warplate Helmet",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 1,
+          "level": 46,
+          "count": 93,
+          "outof": 305,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "selectedQuestStarts": [],
+      "selectedQuestEnds": [],
+      "selectedTeaches": [],
+      "selectedSells": []
+    },
+    "258972": {
+      "url": "https://www.wowhead.com/forever/npc=258972",
+      "bytes": 59556,
+      "sha256": "0e1f484b9364ed21045ff8412aca2b7c9d7d3bb7d6c81e8f1da5737719636a16",
+      "title": "Twilight Commander Zarmok - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 56.8,
+            "xMax": 57,
+            "yMin": 63.4,
+            "yMax": 63.6
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 5,
+      "selectedDrops": [
+        {
+          "id": 274998,
+          "name": "Shadowlight Athame",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 2,
+          "subclass": 15,
+          "slot": 21,
+          "level": 45,
+          "count": 108,
+          "outof": 333,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 274999,
+          "name": "Shadecaster's Leggings",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 1,
+          "slot": 7,
+          "level": 45,
+          "count": 111,
+          "outof": 333,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 275000,
+          "name": "Zarmok's Plated Signet",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": -2,
+          "slot": 11,
+          "level": 45,
+          "count": 110,
+          "outof": 333,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "259281": {
+      "url": "https://www.wowhead.com/forever/npc=259281",
+      "bytes": 59158,
+      "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+      "title": "War Handler Ashka - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 58.2,
+            "xMax": 58.3,
+            "yMin": 62.4,
+            "yMax": 62.8
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 3,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "259285": {
+      "url": "https://www.wowhead.com/forever/npc=259285",
+      "bytes": 53490,
+      "sha256": "a87dd9dcd93b6b887919abb3cffc1fba39642945787025fafef8405744fda7e9",
+      "title": "Terrorhowl - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 58.1,
+            "xMax": 58.3,
+            "yMin": 62.4,
+            "yMax": 62.8
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 0,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "259283": {
+      "url": "https://www.wowhead.com/forever/npc=259283",
+      "bytes": 53418,
+      "sha256": "68d6042c862327b5c75b6eea2b9c880add5401036592a1bb874723a98a95e6c5",
+      "title": "Snarlfang - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 58.1,
+            "xMax": 58.3,
+            "yMin": 62.4,
+            "yMax": 62.8
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 0,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "258966": {
+      "url": "https://www.wowhead.com/forever/npc=258966",
+      "bytes": 58255,
+      "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+      "title": "Slavecrusher Grox - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 56.3,
+            "xMax": 56.5,
+            "yMin": 63.6,
+            "yMax": 64.1
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 4,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    },
+    "264773": {
+      "url": "https://www.wowhead.com/forever/npc=264773",
+      "bytes": 57583,
+      "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+      "title": "Bossman Toof - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 58,
+            "xMax": 58.1,
+            "yMin": 62.2,
+            "yMax": 62.3
+          },
+          "coordinateScope": "continent-only"
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+        }
+      ],
+      "returnedDropsRows": 4,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "guideRegionEvidence": {
+        "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+        "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+        "bytes": 132675,
+        "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+        "reusedCachedResponse": false
+      }
+    }
+  },
+  "containers": {
+    "273101": {
+      "url": "https://www.wowhead.com/forever/item=273101",
+      "bytes": 62312,
+      "sha256": "9972d9f504e4ee7fc7c1fa0e50685402da0671158dfdb355ad71e7e40d4b4f5d",
+      "title": "Blueprint: Expert Campfire - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "classs": 9,
+        "displayName": "Blueprint: Expert Campfire",
+        "flags2": 24580,
+        "id": 273101,
+        "level": 40,
+        "name": "Blueprint: Expert Campfire",
+        "quality": 2,
+        "skill": 200,
+        "slot": 0,
+        "source": [
+          2
+        ],
+        "sourcemore": [
+          {
+            "n": "Slavecrusher Grox",
+            "t": 1,
+            "ti": 258966
+          }
+        ],
+        "subclass": 5,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 2,
+          "classs": 9,
+          "displayName": "Blueprint: Expert Campfire",
+          "flags2": 24580,
+          "id": 273101,
+          "level": 40,
+          "name": "Blueprint: Expert Campfire",
+          "skill": 200,
+          "slot": 0,
+          "source": [
+            2
+          ],
+          "sourcemore": [
+            {
+              "n": "Slavecrusher Grox",
+              "t": 1,
+              "ti": 258966
+            }
+          ],
+          "subclass": 5,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "reqskill": 185,
+          "reqskillrank": 200,
+          "sellprice": 30000,
+          "statsInfo": []
+        }
+      },
+      "requirements": [
+        "Requires Cooking (200)",
+        "Requires Cooking (220)",
+        "Requires Thick Logs"
+      ],
+      "returnedContentsRows": 0,
+      "selectedContains": [],
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258966,
+            "name": "Slavecrusher Grox",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 10,
+            "outof": 239,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "scope": "Cooking200 blueprint learning and Cooking220 Expert Campfire Kit use are distinct. Campsite/campfire utility is outside the954 equipment-recipe book cases. No gear output,wearer level or new regular equipment craft/ingredient inferred."
+    },
+    "271721": {
+      "url": "https://www.wowhead.com/forever/item=271721",
+      "bytes": 58809,
+      "sha256": "df357478bb13f8e073666c2c3a60a598248e084d852d302da90f1245ae1f4be1",
+      "title": "Krol'dok Ogre Key - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "classs": 13,
+        "displayName": "Krol'dok Ogre Key",
+        "flags2": 24580,
+        "id": 271721,
+        "level": 1,
+        "name": "Krol'dok Ogre Key",
+        "quality": 1,
+        "slot": 0,
+        "source": [
+          2
+        ],
+        "sourcemore": [
+          {
+            "n": "Overlord Mugg",
+            "t": 1,
+            "ti": 258968
+          }
+        ],
+        "subclass": 0,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 1,
+          "classs": 13,
+          "displayName": "Krol'dok Ogre Key",
+          "flags2": 24580,
+          "id": 271721,
+          "level": 1,
+          "name": "Krol'dok Ogre Key",
+          "slot": 0,
+          "source": [
+            2
+          ],
+          "sourcemore": [
+            {
+              "n": "Overlord Mugg",
+              "t": 1,
+              "ti": 258968
+            }
+          ],
+          "subclass": 0,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "statsInfo": []
+        }
+      },
+      "requirements": [],
+      "returnedContentsRows": 0,
+      "selectedContains": [],
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 258968,
+            "name": "Overlord Mugg",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 30,
+            "outof": 326,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "scope": "Distinct physical key271721 with exact own/full Overlord Mugg loot join. Not Compound Key267089; their access roles, mandatory use and equivalence are unverified. No newly learned profession/canonical ingredient/equipment adoption."
+    }
+  },
+  "quests": {
+    "94768": {
+      "url": "https://www.wowhead.com/forever/quest=94768",
+      "bytes": 59013,
+      "sha256": "55f2325cbf700cec9ce978d50382d033dc113725fe1454368ff43e1063d2cf7d",
+      "title": "Bring Me His Head - Quest - WoW Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": 16591,
+        "category2": 0,
+        "id": 94768,
+        "itemchoices": [
+          [
+            275050,
+            1
+          ],
+          [
+            275051,
+            1
+          ]
+        ],
+        "level": 46,
+        "name": "Bring Me His Head",
+        "reqlevel": 38,
+        "side": 2,
+        "type": 1,
+        "xp": 5050,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "objectiveMapper": {
+        "objectives": {
+          "16591": {
+            "zone": "Riverglades",
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "id": 258570,
+                  "name": "Da'grosh",
+                  "coords": []
+                },
+                {
+                  "type": 1,
+                  "point": "end",
+                  "id": 258570,
+                  "name": "Da'grosh",
+                  "coords": []
+                }
+              ]
+            ]
+          }
+        }
+      },
+      "seriesQuestIDs": [],
+      "publishedSeriesRows": [],
+      "sourceRequirements": [
+        "Published source minimum 38; Horde quest. Current acceptance,earlier unlocks and mandatory access remain unverified."
+      ],
+      "sourceRequirementsUnresolved": true,
+      "requiredPhysicalItems": [
+        {
+          "itemID": 265837,
+          "name": "Kilgar's Head",
+          "quantity": 1,
+          "provided": false
+        }
+      ],
+      "objectiveZone": "Riverglades",
+      "objectiveInstructions": "Defeat Overlord Kilgar in the outdoor Twilight's Shroud and return his head to Da'grosh. Do not confuse Kilgar with Overlord Mugg in Krol'dok Stronghold."
+    }
+  },
+  "zones": {
+    "zone:16842": {
+      "url": "https://www.wowhead.com/forever/zone=16842",
+      "bytes": 64354,
+      "sha256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0",
+      "title": "Krol'dok Stronghold - Zone - WoW Forever",
+      "reusedCachedResponse": false,
+      "zone": {
+        "id": 16842,
+        "name": "Krol'dok Stronghold",
+        "instanceType": "Dungeon"
+      },
+      "markup": [
+        "[ul][li]Territory: Contested[/li][li]Instance type: Dungeon[/li][li]Number of players: 5[/li][li]Zone ID: 16842[/li][li]Added in patch [acronym=\"1.60.1.70790\"]1.60.1[/acronym][/li][/ul]"
+      ],
+      "navigationInstructions": "Published five-player dungeon;the full page provides no zone map. Use a native entrance only if the client resolves it;precise entrance/floors,current access and keys remain unverified. A player comment about northern Riverglades is attributed,not verified coordinates."
+    }
+  },
+  "allPrimaryResponseHeaders": {
+    "item:274998": {
+      "url": "https://www.wowhead.com/forever/item=274998",
+      "title": "Shadowlight Athame - Item - WoW Forever",
+      "bytes": 171124,
+      "sha256": "f10a7362a29c2830f1ea1b76fce10aab2c629b2fff6d84e977fe456dd104a5de",
+      "reusedCachedResponse": false
+    },
+    "item:274999": {
+      "url": "https://www.wowhead.com/forever/item=274999",
+      "title": "Shadecaster's Leggings - Item - WoW Forever",
+      "bytes": 170304,
+      "sha256": "e48748e6e0da0e80d70f55c3456a2f8be1ffe7221436c3305f85ca6bd7ee63e6",
+      "reusedCachedResponse": false
+    },
+    "item:275004": {
+      "url": "https://www.wowhead.com/forever/item=275004",
+      "title": "Chain of the Corruptor - Item - WoW Forever",
+      "bytes": 174117,
+      "sha256": "6cde82344610f0c1bc64ef5631a95b1823b06dec246e6fe040eee09f0c53ac8e",
+      "reusedCachedResponse": false
+    },
+    "item:275000": {
+      "url": "https://www.wowhead.com/forever/item=275000",
+      "title": "Zarmok's Plated Signet - Item - WoW Forever",
+      "bytes": 168331,
+      "sha256": "2f598a734b39eaa96ce54fed6d4edc4e3510cce46162686249971bdfeda851ce",
+      "reusedCachedResponse": false
+    },
+    "item:275007": {
+      "url": "https://www.wowhead.com/forever/item=275007",
+      "title": "Mugg's Jabber - Item - WoW Forever",
+      "bytes": 171895,
+      "sha256": "1db303ecad20961427ac5c7c79ae8290f262a617234ed12d2997033b60bac017",
+      "reusedCachedResponse": false
+    },
+    "item:275008": {
+      "url": "https://www.wowhead.com/forever/item=275008",
+      "title": "Mugg's Crosser - Item - WoW Forever",
+      "bytes": 170966,
+      "sha256": "3ecc6f569ccd4e2abbc9d727fdbcca777cd7311e9e50873e335cdcb4eb2351e4",
+      "reusedCachedResponse": false
+    },
+    "item:275006": {
+      "url": "https://www.wowhead.com/forever/item=275006",
+      "title": "Krol'dok Warplate Helmet - Item - WoW Forever",
+      "bytes": 173225,
+      "sha256": "42bf9b4bd6a0e1e7953866c1b498a3c853db812580bf3cbad2dd68660f8aac55",
+      "reusedCachedResponse": false
+    },
+    "item:275050": {
+      "url": "https://www.wowhead.com/forever/item=275050",
+      "title": "Cloak of the Cult - Item - WoW Forever",
+      "bytes": 217522,
+      "sha256": "c2c5ac1df016b92d2fcec67fd1a492db6275b9e086b34c37384e46c706e41af7",
+      "reusedCachedResponse": true
+    },
+    "item:275051": {
+      "url": "https://www.wowhead.com/forever/item=275051",
+      "title": "Twilight Barrier - Item - WoW Forever",
+      "bytes": 180505,
+      "sha256": "c41d6749897a53280309c4187179e18ee5e54aa18b8d3b50bd4cbe21af1b4e38",
+      "reusedCachedResponse": true
+    },
+    "item:275005": {
+      "url": "https://www.wowhead.com/forever/item=275005",
+      "title": "Krol'dok Warplate Chest - Item - WoW Forever",
+      "bytes": 174001,
+      "sha256": "9e2c36155deb038f824aa40f32989a11a23c8ddffca9987af24d232ce653d015",
+      "reusedCachedResponse": false
+    },
+    "item:275009": {
+      "url": "https://www.wowhead.com/forever/item=275009",
+      "title": "Emblem of Slamming - Item - WoW Forever",
+      "bytes": 170355,
+      "sha256": "bbd016b37b21aa6c569373619b6f95ab5acb473e81de7bc84f48f684021f3aed",
+      "reusedCachedResponse": false
+    },
+    "item:287025": {
+      "url": "https://www.wowhead.com/forever/item=287025",
+      "title": "Enchantresses' Spire - Item - WoW Forever",
+      "bytes": 180891,
+      "sha256": "4cfc6efc57925907e239045fdf3c2d3bdfbaed56419cddc8e388c558a936e814",
+      "reusedCachedResponse": false
+    },
+    "item:275010": {
+      "url": "https://www.wowhead.com/forever/item=275010",
+      "title": "Strongly Scented Hood - Item - WoW Forever",
+      "bytes": 175429,
+      "sha256": "6dba91a9d0eae111deaa1392128b3eac03613f3b7827979d3b3f3b963a293442",
+      "reusedCachedResponse": false
+    },
+    "npc:258968": {
+      "url": "https://www.wowhead.com/forever/npc=258968",
+      "title": "Overlord Mugg - NPC - WoW Forever",
+      "bytes": 63084,
+      "sha256": "751d8ce8b261b50114cc21b81827cdeab3099a5a71e0a7cfc8f31e5210ac4617",
+      "reusedCachedResponse": true
+    },
+    "npc:255373": {
+      "url": "https://www.wowhead.com/forever/npc=255373",
+      "title": "Strashaz Enchantress - NPC - WoW Forever",
+      "bytes": 77806,
+      "sha256": "13da5067e905a2c510ca1d3adc8486a9ae9eecb1d57701cfc4f4ccb272ee7b4e",
+      "reusedCachedResponse": true
+    },
+    "npc:258964": {
+      "url": "https://www.wowhead.com/forever/npc=258964",
+      "title": "Nar'gurk - NPC - WoW Forever",
+      "bytes": 71741,
+      "sha256": "15dba85c585048f4f71400f893b3b5143c1750541ae66ed169eb069e888569bf",
+      "reusedCachedResponse": true
+    },
+    "npc:258972": {
+      "url": "https://www.wowhead.com/forever/npc=258972",
+      "title": "Twilight Commander Zarmok - NPC - WoW Forever",
+      "bytes": 59556,
+      "sha256": "0e1f484b9364ed21045ff8412aca2b7c9d7d3bb7d6c81e8f1da5737719636a16",
+      "reusedCachedResponse": true
+    },
+    "quest:94768": {
+      "url": "https://www.wowhead.com/forever/quest=94768",
+      "title": "Bring Me His Head - Quest - WoW Forever",
+      "bytes": 59013,
+      "sha256": "55f2325cbf700cec9ce978d50382d033dc113725fe1454368ff43e1063d2cf7d",
+      "reusedCachedResponse": true
+    },
+    "npc:259281": {
+      "url": "https://www.wowhead.com/forever/npc=259281",
+      "title": "War Handler Ashka - NPC - WoW Forever",
+      "bytes": 59158,
+      "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+      "reusedCachedResponse": false
+    },
+    "npc:259285": {
+      "url": "https://www.wowhead.com/forever/npc=259285",
+      "title": "Terrorhowl - NPC - WoW Forever",
+      "bytes": 53490,
+      "sha256": "a87dd9dcd93b6b887919abb3cffc1fba39642945787025fafef8405744fda7e9",
+      "reusedCachedResponse": false
+    },
+    "npc:259283": {
+      "url": "https://www.wowhead.com/forever/npc=259283",
+      "title": "Snarlfang - NPC - WoW Forever",
+      "bytes": 53418,
+      "sha256": "68d6042c862327b5c75b6eea2b9c880add5401036592a1bb874723a98a95e6c5",
+      "reusedCachedResponse": false
+    },
+    "npc:258966": {
+      "url": "https://www.wowhead.com/forever/npc=258966",
+      "title": "Slavecrusher Grox - NPC - WoW Forever",
+      "bytes": 58255,
+      "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+      "reusedCachedResponse": false
+    },
+    "npc:264773": {
+      "url": "https://www.wowhead.com/forever/npc=264773",
+      "title": "Bossman Toof - NPC - WoW Forever",
+      "bytes": 57583,
+      "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+      "reusedCachedResponse": false
+    },
+    "item:273101": {
+      "url": "https://www.wowhead.com/forever/item=273101",
+      "title": "Blueprint: Expert Campfire - Item - WoW Forever",
+      "bytes": 62312,
+      "sha256": "9972d9f504e4ee7fc7c1fa0e50685402da0671158dfdb355ad71e7e40d4b4f5d",
+      "reusedCachedResponse": false
+    },
+    "quest:95056": {
+      "url": "https://www.wowhead.com/forever/quest=95056",
+      "title": "Krol'dok No More! - Quest - WoW Forever",
+      "bytes": 54152,
+      "sha256": "8998743d97e8af1c39529527b9cfd4df3d68ae5452a27dea10cb2144c07fbf4b",
+      "reusedCachedResponse": false
+    },
+    "quest:94969": {
+      "url": "https://www.wowhead.com/forever/quest=94969",
+      "title": "Krol'dok No More! - Quest - WoW Forever",
+      "bytes": 54351,
+      "sha256": "e84273afb06eab0ea1493db4b7fcfb2670efc54baa66f756bd1b8b32cfb8960e",
+      "reusedCachedResponse": false
+    },
+    "item:271721": {
+      "url": "https://www.wowhead.com/forever/item=271721",
+      "title": "Krol'dok Ogre Key - Item - WoW Forever",
+      "bytes": 58809,
+      "sha256": "df357478bb13f8e073666c2c3a60a598248e084d852d302da90f1245ae1f4be1",
+      "reusedCachedResponse": false
+    },
+    "zone:16842": {
+      "url": "https://www.wowhead.com/forever/zone=16842",
+      "bytes": 64354,
+      "sha256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0",
+      "title": "Krol'dok Stronghold - Zone - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "guide:kroldok-overview": {
+      "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+      "title": "Krol'dok Stronghold Overview Guide: Quests, Location, Strategy &amp; Rewards - WoW Forever - Wowhead",
+      "bytes": 132675,
+      "sha256": "8772de7cee1fd073dd96bdd44db3f65d946f78d2a1565f5649479e9f79e10c58",
+      "reusedCachedResponse": false
+    }
+  },
+  "dropReverseJoins": [
+    {
+      "itemID": 274998,
+      "npcID": 258972,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 274999,
+      "npcID": 258972,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275000,
+      "npcID": 258972,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275004,
+      "npcID": 258964,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275005,
+      "npcID": 258964,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275006,
+      "npcID": 258964,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275007,
+      "npcID": 258968,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275008,
+      "npcID": 258968,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275009,
+      "npcID": 258968,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 275010,
+      "npcID": 258968,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287025,
+      "npcID": 255373,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    }
+  ],
+  "dropReverseOmissions": [],
+  "failedFullReads": [
+    {
+      "target": "item:279851",
+      "url": "https://www.wowhead.com/forever/item=279851",
+      "previousStatus": 404,
+      "sha256": null,
+      "bytes": null,
+      "scope": "Full own item unavailable to read,not empty/retired/verified gear."
+    },
+    {
+      "target": "item:279861",
+      "url": "https://www.wowhead.com/forever/item=279861",
+      "previousStatus": 404,
+      "sha256": null,
+      "bytes": null,
+      "scope": "Full own item unavailable to read,not empty/retired/verified gear."
+    },
+    {
+      "target": "item:279862",
+      "url": "https://www.wowhead.com/forever/item=279862",
+      "previousStatus": 404,
+      "sha256": null,
+      "bytes": null,
+      "scope": "Full own item unavailable to read,not empty/retired/verified gear."
+    },
+    {
+      "target": "item:279929",
+      "url": "https://www.wowhead.com/forever/item=279929",
+      "previousStatus": 404,
+      "sha256": null,
+      "bytes": null,
+      "scope": "Full own item unavailable to read,not empty/retired/verified gear."
+    }
+  ],
+  "reusedKnownFailures": [],
+  "guideBossIdentities": [
+    {
+      "npcID": 258966,
+      "name": "Slavecrusher Grox"
+    },
+    {
+      "npcID": 258972,
+      "name": "Twilight Commander Zarmok"
+    },
+    {
+      "npcID": 259281,
+      "name": "War Handler Ashka"
+    },
+    {
+      "npcID": 258964,
+      "name": "Nar'gurk"
+    },
+    {
+      "npcID": 264773,
+      "name": "Bossman Toof"
+    },
+    {
+      "npcID": 258968,
+      "name": "Overlord Mugg"
+    }
+  ],
+  "guidePetsNotExtraBosses": [
+    259283,
+    259285
+  ],
+  "limits": "Published references only;no live drop/current stock/quest acceptance/map rendering confirmation. Selected13 outside active catalogue. Source quest minima never replace missing printed equip level. The two alternative quest rewards are Kilgar/outdoor Twilight Shroud,not Mugg/dungeon. OgreKey271721 distinct from CompoundKey267089/access unresolved. Campfire utility recipe outside equipment scope. Guide directions do not establish exact entrance/floors/client UIMapID. Four placeholderchoices quarantined outside runtime evidence.",
+  "next": "Verify13+4register entries,shared directions and reported94768 chain;all inventory+typed zone quest arrays completeness audit;freshcapture/full19local18CI/wholebotreview;next8CP9newgearthencomplete remaining scope/exception audit."
+}

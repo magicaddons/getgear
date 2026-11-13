@@ -80,8 +80,8 @@ local function appendQuestItems(out,q,prefix)
     if not listed then out[#out+1]=(prefix or "").."This quest requires physical items; see acquisition evidence below for quantities and current requirements." end
 end
 
-local function sourceLocations(actor,q,key)
-    local zone=q and q.actorZones and q.actorZones[key]
+local function sourceLocations(actor,q,key,route)
+    local zone=q and q.actorZones and q.actorZones[key] or route and route.sourceZone
     if not zone then return actor.locations or {} end
     local locations={}
     for _,loc in ipairs(actor.locations or {}) do
@@ -144,7 +144,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     end
     local function source(key,role,q,route,preferred)
         local actor=model.sources[key] or {}
-        local locations=sourceLocations(actor,q,key)
+        local locations=sourceLocations(actor,q,key,route)
         local unresolved=q and #(q.relatedQuests or {})>0 and not get(model.chains,route.questID)
         local requirements=offerText(route)
         if q and #(q.sourceRequirements or {})>0 then
@@ -247,8 +247,11 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                 for _, key in ipairs(q.ends or {}) do source(key,state=="completed" and "Completed quest — turn-in reference" or "Quest turn-in",q,route,false) end
             end
         elseif route.kind=="dungeon" then
+            local context=(model.instanceDetails or {})[route.dungeon]
+            local instructions=route.instructions
+            if context and context.instructions then instructions=(instructions and instructions.."\n" or "")..context.instructions end
             add({kind="dungeon",dungeon=route.dungeon,label=route.dungeon.." entrance",boss=route.boss,
-                 role=route.recipe and "Obtain recipe in dungeon" or "Dungeon entrance",instructions=route.instructions,
+                 role=route.recipe and "Obtain recipe in dungeon" or "Dungeon entrance",instructions=instructions,
                  verification=route.verification,bookItemID=route.bookItemID})
         elseif route.source then
             source(route.source,route.kind=="recipe_vendor" and "Recipe vendor" or route.kind=="vendor_container" and "Container vendor" or route.kind=="npc_container" and "Container drop source" or route.kind=="recipe_drop" and "Obtain recipe book" or route.kind=="trainer" and "Recipe trainer" or route.kind=="crafting_requirement" and "Special crafting location" or route.kind=="unlock" and "Acquisition unlock" or route.kind=="fishing" and "Fishing zone" or route.kind=="vendor" and "Equipment vendor" or route.kind=="object" and "Acquisition object" or "Published named source",nil,route,false)

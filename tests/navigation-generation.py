@@ -77,6 +77,19 @@ with tempfile.TemporaryDirectory() as temp:
     future = nav.build(gear)[0]
     assert future["items"]["2"]["routes"][0]["kind"] == "crafting_requirement", "future reviewed special locations use the same registry/model"
     assert any(g["sourceID"]=="item:900" and g["questID"]==999 for g in nav.build(gear)[2]), "indirect container quest gaps stay in shared acquisition research tracking"
+    scoped = dict(itemID=2, navigationRoutes=[dict(kind="crafting_requirement", source="npc:100", sourceZone="Westfall")])
+    proof["actors"][0]["maps"]["44"] = [dict(uiMapName="Redridge Mountains", uiMapId=49, coords=[[40, 50]])]
+    path.write_text(json.dumps(proof))
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([scoped]))
+    scoped_model, scoped_coverage, _, _ = nav.build(gear)
+    assert scoped_model["items"]["2"]["routes"][0]["sourceZone"] == "Westfall", "a future source-specific region propagates through the shared model"
+    assert next(r for r in scoped_coverage if r["itemID"] == 2)["status"] == "directions", "an unrelated region's exact coordinate must not inflate scoped navigation coverage"
+    scoped["navigationRoutes"][0]["sourceZone"] = "Unverified region"
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([scoped]))
+    scoped_model, _, scoped_gaps, _ = nav.build(gear)
+    assert "2" not in scoped_model["items"] and any(g["gap"] == "source_region_unverified" for g in scoped_gaps), "unknown source regions cannot substitute independently published coordinates from another region"
+    del proof["actors"][0]["maps"]["44"]
+    path.write_text(json.dumps(proof))
     (nav.REPORT / "reviewed_equipment_sources.json").write_text("[]")
     proof["actors"].append(response("object", 700, name="Chest fixture", maps={"40": [{"uiMapName": "Westfall", "coords": [[20, 30]]}]}))
     proof["items"].append(response("item", 3, lists={"contained-in-object": [{"id": 700, "name": "Chest fixture"}]}))
@@ -486,4 +499,31 @@ with tempfile.TemporaryDirectory() as temp:
     proof["npcs"][0]["maps"]["-3"][0].pop("coordinateScope")
     outdoor_model = teaching_routes()[0]
     assert outdoor_model["sources"]["npc:100"]["locations"][0]["x"] == 58.4, "explicitly qualified instance uncertainty must not erase independent published outdoor continent positions"
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    for name in ["reviewed_equipment_sources.json", "reviewed_recipe_sources.json"]:
+        (nav.REPORT / name).write_text("[]")
+    for name in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / name).write_text("itemID\n")
+    guide = dict(url="https://www.wowhead.com/forever/guide/fixture-dungeon", sha256="b" * 64,
+                 instanceNavigationGuidance=[dict(name="Fixture Dungeon", areaID=42, instructions="Follow the published northern approach.",
+                                                 uiMapID=999, x=1, y=2)])
+    guide_path = nav.REPORT / "checkpoint_a_evidence.json"
+    guide_path.write_text(json.dumps(guide))
+    assert not nav.build({})[0]["instances"], "guide prose alone cannot type an instance"
+    zone = dict(url="https://www.wowhead.com/forever/zone=42", sha256="a" * 64,
+                title="Fixture Dungeon - Zone - WoW Forever", zone=dict(id=42, name="Fixture Dungeon", instanceType="Dungeon"),
+                markup=["[li]Instance type: Dungeon[/li]"], navigationInstructions="Full zone context.")
+    (nav.REPORT / "checkpoint_z_evidence.json").write_text(json.dumps(zone))
+    details = nav.build({})[0]["instanceDetails"]["Fixture Dungeon"]
+    assert details["instructions"] == "Full zone context.\nFollow the published northern approach.", "guide may precede the independently typed zone in file order"
+    assert details["evidence"]["sha256"] == "a" * 64 and details["guidanceEvidence"][0]["sha256"] == "b" * 64, "zone typing and guide instructions retain distinct provenance"
+    assert not any(k in details for k in ["x", "y", "uiMapID"]), "written guide context cannot install unverified coordinates"
+    guide["instanceNavigationGuidance"][0]["areaID"] = 43
+    guide_path.write_text(json.dumps(guide))
+    assert nav.build({})[0]["instanceDetails"]["Fixture Dungeon"]["instructions"] == "Full zone context.", "matching names cannot join different area IDs"
+    guide["instanceNavigationGuidance"][0]["areaID"] = 42
+    guide["sha256"] = "unread"
+    guide_path.write_text(json.dumps(guide))
+    assert nav.build({})[0]["instanceDetails"]["Fixture Dungeon"]["instructions"] == "Full zone context.", "unread guide snippets cannot supply runtime directions"
 print("PASS navigation generation: future evidence propagation, exact trainer spell/output/profession joins, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

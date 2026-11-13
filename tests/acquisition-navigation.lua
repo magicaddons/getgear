@@ -193,6 +193,11 @@ local regionChoices=addon:GetAcquisitionNavigationChoices(multiRegion)
 assert(#regionChoices==2 and regionChoices[1].zone=="Westfall" and regionChoices[2].zone=="Redridge Mountains","written references retain every independently published region")
 for _,target in ipairs(regionChoices) do assert(target.kind=="directions" and not target.x and not target.bounds,"historical regions must not become current farm points") end
 assert(addon:GetAcquisitionDirections(multiRegion):find("Redridge Mountains",1,true),"the full guide retains subsequent regions")
+local scopedRegion=plan(31,{{kind="named_drop",source="npc:4",sourceZone="Redridge Mountains"}})
+assert(addon:GetAcquisitionMapTarget(scopedRegion).zone=="Redridge Mountains" and #addon:GetAcquisitionNavigationChoices(scopedRegion)==1,"an acquisition-specific region selects its actual actor geography without duplicating unrelated destinations")
+model.items["31"].routes[1].sourceZone="Unverified region"
+local unknownRegion=addon:GetAcquisitionMapTarget(scopedRegion)
+assert(unknownRegion.zone=="Unverified region" and not unknownRegion.x and not unknownRegion.uiMapID,"unmatched source regions cannot borrow another region's coordinate")
 model.instances["Fixture raid"]=true
 model.sources["npc:5"]={name="Raid source",locations={{zone="Fixture raid",uiMapID=999,x=20,y=30}}}
 local instanceSource=plan(28,{{kind="named_drop",source="npc:5"}})
@@ -234,6 +239,11 @@ local prices=plan(15,{{kind="vendor",source="npc:1",offer={cost={{100,{},{}},{0,
 assert(addon:GetAcquisitionDirections(prices):find("0g 1s 0c OR 1 item #9249",1,true),"alternative prices are not summed")
 local boss=plan(7,{{kind="dungeon",dungeon="The Deadmines",boss="Boss fixture"}})
 local dungeonRecipe=plan(8,{{kind="dungeon",dungeon="The Deadmines",boss="Boss fixture",recipe=true,bookItemID=901}})
+model.instanceDetails={["The Deadmines"]={instructions="Published shared entrance approach."},["Fixture raid"]={instructions="Published shared raid approach."}}
+assert(addon:GetAcquisitionMapTarget(boss).instructions:find("Published shared entrance approach.",1,true),"direct boss routes inherit newly researched shared instance directions")
+assert(addon:GetAcquisitionDirections(dungeonRecipe):find("Published shared entrance approach.",1,true),"the detailed recipe guide uses the same shared entrance directions")
+assert(addon:GetAcquisitionMapTarget(instanceSource).instructions:find("Published shared raid approach.",1,true),"named sources share instance directions")
+assert(addon:GetAcquisitionMapTarget(sharedEntrance).instructions:find("Published shared raid approach.",1,true),"written-only entrance alternatives share instance directions")
 assert(addon:GetAcquisitionMapTarget(boss).kind=="dungeon")
 assert(addon:GetAcquisitionMapTarget(boss).boss=="Boss fixture","explicit researched boss information is retained")
 assert(addon:GetAcquisitionMapTarget(dungeonRecipe).role=="Obtain recipe in dungeon")

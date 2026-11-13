@@ -1,0 +1,787 @@
+{
+  "status": "Shared acquisition research leads,not active gear/eligibility",
+  "scope": "All9 full NPC inventories/full zone rendered reward rows audited. Full typed zone quest itemchoice arrays additionally reveal4 placeholders omitted by rendered rewards;all4 individually held in the same register. Guide typed item IDs crosschecked against active/assessed/pending and physical context cases.9 new gear references remain own-tooltip/source review pending.",
+  "previousPending": 0,
+  "newCount": 9,
+  "totalPending": 9,
+  "counts": {
+    "non_equipment_or_low_quality_rows": 20,
+    "already_assessed_outside_rows": 21,
+    "active_equipment_rows": 10,
+    "new_all_slot_reference_rows": 9
+  },
+  "supplementalPlaceholderReferenceHolds": 4,
+  "leads": [
+    {
+      "itemID": 274995,
+      "name": "Slavecrusher Scepter",
+      "quality": 3,
+      "classs": 2,
+      "slot": 13,
+      "rawRequiredLevel": 39,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:258966",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=258966",
+          "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                743313,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Slavecrusher Scepter",
+            "displayid": 743313,
+            "dps": 29.81,
+            "id": 274995,
+            "level": 44,
+            "name": "Slavecrusher Scepter",
+            "quality": 3,
+            "reqlevel": 39,
+            "slot": 13,
+            "slotbak": 13,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Slavecrusher Grox",
+                "t": 1,
+                "ti": 258966
+              }
+            ],
+            "speed": 2.6,
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 84,
+                "outof": 239
+              },
+              "0": {
+                "count": 84,
+                "outof": 239
+              }
+            },
+            "count": 84,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 84,
+                    "outof": 239
+                  },
+                  "0": {
+                    "count": 84,
+                    "outof": 239
+                  }
+                }
+              }
+            },
+            "outof": 239
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 274996,
+      "name": "Resistance Breaker Spaulder",
+      "quality": 3,
+      "classs": 4,
+      "slot": 3,
+      "rawRequiredLevel": 39,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:258966",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=258966",
+          "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                743311,
+                ""
+              ]
+            },
+            "armor": 202,
+            "classs": 4,
+            "displayName": "Resistance Breaker Spaulder",
+            "displayid": 743311,
+            "id": 274996,
+            "level": 44,
+            "name": "Resistance Breaker Spaulder",
+            "quality": 3,
+            "reqlevel": 39,
+            "slot": 3,
+            "slotbak": 3,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Slavecrusher Grox",
+                "t": 1,
+                "ti": 258966
+              }
+            ],
+            "subclass": 3,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 69,
+                "outof": 239
+              },
+              "0": {
+                "count": 69,
+                "outof": 239
+              }
+            },
+            "count": 69,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 69,
+                    "outof": 239
+                  },
+                  "0": {
+                    "count": 69,
+                    "outof": 239
+                  }
+                }
+              }
+            },
+            "outof": 239
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 274997,
+      "name": "Chain of Binding",
+      "quality": 3,
+      "classs": 4,
+      "slot": 6,
+      "rawRequiredLevel": 39,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:258966",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=258966",
+          "sha256": "1e78f0ca33db6af13cc64620a501cdcb17c69a431d2f4d4aa91e5c650a0179ce",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                743312,
+                ""
+              ]
+            },
+            "armor": 152,
+            "classs": 4,
+            "displayName": "Chain of Binding",
+            "displayid": 743312,
+            "id": 274997,
+            "level": 44,
+            "name": "Chain of Binding",
+            "quality": 3,
+            "reqlevel": 39,
+            "slot": 6,
+            "slotbak": 6,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Slavecrusher Grox",
+                "t": 1,
+                "ti": 258966
+              }
+            ],
+            "subclass": 3,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 85,
+                "outof": 239
+              },
+              "0": {
+                "count": 85,
+                "outof": 239
+              }
+            },
+            "count": 85,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 85,
+                    "outof": 239
+                  },
+                  "0": {
+                    "count": 85,
+                    "outof": 239
+                  }
+                }
+              }
+            },
+            "outof": 239
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 275001,
+      "name": "Bloodied Gutslicer",
+      "quality": 3,
+      "classs": 2,
+      "slot": 17,
+      "rawRequiredLevel": 40,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:259281",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=259281",
+          "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                740967,
+                "inv_sword_10"
+              ]
+            },
+            "classs": 2,
+            "displayName": "Bloodied Gutslicer",
+            "displayid": 740967,
+            "dps": 39.58,
+            "id": 275001,
+            "level": 45,
+            "name": "Bloodied Gutslicer",
+            "quality": 3,
+            "reqlevel": 40,
+            "slot": 17,
+            "slotbak": 17,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "War Handler Ashka",
+                "t": 1,
+                "ti": 259281
+              }
+            ],
+            "speed": 3.6,
+            "subclass": 8,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 109,
+                "outof": 271
+              },
+              "0": {
+                "count": 109,
+                "outof": 271
+              }
+            },
+            "count": 109,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 109,
+                    "outof": 271
+                  },
+                  "0": {
+                    "count": 109,
+                    "outof": 271
+                  }
+                }
+              }
+            },
+            "outof": 271
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 275002,
+      "name": "War Handler's Gaze",
+      "quality": 3,
+      "classs": 4,
+      "slot": 1,
+      "rawRequiredLevel": 40,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:259281",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=259281",
+          "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                743309,
+                ""
+              ]
+            },
+            "armor": 109,
+            "classs": 4,
+            "displayName": "War Handler's Gaze",
+            "displayid": 743309,
+            "id": 275002,
+            "level": 45,
+            "name": "War Handler's Gaze",
+            "quality": 3,
+            "reqlevel": 40,
+            "slot": 1,
+            "slotbak": 1,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "War Handler Ashka",
+                "t": 1,
+                "ti": 259281
+              }
+            ],
+            "subclass": 2,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 89,
+                "outof": 271
+              },
+              "0": {
+                "count": 89,
+                "outof": 271
+              }
+            },
+            "count": 89,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 89,
+                    "outof": 271
+                  },
+                  "0": {
+                    "count": 89,
+                    "outof": 271
+                  }
+                }
+              }
+            },
+            "outof": 271
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 275003,
+      "name": "Worgbinder's Treads",
+      "quality": 3,
+      "classs": 4,
+      "slot": 8,
+      "rawRequiredLevel": 40,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:259281",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=259281",
+          "sha256": "6afc1bdc0fc34f8bee36388259540898279649cf5b7624752f1f8505e686e87d",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                740964,
+                "inv_boots_plate_08"
+              ]
+            },
+            "armor": 330,
+            "classs": 4,
+            "displayName": "Worgbinder's Treads",
+            "displayid": 740964,
+            "id": 275003,
+            "level": 45,
+            "name": "Worgbinder's Treads",
+            "quality": 3,
+            "reqlevel": 40,
+            "slot": 8,
+            "slotbak": 8,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "War Handler Ashka",
+                "t": 1,
+                "ti": 259281
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 73,
+                "outof": 271
+              },
+              "0": {
+                "count": 73,
+                "outof": 271
+              }
+            },
+            "count": 73,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 73,
+                    "outof": 271
+                  },
+                  "0": {
+                    "count": 73,
+                    "outof": 271
+                  }
+                }
+              }
+            },
+            "outof": 271
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 286428,
+      "name": "Band of Bossman",
+      "quality": 3,
+      "classs": 4,
+      "slot": 11,
+      "rawRequiredLevel": 40,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:264773",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=264773",
+          "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Band of Bossman",
+            "id": 286428,
+            "level": 45,
+            "name": "Band of Bossman",
+            "quality": 3,
+            "reqlevel": 40,
+            "slot": 11,
+            "slotbak": 11,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Bossman Toof",
+                "t": 1,
+                "ti": 264773
+              }
+            ],
+            "subclass": -2,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 87,
+                "outof": 263
+              },
+              "0": {
+                "count": 87,
+                "outof": 263
+              }
+            },
+            "count": 87,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 87,
+                    "outof": 263
+                  },
+                  "0": {
+                    "count": 87,
+                    "outof": 263
+                  }
+                }
+              }
+            },
+            "outof": 263
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 286429,
+      "name": "Big-Belly Belt",
+      "quality": 3,
+      "classs": 4,
+      "slot": 6,
+      "rawRequiredLevel": 40,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:264773",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=264773",
+          "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                6299,
+                "inv_belt_25"
+              ]
+            },
+            "armor": 37,
+            "classs": 4,
+            "displayName": "Big-Belly Belt",
+            "displayid": 6299,
+            "flags2": 4,
+            "id": 286429,
+            "level": 45,
+            "name": "Big-Belly Belt",
+            "quality": 3,
+            "reqlevel": 40,
+            "slot": 6,
+            "slotbak": 6,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Bossman Toof",
+                "t": 1,
+                "ti": 264773
+              }
+            ],
+            "subclass": 1,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 89,
+                "outof": 263
+              },
+              "0": {
+                "count": 89,
+                "outof": 263
+              }
+            },
+            "count": 89,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 89,
+                    "outof": 263
+                  },
+                  "0": {
+                    "count": 89,
+                    "outof": 263
+                  }
+                }
+              }
+            },
+            "outof": 263
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 286430,
+      "name": "Toofbreaker",
+      "quality": 3,
+      "classs": 2,
+      "slot": 13,
+      "rawRequiredLevel": 40,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:264773",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=264773",
+          "sha256": "b798b23960153f695aa96d6bfbfa4b77f0b5f2e6e7ba34ea15438467c5a69363",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                741094,
+                ""
+              ]
+            },
+            "classs": 2,
+            "displayName": "Toofbreaker",
+            "displayid": 741094,
+            "dps": 30.26,
+            "id": 286430,
+            "level": 45,
+            "name": "Toofbreaker",
+            "quality": 3,
+            "reqlevel": 40,
+            "slot": 13,
+            "slotbak": 13,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "n": "Bossman Toof",
+                "t": 1,
+                "ti": 264773
+              }
+            ],
+            "speed": 1.9,
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 87,
+                "outof": 263
+              },
+              "0": {
+                "count": 87,
+                "outof": 263
+              }
+            },
+            "count": 87,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 87,
+                    "outof": 263
+                  },
+                  "0": {
+                    "count": 87,
+                    "outof": 263
+                  }
+                }
+              }
+            },
+            "outof": 263
+          }
+        }
+      ]
+    }
+  ]
+}

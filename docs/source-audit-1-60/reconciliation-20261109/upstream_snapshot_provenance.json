@@ -1,21 +1,21 @@
 {
-  "capturedForCheckpoint": "8CL final actual8cl2",
-  "capturedUTC": "2026-11-13T02:06:27.894791+00:00",
+  "capturedForCheckpoint": "8CO final actual8co2",
+  "capturedUTC": "2026-11-13T04:20:51.668526+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23627,
+    "itemCount": 23628,
     "sourceDefinitions": 9328,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.7acc143c49.json",
+        "url": "https://playfulls.com/db/meta.7f7d5e4131.json",
         "bytes": 1010725,
-        "sha256": "7acc143c49b06aa60a78140e767e15d1830f85b00f0689774669563ad500ee4d",
+        "sha256": "7f7d5e4131f309e16aad68ab3ee23dec483f1b218e8ae6a319439dfeeef92e1a",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.49966a6566.json",
-        "bytes": 1360816,
-        "sha256": "49966a6566e44a52d32c48696ccc90c31710ec8336843f1c3acb77e49edf9e38",
+        "url": "https://playfulls.com/db/gear.3dd56ea4d7.json",
+        "bytes": 1360916,
+        "sha256": "3dd56ea4d7bb69ad1c99b6046db30984ac3e2bf83adbb3b0bd11bfdc19a63cfd",
         "matchesRecordedFingerprint": true
       },
       {
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "PF23622\u219223627/9327\u21929328:fiveaddedIDs/fournewsharedleads,18538completed8CJversionholdreused;onefullquestdefinition. Allpriorresolvedacquisitionfacts/names exact;6723source-index-onlyrows.20statdisplaystrings/sixuninterpretedfield10values andaggregatefacetcounts retainedwithoutactivegearmutation. Allotherpriorrawcells/fullsourceobjects/metadata exact. Entire1702EVrecords exactactual8CK/1439qualified;sevenselectedpastattributedexamplesnotfarms."
+    "comparison": "PF23627\u219223628:one new outside14557 feed lead queued8CP. Allpriorrawrows/names/resolvedacquisitionfacts/9328fullsourceobjects exact;only aggregate st facetcounts changed. No active gear-stat/loot mutation. Entire1702EVrecords/fields exact actual8CN4,1439qualified/no selected edges. Original/finalfullcomparisons saved before diagnostic baseline advance."
   },
   "everloot": {
     "total": 1702,
@@ -52,35 +52,35 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103442,
-        "sha256": "69796ae16719b49a5ffbe2f016c63e73ff2c635daec38283c7a7fdb788c3be20",
+        "sha256": "363d6e12c5e781e50f5957374181f58dce149be4d7d10f9c8dfd6f6158f5f820",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T23:20:14.015Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103495,
-        "sha256": "401ae9e9d6c6fbe3b97c36b3d21b8cbe0d54b7b76cd99fe7653c8653deb28fa4",
+        "sha256": "d46de5315b0ea4a09151b335268d7b631dc9e8ee87e2c2b2394af5296ffdf4bb",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T23:20:14.015Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103456,
-        "sha256": "926fc7bb1002bf2ac69b61a29c9c73c8d3f67e597ac8c0939caf944381c0783b",
+        "sha256": "199f6a626c38ef10b1f5498aba7c59e9e4776b11e1e4918a0c5dc20d933e842d",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T23:20:14.015Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
         "bytes": 41905,
-        "sha256": "fa1f40b3959d311c2e7e2e1ae069c7895cadec9be0397e858f6018de1132eaf5",
+        "sha256": "56a4ab8c572c8f5b73b250468f21ecf7ac105685b815baaf36f275761ee118da",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-12T23:20:14.015Z"
       }
     ],
-    "comparison": "All1702relationrecords andfields exact retained actual8CJ/8CK factual baseline;no added/deleted/updated relations. EVdiagnosticCSVretainedbyteexact.",
+    "comparison": "All1702 full relation records exact retained actual8CN4. EVdiagnosticCSVbyteexact.",
     "rawEdges": 1702,
     "qualifyingRelationships": 1439
   },
-  "finalCaptureReview": "PF23622\u219223627/9327\u21929328:fiveaddedIDs/fournewsharedleads,18538completed8CJversionholdreused;onefullquestdefinition. Allpriorresolvedacquisitionfacts/names exact;6723source-index-onlyrows.20statdisplaystrings/sixuninterpretedfield10values andaggregatefacetcounts retainedwithoutactivegearmutation. Allotherpriorrawcells/fullsourceobjects/metadata exact. Entire1702EVrecords exactactual8CK/1439qualified;sevenselectedpastattributedexamplesnotfarms."
+  "finalCaptureReview": "PF23627\u219223628:one new outside14557 feed lead queued8CP. Allpriorrawrows/names/resolvedacquisitionfacts/9328fullsourceobjects exact;only aggregate st facetcounts changed. No active gear-stat/loot mutation. Entire1702EVrecords/fields exact actual8CN4,1439qualified/no selected edges. Original/finalfullcomparisons saved before diagnostic baseline advance."
 }

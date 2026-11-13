@@ -1,0 +1,200 @@
+{
+  "status": "13selected+4placeholderholds;finalactual8co2/full19localPASS;CI/fullbotreviewpending",
+  "registry": 5902,
+  "index": 7373,
+  "display": 7372,
+  "books": 759,
+  "originalFrozenQueue": {
+    "total": 5688,
+    "dispositioned": 5688,
+    "pending": 0
+  },
+  "outsideQueue": {
+    "total": 811,
+    "assessed": 810,
+    "pending": 1,
+    "prior793BytesAndObjectsPreserved": true,
+    "newAssessed13Plus4PlaceholderHolds": true,
+    "newFeedLead14557Pending": true
+  },
+  "additionalAllSlotQueue": {
+    "total": 318,
+    "assessed": 308,
+    "pending": 10,
+    "nextBatch": "8CP",
+    "nextCases": 10,
+    "IDs": [
+      14557,
+      274995,
+      274996,
+      274997,
+      275001,
+      275002,
+      275003,
+      286428,
+      286429,
+      286430
+    ]
+  },
+  "caseCounts": {
+    "selected": 13,
+    "individuallyAssessed": 13,
+    "supplementalPlaceholderReferences": 4,
+    "groups": {
+      "named-source-reference": 11,
+      "quest-reference": 2
+    },
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 11,
+      "hold-no-rendered-equip-level": 2
+    },
+    "caseFullPages": 29,
+    "caseNewPages": 21,
+    "caseCachedPages": 8,
+    "fullNPC": 9,
+    "fullQuest": 3,
+    "physicalContextItems": 2,
+    "dropReverseJoins": 11,
+    "dropReverseOmissions": 0,
+    "exactQueries": 13,
+    "sharedQueries": 3,
+    "newFailed404": 4,
+    "knownFailedURLs": 1681,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "sourceProofImmutableSHA256": "49b66ed30eaab3bdbe227db0766c824912f89528a3ade705df3053eda21d71d5",
+  "runtimeEvidenceSHA256": "c4b8b7815f51af57fa028c703d4ec8ab41916e9c2db2373a8c807f7ae6a6eb61",
+  "successfulCapture": {
+    "label": "8co2",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.7f7d5e4131.json": {
+        "bytes": 1010725,
+        "sha256": "7f7d5e4131f309e16aad68ab3ee23dec483f1b218e8ae6a319439dfeeef92e1a",
+        "workspacePath": "/tmp/getgear-research/8co2-http-capture/7f7d5e4131f309e16aad68ab3ee23dec483f1b218e8ae6a319439dfeeef92e1a.body",
+        "capturedUTC": "2026-11-13T04:20:37.258271+00:00"
+      },
+      "https://playfulls.com/db/gear.3dd56ea4d7.json": {
+        "bytes": 1360916,
+        "sha256": "3dd56ea4d7bb69ad1c99b6046db30984ac3e2bf83adbb3b0bd11bfdc19a63cfd",
+        "workspacePath": "/tmp/getgear-research/8co2-http-capture/3dd56ea4d7bb69ad1c99b6046db30984ac3e2bf83adbb3b0bd11bfdc19a63cfd.body",
+        "capturedUTC": "2026-11-13T04:20:37.508383+00:00"
+      },
+      "https://playfulls.com/db/goods.0dd030350d.json": {
+        "bytes": 466933,
+        "sha256": "0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53",
+        "workspacePath": "/tmp/getgear-research/8co2-http-capture/0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53.body",
+        "capturedUTC": "2026-11-13T04:20:37.690053+00:00"
+      },
+      "https://playfulls.com/db/other.d4891008c4.json": {
+        "bytes": 446812,
+        "sha256": "d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140",
+        "workspacePath": "/tmp/getgear-research/8co2-http-capture/d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140.body",
+        "capturedUTC": "2026-11-13T04:20:37.887871+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103442,
+        "sha256": "363d6e12c5e781e50f5957374181f58dce149be4d7d10f9c8dfd6f6158f5f820",
+        "workspacePath": "/tmp/getgear-research/8co2-http-capture/363d6e12c5e781e50f5957374181f58dce149be4d7d10f9c8dfd6f6158f5f820.body",
+        "capturedUTC": "2026-11-13T04:20:42.089307+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103495,
+        "sha256": "d46de5315b0ea4a09151b335268d7b631dc9e8ee87e2c2b2394af5296ffdf4bb",
+        "workspacePath": "/tmp/getgear-research/8co2-http-capture/d46de5315b0ea4a09151b335268d7b631dc9e8ee87e2c2b2394af5296ffdf4bb.body",
+        "capturedUTC": "2026-11-13T04:20:45.150040+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103456,
+        "sha256": "199f6a626c38ef10b1f5498aba7c59e9e4776b11e1e4918a0c5dc20d933e842d",
+        "workspacePath": "/tmp/getgear-research/8co2-http-capture/199f6a626c38ef10b1f5498aba7c59e9e4776b11e1e4918a0c5dc20d933e842d.body",
+        "capturedUTC": "2026-11-13T04:20:48.500256+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 41905,
+        "sha256": "56a4ab8c572c8f5b73b250468f21ecf7ac105685b815baaf36f275761ee118da",
+        "workspacePath": "/tmp/getgear-research/8co2-http-capture/56a4ab8c572c8f5b73b250468f21ecf7ac105685b815baaf36f275761ee118da.body",
+        "capturedUTC": "2026-11-13T04:20:51.668526+00:00"
+      }
+    }
+  },
+  "fullLocalPASS": 19,
+  "LuaSuites": 15,
+  "offlinePythonSuites": 3,
+  "modules": 26,
+  "fourToolsAndExporterSyntax": true,
+  "identities": 7707,
+  "classObjectives": 36341,
+  "crafts": 1254,
+  "ingredients": 4857,
+  "activeCatalogueAdoptions": 0,
+  "unchanged": {
+    "reviewed_equipment_sources.json": "byte-exact",
+    "reviewed_recipe_sources.json": "byte-exact",
+    "all_items_reconciled.csv": "byte-exact",
+    "dungeon_equipment_drops.csv": "byte-exact",
+    "dungeon_items_reconciled.csv": "byte-exact",
+    "dungeon_source_followups.csv": "byte-exact",
+    "recipes_reconciled.csv": "byte-exact",
+    "recipe_source_followups.csv": "byte-exact",
+    "recipe_trainer_book_checks.csv": "byte-exact",
+    "recipe_vendor_book_checks.csv": "byte-exact",
+    "supplementary_crafts_reconciled.csv": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "remaining_equipment_research_queue.csv": "byte-exact",
+    "navigation_coverage.csv": "byte-exact",
+    "navigation_research_gaps.csv": "byte-exact",
+    "upstream_everloot_edges_snapshot.csv": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1581,
+    "missing": 3087,
+    "verified_coordinate_data": 883
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "unchangedPriorItineraries": 34,
+  "newReportedUnorderedReferences": 1,
+  "wholeModel": {
+    "allExistingActivePlansSourcesQuestsMapsAuditExact": true,
+    "all34PriorChainObjectsExact": true,
+    "newReportedUnorderedChain94768": true,
+    "onlyExistingInstanceChange": "Krol'dok Stronghold instructions+distinct full-guide provenance",
+    "candidateOnlySourcesPrunedNoCoverageInflation": true,
+    "guideReferencedItemIDs": [
+      271721,
+      274995,
+      274996,
+      274997,
+      274998,
+      274999,
+      275000,
+      275001,
+      275002,
+      275003,
+      275004,
+      275005,
+      275006,
+      275007,
+      275008,
+      275009,
+      275010,
+      279480,
+      279852,
+      279853,
+      286428,
+      286429,
+      286430,
+      287008,
+      287012,
+      287013,
+      287014
+    ],
+    "allGuideItemsAccountedFor": true
+  },
+  "upstream": "PF23627\u219223628:one new outside14557 feed lead queued8CP. Allpriorrawrows/names/resolvedacquisitionfacts/9328fullsourceobjects exact;only aggregate st facetcounts changed. No active gear-stat/loot mutation. Entire1702EVrecords/fields exact actual8CN4,1439qualified/no selected edges. Original/finalfullcomparisons saved before diagnostic baseline advance.",
+  "preflight": "Coverage guard also scopes exact-coordinate classification to sourceZone;unrelated-region points cannot inflate coverage. Final8co2 validates finalcode/model;initial8co1 full19 passed earliercode and itsfullrawdelta preserved separately. All13 reversejoins independently checked;no full-source omission or genuine data change invented.",
+  "limits": "Published references only;no live drop/current stock/quest acceptance/map rendering confirmation. Selected13 outside active catalogue. Source quest minima never replace missing printed equip level. The two alternative quest rewards are Kilgar/outdoor Twilight Shroud,not Mugg/dungeon. OgreKey271721 distinct from CompoundKey267089/access unresolved. Campfire utility recipe outside equipment scope. Guide directions do not establish exact entrance/floors/client UIMapID. Four placeholderchoices quarantined outside runtime evidence."
+}
