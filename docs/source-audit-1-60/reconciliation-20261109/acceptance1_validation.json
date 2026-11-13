@@ -1,5 +1,5 @@
 {
-  "status": "local-passed-ci-pending",
+  "status": "complete-awaiting-next-in-game-acceptance",
   "baselineCommit": "4df9a03fc5033fd9067e0fa573129a4b6cbb5fd2",
   "branch": "work/full-acquisition-reconciliation-20261109",
   "localStandardPass": 19,
@@ -39,7 +39,41 @@
     "missing": 2971,
     "verified_coordinate_data": 897
   },
-  "next": "non-releaseCI/wholebotreview,thenstopawaitmanualacceptance",
+  "next": "STOP;await the user next in-game acceptance observations;no package/researchrestart/release",
   "noPackage": true,
-  "noResearchRestart": true
+  "noResearchRestart": true,
+  "sourceCommit": "538d483db6068f4e12472f8af4080a00840d817a",
+  "validatedHead": "27202581aabc4ea1e50fbaad38972e40d78e98f9",
+  "ci": {
+    "run": 43440268260,
+    "job": 131935751658,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43440268260",
+    "conclusion": "success",
+    "timestampedPassLines": 18,
+    "syntaxModules": 26
+  },
+  "botReview": {
+    "commit": "27202581aabc4ea1e50fbaad38972e40d78e98f9",
+    "directParent": "538d483db6068f4e12472f8af4080a00840d817a",
+    "wholeDiffReviewed": true,
+    "files": [
+      "docs/source-audit-1-60/reconciliation-20261109/README.md",
+      "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+    ],
+    "changes": "README qualifying edge count1588->1598;four Everloot response sizes/hashes/dataAsOf/total1881->1893/runUTC only;all other repository bytes exact",
+    "apiResponseBodiesIndependentlyRead": false
+  },
+  "protectedRemoteRefs": {
+    "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "beta8Tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "beta8Commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  },
+  "proofSHA256": {
+    "acceptance1_local_results.txt": "1eb7e6e9ad9300057dc1c6956cac7ee027d171383fc58b596a32a8c5e95d1499",
+    "acceptance1_ci_results.txt": "55bcc16df58f18e4881b5686aa7dcfa699e2a98b015a94a712160399bb321b53",
+    "acceptance1_source_integrity.json": "d45c4b085470088084cf11a3f6a759cbb05f2a4e8043b20be4ffc9c04e5e732c",
+    "acceptance1_upstream_review.json": "3a2f8391fc282cbe14d476ef6c2cdc460d1d1fd38ae6397b1728029dfb1a7d18",
+    "acceptance1_affected_records.csv": "54cac2c83763f9336465a0e6d5b04ffa409a3bf6a077b869ebb6327dab7c4c02",
+    "checkpoint_acceptance1_working_evidence.json": "85f7113469c7a31ce1bf05777473d6e948ac7f16b1fecaf46d7ae218e134b6ee"
+  }
 }
