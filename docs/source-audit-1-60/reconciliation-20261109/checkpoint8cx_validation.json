@@ -1,6 +1,6 @@
 {
   "checkpoint": "8CX",
-  "status": "fresh actual reconciliation and19local checks PASS;nonreleaseCI/directbotreviewPENDING",
+  "status": "verified local19PASS/nonreleaseCI18PASS/directbot whole diff reviewed;continue8CY",
   "baseline": "a11a08bbe5577b4e05cb653c7084c514d82b11ae",
   "scope": "Primary source rank adapter,254source-only actors,two canonical spell mappings;actual upstream delta audited;no active gear adoption.",
   "targetedChecks": [
@@ -591,10 +591,10 @@
   },
   "localTestPASS": 19,
   "expectedCIPASS": 18,
-  "CI": null,
-  "sourceCommit": null,
-  "generatedCommit": null,
-  "fullCIAndBotGateComplete": false,
+  "CI": 43405524024,
+  "sourceCommit": "edb61628f773ab6f2da823770b5bcf144b962b08",
+  "generatedCommit": "c646bd430742ddc369ecd06d8bb6e9003fca14ec",
+  "fullCIAndBotGateComplete": true,
   "nextCheckpoint": "8CY:seven fresh feed scope references/reusefullpages,38fullfeedactorlocations,then finalexceptions/integrity/manualacceptance",
   "limits": "Cited coordinates and written reference routes remain unverified in the actual Forever client. No live stock/quest acceptance/current-build loot guarantee.59current source offers have raw0/no gate;positive source rank fix is proven against real independent6/7 publications and future generated fixture,not59currently wrong displayed ranks. Six dungeon links and954book routes retain current-live limits. No new equipment adoption or release.",
   "protectedRemoteRefsVerifiedUTC": "2026-11-13T09:58:33.433060+00:00",
@@ -602,5 +602,17 @@
     "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
     "Beta8Tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
     "Beta8Commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  },
+  "CIJob": 131818819193,
+  "CIPASS": 18,
+  "botReview": {
+    "directParent": "edb61628f773ab6f2da823770b5bcf144b962b08",
+    "changedFiles": [
+      "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+    ],
+    "changedValues": "fourEverlootresponsehashes/lastRunUTC only;allother bytes exact",
+    "APIResponseBodiesIndependentlyRead": false,
+    "actualLocalFactualSnapshotRetained": true,
+    "equalCountersNotTreatedAsFactualEquivalence": true
   }
 }

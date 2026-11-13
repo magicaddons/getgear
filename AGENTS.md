@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-Current: [8CX implementation](docs/source-audit-1-60/reconciliation-20261109/checkpoint8cx_validation.json), 13 November 2026. Fresh reconciliation / 19 local checks PASS; **nonrelease CI and whole bot review pending**. Completed CI remains 8CO until closure. Then **8CY seven fresh feed scope references**, marked once in both queues; reuse full pages, propagate 38 full source locations, finish exceptions/integrity/manual acceptance. Register 1,418 assessed / seven pending. Single worker/existing automation; 1,732 known failed URLs, no unchanged retries.
+Verified: [8CX](docs/source-audit-1-60/reconciliation-20261109/checkpoint8cx_validation.json), 13 November 2026; 19 local / 18 CI PASS, run 43405524024, direct bot `c646bd4` fully reviewed. **Next 8CY seven cached fresh-feed scope references**, both existing queues marked; propagate 38 full source locations, reconcile stale register labels to completed proofs, finish exceptions/integrity/manual acceptance. Register 1,418 assessed / seven pending. Single worker/existing automation; 1,732 failed URLs, no unchanged retries.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
@@ -1869,3 +1869,10 @@ Fresh actual 8cx1 capture exited zero, all 19 local checks passed. CI and whole 
 Actual feed delta: PF 23,642/9,328 definitions (14 new IDs; all prior resolved facts/source objects preserved, 76 index remaps); EV 1,873/1,583 qualifying, 171 new relations and 57 counter/time updates. 164 full primary checks retain omissions and six unread failed NPCs; no retries or live/current-build guarantees. Seven active anonymous-observation cells/two spell cells are the only semantic companion changes. Original/full deltas preserved before diagnostic snapshots advance to actual local capture.
 
 After CI/bot gate, **next 8CY: seven new feed scope references 12547/18231/22317/22318/22330/285066/288206**, already full-read/cached, marked once in existing queues. Register 1,425=1,418 assessed+7 pending; shared queue 923=916+7. Propagate 38 full feed actor locations via same reusable pipeline, then final exceptions/integrity/manual acceptance. Single worker/existing automation confirmed enabled; no quota-meter/refresh guarantee. No main/Beta 8/build/package/release/billing changes.
+
+
+## Checkpoint 8CX fully verified — next 8CY seven cached scope cases
+
+Fresh capture8cx1 and full 19 local checks PASS. [Nonrelease CI 43405524024](https://github.com/magicaddons/getgear/actions/runs/43405524024), job 131818819193, SUCCESS / 18 timestamped PASS. Source `edb61628f773ab6f2da823770b5bcf144b962b08`; inspected direct bot/final validated `c646bd430742ddc369ecd06d8bb6e9003fca14ec`. Whole bot diff: only four Everloot response hashes and run timestamp; all other bytes exact. Bot API response bodies unread; actual local PF23642/9328/EV1873/1583 factual snapshots retained, no equal-counter inference. Full gate complete; see checkpoint8cx_validation.json and checkpoint8cx_ci_results.txt.
+
+**Continue 8CY:** seven new PF scope references 12547/18231/22317/22318/22330/285066/288206, already full-read/cached, both existing queues marked; then 38 full feed actor location propagation and final exceptions/integrity/manual acceptance. Also reconcile stale descriptive pending labels in the candidate register against already completed authoritative queue/proof decisions; no repeated acquisition research. Current navigation 885/1581/3085/2156, 17,404 overlapping gaps, rendering zero. Two mappings resolved; source-standing fix and 254-source geography pool validated. Single worker/existing automation; no main/Beta 8/release/billing action.
