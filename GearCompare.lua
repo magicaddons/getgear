@@ -3,7 +3,7 @@ local addonName, GetGear = ...
 -- Live, read-only equipment comparisons. We use item stats supplied by the
 -- Forever client; missing stat data never becomes an invented zero.
 local SLOT = {
-    Head={1}, Neck={2}, Shoulder={3}, Chest={5}, Waist={6}, Legs={7},
+    Head={1}, Neck={2}, Shoulder={3}, Shirt={4}, Chest={5}, Waist={6}, Legs={7}, Tabard={19},
     Feet={8}, Wrist={9}, Hands={10}, Back={15}, Wand={18},
     Ring={11,12}, Trinket={13,14}, ["Off Hand"]={17},
     ["Ranged"]={18}, ["Thrown"]={18},
@@ -94,12 +94,17 @@ local function NormalizeStats(raw)
 end
 local function Stats(link)
     if not link or not C_Item or type(C_Item.GetItemStats)~="function" then return nil end
+    local id=type(link)=="string" and tonumber(link:match("item:(%d+)"))
+    if id and type(C_Item.IsItemDataCachedByID)=="function" then
+        local ok,cached=pcall(C_Item.IsItemDataCachedByID,id)
+        if ok and cached==false then return nil end
+    end
     local ok, result=pcall(C_Item.GetItemStats,link)
     if not ok or type(result)~="table" then return nil end
     return NormalizeStats(result)
 end
 local function ItemStats(itemID, requestIfMissing)
-    if type(itemID)~="number" then return nil end
+    if not IsSafe(itemID) or itemID<=0 or itemID~=math.floor(itemID) then return nil end
     local out=Stats("item:"..itemID)
     if out then return out end
     if requestIfMissing ~= false and GetGear.RequestItemDataOnce then
@@ -108,9 +113,20 @@ local function ItemStats(itemID, requestIfMissing)
     return nil
 end
 local function Equipped(slot)
-    if type(GetInventoryItemLink)~="function" then return nil end
+    if type(GetInventoryItemLink)~="function" then return nil,"unknown" end
     local ok, link=pcall(GetInventoryItemLink,"player",slot)
-    return ok and type(link)=="string" and link or nil
+    if not ok then return nil,"unknown" end
+    if type(link)=="string" and link~="" then return link,"equipped" end
+    -- An absent link can be an uncached equipped item. Confirm occupancy
+    -- independently before treating this slot as a zero-stat baseline.
+    if link==nil and type(GetInventoryItemID)=="function" then
+        local read,id=pcall(GetInventoryItemID,"player",slot)
+        if read and (id==nil or IsSafe(id) and id==0) then return nil,"empty" end
+        if read and IsSafe(id) and id>0 and id==math.floor(id) then
+            return "item:"..id,"equipped"
+        end
+    end
+    return nil,"unknown"
 end
 -- Equipped is a live presentation status, never persisted as "acquired".
 -- Compare item IDs, not names/stats: the same item in either ring/trinket
@@ -121,7 +137,7 @@ local function LinkItemID(link)
     return id and tonumber(id) or nil
 end
 function GetGear:IsGearEquipped(gear)
-    if not gear or type(gear.itemID)~="number" then return false end
+    if not gear or not IsSafe(gear.itemID) or gear.itemID<=0 or gear.itemID~=math.floor(gear.itemID) then return false end
     local slots=SLOT[gear.slot]
     if not slots then return false end
     for _,slot in ipairs(slots) do
@@ -147,11 +163,12 @@ local function Combine(a,b)
     for key,value in pairs(b or {}) do result[key]=(result[key] or 0)+value end
     return result
 end
-local function MakeGroup(label, candidate, equippedLinks)
+local function MakeGroup(label, candidate, equippedLinks, unknownEquipment)
     local result={label=label,rows={},comparable=false}
-    if #equippedLinks==0 then
-        result.message="No item equipped";return result
+    if unknownEquipment then
+        result.message="Equipped item data not available yet";return result
     end
+    result.emptySlot=#equippedLinks==0
     local base={}
     for _,link in ipairs(equippedLinks) do
         local equipped=Stats(link)
@@ -183,7 +200,7 @@ local function MakeGroup(label, candidate, equippedLinks)
         end
     end
     if #result.rows==0 then result.message="No differences in reported base stats" end
-    result.comparable=true -- both candidate and equipped base stats were read
+    result.comparable=true -- candidate and occupied stats read, or slot independently confirmed empty
     return result
 end
 
@@ -196,29 +213,33 @@ function GetGear:GetGearComparison(gear, suppressItemDataRequest)
     local groups={}
     if gear.slot=="Ring" or gear.slot=="Trinket" then
         for index,slot in ipairs(slots) do
-            local link=Equipped(slot)
-            groups[#groups+1]=MakeGroup(gear.slot.." "..index,candidate,link and {link} or {})
+            local link,state=Equipped(slot)
+            groups[#groups+1]=MakeGroup(gear.slot.." "..index,candidate,link and {link} or {},state=="unknown")
         end
     elseif gear.slot=="Off Hand" then
-        local main=Equipped(16)
+        local main,mainState=Equipped(16)
+        if mainState=="unknown" then
+            return {message="Cannot confirm main-hand equipment yet; off-hand comparison unavailable.",groups={}}
+        end
         if main and IsTwoHanded(main)==true then
             return {message="A two-handed weapon is equipped; requires a one-handed weapon.",groups={}}
         end
         if main and IsTwoHanded(main)==nil then
             return {message="Cannot confirm main-hand type yet; off-hand comparison unavailable.",groups={}}
         end
-        local link=Equipped(17)
-        groups[1]=MakeGroup("Off Hand",candidate,link and {link} or {})
+        local link,state=Equipped(17)
+        groups[1]=MakeGroup("Off Hand",candidate,link and {link} or {},state=="unknown")
     elseif TWO_HANDED[gear.slot] then
-        local links={}
+        local links,unknown={},false
         for _,slot in ipairs(slots) do
-            local link=Equipped(slot)
+            local link,state=Equipped(slot)
             if link then links[#links+1]=link end
+            unknown=unknown or state=="unknown"
         end
-        groups[1]=MakeGroup("Main Hand + Off Hand",candidate,links)
+        groups[1]=MakeGroup("Main Hand + Off Hand",candidate,links,unknown)
     else
-        local link=Equipped(slots[1])
-        groups[1]=MakeGroup(gear.slot,candidate,link and {link} or {})
+        local link,state=Equipped(slots[1])
+        groups[1]=MakeGroup(gear.slot,candidate,link and {link} or {},state=="unknown")
     end
     return {groups=groups}
 end

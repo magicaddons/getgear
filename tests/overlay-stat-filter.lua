@@ -146,4 +146,39 @@ assert(core:find('o.countArmorOnlyUpgrades = false',1,true),
     "Default on existing and new characters must be no armor-only")
 assert(core:find('o.hideWithoutPositiveStats = true',1,true),
     "New and existing characters should default to filtering")
+-- Acceptance handover1: true empty slots have a zero baseline; missing
+-- inventory links/data do not establish emptiness.
+statData["item:9000"]={ITEM_MOD_AGILITY_SHORT=3,ITEM_MOD_STAMINA_SHORT=2,RESISTANCE0_NAME=35}
+GetInventoryItemLink=function()return nil end
+GetInventoryItemID=function()return nil end
+for _,class in ipairs({"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}) do
+ addon.classToken=class
+ for _,slot in ipairs({"Head","Neck","Shoulder","Shirt","Tabard","Chest","Waist","Legs","Feet","Wrist","Hands","Back","Ring","Trinket","Main Hand","Off Hand","Two-Hand Staff","Two-Hand","Two-Hand Mace","Two-Hand Polearm","Two-Hand Axe","Two-Hand Sword","Ranged","Thrown","Wand","Relic"}) do
+  local c=addon:GetGearComparison(item(9000,slot))
+  assert(c.groups[1].comparable and c.groups[1].emptySlot and #c.groups[1].rows==3,"known empty baseline across classes/slots")
+  for _,r in ipairs(c.groups[1].rows)do assert(r.old==0 and r.delta==r.new and r.delta>0)end
+  local text=addon:ComparisonInline(item(9000,slot))
+  assert(text:find("+3 Agility",1,true)and text:find("+2 Stamina",1,true)and text:find("+35 Armor",1,true),"empty-slot benefit line includes all real client stats")
+ end
+end
+GetInventoryItemID=function()return 99999 end
+assert(not addon:GetGearComparison(item(9000,"Hands")).groups[1].comparable,"uncached occupied item is not zero")
+GetInventoryItemID=function()error("unavailable")end
+assert(not addon:GetGearComparison(item(9000,"Hands")).groups[1].comparable,"failed occupancy lookup is unknown")
+GetInventoryItemID=function()return nil end
+assert(not addon:GetGearComparison(item(99998,"Hands")).groups[1].comparable,"unknown candidate stats remain unknown even when slot empty")
+statData["item:99997"]={}
+C_Item.IsItemDataCachedByID=function()return false end
+assert(not addon:GetGearComparison(item(99997,"Hands")).groups[1].comparable,"uncached empty stats table is not a real zero-stat item")
+C_Item.IsItemDataCachedByID=nil
+assert(not addon:GetGearComparison(item(0,"Hands")).groups[1].comparable,"invalid item ID cannot produce a zero-stat comparison")
+statData["item:9001"]={ITEM_MOD_STAMINA_SHORT=1}
+statData["item:9002"]={ITEM_MOD_STAMINA_SHORT=2}
+GetInventoryItemLink=function(_,slot)return slot==16 and "item:9001"or slot==17 and "item:9002"end
+local combined=addon:GetGearComparison(item(9000,"Two-Hand Staff"))
+local stamina
+for _,r in ipairs(combined.groups[1].rows)do if r.key=="ITEM_MOD_STAMINA_SHORT"then stamina=r end end
+assert(stamina.old==3 and stamina.new==2 and stamina.delta==-1,"two-hand candidate replaces both occupied hands")
+C_Item.GetItemInventoryTypeByID=function()return 17 end
+assert(addon:GetGearComparison(item(9000,"Off Hand")).message:find("two-handed",1,true),"empty offhand is not usable while a two-hand weapon is equipped")
 print("PASS overlay stat filter: nine classes, two armor keys, armor-only opt-in, other positives/resistance, negative/zero/unknown, rings, bags, guide, materials, toggle and zero bulk requests")

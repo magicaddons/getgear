@@ -633,5 +633,26 @@
       "https://www.wowhead.com/forever/quest=94744"
     ],
     "instructions": "One contributor reports these prerequisite references before Bring Me His Head. The relative order and mandatory status of Break Their Chains, Carving a Path and Rise Up remain unverified. Actual active quests take priority; completion flags cannot advance this graph. The final objective is Overlord Kilgar in the outdoor Twilight's Shroud, followed by Da'grosh; it is not Overlord Mugg in Krol'dok Stronghold. Earlier Bolder'ok unlocks remain unresolved."
+  },
+  "79192": {
+    "steps": [
+      79008,
+      79192
+    ],
+    "sideSteps": {
+      "1": [
+        79008,
+        79192
+      ],
+      "2": [
+        79007,
+        79192
+      ]
+    },
+    "ordered": true,
+    "routeVerified": false,
+    "prerequisitesVerified": false,
+    "instructions": "Reported faction-specific route: Alliance begins at Westfall remains #415107;Horde at Barrens remains #415106. Both continue Stepping Stones. These published references do not establish every mandatory unlock;active quest state has priority. Scramble is a later stage,not a prerequisite for this shovel reward.",
+    "evidence": "checkpoint_acceptance1_working_evidence.json"
   }
 }

@@ -289,12 +289,17 @@ local function UpdateProfessionSkill(icon, label, gear, showRequiredProfession, 
     if not gear.profession then
         icon:Hide(); label:Hide(); return false
     end
+    local published
+    if GetGear.GetRecipeSkillRequirement then published=GetGear:GetRecipeSkillRequirement(gear) end
+    local required=published or gear.professionSkillRequired
+    if not published and gear.recipeLearnSkillEvidence=="unverified" then required=nil end
+    local provisional=not published and gear.recipeLearnSkillProvisional==true
     if previewMode then
         -- This is an alternate class/level; the actual player's skill and
         -- known recipes must not be presented as the preview character's.
-        if gear.professionSkillRequired and gear.recipeLearnSkillEvidence~="unverified" then
-            label:SetText(gear.profession .. " " .. tostring(gear.professionSkillRequired) ..
-                (gear.recipeLearnSkillProvisional and "? (reported)" or " required"))
+        if required then
+            label:SetText(gear.profession .. " " .. tostring(required) ..
+                (provisional and "? (reported)" or " required"))
         elseif gear.professionLearnSource == "Trainer" or gear.professionSkillEstimate or gear.recipeLearnMethod=="trainer" then
             label:SetText(gear.profession .. " - Trainer (verify skill)")
         else
@@ -309,8 +314,6 @@ local function UpdateProfessionSkill(icon, label, gear, showRequiredProfession, 
     -- requirement. Lookup is tri-state: nil means the client has not supplied
     -- trustworthy learning data, not that the player lacks the recipe.
     local learned = GetGear.GetRecipeKnowledge and GetGear:GetRecipeKnowledge(gear)
-    local required = gear.professionSkillRequired
-    if gear.recipeLearnSkillEvidence=="unverified" then required=nil end
     local trainer = gear.professionLearnSource == "Trainer" or
         gear.professionSkillEstimate ~= nil or gear.recipeLearnMethod=="trainer"
     if learned ~= true and required == nil and not trainer then
@@ -323,22 +326,22 @@ local function UpdateProfessionSkill(icon, label, gear, showRequiredProfession, 
     local current = GetGear:GetProfessionSkill(gear.profession)
     if showRequiredProfession then
         if learned == true then
-            label:SetText(gear.profession .. " - Learned")
+            label:SetText(gear.profession .. (required and " "..required or "") .. " - Learned")
         elseif required then
-            label:SetText(gear.profession .. " " .. tostring(required) .. (gear.recipeLearnSkillProvisional and "?" or ""))
+            label:SetText(gear.profession .. " " .. tostring(required) .. (provisional and "?" or ""))
         else
             label:SetText(gear.profession .. " - Trainer")
         end
     else
         if learned == true then
-            label:SetText(gear.profession .. " - Learned")
+            label:SetText(gear.profession .. (required and " "..required or "") .. " - Learned")
         elseif required then
-            label:SetText((current == nil and "-" or tostring(current)) .. "/" .. tostring(required) .. (gear.recipeLearnSkillProvisional and "?" or ""))
+            label:SetText((current == nil and "-" or tostring(current)) .. "/" .. tostring(required) .. (provisional and "?" or ""))
         else
             label:SetText(gear.profession .. " - Trainer")
         end
     end
-    if learned == true or (required and not gear.recipeLearnSkillProvisional and current and current >= required) then
+    if learned == true or (required and not provisional and current and current >= required) then
         label:SetTextColor(0.38,0.90,0.53)
     else
         label:SetTextColor(1,0.77,0.38)
@@ -1879,7 +1882,7 @@ function GetGear:RefreshOverlay()
     local list = self:GetItems("tracker")
     -- These are independent overlay presentation filters. Neither affects
     -- the full guide, saved progress, or the catalogue's source research.
-    if self.ShouldShowOverlayStatChanges or self.ShouldShowOverlayWorldBoEDrops then
+    if self.ShouldShowOverlayStatChanges or self.ShouldShowOverlayWorldBoEDrops or self.ShouldShowOverlayAcquisition then
         local visible={}
         for _,gear in ipairs(list) do
             local useful=(opts.hideWithoutPositiveStats==false)
@@ -1888,7 +1891,8 @@ function GetGear:RefreshOverlay()
             local obtainable=(opts.hideGreenBoEWorldDrops==false)
                 or not self.ShouldShowOverlayWorldBoEDrops
                 or self:ShouldShowOverlayWorldBoEDrops(gear)
-            if useful and obtainable then visible[#visible+1]=gear end
+            local accessible=not self.ShouldShowOverlayAcquisition or self:ShouldShowOverlayAcquisition(gear)
+            if useful and obtainable and accessible then visible[#visible+1]=gear end
         end
         list=visible
     end

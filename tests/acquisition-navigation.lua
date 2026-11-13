@@ -603,4 +603,66 @@ for _,goal in ipairs(researchGoals) do actualModel.items[tostring(-goal)]=nil en
 C_QuestLog=nil
 
 C_QuestLog=savedSourceAPI
+-- Acceptance handover1: trainer preference and source eligibility are shared
+-- navigation/presentation rules, not item blacklists or catalogue removal.
+do
+ local a={level=5};assert(loadfile(root.."/AcquisitionNavigation.lua"))("GetGear",a)
+ a.AcquisitionNavigationData={items={},sources={},quests={},chains={},recipeRequirements={},availability={}}
+ local d=a.AcquisitionNavigationData
+ UnitFactionGroup=function()return "Alliance"end;UnitLevel=function()return a.level end
+ UnitClass=function()return "Druid","DRUID",11 end
+ C_Map={GetBestMapForUnit=function()return 100 end,GetMapInfo=function()return{name="Elwynn Forest"}end,
+  GetPlayerMapPosition=function()return{GetXY=function()return .20,.20 end}end}
+ d.sources["npc:1"]={name="Remote",serviceSide=1,locations={{zone="Riverglades",uiMapID=101,x=10,y=10}}}
+ d.sources["npc:2"]={name="Capital",serviceSide=1,locations={{zone="Stormwind City",uiMapID=102,x=30,y=30}}}
+ d.sources["npc:3"]={name="Nearby",serviceSide=1,locations={{zone="Elwynn Forest",uiMapID=100,x=21,y=21}}}
+ d.sources["npc:4"]={name="Other faction",serviceSide=2,locations={{zone="Elwynn Forest",uiMapID=100,x=20,y=20}}}
+ d.items['1']={routes={}}
+ for i=1,4 do d.items['1'].routes[i]={kind="trainer",source="npc:"..i,serviceSide=d.sources["npc:"..i].serviceSide}end
+ local g={itemID=1,profession="Blacksmithing"}
+ assert(a:GetAcquisitionMapTarget(g).source=="npc:3","same-frame nearby eligible trainer wins")
+ assert(#a:GetAcquisitionNavigationChoices(g)==3,"all valid alternative trainers retained;other faction service excluded")
+ C_Map=nil
+ assert(a:GetAcquisitionMapTarget(g).source=="npc:2","without player location prefer verified faction capital over remote trainer")
+ d.availability['1']={overlayEligible=false,reason="cross-version source unconfirmed"}
+ assert(not a:ShouldShowOverlayAcquisition(g)and d.items['1'],"overlay availability does not remove guide data")
+ d.availability['1']={overlayEligible=true,status="reviewed-current-source"}
+ assert(a:ShouldShowOverlayAcquisition(g),"credible current source can reclassify a cross-version-origin item")
+ d.items['2']={routes={{kind="quest",questID=20}}};d.quests['20']={questID=20,side=2,starts={'npc:4'},ends={}}
+ assert(not a:ShouldShowOverlayAcquisition({itemID=2}),"genuinely opposing-faction-only source is not ordinary Alliance overlay recommendation")
+ d.sources['npc:5']={name="Neutral drop",locations={{zone="Tirisfal Glades",x=35,y=50}}}
+ d.items['3']={routes={{kind="named_drop",source="npc:5"}}}
+ assert(not a:ShouldShowOverlayAcquisition({itemID=3}),"low-level neutral drop in opposing home territory is a travel preference,not faction-exclusive")
+ assert(#a:GetAcquisitionNavigationChoices({itemID=3})==1,"inconvenient neutral source remains in guide")
+ a.level=30;assert(a:ShouldShowOverlayAcquisition({itemID=3}),"not a blanket hostile-zone blacklist")
+ a.level=5;C_Map={GetBestMapForUnit=function()return 99 end,GetMapInfo=function()return{name="Tirisfal Glades"}end}
+ assert(a:ShouldShowOverlayAcquisition({itemID=3}),"player already in source region has a practical local alternative")
+ d.recipeRequirements['1']={recipeMinimumSkill=25,skillUpThresholds={99,100,110,120}}
+ assert(a:GetRecipeSkillRequirement(g)==25,"minimum is not orange/yellow/green/grey threshold")
+ d.recipeRequirements['1']={skillUpThresholds={25,55,70,85}}
+ assert(a:GetRecipeSkillRequirement(g)==nil,"thresholds alone cannot invent a minimum")
+ d.recipeRequirements['1']={broadBookDrop=true,bookLearningSkill=30}
+ assert(a:GetAcquisitionDirections(g):find("not a targeted farm",1,true)and a:GetAcquisitionDirections(g):find("listings are unknown",1,true),"broad pattern references remain qualified,AH conditional")
+ -- The actual reported cases use the exact same helpers.
+ assert(loadfile(root.."/AcquisitionNavigationData.lua"))("GetGear",a)
+ assert(a:GetRecipeSkillRequirement({itemID=4237,profession="Leatherworking"})==25)
+ assert(a:GetRecipeSkillRequirement({itemID=7280,profession="Leatherworking"})==30)
+ assert(a:GetRecipeAcquisitionKind({itemID=7280})=="broad-book-drop")
+ assert(not a:ShouldShowOverlayAcquisition({itemID=241089}),"actual Scarlet Dagger version warning suppresses compact recommendation")
+ a.level=5;C_Map=nil
+ assert(not a:ShouldShowOverlayAcquisition({itemID=3334}),"Farmer's Shovel level5 Alliance source travel is not practical")
+ a.level=14
+ local first=a:GetAcquisitionMapTarget({itemID=3334})
+ assert(first and first.zone=="Westfall"and first.questID==79008,"Alliance variant begins in Westfall,not Horde territory or final turn-in")
+ UnitFactionGroup=function()return "Horde"end
+ assert(a:GetAcquisitionMapTarget({itemID=3334}).questID==79007,"Horde variant has independent published starting step")
+ -- Exercise the actual UI skill formatter,including the already-learned path.
+ local u=assert(io.open(root.."/UI.lua")):read('*a');local body=assert(u:match('(local function UpdateProfessionSkill.-)\nend'))..'\nend\nreturn UpdateProfessionSkill'
+ local label={SetText=function(self,t)self.text=t end,SetTextColor=function()end,Show=function()end,Hide=function()end}
+ local icon={Hide=function()end};a.GetProfessionSkill=function()return 25 end;a.GetRecipeKnowledge=function()return true end
+ local env=setmetatable({GetGear=a,PROFESSION_ART={},SetProfessionIcon=function()end},{__index=_G})
+ local formatter=assert(load(body,'profession minimum','t',env))()
+ formatter(icon,label,{itemID=4237,profession='Leatherworking'},true,false)
+ assert(label.text:find('25',1,true)and label.text:find('Learned',1,true),'learned recipe still shows numerical minimum')
+end
 print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests")

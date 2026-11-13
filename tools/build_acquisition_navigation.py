@@ -18,7 +18,7 @@ CLASSES = ["PRIEST", "MAGE", "WARLOCK", "DRUID", "ROGUE", "HUNTER", "SHAMAN", "W
 PROFESSION_SKILLS = {"Alchemy": 171, "Blacksmithing": 164, "Enchanting": 333,
                      "Engineering": 202, "Leatherworking": 165, "Tailoring": 197,
                      "Cooking": 185, "First Aid": 129}
-ENTITY = re.compile(r"/(?:forever/)?(npc|object|quest|item|currency|zone)(?:=|/)(\d+)")
+ENTITY = re.compile(r"/(?:forever/)?(npc|object|quest|item|spell|currency|zone)(?:=|/)(\d+)")
 
 
 def lua(value):
@@ -74,6 +74,7 @@ class Evidence:
         self.full_npc_sales = collections.defaultdict(dict)
         self.full_npc_drops = collections.defaultdict(dict)
         self.full_npc_teaching = collections.defaultdict(list)
+        self.full_recipes = collections.defaultdict(list)
         self.full_object_contents = collections.defaultdict(dict)
         self.instances = {}
         self.instance_guidance = []
@@ -178,10 +179,16 @@ class Evidence:
             kind, raw_id = match.groups()
             source_id = int(raw_id)
             provenance = dict(url=url, sha256=node["sha256"], file=evidence_file)
+            if kind in ["spell", "item"]:
+                for recipe in rows((node.get("lists") or {}).get("recipes")) + rows((node.get("lists") or {}).get("created-by-spell")):
+                    if isinstance(recipe, dict) and type(recipe.get("id")) is int:
+                        self.full_recipes[recipe["id"]].append((recipe, provenance))
             if kind in ["npc", "object"]:
                 name = node.get("title", "").split(" - ")[0] or node.get("name")
                 _, source = self.source(kind, source_id, name, provenance)
                 if kind == "npc":
+                    if type(node.get("serviceSide")) is int and node["serviceSide"] in [1, 2]:
+                        source["serviceSide"] = node["serviceSide"]
                     for note in rows(node.get("serviceAccessNotes")):
                         if isinstance(note, str) and note.strip() and note not in source.setdefault("serviceAccessNotes", []):
                             source["serviceAccessNotes"].append(note)
@@ -296,6 +303,10 @@ class Evidence:
                     q["actorZones"] = {key: value for key, value in node["actorZones"].items()
                                        if isinstance(key, str) and re.fullmatch(r"(?:npc|object):\d+", key)
                                        and isinstance(value, str) and value.strip()}
+                if isinstance(node.get("actorSides"), dict):
+                    q["actorSides"] = {key: value for key, value in node["actorSides"].items()
+                                       if isinstance(key, str) and re.fullmatch(r"(?:npc|object):\d+", key)
+                                       and type(value) is int and value in [1, 2]}
                 for field in ["starterZone", "starterInstructions", "objectiveZone", "objectiveSource", "objectiveInstructions", "turnInZone", "turnInInstructions"]:
                     if isinstance(node.get(field), str):
                         q[field] = node[field]
@@ -457,6 +468,7 @@ def build(inputs):
     chains_path = REPORT / "navigation_quest_chains.json"
     chains = json.loads(chains_path.read_text()) if chains_path.exists() else {}
     data = dict(version=1, sources=evidence.sources, quests=evidence.quests, items={}, maps={}, chains=chains,
+                recipeRequirements={}, availability={},
                 currencies=evidence.currencies,
                 instances={name: True for name in known_dungeons | set(evidence.instances)},
                 instanceDetails=evidence.instances)
@@ -476,6 +488,37 @@ def build(inputs):
         meta = equipment.get(item_id) or books.get(item_id) or {}
         own = evidence.items.get(item_id, {})
         craft = bool(gear.get("profession"))
+        if craft:
+            requirement = dict(profession=gear["profession"])
+            book_meta = books.get(item_id, {})
+            book_minimum = book_meta.get("bookLearningSkill")
+            if type(book_minimum) is int and 0 < book_minimum < 9999:
+                requirement["bookLearningSkill"] = book_minimum
+            recipe = recipes.get(item_id, {})
+            if str(recipe.get("spellID", "")).isdigit() and recipe.get("profession") == gear["profession"]:
+                spell_id = int(recipe["spellID"])
+                minimums, citations, thresholds = set(), [], []
+                for fact, proof in evidence.full_recipes.get(spell_id, []):
+                    if (rows(fact.get("creates"))[:1] == [item_id] and fact.get("name") == gear["name"]
+                            and PROFESSION_SKILLS.get(gear["profession"]) in rows(fact.get("skill"))
+                            and (fact.get("envChange") or {}).get("status") != "unconfirmed"):
+                        n = fact.get("learnedat")
+                        if type(n) is int and 0 < n < 9999:
+                            minimums.add(n); citations.append(proof)
+                        if len(rows(fact.get("colors"))) == 4:
+                            thresholds.append(fact["colors"])
+                if len(minimums) == 1:
+                    requirement["recipeMinimumSkill"] = next(iter(minimums))
+                    requirement["evidence"] = citations
+                elif minimums:
+                    requirement["minimumDisputed"] = True
+                # Skill-up colors are retained for review, never used as minima.
+                if thresholds:
+                    requirement["skillUpThresholds"] = thresholds[0]
+            if book_meta.get("retrievedNPCRows", 0) >= 10:
+                requirement["broadBookDrop"] = True
+                requirement["bookItemID"] = book_meta.get("bookItemID")
+            data["recipeRequirements"][raw_id] = requirement
         dungeon = dungeon_rows.get(item_id)
         source_type = gear.get("sourceType", "").lower()
         plan["category"] = "crafting" if craft else "quest" if "quest" in source_type else "vendor" if "vendor" in source_type else "world_drop" if "world drop" in source_type else "reputation" if "reputation" in source_type else "unknown"
@@ -517,6 +560,10 @@ def build(inputs):
                     minimum, fee = teaching.get("learnedat"), teaching.get("trainingcost")
                     if type(minimum) is int and 0 <= minimum < 9999:
                         details += f" Published learning skill: {gear['profession']} {minimum}."
+                        if minimum > 0:
+                            known = data["recipeRequirements"][raw_id].setdefault("trainerLearningSkills", [])
+                            if minimum not in known:
+                                known.append(minimum)
                     if type(fee) is int and fee >= 0:
                         details += f" Published training fee: {fee} copper."
                     details += (" This locates recipe learning, not finished equipment or a physical pattern book."
@@ -525,6 +572,7 @@ def build(inputs):
                         details += " " + note
                     legacy = teaching.get("classicEra") == 1
                     route("trainer", source=f"npc:{npc_id}", spellID=spell_id,
+                          serviceSide=evidence.sources[f"npc:{npc_id}"].get("serviceSide"),
                           verification="legacy-reference" if legacy else "published-reference",
                           directionsOnly=True if legacy else None, instructions=details)
                     break
@@ -764,9 +812,47 @@ def build(inputs):
                   location=dict(legacy, verification="legacy-reference" if legacy.get("quality") == "classic-reference" else "published-reference"),
                   label=legacy.get("spot", gear.get("source")), instructions=gear.get("instructions"),
                   cost=gear.get("recipeVendorCost"), currency=gear.get("recipeVendorCurrency"))
-        if own.get("disputed") or source_item.get("disputed"):
+        warning_confidences = {
+            "published-forever-equipment-version-unconfirmed", "published-forever-equipment-unavailable-version",
+            "published-forever-unavailable-version", "published-cross-version-availability-warning",
+            "published-forever-version-warning-current-acquisition-unverified",
+            "published-cross-version-reference-current-unconfirmed", "published-forever-seasonal-version-unconfirmed",
+            "published-forever-version-warning-origin-unresolved",
+        }
+        unresolved_confidences = {
+            "published-forever-equipment-origin-unresolved", "cached-exact-forever-equipment-origin-unresolved",
+            "published-forever-name-and-faction-reference-origin-unresolved",
+            "secondary-unnamed-vendor-origin-unresolved", "secondary-availability-claim-unresolved",
+            "reported-market-reference-origin-unresolved", "published-forever-reference-origin-unresolved",
+        }
+        published_route = any(r["kind"] != "legacy" and r.get("verification") == "published-reference"
+                              and not r.get("directionsOnly") for r in plan["routes"])
+        unknown_origin = not craft and not published_route and (meta.get("originUnknown") is True
+            or meta.get("sourceFinding") == "named-origin-unresolved" or meta.get("confidence") in unresolved_confidences)
+        current_trainer = any(r["kind"] == "trainer" and not r.get("directionsOnly") for r in plan["routes"])
+        uncertain_learning_only = craft and source_item.get("disputed") and not current_trainer
+        warning = own.get("disputed") or meta.get("confidence") in warning_confidences or unknown_origin or uncertain_learning_only
+        override = meta.get("availabilityEvidence") or {}
+        reviewed_current = (meta.get("liveVerified") is True
+                            or gear.get("acquisitionConfidence") in ["forever", "observed", "forever-observed-npc"]
+                            or meta.get("availabilityStatus") == "published-current-source"
+                            and isinstance(override.get("url"), str) and override["url"].startswith("https://")
+                            and re.fullmatch(r"[0-9a-f]{64}", str(override.get("sha256", ""))))
+        if warning and not reviewed_current:
+            data["availability"][raw_id] = dict(status="origin-unresolved" if unknown_origin else "unconfirmed-version", overlayEligible=False,
+                reason="Current Forever acquisition is not established; a statistics/client/cross-version reference alone is not an actionable source.",
+                evidence=own.get("evidence"), reviewedConfidence=meta.get("confidence"))
+        elif warning and reviewed_current:
+            data["availability"][raw_id] = dict(status="reviewed-current-source", overlayEligible=True,
+                evidence=override, liveVerified=meta.get("liveVerified") is True)
+        if own.get("disputed") and not reviewed_current:
             plan["routes"] = []
             gap("source_version_disputed", detail="Availability warning must not create a misleading destination.")
+        elif source_item.get("disputed"):
+            # A questionable physical book cannot erase independently matched
+            # current trainer teaching for the same spell/output/profession.
+            plan["routes"] = [r for r in plan["routes"] if r["kind"] == "trainer" and not r.get("directionsOnly")]
+            gap("source_version_disputed", detail="Book version unverified; only independently joined current trainer alternatives are retained.")
         located, exact = False, False
         for entry in plan["routes"]:
             q = None

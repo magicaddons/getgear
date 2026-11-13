@@ -48,6 +48,7 @@ local function NotifyLevel(newLevel)
             and not GetGear:GetStatus(item) and not GetGear:IsHidden(item)
             and not GetGear:IsGearEquipped(item)
             and (not GetGear.ShouldDisplayGear or GetGear:ShouldDisplayGear(item,GetGear.classToken,"available"))
+            and (not GetGear.ShouldShowOverlayAcquisition or GetGear:ShouldShowOverlayAcquisition(item))
             and (not GetGear.ShouldDisplayCraftedGear or GetGear:ShouldDisplayCraftedGear(item)) then
             count = count + 1
         end

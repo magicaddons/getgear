@@ -2174,7 +2174,27 @@
       "https://www.wowhead.com/forever/quest=79192/stepping-stones": "96dc26389578c8005fb0edc78962847b6b7674a91f5b240c898d1444db97209c"
     },
     "sourceFinding": "published-named-source-reference",
-    "publishedRequirements": []
+    "publishedRequirements": [],
+    "navigationRoutes": [
+      {
+        "kind": "named_drop",
+        "source": "npc:1934",
+        "requiresFullLootJoin": true,
+        "directionsOnly": true,
+        "verification": "legacy-reference",
+        "sourceZone": "Tirisfal Glades",
+        "instructions": "Published neutral item drop reference in Horde starting territory;not faction-exclusive or a confirmed current farm. Current loot/access unverified;Alliance quest alternative is separate."
+      },
+      {
+        "kind": "named_drop",
+        "source": "npc:1936",
+        "requiresFullLootJoin": true,
+        "directionsOnly": true,
+        "verification": "legacy-reference",
+        "sourceZone": "Tirisfal Glades",
+        "instructions": "Published neutral item drop reference in Horde starting territory;not faction-exclusive or a confirmed current farm. Current loot/access unverified;Alliance quest alternative is separate."
+      }
+    ]
   },
   {
     "itemID": 4196,

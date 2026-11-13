@@ -1,0 +1,45 @@
+{
+  "status": "local-passed-ci-pending",
+  "baselineCommit": "4df9a03fc5033fd9067e0fa573129a4b6cbb5fd2",
+  "branch": "work/full-acquisition-reconciliation-20261109",
+  "localStandardPass": 19,
+  "lua51SyntaxModules": 26,
+  "lua51RegressionPass": 15,
+  "syntheticTocRuntimes": [
+    "5.1",
+    "5.4"
+  ],
+  "actualClientVerified": false,
+  "sourceCapture": "acceptance1verified",
+  "capturedHTTPResponses": 8,
+  "affected": {
+    "exactTrainerRelationsBefore": 21,
+    "exactTrainerRelationsAfter": 370,
+    "trainerCraftsBefore": 21,
+    "trainerCraftsAfter": 147,
+    "numericalMinima": 1135,
+    "newNumericalMinima": 972,
+    "unknownMinima": 119,
+    "broadPatternRecords": 114,
+    "availabilityExcluded": 1076,
+    "originUnresolved": 801,
+    "unconfirmedVersion": 275
+  },
+  "protected": {
+    "gear": 7707,
+    "classObjectives": 36341,
+    "crafts": 1254,
+    "ingredients": 4857,
+    "bookObjects": 954,
+    "heldOutsideCandidates": 900
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1683,
+    "missing": 2971,
+    "verified_coordinate_data": 897
+  },
+  "next": "non-releaseCI/wholebotreview,thenstopawaitmanualacceptance",
+  "noPackage": true,
+  "noResearchRestart": true
+}

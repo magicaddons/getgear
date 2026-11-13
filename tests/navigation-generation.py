@@ -564,4 +564,40 @@ with tempfile.TemporaryDirectory() as temp:
     later = nav.build(gear)[0]
     assert later["sources"]["npc:100"]["locations"][0]["bounds"] == dict(xMin=20, xMax=25, yMin=30, yMax=35)
     assert set(later["items"]) == {"1"} and later["items"]["1"]["routes"] == data["items"]["1"]["routes"], "source-only discovery changes geography, not routes or item membership"
+# Acceptance1: minima are explicit learnedat fields, never color thresholds;
+# shared parsing covers every supported crafting profession and preserves
+# book learning and recipe/crafting minima independently.
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT = Path(temp)
+    (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([dict(itemID=99, confidence="published-cross-version-availability-warning", liveVerified=False)]))
+    (nav.REPORT / "reviewed_recipe_sources.json").write_text(json.dumps([dict(itemID=1, bookLearningSkill=30, retrievedNPCRows=200, bookItemID=50)]))
+    for filename in ["dungeon_items_reconciled.csv", "remaining_equipment_research_queue.csv"]:
+        (nav.REPORT / filename).write_text("itemID\n")
+    gear={};proof=[];csvrows=["itemID,profession,spellID"]
+    for i,(profession,skill) in enumerate([("Leatherworking",165),("Blacksmithing",164),("Tailoring",197),("Engineering",202),("Enchanting",333),("Alchemy",171)],1):
+        gear[str(i)]=dict(itemID=i,name="Skill fixture "+str(i),profession=profession,sourceType=profession,eligibility=[511])
+        csvrows.append(f"{i},{profession},{100+i}")
+        proof.append(response("spell",100+i,lists={"recipes":[dict(id=100+i,name=gear[str(i)]["name"],creates=[i,1,1],skill=[skill],learnedat=25,colors=[99,100,110,120])]}))
+    gear['99']=dict(itemID=99,name="Version fixture",sourceType="World drop",eligibility=[511])
+    (nav.REPORT/"recipes_reconciled.csv").write_text("\n".join(csvrows)+"\n")
+    (nav.REPORT/"checkpoint_fixture_evidence.json").write_text(json.dumps(proof))
+    d=nav.build(gear)[0]
+    for i in range(1,7):assert d['recipeRequirements'][str(i)]['recipeMinimumSkill']==25 and d['recipeRequirements'][str(i)]['skillUpThresholds']==[99,100,110,120]
+    assert d['recipeRequirements']['1']['bookLearningSkill']==30 and d['recipeRequirements']['1']['broadBookDrop']
+    assert not d['availability']['99']['overlayEligible'],"cross-version stats/source warning is not current acquisition proof"
+    (nav.REPORT/"reviewed_equipment_sources.json").write_text(json.dumps([dict(itemID=99,confidence="published-cross-version-availability-warning",availabilityStatus="published-current-source",availabilityEvidence=dict(url="https://www.wowhead.com/forever/item=99",sha256="b"*64))]))
+    assert nav.build(gear)[0]['availability']['99']['overlayEligible'],"reviewed current source evidence permits reclassification without banning a version origin"
+    (nav.REPORT/"reviewed_equipment_sources.json").write_text(json.dumps([dict(itemID=99,confidence="published-forever-equipment-origin-unresolved",originUnknown=True)]))
+    assert not nav.build(gear)[0]['availability']['99']['overlayEligible'],"statistics with an explicitly unresolved origin are reference data,not an actionable overlay source"
+    gear['99']['acquisitionConfidence']='forever'
+    assert nav.build(gear)[0]['availability']['99']['overlayEligible'],"do not replace a genuinely verified manual source with an older unresolved finding"
+    del gear['99']['acquisitionConfidence']
+    (nav.REPORT/"reviewed_equipment_sources.json").write_text(json.dumps([dict(itemID=99,originUnknown=True,navigationRoutes=[dict(kind='vendor',source='npc:100',requiresFullSaleJoin=True)])]))
+    proof.append(response('item',99,lists={'sold-by':[dict(id=100,name='Published vendor')]}))
+    proof.append(response('npc',100,name='Published vendor',selectedSells=[dict(id=99,name='Version fixture')]))
+    (nav.REPORT/"checkpoint_fixture_evidence.json").write_text(json.dumps(proof))
+    assert '99' not in nav.build(gear)[0]['availability'],"an independently joined published source supersedes a stale origin-unknown finding"
+    proof[0]['lists']['recipes'][0]['learnedat']=True
+    (nav.REPORT/"checkpoint_fixture_evidence.json").write_text(json.dumps(proof))
+    assert 'recipeMinimumSkill'not in nav.build(gear)[0]['recipeRequirements']['1'],"malformed minima remain unknown;do not substitute skill-up colors"
 print("PASS navigation generation: future evidence propagation, exact trainer spell/output/profession joins, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

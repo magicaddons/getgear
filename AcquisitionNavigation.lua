@@ -4,14 +4,54 @@ local _, GetGear = ...
 -- never inferred from equipment status or another character's completion.
 local function data() return GetGear.AcquisitionNavigationData or {items={},sources={},quests={},chains={}} end
 local function get(t,id) return t and (t[id] or t[tostring(id)]) end
+function GetGear:GetRecipeSkillRequirement(gear)
+    if not gear then return end
+    local fact=get(data().recipeRequirements,gear.itemID) or {}
+    if type(fact.recipeMinimumSkill)=="number" then return fact.recipeMinimumSkill,"recipe minimum" end
+    if type(fact.trainerLearningSkills)=="table" and #fact.trainerLearningSkills==1 then
+        return fact.trainerLearningSkills[1],"learning minimum"
+    end
+    if type(fact.bookLearningSkill)=="number" then return fact.bookLearningSkill,"book learning minimum" end
+    if type(gear.professionSkillRequired)=="number" and gear.recipeLearnSkillEvidence~="unverified" then
+        return gear.professionSkillRequired,"learning minimum"
+    end
+end
+function GetGear:GetRecipeAcquisitionKind(gear)
+    local fact=get(data().recipeRequirements,gear and gear.itemID) or {}
+    return fact.broadBookDrop and "broad-book-drop" or nil
+end
 local function call(fn,...)
     if type(fn)~="function" then return end
     local ok,a,b,c=pcall(fn,...)
     if ok and not (type(issecretvalue)=="function" and (issecretvalue(a) or issecretvalue(b) or issecretvalue(c))) then return a,b,c end
 end
+-- Travel preferences are not item-faction restrictions. In particular, a
+-- neutral drop in an opposing starting territory remains in the full guide.
+local HOME_SIDE={
+    ["Tirisfal Glades"]=2,["Durotar"]=2,["Mulgore"]=2,
+    ["Elwynn Forest"]=1,["Dun Morogh"]=1,["Teldrassil"]=1,
+    ["Stormwind City"]=1,["Stormwind"]=1,["Ironforge"]=1,["Darnassus"]=1,
+    ["Orgrimmar"]=2,["Undercity"]=2,["Thunder Bluff"]=2,
+}
+local CAPITAL={ ["Stormwind City"]=1,["Stormwind"]=1,["Ironforge"]=1,["Darnassus"]=1,
+    ["Orgrimmar"]=2,["Undercity"]=2,["Thunder Bluff"]=2 }
+local function travelContext()
+    local faction=call(UnitFactionGroup,"player")
+    local side=faction=="Alliance" and 1 or faction=="Horde" and 2
+    local map=C_Map and call(C_Map.GetBestMapForUnit,"player")
+    local info=map and C_Map and call(C_Map.GetMapInfo,map)
+    return side,map,type(info)=="table" and info.name,call(UnitLevel,"player") or GetGear.level
+end
 local function onQuest(id) return C_QuestLog and call(C_QuestLog.IsOnQuest,id)==true end
 local function chooseQuest(goal)
     local chain=get(data().chains,goal)
+    if chain and chain.sideSteps then
+        local side=call(UnitFactionGroup,"player")=="Alliance" and "1" or call(UnitFactionGroup,"player")=="Horde" and "2"
+        if side and chain.sideSteps[side] then
+            local selected={};for k,v in pairs(chain)do selected[k]=v end
+            selected.steps=chain.sideSteps[side];chain=selected
+        end
+    end
     local steps=chain and chain.steps or {goal}
     for _, id in ipairs(steps) do if onQuest(id) then return id,"active",chain end end
     if C_QuestLog and call(C_QuestLog.IsQuestFlaggedCompleted,goal)==true then return goal,"completed",chain end
@@ -100,7 +140,7 @@ local function routesForCharacter(model,plan)
     if not side and not classBit then return routes end
     local useful={}
     for _,route in ipairs(routes) do
-        local restricted=route.offer and route.offer.side
+        local restricted=route.serviceSide or route.offer and route.offer.side
         local classMask
         local activeSide,activeClass=false,false
         if route.kind=="quest" or route.kind=="quest_container" then
@@ -143,6 +183,8 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         if not seen[key] then seen[key]=true;target.id=key;choices[#choices+1]=target end
     end
     local function source(key,role,q,route,preferred)
+        local side=travelContext()
+        if q and q.actorSides and q.actorSides[key] and side and q.actorSides[key]~=side then return end
         local actor=model.sources[key] or {}
         local locations=sourceLocations(actor,q,key,route)
         local unresolved=q and #(q.relatedQuests or {})>0 and not get(model.chains,route.questID)
@@ -263,7 +305,70 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                  requirements=offerText(route),instructions=route.instructions})
         end
     end
+    local side,map,zone,level=travelContext()
+    local trainerPreferred,trainerRank
+    for index,target in ipairs(choices) do
+        local q=target.questID and get(model.quests,target.questID)
+        local minimum=q and q.reqlevel
+        target.minimumLevel=type(minimum)=="number" and minimum or nil
+        target.futureLevel=target.minimumLevel and type(level)=="number" and target.minimumLevel>level or false
+        if target.futureLevel then target.preferred=false end
+        local actor=target.source and model.sources[target.source] or {}
+        local sameZone=(map and target.uiMapID==map) or zone and zone==target.zone
+        target.opposingHome=side and HOME_SIDE[target.zone] and HOME_SIDE[target.zone]~=side
+            and actor.serviceSide~=side and not sameZone or false
+        if target.opposingHome then target.accessNote="Neutral/qualified source in opposing starting territory; travel may be inconvenient." end
+        if target.futureLevel then
+            target.accessNote=(target.accessNote and target.accessNote.." " or "").."Published quest minimum level: "..target.minimumLevel.."."
+        end
+        if target.role=="Recipe trainer" and side and actor.serviceSide==side and not target.futureLevel then
+            local rank=sameZone and 0 or CAPITAL[target.zone]==side and 1 or 2
+            -- Distance is used only within the identical published UI-map frame.
+            local distance=0
+            if sameZone and map==target.uiMapID and C_Map then
+                local point=call(C_Map.GetPlayerMapPosition,map,"player")
+                local x,y
+                if point and type(point.GetXY)=="function" then x,y=call(point.GetXY,point) end
+                if type(x)=="number" and type(y)=="number" and x>=0 and x<=1 and y>=0 and y<=1 then
+                    local b=target.bounds
+                    local tx=target.x or b and math.max(b.xMin,math.min(x*100,b.xMax))
+                    local ty=target.y or b and math.max(b.yMin,math.min(y*100,b.yMax))
+                    if tx and ty then distance=((x*100-tx)^2+(y*100-ty)^2)/100000 end
+                end
+            end
+            rank=rank+distance
+            if not trainerRank or rank<trainerRank then trainerPreferred=index;trainerRank=rank end
+        end
+    end
+    if trainerPreferred then
+        for _,target in ipairs(choices) do target.preferred=false end
+        choices[trainerPreferred].preferred=true
+    end
     return choices
+end
+
+function GetGear:GetAcquisitionOverlayExclusion(gear)
+    if not gear or gear.bagUpgrade then return end
+    local policy=get(data().availability,gear.itemID)
+    if policy and policy.overlayEligible==false then return policy.reason or "Current Forever availability unconfirmed" end
+    local plan=get(data().items,gear.itemID)
+    if not plan or #(plan.routes or {})==0 then return end
+    local side,_,_,level=travelContext()
+    if not side then return end
+    if #routesForCharacter(data(),plan)==0 then return "No published source route for this character's faction/class" end
+    local current,hostile=0,0
+    for _,target in ipairs(self:GetAcquisitionNavigationChoices(gear)) do
+        if not target.missingLocation and not target.futureLevel then
+            current=current+1
+            if target.opposingHome then hostile=hostile+1 end
+        end
+    end
+    if type(level)=="number" and level<=15 and current>0 and current==hostile then
+        return "Only opposing starting-territory routes are currently practical-level candidates; alternatives remain in the guide"
+    end
+end
+function GetGear:ShouldShowOverlayAcquisition(gear)
+    return self:GetAcquisitionOverlayExclusion(gear)==nil
 end
 
 function GetGear:GetAcquisitionMapTarget(gear)
@@ -286,6 +391,15 @@ end
 
 function GetGear:GetAcquisitionDirections(gear)
     local out={}
+    local minimum,kind=self:GetRecipeSkillRequirement(gear)
+    if minimum then out[#out+1]="Published "..kind..": "..(gear.profession or "profession").." "..minimum.."; not a yellow/green/grey skill-up threshold." end
+    local learning=get(data().recipeRequirements,gear and gear.itemID) or {}
+    if learning.bookLearningSkill and learning.bookLearningSkill~=minimum then
+        out[#out+1]="Published book-learning minimum: "..(gear.profession or "profession").." "..learning.bookLearningSkill.."; separate from the recipe/crafting minimum."
+    end
+    if self:GetRecipeAcquisitionKind(gear)=="broad-book-drop" then
+        out[#out+1]="Physical pattern: broad/random published drop references, not a targeted farm. Listed enemy/zone examples do not confirm current loot. If tradeable, consider the Auction House or player trade; current listings are unknown."
+    end
     local plan=get(data().items,gear and gear.itemID)
     for _, route in ipairs(routesForCharacter(data(),plan)) do
         if route.kind=="npc_container" then
@@ -318,7 +432,8 @@ function GetGear:GetAcquisitionDirections(gear)
                         for _, key in ipairs(q[role] or {}) do
                             local a=data().sources[key] or {}
                             local loc=sourceLocations(a,q,key)[1]
-                            out[#out+1]="   "..(role=="starts" and "Start: " or "Turn-in: ")..(a.name or key)..(loc and " — "..loc.zone or " — location unresolved")
+                            local side=q.actorSides and q.actorSides[key]
+                            out[#out+1]="   "..(role=="starts" and "Start: " or "Turn-in: ")..(a.name or key)..(side and (side==1 and " (Alliance route)" or " (Horde route)") or "")..(loc and " — "..loc.zone or " — location unresolved")
                         end
                     end
                 end
@@ -351,6 +466,7 @@ function GetGear:GetAcquisitionDirections(gear)
         if type(target.x)=="number" and type(target.y)=="number" then line=line..string.format(" (%.1f, %.1f)",target.x,target.y)
         elseif target.bounds then local b=target.bounds;line=line..string.format("; published area x%.1f–%.1f, y%.1f–%.1f",b.xMin,b.xMax,b.yMin,b.yMax) end
         if target.missingLocation then line=line.." — exact location unresolved" end
+        if target.accessNote then line=line.."\n"..target.accessNote end
         if target.boss and target.boss~="" then line=line.."; inside, find "..target.boss..". Boss-floor position/access requirements unverified." end
         if target.requirements and target.requirements~="" then line=line.."\n"..target.requirements end
         if target.instructions and target.instructions~="" then line=line.."\n"..target.instructions end
