@@ -1,0 +1,308 @@
+{
+  "status": "genuine navigation formatter/generator followup;not a current catalogue item adoption",
+  "scope": "Full item tooltips say Revered while full merchant standing6 is passed unchanged into the current one-based Lua label table as Honored. Raw item reqrep6 also aligns with Revered;source rank convention must be normalized separately from client API ranks. Own vendor quote52631 versus full merchant/base50000 on274022 also remains source-specific price/discount uncertainty,not one accepted global cost.",
+  "cases": [
+    {
+      "itemID": 274022,
+      "name": "Tough Guy's Eyepatch",
+      "itemURL": "https://www.wowhead.com/forever/item=274022",
+      "itemSHA256": "d388934e205d1ed1a3dffdf23513b94df3a5fe556801c975ba1c4cc7c0df64b5",
+      "printedTooltip": "Tough Guy's Eyepatch      Item Level  1   Binds when picked up     Head                       Requires  Booty Bay  - Revered      Sell Price:  1",
+      "rawNestedRequiredReputation": 6,
+      "ownOffers": [
+        {
+          "classification": 0,
+          "displayName": "Gezzy Gunkgear",
+          "displayNames": [],
+          "id": 265575,
+          "location": [
+            33
+          ],
+          "maxlevel": 36,
+          "minlevel": 36,
+          "name": "Gezzy Gunkgear",
+          "names": [],
+          "react": [
+            0,
+            0
+          ],
+          "tag": "Booty Bay Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              52631
+            ]
+          ],
+          "popularity": 520
+        }
+      ],
+      "fullSale": [
+        {
+          "npcID": 265575,
+          "row": {
+            "appearances": {
+              "0": [
+                740012,
+                ""
+              ]
+            },
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Tough Guy's Eyepatch",
+            "displayid": 740012,
+            "flags2": 24576,
+            "id": 274022,
+            "level": 1,
+            "name": "Tough Guy's Eyepatch",
+            "quality": 3,
+            "slot": 1,
+            "slotbak": 1,
+            "source": [
+              5
+            ],
+            "sourcemore": [
+              {
+                "n": "Gezzy Gunkgear",
+                "t": 1,
+                "ti": 265575,
+                "z": 33
+              }
+            ],
+            "subclass": 5,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "standing": 6,
+            "react": [
+              0,
+              0
+            ],
+            "stack": [
+              1
+            ],
+            "avail": -1,
+            "cost": [
+              [
+                50000,
+                [],
+                []
+              ]
+            ]
+          },
+          "sourceURL": "https://www.wowhead.com/forever/npc=265575",
+          "sourceSHA256": "3dff58f0ca81e36ccb029e45cd18f957752724cd417156d61897bebf64ffcbd4"
+        }
+      ]
+    },
+    {
+      "itemID": 274023,
+      "name": "Stolen Wastewander Cowl",
+      "itemURL": "https://www.wowhead.com/forever/item=274023",
+      "itemSHA256": "1f56c2e37c71056e80bad439e1efea62b28c5c6192744668ca02db1bbeacb3e3",
+      "printedTooltip": "Stolen Wastewander Cowl      Item Level  1   Binds when picked up     Head                       Requires  Gadgetzan  - Revered      Sell Price:  1",
+      "rawNestedRequiredReputation": 6,
+      "ownOffers": [
+        {
+          "classification": 0,
+          "displayName": "Rettrick",
+          "displayNames": [],
+          "id": 265576,
+          "location": [
+            440
+          ],
+          "maxlevel": 44,
+          "minlevel": 44,
+          "name": "Rettrick",
+          "names": [],
+          "react": [
+            0,
+            0
+          ],
+          "tag": "Gadgetzan Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              100000
+            ]
+          ],
+          "popularity": 243
+        }
+      ],
+      "fullSale": [
+        {
+          "npcID": 265576,
+          "row": {
+            "appearances": {
+              "0": [
+                740011,
+                ""
+              ]
+            },
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Stolen Wastewander Cowl",
+            "displayid": 740011,
+            "flags2": 24576,
+            "id": 274023,
+            "level": 1,
+            "name": "Stolen Wastewander Cowl",
+            "quality": 3,
+            "slot": 1,
+            "slotbak": 1,
+            "source": [
+              5
+            ],
+            "sourcemore": [
+              {
+                "n": "Rettrick",
+                "t": 1,
+                "ti": 265576,
+                "z": 440
+              }
+            ],
+            "subclass": 5,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "standing": 6,
+            "react": [
+              0,
+              0
+            ],
+            "stack": [
+              1
+            ],
+            "avail": -1,
+            "cost": [
+              [
+                105263,
+                [],
+                []
+              ]
+            ]
+          },
+          "sourceURL": "https://www.wowhead.com/forever/npc=265576",
+          "sourceSHA256": "37dbf601465d11d24cb002a7bac5ffb4605fbae8f26d66e166c4c7bab0060254"
+        }
+      ]
+    },
+    {
+      "itemID": 276199,
+      "name": "Haughty Fellow's Monocle",
+      "itemURL": "https://www.wowhead.com/forever/item=276199",
+      "itemSHA256": "0f257ae81bde33218a124c339a03329d57db1603790c1fdf00883a35c7562452",
+      "printedTooltip": "Haughty Fellow's Monocle      Item Level  1   Binds when picked up     Head                       Requires  Powderfuse  - Revered      Sell Price:  1",
+      "rawNestedRequiredReputation": 6,
+      "ownOffers": [
+        {
+          "classification": 0,
+          "displayName": "Friz Frazzlespark",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 255897,
+          "location": [
+            16591
+          ],
+          "maxlevel": 41,
+          "minlevel": 41,
+          "name": "Friz Frazzlespark",
+          "names": [],
+          "react": [
+            0,
+            0
+          ],
+          "tag": "Specialty Goods",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              100000
+            ]
+          ],
+          "popularity": 981
+        }
+      ],
+      "fullSale": [
+        {
+          "npcID": 255897,
+          "row": {
+            "appearances": {
+              "0": [
+                741374,
+                ""
+              ]
+            },
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Haughty Fellow's Monocle",
+            "displayid": 741374,
+            "flags2": 24576,
+            "id": 276199,
+            "level": 1,
+            "name": "Haughty Fellow's Monocle",
+            "quality": 3,
+            "slot": 1,
+            "slotbak": 1,
+            "source": [
+              5
+            ],
+            "sourcemore": [
+              {
+                "n": "Friz Frazzlespark",
+                "t": 1,
+                "ti": 255897,
+                "z": 16591
+              }
+            ],
+            "subclass": 5,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "standing": 6,
+            "react": [
+              0,
+              0
+            ],
+            "stack": [
+              1
+            ],
+            "avail": -1,
+            "cost": [
+              [
+                100000,
+                [],
+                []
+              ]
+            ]
+          },
+          "sourceURL": "https://www.wowhead.com/forever/npc=255897",
+          "sourceSHA256": "928ce5f5bfbfbe38126114f4cd37af1c5e728215834e733186e37ab639e7a884"
+        }
+      ]
+    }
+  ],
+  "next": "After bounded source research finish a separate code checkpoint with rank-zero-boundaries/full own merchant evidence,tests/full19local18CI. Do not change class/equip/recipe gates or silently treat a source0asHated."
+}

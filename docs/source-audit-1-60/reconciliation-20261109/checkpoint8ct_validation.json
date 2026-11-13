@@ -1,0 +1,120 @@
+{
+  "checkpoint": "8CT",
+  "status": "documentation-only80case research;targetedproofvalidationPASS;readycommitpush",
+  "baseline": "a7a830d98e83dcfdad3007c24218c61dd010ac65",
+  "sourceProofSHA256": "c2e3378c4d1ae2067d34b1da5563581523390c61fa229dc4f915998083bd1729",
+  "caseCounts": {
+    "selected": 80,
+    "assessed": 80,
+    "fullOwnItems": 80,
+    "ownUnread404": 0,
+    "eligibility": {
+      "hold-no-rendered-equip-level": 36,
+      "hold-version-unconfirmed": 6,
+      "published-all-slot-baseline-pass;future-development-review": 35,
+      "hold-unsupported-equipment-type-or-class-policy": 3
+    },
+    "groups": {
+      "quest-reference": 36,
+      "vendor-reference": 22,
+      "named-source-reference": 22
+    },
+    "fullPrimaryResponses": 181,
+    "newPrimaryResponses": 133,
+    "reusedPrimaryResponses": 48,
+    "fullNPC": 49,
+    "fullQuest": 51,
+    "fullObject": 1,
+    "dropReverseJoins": 22,
+    "dropReverseOmissions": 0,
+    "vendorExactJoins": 33,
+    "vendorFullOmissions": 0,
+    "formalQuestRoleJoins": 77,
+    "knownFailedReferenceEdges": 0,
+    "newFailedReads": 11,
+    "newOwn404": 0,
+    "newNPC403": 9,
+    "newObject403": 2,
+    "knownFailedURLs": 1731,
+    "activeAdoptions": 0,
+    "liveVerified": 0,
+    "BackHeaders": 16,
+    "ThrownHeaders": 2,
+    "publishedMatchingSeriesSegments": 30,
+    "distinctMatchingPrimarySeries": 7,
+    "physicalQuestInputDependencies": 0,
+    "knownContextReferenceEdgesSkipped": 1,
+    "knownActorReferenceEdgesSkipped": 3,
+    "finalFailureGuardSkipEdges": 22
+  },
+  "targetedChecks": [
+    "181actualfullresponsehashes",
+    "80individualdecisions/35passes36missinglevel6version3unknownarmour-classpolicy",
+    "22NPC/33vendor/77role joins andzero selected NPC omissions",
+    "11new403uniqueURLs/nohashes/1731ledger",
+    "192uniqueactualreadtargets/no duplicate read",
+    "30reward-specificprefixes/sevenfullmatchingSeries/do not require later stages",
+    "all1120priorregisterbytes/objects preserved",
+    "three newtyped and204deduplicateduntypedscope references in existing queues",
+    "Revered/source standing6 versus currentformatterbug recorded",
+    "actualgeneratortemporary35eligiblefutureinputs",
+    "protectedruntime/sourceinputsbyteexact"
+  ],
+  "proposalCompatibility": {
+    "eligibleFutureInputs": 35,
+    "plans": 35,
+    "statuses": {
+      "verified_coordinate_data": 9,
+      "directions": 24,
+      "missing": 2
+    },
+    "allVersionUnknownTypeAndMissingLevelHoldsExcluded": true,
+    "actualCurrentCoverageUnchanged": true
+  },
+  "outsideQueue": {
+    "total": 1404,
+    "assessed": 1200,
+    "pendingUntypedScope": 204
+  },
+  "additionalAllSlotQueue": {
+    "total": 905,
+    "assessed": 698,
+    "pendingTyped": 3,
+    "pendingUntypedScope": 204,
+    "nextCheckpoint": "8CU",
+    "nextCount": 3,
+    "IDs": [
+      276395,
+      276396,
+      280363
+    ]
+  },
+  "untypedRewardReferenceScopeReview": {
+    "rawOriginalIDs": 345,
+    "overlapTypedQueue": 144,
+    "distinctOriginalUntyped": 201,
+    "newDistinct": 3,
+    "totalPending": 204
+  },
+  "requiredCodeFollowup": "Source reputation rank6isRevered,not currentformatterHonored;separate source basis from client ranks,fullvalidation required after fix. Also source-only location propagation and canonicalspellmappingholds2844/2845.",
+  "lastFullValidation": {
+    "checkpoint": "8CO",
+    "CI": 43365182317,
+    "source": "30c0553283547e0c23539cec03077f78b3407b4e",
+    "generated": "7bbc9b5fb71bdb7c026cc15787d3c043221a2e66",
+    "localPASS": 19,
+    "CIPASS": 18,
+    "newFullSuiteClaim": false,
+    "newCIRequired": false,
+    "reason": "Diagnostic research/proposals/tracking only;no addon/source/generator/runtime inputs changed."
+  },
+  "navigation": {
+    "verified_coordinate_data": 883,
+    "directions": 1581,
+    "missing": 3087,
+    "not_applicable": 2156
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "limits": "Published source research,not live loot/stock/access/quest acceptance/rendering.35printed1\u201360class-policy passes,36missing-rendered-wearer-level holds,sixversion-unconfirmed,threeunsupportedprintedarmour/class-policyholds. Raw/source minima not wearer gates;no class inferred from an eyepatch/cowl/monocle name or raw unknown subclass. Full ordered Series kept distinct from branching/earlier mandatory unlocks;actual player progress not inferred. NineNPC/twoobject403pages have no bodyhash/coords/currentabsence/retirement claim. Currentphase errors merged before followup;zero repeated failures in8CT. 1731knownfailedURLs,no unchangedretry. Source reputation-rank convention/cost discrepancy newly identified for later code checkpoint;no source or equipment gate silently changed. No canonicalgear/class/recipe/material/chain/runtime input mutation."
+}
