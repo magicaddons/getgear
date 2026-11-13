@@ -3,11 +3,11 @@
   "statuses": {
     "not_applicable": 2156,
     "directions": 1581,
-    "missing": 3091,
-    "verified_coordinate_data": 879
+    "missing": 3087,
+    "verified_coordinate_data": 883
   },
   "inGameRenderingVerified": 0,
-  "gapRows": 17410,
+  "gapRows": 17406,
   "legacyRecipeQuestReferences": {
     "actor_roles_restored": 58,
     "full_recipe_quests_restored": 33,
@@ -32,7 +32,7 @@
     "quest_container": 2365,
     "quest": 305,
     "vendor": 1909,
-    "trainer": 18,
+    "trainer": 22,
     "recipe_vendor": 503,
     "recipe_drop": 60,
     "object": 45,
@@ -44,20 +44,20 @@
     "PRIEST": {
       "directions": 707,
       "not_applicable": 783,
-      "missing": 832,
-      "verified_coordinate_data": 305
+      "missing": 828,
+      "verified_coordinate_data": 309
     },
     "MAGE": {
       "not_applicable": 765,
       "directions": 679,
-      "missing": 722,
-      "verified_coordinate_data": 305
+      "missing": 718,
+      "verified_coordinate_data": 309
     },
     "WARLOCK": {
       "not_applicable": 765,
       "directions": 674,
-      "missing": 713,
-      "verified_coordinate_data": 309
+      "missing": 709,
+      "verified_coordinate_data": 313
     },
     "DRUID": {
       "not_applicable": 1211,
@@ -96,8 +96,8 @@
       "verified_coordinate_data": 625
     }
   },
-  "sourceRecords": 839,
-  "questRecords": 650,
+  "sourceRecords": 849,
+  "questRecords": 670,
   "scope": "Every catalogue ID audited. Verified coordinate data means cited published coordinates, not tested in-game rendering. Directions include client-resolved entrances/areas. Missing data is not successful navigation. Gap rows share the existing acquisition research tracking.",
   "inputs": [
     {
@@ -445,6 +445,10 @@
       "sha256": "b0c6922c723956ec1b62d4fd885afedc67683f016843c8e84f0e348c70bf7a4d"
     },
     {
+      "file": "checkpoint8cn_working_evidence.json",
+      "sha256": "d02f87e1cf581c17ba9eea2a1cf08ebdc623137961a062b97fac7f6a1b158e91"
+    },
+    {
       "file": "checkpoint8d_publication_evidence.json",
       "sha256": "e78e9242b4b8718f039a58131e332455db0794a11a4de35378d2a71521712e3f"
     },
@@ -682,7 +686,7 @@
     },
     {
       "file": "docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json",
-      "sha256": "baffc66bd95c8da8d03076a2c16abb77150e4d8a02c6ec20b1806058381e9135"
+      "sha256": "4d196b789da8c0a99183b09a03c2c862109d13a2bdf3f65b039dbb5be4a3c78f"
     },
     {
       "file": "tools/export_navigation_inputs.lua",
@@ -690,7 +694,7 @@
     },
     {
       "file": "tools/build_acquisition_navigation.py",
-      "sha256": "6d5f7be236e91039cced9359cc02dc1df51bf915f27162b10052a3e081043749"
+      "sha256": "3bfffe3a0fbfb17212f7302e679c81c7f7ce9e68e555c7ed752ebe65c861131e"
     }
   ],
   "catalogueExportSHA256": "cf41374826e9a63649177d9d39c5ca18e006b8b01d524ece438b96e8981c1da9"

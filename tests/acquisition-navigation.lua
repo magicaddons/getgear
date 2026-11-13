@@ -29,6 +29,13 @@ assert(addon:GetAcquisitionMapTarget(chain).questID==10,"unknown progress uses b
 C_QuestLog={IsQuestFlaggedCompleted=function(id) return id==10 end,IsOnQuest=function() return false end}
 assert(addon:GetAcquisitionMapTarget(chain).questID==11,"next incomplete character stage")
 assert(addon:GetAcquisitionDirections(chain):find("prerequisite/unlock rules remain unverified",1,true))
+model.chains["11"].ordered=false
+model.chains["11"].routeVerified=false
+local reportedDirections=addon:GetAcquisitionDirections(chain)
+assert(reportedDirections:find("Reported quest references (order unverified)",1,true) and not reportedDirections:find("ordered published stages",1,true),"reported prerequisite groups must not be labelled a confirmed travel order")
+assert(addon:GetAcquisitionMapTarget(chain).questID==10,"completion flags must not advance an unverified reported graph")
+model.chains["11"].ordered=nil
+model.chains["11"].routeVerified=true
 C_QuestLog.IsOnQuest=function(id) return id==11 end
 C_QuestLog.GetNextWaypoint=function() return 52,.25,.35 end
 C_QuestLog.GetNextWaypointText=function() return "Current client objective" end

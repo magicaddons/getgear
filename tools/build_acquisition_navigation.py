@@ -83,6 +83,11 @@ class Evidence:
         if isinstance(map_id, int) and map_id > 0:
             result["uiMapID"] = map_id
             self.maps[zone].add(map_id)
+        if raw.get("coordinateScope") == "continent-only":
+            # Research can distinguish a coarse instance mapper from a genuine
+            # published outdoor position in the same continent coordinate frame.
+            result["coordinateScope"] = "continent-only"
+            return result
         points = [p for p in rows(raw.get("coords")) if isinstance(p, list) and len(p) >= 2 and coordinate(p[0]) and coordinate(p[1]) and (p[0] != 0 or p[1] != 0)]
         bounds = raw.get("bounds")
         if points:
@@ -107,6 +112,15 @@ class Evidence:
 
     @staticmethod
     def append_location(source, location):
+        if location:
+            frame = lambda value: tuple(value.get(k) for k in ["zone", "areaID", "uiMapID"])
+            same_frame = [old for old in source["locations"] if frame(old) == frame(location)]
+            if location.get("coordinateScope") == "continent-only" or any(old.get("coordinateScope") == "continent-only" for old in same_frame):
+                location = dict(location, coordinateScope="continent-only")
+                for value in same_frame + [location]:
+                    value["coordinateScope"] = "continent-only"
+                    for field in ["x", "y", "bounds"]:
+                        value.pop(field, None)
         if location and location not in source["locations"]:
             source["locations"].append(location)
 
@@ -144,6 +158,9 @@ class Evidence:
                 name = node.get("title", "").split(" - ")[0] or node.get("name")
                 _, source = self.source(kind, source_id, name, provenance)
                 if kind == "npc":
+                    for note in rows(node.get("serviceAccessNotes")):
+                        if isinstance(note, str) and note.strip() and note not in source.setdefault("serviceAccessNotes", []):
+                            source["serviceAccessNotes"].append(note)
                     # A full NPC's selected quest-role rows can corroborate a
                     # starting destination even when the quest page is unread.
                     # They establish neither rewards, faction nor prerequisites.
@@ -469,6 +486,8 @@ def build(inputs):
                         details += f" Published training fee: {fee} copper."
                     details += (" This locates recipe learning, not finished equipment or a physical pattern book."
                                 " Learning skill is not a wearer requirement. Current teaching, price and access remain unverified.")
+                    for note in evidence.sources[f"npc:{npc_id}"].get("serviceAccessNotes", []):
+                        details += " " + note
                     legacy = teaching.get("classicEra") == 1
                     route("trainer", source=f"npc:{npc_id}", spellID=spell_id,
                           verification="legacy-reference" if legacy else "published-reference",

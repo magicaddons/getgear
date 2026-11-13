@@ -297,7 +297,7 @@ function GetGear:GetAcquisitionDirections(gear)
             local id,state,chain=chooseQuest(route.questID)
             if state=="completed" then out[#out+1]="The client reports this reward quest complete; repeat availability is not determined." end
             if chain then
-                out[#out+1]="Quest route (ordered published stages):"
+                out[#out+1]=chain.ordered==false and "Reported quest references (order unverified):" or "Quest route (ordered published stages):"
                 if chain.instructions then out[#out+1]=chain.instructions end
                 if not chain.prerequisitesVerified then out[#out+1]="Exact prerequisite/unlock rules remain unverified; this route does not prove quest availability." end
                 for i, stepID in ipairs(chain.steps or {}) do

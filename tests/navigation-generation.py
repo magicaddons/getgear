@@ -442,6 +442,7 @@ with tempfile.TemporaryDirectory() as temp:
                     learnedat=35, trainingcost=100)
     proof = dict(npcs=[dict(url="https://www.wowhead.com/forever/npc=100", sha256="a"*64,
                            title="Trainer - NPC - Forever", selectedTeaches=[teaching],
+                           serviceAccessNotes=["Published Alliance reaction; Horde service unverified.", 42],
                            maps={"40": [dict(uiMapName="Westfall", uiMapId=52, coords=[[20, 30]])]})])
     path = nav.REPORT / "checkpoint_teacher_evidence.json"
     def teaching_routes():
@@ -451,6 +452,7 @@ with tempfile.TemporaryDirectory() as temp:
     model, routes = teaching_routes()
     assert len(routes) == 1 and routes[0]["source"] == "npc:100" and routes[0]["spellID"] == 123
     assert "Blacksmithing 35" in routes[0]["instructions"] and "100 copper" in routes[0]["instructions"]
+    assert "Horde service unverified" in routes[0]["instructions"] and model["sources"]["npc:100"]["serviceAccessNotes"] == ["Published Alliance reaction; Horde service unverified."], "published reaction uncertainty must survive in shared trainer directions without inventing a faction restriction"
     assert "bookItemID" not in routes[0] and gear == before, "a learned spell is not acquisition of a physical pattern or mutation of gear eligibility"
     assert model["sources"]["npc:100"]["locations"][0]["x"] == 20, "new full trainer evidence must reach the shared map model"
     recipe_path.write_text("itemID,name,profession,spellID\n1,Legacy output label,Blacksmithing,123\n")
@@ -469,4 +471,19 @@ with tempfile.TemporaryDirectory() as temp:
     proof["npcs"][0]["selectedTeaches"] = [teaching]
     recipe_path.write_text("itemID,name,profession,spellID\n1,Training fixture,Blacksmithing,124\n")
     assert not teaching_routes()[1], "independent canonical spell mapping is required"
+    recipe_path.write_text("itemID,name,profession,spellID\n1,Training fixture,Blacksmithing,123\n")
+    proof["npcs"][0]["maps"] = {"-3": [dict(uiMapName="Eastern Kingdoms", uiMapId=1415, coords=[[58.4, 62.5]], coordinateScope="continent-only")]}
+    continent_model, continent_routes = teaching_routes()
+    continent = continent_model["sources"]["npc:100"]["locations"][0]
+    assert len(continent_routes) == 1 and continent["coordinateScope"] == "continent-only"
+    assert not any(k in continent for k in ["x", "y", "bounds"]), "sentinel continent-only mapper coordinates must remain area directions, not precise NPC or dungeon-floor pins"
+    for locations in [[dict(continent), dict(zone="Eastern Kingdoms", areaID=-3, uiMapID=1415, x=58.4, y=62.5)],
+                      [dict(zone="Eastern Kingdoms", areaID=-3, uiMapID=1415, x=58.4, y=62.5), dict(continent)]]:
+        source = dict(locations=[])
+        for location in locations:
+            nav.Evidence.append_location(source, location)
+        assert all(not any(k in location for k in ["x", "y", "bounds"]) for location in source["locations"]), "later unqualified excerpts must not restore a rejected precise point in the same coordinate frame"
+    proof["npcs"][0]["maps"]["-3"][0].pop("coordinateScope")
+    outdoor_model = teaching_routes()[0]
+    assert outdoor_model["sources"]["npc:100"]["locations"][0]["x"] == 58.4, "explicitly qualified instance uncertainty must not erase independent published outdoor continent positions"
 print("PASS navigation generation: future evidence propagation, exact trainer spell/output/profession joins, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")
