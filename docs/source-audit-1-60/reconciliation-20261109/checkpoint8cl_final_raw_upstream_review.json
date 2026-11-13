@@ -1,0 +1,259 @@
+{
+  "capturedUTC": "2026-11-13T02:07:00.041620+00:00",
+  "method": "Exact full factual snapshot comparison: actual8CJ PF23622/EV1702 snapshots to8CL actual8cl2; original8BR deltas preserved separately;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23622,
+    "afterItems": 23627,
+    "beforeDefinitions": 9327,
+    "afterDefinitions": 9328,
+    "newItems": [
+      {
+        "itemID": 12059,
+        "name": "Conqueror's Medallion",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Operation: Death to Angerforge",
+            "zone": "Blackrock Depths (Horde)",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18387,
+        "name": "Brightspark Gloves",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Tsu'zee",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "c64392bda2e9924efb2a8afcb1d8e61467247dce44fc56cf31d5aa30f05c5908"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18538,
+        "name": "Treant's Bane",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 270126,
+        "name": "Conqueror's Pendant",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 286590,
+        "name": "Silithid Queen's Husk",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 6723,
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 252606,
+        "name": "Pristine Scorpid Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 272625,
+        "name": "Premier Linked Hauberk",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 272647,
+        "name": "Premier Linked Headguard",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 274179,
+        "name": "Premier Scalemail Chestpiece",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 274194,
+        "name": "Premier Flatmail Hauberk",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 274196,
+        "name": "Premier Flatmail Headguard",
+        "before": "5",
+        "after": 7
+      }
+    ],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.7acc143c49.json",
+        "bytes": 1010725,
+        "sha256": "7acc143c49b06aa60a78140e767e15d1830f85b00f0689774669563ad500ee4d",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.49966a6566.json",
+        "bytes": 1360816,
+        "sha256": "49966a6566e44a52d32c48696ccc90c31710ec8336843f1c3acb77e49edf9e38",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.0dd030350d.json",
+        "bytes": 466933,
+        "sha256": "0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.d4891008c4.json",
+        "bytes": 446812,
+        "sha256": "d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1702,
+    "afterRaw": 1702,
+    "qualifying": 1439,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 15501,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3637,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-07T13:24:31.000Z",
+        "lastSeen": "2026-11-07T13:24:35.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15501,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11323,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-06T16:30:06.000Z",
+        "lastSeen": "2026-11-06T16:30:06.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15309,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11324,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-07T17:01:57.000Z",
+        "lastSeen": "2026-11-07T17:01:57.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14365,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 4127,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T09:36:10.000Z",
+        "lastSeen": "2026-11-07T09:36:10.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 273084,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3653,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-07T23:45:44.000Z",
+        "lastSeen": "2026-11-09T20:57:49.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15309,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11320,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-06T16:25:59.000Z",
+        "lastSeen": "2026-11-06T16:25:59.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14365,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3241,
+        "evidence": "observed",
+        "build": null,
+        "installs": 4,
+        "firstSeen": "2026-11-06T07:29:20.000Z",
+        "lastSeen": "2026-11-06T07:29:20.000Z"
+      }
+    ],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103442,
+        "sha256": "69796ae16719b49a5ffbe2f016c63e73ff2c635daec38283c7a7fdb788c3be20",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103495,
+        "sha256": "401ae9e9d6c6fbe3b97c36b3d21b8cbe0d54b7b76cd99fe7653c8653deb28fa4",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103456,
+        "sha256": "926fc7bb1002bf2ac69b61a29c9c73c8d3f67e597ac8c0939caf944381c0783b",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 41905,
+        "sha256": "fa1f40b3959d311c2e7e2e1ae069c7895cadec9be0397e858f6018de1132eaf5",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
+      }
+    ]
+  }
+}

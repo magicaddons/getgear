@@ -1,40 +1,40 @@
 {
-  "capturedForCheckpoint": "8CJ actual8cj Everloot;Playfulls retainedactual8CH snapshot with full facts exact",
-  "capturedUTC": "2026-11-12T21:24:47.007262+00:00",
+  "capturedForCheckpoint": "8CL final actual8cl2",
+  "capturedUTC": "2026-11-13T02:06:27.894791+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
-    "itemCount": 23622,
-    "sourceDefinitions": 9327,
+    "itemCount": 23627,
+    "sourceDefinitions": 9328,
     "fingerprints": [
       {
-        "url": "https://playfulls.com/db/meta.a58bed597a.json",
-        "bytes": 1010639,
-        "sha256": "a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4",
+        "url": "https://playfulls.com/db/meta.7acc143c49.json",
+        "bytes": 1010725,
+        "sha256": "7acc143c49b06aa60a78140e767e15d1830f85b00f0689774669563ad500ee4d",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/gear.ce85a43eee.json",
-        "bytes": 1360205,
-        "sha256": "ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9",
+        "url": "https://playfulls.com/db/gear.49966a6566.json",
+        "bytes": 1360816,
+        "sha256": "49966a6566e44a52d32c48696ccc90c31710ec8336843f1c3acb77e49edf9e38",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/goods.b06e07d3a6.json",
+        "url": "https://playfulls.com/db/goods.0dd030350d.json",
         "bytes": 466933,
-        "sha256": "b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82",
+        "sha256": "0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53",
         "matchesRecordedFingerprint": true
       },
       {
-        "url": "https://playfulls.com/db/other.3a97362f02.json",
+        "url": "https://playfulls.com/db/other.d4891008c4.json",
         "bytes": 446812,
-        "sha256": "3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9",
+        "sha256": "d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140",
         "matchesRecordedFingerprint": true
       }
     ],
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "Original8CG2/8CE2-to8CH full raw diff saved:one non-equipmentToy286573 excluded,268 field8 icon index remaps all resolved icons exact,one inserted icon,no other prior raw/source/metadata changes. Two new NPC located_in edges341/382\u2192UI1433 independently full-primary matched;no itemloot or prior edge changes. Final actual8ch5 full PF rows/metadata and1701 full EV facts exactactual8ch3. Diagnostic snapshots advanced only after preserving comparisons."
+    "comparison": "PF23622\u219223627/9327\u21929328:fiveaddedIDs/fournewsharedleads,18538completed8CJversionholdreused;onefullquestdefinition. Allpriorresolvedacquisitionfacts/names exact;6723source-index-onlyrows.20statdisplaystrings/sixuninterpretedfield10values andaggregatefacetcounts retainedwithoutactivegearmutation. Allotherpriorrawcells/fullsourceobjects/metadata exact. Entire1702EVrecords exactactual8CK/1439qualified;sevenselectedpastattributedexamplesnotfarms."
   },
   "everloot": {
     "total": 1702,
@@ -52,35 +52,35 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103442,
-        "sha256": "83b178bc3589ead7f565eea60946ed5ba42d6c79506c9038ddc317c472befac0",
+        "sha256": "69796ae16719b49a5ffbe2f016c63e73ff2c635daec38283c7a7fdb788c3be20",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T21:20:16.962Z"
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103495,
-        "sha256": "4d67733a64f7686b30e08d0234fe6eecff26218d3e5745613d4c90330e1c3b0e",
+        "sha256": "401ae9e9d6c6fbe3b97c36b3d21b8cbe0d54b7b76cd99fe7653c8653deb28fa4",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T21:20:16.962Z"
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103456,
-        "sha256": "a04fbf12b14e71492f61328c85d212533e57c9cb333aba50e52adaaa83f1de67",
+        "sha256": "926fc7bb1002bf2ac69b61a29c9c73c8d3f67e597ac8c0939caf944381c0783b",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T21:20:16.962Z"
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
         "bytes": 41905,
-        "sha256": "572bac06f41bc1cf5a496162d49ce3e3e10038611fbf8f57a0b7b1ce041141bd",
+        "sha256": "fa1f40b3959d311c2e7e2e1ae069c7895cadec9be0397e858f6018de1132eaf5",
         "matchesReconciliationResponseFingerprint": true,
-        "dataAsOf": "2026-11-12T21:20:16.962Z"
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
       }
     ],
-    "comparison": "One NPC-only SpiritHealer6491\u2192DunMoroghUI1426 observation;all1701old full relation records exact. Full originaldelta andindependentprimary read preserved. No gearloot relation added.",
+    "comparison": "All1702relationrecords andfields exact retained actual8CJ/8CK factual baseline;no added/deleted/updated relations. EVdiagnosticCSVretainedbyteexact.",
     "rawEdges": 1702,
     "qualifyingRelationships": 1439
   },
-  "finalCaptureReview": "Full original8CH-to8CJ comparison preserved beforeadvance. PF23622allrawrows/9327fullsourceobjects/entiremetadata exact,so PF snapshots remain byteexact8CH. EV1701\u21921702:one NPC6491 SpiritHealer located_in UI1426 DunMorogh, independently full-primary geography matched;no gear-loot/oldedgeupdates. Old selected6564\u21923875 observation is unchanged,broadrandomexample notdedicatedfarm. Followup is diagnostic-only,notruntime input;full19localpreceded this targeted read,not repeated or misrepresented."
+  "finalCaptureReview": "PF23622\u219223627/9327\u21929328:fiveaddedIDs/fournewsharedleads,18538completed8CJversionholdreused;onefullquestdefinition. Allpriorresolvedacquisitionfacts/names exact;6723source-index-onlyrows.20statdisplaystrings/sixuninterpretedfield10values andaggregatefacetcounts retainedwithoutactivegearmutation. Allotherpriorrawcells/fullsourceobjects/metadata exact. Entire1702EVrecords exactactual8CK/1439qualified;sevenselectedpastattributedexamplesnotfarms."
 }
