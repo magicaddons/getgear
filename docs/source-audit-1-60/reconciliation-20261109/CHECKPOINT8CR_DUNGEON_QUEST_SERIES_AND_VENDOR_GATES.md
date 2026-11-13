@@ -16,14 +16,14 @@ Four new formal actor reads returned403:10879 Harbinger Balthazad,10267 Tinkee S
 
 Matching full primary Series rows establish eight distinct ordered published segments,represented across20quest records:
 
--4766 Mayara Brightwing→4764 Doomrigger's Clasp→4765 Delivery to Ridgewell.
--4769 Vivian Lagrave and the Darkstone Tablet→4768 The Darkstone Tablet.
--5522 Leonid Barthalomew→5531 Betina Bigglezink→4771 Dawn's Gambit.
--5382 Doctor Theolen Krastinov,the Butcher→5515 Krastinov's Bag of Horrors→5384 Kirtonos the Herald.
--4981 Bijou's Belongings→4982 Bijou's Reconnaissance Report→4983 Bijou's Reconnaissance Report.
--7494 Feathermoon Stronghold→7488 Lethtendris's Web.
--7492 Camp Mojache→7489 Lethtendris's Web.
--7461 The Madness Within→7877 The Treasure of the Shen'dralar.
+- 4766 Mayara Brightwing → 4764 Doomrigger's Clasp → 4765 Delivery to Ridgewell.
+- 4769 Vivian Lagrave and the Darkstone Tablet → 4768 The Darkstone Tablet.
+- 5522 Leonid Barthalomew → 5531 Betina Bigglezink → 4771 Dawn's Gambit.
+- 5382 Doctor Theolen Krastinov, the Butcher → 5515 Krastinov's Bag of Horrors → 5384 Kirtonos the Herald.
+- 4981 Operative Bijou → 4982 Bijou's Belongings → 4983 Bijou's Reconnaissance Report.
+- 7494 Feathermoon Stronghold → 7488 Lethtendris's Web.
+- 7492 Camp Mojache → 7489 Lethtendris's Web.
+- 7461 The Madness Within → 7877 The Treasure of the Shen'dralar.
 
 Exact primary names,actor identities and roles are stored in the proof;the list above is a concise navigation index,not proof of every earlier mandatory unlock or live acceptance. Four first actors remain independently unread as noted. No current progress is inferred. The separate same-name quest7462has no formal starter/recipient fields and must not borrow7877's roles. Quest7877starts at Shen'dralar Ancient14358 and ends at object179517 Treasure of the Shen'dralar;an object recipient is not the starting NPC. Full source objectives/physical IDs remain distinct from reward equipment.
 
