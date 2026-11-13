@@ -1,0 +1,66 @@
+{
+  "checkpoint": "8CU",
+  "status": "documentation-onlythreecase research;targetedproofvalidationPASS;readycommitpush",
+  "baseline": "9220b4cb5d91b2e157a7d6d0844bbe44e0278dbb",
+  "sourceProofSHA256": "e8e5305735190b76705488dc5c2c8393874c8af9ec7eb21533483db9c4014471",
+  "caseCounts": {
+    "selected": 3,
+    "assessed": 3,
+    "printedLevelBaselinePass": 2,
+    "unsupportedPrintedTypeClassPolicyHold": 1,
+    "fullPrimaryResponses": 5,
+    "newPrimaryResponses": 3,
+    "reusedPrimaryResponses": 2,
+    "dropReverseJoins": 2,
+    "fullSellerJoins": 1,
+    "newFailures": 0,
+    "knownFailedURLs": 1731,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "targetedChecks": [
+    "fivefullresponsehashes",
+    "threeindividualdecisions/twofullNPCloot/onefullmerchantjoin",
+    "NightclawMantleprintedlevel15/typepolicyunknown/factionnotplayerclass",
+    "source standing7Exalted corroborates normalization followup",
+    "all1404priorregisterbytes preserved",
+    "701typedcases closed/newsourceinventoryaudit0new",
+    "204scopepending/next100859-21180 both existing queues",
+    "twoactualgeneratorfuturewritteninstanceplans",
+    "protectedruntime/sourceinputsbyteexact"
+  ],
+  "outsideQueue": {
+    "total": 1407,
+    "assessed": 1203,
+    "pendingUntypedScope": 204
+  },
+  "additionalAllSlotQueue": {
+    "total": 905,
+    "assessed": 701,
+    "pendingUntypedScope": 204,
+    "nextCheckpoint": "8CV",
+    "nextCount": 100,
+    "firstID": 859,
+    "lastID": 21180,
+    "remainingAfterNext100": 104
+  },
+  "lastFullValidation": {
+    "checkpoint": "8CO",
+    "CI": 43365182317,
+    "source": "30c0553283547e0c23539cec03077f78b3407b4e",
+    "generated": "7bbc9b5fb71bdb7c026cc15787d3c043221a2e66",
+    "localPASS": 19,
+    "CIPASS": 18,
+    "newFullSuiteClaim": false,
+    "newCIRequired": false
+  },
+  "navigation": {
+    "verified_coordinate_data": 883,
+    "directions": 1581,
+    "missing": 3087,
+    "not_applicable": 2156
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "limits": "Published own/full source joins,not current drops/stock/acceptance/rendering. Ezra Grimm is a named source,not falsely classified as a boss;Stratholme region not precise floor. Nightclaw Mantle printedwearer15 is retained,not a missing-level hold;no armour/class policy inferred from mantle name or Nightclaw Druids faction. Exalted requirement/full merchantstanding7 strengthens source-rank convention followup. No canonical gear/class/ingredient/recipe/chain/runtime changes."
+}
