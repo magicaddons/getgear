@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-Verified: [8CY](docs/source-audit-1-60/reconciliation-20261109/checkpoint8cy_validation.json), 13 November 2026; 19 local / 18 CI PASS, run 43406651194, direct bot `dfc3120` fully reviewed. All 1,425 candidate / 923 shared / 5,688 original cases dispositioned; cache 3,130 full sources, no unqueued leads. **Next 8CZ final integrity, source/gap exceptions, report/manual acceptance, automation completion.** Missing/live/rendering limits remain explicit. Single worker/existing automation.
+**8CZ offline research handover, 13 November 2026:** [comprehensive report](docs/source-audit-1-60/reconciliation-20261109/COMPREHENSIVE_RESEARCH_REPORT.md). All current queues dispositioned; latest full gate 8CY19local/18CI43406651194, bot dfc3120 reviewed. **Next: actual Forever-client acceptance and explicit evidence exceptions**, not repeated completed research. 885 point-data / 1,581 directions / 3,085 missing / 2,156 N/A; rendering untested. 900 outside candidates await development review. Existing automation completion state is recorded separately; no release/main/Beta8 action.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
@@ -1892,3 +1892,12 @@ Fresh 8cy1 capture exited zero; full 19 local checks PASS. CI/whole bot review P
 Source `5a2b557d913e8e57688f8232e7073f3725c25b47`; full fresh8cy1 capture / 19 local PASS. [Nonrelease CI 43406651194](https://github.com/magicaddons/getgear/actions/runs/43406651194), job 131822497647, SUCCESS / 18 timestamped PASS. Inspected direct bot/final validated `dfc312057884f20670c83166f27c1be47df142d3` changes only four Everloot hashes/run time; all other bytes exact. Bot API response bodies unread, actual local PF23642/9328/EV1873/1583 full factual snapshots retained; no count-based inference. See checkpoint8cy_validation.json and checkpoint8cy_ci_results.txt. Gate complete.
 
 All 1,425 candidate/main-queue, 923 shared all-slot and 5,688 original cases dispositioned; 3,130-source cache has zero unqueued typed/untyped leads. No further routine checkpoint queue is pending. **Next 8CZ: final whole-catalogue/source-exception/gap audit, comprehensive report, exact in-game acceptance handover and existing automation completion.** Missing facts/current-live availability/rendering remain explicit exceptions, not verified navigation. Current coverage 885/1581/3085/2156; 17,404 overlapping gaps; real rendering zero. No main/Beta 8/release/billing action.
+
+
+## Checkpoint 8CZ final offline handover
+
+All currently queued publication research is dispositioned: 5,688 original cases, 1,425 candidate cases and their 923-case shared subset, no pending markers. Cache closure: 3,130 full source pages, zero unqueued typed equipment or untyped reward references. All available automated validation passed (latest 8CY: 19 local / 18 CI, run 43406651194; whole direct bot dfc3120 reviewed). This closes available offline research, not unresolved source facts or actual-client acceptance.
+
+Read COMPREHENSIVE_RESEARCH_REPORT.md and checkpoint8cz_resume.json in the reconciliation directory for the complete account, sources/confidence, catalogue corrections, category/nine-class coverage, all gap dispositions, six dungeon/live-book exceptions and exact in-game tests. Current 7,707-item navigation: 885 published coordinate-data / 1,581 directions / 3,085 missing / 2,156 N/A; real rendering zero. 900 outside-catalogue baseline passes are future-development candidates, not adopted gear. Existing shared gaps/queues remain authoritative for new discoveries.
+
+Next: actual Forever-client acceptance and new reliable/live evidence for explicit exceptions; do not repeat completed research or unchanged failed URLs. Existing automation is to be disabled after verified report push, with confirmed state in checkpoint8cz_automation_completion.json. No main/Beta 8/build/package/release/billing action. Source is ready for in-game QA; next beta still requires manual acceptance and explicit release authorization.

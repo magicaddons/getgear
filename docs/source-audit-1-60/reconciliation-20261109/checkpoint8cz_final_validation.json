@@ -1,0 +1,43 @@
+{
+  "checkpoint": "8CZ",
+  "status": "targeted finaldocumentation/integrity validation PASS;availableoffline researchclosed with explicitmanual/evidenceexceptions",
+  "verifiedUTC": "2026-11-13T10:13:54.172303+00:00",
+  "baseline": "cfa101f8450b331f9fa6f3c0106ef2ec6c46f898",
+  "checks": [
+    "5688original/1425candidate/923sharedcasesuniquelydispositioned/no pendingmarkers",
+    "900outsidebaselinecandidatesnotadopted/all1425statusessum",
+    "7707coverage/36341classobjectives/49gaptypes17404rows retainednotresolved",
+    "3130fullsourcebodyhashes/cacheclosurezero unqueuedleads/zeroerrors",
+    "8CYimmutableproofandactual19local18CIlogs/fullbotreview retained",
+    "allruntime/source/canonical/materials/registry/chain/coverage/provenancebytes exact",
+    "reportrelativefilelinksresolve",
+    "main/Beta8remoteprotectedrefsunchanged/developmentremoteHEAD exact"
+  ],
+  "documentSHA256": {
+    "COMPREHENSIVE_RESEARCH_REPORT.md": "27941de45f4d0a58f600b0bcfad26e730955f93e2c3ecaa8ad0f82c42c2bae8a",
+    "checkpoint8cz_final_integrity.json": "198ca9c3fe734c36d5bcfef6c727cfed972ef3ab43427ea897a8f4c3225866a2",
+    "checkpoint8cz_navigation_gap_dispositions.csv": "5b8a6b70ae4db15e19c68488248b66a8266db7ae07985e9257694fcc4572aaf1",
+    "checkpoint8cz_resume.json": "0c1a4de1079c84ea7dcad7fc5ab806e2c70988c71f7f4220f99beb937f9f2102"
+  },
+  "lastFullValidation": {
+    "checkpoint": "8CY",
+    "source": "5a2b557d913e8e57688f8232e7073f3725c25b47",
+    "generated": "dfc312057884f20670c83166f27c1be47df142d3",
+    "localPASS": 19,
+    "CI": 43406651194,
+    "CIJob": 131822497647,
+    "CIPASS": 18,
+    "wholeDirectBotReviewed": true,
+    "botAPIResponseBodiesRead": false
+  },
+  "newFullSuiteClaim": false,
+  "newCIRequired": false,
+  "actualGameRenderingVerified": 0,
+  "automationPausePending": true,
+  "protectedRemoteRefs": {
+    "refs/heads/main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "refs/heads/work/full-acquisition-reconciliation-20261109": "cfa101f8450b331f9fa6f3c0106ef2ec6c46f898",
+    "refs/tags/v0.14.0-beta8": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "refs/tags/v0.14.0-beta8^{}": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  }
+}

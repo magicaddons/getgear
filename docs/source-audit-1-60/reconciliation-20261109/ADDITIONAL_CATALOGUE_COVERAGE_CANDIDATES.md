@@ -1,5 +1,6 @@
 # Additional catalogue coverage candidates — pending audit9A
 
+**Current account:** [8CZ comprehensive report](COMPREHENSIVE_RESEARCH_REPORT.md). Earlier counts and next-step entries below are chronological history; current queues are dispositioned, with explicit evidence/manual exceptions.
 Current pending total: **363 unique IDs**, all outside the canonical7,707 and awaiting individual9A identity/version/scope/eligibility/acquisition audit. Latest extension is8BE below; original-count sections are historical.
 
 The exact8N→8O upstream diff exposed39 new Playfulls IDs. A targeted8T integrity check finds all39 outside the frozen7,707-item canonical CSV, not merely new sources for known IDs. [Candidate list](additional_catalogue_coverage_candidates.csv) preserves exact published names/source fields; [raw diff](checkpoint8o_bot_upstream_review.json) and [snapshot provenance](upstream_snapshot_provenance.json) retain fingerprints. No candidate is claimed newly added to the game or currently obtainable.

@@ -1,0 +1,300 @@
+{
+  "checkpoint": "8CZ",
+  "reviewedUTC": "2026-11-13T10:13:08.138788+00:00",
+  "status": "Availableoffline publication-research queue and automatedvalidation complete;explicit unresolved evidence/live/client exceptions retained",
+  "scope": "Research closure is disposition,not assertion that all acquisition facts or all markers are live verified.",
+  "catalogue": {
+    "equipmentIDs": 7707,
+    "classObjectives": 36341,
+    "crafts": 1254,
+    "ingredients": 4857,
+    "reviewedGearRecords": 5902,
+    "reviewedRecipeBookRecords": 954,
+    "evidenceIndex": 7373,
+    "displayedReferences": 7372,
+    "indexedBookIDs": 759,
+    "globalQuestChainRecords": 35
+  },
+  "queues": {
+    "originalCases": 5688,
+    "originalPending": 0,
+    "candidateCases": 1425,
+    "candidatePending": 0,
+    "sharedAllSlotCases": 923,
+    "sharedPending": 0,
+    "subsetCountsNotAdditive": true,
+    "outsideBaselinePasses": 900,
+    "outsideActiveAdoptions": 0,
+    "dispositions": {
+      "published-all-slot-baseline-pass": 900,
+      "hold-version-unconfirmed": 64,
+      "hold-no-rendered-equip-level": 287,
+      "excluded-nonwearable-quest-component": 1,
+      "excluded-nonwearable-charged-utility": 1,
+      "hold-primary-unavailable": 3,
+      "excluded-non-equipment-or-unsupported-slot": 6,
+      "development validation held": 2,
+      "hold-unresolved-placeholder-reference": 4,
+      "hold-unread-primary": 1,
+      "hold-unsupported-equipment-type-or-class-policy": 4,
+      "excluded-current-quality-below-existing-candidate-scope": 41,
+      "excluded-nongear-class-from-equipment-scope": 101,
+      "reuse-completed-recipe-book-scope": 6,
+      "hold-own-primary-unread404": 1,
+      "excluded-food-recipe-outside-equipment-book-scope": 2,
+      "excluded-consumable-recipe-outside-equipment-book-scope": 1
+    }
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1581,
+    "missing": 3085,
+    "verified_coordinate_data": 885,
+    "actualClientRenderingVerified": 0,
+    "overlappingGapRows": 17404,
+    "gapTypes": 49,
+    "categories": {
+      "world_drop": 2743,
+      "dungeon": 693,
+      "quest": 262,
+      "crafting": 1230,
+      "vendor": 1497,
+      "unknown": 1255,
+      "reputation": 2,
+      "fishing": 1,
+      "dungeon_recipe": 24
+    },
+    "classes": {
+      "PRIEST": {
+        "directions": 707,
+        "not_applicable": 783,
+        "missing": 827,
+        "verified_coordinate_data": 310
+      },
+      "MAGE": {
+        "not_applicable": 765,
+        "directions": 679,
+        "missing": 718,
+        "verified_coordinate_data": 309
+      },
+      "WARLOCK": {
+        "not_applicable": 765,
+        "directions": 674,
+        "missing": 709,
+        "verified_coordinate_data": 313
+      },
+      "DRUID": {
+        "not_applicable": 1211,
+        "directions": 978,
+        "missing": 1209,
+        "verified_coordinate_data": 460
+      },
+      "ROGUE": {
+        "not_applicable": 1185,
+        "directions": 968,
+        "missing": 1052,
+        "verified_coordinate_data": 434
+      },
+      "HUNTER": {
+        "not_applicable": 1672,
+        "directions": 1235,
+        "missing": 1400,
+        "verified_coordinate_data": 559
+      },
+      "SHAMAN": {
+        "not_applicable": 1820,
+        "directions": 1250,
+        "missing": 1455,
+        "verified_coordinate_data": 584
+      },
+      "WARRIOR": {
+        "not_applicable": 2054,
+        "directions": 1464,
+        "missing": 1626,
+        "verified_coordinate_data": 641
+      },
+      "PALADIN": {
+        "not_applicable": 2050,
+        "directions": 1319,
+        "missing": 1529,
+        "verified_coordinate_data": 627
+      }
+    },
+    "sourceRecords": 849,
+    "questRecords": 670,
+    "routeKinds": {
+      "named_drop": 546,
+      "dungeon": 561,
+      "legacy": 59,
+      "quest_container": 2365,
+      "quest": 305,
+      "vendor": 1909,
+      "trainer": 24,
+      "recipe_vendor": 503,
+      "recipe_drop": 60,
+      "object": 45,
+      "vendor_container": 58,
+      "npc_container": 73,
+      "fishing": 1
+    }
+  },
+  "cacheScopeClosure": {
+    "fullSourcePages": 3130,
+    "unqueuedTypedEquipment": 0,
+    "unqueuedUntypedQuestRewards": 0,
+    "parseErrors": 0
+  },
+  "lastFullValidation": {
+    "checkpoint": "8CY",
+    "source": "5a2b557d913e8e57688f8232e7073f3725c25b47",
+    "generated": "dfc312057884f20670c83166f27c1be47df142d3",
+    "localPASS": 19,
+    "CI": 43406651194,
+    "CIJob": 131822497647,
+    "CIPASS": 18,
+    "wholeDirectBotReviewed": true,
+    "botAPIResponseBodiesRead": false
+  },
+  "exceptions": {
+    "dungeonLinkCases": [
+      {
+        "itemID": "10801",
+        "name": "Slitherscale Boots",
+        "level": "47",
+        "existingType": "Dungeon (loot table unverified)",
+        "existingRoute": "Dungeon enemy: Spawn of Hakkar (dated client reference; live loot unverified)",
+        "existingEvidence": "client",
+        "dungeon": "Sunken Temple",
+        "sourceIsCraftedPattern": "False",
+        "reconciledRole": "dungeon-enemy",
+        "enemy": "Spawn of Hakkar",
+        "confidence": "forever-community-reference",
+        "sourceSummary": "Sunken Temple | Enemy: Spawn of Hakkar; boss/trash unverified",
+        "playerObservedNPCs": "[]",
+        "ForeverCacheBossNames": "Spawn of Hakkar",
+        "ClassicMobLeads": "[]",
+        "PlayfullsRoutes": "[{\"type\": \"dungeon\", \"npc\": \"Spawn of Hakkar\", \"zone\": \"Sunken Temple\", \"path\": \"loot-tables/dungeons/sunken-temple\", \"note\": \"\", \"sourceRow\": 6279, \"label\": \"Dungeon drop\"}]",
+        "sourceURL": "https://playfulls.com/database",
+        "needsLiveVerification": "True"
+      },
+      {
+        "itemID": "11945",
+        "name": "Dark Iron Ring",
+        "level": "48",
+        "existingType": "Dungeon (loot table unverified)",
+        "existingRoute": "Dungeon enemy: Dark Coffer (dated client reference; live loot unverified)",
+        "existingEvidence": "client",
+        "dungeon": "Blackrock Depths",
+        "sourceIsCraftedPattern": "False",
+        "reconciledRole": "container-lead",
+        "enemy": "Dark/Relic Coffer",
+        "confidence": "historic-container-reference",
+        "sourceSummary": "Blackrock Depths | Container lead: Dark/Relic Coffer (Classic-era item source only; Forever coffer loot unverified)",
+        "playerObservedNPCs": "[]",
+        "ForeverCacheBossNames": "",
+        "ClassicMobLeads": "[]",
+        "PlayfullsRoutes": "[]",
+        "sourceURL": "https://foreverchanges.pro/item/11945/dark-iron-ring",
+        "needsLiveVerification": "True"
+      },
+      {
+        "itemID": "11946",
+        "name": "Fire Opal Necklace",
+        "level": "47",
+        "existingType": "Dungeon (loot table unverified)",
+        "existingRoute": "Dungeon enemy: Dark Coffer (dated client reference; live loot unverified)",
+        "existingEvidence": "client",
+        "dungeon": "Blackrock Depths",
+        "sourceIsCraftedPattern": "False",
+        "reconciledRole": "container-lead",
+        "enemy": "Dark/Relic Coffer",
+        "confidence": "historic-container-reference",
+        "sourceSummary": "Blackrock Depths | Container lead: Dark/Relic Coffer (Classic-era item source only; Forever coffer loot unverified)",
+        "playerObservedNPCs": "[]",
+        "ForeverCacheBossNames": "",
+        "ClassicMobLeads": "[]",
+        "PlayfullsRoutes": "[{\"type\": \"container\", \"npc\": \"Fat Sack of Coins\", \"zone\": \"\", \"path\": \"\", \"note\": \"item/11937-fat-sack-of-coins\", \"sourceRow\": 634, \"label\": \"Container\"}]",
+        "sourceURL": "https://www.wowhead.com/forever/item=11946/fire-opal-necklace",
+        "needsLiveVerification": "True"
+      },
+      {
+        "itemID": "14525",
+        "name": "Boneclenched Gauntlets",
+        "level": "57",
+        "existingType": "Dungeon (loot table unverified)",
+        "existingRoute": "Dungeon enemy: Ras Frostwhisper (dated client reference; live loot unverified)",
+        "existingEvidence": "client",
+        "dungeon": "Scholomance",
+        "sourceIsCraftedPattern": "False",
+        "reconciledRole": "dungeon-enemy",
+        "enemy": "Ras Frostwhisper",
+        "confidence": "forever-community-reference",
+        "sourceSummary": "Scholomance | Enemy: Ras Frostwhisper (published boss lead; item-to-NPC link/live drop unverified)",
+        "playerObservedNPCs": "[]",
+        "ForeverCacheBossNames": "Ras Frostwhisper",
+        "ClassicMobLeads": "[]",
+        "PlayfullsRoutes": "[{\"type\": \"boss\", \"npc\": \"Ras Frostwhisper\", \"zone\": \"Scholomance\", \"path\": \"loot-tables/dungeons/scholomance\", \"note\": \"loot-tables/dungeons/scholomance#boss-ras-frostwhisper\", \"sourceRow\": 6855, \"label\": \"Boss drop\"}]",
+        "sourceURL": "https://playfulls.com/database",
+        "needsLiveVerification": "True"
+      },
+      {
+        "itemID": "23173",
+        "name": "Abomination Skin Leggings",
+        "level": "20",
+        "existingType": "Dungeon (loot table unverified)",
+        "existingRoute": "Dungeon enemy: Sever (dated client reference; live loot unverified)",
+        "existingEvidence": "client",
+        "dungeon": "Shadowfang Keep",
+        "sourceIsCraftedPattern": "False",
+        "reconciledRole": "dungeon-enemy",
+        "enemy": "Sever",
+        "confidence": "forever-reference-unverified",
+        "sourceSummary": "Shadowfang Keep | Enemy: Sever (boss/trash unverified)",
+        "playerObservedNPCs": "[]",
+        "ForeverCacheBossNames": "Sever",
+        "ClassicMobLeads": "[{\"npcID\": 14682, \"name\": \"Sever\", \"rank\": \"Elite\", \"source\": \"https://www.wowforeverfriends.org/items/items.json\"}]",
+        "PlayfullsRoutes": "[]",
+        "sourceURL": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+        "needsLiveVerification": "True"
+      },
+      {
+        "itemID": "273044",
+        "name": "Arcanowisp Robes",
+        "level": "27",
+        "existingType": "Dungeon (loot table unverified)",
+        "existingRoute": "Dungeon enemy: Arcanic Enigma (dated client reference; live loot unverified)",
+        "existingEvidence": "client",
+        "dungeon": "City of Dalaran",
+        "sourceIsCraftedPattern": "False",
+        "reconciledRole": "dungeon-enemy",
+        "enemy": "Arcanic Enigma",
+        "confidence": "forever-reference-unverified",
+        "sourceSummary": "City of Dalaran | Enemy: Arcanic Enigma (boss/trash unverified)",
+        "playerObservedNPCs": "[]",
+        "ForeverCacheBossNames": "Arcanic Enigma",
+        "ClassicMobLeads": "[]",
+        "PlayfullsRoutes": "[]",
+        "sourceURL": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+        "needsLiveVerification": "True"
+      }
+    ],
+    "currentLiveRecipeRoutes": 954,
+    "failedURLs": 1732,
+    "failedURLLedger": "checkpoint8cw_known_failed_reads.json",
+    "coordinatesAndQuestRelationships": "navigation_research_gaps.csv",
+    "gapDispositions": "checkpoint8cz_navigation_gap_dispositions.csv",
+    "newEvidenceRule": "Reopen exact affected source/item IDs only when genuinely new reliable evidence or actual client results exist;do not repeat completed research/unchanged failedURLs."
+  },
+  "release": {
+    "mainModified": false,
+    "Beta8Modified": false,
+    "buildPackageTagReleaseCreated": false,
+    "explicitReleaseAuthorizationStillRequired": true
+  },
+  "automation": {
+    "existingID": "Automation_7353739dfe2c81918900f688ab8984b8",
+    "newAutomationCreated": false,
+    "completionPausePending": true
+  },
+  "next": "ActualForeverclient manual acceptance and live evidence for explicit gaps;future candidate adoption is nextdevelopmentphase,not a silent catalogue expansion."
+}
