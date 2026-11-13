@@ -2248,3 +2248,10 @@ Next: actual Forever-client acceptance and new reliable/live evidence for explic
 
 
 Final automation closure: the existing same-thread Automation_7353739dfe2c81918900f688ab8984b8 was disabled at 2026-11-13T10:14:19.350019+00:00 and independently re-read as disabled after verified report commit 9288dc5 was pushed. No duplicate automation was created. A scheduled prompt arriving during the active closeout was skipped as duplicate. See checkpoint8cz_automation_completion.json in the reconciliation directory. Next work is the report’s actual-client acceptance/evidence exceptions; no pending routine offline queue or release authorization exists.
+
+
+## Private development test 1 — explicitly authorized 13 November 2026
+
+The user authorized one complete, locally installable private development-testing ZIP from the completed ae809d6 research handover. Do not restart acquisition research or adopt the 900 outside candidates. Read docs/PRIVATE_DEVELOPMENT_TEST1.md and docs/private-testing/test1-20261113/review_and_validation.json. All 26 gameplay Lua files and catalogue/source data remain unchanged; packaging-only TOC identity and private README substitutions distinguish this test from published Beta 8. Current local suite: 19 standard checks, 26 Lua5.1 syntax checks, 15 Lua5.1 regressions with a test-only fixture compiler adapter, and full synthetic TOC load. This does not establish actual client compatibility. Prior CI43406651194 covers unchanged runtime; no new CI claim/source-feed refresh.
+
+No public release/tag/merge/main/Beta8 change is authorized. The research automation stays disabled. Stop after the private ZIP, SHA-256/manifest proof and acceptance checklist are delivered; await actual in-game results before further development or release. Package source commit and final artifact/checksum are recorded in docs/private-testing/test1-20261113/package_verification.json once built.
