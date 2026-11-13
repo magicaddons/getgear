@@ -1,6 +1,6 @@
 {
-  "capturedForCheckpoint": "8CX actual local capture8cx1;original8CO-to8CXfull deltas preserved",
-  "capturedUTC": "2026-11-13T09:50:57.762225+00:00",
+  "capturedForCheckpoint": "8CY actual local capture8cy1;full parsed source data equals8CX1 except four generatedAt values",
+  "capturedUTC": "2026-11-13T10:03:33.026706+00:00",
   "purpose": "Diagnostic acquisition/source/anonymous-edge snapshots, not runtime inputs. Compare resolved factual source fields, not sourceRow or rawRowSHA256 alone.",
   "playfulls": {
     "itemCount": 23642,
@@ -34,7 +34,7 @@
     "itemsFile": "upstream_playfulls_acquisition_snapshot.csv",
     "sourceDefinitionsFile": "upstream_playfulls_source_definitions.json",
     "rawField10Interpretation": "Uninterpreted; source indices are field15.",
-    "comparison": "14new outsidecanonical IDs;sevenalreadyregistered/sevenqueued8CY. Allprior rawcells/name/resolvedfacts/sourceobjects preserved;76sourceindexremaps andaggregatefacets only. Full8CO-to8CXdelta retained."
+    "comparison": "8CX1\u21928CY1 all23642rawrows/9328fullsourceobjects/entiremetadata byte-semanticexact,no newIDs or anyfieldchange. Prior8CO-to8CXdeltas retained separately."
   },
   "everloot": {
     "total": 1873,
@@ -52,33 +52,33 @@
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
         "bytes": 103440,
-        "sha256": "fa0d8626113b3a776d105b568807d56aed2ea3f935988c505321ad89c02664c4",
+        "sha256": "674ee4fa648788c2747f07d893ac5e51d91327a00fb8e9d16e4085bd5753d359",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-13T09:50:15.898Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
         "bytes": 103414,
-        "sha256": "fec74cdae5404abd4775f70a1b3e612d7cc2d61a803bc039a3b97bedf41dc00b",
+        "sha256": "1d0ac50b631bbf0260cd268d5b7e1ff576b76e0d4389d87015f681bd8cd8db4e",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-13T09:50:15.898Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
         "bytes": 103631,
-        "sha256": "0e6d8ebef7791ed7558710e026f29927537c8ad49da23d024bb7933a817a6014",
+        "sha256": "9246752a70bf68ca16cb4189384779c500fbfcf084b425a64fc3fe4d575e8d9c",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-13T09:50:15.898Z"
       },
       {
         "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
         "bytes": 76851,
-        "sha256": "369d71665cfddf2408a8b093936e31dcb9be9a4519000257c94736e3eeec98e1",
+        "sha256": "1810f942c4e4e766da7260a1d17e27491c1d8b74e6b9e426e96ee7ce4da14e9b",
         "matchesReconciliationResponseFingerprint": true,
         "dataAsOf": "2026-11-13T09:50:15.898Z"
       }
     ],
-    "comparison": "171newrelations(144item/27NPClocation),57counter-timeupdates(46installs/27lastSeen overlap),zero removed/build/firstSeen changes. All164fullprimaryfeedresponses andfailedactorlimits incheckpoint8cx_feed_delta_research.json. Notpersonal/current-buildconfirmation.",
+    "comparison": "8CX1\u21928CY1 all1873fullrelationfields/builds/counters/attributionandothermetadataexact;onlyfourgeneratedAtvalues change. 1583qualifyingitemrelations. Fullresponsecomparisonretained,no equalcount inference.",
     "rawEdges": 1702,
     "qualifyingRelationships": 1439
   },

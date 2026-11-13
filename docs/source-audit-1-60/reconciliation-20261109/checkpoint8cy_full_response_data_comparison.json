@@ -1,0 +1,30 @@
+{
+  "fullParsedResponseCount": 8,
+  "allSourceFactsExact": true,
+  "topLevelChangedValues": [
+    {
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+      "field": "generatedAt",
+      "before": "2026-11-13T09:50:42.704Z",
+      "after": "2026-11-13T10:03:15.586Z"
+    },
+    {
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+      "field": "generatedAt",
+      "before": "2026-11-13T09:50:45.273Z",
+      "after": "2026-11-13T10:03:19.228Z"
+    },
+    {
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+      "field": "generatedAt",
+      "before": "2026-11-13T09:50:49.080Z",
+      "after": "2026-11-13T10:03:23.150Z"
+    },
+    {
+      "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+      "field": "generatedAt",
+      "before": "2026-11-13T09:50:52.631Z",
+      "after": "2026-11-13T10:03:27.514Z"
+    }
+  ]
+}
