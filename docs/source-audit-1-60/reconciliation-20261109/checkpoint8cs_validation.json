@@ -1,0 +1,115 @@
+{
+  "checkpoint": "8CS",
+  "status": "documentation-only100case research;targetedproofvalidationPASS;readycommitpush",
+  "baseline": "9610debbdecc1657891d30f8e5f35baabd136a6a",
+  "sourceProofSHA256": "950ed3aa2d7f83b82e25627ecfe2be847f8dba610d2b363af8dff4083e271880",
+  "caseCounts": {
+    "selected": 100,
+    "assessed": 100,
+    "fullOwnItems": 100,
+    "ownUnread404": 0,
+    "eligibility": {
+      "hold-version-unconfirmed": 1,
+      "hold-no-rendered-equip-level": 78,
+      "published-all-slot-baseline-pass;future-development-review": 21
+    },
+    "groups": {
+      "named-source-reference": 16,
+      "quest-reference": 77,
+      "vendor-reference": 4,
+      "object-source-reference": 1,
+      "broad-published-reference": 2
+    },
+    "fullPrimaryResponses": 194,
+    "newPrimaryResponses": 171,
+    "reusedPrimaryResponses": 23,
+    "fullNPC": 26,
+    "fullQuest": 67,
+    "fullObject": 1,
+    "dropReverseJoins": 28,
+    "dropReverseOmissions": 0,
+    "vendorExactJoins": 4,
+    "vendorFullOmissions": 0,
+    "formalQuestRoleJoins": 20,
+    "knownFailedReferenceEdges": 0,
+    "newFailedReads": 34,
+    "failedReadAttempts": 43,
+    "newOwn404": 0,
+    "newNPC403": 9,
+    "newQuest403": 25,
+    "duplicateFailedActorReads": 9,
+    "knownFailedURLs": 1720,
+    "activeAdoptions": 0,
+    "liveVerified": 0,
+    "BackHeaders": 7,
+    "ThrownHeaders": 0,
+    "publishedMatchingSeriesSegments": 0,
+    "distinctMatchingPrimarySeries": 0,
+    "physicalQuestInputDependencies": 24,
+    "knownContextReferenceEdgesSkipped": 3,
+    "objectContentsJoins": 1
+  },
+  "targetedChecks": [
+    "194fullresponsehashes/100ownitemdecisions",
+    "28NPC/4vendor/20questrole/onehistoricalobject joins",
+    "78missingprintedwearerlevelholds/14577versionhold",
+    "34new403uniqueURLs43attempts/nineduplicatepreflightreadsdisclosed/correctedledger",
+    "24exactphysicalpredecessoritemlinks/notcrafts/reputationflags",
+    "no false verified Set2/prerequisite sequence",
+    "prior1020registerbytes/objects preserved",
+    "exactnext80 shared queue/no new leads",
+    "actualgeneratortemporary21eligiblefutureinputs",
+    "protectedruntime/sourceinputsbyteexact"
+  ],
+  "proposalCompatibility": {
+    "eligibleFutureInputs": 21,
+    "plans": 19,
+    "statuses": {
+      "verified_coordinate_data": 2,
+      "directions": 17,
+      "missing": 2
+    },
+    "historicalObjectWrittenOnly": true,
+    "noFakeSet2PrerequisiteGraph": true,
+    "actualCurrentCoverageUnchanged": true
+  },
+  "outsideQueue": {
+    "total": 1120,
+    "assessed": 1120,
+    "pending": 0
+  },
+  "additionalAllSlotQueue": {
+    "total": 698,
+    "assessed": 618,
+    "pending": 80,
+    "nextCheckpoint": "8CT",
+    "nextCount": 80,
+    "firstID": 23207,
+    "lastID": 287063
+  },
+  "untypedRewardReferenceScopeReview": {
+    "rawReferenceIDs": 345,
+    "overlapTypedQueue": 144,
+    "distinctUntyped": 201
+  },
+  "lastFullValidation": {
+    "checkpoint": "8CO",
+    "CI": 43365182317,
+    "source": "30c0553283547e0c23539cec03077f78b3407b4e",
+    "generated": "7bbc9b5fb71bdb7c026cc15787d3c043221a2e66",
+    "localPASS": 19,
+    "CIPASS": 18,
+    "newFullSuiteClaim": false,
+    "newCIRequired": false,
+    "reason": "Diagnostic research/proposals/tracking only;no addon/source/generator/runtime inputs changed."
+  },
+  "navigation": {
+    "verified_coordinate_data": 883,
+    "directions": 1581,
+    "missing": 3087,
+    "not_applicable": 2156
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "limits": "Published reference research,not live loot/stock/quest acceptance/rendering.21printed1\u201360class-policy passes,78missing-rendered-level holds,14577version-unconfirmed. Raw/source quest minima never fill wearer gates.25prerequisite pages/nineformalNPC pages403;no failedbodyhash/coords/availability/retirement inferred. Nineactor reads repeated once by a preflight collector error;explicit correction and rolled-forward1720failedURLknowledge. Physical predecessor-item exchanges distinct from ordinary crafts/reputation gain versus required rank. No current quest progress/mandatory prerequisite graph invented from incomplete Series. No source/gear/class/ingredient/recipe/chain/runtime mutation."
+}
