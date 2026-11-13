@@ -1,7 +1,7 @@
 # GetGear acquisition reconciliation — durable checkpoints
 
 <!-- current-research-checkpoint -->
-Current verified checkpoint: [8CM validation](source-audit-1-60/reconciliation-20261109/checkpoint8cm_validation.json) (13 November 2026). Next: **8CN, all17 marked all-slot leads267090–287019**. Preserve the single existing worker/automation; later chronological records below qualify historical entries.
+Current verified checkpoint: [8CN validation](source-audit-1-60/reconciliation-20261109/checkpoint8cn_validation.json) (13 November 2026). Next: **8CO, all13 marked all-slot leads274998–287025**. Preserve the single existing worker/automation; later chronological records below qualify historical entries.
 <!-- /current-research-checkpoint -->
 
 ## Baseline recovered (2026-11-09)
@@ -2153,3 +2153,16 @@ All23627PFrawrows/9328fullsourceobjects/entiremetadata and1702EVfullrelationfiel
 FournewactualEnchantingdestinations11287/11288/11289/217287fromfullMelanie259287/canonicalspelljoins.15existingAlphonsedirectionsgainpublishedAllianceReaction/Horde-service-unspecifiednotes,noinventedfactiongate/bookorigin/ingredientschange. Explicitcoarseinstanceprecisionfortwonewactorspersistsacrossexcerpts;allprioroutdoorpositionspreserved. Finalactual8cn4exit0/full19localPASS;18CI/fullbotreviewpendinguntilcheckpoint8cn_validation.json. Coverage883coordinate-data1581directions3087missing2156NA/17406gaps/render0;fournewactiveplans,nocandidate-onlyinflation.7707IDs36341objectives1254crafts4857ingredients/954recipes/5902registry7373index7372display759books/settingsfiltersintact.
 
 PF23627rawrows/9328fullsourceobjects/entiremetadataand1702EVrelationfieldsexactretainedactual8CL2/1439qualified/selected0;no newfeed/source/index/opaque/counterchanges. Diagnosticbytesretainedafterfullcomparison. No currentservice/price/drop/quest/APIrenderingclaim. Continue13then systematicscope/twospellmappingholds/sixdungeon/954livebooklimits/sharednavigationgaps/finalintegrity/manualacceptance. Sameworker/existingautomation;no mainBeta8buildpackagereleasebillingaction.
+
+
+## Checkpoint 8CN verified — continue 8CO13 all-slot leads
+
+Source `8ab2aa413b99fdb81697856c4d55bbdfe4b8d2c8` passed finalactual8cn4 reconciliation/full19local. [Non-release CI43357184989](https://github.com/magicaddons/getgear/actions/runs/43357184989),job131661901105,SUCCESS18timestampedtestPASS(15Lua/threeofflinePython/26modules/fourtools/exporter). Whole direct generated commit `845a55376199877dd920b07763bfaa5ca6de42d4` inspected:onlyfourEverlootfingerprints/runtime;allotherruntime/source/audit/reportbytesexact. Bot APIbodiesunread;actualfullfactualbaseline retained,notcountinference. No pending8CNgate.
+
+**793registeredcasesassessed/zeropending;sharedallslot308=295assessed+13pending. Next8CO all13 IDs274998–287025,numeric order.** Selected17:8publishedprinted-level/class-policy passes/9missing-rendered-levelholds;questsource minima notwearergates. Prior776registerbytes/objects preserved/zeroactivegearadoption. Original5688dispositions includeexplicitunknown/unread/versionexceptions;whole research remains open beyond13.
+
+75fullprimary59new16cached/reused;17exactthreecontextqueries;27equipmentNPCjoins/14physicalinputjoins/40formalroles. One275042contextitemraw403/no fakebodyhash/retry/1677knownfailedURLs. FullSeriesCurios94983→94997→94998 andAllianceTome94907→94984;provided distinctsatchels268035/268036notfreefirststarter. SinglePowdercakecomment6470059Hordegraphreportedonly;fullClugfist95428→94744pair addsqualifiedearliercontext. ThreeHordereferencesorderedfalse/routeVerifiedfalse/no completedflagadvancement;actualactivequestsretainpriority. All29oldchains preserved→34records.
+
+FouractualnewEnchantingdestinations11287/11288/11289/217287 fromfullMelanie259287/canonicalspelljoins.15existingAlphonsedirectionsgainpublishedAllianceReaction/Horde-service-unspecifiednotes;noinventedfactiongate/bookorigin/ingredientschange. Twoexplicitcoarseinstanceframesstaynonpreciseacrossexcerpts;independentoutdoorpositionspreserved. Allpriorquests/chains/instances/mapIDs/sourcefacts/locations exactexceptoneadditiveaccessnotefield;15priorplansinstruction-only/fournewactiveplans. Coverage883publishedcoordinate-data1581directions3087missing2156NA/17406gaps/render0.7707IDs36341objectives1254crafts4857ingredients/954recipeobjects/5902registry7373index7372display759books/settingsfilters intact. Candidate-onlydataexcluded.
+
+PF23627rawrows/9328fullsourceobjects/entiremetadata and1702EVrelationfieldsexactretainedactual8CL2/1439qualified/selected0;no newfeed/source/index/opaque/counterchanges. Diagnosticbytesretainedafterfullcomparison. Final [checkpoint record](source-audit-1-60/reconciliation-20261109/checkpoint8cn_validation.json) supersedeshistoricalpendingstates. Closure targetedproof/link/queue/diffchecks,notanotherfullsuite. Continue13then systematicscope/twocanonicalspellmappingholds2844/2845/sixdungeon/954livebooklimits/sharednavigationgaps/finalintegrity/manualacceptance. Sameworker/existingautomationonly;no mainBeta8buildpackagereleasebillingaction.
