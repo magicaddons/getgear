@@ -1,0 +1,120 @@
+{
+  "checkpoint": "8CV",
+  "status": "documentation-only100selected+11supplemental scope research;targetedproofvalidationPASS;readycommitpush",
+  "baseline": "d935598231afb92f92c6605bc70ef55a11139b2c",
+  "sourceProofSHA256": "7d6eaf31e0ad924f29b124eca0436d52eeb29e19eececf0723414fb8e7bcdbd2",
+  "caseCounts": {
+    "selected": 100,
+    "assessed": 100,
+    "fullOwnItems": 99,
+    "ownUnread404": 1,
+    "eligibility": {
+      "hold-no-rendered-equip-level": 20,
+      "published-all-slot-baseline-pass;future-development-review": 1,
+      "hold-primary-unavailable": 1,
+      "hold-version-unconfirmed": 1
+    },
+    "groups": {
+      "quest-reference": 23
+    },
+    "fullPrimaryResponses": 202,
+    "newPrimaryResponses": 111,
+    "reusedPrimaryResponses": 91,
+    "fullNPC": 30,
+    "fullQuest": 53,
+    "fullObject": 9,
+    "dropReverseJoins": 0,
+    "dropReverseOmissions": 0,
+    "vendorExactJoins": 0,
+    "vendorFullOmissions": 0,
+    "formalQuestRoleJoins": 102,
+    "knownFailedReferenceEdges": 0,
+    "newFailedReads": 1,
+    "newOwn404": 1,
+    "newNPC403": 0,
+    "newObject403": 0,
+    "knownFailedURLs": 1732,
+    "activeAdoptions": 0,
+    "liveVerified": 0,
+    "BackHeaders": 1,
+    "ThrownHeaders": 1,
+    "scopeDecisions": {
+      "excluded-current-quality-below-existing-candidate-scope": 6,
+      "hold-no-rendered-equip-level": 20,
+      "excluded-nongear-class-from-equipment-scope": 64,
+      "reuse-completed-recipe-book-scope": 6,
+      "published-all-slot-baseline-pass;future-development-review": 1,
+      "hold-primary-unavailable": 1,
+      "hold-own-primary-unread404": 1,
+      "hold-version-unconfirmed": 1
+    },
+    "equipmentReferences": 23,
+    "nonGearOrCommonQualityExcluded": 70,
+    "reusedCompletedBookCases": 6,
+    "distinctMatchingPrimarySeries": 10,
+    "publishedMatchingSeriesSegments": 29,
+    "knownContextReferenceEdgesSkipped": 0,
+    "supplementalScopeCases": 11,
+    "totalScopeDispositions": 111,
+    "totalFullOwnItems": 110,
+    "supplementalNewPages": 9,
+    "supplementalCachedPages": 2,
+    "supplementalNewEquipment": 0
+  },
+  "targetedChecks": [
+    "202actualfullbodyhashes/111scope decisions",
+    "23gearrefs20missinglevel1pass1primaryunavailable1unconfirmed",
+    "70originalnongear-qualityexclusions/sixcompletedbookreuse/oneunread",
+    "11supplementalnongear/common scopes/no newequipment",
+    "954bookregistryexact/bookIDs notfinishedIDs/factsreuse",
+    "existingDefias166andSmokey6041chainsreusednotdowngraded",
+    "twofalsemissing-levelgaplabels13544/19812corrected",
+    "new-updatedForeverquestconfidence corrected in diagnosticproposals/oldproofsexact",
+    "prior1203assessedrecords unchanged/priorpendingreferencefacts retained",
+    "exactnext104 shared queues",
+    "oneeligibleactualgeneratorfuturequestmodel",
+    "protectedruntime-sourceinputsbyteexact"
+  ],
+  "proposalCompatibility": {
+    "oneEligibleFutureInput": 6789,
+    "plans": 1,
+    "statuses": {
+      "verified_coordinate_data": 1
+    },
+    "noUnavailableOrUnconfirmedOrMissingLevelAdoption": true,
+    "actualCoverageUnchanged": true
+  },
+  "outsideQueue": {
+    "total": 1418,
+    "assessed": 1314,
+    "pendingScope": 104
+  },
+  "additionalAllSlotQueue": {
+    "total": 916,
+    "assessed": 812,
+    "pendingScope": 104,
+    "nextCheckpoint": "8CW",
+    "nextCount": 104,
+    "firstID": 21190,
+    "lastID": 286427
+  },
+  "lastFullValidation": {
+    "checkpoint": "8CO",
+    "CI": 43365182317,
+    "source": "30c0553283547e0c23539cec03077f78b3407b4e",
+    "generated": "7bbc9b5fb71bdb7c026cc15787d3c043221a2e66",
+    "localPASS": 19,
+    "CIPASS": 18,
+    "newFullSuiteClaim": false,
+    "newCIRequired": false
+  },
+  "navigation": {
+    "verified_coordinate_data": 883,
+    "directions": 1581,
+    "missing": 3087,
+    "not_applicable": 2156
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "limits": "Scope review is not100newgear acquisitions:23equipment refs(20missingwearerlevels,onebaselinepass6789,oneprimaryunavailablewarning13315,oneversion-unconfirmed18348);64nongear+sixcommonqualitywearablesexcluded,sixexistingrecipebooksreused,16025own404held. Book-registry keyedfinisheditemIDs cannot serve as bookID exclusion. Old book origins/learning facts unchanged;all954objects preserved. No source minima as wearer gates;no unavailable warning as live retirement;no rawsourceprice as guaranteedpaidfee. FullQSeries reward-specificprefixes/branching/earlierunlockuncertainties retained. No canonicalgear/source/recipe/ingredient/chain/runtime mutation. Eleven new prerequisite reward references were immediately scope-checked:tennongear/onecommonqualitytool,zero new supported equipment;not111newgear. Original100case primary unread16025 remains held."
+}

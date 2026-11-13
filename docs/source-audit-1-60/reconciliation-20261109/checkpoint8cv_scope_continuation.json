@@ -1,0 +1,36 @@
+{
+  "original100Dispositions": {
+    "excluded-current-quality-below-existing-candidate-scope": 6,
+    "hold-no-rendered-equip-level": 20,
+    "excluded-nongear-class-from-equipment-scope": 64,
+    "reuse-completed-recipe-book-scope": 6,
+    "published-all-slot-baseline-pass;future-development-review": 1,
+    "hold-primary-unavailable": 1,
+    "hold-own-primary-unread404": 1,
+    "hold-version-unconfirmed": 1
+  },
+  "supplementalScopeDispositions": 11,
+  "newSupportedEquipmentFromSupplemental": 0,
+  "scopeBookDedupCorrected": "Use reviewed bookItemID,not finisheditemID;sixcompletedbooksreused",
+  "register": {
+    "total": 1418,
+    "assessed": 1314,
+    "pendingScope": 104
+  },
+  "sharedQueue": {
+    "total": 916,
+    "assessed": 812,
+    "pendingScope": 104
+  },
+  "nextCheckpoint": "8CW",
+  "nextCount": 104,
+  "firstID": 21190,
+  "lastID": 286427,
+  "requiredAfterScope": [
+    "source reputation rank normalization with full validation",
+    "source-only location propagation",
+    "two canonical spell mappings2844/2845",
+    "dungeon/livebook/coordinate-chainexceptions andfinal integrity/manual acceptance"
+  ],
+  "knownFailedURLs": 1732
+}

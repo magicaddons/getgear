@@ -5394,7 +5394,7 @@
         {
           "kind": "quest",
           "questID": 8949,
-          "verification": "legacy-reference",
+          "verification": "published-reference",
           "directionsOnly": true,
           "sourceMinimum": 58,
           "sourceSide": 3,
@@ -5425,7 +5425,7 @@
           "sourceRequirements": [
             "[ul][li]Level: 60[/li][li]Requires level 58[/li][li]Type: Dungeon[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=16032/falrin-treeshaper]Falrin Treeshaper[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=16032/falrin-treeshaper]Falrin Treeshaper[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]58[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.5.34713\"]1.13.5[/acronym] \"The Gates of Ahn'Qiraj\"[/li][/ul]"
           ],
-          "instructions": "Published unchanged/Classic-labelled full quest relation and exact giver/recipient joins;current acceptance and earlier mandatory prerequisites remain unverified. Source quest minimum is not equipment wearer level."
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
         }
       ],
       "navigationStatus": "published_future_routes;candidate_not_active",
@@ -5472,7 +5472,7 @@
         {
           "kind": "quest",
           "questID": 8949,
-          "verification": "legacy-reference",
+          "verification": "published-reference",
           "directionsOnly": true,
           "sourceMinimum": 58,
           "sourceSide": 3,
@@ -5503,7 +5503,7 @@
           "sourceRequirements": [
             "[ul][li]Level: 60[/li][li]Requires level 58[/li][li]Type: Dungeon[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=16032/falrin-treeshaper]Falrin Treeshaper[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=16032/falrin-treeshaper]Falrin Treeshaper[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]58[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.5.34713\"]1.13.5[/acronym] \"The Gates of Ahn'Qiraj\"[/li][/ul]"
           ],
-          "instructions": "Published unchanged/Classic-labelled full quest relation and exact giver/recipient joins;current acceptance and earlier mandatory prerequisites remain unverified. Source quest minimum is not equipment wearer level."
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
         }
       ],
       "navigationStatus": "published_future_routes;candidate_not_active",
@@ -6302,7 +6302,7 @@
         {
           "kind": "quest",
           "questID": 9237,
-          "verification": "legacy-reference",
+          "verification": "published-reference",
           "directionsOnly": true,
           "sourceMinimum": 60,
           "sourceSide": 3,
@@ -6333,12 +6333,11 @@
           "sourceRequirements": [
             "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.6.36714\"]1.13.6[/acronym] \"Shadow of the Necropolis\"[/li][/ul]"
           ],
-          "instructions": "Published unchanged/Classic-labelled full quest relation and exact giver/recipient joins;current acceptance and earlier mandatory prerequisites remain unverified. Source quest minimum is not equipment wearer level."
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
         }
       ],
       "navigationStatus": "published_future_routes;candidate_not_active",
       "gaps": [
-        "missing_printed_wearer_level",
         "quest_minimum_not_equip_gate",
         "historical_quest_reference_current_acceptance_and_chain_unverified"
       ],
@@ -6373,7 +6372,7 @@
         {
           "kind": "quest",
           "questID": 9232,
-          "verification": "legacy-reference",
+          "verification": "published-reference",
           "directionsOnly": true,
           "sourceMinimum": 60,
           "sourceSide": 3,
@@ -6404,7 +6403,7 @@
           "sourceRequirements": [
             "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.6.36714\"]1.13.6[/acronym] \"Shadow of the Necropolis\"[/li][/ul]"
           ],
-          "instructions": "Published unchanged/Classic-labelled full quest relation and exact giver/recipient joins;current acceptance and earlier mandatory prerequisites remain unverified. Source quest minimum is not equipment wearer level."
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
         }
       ],
       "navigationStatus": "published_future_routes;candidate_not_active",
@@ -6451,7 +6450,7 @@
         {
           "kind": "quest",
           "questID": 9232,
-          "verification": "legacy-reference",
+          "verification": "published-reference",
           "directionsOnly": true,
           "sourceMinimum": 60,
           "sourceSide": 3,
@@ -6482,7 +6481,7 @@
           "sourceRequirements": [
             "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.6.36714\"]1.13.6[/acronym] \"Shadow of the Necropolis\"[/li][/ul]"
           ],
-          "instructions": "Published unchanged/Classic-labelled full quest relation and exact giver/recipient joins;current acceptance and earlier mandatory prerequisites remain unverified. Source quest minimum is not equipment wearer level."
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
         }
       ],
       "navigationStatus": "published_future_routes;candidate_not_active",
@@ -6526,7 +6525,7 @@
         {
           "kind": "quest",
           "questID": 9232,
-          "verification": "legacy-reference",
+          "verification": "published-reference",
           "directionsOnly": true,
           "sourceMinimum": 60,
           "sourceSide": 3,
@@ -6557,7 +6556,7 @@
           "sourceRequirements": [
             "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.6.36714\"]1.13.6[/acronym] \"Shadow of the Necropolis\"[/li][/ul]"
           ],
-          "instructions": "Published unchanged/Classic-labelled full quest relation and exact giver/recipient joins;current acceptance and earlier mandatory prerequisites remain unverified. Source quest minimum is not equipment wearer level."
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
         }
       ],
       "navigationStatus": "published_future_routes;candidate_not_active",
@@ -6599,7 +6598,7 @@
         {
           "kind": "quest",
           "questID": 9232,
-          "verification": "legacy-reference",
+          "verification": "published-reference",
           "directionsOnly": true,
           "sourceMinimum": 60,
           "sourceSide": 3,
@@ -6630,7 +6629,7 @@
           "sourceRequirements": [
             "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=16376/craftsman-wilhelm]Craftsman Wilhelm[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.6.36714\"]1.13.6[/acronym] \"Shadow of the Necropolis\"[/li][/ul]"
           ],
-          "instructions": "Published unchanged/Classic-labelled full quest relation and exact giver/recipient joins;current acceptance and earlier mandatory prerequisites remain unverified. Source quest minimum is not equipment wearer level."
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
         }
       ],
       "navigationStatus": "published_future_routes;candidate_not_active",
@@ -6677,7 +6676,7 @@
         {
           "kind": "quest",
           "questID": 9230,
-          "verification": "legacy-reference",
+          "verification": "published-reference",
           "directionsOnly": true,
           "sourceMinimum": 60,
           "sourceSide": 3,
@@ -6708,7 +6707,7 @@
           "sourceRequirements": [
             "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=16112/korfax-champion-of-the-light]Korfax, Champion of the Light[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=16112/korfax-champion-of-the-light]Korfax, Champion of the Light[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.6.36714\"]1.13.6[/acronym] \"Shadow of the Necropolis\"[/li][/ul]"
           ],
-          "instructions": "Published unchanged/Classic-labelled full quest relation and exact giver/recipient joins;current acceptance and earlier mandatory prerequisites remain unverified. Source quest minimum is not equipment wearer level."
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
         }
       ],
       "navigationStatus": "published_future_routes;candidate_not_active",

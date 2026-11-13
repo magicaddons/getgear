@@ -1,0 +1,2156 @@
+{
+  "scope": "Only23equipment-referenceproposals;other77scope decisions are excluded/reused/unread. No currentcatalogue adoption.",
+  "candidates": {
+    "2041": {
+      "itemID": 2041,
+      "name": "Tunic of Westfall",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 2041,
+        "name": "Tunic of Westfall",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 14,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 166,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 14,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 234,
+              "name": "Gryan Stoutmantle",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=234",
+              "fullSourceSHA256": "1b420412c9abba38337dbfc6d92ed368df0b7c9db674456076da31d66fa66d35",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 234,
+              "name": "Gryan Stoutmantle",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=234",
+              "fullSourceSHA256": "1b420412c9abba38337dbfc6d92ed368df0b7c9db674456076da31d66fa66d35",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              65,
+              132,
+              135,
+              141,
+              142,
+              155,
+              166
+            ],
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "verification": "published-route",
+            "evidence": "checkpoint_navigation_evidence.json",
+            "instructions": "Published travel sequence: begin with Gryan Stoutmantle at Sentinel Hill. Follow the Lakeshire and Stormwind investigation, intercept the messenger, escort the Defias Traitor, then defeat Edwin VanCleef in The Deadmines and return to Stoutmantle. Earlier unlocks and current quest availability remain unverified.",
+            "reuseQualification": "Existing validated navigation research reused;raw primary Series suffix is not substituted for the already documented earlier travel stages. Mandatory/current acceptance qualification remains unchanged."
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 22[/li][li]Requires level 14[/li][li]Type: Dungeon[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=234/gryan-stoutmantle]Gryan Stoutmantle[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=234/gryan-stoutmantle]Gryan Stoutmantle[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]14[/color][small] &nbsp;[/small][color=r1]18[/color][small] &nbsp;[/small][color=r2]20[/color][small] &nbsp;[/small][color=r3]25[/color][small] &nbsp;[/small][color=r4]29[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved.",
+          "reusedExistingChain": true
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=2041",
+      "sourceSHA256": "d71ba2d2a25fddcc503e23c60e1667a6a90d725c184bb6199535753e0cde0bf0",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "2904": {
+      "itemID": 2904,
+      "name": "Daryl's Hunting Rifle",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 2904,
+        "name": "Daryl's Hunting Rifle",
+        "inventoryType": 15,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 11,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 257,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 11,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 1187,
+              "name": "Daryl the Youngling",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=1187",
+              "fullSourceSHA256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 1187,
+              "name": "Daryl the Youngling",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=1187",
+              "fullSourceSHA256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              257
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 1187,
+                "name": "Daryl the Youngling",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=1187",
+                "fullSourceSHA256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 1187,
+                "name": "Daryl the Youngling",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=1187",
+                "fullSourceSHA256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              257,
+              258
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 16[/li][li]Requires level 11[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li]Timer: 15 minutes[/li][li][icon name=quest-start]Start: [url=/forever/npc=1187/daryl-the-youngling]Daryl the Youngling[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=1187/daryl-the-youngling]Daryl the Youngling[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]11[/color][small] &nbsp;[/small][color=r1]12[/color][small] &nbsp;[/small][color=r2]14[/color][small] &nbsp;[/small][color=r3]19[/color][small] &nbsp;[/small][color=r4]23[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=2904",
+      "sourceSHA256": "9cf10be139c8b937735f17e0ba6a430e8ff49b9b7183beabcf178c3519d6e0f5",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "2943": {
+      "itemID": 2943,
+      "name": "Eye of Paleth",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 2943,
+        "name": "Eye of Paleth",
+        "inventoryType": 23,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 22,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 293,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 22,
+          "sourceSide": 1,
+          "choiceReward": false,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 1217,
+              "name": "Glorin Steelbrow",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=1217",
+              "fullSourceSHA256": "e0f240108ff0d44b921528bab4d7bcd13ec1f63b2ded5fb007df0759a275875d",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 1284,
+              "name": "Archbishop Benedictus",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=1284",
+              "fullSourceSHA256": "01d3ad1fb2c6e73be13154693b1b61e654f2bf792ab5368afe4af03815c0ba2b",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              288,
+              289,
+              290,
+              292,
+              293
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 1239,
+                "name": "First Mate Fitzsimmons",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=1239",
+                "fullSourceSHA256": "d1a8998099b3f89e570992b274f73608224dad0351271d434042db331fa1b2f3",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 1239,
+                "name": "First Mate Fitzsimmons",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=1239",
+                "fullSourceSHA256": "d1a8998099b3f89e570992b274f73608224dad0351271d434042db331fa1b2f3",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              288,
+              289,
+              290,
+              292,
+              293
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 30[/li][li]Requires level 22[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=1217/glorin-steelbrow]Glorin Steelbrow[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=1284/archbishop-benedictus]Archbishop Benedictus[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]22[/color][small] &nbsp;[/small][color=r1]26[/color][small] &nbsp;[/small][color=r2]28[/color][small] &nbsp;[/small][color=r3]33[/color][small] &nbsp;[/small][color=r4]38[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=2943",
+      "sourceSHA256": "f4ac60c6f6fe4eaaa73368284fa8e4c43b9c279b4009d47ffcfa6514ca4cb7c1",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "3463": {
+      "itemID": 3463,
+      "name": "Silver Star",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 3463,
+        "name": "Silver Star",
+        "inventoryType": 25,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 30,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 1370,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 30,
+          "sourceSide": 3,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 5397,
+              "name": "Uthek the Wise",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=5397",
+              "fullSourceSHA256": "e11cf28ef403e2d4c53e1d6e5c7b4cb4c671710bcf4e24dd4d423a254cdfccc0",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 5397,
+              "name": "Uthek the Wise",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=5397",
+              "fullSourceSHA256": "e11cf28ef403e2d4c53e1d6e5c7b4cb4c671710bcf4e24dd4d423a254cdfccc0",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 35[/li][li]Requires level 30[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=5397/uthek-the-wise]Uthek the Wise[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=5397/uthek-the-wise]Uthek the Wise[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]30[/color][small] &nbsp;[/small][color=r1]31[/color][small] &nbsp;[/small][color=r2]33[/color][small] &nbsp;[/small][color=r3]38[/color][small] &nbsp;[/small][color=r4]44[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        },
+        {
+          "kind": "quest",
+          "questID": 79980,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 14,
+          "sourceSide": 3,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "object",
+              "sourceID": 424005,
+              "name": "Pocket Litter",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/object=424005",
+              "fullSourceSHA256": "fd0c80757666a667f558a8594192014b598896e62a6b1394e92149f071800704",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "object",
+              "sourceID": 424012,
+              "name": "Mound of Dirt",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/object=424012",
+              "fullSourceSHA256": "dae2d494a31f415c549f6e0ce6226eea2fc9094b0cba65e91df46a64b9dd7575",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 24[/li][li]Requires level 14[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/object=424005/pocket-litter]Pocket Litter[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/object=424012/mound-of-dirt]Mound of Dirt[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]14[/color][small] &nbsp;[/small][color=r1]20[/color][small] &nbsp;[/small][color=r2]22[/color][small] &nbsp;[/small][color=r3]27[/color][small] &nbsp;[/small][color=r4]32[/color][/li][li]Added in patch [acronym=\"1.60.1.69913\"]1.60.1[/acronym][/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=3463",
+      "sourceSHA256": "d2b457e51237b012a9e6cd0614f50f50ae6b10e309812a3faba29785ab22d275",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "3560": {
+      "itemID": 3560,
+      "name": "Mantle of Honor",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 3560,
+        "name": "Mantle of Honor",
+        "inventoryType": 3,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 20,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 253,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 20,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 263,
+              "name": "Lord Ello Ebonlocke",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=263",
+              "fullSourceSHA256": "337532504589f43fd9e547ce7fd7cd1ca8901781da515195aca2a1c8c274c1d6",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 263,
+              "name": "Lord Ello Ebonlocke",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=263",
+              "fullSourceSHA256": "337532504589f43fd9e547ce7fd7cd1ca8901781da515195aca2a1c8c274c1d6",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 30[/li][li]Requires level 20[/li][li]Type: Elite[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=263/lord-ello-ebonlocke]Lord Ello Ebonlocke[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=263/lord-ello-ebonlocke]Lord Ello Ebonlocke[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]20[/color][small] &nbsp;[/small][color=r1]26[/color][small] &nbsp;[/small][color=r2]28[/color][small] &nbsp;[/small][color=r3]33[/color][small] &nbsp;[/small][color=r4]38[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=3560",
+      "sourceSHA256": "77dc9737dcab92a260e2023d62719ff85ecdb352ef293f5ece9f3fd9be43bb85",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "3572": {
+      "itemID": 3572,
+      "name": "Daryl's Shortsword",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 3572,
+        "name": "Daryl's Shortsword",
+        "inventoryType": 13,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 11,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "MAGE",
+          "WARLOCK",
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 258,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 11,
+          "sourceSide": 1,
+          "choiceReward": false,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 1187,
+              "name": "Daryl the Youngling",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=1187",
+              "fullSourceSHA256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 1187,
+              "name": "Daryl the Youngling",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=1187",
+              "fullSourceSHA256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              257,
+              258
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 1187,
+                "name": "Daryl the Youngling",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=1187",
+                "fullSourceSHA256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 1187,
+                "name": "Daryl the Youngling",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=1187",
+                "fullSourceSHA256": "540e671865f34adfc1761b0455753b512b43d6825eb767cae57389d1db3a6709",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              257,
+              258
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 17[/li][li]Requires level 11[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li]Timer: 12 minutes[/li][li][icon name=quest-start]Start: [url=/forever/npc=1187/daryl-the-youngling]Daryl the Youngling[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=1187/daryl-the-youngling]Daryl the Youngling[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]11[/color][small] &nbsp;[/small][color=r1]13[/color][small] &nbsp;[/small][color=r2]15[/color][small] &nbsp;[/small][color=r3]20[/color][small] &nbsp;[/small][color=r4]24[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=3572",
+      "sourceSHA256": "f346007ddce1818ef24e1a4aec75f98880f2f2399f3110941a911463bc822cbf",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "5459": {
+      "itemID": 5459,
+      "name": "Defender Axe",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 5459,
+        "name": "Defender Axe",
+        "inventoryType": 21,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 4,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 486,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 4,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 2078,
+              "name": "Athridas Bearmantle",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=2078",
+              "fullSourceSHA256": "86ee874deb2e0c8ed64f59553c77d49cd863ba35bb5fd9d3999279f139990e44",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 2078,
+              "name": "Athridas Bearmantle",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=2078",
+              "fullSourceSHA256": "86ee874deb2e0c8ed64f59553c77d49cd863ba35bb5fd9d3999279f139990e44",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              475,
+              476,
+              483,
+              486
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 2078,
+                "name": "Athridas Bearmantle",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=2078",
+                "fullSourceSHA256": "86ee874deb2e0c8ed64f59553c77d49cd863ba35bb5fd9d3999279f139990e44",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 2107,
+                "name": "Gaerolas Talvethren",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=2107",
+                "fullSourceSHA256": "e46bafa1d58ed22448a0b24b0fb90a64d703683912256809846f767640e7460b",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              475,
+              476,
+              483,
+              486
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 12[/li][li]Requires level 4[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=2078/athridas-bearmantle]Athridas Bearmantle[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=2078/athridas-bearmantle]Athridas Bearmantle[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]4[/color][small] &nbsp;[/small][color=r1]8[/color][small] &nbsp;[/small][color=r2]10[/color][small] &nbsp;[/small][color=r3]15[/color][small] &nbsp;[/small][color=r4]18[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=5459",
+      "sourceSHA256": "fd58d99551474669bcc75115ffd7fd120e3091ef13aa8f0b9c1826deadeb77c5",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "5587": {
+      "itemID": 5587,
+      "name": "Thornroot Club",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 5587,
+        "name": "Thornroot Club",
+        "inventoryType": 21,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 4,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "ROGUE",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 486,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 4,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 2078,
+              "name": "Athridas Bearmantle",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=2078",
+              "fullSourceSHA256": "86ee874deb2e0c8ed64f59553c77d49cd863ba35bb5fd9d3999279f139990e44",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 2078,
+              "name": "Athridas Bearmantle",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=2078",
+              "fullSourceSHA256": "86ee874deb2e0c8ed64f59553c77d49cd863ba35bb5fd9d3999279f139990e44",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              475,
+              476,
+              483,
+              486
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 2078,
+                "name": "Athridas Bearmantle",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=2078",
+                "fullSourceSHA256": "86ee874deb2e0c8ed64f59553c77d49cd863ba35bb5fd9d3999279f139990e44",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 2107,
+                "name": "Gaerolas Talvethren",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=2107",
+                "fullSourceSHA256": "e46bafa1d58ed22448a0b24b0fb90a64d703683912256809846f767640e7460b",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              475,
+              476,
+              483,
+              486
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 12[/li][li]Requires level 4[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=2078/athridas-bearmantle]Athridas Bearmantle[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=2078/athridas-bearmantle]Athridas Bearmantle[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]4[/color][small] &nbsp;[/small][color=r1]8[/color][small] &nbsp;[/small][color=r2]10[/color][small] &nbsp;[/small][color=r3]15[/color][small] &nbsp;[/small][color=r4]18[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=5587",
+      "sourceSHA256": "cd2c7684b49e50b8f02c0d0b107b68403365855cdba77b2249b4f528f31df47e",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "6087": {
+      "itemID": 6087,
+      "name": "Chausses of Westfall",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 6087,
+        "name": "Chausses of Westfall",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 14,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 166,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 14,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 234,
+              "name": "Gryan Stoutmantle",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=234",
+              "fullSourceSHA256": "1b420412c9abba38337dbfc6d92ed368df0b7c9db674456076da31d66fa66d35",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 234,
+              "name": "Gryan Stoutmantle",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=234",
+              "fullSourceSHA256": "1b420412c9abba38337dbfc6d92ed368df0b7c9db674456076da31d66fa66d35",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              65,
+              132,
+              135,
+              141,
+              142,
+              155,
+              166
+            ],
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "verification": "published-route",
+            "evidence": "checkpoint_navigation_evidence.json",
+            "instructions": "Published travel sequence: begin with Gryan Stoutmantle at Sentinel Hill. Follow the Lakeshire and Stormwind investigation, intercept the messenger, escort the Defias Traitor, then defeat Edwin VanCleef in The Deadmines and return to Stoutmantle. Earlier unlocks and current quest availability remain unverified.",
+            "reuseQualification": "Existing validated navigation research reused;raw primary Series suffix is not substituted for the already documented earlier travel stages. Mandatory/current acceptance qualification remains unchanged."
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 22[/li][li]Requires level 14[/li][li]Type: Dungeon[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=234/gryan-stoutmantle]Gryan Stoutmantle[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=234/gryan-stoutmantle]Gryan Stoutmantle[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]14[/color][small] &nbsp;[/small][color=r1]18[/color][small] &nbsp;[/small][color=r2]20[/color][small] &nbsp;[/small][color=r3]25[/color][small] &nbsp;[/small][color=r4]29[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved.",
+          "reusedExistingChain": true
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=6087",
+      "sourceSHA256": "ab1692040c180caa6a7e20645e4f66abc33312788b63ace263fe4d2940934ecf",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "6189": {
+      "itemID": 6189,
+      "name": "Durable Chain Shoulders",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 6189,
+        "name": "Durable Chain Shoulders",
+        "inventoryType": 3,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 17,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 256,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 17,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "object",
+              "sourceID": 256,
+              "name": "WANTED",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/object=256",
+              "fullSourceSHA256": "2de93a7b4e9bdea99307804cb11eefee546772d4bc1ed8cf3c98811c7c5afd33",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 1139,
+              "name": "Magistrate Bluntnose",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=1139",
+              "fullSourceSHA256": "8f32ca1b508ec865793c92810fd5201a4c6e089073f52ce58ec116d84abc1c39",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 22[/li][li]Requires level 17[/li][li]Type: Elite[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/object=256/wanted]WANTED[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=1139/magistrate-bluntnose]Magistrate Bluntnose[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]17[/color][small] &nbsp;[/small][color=r1]18[/color][small] &nbsp;[/small][color=r2]20[/color][small] &nbsp;[/small][color=r3]25[/color][small] &nbsp;[/small][color=r4]29[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=6189",
+      "sourceSHA256": "d181aa3ad9b9427bed52599f80b92ff1cd36687b8639ff48d0cf23a4ac4fe1ff",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "6191": {
+      "itemID": 6191,
+      "name": "Kimbra Boots",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 6191,
+        "name": "Kimbra Boots",
+        "inventoryType": 8,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 17,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 256,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 17,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "object",
+              "sourceID": 256,
+              "name": "WANTED",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/object=256",
+              "fullSourceSHA256": "2de93a7b4e9bdea99307804cb11eefee546772d4bc1ed8cf3c98811c7c5afd33",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 1139,
+              "name": "Magistrate Bluntnose",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=1139",
+              "fullSourceSHA256": "8f32ca1b508ec865793c92810fd5201a4c6e089073f52ce58ec116d84abc1c39",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 22[/li][li]Requires level 17[/li][li]Type: Elite[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/object=256/wanted]WANTED[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=1139/magistrate-bluntnose]Magistrate Bluntnose[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]17[/color][small] &nbsp;[/small][color=r1]18[/color][small] &nbsp;[/small][color=r2]20[/color][small] &nbsp;[/small][color=r3]25[/color][small] &nbsp;[/small][color=r4]29[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=6191",
+      "sourceSHA256": "1dbdc20df9815f99392f162f8f2f27987d1310bd5e9904e3dda0b977cc3685e1",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "6481": {
+      "itemID": 6481,
+      "name": "Dagmire Gauntlets",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 6481,
+        "name": "Dagmire Gauntlets",
+        "inventoryType": 10,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 15,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 1487,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 15,
+          "sourceSide": 3,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 5768,
+              "name": "Ebru",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=5768",
+              "fullSourceSHA256": "b5e7c9149f479daefebc341d106cc256e752e678313013158d2409ab50cfcbc4",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 5768,
+              "name": "Ebru",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=5768",
+              "fullSourceSHA256": "b5e7c9149f479daefebc341d106cc256e752e678313013158d2409ab50cfcbc4",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 21[/li][li]Requires level 15[/li][li]Type: Dungeon[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=5768/ebru]Ebru[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=5768/ebru]Ebru[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]15[/color][small] &nbsp;[/small][color=r1]17[/color][small] &nbsp;[/small][color=r2]19[/color][small] &nbsp;[/small][color=r3]24[/color][small] &nbsp;[/small][color=r4]28[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=6481",
+      "sourceSHA256": "662f6e00cc878fda574a54723f1dbf92c01cc97ea9776a46eec3b1b22861c565",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "6789": {
+      "itemID": 6789,
+      "name": "Ceremonial Centaur Blanket",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 6789,
+        "name": "Ceremonial Centaur Blanket",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 35,
+        "renderedEquipLevel": 35,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 1381,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 30,
+          "sourceSide": 3,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 5398,
+              "name": "Warug",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=5398",
+              "fullSourceSHA256": "2772db3d0874454e9c789391e3101c2dc59eaa9a3ebe88e7ba3a0b67b76f0860",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 5398,
+              "name": "Warug",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=5398",
+              "fullSourceSHA256": "2772db3d0874454e9c789391e3101c2dc59eaa9a3ebe88e7ba3a0b67b76f0860",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              1375,
+              1381
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 5398,
+                "name": "Warug",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=5398",
+                "fullSourceSHA256": "2772db3d0874454e9c789391e3101c2dc59eaa9a3ebe88e7ba3a0b67b76f0860",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 5398,
+                "name": "Warug",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=5398",
+                "fullSourceSHA256": "2772db3d0874454e9c789391e3101c2dc59eaa9a3ebe88e7ba3a0b67b76f0860",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              1375,
+              1381
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 42[/li][li]Requires level 30[/li][li]Type: Elite[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=5398/warug]Warug[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=5398/warug]Warug[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]30[/color][small] &nbsp;[/small][color=r1]38[/color][small] &nbsp;[/small][color=r2]40[/color][small] &nbsp;[/small][color=r3]45[/color][small] &nbsp;[/small][color=r4]52[/color][/li][li]Added in patch [acronym=\"1.13.2.30682\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        },
+        {
+          "kind": "quest",
+          "questID": 96222,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 35,
+          "sourceSide": 3,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 253066,
+              "name": "Umarak",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=253066",
+              "fullSourceSHA256": "d5e299ef35873b07f10b4a63bb649570c8a428153fd3e1d4705c91910b9fa93b",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 253066,
+              "name": "Umarak",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=253066",
+              "fullSourceSHA256": "d5e299ef35873b07f10b4a63bb649570c8a428153fd3e1d4705c91910b9fa93b",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 42[/li][li]Requires level 35[/li][li]Type: Elite[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=253066/umarak]Umarak[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=253066/umarak]Umarak[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]35[/color][small] &nbsp;[/small][color=r1]38[/color][small] &nbsp;[/small][color=r2]40[/color][small] &nbsp;[/small][color=r3]45[/color][small] &nbsp;[/small][color=r4]52[/color][/li][li]Added in patch [acronym=\"1.60.1.70205\"]1.60.1[/acronym][/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=6789",
+      "sourceSHA256": "2ddbd2d16b6c7d682f653c56e46366bb38be12b67de908e474fa961868b2e37e",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "8703": {
+      "itemID": 8703,
+      "name": "Signet of Expertise",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 8703,
+        "name": "Signet of Expertise",
+        "inventoryType": 12,
+        "quality": 2,
+        "rawStructuredRequiredLevel": null,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 2765,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 40,
+          "sourceSide": 3,
+          "choiceReward": false,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 7802,
+              "name": "Galvan the Ancient",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=7802",
+              "fullSourceSHA256": "599c881bf1099ba3b9f50bad806c4b3b3cf06b3c26957971ccc354034dd2b34c",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 7802,
+              "name": "Galvan the Ancient",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=7802",
+              "fullSourceSHA256": "599c881bf1099ba3b9f50bad806c4b3b3cf06b3c26957971ccc354034dd2b34c",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 45[/li][li]Requires level 40[/li][li]Side: Both[/li][li]Classes: [class=1], [class=2], [br][class=3][/li][li]Profession: [url=/forever/skill=164/blacksmithing]Blacksmithing[/url][/li][li][icon name=quest-start]Start: [url=/forever/npc=7802/galvan-the-ancient]Galvan the Ancient[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=7802/galvan-the-ancient]Galvan the Ancient[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]40[/color][small] &nbsp;[/small][color=r1]41[/color][small] &nbsp;[/small][color=r2]43[/color][small] &nbsp;[/small][color=r3]48[/color][small] &nbsp;[/small][color=r4]55[/color][/li][li]Added in patch [acronym=\"1.13.2.30682\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=8703",
+      "sourceSHA256": "3ef457ce9b193e89eee223a81950f7e6bcafc181b64f1d06c9c539ba4d86dfc1",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "9607": {
+      "itemID": 9607,
+      "name": "Bastion of Stormwind",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 9607,
+        "name": "Bastion of Stormwind",
+        "inventoryType": 14,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 20,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": 2,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 1652,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 20,
+          "sourceSide": 1,
+          "choiceReward": false,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 6182,
+              "name": "Daphne Stilwell",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=6182",
+              "fullSourceSHA256": "19528d4cd1d3215c5d474eeda0c512e5924b30c7ac6fef7240e52aa18f4cfdef",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 6171,
+              "name": "Duthorian Rall",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=6171",
+              "fullSourceSHA256": "679e2a8804d69a86fd8b1835367b49feedb981021d64ffd03ceb677c3c7040b2",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              1651,
+              1652
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 6182,
+                "name": "Daphne Stilwell",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=6182",
+                "fullSourceSHA256": "19528d4cd1d3215c5d474eeda0c512e5924b30c7ac6fef7240e52aa18f4cfdef",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 6182,
+                "name": "Daphne Stilwell",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=6182",
+                "fullSourceSHA256": "19528d4cd1d3215c5d474eeda0c512e5924b30c7ac6fef7240e52aa18f4cfdef",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              1651,
+              1652,
+              1653,
+              1654,
+              1806
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 25[/li][li]Requires level 20[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li]Races: [race=1], [race=3][/li][li]Class: [class=2][/li][li][icon name=quest-start]Start: [url=/forever/npc=6182/daphne-stilwell]Daphne Stilwell[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=6171/duthorian-rall]Duthorian Rall[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]20[/color][small] &nbsp;[/small][color=r1]21[/color][small] &nbsp;[/small][color=r2]23[/color][small] &nbsp;[/small][color=r3]28[/color][small] &nbsp;[/small][color=r4]33[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=9607",
+      "sourceSHA256": "b8ad926ac43a722a29493f2a82175ab1dbdadbe47290116ce349bffa7e949716",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "13315": {
+      "itemID": 13315,
+      "name": "Testament of Hope",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 13315,
+        "name": "Testament of Hope",
+        "inventoryType": 23,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": null,
+        "primaryVersion": "not-provided",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-primary-unavailable",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "navigationStatus": "primary_unavailable_warning_hold;no_marker",
+      "gaps": [
+        "primary_explicit_unavailable_warning_not_live_retirement_proof"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=13315",
+      "sourceSHA256": "0ad997cef3ee735b0120bcdd6102b22c3895fe4bf6129e404c2fdb9245a03e94",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "15791": {
+      "itemID": 15791,
+      "name": "Turquoise Sash",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15791,
+        "name": "Turquoise Sash",
+        "inventoryType": 6,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 5253,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 53,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 11079,
+              "name": "Wynd Nightchaser",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=11079",
+              "fullSourceSHA256": "88442b11094244a82abdf0490fb2ab7cae43d2cfdac8af74dad4357ead924a69",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 3516,
+              "name": "Arch Druid Fandral Staghelm",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=3516",
+              "fullSourceSHA256": "9db5460d9cd8b9cbff9763e08f4f813c54a95b1e72dfed1f9b3b06dbe69a120e",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              5248,
+              5252,
+              5253
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 10304,
+                "name": "Aurora Skycaller",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=10304",
+                "fullSourceSHA256": "fb45d2322d251a87a713e091e6f1ec6943c55e3fa26879ec0c63665f34bcf47b",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 10684,
+                "name": "Remorseful Highborne",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=10684",
+                "fullSourceSHA256": "ee530d5835aedfdaac5f403b052f801512ff2dbf3c517d13aded2e4720e4a307",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              5248,
+              5252,
+              5253
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 58[/li][li]Requires level 53[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=11079/wynd-nightchaser]Wynd Nightchaser[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=3516/arch-druid-fandral-staghelm]Arch Druid Fandral Staghelm[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]53[/color][small] &nbsp;[/small][color=r1]54[/color][small] &nbsp;[/small][color=r2]56[/color][small] &nbsp;[/small][color=r3]61[/color][small] &nbsp;[/small][color=r4]69[/color][/li][li]Added in patch [acronym=\"1.13.2.31727\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15791",
+      "sourceSHA256": "65769201cf93f900bce895fc073c8925c54ed0c2d2d1feb811614c751e426cd2",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "15792": {
+      "itemID": 15792,
+      "name": "Plow Wood Spaulders",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15792,
+        "name": "Plow Wood Spaulders",
+        "inventoryType": 3,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 5253,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 53,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 11079,
+              "name": "Wynd Nightchaser",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=11079",
+              "fullSourceSHA256": "88442b11094244a82abdf0490fb2ab7cae43d2cfdac8af74dad4357ead924a69",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 3516,
+              "name": "Arch Druid Fandral Staghelm",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=3516",
+              "fullSourceSHA256": "9db5460d9cd8b9cbff9763e08f4f813c54a95b1e72dfed1f9b3b06dbe69a120e",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              5248,
+              5252,
+              5253
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 10304,
+                "name": "Aurora Skycaller",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=10304",
+                "fullSourceSHA256": "fb45d2322d251a87a713e091e6f1ec6943c55e3fa26879ec0c63665f34bcf47b",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 10684,
+                "name": "Remorseful Highborne",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=10684",
+                "fullSourceSHA256": "ee530d5835aedfdaac5f403b052f801512ff2dbf3c517d13aded2e4720e4a307",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              5248,
+              5252,
+              5253
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 58[/li][li]Requires level 53[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=11079/wynd-nightchaser]Wynd Nightchaser[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=3516/arch-druid-fandral-staghelm]Arch Druid Fandral Staghelm[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]53[/color][small] &nbsp;[/small][color=r1]54[/color][small] &nbsp;[/small][color=r2]56[/color][small] &nbsp;[/small][color=r3]61[/color][small] &nbsp;[/small][color=r4]69[/color][/li][li]Added in patch [acronym=\"1.13.2.31727\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15792",
+      "sourceSHA256": "ad0a8b3d31bc554bc0a91ddedd3a08268bfa7a6a96a811c10ba22cfc8dfc25e9",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "15795": {
+      "itemID": 15795,
+      "name": "Emerald Mist Gauntlets",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15795,
+        "name": "Emerald Mist Gauntlets",
+        "inventoryType": 10,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 5253,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 53,
+          "sourceSide": 1,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 11079,
+              "name": "Wynd Nightchaser",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=11079",
+              "fullSourceSHA256": "88442b11094244a82abdf0490fb2ab7cae43d2cfdac8af74dad4357ead924a69",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 3516,
+              "name": "Arch Druid Fandral Staghelm",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=3516",
+              "fullSourceSHA256": "9db5460d9cd8b9cbff9763e08f4f813c54a95b1e72dfed1f9b3b06dbe69a120e",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              5248,
+              5252,
+              5253
+            ],
+            "ordered": true,
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "earlierUnlocksUnresolved": true,
+            "firstFormalActorReferences": [
+              {
+                "sourceKind": "npc",
+                "sourceID": 10304,
+                "name": "Aurora Skycaller",
+                "role": "start",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=10304",
+                "fullSourceSHA256": "fb45d2322d251a87a713e091e6f1ec6943c55e3fa26879ec0c63665f34bcf47b",
+                "unreadSource": false
+              },
+              {
+                "sourceKind": "npc",
+                "sourceID": 10684,
+                "name": "Remorseful Highborne",
+                "role": "end",
+                "independentFullReverseJoin": true,
+                "fullSourceURL": "https://www.wowhead.com/forever/npc=10684",
+                "fullSourceSHA256": "ee530d5835aedfdaac5f403b052f801512ff2dbf3c517d13aded2e4720e4a307",
+                "unreadSource": false
+              }
+            ],
+            "confidence": "Matching full primary Series rows,not independently confirmed mandatory prerequisite graph/current progress.",
+            "fullPublishedSeriesSteps": [
+              5248,
+              5252,
+              5253
+            ]
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 58[/li][li]Requires level 53[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=11079/wynd-nightchaser]Wynd Nightchaser[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=3516/arch-druid-fandral-staghelm]Arch Druid Fandral Staghelm[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]53[/color][small] &nbsp;[/small][color=r1]54[/color][small] &nbsp;[/small][color=r2]56[/color][small] &nbsp;[/small][color=r3]61[/color][small] &nbsp;[/small][color=r4]69[/color][/li][li]Added in patch [acronym=\"1.13.2.31727\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15795",
+      "sourceSHA256": "cde9e5f98edca99bb2a9da8a592676ccc079927af572f64e6450ccee0a733893",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "16992": {
+      "itemID": 16992,
+      "name": "Smokey's Explosive Launcher",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 16992,
+        "name": "Smokey's Explosive Launcher",
+        "inventoryType": 15,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 6041,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 54,
+          "sourceSide": 3,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 11033,
+              "name": "Smokey LaRue",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=11033",
+              "fullSourceSHA256": "60c75c45eed94d62de1d5672e5340136f270c11283ffc9f9926845db208a70fe",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 11033,
+              "name": "Smokey LaRue",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=11033",
+              "fullSourceSHA256": "60c75c45eed94d62de1d5672e5340136f270c11283ffc9f9926845db208a70fe",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              6026,
+              6041
+            ],
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "verification": "published-route-reference",
+            "evidence": "checkpoint8cg_working_evidence.json",
+            "instructions": "Published travel sequence. Begin with the first listed stage when progress is unknown; reliable active quests take priority. Earlier/current mandatory unlocks remain unverified. Source quest levels/factions are separate from wearer eligibility.",
+            "reuseQualification": "Existing validated navigation research reused;raw primary Series suffix is not substituted for the already documented earlier travel stages. Mandatory/current acceptance qualification remains unchanged."
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 58[/li][li]Requires level 54[/li][li]Type: Elite[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=11033/smokey-larue]Smokey LaRue[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=11033/smokey-larue]Smokey LaRue[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r1]54[/color][small] &nbsp;[/small][color=r2]56[/color][small] &nbsp;[/small][color=r3]61[/color][small] &nbsp;[/small][color=r4]69[/color][/li][li]Added in patch [acronym=\"1.13.2.31727\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved.",
+          "reusedExistingChain": true
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=16992",
+      "sourceSHA256": "8d5c7ef9c705381df76fffd8e592e3de6f23c3a80fedb394ef40c1e2ffe0755c",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "16993": {
+      "itemID": 16993,
+      "name": "Smokey's Fireshooter",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 16993,
+        "name": "Smokey's Fireshooter",
+        "inventoryType": 15,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": null,
+        "primaryVersion": "updated",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 6041,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 54,
+          "sourceSide": 3,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 11033,
+              "name": "Smokey LaRue",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=11033",
+              "fullSourceSHA256": "60c75c45eed94d62de1d5672e5340136f270c11283ffc9f9926845db208a70fe",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 11033,
+              "name": "Smokey LaRue",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=11033",
+              "fullSourceSHA256": "60c75c45eed94d62de1d5672e5340136f270c11283ffc9f9926845db208a70fe",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": {
+            "steps": [
+              6026,
+              6041
+            ],
+            "routeVerified": true,
+            "prerequisitesVerified": false,
+            "verification": "published-route-reference",
+            "evidence": "checkpoint8cg_working_evidence.json",
+            "instructions": "Published travel sequence. Begin with the first listed stage when progress is unknown; reliable active quests take priority. Earlier/current mandatory unlocks remain unverified. Source quest levels/factions are separate from wearer eligibility.",
+            "reuseQualification": "Existing validated navigation research reused;raw primary Series suffix is not substituted for the already documented earlier travel stages. Mandatory/current acceptance qualification remains unchanged."
+          },
+          "sourceRequirements": [
+            "[ul][li]Level: 58[/li][li]Requires level 54[/li][li]Type: Elite[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=11033/smokey-larue]Smokey LaRue[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=11033/smokey-larue]Smokey LaRue[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r1]54[/color][small] &nbsp;[/small][color=r2]56[/color][small] &nbsp;[/small][color=r3]61[/color][small] &nbsp;[/small][color=r4]69[/color][/li][li]Added in patch [acronym=\"1.13.2.31727\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved.",
+          "reusedExistingChain": true
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=16993",
+      "sourceSHA256": "50ea1e9a5a31b3c2049857a5a0c766ca891b38db988ea93f92948b70c4163ce0",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "18348": {
+      "itemID": 18348,
+      "name": "Quel'Serrar",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18348,
+        "name": "Quel'Serrar",
+        "inventoryType": 21,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": 60,
+        "primaryVersion": "unconfirmed",
+        "currentParserReason": "unconfirmed-forever-facts",
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-version-unconfirmed",
+        "activeAdoption": false,
+        "rawClassMask": 3,
+        "printedClassRestriction": true,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "navigationStatus": "version_unconfirmed_no_marker",
+      "gaps": [
+        "current_primary_version_unconfirmed",
+        "full_inventory_omission_not_current_absence"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18348",
+      "sourceSHA256": "baa790098de506408acc3ad6f8e77873afc17ac1528f846e3b47b9487846de9b",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    },
+    "21180": {
+      "itemID": 21180,
+      "name": "Earthstrike",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 21180,
+        "name": "Earthstrike",
+        "inventoryType": 12,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 60,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 8573,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "sourceMinimum": 60,
+          "sourceSide": 3,
+          "choiceReward": true,
+          "publishedActors": [
+            {
+              "sourceKind": "npc",
+              "sourceID": 15176,
+              "name": "Vargus",
+              "role": "start",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=15176",
+              "fullSourceSHA256": "e17e6e64a7c5bf9791ab13dfcb90aabe396886704878255981f8cb64d06c8ce1",
+              "unreadSource": false
+            },
+            {
+              "sourceKind": "npc",
+              "sourceID": 15176,
+              "name": "Vargus",
+              "role": "end",
+              "independentFullReverseJoin": true,
+              "fullSourceURL": "https://www.wowhead.com/forever/npc=15176",
+              "fullSourceSHA256": "e17e6e64a7c5bf9791ab13dfcb90aabe396886704878255981f8cb64d06c8ce1",
+              "unreadSource": false
+            }
+          ],
+          "publishedSeriesSegment": null,
+          "sourceRequirements": [
+            "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=15176/vargus]Vargus[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=15176/vargus]Vargus[/url][/icon][/li][li]Repeatable[/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.5.34713\"]1.13.5[/acronym] \"The Gates of Ahn'Qiraj\"[/li][/ul]"
+          ],
+          "instructions": "Exact full primary quest reward relation and formal actor references. Published source minimum is separate from the wearer gate. Current acceptance,earlier mandatory unlocks and any unverified branch order remain unresolved."
+        }
+      ],
+      "navigationStatus": "published_future_routes;candidate_not_active",
+      "gaps": [
+        "missing_printed_wearer_level",
+        "quest_minimum_not_equip_gate",
+        "historical_quest_reference_current_acceptance_and_chain_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=21180",
+      "sourceSHA256": "4929a85a7d5b2de18a736b9cf0bc5be0adea027787bf4646982c9cdbf52eccd8",
+      "sharedEvidence": "checkpoint8cv_partial_research.json"
+    }
+  }
+}
