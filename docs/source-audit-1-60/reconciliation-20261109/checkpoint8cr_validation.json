@@ -1,0 +1,112 @@
+{
+  "checkpoint": "8CR",
+  "status": "documentation-only100case research;targetedproofvalidationPASS;readycommitpush",
+  "baseline": "20204db8505eb7f6af07e3868cf461fdcc82ee9e",
+  "sourceProofSHA256": "8740dfe05432f3e258bc476d3ba6ef19f079cf9ea31f87e954657c7c570d84f0",
+  "caseCounts": {
+    "selected": 100,
+    "assessed": 100,
+    "fullOwnItems": 99,
+    "ownUnread404": 1,
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 67,
+      "hold-version-unconfirmed": 5,
+      "hold-no-rendered-equip-level": 27,
+      "hold-unread-primary": 1
+    },
+    "groups": {
+      "named-source-reference": 41,
+      "origin-unresolved": 1,
+      "broad-published-reference": 10,
+      "quest-reference": 28,
+      "vendor-reference": 19
+    },
+    "fullPrimaryResponses": 199,
+    "newPrimaryResponses": 144,
+    "reusedPrimaryResponses": 55,
+    "fullNPC": 65,
+    "fullQuest": 33,
+    "fullObject": 2,
+    "dropReverseJoins": 101,
+    "dropReverseOmissions": 9,
+    "vendorExactJoins": 23,
+    "vendorFullOmissions": 0,
+    "formalQuestRoleJoins": 60,
+    "knownFailedReferenceEdges": 0,
+    "newFailedReads": 5,
+    "newOwn404": 1,
+    "newNPC403": 4,
+    "knownFailedURLs": 1686,
+    "activeAdoptions": 0,
+    "liveVerified": 0,
+    "BackHeaders": 19,
+    "ThrownHeaders": 0,
+    "publishedMatchingSeriesSegments": 20,
+    "distinctMatchingPrimarySeries": 8,
+    "questFactionDiscrepancies": 0
+  },
+  "targetedChecks": [
+    "199fullresponsehashes",
+    "100individualdispositions/99fullown+oneunread404",
+    "101NPC/23vendor/60questrole joins and9qualifiedomissions",
+    "fournewactor403reads/1686knownfailedURLs/no fake hashes/retry",
+    "eightdistinctmatchingpublishedSeries/20questrecords",
+    "exactthreeMugambapredecessoritemexchanges/notprofessioncrafts",
+    "prior920registerbytes/objects preserved",
+    "exactnext100 shared queue/new14577deduplicated",
+    "345untypedreferencesdedup144typed+201distinct",
+    "actualgeneratortemporary67eligiblefutureinputs",
+    "protectedruntime/sourceinputsbyteexact"
+  ],
+  "proposalCompatibility": {
+    "eligibleFutureInputs": 67,
+    "plans": 57,
+    "statuses": {
+      "directions": 53,
+      "missing": 10,
+      "verified_coordinate_data": 4
+    },
+    "allUnreadAndMissingLevelAndVersionHoldsNotAdopted": true,
+    "actualCurrentCoverageUnchanged": true
+  },
+  "outsideQueue": {
+    "total": 1020,
+    "assessed": 1020,
+    "pending": 0
+  },
+  "additionalAllSlotQueue": {
+    "total": 698,
+    "assessed": 518,
+    "pending": 180,
+    "nextCheckpoint": "8CS",
+    "nextCount": 100,
+    "firstID": 14577,
+    "lastID": 23206,
+    "remainingAfterNext100": 80
+  },
+  "untypedRewardReferenceScopeReview": {
+    "rawReferenceIDs": 345,
+    "overlapTypedQueue": 144,
+    "distinctUntyped": 201
+  },
+  "lastFullValidation": {
+    "checkpoint": "8CO",
+    "CI": 43365182317,
+    "source": "30c0553283547e0c23539cec03077f78b3407b4e",
+    "generated": "7bbc9b5fb71bdb7c026cc15787d3c043221a2e66",
+    "localPASS": 19,
+    "CIPASS": 18,
+    "newFullSuiteClaim": false,
+    "newCIRequired": false,
+    "reason": "Diagnostic research/proposals/tracking only;no addon/source/generator/runtime inputs changed."
+  },
+  "navigation": {
+    "verified_coordinate_data": 883,
+    "directions": 1581,
+    "missing": 3087,
+    "not_applicable": 2156
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "limits": "Published reference research,not current realm loot/stock/quest acceptance/rendering confirmation. Full omission rows are not assumed caps/absence/retirement. Shadowstrike17074own404 andfournewformalNPC403reads have no bodyhash;1686knownfailedURLs retainedwithoutunchangedretry.27missing wearer levels not filledfromsource minima;5unconfirmed versions not acceptedcurrentorigins. Historical/broad sparse drops not focused farms;source region names/areaIDs are not floor/UIMapID coordinates. 19vendoritems retain per-seller cost/rank/reputation/stock/access publication details,not current service. Full primary Series segments and physical item objectives are recorded separately from mandatory/current unlock graphs. No class/ingredient/recipe/canonical equipment/source/quest-chain mutation."
+}
