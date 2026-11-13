@@ -1,8 +1,8 @@
 {
   "checkpoint": "8CZ",
   "status": "targeted finaldocumentation/integrity validation PASS;availableoffline researchclosed with explicitmanual/evidenceexceptions",
-  "verifiedUTC": "2026-11-13T10:13:54.172303+00:00",
-  "baseline": "cfa101f8450b331f9fa6f3c0106ef2ec6c46f898",
+  "verifiedUTC": "2026-11-13T10:15:17.252246+00:00",
+  "baseline": "9288dc5a7bcc919276bb134b5f6ab7750c8851c1",
   "checks": [
     "5688original/1425candidate/923sharedcasesuniquelydispositioned/no pendingmarkers",
     "900outsidebaselinecandidatesnotadopted/all1425statusessum",
@@ -14,10 +14,10 @@
     "main/Beta8remoteprotectedrefsunchanged/developmentremoteHEAD exact"
   ],
   "documentSHA256": {
-    "COMPREHENSIVE_RESEARCH_REPORT.md": "27941de45f4d0a58f600b0bcfad26e730955f93e2c3ecaa8ad0f82c42c2bae8a",
-    "checkpoint8cz_final_integrity.json": "198ca9c3fe734c36d5bcfef6c727cfed972ef3ab43427ea897a8f4c3225866a2",
+    "COMPREHENSIVE_RESEARCH_REPORT.md": "28ba8697435ce4b1aeb393ee7c6426ee20082f94869f8595b15cd6d342a0a470",
+    "checkpoint8cz_final_integrity.json": "d63604ce1b90ae1145c1ee112115f988237aeaf1a737390ad3ca31fe3f55772f",
     "checkpoint8cz_navigation_gap_dispositions.csv": "5b8a6b70ae4db15e19c68488248b66a8266db7ae07985e9257694fcc4572aaf1",
-    "checkpoint8cz_resume.json": "0c1a4de1079c84ea7dcad7fc5ab806e2c70988c71f7f4220f99beb937f9f2102"
+    "checkpoint8cz_resume.json": "95df30511d880ef217c830c0efdd4fc78ee80c633f9c565164765848828d77db"
   },
   "lastFullValidation": {
     "checkpoint": "8CY",
@@ -33,11 +33,13 @@
   "newFullSuiteClaim": false,
   "newCIRequired": false,
   "actualGameRenderingVerified": 0,
-  "automationPausePending": true,
+  "automationPausePending": false,
   "protectedRemoteRefs": {
     "refs/heads/main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
-    "refs/heads/work/full-acquisition-reconciliation-20261109": "cfa101f8450b331f9fa6f3c0106ef2ec6c46f898",
+    "refs/heads/work/full-acquisition-reconciliation-20261109": "9288dc5a7bcc919276bb134b5f6ab7750c8851c1",
     "refs/tags/v0.14.0-beta8": "0a088935f66d7a683f4db32a448157e15b5e6f39",
     "refs/tags/v0.14.0-beta8^{}": "543e5a248a018f8a9144e64aca655d242cf274e0"
-  }
+  },
+  "automationDisabledAndIndependentlyVerified": true,
+  "automationCompletionCheckpointCommit": "9288dc5a7bcc919276bb134b5f6ab7750c8851c1"
 }

@@ -1,7 +1,7 @@
 # GetGear acquisition reconciliation — durable checkpoints
 
 <!-- current-research-checkpoint -->
-**8CZ offline research handover, 13 November 2026:** [comprehensive report](source-audit-1-60/reconciliation-20261109/COMPREHENSIVE_RESEARCH_REPORT.md). All current queues dispositioned; latest full gate 8CY19local/18CI43406651194, bot dfc3120 reviewed. **Next: actual Forever-client acceptance and explicit evidence exceptions**, not repeated completed research. 885 point-data / 1,581 directions / 3,085 missing / 2,156 N/A; rendering untested. 900 outside candidates await development review. Existing automation completion state is recorded separately; no release/main/Beta8 action.
+**8CZ offline research handover, 13 November 2026:** [comprehensive report](source-audit-1-60/reconciliation-20261109/COMPREHENSIVE_RESEARCH_REPORT.md). All current queues dispositioned; latest full gate 8CY19local/18CI43406651194, bot dfc3120 reviewed. **Next: actual Forever-client acceptance and explicit evidence exceptions**, not repeated completed research. 885 point-data / 1,581 directions / 3,085 missing / 2,156 N/A; rendering untested. 900 outside candidates await development review. Existing automation is disabled and independently verified; no release/main/Beta8 action.
 <!-- /current-research-checkpoint -->
 
 ## Baseline recovered (2026-11-09)
@@ -2298,4 +2298,7 @@ All currently queued publication research is dispositioned: 5,688 original cases
 
 Read COMPREHENSIVE_RESEARCH_REPORT.md and checkpoint8cz_resume.json in the reconciliation directory for the complete account, sources/confidence, catalogue corrections, category/nine-class coverage, all gap dispositions, six dungeon/live-book exceptions and exact in-game tests. Current 7,707-item navigation: 885 published coordinate-data / 1,581 directions / 3,085 missing / 2,156 N/A; real rendering zero. 900 outside-catalogue baseline passes are future-development candidates, not adopted gear. Existing shared gaps/queues remain authoritative for new discoveries.
 
-Next: actual Forever-client acceptance and new reliable/live evidence for explicit exceptions; do not repeat completed research or unchanged failed URLs. Existing automation is to be disabled after verified report push, with confirmed state in checkpoint8cz_automation_completion.json. No main/Beta 8/build/package/release/billing action. Source is ready for in-game QA; next beta still requires manual acceptance and explicit release authorization.
+Next: actual Forever-client acceptance and new reliable/live evidence for explicit exceptions; do not repeat completed research or unchanged failed URLs. Existing automation is disabled and independently verified; confirmed state is in checkpoint8cz_automation_completion.json. No main/Beta 8/build/package/release/billing action. Source is ready for in-game QA; next beta still requires manual acceptance and explicit release authorization.
+
+
+Final automation closure: the existing same-thread Automation_7353739dfe2c81918900f688ab8984b8 was disabled at 2026-11-13T10:14:19.350019+00:00 and independently re-read as disabled after verified report commit 9288dc5 was pushed. No duplicate automation was created. A scheduled prompt arriving during the active closeout was skipped as duplicate. See checkpoint8cz_automation_completion.json in the reconciliation directory. Next work is the report’s actual-client acceptance/evidence exceptions; no pending routine offline queue or release authorization exists.

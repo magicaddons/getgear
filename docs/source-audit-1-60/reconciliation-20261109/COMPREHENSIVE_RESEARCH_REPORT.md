@@ -2,7 +2,7 @@
 
 13 November 2026, Australia/Adelaide. **All currently queued publication research is dispositioned and available automated validation is complete. The navigation feature is ready for actual Forever-client acceptance testing.** This is not confirmation that every acquisition is live, every item has a destination, or map rendering has been tested. Missing facts remain real exceptions below.
 
-Work is isolated on `work/full-acquisition-reconciliation-20261109`. Main and the published Beta 8 tag/commit are unchanged. No addon build, package, tag, release or merge was created. Release still requires explicit authorization. The existing recurring research automation will be disabled after this verified closeout is pushed; its confirmed final state is recorded in checkpoint8cz_automation_completion.json. No duplicate automation, billing change, purchased credits or banked reset was used. This environment exposes no usage-balance/refresh meter; no allowance-exhaustion cause or guaranteed refresh is inferred.
+Work is isolated on `work/full-acquisition-reconciliation-20261109`. Main and the published Beta 8 tag/commit are unchanged. No addon build, package, tag, release or merge was created. Release still requires explicit authorization. The existing recurring research automation **has been disabled and independently verified** after closeout commit 9288dc5 was pushed; [confirmed state](checkpoint8cz_automation_completion.json) records the same-thread automation ID and timestamp. No duplicate automation, billing change, purchased credits or banked reset was used. This environment exposes no usage-balance/refresh meter; no allowance-exhaustion cause or guaranteed refresh is inferred.
 
 ## Completed checkpoints and preserved scope
 
