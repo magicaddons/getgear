@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-**Beta9 publication authorised — validation pending:**user tested PRIVATE TEST4 sourceaa96895 and explicitly authorises v0.14.0-beta9 public prerelease. Version/packaging/docs only;no gameplay/data/900hold changes/main/merge. Read [release preparation](docs/source-audit-1-60/reconciliation-20261109/BETA9_RELEASE_PREPARATION.md). Next local+nonreleaseCI/wholecommitreview,exact sourceZIP/tag,draft,upload+verifybothassets,publish+publicverify,STOP. Preserve all prior releases/tags. Do not invoke historical release workflows.
+**Beta9 upload BLOCKED — STOP:**validated release source/tag0499287,CI43569430115 PASS27;publicZIPsha c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15. Draft445097507 exists/unpublished/prerelease/zeroassets;uploads.github.com returned401Badcredentials. Read [release handover](docs/BETA9_RELEASE_HANDOVER.md). Exactresume needs upload-capableauthentication/manualupload to existingdraft,download+verifybothassets beforepublish/publicverify. Userauthorisation persists;do notcreate duplicate release/tag/change source/publish incomplete draft. Allpriorreleases/tags/main/900holds/gameplay/data preserved;no research/features/merge.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
