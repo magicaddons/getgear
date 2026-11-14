@@ -81,7 +81,7 @@ for i,school in ipairs({'HOLY','FIRE','NATURE','FROST','SHADOW','ARCANE'}) do
 end
 local function FirstStat(t, keys)
     for _,key in ipairs(keys) do
-        if t[key] ~= nil then return t[key] end
+        if IsSafe(t[key]) then return t[key] end
     end
 end
 local function NormalizeStats(raw)
@@ -178,13 +178,14 @@ local function Combine(a,b)
     for key,value in pairs(b or {}) do result[key]=(result[key] or 0)+value end
     return result
 end
-local function MakeGroup(label, candidate, equippedLinks, unknownEquipment)
-    local result={label=label,rows={},comparable=false}
+local function MakeGroup(label, candidate, equippedLinks, unknownEquipment, unknownWeaponDPS)
+    local result={label=label,rows={},comparable=false,dpsUnknown=unknownWeaponDPS}
     if unknownEquipment then
         result.message="Equipped item data not available yet";return result
     end
     result.emptySlot=#equippedLinks==0
     local base={}
+    local weaponsWithDPS=0
     for _,link in ipairs(equippedLinks) do
         local equipped=Stats(link)
         if not equipped then
@@ -192,14 +193,18 @@ local function MakeGroup(label, candidate, equippedLinks, unknownEquipment)
             return result
         end
         base=Combine(base,equipped)
+        if (equipped.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0 then weaponsWithDPS=weaponsWithDPS+1 end
     end
     if not candidate then
         result.message="Recommended item stats are loading"
         return result
     end
+    if weaponsWithDPS>1 then result.dpsUnknown=true end
+    if result.dpsUnknown then result.note='Weapon DPS is not summed for a dual-wield set.' end
     local union={}
     for key in pairs(base) do union[key]=true end
     for key in pairs(candidate) do union[key]=true end
+    if result.dpsUnknown then union.ITEM_MOD_DAMAGE_PER_SECOND_SHORT=nil end
     local keys={}
     for key in pairs(union) do keys[#keys+1]=key end
     table.sort(keys,function(a,b)
@@ -253,7 +258,8 @@ function GetGear:GetGearComparison(gear, suppressItemDataRequest, plannedMainHan
                 local ok,kind
                 if C_Item and type(C_Item.GetItemInventoryTypeByID)=='function' then ok,kind=pcall(C_Item.GetItemInventoryTypeByID,link) end
                 if candidate and partnerStats and ok and (kind==13 or kind==21) then
-                    result.groups[2]=MakeGroup('Planned '..(partner.name or link)..' + off-hand vs two-handed',Combine(candidate,partnerStats),{main})
+                    local dual=(candidate.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0 and(partnerStats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0
+                    result.groups[2]=MakeGroup('Planned '..(partner.name or link)..' + off-hand vs two-handed',Combine(candidate,partnerStats),{main},false,dual)
                     result.note='Potential off-hand benefits and the explicitly planned replacement set are shown separately; ownership is not assumed.'
                 end
             end
@@ -302,6 +308,7 @@ function GetGear:ShouldShowOverlayStatChanges(gear)
     local resistanceGain=false
     for _,group in ipairs(comparison.groups) do
         if not group.comparable then return true end
+        if group.dpsUnknown and (not self.IsClassRelevantStat or self:IsClassRelevantStat('ITEM_MOD_DAMAGE_PER_SECOND_SHORT',gear)) then return true end
         local meaningfulLoss=false
         local allValid=self.db and self.db.overlay and self.db.overlay.showAllValidGear
         for _,stat in ipairs(group.rows or {}) do
@@ -583,6 +590,7 @@ function GetGear:ComparisonInline(gear, detailed)
         if group.potentialOnly or #comparison.groups > 1 or TWO_HANDED[gear.slot] then
             lines[#lines+1]="|cff96a6baVs "..group.label.."|r"
         end
+        if group.note then lines[#lines+1]='|cff96a6ba'..group.note..'|r' end
         if group.message then
             lines[#lines+1]="|cff96a6ba"..group.message.."|r"
         else
@@ -614,6 +622,7 @@ function GetGear:AppendComparisonTooltip(tip,gear)
     end
     for _,group in ipairs(compare.groups) do
         tip:AddLine("Against "..group.label,0.75,0.83,0.95)
+        if group.note then tip:AddLine(group.note,0.72,0.78,0.85,true) end
         if group.message then tip:AddLine(group.message,0.7,0.7,0.7,true)
         else
             for _,stat in ipairs(group.rows) do

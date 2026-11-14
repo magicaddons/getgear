@@ -600,4 +600,39 @@ with tempfile.TemporaryDirectory() as temp:
     proof[0]['lists']['recipes'][0]['learnedat']=True
     (nav.REPORT/"checkpoint_fixture_evidence.json").write_text(json.dumps(proof))
     assert 'recipeMinimumSkill'not in nav.build(gear)[0]['recipeRequirements']['1'],"malformed minima remain unknown;do not substitute skill-up colors"
+# AH2: reviewed entrance coordinates have a separate typed boundary; a
+# generic prose guide still cannot install arbitrary map points.
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT=Path(temp)
+    for f in ['reviewed_equipment_sources.json','reviewed_recipe_sources.json']:(nav.REPORT/f).write_text('[]')
+    for f in ['dungeon_items_reconciled.csv','remaining_equipment_research_queue.csv']:(nav.REPORT/f).write_text('itemID\n')
+    (nav.REPORT/'checkpoint_zone_evidence.json').write_text(json.dumps(response('zone',42,title='Fixture Dungeon - Zone - WoW Forever',zone=dict(id=42,name='Fixture Dungeon',instanceType='Dungeon'),markup=['[li]Instance type: Dungeon[/li]'])))
+    location=dict(id='main',zone='Westfall',x=20,y=30,verification='published-reference',coordinateKind='outdoor-entrance-approach',evidence=dict(url='https://www.wowhead.com/forever/guide/fixture',sha256='b'*64))
+    definitions=dict(instances={'Fixture Dungeon':dict(aliases=['Fixture alias'],entrances=[location],instructions='Published approach,not boss floor')})
+    path=nav.REPORT/'navigation_instance_entrances.json';path.write_text(json.dumps(definitions))
+    data=nav.build({})[0];assert data['instanceEntrances']['Fixture Dungeon']['entrances'][0]['x']==20 and data['instanceEntranceAliases']['Fixture alias']=='Fixture Dungeon'
+    location['evidence']['sha256']='unread';path.write_text(json.dumps(definitions));assert not nav.build({})[0]['instanceEntrances']['Fixture Dungeon']['entrances']
+    location['evidence']['sha256']='b'*64;location['zone']='Fixture Dungeon';path.write_text(json.dumps(definitions));assert not nav.build({})[0]['instanceEntrances']['Fixture Dungeon']['entrances'],'an instance floor is not an outdoor entrance'
+    location['zone']='Westfall';location['x']=True;path.write_text(json.dumps(definitions));assert not nav.build({})[0]['instanceEntrances']['Fixture Dungeon']['entrances']
+# Reviewed book seller IDs require exact independent full inventory/name joins.
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT=Path(temp)
+    (nav.REPORT/'reviewed_equipment_sources.json').write_text('[]')
+    (nav.REPORT/'reviewed_recipe_sources.json').write_text(json.dumps([dict(itemID=1,bookItemID=50,vendorEvidence=[dict(npcID=100,name='Vendor')])]))
+    for f in ['dungeon_items_reconciled.csv','remaining_equipment_research_queue.csv']:(nav.REPORT/f).write_text('itemID\n')
+    source=response('npc',100,name='Vendor',serviceSide=1,selectedSells=[dict(id=50,name='Pattern: Fixture')],publishedLocationFootprints=[dict(name='Westfall',zoneID=40,uiMapID=52,bounds=dict(xMin=20,xMax=21,yMin=30,yMax=31))])
+    path=nav.REPORT/'checkpoint_vendor_evidence.json';path.write_text(json.dumps(source))
+    gear={'1':dict(itemID=1,name='Fixture',profession='Tailoring',sourceType='Tailoring',eligibility=[511])}
+    routes=nav.build(gear)[0]['items']['1']['routes'];assert routes[0]['kind']=='recipe_vendor' and routes[0]['offer']['side']==1
+    source['selectedSells'][0]['name']='Pattern: Different';path.write_text(json.dumps(source));assert not nav.build(gear)[0]['items'].get('1'),'name/ID mismatch cannot manufacture a recipe route'
+# Earlier full NPC map excerpts retain continent sentinel qualification.
+with tempfile.TemporaryDirectory() as temp:
+    nav.REPORT=Path(temp)
+    (nav.REPORT/'reviewed_equipment_sources.json').write_text('[]')
+    vendor=dict(npcID=100,name='Vendor',npcURL='https://www.wowhead.com/forever/npc=100',npcPageSHA256='b'*64,mapReference={'-6':[dict(uiMapName='Kalimdor',uiMapId=1414,coords=[[51.8,55.4]])]})
+    (nav.REPORT/'reviewed_recipe_sources.json').write_text(json.dumps([dict(itemID=1,bookItemID=50,sourceSHA256={'https://www.wowhead.com/forever/item=50':'a'*64},vendorEvidence=[vendor])]))
+    for f in ['dungeon_items_reconciled.csv','remaining_equipment_research_queue.csv']:(nav.REPORT/f).write_text('itemID\n')
+    model=nav.build({'1':dict(itemID=1,name='Fixture',profession='Tailoring',sourceType='Tailoring',eligibility=[511])})[0]
+    location=model['sources']['npc:100']['locations'][0]
+    assert location['coordinateScope']=='continent-only'and not any(k in location for k in ['x','y','bounds']),'continent sentinels never become precise vendor positions'
 print("PASS navigation generation: future evidence propagation, exact trainer spell/output/profession joins, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")

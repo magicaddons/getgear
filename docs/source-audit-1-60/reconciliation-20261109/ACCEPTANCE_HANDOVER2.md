@@ -4,7 +4,7 @@ User handover dated 14 November 2026. Baseline `ec1bbdd36b539aaa44dfb5f7947153ae
 
 ## Stage 1 — eligibility, stat relevance and comparisons
 
-Stage1 fully validated: source `5151f34d8826ddaabe1c18d662fffa665b4de7ff`, direct bot `deb4f09e0d19dd97f7746537415bf332bd9d6681`; [nonrelease CI43536121098](https://github.com/magicaddons/getgear/actions/runs/43536121098) SUCCESS/20timestampedPASS plus26module syntax. Whole directbot diff inspected:only fourEverloot hashes/runUTC;allotherbytes exact,bot bodies unread. Navigation/faction workstreams remain open; this is not the final completion report.
+Stage1 fully validated: source `5151f34d8826ddaabe1c18d662fffa665b4de7ff`, direct bot `deb4f09e0d19dd97f7746537415bf332bd9d6681`; [nonrelease CI43536121098](https://github.com/magicaddons/getgear/actions/runs/43536121098) SUCCESS/20timestampedPASS plus26module syntax. Whole directbot diff inspected:only fourEverloot hashes/runUTC;allotherbytes exact,bot bodies unread. Navigation/faction workstreams are implemented below; final non-release CI is pending, so this is not yet the closed completion gate.
 
 ### Confirmed root causes and systemic corrections
 
@@ -29,3 +29,80 @@ Potential proficiency decisions preserve existing project class permissions exce
 ## Next checkpoint
 
 Stage1CI/wholebot gate is complete. Continue workstreams3/4: delayed marker readiness/lifecycle; canonical independently sourced instance entrances and practical selector deduplication across every referenced instance; structured Alliance-accessible vendor/recipe/object navigation and compact faction-specific summary. #2/#3/#4/#6 remain pending, with exact actor/entrance research and manual rendering limitations recorded in the final report. Do not package.
+
+## Stage 2 — acquisition navigation and faction context
+
+Implementation and local validation complete. **Final non-release CI / whole bot review pending. No package is authorized or created.**
+
+### #2 Flame Gown: map opens, marker missing
+
+`OpenAcquisitionMap` called `installMarker` immediately after opening the map; when `refreshMarker` could not yet see a ready canvas or matching map ID, `installMarker` returned false and the directions fallback called `ClearAcquisitionMapMarker`. The later refresh hook consequently had no destination left to draw. This race is reproduced with delayed/zero-size canvas fixtures. It is a confirmed code defect consistent with the report; the exact timing of the user's actual client has not been independently observed.
+
+The single GetGear-owned marker now has an accepted pending state. World-map show/update hooks retain and refresh the latest destination when the canvas/map ID becomes ready; another click supersedes it. Closing the map clears it. A delayed directions fallback does not erase the destination, and ordinary map browsing after a successful draw does not trigger fallback popups. A ScrollContainer child fallback handles compatible canvases without GetCanvas. Frame level follows the map and raises the noninteractive marker above the canvas; no native scripts are overwritten. A published roaming footprint also gets a recognizable pin **labelled as an area**, anchored at its boundary rather than an invented NPC midpoint; the footprint remains highlighted. Invalid coordinates still go directly to qualified directions. Native waypoint setters/clearers are never called.
+
+### #3 Shining Gown253971 / pattern253972: missing button, Horde text
+
+The full reviewed book registry already held typed `vendorEvidence`, but the builder did not project that information into navigable routes. Flame Gown253965/pattern253966 alone had a hand-entered legacy destination, creating inconsistent coverage. `GetAcquisitionSummary` also displayed the entire dual-faction research summary in the compact overlay.
+
+The shared builder now reuses all **268 reviewed book records containing structured seller evidence**, requiring exact book IDs and traceable full-book fingerprints. Independently read NPC map excerpts keep their own NPC URL/SHA and frame; a zone ID can supply a named region, never another NPC's coordinates. Missing/continent-sentinel geography remains qualified written guidance. New full Mivin256735/Jim'bek248202 inventories additionally give exact book/name joins and explicit Alliance/Horde reaction headers; Mivin offers **65 current-catalogue crafted-item pattern references**. Full current name conflicts or explicit full-inventory join requirements are not bypassed by older references.
+
+Vendor/recipe navigation now covers **432 crafted items versus323 before (+109)**. Existing stronger offers and additional reputation/stock conditions are retained when references consolidate. The compact source hint selects character-accessible structured routes, retaining known recipe ID/minimum/currency and uncertainty. Alliance gets Mivin in Redridge rather than Jim'bek instructions. Both vendor records, original mixed-faction research text, recipe data and provenance remain in the full catalogue/guide. A single practical vendor destination is no longer duplicated by its older legacy coordinate; the original coordinate is retained in readable qualified instructions and the untouched catalogue facts. No publication listing is called live inventory or current stock.
+
+Full primary NPC data places Mivin in Redridge at a **published footprint x10.0, y72.4–72.8**, not a fabricated exact standing point. The old catalogue's10.0,73.0 direction remains documented. Jim'bek is a Horde service in the Barrens, footprint x49.6,y29.4–29.6. Merchant's Favor currency3402 has an independently full-read currency name. Unknown service factions elsewhere remain unknown; hostile zone alone does not become a faction exclusion.
+
+### #4 Robes of Arugal6324: no Shadowfang entrance fallback
+
+The adapter only used `C_EncounterJournal.GetDungeonEntrancesForMap`; it had no maintained entrance reference fallback. The previous warning therefore meant that API discovery returned nothing, not that no published outdoor location existed.
+
+Resolution now tries a valid native entrance first (with guarded API availability and outdoor map checks), then the reviewed shared registry, then qualified directions. The full [Forever dungeon overview](https://www.wowhead.com/forever/guide/dungeons-overview-locations-details),170,481bytes/SHA256 `92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1`, publishes both `/way` and matching map-pin coordinates for an outdoor Shadowfang approach: **Silverpine42.6,66.6, above Pyrewood Village**. This marks a published approach, **not an independently observed live portal or a boss-floor coordinate**. Current door/access/route accuracy still requires the next actual-client walk-through. The data model and tooltip distinguish those concepts explicitly.
+
+### #6 Gaze Dreamer Pants6903: redundant Blackfathom options
+
+Two independent representations described the entrance trip: a structured dungeon route and a legacy outer-ruins coordinate. Selection keys distinguished role/label rather than the practical destination. The first needed a native API; the second suffered the marker-readiness defect.
+
+The registry now defines canonical instances, aliases, entrance IDs and explicitly reviewed legacy approach equivalences. Blackfathom uses **one canonical Ashenvale outdoor approach13.4,12.8** from the full primary guide. The original **14.5,14.6 Zoram Strand outer-ruins reference remains unchanged in catalogue facts and qualified directions**. These published approaches are not claimed to be the exact same portal point; the practical travel choice is consolidated rather than showing two failing entrance options. Boss/source descriptions and qualifications merge without losing conditions. Genuinely different gates stay separate: Stratholme's Living30.9,15.2 and Undead48.3,21.8 entries have different IDs, labels and gate instructions. An unspecified native record cannot redirect a requested different gate.
+
+### Dungeon/raid and catalogue-wide coverage
+
+Every **34 current instance labels** was audited and maps to **32 canonical definitions**, in `navigation_instance_entrances.json` and `acceptance2_instance_coverage.csv`. **20 canonical instances have21 published outdoor approach points** (Stratholme has two). No floor/boss coordinates are manufactured. The **12 without trustworthy stored entrance points** use native discovery or qualified written directions: The Hall of Thanes, Ruins of Lordaeron, Excavation Site: Wetlands, City of Dalaran, Krol'dok Stronghold, Alcaz Prison, Blackmaw Hold, Naxxramas, Blackwing Lair, Molten Core, Ahn'Qiraj and Zul'Gurub. Some source guides contain historical/future-opening language; this is not adopted as proof of current closure. Existing transport/attunement references remain qualified. These12 are explicit coordinate gaps, not implemented precise markers.
+
+The generator and `audit_acquisition_buttons.lua` use the same shared source/instance model for existing and future discoveries. All7,707items /36,255valid class entries were exercised with simulated Alliance classes at level25, no active quest or player-position assumptions, and **zero item-cache requests**. Known Horde-only services were never offered. Native rendering is not simulated as success.
+
+Two reports have distinct scopes:
+
+| Coverage | Generator source-data audit | Runtime-button audit, any eligible Alliance class at25 |
+|---|---:|---:|
+| Published precise point data | 1,371 | 1,021 |
+| Published area footprint | Included under directions | 1,214 |
+| Written directions / native entrance only | 1,406 | 534 |
+| Missing actionable location/target | 2,774 | 2,782 |
+| Not applicable | 2,156 | 2,156 |
+
+The source-data report evaluates item routes without character quest/faction selection; the runtime report also checks which button target can actually be offered in that declared character context, including earlier chain stages and area footprints. These are **data/logic coverage**, not counts of working live rendered markers. `navigation_research_gaps.csv` retains17,582overlapping unresolved facts, in the existing research tracking system. There is no new disconnected research programme.
+
+### Final comparison safeguards and tests
+
+Canonical aliases cover all six resistance schools, armour, generic damage and healing, with valid-key precedence rather than adding equivalent totals. Malformed canonical values can fall back to a valid alias. Dual-wield weapon DPS is **not summed and represented as combat DPS** when comparing a set; uncertain set DPS remains explicit, while ordinary stat totals and potential offhand benefits are still shown. No universal weights, best-in-slot score or assumed one-handed partner is introduced. Hidden/completed state, recipe knowledge/visibility, tracked/all materials, lookback/upcoming, nine-class preview and the independent existing stat/armour/green-BoE/source-confidence controls remain covered.
+
+- Final local suite: **24/24PASS** (18Lua regressions, four offline Python checks, catalogue-wide button audit and grouped module/file/syntax check). All26 gameplay modules parse with Lua5.4 and5.1. All**18Lua regressions pass on5.1** using only the documented fixture compiler adapter; full synthetic Core/UI/AltInventory startup passes on both runtimes. The5.1 button audit also passes.
+- New readiness fixtures cover delayed/zero canvas, ScrollContainer fallback, late map IDs, repeated destinations, map transitions/resize, close/reopen, directions fallback retaining pending state, native priority, reference fallback, distinct gates, invalid coordinates and one-marker lifecycle. No waypoint mutations occur.
+- Eight targeted full navigation-source responses succeeded, with all actual body lengths/SHA256checked and no failed/unchanged-failed-URL retries. Source URLs/hashes are in `acceptance2_navigation_source_integrity.json`; the registry stores waypoint/map-pin fact pairs without copying the whole guide. The cache used for stage1 was the exact prior full tooltip source. No acquisition facts are invented and no original metadata registry is rewritten.
+- Fresh required `ah2b` normal reconciliation captured eight original HTTP responses, exit0; final offline projections use the verified final model. Current all-items/dungeon/recipe reconciled companion CSVs are byte-exact to stage1; only provenance/report counters change with feed time. No new outside-feed items were adopted. All5902equipment /954book objects, recipes/4857ingredients, identity/equip-level facts and900candidate holds remain exact. Original diagnostic snapshots keep their dated provenance; bot response facts are not inferred from counters.
+- Final non-release CI/whole generated commit review: **PENDING**. See `acceptance2_validation.json`; closure will record exact source/bot/final receipt hashes and CI run. No actual Forever compatibility claim follows from these fixtures.
+
+## Practical next in-game acceptance (after separately authorized private build)
+
+1. Confirm the new private identifier and use the level25Alliance Priest. In normal relevance mode, Flame Gown253965 and Azure Silk Pants7046 should be absent. Enable Show-all to inspect them in the guide; they remain class-equippable choices. A Mage should retain its compatible schools; compare a hybrid class to confirm both physical and caster choices remain.
+2. Twilight Maul273841 must never appear for Priest, including Show-all/preview. Potential untrained daggers remain class-eligible in Show-all. Check another class's legal two-handed weapons and the39→40armour transition.
+3. Re-test Blackvenom4446, Meteor6220 and Talon4454 against the Priest's current weapon. Agility/melee DPS or a tiny resistance alone must not overcome Spirit/spell/healing losses. A real Spirit/healing gain can remain a choice; no dagger-ID blacklist exists. Resistance should appear once per school; check caster/armour aliases and mixed gains/losses.
+4. With the staff equipped, Orb of Mistmantle13031 shows **potential offhand stats**, plus the need for a one-handed weapon and an explicitly incomplete net set comparison. It must not pretend an owned replacement. Equip a known one-hand+offhand pair and test the reverse staff comparison; dual-wield DPS is not a summed combat score.
+5. Open Shining Gown navigation in the guide if ordinary stat filters hide it. Alliance compact text shows Mivin, Tailoring110 and known currency, not Horde vendor instructions. Check the Redridge area pin/footprint is visible and labelled as a published area; original stock/access uncertainty remains. Flame Gown's pin can be retested from Show-all or on a compatible caster.
+6. Open Robes of Arugal and Gaze Dreamer Pants: expect Silverpine and Ashenvale **published outdoor approaches** when native entrance APIs do not resolve. Walk to the actual portal and report any approach discrepancy. Blackfathom should have one practical entrance choice; Stratholme's genuinely different gates should remain selectable. Check one dungeon with no stored point yields useful qualified directions rather than an invented marker.
+7. Test first map open after login, slow initialization, repeated different pins, zoom/pan/resize, another map, close/reopen and another click. Exactly one owned marker should follow the latest destination, never accumulate or resurrect after closing; native waypoint/quest markers and normal map interaction remain intact.
+8. Recheck compact spacing, guide access, next-five-level/earlier views, nine-class preview, hidden/acquired records, recipe knowledge/visibility, tracked/all materials, saved settings and the independent visibility toggles. Capture the itemID, class/level/location, actual equipment/stats, relevant recipe/quest state and any Lua error/screenshot for failures.
+
+## Readiness and remaining limits
+
+Implementation is suitable for another **private acceptance build once the final CI gate passes and the user separately authorizes packaging**. It is not a public-release acceptance result. No live client is available in this automated environment: actual map rendering/scale/visibility/API timing, current profession offers/stock, quest phasing/access, real inventory-cache event timing and practical entrance travel remain manual. The12instance coordinate gaps, other2,774source-location gaps and unknown faction/access facts stay explicit. The normal UI does not pick a one-handed planning partner; full net-pair API tests use an explicitly supplied partner only. Base-stat comparisons do not simulate procs, talent/encounter mechanics or combat DPS.
+
+**Stop after final CI, whole bot review and this report. No ZIP/package/tag/public release/merge/main/Beta8/automation/candidate-adoption action is authorized.**

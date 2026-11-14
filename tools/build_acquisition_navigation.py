@@ -66,6 +66,34 @@ def published_offer(sale):
     return offer
 
 
+def instance_entrances(known, evidence):
+    """Reviewed outdoor approaches, separate from generic guide prose/floors."""
+    path = REPORT / 'navigation_instance_entrances.json'
+    result, aliases = {}, {}
+    if not path.exists():
+        return result, aliases
+    evidence.inputs.append(dict(file=path.name, sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
+    def cited(proof):
+        return (isinstance(proof, dict) and str(proof.get('url','')).startswith('https://')
+                and re.fullmatch(r'[0-9a-f]{64}', str(proof.get('sha256',''))))
+    for name, definition in json.loads(path.read_text()).get('instances', {}).items():
+        if name not in known:
+            continue
+        entry = dict(canonicalName=name, instructions=definition.get('instructions',''), entrances=[],
+                     legacyApproachLabels=definition.get('legacyApproachLabels',[]), evidence=definition.get('evidence',{}))
+        for location in definition.get('entrances',[]):
+            if (isinstance(location, dict) and location.get('coordinateKind') == 'outdoor-entrance-approach'
+                    and location.get('verification') == 'published-reference' and cited(location.get('evidence'))
+                    and location.get('zone') and location['zone'] not in known
+                    and coordinate(location.get('x')) and coordinate(location.get('y'))
+                    and (location['x'] or location['y']) and isinstance(location.get('id'),str)):
+                entry['entrances'].append(location)
+        result[name] = entry
+        for alias in [name] + definition.get('aliases',[]):
+            if isinstance(alias,str): aliases[alias] = name
+    return result, aliases
+
+
 class Evidence:
     def __init__(self):
         self.sources = {}
@@ -451,6 +479,43 @@ def build(inputs):
                 partial_hints.add(int(raw_id))
     equipment = {r["itemID"]: r for r in json.loads((REPORT / "reviewed_equipment_sources.json").read_text())}
     books = {r["itemID"]: r for r in json.loads((REPORT / "reviewed_recipe_sources.json").read_text())}
+    # Typed vendor references and full NPC map excerpts from earlier reviewed
+    # book work were otherwise left as descriptive metadata. Reuse their exact
+    # identities/fingerprints; zone IDs may name a region but never supply a
+    # different actor's coordinates.
+    vendor_proofs={}
+    area_names={}
+    for actor in evidence.sources.values():
+        for loc in actor.get('locations',[]):
+            if loc.get('areaID'):area_names.setdefault(str(loc['areaID']),loc['zone'])
+    for product,book in books.items():
+        book_id=book.get('bookItemID')
+        for url,digest in book.get('sourceSHA256',{}).items():
+            entity=ENTITY.search(url)
+            if (entity and entity.groups()==('item',str(book_id)) and '&xml' not in url
+                    and re.fullmatch(r'[0-9a-f]{64}',str(digest))):
+                vendor_proofs[product]=dict(url=url,sha256=digest,file='reviewed_recipe_sources.json')
+                break
+        if product not in vendor_proofs:continue
+        for vendor in book.get('vendorEvidence',[]):
+            npc=vendor.get('npcID');name=vendor.get('name')
+            if type(npc)is not int or npc<=0 or not name:continue
+            key='npc:'+str(npc);old=evidence.sources.get(key,{})
+            if old.get('name')and old['name']!=name:continue
+            _,actor=evidence.source('npc',npc,name,vendor_proofs[product])
+            npc_url=vendor.get('npcURL','');match=ENTITY.search(npc_url)
+            full=(match and match.groups()==('npc',str(npc)) and re.fullmatch(r'[0-9a-f]{64}',str(vendor.get('npcPageSHA256',''))))
+            if full:
+                evidence.source('npc',npc,name,dict(url=npc_url,sha256=vendor['npcPageSHA256'],file='reviewed_recipe_sources.json'))
+                for area,locations in (vendor.get('mapReference')or{}).items():
+                    for loc in rows(locations):
+                        if str(area).lstrip('-').isdigit() and int(area)<=0:
+                            loc=dict(loc,coordinateScope='continent-only')
+                        evidence.append_location(actor,evidence.location(loc.get('uiMapName'),area,loc))
+            if not actor['locations']:
+                zones=[vendor['zone']]if vendor.get('zone')else[area_names.get(str(i))for i in vendor.get('zoneIDs',[])or[vendor.get('zoneID')]]
+                for zone in zones:
+                    if zone:evidence.append_location(actor,evidence.location(zone))
     recipe_path = REPORT / "recipes_reconciled.csv"
     recipes = {int(r["itemID"]): r for r in read_csv(recipe_path)} if recipe_path.exists() else {}
     if recipe_path.exists():
@@ -472,6 +537,7 @@ def build(inputs):
                 currencies=evidence.currencies,
                 instances={name: True for name in known_dungeons | set(evidence.instances)},
                 instanceDetails=evidence.instances)
+    data['instanceEntrances'],data['instanceEntranceAliases'] = instance_entrances(known_dungeons | set(evidence.instances), evidence)
     container_routes = collections.defaultdict(list)
     for container_id, container in evidence.items.items():
         shared = container.get("containerNavigationRoutes", [])
@@ -715,6 +781,32 @@ def build(inputs):
                     gap("quest_source_access_unverified", quest=quest_id, detail="A published source requirement is known but its exact access threshold or current availability remains unresolved.")
         source_item = evidence.items.get(book_id if craft and book_id else item_id, {})
         if not own.get("disputed") and not source_item.get("disputed"):
+            # Earlier reviewed books already hold typed seller IDs. Reuse them
+            # only with an independently full, exact vendor-inventory join.
+            # A profession/vendor title alone never creates a teaching/sale.
+            if craft and book_id:
+                book_meta = books.get(item_id,{})
+                for vendor in book_meta.get('vendorEvidence',[]):
+                    npc = vendor.get('npcID')
+                    actor = evidence.sources.get('npc:'+str(npc),{})
+                    sale = evidence.full_npc_sales.get(npc,{}).get(book_id,{})
+                    identity = evidence.items.get(book_id,{}).get('identity',{}).get('name')
+                    expected = identity or re.sub(r'^(?:Pattern|Plans|Recipe|Formula):\s*','',str(sale.get('name','')))
+                    exact_name = sale.get('name') == identity if identity else expected == gear['name']
+                    if sale and not exact_name:continue
+                    if (type(npc) is int and actor.get('evidence') and sale and exact_name
+                            and actor.get('name') == vendor.get('name')):
+                        offer=published_offer(sale)
+                        if actor.get('serviceSide') in [1,2]:offer['side']=actor['serviceSide']
+                        route('recipe_vendor', source='npc:'+str(npc), bookItemID=book_id,offer=offer,
+                              verification='published-reference',instructions='Published exact pattern/vendor reference; current inventory, stock and access are unverified.')
+                    elif (type(npc)is int and npc>0 and vendor.get('name') and item_id in vendor_proofs and actor.get('name')==vendor.get('name')
+                          and not any(x.get('id')==npc for x in rows(source_item.get('sold-by')))
+                          and not any(x.get('requiresFullSaleJoin') and x.get('source')=='npc:'+str(npc) for x in extras)):
+                        offer=published_offer(dict(cost=vendor.get('cost'),stock=vendor.get('listedStock')))
+                        if actor.get('serviceSide') in [1,2]:offer['side']=actor['serviceSide']
+                        route('recipe_vendor',source='npc:'+str(npc),bookItemID=book_id,offer=offer,
+                              verification='published-reference',instructions='Earlier independently reviewed full-book seller reference; current vendor inventory/stock/access remains unverified. Zone-only references open written directions,not invented coordinates.')
             for seller in rows(source_item.get("sold-by")):
                 if not seller.get("id"):
                     continue
@@ -723,6 +815,8 @@ def build(inputs):
                        and x.get("requiresFullSaleJoin") for x in extras):
                     continue
                 offer = published_offer(seller)
+                actor_side=evidence.sources.get(source_key,{}).get('serviceSide')
+                if actor_side in [1,2] and 'side' not in offer:offer['side']=actor_side
                 route("recipe_vendor" if craft else "vendor", source=source_key, bookItemID=book_id, offer=offer)
             for merchant in merchants.get(book_id if craft and book_id else item_id, []):
                 if any(x.get("kind") in ["vendor", "recipe_vendor"] and x.get("source") == "npc:" + str(merchant["npcID"])
@@ -807,8 +901,26 @@ def build(inputs):
             gap("dungeon_floor_or_access_unverified", detail="Use client entrance; no inferred boss-floor coordinates, keys or unlocks.")
         legacy = gear.get("acquisitionLocation")
         if isinstance(legacy, dict) and legacy.get("zone"):
+            legacy_text=(legacy.get('spot') or 'Earlier location')+' — '+legacy['zone']
+            if coordinate(legacy.get('x')) and coordinate(legacy.get('y')):
+                legacy_text+=f" ({legacy['x']:.1f}, {legacy['y']:.1f})"
             # Existing researched coordinates remain separate from the item itself.
-            route("recipe_vendor" if craft and gear.get("recipeVendor") else "trainer" if "Trainer" in gear.get("acquisitionKind", "") else "legacy",
+            equivalent = next((name for name, definition in data['instanceEntrances'].items()
+                               if legacy.get('spot') in definition['legacyApproachLabels']
+                               and any(r.get('dungeon') in [name] + [k for k,v in data['instanceEntranceAliases'].items() if v==name] for r in plan['routes'])), None)
+            if equivalent:
+                route('dungeon',dungeon=equivalent,verification='published-reference',
+                      instructions='Retained original outdoor approach: '+legacy_text+'. '+(gear.get('instructions')or''))
+            else:
+                same_actor = next((r for r in plan['routes'] if r['kind'] in ['vendor','recipe_vendor','trainer']
+                                   and r.get('verification')=='published-reference'
+                                   and (actor:=evidence.sources.get(r.get('source'),{})).get('name')
+                                   and (legacy.get('spot')==actor['name'] or str(legacy.get('spot','')).startswith(actor['name']+','))
+                                   and any(loc['zone']==legacy['zone'] for loc in actor['locations'])), None)
+                if same_actor:
+                    same_actor['instructions']=(same_actor.get('instructions')or'')+' Earlier catalogue directions retained: '+legacy_text+'. The independently published actor footprint is used; current position/access remains unverified.'
+                else:
+                    route("recipe_vendor" if craft and gear.get("recipeVendor") else "trainer" if "Trainer" in gear.get("acquisitionKind", "") else "legacy",
                   location=dict(legacy, verification="legacy-reference" if legacy.get("quality") == "classic-reference" else "published-reference"),
                   label=legacy.get("spot", gear.get("source")), instructions=gear.get("instructions"),
                   cost=gear.get("recipeVendorCost"), currency=gear.get("recipeVendorCurrency"))
@@ -869,6 +981,9 @@ def build(inputs):
                     values = [loc for loc in values if loc["zone"] == zone] or [dict(zone=zone, verification="published-reference")]
                 source_locations[key] = values
             locations = [loc for values in source_locations.values() for loc in values]
+            if entry['kind']=='dungeon':
+                canonical=data['instanceEntranceAliases'].get(entry.get('dungeon'),entry.get('dungeon'))
+                locations.extend(data['instanceEntrances'].get(canonical,{}).get('entrances',[]))
             if entry.get("location"):
                 locations.append(entry["location"])
             located = located or bool(locations) or entry["kind"] == "dungeon"

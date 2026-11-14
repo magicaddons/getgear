@@ -15,6 +15,10 @@ on:
       - tools/build_acquisition_navigation.py
       - tools/export_navigation_inputs.lua
       - tests/acquisition-navigation.lua
+      - tests/acquisition-map-readiness.lua
+      - tests/full-toc-startup.lua
+      - tools/audit_acquisition_buttons.lua
+      - docs/source-audit-1-60/reconciliation-20261109/navigation_instance_entrances.json
       - tests/navigation-generation.py
       - docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json
       - docs/source-audit-1-60/reconciliation-20261109/checkpoint*evidence.json
@@ -114,6 +118,9 @@ jobs:
           lua5.4 tests/overlay-green-boe-filter.lua .
           lua5.4 tests/beta7-acquisition-reconciled.lua .
           lua5.4 tests/acquisition-navigation.lua .
+          lua5.4 tests/acquisition-map-readiness.lua .
+          lua5.4 tools/audit_acquisition_buttons.lua .
+          lua5.4 tests/full-toc-startup.lua .
       - name: Save source register and audit tables (development branch only)
         uses: actions/upload-artifact@v4
         with:

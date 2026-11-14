@@ -321,20 +321,23 @@ local tailoringBooks={
     {253995,253996,125},
     {253997,253998,125},
 }
+local previousSourceFaction=UnitFactionGroup
+UnitFactionGroup=function()return'Alliance'end
 for _,r in ipairs(tailoringBooks) do
     local item=assert(addon.ItemCatalog[r[1]])
     local text=addon:GetAcquisitionSummary(item)
     assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
     assert(text:find("Pattern:",1,true) and text:find("#"..r[2],1,true)
         and text:find("Tailoring "..r[3],1,true)
-        and text:find("Alliance Mivin Shadowweave",1,true)
-        and text:find("Horde Jim'bek",1,true)
+        and text:find("Mivin Shadowweave",1,true)
+        and not text:find("Jim'bek",1,true)
         and text:find("30 Merchant's Favor",1,true)
-        and text:find("live stock/gates unverified",1,true))
+        and text:find("current stock/access unverified",1,true))
     assert(item.acquisitionResearch.confidence=="published-forever-recipe-vendor-reference")
     assert(not text:find("Boss:",1,true))
     assert(describe(item,false):find("Jim'bek",1,true),"Guide lost Horde source")
 end
+UnitFactionGroup=previousSourceFaction
 
 -- Checkpoint 6D: all researched Leatherworking books keep vendor and
 -- drop alternatives distinct from the finished crafted equipment.

@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-**Acceptance handover2 active:** ten reported Priest issues; stage1eligibility/relevance/comparisons verified21local/20CI43536121098PASS,wholebotdeb4f09reviewed. Read [case handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER2.md). Continue navigation/faction workstreams3/4. No newpackage/release/main;900holds/researchclosed/automationdisabled.
+**Acceptance2 final gate pending:** all ten findings implemented in two stages;24local/18Lua5.1/26modules PASS. Stage1CI43536121098/botdeb4f09reviewed. Read [full handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER2.md). Next finalnonreleaseCI+wholebotreview,documentclosure,thenSTOP for user acceptance. No package/release/main;900holds/researchclosed/automationdisabled.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
@@ -1932,3 +1932,8 @@ New ten-issue level25Priest handover authorizes development only;no package/rele
 
 
 Acceptance2stage1 full gate:source5151f34/directbotdeb4f09;21local/20CI43536121098+26syntax PASS. Wholebotonly4EVhashes/runUTC;allotherbytes exact,botbodiesunread. Continue navigation/factionworkstreams3/4 from ACCEPTANCE_HANDOVER2.md/REQUEST;no package.
+
+
+## Acceptance2 stage2 — all ten findings implemented; final CI pending
+
+See ACCEPTANCE_HANDOVER2.md and acceptance2_validation.json in reconciliation directory. Pending-ready one-marker lifecycle, native→published approach→written entrance strategy,32canonical/34instance labels(20with21published approaches;12explicit gaps),shared vendor projection(+109crafted-item routes,432total),Alliancecompactcontext and preserved original faction/source provenance implemented. Full24local/18Lua5.1/26module syntax and synthetic startup PASS;all7707IDs/36255classsourcechecks/zeroitemcache requests audited. Source data1371point/1406directions/2774missing/2156NA;actualrendering untested. FinalnonreleaseCI/wholebot pending;stage1lastcompletedCI43536121098. Allmaterial/book/gear/candidate facts preserved;no package/main/Beta8/release/automation changes. FinishCI+report then STOP.

@@ -150,7 +150,7 @@ local function NewAcquisitionPin(parent, size)
             GameTooltip:AddLine(destination.zone .. " - approximate region",0.8,0.85,0.93)
         end
         if destination.kind=="dungeon" then
-            GameTooltip:AddLine("Uses this client's dungeon entrance location. Boss-floor position is not guessed.",0.8,0.85,0.93,true)
+            GameTooltip:AddLine("Uses a valid client entrance first, then a published outdoor approach. Exact portal/access and boss-floor positions are not assumed.",0.8,0.85,0.93,true)
         elseif destination.bounds and not destination.x then
             GameTooltip:AddLine("Published area, not an exact NPC position.",0.8,0.85,0.93,true)
         end

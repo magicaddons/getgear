@@ -8,6 +8,8 @@ function GetGear:GetAcquisitionSummary(gear)
     if self.GetRecipeAcquisitionKind and self:GetRecipeAcquisitionKind(gear)=="broad-book-drop" then
         return "Recipe: broad/random-drop examples, not farm directions. See Guide for other routes; trade/Auction House if tradeable (listings unknown)."
     end
+    local contextual=self.GetAcquisitionCompactSummary and self:GetAcquisitionCompactSummary(gear)
+    if contextual then return contextual end
     if type(gear.sourceSummary)=="string" and gear.sourceSummary~="" then
         return "Source: "..gear.sourceSummary
     end

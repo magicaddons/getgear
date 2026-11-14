@@ -1,0 +1,35 @@
+{
+  "status": "local-complete-final-ci-pending",
+  "baseline": "ec1bbdd36b539aaa44dfb5f7947153aee0e912a9",
+  "stage1": {
+    "source": "5151f34d8826ddaabe1c18d662fffa665b4de7ff",
+    "validated": "deb4f09e0d19dd97f7746537415bf332bd9d6681",
+    "ci": 43536121098,
+    "checks": 20
+  },
+  "localChecks": 24,
+  "lua51Regressions": 18,
+  "syntaxModulesEachRuntime": 26,
+  "allCatalogueButtonChecks": 36255,
+  "items": 7707,
+  "classCorrections": 86,
+  "canonicalInstances": 32,
+  "instanceLabels": 34,
+  "publishedApproachInstances": 20,
+  "publishedApproachPoints": 21,
+  "instanceCoordinateGaps": 12,
+  "craftsWithVendorRoutesBefore": 323,
+  "craftsWithVendorRoutesAfter": 432,
+  "publishedSourceNavigation": {
+    "not_applicable": 2156,
+    "directions": 1406,
+    "verified_coordinate_data": 1371,
+    "missing": 2774
+  },
+  "gapRows": 17582,
+  "actualClientRenderingVerified": false,
+  "sourceRegistryAndMaterialsPreserved": true,
+  "outsideCandidatesAdopted": 0,
+  "noPackage": true,
+  "next": "Final nonreleaseCI/wholebot review,documentation closure,STOP for user acceptance"
+}

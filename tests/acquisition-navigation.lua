@@ -209,7 +209,7 @@ local sharedEntrance=plan(29,{
     {kind="named_drop",source="npc:6",directionsOnly=true,verification="legacy-reference",entranceOnly=true}})
 local sharedTarget=addon:GetAcquisitionMapTarget(sharedEntrance)
 assert(sharedTarget.kind=="dungeon" and sharedTarget.verification=="legacy-reference" and not sharedTarget.x,"a historical loot reference can locate a client-supplied instance entrance without claiming current NPC loot or coordinates")
-assert(sharedTarget.choiceCount==1 and not sharedTarget.chooseFirst and #addon:GetAcquisitionNavigationChoices(sharedEntrance)==2,"one physical entrance opens directly while the guide retains every source")
+assert(sharedTarget.choiceCount==1 and not sharedTarget.chooseFirst and #addon:GetAcquisitionNavigationChoices(sharedEntrance)==1,"one physical entrance opens directly while the guide retains every source")
 assert(addon:GetAcquisitionDirections(npcContainer):find("not guaranteed finished equipment",1,true),"the NPC drops a box rather than guaranteeing its gear contents")
 model.quests["25"]={questID=25,name="Unresolved starting volume",starts={},ends={"npc:1"},
     starterItems={{itemID=905,name="Starting volume"}},starterOriginUnresolved=true}
@@ -304,9 +304,9 @@ local ok,mode=addon:OpenAcquisitionMap(vendor);assert(ok and mode=="map")
 local target,marker=addon:GetAcquisitionMarkerState();assert(target.x==40 and marker:IsShown())
 assert(marker.point[4]==400 and marker.point[5]==-400,"normalized map-canvas position")
 addon:OpenAcquisitionMap(rare);local _,same=addon:GetAcquisitionMarkerState();assert(marker==same and frames==1,"reuse one marker")
-mapID=99;marker.scripts.OnUpdate(marker,.2);assert(not marker:IsShown(),"changing map hides marker")
+mapID=99;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(not marker:IsShown(),"changing map hides marker")
 mapID=52;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(marker:IsShown(),"returning to destination restores marker")
-canvas.width=500;marker.scripts.OnUpdate(marker,.2);assert(marker.point[4]==300,"resize repositions marker")
+canvas.width=500;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(marker.point[4]==300,"resize repositions marker")
 WorldMapFrame:Hide();assert(not addon:GetAcquisitionMarkerState() and not marker:IsShown(),"closing clears marker")
 ok,mode=addon:OpenAcquisitionMap(multi);assert(ok and mode=="choices" and #addon.choices==2)
 local id=addon.choices[2].id;ok,mode=addon:OpenAcquisitionMap(multi,id);assert(ok and mode=="map")
@@ -664,5 +664,25 @@ do
  local formatter=assert(load(body,'profession minimum','t',env))()
  formatter(icon,label,{itemID=4237,profession='Leatherworking'},true,false)
  assert(label.text:find('25',1,true)and label.text:find('Learned',1,true),'learned recipe still shows numerical minimum')
+end
+-- AH2 actual reported source cases; same structured model in compact/guide.
+do
+ local a={level=25};assert(loadfile(root..'/AcquisitionNavigation.lua'))('GetGear',a)
+ assert(loadfile(root..'/AcquisitionNavigationData.lua'))('GetGear',a)
+ assert(loadfile(root..'/AcquisitionSummary.lua'))('GetGear',a)
+ UnitFactionGroup=function()return'Alliance'end;UnitClass=function()return'Priest','PRIEST',5 end;UnitLevel=function()return 25 end
+ C_Map=nil;C_QuestLog=nil
+ for _,id in ipairs({253965,253971})do
+  local g=addon.ItemCatalog[id];local choices=a:GetAcquisitionNavigationChoices(g)
+  assert(#choices==1 and choices[1].source=='npc:256735'and choices[1].zone=='Redridge Mountains','exact ACA vendor navigation '..id)
+  local summary=a:GetAcquisitionSummary(g)
+  assert(summary:find('Mivin Shadowweave',1,true)and not summary:find("Jim'bek",1,true)and summary:find("30 Merchant's Favor",1,true))
+ end
+ local sfk=a:GetAcquisitionMapTarget(addon.ItemCatalog[6324]);assert(sfk.dungeon=='Shadowfang Keep'and sfk.zone=='Silverpine Forest'and sfk.x==42.6)
+ local bfd=a:GetAcquisitionNavigationChoices(addon.ItemCatalog[6903]);assert(#bfd==1 and bfd[1].zone=='Ashenvale'and bfd[1].x==13.4,'one canonical outdoor approach,not redundant failed options')
+ assert(addon.ItemCatalog[6903].acquisitionLocation.x==14.5,'retain original qualified reference instead of silently replacing sourced facts')
+ local instances=0;for name in pairs(a.AcquisitionNavigationData.instances)do assert(a:GetAcquisitionInstanceDefinition(name),'missing instance audit '..name);instances=instances+1 end;assert(instances==34)
+ UnitFactionGroup=function()return'Horde'end
+ assert(a:GetAcquisitionMapTarget(addon.ItemCatalog[253971]).source=='npc:248202','Horde reference retained in structured model')
 end
 print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36255 class objectives; rendering requires manual client tests")

@@ -72,9 +72,16 @@ local planned=a:GetGearComparison(catalogue[13031],true,{itemID=9001,slot='Main 
 assert(#planned.groups==2 and planned.groups[2].comparable)
 GetInventoryItemLink=function()return nil end
 local aliases={RESISTANCE0_NAME=40,ITEM_MOD_ARMOR_SHORT=40,ITEM_MOD_SPELL_POWER_SHORT=20,
+ SPELL_DAMAGE_TOTAL='unavailable',
  ITEM_MOD_SPELL_DAMAGE_DONE_SHORT=8,ITEM_MOD_SPELL_DAMAGE_SHORT=8,ITEM_MOD_SPELL_HEALING_DONE_SHORT=9,ITEM_MOD_HEALING_DONE_SHORT=9}
 for i,school in ipairs({'HOLY','FIRE','NATURE','FROST','SHADOW','ARCANE'})do aliases['RESISTANCE'..i..'_NAME']=3;aliases['ITEM_MOD_'..school..'_RESISTANCE_SHORT']=3 end
 stats['item:9005']=aliases
 local normal=a:GetGearComparison({itemID=9005,slot='Ring'}).groups[1];assert(#normal.rows==9)
 for _,r in ipairs(normal.rows)do assert(not r.key:find('RESISTANCE_SHORT',1,true));if r.key:match('^RESISTANCE[1-6]_NAME$')then assert(r.new==3)end end
+a.classToken='WARRIOR'
+stats['item:9006']={ITEM_MOD_DAMAGE_PER_SECOND_SHORT=20};stats['item:9007']={ITEM_MOD_DAMAGE_PER_SECOND_SHORT=15};stats['item:9008']={ITEM_MOD_DAMAGE_PER_SECOND_SHORT=25}
+GetInventoryItemLink=function(_,slot)return slot==16 and'item:9006'or slot==17 and'item:9007'end
+local dualCandidate={itemID=9008,slot='Two-Hand Mace',armorType='Mace'}
+local dual=a:GetGearComparison(dualCandidate);assert(dual.groups[1].dpsUnknown and #dual.groups[1].rows==0,'do not add two reported weapon DPS totals and claim actual dual-wield combat performance')
+assert(a:ShouldShowOverlayStatChanges(dualCandidate),'unknown set DPS is not proof of no possible weapon improvement')
 print('PASS AH2:7707items/36255legal objectives/86audited corrections/nine-class schools/meaningful stats/aliases/explicit offhand planning;client rendering untested')

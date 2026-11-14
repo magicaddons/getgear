@@ -168,6 +168,37 @@ local function routesForCharacter(model,plan)
     return useful
 end
 
+function GetGear:GetAcquisitionInstanceDefinition(name)
+    local model=data()
+    local canonical=(model.instanceEntranceAliases or {})[name] or name
+    return (model.instanceEntrances or {})[canonical],canonical
+end
+
+-- Compact context is derived from structured, character-accessible routes.
+-- The original researched summary/provenance stays intact in the full guide.
+function GetGear:GetAcquisitionCompactSummary(gear)
+    local model=data();local plan=get(model.items,gear and gear.itemID)
+    local out,seen={},{}
+    for _,route in ipairs(routesForCharacter(model,plan)) do
+        if (route.kind=='vendor' or route.kind=='recipe_vendor' or route.kind=='trainer')
+            and (route.serviceSide or route.offer and route.offer.side) then
+            local actor=model.sources[route.source] or {}
+            local loc=(actor.locations or {})[1]
+            if actor.name and loc and loc.zone and not seen[route.source] then
+                seen[route.source]=true;out[#out+1]=actor.name..' — '..loc.zone..(offerText(route)~='' and ('; '..offerText(route))or'')
+            end
+        end
+    end
+    if #out>0 then
+        local minimum=self:GetRecipeSkillRequirement(gear)
+        local recipe=gear.profession and ((gear.recipePatternItemID and ('Pattern: #'..gear.recipePatternItemID..'; ')or'Recipe source: ')
+            ..gear.profession..(minimum and (' '..minimum)or'')..'; ')or'Source: '
+        return recipe..out[1]
+            ..(#out>1 and ('; '..(#out-1)..' other qualified location(s)')or'')
+            ..' (published reference; current stock/access unverified).'
+    end
+end
+
 function GetGear:GetAcquisitionNavigationChoices(gear)
     if not gear then return {} end
     local model=data()
@@ -179,8 +210,19 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     local routes=routesForCharacter(model,plan)
     local choices,seen={},{}
     local function add(target)
-        local key=table.concat({target.role or "",target.questID or "",target.source or "",target.zone or "",target.x or "",target.y or "",target.dungeon or "",target.label or ""},"|")
-        if not seen[key] then seen[key]=true;target.id=key;choices[#choices+1]=target end
+        local b=target.bounds
+        local footprint=b and table.concat({b.xMin or'',b.xMax or'',b.yMin or'',b.yMax or''},',')or''
+        local key=target.kind=='dungeon' and target.entranceOnly and ('entrance|'..target.dungeon..'|'..(target.entranceID or'main'))
+            or table.concat({target.role or "",target.questID or "",target.source or "",target.zone or "",target.x or "",target.y or "",footprint,target.dungeon or "",target.label or ""},"|")
+        if seen[key] then
+            local old=seen[key]
+            if target.instructions and not (old.instructions or ''):find(target.instructions,1,true) then old.instructions=(old.instructions or '')..'\n'..target.instructions end
+            if target.boss and not (old.boss or ''):find(target.boss,1,true) then old.boss=(old.boss and old.boss..', 'or'')..target.boss end
+            if target.requirements and target.requirements~='' and not (old.requirements or ''):find(target.requirements,1,true) then
+                old.requirements=(old.requirements and old.requirements~='' and old.requirements..'; Other published conditions: 'or'')..target.requirements
+            end
+        end
+        if not seen[key] then seen[key]=target;target.id=key;choices[#choices+1]=target end
     end
     local function source(key,role,q,route,preferred)
         local side=travelContext()
@@ -292,9 +334,18 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
             local context=(model.instanceDetails or {})[route.dungeon]
             local instructions=route.instructions
             if context and context.instructions then instructions=(instructions and instructions.."\n" or "")..context.instructions end
-            add({kind="dungeon",dungeon=route.dungeon,label=route.dungeon.." entrance",boss=route.boss,
-                 role=route.recipe and "Obtain recipe in dungeon" or "Dungeon entrance",instructions=instructions,
-                 verification=route.verification,bookItemID=route.bookItemID})
+            local definition,canonical=self:GetAcquisitionInstanceDefinition(route.dungeon)
+            if definition then instructions=(instructions or '')..'\n'..(definition.instructions or '') end
+            local variants=definition and definition.entrances or {}
+            if #variants==0 then variants={{}} end
+            for _,entrance in ipairs(variants) do
+                add({kind="dungeon",dungeon=canonical,label=entrance.label or (canonical.." entrance"),boss=route.boss,
+                    entranceOnly=true,entranceID=entrance.id,publishedEntrance=entrance.zone and entrance or nil,
+                    multipleEntrances=#variants>1,
+                    zone=entrance.zone,x=entrance.x,y=entrance.y,coordinateKind=entrance.coordinateKind,
+                    role=route.recipe and "Obtain recipe in dungeon" or "Dungeon entrance",instructions=instructions,
+                    verification=entrance.verification or route.verification,bookItemID=route.bookItemID})
+            end
         elseif route.source then
             source(route.source,route.kind=="recipe_vendor" and "Recipe vendor" or route.kind=="vendor_container" and "Container vendor" or route.kind=="npc_container" and "Container drop source" or route.kind=="recipe_drop" and "Obtain recipe book" or route.kind=="trainer" and "Recipe trainer" or route.kind=="crafting_requirement" and "Special crafting location" or route.kind=="unlock" and "Acquisition unlock" or route.kind=="fishing" and "Fishing zone" or route.kind=="vendor" and "Equipment vendor" or route.kind=="object" and "Acquisition object" or "Published named source",nil,route,false)
         elseif route.location then
@@ -381,7 +432,7 @@ function GetGear:GetAcquisitionMapTarget(gear)
     for _, target in ipairs(useful) do if target.preferred then selected=target;break end end
     local sameEntrance=selected.kind=="dungeon" and selected.entranceOnly==true
     for _,target in ipairs(useful) do
-        if target.kind~="dungeon" or not target.entranceOnly or target.dungeon~=selected.dungeon then sameEntrance=false;break end
+        if target.kind~="dungeon" or not target.entranceOnly or target.dungeon~=selected.dungeon or target.entranceID~=selected.entranceID then sameEntrance=false;break end
     end
     selected.choiceCount=sameEntrance and 1 or #useful
     selected.chooseFirst=not sameEntrance and #useful>1 and not selected.preferred
