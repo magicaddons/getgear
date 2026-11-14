@@ -1,0 +1,341 @@
+{
+  "version": "0.14.0-beta9",
+  "tag": "v0.14.0-beta9",
+  "sourceCommit": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3",
+  "sourceTree": "e052db0ea4d8be6c757cb1d8c98ba34c464b9771",
+  "testedPrivateSource": "aa96895077812be8d45a4fc25ee0c03ef38081db",
+  "testedPrivateSHA256": "b8599291dae1aa1b2a9f6c54844b7ac5c8c12839f6ceb2cb0e3eefbdffa1022f",
+  "gameplayAndAssetIdenticalToTestedPrivateBuild": true,
+  "sourceCI": {
+    "conclusion": "success",
+    "headSha": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3",
+    "jobs": [
+      {
+        "completedAt": "2026-11-14T07:06:43Z",
+        "conclusion": "success",
+        "databaseId": 132370346297,
+        "name": "reconcile",
+        "startedAt": "2026-11-14T07:05:30Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install pinned Lua validation tools",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Reconcile public Forever sources by item ID",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Check Lua syntax of complete integrated addon",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Full nine-class, filters, sources, crafting, layout and performance regression",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Save source register and audit tables (development branch only)",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Commit evidence index and reports only after passing validation",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Never package or release",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 18,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/magicaddons/getgear/actions/runs/43569430115/job/132370346297"
+      }
+    ],
+    "status": "completed"
+  },
+  "name": "GetGear-v0.14.0-beta9.zip",
+  "bytes": 2023756,
+  "sha256": "c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15",
+  "memberCount": 30,
+  "gameplayModules": 26,
+  "archiveCRCVerified": true,
+  "repeatBuildByteIdentical": true,
+  "files": [
+    {
+      "path": "GetGear/AcquisitionEvidence.lua",
+      "bytes": 2136,
+      "sha256": "d740e25b01b5d0a7864fabedd132264d4798321b216c966ba1aab4a91e452715",
+      "sourcePath": "AcquisitionEvidence.lua",
+      "sourceSHA256": "d740e25b01b5d0a7864fabedd132264d4798321b216c966ba1aab4a91e452715",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/AcquisitionEvidenceIndex.lua",
+      "bytes": 19442731,
+      "sha256": "0b207945423fccc9461f32ed65fbc978c93fbef25437add63cf436f6b0a32ee0",
+      "sourcePath": "AcquisitionEvidenceIndex.lua",
+      "sourceSHA256": "0b207945423fccc9461f32ed65fbc978c93fbef25437add63cf436f6b0a32ee0",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/AcquisitionNavigation.lua",
+      "bytes": 46294,
+      "sha256": "c63c56968f9744e3eaacd1b762971f108295c1e12a937ce88616fda0e590ca33",
+      "sourcePath": "AcquisitionNavigation.lua",
+      "sourceSHA256": "c63c56968f9744e3eaacd1b762971f108295c1e12a937ce88616fda0e590ca33",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/AcquisitionNavigationData.lua",
+      "bytes": 4644037,
+      "sha256": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
+      "sourcePath": "AcquisitionNavigationData.lua",
+      "sourceSHA256": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/AcquisitionSummary.lua",
+      "bytes": 11699,
+      "sha256": "7c9801409d2129f0ea6fd7c26f5bd596c74d328b04f03f838fc1399ce7d1fbee",
+      "sourcePath": "AcquisitionSummary.lua",
+      "sourceSHA256": "7c9801409d2129f0ea6fd7c26f5bd596c74d328b04f03f838fc1399ce7d1fbee",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/AltInventory.lua",
+      "bytes": 14938,
+      "sha256": "4b4fec128ac263f03eaafa6170df63ac1d38bc5ab57e8b2cf630b57882e14ebf",
+      "sourcePath": "AltInventory.lua",
+      "sourceSHA256": "4b4fec128ac263f03eaafa6170df63ac1d38bc5ab57e8b2cf630b57882e14ebf",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/BUILD_INFO.txt",
+      "bytes": 745,
+      "sha256": "cef5d10543baecd7202c6a4fdb6d9cf9c84c3ad9c7249b23bb77d85bb51a0101",
+      "sourcePath": null,
+      "mapping": "generated release provenance only;no gameplay code"
+    },
+    {
+      "path": "GetGear/BagUpgrades.lua",
+      "bytes": 12697,
+      "sha256": "f7c84a32da111c95f845e4db45243e869b80aa6d0c0c0f2f4af3857cecee6150",
+      "sourcePath": "BagUpgrades.lua",
+      "sourceSHA256": "f7c84a32da111c95f845e4db45243e869b80aa6d0c0c0f2f4af3857cecee6150",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/Core.lua",
+      "bytes": 13521,
+      "sha256": "1ff94ee3cdd8c86efcb9b499da827490d2d0cc5797e8fc98b80e9f46e833e7dd",
+      "sourcePath": "Core.lua",
+      "sourceSHA256": "1ff94ee3cdd8c86efcb9b499da827490d2d0cc5797e8fc98b80e9f46e833e7dd",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/CraftingVisibility.lua",
+      "bytes": 2657,
+      "sha256": "e97ae0b1e9bed45fd5310f81863729a1f58f74deb77ad22495b31fbde2931bff",
+      "sourcePath": "CraftingVisibility.lua",
+      "sourceSHA256": "e97ae0b1e9bed45fd5310f81863729a1f58f74deb77ad22495b31fbde2931bff",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/EquipmentCache.lua",
+      "bytes": 683649,
+      "sha256": "26d664699fb9c379545523950ad526cca466d6425ba55a191e56163fb72175dd",
+      "sourcePath": "EquipmentCache.lua",
+      "sourceSHA256": "26d664699fb9c379545523950ad526cca466d6425ba55a191e56163fb72175dd",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/GearCompare.lua",
+      "bytes": 32368,
+      "sha256": "a851ef205ba4778fd064bebc58ea1992d1385ddfa6a4731680112985902e759d",
+      "sourcePath": "GearCompare.lua",
+      "sourceSHA256": "a851ef205ba4778fd064bebc58ea1992d1385ddfa6a4731680112985902e759d",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/GearRelevance.lua",
+      "bytes": 8090,
+      "sha256": "13e49400217c057f43c0b8c451e26b0239646750f94ca99dc78a76c332df132a",
+      "sourcePath": "GearRelevance.lua",
+      "sourceSHA256": "13e49400217c057f43c0b8c451e26b0239646750f94ca99dc78a76c332df132a",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/GeneratedBeta7Evidence.lua",
+      "bytes": 196151,
+      "sha256": "b23e3b688585032312054e1ec5676ab55140629deebdfb71f7abd19778d9dfe6",
+      "sourcePath": "GeneratedBeta7Evidence.lua",
+      "sourceSHA256": "b23e3b688585032312054e1ec5676ab55140629deebdfb71f7abd19778d9dfe6",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/GeneratedStatFlags.lua",
+      "bytes": 333995,
+      "sha256": "047c437981c54d9a3a3d60c9730e6b41e996333dac3d7436d583010feb8200bf",
+      "sourcePath": "GeneratedStatFlags.lua",
+      "sourceSHA256": "047c437981c54d9a3a3d60c9730e6b41e996333dac3d7436d583010feb8200bf",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/GetGear.toc",
+      "bytes": 753,
+      "sha256": "040de27553bb6d6e34420e8ea6be8da7b498fe3aacf92feaeffb028a7c3344d2",
+      "sourcePath": "GetGear.toc",
+      "sourceSHA256": "040de27553bb6d6e34420e8ea6be8da7b498fe3aacf92feaeffb028a7c3344d2",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/GuideEngine.lua",
+      "bytes": 7308,
+      "sha256": "aa79ae97bcc2e884f05b34c6c6e24ce5ddc94a268098f5512c306dfa5fc71606",
+      "sourcePath": "GuideEngine.lua",
+      "sourceSHA256": "aa79ae97bcc2e884f05b34c6c6e24ce5ddc94a268098f5512c306dfa5fc71606",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/GuideState.lua",
+      "bytes": 7250,
+      "sha256": "d1df36d5d9cc64500ff991c6e98ae7f200626ec55b47c7b976cd0c922212464b",
+      "sourcePath": "GuideState.lua",
+      "sourceSHA256": "d1df36d5d9cc64500ff991c6e98ae7f200626ec55b47c7b976cd0c922212464b",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/ItemData.lua",
+      "bytes": 1860,
+      "sha256": "cd15d9a8a54982a1015d1c00ce31264c11fa56bab6ebe8dcb3dd87371e0ca72a",
+      "sourcePath": "ItemData.lua",
+      "sourceSHA256": "cd15d9a8a54982a1015d1c00ce31264c11fa56bab6ebe8dcb3dd87371e0ca72a",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/MapNavigation.lua",
+      "bytes": 16723,
+      "sha256": "0445ac2feceaea9f19b4c134e00807956e4a4496440bcfc30eadac09aa0afedc",
+      "sourcePath": "MapNavigation.lua",
+      "sourceSHA256": "0445ac2feceaea9f19b4c134e00807956e4a4496440bcfc30eadac09aa0afedc",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/MapPin.tga",
+      "bytes": 16428,
+      "sha256": "cbdcc54438c808d9e0117ec89b1e916aea0ba8aed04065e7e4eb8e92821d8a53",
+      "sourcePath": "MapPin.tga",
+      "sourceSHA256": "cbdcc54438c808d9e0117ec89b1e916aea0ba8aed04065e7e4eb8e92821d8a53",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/Materials.lua",
+      "bytes": 13205,
+      "sha256": "972932157bf55d68200f7149d4d88ff8b149b36b054beb2abd0d2b268070cc7d",
+      "sourcePath": "Materials.lua",
+      "sourceSHA256": "972932157bf55d68200f7149d4d88ff8b149b36b054beb2abd0d2b268070cc7d",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/README.txt",
+      "bytes": 3749,
+      "sha256": "99d89ab6ded1febdce42aeb08dbd7d4017c86ca5778df9f6bf57101126841f20",
+      "sourcePath": "README.txt",
+      "sourceSHA256": "99d89ab6ded1febdce42aeb08dbd7d4017c86ca5778df9f6bf57101126841f20",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/RecipeKnowledge.lua",
+      "bytes": 2650,
+      "sha256": "1a1ca65b2e626127a460a7dcdb286c68a1f10b85b327a99c9bf7fb51bb89740a",
+      "sourcePath": "RecipeKnowledge.lua",
+      "sourceSHA256": "1a1ca65b2e626127a460a7dcdb286c68a1f10b85b327a99c9bf7fb51bb89740a",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/ResearchedItemFacts.lua",
+      "bytes": 394827,
+      "sha256": "f04e844e6283930b579d152d2e085677e9fc222bedb595ba2229d6b754da8051",
+      "sourcePath": "ResearchedItemFacts.lua",
+      "sourceSHA256": "f04e844e6283930b579d152d2e085677e9fc222bedb595ba2229d6b754da8051",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/SourceEnrichment.lua",
+      "bytes": 12789,
+      "sha256": "958986371d7d8134b3161011d8336129bfb106143a1e82745be52ca9a4188f87",
+      "sourcePath": "SourceEnrichment.lua",
+      "sourceSHA256": "958986371d7d8134b3161011d8336129bfb106143a1e82745be52ca9a4188f87",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/StatEvidence.lua",
+      "bytes": 1807,
+      "sha256": "4930287b53bd3f5d26cc7d92cdfe71a8ce5af724a97e3a2e7628476b137da79e",
+      "sourcePath": "StatEvidence.lua",
+      "sourceSHA256": "4930287b53bd3f5d26cc7d92cdfe71a8ce5af724a97e3a2e7628476b137da79e",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/TalentAwareness.lua",
+      "bytes": 3338,
+      "sha256": "3da0d92394cb33015dfa92bee31f6467cdbfc8cca77b4b93841cd5fce21f3026",
+      "sourcePath": "TalentAwareness.lua",
+      "sourceSHA256": "3da0d92394cb33015dfa92bee31f6467cdbfc8cca77b4b93841cd5fce21f3026",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/UI.lua",
+      "bytes": 120776,
+      "sha256": "95d6f365bfc29e9a8bd5214972c2234c0191db2d76fd4e0134a593c2830368b3",
+      "sourcePath": "UI.lua",
+      "sourceSHA256": "95d6f365bfc29e9a8bd5214972c2234c0191db2d76fd4e0134a593c2830368b3",
+      "mapping": "exact release-commit bytes"
+    },
+    {
+      "path": "GetGear/WorldDropBoEIndex.lua",
+      "bytes": 33004,
+      "sha256": "e513007214fd7081f66100a9c3e92fc701d3f8456d4300dc2d3889d030c0719c",
+      "sourcePath": "WorldDropBoEIndex.lua",
+      "sourceSHA256": "e513007214fd7081f66100a9c3e92fc701d3f8456d4300dc2d3889d030c0719c",
+      "mapping": "exact release-commit bytes"
+    }
+  ]
+}
