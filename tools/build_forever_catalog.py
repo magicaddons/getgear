@@ -155,7 +155,7 @@ def parse_equipment(record):
             if subtype == "Axe":
                 classes.discard("ROGUE")
             if subtype == "Mace":
-                classes.discard("ROGUE")
+                classes -= {"ROGUE", "PRIEST"}
             if subtype == "Sword":
                 classes -= {"ROGUE", "MAGE", "WARLOCK"}
             if subtype == "Dagger":
@@ -164,6 +164,9 @@ def parse_equipment(record):
             slot = "Wand" if subtype == "Wand" else "Ranged"
         elif hand == "off hand":
             slot = "Off Hand"
+            # Potential dual-wield proficiency, independent of whether the
+            # individual character has trained the skill yet.
+            classes &= {"WARRIOR", "ROGUE", "HUNTER", "SHAMAN"}
         else:
             slot = "Main Hand"
         kind = "weapon"

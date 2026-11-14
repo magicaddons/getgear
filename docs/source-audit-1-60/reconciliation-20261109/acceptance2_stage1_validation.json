@@ -1,0 +1,20 @@
+{
+  "stage": "1-equipment-and-comparisons",
+  "status": "local-passed-ci-pending",
+  "baseline": "ec1bbdd36b539aaa44dfb5f7947153aee0e912a9",
+  "localPass": 21,
+  "targetedLua51": true,
+  "sourceCache": {
+    "url": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+    "sha256": "86a387d5274635ebff1589b8702792fc8c0bfdb55df2ae29ec31a4c894f18e3a",
+    "bytes": 18590138
+  },
+  "corrections": {
+    "priestTwoHandMace": 79,
+    "druidOffhandFist": 7,
+    "originalObjectives": 36341,
+    "currentObjectives": 36255
+  },
+  "next": "CIgate/wholebotreview,thenallnavigation/faction findings;no package",
+  "actualClientRendering": false
+}

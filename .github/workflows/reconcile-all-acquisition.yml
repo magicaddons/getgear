@@ -26,6 +26,14 @@ on:
       - tests/reconcile-dungeon-link-guards.py
       - tests/beta7-evidence.lua
       - GearCompare.lua
+      - GuideEngine.lua
+      - GearRelevance.lua
+      - StatEvidence.lua
+      - GeneratedStatFlags.lua
+      - tools/build_forever_catalog.py
+      - tools/generate_forever_stat_flags.py
+      - tests/class-stat-eligibility.lua
+      - tests/stat-school-generation.py
       - Core.lua
       - UI.lua
       - GuideState.lua
@@ -72,6 +80,7 @@ jobs:
           python3 tests/reconcile-dungeon-link-guards.py
           python3 tests/worlddrop-boe-fallback.py
           python3 tests/navigation-generation.py
+          python3 tests/stat-school-generation.py
           python3 tools/reconcile_acquisition_1_60.py
           test -s AcquisitionEvidenceIndex.lua
           test -s docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv
@@ -101,6 +110,7 @@ jobs:
           lua5.4 tests/beta7-preview-layout.lua .
           lua5.4 tests/beta7-stat-flags.lua .
           lua5.4 tests/overlay-stat-filter.lua .
+          lua5.4 tests/class-stat-eligibility.lua .
           lua5.4 tests/overlay-green-boe-filter.lua .
           lua5.4 tests/beta7-acquisition-reconciled.lua .
           lua5.4 tests/acquisition-navigation.lua .

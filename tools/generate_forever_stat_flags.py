@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build independent stat flags from WoW Forever item tooltip HTML, not statRole."""
-import csv,hashlib,html,json,pathlib,re,urllib.request
+import argparse,csv,hashlib,html,json,pathlib,re,urllib.request
 from html.parser import HTMLParser
 
 SOURCE_URL="https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json"
@@ -8,6 +8,36 @@ CATALOGUE=pathlib.Path("docs/source-audit-1-60/all_items.csv")
 OUTPUT=pathlib.Path("GeneratedStatFlags.lua")
 REPORT=pathlib.Path("docs/source-audit-1-60/STAT_FLAGS.md")
 BITS={"spellPower":1,"healing":2,"mana":4,"physical":8,"defense":16}
+SCHOOL_BITS={"Fire":1,"Frost":2,"Shadow":4,"Holy":8,"Arcane":16,"Nature":32}
+
+def school_facts(raw):
+    """Passive offensive schools, separate from generic power and healing.
+
+    A proc dealing fire damage is not passive fire spell power. Attributes
+    alongside a school bonus do not make that bonus generic spell power.
+    """
+    parser=Plain();parser.feed(raw)
+    text=re.sub(r"\s+"," ",parser.get()).lower()
+    base=re.split(r"\b(?:equip:|use:|chance on hit:)",text)[0]
+    passive=[base]+re.findall(r"\bequip:\s*(.*?)(?=\bequip:|\buse:|\bchance on hit:|\bsell price:|$)",text)
+    mask=0;generic=False;healing=False
+    for effect in passive:
+        school_phrase=re.search(r"increases?.*?\bdamage(?: done)? by\s+(.*?)\s+spells\b",effect)
+        healing=healing or bool(re.search(r"(?:\+\s*\d+\s+healing|increases?.*\bhealing\b)",effect))
+        generic=generic or bool(re.search(r"\bspell power\b|\+\s*\d+\s+spell damage\b",effect))
+        generic=generic or bool(re.search(r"increases?.*\bdamage\b.*\b(?:magical|all) spells\b",effect))
+        generic=generic or bool(re.search(r"increases?.*\bdamage(?: and healing)? done by spells and effects\b",effect))
+        for school,bit in SCHOOL_BITS.items():
+            s=school.lower()
+            if (re.search(r"\+\s*\d+\s+"+s+r"\s+(?:spell\s+)?damage\b",effect)
+                or school_phrase and re.search(r'\b'+s+r'\b',school_phrase[1])):
+                if not mask&bit:mask+=bit
+    # Do not rule out utility weapons when a use/cast effect is not represented
+    # by the passive stat flags. Physical on-hit procs alone are not caster stats.
+    utility=bool(re.search(r'\buse:|\b(?:spellcast|spell cast|when you cast|healing spell)|\bspells? have a chance',text))
+    if not mask and not generic and not healing and len(passive)>1:
+        utility=True # e.g. spell hit/crit or an unfamiliar passive effect
+    return [mask,bool(generic),bool(healing),utility]
 
 class Plain(HTMLParser):
     def __init__(self):
@@ -58,14 +88,19 @@ def flags_from_tooltip(raw):
                 ("physical",physical),("defense",defense)) if ok)
 
 def main():
+    args=argparse.ArgumentParser()
+    args.add_argument('--input',type=pathlib.Path,help='Pinned full Forever tooltip cache; no network when supplied')
+    options=args.parse_args()
     assert CATALOGUE.exists(),"Full GetGear catalogue audit required"
     with CATALOGUE.open(encoding="utf8",newline="") as f:cats=list(csv.DictReader(f))
     assert len(cats)==7707,(len(cats),"unexpected catalogue")
-    data,digest=download(SOURCE_URL)
+    if options.input:
+        raw=options.input.read_bytes();data=json.loads(raw);digest=hashlib.sha256(raw).hexdigest()
+    else:data,digest=download(SOURCE_URL)
     assert isinstance(data,list) and len(data)>10000
     source={x["itemId"]:x for x in data if isinstance(x,dict)
             and isinstance(x.get("itemId"),int)}
-    flags={};reasons={}
+    flags={};schools={};reasons={}
     for row in cats:
         iid=int(row["itemID"]);item=source.get(iid)
         problem=None
@@ -76,6 +111,7 @@ def main():
             reasons[problem]=reasons.get(problem,0)+1
             continue
         flags[iid]=flags_from_tooltip(item["tooltipHtml"])
+        schools[iid]=school_facts(item['tooltipHtml'])
     fixtures={
       250492:{"spellPower":True,"physical":True},
       250522:{"spellPower":True,"physical":True},
@@ -107,6 +143,11 @@ def main():
         + "".join("    "+", ".join(f"[{iid}]={mask}" for iid,mask in
                 sorted(flags.items())[i:i+12])+",\n"
                 for i in range(0,len(flags),12))
+        + "}\n"
+        + "-- Passive offensive-school mask (Fire1,Frost2,Shadow4,Holy8,Arcane16,Nature32), generic damage, healing, unclassified/use utility.\n"
+        + "-- Exact name-matched full tooltip; missing records remain unknown. No proc-school inference.\n"
+        + "GetGear.GeneratedSchoolStats = {\n"
+        + ''.join(f' [{iid}]={{{row[0]},{str(row[1]).lower()},{str(row[2]).lower()},{str(row[3]).lower()}}},\n' for iid,row in sorted(schools.items()))
         + "}\n",encoding="utf8")
     counts={name:sum(bool(mask & bit) for mask in flags.values())
             for name,bit in BITS.items()}

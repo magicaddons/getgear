@@ -6,6 +6,61 @@ local addonName, GetGear = ...
 local CLASSES={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 local BITS={}
 for i,class in ipairs(CLASSES) do BITS[class]=2^(i-1) end
+-- Potential class proficiencies, never the individual player's trained skills.
+-- Keep one-/two-handed and offhand weapon permissions distinct. Raw imported
+-- masks remain available as source evidence; the effective mask intersects
+-- those restrictions with these structural permissions before any relevance.
+local function classes(names)
+    local out={};for name in names:gmatch('%S+') do out[name]=true end;return out
+end
+local TWO_HAND={
+    Mace=classes('WARRIOR PALADIN DRUID SHAMAN'),
+    Axe=classes('WARRIOR PALADIN HUNTER SHAMAN'),
+    Sword=classes('WARRIOR PALADIN HUNTER'),
+    Staff=classes('WARRIOR HUNTER SHAMAN DRUID PRIEST MAGE WARLOCK'),
+    Polearm=classes('WARRIOR PALADIN HUNTER DRUID'),
+}
+local WEAPONS={
+    Sword=classes('WARRIOR PALADIN ROGUE HUNTER MAGE WARLOCK'),
+    Axe=classes('WARRIOR PALADIN ROGUE HUNTER SHAMAN'),
+    Mace=classes('WARRIOR PALADIN ROGUE SHAMAN PRIEST DRUID'),
+    Dagger=classes('WARRIOR ROGUE HUNTER PRIEST SHAMAN DRUID MAGE WARLOCK'),
+    ['Fist Weapon']=classes('WARRIOR ROGUE HUNTER DRUID SHAMAN'),
+    Bow=classes('WARRIOR ROGUE HUNTER'),Gun=classes('WARRIOR ROGUE HUNTER'),
+    Crossbow=classes('WARRIOR ROGUE HUNTER'),Thrown=classes('WARRIOR ROGUE HUNTER'),
+    Wand=classes('PRIEST MAGE WARLOCK'),
+}
+local DUAL_WIELD=classes('WARRIOR ROGUE HUNTER SHAMAN')
+local ARMOR={Cloth=classes('PRIEST MAGE WARLOCK DRUID ROGUE HUNTER SHAMAN WARRIOR PALADIN'),
+    Leather=classes('DRUID ROGUE HUNTER SHAMAN WARRIOR PALADIN'),
+    Mail=classes('HUNTER SHAMAN WARRIOR PALADIN'),Plate=classes('WARRIOR PALADIN'),
+    Shield=classes('WARRIOR PALADIN SHAMAN'),Idol=classes('DRUID'),Libram=classes('PALADIN'),Totem=classes('SHAMAN')}
+function GetGear:CanClassEquipGear(gear,class)
+    if not gear or gear.bagUpgrade or not BITS[class] then return true end
+    local e=self.EquipmentEligibility and self.EquipmentEligibility[gear.itemID]
+    if e and math.floor(e[1]/BITS[class])%2~=1 then return false end
+    local subtype=gear.armorType or e and e[3]
+    local slot=gear.slot or ''
+    local allowed
+    if slot:find('^Two%-Hand') then
+        local kind=slot:match('^Two%-Hand (.+)$') or subtype
+        allowed=TWO_HAND[kind]
+    elseif WEAPONS[subtype] then
+        allowed=WEAPONS[subtype]
+        if slot=='Off Hand' and not DUAL_WIELD[class] then return false end
+    elseif subtype~='Held In Off-hand' then allowed=ARMOR[subtype] end
+    return not allowed or allowed[class]==true -- unfamiliar evidence stays open
+end
+GetGear.EffectiveEquipmentEligibility={}
+GetGear.EquipmentEligibilityCorrections={}
+for id,e in pairs(GetGear.EquipmentEligibility or {}) do
+    local item=GetGear.ItemCatalog[id];local mask=0
+    for _,class in ipairs(CLASSES) do
+        if GetGear:CanClassEquipGear(item,class) then mask=mask+BITS[class] end
+    end
+    GetGear.EffectiveEquipmentEligibility[id]={mask,e[2],e[3]}
+    if mask~=e[1] then GetGear.EquipmentEligibilityCorrections[id]={originalMask=e[1],effectiveMask=mask} end
+end
 GetGear.GuideDefinitions={}
 GetGear.EquipmentByClass={}
 for _,class in ipairs(CLASSES) do
@@ -14,7 +69,7 @@ for _,class in ipairs(CLASSES) do
 end
 
 local allObjectives=0
-for itemID,eligibility in pairs(GetGear.EquipmentEligibility or {}) do
+for itemID,eligibility in pairs(GetGear.EffectiveEquipmentEligibility) do
     local facts=GetGear.ItemCatalog[itemID]
     assert(facts,"Eligibility refers to missing catalogue item "..itemID)
     local mask,rawLevel,armor=eligibility[1],eligibility[2],eligibility[3]

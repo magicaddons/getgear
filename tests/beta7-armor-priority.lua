@@ -26,8 +26,10 @@ local function check(cls,level,allowed,blocked,role)
     assert(not a:ShouldDisplayGear(item,cls,"available"),
         cls.." at "..level.." should not show "..blocked)
     a.db.overlay.showAllValidGear=true
-    assert(a:ShouldDisplayGear(item,cls,"available"),
-        cls.." at "..level.." expanded mode should show "..blocked)
+    local forbidden=(cls=='ROGUE'or cls=='DRUID')and(blocked=='Mail'or blocked=='Plate')
+        or (cls=='PRIEST'or cls=='MAGE'or cls=='WARLOCK')and blocked~='Cloth'
+    assert(a:ShouldDisplayGear(item,cls,"available")==not forbidden,
+        cls.." expanded mode lifts relevance,never physical armour permissions: "..blocked)
     a.db.overlay.showAllValidGear=false
 end
 for _,cls in ipairs({"WARRIOR","PALADIN"}) do

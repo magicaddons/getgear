@@ -37,7 +37,7 @@ local fields = { "itemID", "name", "slot", "sourceType", "source", "zone", "inst
     "recipeVendorCurrency", "recipeLearningSourceURL", "professionSkillRequired", "questStart" }
 local items = {}
 for id, gear in pairs(addon.ItemCatalog) do
-    local record = { eligibility = addon.EquipmentEligibility[id] }
+    local record = { eligibility = (addon.EffectiveEquipmentEligibility or addon.EquipmentEligibility)[id] }
     for _, field in ipairs(fields) do record[field] = gear[field] end
     items[tostring(id)] = record
 end

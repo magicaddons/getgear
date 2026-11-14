@@ -367,7 +367,7 @@ addon={};C_Map=nil
 local toc=assert(io.open(root.."/GetGear.toc")):read("*a")
 local skip={["Core.lua"]=true,["UI.lua"]=true,["AltInventory.lua"]=true}
 for path in toc:gmatch("[^\r\n]+") do if path:match("%.lua$") and not skip[path] then loadModule(path) end end
-assert(addon.CatalogueAudit.items==7707 and addon.CatalogueAudit.objectives==36341)
+assert(addon.CatalogueAudit.items==7707 and addon.CatalogueAudit.objectives==36255)
 assert(addon.AcquisitionNavigationData.audit.items==7707)
 local start=os.clock();local destinations=0
 for _,gear in pairs(addon.ItemCatalog) do if addon:GetAcquisitionMapTarget(gear) then destinations=destinations+1 end end
@@ -665,4 +665,4 @@ do
  formatter(icon,label,{itemID=4237,profession='Leatherworking'},true,false)
  assert(label.text:find('25',1,true)and label.text:find('Learned',1,true),'learned recipe still shows numerical minimum')
 end
-print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36341 class objectives; rendering requires manual client tests")
+print("PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36255 class objectives; rendering requires manual client tests")

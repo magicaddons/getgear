@@ -72,7 +72,7 @@ for _,class in ipairs({"PRIEST","MAGE","WARLOCK","WARRIOR","PALADIN",
         class.." must preserve positive non-armor changes")
     assert(addon:ShouldShowOverlayStatChanges(resistance)==true,
         class.." should keep positive Frost resistance")
-    assert(addon:ShouldShowOverlayStatChanges(armorPlusResistance)==true)
+    assert(addon:ShouldShowOverlayStatChanges(armorPlusResistance)==false,"a small resistance gain cannot offset primary-stat losses")
 end
 addon.classToken="PRIEST"
 addon.db.overlay.countArmorOnlyUpgrades=true
@@ -120,7 +120,7 @@ assert(hasMat(all,101) and hasMat(all,102)
     "All materials must include hidden-by-filter including armor-only items")
 assert(not hasMat(tracked,106) and not hasMat(tracked,107)
     and not hasMat(tracked,109) and hasMat(tracked,108)
-    and hasMat(tracked,110) and hasMat(tracked,111),
+    and hasMat(tracked,110) and not hasMat(tracked,111),
     "Tracked materials must follow armor-only meaningful-positive rule")
 assert(has(addon:GetItems("tracker"),106)
     and has(addon:GetItems("available"),107),
@@ -180,5 +180,6 @@ local stamina
 for _,r in ipairs(combined.groups[1].rows)do if r.key=="ITEM_MOD_STAMINA_SHORT"then stamina=r end end
 assert(stamina.old==3 and stamina.new==2 and stamina.delta==-1,"two-hand candidate replaces both occupied hands")
 C_Item.GetItemInventoryTypeByID=function()return 17 end
-assert(addon:GetGearComparison(item(9000,"Off Hand")).message:find("two-handed",1,true),"empty offhand is not usable while a two-hand weapon is equipped")
+local potential=addon:GetGearComparison(item(9000,"Off Hand"))
+assert(potential.groups[1].potentialOnly and potential.groups[1].comparable and potential.note:find("one-handed",1,true),"offhand planning shows potential benefits without inventing a complete replacement set")
 print("PASS overlay stat filter: nine classes, two armor keys, armor-only opt-in, other positives/resistance, negative/zero/unknown, rings, bags, guide, materials, toggle and zero bulk requests")

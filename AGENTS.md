@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-**Acceptance handover 1 complete:** six systemic fixes, source538d483 / finalvalidated2720258. Full19local,26Lua5.1syntax,15Lua5.1regressions,18CI[43440268260](https://github.com/magicaddons/getgear/actions/runs/43440268260) PASS;wholebotdiff reviewed. Read [case report](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER1.md). **STOP for next in-game observations.** Completedresearch stays closed;900candidates held;automation disabled;no new package/release.
+**Acceptance handover2 active:** ten reported Priest issues; stage1eligibility/relevance/comparisons implemented21local PASS/CIpending. Read [case handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER2.md). Finish stage1CI+wholebot review,then navigation/faction workstreams3/4. No newpackage/release/main;900holds/researchclosed/automationdisabled.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
@@ -1924,3 +1924,8 @@ The user supplied actual Forever-client observations and authorized six focused 
 ## Acceptance handover 1 — fully validated; stop for next observations
 
 All six findings confirmed at code/data level and corrected systemically. Source `538d483db6068f4e12472f8af4080a00840d817a`, final validated implementation/direct bot `27202581aabc4ea1e50fbaad38972e40d78e98f9` (whole diff inspected). [Nonrelease CI 43440268260](https://github.com/magicaddons/getgear/actions/runs/43440268260), job131935751658 SUCCESS/18timestampedPASS plus26module syntax. Fresh acceptance1verified/19local PASS;26Lua5.1syntax/15Lua5.1regressions and syntheticTOC5.1+5.4 PASS. Exact count/report/evidence/manual tests: `docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER1.md`, `acceptance1_validation.json`, `acceptance1_affected_records.csv`. Bot onlyREADME observationcount/provenance;allruntime/source/companions exact. BotAPIbodies unread/no equal-facts claim. Original diagnostic snapshots retain8CYprovenance; actual local captures reviewed separately. No candidate adoption, main/Beta8/tag/merge commit/release/newZIP/automation action. **STOP: await the next user acceptance handover.** Current-client map rendering, teaching, source access/loot and actual inventory-cache behavior remain manual acceptance, not established by automated fixtures.
+
+
+## Acceptance handover2 stage1 — local passed; CI pending
+
+New ten-issue level25Priest handover authorizes development only;no package/release/researchrestart. See docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER2.md and acceptance2_stage1_validation.json. Central potential class proficiency corrects79Priest2Hmace/sevenDruid offhand-fist memberships(36341→36255 objectives),preserving7707identities/rawsource masks. Independent full-tooltip offensive schools/generic/healing/unknown utility,meaningful class-stat deltas,canonicalresistance/armour/spell aliases,and explicit potential offhand planning implemented. Existing19+two newchecks=21local PASS afterfresh8response ah2a capture;targetedLua5.1 PASS. Stage1CI/wholebot pending;lastcompleted43440268260 untilclosure. #2/#3/#4/#6 navigation/faction findings next aftergate. Allsourcequalifications/materials/900holds intact.

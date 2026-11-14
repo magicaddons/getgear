@@ -50,7 +50,7 @@ assert(positions["EquipmentCache.lua"]<positions["SourceEnrichment.lua"]
     and positions["AcquisitionEvidence.lua"]<positions["AcquisitionSummary.lua"]
     and positions["AcquisitionSummary.lua"]<positions["GuideEngine.lua"],
     "Evidence registry must preserve existing source precedence and class-gate generation")
-assert(addon.CatalogueAudit.items==7707 and addon.CatalogueAudit.objectives==36341)
+assert(addon.CatalogueAudit.items==7707 and addon.CatalogueAudit.objectives==36255)
 assert(addon.AcquisitionResearchAudit.indexed>=100,
     "Expected hundreds of safely attributed source references")
 local classicTrash=assert(addon.ItemCatalog[1943])

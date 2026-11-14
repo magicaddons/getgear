@@ -1,0 +1,695 @@
+{
+  "reason": "Intersect raw masks with potential class subtype/hand permissions,not currently trained skills.79Priest2Hmaces and7Druid offhand fist weapons;no other objective changes.",
+  "beforeObjectives": 36341,
+  "afterObjectives": 36255,
+  "items": [
+    {
+      "itemID": "911",
+      "name": "Ironwood Treebranch",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:20,DRUID:20,SHAMAN:20,WARRIOR:20,PALADIN:20",
+      "after": "DRUID:20,SHAMAN:20,WARRIOR:20,PALADIN:20"
+    },
+    {
+      "itemID": "1218",
+      "name": "Heavy Gnoll War Club",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:16,DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16",
+      "after": "DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16"
+    },
+    {
+      "itemID": "1458",
+      "name": "Shadowhide Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:18,DRUID:18,SHAMAN:18,WARRIOR:18,PALADIN:18",
+      "after": "DRUID:18,SHAMAN:18,WARRIOR:18,PALADIN:18"
+    },
+    {
+      "itemID": "1523",
+      "name": "Huge Stone Club",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:31,DRUID:31,SHAMAN:31,WARRIOR:31,PALADIN:31",
+      "after": "DRUID:31,SHAMAN:31,WARRIOR:31,PALADIN:31"
+    },
+    {
+      "itemID": "1679",
+      "name": "Korg Bat",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:31,DRUID:31,SHAMAN:31,WARRIOR:31,PALADIN:31",
+      "after": "DRUID:31,SHAMAN:31,WARRIOR:31,PALADIN:31"
+    },
+    {
+      "itemID": "1722",
+      "name": "Thornstone Sledgehammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:37,DRUID:37,SHAMAN:37,WARRIOR:37,PALADIN:37",
+      "after": "DRUID:37,SHAMAN:37,WARRIOR:37,PALADIN:37"
+    },
+    {
+      "itemID": "1976",
+      "name": "Slaghammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:24,DRUID:24,SHAMAN:24,WARRIOR:24,PALADIN:24",
+      "after": "DRUID:24,SHAMAN:24,WARRIOR:24,PALADIN:24"
+    },
+    {
+      "itemID": "1990",
+      "name": "Ballast Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:31,DRUID:31,SHAMAN:31,WARRIOR:31,PALADIN:31",
+      "after": "DRUID:31,SHAMAN:31,WARRIOR:31,PALADIN:31"
+    },
+    {
+      "itemID": "1991",
+      "name": "Goblin Power Shovel",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:29,DRUID:29,SHAMAN:29,WARRIOR:29,PALADIN:29",
+      "after": "DRUID:29,SHAMAN:29,WARRIOR:29,PALADIN:29"
+    },
+    {
+      "itemID": "2058",
+      "name": "Kazon's Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:24,DRUID:24,SHAMAN:24,WARRIOR:24,PALADIN:24",
+      "after": "DRUID:24,SHAMAN:24,WARRIOR:24,PALADIN:24"
+    },
+    {
+      "itemID": "2254",
+      "name": "Icepane Warhammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:7,DRUID:7,SHAMAN:7,WARRIOR:7,PALADIN:7",
+      "after": "DRUID:7,SHAMAN:7,WARRIOR:7,PALADIN:7"
+    },
+    {
+      "itemID": "3193",
+      "name": "Oak Mallet",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:16,DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16",
+      "after": "DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16"
+    },
+    {
+      "itemID": "3194",
+      "name": "Black Malice",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:16,DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16",
+      "after": "DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16"
+    },
+    {
+      "itemID": "3198",
+      "name": "Battering Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:18,DRUID:18,SHAMAN:18,WARRIOR:18,PALADIN:18",
+      "after": "DRUID:18,SHAMAN:18,WARRIOR:18,PALADIN:18"
+    },
+    {
+      "itemID": "3203",
+      "name": "Dense Triangle Mace",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:23,DRUID:23,SHAMAN:23,WARRIOR:23,PALADIN:23",
+      "after": "DRUID:23,SHAMAN:23,WARRIOR:23,PALADIN:23"
+    },
+    {
+      "itemID": "3208",
+      "name": "Conk Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:43,DRUID:43,SHAMAN:43,WARRIOR:43,PALADIN:43",
+      "after": "DRUID:43,SHAMAN:43,WARRIOR:43,PALADIN:43"
+    },
+    {
+      "itemID": "3334",
+      "name": "Farmer's Shovel",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:5,DRUID:5,SHAMAN:5,WARRIOR:5,PALADIN:5",
+      "after": "DRUID:5,SHAMAN:5,WARRIOR:5,PALADIN:5"
+    },
+    {
+      "itemID": "3571",
+      "name": "Trogg Beater",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:18,DRUID:18,SHAMAN:18,WARRIOR:18,PALADIN:18",
+      "after": "DRUID:18,SHAMAN:18,WARRIOR:18,PALADIN:18"
+    },
+    {
+      "itemID": "3851",
+      "name": "Solid Iron Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:26,DRUID:26,SHAMAN:26,WARRIOR:26,PALADIN:26",
+      "after": "DRUID:26,SHAMAN:26,WARRIOR:26,PALADIN:26"
+    },
+    {
+      "itemID": "3852",
+      "name": "Golden Iron Destroyer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:29,DRUID:29,SHAMAN:29,WARRIOR:29,PALADIN:29",
+      "after": "DRUID:29,SHAMAN:29,WARRIOR:29,PALADIN:29"
+    },
+    {
+      "itemID": "4564",
+      "name": "Spiked Club",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:8,DRUID:8,SHAMAN:8,WARRIOR:8,PALADIN:8",
+      "after": "DRUID:8,SHAMAN:8,WARRIOR:8,PALADIN:8"
+    },
+    {
+      "itemID": "4570",
+      "name": "Birchwood Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:10,DRUID:10,SHAMAN:10,WARRIOR:10,PALADIN:10",
+      "after": "DRUID:10,SHAMAN:10,WARRIOR:10,PALADIN:10"
+    },
+    {
+      "itemID": "4777",
+      "name": "Ironwood Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:13,DRUID:13,SHAMAN:13,WARRIOR:13,PALADIN:13",
+      "after": "DRUID:13,SHAMAN:13,WARRIOR:13,PALADIN:13"
+    },
+    {
+      "itemID": "4778",
+      "name": "Heavy Spiked Mace",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:14,DRUID:14,SHAMAN:14,WARRIOR:14,PALADIN:14",
+      "after": "DRUID:14,SHAMAN:14,WARRIOR:14,PALADIN:14"
+    },
+    {
+      "itemID": "5187",
+      "name": "Rhahk'Zor's Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:16,DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16",
+      "after": "DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16"
+    },
+    {
+      "itemID": "6205",
+      "name": "Burrowing Shovel",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:12,DRUID:12,SHAMAN:12,WARRIOR:12,PALADIN:12",
+      "after": "DRUID:12,SHAMAN:12,WARRIOR:12,PALADIN:12"
+    },
+    {
+      "itemID": "6214",
+      "name": "Heavy Copper Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:11,DRUID:11,SHAMAN:11,WARRIOR:11,PALADIN:11",
+      "after": "DRUID:11,SHAMAN:11,WARRIOR:11,PALADIN:11"
+    },
+    {
+      "itemID": "6327",
+      "name": "The Pacifier",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:36,DRUID:36,SHAMAN:36,WARRIOR:36,PALADIN:36",
+      "after": "DRUID:36,SHAMAN:36,WARRIOR:36,PALADIN:36"
+    },
+    {
+      "itemID": "7230",
+      "name": "Smite's Mighty Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:18,DRUID:18,SHAMAN:18,WARRIOR:18,PALADIN:18",
+      "after": "DRUID:18,SHAMAN:18,WARRIOR:18,PALADIN:18"
+    },
+    {
+      "itemID": "7723",
+      "name": "Mograine's Might",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:39,DRUID:39,SHAMAN:39,WARRIOR:39,PALADIN:39",
+      "after": "DRUID:39,SHAMAN:39,WARRIOR:39,PALADIN:39"
+    },
+    {
+      "itemID": "7730",
+      "name": "Cobalt Crusher",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:29,DRUID:29,SHAMAN:29,WARRIOR:29,PALADIN:29",
+      "after": "DRUID:29,SHAMAN:29,WARRIOR:29,PALADIN:29"
+    },
+    {
+      "itemID": "7956",
+      "name": "Bronze Warhammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:20,DRUID:20,SHAMAN:20,WARRIOR:20,PALADIN:20",
+      "after": "DRUID:20,SHAMAN:20,WARRIOR:20,PALADIN:20"
+    },
+    {
+      "itemID": "9449",
+      "name": "Manual Crowd Pummeler",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:29,DRUID:29,SHAMAN:29,WARRIOR:29,PALADIN:29",
+      "after": "DRUID:29,SHAMAN:29,WARRIOR:29,PALADIN:29"
+    },
+    {
+      "itemID": "11608",
+      "name": "Dark Iron Pulverizer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:50,DRUID:50,SHAMAN:50,WARRIOR:50,PALADIN:50",
+      "after": "DRUID:50,SHAMAN:50,WARRIOR:50,PALADIN:50"
+    },
+    {
+      "itemID": "12772",
+      "name": "Inlaid Thorium Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:49,DRUID:49,SHAMAN:49,WARRIOR:49,PALADIN:49",
+      "after": "DRUID:49,SHAMAN:49,WARRIOR:49,PALADIN:49"
+    },
+    {
+      "itemID": "12776",
+      "name": "Enchanted Battlehammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:51,DRUID:51,SHAMAN:51,WARRIOR:51,PALADIN:51",
+      "after": "DRUID:51,SHAMAN:51,WARRIOR:51,PALADIN:51"
+    },
+    {
+      "itemID": "12796",
+      "name": "Hammer of the Titans",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:58,DRUID:58,SHAMAN:58,WARRIOR:58,PALADIN:58",
+      "after": "DRUID:58,SHAMAN:58,WARRIOR:58,PALADIN:58"
+    },
+    {
+      "itemID": "12983",
+      "name": "Rakzur Club",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:16,DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16",
+      "after": "DRUID:16,SHAMAN:16,WARRIOR:16,PALADIN:16"
+    },
+    {
+      "itemID": "13045",
+      "name": "Viscous Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:30,DRUID:30,SHAMAN:30,WARRIOR:30,PALADIN:30",
+      "after": "DRUID:30,SHAMAN:30,WARRIOR:30,PALADIN:30"
+    },
+    {
+      "itemID": "13046",
+      "name": "Blanchard's Stout",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:45,DRUID:45,SHAMAN:45,WARRIOR:45,PALADIN:45",
+      "after": "DRUID:45,SHAMAN:45,WARRIOR:45,PALADIN:45"
+    },
+    {
+      "itemID": "13047",
+      "name": "Twig of the World Tree",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:53,DRUID:53,SHAMAN:53,WARRIOR:53,PALADIN:53",
+      "after": "DRUID:53,SHAMAN:53,WARRIOR:53,PALADIN:53"
+    },
+    {
+      "itemID": "15259",
+      "name": "Hefty Battlehammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:20,DRUID:20,SHAMAN:20,WARRIOR:20,PALADIN:20",
+      "after": "DRUID:20,SHAMAN:20,WARRIOR:20,PALADIN:20"
+    },
+    {
+      "itemID": "15260",
+      "name": "Stone Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:33,DRUID:33,SHAMAN:33,WARRIOR:33,PALADIN:33",
+      "after": "DRUID:33,SHAMAN:33,WARRIOR:33,PALADIN:33"
+    },
+    {
+      "itemID": "15261",
+      "name": "Sequoia Branch",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:35,DRUID:35,SHAMAN:35,WARRIOR:35,PALADIN:35",
+      "after": "DRUID:35,SHAMAN:35,WARRIOR:35,PALADIN:35"
+    },
+    {
+      "itemID": "15262",
+      "name": "Greater Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:41,DRUID:41,SHAMAN:41,WARRIOR:41,PALADIN:41",
+      "after": "DRUID:41,SHAMAN:41,WARRIOR:41,PALADIN:41"
+    },
+    {
+      "itemID": "15263",
+      "name": "Royal Mallet",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:45,DRUID:45,SHAMAN:45,WARRIOR:45,PALADIN:45",
+      "after": "DRUID:45,SHAMAN:45,WARRIOR:45,PALADIN:45"
+    },
+    {
+      "itemID": "15264",
+      "name": "Backbreaker",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:51,DRUID:51,SHAMAN:51,WARRIOR:51,PALADIN:51",
+      "after": "DRUID:51,SHAMAN:51,WARRIOR:51,PALADIN:51"
+    },
+    {
+      "itemID": "15265",
+      "name": "Painbringer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:53,DRUID:53,SHAMAN:53,WARRIOR:53,PALADIN:53",
+      "after": "DRUID:53,SHAMAN:53,WARRIOR:53,PALADIN:53"
+    },
+    {
+      "itemID": "15266",
+      "name": "Fierce Mauler",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:56,DRUID:56,SHAMAN:56,WARRIOR:56,PALADIN:56",
+      "after": "DRUID:56,SHAMAN:56,WARRIOR:56,PALADIN:56"
+    },
+    {
+      "itemID": "15267",
+      "name": "Brutehammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:58,DRUID:58,SHAMAN:58,WARRIOR:58,PALADIN:58",
+      "after": "DRUID:58,SHAMAN:58,WARRIOR:58,PALADIN:58"
+    },
+    {
+      "itemID": "17073",
+      "name": "Earthshaker",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "17182",
+      "name": "Sulfuras, Hand of Ragnaros",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "17193",
+      "name": "Sulfuron Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "17738",
+      "name": "Claw of Celebras",
+      "slot": "Off Hand",
+      "subtype": "Fist Weapon",
+      "before": "DRUID:47,ROGUE:47,HUNTER:47,SHAMAN:47,WARRIOR:47",
+      "after": "ROGUE:47,HUNTER:47,SHAMAN:47,WARRIOR:47"
+    },
+    {
+      "itemID": "17766",
+      "name": "Princess Theradras' Scepter",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:49,DRUID:49,SHAMAN:49,WARRIOR:49,PALADIN:49",
+      "after": "DRUID:49,SHAMAN:49,WARRIOR:49,PALADIN:49"
+    },
+    {
+      "itemID": "18847",
+      "name": "Grand Marshal's Left Hand Blade",
+      "slot": "Off Hand",
+      "subtype": "Fist Weapon",
+      "before": "DRUID:60,ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "after": "ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60"
+    },
+    {
+      "itemID": "18848",
+      "name": "High Warlord's Left Claw",
+      "slot": "Off Hand",
+      "subtype": "Fist Weapon",
+      "before": "DRUID:60,ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "after": "ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60"
+    },
+    {
+      "itemID": "18867",
+      "name": "Grand Marshal's Battle Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "18868",
+      "name": "High Warlord's Pulverizer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "19323",
+      "name": "The Unstoppable Force",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:55,DRUID:55,SHAMAN:55,WARRIOR:55,PALADIN:55",
+      "after": "DRUID:55,SHAMAN:55,WARRIOR:55,PALADIN:55"
+    },
+    {
+      "itemID": "21188",
+      "name": "Fist of Cenarius",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "23455",
+      "name": "Grand Marshal's Demolisher",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "23465",
+      "name": "High Warlord's Destroyer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "234545",
+      "name": "High Warlord's Pulverizer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "234546",
+      "name": "High Warlord's Destroyer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "234558",
+      "name": "High Warlord's Left Claw",
+      "slot": "Off Hand",
+      "subtype": "Fist Weapon",
+      "before": "DRUID:60,ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "after": "ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60"
+    },
+    {
+      "itemID": "234567",
+      "name": "Grand Marshal's Battle Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "234568",
+      "name": "Grand Marshal's Demolisher",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "234584",
+      "name": "Grand Marshal's Left Hand Blade",
+      "slot": "Off Hand",
+      "subtype": "Fist Weapon",
+      "before": "DRUID:60,ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "after": "ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60"
+    },
+    {
+      "itemID": "250608",
+      "name": "Mithril Warhammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:38,DRUID:38,SHAMAN:38,WARRIOR:38,PALADIN:38",
+      "after": "DRUID:38,SHAMAN:38,WARRIOR:38,PALADIN:38"
+    },
+    {
+      "itemID": "250613",
+      "name": "Thorium Greatmace",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:50,DRUID:50,SHAMAN:50,WARRIOR:50,PALADIN:50",
+      "after": "DRUID:50,SHAMAN:50,WARRIOR:50,PALADIN:50"
+    },
+    {
+      "itemID": "263312",
+      "name": "Planting Shovel",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:1,DRUID:1,SHAMAN:1,WARRIOR:1,PALADIN:1",
+      "after": "DRUID:1,SHAMAN:1,WARRIOR:1,PALADIN:1"
+    },
+    {
+      "itemID": "272598",
+      "name": "Premier High Warlord's Left Claw",
+      "slot": "Off Hand",
+      "subtype": "Fist Weapon",
+      "before": "DRUID:60,ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "after": "ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60"
+    },
+    {
+      "itemID": "272601",
+      "name": "Premier High Warlord's Pulverizer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "272682",
+      "name": "Premier High Warlord's Destroyer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "272845",
+      "name": "Premier Grand Marshal's Left Hand Blade",
+      "slot": "Off Hand",
+      "subtype": "Fist Weapon",
+      "before": "DRUID:60,ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60",
+      "after": "ROGUE:60,HUNTER:60,SHAMAN:60,WARRIOR:60"
+    },
+    {
+      "itemID": "272848",
+      "name": "Premier Grand Marshal's Battle Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "272858",
+      "name": "Premier Grand Marshal's Demolisher",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:60,DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60",
+      "after": "DRUID:60,SHAMAN:60,WARRIOR:60,PALADIN:60"
+    },
+    {
+      "itemID": "273817",
+      "name": "Graverobber's Shovel",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:23,DRUID:23,SHAMAN:23,WARRIOR:23,PALADIN:23",
+      "after": "DRUID:23,SHAMAN:23,WARRIOR:23,PALADIN:23"
+    },
+    {
+      "itemID": "273841",
+      "name": "Twilight Maul",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:23,DRUID:23,SHAMAN:23,WARRIOR:23,PALADIN:23",
+      "after": "DRUID:23,SHAMAN:23,WARRIOR:23,PALADIN:23"
+    },
+    {
+      "itemID": "277250",
+      "name": "The Skullcracker",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:40,DRUID:40,SHAMAN:40,WARRIOR:40,PALADIN:40",
+      "after": "DRUID:40,SHAMAN:40,WARRIOR:40,PALADIN:40"
+    },
+    {
+      "itemID": "281648",
+      "name": "Gul'gash's Greathammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:44,DRUID:44,SHAMAN:44,WARRIOR:44,PALADIN:44",
+      "after": "DRUID:44,SHAMAN:44,WARRIOR:44,PALADIN:44"
+    },
+    {
+      "itemID": "282070",
+      "name": "Gruklash's Basher",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:56,DRUID:56,SHAMAN:56,WARRIOR:56,PALADIN:56",
+      "after": "DRUID:56,SHAMAN:56,WARRIOR:56,PALADIN:56"
+    },
+    {
+      "itemID": "282702",
+      "name": "Molok's Masher",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:36,DRUID:36,SHAMAN:36,WARRIOR:36,PALADIN:36",
+      "after": "DRUID:36,SHAMAN:36,WARRIOR:36,PALADIN:36"
+    },
+    {
+      "itemID": "284459",
+      "name": "Dendweller's Hammer",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:26,DRUID:26,SHAMAN:26,WARRIOR:26,PALADIN:26",
+      "after": "DRUID:26,SHAMAN:26,WARRIOR:26,PALADIN:26"
+    },
+    {
+      "itemID": "284700",
+      "name": "Den Guardian's Crusher",
+      "slot": "Two-Hand Mace",
+      "subtype": "Mace",
+      "before": "PRIEST:22,DRUID:22,SHAMAN:22,WARRIOR:22,PALADIN:22",
+      "after": "DRUID:22,SHAMAN:22,WARRIOR:22,PALADIN:22"
+    }
+  ]
+}

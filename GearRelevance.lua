@@ -22,6 +22,35 @@ local EXEMPT_BODY_SLOTS = {Back=true,Shirt=true,Tabard=true}
 -- Add only verified item-specific exceptions here, never loose role exceptions.
 local ARMOR_EXCEPTIONS = {}
 local LOOKBACK = 5
+local SCHOOLS={
+    PRIEST={Holy=true,Shadow=true},MAGE={Fire=true,Frost=true,Arcane=true},
+    WARLOCK={Fire=true,Shadow=true},DRUID={Nature=true,Arcane=true},
+    PALADIN={Holy=true},SHAMAN={Nature=true,Fire=true,Frost=true},
+    HUNTER={Nature=true,Arcane=true,Fire=true},ROGUE={Nature=true},WARRIOR={},
+}
+GetGear.ClassOffensiveSchools=SCHOOLS
+function GetGear:IsClassRelevantStat(key,gear,class)
+    class=class or self.classToken
+    if not class or self.db and self.db.overlay and self.db.overlay.showAllValidGear then return true end
+    local school=type(key)=='string' and key:match('^ITEM_MOD_(%u+)_DAMAGE_SHORT$')
+    if school then
+        school=school:sub(1,1)..school:sub(2):lower()
+        return not NO_SPELL[class] and SCHOOLS[class] and SCHOOLS[class][school]==true or false
+    end
+    if key=='SPELL_DAMAGE_TOTAL' or key=='SPELL_HEALING_TOTAL' then return not NO_SPELL[class] end
+    if CLOTH_CASTER[class] and (key=='ITEM_MOD_STRENGTH_SHORT' or key=='ITEM_MOD_AGILITY_SHORT'
+        or key:find('ATTACK_POWER',1,true) or key=='ITEM_MOD_DAMAGE_PER_SECOND_SHORT' and gear.slot~='Wand') then return false end
+    if NO_MANA[class] and (key=='ITEM_MOD_INTELLECT_SHORT' or key=='ITEM_MOD_SPIRIT_SHORT'
+        or key=='ITEM_MOD_MANA_SHORT' or key=='ITEM_MOD_MANA_REGENERATION_SHORT') then return false end
+    return true
+end
+
+function GetGear:HasUsableOffensiveSchool(gear,class)
+    if type(gear.offensiveSchools)~='table' or next(gear.offensiveSchools)==nil
+        or gear.genericSpellDamage~=false or gear.explicitHealing~=false or gear.casterUtility==true then return true end
+    for school in pairs(gear.offensiveSchools) do if SCHOOLS[class] and SCHOOLS[class][school] then return true end end
+    return false
+end
 
 function GetGear:IsHardExcludedGear(gear)
     if not gear then return false end
@@ -51,6 +80,8 @@ end
 function GetGear:ShouldDisplayGear(gear,classToken,mode)
     if not gear or gear.bagUpgrade then return true end
     if self:IsHardExcludedGear(gear) then return false end
+    classToken=classToken or self.classToken
+    if self.CanClassEquipGear and not self:CanClassEquipGear(gear,classToken) then return false end
     if mode=="completed" or mode=="hidden" then return true end
     local opts=self.db and self.db.overlay
     if opts and opts.showAllValidGear==true then return true end
@@ -65,10 +96,16 @@ function GetGear:ShouldDisplayGear(gear,classToken,mode)
     -- This keeps the default catalogue class-wide rather than turning
     -- research coverage into a silent recommendation whitelist.
 
-    classToken=classToken or self.classToken
     if not classToken then return true end
+    if not self:HasUsableOffensiveSchool(gear,classToken) then return false end
     local armor=gear.armorType
     local role=gear.statRole
+    if CLOTH_CASTER[classToken] and (gear.slot=='Main Hand' or (gear.slot or ''):find('^Two%-Hand'))
+        and type(gear.offensiveSchools)=='table' and next(gear.offensiveSchools)==nil
+        and gear.genericSpellDamage==false and gear.explicitHealing==false and gear.casterUtility==false
+        and type(gear.statFlags)=='table' and not gear.statFlags.mana then
+        return false -- complete tooltip: a physical weapon, not an unknown caster effect
+    end
     -- Preview spans all levels independently of the current character:
     -- reference each item's own target level so level-1 mail and level-40
     -- plate can coexist in the same 1-60 class preview. Upcoming equipment
