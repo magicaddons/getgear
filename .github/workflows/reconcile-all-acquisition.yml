@@ -20,6 +20,11 @@ on:
       - AcquisitionSummary.lua
       - tests/full-toc-startup.lua
       - tools/audit_acquisition_buttons.lua
+      - tools/audit_acquisition_presentation.py
+      - tools/export_acquisition_presentation.lua
+      - tools/reconcile_presentation_snapshot.py
+      - docs/source-audit-1-60/reconciliation-20261109/presentation_audit_baseline.json
+      - docs/source-audit-1-60/reconciliation-20261109/presentation_data_snapshot.json
       - docs/source-audit-1-60/reconciliation-20261109/navigation_instance_entrances.json
       - tests/navigation-generation.py
       - docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json
@@ -87,7 +92,7 @@ jobs:
           python3 tests/worlddrop-boe-fallback.py
           python3 tests/navigation-generation.py
           python3 tests/stat-school-generation.py
-          python3 tools/reconcile_acquisition_1_60.py
+          python3 tools/reconcile_presentation_snapshot.py --diagnostics "$RUNNER_TEMP/getgear-presentation-source-diagnostic"
           test -s AcquisitionEvidenceIndex.lua
           test -s docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv
           test -s docs/source-audit-1-60/reconciliation-20261109/recipes_reconciled.csv
@@ -123,12 +128,15 @@ jobs:
           lua5.4 tests/acquisition-map-readiness.lua .
           lua5.4 tests/acquisition-presentation.lua .
           lua5.4 tools/audit_acquisition_buttons.lua .
+          python3 tools/audit_acquisition_presentation.py
           lua5.4 tests/full-toc-startup.lua .
       - name: Save source register and audit tables (development branch only)
         uses: actions/upload-artifact@v4
         with:
           name: getgear-acquisition-reconciliation-reports
-          path: docs/source-audit-1-60/reconciliation-20261109/
+          path: |
+            docs/source-audit-1-60/reconciliation-20261109/
+            ${{ runner.temp }}/getgear-presentation-source-diagnostic/
           retention-days: 60
       - name: Commit evidence index and reports only after passing validation
         shell: bash

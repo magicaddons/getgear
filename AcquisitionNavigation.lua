@@ -176,15 +176,35 @@ end
 
 -- Compact context is derived from structured, character-accessible routes.
 -- The original researched summary/provenance stays intact in the full guide.
-function GetGear:GetCompactRecipeSummary(gear)
+function GetGear:GetCompactAcquisitionRequirements(gear)
+    local source=gear and gear.sourceSummary or ""
+    local out={}
+    for tag,clause in tostring(source):gmatch("[Pp]ublished ([^:%.]+):%s*([^%.]+)") do
+        if tag=="requirement" or tag=="gate" or tag=="book specialisation" or tag=="specialisation" or tag=="book requirement" or tag=="availability" then
+            clause=clause:gsub("%s*%(live stock/access unverified%)",""):gsub("%s+$","")
+            local standing,alliance,horde=clause:match('^(.-) reputation %(Alliance: ([^;]+); Horde: ([^;]+);')
+            if standing then
+                local side=call(UnitFactionGroup,'player')
+                clause=standing..(side=='Alliance' and ' with '..alliance or side=='Horde' and ' with '..horde
+                    or ' — Alliance: '..alliance..'; Horde: '..horde)..' (access unverified)'
+            end
+            out[#out+1]=(tag=="book specialisation" and "Learn: " or tag=="specialisation" and "Specialisation: " or "")..clause
+        end
+    end
+    local tooltip=tostring(source):match('Exact tooltip requirement:%s*([^%.]+)')
+    if tooltip then out[#out+1]='Requires: '..tooltip end
+    return out
+end
+
+local function compactRecipeSummary(self,gear)
     if not gear or not gear.profession then return end
     local model=data();local plan=get(model.items,gear.itemID)
     local minimum=self:GetRecipeSkillRequirement(gear)
     local skill=minimum and (" ("..minimum..")") or " (skill unverified)"
     -- Some reviewed gates predate structured offers. Preserve their explicitly
     -- labelled clause verbatim rather than losing it during summarisation.
-    local publishedRequirement=type(gear.sourceSummary)=="string"
-        and gear.sourceSummary:match("Published requirement:%s*(.+)")
+    local requirements=self:GetCompactAcquisitionRequirements(gear)
+    local publishedRequirement=#requirements>0 and table.concat(requirements,"; ")
     local disputed=gear.recipeLearningAvailability=="disputed" or gear.recipeLearnMethod=="multiple"
     if disputed then return "Recipe: teaching method disputed; "..(publishedRequirement and publishedRequirement.."; " or "").."see Guide for trainer/pattern routes." end
     local historical=gear.acquisitionConfidence=="classic-reference" or gear.confidence=="classic-reference"
@@ -233,7 +253,8 @@ function GetGear:GetCompactRecipeSummary(gear)
     for _,route in ipairs(routes) do
         if route.kind=="recipe_vendor" or route.kind=="vendor" then
             local actor=model.sources[route.source] or {}
-            if actor.name then return qualified(actor.name,route,"; stock/access unverified") end
+            local name=actor.name or route.label or route.location and route.location.spot
+            if name then return qualified(name,route,"; stock/access unverified") end
         end
     end
     for _,route in ipairs(routes) do
@@ -242,7 +263,19 @@ function GetGear:GetCompactRecipeSummary(gear)
             local parts={q.name or "quest #"..tostring(route.questID)}
             if q.reqlevel then parts[#parts+1]="quest level "..q.reqlevel end
             if q.side==1 or q.side==2 then parts[#parts+1]=q.side==1 and "Alliance" or "Horde" end
-            for _,requirement in ipairs(q.sourceRequirements or {}) do parts[#parts+1]=requirement end
+            if type(q.reqclass)=="number" and q.reqclass>0 then
+                local names={}
+                for _,entry in ipairs({{1,'Warrior'},{2,'Paladin'},{3,'Hunter'},{4,'Rogue'},{5,'Priest'},{7,'Shaman'},{8,'Mage'},{9,'Warlock'},{11,'Druid'}}) do
+                    if math.floor(q.reqclass/2^(entry[1]-1))%2==1 then names[#names+1]=entry[2] end
+                end
+                if #names>0 then parts[#parts+1]=table.concat(names,'/')..' quest access' end
+            end
+            for _,requirement in ipairs(q.sourceRequirements or {}) do
+                if #requirement<=100 then parts[#parts+1]=requirement end
+                for _,specialisation in ipairs({'Armorsmith','Weaponsmith','Master Axesmith','Master Swordsmith','Master Hammersmith','Tribal Leatherworking','Elemental Leatherworking','Dragonscale Leatherworking'}) do
+                    if requirement:find(specialisation,1,true) then parts[#parts+1]=specialisation end
+                end
+            end
             return qualified(table.concat(parts,"; "),route,"; prerequisites/access: see Guide")
         elseif route.kind=="dungeon" then
             return qualified((route.boss and route.boss.." — " or "")..route.dungeon.." drop",route,"; drop/access unverified")
@@ -259,9 +292,65 @@ function GetGear:GetCompactRecipeSummary(gear)
     end
 end
 
+function GetGear:GetCompactRecipeSummary(gear)
+    if not gear or not gear.profession then return end
+    local plan=get(data().items,gear.itemID)
+    local routes=routesForCharacter(data(),plan)
+    local summary=compactRecipeSummary(self,gear)
+    local routine=summary and summary:find('Recipe: '..gear.profession..' trainer',1,true)==1
+    if not routine and plan and #(plan.routes or {})>0 and #routes==0 then
+        summary="Recipe: no known source route for this character; see Guide"
+    end
+    if not summary and self.GetCompactLegacyAcquisitionSummary then summary=self:GetCompactLegacyAcquisitionSummary(gear) end
+    if not summary then return end
+    for _,requirement in ipairs(self:GetCompactAcquisitionRequirements(gear)) do
+        if not summary:find(requirement,1,true) then summary=summary.."; "..requirement end
+    end
+    local kinds,methods={},0
+    for _,route in ipairs(routes) do
+        local kind=({recipe_vendor='vendor',vendor='vendor',trainer='trainer',recipe_drop='drop',dungeon='drop',quest='quest',object='object'})[route.kind]
+        if kind and not kinds[kind] then kinds[kind]=true;methods=methods+1 end
+    end
+    if methods>1 and not summary:find('other routes',1,true) then summary=summary..'; other methods: Guide' end
+    return summary
+end
+
 function GetGear:GetAcquisitionCompactSummary(gear)
     if gear and gear.profession then return self:GetCompactRecipeSummary(gear) end
     local model=data();local plan=get(model.items,gear and gear.itemID)
+    if plan and #(plan.routes or {})>0 and #routesForCharacter(model,plan)==0 then
+        return 'Source: no known route for this character; see Guide'
+    end
+    local target=self:GetAcquisitionMapTarget(gear)
+    if target then
+        local label=target.label or target.zone or 'location unresolved'
+        local prefix='Source: '
+        if target.questID then prefix='Quest: ';label=(target.questName or 'quest #'..target.questID)..' — '..label
+        elseif target.kind=='dungeon' then label=(target.dungeon or label)..(target.boss and ' — '..target.boss or '') end
+        local requirements=target.requirements or ''
+        requirements=requirements:gsub('Published Alliance source;','Alliance source;'):gsub('Published Horde source;','Horde source;')
+        if target.questID then
+            local q=get(model.quests,target.questID) or {}
+            local out={}
+            if q.side==1 or q.side==2 then out[#out+1]=q.side==1 and 'Alliance' or 'Horde' end
+            if type(q.reqclass)=='number' and q.reqclass>0 then out[#out+1]='Class-restricted' end
+            for _,requirement in ipairs(q.sourceRequirements or {}) do
+                if #requirement<=80 then out[#out+1]=requirement end
+            end
+            out[#out+1]=#(q.requiredItems or {})>0 and 'Items/unlocks: Guide' or 'Unlocks: Guide'
+            requirements=table.concat(out,'; ')
+        end
+        local container=target.kind=='quest_container' or target.kind=='npc_container' or target.kind=='vendor_container'
+        if target.questID then
+            for _,route in ipairs(plan and plan.routes or {}) do
+                if route.questID==target.questID and route.kind=='quest_container' then container=true end
+            end
+        end
+        return prefix..label..(target.zone and target.kind~='dungeon' and ' — '..target.zone or '')
+            ..(target.minimumLevel and '; quest level '..target.minimumLevel or '')
+            ..(container and '; possible container contents' or '')
+            ..(requirements~='' and '; '..requirements or '')..'; access unverified'
+    end
     local out,seen={},{}
     for _,route in ipairs(routesForCharacter(model,plan)) do
         if (route.kind=='vendor' or route.kind=='recipe_vendor' or route.kind=='trainer')

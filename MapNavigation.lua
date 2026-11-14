@@ -151,6 +151,7 @@ function GetGear:GetAcquisitionMarkerLabel(target)
     for _,suffix in ipairs({" (published approach)"," (published area)"," (published reference)"," (legacy reference)"}) do
         if label:sub(-#suffix)==suffix then label=label:sub(1,-#suffix-1) end
     end
+    label=label:gsub("%s*%([^)]*Classic%-only reference%)$","")
     return label
 end
 local function hideMarker() if marker then marker:Hide() end end

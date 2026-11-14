@@ -404,6 +404,10 @@ end
 -- shown by the heading (patterns and initial recipes), and significant source
 -- warnings even when a location pin exists. The detailed Guide stays complete.
 local function DescribeOverlay(gear, hasLocationButton)
+    -- The shared compact formatter already includes the acquisition method,
+    -- meaningful restrictions and uncertainty. Expanding must not append a
+    -- second raw/provenance paragraph; the full Guide retains those details.
+    if GetGear.GetAcquisitionSummary and GetGear:GetAcquisitionSummary(gear) then return nil end
     if gear.profession then
         if gear.recipeLearningAvailability=="disputed" or gear.recipeLearnMethod=="multiple" then
             return "Recipe teaching method disputed in Forever; check trainer/pattern availability."
