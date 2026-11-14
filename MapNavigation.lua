@@ -139,6 +139,20 @@ end
 local marker,activeTarget,elapsed=nil,nil,0
 local pendingAge,pendingNotified,pendingGear,pendingAnchor=0,false,nil,nil
 local renderedOnce=false
+-- Primary marker text names the destination. Coordinate precision and source
+-- qualifications stay on the target, in the pin tooltip and in the full guide.
+function GetGear:GetAcquisitionMarkerLabel(target)
+    if not target then return "Destination" end
+    local label=target.label or target.zone or "Destination"
+    if target.kind=="dungeon" and target.dungeon then
+        label=target.multipleEntrances and target.publishedEntrance and target.publishedEntrance.label
+            or target.multipleEntrances and target.label or target.dungeon
+    end
+    for _,suffix in ipairs({" (published approach)"," (published area)"," (published reference)"," (legacy reference)"}) do
+        if label:sub(-#suffix)==suffix then label=label:sub(1,-#suffix-1) end
+    end
+    return label
+end
 local function hideMarker() if marker then marker:Hide() end end
 local function refreshMarker()
     if not marker or not activeTarget or not WorldMapFrame or not WorldMapFrame:IsShown() then hideMarker();return end
@@ -166,7 +180,7 @@ local function refreshMarker()
         marker.icon:ClearAllPoints();marker.icon:SetSize(22,26);marker.icon:SetPoint('BOTTOM',marker,'TOPLEFT',0,0)
         marker.icon:Show();marker.area:Show()
     else hideMarker();return end
-    marker.label:SetText("GetGear: "..(target.label or target.zone or "Destination")..(precise and "" or " (published area)"))
+    marker.label:SetText(GetGear:GetAcquisitionMarkerLabel(target))
     marker:Show();pendingAge=0;renderedOnce=true;return true
 end
 local function installMarker(target,gear,anchor)

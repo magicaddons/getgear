@@ -13,7 +13,7 @@ local function frame()
  function f:SetParent(p)self.parent=p end;function f:ClearAllPoints()end
  function f:SetPoint(...)self.point={...}end
  function f:EnableMouse()end;function f:SetFrameLevel()end;function f:GetFrameLevel()return 1 end
- function f:CreateTexture()return setmetatable({},{__index=function()return function()end end})end
+ function f:CreateTexture()return setmetatable({SetText=function(self,text)self.text=text end},{__index=function()return function()end end})end
  f.CreateFontString=f.CreateTexture
  return f
 end
@@ -36,6 +36,7 @@ canvas.width=0
 local ok,mode=a:OpenAcquisitionMap(one);assert(ok and mode=='map-pending')
 local active,pin=a:GetAcquisitionMarkerState();assert(active and not pin:IsShown())
 canvas.width=1000;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(pin:IsShown()and pin.point[4]==400)
+assert(pin.label.text=='VendorA','primary marker names the vendor without a GetGear category prefix')
 -- Browsing another map after a successful draw must not open a popup later.
 mapID=21;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,4);assert(not pin:IsShown()and messages==0)
 mapID=52;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(pin:IsShown())
@@ -65,5 +66,13 @@ local choices=a:GetAcquisitionNavigationChoices(dungeon);assert(#choices==2 and 
 a.ShowAcquisitionChoices=function(self,_,c)self.choices=c end
 ok,mode=a:OpenAcquisitionMap(dungeon);assert(mode=='choices')
 a:OpenAcquisitionMap(dungeon,choices[2].id);assert(a:GetAcquisitionMarkerState().x==60,'generic native entry cannot redirect a distinct requested gate')
+assert(pin.label.text=='Distinct gate','genuinely distinct entrance label retained')
+m.sources['npc:3']={name="Va'yn Moongaze",locations={{zone='Westfall',bounds={xMin=30,xMax=33,yMin=40,yMax=45},verification='published-reference'}}}
+local area=gear(4,{{kind='vendor',source='npc:3'}})
+a:OpenAcquisitionMap(area)
+assert(pin.label.text=="Va'yn Moongaze",'primary area marker uses only the destination name')
+assert(a:GetAcquisitionMarkerState().bounds.xMin==30 and a:GetAcquisitionDirections(area):find('published area',1,true),'concise name does not replace area uncertainty or its footprint')
+a:OpenAcquisitionMap(one);a:OpenAcquisitionMap(area);assert(created==1 and pin.label.text=="Va'yn Moongaze")
+WorldMapFrame:Hide();WorldMapFrame:Show();assert(not pin:IsShown())
 assert(nativeWrites==0,'native waypoint unchanged')
 print('PASS AH2 map readiness:delayed/zero canvas,late map IDs,refresh/resize/close/reopen,repeated destinations,published fallback/native priority/distinct gates/one marker;live rendering unverified')

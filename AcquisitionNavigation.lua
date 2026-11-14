@@ -176,7 +176,91 @@ end
 
 -- Compact context is derived from structured, character-accessible routes.
 -- The original researched summary/provenance stays intact in the full guide.
+function GetGear:GetCompactRecipeSummary(gear)
+    if not gear or not gear.profession then return end
+    local model=data();local plan=get(model.items,gear.itemID)
+    local minimum=self:GetRecipeSkillRequirement(gear)
+    local skill=minimum and (" ("..minimum..")") or " (skill unverified)"
+    -- Some reviewed gates predate structured offers. Preserve their explicitly
+    -- labelled clause verbatim rather than losing it during summarisation.
+    local publishedRequirement=type(gear.sourceSummary)=="string"
+        and gear.sourceSummary:match("Published requirement:%s*(.+)")
+    local disputed=gear.recipeLearningAvailability=="disputed" or gear.recipeLearnMethod=="multiple"
+    if disputed then return "Recipe: teaching method disputed; "..(publishedRequirement and publishedRequirement.."; " or "").."see Guide for trainer/pattern routes." end
+    local historical=gear.acquisitionConfidence=="classic-reference" or gear.confidence=="classic-reference"
+    -- A trainer's mere mention is not a standard teaching route. Require the
+    -- existing explicit trainer method or multiple independently matched full
+    -- teaching tables, a known minimum and no competing/restricted book route.
+    local fact=get(model.recipeRequirements,gear.itemID) or {}
+    local teachers,seen,spell,ordinary=0,{},nil,not historical and not gear.recipePatternItemID
+        and not gear.recipeVendor and not fact.minimumDisputed and not publishedRequirement
+        and gear.recipeLearnMethod~="pattern" and gear.recipeLearnMethod~="unknown"
+    for _,route in ipairs(plan and plan.routes or {}) do
+        if route.kind~="trainer" or route.verification~="published-reference"
+            or not route.spellID or #(route.sourceRequirements or {})>0 or route.offer
+            or route.cost or route.currency then ordinary=false end
+        if route.spellID and spell and route.spellID~=spell then ordinary=false end
+        spell=spell or route.spellID
+        local actor=model.sources[route.source] or {}
+        if route.kind=="trainer" and route.verification=="published-reference" and route.spellID
+            and #(actor.evidence or {})>0 and not seen[route.source] then
+            seen[route.source]=true;teachers=teachers+1
+        end
+    end
+    local explicit=gear.recipeLearnMethod=="trainer" or gear.professionLearnSource=="Trainer"
+    if ordinary and (explicit or teachers>=2 and minimum) then
+        return "Recipe: "..gear.profession.." trainer"..skill
+    end
+    if gear.recipeLearnMethod=="initial" and ordinary then
+        return "Recipe: learned with "..gear.profession..skill
+    end
+    if self:GetRecipeAcquisitionKind(gear)=="broad-book-drop" then
+        return "Recipe: random drop; trade/Auction House if tradeable (listings unknown)."
+    end
+    local routes=routesForCharacter(model,plan)
+    local function qualified(text,route,uncertainty)
+        local requirements=offerText(route)
+        if publishedRequirement and not requirements:find(publishedRequirement,1,true) then
+            requirements=requirements..(requirements~="" and "; " or "")..publishedRequirement
+        end
+        return "Recipe: "..text.." ("..gear.profession..(minimum and " "..minimum or "; skill unverified")..")"
+            ..(requirements~="" and "; "..requirements or "")
+            ..((historical or route.verification=="legacy-reference")
+                and "; Classic reference, verify in Forever" or uncertainty or "")
+    end
+    -- Prefer a meaningful named acquisition route; trainer alternatives are
+    -- retained in the guide without allowing one reference to imply routine teaching.
+    for _,route in ipairs(routes) do
+        if route.kind=="recipe_vendor" or route.kind=="vendor" then
+            local actor=model.sources[route.source] or {}
+            if actor.name then return qualified(actor.name,route,"; stock/access unverified") end
+        end
+    end
+    for _,route in ipairs(routes) do
+        if route.kind=="quest" then
+            local q=get(model.quests,route.questID) or {}
+            local parts={q.name or "quest #"..tostring(route.questID)}
+            if q.reqlevel then parts[#parts+1]="quest level "..q.reqlevel end
+            if q.side==1 or q.side==2 then parts[#parts+1]=q.side==1 and "Alliance" or "Horde" end
+            for _,requirement in ipairs(q.sourceRequirements or {}) do parts[#parts+1]=requirement end
+            return qualified(table.concat(parts,"; "),route,"; prerequisites/access: see Guide")
+        elseif route.kind=="dungeon" then
+            return qualified((route.boss and route.boss.." — " or "")..route.dungeon.." drop",route,"; drop/access unverified")
+        elseif route.kind=="recipe_drop" then
+            local actor=model.sources[route.source] or {}
+            if actor.name then return qualified(actor.name.." drop",route,"; drop unverified") end
+        end
+    end
+    for _,route in ipairs(routes) do
+        if route.kind=="trainer" then
+            local actor=model.sources[route.source] or {}
+            if actor.name then return qualified(actor.name.." — trainer",route,"; teaching/access unverified") end
+        end
+    end
+end
+
 function GetGear:GetAcquisitionCompactSummary(gear)
+    if gear and gear.profession then return self:GetCompactRecipeSummary(gear) end
     local model=data();local plan=get(model.items,gear and gear.itemID)
     local out,seen={},{}
     for _,route in ipairs(routesForCharacter(model,plan)) do

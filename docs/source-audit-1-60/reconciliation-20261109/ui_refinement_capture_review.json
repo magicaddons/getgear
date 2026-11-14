@@ -1,0 +1,324 @@
+{
+  "baselineActualCapture": "ah2c (local actual payloads,not unread CI responses)",
+  "currentActualCapture": "ui1",
+  "capturedResponses": 8,
+  "playfulls": {
+    "before": 23655,
+    "after": 23662,
+    "newIDs": [
+      14555,
+      18754,
+      18755,
+      18757,
+      276071,
+      284163,
+      284164
+    ],
+    "removedIDs": [],
+    "changedPriorRows": [],
+    "metadataChangedKeys": [
+      "st"
+    ],
+    "sourceDefinitionsExact": true
+  },
+  "everloot": {
+    "before": 1938,
+    "after": 1946,
+    "added": [
+      {
+        "fromKind": "item",
+        "fromId": 1205,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3853,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-14T04:20:41.000Z",
+        "lastSeen": "2026-11-14T04:20:41.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 1823,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3855,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-14T04:32:44.000Z",
+        "lastSeen": "2026-11-14T04:32:44.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 3065,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3875,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-14T04:29:16.000Z",
+        "lastSeen": "2026-11-14T04:29:16.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 3193,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3855,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-14T04:33:03.000Z",
+        "lastSeen": "2026-11-14T04:33:03.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 3770,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3851,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-14T04:11:35.000Z",
+        "lastSeen": "2026-11-14T04:11:35.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6380,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3851,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-14T04:12:59.000Z",
+        "lastSeen": "2026-11-14T04:12:59.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 929,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3855,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-14T04:32:44.000Z",
+        "lastSeen": "2026-11-14T04:32:44.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 6746,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1456,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T06:58:29.000Z",
+        "lastSeen": "2026-11-14T03:42:24.000Z"
+      }
+    ],
+    "removed": [],
+    "updated": [
+      {
+        "key": [
+          "item",
+          1210,
+          "dropped_by",
+          "npc",
+          3853,
+          null
+        ],
+        "fields": {
+          "lastSeen": [
+            "2026-11-08T23:23:49.000Z",
+            "2026-11-14T04:19:15.000Z"
+          ]
+        }
+      },
+      {
+        "key": [
+          "item",
+          2592,
+          "dropped_by",
+          "npc",
+          3875,
+          null
+        ],
+        "fields": {
+          "lastSeen": [
+            "2026-11-08T23:38:14.000Z",
+            "2026-11-14T04:30:31.000Z"
+          ]
+        }
+      },
+      {
+        "key": [
+          "item",
+          2982,
+          "dropped_by",
+          "npc",
+          3853,
+          null
+        ],
+        "fields": {
+          "lastSeen": [
+            "2026-11-09T08:44:24.000Z",
+            "2026-11-14T04:19:15.000Z"
+          ]
+        }
+      },
+      {
+        "key": [
+          "npc",
+          12616,
+          "located_in",
+          "zone",
+          1440,
+          null
+        ],
+        "fields": {
+          "installs": [
+            4,
+            5
+          ],
+          "lastSeen": [
+            "2026-11-10T23:28:03.000Z",
+            "2026-11-14T04:21:37.000Z"
+          ]
+        }
+      },
+      {
+        "key": [
+          "npc",
+          12696,
+          "located_in",
+          "zone",
+          1440,
+          null
+        ],
+        "fields": {
+          "installs": [
+            4,
+            5
+          ],
+          "lastSeen": [
+            "2026-11-10T23:26:49.000Z",
+            "2026-11-14T04:20:59.000Z"
+          ]
+        }
+      },
+      {
+        "key": [
+          "npc",
+          12724,
+          "located_in",
+          "zone",
+          1440,
+          null
+        ],
+        "fields": {
+          "installs": [
+            4,
+            5
+          ],
+          "lastSeen": [
+            "2026-11-10T23:30:04.000Z",
+            "2026-11-14T04:21:32.000Z"
+          ]
+        }
+      },
+      {
+        "key": [
+          "npc",
+          12737,
+          "located_in",
+          "zone",
+          1440,
+          null
+        ],
+        "fields": {
+          "installs": [
+            4,
+            5
+          ],
+          "lastSeen": [
+            "2026-11-10T23:28:36.000Z",
+            "2026-11-14T04:21:21.000Z"
+          ]
+        }
+      },
+      {
+        "key": [
+          "npc",
+          2996,
+          "located_in",
+          "zone",
+          1456,
+          null
+        ],
+        "fields": {
+          "installs": [
+            3,
+            4
+          ],
+          "lastSeen": [
+            "2026-11-11T22:30:26.000Z",
+            "2026-11-14T03:43:19.000Z"
+          ]
+        }
+      },
+      {
+        "key": [
+          "npc",
+          6028,
+          "located_in",
+          "zone",
+          1440,
+          null
+        ],
+        "fields": {
+          "installs": [
+            4,
+            5
+          ],
+          "lastSeen": [
+            "2026-11-10T23:28:16.000Z",
+            "2026-11-14T04:21:16.000Z"
+          ]
+        }
+      }
+    ]
+  },
+  "protectedFilesExactToBaseline": {
+    "EquipmentCache.lua": "26d664699fb9c379545523950ad526cca466d6425ba55a191e56163fb72175dd",
+    "ResearchedItemFacts.lua": "f04e844e6283930b579d152d2e085677e9fc222bedb595ba2229d6b754da8051",
+    "GeneratedBeta7Evidence.lua": "b23e3b688585032312054e1ec5676ab55140629deebdfb71f7abd19778d9dfe6",
+    "SourceEnrichment.lua": "958986371d7d8134b3161011d8336129bfb106143a1e82745be52ca9a4188f87",
+    "AcquisitionEvidenceIndex.lua": "0b207945423fccc9461f32ed65fbc978c93fbef25437add63cf436f6b0a32ee0",
+    "AcquisitionEvidence.lua": "d740e25b01b5d0a7864fabedd132264d4798321b216c966ba1aab4a91e452715",
+    "GeneratedStatFlags.lua": "047c437981c54d9a3a3d60c9730e6b41e996333dac3d7436d583010feb8200bf",
+    "StatEvidence.lua": "4930287b53bd3f5d26cc7d92cdfe71a8ce5af724a97e3a2e7628476b137da79e",
+    "GuideEngine.lua": "aa79ae97bcc2e884f05b34c6c6e24ce5ddc94a268098f5512c306dfa5fc71606",
+    "GearRelevance.lua": "13e49400217c057f43c0b8c451e26b0239646750f94ca99dc78a76c332df132a",
+    "GearCompare.lua": "a851ef205ba4778fd064bebc58ea1992d1385ddfa6a4731680112985902e759d",
+    "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
+    "CraftingVisibility.lua": "e97ae0b1e9bed45fd5310f81863729a1f58f74deb77ad22495b31fbde2931bff",
+    "RecipeKnowledge.lua": "1a1ca65b2e626127a460a7dcdb286c68a1f10b85b327a99c9bf7fb51bb89740a",
+    "Materials.lua": "972932157bf55d68200f7149d4d88ff8b149b36b054beb2abd0d2b268070cc7d",
+    "UI.lua": "fd64ed7994defb76b332e557381fa9b7d8bea3c084c7b01d2bb6b54b60262f84",
+    "Core.lua": "1ff94ee3cdd8c86efcb9b499da827490d2d0cc5797e8fc98b80e9f46e833e7dd",
+    "GuideState.lua": "d1df36d5d9cc64500ff991c6e98ae7f200626ec55b47c7b976cd0c922212464b",
+    "GetGear.toc": "28732edf7d772fd37d3d1fb051364daef7cf63b387dc679d48198c4b413bbd18",
+    "MapPin.tga": "cbdcc54438c808d9e0117ec89b1e916aea0ba8aed04065e7e4eb8e92821d8a53",
+    "docs/source-audit-1-60/all_items.csv": "3a2edb7b1040d8c9c68d218610d4f790399ddca8be7e6f9d1745fbde1ec8221e"
+  },
+  "catalogueAdoptions": 0,
+  "researchQueueReopened": false,
+  "clientEncounterBodyComparison": "not captured;changed fingerprint alone does not establish changed facts;runtime evidence index exact",
+  "noLiveConfirmation": true
+}

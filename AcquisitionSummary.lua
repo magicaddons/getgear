@@ -5,6 +5,8 @@ local addonName, GetGear = ...
 
 function GetGear:GetAcquisitionSummary(gear)
     if not gear or gear.bagUpgrade then return nil end
+    local recipe=self.GetCompactRecipeSummary and self:GetCompactRecipeSummary(gear)
+    if recipe then return recipe end
     if self.GetRecipeAcquisitionKind and self:GetRecipeAcquisitionKind(gear)=="broad-book-drop" then
         return "Recipe: broad/random-drop examples, not farm directions. See Guide for other routes; trade/Auction House if tradeable (listings unknown)."
     end

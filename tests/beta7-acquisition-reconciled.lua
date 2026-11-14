@@ -240,12 +240,19 @@ local reviewedBooks={
     {250529,251381,95},{250532,251384,95},{250522,251374,110},
     {250527,251379,125},
 }
+-- Exercise the real detailed-guide formatter with the researched source.
+local ui=assert(io.open(root.."/UI.lua")):read("*a")
+local describeBody=assert(ui:match("local function Describe%(gear, previewMode%)%s*(.-)\nend"))
+local describe=assert(load("return function(gear,previewMode)\n"..describeBody.."\nend",
+    "Describe", "t", {type=type,tostring=tostring,table=table,GetGear=addon}))()
+-- Source-evidence assertions belong in the full guide; compact contracts are
+-- covered separately without requiring both factions and provenance in one row.
 for _,r in ipairs(reviewedBooks) do
     local item=assert(addon.ItemCatalog[r[1]])
     local ev=assert(item.acquisitionResearch)
     assert(ev.recipeReference and ev.confidence=="published-forever-recipe-vendor-reference")
     assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
-    local text=addon:GetAcquisitionSummary(item)
+    local text=describe(item,false)
     assert(text:find("Plans #"..r[2],1,true)
         and text:find("Blacksmithing "..r[3],1,true)
         and text:find("Alliance Stondry Darkhammer",1,true)
@@ -263,11 +270,6 @@ end
 assert(addon.ItemCatalog[250510].sourceSummary:find("Player report:",1,true))
 assert(addon.ItemCatalog[250512].sourceSummary:find("enemy unspecified",1,true))
 assert(addon.ItemCatalog[250529].sourceSummary:find("Verdan the Everliving",1,true))
--- Exercise the real detailed-guide formatter with the researched source.
-local ui=assert(io.open(root.."/UI.lua")):read("*a")
-local describeBody=assert(ui:match("local function Describe%(gear, previewMode%)%s*(.-)\nend"))
-local describe=assert(load("return function(gear,previewMode)\n"..describeBody.."\nend",
-    "Describe", "t", {type=type,tostring=tostring,table=table,GetGear=addon}))()
 local detailed=describe(addon.ItemCatalog[250515],false)
 assert(detailed:find("Stondry Darkhammer",1,true)
     and detailed:find("Gor'mak",1,true) and detailed:find("unverified",1,true))
@@ -327,12 +329,12 @@ for _,r in ipairs(tailoringBooks) do
     local item=assert(addon.ItemCatalog[r[1]])
     local text=addon:GetAcquisitionSummary(item)
     assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
-    assert(text:find("Pattern:",1,true) and text:find("#"..r[2],1,true)
-        and text:find("Tailoring "..r[3],1,true)
+    assert(text:find("Recipe:",1,true) and text:find("Tailoring "..r[3],1,true)
         and text:find("Mivin Shadowweave",1,true)
         and not text:find("Jim'bek",1,true)
         and text:find("30 Merchant's Favor",1,true)
-        and text:find("current stock/access unverified",1,true))
+        and text:find("stock/access unverified",1,true))
+    assert(describe(item,false):find("#"..r[2],1,true),"Guide retains book identity")
     assert(item.acquisitionResearch.confidence=="published-forever-recipe-vendor-reference")
     assert(not text:find("Boss:",1,true))
     assert(describe(item,false):find("Jim'bek",1,true),"Guide lost Horde source")
@@ -364,7 +366,7 @@ local leatherBooks={
 }
 for _,r in ipairs(leatherBooks) do
     local item=assert(addon.ItemCatalog[r[1]])
-    local text=addon:GetAcquisitionSummary(item)
+    local text=describe(item,false)
     assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
     assert(text:find("#"..r[2],1,true) and text:find("Leatherworking "..r[3],1,true)
         and text:find("Alliance Daniel Stitchsong",1,true)
@@ -393,7 +395,7 @@ assert(beltDetail:find("Waylaid Crate",1,true),"Shared Favor directions remain u
 -- between profession families or turn a publication into live stock.
 for _,r in ipairs({{249392,249482},{249393,249483},{249394,249484}}) do
     local item=assert(addon.ItemCatalog[r[1]])
-    local text=addon:GetAcquisitionSummary(item)
+    local text=describe(item,false)
     assert(item.recipePatternItemID==r[2] and text:find("Enchanting 140",1,true)
         and text:find("Alliance Alynsia",1,true) and text:find("Horde Beneris",1,true)
         and text:find("45 Merchant's Favor",1,true)
@@ -402,7 +404,7 @@ for _,r in ipairs({{249392,249482},{249393,249483},{249394,249484}}) do
 end
 for _,r in ipairs({{280306,280321},{280307,280322},{280308,280323}}) do
     local item=assert(addon.ItemCatalog[r[1]])
-    local text=addon:GetAcquisitionSummary(item)
+    local text=describe(item,false)
     assert(item.recipePatternItemID==r[2] and text:find("Engineering 175",1,true)
         and text:find("Alliance Fritz Fizzle",1,true) and text:find("Horde Fizzlefuse",1,true)
         and text:find("180 Merchant's Favor",1,true)
@@ -417,7 +419,7 @@ end
 for _,r in ipairs({{3471,3609},{6468,6476},{6709,6710},{6731,6735},
                    {7913,7978},{7914,7979},{7915,7980},{277672,277673}}) do
     local item=assert(addon.ItemCatalog[r[1]])
-    local text=addon:GetAcquisitionSummary(item)
+    local text=describe(item,false)
     assert(item.recipePatternItemID==r[2] and text:find("#"..r[2],1,true))
     assert(item.acquisitionResearch.confidence=="published-forever-quest-book-reference")
     assert(text:find("current availability/prerequisites unverified",1,true))
@@ -1409,7 +1411,7 @@ assert(addon.ItemCatalog[274490].acquisitionResearch.recipeReference
     and addon.ItemCatalog[274490].profession=="Leatherworking")
 assert(addon.ItemCatalog[274490].acquisitionResearch.details:find("15 Carved Centaur Totems",1,true)
     and addon.ItemCatalog[274490].acquisitionResearch.details:find("60 Carved Centaur Totems",1,true))
-assert(addon:GetAcquisitionSummary(addon.ItemCatalog[274490]):find("Leatherworking",1,true))
+assert(describe(addon.ItemCatalog[274490],false):find("Leatherworking",1,true))
 local supplementaryCSV=assert(io.open(root.."/docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts_reconciled.csv")):read("*a")
 assert(supplementaryCSV:find("274490,Centaur Hoofwarmers,Leatherworking,165,1294289,274491,4304:12;8343:2",1,true)
     and supplementaryCSV:find("220606,Idol of the Dream",1,true))

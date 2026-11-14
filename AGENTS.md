@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-**Acceptance2 complete — STOP:** all ten findings implemented;24local/18Lua5.1/26module syntax PASS;final CI43545006409 SUCCESS/23checks,whole directbot19267ac reviewed (sourcece6a2e1).7707items/36669valid class entries/224audited masks. Read [full handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER2.md). Next only separatelyauthorizedprivatebuild and actualclientacceptance;no currentpackage/release/main permission.900holds/researchclosed/automationdisabled.
+**UI refinement local PASS — CI pending:** only concise marker labels and source-aware compact recipe text;25local/19Lua5.1/26module syntax PASS.7707items/36669classentries/source routes/coordinates/materials/900holds preserved. Read [current handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_UI_REFINEMENT.md). Next nonreleaseCI+wholebotreview,close report,thenSTOP;no newpackage/release/main permission/researchrestart.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
