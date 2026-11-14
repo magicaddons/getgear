@@ -1,5 +1,5 @@
 {
-  "status": "local-pass-ci-pending",
+  "status": "complete-awaiting-private-build-authorization-and-client-QA",
   "baseline": "9e35db97db4cd811dde3bf3f091082f2dad2450d",
   "items": 7707,
   "recipes": 1254,
@@ -14,5 +14,14 @@
   "actualClientRenderingVerified": false,
   "noPackage": true,
   "outsideCandidatesAdopted": 0,
-  "next": "Final nonrelease CI and complete resulting commit review,close report,STOP"
+  "next": "STOP;await separate private-build authorization and actual client findings",
+  "source": "7f381939cd9999ce4bac486e3f08609506be7b57",
+  "validated": "7f381939cd9999ce4bac486e3f08609506be7b57",
+  "ci": 43566380959,
+  "ciJob": 132361039883,
+  "ciTimestampedPass": 27,
+  "ciRegressionAuditChecks": 25,
+  "ciDiagnosticChecks": 2,
+  "postCIWholeDiffReviewed": true,
+  "ciGeneratedCommit": null
 }

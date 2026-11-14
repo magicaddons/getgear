@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-**Catalogue presentation audit local PASS — CI pending:**7707items/1254recipes;4609affecteditems(600recipes)/8567textvariants corrected;27local/19Lua5.1/26syntax PASS. Read [audit handover](docs/source-audit-1-60/reconciliation-20261109/PRESENTATION_CATALOGUE_AUDIT.md). Acquisition data remain frozen; required fresh reconciliation is diagnostic-only via presentation_data_snapshot.json and wrapper (no HTTP replay). Next finalnonreleaseCI+wholecommitreview,close report,STOP;no package/main/release/researchrestart/900adoptions.
+**Catalogue presentation audit COMPLETE — STOP:**7707items/1254recipes;4609affecteditems(600recipes)/8567textvariants corrected;no qualityflags.27local/19Lua5.1/26syntax PASS;CI43566380959 SUCCESS27PASS,source/finalvalidated7f38193;wholepost-CIdiff reviewed/no botcommit. Read [audit handover](docs/source-audit-1-60/reconciliation-20261109/PRESENTATION_CATALOGUE_AUDIT.md). Acquisition data remain frozen; required fresh reconciliation is diagnostic-only via snapshot wrapper (no HTTP replay/adoption). Next only separatelyauthorizedprivatebuild/clientQA;no package/main/release/researchrestart/900adoptions.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
