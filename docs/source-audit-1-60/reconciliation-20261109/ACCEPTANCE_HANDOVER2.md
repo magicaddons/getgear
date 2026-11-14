@@ -4,7 +4,7 @@ User handover dated 14 November 2026. Baseline `ec1bbdd36b539aaa44dfb5f7947153ae
 
 ## Stage 1 — eligibility, stat relevance and comparisons
 
-Stage1 fully validated: source `5151f34d8826ddaabe1c18d662fffa665b4de7ff`, direct bot `deb4f09e0d19dd97f7746537415bf332bd9d6681`; [nonrelease CI43536121098](https://github.com/magicaddons/getgear/actions/runs/43536121098) SUCCESS/20timestampedPASS plus26module syntax. Whole directbot diff inspected:only fourEverloot hashes/runUTC;allotherbytes exact,bot bodies unread. Navigation/faction workstreams are implemented below; final non-release CI is pending, so this is not yet the closed completion gate.
+Stage1 fully validated: source `5151f34d8826ddaabe1c18d662fffa665b4de7ff`, direct bot `deb4f09e0d19dd97f7746537415bf332bd9d6681`; [nonrelease CI43536121098](https://github.com/magicaddons/getgear/actions/runs/43536121098) SUCCESS/20timestampedPASS plus26module syntax. Whole directbot diff inspected:only fourEverloot hashes/runUTC;allotherbytes exact,bot bodies unread. Navigation/faction workstreams and the subsequent final eligibility audit are documented below; see the final gate for current validation state.
 
 ### Confirmed root causes and systemic corrections
 
@@ -13,6 +13,21 @@ Stage1 fully validated: source `5151f34d8826ddaabe1c18d662fffa665b4de7ff`, direc
 - **#7 Blackvenom Blade4446 / Meteor Shard6220 / Talon of Vultros4454:** broad `mixed`/spell role (including physical on-hit damage), and `ShouldShowOverlayStatChanges` accepting *any* non-armour positive, let Agility/melee DPS or a tiny resistance offset substantial caster losses. A shared class-stat relevance model ignores physical gains as independent caster qualification (wand DPS remains relevant). Resistance-only gain qualifies only without meaningful class-stat loss; no arbitrary score or resistance threshold is used. Stamina/Health, meaningful damage/healing tradeoffs and hybrid physical/caster roles remain choices. Talon has genuine published +3Spirit alongside +6Agility: it is not blacklisted; it can remain a choice when Spirit really improves, but its Agility/DPS cannot independently offset Spirit/spell/healing losses. Missing cached stats do not become proof of inferiority. Existing positive-stat/armour-only/green-BoE settings remain independent.
 - **#8 duplicate Fire Resistance:** `NormalizeStats` canonicalised generic spell aliases but left `ITEM_MOD_FIRE_RESISTANCE_SHORT` and `RESISTANCE2_NAME` as separate rows with different Pretty labels. Explicit alias groups now cover all six resistances and armour; canonical totals take precedence and equivalent keys are never summed. Generic damage/healing totals also take canonical precedence. Distinct school attributes remain distinct.
 - **#9 Orb of Mistmantle13031:** `GetGearComparison` returned a top-level blocking message when a staff was equipped. A confirmed two-handed main hand now allows a clearly labelled **potential offhand** group against a hypothetical empty offhand, separate from the actual occupied inventory. It displays the Orb's read client stats while stating that net replacement depends on the one-handed weapon. An explicitly provided `plannedMainHand` argument can produce a separate complete pair-versus-staff group only for a class-eligible, typed, cached one-handed partner; no weapon is selected or ownership assumed. No new pairing UI is introduced. The normal UI therefore presents potential benefits unless an explicit pair is supplied. Reverse two-handed versus occupied main+offhand comparisons remain combined, with unknown-cache safeguards.
+
+### File/function index for all ten findings
+
+| Issue | Root-cause implementation / corrected shared entry points |
+|---|---|
+| #1 Flame Gown | `GeneratedStatFlags.lua`/`StatEvidence.lua`, generator `school_facts`; `GearRelevance.lua:HasUsableOffensiveSchool`/`ShouldDisplayGear` distinguish unsupported offensive schools from attributes. |
+| #2 missing pin | `MapNavigation.lua:installMarker`/`refreshMarker`/`OpenAcquisitionMap` retain pending readiness, area destinations and one-marker lifecycle. |
+| #3 Shining vendor/button | `tools/build_acquisition_navigation.py:build` projects typed book seller evidence; `AcquisitionNavigation.lua:GetAcquisitionCompactSummary`/`GetAcquisitionNavigationChoices` select accessible structured routes. |
+| #4 Shadowfang | `MapNavigation.lua:dungeonEntrance` and `AcquisitionNavigation.lua:GetAcquisitionInstanceDefinition`, shared `navigation_instance_entrances.json`: native→published outdoor approach→written. |
+| #5 Azure Silk | Same school-fact/relevance entry points as #1; no item-specific blacklist. |
+| #6 Blackfathom | `GetAcquisitionNavigationChoices` uses reviewed canonical entrance IDs; `dungeonEntrance` preserves genuinely distinct gates and practical destination qualifications. |
+| #7 physical daggers | `GearRelevance.lua:IsClassRelevantStat` and `GearCompare.lua:ShouldShowOverlayStatChanges` reject irrelevant positives as independent caster qualification. |
+| #8 aliases | `GearCompare.lua:NormalizeStats`/`FirstStat` choose one valid canonical resistance/armour/spell total without summing aliases. |
+| #9 staff/offhand | `GearCompare.lua:GetGearComparison`/`MakeGroup` separate potential benefits from explicitly supplied net pairs; guard unknown cache and set DPS. |
+| #10 class permissions | `tools/build_forever_catalog.py:parse_equipment`, `GuideEngine.lua:CanClassEquipGear`/effective eligibility; final generator `held_class_mask` plus `StatEvidence.lua` separate frill permissions from relevance. |
 
 ### Evidence and version boundaries
 
@@ -26,13 +41,13 @@ Potential proficiency decisions preserve existing project class permissions exce
 - Fresh `ah2a` normal reconciliation,8actual original HTTP responses captured, exit0. Full **21local PASS** (previous19plus the new Lua and offline Python checks); Lua5.1 targeted acceptance regression PASS with the existing test-only fixture adapter. Stage1 CI fully passed as recorded above.
 - Required fresh feed report changes: one `all_items_reconciled` cell2079 anonymous observed-edge count1→2; no new runtime source relation/inventory is asserted. Source enrichment, acquisition evidence index, all954book/all5902equipment registry objects, recipe/materials, assets and all900candidate holds remain unchanged. Existing companion sources unchanged; navigation class coverage updates the86eligibility corrections only. Diagnostic research snapshots retain their previous provenance; no new source programme/candidate queue is opened.
 
-## Next checkpoint
+## Historical stage1 continuation (now completed below)
 
-Stage1CI/wholebot gate is complete. Continue workstreams3/4: delayed marker readiness/lifecycle; canonical independently sourced instance entrances and practical selector deduplication across every referenced instance; structured Alliance-accessible vendor/recipe/object navigation and compact faction-specific summary. #2/#3/#4/#6 remain pending, with exact actor/entrance research and manual rendering limitations recorded in the final report. Do not package.
+Stage1CI/wholebot gate is complete. The next authorized stage was workstreams3/4: delayed marker readiness/lifecycle; canonical independently sourced instance entrances and practical selector deduplication across every referenced instance; structured Alliance-accessible vendor/recipe/object navigation and compact faction-specific summary. #2/#3/#4/#6 were pending at that stage, with exact actor/entrance research and manual rendering limitations recorded in the final report. Do not package.
 
 ## Stage 2 — acquisition navigation and faction context
 
-Implementation and local validation complete. **Final non-release CI / whole bot review pending. No package is authorized or created.**
+Implementation and validation complete. Stage2 CI and the final eligibility gate both passed as recorded below. **No package is authorized or created.**
 
 ### #2 Flame Gown: map opens, marker missing
 
@@ -89,7 +104,7 @@ Canonical aliases cover all six resistance schools, armour, generic damage and h
 - Eight targeted full navigation-source responses succeeded, with all actual body lengths/SHA256checked and no failed/unchanged-failed-URL retries. Source URLs/hashes are in `acceptance2_navigation_source_integrity.json`; the registry stores waypoint/map-pin fact pairs without copying the whole guide. The cache used for stage1 was the exact prior full tooltip source. No acquisition facts are invented and no original metadata registry is rewritten.
 - Fresh required `ah2b` normal reconciliation captured eight original HTTP responses, exit0; final offline projections use the verified final model. Current all-items/dungeon/recipe reconciled companion CSVs are byte-exact to stage1; only provenance/report counters change with feed time. No new outside-feed items were adopted. All5902equipment /954book objects, recipes/4857ingredients, identity/equip-level facts and900candidate holds remain exact. Original diagnostic snapshots keep their dated provenance; bot response facts are not inferred from counters.
 - Stage2 non-release CI43542359687/job132285586272: **SUCCESS**,23timestamped PASS plus26module syntax, source `d4c868a0fdd9bfc9998f6bb7a81cc9bb6d28c53c`. Whole direct bot `15498b34b9b284e71862899799f19829d4a051d4` reviewed: four Everloot hashes/runUTC and ordering-only unchanged button counts; all other bytes exact. Bot bodies unread. Receipt `acceptance2_stage2_ci_results.txt`.
-- Final eligibility follow-up CI/whole generated commit review: **PENDING**. See `acceptance2_validation.json`; closure will record exact source/bot/final receipt hashes and CI run. No actual Forever compatibility claim follows from these fixtures.
+- Final eligibility follow-up: **SUCCESS**, [CI43545006409](https://github.com/magicaddons/getgear/actions/runs/43545006409), job132294156148,23timestamped regression PASS plus26module syntax. Source `ce6a2e1b8c65501c6c57e0f87e1376f856d2b2d7`; whole direct bot/final validated `19267acb0b75ff5a48779b5d17d90a97b7508869` reviewed: only four Everloot response hashes/runUTC in provenance.json, all other bytes exact. Bot bodies unread; no count-based factual equality inference. Same-branch fast-forward only, no merge commit. Receipt `acceptance2_final_ci_results.txt`. No failed or pending required validation remains; actual Forever compatibility remains unverified.
 
 ## Final audit follow-up — non-weapon offhand eligibility
 
@@ -97,7 +112,7 @@ The comprehensive #10 review found one additional importer defect: all non-weapo
 
 This restores **138 frills /414 Warrior,Rogue,Hunter memberships**, while preserving the **79 Priest two-handed-mace and7Druid offhand-fist removals**. Final **36,669 objectives /224 audited item masks** =36,341 baseline−86invalid+414restored. Original imported masks remain in raw source files and correction diagnostics; no identity/equip-level/source/recipe/material changes. Evidence and every affected item/header fingerprint: `acceptance2_frill_eligibility_restorations.json`. Same independently read full cache SHA256 `86a387d5274635ebff1589b8702792fc8c0bfdb55df2ae29ec31a4c894f18e3a`, no new broad research.
 
-Fresh actual eight-response `ah2c` reconciliation exited0. All24local checks,18Lua5.1 regressions,26module syntax on both runtimes and zero-cache all-class button audit pass at36,669. Canonical all-items/navigation coverage changes are only138 class-list cells each; class-specific audit counts/export hash change accordingly. Global route counts stay exact. Final CI is pending. The button summary now has deterministic status order rather than pairs iteration order.
+Fresh actual eight-response `ah2c` reconciliation exited0. Recursive comparison of the entire actual `ah2b` and `ah2c` payloads found exactly four Everloot `generatedAt` differences and no other body facts changed; this is a full-body comparison, separate from unread CI bot responses. All24local checks,18Lua5.1 regressions,26module syntax on both runtimes and zero-cache all-class button audit pass at36,669. Canonical all-items/navigation coverage changes are only138 class-list cells each; class-specific audit counts/export hash change accordingly. Global route counts stay exact. Final CI passed as recorded above. The button summary now has deterministic status order rather than pairs iteration order.
 
 ## Practical next in-game acceptance (after separately authorized private build)
 
@@ -112,6 +127,6 @@ Fresh actual eight-response `ah2c` reconciliation exited0. All24local checks,18L
 
 ## Readiness and remaining limits
 
-Implementation is suitable for another **private acceptance build once the final CI gate passes and the user separately authorizes packaging**. It is not a public-release acceptance result. No live client is available in this automated environment: actual map rendering/scale/visibility/API timing, current profession offers/stock, quest phasing/access, real inventory-cache event timing and practical entrance travel remain manual. The12instance coordinate gaps, other2,774source-location gaps and unknown faction/access facts stay explicit. The normal UI does not pick a one-handed planning partner; full net-pair API tests use an explicitly supplied partner only. Base-stat comparisons do not simulate procs, talent/encounter mechanics or combat DPS.
+Implementation is suitable for another **private acceptance build after the user separately authorizes packaging (all automated gates passed)**. It is not a public-release acceptance result. No live client is available in this automated environment: actual map rendering/scale/visibility/API timing, current profession offers/stock, quest phasing/access, real inventory-cache event timing and practical entrance travel remain manual. The12instance coordinate gaps, other2,774source-location gaps and unknown faction/access facts stay explicit. The normal UI does not pick a one-handed planning partner; full net-pair API tests use an explicitly supplied partner only. Base-stat comparisons do not simulate procs, talent/encounter mechanics or combat DPS.
 
-**Stop after final CI, whole bot review and this report. No ZIP/package/tag/public release/merge/main/Beta8/automation/candidate-adoption action is authorized.**
+**STOP: implementation, final CI, whole bot review and this report are complete. No ZIP/package/tag/public release/merge/main/Beta8/automation/candidate-adoption action is authorized.**

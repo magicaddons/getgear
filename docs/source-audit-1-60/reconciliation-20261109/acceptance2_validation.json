@@ -1,5 +1,5 @@
 {
-  "status": "local-complete-final-ci-pending",
+  "status": "complete-automated-gates-awaiting-private-client-acceptance",
   "baseline": "ec1bbdd36b539aaa44dfb5f7947153aee0e912a9",
   "stage1": {
     "source": "5151f34d8826ddaabe1c18d662fffa665b4de7ff",
@@ -31,7 +31,7 @@
   "sourceRegistryAndMaterialsPreserved": true,
   "outsideCandidatesAdopted": 0,
   "noPackage": true,
-  "next": "Final nonreleaseCI/wholebot review,documentation closure,STOP for user acceptance",
+  "next": "STOP;await separate private-build authorization,then actual Forever-client acceptance",
   "removedInvalidMemberships": 86,
   "restoredFrillItems": 138,
   "restoredFrillMemberships": 414,
@@ -40,5 +40,11 @@
     "validated": "15498b34b9b284e71862899799f19829d4a051d4",
     "ci": 43542359687,
     "checks": 23
-  }
+  },
+  "finalSource": "ce6a2e1b8c65501c6c57e0f87e1376f856d2b2d7",
+  "finalValidated": "19267acb0b75ff5a48779b5d17d90a97b7508869",
+  "finalCI": 43545006409,
+  "finalCIJob": 132294156148,
+  "finalCIChecks": 23,
+  "wholeBotReviewed": true
 }
