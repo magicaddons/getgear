@@ -4,7 +4,7 @@ User handover dated 14 November 2026. Baseline `ec1bbdd36b539aaa44dfb5f7947153ae
 
 ## Stage 1 — eligibility, stat relevance and comparisons
 
-Local implementation and fresh reconciliation complete; non-release CI/whole generated-commit review pending. Navigation/faction workstreams remain open; this is not the final completion report.
+Stage1 fully validated: source `5151f34d8826ddaabe1c18d662fffa665b4de7ff`, direct bot `deb4f09e0d19dd97f7746537415bf332bd9d6681`; [nonrelease CI43536121098](https://github.com/magicaddons/getgear/actions/runs/43536121098) SUCCESS/20timestampedPASS plus26module syntax. Whole directbot diff inspected:only fourEverloot hashes/runUTC;allotherbytes exact,bot bodies unread. Navigation/faction workstreams remain open; this is not the final completion report.
 
 ### Confirmed root causes and systemic corrections
 
@@ -23,9 +23,9 @@ Potential proficiency decisions preserve existing project class permissions exce
 ### Validation status
 
 - Targeted class/school/importer/alias/offhand tests PASS, including all nine classes, all six schools, exact reported items, generic/healing/mixed/unknown data, meaningful simultaneous gains/losses, explicit pair and reverse weapon comparisons. A spell-on-hit is not parsed as passive caster power.
-- Fresh `ah2a` normal reconciliation,8actual original HTTP responses captured, exit0. Full **21local PASS** (previous19plus the new Lua and offline Python checks); Lua5.1 targeted acceptance regression PASS with the existing test-only fixture adapter. CI pending.
+- Fresh `ah2a` normal reconciliation,8actual original HTTP responses captured, exit0. Full **21local PASS** (previous19plus the new Lua and offline Python checks); Lua5.1 targeted acceptance regression PASS with the existing test-only fixture adapter. Stage1 CI fully passed as recorded above.
 - Required fresh feed report changes: one `all_items_reconciled` cell2079 anonymous observed-edge count1→2; no new runtime source relation/inventory is asserted. Source enrichment, acquisition evidence index, all954book/all5902equipment registry objects, recipe/materials, assets and all900candidate holds remain unchanged. Existing companion sources unchanged; navigation class coverage updates the86eligibility corrections only. Diagnostic research snapshots retain their previous provenance; no new source programme/candidate queue is opened.
 
 ## Next checkpoint
 
-Complete stage1non-release CI and inspect the whole direct bot diff, then workstreams3/4: delayed marker readiness/lifecycle; canonical independently sourced instance entrances and practical selector deduplication across every referenced instance; structured Alliance-accessible vendor/recipe/object navigation and compact faction-specific summary. #2/#3/#4/#6 remain pending, with exact actor/entrance research and manual rendering limitations recorded in the final report. Do not package.
+Stage1CI/wholebot gate is complete. Continue workstreams3/4: delayed marker readiness/lifecycle; canonical independently sourced instance entrances and practical selector deduplication across every referenced instance; structured Alliance-accessible vendor/recipe/object navigation and compact faction-specific summary. #2/#3/#4/#6 remain pending, with exact actor/entrance research and manual rendering limitations recorded in the final report. Do not package.

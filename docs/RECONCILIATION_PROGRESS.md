@@ -2327,3 +2327,6 @@ All six findings confirmed at code/data level and corrected systemically. Source
 ## Acceptance handover2 stage1 — local passed; CI pending
 
 New ten-issue level25Priest handover authorizes development only;no package/release/researchrestart. See docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER2.md and acceptance2_stage1_validation.json. Central potential class proficiency corrects79Priest2Hmace/sevenDruid offhand-fist memberships(36341→36255 objectives),preserving7707identities/rawsource masks. Independent full-tooltip offensive schools/generic/healing/unknown utility,meaningful class-stat deltas,canonicalresistance/armour/spell aliases,and explicit potential offhand planning implemented. Existing19+two newchecks=21local PASS afterfresh8response ah2a capture;targetedLua5.1 PASS. Stage1CI/wholebot pending;lastcompleted43440268260 untilclosure. #2/#3/#4/#6 navigation/faction findings next aftergate. Allsourcequalifications/materials/900holds intact.
+
+
+Acceptance2stage1 full gate:source5151f34/directbotdeb4f09;21local/20CI43536121098+26syntax PASS. Wholebotonly4EVhashes/runUTC;allotherbytes exact,botbodiesunread. Continue navigation/factionworkstreams3/4 from ACCEPTANCE_HANDOVER2.md/REQUEST;no package.

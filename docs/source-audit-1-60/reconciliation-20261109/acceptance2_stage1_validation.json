@@ -1,6 +1,6 @@
 {
   "stage": "1-equipment-and-comparisons",
-  "status": "local-passed-ci-pending",
+  "status": "fully-validated-next-navigation-faction",
   "baseline": "ec1bbdd36b539aaa44dfb5f7947153aee0e912a9",
   "localPass": 21,
   "targetedLua51": true,
@@ -16,5 +16,14 @@
     "currentObjectives": 36255
   },
   "next": "CIgate/wholebotreview,thenallnavigation/faction findings;no package",
-  "actualClientRendering": false
+  "actualClientRendering": false,
+  "sourceCommit": "5151f34d8826ddaabe1c18d662fffa665b4de7ff",
+  "validatedHead": "deb4f09e0d19dd97f7746537415bf332bd9d6681",
+  "ci": {
+    "run": 43536121098,
+    "job": 132265418738,
+    "conclusion": "success",
+    "timestampedPass": 20
+  },
+  "wholeBotReview": "direct parent verified;only fourEverloot hashes/runUTC;allotherbytes exact;bot response bodies unread"
 }
