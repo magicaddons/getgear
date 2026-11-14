@@ -5,7 +5,7 @@ Merge the infrastructure-only maintenance PR into `main`. Do not merge the
 acquisition development branch or move any release tag. Dispatch from **main**;
 other workflow refs are deliberately skipped. No push event publishes a release.
 
-## Beta 9 is blocked until its original ZIP is recovered
+## Original Beta 9 ZIP identity
 
 The existing unpublished draft is **445097507**, tag `v0.14.0-beta9`, source
 `04992876bd4f50b66d6b6dd78d00b32cd0594cd3`. Never recreate it. Its only accepted
@@ -16,24 +16,24 @@ c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15
 ```
 
 The original `/workspace/release-artifacts/getgear-beta9/` directory was missing
-in the infrastructure environment. The development branch's
-`docs/BETA9_RELEASE_HANDOVER.md` records `BUILD_RECIPE.py` there, but neither that
-recipe nor the ZIP is in Git. Its durable manifest was copied to
+when the infrastructure was first prepared. The development branch's
+`docs/BETA9_RELEASE_HANDOVER.md` records `BUILD_RECIPE.py` there; neither that
+recipe nor the ZIP was in Git at that point. Its durable manifest was copied to
 `tools/release/beta9-manifest.json` from development commit
 `0958954a542380173e4382e66bfd950738415162` solely as release verification evidence.
 This infrastructure does **not** claim to have reproduced Beta 9's ZIP bytes.
 
-Recover the original package separately. Verify the hash above, then add the
-exact ZIP as `release-packages/GetGear-v0.14.0-beta9.zip` on `main` through a
-separate reviewed PR. This gives the runner access to immutable, reviewed bytes
-without a new upload credential or dependency on a local workspace. A rebuild is
+The exact ZIP is now present as `release-packages/GetGear-v0.14.0-beta9.zip`
+on `main` following the separate package recovery PR. This gives the runner
+access to immutable, reviewed bytes without a new upload credential or dependency
+on a local workspace. A rebuild is
 acceptable only after its complete archive hash is proven identical; matching
 individual source files is insufficient. Do not approve a replacement hash.
 The workflow will stop before any release mutation if the package is absent or
 incorrect. It checks all historical member hashes and source-backed bytes, not
 just the outer ZIP hash.
 
-## Run after merging (and recovering the Beta 9 ZIP)
+## Run after merging
 
 1. Open **Actions → Publish verified GetGear beta → Run workflow**.
 2. Select branch **main** and enter:
@@ -93,14 +93,23 @@ the temporary test directory, never the installable archive.
   `actions/upload-artifact` and `actions/download-artifact` actions, with access to
   Ubuntu package mirrors. No new repository secrets, PATs or external services.
 - Keep the default workflow token read-only. The workflow starts with no
-  permissions; build/inspect request only `contents: read`. Only the explicit
-  publishing job requests `contents: write` using built-in `github.token`.
-  Organization policies must permit this job-level grant. Do not enable PR write
+  permissions; build requests only `contents: read` and verifies the remote tag
+  without listing releases. GitHub hides unpublished drafts from tokens without
+  push access, so both isolated inspect/publish jobs need `contents: write` using
+  built-in `github.token`. Organization policies must permit these job-level
+  grants. No additional `actions: read` grant is needed to transfer artifacts
+  within the same run through the pinned artifact actions. Do not enable PR write
   access, bypass branch protections or grant workflow-wide write access.
 - Protect/review changes to `main`, workflows and `tools/release/`; only trusted
   maintainers should dispatch. Published source code/tests execute only in the
   read-only build job, without persisted checkout credentials or a token in
-  their environment. The write job checks out only the trusted infrastructure.
+  their environment. Both jobs with write permission check out only trusted
+  `tools/release/` helpers at the workflow's exact `github.sha`, run only from
+  `main`, and treat the downloaded ZIP/checksum as bytes; they never execute the
+  selected release source, tests or archive contents. Checkout credentials are
+  not persisted. The dry-run inspect job passes literal `false`; its API client
+  rejects non-GET requests, request bodies and uploads before invoking `gh`.
+  Only the explicit `publish=true` job enables the client's mutation methods.
 - All runs of this workflow share a concurrency group with cancellation disabled.
   GitHub can replace an older pending run if several are queued. Avoid manual
   draft/tag changes or other publishers during a run; Actions concurrency cannot
@@ -127,12 +136,18 @@ The safety tests use a fake GitHub client: successful publication/resume, disabl
 publication, wrong local hashes, moved tags, already-public releases, duplicate
 releases, wrong target, unknown assets, differing downloads and failed uploads.
 The archive tests also cover deterministic future builds and unsafe member rejection.
-No test performs a live release mutation. Beta 9's missing-original rejection
-was also exercised locally. The tagged gameplay was checked with a separately
-labelled test ZIP; that fixture is not an accepted Beta 9 release artifact.
+Permission regressions reproduce an existing draft hidden from a read-only token,
+check that the build reads only the remote tag, and enforce the trusted inspection
+boundary. Dry runs cover empty/existing assets, denied API access and transport
+rejection of all mutation methods. These tests require no third-party packages.
+No test performs a live release mutation.
 
-Local results: actionlint 1.7.7 passed; 11 offline safety tests passed. A real
-synthetic future-beta source built identically twice and passed both Lua runtimes.
-Beta 9 source fixtures passed 52 syntax checks, 38 Lua regressions and four Python
-generator tests. Exact accepted Beta 9 archive validation remains blocked by the
-missing original bytes; no live upload/publication test was performed.
+Corrective PR validation: actionlint 1.7.7 and 20 offline safety tests passed.
+The workflow boundary tests reject the original failing workflow. The unchanged
+accepted Beta 9 ZIP passed its full SHA-256, historical member/source-byte checks,
+52 syntax checks and 38 packaged Lua regression runs across Lua 5.1/5.4 against
+source `04992876bd4f50b66d6b6dd78d00b32cd0594cd3`. All four source Python generator
+tests passed without tracked changes. Live read-only API inspection confirmed
+draft 445097507 remains unpublished with zero assets and the tag still resolves
+to that source. The corrected main-only workflow has not been dispatched;
+end-to-end token visibility must be checked with `publish=false` after merging.
