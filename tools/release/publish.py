@@ -10,11 +10,14 @@ from package import BETA9, digest, identity, require
 
 
 class GitHub:
-    def __init__(self, repository):
+    def __init__(self, repository, allow_writes=False):
         require(repository == 'magicaddons/getgear', 'Wrong repository')
         self.base = f'repos/{repository}'
+        self.allow_writes = allow_writes
 
     def api(self, path, method='GET', body=None):
+        require(self.allow_writes or (method == 'GET' and body is None),
+                'Release mutations disabled for dry run')
         cmd = ['gh', 'api', self.base + '/' + path, '--method', method]
         if body is not None:
             cmd += ['--input', '-']
@@ -42,6 +45,7 @@ class GitHub:
         raise RuntimeError('Excessive annotated tag nesting')
 
     def upload(self, release_id, path):
+        require(self.allow_writes, 'Release mutations disabled for dry run')
         # Fixed host/repository/id: never follow an untrusted upload_url or use clobber.
         url = ('https://uploads.github.com/' + self.base + f'/releases/{release_id}/assets?name='
                + quote(path.name, safe=''))
@@ -54,8 +58,13 @@ class GitHub:
                                         '-H', 'Accept: application/octet-stream'])
 
 
-def select(api, tag, commit):
+def verify_tag(api, tag, commit):
+    # Safe with contents: read; unlike draft inspection this needs no push access.
     require(api.commit(tag) == commit, 'Tag moved or wrong expected source commit')
+
+
+def select(api, tag, commit):
+    verify_tag(api, tag, commit)
     matches = [r for r in api.releases() if r['tag_name'] == tag]
     require(len(matches) == 1, 'Exactly one existing draft is required; never create releases here')
     release = matches[0]
@@ -116,5 +125,6 @@ def run(api, directory, tag, commit, checksum, publish=False):
 
 if __name__ == '__main__':
     directory, tag, commit, checksum, enabled = sys.argv[1:]
-    run(GitHub(os.environ['GITHUB_REPOSITORY']), Path(directory), tag, commit, checksum,
-        publish=enabled == 'true')
+    publish = enabled == 'true'
+    run(GitHub(os.environ['GITHUB_REPOSITORY'], allow_writes=publish),
+        Path(directory), tag, commit, checksum, publish=publish)

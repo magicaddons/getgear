@@ -1,15 +1,18 @@
 """Offline release safety tests: no credentials, requests, or release mutations."""
 import copy
+import json
+import subprocess
 import sys
 import tempfile
 import zipfile
 from unittest.mock import patch
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'tools/release'))
 from package import BETA9, build, digest, identity, validate
-from publish import run
+from publish import GitHub, run, select, verify_tag
 
 TAG = BETA9['tag']
 COMMIT = BETA9['sourceCommit']
@@ -73,6 +76,60 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(self.api.writes, [])
         self.assertTrue(self.api.release['draft'])
 
+    def test_read_token_verifies_tag_but_only_trusted_inspector_sees_draft(self):
+        # Reproduce GitHub's successful-but-filtered releases response: the draft
+        # exists, yet a contents: read token cannot see it (not an API error).
+        can_see_drafts = False
+        paths = []
+
+        def request(cmd, **kwargs):
+            self.assertEqual(cmd[cmd.index('--method') + 1], 'GET')
+            path = cmd[2].removeprefix('repos/magicaddons/getgear/')
+            paths.append(path)
+            if path.startswith('git/ref/tags/'):
+                result = {'object': {'type': 'commit', 'sha': COMMIT}}
+            elif path.startswith('releases?'):
+                result = [self.api.release] if can_see_drafts else []
+            elif path.endswith('/assets?per_page=100'):
+                result = []
+            else:
+                self.fail('Unexpected API request: ' + path)
+            return SimpleNamespace(stdout=json.dumps(result))
+
+        client = GitHub('magicaddons/getgear')
+        with patch('publish.subprocess.run', side_effect=request):
+            verify_tag(client, self.tag, COMMIT)
+            self.assertEqual(len(paths), 1)  # Build never asks for drafts/assets.
+            with self.assertRaisesRegex(RuntimeError, 'Exactly one existing draft'):
+                run(client, self.path, self.tag, COMMIT, self.hash, publish=False)
+            can_see_drafts = True  # Isolated inspection token has contents: write.
+            run(client, self.path, self.tag, COMMIT, self.hash, publish=False)
+        self.assertEqual(self.api.writes, [])
+        self.assertTrue(self.api.release['draft'])
+        self.assertEqual(self.api.files, {})
+
+    def test_dry_run_verifies_existing_assets_without_writes(self):
+        self.api.files = {p.name: p.read_bytes() for p in self.path.iterdir()}
+        before = copy.deepcopy(self.api.files)
+        self.run_release(False)
+        self.assertEqual(self.api.files, before)
+        self.assertEqual(self.api.writes, [])
+        self.api.corrupt = True
+        with self.assertRaisesRegex(RuntimeError, 'asset bytes differ'):
+            self.run_release(False)
+        self.assertEqual(self.api.writes, [])
+
+    def test_inspection_permission_failure_never_writes(self):
+        for method in ['commit', 'releases', 'api', 'download']:
+            with self.subTest(method=method):
+                self.api.files[self.name] = self.zip
+                with patch.object(self.api, method, side_effect=subprocess.CalledProcessError(
+                        1, ['gh', 'api'], stderr='Resource not accessible by integration')):
+                    with self.assertRaises(subprocess.CalledProcessError):
+                        self.run_release(False)
+                self.assertEqual(self.api.writes, [])
+                self.assertTrue(self.api.release['draft'])
+
     def test_publish_only_after_both_downloaded(self):
         self.run_release()
         self.assertEqual([x[0] for x in self.api.writes], ['upload', 'upload', 'publish'])
@@ -124,11 +181,54 @@ class ReleaseTests(unittest.TestCase):
         for commit, checksum in [('0' * 40, BETA9['sha256']), (COMMIT, '0' * 64)]:
             with self.assertRaises(RuntimeError):
                 identity(TAG, commit, checksum)
+        api = FakeGitHub()
+        self.assertEqual(select(api, TAG, COMMIT)['id'], 445097507)
+        api.release['id'] += 1
+        with self.assertRaisesRegex(RuntimeError, 'Wrong Beta 9 draft ID'):
+            select(api, TAG, COMMIT)
+        self.assertEqual(api.writes, [])
 
     def test_untrusted_inputs_rejected(self):
         for tag in ['main', '../x', 'v1.2.3-beta1\nfoo', '$(id)']:
             with self.assertRaises(RuntimeError):
                 identity(tag, COMMIT, self.hash)
+
+
+class TransportSafetyTests(unittest.TestCase):
+    def test_read_only_tag_check_peels_annotated_tag_and_rejects_moved_commit(self):
+        client = GitHub('magicaddons/getgear')
+        tag_object = {'object': {'type': 'tag', 'sha': 'a' * 40}}
+        commit_object = {'object': {'type': 'commit', 'sha': COMMIT}}
+        with patch.object(client, 'api', side_effect=[tag_object, commit_object]) as request:
+            verify_tag(client, TAG, COMMIT)
+            self.assertEqual([c.args[0] for c in request.call_args_list],
+                             ['git/ref/tags/' + TAG, 'git/tags/' + 'a' * 40])
+        with patch.object(client, 'api', return_value=commit_object):
+            with self.assertRaisesRegex(RuntimeError, 'Tag moved'):
+                verify_tag(client, TAG, '0' * 40)
+
+    def test_dry_run_transport_rejects_every_mutation_before_invoking_gh(self):
+        client = GitHub('magicaddons/getgear')
+        with patch('publish.subprocess.run') as request:
+            for method in ['POST', 'PATCH', 'PUT', 'DELETE', 'get']:
+                with self.subTest(method=method):
+                    with self.assertRaisesRegex(RuntimeError, 'mutations disabled'):
+                        client.api('releases/445097507', method, {'draft': False})
+            # gh treats fields as POST unless --method GET is explicit. Reject
+            # even a GET body so inspection cannot accidentally acquire fields.
+            with self.assertRaisesRegex(RuntimeError, 'mutations disabled'):
+                client.api('releases', body={'draft': False})
+            with self.assertRaisesRegex(RuntimeError, 'mutations disabled'):
+                client.upload(445097507, Path('unused.zip'))
+            request.assert_not_called()
+
+    def test_explicit_publishing_transport_allows_writes(self):
+        client = GitHub('magicaddons/getgear', allow_writes=True)
+        with patch('publish.subprocess.run', return_value=SimpleNamespace(stdout='{}')) as request:
+            client.api('releases/445097507', 'PATCH', {'draft': False})
+            self.assertEqual(request.call_args.args[0][-3:], ['PATCH', '--input', '-'])
+            client.upload(445097507, Path('fixture.zip'))
+            self.assertEqual(request.call_count, 2)
 
 
 class PackageSafetyTests(unittest.TestCase):

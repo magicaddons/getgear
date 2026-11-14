@@ -38,6 +38,7 @@ jobs:
       - name: Checkout trusted release infrastructure
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
+          ref: ${{ github.sha }}
           path: infrastructure
           persist-credentials: false
       - name: Test release safeguards offline
@@ -60,7 +61,7 @@ jobs:
           ref: ${{ inputs.expected_commit }}
           path: source
           persist-credentials: false
-      - name: Verify remote tag and existing draft (read only)
+      - name: Verify remote tag (read only)
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ inputs.tag }}
@@ -69,8 +70,8 @@ jobs:
           python3 - <<'PY'
           import os, sys
           sys.path.insert(0, 'infrastructure/tools/release')
-          from publish import GitHub, select
-          select(GitHub(os.environ['GITHUB_REPOSITORY']), os.environ['TAG'], os.environ['COMMIT'])
+          from publish import GitHub, verify_tag
+          verify_tag(GitHub(os.environ['GITHUB_REPOSITORY']), os.environ['TAG'], os.environ['COMMIT'])
           PY
       - name: Install Lua compatibility tools
         run: |
@@ -102,16 +103,22 @@ jobs:
           retention-days: 14
 
   inspect:
-    if: ${{ !inputs.publish }}
+    if: ${{ github.ref == 'refs/heads/main' && !inputs.publish }}
     needs: build
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
-      contents: read
+      # GitHub hides unpublished drafts from contents: read tokens. The helper
+      # enforces GET-only access in this job despite the required visibility grant.
+      contents: write
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Checkout trusted inspection helper only
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
+          ref: ${{ github.sha }}
           persist-credentials: false
+          sparse-checkout: tools/release
+          sparse-checkout-cone-mode: false
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: verified-beta-package
@@ -125,7 +132,7 @@ jobs:
         run: python3 tools/release/publish.py dist "$TAG" "$COMMIT" "$CHECKSUM" false
 
   publish:
-    if: ${{ inputs.publish }}
+    if: ${{ github.ref == 'refs/heads/main' && inputs.publish }}
     needs: build
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -135,7 +142,10 @@ jobs:
       - name: Checkout trusted publishing helper only
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
+          ref: ${{ github.sha }}
           persist-credentials: false
+          sparse-checkout: tools/release
+          sparse-checkout-cone-mode: false
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
         with:
           name: verified-beta-package
