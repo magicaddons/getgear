@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-**UI refinement local PASS — CI pending:** only concise marker labels and source-aware compact recipe text;25local/19Lua5.1/26module syntax PASS.7707items/36669classentries/source routes/coordinates/materials/900holds preserved. Read [current handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_UI_REFINEMENT.md). Next nonreleaseCI+wholebotreview,close report,thenSTOP;no newpackage/release/main permission/researchrestart.
+**UI refinement complete — STOP:** destination-only marker labels and source-aware compact recipe text;25local/19Lua5.1/26module syntax PASS;CI43560998879 SUCCESS/24checks,whole directbot8bd37d3 reviewed (sourceb264a3e).7707items/36669classentries/source routes/coordinates/materials/900holds preserved. Read [current handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_UI_REFINEMENT.md). Next only separatelyauthorizedprivatebuild and actualclientchecks;no newpackage/release/main permission/researchrestart.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.
