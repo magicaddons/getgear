@@ -38,7 +38,13 @@ local ARMOR={Cloth=classes('PRIEST MAGE WARLOCK DRUID ROGUE HUNTER SHAMAN WARRIO
 function GetGear:CanClassEquipGear(gear,class)
     if not gear or gear.bagUpgrade or not BITS[class] then return true end
     local e=self.EquipmentEligibility and self.EquipmentEligibility[gear.itemID]
-    if e and math.floor(e[1]/BITS[class])%2~=1 then return false end
+    local mask=e and e[1]
+    -- The old importer assigned335 to every unrestricted frill because it
+    -- was caster-oriented. A full matching tooltip header can correct that
+    -- derived role mask, while explicit class restrictions remain intact.
+    if mask==335 and gear.heldClassEvidence=='full-forever-tooltip-header'
+        and type(gear.verifiedHeldClassMask)=='number' then mask=gear.verifiedHeldClassMask end
+    if mask and math.floor(mask/BITS[class])%2~=1 then return false end
     local subtype=gear.armorType or e and e[3]
     local slot=gear.slot or ''
     local allowed

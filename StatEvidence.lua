@@ -18,6 +18,13 @@ for itemID,mask in pairs(GetGear.GeneratedStatFlags or {}) do
     end
 end
 GetGear.StatFlagEvidence={matched=matched,bits=BITS}
+for id,mask in pairs(GetGear.GeneratedHeldClassMasks or {}) do
+    local item=GetGear.ItemCatalog and GetGear.ItemCatalog[id]
+    if item and item.slot=='Off Hand' then
+        item.verifiedHeldClassMask=mask
+        item.heldClassEvidence='full-forever-tooltip-header'
+    end
+end
 -- These independently parsed full-tooltip fields distinguish offensive school
 -- specialisation from Intellect/Spirit, generic damage and actual healing.
 local schools={Fire=1,Frost=2,Shadow=4,Holy=8,Arcane=16,Nature=32}

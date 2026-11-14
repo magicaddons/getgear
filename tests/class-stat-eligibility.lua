@@ -14,11 +14,13 @@ assert(not a:ShouldDisplayGear(maul,'PRIEST','available'),'all-valid cannot over
 assert(a:GetGearComparison(maul).message:find('cannot equip',1,true),'eligibility precedes live stat comparisons')
 assert(a:ShouldDisplayGear(catalogue[4446],'PRIEST','available'),'all-valid retains class-equippable physical daggers')
 a.db.overlay.showAllValidGear=false
-local changes,maces,offhands=0,0,0;for id,diff in pairs(a.EquipmentEligibilityCorrections)do
+local changes,maces,offhands,frills=0,0,0,0;for id,diff in pairs(a.EquipmentEligibilityCorrections)do
  changes=changes+1
- if catalogue[id].slot=='Two-Hand Mace'then maces=maces+1;assert(diff.originalMask==diff.effectiveMask+1)else offhands=offhands+1;assert(catalogue[id].slot=='Off Hand'and catalogue[id].armorType=='Fist Weapon'and diff.originalMask==diff.effectiveMask+8)end
+ if catalogue[id].slot=='Two-Hand Mace'then maces=maces+1;assert(diff.originalMask==diff.effectiveMask+1)elseif catalogue[id].armorType=='Fist Weapon'then offhands=offhands+1;assert(catalogue[id].slot=='Off Hand'and diff.originalMask==diff.effectiveMask+8)else frills=frills+1;assert(diff.originalMask==335 and diff.effectiveMask==511 and catalogue[id].verifiedHeldClassMask==511)end
 end
-assert(maces==79 and offhands==7 and changes==86 and a.CatalogueAudit.objectives==36255)
+assert(maces==79 and offhands==7 and frills==138 and changes==224 and a.CatalogueAudit.objectives==36669)
+for _,c in ipairs({'WARRIOR','ROGUE','HUNTER'})do assert(a:CanClassEquipGear(catalogue[1992],c),'unrestricted non-weapon frill is not caster-only')end
+assert(a:CanClassEquipGear(catalogue[6898],'WARLOCK')and not a:CanClassEquipGear(catalogue[6898],'PRIEST'),'printed class restriction preserved')
 for _,class in ipairs(classes)do
  for _,g in ipairs(a.EquipmentByClass[class])do assert(a:CanClassEquipGear(g,class),class..' illegal '..g.itemID)end
 end
@@ -84,4 +86,4 @@ GetInventoryItemLink=function(_,slot)return slot==16 and'item:9006'or slot==17 a
 local dualCandidate={itemID=9008,slot='Two-Hand Mace',armorType='Mace'}
 local dual=a:GetGearComparison(dualCandidate);assert(dual.groups[1].dpsUnknown and #dual.groups[1].rows==0,'do not add two reported weapon DPS totals and claim actual dual-wield combat performance')
 assert(a:ShouldShowOverlayStatChanges(dualCandidate),'unknown set DPS is not proof of no possible weapon improvement')
-print('PASS AH2:7707items/36255legal objectives/86audited corrections/nine-class schools/meaningful stats/aliases/explicit offhand planning;client rendering untested')
+print('PASS AH2:7707items/36669legal objectives/224audited item masks/nine-class schools/meaningful stats/aliases/explicit offhand planning;client rendering untested')

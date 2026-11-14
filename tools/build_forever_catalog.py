@@ -178,7 +178,7 @@ def parse_equipment(record):
     elif re.search(r"\bHeld In Off-hand\b", equip_header, re.I):
         slot = "Off Hand"
         subtype = "Held In Off-hand"
-        classes = {"PRIEST", "MAGE", "WARLOCK", "DRUID", "SHAMAN", "PALADIN"}
+        classes = set(ALL) # Non-weapon frills need neither caster nor dual-wield proficiency.
         kind = "armor"
     elif re.search(r"\bRanged\s+Wand\b", equip_header, re.I):
         slot, subtype, classes, kind = "Wand", "Wand", set(WEAPON_CLASSES["Wand"]), "weapon"

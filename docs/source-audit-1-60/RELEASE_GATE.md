@@ -2281,3 +2281,8 @@ Acceptance2stage1 full gate:source5151f34/directbotdeb4f09;21local/20CI435361210
 ## Acceptance2 stage2 — all ten findings implemented; final CI pending
 
 See ACCEPTANCE_HANDOVER2.md and acceptance2_validation.json in reconciliation directory. Pending-ready one-marker lifecycle, native→published approach→written entrance strategy,32canonical/34instance labels(20with21published approaches;12explicit gaps),shared vendor projection(+109crafted-item routes,432total),Alliancecompactcontext and preserved original faction/source provenance implemented. Full24local/18Lua5.1/26module syntax and synthetic startup PASS;all7707IDs/36255classsourcechecks/zeroitemcache requests audited. Source data1371point/1406directions/2774missing/2156NA;actualrendering untested. FinalnonreleaseCI/wholebot pending;stage1lastcompletedCI43536121098. Allmaterial/book/gear/candidate facts preserved;no package/main/Beta8/release/automation changes. FinishCI+report then STOP.
+
+
+## Acceptance2 final eligibility audit — local passed, final CI pending
+
+Navigation stage2 fully validated:source d4c868a/whole reviewed bot15498b3/nonreleaseCI43542359687,23timestampedPASS+26module syntax. Final #10 audit corrects derived caster-only335 permission on138 independently header-verified nonweapon frills:414 valid Warrior/Rogue/Hunter memberships restored;79Priest2Hmace/sevenDruid offhand-fist removals retained. Final36669objectives/224audited item masks;7707IDs/raw masks/printed class gates/recipes/4857ingredients/900holds preserved. Fresh8response ah2c exit0;24local/18Lua5.1/26module syntax PASS. Final CI/wholebot pending; see ACCEPTANCE_HANDOVER2.md and acceptance2_frill_eligibility_restorations.json. No package/main/Beta8/release/automation action. Finish final gate/report then STOP.

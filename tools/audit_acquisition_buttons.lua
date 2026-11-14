@@ -26,7 +26,7 @@ for _,c in ipairs(classes)do
   end
  end
 end
-assert(checks==36255 and requests==0)
+assert(checks==36669 and requests==0)
 local ids={};for id in pairs(a.ItemCatalog)do ids[#ids+1]=id end;table.sort(ids)
 local published={}
 -- CSV's item-name column can contain commas/escaped quotes; never split it
@@ -56,6 +56,6 @@ for _,id in ipairs(ids)do
 end
 out:close()
 local details=assert(io.open(output:gsub('%.csv$','.txt'),'w'))
-details:write('Scope:all7707catalogueIDs/36255eligibleclassrecords;Alliancelevel25/source-only planning;no active quests/location or live rendering assumed. No item-cache requests.\n')
-for k,v in pairs(counts)do details:write(k..'='..v..'\n')end;details:close()
-print('PASS AH2 button audit:7707items/36255classsourcechecks/knownHordeservicesexcluded/zeroitemcache requests;point/area/written/missing distinguished;actual rendering untested')
+details:write('Scope:all7707catalogueIDs/36669eligibleclassrecords;Alliancelevel25/source-only planning;no active quests/location or live rendering assumed. No item-cache requests.\n')
+for _,k in ipairs({'published_point_data','published_area_data','written_or_native_only','missing_actionable_target','not_applicable'})do details:write(k..'='..tostring(counts[k]or 0)..'\n')end;details:close()
+print('PASS AH2 button audit:7707items/36669classsourcechecks/knownHordeservicesexcluded/zeroitemcache requests;point/area/written/missing distinguished;actual rendering untested')

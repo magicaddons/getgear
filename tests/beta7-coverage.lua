@@ -7,6 +7,8 @@ for _,path in ipairs({
     "EquipmentCache.lua",
     "GeneratedBeta7Evidence.lua",
     "SourceEnrichment.lua",
+    "GeneratedStatFlags.lua",
+    "StatEvidence.lua",
     "GuideEngine.lua",
 }) do
     local fn,err=loadfile(root.."/"..path)
@@ -29,7 +31,7 @@ for id,item in pairs(a.ItemCatalog) do
     end
 end
 assert(count==7707,"Catalogue changed from 7,707: "..count)
-assert(a.CatalogueAudit.objectives==36255,"Class objectives changed")
+assert(a.CatalogueAudit.objectives==36669,"Class objectives changed")
 local classes={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 for _,c in ipairs(classes) do
     assert(#(a.EquipmentByClass[c] or {})>=1000,c.." catalogue lost")
@@ -67,4 +69,4 @@ local copper=assert(a.ItemCatalog[2864])
 assert(copper.recipeLearningSourceURL:find("item=2881",1,true))
 local wand=assert(a.ItemCatalog[217287])
 assert(wand.recipeSpellID==14810,"Greater Mystic Wand default variant changed")
-print("PASS full Beta7: 7707 items, 36255 class objectives, nine classes, 1060 new recipes, 43 corrections, 415 named dungeon enemies (not necessarily bosses), 55 vendor, 27 quest")
+print("PASS full Beta7: 7707 items, 36669 class objectives, nine classes, 1060 new recipes, 43 corrections, 415 named dungeon enemies (not necessarily bosses), 55 vendor, 27 quest")

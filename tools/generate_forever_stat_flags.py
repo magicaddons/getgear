@@ -9,6 +9,21 @@ OUTPUT=pathlib.Path("GeneratedStatFlags.lua")
 REPORT=pathlib.Path("docs/source-audit-1-60/STAT_FLAGS.md")
 BITS={"spellPower":1,"healing":2,"mana":4,"physical":8,"defense":16}
 SCHOOL_BITS={"Fire":1,"Frost":2,"Shadow":4,"Holy":8,"Arcane":16,"Nature":32}
+CLASSES=('PRIEST','MAGE','WARLOCK','DRUID','ROGUE','HUNTER','SHAMAN','WARRIOR','PALADIN')
+
+def held_class_mask(raw):
+    """Frills need no weapon/dual-wield proficiency. Printed class gates do.
+
+    Do not confuse a caster-oriented item with a caster-only equippability
+    rule. Missing/unfamiliar/race-specific header evidence is not expanded.
+    """
+    text=re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',raw)))
+    header=re.split(r'\b(?:Durability|Requires Level|Equip:|Use:|Sell Price|Item Set)\b',text,maxsplit=1)[0]
+    if not re.search(r'\bHeld In Off[ -]hand\b',header,re.I) or re.search(r'\bRaces:',text,re.I):return None
+    restriction=re.search(r'\bClasses:\s*([A-Za-z ,]+)',text,re.I)
+    if not restriction:return 511
+    mask=sum(1<<i for i,c in enumerate(CLASSES)if re.search(r'\b'+c+r'\b',restriction[1],re.I))
+    return mask or None
 
 def school_facts(raw):
     """Passive offensive schools, separate from generic power and healing.
@@ -100,7 +115,7 @@ def main():
     assert isinstance(data,list) and len(data)>10000
     source={x["itemId"]:x for x in data if isinstance(x,dict)
             and isinstance(x.get("itemId"),int)}
-    flags={};schools={};reasons={}
+    flags={};schools={};held={};reasons={}
     for row in cats:
         iid=int(row["itemID"]);item=source.get(iid)
         problem=None
@@ -112,6 +127,8 @@ def main():
             continue
         flags[iid]=flags_from_tooltip(item["tooltipHtml"])
         schools[iid]=school_facts(item['tooltipHtml'])
+        mask=held_class_mask(item['tooltipHtml'])
+        if mask is not None and (item.get('changeFromClassic')or{}).get('status')!='unconfirmed':held[iid]=mask
     fixtures={
       250492:{"spellPower":True,"physical":True},
       250522:{"spellPower":True,"physical":True},
@@ -148,7 +165,9 @@ def main():
         + "-- Exact name-matched full tooltip; missing records remain unknown. No proc-school inference.\n"
         + "GetGear.GeneratedSchoolStats = {\n"
         + ''.join(f' [{iid}]={{{row[0]},{str(row[1]).lower()},{str(row[2]).lower()},{str(row[3]).lower()}}},\n' for iid,row in sorted(schools.items()))
-        + "}\n",encoding="utf8")
+        + "}\n"
+        + "-- Independently name-matched non-weapon offhand class headers;not caster-role masks.\n"
+        + "GetGear.GeneratedHeldClassMasks={"+','.join(f'[{iid}]={mask}'for iid,mask in sorted(held.items()))+"}\n",encoding="utf8")
     counts={name:sum(bool(mask & bit) for mask in flags.values())
             for name,bit in BITS.items()}
     REPORT.write_text(

@@ -4,7 +4,7 @@
 local root=(arg and arg[1]) or "."
 local a={}
 for _,name in ipairs({"ResearchedItemFacts.lua","EquipmentCache.lua",
-    "GeneratedBeta7Evidence.lua","SourceEnrichment.lua","GuideEngine.lua",
+    "GeneratedBeta7Evidence.lua","SourceEnrichment.lua","GeneratedStatFlags.lua","StatEvidence.lua","GuideEngine.lua",
     "GearRelevance.lua"}) do
     local fn,err=loadfile(root.."/"..name);assert(fn,err)
     local ok,result=pcall(fn,"GetGear",a);assert(ok,name..": "..tostring(result))

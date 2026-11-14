@@ -1,7 +1,7 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-**Acceptance2 final gate pending:** all ten findings implemented in two stages;24local/18Lua5.1/26modules PASS. Stage1CI43536121098/botdeb4f09reviewed. Read [full handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER2.md). Next finalnonreleaseCI+wholebotreview,documentclosure,thenSTOP for user acceptance. No package/release/main;900holds/researchclosed/automationdisabled.
+**Acceptance2 final eligibility CI pending:** all ten findings implemented; stage2CI43542359687/bot15498b3 reviewed. Final frill permission audit restores414 memberships across138items;36669objectives/224audited masks;24local/18Lua5.1/26modules PASS. Read [full handover](docs/source-audit-1-60/reconciliation-20261109/ACCEPTANCE_HANDOVER2.md). Next finalnonreleaseCI+wholebotreview,documentclosure,thenSTOP for user acceptance. No package/release/main;900holds/researchclosed/automationdisabled.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.

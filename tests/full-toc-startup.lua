@@ -40,7 +40,7 @@ local n=0
 for line in assert(io.open(root.."/GetGear.toc")):read("*a"):gmatch("[^\r\n]+") do
  if line:match("%.lua$")then assert(loadfile(root.."/"..line))("GetGear",addon);n=n+1 end
 end
-assert(n==26 and addon.CatalogueAudit.items==7707 and addon.CatalogueAudit.objectives==36255)
+assert(n==26 and addon.CatalogueAudit.items==7707 and addon.CatalogueAudit.objectives==36669)
 assert(type(addon.OpenAcquisitionMap)=="function"and type(addon.GetAcquisitionMapTarget)=="function"and type(addon.ShowAcquisitionChoices)=="function"and type(addon.ShowAcquisitionDirections)=="function")
 assert(type(SlashCmdList.GETGEAR)=="function")
 print("PASS full TOC smoke:26modules including Core/UI/AltInventory;shared navigation helpers/slash command;no external addon library;synthetic frames only")

@@ -19,4 +19,12 @@ for subclass in ['Mace','Sword','Axe']:
  html=f'<b class="q2">Fixture</b><table><tr><td>Two-Hand</td><td>{subclass}</td></tr></table>Requires Level 23'
  row,reason=f.parse_equipment(dict(itemId=999000,name='Fixture',itemExpansion='Forever',tooltipHtml=html))
  assert row and not row['mask']&1 and not row['mask']&16,(subclass,row,reason)
-print('PASS AH2 school extraction:attributes do not broaden school bonuses;generic/healing/mixed/procs separated;two-hand importer class restrictions')
+
+assert m.held_class_mask('<b>Frill</b><br>Held In Off-hand<br>Requires Level 25')==511
+assert m.held_class_mask('<b>Frill</b><br>Held In Off-hand<br>Classes: Priest<br>Requires Level 25')==1
+assert m.held_class_mask('<b>Weapon</b><br>Off Hand Dagger<br>Requires Level 25')is None
+assert m.held_class_mask('<b>Frill</b><br>Held In Off-hand<br>Races: Dwarf<br>Requires Level 25')is None
+row,reason=f.parse_equipment(dict(itemId=999001,name='Frill',itemExpansion='Forever',tooltipHtml='<b class="q2">Frill</b><br>Held In Off-hand<br>Requires Level 25'))
+assert row['mask']==511
+
+print("PASS AH2 school/proficiency extraction:generic/healing/school/proc evidence;two-hand and unrestricted/class-gated nonweapon offhands")
