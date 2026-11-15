@@ -2331,3 +2331,14 @@ comparisons and per-character preferences implemented. Full local validation and
 new read-only non-release CI are recorded in `docs/recommendation-validation.json`.
 No package, build archive, release, tag, merge or main change is authorized.
 After validation/reporting, stop for user review and in-game acceptance.
+
+
+Recommendation handover complete: final code `b3ae8000763287ceeb2d73f699cde5a333e1f680`,
+[non-release CI43673339157](https://github.com/magicaddons/getgear/actions/runs/43673339157),
+job132687992055 SUCCESS/all steps. Local 20Lua programs on both 5.1/5.4, four Python
+regressions, two catalogue audits and 29 modules per-runtime syntax PASS; 330 new
+assertions; zero failures. All97 protected source/candidate files byte-exact,
+17 generated snapshot files restored after both fresh diagnostic reconciliations.
+No generated CI commits, source adoption, package, tag, release, merge or main
+change. Final follow-up changes only documentation/receipts. Stop for user review;
+client checklist and remaining28 bag variant gaps are in RECOMMENDATION_HANDOVER.

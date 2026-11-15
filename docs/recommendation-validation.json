@@ -20,15 +20,27 @@
     "lua54PassLines": 20,
     "lua51PassLines": 20,
     "pythonPassLines": 4,
-    "buttonsPassLines": 1
+    "buttonsPassLines": 1,
+    "completedValidationPrograms": 46,
+    "distinctRegressionAndAuditPrograms": 26,
+    "syntaxChecksTotalBothRuntimes": 58,
+    "failures": 0
   },
   "ci": {
-    "status": "follow-up pending push",
+    "status": "completed",
     "initialValidatedCommit": "ce71c9608784eececd85fb7f79863bbfcd3c0a8c",
     "initialRunID": 43672751063,
     "initialConclusion": "success",
     "initialRunURL": "https://github.com/magicaddons/getgear/actions/runs/43672751063",
-    "workflow": ".github/workflows/recommendation-validation.yml"
+    "workflow": ".github/workflows/recommendation-validation.yml",
+    "conclusion": "success",
+    "validatedCommit": "b3ae8000763287ceeb2d73f699cde5a333e1f680",
+    "runID": 43673339157,
+    "jobID": 132687992055,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43673339157",
+    "allStepsSuccessful": true,
+    "repositoryPermissions": "contents:read",
+    "generatedCommits": false
   },
   "releaseCreated": false,
   "packageCreated": false,

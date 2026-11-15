@@ -162,6 +162,21 @@ files were restored exactly. Fresh unrelated source changes were diagnostic-only
 The new CI has read-only repository permissions and cannot commit to a different
 branch, package an addon or publish a release.
 
+Final validation: **20 Lua programs pass on Lua 5.4 and Lua 5.1**, including
+**330 new assertions**; four Python regressions and two catalogue-wide audits
+pass. All 29 addon modules parse on each runtime (58 syntax checks). No local or
+CI test failures remain. Protected source/candidate inputs: 97 files byte-exact.
+
+Implementation commits: `ce71c9608784eececd85fb7f79863bbfcd3c0a8c` and
+`b3ae8000763287ceeb2d73f699cde5a333e1f680`. Final implementation CI:
+[43673339157](https://github.com/magicaddons/getgear/actions/runs/43673339157),
+job 132687992055, **success**, all steps successful. Earlier implementation CI
+[43672751063](https://github.com/magicaddons/getgear/actions/runs/43672751063)
+also passed. The final follow-up commit records documentation/receipts only;
+code validation applies to `b3ae800`. The workflow has read-only contents
+permission and made no bot commits. No package, tag, release, main modification
+or merge was performed. Stop for user review and client acceptance.
+
 ## In-game acceptance checklist
 
 No installable archive has been created. After a separately authorized test build:
