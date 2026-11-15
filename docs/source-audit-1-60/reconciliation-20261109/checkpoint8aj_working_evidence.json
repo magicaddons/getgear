@@ -1,0 +1,2759 @@
+{
+  "status": "Complete at publication-research level;full local/nonreleaseCI PASS;directbot reviewed",
+  "baseline": "915a1b2f5c9df7289db9dc8cb69020ce304ddf37",
+  "reviewedOn": "2026-11-10",
+  "counts": {
+    "selected": 12,
+    "discoveryQueries": 20,
+    "primaryPages": 12,
+    "rewardQuestPages": 11,
+    "preliminaryAuxiliaryResponses": 36,
+    "distinctQuestPages": 21,
+    "runtimeIntegrated": 0,
+    "currentLiveVerified": 0,
+    "auxiliaryRecords": 118,
+    "inputOrSelectedItemPages": 69,
+    "npcPages": 32,
+    "spellPages": 6,
+    "currencyPages": 1
+  },
+  "items": {
+    "19288": {
+      "url": "https://www.wowhead.com/forever/item=19288",
+      "bytes": 288147,
+      "sha256": "a02f2db0ad9eeff20a5f2c9d7e42858f601a3d389e027eac22f8e054e0dec4c6",
+      "title": "Darkmoon Card: Blue Dragon - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Darkmoon Card: Blue Dragon",
+        "flags2": 24580,
+        "id": 19288,
+        "level": 66,
+        "name": "Darkmoon Card: Blue Dragon",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "c": -364,
+            "c2": 9,
+            "n": "Darkmoon Beast Deck",
+            "t": 5,
+            "ti": 7907
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "effects_changed"
+          ],
+          "lines": [
+            "Effects: 150 instead of 100"
+          ],
+          "notShown": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Darkmoon Card: Blue Dragon",
+          "flags2": 24580,
+          "id": 19288,
+          "level": 66,
+          "name": "Darkmoon Card: Blue Dragon",
+          "reqlevel": 60,
+          "slot": 12,
+          "slotbak": 12,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "c": -364,
+              "c2": 9,
+              "n": "Darkmoon Beast Deck",
+              "t": 5,
+              "ti": 7907
+            }
+          ],
+          "subclass": -4,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "effects_changed"
+            ],
+            "lines": [
+              "Effects: 150 instead of 100"
+            ],
+            "notShown": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "sellprice": 100000,
+          "statsInfo": []
+        }
+      },
+      "tooltipText": "Darkmoon Card: Blue Dragon      Item Level  66   Binds when picked up Unique     Trinket                       Requires Level  60    Equip:   2% chance on successful spellcast to increase your Spirit by 150 for 15 sec. (Proc chance: 2%)         Sell Price:  10",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": -364,
+            "category2": 9,
+            "id": 7907,
+            "itemrewards": [
+              [
+                19288,
+                1
+              ]
+            ],
+            "level": 55,
+            "name": "Darkmoon Beast Deck",
+            "reprewards": [
+              [
+                909,
+                150
+              ]
+            ],
+            "reqlevel": 1,
+            "side": 3,
+            "wflags": 8,
+            "xp": 560,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 66
+          }
+        ]
+      }
+    },
+    "19289": {
+      "url": "https://www.wowhead.com/forever/item=19289",
+      "bytes": 214158,
+      "sha256": "76679b11eaa244b06722ee0b6c916a0094b011417fd5f8a1472b91b1114c6efb",
+      "title": "Darkmoon Card: Maelstrom - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Darkmoon Card: Maelstrom",
+        "flags2": 24580,
+        "id": 19289,
+        "level": 66,
+        "name": "Darkmoon Card: Maelstrom",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "c": -364,
+            "c2": 9,
+            "n": "Darkmoon Elementals Deck",
+            "t": 5,
+            "ti": 7929
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Darkmoon Card: Maelstrom",
+          "flags2": 24580,
+          "id": 19289,
+          "level": 66,
+          "name": "Darkmoon Card: Maelstrom",
+          "reqlevel": 60,
+          "slot": 12,
+          "slotbak": 12,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "c": -364,
+              "c2": 9,
+              "n": "Darkmoon Elementals Deck",
+              "t": 5,
+              "ti": 7929
+            }
+          ],
+          "subclass": -4,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "sellprice": 100000,
+          "statsInfo": []
+        }
+      },
+      "tooltipText": "Darkmoon Card: Maelstrom      Item Level  66   Binds when picked up Unique     Trinket                       Requires Level  60    Equip:   Chance to strike your melee target with lightning for 200 to 300 Nature damage.         Sell Price:  10",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": -364,
+            "category2": 9,
+            "id": 7929,
+            "itemrewards": [
+              [
+                19289,
+                1
+              ]
+            ],
+            "level": 55,
+            "name": "Darkmoon Elementals Deck",
+            "reprewards": [
+              [
+                909,
+                150
+              ]
+            ],
+            "reqlevel": 1,
+            "side": 3,
+            "wflags": 8,
+            "xp": 560,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 107
+          }
+        ]
+      }
+    },
+    "19287": {
+      "url": "https://www.wowhead.com/forever/item=19287",
+      "bytes": 237683,
+      "sha256": "39b4baf1547adffab5583b0bcff11c4dbe41478396302d1f97ff57acd2ba00af",
+      "title": "Darkmoon Card: Heroism - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Darkmoon Card: Heroism",
+        "flags2": 24580,
+        "id": 19287,
+        "level": 66,
+        "name": "Darkmoon Card: Heroism",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "c": -364,
+            "c2": 9,
+            "n": "Darkmoon Warlords Deck",
+            "t": 5,
+            "ti": 7928
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Darkmoon Card: Heroism",
+          "flags2": 24580,
+          "id": 19287,
+          "level": 66,
+          "name": "Darkmoon Card: Heroism",
+          "reqlevel": 60,
+          "slot": 12,
+          "slotbak": 12,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "c": -364,
+              "c2": 9,
+              "n": "Darkmoon Warlords Deck",
+              "t": 5,
+              "ti": 7928
+            }
+          ],
+          "subclass": -4,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "sellprice": 100000,
+          "statsInfo": []
+        }
+      },
+      "tooltipText": "Darkmoon Card: Heroism      Item Level  66   Binds when picked up Unique     Trinket                       Requires Level  60    Equip:   Sometimes heals bearer of 120 to 180 damage when damaging an enemy in melee.         Sell Price:  10",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": -364,
+            "category2": 9,
+            "id": 7928,
+            "itemrewards": [
+              [
+                19287,
+                1
+              ]
+            ],
+            "level": 55,
+            "name": "Darkmoon Warlords Deck",
+            "reprewards": [
+              [
+                909,
+                150
+              ]
+            ],
+            "reqlevel": 1,
+            "side": 3,
+            "wflags": 8,
+            "xp": 560,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 44
+          }
+        ]
+      }
+    },
+    "19383": {
+      "url": "https://www.wowhead.com/forever/item=19383",
+      "bytes": 179429,
+      "sha256": "81afaa92075165187d3c1742ac110edcc6868c59c63ecd5ea02ab359008791d7",
+      "title": "Master Dragonslayer's Medallion - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Master Dragonslayer's Medallion",
+        "flags2": 24580,
+        "id": 19383,
+        "level": 83,
+        "name": "Master Dragonslayer's Medallion",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 2,
+        "slotbak": 2,
+        "source": [
+          4
+        ],
+        "subclass": -3,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Defense Rating 7 added",
+            "Defense 7 removed"
+          ],
+          "notShown": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Master Dragonslayer's Medallion",
+          "flags2": 24580,
+          "id": 19383,
+          "level": 83,
+          "name": "Master Dragonslayer's Medallion",
+          "reqlevel": 60,
+          "slot": 2,
+          "slotbak": 2,
+          "source": [
+            4
+          ],
+          "subclass": -3,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed"
+            ],
+            "lines": [
+              "Defense Rating 7 added",
+              "Defense 7 removed"
+            ],
+            "notShown": []
+          },
+          "agi": 14,
+          "defrtng": 7,
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "sellprice": 128862,
+          "sta": 24,
+          "statsInfo": {
+            "3": {
+              "qty": 0,
+              "alloc": 4375,
+              "socketMult": 0
+            },
+            "7": {
+              "qty": 0,
+              "alloc": 7500,
+              "socketMult": 0
+            },
+            "12": {
+              "qty": 0,
+              "alloc": 2188,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "tooltipText": "Master Dragonslayer's Medallion      Item Level  83   Binds when picked up Unique     Neck            +14 Agility    +24 Stamina              Requires Level  60   Equip: Increased Defense + 7.      Sell Price:  12   88   62",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": 1519,
+            "category2": 0,
+            "id": 7782,
+            "itemchoices": [
+              [
+                19383,
+                1
+              ],
+              [
+                19366,
+                1
+              ],
+              [
+                19384,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "The Lord of Blackrock",
+            "reprewards": [
+              [
+                72,
+                200
+              ],
+              [
+                47,
+                200
+              ],
+              [
+                69,
+                200
+              ],
+              [
+                54,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 1,
+            "xp": 9950,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "reworded"
+              ],
+              "lines": [
+                "Objective text reworded",
+                "Description reworded"
+              ],
+              "notShown": [
+                "Description reworded"
+              ]
+            },
+            "popularity": 68
+          },
+          {
+            "category": 1637,
+            "category2": 1,
+            "id": 7784,
+            "itemchoices": [
+              [
+                19383,
+                1
+              ],
+              [
+                19366,
+                1
+              ],
+              [
+                19384,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "The Lord of Blackrock",
+            "reprewards": [
+              [
+                76,
+                200
+              ],
+              [
+                530,
+                200
+              ],
+              [
+                81,
+                200
+              ],
+              [
+                68,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 2,
+            "xp": 9950,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 57
+          }
+        ]
+      }
+    },
+    "19366": {
+      "url": "https://www.wowhead.com/forever/item=19366",
+      "bytes": 242689,
+      "sha256": "5027ac549ca13ca1b8d83cd90b464ece511fe071d9b5e759c0da36411f45be3e",
+      "title": "Master Dragonslayer's Orb - Item - Forever",
+      "item": {
+        "appearances": {
+          "0": [
+            31953,
+            ""
+          ]
+        },
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Master Dragonslayer's Orb",
+        "displayid": 31953,
+        "flags2": 24580,
+        "id": 19366,
+        "level": 83,
+        "name": "Master Dragonslayer's Orb",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 23,
+        "slotbak": 23,
+        "source": [
+          4
+        ],
+        "subclass": -5,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "appearances": {
+            "0": [
+              31953,
+              ""
+            ]
+          },
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Master Dragonslayer's Orb",
+          "displayid": 31953,
+          "flags2": 24580,
+          "id": 19366,
+          "level": 83,
+          "name": "Master Dragonslayer's Orb",
+          "reqlevel": 60,
+          "slot": 23,
+          "slotbak": 23,
+          "source": [
+            4
+          ],
+          "subclass": -5,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "int": 14,
+          "itemSquishEraId": 0,
+          "sellprice": 203059,
+          "sheathtype": 3,
+          "splpwr": 28,
+          "sta": 10,
+          "statsInfo": {
+            "5": {
+              "qty": 0,
+              "alloc": 4375,
+              "socketMult": 0
+            },
+            "7": {
+              "qty": 0,
+              "alloc": 3125,
+              "socketMult": 0
+            },
+            "45": {
+              "qty": 0,
+              "alloc": 8750,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "tooltipText": "Master Dragonslayer's Orb      Item Level  83   Binds when picked up     Held In Off-hand            +10 Stamina    +14 Intellect              Requires Level  60   Equip: Increases damage and healing done by magical spells and effects by up to   28 .      Sell Price:  20   30   59",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": 1519,
+            "category2": 0,
+            "id": 7782,
+            "itemchoices": [
+              [
+                19383,
+                1
+              ],
+              [
+                19366,
+                1
+              ],
+              [
+                19384,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "The Lord of Blackrock",
+            "reprewards": [
+              [
+                72,
+                200
+              ],
+              [
+                47,
+                200
+              ],
+              [
+                69,
+                200
+              ],
+              [
+                54,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 1,
+            "xp": 9950,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "reworded"
+              ],
+              "lines": [
+                "Objective text reworded",
+                "Description reworded"
+              ],
+              "notShown": [
+                "Description reworded"
+              ]
+            },
+            "popularity": 68
+          },
+          {
+            "category": 1637,
+            "category2": 1,
+            "id": 7784,
+            "itemchoices": [
+              [
+                19383,
+                1
+              ],
+              [
+                19366,
+                1
+              ],
+              [
+                19384,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "The Lord of Blackrock",
+            "reprewards": [
+              [
+                76,
+                200
+              ],
+              [
+                530,
+                200
+              ],
+              [
+                81,
+                200
+              ],
+              [
+                68,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 2,
+            "xp": 9950,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 57
+          }
+        ]
+      }
+    },
+    "19290": {
+      "url": "https://www.wowhead.com/forever/item=19290",
+      "bytes": 262915,
+      "sha256": "130477044671c3f8fe603948d9534475f8c00270e6d91413f9f79a2f0967b689",
+      "title": "Darkmoon Card: Twisting Nether - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Darkmoon Card: Twisting Nether",
+        "flags2": 24580,
+        "id": 19290,
+        "level": 66,
+        "name": "Darkmoon Card: Twisting Nether",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "c": -364,
+            "c2": 9,
+            "n": "Darkmoon Portals Deck",
+            "t": 5,
+            "ti": 7927
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Darkmoon Card: Twisting Nether",
+          "flags2": 24580,
+          "id": 19290,
+          "level": 66,
+          "name": "Darkmoon Card: Twisting Nether",
+          "reqlevel": 60,
+          "slot": 12,
+          "slotbak": 12,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "c": -364,
+              "c2": 9,
+              "n": "Darkmoon Portals Deck",
+              "t": 5,
+              "ti": 7927
+            }
+          ],
+          "subclass": -4,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "sellprice": 100000,
+          "statsInfo": []
+        }
+      },
+      "tooltipText": "Darkmoon Card: Twisting Nether      Item Level  66   Binds when picked up Unique     Trinket                       Requires Level  60    Equip:   Gives the wearer a 10% chance of being able to resurrect with 20% health and mana.         Sell Price:  10",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": -364,
+            "category2": 9,
+            "id": 7927,
+            "itemrewards": [
+              [
+                19290,
+                1
+              ]
+            ],
+            "level": 55,
+            "name": "Darkmoon Portals Deck",
+            "reprewards": [
+              [
+                909,
+                150
+              ]
+            ],
+            "reqlevel": 1,
+            "side": 3,
+            "wflags": 8,
+            "xp": 560,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 70
+          }
+        ]
+      }
+    },
+    "19019": {
+      "url": "https://www.wowhead.com/forever/item=19019",
+      "bytes": 710783,
+      "sha256": "39b621ca502c4d2d214af6035c149bed45a056e0cdcaf5987c3aee6b79321b94",
+      "title": "Thunderfury, Blessed Blade of the Windseeker - Item - Forever",
+      "item": {
+        "appearances": {
+          "0": [
+            30606,
+            ""
+          ]
+        },
+        "classs": 2,
+        "displayName": "Thunderfury, Blessed Blade of the Windseeker",
+        "displayid": 30606,
+        "dps": 41.84,
+        "flags2": 28676,
+        "id": 19019,
+        "level": 80,
+        "name": "Thunderfury, Blessed Blade of the Windseeker",
+        "quality": 5,
+        "reqlevel": 60,
+        "slot": 13,
+        "slotbak": 13,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "c": -344,
+            "c2": 7,
+            "n": "Rise, Thunderfury!",
+            "t": 5,
+            "ti": 7787
+          }
+        ],
+        "speed": 1.9,
+        "subclass": 7,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 5,
+          "appearances": {
+            "0": [
+              30606,
+              ""
+            ]
+          },
+          "classs": 2,
+          "displayName": "Thunderfury, Blessed Blade of the Windseeker",
+          "displayid": 30606,
+          "dps": 41.84,
+          "flags2": 28676,
+          "id": 19019,
+          "level": 80,
+          "name": "Thunderfury, Blessed Blade of the Windseeker",
+          "reqlevel": 60,
+          "slot": 13,
+          "slotbak": 13,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "c": -344,
+              "c2": 7,
+              "n": "Rise, Thunderfury!",
+              "t": 5,
+              "ti": 7787
+            }
+          ],
+          "speed": 1.9,
+          "subclass": 7,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "agi": 5,
+          "dmgmax1": 115.00000343322755,
+          "dmgmin1": 43.999998855590825,
+          "dmgrange": 0.6,
+          "dmgtype1": 0,
+          "dura": 125,
+          "firres": 8,
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "mledmgmax": 115.00000343322755,
+          "mledmgmin": 43.999998855590825,
+          "mledps": 41.84,
+          "mlespeed": 1.9,
+          "natres": 9,
+          "sellprice": 255355,
+          "sheathtype": 1,
+          "sta": 8,
+          "statsInfo": {
+            "3": {
+              "qty": 0,
+              "alloc": 2174,
+              "socketMult": 0
+            },
+            "7": {
+              "qty": 0,
+              "alloc": 3478,
+              "socketMult": 0
+            },
+            "51": {
+              "qty": 0,
+              "alloc": 3478,
+              "socketMult": 0
+            },
+            "55": {
+              "qty": 0,
+              "alloc": 3913,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "tooltipText": "Thunderfury, Blessed Blade of the Windseeker      Item Level  80   Binds when picked up Unique     One-Hand    Sword        \n       44 - 115 Damage  \n     Speed  1.90 \n   (41.84 damage per second)   +5 Agility    +8 Stamina       +8 Fire Resistance +9 Nature Resistance   Durability 125 / 125      Requires Level  60    Chance on hit:   Blasts your enemy with lightning, dealing 300 Nature damage and then jumping to additional nearby enemies. \u00a0Each jump reduces that victim's Nature resistance by 25. Affects 5 targets. Your primary target is also consumed by a cyclone, slowing its attack speed by 20% for 12 sec.         Sell Price:  25   53   55",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": -344,
+            "category2": 7,
+            "id": 7787,
+            "itemrewards": [
+              [
+                19019,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Rise, Thunderfury!",
+            "reqlevel": 60,
+            "side": 3,
+            "xp": 9950,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 344
+          }
+        ]
+      }
+    },
+    "19426": {
+      "url": "https://www.wowhead.com/forever/item=19426",
+      "bytes": 212259,
+      "sha256": "5cadfe84da0d7711b3fd0a9b5778df810b6fec5f4fc8b45201fc91d1c60df64b",
+      "title": "Orb of the Darkmoon - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Orb of the Darkmoon",
+        "flags2": 24576,
+        "id": 19426,
+        "level": 65,
+        "name": "Orb of the Darkmoon",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 2,
+        "slotbak": 2,
+        "source": [
+          4,
+          5
+        ],
+        "sourcemore": [
+          {
+            "c": -364,
+            "c2": 9,
+            "n": "1200 Tickets - Orb of the Darkmoon",
+            "t": 5,
+            "ti": 7940
+          },
+          {
+            "n": "Gelvas Grimegate",
+            "t": 1,
+            "ti": 14828
+          }
+        ],
+        "subclass": -3,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Orb of the Darkmoon",
+          "flags2": 24576,
+          "id": 19426,
+          "level": 65,
+          "name": "Orb of the Darkmoon",
+          "reqlevel": 60,
+          "slot": 2,
+          "slotbak": 2,
+          "source": [
+            4,
+            5
+          ],
+          "sourcemore": [
+            {
+              "c": -364,
+              "c2": 9,
+              "n": "1200 Tickets - Orb of the Darkmoon",
+              "t": 5,
+              "ti": 7940
+            },
+            {
+              "n": "Gelvas Grimegate",
+              "t": 1,
+              "ti": 14828
+            }
+          ],
+          "subclass": -3,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "buyprice": 100000,
+          "itemSquishEraId": 0,
+          "sellprice": 25000,
+          "spi": 8,
+          "splpwr": 22,
+          "sta": 11,
+          "statsInfo": {
+            "7": {
+              "qty": 0,
+              "alloc": 4074,
+              "socketMult": 0
+            },
+            "6": {
+              "qty": 0,
+              "alloc": 2963,
+              "socketMult": 0
+            },
+            "45": {
+              "qty": 0,
+              "alloc": 8148,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "tooltipText": "Orb of the Darkmoon      Item Level  65   Binds when picked up     Neck            +11 Stamina    +8 Spirit              Requires Level  60   Equip: Increases damage and healing done by magical spells and effects by up to   22 .      Sell Price:  2   50",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": -364,
+            "category2": 9,
+            "id": 7940,
+            "itemrewards": [
+              [
+                19426,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "1200 Tickets - Orb of the Darkmoon",
+            "reqlevel": 55,
+            "side": 3,
+            "wflags": 24,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "objectives_changed"
+              ],
+              "lines": [
+                "Objectives: no longer Darkmoon Faire Prize Ticket x1200"
+              ],
+              "notShown": []
+            },
+            "popularity": 136
+          }
+        ],
+        "sold-by": [
+          {
+            "classification": 0,
+            "displayName": "Gelvas Grimegate",
+            "displayNames": [],
+            "id": 14828,
+            "location": [
+              12,
+              215
+            ],
+            "maxlevel": 25,
+            "minlevel": 25,
+            "name": "Gelvas Grimegate",
+            "names": [],
+            "react": [
+              1,
+              1
+            ],
+            "tag": "Darkmoon Faire Ticket Redemption",
+            "type": 7,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "vendor_changed"
+              ],
+              "lines": [
+                "Sells: adds Amulet of the Darkmoon, Darkmoon Flower, Darkmoon Storage Box, and 7 more"
+              ],
+              "notShown": [
+                "Sells: adds Amulet of the Darkmoon, Darkmoon Flower, Darkmoon Storage Box, and 7 more"
+              ]
+            },
+            "stock": -1,
+            "cost": [
+              [
+                0,
+                [
+                  [
+                    515,
+                    1200
+                  ]
+                ],
+                []
+              ]
+            ],
+            "popularity": 592
+          }
+        ]
+      }
+    },
+    "19384": {
+      "url": "https://www.wowhead.com/forever/item=19384",
+      "bytes": 207962,
+      "sha256": "29781dc0f21fb82f5c5c3ae9832c699d604552b2a390a8d42d13ba0635798613",
+      "title": "Master Dragonslayer's Ring - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Master Dragonslayer's Ring",
+        "flags2": 24580,
+        "id": 19384,
+        "level": 83,
+        "name": "Master Dragonslayer's Ring",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 11,
+        "slotbak": 11,
+        "source": [
+          4
+        ],
+        "subclass": -2,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Hit Rating 10 added",
+            "Hit % 1 removed"
+          ],
+          "notShown": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Master Dragonslayer's Ring",
+          "flags2": 24580,
+          "id": 19384,
+          "level": 83,
+          "name": "Master Dragonslayer's Ring",
+          "reqlevel": 60,
+          "slot": 11,
+          "slotbak": 11,
+          "source": [
+            4
+          ],
+          "subclass": -2,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed"
+            ],
+            "lines": [
+              "Hit Rating 10 added",
+              "Hit % 1 removed"
+            ],
+            "notShown": []
+          },
+          "atkpwr": 48,
+          "hitrtng": 10,
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "sellprice": 130616,
+          "sta": 14,
+          "statsInfo": {
+            "7": {
+              "qty": 0,
+              "alloc": 4375,
+              "socketMult": 0
+            },
+            "38": {
+              "qty": 0,
+              "alloc": 15000,
+              "socketMult": 0
+            },
+            "31": {
+              "qty": 0,
+              "alloc": 3125,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "tooltipText": "Master Dragonslayer's Ring      Item Level  83   Binds when picked up Unique     Finger            +14 Stamina              Requires Level  60   Equip: Improves your chance to hit by 1.0%.   Equip: + 48 Attack Power.      Sell Price:  13   6   16",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": 1519,
+            "category2": 0,
+            "id": 7782,
+            "itemchoices": [
+              [
+                19383,
+                1
+              ],
+              [
+                19366,
+                1
+              ],
+              [
+                19384,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "The Lord of Blackrock",
+            "reprewards": [
+              [
+                72,
+                200
+              ],
+              [
+                47,
+                200
+              ],
+              [
+                69,
+                200
+              ],
+              [
+                54,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 1,
+            "xp": 9950,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "reworded"
+              ],
+              "lines": [
+                "Objective text reworded",
+                "Description reworded"
+              ],
+              "notShown": [
+                "Description reworded"
+              ]
+            },
+            "popularity": 68
+          },
+          {
+            "category": 1637,
+            "category2": 1,
+            "id": 7784,
+            "itemchoices": [
+              [
+                19383,
+                1
+              ],
+              [
+                19366,
+                1
+              ],
+              [
+                19384,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "The Lord of Blackrock",
+            "reprewards": [
+              [
+                76,
+                200
+              ],
+              [
+                530,
+                200
+              ],
+              [
+                81,
+                200
+              ],
+              [
+                68,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 2,
+            "xp": 9950,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 60
+          }
+        ]
+      }
+    },
+    "19491": {
+      "url": "https://www.wowhead.com/forever/item=19491",
+      "bytes": 292559,
+      "sha256": "cfa1f3b0d4418bd5a2ad5e64846ec5d2bf9b7f74ea099865bbeaaf653f9506c4",
+      "title": "Amulet of the Darkmoon - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Amulet of the Darkmoon",
+        "flags2": 24576,
+        "id": 19491,
+        "level": 65,
+        "name": "Amulet of the Darkmoon",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 2,
+        "slotbak": 2,
+        "source": [
+          4,
+          5
+        ],
+        "sourcemore": [
+          {
+            "c": -364,
+            "c2": 9,
+            "n": "1200 Tickets - Amulet of the Darkmoon",
+            "t": 5,
+            "ti": 7981
+          },
+          {
+            "n": "Gelvas Grimegate",
+            "t": 1,
+            "ti": 14828
+          }
+        ],
+        "subclass": -3,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Amulet of the Darkmoon",
+          "flags2": 24576,
+          "id": 19491,
+          "level": 65,
+          "name": "Amulet of the Darkmoon",
+          "reqlevel": 60,
+          "slot": 2,
+          "slotbak": 2,
+          "source": [
+            4,
+            5
+          ],
+          "sourcemore": [
+            {
+              "c": -364,
+              "c2": 9,
+              "n": "1200 Tickets - Amulet of the Darkmoon",
+              "t": 5,
+              "ti": 7981
+            },
+            {
+              "n": "Gelvas Grimegate",
+              "t": 1,
+              "ti": 14828
+            }
+          ],
+          "subclass": -3,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "agi": 19,
+          "buyprice": 100000,
+          "itemSquishEraId": 0,
+          "sellprice": 25000,
+          "sta": 10,
+          "str": 10,
+          "statsInfo": {
+            "3": {
+              "qty": 0,
+              "alloc": 7037,
+              "socketMult": 0
+            },
+            "7": {
+              "qty": 0,
+              "alloc": 3704,
+              "socketMult": 0
+            },
+            "4": {
+              "qty": 0,
+              "alloc": 3704,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "tooltipText": "Amulet of the Darkmoon      Item Level  65   Binds when picked up     Neck            +10 Strength    +19 Agility    +10 Stamina              Requires Level  60      Sell Price:  2   50",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": -364,
+            "category2": 9,
+            "id": 7981,
+            "itemrewards": [
+              [
+                19491,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "1200 Tickets - Amulet of the Darkmoon",
+            "reqlevel": 55,
+            "side": 3,
+            "wflags": 24,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "objectives_changed"
+              ],
+              "lines": [
+                "Objectives: no longer Darkmoon Faire Prize Ticket x1200"
+              ],
+              "notShown": []
+            },
+            "popularity": 103
+          }
+        ],
+        "sold-by": [
+          {
+            "classification": 0,
+            "displayName": "Gelvas Grimegate",
+            "displayNames": [],
+            "id": 14828,
+            "location": [
+              12,
+              215
+            ],
+            "maxlevel": 25,
+            "minlevel": 25,
+            "name": "Gelvas Grimegate",
+            "names": [],
+            "react": [
+              1,
+              1
+            ],
+            "tag": "Darkmoon Faire Ticket Redemption",
+            "type": 7,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "vendor_changed"
+              ],
+              "lines": [
+                "Sells: adds Amulet of the Darkmoon, Darkmoon Flower, Darkmoon Storage Box, and 7 more"
+              ],
+              "notShown": [
+                "Sells: adds Amulet of the Darkmoon, Darkmoon Flower, Darkmoon Storage Box, and 7 more"
+              ]
+            },
+            "stock": -1,
+            "cost": [
+              [
+                0,
+                [
+                  [
+                    515,
+                    1200
+                  ]
+                ],
+                []
+              ]
+            ],
+            "popularity": 592
+          }
+        ]
+      }
+    },
+    "20600": {
+      "url": "https://www.wowhead.com/forever/item=20600",
+      "bytes": 182341,
+      "sha256": "d3ca8980e00e3b0b995b532379dbaa0d6fdb69debc4b9fd127adee61433dfe54",
+      "title": "Malfurion's Signet Ring - Item - Forever",
+      "item": {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Malfurion's Signet Ring",
+        "flags2": 24580,
+        "id": 20600,
+        "level": 72,
+        "name": "Malfurion's Signet Ring",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 11,
+        "slotbak": 11,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "c": -1,
+            "c2": 7,
+            "n": "Waking Legends",
+            "t": 5,
+            "ti": 8447
+          }
+        ],
+        "subclass": -2,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Malfurion's Signet Ring",
+          "flags2": 24580,
+          "id": 20600,
+          "level": 72,
+          "name": "Malfurion's Signet Ring",
+          "reqlevel": 60,
+          "slot": 11,
+          "slotbak": 11,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "c": -1,
+              "c2": 7,
+              "n": "Waking Legends",
+              "t": 5,
+              "ti": 8447
+            }
+          ],
+          "subclass": -2,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "natres": 20,
+          "sellprice": 98660,
+          "sta": 17,
+          "statsInfo": {
+            "7": {
+              "qty": 0,
+              "alloc": 5862,
+              "socketMult": 0
+            },
+            "55": {
+              "qty": 0,
+              "alloc": 6897,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "tooltipText": "Malfurion's Signet Ring      Item Level  72   Binds when picked up Unique     Finger            +17 Stamina       +20 Nature Resistance        Requires Level  60      Sell Price:  9   86   60",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": -1,
+            "category2": 7,
+            "id": 8447,
+            "itemrewards": [
+              [
+                20600,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Waking Legends",
+            "reprewards": [
+              [
+                609,
+                200
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 66
+          }
+        ]
+      }
+    },
+    "21188": {
+      "url": "https://www.wowhead.com/forever/item=21188",
+      "bytes": 184287,
+      "sha256": "bff952f1b3f23b86897fe5265c8c897adc874cf34ed49e21f222804d55152e39",
+      "title": "Fist of Cenarius - Item - Forever",
+      "item": {
+        "appearances": {
+          "0": [
+            33533,
+            ""
+          ]
+        },
+        "classs": 2,
+        "displayName": "Fist of Cenarius",
+        "displayid": 33533,
+        "dps": 62.57,
+        "flags2": 24580,
+        "id": 21188,
+        "level": 66,
+        "name": "Fist of Cenarius",
+        "quality": 4,
+        "reqlevel": 60,
+        "slot": 17,
+        "slotbak": 17,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "c": 1377,
+            "c2": 1,
+            "n": "Champion's Battlegear",
+            "t": 5,
+            "ti": 8573
+          }
+        ],
+        "speed": 3.5,
+        "subclass": 5,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed",
+            "effects_changed"
+          ],
+          "lines": [
+            "Critical Strike Rating 28 added",
+            "Spell Critical Strike % 2 removed",
+            "Effects removed"
+          ],
+          "notShown": []
+        },
+        "jsonequip": {
+          "quality": 4,
+          "appearances": {
+            "0": [
+              33533,
+              ""
+            ]
+          },
+          "classs": 2,
+          "displayName": "Fist of Cenarius",
+          "displayid": 33533,
+          "dps": 62.57,
+          "flags2": 24580,
+          "id": 21188,
+          "level": 66,
+          "name": "Fist of Cenarius",
+          "reqlevel": 60,
+          "slot": 17,
+          "slotbak": 17,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "c": 1377,
+              "c2": 1,
+              "n": "Champion's Battlegear",
+              "t": 5,
+              "ti": 8573
+            }
+          ],
+          "speed": 3.5,
+          "subclass": 5,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed",
+              "effects_changed"
+            ],
+            "lines": [
+              "Critical Strike Rating 28 added",
+              "Spell Critical Strike % 2 removed",
+              "Effects removed"
+            ],
+            "notShown": []
+          },
+          "critstrkrtng": 28,
+          "dmgmax1": 263,
+          "dmgmin1": 175,
+          "dmgrange": 0.4,
+          "dmgtype1": 0,
+          "dura": 120,
+          "itemSquishEraId": 0,
+          "mledmgmax": 263,
+          "mledmgmin": 175,
+          "mledps": 62.57,
+          "mlespeed": 3.5,
+          "sellprice": 111220,
+          "sheathtype": 1,
+          "splpwr": 40,
+          "statsInfo": {
+            "45": {
+              "qty": 0,
+              "alloc": 8511,
+              "socketMult": 0
+            },
+            "32": {
+              "qty": 0,
+              "alloc": 5957,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "tooltipText": "Fist of Cenarius      Item Level  66   Binds when picked up     Two-Hand    Mace        \n       175 - 263 Damage  \n     Speed  3.50 \n   (62.57 damage per second)        Durability 120 / 120      Requires Level  60   Equip: Improves your chance to get a critical strike by 2.0%.   Equip: Increases damage and healing done by magical spells and effects by up to   40 .      Sell Price:  11   12   20",
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "acquisitionLists": {
+        "reward-from-q": [
+          {
+            "category": 1377,
+            "category2": 1,
+            "id": 8573,
+            "itemchoices": [
+              [
+                21188,
+                1
+              ],
+              [
+                21190,
+                1
+              ],
+              [
+                21180,
+                1
+              ]
+            ],
+            "level": 60,
+            "name": "Champion's Battlegear",
+            "reprewards": [
+              [
+                609,
+                50
+              ]
+            ],
+            "reqlevel": 60,
+            "side": 3,
+            "wflags": 1,
+            "xp": 3300,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 112
+          }
+        ]
+      }
+    }
+  },
+  "quests": {
+    "7787": {
+      "url": "https://www.wowhead.com/forever/quest=7787",
+      "bytes": 79733,
+      "sha256": "9d227fc310e087722e641759d33b0df9f68c6ed0b9b58c4549a833aa25afd4c4",
+      "title": "Rise, Thunderfury! - Quest - Forever",
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 7787,
+        "itemrewards": [
+          [
+            19019,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Rise, Thunderfury!",
+        "reqlevel": 60,
+        "side": 3,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=14347/highlord-demitrian]Highlord Demitrian[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.3.33302\"]1.13.3[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7784": {
+      "url": "https://www.wowhead.com/forever/quest=7784",
+      "bytes": 51566,
+      "sha256": "63b47e8f24c6e70359efcb47cff1fc6b15488949d71846d861d496f30a187c72",
+      "title": "The Lord of Blackrock - Quest - Forever",
+      "quest": {
+        "category": 1637,
+        "category2": 1,
+        "id": 7784,
+        "itemchoices": [
+          [
+            19383,
+            1
+          ],
+          [
+            19366,
+            1
+          ],
+          [
+            19384,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "The Lord of Blackrock",
+        "reprewards": [
+          [
+            76,
+            200
+          ],
+          [
+            530,
+            200
+          ],
+          [
+            81,
+            200
+          ],
+          [
+            68,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 2,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        7783
+      ],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: [span class=icon-horde]Horde[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=4949/thrall]Thrall[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=14720/high-overlord-saurfang]High Overlord Saurfang[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.3.33155\"]1.13.3[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7907": {
+      "url": "https://www.wowhead.com/forever/quest=7907",
+      "bytes": 108168,
+      "sha256": "ef793e008d95d8af2fac811fbb968d389f44c38ede3972d4d18eed8674b669c0",
+      "title": "Darkmoon Beast Deck - Quest - Forever",
+      "quest": {
+        "category": -364,
+        "category2": 9,
+        "id": 7907,
+        "itemrewards": [
+          [
+            19288,
+            1
+          ]
+        ],
+        "level": 55,
+        "name": "Darkmoon Beast Deck",
+        "reprewards": [
+          [
+            909,
+            150
+          ]
+        ],
+        "reqlevel": 1,
+        "side": 3,
+        "wflags": 8,
+        "xp": 560,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 55[/li][li]Requires level 1[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=14847/professor-thaddeus-paleo]Professor Thaddeus Paleo[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]1[/color][small] &nbsp;[/small][color=r1]51[/color][small] &nbsp;[/small][color=r2]53[/color][small] &nbsp;[/small][color=r3]58[/color][small] &nbsp;[/small][color=r4]66[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7782": {
+      "url": "https://www.wowhead.com/forever/quest=7782",
+      "bytes": 70488,
+      "sha256": "0d1b88e0ba6a62fcec4b0bebcb8b1e6254e0f48603fd10e535c575a687010344",
+      "title": "The Lord of Blackrock - Quest - Forever",
+      "quest": {
+        "category": 1519,
+        "category2": 0,
+        "id": 7782,
+        "itemchoices": [
+          [
+            19383,
+            1
+          ],
+          [
+            19366,
+            1
+          ],
+          [
+            19384,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "The Lord of Blackrock",
+        "reprewards": [
+          [
+            72,
+            200
+          ],
+          [
+            47,
+            200
+          ],
+          [
+            69,
+            200
+          ],
+          [
+            54,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 1,
+        "xp": 9950,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "reworded"
+          ],
+          "lines": [
+            "Objective text reworded",
+            "Description reworded"
+          ],
+          "notShown": [
+            "Description reworded"
+          ]
+        }
+      },
+      "seriesQuestIDs": [
+        7781
+      ],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=1748/highlord-bolvar-fordragon]Highlord Bolvar Fordragon[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=14721/field-marshal-stonebridge]Field Marshal Stonebridge[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.3.33155\"]1.13.3[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7927": {
+      "url": "https://www.wowhead.com/forever/quest=7927",
+      "bytes": 111019,
+      "sha256": "47501f26bda02a1d4120dc6d465122572465c837bb736bc17e065192286a3a18",
+      "title": "Darkmoon Portals Deck - Quest - Forever",
+      "quest": {
+        "category": -364,
+        "category2": 9,
+        "id": 7927,
+        "itemrewards": [
+          [
+            19290,
+            1
+          ]
+        ],
+        "level": 55,
+        "name": "Darkmoon Portals Deck",
+        "reprewards": [
+          [
+            909,
+            150
+          ]
+        ],
+        "reqlevel": 1,
+        "side": 3,
+        "wflags": 8,
+        "xp": 560,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 55[/li][li]Requires level 1[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=14847/professor-thaddeus-paleo]Professor Thaddeus Paleo[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]1[/color][small] &nbsp;[/small][color=r1]51[/color][small] &nbsp;[/small][color=r2]53[/color][small] &nbsp;[/small][color=r3]58[/color][small] &nbsp;[/small][color=r4]66[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7928": {
+      "url": "https://www.wowhead.com/forever/quest=7928",
+      "bytes": 138261,
+      "sha256": "ddef6304639aa4d36d46616b37338c663b50c8260bc59e76455e0f7310286aa1",
+      "title": "Darkmoon Warlords Deck - Quest - Forever",
+      "quest": {
+        "category": -364,
+        "category2": 9,
+        "id": 7928,
+        "itemrewards": [
+          [
+            19287,
+            1
+          ]
+        ],
+        "level": 55,
+        "name": "Darkmoon Warlords Deck",
+        "reprewards": [
+          [
+            909,
+            150
+          ]
+        ],
+        "reqlevel": 1,
+        "side": 3,
+        "wflags": 8,
+        "xp": 560,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 55[/li][li]Requires level 1[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=14847/professor-thaddeus-paleo]Professor Thaddeus Paleo[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]1[/color][small] &nbsp;[/small][color=r1]51[/color][small] &nbsp;[/small][color=r2]53[/color][small] &nbsp;[/small][color=r3]58[/color][small] &nbsp;[/small][color=r4]66[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7940": {
+      "url": "https://www.wowhead.com/forever/quest=7940",
+      "bytes": 74802,
+      "sha256": "63ffefa382bcff70c962763f8d474422651bd314870ca9cfd663b71e9712cf21",
+      "title": "1200 Tickets - Orb of the Darkmoon - Quest - Forever",
+      "quest": {
+        "category": -364,
+        "category2": 9,
+        "id": 7940,
+        "itemrewards": [
+          [
+            19426,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "1200 Tickets - Orb of the Darkmoon",
+        "reqlevel": 55,
+        "side": 3,
+        "wflags": 24,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "objectives_changed"
+          ],
+          "lines": [
+            "Objectives: no longer Darkmoon Faire Prize Ticket x1200"
+          ],
+          "notShown": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 55[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=14828/gelvas-grimegate]Gelvas Grimegate[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=14828/gelvas-grimegate]Gelvas Grimegate[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]55[/color][small] &nbsp;[/small][color=r1]56[/color][small] &nbsp;[/small][color=r2]58[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7929": {
+      "url": "https://www.wowhead.com/forever/quest=7929",
+      "bytes": 104399,
+      "sha256": "e6054e25e773459adab7c8db1a4d4cd51c77d63bb32203ab7be7d96e4e541c7a",
+      "title": "Darkmoon Elementals Deck - Quest - Forever",
+      "quest": {
+        "category": -364,
+        "category2": 9,
+        "id": 7929,
+        "itemrewards": [
+          [
+            19289,
+            1
+          ]
+        ],
+        "level": 55,
+        "name": "Darkmoon Elementals Deck",
+        "reprewards": [
+          [
+            909,
+            150
+          ]
+        ],
+        "reqlevel": 1,
+        "side": 3,
+        "wflags": 8,
+        "xp": 560,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 55[/li][li]Requires level 1[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=14847/professor-thaddeus-paleo]Professor Thaddeus Paleo[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=q10]1[/color][small] &nbsp;[/small][color=r1]51[/color][small] &nbsp;[/small][color=r2]53[/color][small] &nbsp;[/small][color=r3]58[/color][small] &nbsp;[/small][color=r4]66[/color][/li][li]Added in patch [acronym=\"1.13.2.30406\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7981": {
+      "url": "https://www.wowhead.com/forever/quest=7981",
+      "bytes": 83847,
+      "sha256": "1529aa39c94966cfb03999680ddee1e4f6a66448c398f7ace57df30f7d0d3fe1",
+      "title": "1200 Tickets - Amulet of the Darkmoon - Quest - Forever",
+      "quest": {
+        "category": -364,
+        "category2": 9,
+        "id": 7981,
+        "itemrewards": [
+          [
+            19491,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "1200 Tickets - Amulet of the Darkmoon",
+        "reqlevel": 55,
+        "side": 3,
+        "wflags": 24,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "objectives_changed"
+          ],
+          "lines": [
+            "Objectives: no longer Darkmoon Faire Prize Ticket x1200"
+          ],
+          "notShown": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 55[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=14828/gelvas-grimegate]Gelvas Grimegate[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=14828/gelvas-grimegate]Gelvas Grimegate[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]55[/color][small] &nbsp;[/small][color=r1]56[/color][small] &nbsp;[/small][color=r2]58[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "8447": {
+      "url": "https://www.wowhead.com/forever/quest=8447",
+      "bytes": 56391,
+      "sha256": "545936e1b730315e6d5feafecd332cfe04b7c9da4229208dd4c67f4a8fb848a4",
+      "title": "Waking Legends - Quest - Forever",
+      "quest": {
+        "category": -1,
+        "category2": 7,
+        "id": 8447,
+        "itemrewards": [
+          [
+            20600,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Waking Legends",
+        "reprewards": [
+          [
+            609,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        8446
+      ],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=11832/keeper-remulos]Keeper Remulos[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=11832/keeper-remulos]Keeper Remulos[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.4.33598\"]1.13.4[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "8573": {
+      "url": "https://www.wowhead.com/forever/quest=8573",
+      "bytes": 87458,
+      "sha256": "12bdd0192c7bf2cc09e9dde838b4bb5c888435566e059c6c071d727b97617d12",
+      "title": "Champion's Battlegear - Quest - Forever",
+      "quest": {
+        "category": 1377,
+        "category2": 1,
+        "id": 8573,
+        "itemchoices": [
+          [
+            21188,
+            1
+          ],
+          [
+            21190,
+            1
+          ],
+          [
+            21180,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Champion's Battlegear",
+        "reprewards": [
+          [
+            609,
+            50
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "wflags": 1,
+        "xp": 3300,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=15176/vargus]Vargus[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=15176/vargus]Vargus[/url][/icon][/li][li]Repeatable[/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.5.34713\"]1.13.5[/acronym] \"The Gates of Ahn'Qiraj\"[/li][/ul]"
+      ]
+    },
+    "7781": {
+      "url": "https://www.wowhead.com/forever/quest=7781",
+      "bytes": 64765,
+      "sha256": "e1aaa7a8a3450567fe18f66a35fa5306786c5b8f91cdfe0e96eee9152c3470ae",
+      "title": "The Lord of Blackrock - Quest - Forever",
+      "quest": {
+        "category": 1519,
+        "category2": 0,
+        "id": 7781,
+        "level": 60,
+        "name": "The Lord of Blackrock",
+        "reprewards": [
+          [
+            72,
+            200
+          ],
+          [
+            47,
+            200
+          ],
+          [
+            69,
+            200
+          ],
+          [
+            54,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 1,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        7782
+      ],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-end]End: [url=/forever/npc=1748/highlord-bolvar-fordragon]Highlord Bolvar Fordragon[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7783": {
+      "url": "https://www.wowhead.com/forever/quest=7783",
+      "bytes": 50976,
+      "sha256": "9c535d015bde80edcf2f1fba034dbfa1f41b395878ff1248588dbf704b34f4ab",
+      "title": "The Lord of Blackrock - Quest - Forever",
+      "quest": {
+        "category": 1637,
+        "category2": 1,
+        "id": 7783,
+        "level": 60,
+        "name": "The Lord of Blackrock",
+        "reprewards": [
+          [
+            76,
+            200
+          ],
+          [
+            530,
+            200
+          ],
+          [
+            81,
+            200
+          ],
+          [
+            68,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 2,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        7784
+      ],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: [span class=icon-horde]Horde[/span][/li][li][icon name=quest-end]End: [url=/forever/npc=4949/thrall]Thrall[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "8446": {
+      "url": "https://www.wowhead.com/forever/quest=8446",
+      "bytes": 58651,
+      "sha256": "51fc9ac28d375342f68a904527d0d6a509f78f372c7ea9a86413716c00fca499",
+      "title": "Shrouded in Nightmare - Quest - Forever",
+      "quest": {
+        "category": -1,
+        "category2": 7,
+        "id": 8446,
+        "level": 60,
+        "name": "Shrouded in Nightmare",
+        "reprewards": [
+          [
+            609,
+            200
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        8447
+      ],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=11832/keeper-remulos]Keeper Remulos[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7785": {
+      "url": "https://www.wowhead.com/forever/quest=7785",
+      "bytes": 77744,
+      "sha256": "931986cb310a22661b79347ad0e98ebcdf500b80161e65356d0cfa3a8faacb00",
+      "title": "Examine the Vessel - Quest - Forever",
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 7785,
+        "level": 60,
+        "name": "Examine the Vessel",
+        "reqlevel": 60,
+        "side": 3,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        7786
+      ],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=14347/highlord-demitrian]Highlord Demitrian[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "8538": {
+      "url": "https://www.wowhead.com/forever/quest=8538",
+      "bytes": 78130,
+      "sha256": "69d702ee3df34e635d081f2c6ef2c8aa8122706d0faa655cc1db6eb6896b7551",
+      "title": "The Four Dukes - Quest - Forever",
+      "quest": {
+        "category": 1377,
+        "category2": 1,
+        "id": 8538,
+        "itemrewards": [
+          [
+            21508,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "The Four Dukes",
+        "reprewards": [
+          [
+            609,
+            100
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 1,
+        "wflags": 1,
+        "xp": 660,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Elite[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=15181/commander-maralith]Commander Mar'alith[/url][/icon][/li][li]Repeatable[/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "7786": {
+      "url": "https://www.wowhead.com/forever/quest=7786",
+      "bytes": 119995,
+      "sha256": "d4d643cb3e856e32719dcea5fd586dc640a3e939a4ba3d192e81aeed746f42d3",
+      "title": "Thunderaan the Windseeker - Quest - Forever",
+      "quest": {
+        "category": -344,
+        "category2": 7,
+        "id": 7786,
+        "level": 60,
+        "name": "Thunderaan the Windseeker",
+        "reqlevel": 60,
+        "side": 3,
+        "type": 62,
+        "xp": 9950,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        7785
+      ],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Raid[/li][li]Side: Both[/li][li][icon name=quest-start]Start: [url=/forever/npc=14347/highlord-demitrian]Highlord Demitrian[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=14347/highlord-demitrian]Highlord Demitrian[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.31830\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "8496": {
+      "url": "https://www.wowhead.com/forever/quest=8496",
+      "bytes": 50290,
+      "sha256": "3c690ec0741d89d695126272a515704c940dce7d9f6a4df5e0a7590c73db2137",
+      "title": "Bandages for the Field - Quest - Forever",
+      "quest": {
+        "category": 1377,
+        "category2": 1,
+        "id": 8496,
+        "itemrewards": [
+          [
+            20800,
+            1
+          ],
+          [
+            20805,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Bandages for the Field",
+        "reprewards": [
+          [
+            609,
+            50
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 1,
+        "xp": 660,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: [span class=icon-alliance]Alliance[/span][/li][li][icon name=quest-end]End: [url=/forever/npc=15191/windcaller-proudhorn]Windcaller Proudhorn[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "8498": {
+      "url": "https://www.wowhead.com/forever/quest=8498",
+      "bytes": 65900,
+      "sha256": "f083a8063e7e6a9e3cd9586cd318d76d3f6eb7ae29c4d71c9e0677e47232d890",
+      "title": "Twilight Battle Orders - Quest - Forever",
+      "quest": {
+        "category": 1377,
+        "category2": 1,
+        "id": 8498,
+        "itemrewards": [
+          [
+            20801,
+            1
+          ],
+          [
+            20809,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Twilight Battle Orders",
+        "reprewards": [
+          [
+            609,
+            50
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 1,
+        "xp": 660,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Elite[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=15181/commander-maralith]Commander Mar'alith[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "8501": {
+      "url": "https://www.wowhead.com/forever/quest=8501",
+      "bytes": 56097,
+      "sha256": "02dc3357cfbdcfd7f780f2e05b0853fd79890338df76cd089355396f0016f147",
+      "title": "Target: Hive'Ashi Stingers - Quest - Forever",
+      "quest": {
+        "category": 1377,
+        "category2": 1,
+        "id": 8501,
+        "itemrewards": [
+          [
+            20802,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "Target: Hive'Ashi Stingers",
+        "reprewards": [
+          [
+            609,
+            50
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 3,
+        "type": 1,
+        "xp": 660,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Type: Elite[/li][li]Side: Both[/li][li][icon name=quest-end]End: [url=/forever/npc=15181/commander-maralith]Commander Mar'alith[/url][/icon][/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    },
+    "8785": {
+      "url": "https://www.wowhead.com/forever/quest=8785",
+      "bytes": 52283,
+      "sha256": "618510a87e9657a159bcc0d6f9aa37dfc049f2fb9e7bb249f5d30367cbeeb06c",
+      "title": "The Orgrimmar Legion Needs Mojo! - Quest - Forever",
+      "quest": {
+        "category": 1377,
+        "category2": 1,
+        "id": 8785,
+        "itemrewards": [
+          [
+            20800,
+            1
+          ],
+          [
+            21386,
+            1
+          ]
+        ],
+        "level": 60,
+        "name": "The Orgrimmar Legion Needs Mojo!",
+        "reprewards": [
+          [
+            609,
+            50
+          ]
+        ],
+        "reqlevel": 60,
+        "side": 2,
+        "wflags": 1,
+        "xp": 660,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [],
+      "actorFacts": [
+        "[ul][li]Level: 60[/li][li]Requires level 60[/li][li]Side: [span class=icon-horde]Horde[/span][/li][li][icon name=quest-end]End: [url=/forever/npc=15615/shadow-priestess-shai]Shadow Priestess Shai[/url][/icon][/li][li]Repeatable[/li][li]Not sharable[/li][li]Difficulty: [color=r2]60[/color][small] &nbsp;[/small][color=r3]63[/color][small] &nbsp;[/small][color=r4]72[/color][/li][li]Added in patch [acronym=\"1.13.2.30786\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+      ]
+    }
+  },
+  "findings": [
+    "All12 exact primaryequipment/rewardrows match21fullquestpages and independentnamedactors;12equip60 identities/no explicitavailabilitywarnings retained.",
+    "FourDarkmooncards:four item-useassemblies/eight exactcardinputs each,32fullcardpages/nineAceNPCreversejoins;questreqlevel1/display55/equip60,Professor14847endsjoins. No learnedprofession/actualcurrentlevel1acceptance/livefarmrate assumed.",
+    "TwoDarkmoonnecklaces:Gelvas14828/item/currency515 triplecostjoins1200each;quests7940/7981min55 remain alongside changed-objective notice/legacyphysical19182placeholder(fullpage404). No doublecharge/freecost/bagwalletconversion/purchaselevel55-60 acceptance claimed.",
+    "ThreeDragonslayeritems:onechoice ofthree,Alliancehead19003\u21927781Bolvar1748\u21927782Stonebridge14721;Hordehead19002\u21927783Thrall4949\u21927784Saurfang14720. Nefarian11583reversejoinsbothinputheads,notfinishedgearloot;AfrasiabibodyversusStonebridgeendpoint preserved.",
+    "Thunderfury:19019reward7787/Demitrian14347/input19018\u2192Thunderaan14435;7785Vessel/7786requires10ElementiumBars17771+Essence19017+bindings18563-4. Two bindings/threeEssenceNPCreversejoins arepublishedinputreferences,includingtwoFirefighterIDscurrent/crossversionunconfirmed. Smelt22967inputrecipe notsword/wielderprofession;Vessel22958DNDplayertrigger/learningunknown.",
+    "Malfurion20600:8446\u21928447Remulos11832,Object20644/fourNightmareDragonNPCreversejoins,notringdrops/Druid-onlygate.",
+    "Fist21188:onechoice8573/Vargus15176/min60/Cenarion609Exalted/15Combat20802+20Logistics20800+20Tactical20801+1Mark21508. Mark8538/fourDukes/brief20948/21133containerreversejoin;fourrepresentativebadgequest/actorjoins qualify42broaderinputrewardreferences,notexhaustivecurrentfarming/learnedprofession.",
+    "Full9NovDarkmoonguide supports wallet/assembly/publishedNov9\u201315Elwynnschedule butretainsBlueDragonold100percentregenblurb versus exactprimary150Spirit. Guidepurchase55/legacyquestmin55 distinctequip60;no currentstock/acceptance oroldstatadoption. Allcurrentliveacquisitionunverified."
+  ],
+  "nextResearch": [],
+  "limits": "No fullsourcearticle/storyprose retained. actorFacts are structuredquestmetadata only;allfullHTTPfingerprints real. Publication source references not currentlive observations. Runtime2825/index4474;frozen3077 unchanged;12still8AJ. LatestfullPASS8AI42768530618/bot2b51ecb. Allrelease/main/Beta8/usage/concurrency restrictions remain.",
+  "inputEvidence": "checkpoint8aj_input_evidence.json",
+  "nextIntegration": "Integrate12metadata fromprimaryitems+checkpoint8aj_input_evidence chainFacts;preserve2825priorobjects/eligibility/strongersources,thenfreshactualHTTPcapture/full14Lua+offlinePython/24modules/fourreports/local+CI/bot. Queue12still8AJ;afterPASSmark8AK15legacyNozdormu21196\u201321210.",
+  "integrationOutcome": {
+    "equipmentRegistry": 2837,
+    "index": 4479,
+    "display": 4478,
+    "books": 759,
+    "remaining": 3065,
+    "nextCheckpoint": "8AK fifteen legacyNozdormu quest rings21196\u201321210",
+    "nextFirst": "21196",
+    "nextLast": "21210",
+    "priorObjectsExact": 2825,
+    "local": "14Lua+offlinePython/24modules/fourreports PASS;16localPASS includingfiles/syntax",
+    "ci": "success;15testPASS=14Lua+offlinePython/24modules/fourreports;capturehelpersyntaxchecked",
+    "additionalCandidates": 121,
+    "rawComparison": "checkpoint8aj_raw_upstream_review.json",
+    "httpCapture": "7originalresponses/fullbytes/hashesmatchprovenance;noextra diagnosticrequests/replay/fallback",
+    "sourceDelta": "14outsidecanonicalnewIDs;33outsideindexrows/16definitionpositions fact-preserving;23366/9153snapshot;0priorfacts/names/field10changes",
+    "sourceCommit": "3c29c1a37f8b49a6edeccb7ca5dec57957907c1a",
+    "ciRun": 42771400963,
+    "ciJob": 129679798630,
+    "validatedFinalHEAD": "90cc64e85c5d8fe1dfe247f7a754b3eeb42acb33",
+    "botReview": "Onlytimestamp/threeEverlootresponsehashes;no runtime/report/index/countchange;botresponse-byteidentitynotclaimed"
+  }
+}

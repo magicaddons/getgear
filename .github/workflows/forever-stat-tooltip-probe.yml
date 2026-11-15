@@ -1,0 +1,14 @@
+name: Inspect independent Forever tooltip structure (no release)
+on:
+  push:
+    branches: [work/independent-stat-flags]
+    paths: [tools/probe_forever_stat_tooltips.py, .github/workflows/forever-stat-tooltip-probe.yml]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/probe_forever_stat_tooltips.py

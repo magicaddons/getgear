@@ -1,0 +1,12 @@
+SOURCE Playfulls 23618 items 9327 published source labels
+SOURCE Everloot 1688 observed edges 1439 item relationships
+DATASET 10315 Forever items 16702 classic-reference items 7431 Classic NPC names 312 client encounter names
+Traceback (most recent call last):
+  File "/workspace/getgear/tools/capture_acquisition_audit.py", line 72, in <module>
+    main()
+  File "/workspace/getgear/tools/capture_acquisition_audit.py", line 56, in main
+    reconciler.main()
+  File "/workspace/getgear/tools/reconcile_acquisition_1_60.py", line 607, in main
+    assert ref["liveVerified"] is False and "unverified" in ref["summary"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

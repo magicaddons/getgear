@@ -8,13 +8,13 @@ GetGear helps **Alliance characters across all nine classes** browse class-equip
 
 ## Download
 
-### [Download GetGear v0.14.0 Beta 7](https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta7)
+### [Download GetGear v0.14.0 Beta 8](https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta8)
 
-Open the release page and download **`GetGear-v0.14.0-beta7.zip`** from **Assets**.
+Open the release page and download **`GetGear-v0.14.0-beta8.zip`** from **Assets**.
 
 **Install the release ZIP, not GitHub's automatically generated “Source code (zip)”**, which contains the repository rather than just the installable addon.
 
-[All releases](https://github.com/magicaddons/getgear/releases) · [Beta 7 release notes](https://github.com/magicaddons/getgear/blob/main/RELEASE_v0.14.0-beta7.md) · [Report an issue](https://github.com/magicaddons/getgear/issues)
+[All releases](https://github.com/magicaddons/getgear/releases) · [Beta 8 release notes](https://github.com/magicaddons/getgear/blob/v0.14.0-beta8/RELEASE_v0.14.0-beta8.md) · [Report an issue](https://github.com/magicaddons/getgear/issues)
 
 ## Features
 
@@ -33,7 +33,7 @@ Open the release page and download **`GetGear-v0.14.0-beta7.zip`** from **Assets
 
 ## Installation
 
-1. Download **`GetGear-v0.14.0-beta7.zip`** from the [Beta 7 release](https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta7).
+1. Download **`GetGear-v0.14.0-beta8.zip`** from the [Beta 8 release](https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta8).
 2. **Exit WoW Forever completely.** Back up your existing `GetGear` addon folder and its SavedVariables if you want to preserve or restore your current setup.
 3. Extract the ZIP and copy its **`GetGear`** folder to `_forever_/Interface/AddOns/`, replacing the old folder. Remove any nested or duplicate addon copies.
 4. Verify the file is at `_forever_/Interface/AddOns/GetGear/GetGear.toc`.
@@ -42,6 +42,13 @@ Open the release page and download **`GetGear-v0.14.0-beta7.zip`** from **Assets
 ### Upgrading from v0.12.x
 
 The unified 1–60 guide introduces a new per-character progress schema. **Your old acquired/skipped/hidden objective status and display preferences can reset when migrating from v0.12.x.** Back up SavedVariables before upgrading. The separately tracked account inventory is intended to be retained, but a backup is still advisable.
+
+## Beta 8 improvements
+
+- Recipe books: exact vendors, enemies, quests, objects, locations, requirements and alternative routes, with confidence limits.
+- Expanded lower-level quest/vendor/drop/fishing directions and warnings for unavailable or cross-version item records.
+- Compact tracker shows positive stat improvements, with optional armour-only improvements and default-hidden green world BoEs. The full guide retains class-equippable informational coverage.
+- Corrected crafted Idol of the Dream and clearer boss/trash/container references; existing crafting materials, filters and settings safeguards retained.
 
 ## Commands
 
@@ -63,11 +70,12 @@ GetGear records **last-known inventory snapshots** rather than live counts from 
 
 - **Alliance is the supported route focus.** This release covers equipment levels **1–60**, not a completed Horde acquisition guide.
 - The 7,707-item catalogue includes candidates inferred from class proficiency and dated client records; inclusion **does not prove the item is currently obtainable or a practical upgrade**.
-- Some world-drop sources, **1,439 vendor identities**, **204 quest identities**, and **107 dungeon records without named bosses** remain unresolved in the recovered source data. Some dungeon items may be trash or rare drops rather than boss drops.
+- Beta 8 supplies **2,177 conservative acquisition summaries**, including individually reviewed metadata for **954 recipe-book cases** and **214 other equipment cases**. These include honest unknown origins, unavailable-page flags and cross-version warnings.
+- **Six dungeon source links and 954 current recipe-book routes** still need live verification. Broader world-drop, vendor and quest coverage remains incomplete; named sources do not imply guaranteed current loot or stock.
 - Some recipe acquisition routes, trainer learn minima, binds, reputation requirements and quest eligibility still need client verification. The reagent snapshot is dated **31 October 2026**; the broad item cache is dated **21 October 2026**.
 - Full in-game testing across every class, level, quest, map and profession is ongoing. The successful automated regressions do not certify all live client interactions or item availability.
 
-For source evidence and audit details, see [Beta 7 reconciliation](https://github.com/magicaddons/getgear/blob/main/docs/BETA7_RECONCILIATION.md).
+For current evidence, validation and remaining gaps, see the [Beta 8 release gate](https://github.com/magicaddons/getgear/blob/v0.14.0-beta8/docs/source-audit-1-60/RELEASE_GATE.md).
 
 ## Feedback and bug reports
 

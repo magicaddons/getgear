@@ -1,0 +1,61 @@
+{
+  "quest4132": {
+    "primary": {
+      "url": "https://www.wowhead.com/forever/quest=4132",
+      "bytes": 68337,
+      "sha256": "0ebbe4f775efd22936a4a53a401f90da4ba820798672fd8e2591fe85f104ff39",
+      "title": "Operation: Death to Angerforge - Quest - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "identity": {
+      "category": 1584,
+      "category2": 2,
+      "id": 4132,
+      "itemrewards": [
+        [
+          12059,
+          1
+        ]
+      ],
+      "level": 58,
+      "money": 26500,
+      "name": "Operation: Death to Angerforge",
+      "reprewards": [
+        [
+          76,
+          150
+        ]
+      ],
+      "reqlevel": 52,
+      "side": 2,
+      "type": 81,
+      "xp": 7750,
+      "envChange": {
+        "status": "updated",
+        "labels": [
+          "rewards_changed"
+        ],
+        "lines": [
+          "Rewards: no longer Conqueror's Medallion"
+        ],
+        "notShown": [
+          "Rewards: no longer Conqueror's Medallion"
+        ]
+      }
+    },
+    "formalMarkup": [
+      "[ul][li]Level: 58[/li][li]Requires level 52[/li][li]Type: Dungeon[/li][li]Side: [span class=icon-horde]Horde[/span][/li][li][icon name=quest-start]Start: [url=/forever/npc=9077/warlord-goretooth]Warlord Goretooth[/url][/icon][/li][li][icon name=quest-end]End: [url=/forever/npc=9077/warlord-goretooth]Warlord Goretooth[/url][/icon][/li][li]Sharable[/li][li]Difficulty: [color=q10]52[/color][small] &nbsp;[/small][color=r1]54[/color][small] &nbsp;[/small][color=r2]56[/color][small] &nbsp;[/small][color=r3]61[/color][small] &nbsp;[/small][color=r4]69[/color][/li][li]Added in patch [acronym=\"1.13.2.31727\"]1.13.2[/acronym] \"Classic\"[/li][/ul]"
+    ],
+    "conflict": "Legacy reward12059 remains in fullquest/own table while change annotation says removed. Item12059primaryunconfirmed/no printed level. 270126originunknown/no name-based replacement or new reward accepted.",
+    "currentRewardConfirmed": false
+  },
+  "keySourceNotes": {
+    "physicalKey267089": "Class13key,notgear/recipe;raw38notprintedwearergate",
+    "mouldings": {
+      "Horde267137": 94973,
+      "Alliance267138": 94980
+    },
+    "providedItems": "Not free repeatable supply",
+    "mandatoryGraphAndCompoundAccessVerified": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "reason": "Two nonreleaseCI attempts failed InstallLua security.ubuntu.com DNS before allvalidation. Sameimage previouslyworked;no image-regression claim. Replace mutable systemAPT setup with checksum-pinned prebuilt tool matchinglocalvalidation;no GetGear compilation/package/release.",
+  "package": {
+    "url": "https://deb.debian.org/debian/pool/main/l/lua5.4/lua5.4_5.4.7-1+b2_amd64.deb",
+    "version": "5.4.7-1+b2",
+    "architecture": "amd64",
+    "bytes": 130752,
+    "sha256": "da5947f8274bdcd0dd6d1aaf6d780bc7537827455d456d07dc9c14daf702f1df",
+    "authenticatedPackageEntry": "Package: lua5.4\nSource: lua5.4 (5.4.7-1)\nVersion: 5.4.7-1+b2\nInstalled-Size: 476\nMaintainer: Debian Lua Team <pkg-lua-devel@lists.alioth.debian.org>\nArchitecture: amd64\nProvides: lua\nDepends: libc6 (>= 2.38), libreadline8t64 (>= 6.0)\nDescription: Simple, extensible, embeddable programming language\nMulti-Arch: foreign\nHomepage: http://www.lua.org\nDescription-md5: 130003bb49100d21ad1dd4ef09dee02f\nSection: interpreters\nPriority: optional\nFilename: pool/main/l/lua5.4/lua5.4_5.4.7-1+b2_amd64.deb\nSize: 130752\nMD5sum: 015fce554a33c7ec0552c800bc6204ab\nSHA256: da5947f8274bdcd0dd6d1aaf6d780bc7537827455d456d07dc9c14daf702f1df"
+  },
+  "authentication": {
+    "method": "FreshAPT_CONFIGprivatecache apt-get update -qq exit0/signed-by Debianarchivekeyring;SHA256chain InRelease\u2192Packages\u2192package independentlychecked;freshHTTPSbodymatchespinnedhash. Standalonegpgv unavailable;APT performs signatureverification.",
+    "inReleaseURL": "https://deb.debian.org/debian/dists/trixie/InRelease",
+    "inReleaseBytes": 140421,
+    "inReleaseSHA256": "0584fba32e13e0ab8285fb16c27adea1ec03a73669c18702821094fd6ca86675",
+    "packagesSHA256": "4f2c68d67001d595fbd343f6dbad44468953a51c4d9dec3a4803249f6e295940"
+  },
+  "smoke": {
+    "exactWorkflowBlockSyntaxExitCode": 0,
+    "exactWorkflowBlockRunExitCode": 0,
+    "stdout": "/tmp/getgear-research/ci-tool-smoke/getgear-lua5.4.deb: OK\nLua 5.4.7  Copyright (C) 1994-2024 Lua.org, PUC-Rio\nLua 5.4.7  Copyright (C) 1994-2024 Lua.org, PUC-Rio\n",
+    "pathWritten": "/tmp/getgear-research/ci-tool-smoke/getgear-lua5.4/usr/bin\n",
+    "scope": "OnlyprebuiltLua/luac extractedunderRUNNER_TEMP;no sudo/systemAPTchanges/no addonartifact;no validation gates removed."
+  },
+  "failedCI": {
+    "runID": 43060773179,
+    "attempts": [
+      {
+        "attempt": 1,
+        "jobID": 130662420190
+      },
+      {
+        "attempt": 2,
+        "jobID": 130666113524
+      }
+    ],
+    "result": "InstallLuaDNSfailure/reconcile-and-tests-skipped"
+  }
+}

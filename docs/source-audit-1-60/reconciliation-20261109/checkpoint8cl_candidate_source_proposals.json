@@ -1,0 +1,3973 @@
+{
+  "scope": "Future-development proposals in the existing shared model;requiresFullLootJoin is the actual source guard. No active gear adoption or working candidate-only map coverage. Dungeon-region context reuses existing instance names/entrance fallback,not new guessed definitions or points.",
+  "navigationCounts": {
+    "broad_random_or_group_no_direct_marker;candidate_not_active": 23,
+    "qualified_named_descriptor_written_only;candidate_not_active": 3,
+    "published_named_region;candidate_not_active": 40,
+    "qualified_published_dungeon_region_entrance;candidate_not_active": 4
+  },
+  "candidates": {
+    "809": {
+      "itemID": 809,
+      "name": "Bloodrazor",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 809,
+        "name": "Bloodrazor",
+        "inventoryType": 21,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 45,
+        "renderedEquipLevel": 45,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "MAGE",
+          "WARLOCK",
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=809",
+      "sourceSHA256": "60f5c9c74bd1217cd83b2673f42ab9d48074545b122cadab7cac0a7b9a77fb15",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "833": {
+      "itemID": 833,
+      "name": "Lifestone",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 833,
+        "name": "Lifestone",
+        "inventoryType": 12,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 51,
+        "renderedEquipLevel": 51,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=833",
+      "sourceSHA256": "5ca63e62d81395c7b20a42f07d7fd8c2738ffafe80622722b82f68a34cf8dde2",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "942": {
+      "itemID": 942,
+      "name": "Freezing Band",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 942,
+        "name": "Freezing Band",
+        "inventoryType": 11,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": 47,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:8905",
+          "name": "Warbringer Construct",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 1584,
+              "name": "Blackrock Depths",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "qualified_named_descriptor_written_only;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified",
+        "literal_primary_descriptor_not_exclusive_or_dedicated_farm",
+        "broader_historical_sources_retained_no_focused_marker"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=942",
+      "sourceSHA256": "8609a11b8d415660f3be1ea755e598fb223d72a09972946f9d430649c297164a",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "1315": {
+      "itemID": 1315,
+      "name": "Lei of Lilies",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 1315,
+        "name": "Lei of Lilies",
+        "inventoryType": 2,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 46,
+        "renderedEquipLevel": 46,
+        "primaryVersion": "unchanged",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=1315",
+      "sourceSHA256": "6d485419b6b9def3f8c16575cfa215a24b35517b0debd65c5e7ed9179a81aec6",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "1979": {
+      "itemID": 1979,
+      "name": "Wall of the Dead",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 1979,
+        "name": "Wall of the Dead",
+        "inventoryType": 14,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 45,
+        "renderedEquipLevel": 45,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=1979",
+      "sourceSHA256": "111a365052d6d05f2504e8d0010ae1ac2f8ae7f87722722d1909a1ace3e30494",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "2163": {
+      "itemID": 2163,
+      "name": "Shadowblade",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 2163,
+        "name": "Shadowblade",
+        "inventoryType": 13,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=2163",
+      "sourceSHA256": "79122ef38b5e7944275601b8d01761455a1b11da9f06d770822c883108681a3f",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "2824": {
+      "itemID": 2824,
+      "name": "Hurricane",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 2824,
+        "name": "Hurricane",
+        "inventoryType": 15,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=2824",
+      "sourceSHA256": "26ff44df441568c234bc3985b17cc834e89b1c915c5bc7b893e4f7d56fe48c04",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "2915": {
+      "itemID": 2915,
+      "name": "Taran Icebreaker",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 2915,
+        "name": "Taran Icebreaker",
+        "inventoryType": 17,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": 47,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "DRUID",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=2915",
+      "sourceSHA256": "6f37317c516dd08e4ed5500699de143a489ed993535eccac88188f38646582a7",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "3075": {
+      "itemID": 3075,
+      "name": "Eye of Flame",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 3075,
+        "name": "Eye of Flame",
+        "inventoryType": 1,
+        "quality": 4,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=3075",
+      "sourceSHA256": "2887bcff796c409f9931894f96927ec77fd065de0720bb237a3ba0992f50ad6b",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "4771": {
+      "itemID": 4771,
+      "name": "Harvest Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 4771,
+        "name": "Harvest Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 12,
+        "renderedEquipLevel": 12,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:3270",
+          "name": "Elder Mystic Razorsnout",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 5,
+              "bounds": {
+                "xMin": 58.3,
+                "xMax": 58.9,
+                "yMin": 24.3,
+                "yMax": 26.8
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=4771",
+      "sourceSHA256": "b73907c885b8dc0331eaf6ca1fcd42c55046fb942453670f3284d459f055ad01",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "5111": {
+      "itemID": 5111,
+      "name": "Rathorian's Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 5111,
+        "name": "Rathorian's Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 12,
+        "renderedEquipLevel": 12,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:3470",
+          "name": "Rathorian",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 2,
+              "bounds": {
+                "xMin": 47.4,
+                "xMax": 47.6,
+                "yMin": 19,
+                "yMax": 19.2
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=5111",
+      "sourceSHA256": "418772f5acf9e84ef5f136c889a8efe52a31657894180be3fadcfbf58d423b47",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "5751": {
+      "itemID": 5751,
+      "name": "Webwing Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 5751,
+        "name": "Webwing Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 22,
+        "renderedEquipLevel": 22,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:4015",
+          "name": "Pridewing Patriarch",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 406,
+              "name": "Stonetalon Mountains",
+              "uiMapID": 1442,
+              "pointCount": 26,
+              "bounds": {
+                "xMin": 44.2,
+                "xMax": 54.6,
+                "yMin": 36.4,
+                "yMax": 46.2
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=5751",
+      "sourceSHA256": "cfa44cc1e165af07bc53024d03c34d0bae6a3636fba4526cf112bf852037b829",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "6179": {
+      "itemID": 6179,
+      "name": "Privateer's Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 6179,
+        "name": "Privateer's Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 16,
+        "renderedEquipLevel": 16,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:520",
+          "name": "Brack",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 40,
+              "name": "Westfall",
+              "uiMapID": 1436,
+              "pointCount": 272,
+              "bounds": {
+                "xMin": 25.2,
+                "xMax": 58,
+                "yMin": 8.4,
+                "yMax": 86.2
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=6179",
+      "sourceSHA256": "2e9332fe140f6c6f2ae44d7ce343c94e6a4a92a58cd7f091179608ddb68b630b",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "9478": {
+      "itemID": 9478,
+      "name": "Ripsaw",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 9478,
+        "name": "Ripsaw",
+        "inventoryType": 21,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 45,
+        "renderedEquipLevel": 45,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:7267",
+          "name": "Chief Ukorz Sandscalp",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 1176,
+              "name": "Zul'Farrak",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=9478",
+      "sourceSHA256": "44cd875d38d492fbf611f2e2e9c24b8088db9e51f1de431a920dc4050eab9206",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "9479": {
+      "itemID": 9479,
+      "name": "Embrace of the Lycan",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 9479,
+        "name": "Embrace of the Lycan",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 44,
+        "renderedEquipLevel": 44,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:7267",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 1176,
+              "name": "Zul'Farrak",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Zul'Farrak source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 1176,
+          "publishedNPCRegionNames": [
+            "Zul'Farrak"
+          ],
+          "primaryDescriptor": {
+            "bd": 1,
+            "dd": -1,
+            "z": 1176
+          },
+          "fullZoneRawStatus": "not-requested-existing-context-only",
+          "scope": "Literal source area ID is not UI map ID,dungeon type or precise coordinate. Existing independently reviewed instance definitions may be reused."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=9479",
+      "sourceSHA256": "9c16657f9b38ab6229876faf872afcdad5a8f8f8626a35f721ee584b05f4aa5a",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "9641": {
+      "itemID": 9641,
+      "name": "Lifeblood Amulet",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 9641,
+        "name": "Lifeblood Amulet",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 45,
+        "renderedEquipLevel": 45,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:8127",
+          "name": "Antu'sul",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 1176,
+              "name": "Zul'Farrak",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=9641",
+      "sourceSHA256": "f0f7e79e722eaeaad026b0f73a87c9ad6a69a08969397e130c810dd4d4ad43ef",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "10581": {
+      "itemID": 10581,
+      "name": "Death's Head Vestment",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 10581,
+        "name": "Death's Head Vestment",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 35,
+        "renderedEquipLevel": 35,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:7337",
+          "requiresFullLootJoin": true,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 722,
+              "name": "Razorfen Downs",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Razorfen Downs source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:8567",
+          "requiresFullLootJoin": true,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 722,
+              "name": "Razorfen Downs",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Razorfen Downs source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 722,
+          "publishedNPCRegionNames": [
+            "Razorfen Downs"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 722
+          },
+          "fullZoneRawStatus": "not-requested-existing-context-only",
+          "scope": "Literal source area ID is not UI map ID,dungeon type or precise coordinate. Existing independently reviewed instance definitions may be reused."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=10581",
+      "sourceSHA256": "286f6ae3cd02f8878eec20f3ea944b381df367e949320284b4c102ee41b3a34c",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "10760": {
+      "itemID": 10760,
+      "name": "Swine Fists",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 10760,
+        "name": "Swine Fists",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 37,
+        "renderedEquipLevel": 37,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:7356",
+          "name": "Plaguemaw the Rotting",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 722,
+              "name": "Razorfen Downs",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=10760",
+      "sourceSHA256": "37f72228080369e6c8106fd69792d540bae2e83c6b58a52c3e3e0b7e1f0af51a",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "10766": {
+      "itemID": 10766,
+      "name": "Plaguerot Sprig",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 10766,
+        "name": "Plaguerot Sprig",
+        "inventoryType": 15,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 37,
+        "renderedEquipLevel": 37,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:7356",
+          "name": "Plaguemaw the Rotting",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 722,
+              "name": "Razorfen Downs",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=10766",
+      "sourceSHA256": "966e21a881d92c877c77727bd9bf7e765aef49ece5a73d3340fcff151d5ab5e3",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14123": {
+      "itemID": 14123,
+      "name": "Ritual Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14123,
+        "name": "Ritual Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 12,
+        "renderedEquipLevel": 12,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14123",
+      "sourceSHA256": "1a90952d41b2469d8fb3e8001741a0e877f8ffeb6980bf5af68bb4cfbfd04c52",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14149": {
+      "itemID": 14149,
+      "name": "Subterranean Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14149,
+        "name": "Subterranean Cape",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 13,
+        "renderedEquipLevel": 13,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11520",
+          "name": "Taragaman the Hungerer",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2437,
+              "name": "Ragefire Chasm",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14149",
+      "sourceSHA256": "501ddc8a397871a6539a1351e9bbb2349011376975587ca2f2db57017cf12472",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14292": {
+      "itemID": 14292,
+      "name": "Arachnidian Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14292,
+        "name": "Arachnidian Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 44,
+        "renderedEquipLevel": 44,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14292",
+      "sourceSHA256": "6eef1ba046d40c203daf7049ab26750334bd3f454efc565b89545ec3db20f220",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14300": {
+      "itemID": 14300,
+      "name": "Bonecaster's Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14300,
+        "name": "Bonecaster's Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": 47,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14300",
+      "sourceSHA256": "a6e017e9783552403b10bd1a0b705f60765715a3e2fb67303e1a69096505ed94",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14313": {
+      "itemID": 14313,
+      "name": "Celestial Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14313,
+        "name": "Celestial Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14313",
+      "sourceSHA256": "c3afe8687bb75cddd0b9d38ab2327ab00c646aa9f7b69bfe04c296a844a06d54",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14365": {
+      "itemID": 14365,
+      "name": "Mystic's Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14365,
+        "name": "Mystic's Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 10,
+        "renderedEquipLevel": 10,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14365",
+      "sourceSHA256": "cc514d1f194a8ee0729953e6b520d4b4b1483bc2617bcd852832a445800161cd",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14450": {
+      "itemID": 14450,
+      "name": "Highborne Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14450,
+        "name": "Highborne Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 46,
+        "renderedEquipLevel": 46,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:6201",
+          "name": "Legashi Rogue",
+          "requiresFullLootJoin": true,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16,
+              "name": "Azshara",
+              "uiMapID": 1447,
+              "pointCount": 44,
+              "bounds": {
+                "xMin": 50.2,
+                "xMax": 68.6,
+                "yMin": 15.4,
+                "yMax": 26.8
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "qualified_named_descriptor_written_only;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified",
+        "literal_primary_descriptor_not_exclusive_or_dedicated_farm",
+        "broader_historical_sources_retained_no_focused_marker"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14450",
+      "sourceSHA256": "a51ba6accdf9967dbdf5da2eb2f08124f182b47938a0243d24762495049f3d7d",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14673": {
+      "itemID": 14673,
+      "name": "Pridelord Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14673,
+        "name": "Pridelord Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": 47,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:255364",
+          "name": "Renegade Conjurer",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "qualified_named_descriptor_written_only;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified",
+        "literal_primary_descriptor_not_exclusive_or_dedicated_farm",
+        "broader_historical_sources_retained_no_focused_marker"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14673",
+      "sourceSHA256": "43198c976fe15ab284bfba9c2279c0552af7cc5cbf3b23993bb72dabedf8964f",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14724": {
+      "itemID": 14724,
+      "name": "War Paint Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14724,
+        "name": "War Paint Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 11,
+        "renderedEquipLevel": 11,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14724",
+      "sourceSHA256": "0e7e2866b63c3804a25f68976463e5567e86e60f29a020a63dc801877feae5a3",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "14801": {
+      "itemID": 14801,
+      "name": "Bloodlust Cape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 14801,
+        "name": "Bloodlust Cape",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": 47,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=14801",
+      "sourceSHA256": "c870097fc66d6ed7d86654ddc0d83990130f179dcd8036ff2d9a5cd7f2f7b65d",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "15183": {
+      "itemID": 15183,
+      "name": "Praetorian Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15183,
+        "name": "Praetorian Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 45,
+        "renderedEquipLevel": 45,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15183",
+      "sourceSHA256": "645865bd81902ccb1242e68846a9f7b885b3879b7ec8647da46469ff46c6a3d2",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "15309": {
+      "itemID": 15309,
+      "name": "Feral Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15309,
+        "name": "Feral Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 10,
+        "renderedEquipLevel": 10,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15309",
+      "sourceSHA256": "63b7fb445a0ec166045da99577cdf9044effb5f8fdd5117823f5c6a1b483776e",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "15427": {
+      "itemID": 15427,
+      "name": "Peerless Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15427,
+        "name": "Peerless Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15427",
+      "sourceSHA256": "419ab83022850543aa37db1b26aa9d240968240115f722eaabdf3d52bcf7f3c4",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "15501": {
+      "itemID": 15501,
+      "name": "Outrunner's Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15501,
+        "name": "Outrunner's Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 12,
+        "renderedEquipLevel": 12,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15501",
+      "sourceSHA256": "b3c6c3ede8ccb23eda7b7f5948dbec0069d34e575e9a626b81052502f034564b",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "15652": {
+      "itemID": 15652,
+      "name": "Merciless Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15652,
+        "name": "Merciless Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 46,
+        "renderedEquipLevel": 46,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15652",
+      "sourceSHA256": "b9540c838c0aa50d2199f1fa42e3c50e079a4a49eb0e7be89864180ebd2e259d",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "15661": {
+      "itemID": 15661,
+      "name": "Impenetrable Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 15661,
+        "name": "Impenetrable Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "unchanged",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=15661",
+      "sourceSHA256": "2ec35a76c856fb4a70ce8fb1444313b87f41dfd02c17a3a426ecf3895cb3823e",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17734": {
+      "itemID": 17734,
+      "name": "Helm of the Mountain",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17734,
+        "name": "Helm of the Mountain",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12203",
+          "name": "Landslide",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17734",
+      "sourceSHA256": "e9d5e93fce00f8ef0c5a583cfce32fcb8806fd9e60dd67cbdebd53657be51448",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17736": {
+      "itemID": 17736,
+      "name": "Rockgrip Gauntlets",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17736,
+        "name": "Rockgrip Gauntlets",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12203",
+          "name": "Landslide",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17736",
+      "sourceSHA256": "dd5e329f4c834697468f98d1267245a3a702aef0e94edb00422e88af9c8a703e",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17737": {
+      "itemID": 17737,
+      "name": "Cloud Stone",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17737,
+        "name": "Cloud Stone",
+        "inventoryType": 23,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "SHAMAN",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12203",
+          "name": "Landslide",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17737",
+      "sourceSHA256": "a2285ade5123a86ff11a55e433bae7efff02775433e2797c6943c63f7dc3e542",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17739": {
+      "itemID": 17739,
+      "name": "Grovekeeper's Drape",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17739,
+        "name": "Grovekeeper's Drape",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 47,
+        "renderedEquipLevel": 47,
+        "primaryVersion": "updated",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12225",
+          "name": "Celebras the Cursed",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17739",
+      "sourceSHA256": "b9027e1ed0fe260542bc8f8590abc0239e1c15acbfc35e4b0819de9417f453bc",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17744": {
+      "itemID": 17744,
+      "name": "Heart of Noxxion",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17744,
+        "name": "Heart of Noxxion",
+        "inventoryType": 12,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 46,
+        "renderedEquipLevel": 46,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:13282",
+          "name": "Noxxion",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17744",
+      "sourceSHA256": "c820b40fab6a998673d45b549c6b47fcfc333998141aafd359289c6886d861bd",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17746": {
+      "itemID": 17746,
+      "name": "Noxxion's Shackles",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17746,
+        "name": "Noxxion's Shackles",
+        "inventoryType": 9,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 46,
+        "renderedEquipLevel": 46,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:13282",
+          "name": "Noxxion",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17746",
+      "sourceSHA256": "c9ff12dcbb3f486b7aa17b112751d707828278df8941ea9756197591c1757cff",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17749": {
+      "itemID": 17749,
+      "name": "Phytoskin Spaulders",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17749,
+        "name": "Phytoskin Spaulders",
+        "inventoryType": 3,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 46,
+        "renderedEquipLevel": 46,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12258",
+          "name": "Razorlash",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17749",
+      "sourceSHA256": "5a82d44ac9da4bc5d83f8cbba1179c557fc0a8904c922098f74a6bdd90c3d3d8",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17750": {
+      "itemID": 17750,
+      "name": "Chloromesh Girdle",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17750,
+        "name": "Chloromesh Girdle",
+        "inventoryType": 6,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 46,
+        "renderedEquipLevel": 46,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12258",
+          "name": "Razorlash",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17750",
+      "sourceSHA256": "68f841640ee5152c4976b6a755de4955bbf229540e2e18ad717285ab8e210a4e",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "17751": {
+      "itemID": 17751,
+      "name": "Brusslehide Leggings",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 17751,
+        "name": "Brusslehide Leggings",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 46,
+        "renderedEquipLevel": 46,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:12258",
+          "name": "Razorlash",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2100,
+              "name": "Maraudon",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=17751",
+      "sourceSHA256": "cce8a82c21e4d42ed7372e726cd65adf9fe90dfb76225140e450610603518d27",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18301": {
+      "itemID": 18301,
+      "name": "Lethtendris's Wand",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18301,
+        "name": "Lethtendris's Wand",
+        "inventoryType": 15,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:14327",
+          "name": "Lethtendris",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18301",
+      "sourceSHA256": "c6e307c0d69ae3dfc64cd38bdf4040f51f39acf5fcd9f10160a42e9f13a0d8bb",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18302": {
+      "itemID": 18302,
+      "name": "Band of Vigor",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18302,
+        "name": "Band of Vigor",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:14327",
+          "name": "Lethtendris",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18302",
+      "sourceSHA256": "78b56a5ed4acd4a4452c556d5e4f7538ad9dd9a99d39e06c6e32746641b8f60c",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18306": {
+      "itemID": 18306,
+      "name": "Gloves of Shadowy Mist",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18306,
+        "name": "Gloves of Shadowy Mist",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11490",
+          "name": "Zevrim Thornhoof",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18306",
+      "sourceSHA256": "3e3672e702f795fc7f0a6e686a8a0a58913089193ed45153f01c28466ce6e273",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18309": {
+      "itemID": 18309,
+      "name": "Gloves of Restoration",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18309,
+        "name": "Gloves of Restoration",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11492",
+          "name": "Alzzin the Wildshaper",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18309",
+      "sourceSHA256": "e50d07701d8f7cbae48dd69d5e273e40c7fc5b20c6fad9881c1a2d5948f50cae",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18315": {
+      "itemID": 18315,
+      "name": "Ring of Demonic Potency",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18315,
+        "name": "Ring of Demonic Potency",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11492",
+          "name": "Alzzin the Wildshaper",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18315",
+      "sourceSHA256": "eb08e16dce044579d75a53bd62652ac6dc40fc4a9c5f1df604e34291d43ec7fd",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18317": {
+      "itemID": 18317,
+      "name": "Tempest Talisman",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18317,
+        "name": "Tempest Talisman",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:13280",
+          "name": "Hydrospawn",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18317",
+      "sourceSHA256": "453fd753e6a5612d4a1a1f2fb6205bb5d754f6e8f832fff8e3c802dd9a126ac1",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18318": {
+      "itemID": 18318,
+      "name": "Merciful Greaves",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18318,
+        "name": "Merciful Greaves",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11492",
+          "name": "Alzzin the Wildshaper",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18318",
+      "sourceSHA256": "7aedfa67ddfb87a920208eca0fbf46d07d928c9dc5704f054988dfbf0c59f452",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18323": {
+      "itemID": 18323,
+      "name": "Satyr's Bow",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18323,
+        "name": "Satyr's Bow",
+        "inventoryType": 15,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11490",
+          "name": "Zevrim Thornhoof",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18323",
+      "sourceSHA256": "d27c5fafe5b904f54e56ebc0100b5f9604f8a08db192bb2b64f631f69f20d2c4",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18324": {
+      "itemID": 18324,
+      "name": "Waveslicer",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18324,
+        "name": "Waveslicer",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 53,
+        "renderedEquipLevel": 53,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:13280",
+          "name": "Hydrospawn",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18324",
+      "sourceSHA256": "7a424050d71c283d15c195501180c4a6a678b39164f65b3a6070a2cd2fbaeb15",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18463": {
+      "itemID": 18463,
+      "name": "Ogre Pocket Knife",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18463,
+        "name": "Ogre Pocket Knife",
+        "inventoryType": 13,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "MAGE",
+          "WARLOCK",
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:14323",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Dire Maul source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:14326",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Dire Maul source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:14321",
+          "requiresFullLootJoin": true,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Dire Maul source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 2557,
+          "publishedNPCRegionNames": [
+            "Dire Maul"
+          ],
+          "primaryDescriptor": {
+            "bd": 1,
+            "dd": -1,
+            "z": 2557
+          },
+          "fullZoneRawStatus": "not-requested-existing-context-only",
+          "scope": "Literal source area ID is not UI map ID,dungeon type or precise coordinate. Existing independently reviewed instance definitions may be reused."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18463",
+      "sourceSHA256": "90c796759bf911ca3359ad11acdb7d65c52e79241965e5e0cb6c7e030e821132",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18464": {
+      "itemID": 18464,
+      "name": "Gordok Nose Ring",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18464,
+        "name": "Gordok Nose Ring",
+        "inventoryType": 11,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:14323",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Dire Maul source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:14326",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Dire Maul source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:14321",
+          "requiresFullLootJoin": true,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published Dire Maul source region and exact full NPC loot match. Use an existing native entrance only if the client resolves it. Current loot/access and source exclusivity/floor remain unverified;not a guaranteed or focused common-NPC farm."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 2557,
+          "publishedNPCRegionNames": [
+            "Dire Maul"
+          ],
+          "primaryDescriptor": {
+            "bd": 1,
+            "dd": -1,
+            "z": 2557
+          },
+          "fullZoneRawStatus": "not-requested-existing-context-only",
+          "scope": "Literal source area ID is not UI map ID,dungeon type or precise coordinate. Existing independently reviewed instance definitions may be reused."
+        }
+      ],
+      "navigationStatus": "qualified_published_dungeon_region_entrance;candidate_not_active",
+      "gaps": [
+        "primary_region_and_full_NPC_joins_not_current_drop_proof",
+        "existing_native_instance_context_reused_not_new_definition",
+        "no_precise_boss_floor_or_named_common_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18464",
+      "sourceSHA256": "2964dbbe57e806c9ae2e5a2d9bc061080eb4f1b13c909408bcb274d4da6c879d",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18502": {
+      "itemID": 18502,
+      "name": "Monstrous Glaive",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18502,
+        "name": "Monstrous Glaive",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 57,
+        "renderedEquipLevel": 57,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "HUNTER",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:14325",
+          "name": "Captain Kromcrush",
+          "requiresFullLootJoin": true,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18502",
+      "sourceSHA256": "6d940ef6d78b1f235232533ea395feed59808351593919fcd9967760a4879a55",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "18505": {
+      "itemID": 18505,
+      "name": "Mugger's Belt",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 18505,
+        "name": "Mugger's Belt",
+        "inventoryType": 6,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 57,
+        "renderedEquipLevel": 57,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:14325",
+          "name": "Captain Kromcrush",
+          "requiresFullLootJoin": true,
+          "verification": "legacy-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 2557,
+              "name": "Dire Maul",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=18505",
+      "sourceSHA256": "072adcaf7ce6ec48dc96fb810579635702cfea84f096fb9de95fbdbd17096eeb",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "273005": {
+      "itemID": 273005,
+      "name": "Satyrskin Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 273005,
+        "name": "Satyrskin Cloak",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 13,
+        "renderedEquipLevel": 13,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11519",
+          "name": "Bazzalan",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 2437,
+              "name": "Ragefire Chasm",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=273005",
+      "sourceSHA256": "9fcd2740d0b268781d76dce1a2ad2171e71c21dec4dc401f7e8af377e09b05a4",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "273084": {
+      "itemID": 273084,
+      "name": "Cloak of Hermitic Bliss",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 273084,
+        "name": "Cloak of Hermitic Bliss",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 17,
+        "renderedEquipLevel": 17,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:3653",
+          "name": "Kresh",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 718,
+              "name": "Wailing Caverns",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=273084",
+      "sourceSHA256": "63a2637baa20adfb47d88f6f61785605554fb1835e75125a578b7a24a831d96f",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "274660": {
+      "itemID": 274660,
+      "name": "Sandarr's Shoulders",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 274660,
+        "name": "Sandarr's Shoulders",
+        "inventoryType": 3,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:10080",
+          "name": "Sandarr Dunereaver",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 1176,
+              "name": "Zul'Farrak",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=274660",
+      "sourceSHA256": "35bef4454ffaf7458242c7c41e44e07d0c4f415786da97eda83ada63131c83be",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "277556": {
+      "itemID": 277556,
+      "name": "Razza's Heart",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 277556,
+        "name": "Razza's Heart",
+        "inventoryType": 12,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11497",
+          "name": "The Razza",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 357,
+              "name": "Feralas",
+              "uiMapID": 1444,
+              "pointCount": 2,
+              "bounds": {
+                "xMin": 62.4,
+                "xMax": 62.6,
+                "yMin": 30,
+                "yMax": 30
+              }
+            }
+          ],
+          "instructions": "Outdoor Maul arena in Feralas; published NPC footprint,not an in-instance boss floor. Obtain this trinket from the named source first. Its optional Brawl at the Maul quest asks for Griniblix above the Maul;not a prerequisite/reward or guaranteed free provided item. Item retention and current access/drop unverified."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified",
+        "optional_item_started_quest_not_prerequisite_or_trinket_reward",
+        "provided_item_label_not_free_sustainable_supply",
+        "quest_recipient_formal_ID_location_and_item_retention_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=277556",
+      "sourceSHA256": "08e17ccbbdaa79a3bdec0b08cc0f5699e359928e6e989836e0a849bc4d5d3c48",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "277557": {
+      "itemID": 277557,
+      "name": "Skarr's Broken Gauntlet",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 277557,
+        "name": "Skarr's Broken Gauntlet",
+        "inventoryType": 12,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11498",
+          "name": "Skarr the Unbreakable",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 357,
+              "name": "Feralas",
+              "uiMapID": 1444,
+              "pointCount": 2,
+              "bounds": {
+                "xMin": 62.4,
+                "xMax": 62.6,
+                "yMin": 30,
+                "yMax": 30
+              }
+            }
+          ],
+          "instructions": "Outdoor Maul arena in Feralas; published NPC footprint,not an in-instance boss floor. Obtain this trinket from the named source first. Its optional Brawl at the Maul quest asks for Griniblix above the Maul;not a prerequisite/reward or guaranteed free provided item. Item retention and current access/drop unverified."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified",
+        "optional_item_started_quest_not_prerequisite_or_trinket_reward",
+        "provided_item_label_not_free_sustainable_supply",
+        "quest_recipient_formal_ID_location_and_item_retention_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=277557",
+      "sourceSHA256": "632cf74ddba8fce13614f385f064c5084d1e8d45027eb4325a9f7f0c3eaa8855",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "281746": {
+      "itemID": 281746,
+      "name": "Kurmokk's Pelt",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 281746,
+        "name": "Kurmokk's Pelt",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 37,
+        "renderedEquipLevel": 37,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:14491",
+          "name": "Kurmokk",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 33,
+              "name": "Stranglethorn Vale",
+              "uiMapID": 1434,
+              "pointCount": 23,
+              "bounds": {
+                "xMin": 30.8,
+                "xMax": 37.8,
+                "yMin": 61.4,
+                "yMax": 70.2
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=281746",
+      "sourceSHA256": "a963e9867248bc36b484133f69de634381db81cc5fa13aaad201721fc7a9d734",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "284187": {
+      "itemID": 284187,
+      "name": "Crazed Firecaller's Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 284187,
+        "name": "Crazed Firecaller's Cloak",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 16,
+        "renderedEquipLevel": 16,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:2192",
+          "name": "Firecaller Radison",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 148,
+              "name": "Darkshore",
+              "uiMapID": 1439,
+              "pointCount": 5,
+              "bounds": {
+                "xMin": 38.4,
+                "xMax": 39,
+                "yMin": 86.2,
+                "yMax": 87.6
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=284187",
+      "sourceSHA256": "03782eee9b515a9879f89730ba4e76e2686925d4605004c09bfe86ecae43cd28",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "285101": {
+      "itemID": 285101,
+      "name": "Rot-Fused Greaves",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 285101,
+        "name": "Rot-Fused Greaves",
+        "inventoryType": 8,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:14235",
+          "name": "The Rot",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 15,
+              "name": "Dustwallow Marsh",
+              "uiMapID": 1445,
+              "pointCount": 39,
+              "bounds": {
+                "xMin": 48.4,
+                "xMax": 55.2,
+                "yMin": 49,
+                "yMax": 60.8
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=285101",
+      "sourceSHA256": "460d84cf77bf26cb21b62dde1b0db0fe95fd16877dc5dcf55ce71198dabbe349",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "285282": {
+      "itemID": 285282,
+      "name": "Jagged Knives",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 285282,
+        "name": "Jagged Knives",
+        "inventoryType": 25,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 13,
+        "renderedEquipLevel": 13,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:3295",
+          "name": "Sludge Beast",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 5,
+              "bounds": {
+                "xMin": 56.4,
+                "xMax": 56.8,
+                "yMin": 7.4,
+                "yMax": 8.5
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:5829",
+          "name": "Snort the Heckler",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 13,
+              "bounds": {
+                "xMin": 40.4,
+                "xMax": 42.1,
+                "yMin": 20.8,
+                "yMax": 28
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:5830",
+          "name": "Sister Rathtalon",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 14,
+              "bounds": {
+                "xMin": 38.4,
+                "xMax": 41,
+                "yMin": 12.6,
+                "yMax": 17
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:5835",
+          "name": "Foreman Grills",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 5,
+              "bounds": {
+                "xMin": 25.8,
+                "xMax": 56.6,
+                "yMin": 8.3,
+                "yMax": 23.8
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:5836",
+          "name": "Engineer Whirleygig",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 3,
+              "bounds": {
+                "xMin": 56.1,
+                "xMax": 56.7,
+                "yMin": 8.3,
+                "yMax": 8.8
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:5838",
+          "name": "Brokespear",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 7,
+              "bounds": {
+                "xMin": 53,
+                "xMax": 57,
+                "yMin": 40,
+                "yMax": 46.4
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:5841",
+          "name": "Rocklance",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 23,
+              "bounds": {
+                "xMin": 53,
+                "xMax": 56.8,
+                "yMin": 38,
+                "yMax": 46.5
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        },
+        {
+          "kind": "named_drop",
+          "source": "npc:5863",
+          "name": "Geopriest Gukk'rok",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 8,
+              "bounds": {
+                "xMin": 41,
+                "xMax": 45,
+                "yMin": 45.2,
+                "yMax": 52
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 17,
+          "publishedNPCRegionNames": [
+            "The Barrens"
+          ],
+          "primaryDescriptor": {
+            "z": 17
+          },
+          "fullZoneRawStatus": "not-requested-existing-context-only",
+          "scope": "Literal source area ID is not UI map ID,dungeon type or precise coordinate. Existing independently reviewed instance definitions may be reused."
+        }
+      ],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified",
+        "alternative_named_rares_not_mandatory_combined_kills",
+        "full_omitted_actor_excluded_no_completeness_claim"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=285282",
+      "sourceSHA256": "d996b45b669c28b972c06d6763aabe2fb4eb401c00db5364788b717b617d2a47",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "285292": {
+      "itemID": 285292,
+      "name": "Dull Sawblade",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 285292,
+        "name": "Dull Sawblade",
+        "inventoryType": 25,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 16,
+        "renderedEquipLevel": 16,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "ROGUE",
+          "HUNTER",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:642",
+          "name": "Sneed's Shredder",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 1581,
+              "name": "The Deadmines",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=285292",
+      "sourceSHA256": "e7f66a8663666866a7534749f28c797a1dc9c6e0e601645e51535e5e03f4a7a0",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "285329": {
+      "itemID": 285329,
+      "name": "Raptor Hide Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 285329,
+        "name": "Raptor Hide Cloak",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 16,
+        "renderedEquipLevel": 16,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:5842",
+          "name": "Takk the Leaper",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": false,
+          "publishedLocations": [
+            {
+              "zoneID": 17,
+              "name": "The Barrens",
+              "uiMapID": 1413,
+              "pointCount": 30,
+              "bounds": {
+                "xMin": 56.8,
+                "xMax": 62.6,
+                "yMin": 5.6,
+                "yMax": 15.6
+              }
+            }
+          ],
+          "instructions": "Exact full own/NPC join and published source identity. Broader or historical loot references remain;current availability,exclusivity/rate/floor unverified. Written-only for broad descriptor or historical sources."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=285329",
+      "sourceSHA256": "f7684a664d8914d90a0d510f1948d6103444476b7a30a875f5f621760f4f22dc",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "286994": {
+      "itemID": 286994,
+      "name": "Tattered Kirin Tor Cloak",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 286994,
+        "name": "Tattered Kirin Tor Cloak",
+        "inventoryType": 16,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 28,
+        "renderedEquipLevel": 28,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 36,
+          "publishedNPCRegionNames": [
+            "Alterac Mountains"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 36
+          },
+          "fullZoneRawStatus": "not-requested-existing-context-only",
+          "scope": "Literal source area ID is not UI map ID,dungeon type or precise coordinate. Existing independently reviewed instance definitions may be reused."
+        }
+      ],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=286994",
+      "sourceSHA256": "62b2479d283c9b6ed58c2bcc533ee92d4ded9e27eeedb8898f6cfc6c467b0466",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    },
+    "287011": {
+      "itemID": 287011,
+      "name": "Guise of Battle",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287011,
+        "name": "Guise of Battle",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [],
+      "primaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "not-requested-existing-context-only",
+          "scope": "Literal source area ID is not UI map ID,dungeon type or precise coordinate. Existing independently reviewed instance definitions may be reused."
+        }
+      ],
+      "navigationStatus": "broad_random_or_group_no_direct_marker;candidate_not_active",
+      "gaps": [
+        "broad_or_sparse_loot_samples_not_dedicated_named_farm",
+        "literal_region_areaID_not_UIMapID",
+        "no_new_full_source_zone_definition"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287011",
+      "sourceSHA256": "a52d7043902c56304cace72c1d6789a051fd839b59447afd2005111a40bcaa0b",
+      "sharedEvidence": "checkpoint8cl_working_evidence.json"
+    }
+  }
+}

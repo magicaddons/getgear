@@ -1,0 +1,900 @@
+{
+  "status": "Shared acquisition research leads,notactivegear/eligibility",
+  "scope": "All actual312 full auxiliary NPC inventories. All70 prior pending cases individually assessed; deduplicate active/assessed/pending leads. Class2/4 quality>=2/source raw minimum<=60 preliminary lead scope only;own printedlevel/version/class/source pending.",
+  "previousPending": 0,
+  "newCount": 10,
+  "newBackLeads": 0,
+  "totalPending": 10,
+  "counts": {
+    "non_equipment_or_low_quality_rows": 18863,
+    "active_equipment_rows": 19815,
+    "already_assessed_outside_rows": 1791,
+    "new_all_slot_reference_rows": 10
+  },
+  "leads": [
+    {
+      "itemID": 11755,
+      "name": "Verek's Collar",
+      "quality": 3,
+      "classs": 4,
+      "slot": 2,
+      "rawRequiredLevel": 51,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:9042",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=9042",
+          "sha256": "23413deafcd6592614a10fbb62e28fdc4d56563286153e9a4b5fb72bef46c93d",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Verek's Collar",
+            "flags2": 4,
+            "id": 11755,
+            "level": 56,
+            "name": "Verek's Collar",
+            "quality": 3,
+            "reqlevel": 51,
+            "slot": 2,
+            "slotbak": 2,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Verek",
+                "t": 1,
+                "ti": 9042,
+                "z": 1584
+              }
+            ],
+            "subclass": -3,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Defense Rating 3 added",
+                "Dodge Rating 12 added",
+                "Dodge % 1 removed"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 4,
+                "outof": 14
+              },
+              "0": {
+                "count": 4,
+                "outof": 14
+              }
+            },
+            "count": 4,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 4,
+                    "outof": 14
+                  },
+                  "0": {
+                    "count": 4,
+                    "outof": 14
+                  }
+                }
+              }
+            },
+            "outof": 14
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 17707,
+      "name": "Gemshard Heart",
+      "quality": 3,
+      "classs": 4,
+      "slot": 2,
+      "rawRequiredLevel": 49,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:12201",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=12201",
+          "sha256": "1905633f48dc5507668e23292b3e50aa80554c416386dbde36a2b4c6eefb4959",
+          "publishedRow": {
+            "armor": 0,
+            "classs": 4,
+            "displayName": "Gemshard Heart",
+            "flags2": 4,
+            "id": 17707,
+            "level": 54,
+            "name": "Gemshard Heart",
+            "quality": 3,
+            "reqlevel": 49,
+            "slot": 2,
+            "slotbak": 2,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Princess Theradras",
+                "t": 1,
+                "ti": 12201,
+                "z": 2100
+              }
+            ],
+            "subclass": -3,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Intellect 9 instead of 10",
+                "Spell Power 5 added",
+                "Healing 10 added",
+                "Spirit 6 removed"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 15,
+                "outof": 58
+              },
+              "0": {
+                "count": 15,
+                "outof": 58
+              }
+            },
+            "count": 15,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 15,
+                    "outof": 58
+                  },
+                  "0": {
+                    "count": 15,
+                    "outof": 58
+                  }
+                }
+              }
+            },
+            "outof": 58
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 17711,
+      "name": "Elemental Rockridge Leggings",
+      "quality": 3,
+      "classs": 4,
+      "slot": 7,
+      "rawRequiredLevel": 49,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:12201",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=12201",
+          "sha256": "1905633f48dc5507668e23292b3e50aa80554c416386dbde36a2b4c6eefb4959",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                12817,
+                "inv_pants_01"
+              ]
+            },
+            "armor": 496,
+            "classs": 4,
+            "displayName": "Elemental Rockridge Leggings",
+            "displayid": 12817,
+            "flags2": 4,
+            "id": 17711,
+            "level": 54,
+            "name": "Elemental Rockridge Leggings",
+            "quality": 3,
+            "reqlevel": 49,
+            "slot": 7,
+            "slotbak": 7,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Princess Theradras",
+                "t": 1,
+                "ti": 12201,
+                "z": 2100
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Stamina 16 instead of 18"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 12,
+                "outof": 58
+              },
+              "0": {
+                "count": 12,
+                "outof": 58
+              }
+            },
+            "count": 12,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 12,
+                    "outof": 58
+                  },
+                  "0": {
+                    "count": 12,
+                    "outof": 58
+                  }
+                }
+              }
+            },
+            "outof": 58
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 17718,
+      "name": "Gizlock's Hypertech Buckler",
+      "quality": 3,
+      "classs": 4,
+      "slot": 14,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:13601",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=13601",
+          "sha256": "d2bfd981ebc3f121f1c46502204a80872a7297d07aedcfd8f263e0ecaa3de4c2",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                20986,
+                "inv_shield_08"
+              ]
+            },
+            "armor": 1835,
+            "classs": 4,
+            "displayName": "Gizlock's Hypertech Buckler",
+            "displayid": 20986,
+            "flags2": 4,
+            "id": 17718,
+            "level": 53,
+            "name": "Gizlock's Hypertech Buckler",
+            "quality": 3,
+            "reqlevel": 48,
+            "slot": 14,
+            "slotbak": 14,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "bd": 1,
+                "dd": -1,
+                "n": "Tinkerer Gizlock",
+                "t": 1,
+                "ti": 13601,
+                "z": 2100
+              }
+            ],
+            "subclass": 6,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "stats_changed"
+              ],
+              "lines": [
+                "Spell Power 5 added",
+                "Healing 8 added",
+                "Stamina 5 removed"
+              ],
+              "notShown": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 17,
+                "outof": 61
+              },
+              "0": {
+                "count": 17,
+                "outof": 61
+              }
+            },
+            "count": 17,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 17,
+                    "outof": 61
+                  },
+                  "0": {
+                    "count": 17,
+                    "outof": 61
+                  }
+                }
+              }
+            },
+            "outof": 61
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 287009,
+      "name": "Twilight Enforcer's Legs",
+      "quality": 3,
+      "classs": 4,
+      "slot": 7,
+      "rawRequiredLevel": 39,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:258038",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=258038",
+          "sha256": "35fc21af68da9986b7438128799420fe2c31712eae2d4d778479eb867cd2f977",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                23707,
+                ""
+              ]
+            },
+            "armor": 115,
+            "classs": 4,
+            "displayName": "Twilight Enforcer's Legs",
+            "displayid": 23707,
+            "id": 287009,
+            "level": 44,
+            "name": "Twilight Enforcer's Legs",
+            "quality": 3,
+            "reqlevel": 39,
+            "slot": 7,
+            "slotbak": 7,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "z": 16842
+              }
+            ],
+            "subclass": 2,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 2,
+                "outof": 276
+              },
+              "0": {
+                "count": 2,
+                "outof": 276
+              }
+            },
+            "count": 2,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 276
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 276
+                  }
+                }
+              }
+            },
+            "outof": 276
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 287012,
+      "name": "Krol'dok Warplate Gauntlets",
+      "quality": 3,
+      "classs": 4,
+      "slot": 10,
+      "rawRequiredLevel": 40,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:258038",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=258038",
+          "sha256": "35fc21af68da9986b7438128799420fe2c31712eae2d4d778479eb867cd2f977",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                755306,
+                ""
+              ]
+            },
+            "armor": 300,
+            "classs": 4,
+            "displayName": "Krol'dok Warplate Gauntlets",
+            "displayid": 755306,
+            "id": 287012,
+            "level": 45,
+            "name": "Krol'dok Warplate Gauntlets",
+            "quality": 3,
+            "reqlevel": 40,
+            "slot": 10,
+            "slotbak": 10,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "z": 16842
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 1,
+                "outof": 276
+              },
+              "0": {
+                "count": 1,
+                "outof": 276
+              }
+            },
+            "count": 1,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 1,
+                    "outof": 276
+                  },
+                  "0": {
+                    "count": 1,
+                    "outof": 276
+                  }
+                }
+              }
+            },
+            "outof": 276
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 287013,
+      "name": "Krol'dok Warplate Legplates",
+      "quality": 3,
+      "classs": 4,
+      "slot": 7,
+      "rawRequiredLevel": 41,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:258038",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=258038",
+          "sha256": "35fc21af68da9986b7438128799420fe2c31712eae2d4d778479eb867cd2f977",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                755307,
+                ""
+              ]
+            },
+            "armor": 429,
+            "classs": 4,
+            "displayName": "Krol'dok Warplate Legplates",
+            "displayid": 755307,
+            "id": 287013,
+            "level": 46,
+            "name": "Krol'dok Warplate Legplates",
+            "quality": 3,
+            "reqlevel": 41,
+            "slot": 7,
+            "slotbak": 7,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "z": 16842
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 4,
+                "outof": 276
+              },
+              "0": {
+                "count": 4,
+                "outof": 276
+              }
+            },
+            "count": 4,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 4,
+                    "outof": 276
+                  },
+                  "0": {
+                    "count": 4,
+                    "outof": 276
+                  }
+                }
+              }
+            },
+            "outof": 276
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 287014,
+      "name": "Krol'dok Warplate Pauldrons",
+      "quality": 3,
+      "classs": 4,
+      "slot": 3,
+      "rawRequiredLevel": 41,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:258038",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=258038",
+          "sha256": "35fc21af68da9986b7438128799420fe2c31712eae2d4d778479eb867cd2f977",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                25546,
+                "inv_shoulder_16"
+              ]
+            },
+            "armor": 368,
+            "armorbonus": 50,
+            "classs": 4,
+            "displayName": "Krol'dok Warplate Pauldrons",
+            "displayid": 25546,
+            "id": 287014,
+            "level": 46,
+            "name": "Krol'dok Warplate Pauldrons",
+            "quality": 3,
+            "reqlevel": 41,
+            "slot": 3,
+            "slotbak": 3,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "z": 16842
+              }
+            ],
+            "subclass": 4,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 5,
+                "outof": 276
+              },
+              "0": {
+                "count": 5,
+                "outof": 276
+              }
+            },
+            "count": 5,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 5,
+                    "outof": 276
+                  },
+                  "0": {
+                    "count": 5,
+                    "outof": 276
+                  }
+                }
+              }
+            },
+            "outof": 276
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 287020,
+      "name": "Defias Enforcer's Chest",
+      "quality": 3,
+      "classs": 4,
+      "slot": 5,
+      "rawRequiredLevel": 49,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:255377",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=255377",
+          "sha256": "e0eb0f2802690e156d611d079fefd059d2f4f9a212a004aaa1e3d2d462d04700",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                744839,
+                ""
+              ]
+            },
+            "armor": 156,
+            "classs": 4,
+            "displayName": "Defias Enforcer's Chest",
+            "displayid": 744839,
+            "id": 287020,
+            "level": 54,
+            "name": "Defias Enforcer's Chest",
+            "quality": 3,
+            "reqlevel": 49,
+            "slot": 5,
+            "slotbak": 5,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "z": 16620
+              }
+            ],
+            "subclass": 2,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 2,
+                "outof": 146
+              },
+              "0": {
+                "count": 2,
+                "outof": 146
+              }
+            },
+            "count": 2,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 146
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 146
+                  }
+                }
+              }
+            },
+            "outof": 146
+          }
+        }
+      ]
+    },
+    {
+      "itemID": 287021,
+      "name": "Defias Enforcer's Prowlers",
+      "quality": 3,
+      "classs": 4,
+      "slot": 8,
+      "rawRequiredLevel": 48,
+      "status": "untriaged_own_primary_eligibility_source_version_review",
+      "sourceReferences": [
+        {
+          "source": "npc:255377",
+          "relation": "drops",
+          "url": "https://www.wowhead.com/forever/npc=255377",
+          "sha256": "e0eb0f2802690e156d611d079fefd059d2f4f9a212a004aaa1e3d2d462d04700",
+          "publishedRow": {
+            "appearances": {
+              "0": [
+                744845,
+                ""
+              ]
+            },
+            "armor": 105,
+            "classs": 4,
+            "displayName": "Defias Enforcer's Prowlers",
+            "displayid": 744845,
+            "id": 287021,
+            "level": 53,
+            "name": "Defias Enforcer's Prowlers",
+            "quality": 3,
+            "reqlevel": 48,
+            "slot": 8,
+            "slotbak": 8,
+            "source": [
+              2
+            ],
+            "sourcemore": [
+              {
+                "dd": -1,
+                "z": 16620
+              }
+            ],
+            "subclass": 2,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "modes": {
+              "mode": [
+                1
+              ],
+              "1": {
+                "count": 2,
+                "outof": 146
+              },
+              "0": {
+                "count": 2,
+                "outof": 146
+              }
+            },
+            "count": 2,
+            "stack": [
+              1,
+              1
+            ],
+            "specificDrop": true,
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 146
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 146
+                  }
+                }
+              }
+            },
+            "outof": 146
+          }
+        }
+      ]
+    }
+  ]
+}

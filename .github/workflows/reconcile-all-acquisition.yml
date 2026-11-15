@@ -1,0 +1,153 @@
+name: Comprehensive 1-60 acquisition reconciliation (no release)
+on:
+  push:
+    branches: [work/full-acquisition-reconciliation-20261109]
+    paths:
+      - .github/workflows/reconcile-all-acquisition.yml
+      - tools/reconcile_acquisition_1_60.py
+      - tools/capture_acquisition_audit.py
+      - docs/source-audit-1-60/reconciliation-20261109/reviewed_recipe_sources.json
+      - docs/source-audit-1-60/reconciliation-20261109/reviewed_equipment_sources.json
+      - docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts.json
+      - AcquisitionNavigation.lua
+      - AcquisitionNavigationData.lua
+      - MapNavigation.lua
+      - tools/build_acquisition_navigation.py
+      - tools/export_navigation_inputs.lua
+      - tests/acquisition-navigation.lua
+      - tests/acquisition-map-readiness.lua
+      - tests/acquisition-presentation.lua
+      - AcquisitionSummary.lua
+      - tests/full-toc-startup.lua
+      - tools/audit_acquisition_buttons.lua
+      - tools/audit_acquisition_presentation.py
+      - tools/export_acquisition_presentation.lua
+      - tools/reconcile_presentation_snapshot.py
+      - docs/source-audit-1-60/reconciliation-20261109/presentation_audit_baseline.json
+      - docs/source-audit-1-60/reconciliation-20261109/presentation_data_snapshot.json
+      - docs/source-audit-1-60/reconciliation-20261109/navigation_instance_entrances.json
+      - tests/navigation-generation.py
+      - docs/source-audit-1-60/reconciliation-20261109/navigation_quest_chains.json
+      - docs/source-audit-1-60/reconciliation-20261109/checkpoint*evidence.json
+      - docs/source-audit-1-60/reconciliation-20261109/checkpoint*references.csv
+      - SourceEnrichment.lua
+      - AcquisitionEvidence.lua
+      - GetGear.toc
+      - tests/beta7-acquisition-reconciled.lua
+      - tests/reconcile-dungeon-link-guards.py
+      - tests/beta7-evidence.lua
+      - GearCompare.lua
+      - GuideEngine.lua
+      - GearRelevance.lua
+      - StatEvidence.lua
+      - GeneratedStatFlags.lua
+      - tools/build_forever_catalog.py
+      - tools/generate_forever_stat_flags.py
+      - tests/class-stat-eligibility.lua
+      - tests/stat-school-generation.py
+      - Core.lua
+      - UI.lua
+      - GuideState.lua
+      - tests/overlay-stat-filter.lua
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: getgear-full-acquisition-audit
+  cancel-in-progress: false
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install pinned Lua validation tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Same prebuilt Lua used for local validation. Extract into the job's
+          # temporary directory; do not depend on Ubuntu mirror index refreshes.
+          lua_deb="$RUNNER_TEMP/getgear-lua5.4.deb"
+          lua_root="$RUNNER_TEMP/getgear-lua5.4"
+          curl --fail --show-error --location --retry 2 --connect-timeout 20 --max-time 90 \
+            'https://deb.debian.org/debian/pool/main/l/lua5.4/lua5.4_5.4.7-1+b2_amd64.deb' \
+            --output "$lua_deb"
+          printf '%s  %s\n' 'da5947f8274bdcd0dd6d1aaf6d780bc7537827455d456d07dc9c14daf702f1df' "$lua_deb" | sha256sum --check -
+          dpkg-deb --extract "$lua_deb" "$lua_root"
+          echo "$lua_root/usr/bin" >> "$GITHUB_PATH"
+          "$lua_root/usr/bin/lua5.4" -v
+          "$lua_root/usr/bin/luac5.4" -v
+      - name: Reconcile public Forever sources by item ID
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/reconcile_acquisition_1_60.py
+          python3 -m py_compile tools/capture_acquisition_audit.py
+          python3 -m py_compile tools/generate_worlddrop_boe_index.py
+          python3 -m py_compile tools/build_acquisition_navigation.py
+          luac5.4 -p tools/export_navigation_inputs.lua
+          python3 tests/reconcile-dungeon-link-guards.py
+          python3 tests/worlddrop-boe-fallback.py
+          python3 tests/navigation-generation.py
+          python3 tests/stat-school-generation.py
+          python3 tools/reconcile_presentation_snapshot.py --diagnostics "$RUNNER_TEMP/getgear-presentation-source-diagnostic"
+          test -s AcquisitionEvidenceIndex.lua
+          test -s docs/source-audit-1-60/reconciliation-20261109/dungeon_items_reconciled.csv
+          test -s docs/source-audit-1-60/reconciliation-20261109/recipes_reconciled.csv
+          test -s docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts_reconciled.csv
+          cat docs/source-audit-1-60/reconciliation-20261109/README.md
+      - name: Check Lua syntax of complete integrated addon
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in *.lua) test -f "$module"; luac5.4 -p "$module";; esac
+          done < GetGear.toc
+      - name: Full nine-class, filters, sources, crafting, layout and performance regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          lua5.4 tests/beta4-catalogue.lua .
+          lua5.4 tests/beta4-filters.lua .
+          lua5.4 tests/beta4-talents.lua .
+          lua5.4 tests/beta4-performance.lua .
+          lua5.4 tests/beta7-evidence.lua .
+          lua5.4 tests/beta7-material-names.lua .
+          lua5.4 tests/beta7-coverage.lua .
+          lua5.4 tests/beta7-source-visibility.lua .
+          lua5.4 tests/beta7-armor-priority.lua .
+          lua5.4 tests/beta7-preview-layout.lua .
+          lua5.4 tests/beta7-stat-flags.lua .
+          lua5.4 tests/overlay-stat-filter.lua .
+          lua5.4 tests/class-stat-eligibility.lua .
+          lua5.4 tests/overlay-green-boe-filter.lua .
+          lua5.4 tests/beta7-acquisition-reconciled.lua .
+          lua5.4 tests/acquisition-navigation.lua .
+          lua5.4 tests/acquisition-map-readiness.lua .
+          lua5.4 tests/acquisition-presentation.lua .
+          lua5.4 tools/audit_acquisition_buttons.lua .
+          python3 tools/audit_acquisition_presentation.py
+          lua5.4 tests/full-toc-startup.lua .
+      - name: Save source register and audit tables (development branch only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: getgear-acquisition-reconciliation-reports
+          path: |
+            docs/source-audit-1-60/reconciliation-20261109/
+            ${{ runner.temp }}/getgear-presentation-source-diagnostic/
+          retention-days: 60
+      - name: Commit evidence index and reports only after passing validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "GetGear source evidence validator"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add AcquisitionEvidenceIndex.lua AcquisitionNavigationData.lua docs/source-audit-1-60/reconciliation-20261109
+          if ! git diff --cached --quiet; then
+            git commit -m "Reconcile all 7,707 equipment acquisitions with public Forever and player evidence"
+            git push origin "HEAD:work/full-acquisition-reconciliation-20261109"
+          fi
+      - name: Never package or release
+        run: echo "Development source and evidence only. No ZIP, tag, public release, or main modifications."

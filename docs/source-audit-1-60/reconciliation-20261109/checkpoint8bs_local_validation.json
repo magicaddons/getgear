@@ -1,0 +1,230 @@
+{
+  "status": "49integrated/full19localPASS;nonreleaseCI/directbotpending",
+  "registry": 5261,
+  "index": 6732,
+  "display": 6731,
+  "books": 759,
+  "remaining": 641,
+  "next": "8BT56level51numericIDorder",
+  "priorObjectsExact": 5212,
+  "caseCounts": {
+    "selected": 49,
+    "groups": {
+      "broad-worlddrop": 47,
+      "sparse-historic-unresolved": 1,
+      "quest-equipment": 1
+    },
+    "caseFullPages": 222,
+    "caseNewPages": 178,
+    "caseCachedPages": 44,
+    "primaryWithRetainedContext": 437,
+    "newFullPages": 178,
+    "reusedFullPages": 259,
+    "secondaryGuideHTTP": 1,
+    "secondaryGuideCacheReused": true,
+    "exactQueries": 49,
+    "sharedQueries": 4,
+    "dropReverseJoins": 455,
+    "dropReverseOmissions": 225,
+    "objectReverseJoins": 63,
+    "objectReverseOmissions": 14,
+    "physicalContainerReferences": 109,
+    "physicalContainerReverseJoins": 99,
+    "physicalContainerOmissions": 10,
+    "additionalFullOnlyContainerReferences": 2,
+    "qualities": {
+      "3": 5,
+      "2": 44
+    },
+    "BoE": 48,
+    "BoP": 1,
+    "plainUnique": 1,
+    "UniqueEquipped": 0,
+    "newQuestPages": 31,
+    "formalQuestActorJoins": 58,
+    "inputNPCPositive": 18,
+    "inputNPCOmissions": 3,
+    "newOutsideCandidates": 24,
+    "outsideSourceJoins": 25,
+    "newFailures": 0,
+    "liveVerified": 0
+  },
+  "successfulCapture": {
+    "label": "8bs3",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.c41512b4d5.json": {
+        "bytes": 999981,
+        "sha256": "c41512b4d5104cb27e1801651402cdff556769c053e8cd5994a539e07fb163d1",
+        "workspacePath": "/tmp/getgear-research/8bs3-http-capture/c41512b4d5104cb27e1801651402cdff556769c053e8cd5994a539e07fb163d1.body",
+        "capturedUTC": "2026-11-12T02:22:50.253718+00:00"
+      },
+      "https://playfulls.com/db/gear.cd133e9d8c.json": {
+        "bytes": 1359233,
+        "sha256": "cd133e9d8caa56a062a2ee261fb7926eadd0a910824b945202a110c45c2a45d1",
+        "workspacePath": "/tmp/getgear-research/8bs3-http-capture/cd133e9d8caa56a062a2ee261fb7926eadd0a910824b945202a110c45c2a45d1.body",
+        "capturedUTC": "2026-11-12T02:22:50.379021+00:00"
+      },
+      "https://playfulls.com/db/goods.77a729a585.json": {
+        "bytes": 467013,
+        "sha256": "77a729a585eb0fd320883ee420f3a209360ad35c569d0eb31c7bbe8adb0ad82a",
+        "workspacePath": "/tmp/getgear-research/8bs3-http-capture/77a729a585eb0fd320883ee420f3a209360ad35c569d0eb31c7bbe8adb0ad82a.body",
+        "capturedUTC": "2026-11-12T02:22:50.550720+00:00"
+      },
+      "https://playfulls.com/db/other.426fc3124a.json": {
+        "bytes": 446797,
+        "sha256": "426fc3124a7a46005691f36950ac2c42da26a89c7efc8c3febfabdf7a0d6069b",
+        "workspacePath": "/tmp/getgear-research/8bs3-http-capture/426fc3124a7a46005691f36950ac2c42da26a89c7efc8c3febfabdf7a0d6069b.body",
+        "capturedUTC": "2026-11-12T02:22:50.751262+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103442,
+        "sha256": "34b6581ad0ee06d33a828b49b48d9a9616b3bcba8cd8211612fda0c1fca5a3b1",
+        "workspacePath": "/tmp/getgear-research/8bs3-http-capture/34b6581ad0ee06d33a828b49b48d9a9616b3bcba8cd8211612fda0c1fca5a3b1.body",
+        "capturedUTC": "2026-11-12T02:22:54.543717+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103495,
+        "sha256": "69c607108fdb47a6ac2927703e026a0f9f43da99a43bffe7d76ebd63d18a1050",
+        "workspacePath": "/tmp/getgear-research/8bs3-http-capture/69c607108fdb47a6ac2927703e026a0f9f43da99a43bffe7d76ebd63d18a1050.body",
+        "capturedUTC": "2026-11-12T02:22:58.731938+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103457,
+        "sha256": "319ff107c743b5eb0ee92c6477c933e659be301adbf67f3fbfb44693408988d2",
+        "workspacePath": "/tmp/getgear-research/8bs3-http-capture/319ff107c743b5eb0ee92c6477c933e659be301adbf67f3fbfb44693408988d2.body",
+        "capturedUTC": "2026-11-12T02:23:02.329145+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 39034,
+        "sha256": "2e4bd79a2ca11fcfb2b4fbab51c956753978dc7ed170589824529caed9202696",
+        "workspacePath": "/tmp/getgear-research/8bs3-http-capture/2e4bd79a2ca11fcfb2b4fbab51c956753978dc7ed170589824529caed9202696.body",
+        "capturedUTC": "2026-11-12T02:23:08.356142+00:00"
+      }
+    }
+  },
+  "sourceProofImmutableSHA256": "f54a96a14d46e94de354dabed589eb21b11f8c27853acb98f729412d234aaaa7",
+  "sourceProofState": "Historicalpre-finalvalidation;local/finaloverridespendingfields. 27supplementalfeedresponses/18candidates explicitlyseparate;no primaryproofmutation.",
+  "companionFiles": {
+    "dungeon_equipment_drops.csv": {
+      "byteExact": false,
+      "sourceRowOffsetOnlyCells": 152,
+      "changedColumns": {
+        "PlayfullsRoutes": 152
+      },
+      "semanticChanges": 0
+    },
+    "dungeon_items_reconciled.csv": {
+      "byteExact": false,
+      "sourceRowOffsetOnlyCells": 156,
+      "changedColumns": {
+        "PlayfullsRoutes": 156
+      },
+      "semanticChanges": 0
+    },
+    "dungeon_source_followups.csv": {
+      "byteExact": false,
+      "sourceRowOffsetOnlyCells": 1,
+      "changedColumns": {
+        "PlayfullsRoutes": 1
+      },
+      "semanticChanges": 0
+    },
+    "recipes_reconciled.csv": {
+      "byteExact": false,
+      "sourceRowOffsetOnlyCells": 503,
+      "changedColumns": {
+        "bookSources": 503
+      },
+      "semanticChanges": 0
+    },
+    "recipe_source_followups.csv": {
+      "byteExact": false,
+      "sourceRowOffsetOnlyCells": 455,
+      "changedColumns": {
+        "bookSources": 455
+      },
+      "semanticChanges": 0
+    },
+    "recipe_trainer_book_checks.csv": {
+      "byteExact": false,
+      "sourceRowOffsetOnlyCells": 387,
+      "changedColumns": {
+        "bookSources": 387
+      },
+      "semanticChanges": 0
+    },
+    "recipe_vendor_book_checks.csv": {
+      "byteExact": false,
+      "sourceRowOffsetOnlyCells": 68,
+      "changedColumns": {
+        "bookSources": 68
+      },
+      "semanticChanges": 0
+    },
+    "supplementary_crafts_reconciled.csv": {
+      "byteExact": true,
+      "sourceRowOffsetOnlyCells": 0,
+      "changedColumns": {},
+      "semanticChanges": 0
+    },
+    "reviewed_recipe_sources.json": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "upstream_playfulls_display_definitions.json": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2548,
+    "directions": 1304,
+    "missing": 3173,
+    "verified_coordinate_data": 682
+  },
+  "gapRows": 7325,
+  "liveRenderingVerified": 0,
+  "CI": "pending18timestampedPASS/pinnedprebuiltLua/no release",
+  "feedScope": "PF23610→23629/9246→9248/19new1bookrename2questdefs5974indexshifts38opaque10/allpriorresolvedfacts exact;EV1676→1688/1439qual/12new45updates/onecanonical4561edgecell0→1. Alloriginaldeltasbeforebaselineadvance.",
+  "outsideCandidates": 440,
+  "candidateScope": {
+    "before": 398,
+    "afterCaseSourceAudit": 422,
+    "afterFeedReview": 440,
+    "prior398RowsExact": true,
+    "prior422RowsExact": true,
+    "activeCatalogueAdoptions": 0
+  },
+  "supplementalFeedPrimaryResponses": {
+    "total": 27,
+    "new": 25,
+    "cached": 2
+  },
+  "sharedNavigationChanges": {
+    "qualifiedDrakefireItineraries": [
+      6502,
+      6602
+    ],
+    "mandatoryGraphVerified": false,
+    "unresolvedVariantExcluded": 99435,
+    "questStarterDirections": "Explicit fullitem-starts relation/zone+reviewedinstructions;unknownprogressopenswrittenstarterguidance beforeturn-in;acceptedquestsnotrestarted;Providedstarterobjectivesnotfreeitems.",
+    "friendlyDungeonActorsNotBosses": true,
+    "legitimateExplicitBossInformationPreserved": true,
+    "newDingyContainerAlternatives": 14,
+    "sparseBow13022MissingNotFalseFarm": true,
+    "anonymousZeroCoordinatesWithheld": true,
+    "newRandomNPCFarmPins": 0
+  },
+  "limits": "Publicationnotlive/currentattunement/questaccess/mandatoryprerequisites/99435aliases/Halehpath/dungeonkeys/sourceconditions stillunverified. 440outsidecases/ALLslotBackThrown/sixdungeon954livebooks/manualmap/finalintegrityremain.",
+  "earlierStages": [
+    {
+      "capture": "8bs",
+      "exitCode": 0,
+      "fullLocalPASS": 19,
+      "scope": "First integrated stage, before readable wording polish; original feed delta retained separately."
+    },
+    {
+      "capture": "8bs2",
+      "exitCode": 0,
+      "fullLocalPASS": null,
+      "scope": "Unchanged intermediate stage; preceding inline polish command had Python SyntaxError before mutation. No separate full-suite claim."
+    }
+  ],
+  "finalPolish": "Readable, level-neutral container instructions and Drakefire summary; no source-proof, identity, gate, candidate, or queue mutation. Final fresh reconciliation followed by full19localPASS. No final feed fact changes."
+}

@@ -1,0 +1,7104 @@
+{
+  "status": "14sharedallslotleadsindividuallypublication-assessed;integration/finalvalidationpending",
+  "baseline": "4e3d05ce23644be4bb288b59aeaa95194c894a14",
+  "reviewedOn": "2026-11-13 Australia/Adelaide",
+  "counts": {
+    "selected": 14,
+    "individuallyAssessed": 14,
+    "groups": {
+      "named-source-reference": 5,
+      "quest-reference": 1,
+      "origin-unresolved": 2,
+      "broad-published-reference": 6
+    },
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 12,
+      "hold-version-unconfirmed": 1,
+      "hold-no-rendered-equip-level": 1
+    },
+    "primaryFull": 14,
+    "primaryNew": 10,
+    "primaryCached": 4,
+    "auxiliaryFull": 25,
+    "auxiliaryNew": 18,
+    "auxiliaryCached": 7,
+    "fullZones": 1,
+    "caseFullPages": 50,
+    "caseNewPages": 39,
+    "caseCachedPages": 11,
+    "exactQueries": 14,
+    "sharedQueries": 3,
+    "dropReverseJoins": 58,
+    "dropReverseOmissions": 0,
+    "objectReverseJoins": 0,
+    "objectReverseOmissions": 0,
+    "physicalContainerReferences": 0,
+    "newFailed403": 0,
+    "knownFailedURLs": 1676,
+    "oldFailedReferenceEdgesSkipped": 0,
+    "oldFailedUniqueURLsSkipped": 0,
+    "quality": {
+      "3": 14
+    },
+    "BackHeaders": 0,
+    "explicitNPCDescriptorJoins": 5,
+    "explicitRegionDescriptors": 6,
+    "fullZoneNPCJoins": [
+      {
+        "npcID": 258042,
+        "zoneID": 16842,
+        "name": "Twilight Grunt"
+      },
+      {
+        "npcID": 258104,
+        "zoneID": 16842,
+        "name": "Twilight Lieutenant"
+      }
+    ],
+    "activeAdoptions": 0,
+    "liveVerified": 0,
+    "contextKeyFull": 10,
+    "contextKeyNew": 10,
+    "newQualifiedKeyItineraries": 2
+  },
+  "items": {
+    "11755": {
+      "url": "https://www.wowhead.com/forever/item=11755",
+      "bytes": 180495,
+      "sha256": "1988edaeda113b6aaac48b1794442cae1bc50c18dddffa5c3c3d375d9ce48f3a",
+      "title": "Verek's Collar - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 11755,
+        "name": "Verek's Collar",
+        "level": 56,
+        "reqlevel": 51,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -3,
+        "slot": 2,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Defense Rating 3 added",
+            "Dodge Rating 12 added",
+            "Dodge % 1 removed"
+          ],
+          "notShown": []
+        }
+      },
+      "requirements": [
+        "Requires Level 51"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 11755,
+        "name": "Verek's Collar",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 51,
+        "renderedEquipLevel": 51,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 9042,
+            "name": "Verek",
+            "location": [
+              1584
+            ],
+            "classification": 1,
+            "type": 3,
+            "count": 5,
+            "outof": 23,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "type_changed"
+              ],
+              "lines": [
+                "Rank Elite instead of Rare Elite"
+              ],
+              "notShown": []
+            },
+            "boss": 1
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        9042
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "bd": 1,
+          "dd": -1,
+          "n": "Verek",
+          "t": 1,
+          "ti": 9042,
+          "z": 1584
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 9042,
+          "name": "Verek",
+          "primaryDescriptor": {
+            "bd": 1,
+            "dd": -1,
+            "n": "Verek",
+            "t": 1,
+            "ti": 9042,
+            "z": 1584
+          },
+          "independentFullOwnNPCPositive": true,
+          "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "12059": {
+      "url": "https://www.wowhead.com/forever/item=12059",
+      "bytes": 173453,
+      "sha256": "ee0be73fd4538e33af36a121ff58197d620fd71f9aaad2250e772215e41338aa",
+      "title": "Conqueror's Medallion - Item - WoW Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 12059,
+        "name": "Conqueror's Medallion",
+        "level": 58,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -3,
+        "slot": 2,
+        "envChange": {
+          "status": "unconfirmed",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": true,
+      "eligibilityAssessment": {
+        "itemID": 12059,
+        "name": "Conqueror's Medallion",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": null,
+        "renderedEquipLevel": null,
+        "primaryVersion": "unconfirmed",
+        "currentParserReason": "unconfirmed-forever-facts",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-version-unconfirmed",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "reward-from-q": [
+          {
+            "id": 4132,
+            "name": "Operation: Death to Angerforge",
+            "reqlevel": 52,
+            "side": 2,
+            "type": 81,
+            "level": 58,
+            "envChange": {
+              "status": "updated",
+              "labels": [
+                "rewards_changed"
+              ],
+              "lines": [
+                "Rewards: no longer Conqueror's Medallion"
+              ],
+              "notShown": [
+                "Rewards: no longer Conqueror's Medallion"
+              ]
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 0,
+      "dropListPossiblyCappedAt200": false,
+      "group": "quest-reference",
+      "primarySourceTypes": [],
+      "primarySourceDescriptors": [],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": []
+    },
+    "17707": {
+      "url": "https://www.wowhead.com/forever/item=17707",
+      "bytes": 213238,
+      "sha256": "951a367dfaee9aebe796f8fbf24a774a49913780ce253a4db4e1e285a0c90ec0",
+      "title": "Gemshard Heart - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 17707,
+        "name": "Gemshard Heart",
+        "level": 54,
+        "reqlevel": 49,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -3,
+        "slot": 2,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Intellect 9 instead of 10",
+            "Spell Power 5 added",
+            "Healing 10 added",
+            "Spirit 6 removed"
+          ],
+          "notShown": []
+        }
+      },
+      "requirements": [
+        "Requires Level 49"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 17707,
+        "name": "Gemshard Heart",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 12201,
+            "name": "Princess Theradras",
+            "location": [
+              2100
+            ],
+            "classification": 1,
+            "type": 4,
+            "count": 34,
+            "outof": 154,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "boss": 1
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        12201
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "bd": 1,
+          "dd": -1,
+          "n": "Princess Theradras",
+          "t": 1,
+          "ti": 12201,
+          "z": 2100
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 12201,
+          "name": "Princess Theradras",
+          "primaryDescriptor": {
+            "bd": 1,
+            "dd": -1,
+            "n": "Princess Theradras",
+            "t": 1,
+            "ti": 12201,
+            "z": 2100
+          },
+          "independentFullOwnNPCPositive": true,
+          "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "17711": {
+      "url": "https://www.wowhead.com/forever/item=17711",
+      "bytes": 283326,
+      "sha256": "6fc79e9fe71f3d7e0e69c348e4340d70ac6bd14f173db3916436412a88ce3eff",
+      "title": "Elemental Rockridge Leggings - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 17711,
+        "name": "Elemental Rockridge Leggings",
+        "level": 54,
+        "reqlevel": 49,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 7,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Stamina 16 instead of 18"
+          ],
+          "notShown": []
+        }
+      },
+      "requirements": [
+        "Requires Level 49"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 17711,
+        "name": "Elemental Rockridge Leggings",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 12201,
+            "name": "Princess Theradras",
+            "location": [
+              2100
+            ],
+            "classification": 1,
+            "type": 4,
+            "count": 28,
+            "outof": 154,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "boss": 1
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        12201
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "bd": 1,
+          "dd": -1,
+          "n": "Princess Theradras",
+          "t": 1,
+          "ti": 12201,
+          "z": 2100
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 12201,
+          "name": "Princess Theradras",
+          "primaryDescriptor": {
+            "bd": 1,
+            "dd": -1,
+            "n": "Princess Theradras",
+            "t": 1,
+            "ti": 12201,
+            "z": 2100
+          },
+          "independentFullOwnNPCPositive": true,
+          "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "17718": {
+      "url": "https://www.wowhead.com/forever/item=17718",
+      "bytes": 261905,
+      "sha256": "a12dd6be350c782596d6f78df7adb36141617feb2c543c0291e2bbc6163bcff8",
+      "title": "Gizlock's Hypertech Buckler - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 17718,
+        "name": "Gizlock's Hypertech Buckler",
+        "level": 53,
+        "reqlevel": 48,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 6,
+        "slot": 14,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed"
+          ],
+          "lines": [
+            "Spell Power 5 added",
+            "Healing 8 added",
+            "Stamina 5 removed"
+          ],
+          "notShown": []
+        }
+      },
+      "requirements": [
+        "Requires Level 48"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 17718,
+        "name": "Gizlock's Hypertech Buckler",
+        "inventoryType": 14,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 13601,
+            "name": "Tinkerer Gizlock",
+            "location": [
+              2100
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 24,
+            "outof": 83,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "boss": 1
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        13601
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "bd": 1,
+          "dd": -1,
+          "n": "Tinkerer Gizlock",
+          "t": 1,
+          "ti": 13601,
+          "z": 2100
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 13601,
+          "name": "Tinkerer Gizlock",
+          "primaryDescriptor": {
+            "bd": 1,
+            "dd": -1,
+            "n": "Tinkerer Gizlock",
+            "t": 1,
+            "ti": 13601,
+            "z": 2100
+          },
+          "independentFullOwnNPCPositive": true,
+          "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "18387": {
+      "url": "https://www.wowhead.com/forever/item=18387",
+      "bytes": 239182,
+      "sha256": "5ff3ba2401e6cc3fdf9db233385f9c6db1413bc632220c7c9ff25c9a87b94778",
+      "title": "Brightspark Gloves - Item - WoW Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 18387,
+        "name": "Brightspark Gloves",
+        "level": 60,
+        "reqlevel": 55,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 1,
+        "slot": 10,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "stats_changed",
+            "effects_changed"
+          ],
+          "lines": [
+            "Intellect 16 instead of 15",
+            "Critical Strike Rating 14 added",
+            "Spell Critical Strike % 1 removed",
+            "Effects removed"
+          ],
+          "notShown": []
+        }
+      },
+      "requirements": [
+        "Requires Level 55"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 18387,
+        "name": "Brightspark Gloves",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 55,
+        "renderedEquipLevel": 55,
+        "primaryVersion": "updated",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 11467,
+            "name": "Tsu'zee",
+            "location": [
+              2557
+            ],
+            "classification": 1,
+            "type": 6,
+            "count": 1,
+            "outof": 1,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "boss": 1
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        11467
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "bd": 1,
+          "dd": -1,
+          "n": "Tsu'zee",
+          "t": 1,
+          "ti": 11467,
+          "z": 2557
+        }
+      ],
+      "explicitPrimaryNPCReferences": [
+        {
+          "npcID": 11467,
+          "name": "Tsu'zee",
+          "primaryDescriptor": {
+            "bd": 1,
+            "dd": -1,
+            "n": "Tsu'zee",
+            "t": 1,
+            "ti": 11467,
+            "z": 2557
+          },
+          "independentFullOwnNPCPositive": true,
+          "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+        }
+      ],
+      "explicitPrimaryRegionReferences": []
+    },
+    "270126": {
+      "url": "https://www.wowhead.com/forever/item=270126",
+      "bytes": 167382,
+      "sha256": "73908e242bbae671b391a9f995ebe34c6373d35c19b17c43bf2cbc8fc1e8a2da",
+      "title": "Conqueror's Pendant - Item - WoW Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 270126,
+        "name": "Conqueror's Pendant",
+        "level": 58,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -3,
+        "slot": 2
+      },
+      "requirements": [],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 270126,
+        "name": "Conqueror's Pendant",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": null,
+        "renderedEquipLevel": null,
+        "primaryVersion": "not-provided",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {},
+      "reverseDropNPCIDs": [],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 0,
+      "dropListPossiblyCappedAt200": false,
+      "group": "origin-unresolved",
+      "primarySourceTypes": [],
+      "primarySourceDescriptors": [],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": []
+    },
+    "286590": {
+      "url": "https://www.wowhead.com/forever/item=286590",
+      "bytes": 167988,
+      "sha256": "f535afd52ea0e8ce69a52b67b4ec57690b934a25d92f3d43b81a35564d55e66d",
+      "title": "Silithid Queen's Husk - Item - WoW Forever",
+      "reusedCachedResponse": true,
+      "identity": {
+        "id": 286590,
+        "name": "Silithid Queen's Husk",
+        "level": 61,
+        "reqlevel": 56,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 5
+      },
+      "requirements": [
+        "Requires Level 56"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 286590,
+        "name": "Silithid Queen's Husk",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 56,
+        "renderedEquipLevel": 56,
+        "primaryVersion": "not-provided",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {},
+      "reverseDropNPCIDs": [],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 0,
+      "dropListPossiblyCappedAt200": false,
+      "group": "origin-unresolved",
+      "primarySourceTypes": [],
+      "primarySourceDescriptors": [],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": []
+    },
+    "287009": {
+      "url": "https://www.wowhead.com/forever/item=287009",
+      "bytes": 175341,
+      "sha256": "c506eab4809d577a7f7151b89a42ec8a641ad19177cfb9acec2fef8612ab25e7",
+      "title": "Twilight Enforcer's Legs - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 287009,
+        "name": "Twilight Enforcer's Legs",
+        "level": 44,
+        "reqlevel": 39,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 2,
+        "slot": 7,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 39"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 287009,
+        "name": "Twilight Enforcer's Legs",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 39,
+        "renderedEquipLevel": 39,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 257900,
+            "name": "Redridge Prisoner",
+            "location": [
+              -3
+            ],
+            "classification": 0,
+            "type": 7,
+            "count": 1,
+            "outof": 458,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258038,
+            "name": "Shadowhide Bully",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 327,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258042,
+            "name": "Twilight Grunt",
+            "location": [
+              -3,
+              16842
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 4,
+            "outof": 2453,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258102,
+            "name": "Twilight Outrider",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 588,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258687,
+            "name": "Krol'dok Brute",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 2055,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 262067,
+            "name": "Twilight Peon",
+            "location": [
+              -3
+            ],
+            "classification": 0,
+            "type": 7,
+            "count": 1,
+            "outof": 206,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        257900,
+        258038,
+        258042,
+        258102,
+        258687,
+        262067
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 6,
+      "dropListPossiblyCappedAt200": false,
+      "group": "broad-published-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "dd": -1,
+          "z": 16842
+        }
+      ],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [
+            "Krol'dok Stronghold"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "full-primary-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ]
+    },
+    "287012": {
+      "url": "https://www.wowhead.com/forever/item=287012",
+      "bytes": 175731,
+      "sha256": "f56c7c4a71a6c36ad99955ca2bc3040ebe72adccb9e46265693d6e0f477db024",
+      "title": "Krol'dok Warplate Gauntlets - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 287012,
+        "name": "Krol'dok Warplate Gauntlets",
+        "level": 45,
+        "reqlevel": 40,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 10,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 40"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 287012,
+        "name": "Krol'dok Warplate Gauntlets",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 257885,
+            "name": "Krol'dok Centurion",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 8,
+            "outof": 485,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 257888,
+            "name": "Krol'dok Shaman",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 296,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 257900,
+            "name": "Redridge Prisoner",
+            "location": [
+              -3
+            ],
+            "classification": 0,
+            "type": 7,
+            "count": 5,
+            "outof": 458,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258038,
+            "name": "Shadowhide Bully",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 327,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258040,
+            "name": "Shadowhide Curseweaver",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 5,
+            "outof": 140,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258042,
+            "name": "Twilight Grunt",
+            "location": [
+              -3,
+              16842
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 29,
+            "outof": 2453,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258100,
+            "name": "Twilight Warlock",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 3,
+            "outof": 354,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258102,
+            "name": "Twilight Outrider",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 5,
+            "outof": 588,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258104,
+            "name": "Twilight Lieutenant",
+            "location": [
+              -3,
+              16842
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 4,
+            "outof": 707,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258687,
+            "name": "Krol'dok Brute",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 33,
+            "outof": 2055,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        257885,
+        257888,
+        257900,
+        258038,
+        258040,
+        258042,
+        258100,
+        258102,
+        258104,
+        258687
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 10,
+      "dropListPossiblyCappedAt200": false,
+      "group": "broad-published-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "dd": -1,
+          "z": 16842
+        }
+      ],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [
+            "Krol'dok Stronghold"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "full-primary-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ]
+    },
+    "287013": {
+      "url": "https://www.wowhead.com/forever/item=287013",
+      "bytes": 177207,
+      "sha256": "ab0a3ee9e1b2a515b71e8d184e4948f7ba200c7d6adcf4b933a916066ed79148",
+      "title": "Krol'dok Warplate Legplates - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 287013,
+        "name": "Krol'dok Warplate Legplates",
+        "level": 46,
+        "reqlevel": 41,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 7,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 41"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 287013,
+        "name": "Krol'dok Warplate Legplates",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 257885,
+            "name": "Krol'dok Centurion",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 4,
+            "outof": 485,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 257888,
+            "name": "Krol'dok Shaman",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 4,
+            "outof": 296,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 257900,
+            "name": "Redridge Prisoner",
+            "location": [
+              -3
+            ],
+            "classification": 0,
+            "type": 7,
+            "count": 11,
+            "outof": 458,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258038,
+            "name": "Shadowhide Bully",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 4,
+            "outof": 327,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258040,
+            "name": "Shadowhide Curseweaver",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 140,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258042,
+            "name": "Twilight Grunt",
+            "location": [
+              -3,
+              16842
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 22,
+            "outof": 2453,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258100,
+            "name": "Twilight Warlock",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 3,
+            "outof": 354,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258102,
+            "name": "Twilight Outrider",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 14,
+            "outof": 588,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258104,
+            "name": "Twilight Lieutenant",
+            "location": [
+              -3,
+              16842
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 707,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258687,
+            "name": "Krol'dok Brute",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 53,
+            "outof": 2055,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 268423,
+            "name": "Zalfan Moonshadow",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 34,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        257885,
+        257888,
+        257900,
+        258038,
+        258040,
+        258042,
+        258100,
+        258102,
+        258104,
+        258687,
+        268423
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 11,
+      "dropListPossiblyCappedAt200": false,
+      "group": "broad-published-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "dd": -1,
+          "z": 16842
+        }
+      ],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [
+            "Krol'dok Stronghold"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "full-primary-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ]
+    },
+    "287014": {
+      "url": "https://www.wowhead.com/forever/item=287014",
+      "bytes": 223595,
+      "sha256": "a1d66c08ec03409305ec5ae479ed7d929e7ae2124def6efd2d34f70a654acccc",
+      "title": "Krol'dok Warplate Pauldrons - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 287014,
+        "name": "Krol'dok Warplate Pauldrons",
+        "level": 46,
+        "reqlevel": 41,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 4,
+        "slot": 3,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 41"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 287014,
+        "name": "Krol'dok Warplate Pauldrons",
+        "inventoryType": 3,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 257885,
+            "name": "Krol'dok Centurion",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 6,
+            "outof": 485,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 257888,
+            "name": "Krol'dok Shaman",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 296,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 257900,
+            "name": "Redridge Prisoner",
+            "location": [
+              -3
+            ],
+            "classification": 0,
+            "type": 7,
+            "count": 5,
+            "outof": 458,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258038,
+            "name": "Shadowhide Bully",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 6,
+            "outof": 327,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258040,
+            "name": "Shadowhide Curseweaver",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 4,
+            "outof": 140,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258042,
+            "name": "Twilight Grunt",
+            "location": [
+              -3,
+              16842
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 29,
+            "outof": 2453,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258100,
+            "name": "Twilight Warlock",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 354,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258102,
+            "name": "Twilight Outrider",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 3,
+            "outof": 588,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258104,
+            "name": "Twilight Lieutenant",
+            "location": [
+              -3,
+              16842
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 9,
+            "outof": 707,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 258687,
+            "name": "Krol'dok Brute",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 25,
+            "outof": 2055,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 262067,
+            "name": "Twilight Peon",
+            "location": [
+              -3
+            ],
+            "classification": 0,
+            "type": 7,
+            "count": 3,
+            "outof": 206,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 268423,
+            "name": "Zalfan Moonshadow",
+            "location": [
+              -3
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 34,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        257885,
+        257888,
+        257900,
+        258038,
+        258040,
+        258042,
+        258100,
+        258102,
+        258104,
+        258687,
+        262067,
+        268423
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 12,
+      "dropListPossiblyCappedAt200": false,
+      "group": "broad-published-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "dd": -1,
+          "z": 16842
+        }
+      ],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": [
+        {
+          "zoneID": 16842,
+          "publishedNPCRegionNames": [
+            "Krol'dok Stronghold"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16842
+          },
+          "fullZoneRawStatus": "full-primary-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ]
+    },
+    "287020": {
+      "url": "https://www.wowhead.com/forever/item=287020",
+      "bytes": 175691,
+      "sha256": "3e75e5e0025b1650af764fac397b1a43eb0cd1c32a85c33310b43a3e6fb6188d",
+      "title": "Defias Enforcer's Chest - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 287020,
+        "name": "Defias Enforcer's Chest",
+        "level": 54,
+        "reqlevel": 49,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 2,
+        "slot": 5,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 49"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 287020,
+        "name": "Defias Enforcer's Chest",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 255262,
+            "name": "Alcaz Chaplain",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 3,
+            "outof": 95,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255267,
+            "name": "Slavering Hound",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 1,
+            "count": 2,
+            "outof": 123,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255271,
+            "name": "Defias Truthfinder",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 101,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255309,
+            "name": "Defias Bounty Hunter",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 131,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255377,
+            "name": "Alcaz Jailer",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 3,
+            "outof": 179,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 271784,
+            "name": "Alcaz Jailer",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 36,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        255262,
+        255267,
+        255271,
+        255309,
+        255377,
+        271784
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 6,
+      "dropListPossiblyCappedAt200": false,
+      "group": "broad-published-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "dd": -1,
+          "z": 16620
+        }
+      ],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": [
+        {
+          "zoneID": 16620,
+          "publishedNPCRegionNames": [
+            "Alcaz Prison"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16620
+          },
+          "fullZoneRawStatus": "reuse-completed8CI-full-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ]
+    },
+    "287021": {
+      "url": "https://www.wowhead.com/forever/item=287021",
+      "bytes": 175619,
+      "sha256": "05f1e5d46d7e22dd20eb33b24bdf6ae60dd9d66911f5b8879e05ddea34ed0d97",
+      "title": "Defias Enforcer's Prowlers - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 287021,
+        "name": "Defias Enforcer's Prowlers",
+        "level": 53,
+        "reqlevel": 48,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 2,
+        "slot": 8,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 48"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 287021,
+        "name": "Defias Enforcer's Prowlers",
+        "inventoryType": 8,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 48,
+        "renderedEquipLevel": 48,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 255262,
+            "name": "Alcaz Chaplain",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 95,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255267,
+            "name": "Slavering Hound",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 1,
+            "count": 2,
+            "outof": 123,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255271,
+            "name": "Defias Truthfinder",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 101,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255276,
+            "name": "Defias Mercenary",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 114,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255309,
+            "name": "Defias Bounty Hunter",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 131,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255377,
+            "name": "Alcaz Jailer",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 179,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 255995,
+            "name": "Strashaz Soldier",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 2,
+            "outof": 150,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          },
+          {
+            "id": 271784,
+            "name": "Alcaz Jailer",
+            "location": [
+              16620
+            ],
+            "classification": 1,
+            "type": 7,
+            "count": 1,
+            "outof": 36,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        255262,
+        255267,
+        255271,
+        255276,
+        255309,
+        255377,
+        255995,
+        271784
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 8,
+      "dropListPossiblyCappedAt200": false,
+      "group": "broad-published-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "dd": -1,
+          "z": 16620
+        }
+      ],
+      "explicitPrimaryNPCReferences": [],
+      "explicitPrimaryRegionReferences": [
+        {
+          "zoneID": 16620,
+          "publishedNPCRegionNames": [
+            "Alcaz Prison"
+          ],
+          "primaryDescriptor": {
+            "dd": -1,
+            "z": 16620
+          },
+          "fullZoneRawStatus": "reuse-completed8CI-full-definition",
+          "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+        }
+      ]
+    }
+  },
+  "npcs": {
+    "11467": {
+      "url": "https://www.wowhead.com/forever/npc=11467",
+      "bytes": 131601,
+      "sha256": "3423e0de708c992e4ed527ff2796444066151b2fdb3e684fb0ede8e3fed15350",
+      "title": "Tsu'zee - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2557,
+          "name": "Dire Maul",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 19,
+      "selectedDrops": [
+        {
+          "id": 18387,
+          "name": "Brightspark Gloves",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 55,
+          "classicEra": 1,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 1,
+          "slot": 10,
+          "level": 60,
+          "count": 247,
+          "outof": 821,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed",
+              "effects_changed"
+            ],
+            "lines": [
+              "Intellect 16 instead of 15",
+              "Critical Strike Rating 14 added",
+              "Spell Critical Strike % 1 removed",
+              "Effects removed"
+            ],
+            "notShown": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "13601": {
+      "url": "https://www.wowhead.com/forever/npc=13601",
+      "bytes": 212870,
+      "sha256": "d2bfd981ebc3f121f1c46502204a80872a7297d07aedcfd8f263e0ecaa3de4c2",
+      "title": "Tinkerer Gizlock - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2100,
+          "name": "Maraudon",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 85,
+      "selectedDrops": [
+        {
+          "id": 17718,
+          "name": "Gizlock's Hypertech Buckler",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 6,
+          "slot": 14,
+          "level": 53,
+          "count": 17,
+          "outof": 61,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed"
+            ],
+            "lines": [
+              "Spell Power 5 added",
+              "Healing 8 added",
+              "Stamina 5 removed"
+            ],
+            "notShown": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "12201": {
+      "url": "https://www.wowhead.com/forever/npc=12201",
+      "bytes": 296488,
+      "sha256": "1905633f48dc5507668e23292b3e50aa80554c416386dbde36a2b4c6eefb4959",
+      "title": "Princess Theradras - NPC - Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2100,
+          "name": "Maraudon",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 122,
+      "selectedDrops": [
+        {
+          "id": 17707,
+          "name": "Gemshard Heart",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": -3,
+          "slot": 2,
+          "level": 54,
+          "count": 15,
+          "outof": 58,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed"
+            ],
+            "lines": [
+              "Intellect 9 instead of 10",
+              "Spell Power 5 added",
+              "Healing 10 added",
+              "Spirit 6 removed"
+            ],
+            "notShown": []
+          }
+        },
+        {
+          "id": 17711,
+          "name": "Elemental Rockridge Leggings",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 54,
+          "count": 12,
+          "outof": 58,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed"
+            ],
+            "lines": [
+              "Stamina 16 instead of 18"
+            ],
+            "notShown": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "255271": {
+      "url": "https://www.wowhead.com/forever/npc=255271",
+      "bytes": 89954,
+      "sha256": "d2ee44a6de5b59ff9569576fb3fcaa630bc96523bde1e51ee81505b5c7d80e1c",
+      "title": "Defias Truthfinder - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 41,
+      "selectedDrops": [
+        {
+          "id": 287020,
+          "name": "Defias Enforcer's Chest",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 5,
+          "level": 54,
+          "count": 2,
+          "outof": 101,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287021,
+          "name": "Defias Enforcer's Prowlers",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 8,
+          "level": 53,
+          "count": 2,
+          "outof": 101,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "255267": {
+      "url": "https://www.wowhead.com/forever/npc=255267",
+      "bytes": 96121,
+      "sha256": "840d8537a82603db9808806058e5e62d5112cdca8deba53bab5a45e9e3c16260",
+      "title": "Slavering Hound - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 41,
+      "selectedDrops": [
+        {
+          "id": 287020,
+          "name": "Defias Enforcer's Chest",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 5,
+          "level": 54,
+          "count": 2,
+          "outof": 123,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287021,
+          "name": "Defias Enforcer's Prowlers",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 8,
+          "level": 53,
+          "count": 2,
+          "outof": 123,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "255377": {
+      "url": "https://www.wowhead.com/forever/npc=255377",
+      "bytes": 106158,
+      "sha256": "e0eb0f2802690e156d611d079fefd059d2f4f9a212a004aaa1e3d2d462d04700",
+      "title": "Alcaz Jailer - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 56,
+      "selectedDrops": [
+        {
+          "id": 287020,
+          "name": "Defias Enforcer's Chest",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 5,
+          "level": 54,
+          "count": 2,
+          "outof": 146,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287021,
+          "name": "Defias Enforcer's Prowlers",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 8,
+          "level": 53,
+          "count": 2,
+          "outof": 146,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "255276": {
+      "url": "https://www.wowhead.com/forever/npc=255276",
+      "bytes": 93621,
+      "sha256": "fc9e74787ef67caf93512aa28f7741a28376c4c9f8af2ae69756f0cacbb03651",
+      "title": "Defias Mercenary - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 45,
+      "selectedDrops": [
+        {
+          "id": 287021,
+          "name": "Defias Enforcer's Prowlers",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 8,
+          "level": 53,
+          "count": 1,
+          "outof": 114,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "255262": {
+      "url": "https://www.wowhead.com/forever/npc=255262",
+      "bytes": 85225,
+      "sha256": "1e0f28433b4b70aef6dfc86d240be4d2d0d65f73030591c25169eee77faacb1d",
+      "title": "Alcaz Chaplain - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 38,
+      "selectedDrops": [
+        {
+          "id": 287020,
+          "name": "Defias Enforcer's Chest",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 5,
+          "level": 54,
+          "count": 3,
+          "outof": 95,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287021,
+          "name": "Defias Enforcer's Prowlers",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 8,
+          "level": 53,
+          "count": 1,
+          "outof": 95,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "255309": {
+      "url": "https://www.wowhead.com/forever/npc=255309",
+      "bytes": 93661,
+      "sha256": "e24f82e2df43c43a1754f25a820714dccde9a888f037ed48d4ed25cf99a111d2",
+      "title": "Defias Bounty Hunter - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 40,
+      "selectedDrops": [
+        {
+          "id": 287020,
+          "name": "Defias Enforcer's Chest",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 5,
+          "level": 54,
+          "count": 1,
+          "outof": 131,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287021,
+          "name": "Defias Enforcer's Prowlers",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 8,
+          "level": 53,
+          "count": 2,
+          "outof": 131,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "255995": {
+      "url": "https://www.wowhead.com/forever/npc=255995",
+      "bytes": 110725,
+      "sha256": "403d21f433e8ad9148e9d5806189cb0c0c5c87ed42fb5111a289d2127dc7b8c4",
+      "title": "Strashaz Soldier - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 62,
+      "selectedDrops": [
+        {
+          "id": 287021,
+          "name": "Defias Enforcer's Prowlers",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 8,
+          "level": 53,
+          "count": 2,
+          "outof": 150,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258038": {
+      "url": "https://www.wowhead.com/forever/npc=258038",
+      "bytes": 122105,
+      "sha256": "35fc21af68da9986b7438128799420fe2c31712eae2d4d778479eb867cd2f977",
+      "title": "Shadowhide Bully - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 57,
+            "xMax": 57.3,
+            "yMin": 62.7,
+            "yMax": 62.8
+          }
+        }
+      ],
+      "returnedDropsRows": 78,
+      "selectedDrops": [
+        {
+          "id": 287009,
+          "name": "Twilight Enforcer's Legs",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 7,
+          "level": 44,
+          "count": 2,
+          "outof": 276,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 1,
+          "outof": 276,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 4,
+          "outof": 276,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 5,
+          "outof": 276,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "257888": {
+      "url": "https://www.wowhead.com/forever/npc=257888",
+      "bytes": 137819,
+      "sha256": "4dd42e05b715023c7491d1858574184ed37ea4427356d589315342861f400541",
+      "title": "Krol'dok Shaman - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 8,
+          "bounds": {
+            "xMin": 57.5,
+            "xMax": 58.5,
+            "yMin": 61.1,
+            "yMax": 62.7
+          }
+        }
+      ],
+      "returnedDropsRows": 96,
+      "selectedDrops": [
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 2,
+          "outof": 296,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 4,
+          "outof": 296,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 1,
+          "outof": 296,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "257885": {
+      "url": "https://www.wowhead.com/forever/npc=257885",
+      "bytes": 154668,
+      "sha256": "ae03dd64ac06213892263dd96763e8d358096c32ba442330a2bcb5a4359eef61",
+      "title": "Krol'dok Centurion - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 6,
+          "bounds": {
+            "xMin": 57.4,
+            "xMax": 58.5,
+            "yMin": 60.9,
+            "yMax": 63
+          }
+        }
+      ],
+      "returnedDropsRows": 113,
+      "selectedDrops": [
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 8,
+          "outof": 485,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 4,
+          "outof": 485,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 6,
+          "outof": 485,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "257900": {
+      "url": "https://www.wowhead.com/forever/npc=257900",
+      "bytes": 152686,
+      "sha256": "ef5b6ace162579f6f6dcf04e4bd0f52513acb787916c5cf22c46f2f6fe08e15d",
+      "title": "Redridge Prisoner - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 56.4,
+            "xMax": 56.9,
+            "yMin": 62.9,
+            "yMax": 64.1
+          }
+        }
+      ],
+      "returnedDropsRows": 114,
+      "selectedDrops": [
+        {
+          "id": 287009,
+          "name": "Twilight Enforcer's Legs",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 7,
+          "level": 44,
+          "count": 1,
+          "outof": 458,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 5,
+          "outof": 458,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 11,
+          "outof": 458,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 5,
+          "outof": 458,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258040": {
+      "url": "https://www.wowhead.com/forever/npc=258040",
+      "bytes": 102547,
+      "sha256": "cb65329a9ba96ae2032cdbeb9084832d198600f86163d0178fe5b6e5888be404",
+      "title": "Shadowhide Curseweaver - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 56.9,
+            "xMax": 56.9,
+            "yMin": 62.9,
+            "yMax": 63
+          }
+        }
+      ],
+      "returnedDropsRows": 55,
+      "selectedDrops": [
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 5,
+          "outof": 140,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 2,
+          "outof": 140,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 4,
+          "outof": 140,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258042": {
+      "url": "https://www.wowhead.com/forever/npc=258042",
+      "bytes": 289473,
+      "sha256": "c173babdcd3fd0f4b514d8a920b2df010c3c6abcaed83d1c90e4395f6e69421f",
+      "title": "Twilight Grunt - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 10,
+          "bounds": {
+            "xMin": 55.9,
+            "xMax": 58.1,
+            "yMin": 62.3,
+            "yMax": 63.8
+          }
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+          "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+          "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+        }
+      ],
+      "returnedDropsRows": 262,
+      "selectedDrops": [
+        {
+          "id": 287009,
+          "name": "Twilight Enforcer's Legs",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 7,
+          "level": 44,
+          "count": 4,
+          "outof": 2453,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 29,
+          "outof": 2453,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 22,
+          "outof": 2453,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 29,
+          "outof": 2453,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258100": {
+      "url": "https://www.wowhead.com/forever/npc=258100",
+      "bytes": 144000,
+      "sha256": "51dfc6421f6513d0b476b40f9775427a98cce4b3d42c2edc25374deab83bb77d",
+      "title": "Twilight Warlock - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 56.9,
+            "xMax": 57.8,
+            "yMin": 62.3,
+            "yMax": 63.5
+          }
+        }
+      ],
+      "returnedDropsRows": 101,
+      "selectedDrops": [
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 3,
+          "outof": 354,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 3,
+          "outof": 354,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 2,
+          "outof": 354,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258102": {
+      "url": "https://www.wowhead.com/forever/npc=258102",
+      "bytes": 171480,
+      "sha256": "6156807aa144f53e55d4bc0920dcb6d59197a7067e06e389c12576d02c57a9e2",
+      "title": "Twilight Outrider - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 7,
+          "bounds": {
+            "xMin": 56.1,
+            "xMax": 58.2,
+            "yMin": 62,
+            "yMax": 63.6
+          }
+        }
+      ],
+      "returnedDropsRows": 132,
+      "selectedDrops": [
+        {
+          "id": 287009,
+          "name": "Twilight Enforcer's Legs",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 7,
+          "level": 44,
+          "count": 2,
+          "outof": 588,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 5,
+          "outof": 588,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 14,
+          "outof": 588,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 3,
+          "outof": 588,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258104": {
+      "url": "https://www.wowhead.com/forever/npc=258104",
+      "bytes": 184922,
+      "sha256": "bb5ef123c44a129034c70b8cff27070bd638c9d775abce067093c94c849332d6",
+      "title": "Twilight Lieutenant - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 13,
+          "bounds": {
+            "xMin": 56.2,
+            "xMax": 57.8,
+            "yMin": 62.4,
+            "yMax": 63.8
+          }
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        },
+        {
+          "zoneID": 16842,
+          "name": "Krol'dok Stronghold",
+          "pointCount": 0,
+          "scope": "Exact full zone membership and independently read NPC identity;not precise entrance or floor. Preserve broad Eastern Kingdoms footprint separately.",
+          "zoneSourceURL": "https://www.wowhead.com/forever/zone=16842",
+          "zoneSourceSHA256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0"
+        }
+      ],
+      "returnedDropsRows": 146,
+      "selectedDrops": [
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 4,
+          "outof": 707,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 2,
+          "outof": 707,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 9,
+          "outof": 707,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "262067": {
+      "url": "https://www.wowhead.com/forever/npc=262067",
+      "bytes": 70519,
+      "sha256": "5b39cff688708c53d0c9292ab38b400d1226b15ca1ed8a64b96b68999321885e",
+      "title": "Twilight Peon - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 57.6,
+            "xMax": 58.1,
+            "yMin": 62.8,
+            "yMax": 63.8
+          }
+        }
+      ],
+      "returnedDropsRows": 20,
+      "selectedDrops": [
+        {
+          "id": 287009,
+          "name": "Twilight Enforcer's Legs",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 7,
+          "level": 44,
+          "count": 1,
+          "outof": 206,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 3,
+          "outof": 206,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "9042": {
+      "url": "https://www.wowhead.com/forever/npc=9042",
+      "bytes": 101153,
+      "sha256": "23413deafcd6592614a10fbb62e28fdc4d56563286153e9a4b5fb72bef46c93d",
+      "title": "Verek - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 1584,
+          "name": "Blackrock Depths",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 27,
+      "selectedDrops": [
+        {
+          "id": 11755,
+          "name": "Verek's Collar",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 51,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": -3,
+          "slot": 2,
+          "level": 56,
+          "count": 4,
+          "outof": 14,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "stats_changed"
+            ],
+            "lines": [
+              "Defense Rating 3 added",
+              "Dodge Rating 12 added",
+              "Dodge % 1 removed"
+            ],
+            "notShown": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "258687": {
+      "url": "https://www.wowhead.com/forever/npc=258687",
+      "bytes": 295158,
+      "sha256": "26d12c21763d1a7cac6984a4e53e52ade68481f0e94f5e4b3282be4a36e8ffe0",
+      "title": "Krol'dok Brute - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 19,
+          "bounds": {
+            "xMin": 56.1,
+            "xMax": 58.5,
+            "yMin": 61.2,
+            "yMax": 63.9
+          }
+        }
+      ],
+      "returnedDropsRows": 269,
+      "selectedDrops": [
+        {
+          "id": 287009,
+          "name": "Twilight Enforcer's Legs",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 39,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 7,
+          "level": 44,
+          "count": 1,
+          "outof": 2055,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287012,
+          "name": "Krol'dok Warplate Gauntlets",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 40,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 10,
+          "level": 45,
+          "count": 33,
+          "outof": 2055,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 53,
+          "outof": 2055,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 25,
+          "outof": 2055,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "268423": {
+      "url": "https://www.wowhead.com/forever/npc=268423",
+      "bytes": 74773,
+      "sha256": "7d75e3e6bb2611100df7876f3add722203474bd882e12c3b19f79e54d2fecf0b",
+      "title": "Zalfan Moonshadow - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 2,
+          "bounds": {
+            "xMin": 57.1,
+            "xMax": 57.3,
+            "yMin": 62.2,
+            "yMax": 62.5
+          }
+        }
+      ],
+      "returnedDropsRows": 18,
+      "selectedDrops": [
+        {
+          "id": 287013,
+          "name": "Krol'dok Warplate Legplates",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 7,
+          "level": 46,
+          "count": 1,
+          "outof": 34,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287014,
+          "name": "Krol'dok Warplate Pauldrons",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 41,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 4,
+          "slot": 3,
+          "level": 46,
+          "count": 2,
+          "outof": 34,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "271784": {
+      "url": "https://www.wowhead.com/forever/npc=271784",
+      "bytes": 77005,
+      "sha256": "10d9d3b0bd1b4c96c657b5a58947ed2d07f96eb0840369239e3886cc03817ddf",
+      "title": "Alcaz Jailer - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16620,
+          "name": "Alcaz Prison",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 24,
+      "selectedDrops": [
+        {
+          "id": 287020,
+          "name": "Defias Enforcer's Chest",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 49,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 5,
+          "level": 54,
+          "count": 1,
+          "outof": 36,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 287021,
+          "name": "Defias Enforcer's Prowlers",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 48,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 2,
+          "slot": 8,
+          "level": 53,
+          "count": 1,
+          "outof": 36,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "259250": {
+      "url": "https://www.wowhead.com/forever/npc=259250",
+      "bytes": 81965,
+      "sha256": "28f8299bbbe1f78898e7e5511c18c27ec0c6787f227879579f0a64ec28b896cf",
+      "title": "Alphonse Dumas - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16591,
+          "name": "Riverglades",
+          "uiMapID": 2548,
+          "pointCount": 1,
+          "x": 64.4,
+          "y": 82,
+          "bounds": {
+            "xMin": 64.4,
+            "xMax": 64.4,
+            "yMin": 82,
+            "yMax": 82
+          }
+        }
+      ],
+      "rawPublishedContinentMapper": null,
+      "selectedDrops": [],
+      "selectedQuestStarts": [
+        {
+          "category": 16842,
+          "category2": 2,
+          "id": 94981,
+          "itemrewards": [
+            [
+              267089,
+              1
+            ]
+          ],
+          "level": 41,
+          "money": 5500,
+          "name": "Key Ingredients",
+          "reqlevel": 38,
+          "side": 1,
+          "xp": 3300,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "selectedQuestEnds": [
+        {
+          "category": 16842,
+          "category2": 2,
+          "id": 94980,
+          "level": 41,
+          "money": 5500,
+          "name": "Krol'dok Moulding",
+          "reqlevel": 38,
+          "side": 1,
+          "xp": 3300,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "category": 16842,
+          "category2": 2,
+          "id": 94981,
+          "itemrewards": [
+            [
+              267089,
+              1
+            ]
+          ],
+          "level": 41,
+          "money": 5500,
+          "name": "Key Ingredients",
+          "reqlevel": 38,
+          "side": 1,
+          "xp": 3300,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Exact full published actor identity/roles/geography;no current acceptance/stock or continent point promoted to precise pin.",
+      "selectedTeaches": [
+        {
+          "cat": 11,
+          "displayName": "Blacksmithing",
+          "id": 2018,
+          "learnedat": 9999,
+          "level": 0,
+          "name": "Blacksmithing",
+          "nskillup": 1,
+          "rank": "Apprentice",
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 10,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            30,
+            70,
+            90,
+            110
+          ],
+          "creates": [
+            2851,
+            1,
+            1
+          ],
+          "displayName": "Copper Chain Belt",
+          "id": 2661,
+          "learnedat": 30,
+          "level": 0,
+          "name": "Copper Chain Belt",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              6
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 100,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            15,
+            50,
+            70,
+            90
+          ],
+          "creates": [
+            2852,
+            1,
+            1
+          ],
+          "displayName": "Copper Chain Pants",
+          "id": 2662,
+          "learnedat": 15,
+          "level": 0,
+          "name": "Copper Chain Pants",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              4
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 50,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            40,
+            40,
+            47,
+            55
+          ],
+          "creates": [
+            2863,
+            1,
+            1
+          ],
+          "displayName": "Coarse Sharpening Stone",
+          "id": 2665,
+          "learnedat": 40,
+          "level": 0,
+          "name": "Coarse Sharpening Stone",
+          "nskillup": 1,
+          "quality": 1,
+          "reagents": [
+            [
+              2836,
+              1
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 100,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            45,
+            85,
+            105,
+            125
+          ],
+          "creates": [
+            2857,
+            1,
+            1
+          ],
+          "displayName": "Runed Copper Belt",
+          "id": 2666,
+          "learnedat": 45,
+          "level": 0,
+          "name": "Runed Copper Belt",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              10
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 200,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            15,
+            55,
+            75,
+            95
+          ],
+          "creates": [
+            2844,
+            1,
+            1
+          ],
+          "displayName": "Copper Mace",
+          "id": 2737,
+          "learnedat": 15,
+          "level": 0,
+          "name": "Copper Mace",
+          "nskillup": 1,
+          "quality": 1,
+          "reagents": [
+            [
+              2840,
+              6
+            ],
+            [
+              2880,
+              1
+            ],
+            [
+              2589,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 50,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            20,
+            60,
+            80,
+            100
+          ],
+          "creates": [
+            2845,
+            1,
+            1
+          ],
+          "displayName": "Copper Axe",
+          "id": 2738,
+          "learnedat": 20,
+          "level": 0,
+          "name": "Copper Axe",
+          "nskillup": 1,
+          "quality": 1,
+          "reagents": [
+            [
+              2840,
+              6
+            ],
+            [
+              2880,
+              1
+            ],
+            [
+              2589,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 50,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            25,
+            65,
+            85,
+            105
+          ],
+          "creates": [
+            2847,
+            1,
+            1
+          ],
+          "displayName": "Copper Shortsword",
+          "id": 2739,
+          "learnedat": 25,
+          "level": 0,
+          "name": "Copper Shortsword",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              6
+            ],
+            [
+              2880,
+              1
+            ],
+            [
+              2589,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 50,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            40,
+            40,
+            47,
+            55
+          ],
+          "creates": [
+            3240,
+            1,
+            1
+          ],
+          "displayName": "Coarse Weightstone",
+          "id": 3116,
+          "learnedat": 40,
+          "level": 0,
+          "name": "Coarse Weightstone",
+          "nskillup": 1,
+          "quality": 1,
+          "reagents": [
+            [
+              2836,
+              1
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 100,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            30,
+            70,
+            90,
+            110
+          ],
+          "creates": [
+            3488,
+            1,
+            1
+          ],
+          "displayName": "Copper Battle Axe",
+          "id": 3293,
+          "learnedat": 30,
+          "level": 0,
+          "name": "Copper Battle Axe",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              12
+            ],
+            [
+              2880,
+              2
+            ],
+            [
+              774,
+              2
+            ],
+            [
+              3470,
+              2
+            ],
+            [
+              2318,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 250,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            45,
+            85,
+            105,
+            125
+          ],
+          "creates": [
+            3489,
+            1,
+            1
+          ],
+          "displayName": "Thick War Axe",
+          "id": 3294,
+          "learnedat": 45,
+          "level": 0,
+          "name": "Thick War Axe",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              10
+            ],
+            [
+              2880,
+              2
+            ],
+            [
+              2842,
+              2
+            ],
+            [
+              3470,
+              2
+            ],
+            [
+              2318,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 500,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            20,
+            60,
+            80,
+            100
+          ],
+          "creates": [
+            3469,
+            1,
+            1
+          ],
+          "displayName": "Copper Chain Boots",
+          "id": 3319,
+          "learnedat": 20,
+          "level": 0,
+          "name": "Copper Chain Boots",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              8
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 50,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            25,
+            45,
+            65,
+            85
+          ],
+          "creates": [
+            3470,
+            1,
+            1
+          ],
+          "displayName": "Rough Grinding Stone",
+          "id": 3320,
+          "learnedat": 25,
+          "level": 0,
+          "name": "Rough Grinding Stone",
+          "nskillup": 1,
+          "quality": 1,
+          "reagents": [
+            [
+              2835,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 100,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            35,
+            75,
+            95,
+            115
+          ],
+          "creates": [
+            3472,
+            1,
+            1
+          ],
+          "displayName": "Runed Copper Gauntlets",
+          "id": 3323,
+          "learnedat": 35,
+          "level": 0,
+          "name": "Runed Copper Gauntlets",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              8
+            ],
+            [
+              3470,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 100,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            35,
+            75,
+            95,
+            115
+          ],
+          "creates": [
+            3473,
+            1,
+            1
+          ],
+          "displayName": "Runed Copper Pants",
+          "id": 3324,
+          "learnedat": 35,
+          "level": 0,
+          "name": "Runed Copper Pants",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              8
+            ],
+            [
+              2320,
+              3
+            ],
+            [
+              3470,
+              3
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 200,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            50,
+            50,
+            62,
+            75
+          ],
+          "creates": [
+            3478,
+            1,
+            1
+          ],
+          "displayName": "Coarse Grinding Stone",
+          "id": 3326,
+          "learnedat": 50,
+          "level": 0,
+          "name": "Coarse Grinding Stone",
+          "nskillup": 1,
+          "quality": 1,
+          "reagents": [
+            [
+              2836,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 250,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            40,
+            80,
+            100,
+            120
+          ],
+          "creates": [
+            6214,
+            1,
+            1
+          ],
+          "displayName": "Heavy Copper Maul",
+          "id": 7408,
+          "learnedat": 40,
+          "level": 0,
+          "name": "Heavy Copper Maul",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              12
+            ],
+            [
+              2880,
+              2
+            ],
+            [
+              2318,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 300,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            25,
+            65,
+            85,
+            105
+          ],
+          "creates": [
+            7166,
+            1,
+            1
+          ],
+          "displayName": "Copper Dagger",
+          "id": 8880,
+          "learnedat": 25,
+          "level": 0,
+          "name": "Copper Dagger",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              6
+            ],
+            [
+              2880,
+              1
+            ],
+            [
+              3470,
+              1
+            ],
+            [
+              2318,
+              1
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 100,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            25,
+            65,
+            85,
+            105
+          ],
+          "creates": [
+            7955,
+            1,
+            1
+          ],
+          "displayName": "Copper Claymore",
+          "id": 9983,
+          "learnedat": 25,
+          "level": 0,
+          "name": "Copper Claymore",
+          "nskillup": 1,
+          "quality": 2,
+          "reagents": [
+            [
+              2840,
+              10
+            ],
+            [
+              2880,
+              2
+            ],
+            [
+              3470,
+              1
+            ],
+            [
+              2318,
+              1
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 100,
+          "envChange": {
+            "status": "unchanged",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            20,
+            20,
+            22,
+            25
+          ],
+          "creates": [
+            279944,
+            1,
+            1
+          ],
+          "displayName": "Sharpening Wheel",
+          "id": 1230171,
+          "learnedat": 20,
+          "level": 0,
+          "name": "Sharpening Wheel",
+          "nskillup": 1,
+          "quality": 1,
+          "rank": "Tier 1",
+          "reagents": [
+            [
+              2835,
+              1
+            ],
+            [
+              2840,
+              1
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 105,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            35,
+            40,
+            40,
+            40
+          ],
+          "creates": [
+            250620,
+            1,
+            1
+          ],
+          "displayName": "Gemmed Copper Boots",
+          "id": 1252229,
+          "learnedat": 35,
+          "level": 0,
+          "name": "Gemmed Copper Boots",
+          "nskillup": 1,
+          "quality": 3,
+          "reagents": [
+            [
+              2840,
+              2
+            ],
+            [
+              818,
+              2
+            ],
+            [
+              774,
+              2
+            ],
+            [
+              2318,
+              4
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 105,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            35,
+            40,
+            40,
+            40
+          ],
+          "creates": [
+            250621,
+            1,
+            1
+          ],
+          "displayName": "Strange Copper Boots",
+          "id": 1252230,
+          "learnedat": 35,
+          "level": 0,
+          "name": "Strange Copper Boots",
+          "nskillup": 1,
+          "quality": 3,
+          "reagents": [
+            [
+              2840,
+              2
+            ],
+            [
+              10940,
+              4
+            ],
+            [
+              2318,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 105,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "cat": 11,
+          "colors": [
+            35,
+            40,
+            40,
+            40
+          ],
+          "creates": [
+            250482,
+            1,
+            1
+          ],
+          "displayName": "Glowing Copper Boots",
+          "id": 1252231,
+          "learnedat": 35,
+          "level": 0,
+          "name": "Glowing Copper Boots",
+          "nskillup": 1,
+          "quality": 3,
+          "reagents": [
+            [
+              2840,
+              2
+            ],
+            [
+              10938,
+              4
+            ],
+            [
+              2318,
+              2
+            ]
+          ],
+          "schools": 1,
+          "skill": [
+            164
+          ],
+          "source": [
+            6
+          ],
+          "trainingcost": 105,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ]
+    },
+    "256657": {
+      "url": "https://www.wowhead.com/forever/npc=256657",
+      "bytes": 78634,
+      "sha256": "cd63be88b638596f845ee6e6c005e148fbed526f370a7bb68121bee230496bdf",
+      "title": "Kreza Darkthorn - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16591,
+          "name": "Riverglades",
+          "uiMapID": 2548,
+          "pointCount": 1,
+          "x": 59.8,
+          "y": 46,
+          "bounds": {
+            "xMin": 59.8,
+            "xMax": 59.8,
+            "yMin": 46,
+            "yMax": 46
+          }
+        }
+      ],
+      "rawPublishedContinentMapper": null,
+      "selectedDrops": [],
+      "selectedQuestStarts": [
+        {
+          "category": 16842,
+          "category2": 2,
+          "id": 94974,
+          "itemrewards": [
+            [
+              267089,
+              1
+            ]
+          ],
+          "level": 41,
+          "money": 5500,
+          "name": "Key Ingredients",
+          "reqlevel": 38,
+          "side": 2,
+          "xp": 3300,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "selectedQuestEnds": [
+        {
+          "category": 16842,
+          "category2": 2,
+          "id": 94973,
+          "level": 41,
+          "money": 5500,
+          "name": "Krol'dok Moulding",
+          "reqlevel": 38,
+          "side": 2,
+          "xp": 3300,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "category": 16842,
+          "category2": 2,
+          "id": 94974,
+          "itemrewards": [
+            [
+              267089,
+              1
+            ]
+          ],
+          "level": 41,
+          "money": 5500,
+          "name": "Key Ingredients",
+          "reqlevel": 38,
+          "side": 2,
+          "xp": 3300,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Exact full published actor identity/roles/geography;no current acceptance/stock or continent point promoted to precise pin."
+    },
+    "259256": {
+      "url": "https://www.wowhead.com/forever/npc=259256",
+      "bytes": 55176,
+      "sha256": "9c474240a90760accd18b2f737e48f84043c71fb4aa8acfd214e9a38ff834524",
+      "title": "Tunk - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": -3,
+          "name": "Eastern Kingdoms",
+          "uiMapID": 1415,
+          "pointCount": 0,
+          "scope": "Published continent mapper only; not accepted as precise Tunk/entrance/floor position. Raw point retained diagnostically."
+        }
+      ],
+      "rawPublishedContinentMapper": {
+        "-3": [
+          {
+            "count": 1,
+            "coords": [
+              [
+                58.4,
+                62.5
+              ]
+            ],
+            "uiMapId": 1415,
+            "uiMapName": "Eastern Kingdoms"
+          }
+        ]
+      },
+      "selectedDrops": [
+        {
+          "classs": 12,
+          "displayName": "Krol'dok Moulding",
+          "flags2": 24580,
+          "id": 267137,
+          "level": 1,
+          "name": "Krol'dok Moulding",
+          "quality": 1,
+          "slot": 0,
+          "source": [
+            2
+          ],
+          "sourcemore": [
+            {
+              "n": "Tunk",
+              "t": 1,
+              "ti": 259256
+            }
+          ],
+          "subclass": 0,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "modes": {
+            "mode": [
+              1
+            ],
+            "1": {
+              "count": 78,
+              "outof": 149
+            },
+            "0": {
+              "count": 78,
+              "outof": 149
+            }
+          },
+          "count": 78,
+          "stack": [
+            1,
+            1
+          ],
+          "specificDrop": true,
+          "itemSeasonPhaseData": {
+            "0": {
+              "0": {
+                "1": {
+                  "count": 78,
+                  "outof": 149
+                },
+                "0": {
+                  "count": 78,
+                  "outof": 149
+                }
+              }
+            }
+          },
+          "outof": 149
+        },
+        {
+          "classs": 12,
+          "displayName": "Krol'dok Moulding",
+          "flags2": 24580,
+          "id": 267138,
+          "level": 1,
+          "name": "Krol'dok Moulding",
+          "quality": 1,
+          "slot": 0,
+          "source": [
+            2
+          ],
+          "sourcemore": [
+            {
+              "n": "Tunk",
+              "t": 1,
+              "ti": 259256
+            }
+          ],
+          "subclass": 0,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "modes": {
+            "mode": [
+              1
+            ],
+            "1": {
+              "count": 71,
+              "outof": 149
+            },
+            "0": {
+              "count": 71,
+              "outof": 149
+            }
+          },
+          "count": 71,
+          "stack": [
+            1,
+            1
+          ],
+          "specificDrop": true,
+          "itemSeasonPhaseData": {
+            "0": {
+              "0": {
+                "1": {
+                  "count": 71,
+                  "outof": 149
+                },
+                "0": {
+                  "count": 71,
+                  "outof": 149
+                }
+              }
+            }
+          },
+          "outof": 149
+        }
+      ],
+      "selectedQuestStarts": [],
+      "selectedQuestEnds": [],
+      "scope": "Exact full published actor identity/roles/geography;no current acceptance/stock or continent point promoted to precise pin."
+    }
+  },
+  "objects": {},
+  "containers": {
+    "267089": {
+      "url": "https://www.wowhead.com/forever/item=267089",
+      "bytes": 60128,
+      "sha256": "cd8e3f6aa557ebba464a4102f7ce1cd33960a95ecb9ce44643efb0930c7e2568",
+      "title": "Krol'dok Compound Key - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "classs": 13,
+        "displayName": "Krol'dok Compound Key",
+        "flags2": 24580,
+        "id": 267089,
+        "level": 1,
+        "name": "Krol'dok Compound Key",
+        "quality": 1,
+        "reqlevel": 38,
+        "slot": 0,
+        "source": [
+          4
+        ],
+        "sourcemore": [
+          {
+            "z": 16842
+          }
+        ],
+        "subclass": 0,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 1,
+          "classs": 13,
+          "displayName": "Krol'dok Compound Key",
+          "flags2": 24580,
+          "id": 267089,
+          "level": 1,
+          "name": "Krol'dok Compound Key",
+          "reqlevel": 38,
+          "slot": 0,
+          "source": [
+            4
+          ],
+          "sourcemore": [
+            {
+              "z": 16842
+            }
+          ],
+          "subclass": 0,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "statsInfo": []
+        }
+      },
+      "relations": {
+        "reward-from-q": [
+          {
+            "category": 16842,
+            "category2": 2,
+            "id": 94974,
+            "itemrewards": [
+              [
+                267089,
+                1
+              ]
+            ],
+            "level": 41,
+            "money": 5500,
+            "name": "Key Ingredients",
+            "reqlevel": 38,
+            "side": 2,
+            "xp": 3300,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 3766
+          },
+          {
+            "category": 16842,
+            "category2": 2,
+            "id": 94981,
+            "itemrewards": [
+              [
+                267089,
+                1
+              ]
+            ],
+            "level": 41,
+            "money": 5500,
+            "name": "Key Ingredients",
+            "reqlevel": 38,
+            "side": 1,
+            "xp": 3300,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "popularity": 2414
+          }
+        ]
+      },
+      "scope": "Physical quest starter/key,not wearable equipment or profession recipe. Provided labels do not imply free repeatable supply;source minimum38 distinct from wearer level."
+    },
+    "267138": {
+      "url": "https://www.wowhead.com/forever/item=267138",
+      "bytes": 58832,
+      "sha256": "77085c9d90493e64689635912ded95854ad00d931141746c317c4aa88c161bd7",
+      "title": "Krol'dok Moulding - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "classs": 12,
+        "displayName": "Krol'dok Moulding",
+        "flags2": 24580,
+        "id": 267138,
+        "level": 1,
+        "name": "Krol'dok Moulding",
+        "quality": 1,
+        "slot": 0,
+        "source": [
+          2
+        ],
+        "sourcemore": [
+          {
+            "n": "Tunk",
+            "t": 1,
+            "ti": 259256
+          }
+        ],
+        "subclass": 0,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 1,
+          "classs": 12,
+          "displayName": "Krol'dok Moulding",
+          "flags2": 24580,
+          "id": 267138,
+          "level": 1,
+          "name": "Krol'dok Moulding",
+          "slot": 0,
+          "source": [
+            2
+          ],
+          "sourcemore": [
+            {
+              "n": "Tunk",
+              "t": 1,
+              "ti": 259256
+            }
+          ],
+          "subclass": 0,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "reqlevel": 1,
+          "statsInfo": []
+        }
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "classification": 1,
+            "displayName": "Tunk",
+            "displayNames": [],
+            "id": 259256,
+            "location": [
+              -3
+            ],
+            "name": "Tunk",
+            "names": [],
+            "tag": "Blacksmith",
+            "type": 7,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "count": 71,
+            "outof": 149,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 71,
+                "outof": 149
+              },
+              "0": {
+                "count": 71,
+                "outof": 149
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 71,
+                    "outof": 149
+                  },
+                  "0": {
+                    "count": 71,
+                    "outof": 149
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "starts": [
+          {
+            "category": 16842,
+            "category2": 2,
+            "id": 94980,
+            "level": 41,
+            "money": 5500,
+            "name": "Krol'dok Moulding",
+            "reqlevel": 38,
+            "side": 1,
+            "xp": 3300,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "scope": "Physical quest starter/key,not wearable equipment or profession recipe. Provided labels do not imply free repeatable supply;source minimum38 distinct from wearer level."
+    },
+    "267137": {
+      "url": "https://www.wowhead.com/forever/item=267137",
+      "bytes": 57715,
+      "sha256": "0318741d6d280af923a2f0957f1e7ca010e368dd2e06de127742fe7d031afdfd",
+      "title": "Krol'dok Moulding - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "classs": 12,
+        "displayName": "Krol'dok Moulding",
+        "flags2": 24580,
+        "id": 267137,
+        "level": 1,
+        "name": "Krol'dok Moulding",
+        "quality": 1,
+        "slot": 0,
+        "source": [
+          2
+        ],
+        "sourcemore": [
+          {
+            "n": "Tunk",
+            "t": 1,
+            "ti": 259256
+          }
+        ],
+        "subclass": 0,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 1,
+          "classs": 12,
+          "displayName": "Krol'dok Moulding",
+          "flags2": 24580,
+          "id": 267137,
+          "level": 1,
+          "name": "Krol'dok Moulding",
+          "slot": 0,
+          "source": [
+            2
+          ],
+          "sourcemore": [
+            {
+              "n": "Tunk",
+              "t": 1,
+              "ti": 259256
+            }
+          ],
+          "subclass": 0,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "maxcount": 1,
+          "reqlevel": 1,
+          "statsInfo": []
+        }
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "classification": 1,
+            "displayName": "Tunk",
+            "displayNames": [],
+            "id": 259256,
+            "location": [
+              -3
+            ],
+            "name": "Tunk",
+            "names": [],
+            "tag": "Blacksmith",
+            "type": 7,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            },
+            "count": 78,
+            "outof": 149,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 78,
+                "outof": 149
+              },
+              "0": {
+                "count": 78,
+                "outof": 149
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 78,
+                    "outof": 149
+                  },
+                  "0": {
+                    "count": 78,
+                    "outof": 149
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "starts": [
+          {
+            "category": 16842,
+            "category2": 2,
+            "id": 94973,
+            "level": 41,
+            "money": 5500,
+            "name": "Krol'dok Moulding",
+            "reqlevel": 38,
+            "side": 2,
+            "xp": 3300,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "scope": "Physical quest starter/key,not wearable equipment or profession recipe. Provided labels do not imply free repeatable supply;source minimum38 distinct from wearer level."
+    }
+  },
+  "quests": {
+    "94973": {
+      "url": "https://www.wowhead.com/forever/quest=94973",
+      "bytes": 57033,
+      "sha256": "9bb4af45aa12c816feb64446d44eb7674940e59081384981612e2eaed4a1db02",
+      "title": "Krol'dok Moulding - Quest - WoW Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": 16842,
+        "category2": 2,
+        "id": 94973,
+        "level": 41,
+        "money": 5500,
+        "name": "Krol'dok Moulding",
+        "reqlevel": 38,
+        "side": 2,
+        "xp": 3300,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "objectiveMapper": {
+        "objectives": {
+          "16591": {
+            "zone": "Riverglades",
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "end",
+                  "id": 256657,
+                  "name": "Kreza Darkthorn",
+                  "coords": []
+                }
+              ]
+            ]
+          }
+        }
+      },
+      "seriesQuestIDs": [],
+      "sourceRequirements": [
+        "Published Horde source quest minimum 38. Earlier mandatory links,current acceptance,drop conditions and compound access requirements remain unverified."
+      ],
+      "sourceRequirementsUnresolved": true,
+      "acquisitionDetails": [
+        "This is a physical quest-key route,not a learned profession recipe or wearable-item requirement.",
+        "The full zone defines a dungeon;these key quests alone do not prove the key is mandatory for every entry/boss/loot route."
+      ],
+      "starterZone": "Eastern Kingdoms",
+      "starterInstructions": "Obtain and read Krol'dok Moulding (item 267137) from Tunk. The independently matched full NPC page supplies only a coarse continent footprint;precise Tunk position/current drop and dungeon access remain unverified. Then deliver the moulding to Kreza Darkthorn in Riverglades.",
+      "turnInZone": "Riverglades",
+      "turnInInstructions": "Deliver the already obtained moulding to Kreza Darkthorn;full quest and full NPC end-role/geography match. Current acceptance and retention unverified.",
+      "requiredPhysicalItems": [
+        {
+          "itemID": 267137,
+          "name": "Krol'dok Moulding",
+          "quantity": 1,
+          "provided": false,
+          "startsQuest": true,
+          "rawObjectiveProvided": true
+        }
+      ]
+    },
+    "94974": {
+      "url": "https://www.wowhead.com/forever/quest=94974",
+      "bytes": 60625,
+      "sha256": "388d746a911e46bef4dbcdea41d33cc173a5063100201cddcdf1c3865bfb29f9",
+      "title": "Key Ingredients - Quest - WoW Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": 16842,
+        "category2": 2,
+        "id": 94974,
+        "itemrewards": [
+          [
+            267089,
+            1
+          ]
+        ],
+        "level": 41,
+        "money": 5500,
+        "name": "Key Ingredients",
+        "reqlevel": 38,
+        "side": 2,
+        "xp": 3300,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "objectiveMapper": {
+        "objectives": {
+          "16591": {
+            "zone": "Riverglades",
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "id": 256657,
+                  "name": "Kreza Darkthorn",
+                  "coords": []
+                },
+                {
+                  "type": 1,
+                  "point": "end",
+                  "id": 256657,
+                  "name": "Kreza Darkthorn",
+                  "coords": []
+                }
+              ]
+            ]
+          }
+        }
+      },
+      "seriesQuestIDs": [],
+      "sourceRequirements": [
+        "Published Horde source quest minimum 38. Earlier mandatory links,current acceptance,drop conditions and compound access requirements remain unverified."
+      ],
+      "sourceRequirementsUnresolved": true,
+      "acquisitionDetails": [
+        "This is a physical quest-key route,not a learned profession recipe or wearable-item requirement.",
+        "The full zone defines a dungeon;these key quests alone do not prove the key is mandatory for every entry/boss/loot route."
+      ],
+      "requiredPhysicalItems": [
+        {
+          "itemID": 4304,
+          "name": "Thick Leather",
+          "quantity": 4,
+          "provided": false
+        },
+        {
+          "itemID": 3575,
+          "name": "Iron Bar",
+          "quantity": 12,
+          "provided": false
+        }
+      ],
+      "objectiveZone": "Riverglades",
+      "objectiveSource": "npc:256657",
+      "objectiveInstructions": "Bring four Thick Leather and 12 Iron Bars to Kreza Darkthorn for the Krol'dok Compound Key. These are quest inputs,not a new profession craft or required gear ingredients."
+    },
+    "94980": {
+      "url": "https://www.wowhead.com/forever/quest=94980",
+      "bytes": 56881,
+      "sha256": "aaef79d27f294ae4fccee0c396f43b2c0176d3034ca6928812fda56dedf75515",
+      "title": "Krol'dok Moulding - Quest - WoW Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": 16842,
+        "category2": 2,
+        "id": 94980,
+        "level": 41,
+        "money": 5500,
+        "name": "Krol'dok Moulding",
+        "reqlevel": 38,
+        "side": 1,
+        "xp": 3300,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "objectiveMapper": {
+        "objectives": {
+          "16591": {
+            "zone": "Riverglades",
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "end",
+                  "id": 259250,
+                  "name": "Alphonse Dumas",
+                  "coords": []
+                }
+              ]
+            ]
+          }
+        }
+      },
+      "seriesQuestIDs": [],
+      "sourceRequirements": [
+        "Published Alliance source quest minimum 38. Earlier mandatory links,current acceptance,drop conditions and compound access requirements remain unverified."
+      ],
+      "sourceRequirementsUnresolved": true,
+      "acquisitionDetails": [
+        "This is a physical quest-key route,not a learned profession recipe or wearable-item requirement.",
+        "The full zone defines a dungeon;these key quests alone do not prove the key is mandatory for every entry/boss/loot route."
+      ],
+      "starterZone": "Eastern Kingdoms",
+      "starterInstructions": "Obtain and read Krol'dok Moulding (item 267138) from Tunk. The independently matched full NPC page supplies only a coarse continent footprint;precise Tunk position/current drop and dungeon access remain unverified. Then deliver the moulding to Alphonse Dumas in Riverglades.",
+      "turnInZone": "Riverglades",
+      "turnInInstructions": "Deliver the already obtained moulding to Alphonse Dumas;full quest and full NPC end-role/geography match. Current acceptance and retention unverified.",
+      "requiredPhysicalItems": [
+        {
+          "itemID": 267138,
+          "name": "Krol'dok Moulding",
+          "quantity": 1,
+          "provided": false,
+          "startsQuest": true,
+          "rawObjectiveProvided": true
+        }
+      ]
+    },
+    "94981": {
+      "url": "https://www.wowhead.com/forever/quest=94981",
+      "bytes": 58195,
+      "sha256": "93f51cba15f3d906b303a0b8ba6f7e5979b2ca9937a9ce945190737478d477aa",
+      "title": "Key Ingredients - Quest - WoW Forever",
+      "reusedCachedResponse": false,
+      "quest": {
+        "category": 16842,
+        "category2": 2,
+        "id": 94981,
+        "itemrewards": [
+          [
+            267089,
+            1
+          ]
+        ],
+        "level": 41,
+        "money": 5500,
+        "name": "Key Ingredients",
+        "reqlevel": 38,
+        "side": 1,
+        "xp": 3300,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "objectiveMapper": {
+        "objectives": {
+          "16591": {
+            "zone": "Riverglades",
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "id": 259250,
+                  "name": "Alphonse Dumas",
+                  "coords": []
+                },
+                {
+                  "type": 1,
+                  "point": "end",
+                  "id": 259250,
+                  "name": "Alphonse Dumas",
+                  "coords": []
+                }
+              ]
+            ]
+          }
+        }
+      },
+      "seriesQuestIDs": [],
+      "sourceRequirements": [
+        "Published Alliance source quest minimum 38. Earlier mandatory links,current acceptance,drop conditions and compound access requirements remain unverified."
+      ],
+      "sourceRequirementsUnresolved": true,
+      "acquisitionDetails": [
+        "This is a physical quest-key route,not a learned profession recipe or wearable-item requirement.",
+        "The full zone defines a dungeon;these key quests alone do not prove the key is mandatory for every entry/boss/loot route."
+      ],
+      "requiredPhysicalItems": [
+        {
+          "itemID": 4304,
+          "name": "Thick Leather",
+          "quantity": 4,
+          "provided": false
+        },
+        {
+          "itemID": 3575,
+          "name": "Iron Bar",
+          "quantity": 12,
+          "provided": false
+        }
+      ],
+      "objectiveZone": "Riverglades",
+      "objectiveSource": "npc:259250",
+      "objectiveInstructions": "Bring four Thick Leather and 12 Iron Bars to Alphonse Dumas for the Krol'dok Compound Key. These are quest inputs,not a new profession craft or required gear ingredients."
+    }
+  },
+  "zones": {
+    "zone:16842": {
+      "url": "https://www.wowhead.com/forever/zone=16842",
+      "bytes": 64354,
+      "sha256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0",
+      "title": "Krol'dok Stronghold - Zone - WoW Forever",
+      "reusedCachedResponse": false,
+      "zone": {
+        "id": 16842,
+        "name": "Krol'dok Stronghold",
+        "instanceType": "Dungeon"
+      },
+      "markup": [
+        "[ul][li]Territory: Contested[/li][li]Instance type: Dungeon[/li][li]Number of players: 5[/li][li]Zone ID: 16842[/li][li]Added in patch [acronym=\"1.60.1.70790\"]1.60.1[/acronym][/li][/ul]"
+      ],
+      "navigationInstructions": "Published five-player dungeon;the full page provides no zone map. Use a native entrance only if the client resolves it;precise entrance/floors,current access and keys remain unverified. A player comment about northern Riverglades is attributed,not verified coordinates."
+    }
+  },
+  "allPrimaryResponseHeaders": {
+    "item:12059": {
+      "url": "https://www.wowhead.com/forever/item=12059",
+      "bytes": 173453,
+      "sha256": "ee0be73fd4538e33af36a121ff58197d620fd71f9aaad2250e772215e41338aa",
+      "title": "Conqueror's Medallion - Item - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "item:11755": {
+      "url": "https://www.wowhead.com/forever/item=11755",
+      "bytes": 180495,
+      "sha256": "1988edaeda113b6aaac48b1794442cae1bc50c18dddffa5c3c3d375d9ce48f3a",
+      "title": "Verek's Collar - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:18387": {
+      "url": "https://www.wowhead.com/forever/item=18387",
+      "bytes": 239182,
+      "sha256": "5ff3ba2401e6cc3fdf9db233385f9c6db1413bc632220c7c9ff25c9a87b94778",
+      "title": "Brightspark Gloves - Item - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "item:270126": {
+      "url": "https://www.wowhead.com/forever/item=270126",
+      "bytes": 167382,
+      "sha256": "73908e242bbae671b391a9f995ebe34c6373d35c19b17c43bf2cbc8fc1e8a2da",
+      "title": "Conqueror's Pendant - Item - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "item:286590": {
+      "url": "https://www.wowhead.com/forever/item=286590",
+      "bytes": 167988,
+      "sha256": "f535afd52ea0e8ce69a52b67b4ec57690b934a25d92f3d43b81a35564d55e66d",
+      "title": "Silithid Queen's Husk - Item - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "item:17718": {
+      "url": "https://www.wowhead.com/forever/item=17718",
+      "bytes": 261905,
+      "sha256": "a12dd6be350c782596d6f78df7adb36141617feb2c543c0291e2bbc6163bcff8",
+      "title": "Gizlock's Hypertech Buckler - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:17707": {
+      "url": "https://www.wowhead.com/forever/item=17707",
+      "bytes": 213238,
+      "sha256": "951a367dfaee9aebe796f8fbf24a774a49913780ce253a4db4e1e285a0c90ec0",
+      "title": "Gemshard Heart - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:17711": {
+      "url": "https://www.wowhead.com/forever/item=17711",
+      "bytes": 283326,
+      "sha256": "6fc79e9fe71f3d7e0e69c348e4340d70ac6bd14f173db3916436412a88ce3eff",
+      "title": "Elemental Rockridge Leggings - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:287009": {
+      "url": "https://www.wowhead.com/forever/item=287009",
+      "bytes": 175341,
+      "sha256": "c506eab4809d577a7f7151b89a42ec8a641ad19177cfb9acec2fef8612ab25e7",
+      "title": "Twilight Enforcer's Legs - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:287012": {
+      "url": "https://www.wowhead.com/forever/item=287012",
+      "bytes": 175731,
+      "sha256": "f56c7c4a71a6c36ad99955ca2bc3040ebe72adccb9e46265693d6e0f477db024",
+      "title": "Krol'dok Warplate Gauntlets - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:287013": {
+      "url": "https://www.wowhead.com/forever/item=287013",
+      "bytes": 177207,
+      "sha256": "ab0a3ee9e1b2a515b71e8d184e4948f7ba200c7d6adcf4b933a916066ed79148",
+      "title": "Krol'dok Warplate Legplates - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:287014": {
+      "url": "https://www.wowhead.com/forever/item=287014",
+      "bytes": 223595,
+      "sha256": "a1d66c08ec03409305ec5ae479ed7d929e7ae2124def6efd2d34f70a654acccc",
+      "title": "Krol'dok Warplate Pauldrons - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:287020": {
+      "url": "https://www.wowhead.com/forever/item=287020",
+      "bytes": 175691,
+      "sha256": "3e75e5e0025b1650af764fac397b1a43eb0cd1c32a85c33310b43a3e6fb6188d",
+      "title": "Defias Enforcer's Chest - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:287021": {
+      "url": "https://www.wowhead.com/forever/item=287021",
+      "bytes": 175619,
+      "sha256": "05f1e5d46d7e22dd20eb33b24bdf6ae60dd9d66911f5b8879e05ddea34ed0d97",
+      "title": "Defias Enforcer's Prowlers - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:11467": {
+      "url": "https://www.wowhead.com/forever/npc=11467",
+      "bytes": 131601,
+      "sha256": "3423e0de708c992e4ed527ff2796444066151b2fdb3e684fb0ede8e3fed15350",
+      "title": "Tsu'zee - NPC - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "npc:13601": {
+      "url": "https://www.wowhead.com/forever/npc=13601",
+      "bytes": 212870,
+      "sha256": "d2bfd981ebc3f121f1c46502204a80872a7297d07aedcfd8f263e0ecaa3de4c2",
+      "title": "Tinkerer Gizlock - NPC - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "npc:12201": {
+      "url": "https://www.wowhead.com/forever/npc=12201",
+      "bytes": 296488,
+      "sha256": "1905633f48dc5507668e23292b3e50aa80554c416386dbde36a2b4c6eefb4959",
+      "title": "Princess Theradras - NPC - Forever",
+      "reusedCachedResponse": true
+    },
+    "npc:255271": {
+      "url": "https://www.wowhead.com/forever/npc=255271",
+      "bytes": 89954,
+      "sha256": "d2ee44a6de5b59ff9569576fb3fcaa630bc96523bde1e51ee81505b5c7d80e1c",
+      "title": "Defias Truthfinder - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:255267": {
+      "url": "https://www.wowhead.com/forever/npc=255267",
+      "bytes": 96121,
+      "sha256": "840d8537a82603db9808806058e5e62d5112cdca8deba53bab5a45e9e3c16260",
+      "title": "Slavering Hound - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:255377": {
+      "url": "https://www.wowhead.com/forever/npc=255377",
+      "bytes": 106158,
+      "sha256": "e0eb0f2802690e156d611d079fefd059d2f4f9a212a004aaa1e3d2d462d04700",
+      "title": "Alcaz Jailer - NPC - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "npc:255276": {
+      "url": "https://www.wowhead.com/forever/npc=255276",
+      "bytes": 93621,
+      "sha256": "fc9e74787ef67caf93512aa28f7741a28376c4c9f8af2ae69756f0cacbb03651",
+      "title": "Defias Mercenary - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:255262": {
+      "url": "https://www.wowhead.com/forever/npc=255262",
+      "bytes": 85225,
+      "sha256": "1e0f28433b4b70aef6dfc86d240be4d2d0d65f73030591c25169eee77faacb1d",
+      "title": "Alcaz Chaplain - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:255309": {
+      "url": "https://www.wowhead.com/forever/npc=255309",
+      "bytes": 93661,
+      "sha256": "e24f82e2df43c43a1754f25a820714dccde9a888f037ed48d4ed25cf99a111d2",
+      "title": "Defias Bounty Hunter - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:255995": {
+      "url": "https://www.wowhead.com/forever/npc=255995",
+      "bytes": 110725,
+      "sha256": "403d21f433e8ad9148e9d5806189cb0c0c5c87ed42fb5111a289d2127dc7b8c4",
+      "title": "Strashaz Soldier - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:258038": {
+      "url": "https://www.wowhead.com/forever/npc=258038",
+      "bytes": 122105,
+      "sha256": "35fc21af68da9986b7438128799420fe2c31712eae2d4d778479eb867cd2f977",
+      "title": "Shadowhide Bully - NPC - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "npc:257888": {
+      "url": "https://www.wowhead.com/forever/npc=257888",
+      "bytes": 137819,
+      "sha256": "4dd42e05b715023c7491d1858574184ed37ea4427356d589315342861f400541",
+      "title": "Krol'dok Shaman - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:257885": {
+      "url": "https://www.wowhead.com/forever/npc=257885",
+      "bytes": 154668,
+      "sha256": "ae03dd64ac06213892263dd96763e8d358096c32ba442330a2bcb5a4359eef61",
+      "title": "Krol'dok Centurion - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:257900": {
+      "url": "https://www.wowhead.com/forever/npc=257900",
+      "bytes": 152686,
+      "sha256": "ef5b6ace162579f6f6dcf04e4bd0f52513acb787916c5cf22c46f2f6fe08e15d",
+      "title": "Redridge Prisoner - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:258040": {
+      "url": "https://www.wowhead.com/forever/npc=258040",
+      "bytes": 102547,
+      "sha256": "cb65329a9ba96ae2032cdbeb9084832d198600f86163d0178fe5b6e5888be404",
+      "title": "Shadowhide Curseweaver - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:258042": {
+      "url": "https://www.wowhead.com/forever/npc=258042",
+      "bytes": 289473,
+      "sha256": "c173babdcd3fd0f4b514d8a920b2df010c3c6abcaed83d1c90e4395f6e69421f",
+      "title": "Twilight Grunt - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:258100": {
+      "url": "https://www.wowhead.com/forever/npc=258100",
+      "bytes": 144000,
+      "sha256": "51dfc6421f6513d0b476b40f9775427a98cce4b3d42c2edc25374deab83bb77d",
+      "title": "Twilight Warlock - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:258102": {
+      "url": "https://www.wowhead.com/forever/npc=258102",
+      "bytes": 171480,
+      "sha256": "6156807aa144f53e55d4bc0920dcb6d59197a7067e06e389c12576d02c57a9e2",
+      "title": "Twilight Outrider - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:258104": {
+      "url": "https://www.wowhead.com/forever/npc=258104",
+      "bytes": 184922,
+      "sha256": "bb5ef123c44a129034c70b8cff27070bd638c9d775abce067093c94c849332d6",
+      "title": "Twilight Lieutenant - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:262067": {
+      "url": "https://www.wowhead.com/forever/npc=262067",
+      "bytes": 70519,
+      "sha256": "5b39cff688708c53d0c9292ab38b400d1226b15ca1ed8a64b96b68999321885e",
+      "title": "Twilight Peon - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:9042": {
+      "url": "https://www.wowhead.com/forever/npc=9042",
+      "bytes": 101153,
+      "sha256": "23413deafcd6592614a10fbb62e28fdc4d56563286153e9a4b5fb72bef46c93d",
+      "title": "Verek - NPC - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "quest:4132": {
+      "url": "https://www.wowhead.com/forever/quest=4132",
+      "bytes": 68337,
+      "sha256": "0ebbe4f775efd22936a4a53a401f90da4ba820798672fd8e2591fe85f104ff39",
+      "title": "Operation: Death to Angerforge - Quest - WoW Forever",
+      "reusedCachedResponse": true
+    },
+    "npc:258687": {
+      "url": "https://www.wowhead.com/forever/npc=258687",
+      "bytes": 295158,
+      "sha256": "26d12c21763d1a7cac6984a4e53e52ade68481f0e94f5e4b3282be4a36e8ffe0",
+      "title": "Krol'dok Brute - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:268423": {
+      "url": "https://www.wowhead.com/forever/npc=268423",
+      "bytes": 74773,
+      "sha256": "7d75e3e6bb2611100df7876f3add722203474bd882e12c3b19f79e54d2fecf0b",
+      "title": "Zalfan Moonshadow - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:271784": {
+      "url": "https://www.wowhead.com/forever/npc=271784",
+      "bytes": 77005,
+      "sha256": "10d9d3b0bd1b4c96c657b5a58947ed2d07f96eb0840369239e3886cc03817ddf",
+      "title": "Alcaz Jailer - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "zone:16842": {
+      "url": "https://www.wowhead.com/forever/zone=16842",
+      "bytes": 64354,
+      "sha256": "20db8d8d0c8bb1f3e0776f0e12584ae16171d91af57af90c140732a52d1074f0",
+      "title": "Krol'dok Stronghold - Zone - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "quest:94973": {
+      "url": "https://www.wowhead.com/forever/quest=94973",
+      "bytes": 57033,
+      "sha256": "9bb4af45aa12c816feb64446d44eb7674940e59081384981612e2eaed4a1db02",
+      "title": "Krol'dok Moulding - Quest - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:267089": {
+      "url": "https://www.wowhead.com/forever/item=267089",
+      "bytes": 60128,
+      "sha256": "cd8e3f6aa557ebba464a4102f7ce1cd33960a95ecb9ce44643efb0930c7e2568",
+      "title": "Krol'dok Compound Key - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "quest:94980": {
+      "url": "https://www.wowhead.com/forever/quest=94980",
+      "bytes": 56881,
+      "sha256": "aaef79d27f294ae4fccee0c396f43b2c0176d3034ca6928812fda56dedf75515",
+      "title": "Krol'dok Moulding - Quest - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "quest:94974": {
+      "url": "https://www.wowhead.com/forever/quest=94974",
+      "bytes": 60625,
+      "sha256": "388d746a911e46bef4dbcdea41d33cc173a5063100201cddcdf1c3865bfb29f9",
+      "title": "Key Ingredients - Quest - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "quest:94981": {
+      "url": "https://www.wowhead.com/forever/quest=94981",
+      "bytes": 58195,
+      "sha256": "93f51cba15f3d906b303a0b8ba6f7e5979b2ca9937a9ce945190737478d477aa",
+      "title": "Key Ingredients - Quest - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:267138": {
+      "url": "https://www.wowhead.com/forever/item=267138",
+      "bytes": 58832,
+      "sha256": "77085c9d90493e64689635912ded95854ad00d931141746c317c4aa88c161bd7",
+      "title": "Krol'dok Moulding - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "item:267137": {
+      "url": "https://www.wowhead.com/forever/item=267137",
+      "bytes": 57715,
+      "sha256": "0318741d6d280af923a2f0957f1e7ca010e368dd2e06de127742fe7d031afdfd",
+      "title": "Krol'dok Moulding - Item - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:259250": {
+      "url": "https://www.wowhead.com/forever/npc=259250",
+      "bytes": 81965,
+      "sha256": "28f8299bbbe1f78898e7e5511c18c27ec0c6787f227879579f0a64ec28b896cf",
+      "title": "Alphonse Dumas - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:256657": {
+      "url": "https://www.wowhead.com/forever/npc=256657",
+      "bytes": 78634,
+      "sha256": "cd63be88b638596f845ee6e6c005e148fbed526f370a7bb68121bee230496bdf",
+      "title": "Kreza Darkthorn - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    },
+    "npc:259256": {
+      "url": "https://www.wowhead.com/forever/npc=259256",
+      "bytes": 55176,
+      "sha256": "9c474240a90760accd18b2f737e48f84043c71fb4aa8acfd214e9a38ff834524",
+      "title": "Tunk - NPC - WoW Forever",
+      "reusedCachedResponse": false
+    }
+  },
+  "dropReverseJoins": [
+    {
+      "itemID": 11755,
+      "npcID": 9042,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 17707,
+      "npcID": 12201,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 17711,
+      "npcID": 12201,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 17718,
+      "npcID": 13601,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 18387,
+      "npcID": 11467,
+      "ownClassicEra": null,
+      "fullClassicEra": 1
+    },
+    {
+      "itemID": 287009,
+      "npcID": 257900,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287009,
+      "npcID": 258038,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287009,
+      "npcID": 258042,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287009,
+      "npcID": 258102,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287009,
+      "npcID": 258687,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287009,
+      "npcID": 262067,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 257885,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 257888,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 257900,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 258038,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 258040,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 258042,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 258100,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 258102,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 258104,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287012,
+      "npcID": 258687,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 257885,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 257888,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 257900,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 258038,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 258040,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 258042,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 258100,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 258102,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 258104,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 258687,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287013,
+      "npcID": 268423,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 257885,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 257888,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 257900,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 258038,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 258040,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 258042,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 258100,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 258102,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 258104,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 258687,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 262067,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287014,
+      "npcID": 268423,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287020,
+      "npcID": 255262,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287020,
+      "npcID": 255267,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287020,
+      "npcID": 255271,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287020,
+      "npcID": 255309,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287020,
+      "npcID": 255377,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287020,
+      "npcID": 271784,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287021,
+      "npcID": 255262,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287021,
+      "npcID": 255267,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287021,
+      "npcID": 255271,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287021,
+      "npcID": 255276,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287021,
+      "npcID": 255309,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287021,
+      "npcID": 255377,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287021,
+      "npcID": 255995,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 287021,
+      "npcID": 271784,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    }
+  ],
+  "dropReverseOmissions": [],
+  "objectReverseJoins": [],
+  "objectReverseOmissions": [],
+  "physicalContainerReferences": [],
+  "failedFullReads": [],
+  "reusedKnownFailures": [],
+  "explicitPrimaryNPCDescriptorJoins": [
+    {
+      "itemID": 11755,
+      "npcID": 9042,
+      "name": "Verek",
+      "primaryDescriptor": {
+        "bd": 1,
+        "dd": -1,
+        "n": "Verek",
+        "t": 1,
+        "ti": 9042,
+        "z": 1584
+      },
+      "independentFullOwnNPCPositive": true,
+      "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+    },
+    {
+      "itemID": 18387,
+      "npcID": 11467,
+      "name": "Tsu'zee",
+      "primaryDescriptor": {
+        "bd": 1,
+        "dd": -1,
+        "n": "Tsu'zee",
+        "t": 1,
+        "ti": 11467,
+        "z": 2557
+      },
+      "independentFullOwnNPCPositive": true,
+      "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+    },
+    {
+      "itemID": 17718,
+      "npcID": 13601,
+      "name": "Tinkerer Gizlock",
+      "primaryDescriptor": {
+        "bd": 1,
+        "dd": -1,
+        "n": "Tinkerer Gizlock",
+        "t": 1,
+        "ti": 13601,
+        "z": 2100
+      },
+      "independentFullOwnNPCPositive": true,
+      "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+    },
+    {
+      "itemID": 17707,
+      "npcID": 12201,
+      "name": "Princess Theradras",
+      "primaryDescriptor": {
+        "bd": 1,
+        "dd": -1,
+        "n": "Princess Theradras",
+        "t": 1,
+        "ti": 12201,
+        "z": 2100
+      },
+      "independentFullOwnNPCPositive": true,
+      "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+    },
+    {
+      "itemID": 17711,
+      "npcID": 12201,
+      "name": "Princess Theradras",
+      "primaryDescriptor": {
+        "bd": 1,
+        "dd": -1,
+        "n": "Princess Theradras",
+        "t": 1,
+        "ti": 12201,
+        "z": 2100
+      },
+      "independentFullOwnNPCPositive": true,
+      "scope": "Exact rootdescriptor plus fulljoin,notlive/exclusive/rate/floorproof."
+    }
+  ],
+  "explicitPrimaryRegionDescriptors": [
+    {
+      "itemID": 287009,
+      "zoneID": 16842,
+      "publishedNPCRegionNames": [
+        "Krol'dok Stronghold"
+      ],
+      "primaryDescriptor": {
+        "dd": -1,
+        "z": 16842
+      },
+      "fullZoneRawStatus": "full-primary-definition",
+      "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+    },
+    {
+      "itemID": 287012,
+      "zoneID": 16842,
+      "publishedNPCRegionNames": [
+        "Krol'dok Stronghold"
+      ],
+      "primaryDescriptor": {
+        "dd": -1,
+        "z": 16842
+      },
+      "fullZoneRawStatus": "full-primary-definition",
+      "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+    },
+    {
+      "itemID": 287013,
+      "zoneID": 16842,
+      "publishedNPCRegionNames": [
+        "Krol'dok Stronghold"
+      ],
+      "primaryDescriptor": {
+        "dd": -1,
+        "z": 16842
+      },
+      "fullZoneRawStatus": "full-primary-definition",
+      "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+    },
+    {
+      "itemID": 287014,
+      "zoneID": 16842,
+      "publishedNPCRegionNames": [
+        "Krol'dok Stronghold"
+      ],
+      "primaryDescriptor": {
+        "dd": -1,
+        "z": 16842
+      },
+      "fullZoneRawStatus": "full-primary-definition",
+      "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+    },
+    {
+      "itemID": 287020,
+      "zoneID": 16620,
+      "publishedNPCRegionNames": [
+        "Alcaz Prison"
+      ],
+      "primaryDescriptor": {
+        "dd": -1,
+        "z": 16620
+      },
+      "fullZoneRawStatus": "reuse-completed8CI-full-definition",
+      "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+    },
+    {
+      "itemID": 287021,
+      "zoneID": 16620,
+      "publishedNPCRegionNames": [
+        "Alcaz Prison"
+      ],
+      "primaryDescriptor": {
+        "dd": -1,
+        "z": 16620
+      },
+      "fullZoneRawStatus": "reuse-completed8CI-full-definition",
+      "scope": "AreaIDnotUIMapID; nativeentrance/writtencontext,notworldcontinentbounds asfloorpoints."
+    }
+  ],
+  "rawRateLimitCheck": {
+    "rateResponses": [],
+    "notRequested": []
+  },
+  "limits": "Publicationresearchonly/noactivegearadoption.12baseline/one12059unconfirmed-version-plus-missinglevelhold/one270126missingprintedlevelhold;286590originunknown. Full4132legacyrewardversusno-longer-rewardannotationconflictpreservedoutside-runtimefollowup,noPendantreplacementinvented. Full16842Dungeondefinitionand2exactNPCmemberships,nofloor/entrancecoordinate/continentboundsaspin. Fullzonekeyquests areleads,notmandatorygraph/accessproof. Existing27chainsunchanged. Two qualified key itineraries preserve27olderobjects,notmandatoryprerequisite/accessproof. Mouldings267137Horde/267138Alliance bothindependentlyfullTunk259256positive;continentpointretainedrawonly/no preciseTunkpin. FullKreza/AlphonseRivergladespointsandroles corroborated. FourLeather/12IronBarquestcostsnotregularcraft/ingredients.",
+  "next": "Integrate14dispositions/auditallfullinventories+zonerewards;markexactnextqueue;freshreconcile/full19local18CI/fullbotreview,thencontinueautomatically."
+}

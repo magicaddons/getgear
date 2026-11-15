@@ -1,0 +1,109 @@
+{
+  "all_items_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 0,
+    "semanticChanges": [
+      {
+        "itemID": "2987",
+        "name": "Inscribed Leather Boots",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 1,
+            "after": 2
+          }
+        }
+      },
+      {
+        "itemID": "5212",
+        "name": "Blazing Wand",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 3,
+            "after": 4
+          }
+        }
+      },
+      {
+        "itemID": "6528",
+        "name": "Spellbinder Robe",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 1
+          }
+        }
+      },
+      {
+        "itemID": "6565",
+        "name": "Shimmering Gloves",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 1
+          }
+        }
+      },
+      {
+        "itemID": "12983",
+        "name": "Rakzur Club",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 1
+          }
+        }
+      },
+      {
+        "itemID": "12987",
+        "name": "Darkweave Breeches",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 1
+          }
+        }
+      },
+      {
+        "itemID": "15331",
+        "name": "Wrangler's Wristbands",
+        "changes": {
+          "EverlootObservedEdges": {
+            "before": 0,
+            "after": 1
+          }
+        }
+      }
+    ]
+  },
+  "dungeon_items_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 0,
+    "semanticChanges": []
+  },
+  "recipes_reconciled.csv": {
+    "additiveSummaryCells": 0,
+    "sourceRowOffsetOnlyCells": 1,
+    "semanticChanges": [
+      {
+        "itemID": "2844",
+        "name": "Copper Mace",
+        "changes": {
+          "spellID": {
+            "before": "",
+            "after": 2737
+          }
+        }
+      },
+      {
+        "itemID": "2845",
+        "name": "Copper Axe",
+        "changes": {
+          "spellID": {
+            "before": "",
+            "after": 2738
+          }
+        }
+      }
+    ]
+  }
+}

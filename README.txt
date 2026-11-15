@@ -1,65 +1,67 @@
-GETGEAR 0.14.0 BETA 7 — ALLIANCE LEVELS 1–60
-================================================
-PUBLIC BETA / PRE-RELEASE. Not a finished, fully verified item database.
-Official download: https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta7
+GetGear v0.14.0-beta9 — Public Testing Release
+==============================================
+Gear planning and acquisition guidance for WoW Forever, levels 1–60.
+Alliance remains the documented route focus; known source restrictions and
+uncertainties are preserved. This is a public beta, not a stable release.
 
-ABOUT
------
-GetGear is an in-game guide for gear that each of the nine Alliance classes
-can equip between levels 1 and 60. It lists useful leads and materials, not
-a ranked best-in-slot list or a prescribed specialization build.
-
-FEATURES
---------
-- Unified class catalogue across levels 1–60; no manual spec picker.
-- Available Now, Next 5 Levels, Earlier Gear, Completed/Skipped, Hidden,
-  Bags, and a read-only guide preview for all classes and levels.
-- Compact overlay with up to 32 shown records; detailed pages of 40.
-- Default body armour priorities, including the level-40 plate/mail changes.
-  Enable "Show all valid equipment" for unusual class-equippable alternatives.
-- Source leads for quests, bosses, vendors, crafting and world drops, with
-  uncertainty clearly indicated where the live Forever route is unknown.
-- Crafting recipes and materials from a dated Forever client snapshot;
-  combined material totals and optional personal "can't craft" filter.
-- Progress state, item tooltips, stat comparisons, map navigation where
-  supported, bag objectives, and saved account inventory snapshots.
-- Preview Guide Display settings are positioned to avoid control overlap.
-
-INSTALL / UPGRADE
------------------
+INSTALL OR UPGRADE
+------------------
 1. Exit WoW Forever completely.
-2. Back up AddOns/GetGear and its WTF SavedVariables.
-3. Extract the official GitHub Release ZIP. Copy the single GetGear folder
-   into _forever_/Interface/AddOns/, replacing the old folder.
-4. Ensure _forever_/Interface/AddOns/GetGear/GetGear.toc exists (no nesting).
-5. Open the game and type /getgear. Do not use /gg.
+2. Back up the existing Interface/AddOns/GetGear folder outside AddOns, and
+   back up GetGear account/character SavedVariables in WTF. Keep your progress.
+3. Extract the ZIP's single GetGear folder into Interface/AddOns. Move the old
+   addon folder out first so files from earlier tests do not remain behind.
+4. Confirm Interface/AddOns/GetGear/GetGear.toc exists without extra nesting.
+   Do not install multiple GetGear copies simultaneously or rename the folder.
+5. Launch the game, enable GetGear and use /getgear. Settings are available at
+   /getgear settings; /getgear overlay toggles the compact tracker.
 
-WARNING: Moving from v0.12.x to the unified v0.14.x schema can reset old
-per-character acquired/skipped/hidden statuses and display preferences.
-Account inventory is intended to remain, but back it up as well.
+The AddOns version should be 0.14.0-beta9. No new SavedVariables migration is
+introduced relative to the tested v0.14.x builds. Retain backups when upgrading
+from older versions. GetGear requires no TomTom or other third-party addon.
 
-KEY COMMANDS
-------------
-/getgear             Open/close detailed guide
-/getgear overlay     Toggle compact tracker
-/getgear settings    Display options
-/getgear status      Catalogue / talent-detection diagnostics
-/getgear notify      Toggle source-aware level notifications
-/getgear inventory   Inventory diagnostics
-/getgear bankdiag    Bank-container diagnostics
+WHAT'S IMPROVED
+---------------
+- Class-aware equipment permissions and stat/school filtering, with Show-all
+  still available for unusual but class-equippable choices.
+- Cleaner compact acquisition and recipe instructions; full alternatives and
+  requirements remain in the Guide.
+- Context-sensitive map pins, delayed map readiness handling, useful published
+  dungeon approaches, source choices and preserved native waypoints.
+- Recipe learning requirements, specialisations, reputation/currency/material
+  costs and potential offhand planning while using a two-handed weapon.
+- All 7,707 items included in the presentation audit. The approved catalogue
+  and acquisition dataset are unchanged from PRIVATE TEST 4.
 
-SOURCES, SCOPE & REPORTING
---------------------------
-The 7,707-item catalogue (36,341 class-equippable item objectives) is based
-partly on a Forever item snapshot from 21 Oct 2026. Recipe reagents for 1,244
-crafted items come from 31 Oct 2026 client-derived data. Not all entries,
-vendor stock, quests, boss drops, recipe-learning sources and skill levels
-are verified obtainable in the current game. Alliance is the route focus.
+PLEASE HELP TEST
+----------------
+Report problems at https://github.com/magicaddons/getgear/issues
+Include version, class/level, affected item name/ID, relevant settings, expected
+and actual result, screenshot and any full Lua error. /console scriptErrors 1
+can help capture errors. Do not farm an uncertain source solely to verify it.
 
-Bank and bag contents for offline alts are last-known snapshots only;
-inventory does not imply live remote access.
+KNOWN LIMITATIONS
+-----------------
+Some recipe-learning sources, locations and current acquisition conditions
+remain unverified. Published map areas are not exact current NPC positions;
+dungeon approaches are not boss-floor coordinates or a guarantee of access.
+Current vendor stock, loot, quest access, map behaviour and client interactions
+still need community testing. Unknown sources remain explicitly qualified.
+Automated checks and the user's private in-game testing do not confirm every
+route, class, client state or other-addon interaction. The 900 held candidates
+have not been added.
 
-Read the public release notes and current README.md at:
-https://github.com/magicaddons/getgear
-Report errors with item IDs, class, level, source and screenshots at:
-https://github.com/magicaddons/getgear/issues
+SOURCE CREDITS
+--------------
+Everloot: https://everloot.app — community observation data, CC BY-SA 4.0
+https://creativecommons.org/licenses/by-sa/4.0/
+Everloot-derived reference data is adapted/combined and remains subject to
+CC BY-SA 4.0. Observations do not imply guaranteed future loot or rates.
+Playfulls: https://playfulls.com/database — public community source references;
+https://playfulls.com/methodology
+WoW Forever Friends: https://www.wowforeverfriends.org — Classic-reference
+item/NPC data, not proof of current Forever acquisition.
+Forever client cache: https://github.com/Napalmsteak/WoW-Classic-Item-Caches
+Recipe/client references: AHledger and the dated client snapshots documented
+in the repository. Individual publication checks cite Wowhead Forever and
+other source URLs in the reviewed evidence registers. No Blizzard affiliation.

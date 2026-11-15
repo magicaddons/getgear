@@ -7,6 +7,8 @@ for _,path in ipairs({
     "EquipmentCache.lua",
     "GeneratedBeta7Evidence.lua",
     "SourceEnrichment.lua",
+    "GeneratedStatFlags.lua",
+    "StatEvidence.lua",
     "GuideEngine.lua",
 }) do
     local fn,err=loadfile(root.."/"..path)
@@ -29,7 +31,7 @@ for id,item in pairs(a.ItemCatalog) do
     end
 end
 assert(count==7707,"Catalogue changed from 7,707: "..count)
-assert(a.CatalogueAudit.objectives==36341,"Class objectives changed")
+assert(a.CatalogueAudit.objectives==36669,"Class objectives changed")
 local classes={"PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","PALADIN"}
 for _,c in ipairs(classes) do
     assert(#(a.EquipmentByClass[c] or {})>=1000,c.." catalogue lost")
@@ -39,7 +41,7 @@ local report=assert(a.Beta7GeneratedEvidence)
 assert(report.recipe==1060,"Missing expected 1,060 newly detailed crafts: "..tostring(report.recipe))
 assert(report.reagentConflicts==43 and report.reagentCorrections==43,
     "Unexpected recipe discrepancy count: "..tostring(report.reagentConflicts))
-assert(report.boss==415,"Dungeon source regression "..tostring(report.boss))
+assert(report.dungeonEnemy==415,"Dungeon enemy source regression "..tostring(report.dungeonEnemy))
 assert(report.vendor==55,"Vendor source regression "..tostring(report.vendor))
 assert(report.quest==27,"Quest source regression "..tostring(report.quest))
 local function hasIngredient(id,ingredient,quantity)
@@ -67,4 +69,4 @@ local copper=assert(a.ItemCatalog[2864])
 assert(copper.recipeLearningSourceURL:find("item=2881",1,true))
 local wand=assert(a.ItemCatalog[217287])
 assert(wand.recipeSpellID==14810,"Greater Mystic Wand default variant changed")
-print("PASS full Beta7: 7707 items, 36341 class objectives, nine classes, 1060 new recipes, 43 corrections, 415 boss, 55 vendor, 27 quest")
+print("PASS full Beta7: 7707 items, 36669 class objectives, nine classes, 1060 new recipes, 43 corrections, 415 named dungeon enemies (not necessarily bosses), 55 vendor, 27 quest")

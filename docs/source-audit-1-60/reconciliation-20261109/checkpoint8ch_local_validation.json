@@ -1,0 +1,186 @@
+{
+  "status": "100 selected plus1 supplemental candidates individually assessed; final full19localPASS; CI/full bot review pending",
+  "registry": 5902,
+  "index": 7373,
+  "display": 7372,
+  "books": 759,
+  "originalFrozenQueue": {
+    "total": 5688,
+    "dispositioned": 5688,
+    "pending": 0
+  },
+  "outsideQueue": {
+    "total": 498,
+    "assessed": 402,
+    "pending": 96,
+    "nextBatch": "8CI",
+    "nextCases": 96,
+    "firstID": 21394,
+    "lastID": 287074
+  },
+  "caseCounts": {
+    "selected": 100,
+    "supplemental": 1,
+    "individuallyAssessed": 101,
+    "groups": {
+      "origin-unresolved": 11,
+      "named-source-reference": 48,
+      "quest-reference": 19,
+      "broad-published-reference": 23
+    },
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 72,
+      "hold-no-rendered-equip-level": 18,
+      "hold-version-unconfirmed": 11
+    },
+    "primaryFull": 101,
+    "primaryNew": 95,
+    "primaryCached": 6,
+    "caseFullPages": 238,
+    "caseNewPages": 151,
+    "caseCachedPages": 87,
+    "exactQueries": 101,
+    "sharedQueries": 2,
+    "dropReverseJoins": 112,
+    "dropReverseOmissions": 213,
+    "objectReverseJoins": 3,
+    "objectReverseOmissions": 1,
+    "physicalContainerReferences": 2,
+    "physicalContainerReverseJoins": 2,
+    "physicalContainerOmissions": 0,
+    "bookStarterJoins": 9,
+    "bookDropReverseJoins": 99,
+    "bookDropReverseOmissions": 0,
+    "bookObjectReverseJoins": 9,
+    "newFailed403": 0,
+    "knownFailedURLs": 916,
+    "oldFailedReferenceEdgesSkipped": 0,
+    "quality": {
+      "3": 93,
+      "2": 6,
+      "4": 2
+    },
+    "BackHeaders": 6,
+    "versionUnconfirmedFlags": 11,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "sourceProofImmutableSHA256": "c5b5c7be25beb3099a4261b5030958bdd767f2a492a5e02b5e54eff92f1e44cc",
+  "upstreamFollowups": {
+    "full": 3,
+    "new": 3,
+    "cached": 0,
+    "totalIncludingCase": 241,
+    "totalNew": 154,
+    "totalCached": 87
+  },
+  "successfulCapture": {
+    "label": "8ch5",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.a58bed597a.json": {
+        "bytes": 1010639,
+        "sha256": "a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4",
+        "workspacePath": "/tmp/getgear-research/8ch5-http-capture/a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4.body",
+        "capturedUTC": "2026-11-12T20:42:16.793506+00:00"
+      },
+      "https://playfulls.com/db/gear.ce85a43eee.json": {
+        "bytes": 1360205,
+        "sha256": "ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9",
+        "workspacePath": "/tmp/getgear-research/8ch5-http-capture/ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9.body",
+        "capturedUTC": "2026-11-12T20:42:17.068268+00:00"
+      },
+      "https://playfulls.com/db/goods.b06e07d3a6.json": {
+        "bytes": 466933,
+        "sha256": "b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82",
+        "workspacePath": "/tmp/getgear-research/8ch5-http-capture/b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82.body",
+        "capturedUTC": "2026-11-12T20:42:17.283815+00:00"
+      },
+      "https://playfulls.com/db/other.3a97362f02.json": {
+        "bytes": 446812,
+        "sha256": "3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9",
+        "workspacePath": "/tmp/getgear-research/8ch5-http-capture/3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9.body",
+        "capturedUTC": "2026-11-12T20:42:17.458469+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103442,
+        "sha256": "1f4ba8b1df1159fccc3b09fa82a8eea2f9824198c9d73cae0f626081a44b72ea",
+        "workspacePath": "/tmp/getgear-research/8ch5-http-capture/1f4ba8b1df1159fccc3b09fa82a8eea2f9824198c9d73cae0f626081a44b72ea.body",
+        "capturedUTC": "2026-11-12T20:42:21.467034+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103495,
+        "sha256": "e801a3a4505bd7db91b30c3befd34b647fc98ef51ccacb36775c370ef26f2e0f",
+        "workspacePath": "/tmp/getgear-research/8ch5-http-capture/e801a3a4505bd7db91b30c3befd34b647fc98ef51ccacb36775c370ef26f2e0f.body",
+        "capturedUTC": "2026-11-12T20:42:24.048659+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103456,
+        "sha256": "3db9e5dcbb76f7a9395d876eb37a5ae30430a9f3f55cf29a742b6df1e26ca841",
+        "workspacePath": "/tmp/getgear-research/8ch5-http-capture/3db9e5dcbb76f7a9395d876eb37a5ae30430a9f3f55cf29a742b6df1e26ca841.body",
+        "capturedUTC": "2026-11-12T20:42:26.517098+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 41700,
+        "sha256": "a8810d073779faa8613d4ba74cf9f6065662867dea86eb7c80057ce8cef2cf17",
+        "workspacePath": "/tmp/getgear-research/8ch5-http-capture/a8810d073779faa8613d4ba74cf9f6065662867dea86eb7c80057ce8cef2cf17.body",
+        "capturedUTC": "2026-11-12T20:42:30.736988+00:00"
+      }
+    }
+  },
+  "fullLocalPASS": 19,
+  "LuaSuites": 15,
+  "offlinePythonSuites": 3,
+  "modules": 26,
+  "fourToolsAndExporterSyntax": true,
+  "identities": 7707,
+  "classObjectives": 36341,
+  "crafts": 1254,
+  "ingredients": 4857,
+  "activeCatalogueAdoptions": 0,
+  "unchanged": {
+    "reviewed_equipment_sources.json": "byte-exact",
+    "reviewed_recipe_sources.json": "byte-exact",
+    "dungeon_equipment_drops.csv": "byte-exact",
+    "dungeon_items_reconciled.csv": "byte-exact",
+    "dungeon_source_followups.csv": "byte-exact",
+    "recipes_reconciled.csv": "byte-exact",
+    "recipe_source_followups.csv": "byte-exact",
+    "recipe_trainer_book_checks.csv": "byte-exact",
+    "recipe_vendor_book_checks.csv": "byte-exact",
+    "supplementary_crafts_reconciled.csv": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "remaining_equipment_research_queue.csv": "byte-exact",
+    "navigation_coverage.csv": "byte-exact",
+    "navigation_research_gaps.csv": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1587,
+    "missing": 3151,
+    "verified_coordinate_data": 813
+  },
+  "gapRows": 17546,
+  "realClientRendering": 0,
+  "newAllSlotLeads": 18,
+  "priorAllSlotLeadsStillOpen": 27,
+  "totalAllSlotLeadsUntriaged": 45,
+  "upstream": "Original8CG2/8CE2-to8CH full raw diff saved:one non-equipmentToy286573 excluded,268 field8 icon index remaps all resolved icons exact,one inserted icon,no other prior raw/source/metadata changes. Two new NPC located_in edges341/382\u2192UI1433 independently full-primary matched;no itemloot or prior edge changes. Final actual8ch5 full PF rows/metadata and1701 full EV facts exactactual8ch3. Diagnostic snapshots advanced only after preserving comparisons.",
+  "limits": "No active adoption.72 baseline development candidates/18missingprintedlevelholds/11versionholds. Includes supplemental18398not wearer55. Ninebooksarequeststarters notprofessionrecipes/freeprovideditems. ThreeLorekeepersnotLydros;Priest18469/7504table-changeconflictunresolved. New/legacyShamanIDsnotprogressEquivalent;97169SideNone/currentstartingconditionsunknown;normalizedEldrunrecipientonlyfromliteralprimaryobjective/fullNPCidentity,notstartorBothfactions.1318duplicateunresolvednotsequential7703. Hydraxis crosslinks/parallel unlocks unverified;no completion-flag skipping acrossgaps. Fullcoffer0contents doesnoterasefullquestrewardchoice. Gauntlet/Felvine inputobjectsnotfinishedbossloot. No currentlive availability/drop-rate/heal/renderingconfirmation. Currentbook/sourcequalifications retained;0,0 floorplaceholdersnotworldpins.",
+  "progressFix": "Standalone and directly completed goal flags are respected. Earlier stage flags never skip unverified chain links; actual active quest IDs remain first. Completed reward routes are explicitly references, not availability promises.",
+  "preflightCorrections": "Focused fixtures corrected before final fresh capture: inactive standalone candidate actor is correctly pruned, fixture actual recipient is npc1, completed qualified goal may choose its start reference. These were focused preflight failures, not final full-suite outcomes. Actual8ch/8ch2 full19 passed before later completion fix;actual8ch3 and final8ch5 full19 passed after it.",
+  "failedFinalAttempt": {
+    "label": "8ch4",
+    "exitCode": 1,
+    "cause": "Shell PATH omitted pinned Lua; offline navigation exporter stopped before completion. No network failure or successful reconciliation claimed.",
+    "fix": "Explicit pinned Lua PATH for fresh8ch5 followed by full19local."
+  },
+  "sourceCandidateDelta": {
+    "before": 497,
+    "after": 498,
+    "newPrimaryID": 18398,
+    "prior497BytesPreserved": true,
+    "supplementAlreadyAssessed": true,
+    "activeAdoptions": 0
+  }
+}

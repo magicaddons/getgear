@@ -1,0 +1,244 @@
+{
+  "checkpoint": "8CE",
+  "status": "verified-pushed;continue8CF100of396pending",
+  "sourceCommit": "a591653cbeafdb68c2eee7e5f35716e58fa8057d",
+  "finalValidatedGeneratedHead": "59f773e40318aa5feab5e28f59f3f5c035daf111",
+  "CI": {
+    "runID": 43253795769,
+    "jobID": 131306477558,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43253795769",
+    "conclusion": "success",
+    "timestampedTestPASS": 18,
+    "LuaSuites": 15,
+    "offlinePythonSuites": 3,
+    "modules": 26
+  },
+  "local": {
+    "status": "100 outside cases individually publication-assessed; integrated shared navigation and full19localPASS; CI/bot pending",
+    "registry": 5902,
+    "index": 7373,
+    "display": 7372,
+    "books": 759,
+    "originalFrozenQueue": {
+      "total": 5688,
+      "dispositioned": 5688,
+      "pending": 0
+    },
+    "outsideQueue": {
+      "total": 496,
+      "assessed": 100,
+      "pending": 396,
+      "nextBatch": "8CF",
+      "nextCases": 100,
+      "firstID": 12065,
+      "lastID": 13398
+    },
+    "caseCounts": {
+      "selected": 100,
+      "groups": {
+        "broad-published-reference": 64,
+        "origin-unresolved": 21,
+        "named-source-reference": 8,
+        "quest-reference": 7
+      },
+      "primaryFull": 100,
+      "primaryNew": 32,
+      "primaryCached": 68,
+      "caseFullPages": 989,
+      "caseNewPages": 323,
+      "caseCachedPages": 666,
+      "exactQueries": 100,
+      "sharedQueries": 0,
+      "dropReverseJoins": 2865,
+      "dropReverseOmissions": 931,
+      "objectReverseJoins": 123,
+      "objectReverseOmissions": 32,
+      "physicalContainerReferences": 241,
+      "physicalContainerReverseJoins": 195,
+      "physicalContainerOmissions": 45,
+      "newFailed403": 691,
+      "knownFailedURLs": 906,
+      "oldFailedReferenceEdgesSkipped": 193,
+      "quality": {
+        "4": 12,
+        "2": 60,
+        "3": 28
+      },
+      "slots": {
+        "17": 10,
+        "14": 1,
+        "2": 1,
+        "15": 2,
+        "21": 5,
+        "11": 4,
+        "16": 57,
+        "1": 4,
+        "13": 4,
+        "7": 2,
+        "9": 4,
+        "6": 1,
+        "8": 2,
+        "10": 1,
+        "3": 1,
+        "23": 1
+      },
+      "baselineDevelopmentCandidates": 92,
+      "heldNoRenderedEquipLevel": 7,
+      "heldVersionUnconfirmed": 1,
+      "BackImporterGaps": 57,
+      "activeAdoptions": 0,
+      "liveVerified": 0,
+      "physicalContainerUnreadReferences": 1,
+      "incidentalExcludedFullPages": 1,
+      "allFullIncludingExcluded": 990,
+      "allNewIncludingExcluded": 324
+    },
+    "primaryProjectionBodies": 998,
+    "newPrimaryProjectionBodies": 332,
+    "cachedPrimaryProjectionBodies": 666,
+    "additionalExcludedIncidentalBody": 1,
+    "reusedCompletedGuide": true,
+    "successfulCapture": {
+      "label": "8ce2",
+      "exitCode": 0,
+      "responses": {
+        "https://playfulls.com/db/meta.01ed9e751a.json": {
+          "bytes": 1010610,
+          "sha256": "01ed9e751add57687ffb2c39be38ef34a40eac9b8310f5ede1662b4d6e4c6575",
+          "workspacePath": "/tmp/getgear-research/8ce2-http-capture/01ed9e751add57687ffb2c39be38ef34a40eac9b8310f5ede1662b4d6e4c6575.body",
+          "capturedUTC": "2026-11-12T15:55:54.553590+00:00"
+        },
+        "https://playfulls.com/db/gear.c7a5b9f6fe.json": {
+          "bytes": 1360205,
+          "sha256": "c7a5b9f6fe97730b6e9da0c8ec7b9f7313e86c071863874e21e9d416ccd8c798",
+          "workspacePath": "/tmp/getgear-research/8ce2-http-capture/c7a5b9f6fe97730b6e9da0c8ec7b9f7313e86c071863874e21e9d416ccd8c798.body",
+          "capturedUTC": "2026-11-12T15:55:54.836697+00:00"
+        },
+        "https://playfulls.com/db/goods.c731b98083.json": {
+          "bytes": 466933,
+          "sha256": "c731b9808385b2f8a49a3b530bc6087f2cca7ccab63c168038101fd55cb24e0f",
+          "workspacePath": "/tmp/getgear-research/8ce2-http-capture/c731b9808385b2f8a49a3b530bc6087f2cca7ccab63c168038101fd55cb24e0f.body",
+          "capturedUTC": "2026-11-12T15:55:55.042918+00:00"
+        },
+        "https://playfulls.com/db/other.aaf1f7d299.json": {
+          "bytes": 446743,
+          "sha256": "aaf1f7d299087f2b2d6b58308a83826143a8fbddec7a5a45528bf7f34d3338c6",
+          "workspacePath": "/tmp/getgear-research/8ce2-http-capture/aaf1f7d299087f2b2d6b58308a83826143a8fbddec7a5a45528bf7f34d3338c6.body",
+          "capturedUTC": "2026-11-12T15:55:55.174766+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500": {
+          "bytes": 103442,
+          "sha256": "6500abd05665cc6d9a15906975e68b8de452bbbd3371f5f4a5bae9846a8d8e89",
+          "workspacePath": "/tmp/getgear-research/8ce2-http-capture/6500abd05665cc6d9a15906975e68b8de452bbbd3371f5f4a5bae9846a8d8e89.body",
+          "capturedUTC": "2026-11-12T15:55:59.757145+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+          "bytes": 103495,
+          "sha256": "88dce015ac19cb07910478ec6674f9ed87046bd844f8877c8c6fbb4f0f8a03c4",
+          "workspacePath": "/tmp/getgear-research/8ce2-http-capture/88dce015ac19cb07910478ec6674f9ed87046bd844f8877c8c6fbb4f0f8a03c4.body",
+          "capturedUTC": "2026-11-12T15:56:02.918946+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+          "bytes": 103456,
+          "sha256": "157dda302b30b455048bb363e53723ccabd9f710105d70d2aa3d33a1890aaa8d",
+          "workspacePath": "/tmp/getgear-research/8ce2-http-capture/157dda302b30b455048bb363e53723ccabd9f710105d70d2aa3d33a1890aaa8d.body",
+          "capturedUTC": "2026-11-12T15:56:06.117496+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+          "bytes": 41292,
+          "sha256": "0d6916af451d4d1814d3e0f89b7e2364ae32e90be4a2036225d4c251d31ab665",
+          "workspacePath": "/tmp/getgear-research/8ce2-http-capture/0d6916af451d4d1814d3e0f89b7e2364ae32e90be4a2036225d4c251d31ab665.body",
+          "capturedUTC": "2026-11-12T15:56:09.348506+00:00"
+        }
+      }
+    },
+    "sourceProofImmutableSHA256": "42b50bfb484287ebfb13ea182e082a3a5bbdabd2ef945d9fcdc49a54e8015784",
+    "upstreamProofSHA256": "38c94979e2a2e31d916031f4b2a608126519692f246f7412ca732354fd9bd754",
+    "fullLocalPASS": 19,
+    "LuaSuites": 15,
+    "offlinePythonSuites": 3,
+    "modules": 26,
+    "fourToolsAndExporterSyntax": true,
+    "unchanged": {
+      "reviewed_equipment_sources.json": "byte-exact",
+      "reviewed_recipe_sources.json": "byte-exact",
+      "dungeon_equipment_drops.csv": "byte-exact",
+      "dungeon_items_reconciled.csv": "byte-exact",
+      "dungeon_source_followups.csv": "byte-exact",
+      "recipes_reconciled.csv": "byte-exact",
+      "recipe_source_followups.csv": "byte-exact",
+      "recipe_trainer_book_checks.csv": "byte-exact",
+      "recipe_vendor_book_checks.csv": "byte-exact",
+      "supplementary_crafts_reconciled.csv": "byte-exact",
+      "supplementary_crafts.json": "byte-exact",
+      "remaining_equipment_research_queue.csv": "byte-exact"
+    },
+    "identities": 7707,
+    "classObjectives": 36341,
+    "crafts": 1254,
+    "ingredients": 4857,
+    "activeCatalogueAdoptions": 0,
+    "navigation": {
+      "not_applicable": 2156,
+      "directions": 1587,
+      "missing": 3151,
+      "verified_coordinate_data": 813
+    },
+    "gapRows": 17546,
+    "realClientRendering": 0,
+    "newUntriagedAllSlotLeads": 27,
+    "failedReads": {
+      "new403": 691,
+      "known": 906,
+      "oldFailedReferenceEdgesSkipped": 193,
+      "unchangedFailedRetries": 0
+    },
+    "limitations": "Published facts and explicit exceptions, not all sources confirmed live. Candidate assessments remain separate from active gear. 92 baseline development candidates, seven no-rendered-level holds, one version hold; 21 unresolved origins; 57 Back importer gaps. Continue396pending plus27allslotleads/systematicBackThrown/sixdungeon/954livebooklimits/navigationmissingdispositions/finalintegrity/manualclient."
+  },
+  "botReview": {
+    "directParentVerified": true,
+    "files": [
+      "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+    ],
+    "changedKeys": [
+      "https://everloot.app/api/edges?evidence=observed&limit=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+      "lastRunUTC"
+    ],
+    "allOtherJSONRuntimeSourceAuditReportBytesUnchanged": true,
+    "botAPIBodiesRead": false,
+    "actualLocalFactualBaselineRetained": true
+  },
+  "frozenQueue": {
+    "total": 5688,
+    "individuallyAssessed": 5688,
+    "pending": 0,
+    "qualification": "Includes explicit unresolved/unread/version exceptions; not all sources confirmed live."
+  },
+  "outsideQueue": {
+    "total": 496,
+    "assessed": 100,
+    "pending": 396,
+    "nextBatch": "8CF",
+    "nextCases": 100,
+    "firstID": 12065,
+    "lastID": 13398
+  },
+  "next": {
+    "checkpoint": "8CF",
+    "cases": 100,
+    "firstID": 12065,
+    "lastID": 13398,
+    "order": "numericID",
+    "queue": "additional_catalogue_research_queue.csv",
+    "scope": "Outside candidate identity/quality/level/class/ALLslot/version/source/navigation review; reuse exact completed evidence before any new reads or adoption."
+  },
+  "protectedRefs": {
+    "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "Beta8tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "Beta8commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  },
+  "limits": "Published facts and explicit exceptions, not all sources confirmed live. Candidate assessments remain separate from active gear. 92 baseline development candidates, seven no-rendered-level holds, one version hold; 21 unresolved origins; 57 Back importer gaps. Continue396pending plus27allslotleads/systematicBackThrown/sixdungeon/954livebooklimits/navigationmissingdispositions/finalintegrity/manualclient."
+}

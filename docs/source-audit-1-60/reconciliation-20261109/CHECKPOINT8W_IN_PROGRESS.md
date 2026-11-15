@@ -1,0 +1,13 @@
+# Checkpoint8W — research preserved, integration pending
+
+100 exact level55 undocumented identities,100 discovery queries/99 selected IDs and focused source reads preserved in checkpoint8w_working_evidence.json/checkpoint8w_discovery_index.json. Reused171 NPCpages,95 actual sells inventories; only selected merchant match is Dala256629 for268873 Defender of the Barkskin. Independently joined item/NPC/token263439 costs25 Deadwood Tribal Beads; explicit Barkskin BurrowExalted condition despite standing0, equip55. Prior four Dala53 cases/Revered costs are different IDs/tiers, not copied. No oldDefenderTimbermaw quest or 2-set prerequisite inferred.
+
+18355 FerraCollar exact red unavailable notice.29 legacy rank-named IDs have secondary exact-ID rank8 publication claims omitted in current primary tooltip/equip data; general8K rareHonor/no-rank policy does not resolve selected-version access.68 Premier names/set references are data, not current sellers/upgrade output mapping; no faction/rank/Honor/seal/retirement inferred.269501 ElvenChainWristguards are CLOTH/+150bonusArmor, no profession/Elf-only source.99 primary pages have no acquisition tables; only one unavailable flag/no seasonal warnings. Current exact acquisition remains unverified for all100. Do not repeat the preserved primary/discovery/survey/policy research.
+
+**Resume:** integrate100 metadata entries with1 DalaExalted reference/1 exact unavailable warning/29 version-rank discrepancies/68 Premier origin gaps/1 plaincloth gap. Preserve all1843 prior reviewed objects,1254 crafts/4857 ingredients, all identities/eligibility/filters/source precedence. Run fresh reconciliation/full14 regressions/24 modules/four reports then non-release GitHubCI/bot review. Derive index/display counts from logs. All100 remain8W/unreviewed; registry1843/index3492/display3491/books759; frozenremaining4059. Latest fullPASS8V42718647114/bota4c1f97 remains baseline; no full8Wvalidation/queue advance yet. Next after8W:first100 remaining undocumented55, then last76, before higher-level gaps. Later9A39 coverage candidates separate. No main/release/build/package/tag/publish/merge action.
+
+## Superseding integration record
+
+100 entries integrated/full local14/24/4 PASS; see CHECKPOINT8W_LEVEL55_UNDOCUMENTED_FIRST100.md. GitHub CI/bot pending. Queue100 publication-researched, next8X after CI. Do not repeat saved research/integration.
+
+**Completed:** full local/CI/bot review PASS, run42721186621, validateda425567. Earlier pending statements are historical preservation records. Follow current case/CONTINUATION; next8X. Do not repeat8W research/integration.

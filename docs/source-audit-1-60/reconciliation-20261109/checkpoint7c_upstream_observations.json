@@ -1,0 +1,66 @@
+{
+  "reviewedOn": "2026-11-09",
+  "inClientCheckedBySession": false,
+  "EverlootSource": "https://everloot.app/api/edges?evidence=observed&limit=500",
+  "EverlootTotalOld": 1283,
+  "EverlootTotalLocal": 1317,
+  "criteria": "Existing generator requires observed evidence, exact item\u2192NPC dropped_by relation, at least three installations, NPC-ID/name correspondence and named community dungeon association. No published-only source becomes observed.",
+  "threeCorroboratedEquipmentRelationships": [
+    {
+      "itemID": 5254,
+      "name": "Rugged Spaulders",
+      "zone": "Shadowfang Keep",
+      "actor": "Rethilgore",
+      "oldConfidence": "forever-community-reference",
+      "newConfidence": "forever-observed-npc",
+      "events": [
+        {
+          "name": "Rethilgore",
+          "npcID": 3914,
+          "installs": 3,
+          "lastSeen": "2026-11-08T23:18:43.000Z",
+          "evidence": "everloot-3plus-installs"
+        }
+      ],
+      "primaryItemFactsUnchanged": true
+    },
+    {
+      "itemID": 6324,
+      "name": "Robes of Arugal",
+      "zone": "Shadowfang Keep",
+      "actor": "Archmage Arugal",
+      "oldConfidence": "forever-community-reference",
+      "newConfidence": "forever-observed-npc",
+      "events": [
+        {
+          "name": "Archmage Arugal",
+          "npcID": 4275,
+          "installs": 3,
+          "lastSeen": "2026-11-09T09:27:47.000Z",
+          "evidence": "everloot-3plus-installs"
+        }
+      ],
+      "primaryItemFactsUnchanged": true
+    },
+    {
+      "itemID": 6392,
+      "name": "Belt of Arugal",
+      "zone": "Shadowfang Keep",
+      "actor": "Archmage Arugal",
+      "oldConfidence": "forever-community-reference",
+      "newConfidence": "forever-observed-npc",
+      "events": [
+        {
+          "name": "Archmage Arugal",
+          "npcID": 4275,
+          "installs": 3,
+          "lastSeen": "2026-11-08T18:05:24.000Z",
+          "evidence": "everloot-3plus-installs"
+        }
+      ],
+      "primaryItemFactsUnchanged": true
+    }
+  ],
+  "remainingChanges": "12 all-item observation-count cells; two runtime summaries change (third item retains stronger manual display); other new runtime entries are the 93 reviewed equipment cases.",
+  "limitations": "Community client observations, not personal in-session live testing, guaranteed future loot, drop probability or comprehensive encounter availability."
+}

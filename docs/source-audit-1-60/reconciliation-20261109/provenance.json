@@ -1,0 +1,97 @@
+{
+  "supplementary_crafts.json": {
+    "bytes": 1315,
+    "sha256": "4bbb2e2b0407f70cf5aa86624bf76114869928ac799f04056829df7a9c86ed6b"
+  },
+  "reviewed_recipe_sources.json": {
+    "bytes": 2926585,
+    "sha256": "1d5928b2c89e564a3a0a3a902bf0cd7fc221c648ab222ee16ed85157dd894ec2"
+  },
+  "reviewed_equipment_sources.json": {
+    "bytes": 30578260,
+    "sha256": "3fad603b46be7d134e868d97afe25e5a2002e3f99020bdae481ee73c54b4e0ca"
+  },
+  "https://playfulls.com/database": {
+    "bytes": 142568,
+    "sha256": "2fd8245e5a5a4974232c2271bddae88eab3bb67c733221494e846e174995cdc3"
+  },
+  "https://playfulls.com/db/meta.ec7b782b41.json": {
+    "bytes": 1012217,
+    "sha256": "ec7b782b41c9312438c86e6c36db2fdf006f6a19739fd16e72db2ade6522bde9"
+  },
+  "https://playfulls.com/db/gear.8265a884c1.json": {
+    "bytes": 1366046,
+    "sha256": "8265a884c14f760518d5072d88da100a8b57d559bb7c1a73a7d6e06057f53fc2"
+  },
+  "https://playfulls.com/db/goods.443d853af7.json": {
+    "bytes": 467076,
+    "sha256": "443d853af779ca334eed539cf9d790949d6cea35f7a5103e439122c88019017b"
+  },
+  "https://playfulls.com/db/other.df4ac4c5bf.json": {
+    "bytes": 447085,
+    "sha256": "df4ac4c5bfccece8248e858d13e635c9411dcbb8106e50c32715b36fce579e43"
+  },
+  "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json": {
+    "bytes": 18590138,
+    "sha256": "86a387d5274635ebff1589b8702792fc8c0bfdb55df2ae29ec31a4c894f18e3a"
+  },
+  "https://raw.githubusercontent.com/Everloot/everloot/main/web/src/data/game-data/client-encounters.json": {
+    "bytes": 13945,
+    "sha256": "3703c57a682d9735847c76bca257246b8662918d9577a2f2076f870ea86aa5bb"
+  },
+  "https://everloot.app/api/edges?evidence=observed&limit=500": {
+    "bytes": 103454,
+    "sha256": "5355f4bc21d441e062822665ac9aabb355213fddeb459f369814a0f422ba4193"
+  },
+  "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+    "bytes": 103272,
+    "sha256": "f87485c079d30d41cc6003a9d503a1ae2493239426d55bc6fd2dee37f5061ecf"
+  },
+  "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+    "bytes": 103683,
+    "sha256": "c917ec6b4b8ba2626aa372b9713c0d2ec1906d3790e9d0612efa35eba1c18911"
+  },
+  "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+    "bytes": 91941,
+    "sha256": "2ee3291cdd482adbacb61a397abb83c4bdb6713094f0f88bd34612d2b68f0db9"
+  },
+  "https://www.wowforeverfriends.org/items/items.json": {
+    "bytes": 16908600,
+    "sha256": "e0a86115fc289b5c9914b6212e0b178f3e2e1777429c08eaaf4b586277c01fba"
+  },
+  "https://www.wowforeverfriends.org/library/data/npcs.json": {
+    "bytes": 6121482,
+    "sha256": "5c5a4524a3ad6a25c20902291d244baf32bb5f6b33c65c35847c7f5e1dcfb5f1"
+  },
+  "lastRunUTC": "2026-11-14T05:20:27.138934+00:00",
+  "sourceCrediting": {
+    "Everloot": "CC BY-SA 4.0; https://everloot.app; source records credited",
+    "Playfulls": "Public community loot reference; https://playfulls.com/methodology; boss loot not live guaranteed",
+    "Napalmsteak": "Forever Wowhead client tooltip cache; source identities reference-only",
+    "WoW Forever Friends": "ClassicDB reference only; Classic NPC ranks do not prove Forever loot",
+    "AHledger": "Forever client recipe acquisition reference, not observed trainer inventories"
+  },
+  "Everloot": {
+    "dataAsOf": "2026-11-14T05:10:15.872Z",
+    "total": 1946,
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "complete": true
+  },
+  "Playfulls": {
+    "items": 23662,
+    "sourceRecords": 3,
+    "database": "https://playfulls.com/database"
+  },
+  "DataLimitations": {
+    "unmatchedForeverItems": 8,
+    "mismatchedItemNames": 0,
+    "noLiveDropClaims": true,
+    "liveTrainerConfirmations": false
+  }
+}

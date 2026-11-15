@@ -1,0 +1,80 @@
+{
+  "status": "Documented scope deficiency;10 sibling cloakIDs added only to9A candidate audit;canonical/runtime unchanged",
+  "sourceFinding": [
+    {
+      "itemID": 21394,
+      "name": "Drape of Unyielding Strength",
+      "sourceURL": "https://www.wowhead.com/forever/item=21393",
+      "sourceSHA256": "e2aa7e4096e225e1df4b80ea83d161fce61a15e1fe4135f8863b8b12dc147436",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21397,
+      "name": "Cape of Eternal Justice",
+      "sourceURL": "https://www.wowhead.com/forever/item=21396",
+      "sourceSHA256": "31b4db4f1471aed91b43701415a6d63fe34461e2c34b249b4156e79eea202353",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21400,
+      "name": "Cloak of the Gathering Storm",
+      "sourceURL": "https://www.wowhead.com/forever/item=21399",
+      "sourceSHA256": "555e8f141454fe722a1be9a2f3a53edeeb8873d0d371e88978af5a62c326b9a4",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21403,
+      "name": "Cloak of the Unseen Path",
+      "sourceURL": "https://www.wowhead.com/forever/item=21401",
+      "sourceSHA256": "bda69ed2b81a45f5e13fc76181e7c8743fbf9510ee3dc37f4b60be2efa04f986",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21406,
+      "name": "Cloak of Veiled Shadows",
+      "sourceURL": "https://www.wowhead.com/forever/item=21405",
+      "sourceSHA256": "b91100c3573da911e94b021a83f650731d1dfe9ed74cf5cfe2ddc4dd84b37db4",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21409,
+      "name": "Cloak of Unending Life",
+      "sourceURL": "https://www.wowhead.com/forever/item=21407",
+      "sourceSHA256": "13140c802dd4954c883f36a797d0610b4f4f36100c5515657ef26abd0df13a4e",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21412,
+      "name": "Shroud of Infinite Wisdom",
+      "sourceURL": "https://www.wowhead.com/forever/item=21411",
+      "sourceSHA256": "a527985b675f55a789ba79c6c67f6bb61be488e54cbd27b8711787ea85704ef0",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21415,
+      "name": "Drape of Vaulted Secrets",
+      "sourceURL": "https://www.wowhead.com/forever/item=21414",
+      "sourceSHA256": "8d0b7797fb5c95d68ddd83a0a530afd3ec1563bb96d9b785dc35a1edf8791b26",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21418,
+      "name": "Shroud of Unspoken Names",
+      "sourceURL": "https://www.wowhead.com/forever/item=21416",
+      "sourceSHA256": "ec41c2dd17f8d6fdf3ee10bb26f9ba8a814cd354e9cebbb6af528797716b3700",
+      "relation": "Exact set-member reference in full selected8AN gear tooltip; acquisition/scope not yet audited"
+    },
+    {
+      "itemID": 21710,
+      "name": "Cloak of the Fallen God",
+      "sourceURL": "https://www.wowhead.com/forever/quest=8802",
+      "sourceSHA256": "472e7cb69b4668b764bebc18ebd32a37d597c6fe7ed5924666a232ed5fb4ba9b",
+      "relation": "Exact third reward choice of8802, outside selected17/canonical; scope not yet audited"
+    }
+  ],
+  "canonicalBackRows": 4,
+  "queueAndRegistryContainsSelectedCloaks": false,
+  "correction": "Prior8AM/8AN statements calling these cloaks previously completed/researched were unsupported and wrong. Exact ID checks show all10 absent fromcanonical/queue/reviewedregistry/prior135candidates. Historical validated runtime facts remain unchanged.",
+  "nextAudit": "9A must systematically compare Back-slot cache/feed coverage to canonical, not only14new feedIDs or10 siblings; determine intendedscope/version/identity/eligibility/acquisition before any runtimeadoption;do not weaken existingvalidation orfilter requirements.",
+  "candidateCount": 145
+}

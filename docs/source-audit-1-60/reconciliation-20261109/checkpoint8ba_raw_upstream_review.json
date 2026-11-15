@@ -1,0 +1,716 @@
+{
+  "capturedUTC": "2026-11-10T23:57:00.649843+00:00",
+  "method": "Exact full factual snapshot comparison: retainedreviewed8AZactualfactualsnapshots to8BA;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23459,
+    "afterItems": 23464,
+    "beforeDefinitions": 9160,
+    "afterDefinitions": 9160,
+    "newItems": [
+      {
+        "itemID": 12546,
+        "name": "Aristocratic Cuffs",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12551,
+        "name": "Stoneshield Cloak",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13386,
+        "name": "Archivist Cape",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Archivist Galford",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "cc97c6d6159a55b7356249714920370537294b21a50a0b6c6c38407e60f09e25"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22404,
+        "name": "Willey's Back Scratcher",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Cannon Master Willey",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "0585f0370148eb5296c90908702a6cdf98c6eca1cd2f0ce7f7c96923c5ece9b6"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 284091,
+        "name": "Scarlet Forgemaster's Bindings",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 1041,
+        "name": "Horn of the Black Wolf",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 1132,
+        "name": "Horn of the Timber Wolf",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 2411,
+        "name": "Black Stallion Bridle",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 2414,
+        "name": "Pinto Bridle",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 4390,
+        "name": "Iron Grenade",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5655,
+        "name": "Chestnut Mare Bridle",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5656,
+        "name": "Brown Horse Bridle",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5665,
+        "name": "Horn of the Dire Wolf",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5668,
+        "name": "Horn of the Brown Wolf",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5864,
+        "name": "Gray Ram",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5872,
+        "name": "Brown Ram",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5873,
+        "name": "White Ram",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 6637,
+        "name": "Water Sapta",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 8563,
+        "name": "Red Mechanostrider",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 8586,
+        "name": "Whistle of the Mottled Red Raptor",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 8588,
+        "name": "Whistle of the Emerald Raptor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 8591,
+        "name": "Whistle of the Turquoise Raptor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 8592,
+        "name": "Whistle of the Violet Raptor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 8595,
+        "name": "Blue Mechanostrider",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 8629,
+        "name": "Reins of the Striped Nightsaber",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 8631,
+        "name": "Reins of the Striped Frostsaber",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 8632,
+        "name": "Reins of the Spotted Frostsaber",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 12302,
+        "name": "Reins of the Frostsaber",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 12303,
+        "name": "Reins of the Nightsaber",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 12325,
+        "name": "Reins of the Primal Leopard",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 12326,
+        "name": "Reins of the Tawny Sabercat",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 12330,
+        "name": "Horn of the Red Wolf",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 12351,
+        "name": "Horn of the Arctic Wolf",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 12353,
+        "name": "White Stallion Bridle",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 12354,
+        "name": "Palomino Bridle",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 13317,
+        "name": "Whistle of the Ivory Raptor",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 13321,
+        "name": "Green Mechanostrider",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 13322,
+        "name": "Unpainted Mechanostrider",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 13323,
+        "name": "Purple Mechanostrider",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 13324,
+        "name": "Red & Blue Mechanostrider",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 13326,
+        "name": "White Mechanostrider Mod A",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 13327,
+        "name": "Icy Blue Mechanostrider Mod A",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 13328,
+        "name": "Black Ram",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 13329,
+        "name": "Frost Ram",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 13331,
+        "name": "Red Skeletal Horse",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 13332,
+        "name": "Blue Skeletal Horse",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 13333,
+        "name": "Brown Skeletal Horse",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 13334,
+        "name": "Green Skeletal Warhorse",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 15277,
+        "name": "Gray Kodo",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 15290,
+        "name": "Brown Kodo",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 15292,
+        "name": "Green Kodo",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 15293,
+        "name": "Teal Kodo",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18766,
+        "name": "Reins of the Swift Frostsaber",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18767,
+        "name": "Reins of the Swift Mistsaber",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18768,
+        "name": "Reins of the Swift Dawnsaber",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18772,
+        "name": "Swift Green Mechanostrider",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18773,
+        "name": "Swift White Mechanostrider",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18774,
+        "name": "Swift Yellow Mechanostrider",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18777,
+        "name": "Swift Brown Steed",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18778,
+        "name": "Swift White Steed",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18785,
+        "name": "Swift White Ram",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18786,
+        "name": "Swift Brown Ram",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18787,
+        "name": "Swift Gray Ram",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18788,
+        "name": "Swift Blue Raptor",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18789,
+        "name": "Swift Olive Raptor",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18790,
+        "name": "Swift Orange Raptor",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18791,
+        "name": "Purple Skeletal Warhorse",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18793,
+        "name": "Great White Kodo",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18794,
+        "name": "Great Brown Kodo",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18795,
+        "name": "Great Gray Kodo",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18796,
+        "name": "Horn of the Swift Brown Wolf",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18797,
+        "name": "Horn of the Swift Timber Wolf",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18798,
+        "name": "Horn of the Swift Gray Wolf",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 18902,
+        "name": "Reins of the Swift Stormsaber",
+        "before": "0",
+        "after": 2
+      },
+      {
+        "itemID": 247754,
+        "name": "Minor Arcane Elixir",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 265838,
+        "name": "Green Skeletal Horse",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 265839,
+        "name": "Dark Skeletal Horse",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 265840,
+        "name": "Purple Skeletal Horse",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 269671,
+        "name": "Swift Empyrean Galestrider",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 269673,
+        "name": "Swift Regal Galestrider",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 269678,
+        "name": "Swift Stormy Galestrider",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 269681,
+        "name": "Empyrean Galestrider",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 269682,
+        "name": "Regal Galestrider",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 269683,
+        "name": "Stormy Galestrider",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 274387,
+        "name": "Swiftfeather Arrow",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 274388,
+        "name": "Swiftstrike Shot",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 274706,
+        "name": "Reins of the Striped Dawnsaber",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 274799,
+        "name": "Ochre Skeletal Warhorse",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 274930,
+        "name": "Umber Galestrider",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 274933,
+        "name": "Swift Umber Galestrider",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 275993,
+        "name": "White Kodo",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 276063,
+        "name": "Black Skeletal Horse",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 277960,
+        "name": "Lavender Kodo",
+        "before": "1",
+        "after": 3
+      },
+      {
+        "itemID": 279961,
+        "name": "Journeyman Campfire Kit",
+        "before": "5",
+        "after": 7
+      },
+      {
+        "itemID": 282028,
+        "name": "Broken Frond of Celastrus",
+        "before": "1",
+        "after": 3
+      }
+    ],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.114816d4eb.json",
+        "bytes": 989827,
+        "sha256": "114816d4ebf94b430045388d1469d359f7466f6fbfa55fa58444776823067b78",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.2b9f10a544.json",
+        "bytes": 1336372,
+        "sha256": "2b9f10a5442ebf3d28c27bde7f06ecc409ca1e431620437552990aae4bb9c86b",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.70af96b3ee.json",
+        "bytes": 464365,
+        "sha256": "70af96b3ee5408b53a1545d90e07ecaaa51e5cf9e6796546ba8e9cf178ad94aa",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.cf8e55be16.json",
+        "bytes": 446192,
+        "sha256": "cf8e55be16d8137b17abfe49cfe6b57a9d488d39f97592db80aa298e05f55719",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1550,
+    "afterRaw": 1550,
+    "qualifying": 1315,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [
+      {
+        "key": [
+          "npc",
+          "4201",
+          "located_in",
+          "zone",
+          "1442"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-08T22:07:20.000Z",
+            "after": "2026-11-10T20:46:12.000Z"
+          }
+        }
+      }
+    ],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "93b1c8d5d1de06734c3372217ee5513c9d6eb35be9047ba311495f6621e2ba6a",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T22:50:15.399Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103546,
+        "sha256": "31b1665267c815d0d5f4142ebe64a7dc5deaa939a8a37dd36d0b39d9e2c5ebf1",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T22:50:15.399Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103400,
+        "sha256": "a5b5b03b6cbc1301957bac23ab3828c4e4058f26151bc3e79af6f12d3afe2eeb",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T22:50:15.399Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 10711,
+        "sha256": "298a40e220c08b745a0554d8f487259d84b24a6d4065e2544dfb18144bb89026",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T22:50:15.399Z"
+      }
+    ]
+  }
+}

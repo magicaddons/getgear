@@ -1,0 +1,182 @@
+{
+  "status": "17casespublication-assessed;finalactual8cn4/full19localPASS;CI/fullbotreviewpending",
+  "registry": 5902,
+  "index": 7373,
+  "display": 7372,
+  "books": 759,
+  "originalFrozenQueue": {
+    "total": 5688,
+    "dispositioned": 5688,
+    "pending": 0
+  },
+  "outsideQueue": {
+    "total": 793,
+    "assessed": 793,
+    "pending": 0,
+    "prior776BytesAndObjectsPreserved": true,
+    "newAssessed17": true
+  },
+  "additionalAllSlotQueue": {
+    "total": 308,
+    "assessed": 295,
+    "pending": 13,
+    "newInventoryAndContextLeads": 13,
+    "nextBatch": "8CO",
+    "nextCases": 13,
+    "firstID": 274998,
+    "lastID": 287025
+  },
+  "caseCounts": {
+    "selected": 17,
+    "individuallyAssessed": 17,
+    "groups": {
+      "quest-reference": 9,
+      "broad-published-reference": 6,
+      "named-source-reference": 2
+    },
+    "eligibility": {
+      "hold-no-rendered-equip-level": 9,
+      "published-all-slot-baseline-pass;future-development-review": 8
+    },
+    "caseFullPages": 75,
+    "caseNewPages": 59,
+    "caseCachedPages": 16,
+    "exactQueries": 17,
+    "sharedQueries": 3,
+    "fullNPC": 29,
+    "fullQuest": 20,
+    "physicalItems": 6,
+    "reusedCompletedFullZone": 1,
+    "dropReverseJoins": 27,
+    "dropReverseOmissions": 0,
+    "inputReverseJoins": 14,
+    "inputReverseOmissions": 0,
+    "formalRoleJoins": 40,
+    "BackHeaders": 1,
+    "newFailed403": 1,
+    "knownFailedURLs": 1677,
+    "activeAdoptions": 0,
+    "liveVerified": 0,
+    "contextRewardItemIdentities": 2,
+    "reusedCompletedTrainer": 1,
+    "newPrimarySeriesItineraries": 2,
+    "newReportedUnorderedReferences": 3,
+    "contextRewardItemRaw403": 1,
+    "fullNPCSelectedCanonicalBookCaseLootRows": 790
+  },
+  "sourceProofImmutableSHA256": "d02f87e1cf581c17ba9eea2a1cf08ebdc623137961a062b97fac7f6a1b158e91",
+  "successfulCapture": {
+    "label": "8cn4",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.7acc143c49.json": {
+        "bytes": 1010725,
+        "sha256": "7acc143c49b06aa60a78140e767e15d1830f85b00f0689774669563ad500ee4d",
+        "workspacePath": "/tmp/getgear-research/8cn4-http-capture/7acc143c49b06aa60a78140e767e15d1830f85b00f0689774669563ad500ee4d.body",
+        "capturedUTC": "2026-11-13T03:05:25.942323+00:00"
+      },
+      "https://playfulls.com/db/gear.49966a6566.json": {
+        "bytes": 1360816,
+        "sha256": "49966a6566e44a52d32c48696ccc90c31710ec8336843f1c3acb77e49edf9e38",
+        "workspacePath": "/tmp/getgear-research/8cn4-http-capture/49966a6566e44a52d32c48696ccc90c31710ec8336843f1c3acb77e49edf9e38.body",
+        "capturedUTC": "2026-11-13T03:05:26.133274+00:00"
+      },
+      "https://playfulls.com/db/goods.0dd030350d.json": {
+        "bytes": 466933,
+        "sha256": "0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53",
+        "workspacePath": "/tmp/getgear-research/8cn4-http-capture/0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53.body",
+        "capturedUTC": "2026-11-13T03:05:26.333624+00:00"
+      },
+      "https://playfulls.com/db/other.d4891008c4.json": {
+        "bytes": 446812,
+        "sha256": "d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140",
+        "workspacePath": "/tmp/getgear-research/8cn4-http-capture/d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140.body",
+        "capturedUTC": "2026-11-13T03:05:26.478920+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103442,
+        "sha256": "e3c8a483218cba759c1088c272c20b4e2b4f4e1ccc83d550e96347ff85bdf358",
+        "workspacePath": "/tmp/getgear-research/8cn4-http-capture/e3c8a483218cba759c1088c272c20b4e2b4f4e1ccc83d550e96347ff85bdf358.body",
+        "capturedUTC": "2026-11-13T03:05:30.505878+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103495,
+        "sha256": "9065ea2a288b10f2fec2c693eb8dee0e29d2ed9ac852fb28234122b047f01d08",
+        "workspacePath": "/tmp/getgear-research/8cn4-http-capture/9065ea2a288b10f2fec2c693eb8dee0e29d2ed9ac852fb28234122b047f01d08.body",
+        "capturedUTC": "2026-11-13T03:05:33.735238+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103456,
+        "sha256": "27820cf7d5dce1c054830cb2ce1eece376c3bde93c418f09879d85ddcbc79dd5",
+        "workspacePath": "/tmp/getgear-research/8cn4-http-capture/27820cf7d5dce1c054830cb2ce1eece376c3bde93c418f09879d85ddcbc79dd5.body",
+        "capturedUTC": "2026-11-13T03:05:36.692423+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 41905,
+        "sha256": "eae75bd55f3597455f73767f6df0eed28271bff11419ed1a771672b482b08abb",
+        "workspacePath": "/tmp/getgear-research/8cn4-http-capture/eae75bd55f3597455f73767f6df0eed28271bff11419ed1a771672b482b08abb.body",
+        "capturedUTC": "2026-11-13T03:05:43.223434+00:00"
+      }
+    }
+  },
+  "fullLocalPASS": 19,
+  "LuaSuites": 15,
+  "offlinePythonSuites": 3,
+  "modules": 26,
+  "fourToolsAndExporterSyntax": true,
+  "identities": 7707,
+  "classObjectives": 36341,
+  "crafts": 1254,
+  "ingredients": 4857,
+  "activeCatalogueAdoptions": 0,
+  "unchanged": {
+    "reviewed_equipment_sources.json": "byte-exact",
+    "reviewed_recipe_sources.json": "byte-exact",
+    "all_items_reconciled.csv": "byte-exact",
+    "dungeon_equipment_drops.csv": "byte-exact",
+    "dungeon_items_reconciled.csv": "byte-exact",
+    "dungeon_source_followups.csv": "byte-exact",
+    "recipes_reconciled.csv": "byte-exact",
+    "recipe_source_followups.csv": "byte-exact",
+    "recipe_trainer_book_checks.csv": "byte-exact",
+    "recipe_vendor_book_checks.csv": "byte-exact",
+    "supplementary_crafts_reconciled.csv": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "remaining_equipment_research_queue.csv": "byte-exact",
+    "upstream_playfulls_acquisition_snapshot.csv": "byte-exact",
+    "upstream_playfulls_source_definitions.json": "byte-exact",
+    "upstream_playfulls_display_snapshot.csv": "byte-exact",
+    "upstream_playfulls_display_definitions.json": "byte-exact",
+    "upstream_everloot_edges_snapshot.csv": "byte-exact",
+    "upstream_snapshot_provenance.json": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1581,
+    "missing": 3087,
+    "verified_coordinate_data": 883
+  },
+  "gapRows": 17406,
+  "realClientRendering": 0,
+  "unchangedPriorItineraries": 29,
+  "newQualifiedPrimarySeries": 2,
+  "newUnorderedReportedReferences": 3,
+  "newWandTrainerDestinations": 4,
+  "existingTrainerAccessInstructionCorrections": 15,
+  "wholeModel": {
+    "allPriorQuestRecordsChainsInstancesMapsExact": true,
+    "allPriorSourceFactsLocationsExact": true,
+    "oneExistingSourceAddsAccessNotes": true,
+    "fifteenPriorTrainerPlansInstructionOnlyAccessNotes": true,
+    "newActivePlans": 4,
+    "newSources": 10,
+    "newFullQuestRecords": 20,
+    "newPrimarySeriesRecords": 2,
+    "newUnorderedReportedReferenceRecords": 3,
+    "noPreciseCoarseInstancePins": true,
+    "independentOutdoorContinentPositionsPreserved": true
+  },
+  "upstream": "All23627PFrawrows/9328fullsourceobjects/entiremetadata and1702EVrelationfieldsexactretainedactual8CL2;qual1439/selected0. No newfeed/source/index/opaque/counterchanges;diagnosticbytesretained.",
+  "preflight": "Builderliteralescapingcorrectedbeforeanypublication. Initialprovenancecopyaddedduplicateoldkeyroles/zonecitation;reuseoriginalrecordsretainedinstead. Broadsentinelmapguardwoulddowngrade5unrelatedoutdoorpoints;finalexplicitcoordinateScopeguardpreservesalloldoutdoorpositionsandpersiststwoqualifiedinstanceframesacrosslaterexcerpts. Final8cn4/full19validatesfinalcode/data;earlierrunsnotclaimedasfinal.",
+  "limits": "Publicationonly/notactivegearadoption. Questsourcelevelnotwearergate;one-choicevariantsnotallrewards. FullseriesorderedsegmentsdistinctfromonecontributorHordereportedunverifiedparallelprerequisites;no invented fullstartinggraph/currentprogress. Physicalinputbossnotfinishedrewardloot;coarsecontinentpointsnotfloors. Prior29chains/15trainerdestinations/954recipes preserved. Five new itinerary/reference records preserve29oldobjects:twofull-primaryorderedsegments,threeunorderedreportedHordereferences(routeVerifiedfalse/no completionflagadvancement). Two satchelsIDs268035/268036 distinct;provided-not-free. ExistingAlphonseteachingserviceAllianceReaction/HordeUnspecifiednowexplicit;newMelanieteachingtablepropagatesonlythroughcanonicalspell/outputguards. Missingwearerlevelsnotreplacedbysourcequestminima. Contextreward275042fullraw403 isnotanemptytable/retirement;94891rewardmetadata remainspartialcontext,nofakeitembodyhash. Knownfailed1677/no unchangedretry. Reused8CMzone definition andAlphonsekeyrolesremainownedbytheiroriginalevidence;newfileaddsserviceinformationwithoutduplicatingoldrole/zoneprovenance. Explicitcontinent-onlyqualificationforNarGurk258964/OverlordMugg258968preventscoarseinstancepointsandpersistsacrosslaterunqualifiedexcerpts. Independentpublishedoutdoorcontinentpositionsarepreserved."
+}

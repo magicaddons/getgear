@@ -1,0 +1,593 @@
+{
+  "checkpoint": "8CU",
+  "status": "threeindividuallypublication-assessed;targetedvalidationpending",
+  "items": {
+    "276395": {
+      "url": "https://www.wowhead.com/forever/item=276395",
+      "bytes": 194136,
+      "sha256": "5bfa45c5942959c04a034bc8fea468040c0b653cff13720a33929fd89c33b78b",
+      "title": "Grimm's Packing Gloves - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 276395,
+        "name": "Grimm's Packing Gloves",
+        "level": 59,
+        "reqlevel": 54,
+        "quality": 3,
+        "classs": 4,
+        "subclass": 1,
+        "slot": 10,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 54"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 276395,
+        "name": "Grimm's Packing Gloves",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 11058,
+            "name": "Ezra Grimm",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 6,
+            "count": 2,
+            "outof": 7,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "boss": 1
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        11058
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "bd": 1,
+          "dd": -1,
+          "n": "Ezra Grimm",
+          "t": 1,
+          "ti": 11058,
+          "z": 2017
+        }
+      ]
+    },
+    "276396": {
+      "url": "https://www.wowhead.com/forever/item=276396",
+      "bytes": 176976,
+      "sha256": "36db24fe5dd5f7b6dddb31a3dd0f17882b4253b91f0a6f26a2574b798e8cb3a9",
+      "title": "Ezra's Seal of Authenticity - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 276396,
+        "name": "Ezra's Seal of Authenticity",
+        "level": 59,
+        "reqlevel": 54,
+        "quality": 3,
+        "classs": 4,
+        "subclass": -2,
+        "slot": 11,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 54"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 276396,
+        "name": "Ezra's Seal of Authenticity",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "dropped-by": [
+          {
+            "id": 11058,
+            "name": "Ezra Grimm",
+            "location": [
+              2017
+            ],
+            "classification": 1,
+            "type": 6,
+            "count": 1,
+            "outof": 7,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "boss": 1
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [
+        11058
+      ],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 1,
+      "dropListPossiblyCappedAt200": false,
+      "group": "named-source-reference",
+      "primarySourceTypes": [
+        2
+      ],
+      "primarySourceDescriptors": [
+        {
+          "bd": 1,
+          "dd": -1,
+          "n": "Ezra Grimm",
+          "t": 1,
+          "ti": 11058,
+          "z": 2017
+        }
+      ]
+    },
+    "280363": {
+      "url": "https://www.wowhead.com/forever/item=280363",
+      "bytes": 182094,
+      "sha256": "0c03cf2f6f19d80f4cc57170f95cfae47ad5a5acf9f89b8c0c3346f6d753bdce",
+      "title": "Nightclaw Mantle - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "id": 280363,
+        "name": "Nightclaw Mantle",
+        "level": 20,
+        "reqlevel": 15,
+        "quality": 2,
+        "classs": 4,
+        "subclass": 5,
+        "slot": 3,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "requirements": [
+        "Requires Level 15",
+        "Requires Nightclaw Druids - Exalted"
+      ],
+      "primaryUnavailable": false,
+      "crossVersion": false,
+      "crossVersionWarning": false,
+      "eligibilityAssessment": {
+        "itemID": 280363,
+        "name": "Nightclaw Mantle",
+        "inventoryType": 3,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 15,
+        "renderedEquipLevel": 15,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [],
+        "assessment": "hold-unsupported-equipment-type-or-class-policy",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "relations": {
+        "sold-by": [
+          {
+            "id": 254151,
+            "name": "Vayn Moongaze",
+            "location": [
+              16593
+            ],
+            "classification": 0,
+            "cost": [
+              [
+                2995
+              ]
+            ],
+            "stock": -1,
+            "type": 7,
+            "envChange": {
+              "status": "new",
+              "labels": [],
+              "lines": []
+            }
+          }
+        ]
+      },
+      "reverseDropNPCIDs": [],
+      "reverseObjectIDs": [],
+      "unconfirmedObjectIDs": [],
+      "reverseItemContainerIDs": [],
+      "unconfirmedItemContainerIDs": [],
+      "dropListReturnedRows": 0,
+      "dropListPossiblyCappedAt200": false,
+      "group": "vendor-reference",
+      "primarySourceTypes": [
+        5
+      ],
+      "primarySourceDescriptors": [
+        {
+          "n": "Vayn Moongaze",
+          "t": 1,
+          "ti": 254151,
+          "z": 16593
+        }
+      ]
+    }
+  },
+  "npcs": {
+    "11058": {
+      "url": "https://www.wowhead.com/forever/npc=11058",
+      "bytes": 99730,
+      "sha256": "0a228e751e9c1c39c319957bd3d1f698a59284bdd39e8fade1b4faf12194f545",
+      "title": "Ezra Grimm - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 2017,
+          "name": "Stratholme",
+          "pointCount": 0,
+          "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+        }
+      ],
+      "returnedDropsRows": 35,
+      "selectedDrops": [
+        {
+          "id": 276395,
+          "name": "Grimm's Packing Gloves",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 54,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": 1,
+          "slot": 10,
+          "level": 59,
+          "count": 2,
+          "outof": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        },
+        {
+          "id": 276396,
+          "name": "Ezra's Seal of Authenticity",
+          "stack": [
+            1,
+            1
+          ],
+          "reqlevel": 54,
+          "specificDrop": true,
+          "quality": 3,
+          "classs": 4,
+          "subclass": -2,
+          "slot": 11,
+          "level": 59,
+          "count": 1,
+          "outof": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          }
+        }
+      ],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates."
+    },
+    "254151": {
+      "url": "https://www.wowhead.com/forever/npc=254151",
+      "bytes": 99351,
+      "sha256": "2b94ca3a48c8199e2ef489044c3d0722a383cf9e01601abff0b14e1ca1aaf0a6",
+      "title": "Vayn Moongaze - NPC - WoW Forever",
+      "reusedCachedResponse": true,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 16593,
+          "name": "Zephras Isle",
+          "uiMapID": 2521,
+          "pointCount": 5,
+          "bounds": {
+            "xMin": 63.3,
+            "xMax": 64.1,
+            "yMin": 36,
+            "yMax": 38.1
+          }
+        }
+      ],
+      "returnedDropsRows": 0,
+      "selectedDrops": [],
+      "scope": "Full published inventory and geography; retain historical/version/current loot uncertainty, no invented boss floor coordinates.",
+      "selectedSells": [
+        {
+          "appearances": {
+            "0": [
+              684948,
+              "inv_shoulder_07"
+            ]
+          },
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Nightclaw Mantle",
+          "displayid": 684948,
+          "id": 280363,
+          "level": 20,
+          "name": "Nightclaw Mantle",
+          "quality": 2,
+          "reqlevel": 15,
+          "slot": 3,
+          "slotbak": 3,
+          "source": [
+            5
+          ],
+          "sourcemore": [
+            {
+              "n": "Vayn Moongaze",
+              "t": 1,
+              "ti": 254151,
+              "z": 16593
+            }
+          ],
+          "subclass": 5,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            0,
+            0
+          ],
+          "stack": [
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              2995,
+              [],
+              []
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "allPrimaryResponseHeaders": {
+    "item:276395": {
+      "url": "https://www.wowhead.com/forever/item=276395",
+      "title": "Grimm's Packing Gloves - Item - WoW Forever",
+      "bytes": 194136,
+      "sha256": "5bfa45c5942959c04a034bc8fea468040c0b653cff13720a33929fd89c33b78b",
+      "reusedCachedResponse": false
+    },
+    "item:276396": {
+      "url": "https://www.wowhead.com/forever/item=276396",
+      "title": "Ezra's Seal of Authenticity - Item - WoW Forever",
+      "bytes": 176976,
+      "sha256": "36db24fe5dd5f7b6dddb31a3dd0f17882b4253b91f0a6f26a2574b798e8cb3a9",
+      "reusedCachedResponse": false
+    },
+    "item:280363": {
+      "url": "https://www.wowhead.com/forever/item=280363",
+      "title": "Nightclaw Mantle - Item - WoW Forever",
+      "bytes": 182094,
+      "sha256": "0c03cf2f6f19d80f4cc57170f95cfae47ad5a5acf9f89b8c0c3346f6d753bdce",
+      "reusedCachedResponse": false
+    },
+    "npc:11058": {
+      "url": "https://www.wowhead.com/forever/npc=11058",
+      "title": "Ezra Grimm - NPC - WoW Forever",
+      "bytes": 99730,
+      "sha256": "0a228e751e9c1c39c319957bd3d1f698a59284bdd39e8fade1b4faf12194f545",
+      "reusedCachedResponse": true
+    },
+    "npc:254151": {
+      "url": "https://www.wowhead.com/forever/npc=254151",
+      "title": "Vayn Moongaze - NPC - WoW Forever",
+      "bytes": 99351,
+      "sha256": "2b94ca3a48c8199e2ef489044c3d0722a383cf9e01601abff0b14e1ca1aaf0a6",
+      "reusedCachedResponse": true
+    }
+  },
+  "dropReverseJoins": [
+    {
+      "itemID": 276395,
+      "npcID": 11058,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    },
+    {
+      "itemID": 276396,
+      "npcID": 11058,
+      "ownClassicEra": null,
+      "fullClassicEra": null
+    }
+  ],
+  "dropReverseOmissions": [],
+  "vendorExactJoins": [
+    {
+      "itemID": 280363,
+      "npcID": 254151,
+      "ownOffer": {
+        "classification": 0,
+        "displayName": "Vayn Moongaze",
+        "displayNames": [],
+        "hasQuests": 1,
+        "id": 254151,
+        "location": [
+          16593
+        ],
+        "maxlevel": 10,
+        "minlevel": 10,
+        "name": "Vayn Moongaze",
+        "names": [],
+        "react": [
+          0,
+          0
+        ],
+        "type": 7,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "stock": -1,
+        "cost": [
+          [
+            2995
+          ]
+        ],
+        "popularity": 1330
+      },
+      "fullSale": {
+        "appearances": {
+          "0": [
+            684948,
+            "inv_shoulder_07"
+          ]
+        },
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Nightclaw Mantle",
+        "displayid": 684948,
+        "id": 280363,
+        "level": 20,
+        "name": "Nightclaw Mantle",
+        "quality": 2,
+        "reqlevel": 15,
+        "slot": 3,
+        "slotbak": 3,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Vayn Moongaze",
+            "t": 1,
+            "ti": 254151,
+            "z": 16593
+          }
+        ],
+        "subclass": 5,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "standing": 7,
+        "react": [
+          0,
+          0
+        ],
+        "stack": [
+          1
+        ],
+        "avail": -1,
+        "cost": [
+          [
+            2995,
+            [],
+            []
+          ]
+        ]
+      },
+      "sourceURL": "https://www.wowhead.com/forever/npc=254151",
+      "sourceSHA256": "2b94ca3a48c8199e2ef489044c3d0722a383cf9e01601abff0b14e1ca1aaf0a6"
+    }
+  ],
+  "counts": {
+    "selected": 3,
+    "assessed": 3,
+    "printedLevelBaselinePass": 2,
+    "unsupportedPrintedTypeClassPolicyHold": 1,
+    "fullPrimaryResponses": 5,
+    "newPrimaryResponses": 3,
+    "reusedPrimaryResponses": 2,
+    "dropReverseJoins": 2,
+    "fullSellerJoins": 1,
+    "newFailures": 0,
+    "knownFailedURLs": 1731,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "limits": "Published own/full source joins,not current drops/stock/acceptance/rendering. Ezra Grimm is a named source,not falsely classified as a boss;Stratholme region not precise floor. Nightclaw Mantle printedwearer15 is retained,not a missing-level hold;no armour/class policy inferred from mantle name or Nightclaw Druids faction. Exalted requirement/full merchantstanding7 strengthens source-rank convention followup. No canonical gear/class/ingredient/recipe/chain/runtime changes.",
+  "next": "8CV first100of204untyped reward scope references in existingregister/sharedqueue;then104. Follow rank/source-location/spellmapping fixes under fullvalidation and remaining exceptions/finalintegrity/manualacceptance."
+}

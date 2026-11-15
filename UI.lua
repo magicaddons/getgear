@@ -136,36 +136,47 @@ local function NewAcquisitionPin(parent, size)
     t:SetAllPoints()
     t:SetTexture("Interface\\AddOns\\GetGear\\MapPin")
     b.pinTexture=t
+    b:RegisterForClicks("LeftButtonUp","RightButtonUp")
     b:SetScript("OnEnter",function(self)
-        local destination=self.destination
+        local destination=self.gear and GetGear:GetAcquisitionMapTarget(self.gear)
         if not destination or not GameTooltip then return end
         self.pinTexture:SetVertexColor(1,1,0.82)
         GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
-        GameTooltip:AddLine("Open acquisition location",1,0.84,0.42)
-        GameTooltip:AddLine(destination.spot or destination.zone,1,1,1,true)
+        GameTooltip:AddLine(destination.chooseFirst and "Choose acquisition location" or "Open acquisition location",1,0.84,0.42)
+        GameTooltip:AddLine((destination.role and destination.role..": " or "")..(destination.label or destination.zone or "Directions"),1,1,1,true)
         if destination.x and destination.y then
-            GameTooltip:AddLine(destination.zone .. " (" .. string.format("%.1f",destination.x) .. ", " .. string.format("%.1f",destination.y) .. ")",0.8,0.85,0.93)
-        else
+            GameTooltip:AddLine((destination.zone or "Destination map") .. " (" .. string.format("%.1f",destination.x) .. ", " .. string.format("%.1f",destination.y) .. ")",0.8,0.85,0.93)
+        elseif destination.zone then
             GameTooltip:AddLine(destination.zone .. " - approximate region",0.8,0.85,0.93)
         end
-        if destination.quality=="classic-reference" then
-            GameTooltip:AddLine("Classic location; verify in Forever",1,0.70,0.32,true)
-        elseif destination.quality=="reported" then
-            GameTooltip:AddLine("Community-reported location; not independently confirmed",1,0.70,0.32,true)
-        elseif destination.quality=="zone-only" then
-            GameTooltip:AddLine("Approximate zone only; exact destination unverified",1,0.70,0.32,true)
-        elseif destination.quality~="forever" then
-            GameTooltip:AddLine("Acquisition location not independently verified",1,0.70,0.32,true)
+        if destination.kind=="dungeon" then
+            GameTooltip:AddLine("Uses a valid client entrance first, then a published outdoor approach. Exact portal/access and boss-floor positions are not assumed.",0.8,0.85,0.93,true)
+        elseif destination.bounds and not destination.x then
+            GameTooltip:AddLine("Published area, not an exact NPC position.",0.8,0.85,0.93,true)
         end
-        GameTooltip:AddLine("Opens the map. Replaces your existing user waypoint when allowed.",0.65,0.76,0.88,true)
+        if destination.verification=="legacy-reference" then
+            GameTooltip:AddLine("Classic location; verify in Forever",1,0.70,0.32,true)
+        elseif destination.verification~="client" then
+            GameTooltip:AddLine("Published reference; current presence, stock, loot and access remain unverified.",1,0.70,0.32,true)
+        end
+        if destination.chainUnresolved then
+            GameTooltip:AddLine("Quest route incomplete: opens known stages and unresolved prerequisite details.",1,0.70,0.32,true)
+        end
+        if destination.requirements and destination.requirements~="" then
+            GameTooltip:AddLine(destination.requirements,0.85,0.87,0.92,true)
+        end
+        if (destination.choiceCount or 0)>1 then
+            GameTooltip:AddLine("Right-click for other locations ("..destination.choiceCount..").",0.65,0.76,0.88,true)
+        end
+        GameTooltip:AddLine("Opens the map or written directions. Your existing waypoint is preserved.",0.65,0.76,0.88,true)
         GameTooltip:Show()
     end)
     b:SetScript("OnLeave",function(self)
         self.pinTexture:SetVertexColor(1,1,1)
         HideItemTooltip()
     end)
-    b:SetScript("OnClick",function(self)
-        if self.gear then GetGear:OpenAcquisitionMap(self.gear) end
+    b:SetScript("OnClick",function(self,button)
+        if self.gear then GetGear:OpenAcquisitionMap(self.gear,nil,self,button=="RightButton") end
     end)
     return b
 end
@@ -181,6 +192,70 @@ local function AssignAcquisitionPin(b,gear)
         b.destination=nil
         b:Hide()
     end
+end
+
+-- A single lazy popup for source choices or directions. No additional controls
+-- or permanent text are added to compact objective rows.
+local navigationPopup
+function GetGear:HideAcquisitionNavigation()
+    if navigationPopup then navigationPopup:Hide() end
+end
+local function NavigationPopup()
+    if navigationPopup then return navigationPopup end
+    local f=CreateFrame("Frame","GetGearNavigationPopup",UIParent,"BackdropTemplate")
+    f:SetSize(410,330);f:SetPoint("CENTER");f:SetFrameStrata("DIALOG");f:SetClampedToScreen(true)
+    f:SetBackdrop({bgFile="Interface\\DialogFrame\\UI-DialogBox-Background",edgeFile="Interface\\Tooltips\\UI-Tooltip-Border",tile=true,tileSize=16,edgeSize=16,insets={left=4,right=4,top=4,bottom=4}})
+    f.title=NewText(f,"GameFontNormal",350);f.title:SetPoint("TOPLEFT",14,-14)
+    local close=NewButton(f,"X",24,22);close:SetPoint("TOPRIGHT",-8,-8);close:SetScript("OnClick",function() f:Hide() end)
+    f.scroll=CreateFrame("ScrollFrame",nil,f,"UIPanelScrollFrameTemplate");f.scroll:SetPoint("TOPLEFT",14,-44);f.scroll:SetPoint("BOTTOMRIGHT",-30,42)
+    f.content=CreateFrame("Frame",nil,f.scroll);f.content:SetSize(360,240);f.scroll:SetScrollChild(f.content)
+    f.text=NewText(f.content,"GameFontHighlightSmall",350);f.text:SetPoint("TOPLEFT",0,0)
+    f.buttons={}
+    f.previous=NewButton(f,"Previous",88,23);f.previous:SetPoint("BOTTOMLEFT",14,12)
+    f.next=NewButton(f,"Next",88,23);f.next:SetPoint("BOTTOMRIGHT",-14,12)
+    if type(UISpecialFrames)=="table" then table.insert(UISpecialFrames,"GetGearNavigationPopup") end
+    f:Hide();navigationPopup=f
+    return f
+end
+function GetGear:ShowAcquisitionDirections(gear,target,anchor,reason)
+    local f=NavigationPopup()
+    f.title:SetText(gear.name or "Acquisition directions")
+    for _, b in ipairs(f.buttons) do b:Hide() end
+    f.previous:Hide();f.next:Hide();f.text:Show()
+    local text=(reason and reason.."\n\n" or "")..self:GetAcquisitionDirections(gear)
+    if gear.instructions and gear.instructions~="" then text=text.."\n\n"..gear.instructions end
+    local research=gear.acquisitionResearch
+    if research and research.details then text=text.."\n\n"..research.details end
+    f.text:SetText(text);f.content:SetHeight(MeasureText(f.text,240));f.scroll:SetVerticalScroll(0);f:Show()
+end
+function GetGear:ShowAcquisitionChoices(gear,choices,anchor)
+    local f=NavigationPopup()
+    f.title:SetText("Where to obtain "..(gear.name or "this item"))
+    f.text:Hide();f.content:SetHeight(240);f.scroll:SetVerticalScroll(0)
+    local page=1
+    local function render()
+        for _, b in ipairs(f.buttons) do b:Hide() end
+        local first=(page-1)*6+1
+        for n=1,6 do
+            local target=choices[first+n-1]
+            if not target then break end
+            local b=f.buttons[n]
+            if not b then b=NewButton(f.content,"",350,34);b:SetPoint("TOPLEFT",0,-(n-1)*38);f.buttons[n]=b end
+            b:SetText((target.role or "Location")..": "..(target.label or target.zone or "Directions")..(target.zone and " — "..target.zone or ""))
+            b:SetScript("OnClick",function() f:Hide();GetGear:OpenAcquisitionMap(gear,target.id,anchor) end)
+            b:SetScript("OnEnter",function(self)
+                if not GameTooltip then return end
+                GameTooltip:SetOwner(self,"ANCHOR_RIGHT");GameTooltip:AddLine(target.label or "Location",1,0.84,0.42,true)
+                if target.requirements and target.requirements~="" then GameTooltip:AddLine(target.requirements,1,1,1,true) end
+                GameTooltip:AddLine("Published source; current availability unverified.",1,0.7,0.32,true);GameTooltip:Show()
+            end)
+            b:SetScript("OnLeave",HideItemTooltip);b:Show()
+        end
+        f.previous:SetEnabled(page>1);f.next:SetEnabled(page*6<#choices);f.previous:Show();f.next:Show()
+    end
+    f.previous:SetScript("OnClick",function() if page>1 then page=page-1;render() end end)
+    f.next:SetScript("OnClick",function() if page*6<#choices then page=page+1;render() end end)
+    render();f:Show()
 end
 
 local function NewProfessionIcon(parent, size)
@@ -214,12 +289,17 @@ local function UpdateProfessionSkill(icon, label, gear, showRequiredProfession, 
     if not gear.profession then
         icon:Hide(); label:Hide(); return false
     end
+    local published
+    if GetGear.GetRecipeSkillRequirement then published=GetGear:GetRecipeSkillRequirement(gear) end
+    local required=published or gear.professionSkillRequired
+    if not published and gear.recipeLearnSkillEvidence=="unverified" then required=nil end
+    local provisional=not published and gear.recipeLearnSkillProvisional==true
     if previewMode then
         -- This is an alternate class/level; the actual player's skill and
         -- known recipes must not be presented as the preview character's.
-        if gear.professionSkillRequired and gear.recipeLearnSkillEvidence~="unverified" then
-            label:SetText(gear.profession .. " " .. tostring(gear.professionSkillRequired) ..
-                (gear.recipeLearnSkillProvisional and "? (reported)" or " required"))
+        if required then
+            label:SetText(gear.profession .. " " .. tostring(required) ..
+                (provisional and "? (reported)" or " required"))
         elseif gear.professionLearnSource == "Trainer" or gear.professionSkillEstimate or gear.recipeLearnMethod=="trainer" then
             label:SetText(gear.profession .. " - Trainer (verify skill)")
         else
@@ -234,8 +314,6 @@ local function UpdateProfessionSkill(icon, label, gear, showRequiredProfession, 
     -- requirement. Lookup is tri-state: nil means the client has not supplied
     -- trustworthy learning data, not that the player lacks the recipe.
     local learned = GetGear.GetRecipeKnowledge and GetGear:GetRecipeKnowledge(gear)
-    local required = gear.professionSkillRequired
-    if gear.recipeLearnSkillEvidence=="unverified" then required=nil end
     local trainer = gear.professionLearnSource == "Trainer" or
         gear.professionSkillEstimate ~= nil or gear.recipeLearnMethod=="trainer"
     if learned ~= true and required == nil and not trainer then
@@ -248,22 +326,22 @@ local function UpdateProfessionSkill(icon, label, gear, showRequiredProfession, 
     local current = GetGear:GetProfessionSkill(gear.profession)
     if showRequiredProfession then
         if learned == true then
-            label:SetText(gear.profession .. " - Learned")
+            label:SetText(gear.profession .. (required and " "..required or "") .. " - Learned")
         elseif required then
-            label:SetText(gear.profession .. " " .. tostring(required) .. (gear.recipeLearnSkillProvisional and "?" or ""))
+            label:SetText(gear.profession .. " " .. tostring(required) .. (provisional and "?" or ""))
         else
             label:SetText(gear.profession .. " - Trainer")
         end
     else
         if learned == true then
-            label:SetText(gear.profession .. " - Learned")
+            label:SetText(gear.profession .. (required and " "..required or "") .. " - Learned")
         elseif required then
-            label:SetText((current == nil and "-" or tostring(current)) .. "/" .. tostring(required) .. (gear.recipeLearnSkillProvisional and "?" or ""))
+            label:SetText((current == nil and "-" or tostring(current)) .. "/" .. tostring(required) .. (provisional and "?" or ""))
         else
             label:SetText(gear.profession .. " - Trainer")
         end
     end
-    if learned == true or (required and not gear.recipeLearnSkillProvisional and current and current >= required) then
+    if learned == true or (required and not provisional and current and current >= required) then
         label:SetTextColor(0.38,0.90,0.53)
     else
         label:SetTextColor(1,0.77,0.38)
@@ -283,6 +361,13 @@ local function Describe(gear, previewMode)
     local hasSource = type(gear.source)=="string" and gear.source~=""
     local desc = (hasSource and (gear.source .. ": ") or "") .. (gear.instructions or "")
     if gear.notes and gear.notes ~= "" then desc = desc .. "\n" .. gear.notes end
+    local research=gear.acquisitionResearch
+    if research and (research.recipeReference or research.equipmentReference) and research.sourceSummary then
+        desc=desc.."\n"..research.sourceSummary
+        if research.details and research.details~="" then
+            desc=desc.."\n"..research.details
+        end
+    end
     if gear.suitabilityWarning and gear.suitabilityWarning~="" and
         not desc:find(gear.suitabilityWarning,1,true) then
         desc=desc.."\n"..gear.suitabilityWarning
@@ -306,6 +391,10 @@ local function Describe(gear, previewMode)
     if previewMode and type(gear.races)=="table" and #gear.races>0 then
         desc = desc .. "\n|cffffba63Race-restricted: " .. table.concat(gear.races, ", ") .. ".|r"
     end
+    if GetGear.GetAcquisitionDirections then
+        local directions=GetGear:GetAcquisitionDirections(gear)
+        if directions~="" then desc=desc.."\n\n|cffffd36aWhere to go|r\n"..directions end
+    end
     return desc
 end
 
@@ -315,6 +404,10 @@ end
 -- shown by the heading (patterns and initial recipes), and significant source
 -- warnings even when a location pin exists. The detailed Guide stays complete.
 local function DescribeOverlay(gear, hasLocationButton)
+    -- The shared compact formatter already includes the acquisition method,
+    -- meaningful restrictions and uncertainty. Expanding must not append a
+    -- second raw/provenance paragraph; the full Guide retains those details.
+    if GetGear.GetAcquisitionSummary and GetGear:GetAcquisitionSummary(gear) then return nil end
     if gear.profession then
         if gear.recipeLearningAvailability=="disputed" or gear.recipeLearnMethod=="multiple" then
             return "Recipe teaching method disputed in Forever; check trainer/pattern availability."
@@ -1791,6 +1884,22 @@ function GetGear:RefreshOverlay()
     trackerLevel:SetText(ColoredCharacterLabel(self.level, race, class, classToken))
 
     local list = self:GetItems("tracker")
+    -- These are independent overlay presentation filters. Neither affects
+    -- the full guide, saved progress, or the catalogue's source research.
+    if self.ShouldShowOverlayStatChanges or self.ShouldShowOverlayWorldBoEDrops or self.ShouldShowOverlayAcquisition then
+        local visible={}
+        for _,gear in ipairs(list) do
+            local useful=(opts.hideWithoutPositiveStats==false)
+                or not self.ShouldShowOverlayStatChanges
+                or self:ShouldShowOverlayStatChanges(gear)
+            local obtainable=(opts.hideGreenBoEWorldDrops==false)
+                or not self.ShouldShowOverlayWorldBoEDrops
+                or self:ShouldShowOverlayWorldBoEDrops(gear)
+            local accessible=not self.ShouldShowOverlayAcquisition or self:ShouldShowOverlayAcquisition(gear)
+            if useful and obtainable and accessible then visible[#visible+1]=gear end
+        end
+        list=visible
+    end
     objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  OBJECTIVES (" .. #list .. ")")
     local totalY = 0
     if opts.objectivesCollapsed then
@@ -1880,22 +1989,27 @@ function GetGear:RefreshOverlay()
                     r.comparison:Hide()
                 end
                 local expanded = opts.expanded[gear.id]
+                -- Acquisition must be visible at a glance, not hidden behind
+                -- an expand click. Detailed source notes still appear expanded.
+                local summary = self.GetAcquisitionSummary and self:GetAcquisitionSummary(gear)
                 if expanded then
-                    -- No duplicate fixed benefit badge: comparison numbers are
-                    -- already visible inline; icon tooltip has complete stats.
-                    for _, widget in ipairs(r.benefits) do widget:Hide() end
-                    local summary=DescribeOverlay(gear,r.pin:IsShown())
-                    if summary and summary~="" then
-                        r.desc:ClearAllPoints()
-                        r.desc:SetPoint("TOPLEFT", r.f, "TOPLEFT", 11, -nextY)
-                        r.desc:SetText(summary)
-                        r.desc:Show()
-                        -- The former 35-pixel minimum created a large blank gap
-                        -- even when the summary occupied only one text line.
-                        nextY = nextY + MeasureText(r.desc, 12) + 5
-                    else
-                        r.desc:Hide()
+                    local detail=DescribeOverlay(gear,r.pin:IsShown())
+                    if detail and detail~="" then
+                        if summary and summary~="" and not detail:find(summary,1,true) then
+                            summary=summary.."\n"..detail
+                        else
+                            summary=detail
+                        end
                     end
+                end
+                if summary and summary~="" then
+                    r.desc:ClearAllPoints()
+                    r.desc:SetPoint("TOPLEFT", r.f, "TOPLEFT", 11, -nextY)
+                    r.desc:SetText(summary)
+                    r.desc:Show()
+                    -- Use measured wrapped text height, including the brief
+                    -- source shown before expansion.
+                    nextY = nextY + MeasureText(r.desc, 12) + 5
                 else
                     r.desc:Hide()
                 end
@@ -2076,7 +2190,7 @@ end
 -- Settings in separate window; overlay stays uncluttered while playing.
 -- =====================================================================
 local settings = CreateFrame("Frame", "GetGear_OverlaySettings", UIParent, "BasicFrameTemplateWithInset")
-settings:SetSize(418, 628)
+settings:SetSize(418, 692)
 settings:SetPoint("CENTER", UIParent, "CENTER", 270, 50)
 -- Settings must still be usable when opened from the foreground detail guide.
 settings:SetFrameStrata("DIALOG")
@@ -2212,10 +2326,55 @@ allValidGearCheck:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 allValidGearCheck:SetScript("OnLeave",HideItemTooltip)
+-- Only suppress conclusively non-improving items on the tracker. Pending
+-- comparisons stay visible and all gear remains in the detailed guide.
+local positiveStatCheck=NewCheck(settings,"Hide gear without positive stat changes",493,function(v)
+    GetGear.db.overlay.hideWithoutPositiveStats=v
+    GetGear:RefreshOverlay()
+end)
+positiveStatCheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Overlay upgrade comparison",1,0.82,0.35)
+    GameTooltip:AddLine("On by default. Requires at least one confirmed positive stat other than ordinary armour, unless you enable armour-only improvements below.",1,1,1,true)
+    GameTooltip:AddLine("Missing comparison data, equipment empty slots, bag upgrades and the full Guide are unaffected.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+positiveStatCheck:SetScript("OnLeave",HideItemTooltip)
+-- This is only a display rule for generic world drops. A green BoE
+-- crafted item or a targetable boss/trash/quest reward is not filtered.
+local greenBoECheck=NewCheck(settings,"Hide green BoE world drops from tracker",526,function(v)
+    GetGear.db.overlay.hideGreenBoEWorldDrops=v
+    GetGear:RefreshOverlay()
+end)
+greenBoECheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Optional world-drop suppression",1,0.82,0.35)
+    GameTooltip:AddLine("On by default. Hide uncommon (green), Bind-on-Equip WORLD drops that cannot be targeted like quest, dungeon or crafting rewards.",1,1,1,true)
+    GameTooltip:AddLine("Crafted BoEs, dungeon drops, quest rewards and the full Guide remain visible. You can switch this off at any time.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+greenBoECheck:SetScript("OnLeave",HideItemTooltip)
+-- Class alone does not imply a tank role. This opt-in restores armor-only
+-- recommendations without changing the full guide or other stat deltas.
+local armorOnlyCheck=NewCheck(settings,"Count armour-only improvements",559,function(v)
+    GetGear.db.overlay.countArmorOnlyUpgrades=v
+    GetGear:RefreshOverlay()
+end)
+armorOnlyCheck:SetScript("OnEnter",function(self)
+    if not GameTooltip then return end
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Armour-only overlay improvements",1,0.82,0.35)
+    GameTooltip:AddLine("Off by default for every class. Enable when you want added armour alone to keep an item in the tracker, such as while playing a tank.",1,1,1,true)
+    GameTooltip:AddLine("All other improvements, the complete Guide, and comparative armour numbers are unaffected.",0.72,0.83,1,true)
+    GameTooltip:Show()
+end)
+armorOnlyCheck:SetScript("OnLeave",HideItemTooltip)
 -- Keep the Tracked/All material-scope choice in settings, without
 -- confusing it with the Total Materials minimize button.
 local materialScopeButton=NewButton(settings,"",185,23)
-materialScopeButton:SetPoint("TOPLEFT",18,-505)
+materialScopeButton:SetPoint("TOPLEFT",18,-604)
 materialScopeButton:SetScript("OnClick",function(self)
     if not GetGear.db then return end
     local opts=GetGear.db.overlay
@@ -2252,6 +2411,9 @@ function GetGear:ShowSettings()
     bagsCheck:SetChecked(self.db.overlay.bagUpgrades ~= false)
     craftFilterCheck:SetChecked(self.db.overlay.hideUncraftableCrafts == true)
     allValidGearCheck:SetChecked(self.db.overlay.showAllValidGear == true)
+    positiveStatCheck:SetChecked(self.db.overlay.hideWithoutPositiveStats ~= false)
+    greenBoECheck:SetChecked(self.db.overlay.hideGreenBoEWorldDrops ~= false)
+    armorOnlyCheck:SetChecked(self.db.overlay.countArmorOnlyUpgrades == true)
     alphaSlider:SetValue(math.floor((self.db.overlay.backgroundOpacity or 0.78)*100 + 0.5))
     overlayScaleSlider:SetValue(math.floor((self.db.overlay.scale or 1)*100+0.5))
     detailScaleSlider:SetValue(math.floor((self.db.detail.scale or 1)*100+0.5))

@@ -1,0 +1,1444 @@
+{
+  "capturedUTC": "2026-11-12T02:05:06.797099+00:00",
+  "method": "Exact full factual snapshot comparison: actual8BR4 PF23610/EV1676 snapshots to8BS; original8BR deltas preserved separately;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23610,
+    "afterItems": 23629,
+    "beforeDefinitions": 9246,
+    "afterDefinitions": 9248,
+    "newItems": [
+      {
+        "itemID": 9375,
+        "name": "Expert Goldminer's Helmet",
+        "sources": [
+          {
+            "type": "zonedrop",
+            "label": "Zone drop",
+            "npc": "Digmaster Shovelphlange",
+            "zone": "Badlands",
+            "path": "professions/zones/badlands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12895,
+        "name": "Breastplate of the Chromatic Flight",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Breastplate of the Chromatic Flight",
+            "zone": "Western Plaguelands",
+            "path": "professions/zones/western-plaguelands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12903,
+        "name": "Legguards of the Chromatic Defier",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Legplates of the Chromatic Defier",
+            "zone": "Western Plaguelands",
+            "path": "professions/zones/western-plaguelands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12945,
+        "name": "Legplates of the Chromatic Defier",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Legplates of the Chromatic Defier",
+            "zone": "Western Plaguelands",
+            "path": "professions/zones/western-plaguelands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13143,
+        "name": "Mark of the Dragon Lord",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Overlord Wyrmthalak",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "ad93a179404951c462e254db14f1d6536c9b8f03b1c7732bfa1e1317cada0cc6"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13181,
+        "name": "Demonskin Gloves",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13314,
+        "name": "Alanna's Embrace",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "d2fcff54d1c2e5d8e23acf632ffddae7d6c1daa49e73d30cc74836cbf5540a41"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13982,
+        "name": "Warblade of Caer Darrow",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "The Lich, Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13984,
+        "name": "Darrowspike",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "The Lich, Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13986,
+        "name": "Crown of Caer Darrow",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "The Lich, Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 14002,
+        "name": "Darrowshire Strongguard",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "The Lich, Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 14541,
+        "name": "Barovian Family Sword",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Jandice Barov",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "f77c47f526c31f2984cb81d1fe76b61ea54f7999a2c1c58c113d5756e3f3609a"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18296,
+        "name": "Marksman Bands",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18745,
+        "name": "Sacred Cloth Leggings",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280081,
+        "name": "Sad-Sack Sandals",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280082,
+        "name": "Staff of Sorrow",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 283387,
+        "name": "Scrawled Note",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 287029,
+        "name": "Nature Guardian's Legguards",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 287038,
+        "name": "Naturopathy Footpads",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [
+      {
+        "itemID": 21547,
+        "before": "Recipe: Elixir of Greater Firepower",
+        "after": "Recipe: Elixir of Holy Power"
+      }
+    ],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 5974,
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 2526,
+        "name": "Main Gauche",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 3891,
+        "name": "Augmented Chain Helm",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4007,
+        "name": "Overlinked Chain Armor",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4241,
+        "name": "Green Woolen Bag",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5763,
+        "name": "Red Woolen Bag",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5764,
+        "name": "Green Silk Pack",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 5765,
+        "name": "Black Silk Pack",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 8106,
+        "name": "Hibernal Armor",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8291,
+        "name": "Arcane Sash",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8293,
+        "name": "Traveler's Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8307,
+        "name": "Hero's Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8984,
+        "name": "Deadly Poison III",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 9333,
+        "name": "Tarnished Silver Necklace",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 9974,
+        "name": "Overlord's Shield",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10051,
+        "name": "Red Mageweave Bag",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 10142,
+        "name": "High Councillor's Mantle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10145,
+        "name": "Mighty Girdle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10155,
+        "name": "Mercurial Greaves",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10259,
+        "name": "Adventurer's Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10261,
+        "name": "Adventurer's Bandana",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10379,
+        "name": "Commander's Helm",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 11411,
+        "name": "Large Bear Bone",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 12036,
+        "name": "Granite Necklace",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 12058,
+        "name": "Demonic Bone Ring",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13023,
+        "name": "Eaglehorn Long Bow",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13083,
+        "name": "Garrett Family Crest",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13107,
+        "name": "Magiskull Cuffs",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14305,
+        "name": "Bonecaster's Sarong",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14309,
+        "name": "Celestial Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14319,
+        "name": "Resplendent Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14798,
+        "name": "Bloodlust Breastplate",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14855,
+        "name": "Vanguard Gauntlets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14929,
+        "name": "Lofty Shoulder Pads",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14958,
+        "name": "High Chief's Armor",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15240,
+        "name": "Demon's Claw",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15640,
+        "name": "Ironhide Breastplate",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 19283,
+        "name": "Seven of Portals",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 21547,
+        "name": "Recipe: Elixir of Holy Power",
+        "before": "4",
+        "after": 6
+      }
+    ],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.c41512b4d5.json",
+        "bytes": 999981,
+        "sha256": "c41512b4d5104cb27e1801651402cdff556769c053e8cd5994a539e07fb163d1",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.cd133e9d8c.json",
+        "bytes": 1359233,
+        "sha256": "cd133e9d8caa56a062a2ee261fb7926eadd0a910824b945202a110c45c2a45d1",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.77a729a585.json",
+        "bytes": 467013,
+        "sha256": "77a729a585eb0fd320883ee420f3a209360ad35c569d0eb31c7bbe8adb0ad82a",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.426fc3124a.json",
+        "bytes": 446797,
+        "sha256": "426fc3124a7a46005691f36950ac2c42da26a89c7efc8c3febfabdf7a0d6069b",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1676,
+    "afterRaw": 1688,
+    "qualifying": 1439,
+    "addedEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 4561,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3035,
+        "evidence": "observed",
+        "build": null,
+        "installs": 4,
+        "firstSeen": "2026-11-11T21:28:09.000Z",
+        "lastSeen": "2026-11-11T21:28:09.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 4560,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3035,
+        "evidence": "observed",
+        "build": null,
+        "installs": 4,
+        "firstSeen": "2026-11-11T21:37:10.000Z",
+        "lastSeen": "2026-11-11T21:37:10.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 765,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 1617,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T02:26:23.000Z",
+        "lastSeen": "2026-11-11T23:09:53.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2643,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 106318,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-11T22:28:35.000Z",
+        "lastSeen": "2026-11-11T22:28:35.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 3388,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1413,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-10T06:14:19.000Z",
+        "lastSeen": "2026-11-11T19:57:47.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 6747,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1412,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-04T23:15:12.000Z",
+        "lastSeen": "2026-11-11T21:58:59.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 265810,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1412,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T02:27:02.000Z",
+        "lastSeen": "2026-11-11T21:08:33.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 2993,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1412,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T02:49:11.000Z",
+        "lastSeen": "2026-11-11T21:16:28.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 3222,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1412,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T02:49:36.000Z",
+        "lastSeen": "2026-11-11T21:16:07.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 5939,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1412,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T02:50:44.000Z",
+        "lastSeen": "2026-11-11T23:13:55.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 2948,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1412,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T03:05:29.000Z",
+        "lastSeen": "2026-11-11T21:16:41.000Z"
+      },
+      {
+        "fromKind": "npc",
+        "fromId": 2996,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1456,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-05T10:26:27.000Z",
+        "lastSeen": "2026-11-11T22:30:26.000Z"
+      }
+    ],
+    "removedEdges": [],
+    "updatedEdges": [
+      {
+        "key": [
+          "item",
+          "4814",
+          "dropped_by",
+          "npc",
+          "3035"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-06T13:47:42.000Z",
+            "after": "2026-11-11T22:50:45.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4802",
+          "dropped_by",
+          "npc",
+          "3035"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-05T10:00:52.000Z",
+            "after": "2026-11-11T21:53:22.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4813",
+          "dropped_by",
+          "npc",
+          "3035"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-05T10:00:52.000Z",
+            "after": "2026-11-11T21:52:42.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "828",
+          "dropped_by",
+          "npc",
+          "3035"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-08T10:52:23.000Z",
+            "after": "2026-11-11T22:07:01.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4805",
+          "dropped_by",
+          "npc",
+          "3035"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2672",
+          "dropped_by",
+          "npc",
+          "2959"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-08T10:52:09.000Z",
+            "after": "2026-11-11T21:52:16.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4801",
+          "dropped_by",
+          "npc",
+          "2959"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-05T09:51:32.000Z",
+            "after": "2026-11-11T21:54:29.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "3300",
+          "dropped_by",
+          "npc",
+          "2959"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-05T09:51:32.000Z",
+            "after": "2026-11-11T21:41:08.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "3299",
+          "dropped_by",
+          "npc",
+          "2959"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-05T09:48:27.000Z",
+            "after": "2026-11-11T21:54:29.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4758",
+          "dropped_by",
+          "npc",
+          "2959"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "6348",
+          "dropped_by",
+          "npc",
+          "2959"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2447",
+          "dropped_by",
+          "object",
+          "1618"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-11T09:03:17.000Z",
+            "after": "2026-11-11T22:44:54.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "118",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-10T13:39:28.000Z",
+            "after": "2026-11-11T22:28:35.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "159",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-06T03:45:49.000Z",
+            "after": "2026-11-11T22:14:54.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2835",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2318",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4540",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2070",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2589",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "4604",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-05T12:53:45.000Z",
+            "after": "2026-11-11T22:28:35.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "8177",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "1429",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "211785",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-10T12:43:27.000Z",
+            "after": "2026-11-11T22:14:54.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "117",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-05T03:19:46.000Z",
+            "after": "2026-11-11T22:28:35.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "211787",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "3370",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "765",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "818",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "774",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "1416",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "8182",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2774",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "1419",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "211786",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2213",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "1427",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2842",
+          "dropped_by",
+          "object",
+          "106318"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2672",
+          "dropped_by",
+          "npc",
+          "2958"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-05T08:23:19.000Z",
+            "after": "2026-11-11T20:49:46.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "2447",
+          "dropped_by",
+          "object",
+          "657382"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-11T09:03:23.000Z",
+            "after": "2026-11-11T20:44:05.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "159",
+          "sold_by",
+          "npc",
+          "3934"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-11T16:37:29.000Z",
+            "after": "2026-11-11T17:03:02.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "item",
+          "1179",
+          "sold_by",
+          "npc",
+          "3934"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-11T16:37:29.000Z",
+            "after": "2026-11-11T17:03:02.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "9087",
+          "located_in",
+          "zone",
+          "1456"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-11T08:14:51.000Z",
+            "after": "2026-11-11T22:40:35.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "3003",
+          "located_in",
+          "zone",
+          "1456"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T18:23:04.000Z",
+            "after": "2026-11-11T22:31:11.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "8674",
+          "located_in",
+          "zone",
+          "1456"
+        ],
+        "changes": {
+          "installs": {
+            "before": "5",
+            "after": "6"
+          },
+          "lastSeen": {
+            "before": "2026-11-09T14:42:46.000Z",
+            "after": "2026-11-11T17:30:02.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "3027",
+          "located_in",
+          "zone",
+          "1456"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-07T23:16:09.000Z",
+            "after": "2026-11-11T22:41:23.000Z"
+          }
+        }
+      }
+    ],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103442,
+        "sha256": "13630135432f5b6d8d1a83d62098f8a07163293f23d2da747753361775bb5e79",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T00:10:15.793Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103495,
+        "sha256": "1e6d8a062ad0c29cd5b709e9a8744b38d745529a2309290b3dd44332530e0eea",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T00:10:15.793Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103457,
+        "sha256": "39d3c9a21e0d03aba2520d11acaa5cc6f06d802e0824fc7dffb589c55f076259",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T00:10:15.793Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 39034,
+        "sha256": "63f9eb02f7bc3315ee869cb86dc7a484bf82fa39b116e4b3b6075db3202bf9fc",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T00:10:15.793Z"
+      }
+    ]
+  }
+}

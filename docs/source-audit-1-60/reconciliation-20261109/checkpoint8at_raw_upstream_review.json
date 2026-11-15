@@ -1,0 +1,322 @@
+{
+  "capturedUTC": "2026-11-10T14:21:29.511311+00:00",
+  "method": "Exact full factual snapshot comparison: retained8AS actualPlayfulls/Everloot factual baselines to8AT; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23441,
+    "afterItems": 23441,
+    "beforeDefinitions": 9157,
+    "afterDefinitions": 9157,
+    "newItems": [],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.e8a3a7757c.json",
+        "bytes": 989497,
+        "sha256": "e8a3a7757c0f2fe6e4831e4618c616aa2b3599d76e86e75027ace60e5a24a2e4",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.4a3380ce2c.json",
+        "bytes": 1333831,
+        "sha256": "4a3380ce2c3315d73fa505a741731598a28fd9831515f905147850b335d5e5db",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.fccef921c6.json",
+        "bytes": 464365,
+        "sha256": "fccef921c6f6e52b6114d46189bf434c464c679148f7582336a9789d3b7d7efd",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.1b23cb60a8.json",
+        "bytes": 446192,
+        "sha256": "1b23cb60a8757ade49e3c374c663ad708620ffbfa3d77ad4acc14b7a0a241425",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1416,
+    "afterRaw": 1416,
+    "qualifying": 1204,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 15016,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11322,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-06T16:47:49.000Z",
+        "lastSeen": "2026-11-06T16:47:49.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15306,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11318,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-06T21:11:59.000Z",
+        "lastSeen": "2026-11-06T21:11:59.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14114,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3256,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-07T04:05:37.000Z",
+        "lastSeen": "2026-11-07T04:05:37.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2977,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 250618,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T07:27:15.000Z",
+        "lastSeen": "2026-11-09T07:27:15.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 4567,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 250618,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T20:49:23.000Z",
+        "lastSeen": "2026-11-07T20:49:23.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15268,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 250626,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T07:25:06.000Z",
+        "lastSeen": "2026-11-09T07:25:06.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 4567,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11323,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-06T18:51:02.000Z",
+        "lastSeen": "2026-11-06T18:51:02.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14114,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11323,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-06T21:51:44.000Z",
+        "lastSeen": "2026-11-06T21:51:44.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6557,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 1779,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T13:37:24.000Z",
+        "lastSeen": "2026-11-07T13:37:24.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 4567,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 250622,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T07:45:40.000Z",
+        "lastSeen": "2026-11-09T07:45:40.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2970,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 250627,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T21:19:25.000Z",
+        "lastSeen": "2026-11-07T21:19:25.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6539,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 75293,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-08T00:01:28.000Z",
+        "lastSeen": "2026-11-08T00:01:28.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 6559,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 75293,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-08T07:18:20.000Z",
+        "lastSeen": "2026-11-08T07:18:20.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 15016,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3397,
+        "evidence": "observed",
+        "build": null,
+        "installs": 4,
+        "firstSeen": "2026-11-06T13:36:29.000Z",
+        "lastSeen": "2026-11-06T13:36:29.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 3309,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11324,
+        "evidence": "observed",
+        "build": null,
+        "installs": 6,
+        "firstSeen": "2026-11-07T16:57:55.000Z",
+        "lastSeen": "2026-11-07T16:57:55.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2974,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 250484,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T21:31:27.000Z",
+        "lastSeen": "2026-11-07T21:31:27.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 2970,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 250624,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T18:30:26.000Z",
+        "lastSeen": "2026-11-08T18:30:26.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14114,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 11320,
+        "evidence": "observed",
+        "build": null,
+        "installs": 5,
+        "firstSeen": "2026-11-06T18:32:08.000Z",
+        "lastSeen": "2026-11-06T18:32:08.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 4567,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 256040,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T07:07:27.000Z",
+        "lastSeen": "2026-11-09T07:07:27.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14114,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3471,
+        "evidence": "observed",
+        "build": null,
+        "installs": 4,
+        "firstSeen": "2026-11-07T11:08:18.000Z",
+        "lastSeen": "2026-11-07T11:08:18.000Z"
+      }
+    ],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "7f78136d7dea277d425a9550a829831649c7b1e464d16b45d1be275313f64744",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T13:40:13.525Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103652,
+        "sha256": "cd03160082c0048b9b3b331759ecc61ab1257021e89dba6981cd850ff1fdbf4b",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T13:40:13.525Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 85987,
+        "sha256": "33a664c3bc419a57aa75680d39257d38447e5e7af2a94782ba4cb31119008db4",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T13:40:13.525Z"
+      }
+    ]
+  }
+}

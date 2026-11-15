@@ -1,0 +1,66 @@
+{
+  "method": "Finalsame-run8BIactual HTTP capture;read actual bodies once during required reconciliation,not diagnostic refetch.",
+  "playfulls": {
+    "items": 23587,
+    "definitions": 9246,
+    "allRawRowsFullDefinitionsEntireMetadataExactNavigationFinal": true,
+    "allSourceNamesAcquisitionFactsExact": true
+  },
+  "everloot": {
+    "raw": 1665,
+    "qualified": 1424,
+    "addedEdges": [
+      {
+        "fromKind": "npc",
+        "fromId": 4086,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1442,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T14:16:58.000Z",
+        "lastSeen": "2026-11-11T07:35:12.000Z"
+      }
+    ],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedEdges": [],
+    "scope": "OnlyNPC4086located_inzone1442,3install/nullbuild;notitem4086gear/currentNPCpresence/killtime/newloot. Unchanged1424qualifieditemedges/zero8BIselected doesnotproveabsence."
+  },
+  "fullPrimaryReference": {
+    "url": "https://www.wowhead.com/forever/npc=4086",
+    "bytes": 71272,
+    "sha256": "7ae55ae160596ad356a7e0c76de9364597cdf82fd5770db7d4181e79948ea701",
+    "title": "Veenix - NPC - Forever",
+    "reusedCachedResponse": true,
+    "maps": {
+      "406": [
+        {
+          "count": 1,
+          "coords": [
+            [
+              58.2,
+              51.6
+            ]
+          ],
+          "uiMapId": 1442,
+          "uiMapName": "Stonetalon Mountains"
+        }
+      ]
+    },
+    "scope": "Retained full primary reference used for identity/zone only;no new HTTP request or item-drop claim."
+  },
+  "casePrimaryResponses": 180,
+  "caseOriginalNewFullPages": 117,
+  "caseCached": 63,
+  "auxiliaryPrimaryResponses": 1,
+  "auxiliaryNewFullPages": 0,
+  "auxiliaryCached": 1,
+  "totalUniquePrimaryResponses": 181,
+  "totalNewFullPagesAcrossCheckpoint": 117,
+  "totalCachedPrimary": 64,
+  "newFullReadsThisContinuation": 17,
+  "sourceDataChanges": "Exactly100additionalregistryrecords/4584priorobjectsexact;100summarycells/noother source-table semanticchanges. Reg4684/index6155/display6154/books759;all recipes/crafts/ingredients/identity/filters and sixdungeonexceptions preserved. CaptainChest9359shared source/key instructions create one area destination. Priceformatter now handles primary wrapped alternatives;doesnotaddoptions asfees.",
+  "diagnosticPolicy": "Original one-edge delta retained before advancing actual Everloot diagnostic snapshot1664\u21921665. Playfulls source/display snapshots already23587/9246andexact;no mutation. Existing342outsidecandidates unchanged. Never rerun old snapshot mutators against advancedbaseline."
+}

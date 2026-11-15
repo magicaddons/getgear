@@ -1,0 +1,184 @@
+{
+  "status": "100 all-slot leads individually publication-assessed; actual8ck/full19localPASS;CI/full bot review pending",
+  "registry": 5902,
+  "index": 7373,
+  "display": 7372,
+  "books": 759,
+  "originalFrozenQueue": {
+    "total": 5688,
+    "dispositioned": 5688,
+    "pending": 0
+  },
+  "outsideQueue": {
+    "total": 692,
+    "assessed": 692,
+    "pending": 0,
+    "prior592BytesPreserved": true,
+    "newAssessed100": true
+  },
+  "additionalAllSlotQueue": {
+    "total": 264,
+    "assessed": 194,
+    "pending": 70,
+    "previousUntriaged": 11,
+    "newLeads": 59,
+    "newBackLeads": 23,
+    "nextBatch": "8CL",
+    "nextCases": 70,
+    "firstID": 809,
+    "lastID": 287011
+  },
+  "caseCounts": {
+    "selected": 100,
+    "individuallyAssessed": 100,
+    "groups": {
+      "named-source-reference": 13,
+      "broad-published-reference": 85,
+      "named-descriptor-with-broader-loot": 2
+    },
+    "eligibility": {
+      "published-all-slot-baseline-pass;future-development-review": 100
+    },
+    "primaryFull": 100,
+    "primaryNew": 100,
+    "primaryCached": 0,
+    "auxiliaryFull": 712,
+    "auxiliaryNew": 160,
+    "auxiliaryCached": 552,
+    "caseFullPages": 812,
+    "caseNewPages": 260,
+    "caseCachedPages": 552,
+    "exactQueries": 100,
+    "sharedQueries": 0,
+    "dropReverseJoins": 2910,
+    "dropReverseOmissions": 319,
+    "objectReverseJoins": 40,
+    "objectReverseOmissions": 7,
+    "physicalContainerReferences": 12,
+    "physicalContainerReverseJoins": 0,
+    "physicalContainerOmissions": 3,
+    "physicalContainerUnread": 9,
+    "newFailed403": 724,
+    "newNPCFailed403": 719,
+    "newZoneFailed403": 5,
+    "knownFailedURLs": 1676,
+    "oldFailedReferenceEdgesSkipped": 446,
+    "oldFailedUniqueURLsSkipped": 153,
+    "quality": {
+      "2": 84,
+      "4": 3,
+      "3": 13
+    },
+    "BackHeaders": 85,
+    "explicitNPCDescriptorJoins": 15,
+    "explicitRegionDescriptors": 5,
+    "activeAdoptions": 0,
+    "liveVerified": 0
+  },
+  "sourceProofImmutableSHA256": "6f77be404e44da3ace878572bd650a0f7b0fc5c78835cd9a6bf575aa41651e65",
+  "successfulCapture": {
+    "label": "8ck",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.a58bed597a.json": {
+        "bytes": 1010639,
+        "sha256": "a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4",
+        "workspacePath": "/tmp/getgear-research/8ck-http-capture/a58bed597a1f57fc219692c3c375caaa6562a48f968edf59d1e48f4133a3cbd4.body",
+        "capturedUTC": "2026-11-12T21:52:08.393758+00:00"
+      },
+      "https://playfulls.com/db/gear.ce85a43eee.json": {
+        "bytes": 1360205,
+        "sha256": "ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9",
+        "workspacePath": "/tmp/getgear-research/8ck-http-capture/ce85a43eee2efc3c2d163b4d9cb52a6177ce40ed3140a932ba29fc6fdd409fc9.body",
+        "capturedUTC": "2026-11-12T21:52:08.566314+00:00"
+      },
+      "https://playfulls.com/db/goods.b06e07d3a6.json": {
+        "bytes": 466933,
+        "sha256": "b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82",
+        "workspacePath": "/tmp/getgear-research/8ck-http-capture/b06e07d3a669c979eaeababe2586ce94ad1c329094529cd35bce8d9c63d46c82.body",
+        "capturedUTC": "2026-11-12T21:52:08.711574+00:00"
+      },
+      "https://playfulls.com/db/other.3a97362f02.json": {
+        "bytes": 446812,
+        "sha256": "3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9",
+        "workspacePath": "/tmp/getgear-research/8ck-http-capture/3a97362f02565faf1b9a80da30f33758d580eb65cfc57539d6ae74a8d1eb55d9.body",
+        "capturedUTC": "2026-11-12T21:52:08.906429+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103442,
+        "sha256": "69f13b98121895590ecb2bc45187a697e9fb3cf3b7316cf9cf2a654079e07ef0",
+        "workspacePath": "/tmp/getgear-research/8ck-http-capture/69f13b98121895590ecb2bc45187a697e9fb3cf3b7316cf9cf2a654079e07ef0.body",
+        "capturedUTC": "2026-11-12T21:52:13.782844+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103495,
+        "sha256": "ea0c56154984c09ace99fa4311afb64242246be7e27d500e3cbf49b9470458a4",
+        "workspacePath": "/tmp/getgear-research/8ck-http-capture/ea0c56154984c09ace99fa4311afb64242246be7e27d500e3cbf49b9470458a4.body",
+        "capturedUTC": "2026-11-12T21:52:17.251251+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103456,
+        "sha256": "75e75660531778612047e17e694bdb766c5e63c52807b12c90678446dce05bbe",
+        "workspacePath": "/tmp/getgear-research/8ck-http-capture/75e75660531778612047e17e694bdb766c5e63c52807b12c90678446dce05bbe.body",
+        "capturedUTC": "2026-11-12T21:52:20.796481+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 41905,
+        "sha256": "5df5b02b025259990810c4b07e581f2dc7e121916c9c3d9c7f913cb1ae906417",
+        "workspacePath": "/tmp/getgear-research/8ck-http-capture/5df5b02b025259990810c4b07e581f2dc7e121916c9c3d9c7f913cb1ae906417.body",
+        "capturedUTC": "2026-11-12T21:52:23.739209+00:00"
+      }
+    }
+  },
+  "fullLocalPASS": 19,
+  "LuaSuites": 15,
+  "offlinePythonSuites": 3,
+  "modules": 26,
+  "fourToolsAndExporterSyntax": true,
+  "identities": 7707,
+  "classObjectives": 36341,
+  "crafts": 1254,
+  "ingredients": 4857,
+  "activeCatalogueAdoptions": 0,
+  "unchanged": {
+    "reviewed_equipment_sources.json": "byte-exact",
+    "reviewed_recipe_sources.json": "byte-exact",
+    "dungeon_equipment_drops.csv": "byte-exact",
+    "dungeon_items_reconciled.csv": "byte-exact",
+    "dungeon_source_followups.csv": "byte-exact",
+    "recipes_reconciled.csv": "byte-exact",
+    "recipe_source_followups.csv": "byte-exact",
+    "recipe_trainer_book_checks.csv": "byte-exact",
+    "recipe_vendor_book_checks.csv": "byte-exact",
+    "supplementary_crafts_reconciled.csv": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "remaining_equipment_research_queue.csv": "byte-exact",
+    "navigation_quest_chains.json": "byte-exact",
+    "navigation_coverage.csv": "byte-exact",
+    "navigation_research_gaps.csv": "byte-exact",
+    "upstream_playfulls_acquisition_snapshot.csv": "byte-exact",
+    "upstream_playfulls_source_definitions.json": "byte-exact",
+    "upstream_playfulls_display_snapshot.csv": "byte-exact",
+    "upstream_playfulls_display_definitions.json": "byte-exact",
+    "upstream_everloot_edges_snapshot.csv": "byte-exact",
+    "upstream_snapshot_provenance.json": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2156,
+    "directions": 1581,
+    "missing": 3106,
+    "verified_coordinate_data": 864
+  },
+  "gapRows": 17425,
+  "realClientRendering": 0,
+  "unchangedPriorItineraries": 27,
+  "metadataSchemaCorrection": {
+    "files": 6,
+    "keys": 253,
+    "property": "requiresFullLootJoin",
+    "allOtherBytesExact": true,
+    "runtimeInput": false
+  },
+  "upstream": "PF23622allrawrows/9327fullsourceobjects/entiremetadata exactretainedactual8CH;all1702EVrelationfields exactactual8CJ/qual1439. No added/deleted/source/name/index/opaque/metadata/counter/edge changes. Six selected old attributedobservations retained as broad-drop examples,notfarm/current-buildproof. Diagnostic baseline retained byteexact after full comparison,not equal-count inference.",
+  "limits": "Publication research only,no active gear/craft/recipe/class/filter mutation.812fullcase260new552cached;724new403 plus446oldreferenceedges/153uniqueURLsskipped,no unchanged retries or fake failedpagehashes. Explicit named/region descriptors are independently qualified; broad random cloaks and sparse/historical/common NPC loot examples are not dedicated farms. Primary numeric world area IDs notUI mapIDs;five rawzonepages unread,no newlyverified dungeon definition/coordinates. Current acquisition,availability,instance floors and rendering unverified. Existing27chains untouched."
+}

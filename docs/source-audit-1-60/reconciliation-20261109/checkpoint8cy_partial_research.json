@@ -1,0 +1,1623 @@
+{
+  "checkpoint": "8CY",
+  "status": "seven fresh feed references publication-assessed;source-onlygeographyintegrated;fullvalidationpending",
+  "cases": [
+    {
+      "itemID": 12547,
+      "name": "Mar Alom's Grip",
+      "decision": "hold-version-unconfirmed",
+      "scopeKind": "equipment-reference",
+      "activeAdoption": false,
+      "primaryIdentity": {
+        "appearances": {
+          "0": [
+            28797,
+            ""
+          ]
+        },
+        "armor": 100,
+        "classs": 4,
+        "displayName": "Mar Alom's Grip",
+        "displayid": 28797,
+        "flags2": 4,
+        "id": 12547,
+        "level": 56,
+        "name": "Mar Alom's Grip",
+        "quality": 3,
+        "reqlevel": 51,
+        "slot": 10,
+        "slotbak": 10,
+        "subclass": 2,
+        "envChange": {
+          "status": "unconfirmed",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 3,
+          "appearances": {
+            "0": [
+              28797,
+              ""
+            ]
+          },
+          "armor": 100,
+          "classs": 4,
+          "displayName": "Mar Alom's Grip",
+          "displayid": 28797,
+          "flags2": 4,
+          "id": 12547,
+          "level": 56,
+          "name": "Mar Alom's Grip",
+          "reqlevel": 51,
+          "slot": 10,
+          "slotbak": 10,
+          "subclass": 2,
+          "envChange": {
+            "status": "unconfirmed",
+            "labels": [],
+            "lines": []
+          },
+          "avgbuyout": 240000,
+          "dura": 35,
+          "int": 10,
+          "itemSquishEraId": 0,
+          "sellprice": 10118,
+          "spi": 8,
+          "splheal": 15,
+          "splpwr": 7,
+          "sta": 12,
+          "statsInfo": {
+            "6": {
+              "qty": 0,
+              "alloc": 3333,
+              "socketMult": 0
+            },
+            "5": {
+              "qty": 0,
+              "alloc": 4167,
+              "socketMult": 0
+            },
+            "7": {
+              "qty": 0,
+              "alloc": 5000,
+              "socketMult": 0
+            },
+            "41": {
+              "qty": 0,
+              "alloc": 9167,
+              "socketMult": 0
+            },
+            "42": {
+              "qty": 0,
+              "alloc": 2916,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "printedTooltip": "Mar Alom's Grip      Item Level  56   Binds when equipped     Hands    Leather        100 Armor    +12 Stamina    +10 Intellect    +8 Spirit         Durability 35 / 35      Requires Level  51   Equip: Increases healing done by up to   22  and damage done by up to   7  for all magical spells and effects.      Sell Price:  1   1   18",
+      "sourceURL": "https://www.wowhead.com/forever/item=12547",
+      "sourceSHA256": "44e88b28ef624f3f64a83fa0cd7cd334334b6a36e49c11da55542b536b4246dd",
+      "bytes": 198813,
+      "primaryUnavailable": false,
+      "primaryVersion": "unconfirmed",
+      "relations": {
+        "dropped-by": [
+          {
+            "classification": 1,
+            "displayName": "Fireguard Destroyer",
+            "displayNames": [],
+            "id": 8911,
+            "location": [
+              1584
+            ],
+            "maxlevel": 56,
+            "minlevel": 54,
+            "name": "Fireguard Destroyer",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 4,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 26,
+            "outof": 148187,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 26,
+                "outof": 148187
+              },
+              "0": {
+                "count": 26,
+                "outof": 148363
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 26,
+                    "outof": 148187
+                  },
+                  "0": {
+                    "count": 26,
+                    "outof": 148363
+                  }
+                }
+              }
+            },
+            "classicEra": 1
+          },
+          {
+            "classification": 1,
+            "displayName": "Doomforge Dragoon",
+            "displayNames": [],
+            "id": 8899,
+            "location": [
+              1584
+            ],
+            "maxlevel": 55,
+            "minlevel": 54,
+            "name": "Doomforge Dragoon",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 7,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 25,
+            "outof": 86900,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 25,
+                "outof": 86900
+              },
+              "0": {
+                "count": 25,
+                "outof": 86942
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 25,
+                    "outof": 86900
+                  },
+                  "0": {
+                    "count": 25,
+                    "outof": 86942
+                  }
+                }
+              }
+            },
+            "classicEra": 1,
+            "popularity": 40
+          },
+          {
+            "classification": 1,
+            "displayName": "Anvilrage Marshal",
+            "displayNames": [],
+            "id": 8898,
+            "location": [
+              1584
+            ],
+            "maxlevel": 55,
+            "minlevel": 54,
+            "name": "Anvilrage Marshal",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 7,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 10,
+            "outof": 75277,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 10,
+                "outof": 75277
+              },
+              "0": {
+                "count": 10,
+                "outof": 75317
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 10,
+                    "outof": 75277
+                  },
+                  "0": {
+                    "count": 10,
+                    "outof": 75317
+                  }
+                }
+              }
+            },
+            "classicEra": 1,
+            "popularity": 9
+          },
+          {
+            "classification": 1,
+            "displayName": "Ragereaver Golem",
+            "displayNames": [],
+            "id": 8906,
+            "location": [
+              1584
+            ],
+            "maxlevel": 55,
+            "minlevel": 54,
+            "name": "Ragereaver Golem",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 4,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 6,
+            "outof": 24885,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 6,
+                "outof": 24885
+              },
+              "0": {
+                "count": 6,
+                "outof": 24922
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 6,
+                    "outof": 24885
+                  },
+                  "0": {
+                    "count": 6,
+                    "outof": 24922
+                  }
+                }
+              }
+            },
+            "classicEra": 1,
+            "popularity": 145
+          },
+          {
+            "classification": 1,
+            "displayName": "Blazing Fireguard",
+            "displayNames": [],
+            "id": 8910,
+            "location": [
+              1584
+            ],
+            "maxlevel": 54,
+            "minlevel": 52,
+            "name": "Blazing Fireguard",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 4,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 5,
+            "outof": 76555,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 5,
+                "outof": 76555
+              },
+              "0": {
+                "count": 5,
+                "outof": 76662
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 5,
+                    "outof": 76555
+                  },
+                  "0": {
+                    "count": 5,
+                    "outof": 76662
+                  }
+                }
+              }
+            },
+            "classicEra": 1
+          },
+          {
+            "classification": 1,
+            "displayName": "Anvilrage Captain",
+            "displayNames": [],
+            "id": 8903,
+            "location": [
+              1584
+            ],
+            "maxlevel": 56,
+            "minlevel": 55,
+            "name": "Anvilrage Captain",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 7,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 4,
+            "outof": 16466,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 4,
+                "outof": 16466
+              },
+              "0": {
+                "count": 4,
+                "outof": 16479
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 4,
+                    "outof": 16466
+                  },
+                  "0": {
+                    "count": 4,
+                    "outof": 16479
+                  }
+                }
+              }
+            },
+            "classicEra": 1
+          },
+          {
+            "classification": 1,
+            "displayName": "Anvilrage Officer",
+            "displayNames": [],
+            "id": 8895,
+            "location": [
+              1584
+            ],
+            "maxlevel": 54,
+            "minlevel": 53,
+            "name": "Anvilrage Officer",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 7,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 2,
+            "outof": 19782,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 2,
+                "outof": 19782
+              },
+              "0": {
+                "count": 2,
+                "outof": 19817
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 19782
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 19817
+                  }
+                }
+              }
+            },
+            "classicEra": 1
+          },
+          {
+            "classification": 1,
+            "displayName": "Wrath Hammer Construct",
+            "displayNames": [],
+            "id": 8907,
+            "location": [
+              1584
+            ],
+            "maxlevel": 56,
+            "minlevel": 55,
+            "name": "Wrath Hammer Construct",
+            "names": [],
+            "react": [
+              -1,
+              -1
+            ],
+            "type": 4,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 2,
+            "outof": 24138,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": 2,
+                "outof": 24138
+              },
+              "0": {
+                "count": 2,
+                "outof": 24163
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": 2,
+                    "outof": 24138
+                  },
+                  "0": {
+                    "count": 2,
+                    "outof": 24163
+                  }
+                }
+              }
+            },
+            "classicEra": 1
+          }
+        ]
+      },
+      "qualification": "Ownfullprimaryversionunconfirmed;freshcommunityfeedentrydoesnotresolvecurrentversion/loot. No precise marker oradoption."
+    },
+    {
+      "itemID": 18231,
+      "name": "Sleeveless T-Shirt",
+      "decision": "excluded-current-quality-below-existing-candidate-scope",
+      "scopeKind": "poor-quality-shirt",
+      "activeAdoption": false,
+      "primaryIdentity": {
+        "appearances": {
+          "0": [
+            12028,
+            ""
+          ]
+        },
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Sleeveless T-Shirt",
+        "displayid": 12028,
+        "flags2": 16388,
+        "id": 18231,
+        "level": 1,
+        "name": "Sleeveless T-Shirt",
+        "quality": 0,
+        "slot": 4,
+        "slotbak": 4,
+        "subclass": -8,
+        "envChange": {
+          "status": "unconfirmed",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 0,
+          "appearances": {
+            "0": [
+              12028,
+              ""
+            ]
+          },
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Sleeveless T-Shirt",
+          "displayid": 12028,
+          "flags2": 16388,
+          "id": 18231,
+          "level": 1,
+          "name": "Sleeveless T-Shirt",
+          "slot": 4,
+          "slotbak": 4,
+          "subclass": -8,
+          "envChange": {
+            "status": "unconfirmed",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "sellprice": 361,
+          "statsInfo": []
+        }
+      },
+      "printedTooltip": "Sleeveless T-Shirt      Item Level  1       Shirt                          \"On the inside collar it reads, \"Inspected by Earl Z. Moade.\"\"     Sell Price:  3   61   Dropped by: Vipore's Gryphon",
+      "sourceURL": "https://www.wowhead.com/forever/item=18231",
+      "sourceSHA256": "013aa17f6fe6d7889dac11e0428c3c576863f8bc4db4e07870f727546048b118",
+      "bytes": 237729,
+      "primaryUnavailable": false,
+      "primaryVersion": "unconfirmed",
+      "relations": {
+        "dropped-by": [
+          {
+            "classification": 1,
+            "displayName": "Vipore's Gryphon",
+            "displayNames": [],
+            "id": 14948,
+            "location": [
+              2597
+            ],
+            "maxlevel": 60,
+            "minlevel": 60,
+            "name": "Vipore's Gryphon",
+            "names": [],
+            "react": [
+              1,
+              -1
+            ],
+            "type": 1,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": -1,
+            "outof": 0,
+            "personal_loot": 0,
+            "pctstack": null,
+            "modes": {
+              "mode": [
+                1,
+                0
+              ],
+              "1": {
+                "count": -1,
+                "outof": 0,
+                "percentOverride": 10.5
+              },
+              "0": {
+                "count": -1,
+                "outof": 0,
+                "percentOverride": 10.5
+              }
+            },
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "1": {
+                    "count": -1,
+                    "outof": 0,
+                    "percentOverride": 10.5
+                  },
+                  "0": {
+                    "count": -1,
+                    "outof": 0,
+                    "percentOverride": 10.5
+                  }
+                }
+              }
+            },
+            "percentOverride": 10.5
+          }
+        ]
+      },
+      "qualification": "Published unconfirmed version retained,not retirement;quality0shirt outsidequality>=2upgradecandidatepolicy."
+    },
+    {
+      "itemID": 22317,
+      "name": "Lefty's Brass Knuckle",
+      "decision": "hold-version-unconfirmed",
+      "scopeKind": "equipment-reference",
+      "activeAdoption": false,
+      "primaryIdentity": {
+        "appearances": {
+          "0": [
+            23742,
+            ""
+          ]
+        },
+        "classs": 2,
+        "displayName": "Lefty's Brass Knuckle",
+        "displayid": 23742,
+        "dps": 40.0,
+        "flags2": 16388,
+        "id": 22317,
+        "level": 61,
+        "name": "Lefty's Brass Knuckle",
+        "quality": 3,
+        "reqlevel": 56,
+        "slot": 13,
+        "slotbak": 13,
+        "speed": 1.5,
+        "subclass": 13,
+        "envChange": {
+          "status": "unconfirmed",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 3,
+          "appearances": {
+            "0": [
+              23742,
+              ""
+            ]
+          },
+          "classs": 2,
+          "displayName": "Lefty's Brass Knuckle",
+          "displayid": 23742,
+          "dps": 40.0,
+          "flags2": 16388,
+          "id": 22317,
+          "level": 61,
+          "name": "Lefty's Brass Knuckle",
+          "reqlevel": 56,
+          "slot": 13,
+          "slotbak": 13,
+          "speed": 1.5,
+          "subclass": 13,
+          "envChange": {
+            "status": "unconfirmed",
+            "labels": [],
+            "lines": []
+          },
+          "agi": 12,
+          "dmgmax1": 78.0,
+          "dmgmin1": 42.0,
+          "dmgrange": 0.6,
+          "dmgtype1": 0,
+          "itemSquishEraId": 0,
+          "mledmgmax": 78.0,
+          "mledmgmin": 42.0,
+          "mledps": 40.0,
+          "mlespeed": 1.5,
+          "sellprice": 52093,
+          "sheathtype": 7,
+          "str": 8,
+          "statsInfo": {
+            "4": {
+              "qty": 0,
+              "alloc": 5333,
+              "socketMult": 0
+            },
+            "3": {
+              "qty": 0,
+              "alloc": 8000,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "printedTooltip": "Lefty's Brass Knuckle      Item Level  61   Binds when picked up     One-Hand    Fist Weapon        \n       42 - 78 Damage  \n     Speed  1.50 \n   (40.00 damage per second)   +8 Strength    +12 Agility              Requires Level  56      Sell Price:  5   20   93",
+      "sourceURL": "https://www.wowhead.com/forever/item=22317",
+      "sourceSHA256": "04a6023029dbe73df15d0066e01417c3527937f5c0519819879dca82f6613635",
+      "bytes": 221128,
+      "primaryUnavailable": false,
+      "primaryVersion": "unconfirmed",
+      "relations": {
+        "contained-in-object": [
+          {
+            "displayName": "Arena Spoils",
+            "id": 181074,
+            "location": [
+              1584
+            ],
+            "name": "Arena Spoils",
+            "type": 3,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 34,
+            "outof": 172,
+            "classicEra": true,
+            "pctstack": "",
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 34,
+                    "outof": 172
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "qualification": "Ownfullprimaryversionunconfirmed;freshcommunityfeedentrydoesnotresolvecurrentversion/loot. No precise marker oradoption."
+    },
+    {
+      "itemID": 22318,
+      "name": "Malgen's Long Bow",
+      "decision": "hold-version-unconfirmed",
+      "scopeKind": "equipment-reference",
+      "activeAdoption": false,
+      "primaryIdentity": {
+        "appearances": {
+          "0": [
+            34800,
+            ""
+          ]
+        },
+        "classs": 2,
+        "displayName": "Malgen's Long Bow",
+        "displayid": 34800,
+        "dps": 31.21,
+        "flags2": 4,
+        "id": 22318,
+        "level": 61,
+        "name": "Malgen's Long Bow",
+        "quality": 3,
+        "reqlevel": 56,
+        "slot": 15,
+        "slotbak": 15,
+        "speed": 2.9,
+        "subclass": 2,
+        "envChange": {
+          "status": "unconfirmed",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 3,
+          "appearances": {
+            "0": [
+              34800,
+              ""
+            ]
+          },
+          "classs": 2,
+          "displayName": "Malgen's Long Bow",
+          "displayid": 34800,
+          "dps": 31.21,
+          "flags2": 4,
+          "id": 22318,
+          "level": 61,
+          "name": "Malgen's Long Bow",
+          "reqlevel": 56,
+          "slot": 15,
+          "slotbak": 15,
+          "speed": 2.9,
+          "subclass": 2,
+          "envChange": {
+            "status": "unconfirmed",
+            "labels": [],
+            "lines": []
+          },
+          "atkpwr": 18,
+          "dmgmax1": 118.0,
+          "dmgmin1": 63.0,
+          "dmgrange": 0.6,
+          "dmgtype1": 0,
+          "itemSquishEraId": 0,
+          "rgddmgmax": 118.0,
+          "rgddmgmin": 63.0,
+          "rgddps": 31.21,
+          "rgdspeed": 2.9,
+          "sellprice": 39171,
+          "sta": 4,
+          "statsInfo": {
+            "7": {
+              "qty": 0,
+              "alloc": 3636,
+              "socketMult": 0
+            },
+            "38": {
+              "qty": 0,
+              "alloc": 16363,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "printedTooltip": "Malgen's Long Bow      Item Level  61   Binds when picked up     Ranged    Bow        \n       63 - 118 Damage  \n     Speed  2.90 \n   (31.21 damage per second)   +4 Stamina              Requires Level  56   Equip: + 18 Attack Power.      Sell Price:  3   91   71",
+      "sourceURL": "https://www.wowhead.com/forever/item=22318",
+      "sourceSHA256": "10e2a4b667bfa957159f73a5f8572bcf167dec13934aee34bafbfad4a16555a3",
+      "bytes": 181996,
+      "primaryUnavailable": false,
+      "primaryVersion": "unconfirmed",
+      "relations": {
+        "contained-in-object": [
+          {
+            "displayName": "Arena Spoils",
+            "id": 181074,
+            "location": [
+              1584
+            ],
+            "name": "Arena Spoils",
+            "type": 3,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 40,
+            "outof": 172,
+            "classicEra": true,
+            "pctstack": "",
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 40,
+                    "outof": 172
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "qualification": "Ownfullprimaryversionunconfirmed;freshcommunityfeedentrydoesnotresolvecurrentversion/loot. No precise marker oradoption."
+    },
+    {
+      "itemID": 22330,
+      "name": "Shroud of Arcane Mastery",
+      "decision": "hold-version-unconfirmed",
+      "scopeKind": "equipment-reference",
+      "activeAdoption": false,
+      "primaryIdentity": {
+        "appearances": {
+          "0": [
+            16608,
+            ""
+          ]
+        },
+        "armor": 43,
+        "classs": 4,
+        "displayName": "Shroud of Arcane Mastery",
+        "displayid": 16608,
+        "flags2": 4,
+        "id": 22330,
+        "level": 61,
+        "name": "Shroud of Arcane Mastery",
+        "quality": 3,
+        "reqlevel": 56,
+        "slot": 16,
+        "slotbak": 16,
+        "subclass": -6,
+        "envChange": {
+          "status": "unconfirmed",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 3,
+          "appearances": {
+            "0": [
+              16608,
+              ""
+            ]
+          },
+          "armor": 43,
+          "classs": 4,
+          "displayName": "Shroud of Arcane Mastery",
+          "displayid": 16608,
+          "flags2": 4,
+          "id": 22330,
+          "level": 61,
+          "name": "Shroud of Arcane Mastery",
+          "reqlevel": 56,
+          "slot": 16,
+          "slotbak": 16,
+          "subclass": -6,
+          "envChange": {
+            "status": "unconfirmed",
+            "labels": [],
+            "lines": []
+          },
+          "int": 10,
+          "itemSquishEraId": 0,
+          "sellprice": 15668,
+          "splpen": 4,
+          "sta": 10,
+          "statsInfo": {
+            "7": {
+              "qty": 0,
+              "alloc": 5000,
+              "socketMult": 0
+            },
+            "5": {
+              "qty": 0,
+              "alloc": 5000,
+              "socketMult": 0
+            },
+            "47": {
+              "qty": 0,
+              "alloc": 2000,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "printedTooltip": "Shroud of Arcane Mastery      Item Level  61   Binds when picked up     Back      43 Armor    +10 Stamina    +10 Intellect              Requires Level  56   Equip: Your spells pierce  4 Magical Resistance.      Sell Price:  1   56   68",
+      "sourceURL": "https://www.wowhead.com/forever/item=22330",
+      "sourceSHA256": "7ee4aefd2b351515e60ef66a8988d6d7fc0e7332f19304c4851cc7e7a1cc148b",
+      "bytes": 194183,
+      "primaryUnavailable": false,
+      "primaryVersion": "unconfirmed",
+      "relations": {
+        "contained-in-object": [
+          {
+            "displayName": "Arena Spoils",
+            "id": 181074,
+            "location": [
+              1584
+            ],
+            "name": "Arena Spoils",
+            "type": 3,
+            "envChange": {
+              "status": "unchanged",
+              "labels": [],
+              "lines": []
+            },
+            "count": 44,
+            "outof": 172,
+            "classicEra": true,
+            "pctstack": "",
+            "itemSeasonPhaseData": {
+              "0": {
+                "0": {
+                  "0": {
+                    "count": 44,
+                    "outof": 172
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "qualification": "Ownfullprimaryversionunconfirmed;freshcommunityfeedentrydoesnotresolvecurrentversion/loot. No precise marker oradoption."
+    },
+    {
+      "itemID": 285066,
+      "name": "Ooze Rummagers",
+      "decision": "published-all-slot-baseline-pass;origin-unresolved;future-development-review",
+      "scopeKind": "equipment-reference",
+      "activeAdoption": false,
+      "primaryIdentity": {
+        "appearances": {
+          "0": [
+            17769,
+            ""
+          ]
+        },
+        "armor": 52,
+        "classs": 4,
+        "displayName": "Ooze Rummagers",
+        "displayid": 17769,
+        "flags2": 4,
+        "id": 285066,
+        "level": 59,
+        "name": "Ooze Rummagers",
+        "quality": 3,
+        "reqlevel": 54,
+        "slot": 10,
+        "slotbak": 10,
+        "subclass": 1,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "jsonequip": {
+          "quality": 3,
+          "appearances": {
+            "0": [
+              17769,
+              ""
+            ]
+          },
+          "armor": 52,
+          "classs": 4,
+          "displayName": "Ooze Rummagers",
+          "displayid": 17769,
+          "flags2": 4,
+          "id": 285066,
+          "level": 59,
+          "name": "Ooze Rummagers",
+          "reqlevel": 54,
+          "slot": 10,
+          "slotbak": 10,
+          "subclass": 1,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "itemSquishEraId": 0,
+          "sellprice": 9623,
+          "spi": 17,
+          "sta": 17,
+          "statsInfo": {
+            "7": {
+              "qty": 0,
+              "alloc": 6667,
+              "socketMult": 0
+            },
+            "6": {
+              "qty": 0,
+              "alloc": 6666,
+              "socketMult": 0
+            }
+          }
+        }
+      },
+      "printedTooltip": "Ooze Rummagers      Item Level  59   Binds when picked up     Hands    Cloth        52 Armor    +17 Stamina    +17 Spirit              Requires Level  54    Equip:   You have a small chance to find additional ore when mining Ooze Covered Thorium Veins.         Sell Price:  96   23",
+      "sourceURL": "https://www.wowhead.com/forever/item=285066",
+      "sourceSHA256": "29b1a89039b3d90fc227ecf6ee343ae531e8188a6e161b99704010091fdc8049",
+      "bytes": 212786,
+      "primaryUnavailable": false,
+      "primaryVersion": "new",
+      "relations": {},
+      "currentParser": {
+        "id": 285066,
+        "name": "Ooze Rummagers",
+        "level": 54,
+        "slot": "Hands",
+        "subtype": "Cloth",
+        "kind": "armor",
+        "source": 1,
+        "statRole": "mana",
+        "sourceLabel": "",
+        "mask": 511,
+        "phase": 1,
+        "craftOnly": false
+      },
+      "qualification": "Printedlevel54ClothHands,BoP;no fullprimaryacquisitionreference orfeedsource. EquipbonusforOozeCoveredThoriumVeins doesnotmeanthisgear dropsfrommining,norlearnedprofessionrecipe/professionwearergate. No actionablelocation/nofalsepin/noactiveadoption."
+    },
+    {
+      "itemID": 288206,
+      "name": "Recipe: Draught of Water Walking",
+      "decision": "excluded-consumable-recipe-outside-equipment-book-scope",
+      "scopeKind": "alchemy-consumable-recipe",
+      "activeAdoption": false,
+      "primaryIdentity": {
+        "classs": 9,
+        "displayName": "Recipe: Draught of Water Walking",
+        "id": 288206,
+        "level": 1,
+        "name": "Recipe: Draught of Water Walking",
+        "quality": 2,
+        "skill": 180,
+        "slot": 0,
+        "subclass": 6,
+        "jsonequip": {
+          "quality": 2,
+          "classs": 9,
+          "displayName": "Recipe: Draught of Water Walking",
+          "id": 288206,
+          "level": 1,
+          "name": "Recipe: Draught of Water Walking",
+          "skill": 180,
+          "slot": 0,
+          "subclass": 6,
+          "itemSquishEraId": 0,
+          "reqlevel": 1,
+          "reqskill": 171,
+          "reqskillrank": 180,
+          "sellprice": 500,
+          "statsInfo": []
+        }
+      },
+      "printedTooltip": "Recipe: Draught of Water Walking      Item Level  1              Requires  Alchemy  (180)  Use:  Teaches you how to craft Draught of Water Walking.       Sell Price:  5     Draught of Water Walking      Item Level  34         Requires Level  24    Use:   Lets you walk on water for 30 min.  (3 Sec Cooldown)        Max Stack: 20  Sell Price:  1   25    Requires  Blackmouth Oil ,  Liferoot ,  Leaded Vial",
+      "sourceURL": "https://www.wowhead.com/forever/item=288206",
+      "sourceSHA256": "e5c0e80be3d61cba910900a40e554cc62a6348635f85f6750b08b431b682869f",
+      "bytes": 61061,
+      "primaryUnavailable": false,
+      "primaryVersion": null,
+      "relations": {},
+      "publishedTaughtRecipe": {
+        "cat": 0,
+        "creates": [
+          8827,
+          1,
+          1
+        ],
+        "displayName": "Draught of Water Walking",
+        "id": 11447,
+        "level": 0,
+        "name": "Draught of Water Walking",
+        "nskillup": 1,
+        "quality": 1,
+        "reagents": [
+          [
+            6370,
+            1
+          ],
+          [
+            3357,
+            1
+          ],
+          [
+            3372,
+            1
+          ]
+        ],
+        "schools": 1,
+        "skill": [
+          171
+        ],
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "renamed"
+          ],
+          "lines": [
+            "Renamed from Elixir of Waterwalking"
+          ],
+          "before": {
+            "name": "Elixir of Waterwalking",
+            "rank": "",
+            "cost": "",
+            "range": "",
+            "cast": "3 sec cast",
+            "cooldown": "",
+            "text": ""
+          },
+          "after": {
+            "name": "Draught of Water Walking",
+            "rank": "",
+            "cost": "",
+            "range": "",
+            "cast": "3 sec cast",
+            "cooldown": "",
+            "text": "",
+            "notShown": []
+          }
+        }
+      },
+      "learningSkill": 180,
+      "qualification": "Book teaches water-walking consumable8827,not equipment;no954equipmentbookentry/newgearcraft or ingredientmutation. Printed outputwearer24 differsbooklearning180."
+    }
+  ],
+  "allPrimaryResponseHeaders": {
+    "item:12547": {
+      "url": "https://www.wowhead.com/forever/item=12547",
+      "title": "Mar Alom's Grip - Item - WoW Forever",
+      "bytes": 198813,
+      "sha256": "44e88b28ef624f3f64a83fa0cd7cd334334b6a36e49c11da55542b536b4246dd",
+      "reusedCachedResponse": false
+    },
+    "item:18231": {
+      "url": "https://www.wowhead.com/forever/item=18231",
+      "title": "Sleeveless T-Shirt - Item - WoW Forever",
+      "bytes": 237729,
+      "sha256": "013aa17f6fe6d7889dac11e0428c3c576863f8bc4db4e07870f727546048b118",
+      "reusedCachedResponse": false
+    },
+    "item:22317": {
+      "url": "https://www.wowhead.com/forever/item=22317",
+      "title": "Lefty's Brass Knuckle - Item - WoW Forever",
+      "bytes": 221128,
+      "sha256": "04a6023029dbe73df15d0066e01417c3527937f5c0519819879dca82f6613635",
+      "reusedCachedResponse": false
+    },
+    "item:22318": {
+      "url": "https://www.wowhead.com/forever/item=22318",
+      "title": "Malgen's Long Bow - Item - WoW Forever",
+      "bytes": 181996,
+      "sha256": "10e2a4b667bfa957159f73a5f8572bcf167dec13934aee34bafbfad4a16555a3",
+      "reusedCachedResponse": false
+    },
+    "item:22330": {
+      "url": "https://www.wowhead.com/forever/item=22330",
+      "title": "Shroud of Arcane Mastery - Item - WoW Forever",
+      "bytes": 194183,
+      "sha256": "7ee4aefd2b351515e60ef66a8988d6d7fc0e7332f19304c4851cc7e7a1cc148b",
+      "reusedCachedResponse": false
+    },
+    "item:285066": {
+      "url": "https://www.wowhead.com/forever/item=285066",
+      "title": "Ooze Rummagers - Item - WoW Forever",
+      "bytes": 212786,
+      "sha256": "29b1a89039b3d90fc227ecf6ee343ae531e8188a6e161b99704010091fdc8049",
+      "reusedCachedResponse": false
+    },
+    "item:288206": {
+      "url": "https://www.wowhead.com/forever/item=288206",
+      "title": "Recipe: Draught of Water Walking - Item - WoW Forever",
+      "bytes": 61061,
+      "sha256": "e5c0e80be3d61cba910900a40e554cc62a6348635f85f6750b08b431b682869f",
+      "reusedCachedResponse": false
+    },
+    "npc:1083": {
+      "url": "https://www.wowhead.com/forever/npc=1083",
+      "title": "Murloc Shorestriker - NPC - WoW Forever",
+      "bytes": 222094,
+      "sha256": "2ca54f1690f47f72a77b7e8c4e43366655c687d435a48caf900a46893c3bd0cb",
+      "reusedCachedResponse": true
+    },
+    "npc:1070": {
+      "url": "https://www.wowhead.com/forever/npc=1070",
+      "title": "Deputy Feldon - NPC - WoW Forever",
+      "bytes": 56199,
+      "sha256": "455137740b22f98843973d26596070f37317cc96e43aa01c744c5a1128e72e6b",
+      "reusedCachedResponse": false
+    },
+    "npc:1430": {
+      "url": "https://www.wowhead.com/forever/npc=1430",
+      "title": "Tomas - NPC - WoW Forever",
+      "bytes": 77825,
+      "sha256": "9cd6b3b560c99c5633e5b5955b51b348f92bfcbd6574da1fbac862233dd57017",
+      "reusedCachedResponse": false
+    },
+    "npc:1678": {
+      "url": "https://www.wowhead.com/forever/npc=1678",
+      "title": "Vernon Hale - NPC - WoW Forever",
+      "bytes": 69077,
+      "sha256": "ae66a35f7911e716c9fae8933ee00435107e3d55d6c0a17ecd38f9c587e4157c",
+      "reusedCachedResponse": false
+    },
+    "npc:264": {
+      "url": "https://www.wowhead.com/forever/npc=264",
+      "title": "Commander Althea Ebonlocke - NPC - WoW Forever",
+      "bytes": 65216,
+      "sha256": "07b6ff1d5bbbe6fcea3863b9e2a4b75379ae7897135fc033b4b1b84a8659f664",
+      "reusedCachedResponse": false
+    },
+    "npc:2409": {
+      "url": "https://www.wowhead.com/forever/npc=2409",
+      "title": "Felicia Maline - NPC - WoW Forever",
+      "bytes": 56574,
+      "sha256": "f7970a73bcc2e024f69f9993f5575120fca5164809ab9e2910a76627d730f6f1",
+      "reusedCachedResponse": false
+    },
+    "npc:2456": {
+      "url": "https://www.wowhead.com/forever/npc=2456",
+      "title": "Newton Burnside - NPC - WoW Forever",
+      "bytes": 57088,
+      "sha256": "5105149827d8da044b131727b328cd78be5f553e403811eb18ccb77b9c1cf4d6",
+      "reusedCachedResponse": false
+    },
+    "npc:272": {
+      "url": "https://www.wowhead.com/forever/npc=272",
+      "title": "Chef Grual - NPC - WoW Forever",
+      "bytes": 58237,
+      "sha256": "6b0467288ea7df49fcc0444c66f47fb0a0889178b157c26793fe0a6e4fe1f4cd",
+      "reusedCachedResponse": false
+    },
+    "npc:2820": {
+      "url": "https://www.wowhead.com/forever/npc=2820",
+      "title": "Graud - NPC - WoW Forever",
+      "bytes": 71442,
+      "sha256": "ae1b75f191c3343b5989b5cfe4af38c49c82308ec67956e6b408c27cd44d9ea0",
+      "reusedCachedResponse": false
+    },
+    "npc:2787": {
+      "url": "https://www.wowhead.com/forever/npc=2787",
+      "title": "Zaruk - NPC - WoW Forever",
+      "bytes": 52853,
+      "sha256": "7cc1ddd4c6e1814b6b75b658808aa205bc14e65fc0e975fd2c0f4f81d23575db",
+      "reusedCachedResponse": false
+    },
+    "npc:274": {
+      "url": "https://www.wowhead.com/forever/npc=274",
+      "title": "Barkeep Hann - NPC - WoW Forever",
+      "bytes": 77998,
+      "sha256": "06cf672b80f2541330235a9ce153b5383f99590fe32bdea963dfb5dd0a9b385b",
+      "reusedCachedResponse": false
+    },
+    "npc:3238": {
+      "url": "https://www.wowhead.com/forever/npc=3238",
+      "title": "Stormhide - NPC - Forever",
+      "bytes": 217254,
+      "sha256": "a6762eafb5aac32d605bdbc6b4c5f8ae674bf428729938b11c232356aba4b8c2",
+      "reusedCachedResponse": true
+    },
+    "npc:3374": {
+      "url": "https://www.wowhead.com/forever/npc=3374",
+      "title": "Bael'dun Excavator - NPC - WoW Forever",
+      "bytes": 273409,
+      "sha256": "d72cd081a38dc47e22926e1ee06e9cdf5e86844fcebbdc8904fb18d97259757d",
+      "reusedCachedResponse": true
+    },
+    "npc:2955": {
+      "url": "https://www.wowhead.com/forever/npc=2955",
+      "title": "Plainstrider - NPC - WoW Forever",
+      "bytes": 97720,
+      "sha256": "7af8778509fd2ffa048e13006e43d883c24f93fc78a6a5a4931400aedfd5b0b9",
+      "reusedCachedResponse": false
+    },
+    "npc:2980": {
+      "url": "https://www.wowhead.com/forever/npc=2980",
+      "title": "Grull Hawkwind - NPC - WoW Forever",
+      "bytes": 58354,
+      "sha256": "673d3723fe319526355e8555bcc2762b0cf8b69d5dc46b63c44fdeb0a482b467",
+      "reusedCachedResponse": false
+    },
+    "npc:342": {
+      "url": "https://www.wowhead.com/forever/npc=342",
+      "title": "Martie Jainrose - NPC - WoW Forever",
+      "bytes": 58614,
+      "sha256": "ededab0ec78c57d2fbd743f0f0ac14e65adb1668169ee93d5176b578a863a5c3",
+      "reusedCachedResponse": false
+    },
+    "npc:2981": {
+      "url": "https://www.wowhead.com/forever/npc=2981",
+      "title": "Chief Hawkwind - NPC - WoW Forever",
+      "bytes": 60910,
+      "sha256": "36dcd7ac6632087dc5deb885bd20fa085c625b40a11e7d0bc895898c956abaa6",
+      "reusedCachedResponse": false
+    },
+    "npc:428": {
+      "url": "https://www.wowhead.com/forever/npc=428",
+      "title": "Dire Condor - NPC - WoW Forever",
+      "bytes": 218135,
+      "sha256": "28bb223b1ea3d020f49e274bf28b5c1efc33b555d285bdb4ee7be72fe4255e88",
+      "reusedCachedResponse": true
+    },
+    "npc:430": {
+      "url": "https://www.wowhead.com/forever/npc=430",
+      "title": "Redridge Mystic - NPC - WoW Forever",
+      "bytes": 286266,
+      "sha256": "7245599e6406197f2ca86d4245fbfe0afabb6d7de480e7620f73c4084d7d51b1",
+      "reusedCachedResponse": true
+    },
+    "npc:346": {
+      "url": "https://www.wowhead.com/forever/npc=346",
+      "title": "Barkeep Daniels - NPC - WoW Forever",
+      "bytes": 58099,
+      "sha256": "304614d521bd477cd97cc3bd28d0344994a746cfb71769f1a87d2bc9fa6936fb",
+      "reusedCachedResponse": false
+    },
+    "npc:548": {
+      "url": "https://www.wowhead.com/forever/npc=548",
+      "title": "Murloc Minor Tidecaller - NPC - WoW Forever",
+      "bytes": 261522,
+      "sha256": "ec6b1fbc5e805b66a6ba1acbdcf3470ac26aaacf1fb1269fe7ee55150f9fcda3",
+      "reusedCachedResponse": true
+    },
+    "npc:415": {
+      "url": "https://www.wowhead.com/forever/npc=415",
+      "title": "Verner Osgood - NPC - WoW Forever",
+      "bytes": 62188,
+      "sha256": "142e7e6fb6d96d0f4ed81d4afdafb566abed3db70fd9e8a004829696344c95b1",
+      "reusedCachedResponse": false
+    },
+    "npc:381": {
+      "url": "https://www.wowhead.com/forever/npc=381",
+      "title": "Dockmaster Baren - NPC - WoW Forever",
+      "bytes": 59397,
+      "sha256": "66acaeefe256dcebc722e873ef3036c3d21da245779e84df0eff3b87f6d99b1b",
+      "reusedCachedResponse": false
+    },
+    "npc:464": {
+      "url": "https://www.wowhead.com/forever/npc=464",
+      "title": "Guard Parker - NPC - WoW Forever",
+      "bytes": 56713,
+      "sha256": "4170d2cef7f9bdf4368aa10848ed8992452fbce2cb14d04b440589f07c8fa995",
+      "reusedCachedResponse": false
+    },
+    "npc:6727": {
+      "url": "https://www.wowhead.com/forever/npc=6727",
+      "title": "Innkeeper Brianna - NPC - WoW Forever",
+      "bytes": 71117,
+      "sha256": "218b08d176b2825084d69840482d24518035781e76644d4d9feb37318258a901",
+      "reusedCachedResponse": false
+    },
+    "npc:777": {
+      "url": "https://www.wowhead.com/forever/npc=777",
+      "title": "Amy Davenport - NPC - WoW Forever",
+      "bytes": 103907,
+      "sha256": "a3b17be8e564a47515510430df5a02806b24e95e6a8835edb5859c9b127332b6",
+      "reusedCachedResponse": false
+    },
+    "npc:793": {
+      "url": "https://www.wowhead.com/forever/npc=793",
+      "title": "Kara Adams - NPC - Forever",
+      "bytes": 48127,
+      "sha256": "550aa130e2de04a3b27a1a4a687cb19765532f70ed06836f9bac9696561c5654",
+      "reusedCachedResponse": true
+    },
+    "npc:6740": {
+      "url": "https://www.wowhead.com/forever/npc=6740",
+      "title": "Innkeeper Allison - NPC - WoW Forever",
+      "bytes": 70787,
+      "sha256": "a1d007ef47334d24598a357df6c325f21e82a22ab29ddd55ffb1c2481e9252be",
+      "reusedCachedResponse": false
+    },
+    "npc:790": {
+      "url": "https://www.wowhead.com/forever/npc=790",
+      "title": "Karen Taylor - NPC - WoW Forever",
+      "bytes": 60647,
+      "sha256": "278985218b881efcd4822b44bd60f1533b83819b9c24434f76e4d7f48233f0d2",
+      "reusedCachedResponse": false
+    },
+    "npc:791": {
+      "url": "https://www.wowhead.com/forever/npc=791",
+      "title": "Lindsay Ashlock - NPC - WoW Forever",
+      "bytes": 66361,
+      "sha256": "1d9df8c861f82e69f42ee3383393e5b75ea8086940930c900dbcffe3f562947d",
+      "reusedCachedResponse": false
+    },
+    "npc:8670": {
+      "url": "https://www.wowhead.com/forever/npc=8670",
+      "title": "Auctioneer Chilton - NPC - WoW Forever",
+      "bytes": 58033,
+      "sha256": "f07094cd76ccdee4396224044e4d4620f38b1b85c644cb0bd4a810f069aa5385",
+      "reusedCachedResponse": false
+    },
+    "object:106319": {
+      "url": "https://www.wowhead.com/forever/object=106319",
+      "title": "Battered Chest - Object - Forever",
+      "bytes": 174838,
+      "sha256": "567ef87471f52b13bb51aea6632123bef68923b5de68acf17a624ffba94410a5",
+      "reusedCachedResponse": true
+    },
+    "npc:903": {
+      "url": "https://www.wowhead.com/forever/npc=903",
+      "title": "Guard Howe - NPC - WoW Forever",
+      "bytes": 57439,
+      "sha256": "45a183a22247e10f740a987eff644a2049fa277aca5849031653ee367300378c",
+      "reusedCachedResponse": false
+    },
+    "npc:931": {
+      "url": "https://www.wowhead.com/forever/npc=931",
+      "title": "Ariena Stormfeather - NPC - WoW Forever",
+      "bytes": 57701,
+      "sha256": "7da40c77247b4c7243e0ad6568362b8d66708b81dda54733c390f36a1f31cdc7",
+      "reusedCachedResponse": false
+    },
+    "object:2849": {
+      "url": "https://www.wowhead.com/forever/object=2849",
+      "title": "Battered Chest - Object - Forever",
+      "bytes": 154516,
+      "sha256": "81e48e244b391cb6c64995c826de8cf7ad542986d79bcbcd6685457b87f05d00",
+      "reusedCachedResponse": true
+    },
+    "npc:956": {
+      "url": "https://www.wowhead.com/forever/npc=956",
+      "title": "Dorin Songblade - NPC - WoW Forever",
+      "bytes": 65445,
+      "sha256": "502c2bcdfaa97e6ad98bc62800ce551e00ca237c4148556a56c43f89137b7f65",
+      "reusedCachedResponse": false
+    },
+    "object:1619": {
+      "url": "https://www.wowhead.com/forever/object=1619",
+      "title": "Earthroot - Object - WoW Forever",
+      "bytes": 72663,
+      "sha256": "368e0bf5b39d008c9dd50023126809c3079a8931cf78cd56cffb60abf6c599ca",
+      "reusedCachedResponse": false
+    },
+    "object:1732": {
+      "url": "https://www.wowhead.com/forever/object=1732",
+      "title": "Tin Vein - Object - WoW Forever",
+      "bytes": 90605,
+      "sha256": "034306f782384c7f1e0f59ed3dec464830534d6d245024b687826bb07df590f0",
+      "reusedCachedResponse": false
+    }
+  },
+  "fullSourceActors": 38,
+  "sourceOnlyWorkingEvidenceSHA256": "21e7d752eac7e92af9e9576d4272b375f470034da65dbf987e6b54d0f8d90c37",
+  "omittedNewCoarsePrecision": [
+    {
+      "source": "npc:428",
+      "original": {
+        "zoneID": -3,
+        "name": "Eastern Kingdoms",
+        "uiMapID": 1415,
+        "pointCount": 2,
+        "bounds": {
+          "xMin": 53.4,
+          "xMax": 53.6,
+          "yMin": 73,
+          "yMax": 73
+        }
+      }
+    }
+  ],
+  "reusedFullReads": "All45responsebodies previouslyreadin8CX;zero newprimaryHTTPrequests/no failedURLretries.",
+  "counts": {
+    "selected": 7,
+    "assessed": 7,
+    "newPrimaryReads": 0,
+    "reusedFullResponses": 45,
+    "sourceOnlyActors": 38,
+    "decisions": {
+      "hold-version-unconfirmed": 4,
+      "excluded-current-quality-below-existing-candidate-scope": 1,
+      "published-all-slot-baseline-pass;origin-unresolved;future-development-review": 1,
+      "excluded-consumable-recipe-outside-equipment-book-scope": 1
+    },
+    "staleRegisterLabelsAligned": 496,
+    "registerTotal": 1425,
+    "registerAssessed": 1425,
+    "sharedQueueTotal": 923,
+    "sharedQueueAssessed": 923,
+    "knownFailedURLs": 1732,
+    "activeGearAdoptions": 0
+  },
+  "limits": "Fourversionholds/onepoorqualityshirt/oneconsumablebook/onebaselineoriginunknown. No live drop/stock/quest acceptance/actualclient rendering confirmation. Future verifiedlocations use sameactor pool evenwhen currentroute prunesunusedactors;not38newactivebuttons. No changes954books/35chains/canonicalgear/materials/settings.",
+  "next": "Fresh reconcile/full19local18CI/wholebotreview;then final exceptions/integrity/manualacceptance report and stop recurrence onlywhen available offlinework complete."
+}

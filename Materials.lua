@@ -36,9 +36,22 @@ local NAMES = {
     [2692]="Hot Spices",[2453]="Bruiseweed",[10938]="Lesser Magic Essence",
     [10998]="Lesser Astral Essence",[2775]="Silver Ore",[2776]="Gold Ore",
 }
-for _, gear in ipairs(GetGear.Gear) do
+-- All 1-60 item facts and generated recipe ingredients are loaded before
+-- Materials.lua. GetGear.Gear is an EMPTY placeholder at this point, populated
+-- only when a character guide is selected during ADDON_LOADED. Index the
+-- canonical catalogue instead so reagent names are always available offline,
+-- even for other classes and before the WoW item cache loads.
+local function ValidMaterialName(name, itemID)
+    return type(name)=="string" and name~=""
+        and not name:match("^Item%s+"..tostring(itemID).."$")
+end
+for _, gear in pairs(GetGear.ItemCatalog or {}) do
     for _, reagent in ipairs(gear.reagents or {}) do
-        NAMES[reagent.itemID] = reagent.name
+        if type(reagent.itemID)=="number"
+            and ValidMaterialName(reagent.name,reagent.itemID)
+            and not NAMES[reagent.itemID] then
+            NAMES[reagent.itemID] = reagent.name
+        end
     end
 end
 

@@ -3,7 +3,7 @@ local addonName, GetGear = ...
 -- Live, read-only equipment comparisons. We use item stats supplied by the
 -- Forever client; missing stat data never becomes an invented zero.
 local SLOT = {
-    Head={1}, Neck={2}, Shoulder={3}, Chest={5}, Waist={6}, Legs={7},
+    Head={1}, Neck={2}, Shoulder={3}, Shirt={4}, Chest={5}, Waist={6}, Legs={7}, Tabard={19},
     Feet={8}, Wrist={9}, Hands={10}, Back={15}, Wand={18},
     Ring={11,12}, Trinket={13,14}, ["Off Hand"]={17},
     ["Ranged"]={18}, ["Thrown"]={18},
@@ -72,9 +72,16 @@ local SPELL_KEYS = {
     ITEM_MOD_SPELL_HEALING_DONE_SHORT=true, ITEM_MOD_SPELL_HEALING_SHORT=true,
     ITEM_MOD_HEALING_DONE_SHORT=true,
 }
+-- A client can return the same total under both a localized-label key and
+-- an ITEM_MOD alias. Prefer the canonical total; never sum equivalent keys.
+local ALIASES={RESISTANCE0_NAME={'ITEM_MOD_ARMOR_SHORT','ARMOR'}}
+for i,school in ipairs({'HOLY','FIRE','NATURE','FROST','SHADOW','ARCANE'}) do
+    ALIASES['RESISTANCE'..i..'_NAME']={'ITEM_MOD_'..school..'_RESISTANCE_SHORT',
+        'ITEM_MOD_'..school..'_RESISTANCE','ITEM_MOD_'..school..'_RESIST_SHORT',school..'_RESISTANCE'}
+end
 local function FirstStat(t, keys)
     for _,key in ipairs(keys) do
-        if t[key] ~= nil then return t[key] end
+        if IsSafe(t[key]) then return t[key] end
     end
 end
 local function NormalizeStats(raw)
@@ -82,10 +89,18 @@ local function NormalizeStats(raw)
     for key,value in pairs(raw) do
         if type(key)=="string" and IsSafe(value) and not SPELL_KEYS[key] then safe[key]=value end
     end
+    for canonical,aliases in pairs(ALIASES) do
+        local value=IsSafe(raw[canonical]) and raw[canonical] or nil
+        for _,key in ipairs(aliases) do
+            if value==nil and IsSafe(raw[key]) then value=raw[key] end
+            safe[key]=nil
+        end
+        safe[canonical]=value
+    end
     local generic=raw.ITEM_MOD_SPELL_POWER_SHORT
     if not IsSafe(generic) then generic=nil end
-    local damage=FirstStat(raw,{"ITEM_MOD_SPELL_DAMAGE_DONE_SHORT", "ITEM_MOD_SPELL_DAMAGE_SHORT"})
-    local healing=FirstStat(raw,{"ITEM_MOD_SPELL_HEALING_DONE_SHORT", "ITEM_MOD_HEALING_DONE_SHORT", "ITEM_MOD_SPELL_HEALING_SHORT"})
+    local damage=FirstStat(raw,{"SPELL_DAMAGE_TOTAL","ITEM_MOD_SPELL_DAMAGE_DONE_SHORT", "ITEM_MOD_SPELL_DAMAGE_SHORT"})
+    local healing=FirstStat(raw,{"SPELL_HEALING_TOTAL","ITEM_MOD_SPELL_HEALING_DONE_SHORT", "ITEM_MOD_HEALING_DONE_SHORT", "ITEM_MOD_SPELL_HEALING_SHORT"})
     if not IsSafe(damage) then damage=generic end
     if not IsSafe(healing) then healing=generic end
     if IsSafe(damage) then safe.SPELL_DAMAGE_TOTAL=damage end
@@ -94,21 +109,39 @@ local function NormalizeStats(raw)
 end
 local function Stats(link)
     if not link or not C_Item or type(C_Item.GetItemStats)~="function" then return nil end
+    local id=type(link)=="string" and tonumber(link:match("item:(%d+)"))
+    if id and type(C_Item.IsItemDataCachedByID)=="function" then
+        local ok,cached=pcall(C_Item.IsItemDataCachedByID,id)
+        if ok and cached==false then return nil end
+    end
     local ok, result=pcall(C_Item.GetItemStats,link)
     if not ok or type(result)~="table" then return nil end
     return NormalizeStats(result)
 end
-local function ItemStats(itemID)
-    if type(itemID)~="number" then return nil end
+local function ItemStats(itemID, requestIfMissing)
+    if not IsSafe(itemID) or itemID<=0 or itemID~=math.floor(itemID) then return nil end
     local out=Stats("item:"..itemID)
     if out then return out end
-    if GetGear.RequestItemDataOnce then GetGear:RequestItemDataOnce(itemID) end
+    if requestIfMissing ~= false and GetGear.RequestItemDataOnce then
+        GetGear:RequestItemDataOnce(itemID)
+    end
     return nil
 end
 local function Equipped(slot)
-    if type(GetInventoryItemLink)~="function" then return nil end
+    if type(GetInventoryItemLink)~="function" then return nil,"unknown" end
     local ok, link=pcall(GetInventoryItemLink,"player",slot)
-    return ok and type(link)=="string" and link or nil
+    if not ok then return nil,"unknown" end
+    if type(link)=="string" and link~="" then return link,"equipped" end
+    -- An absent link can be an uncached equipped item. Confirm occupancy
+    -- independently before treating this slot as a zero-stat baseline.
+    if link==nil and type(GetInventoryItemID)=="function" then
+        local read,id=pcall(GetInventoryItemID,"player",slot)
+        if read and (id==nil or IsSafe(id) and id==0) then return nil,"empty" end
+        if read and IsSafe(id) and id>0 and id==math.floor(id) then
+            return "item:"..id,"equipped"
+        end
+    end
+    return nil,"unknown"
 end
 -- Equipped is a live presentation status, never persisted as "acquired".
 -- Compare item IDs, not names/stats: the same item in either ring/trinket
@@ -119,7 +152,7 @@ local function LinkItemID(link)
     return id and tonumber(id) or nil
 end
 function GetGear:IsGearEquipped(gear)
-    if not gear or type(gear.itemID)~="number" then return false end
+    if not gear or not IsSafe(gear.itemID) or gear.itemID<=0 or gear.itemID~=math.floor(gear.itemID) then return false end
     local slots=SLOT[gear.slot]
     if not slots then return false end
     for _,slot in ipairs(slots) do
@@ -145,12 +178,14 @@ local function Combine(a,b)
     for key,value in pairs(b or {}) do result[key]=(result[key] or 0)+value end
     return result
 end
-local function MakeGroup(label, candidate, equippedLinks)
-    local result={label=label,rows={}}
-    if #equippedLinks==0 then
-        result.message="No item equipped";return result
+local function MakeGroup(label, candidate, equippedLinks, unknownEquipment, unknownWeaponDPS)
+    local result={label=label,rows={},comparable=false,dpsUnknown=unknownWeaponDPS}
+    if unknownEquipment then
+        result.message="Equipped item data not available yet";return result
     end
+    result.emptySlot=#equippedLinks==0
     local base={}
+    local weaponsWithDPS=0
     for _,link in ipairs(equippedLinks) do
         local equipped=Stats(link)
         if not equipped then
@@ -158,14 +193,18 @@ local function MakeGroup(label, candidate, equippedLinks)
             return result
         end
         base=Combine(base,equipped)
+        if (equipped.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0 then weaponsWithDPS=weaponsWithDPS+1 end
     end
     if not candidate then
         result.message="Recommended item stats are loading"
         return result
     end
+    if weaponsWithDPS>1 then result.dpsUnknown=true end
+    if result.dpsUnknown then result.note='Weapon DPS is not summed for a dual-wield set.' end
     local union={}
     for key in pairs(base) do union[key]=true end
     for key in pairs(candidate) do union[key]=true end
+    if result.dpsUnknown then union.ITEM_MOD_DAMAGE_PER_SECOND_SHORT=nil end
     local keys={}
     for key in pairs(union) do keys[#keys+1]=key end
     table.sort(keys,function(a,b)
@@ -181,44 +220,165 @@ local function MakeGroup(label, candidate, equippedLinks)
         end
     end
     if #result.rows==0 then result.message="No differences in reported base stats" end
+    result.comparable=true -- candidate and occupied stats read, or slot independently confirmed empty
     return result
 end
 
-function GetGear:GetGearComparison(gear)
+function GetGear:GetGearComparison(gear, suppressItemDataRequest, plannedMainHand)
     if type(gear)~="table" then return nil end
+    if self.CanClassEquipGear and not self:CanClassEquipGear(gear,self.classToken) then
+        return {message='This class cannot equip this item.',groups={}}
+    end
     if self:IsGearEquipped(gear) then return {message="Already equipped",groups={}} end
     local slots=SLOT[gear.slot]
     if not slots then return {message="No comparison available for this slot",groups={}} end
-    local candidate=ItemStats(gear.itemID)
+    local candidate=ItemStats(gear.itemID, not suppressItemDataRequest)
     local groups={}
     if gear.slot=="Ring" or gear.slot=="Trinket" then
         for index,slot in ipairs(slots) do
-            local link=Equipped(slot)
-            groups[#groups+1]=MakeGroup(gear.slot.." "..index,candidate,link and {link} or {})
+            local link,state=Equipped(slot)
+            groups[#groups+1]=MakeGroup(gear.slot.." "..index,candidate,link and {link} or {},state=="unknown")
         end
     elseif gear.slot=="Off Hand" then
-        local main=Equipped(16)
+        local main,mainState=Equipped(16)
+        if mainState=="unknown" then
+            return {message="Cannot confirm main-hand equipment yet; off-hand comparison unavailable.",groups={}}
+        end
         if main and IsTwoHanded(main)==true then
-            return {message="A two-handed weapon is equipped; requires a one-handed weapon.",groups={}}
+            local potential=MakeGroup('Potential off-hand benefits',candidate,{})
+            potential.potentialOnly=true;potential.emptySlot=nil
+            local result={groups={potential},note='Potential benefits only; requires a one-handed weapon. Net replacement depends on that weapon.'}
+            -- Only an explicitly supplied planning partner can define the net
+            -- set. Do not infer ownership or silently pick a weapon from bags.
+            local partner=type(plannedMainHand)=='table' and plannedMainHand
+            if partner and partner.slot=='Main Hand'
+                and (not self.CanClassEquipGear or self:CanClassEquipGear(partner,self.classToken)) then
+                local link='item:'..tostring(partner.itemID)
+                local partnerStats=ItemStats(partner.itemID,not suppressItemDataRequest)
+                local ok,kind
+                if C_Item and type(C_Item.GetItemInventoryTypeByID)=='function' then ok,kind=pcall(C_Item.GetItemInventoryTypeByID,link) end
+                if candidate and partnerStats and ok and (kind==13 or kind==21) then
+                    local dual=(candidate.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0 and(partnerStats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0
+                    result.groups[2]=MakeGroup('Planned '..(partner.name or link)..' + off-hand vs two-handed',Combine(candidate,partnerStats),{main},false,dual)
+                    result.note='Potential off-hand benefits and the explicitly planned replacement set are shown separately; ownership is not assumed.'
+                end
+            end
+            return result
         end
         if main and IsTwoHanded(main)==nil then
             return {message="Cannot confirm main-hand type yet; off-hand comparison unavailable.",groups={}}
         end
-        local link=Equipped(17)
-        groups[1]=MakeGroup("Off Hand",candidate,link and {link} or {})
+        local link,state=Equipped(17)
+        groups[1]=MakeGroup("Off Hand",candidate,link and {link} or {},state=="unknown")
     elseif TWO_HANDED[gear.slot] then
-        local links={}
+        local links,unknown={},false
         for _,slot in ipairs(slots) do
-            local link=Equipped(slot)
+            local link,state=Equipped(slot)
             if link then links[#links+1]=link end
+            unknown=unknown or state=="unknown"
         end
-        groups[1]=MakeGroup("Main Hand + Off Hand",candidate,links)
+        groups[1]=MakeGroup("Main Hand + Off Hand",candidate,links,unknown)
     else
-        local link=Equipped(slots[1])
-        groups[1]=MakeGroup(gear.slot,candidate,link and {link} or {})
+        local link,state=Equipped(slots[1])
+        groups[1]=MakeGroup(gear.slot,candidate,link and {link} or {},state=="unknown")
     end
     return {groups=groups}
 end
+
+-- Strictly an overlay presentation filter, independent of catalogue visibility
+-- and user-hidden/acquired states. A stat comparison is conclusive only when
+-- both candidate and equipped item data are present. Never start bulk item-data
+-- requests while scanning the 1-60 tracker catalogue.
+-- Armor is defensive context, not by itself a meaningful upgrade for every
+-- class/role. Both client armor stat keys are excluded from default positive
+-- qualification. An explicit per-character setting opts back into armor-only
+-- gains for tanks or other players who value them.
+local ARMOR_ONLY_KEYS={ITEM_MOD_ARMOR_SHORT=true,RESISTANCE0_NAME=true}
+function GetGear:ShouldShowOverlayStatChanges(gear)
+    if not gear or gear.bagUpgrade then return true end
+    if self.db and self.db.overlay and self.db.overlay.hideWithoutPositiveStats==false then
+        return true
+    end
+    local comparison=self:GetGearComparison(gear,true)
+    if not comparison or comparison.message
+        or type(comparison.groups)~="table" or #comparison.groups==0 then
+        return true -- unavailable/equipped/unknown: not proof of no improvement
+    end
+    local armorGain=false
+    local resistanceGain=false
+    for _,group in ipairs(comparison.groups) do
+        if not group.comparable then return true end
+        if group.dpsUnknown and (not self.IsClassRelevantStat or self:IsClassRelevantStat('ITEM_MOD_DAMAGE_PER_SECOND_SHORT',gear)) then return true end
+        local meaningfulLoss=false
+        local allValid=self.db and self.db.overlay and self.db.overlay.showAllValidGear
+        for _,stat in ipairs(group.rows or {}) do
+            local relevant=not self.IsClassRelevantStat or self:IsClassRelevantStat(stat.key,gear)
+            if relevant and not ARMOR_ONLY_KEYS[stat.key] and not stat.key:match('^RESISTANCE[1-6]_NAME$')
+                and stat.delta< -0.0001 then meaningfulLoss=true end
+            if type(stat.delta)=="number" and stat.delta>0.0001 then
+                if ARMOR_ONLY_KEYS[stat.key] then armorGain=true
+                elseif stat.key:match('^RESISTANCE[1-6]_NAME$') and not allValid then resistanceGain=true
+                elseif relevant then return true end
+            end
+        end
+        if resistanceGain and not meaningfulLoss then return true end
+        resistanceGain=false
+    end
+    -- Armor-only gains are hidden by default, even if other stats worsen.
+    -- The opt-in permits the previous behavior without altering source data.
+    return armorGain and self.db and self.db.overlay
+        and self.db.overlay.countArmorOnlyUpgrades==true or false
+end
+
+-- Overlay-only restriction on *generic, untargetable world drops*, not on
+-- all Bind-on-Equip equipment. Craftable BoEs and named dungeon/quest/vendor
+-- items must remain eligible. Quality/bind data comes from the live client.
+-- When that metadata is absent, use the independently cross-checked
+-- Classic BoE index as a provisional fallback; a loaded Forever tooltip
+-- always overrides it. Never start item-cache requests during a filter pass.
+function GetGear:ShouldShowOverlayWorldBoEDrops(gear)
+    if not gear or gear.bagUpgrade then return true end
+    if self.db and self.db.overlay
+        and self.db.overlay.hideGreenBoEWorldDrops==false then return true end
+    if gear.profession or gear.craftOnly
+        or (type(gear.reagents)=="table" and #gear.reagents>0) then return true end
+    local source=type(gear.sourceType)=="string" and gear.sourceType:lower() or ""
+    local route=type(gear.acquisitionKind)=="string" and gear.acquisitionKind:lower() or ""
+    local zone=type(gear.zone)=="string" and gear.zone:lower() or ""
+    local details=type(gear.source)=="string" and gear.source:lower() or ""
+    -- Some source imports say "World drop" generically while their zone
+    -- explicitly lists "Drops, Quest Rewards". Never lose such an alternative.
+    for _,name in ipairs({"dungeon","quest","vendor","craft","pvp","reputation"}) do
+        if source:find(name,1,true) or route:find(name,1,true)
+            or zone:find(name,1,true) or details:find(name,1,true) then
+            return true
+        end
+    end
+    if not (source:find("world drop",1,true)
+        or route:find("world drop",1,true)) then return true end
+
+    local quality,binding
+    local getter=(C_Item and type(C_Item.GetItemInfo)=="function" and C_Item.GetItemInfo)
+        or (type(GetItemInfo)=="function" and GetItemInfo)
+    if getter and type(gear.itemID)=="number" then
+        local ok,name,link,q,level,minLevel,itemType,subType,stack,equip,icon,price,
+            classID,subclassID,bindType=pcall(getter,gear.itemID)
+        if ok and name and type(q)=="number" then
+            quality=q
+            if type(bindType)=="number" then binding=bindType end
+        end
+    end
+    -- A known non-green or non-BoE item must never be hidden by a Classic
+    -- reference. WoW's standard item-info binding codes: 1 BoP, 2 BoE.
+    if quality and quality~=2 then return true end
+    if binding and binding~=2 then return true end
+    if quality==2 and binding==2 then return false end
+    -- A partial client response isn't proof either way; only trust fallback
+    -- if the remaining data does not contradict its original classification.
+    return not (self.WorldDropGreenBoEIndex
+        and self.WorldDropGreenBoEIndex[gear.itemID]==true)
+end
+
 -- v0.10.5: Reversible earlier-gear classification. Equipment-ID matching
 -- is handled independently; there is no implicit SavedVariables migration.
 local OBSOLETE_ARMOR_SLOTS = {
@@ -425,10 +585,12 @@ function GetGear:ComparisonInline(gear, detailed)
         return "|cff96a6ba"..comparison.message.."|r",true
     end
     local lines={}
+    if comparison.note then lines[#lines+1]='|cff96a6ba'..comparison.note..'|r' end
     for _,group in ipairs(comparison.groups) do
-        if #comparison.groups > 1 or TWO_HANDED[gear.slot] then
+        if group.potentialOnly or #comparison.groups > 1 or TWO_HANDED[gear.slot] then
             lines[#lines+1]="|cff96a6baVs "..group.label.."|r"
         end
+        if group.note then lines[#lines+1]='|cff96a6ba'..group.note..'|r' end
         if group.message then
             lines[#lines+1]="|cff96a6ba"..group.message.."|r"
         else
@@ -453,12 +615,14 @@ function GetGear:AppendComparisonTooltip(tip,gear)
     if not compare then return end
     tip:AddLine(" ")
     tip:AddLine("Gear comparison",1,0.82,0.35)
+    if compare.note then tip:AddLine(compare.note,0.72,0.78,0.85,true) end
     if compare.message then
         tip:AddLine(compare.message,0.72,0.78,0.85,true)
         return
     end
     for _,group in ipairs(compare.groups) do
         tip:AddLine("Against "..group.label,0.75,0.83,0.95)
+        if group.note then tip:AddLine(group.note,0.72,0.78,0.85,true) end
         if group.message then tip:AddLine(group.message,0.7,0.7,0.7,true)
         else
             for _,stat in ipairs(group.rows) do

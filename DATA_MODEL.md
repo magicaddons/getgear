@@ -1,4 +1,4 @@
-# GetGear v0.14.0 Beta 7 data architecture
+# GetGear v0.14.0 Beta 8 data architecture
 
 The source of truth for each item is **ResearchedItemFacts.lua** (259
 pre-import records containing final researched facts and confidence labels),
@@ -90,3 +90,23 @@ This was introduced after a live tester found Ceremonial Leather Harness
 (#3313, +4 Agility/+3 Spirit) in a Warrior default list. Class proficiency
 and stat-role alone were too permissive. Verified by
 `tests/beta7-armor-priority.lua` and `tests/beta4-filters.lua`.
+
+## Beta 8 conservative acquisition evidence
+
+`AcquisitionEvidenceIndex.lua` is generated from ID/name-locked source
+reconciliation and reviewed recipe/equipment registers. `AcquisitionEvidence.lua`
+adds research metadata and fills missing summaries/book references while
+retaining existing manual/observed sources, item identities, class/equip
+facts, materials and settings. `AcquisitionSummary.lua` and the guide expose
+publication quality, unresolved origins and version-specific warnings.
+Book existence does not establish a required/current learning route.
+
+Reviewed recipe cases total 954; reviewed other equipment cases total 214.
+Published vendor/drop/quest/object/fishing references remain unverified live;
+corroborated community observations are separately labelled by evidence.
+Only exact item IDs establish alternatives; no rank/slot/class/availability
+flag is copied between similarly named items. The generator and all fourteen
+non-release regressions protect the original catalogue and source confidence.
+
+This consolidation does not change SavedVariables schema or introduce a new
+progress reset. Existing v0.12-to-v0.14 migration limitations remain relevant.
