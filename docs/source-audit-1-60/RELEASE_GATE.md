@@ -2316,3 +2316,18 @@ All7707items/1254recipes audited through shared formatter/marker functions;27675
 ## Beta9 publication authorised — preparation/validation pending
 
 User reports PRIVATE TEST4 tested in WoW Forever and explicitly authorises public GitHub beta publication. Exact testedsourceaa96895/privateZIPsha b8599291dae1aa1b2a9f6c54844b7ac5c8c12839f6ceb2cb0e3eefbdffa1022f;currentbranchclean/freshremote matches. Beta8latest;prepare unusedv0.14.0-beta9. Version/README/release documentation only;allgameplay/data/materials/navigation/900holds preserved. Read BETA9_RELEASE_PREPARATION.md in reconciliation directory. Next local+nonreleaseCI/wholegenerateddiff review,package exact release commit,tag,draft,upload+verifybothassets,publish+publicverify,thenSTOP. Explicit user authorisation supersedes prior release pause;main/olderreleases/tags remain protected. No additional research/features/merge authorised.
+
+
+## Bag, geographic and stat-priority development — 15 November 2026
+
+New user handover authorizes implementation/local/non-release CI only. Dedicated
+branch `dev/recommendation-pipeline` starts from validated Beta9 source `0499287`
+(CI43569430115; latest development branch differs only in release handover/docs).
+Read `docs/RECOMMENDATION_HANDOVER.md` and `docs/recommendation-bag-audit.json`.
+All 7707 equipment IDs/36669 valid class objectives/1254 equipment crafts and 900
+candidate holds preserved; 40 ordinary bags supported, 28 reviewed variants stay
+unresolved/excluded. Shared independent source access/convenience, net weighted
+comparisons and per-character preferences implemented. Full local validation and
+new read-only non-release CI are recorded in `docs/recommendation-validation.json`.
+No package, build archive, release, tag, merge or main change is authorized.
+After validation/reporting, stop for user review and in-game acceptance.

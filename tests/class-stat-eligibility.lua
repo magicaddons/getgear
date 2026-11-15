@@ -52,11 +52,14 @@ GetInventoryItemLink=function(_,slot)return slot==16 and'item:9000'end
 GetInventoryItemID=function()return nil end
 for _,id in ipairs({4446,6220,4454})do assert(not a:ShouldShowOverlayStatChanges(catalogue[id]),'trivial physical/resistance positives do not offset caster losses '..id)end
 local function sample(id)return{itemID=id,slot='Main Hand',armorType='Dagger',name='Comparison fixture'}end
-assert(a:ShouldShowOverlayStatChanges(sample(9001)),'healing gain with spirit loss is still a legitimate choice')
+assert(not a:ShouldShowOverlayStatChanges(sample(9001)),'balanced scoring accounts for healing gain AND greater spell/spirit losses')
+assert(a:SetStatPriority('custom') and a:SetCustomStatWeight('SPELL_HEALING_TOTAL',100))
+assert(a:ShouldShowOverlayStatChanges(sample(9001)),'explicit healing weight can favour the tradeoff')
+a:SetStatPriority('balanced')
 assert(a:ShouldShowOverlayStatChanges(sample(9002)),'resistance with no meaningful loss remains a choice')
 assert(not a:ShouldShowOverlayStatChanges(sample(9003)),'resistance alone cannot offset primary losses')
 assert(not a:ShouldShowOverlayStatChanges(sample(9004)))
-a.db.overlay.countArmorOnlyUpgrades=true;assert(a:ShouldShowOverlayStatChanges(sample(9004)));a.db.overlay.countArmorOnlyUpgrades=false
+a.db.overlay.countArmorOnlyUpgrades=true;assert(not a:ShouldShowOverlayStatChanges(sample(9004)),'armour preference must still account for caster losses');a.db.overlay.countArmorOnlyUpgrades=false
 a.db.overlay.showAllValidGear=true;assert(a:ShouldShowOverlayStatChanges(catalogue[6220]));a.db.overlay.showAllValidGear=false
 for _,class in ipairs(classes)do
  a.classToken=class

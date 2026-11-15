@@ -161,17 +161,22 @@ local function CanStillDoQuest(questID)
         local ok,done=pcall(C_QuestLog.IsQuestFlaggedCompleted,questID)
         if ok then return not done end
     end
+    if type(IsQuestFlaggedCompleted)=="function" then
+        local ok,done=pcall(IsQuestFlaggedCompleted,questID)
+        if ok and type(done)=="boolean" then return not done end
+    end
     return true -- no quest API available; explain the uncertainty in the text
 end
 
 function GetGear:GetBagPlanningObjectives()
+    if not self.db or self.db.overlay and self.db.overlay.bagUpgrades==false then return {} end
     local plan=self:GetBagUpgradePlan()
-    if not plan then return {} end
-    local results={plan}
+    local results={}
+    if plan then results[1]=plan end
     local equipped=self:GetEquippedBagSnapshot()
     if not equipped then return results end
     local level=self.level or 1
-    local faction=type(UnitFactionGroup)=="function" and UnitFactionGroup("player") or "Alliance"
+    local faction=type(UnitFactionGroup)=="function" and UnitFactionGroup("player") or self.faction
     local race=type(UnitRace)=="function" and select(2,UnitRace("player")) or nil
     local function CountUnder(cap)
         local n=0
@@ -235,6 +240,39 @@ function GetGear:GetBagPlanningObjectives()
               .." Find the Mechanic's Log and defeat Snow Leopard Prowler."
               .." The quest is one-time; no exact coordinates independently verified.",
             "Quest",{zone="Dun Morogh",spot="Grund and Gozwin: Coldridge Valley near Anvilmar",quality="zone-only"})
+    end
+    -- Evaluate every ordinary bag independently of the chosen craft tier.
+    -- A ten-slot quest bag remains useful when six-slot crafting adds nothing.
+    local seen={}
+    for _,record in ipairs(results) do seen[record.itemID]=true end
+    for _,bag in ipairs(self.BagCatalogue or {}) do
+        if not seen[bag.itemID] and level>=bag.planningLevel then
+            local routes=self.GetEligibleAcquisitionRoutes and self:GetEligibleAcquisitionRoutes(bag,false) or bag.acquisitionRoutes
+            local count=CountUnder(bag.bagSlots)
+            if bag.oneTime then
+                count=math.min(count,1)
+                for _,worn in ipairs(equipped) do if worn.itemID==bag.itemID then count=0 end end
+            end
+            if count>0 and routes and #routes>0 then
+                local route=routes[1]
+                local model=self.GetAcquisitionNavigationModel and self:GetAcquisitionNavigationModel()
+                local q=model and model.quests[tostring(route.questID)]
+                local kind=bag.sourceType or ({quest="Quest",vendor="Vendor",dungeon="Dungeon",named_drop="Drop",world_drop="World drop"})[route.kind] or "Trade"
+                local source=q and ("Quest: "..q.name) or route.label or route.boss or kind
+                local location=route.location
+                Alternative(bag.itemID,bag.name,bag.bagSlots,bag.planningLevel,count,source,
+                    bag.notes,kind,location)
+                local record=results[#results]
+                record.acquisitionRoutes=routes
+                record.profession=bag.profession
+                record.sourceURL=bag.sourceURL
+                record.notes=bag.notes
+                record.bagSlots=bag.bagSlots
+                record.oneTime=bag.oneTime
+                record.zone=location and location.zone or route.dungeon or (route.kind=="world_drop" and "World drop / player trade" or "Player trade / crafting")
+                seen[bag.itemID]=true
+            end
+        end
     end
     return results
 end

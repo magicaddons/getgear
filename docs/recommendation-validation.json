@@ -1,0 +1,32 @@
+{
+  "baseline": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3",
+  "branch": "dev/recommendation-pipeline",
+  "local": {
+    "lua54Programs": 20,
+    "lua51Programs": 20,
+    "luaProgramsPassedBothRuntimes": true,
+    "newPipelineAssertions": 323,
+    "pythonRegressions": 4,
+    "addonModulesSyntaxCheckedPerRuntime": 29,
+    "catalogueButtonAudit": "PASS:7707 items/36669 class-source checks, zero cache requests",
+    "cataloguePresentationAudit": "PASS:7707 items/1254 recipes; live typography unverified",
+    "sourceReconciliation": {
+      "exitCode": 0,
+      "approved17FilesRestoredExactly": true,
+      "unrelatedNewSourcesAdopted": false
+    },
+    "protectedInputFilesByteExact": 97,
+    "lua54PassLines": 20,
+    "lua51PassLines": 20,
+    "pythonPassLines": 4,
+    "buttonsPassLines": 1
+  },
+  "ci": {
+    "status": "pending push",
+    "workflow": ".github/workflows/recommendation-validation.yml"
+  },
+  "releaseCreated": false,
+  "packageCreated": false,
+  "mainChanged": false,
+  "actualGameClientVerified": false
+}

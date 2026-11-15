@@ -1,4 +1,5 @@
 local addonName, GetGear = ...
+local ReadTooltipDPS
 
 -- Live, read-only equipment comparisons. We use item stats supplied by the
 -- Forever client; missing stat data never becomes an invented zero.
@@ -116,7 +117,11 @@ local function Stats(link)
     end
     local ok, result=pcall(C_Item.GetItemStats,link)
     if not ok or type(result)~="table" then return nil end
-    return NormalizeStats(result)
+    local normalized=NormalizeStats(result)
+    if not normalized.ITEM_MOD_DAMAGE_PER_SECOND_SHORT and ReadTooltipDPS then
+        normalized.ITEM_MOD_DAMAGE_PER_SECOND_SHORT=ReadTooltipDPS(link)
+    end
+    return normalized
 end
 local function ItemStats(itemID, requestIfMissing)
     if not IsSafe(itemID) or itemID<=0 or itemID~=math.floor(itemID) then return nil end
@@ -179,7 +184,7 @@ local function Combine(a,b)
     return result
 end
 local function MakeGroup(label, candidate, equippedLinks, unknownEquipment, unknownWeaponDPS)
-    local result={label=label,rows={},comparable=false,dpsUnknown=unknownWeaponDPS}
+    local result={label=label,rows={},comparable=false,dpsUnknown=unknownWeaponDPS,equippedLinks=equippedLinks}
     if unknownEquipment then
         result.message="Equipped item data not available yet";return result
     end
@@ -296,6 +301,7 @@ end
 local ARMOR_ONLY_KEYS={ITEM_MOD_ARMOR_SHORT=true,RESISTANCE0_NAME=true}
 function GetGear:ShouldShowOverlayStatChanges(gear)
     if not gear or gear.bagUpgrade then return true end
+    if self.CanClassEquipGear and not self:CanClassEquipGear(gear,self.classToken) then return false end
     if self.db and self.db.overlay and self.db.overlay.hideWithoutPositiveStats==false then
         return true
     end
@@ -303,6 +309,14 @@ function GetGear:ShouldShowOverlayStatChanges(gear)
     if not comparison or comparison.message
         or type(comparison.groups)~="table" or #comparison.groups==0 then
         return true -- unavailable/equipped/unknown: not proof of no improvement
+    end
+    if self.GetWeightedUpgrade and not (self.db and self.db.overlay and self.db.overlay.showAllValidGear) then
+        local score=self:GetWeightedUpgrade(gear,comparison)
+        local potentialOnly=true
+        for _,group in ipairs(comparison.groups) do if not group.potentialOnly then potentialOnly=false end end
+        if potentialOnly then return false end
+        if score~=nil then return score>0.0001 end
+        return true -- missing stats/effects remain an explicitly uncertain choice
     end
     local armorGain=false
     local resistanceGain=false
@@ -443,6 +457,7 @@ local function ToolTipDPS(link)
     end
     return nil
 end
+ReadTooltipDPS=ToolTipDPS
 -- Conservative fallback for the two verified test-case wand IDs only.
 -- The client tooltip is preferred; patch changes should update these values.
 local VERIFIED_WAND_DPS = {[247789]=4.0, [279896]=18.53}
@@ -585,6 +600,9 @@ function GetGear:ComparisonInline(gear, detailed)
         return "|cff96a6ba"..comparison.message.."|r",true
     end
     local lines={}
+    if self.GetWeightedUpgrade and (self:GetWeightedUpgrade(gear,comparison) or 0)>0.0001 then
+        lines[#lines+1]="|cff96a6ba"..self:GetStatPriorityExplanation().."|r"
+    end
     if comparison.note then lines[#lines+1]='|cff96a6ba'..comparison.note..'|r' end
     for _,group in ipairs(comparison.groups) do
         if group.potentialOnly or #comparison.groups > 1 or TWO_HANDED[gear.slot] then

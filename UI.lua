@@ -1900,6 +1900,7 @@ function GetGear:RefreshOverlay()
         end
         list=visible
     end
+    if self.SortUpgradeRecommendations then self:SortUpgradeRecommendations(list) end
     objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  OBJECTIVES (" .. #list .. ")")
     local totalY = 0
     if opts.objectivesCollapsed then
@@ -2391,6 +2392,86 @@ materialScopeButton:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 materialScopeButton:SetScript("OnLeave",HideItemTooltip)
+local priorities=CreateFrame("Frame","GetGear_StatPriorities",UIParent,"BasicFrameTemplateWithInset")
+priorities:SetSize(438,354)
+priorities:SetPoint("CENTER")
+priorities:SetFrameStrata("DIALOG")
+priorities:SetFrameLevel(settings:GetFrameLevel()+10)
+priorities:Hide()
+if priorities.TitleText then priorities.TitleText:SetText("GetGear - Recommendations") end
+if UISpecialFrames then table.insert(UISpecialFrames,"GetGear_StatPriorities") end
+local priorityHelp=NewText(priorities,"GameFontHighlightSmall",395)
+priorityHelp:SetPoint("TOPLEFT",18,-40)
+priorityHelp:SetText("Saved for this character. Balanced weighs gains and losses. A preferred stat gains influence; custom weights use reported item-stat units. The full Guide keeps valid choices.")
+local modeButton=NewButton(priorities,"",395,26)
+modeButton:SetPoint("TOPLEFT",18,-100)
+local statButton=NewButton(priorities,"",395,26)
+statButton:SetPoint("TOPLEFT",18,-138)
+local weightLabel=NewText(priorities,"GameFontHighlightSmall",395)
+weightLabel:SetPoint("TOPLEFT",18,-180)
+local weightInput=CreateFrame("EditBox",nil,priorities,"InputBoxTemplate")
+weightInput:SetPoint("TOPLEFT",26,-210)
+weightInput:SetSize(100,24)
+weightInput:SetAutoFocus(false)
+weightInput:SetMaxLetters(8)
+local applyWeight=NewButton(priorities,"Save weight",120,24)
+applyWeight:SetPoint("LEFT",weightInput,"RIGHT",18,0)
+local validationText=NewText(priorities,"GameFontHighlightSmall",395)
+validationText:SetPoint("TOPLEFT",18,-246)
+validationText:SetText("Weights: 0–100. Unedited weights use class-aware defaults. Unknown effects are left unscored.")
+local geographyCheck=NewCheck(priorities,"Hide impractical opposing-faction sources",278,function(v)
+    GetGear.db.overlay.hideImpracticalSources=v
+    GetGear:RefreshAll()
+end)
+geographyCheck:SetScript("OnEnter",function(self)
+    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
+    GameTooltip:AddLine("Leveling travel convenience",1,0.82,0.35)
+    GameTooltip:AddLine("On by default through level 30. Suppresses distant opposing starting/leveling territories in the tracker. Dungeons, contested zones, named neutral exceptions and local sources remain available. The full Guide retains travel alternatives.",1,1,1,true)
+    GameTooltip:Show()
+end)
+geographyCheck:SetScript("OnLeave",HideItemTooltip)
+
+local selectedStat=1
+local function refreshPriorities()
+    local p=GetGear.db.statPriorities
+    local rows=GetGear.StatPriorityDefinitions
+    local row=rows[selectedStat]
+    modeButton:SetText("Mode: "..({balanced="Balanced",priority="Prioritise a Stat",custom="Custom Weights (Advanced)"})[p.mode])
+    statButton:SetText((p.mode=="custom" and "Edit: " or "Preferred: ")..row[2].." (click to cycle)")
+    weightLabel:SetText("Weight per "..row[2].." point (DPS uses damage/second):")
+    weightInput:SetText(tostring(p.weights[row[1]] or GetGear:GetStatWeight(row[1],{slot=row[1]=="ITEM_MOD_DAMAGE_PER_SECOND_SHORT" and "Wand" or "Ring"}) or 0))
+    if weightInput.SetEnabled then weightInput:SetEnabled(p.mode=="custom") end
+    applyWeight:SetEnabled(p.mode=="custom")
+end
+modeButton:SetScript("OnClick",function()
+    local p=GetGear.db.statPriorities
+    GetGear:SetStatPriority(({balanced="priority",priority="custom",custom="balanced"})[p.mode],GetGear.StatPriorityDefinitions[selectedStat][1])
+    refreshPriorities()
+end)
+statButton:SetScript("OnClick",function()
+    local rows=GetGear.StatPriorityDefinitions
+    repeat selectedStat=selectedStat%#rows+1
+    until GetGear:IsClassRelevantStat(rows[selectedStat][1],{slot=rows[selectedStat][1]=="ITEM_MOD_DAMAGE_PER_SECOND_SHORT" and "Wand" or "Ring"})
+    local p=GetGear.db.statPriorities
+    if p.mode=="priority" then GetGear:SetStatPriority("priority",rows[selectedStat][1]) end
+    refreshPriorities()
+end)
+applyWeight:SetScript("OnClick",function()
+    if GetGear:SetCustomStatWeight(GetGear.StatPriorityDefinitions[selectedStat][1],weightInput:GetText()) then
+        validationText:SetText("Saved for this character. Gains and losses both use this weight.")
+    else validationText:SetText("Enter a finite number from 0 to 100.") end
+end)
+local priorityClose=NewButton(priorities,"Close",88,24)
+priorityClose:SetPoint("BOTTOMRIGHT",-18,18)
+priorityClose:SetScript("OnClick",function() priorities:Hide() end)
+local priorityButton=NewButton(settings,"Recommendations...",160,23)
+priorityButton:SetPoint("TOPRIGHT",-18,-604)
+priorityButton:SetScript("OnClick",function()
+    GetGear:InitializeStatPriorities()
+    local preferred=GetGear.db.statPriorities.preferred
+    for i,row in ipairs(GetGear.StatPriorityDefinitions) do if row[1]==preferred then selectedStat=i end end
+    refreshPriorities();priorities:Show()
+end)
 local showOverlay=NewButton(settings,"Show / hide tracker",165,24)
 showOverlay:SetPoint("BOTTOMLEFT",20,18)
 showOverlay:SetScript("OnClick",function() GetGear:ToggleOverlay() end)
@@ -2414,6 +2495,7 @@ function GetGear:ShowSettings()
     positiveStatCheck:SetChecked(self.db.overlay.hideWithoutPositiveStats ~= false)
     greenBoECheck:SetChecked(self.db.overlay.hideGreenBoEWorldDrops ~= false)
     armorOnlyCheck:SetChecked(self.db.overlay.countArmorOnlyUpgrades == true)
+    geographyCheck:SetChecked(self.db.overlay.hideImpracticalSources ~= false)
     alphaSlider:SetValue(math.floor((self.db.overlay.backgroundOpacity or 0.78)*100 + 0.5))
     overlayScaleSlider:SetValue(math.floor((self.db.overlay.scale or 1)*100+0.5))
     detailScaleSlider:SetValue(math.floor((self.db.detail.scale or 1)*100+0.5))

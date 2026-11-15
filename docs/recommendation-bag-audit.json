@@ -1,0 +1,1323 @@
+{
+  "scope": "Every ordinary-bag name in the Forever bag guide plus the existing six GetGear planner identities; matching snapshot variants audited separately. Specialty/reagent bags excluded. Not a certification of every live container.",
+  "primaryGuide": "https://www.wowhead.com/forever/guide/bags-storage-bank",
+  "baseline": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3",
+  "distinctNames": 59,
+  "rows": 68,
+  "implementedIDs": 40,
+  "unresolvedOrExcludedRows": 28,
+  "records": [
+    {
+      "itemID": 4238,
+      "name": "Linen Bag",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 4240,
+      "name": "Woolen Bag",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 287971,
+      "name": "Woolen Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 4245,
+      "name": "Small Silk Pack",
+      "implemented": true,
+      "slots": 10,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 10050,
+      "name": "Mageweave Bag",
+      "implemented": true,
+      "slots": 12,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 277977,
+      "name": "Canvas Latchbag",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Grund and Gozwin"
+      ],
+      "zones": [
+        "Dun Morogh (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 279935,
+      "name": "Book Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Book Return"
+      ],
+      "zones": [
+        "Elwynn Forest (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Quest item, not the six-slot container #279936; excluded"
+    },
+    {
+      "itemID": 279936,
+      "name": "Book Bag",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Book Return"
+      ],
+      "zones": [
+        "Elwynn Forest (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 280088,
+      "name": "Soft Saber Sack",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Soft Saber Pelts"
+      ],
+      "zones": [
+        "Teldrassil (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 4930,
+      "name": "Handmade Leather Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 11845,
+      "name": "Handmade Leather Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Carry Your Weight"
+      ],
+      "zones": [
+        "Durotar (Horde)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 279937,
+      "name": "Collecting Basket",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Sticks and Bones"
+      ],
+      "zones": [
+        "Tirisfal Glades (Horde)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Quest-tool/reward variant needs independent identity/slot verification"
+    },
+    {
+      "itemID": 279939,
+      "name": "Collecting Basket",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Sticks and Bones"
+      ],
+      "zones": [
+        "Tirisfal Glades (Horde)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 277200,
+      "name": "Scorched Leather Pouch",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Grace of An'she and Mu'sha"
+      ],
+      "zones": [
+        "Mulgore (Horde)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 256935,
+      "name": "Simple Leather Satchel",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "The Problem With Prideclaws"
+      ],
+      "zones": [
+        "Zephras Isle"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 270017,
+      "name": "Hunting Satchel",
+      "implemented": true,
+      "slots": 10,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Vyrin's Revenge"
+      ],
+      "zones": [
+        "Loch Modan (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 1537,
+      "name": "Old Blanchy's Feed Pouch",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Poor Old Blanchy"
+      ],
+      "zones": [
+        "Westfall (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 2082,
+      "name": "Wizbang's Gunnysack",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Buzzbox 525"
+      ],
+      "zones": [
+        "Darkshore (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 5603,
+      "name": "Wizbang's Gunnysack",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 4496,
+      "name": "Small Brown Pouch",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "vendor"
+      ],
+      "sourceLabels": [
+        "Mrs. Winters",
+        "Brog Hamfist",
+        "Quartermaster Lewis",
+        "Lindsay Ashlock",
+        "Drake Lindgren",
+        "Thurman Mullby",
+        "Alyssa Griffith",
+        "Yanni Stoutheart",
+        "Xandar Goodbeard",
+        "Kreg Bilmn",
+        "Edwin Harly",
+        "Tand"
+      ],
+      "zones": [
+        "Dun Morogh (Alliance)",
+        "Elwynn Forest (Alliance)",
+        "Loch Modan (Alliance)",
+        "Redridge Mountains (Alliance)",
+        "Silverpine Forest (Horde)",
+        "Stormwind City (Alliance)",
+        "Thunder Bluff (Horde)",
+        "Tirisfal Glades",
+        "Westfall (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 828,
+      "name": "Small Blue Pouch",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Battered Chest"
+      ],
+      "zones": [
+        "",
+        "Dun Morogh, Durotar, Orgrimmar +11"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 805,
+      "name": "Small Red Pouch",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Battered Chest"
+      ],
+      "zones": [
+        "",
+        "Dun Morogh, Durotar, Orgrimmar +11"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 5572,
+      "name": "Small Green Pouch",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Battered Chest"
+      ],
+      "zones": [
+        "",
+        "Dun Morogh, Durotar, Orgrimmar +11"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 5571,
+      "name": "Small Black Pouch",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Battered Chest"
+      ],
+      "zones": [
+        "",
+        "Dun Morogh, Durotar, Orgrimmar +11"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 4957,
+      "name": "Old Moneybag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "container",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "A Sack of Coins"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 5081,
+      "name": "Kodo Hide Bag",
+      "implemented": true,
+      "slots": 6,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Leatherworking"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 5762,
+      "name": "Red Linen Bag",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 6756,
+      "name": "Jewelry Box",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "container",
+        "zonedrop"
+      ],
+      "sourceLabels": [
+        "Jade Sludge",
+        "A Small Container of Gems"
+      ],
+      "zones": [
+        "",
+        "The Hinterlands"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 856,
+      "name": "Blue Leather Bag",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Hidden Strongbox",
+        "Battered Chest",
+        "Kolkars' Booty",
+        "Battered Chest",
+        "Alliance Chest",
+        "Kolkar's Booty",
+        "Tightly Sealed Trunk"
+      ],
+      "zones": [
+        "",
+        "Alterac Mountains",
+        "Loch Modan, The Barrens, Redridge Mountains +8",
+        "Loch Modan, The Barrens, Silverpine Forest +5",
+        "The Barrens",
+        "The Barrens, Silverpine Forest, Hillsbrad Foothills"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 2657,
+      "name": "Red Leather Bag",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Hidden Strongbox",
+        "Battered Chest",
+        "Kolkars' Booty",
+        "Battered Chest",
+        "Alliance Chest",
+        "Kolkar's Booty",
+        "Tightly Sealed Trunk"
+      ],
+      "zones": [
+        "",
+        "Alterac Mountains",
+        "Loch Modan, The Barrens, Redridge Mountains +8",
+        "Loch Modan, The Barrens, Silverpine Forest +5",
+        "The Barrens",
+        "The Barrens, Silverpine Forest, Hillsbrad Foothills"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 3233,
+      "name": "Gnoll Hide Sack",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "zonedrop"
+      ],
+      "sourceLabels": [
+        "Fedfennel"
+      ],
+      "zones": [
+        "Elwynn Forest"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 3343,
+      "name": "Captain Sander's Booty Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Captain Sander's Hidden Treasure"
+      ],
+      "zones": [
+        "Westfall"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 4498,
+      "name": "Brown Leather Satchel",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "vendor"
+      ],
+      "sourceLabels": [
+        "Mrs. Winters",
+        "Brog Hamfist",
+        "Mabel Solaj",
+        "Quartermaster Lewis",
+        "Corporal Bluth",
+        "Lindsay Ashlock",
+        "Uthok",
+        "Drake Lindgren",
+        "Thurman Mullby",
+        "Alyssa Griffith",
+        "Neal Allen",
+        "Gruham Rumdnul"
+      ],
+      "zones": [
+        "Duskwood (Alliance)",
+        "Elwynn Forest (Alliance)",
+        "Redridge Mountains (Alliance)",
+        "Stormwind City (Alliance)",
+        "Stranglethorn Vale (Alliance)",
+        "Stranglethorn Vale (Horde)",
+        "Tirisfal Glades",
+        "Westfall (Alliance)",
+        "Wetlands (Alliance)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 5573,
+      "name": "Green Leather Bag",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Hidden Strongbox",
+        "Battered Chest",
+        "Kolkars' Booty",
+        "Battered Chest",
+        "Alliance Chest",
+        "Kolkar's Booty",
+        "Tightly Sealed Trunk"
+      ],
+      "zones": [
+        "",
+        "Alterac Mountains",
+        "Loch Modan, The Barrens, Redridge Mountains +8",
+        "Loch Modan, The Barrens, Silverpine Forest +5",
+        "The Barrens",
+        "The Barrens, Silverpine Forest, Hillsbrad Foothills"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 5574,
+      "name": "White Leather Bag",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Hidden Strongbox",
+        "Battered Chest",
+        "Kolkars' Booty",
+        "Battered Chest",
+        "Alliance Chest",
+        "Kolkar's Booty",
+        "Tightly Sealed Trunk"
+      ],
+      "zones": [
+        "",
+        "Alterac Mountains",
+        "Loch Modan, The Barrens, Redridge Mountains +8",
+        "Loch Modan, The Barrens, Silverpine Forest +5",
+        "The Barrens",
+        "The Barrens, Silverpine Forest, Hillsbrad Foothills"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 277332,
+      "name": "Scuffed Shipping Crate",
+      "implemented": true,
+      "slots": 8,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Parts and Pieces"
+      ],
+      "zones": [
+        "The Barrens"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 4241,
+      "name": "Green Woolen Bag",
+      "implemented": true,
+      "slots": 10,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 5763,
+      "name": "Red Woolen Bag",
+      "implemented": true,
+      "slots": 10,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 804,
+      "name": "Large Blue Sack",
+      "implemented": true,
+      "slots": 10,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Solid Chest",
+        "Solid Chest",
+        "Alliance Chest",
+        "Alliance Chest",
+        "Ornate Bronze Lockbox",
+        "Heavy Bronze Lockbox",
+        "Watertight Trunk"
+      ],
+      "zones": [
+        "",
+        "Hillsbrad Foothills",
+        "The Barrens, Hillsbrad Foothills, Stonetalon Mountains",
+        "The Barrens, Wetlands, Duskwood +6",
+        "Wetlands, Duskwood, Thousand Needles +4"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 5765,
+      "name": "Black Silk Pack",
+      "implemented": true,
+      "slots": 12,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 5764,
+      "name": "Green Silk Pack",
+      "implemented": true,
+      "slots": 12,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 276891,
+      "name": "Spidersilk Pouch",
+      "implemented": true,
+      "slots": 12,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Stronger than Steel"
+      ],
+      "zones": [
+        "Mulgore (Horde)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 1652,
+      "name": "Sturdy Lunchbox",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "zonedrop"
+      ],
+      "sourceLabels": [
+        "Verifonix, Venture Co. Foreman"
+      ],
+      "zones": [
+        "Stranglethorn Vale"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 1725,
+      "name": "Large Knapsack",
+      "implemented": true,
+      "slots": 12,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Solid Chest",
+        "Solid Chest",
+        "Horde Chest",
+        "Alliance Chest",
+        "Alliance Chest",
+        "Iron Lockbox",
+        "Strong Iron Lockbox",
+        "Box of Supplies",
+        "Hoard of the Black Dragonflight",
+        "Iron Bound Trunk"
+      ],
+      "zones": [
+        "",
+        "Arathi Highlands",
+        "Arathi Highlands, Alterac Mountains",
+        "Dustwallow Marsh, Badlands, Stranglethorn Vale +7",
+        "Stranglethorn Vale, Arathi Highlands, Thousand Needles +4"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 4499,
+      "name": "Huge Brown Sack",
+      "implemented": true,
+      "slots": 12,
+      "sourceTypes": [
+        "vendor"
+      ],
+      "sourceLabels": [
+        "Alyssa Griffith",
+        "Gotri",
+        "Yldan",
+        "Jonathan Chambers",
+        "Pithwick",
+        "Pakwa"
+      ],
+      "zones": [
+        "Darnassus (Alliance)",
+        "Ironforge (Alliance)",
+        "Orgrimmar (Horde)",
+        "Stormwind City (Alliance)",
+        "Thunder Bluff (Horde)",
+        "Undercity (Horde)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 221498,
+      "name": "Old Toolbox",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Stepping Stones"
+      ],
+      "zones": [
+        "The Barrens"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 10051,
+      "name": "Red Mageweave Bag",
+      "implemented": true,
+      "slots": 14,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 1685,
+      "name": "Troll-hide Bag",
+      "implemented": true,
+      "slots": 14,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Solid Chest",
+        "Captain's Chest",
+        "Solid Chest",
+        "Solid Chest",
+        "Solid Chest",
+        "Large Solid Chest",
+        "Large Mithril Bound Chest",
+        "Steel Lockbox",
+        "Reinforced Steel Lockbox",
+        "Cuergo's Hidden Treasure",
+        "Emerald Encrusted Chest"
+      ],
+      "zones": [
+        "",
+        "Burning Steppes, Western Plaguelands, Eastern Plaguelands +1",
+        "Eastern Plaguelands, Winterspring, Felwood",
+        "Searing Gorge, Stranglethorn Vale, Swamp of Sorrows +8",
+        "Tanaris",
+        "Tanaris, The Hinterlands, Azshara",
+        "Western Plaguelands"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 3914,
+      "name": "Journeyman's Backpack",
+      "implemented": true,
+      "slots": 14,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Solid Chest",
+        "Captain's Chest",
+        "Solid Chest",
+        "Solid Chest",
+        "Solid Chest",
+        "Large Solid Chest",
+        "Large Mithril Bound Chest",
+        "Steel Lockbox",
+        "Mysterious Lockbox",
+        "Reinforced Steel Lockbox",
+        "Mithril Lockbox"
+      ],
+      "zones": [
+        "",
+        "Burning Steppes, Western Plaguelands, Eastern Plaguelands +1",
+        "Eastern Plaguelands, Winterspring, Felwood",
+        "Searing Gorge, Stranglethorn Vale, Swamp of Sorrows +8",
+        "Tanaris",
+        "Tanaris, The Hinterlands, Azshara",
+        "Western Plaguelands"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 9587,
+      "name": "Thawpelt Sack",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "The Platinum Discs",
+        "The Platinum Discs"
+      ],
+      "zones": [
+        "Ironforge (Alliance)",
+        "Thunder Bluff (Horde)"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 14046,
+      "name": "Runecloth Bag",
+      "implemented": true,
+      "slots": 14,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 10683,
+      "name": "Explorer's Knapsack",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 11324,
+      "name": "Explorer's Knapsack",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Cortello's Riddle"
+      ],
+      "zones": [
+        "Stranglethorn Vale"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 16057,
+      "name": "Explorer's Knapsack",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 19291,
+      "name": "Darkmoon Storage Box",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "50 Tickets - Darkmoon Storage Box"
+      ],
+      "zones": [
+        "Mulgore"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 4500,
+      "name": "Traveler's Backpack",
+      "implemented": true,
+      "slots": 16,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Solid Chest",
+        "Solid Chest",
+        "Large Solid Chest",
+        "Large Mithril Bound Chest",
+        "Mysterious Lockbox",
+        "Mithril Lockbox",
+        "Reinforced Locked Chest",
+        "Thorium Lockbox"
+      ],
+      "zones": [
+        "",
+        "Burning Steppes, Western Plaguelands, Eastern Plaguelands +1",
+        "Eastern Plaguelands, Winterspring, Felwood",
+        "Western Plaguelands"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 10959,
+      "name": "Demon Hide Sack",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "You Are Rakh'likh, Demon"
+      ],
+      "zones": [
+        "Blasted Lands"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 11742,
+      "name": "Wayfarer's Knapsack",
+      "implemented": true,
+      "slots": 16,
+      "sourceTypes": [
+        "dungeon"
+      ],
+      "sourceLabels": [
+        "Ribbly Screwspigot"
+      ],
+      "zones": [
+        "Blackrock Depths"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 20400,
+      "name": "Pumpkin Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "container",
+        "object",
+        "worlddrop"
+      ],
+      "sourceLabels": [
+        "",
+        "Solid Chest",
+        "Solid Chest",
+        "Large Solid Chest",
+        "Large Mithril Bound Chest",
+        "Thorium Lockbox"
+      ],
+      "zones": [
+        "",
+        "Burning Steppes, Western Plaguelands, Eastern Plaguelands +1",
+        "Eastern Plaguelands, Winterspring, Felwood",
+        "Western Plaguelands"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 226697,
+      "name": "Red Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 14155,
+      "name": "Mooncloth Bag",
+      "implemented": true,
+      "slots": 18,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 260307,
+      "name": "Hyjal Postal Satchel",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 262801,
+      "name": "Barkskin Satchel",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 22679,
+      "name": "Supply Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [
+        "quest"
+      ],
+      "sourceLabels": [
+        "Superior Armaments of Battle - Friend of the Dawn",
+        "Superior Armaments of Battle - Honored Amongst the Dawn",
+        "Superior Armaments of Battle - Revered Amongst the Dawn",
+        "Superior Armaments of Battle - Exalted Amongst the Dawn"
+      ],
+      "zones": [
+        "Eastern Plaguelands"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 217014,
+      "name": "Supply Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 237263,
+      "name": "Supply Bag",
+      "implemented": false,
+      "slots": null,
+      "sourceTypes": [],
+      "sourceLabels": [],
+      "zones": [],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": "Additional reference/variant: capacity, current quest gates, faction, event or source identity requires verification; not auto-approved"
+    },
+    {
+      "itemID": 17966,
+      "name": "Onyxia Hide Backpack",
+      "implemented": true,
+      "slots": 18,
+      "sourceTypes": [
+        "dungeon"
+      ],
+      "sourceLabels": [
+        "Onyxia"
+      ],
+      "zones": [
+        "Onyxia's Lair"
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    },
+    {
+      "itemID": 14156,
+      "name": "Bottomless Bag",
+      "implemented": true,
+      "slots": 20,
+      "sourceTypes": [
+        "crafted"
+      ],
+      "sourceLabels": [
+        "Tailoring"
+      ],
+      "zones": [
+        ""
+      ],
+      "evidence": "Preserved 2026-11-13 Playfulls snapshot plus 2026-11-15 Forever bag/item/quest page review",
+      "unresolved": ""
+    }
+  ]
+}

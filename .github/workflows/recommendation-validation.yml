@@ -1,0 +1,46 @@
+name: Validate bag, geographic and weighted recommendations (no release)
+on:
+  push:
+    branches: [dev/recommendation-pipeline]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: getgear-recommendations-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua 5.1 and 5.4
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lua5.1 lua5.4
+      - name: Reconcile sources diagnostically and preserve approved catalogue
+        run: python3 tools/reconcile_presentation_snapshot.py --diagnostics "$RUNNER_TEMP/getgear-source-diagnostic"
+      - name: Validate both Lua runtimes and all existing and new regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r module; do
+            case "$module" in *.lua) luac5.1 -p "$module"; luac5.4 -p "$module";; esac
+          done < GetGear.toc
+          for test_file in tests/*.lua; do
+            lua5.4 "$test_file" .
+            lua5.1 tests/lua51-test-harness.inc "$test_file" .
+          done
+          for test_file in tests/*.py; do python3 "$test_file"; done
+          python3 -m py_compile tools/reconcile_acquisition_1_60.py tools/capture_acquisition_audit.py tools/build_acquisition_navigation.py
+          lua5.4 tools/audit_acquisition_buttons.lua . "$RUNNER_TEMP/button-coverage.csv"
+          python3 tools/audit_acquisition_presentation.py
+          python3 tools/reconcile_presentation_snapshot.py --verify-only
+          git diff --exit-code -- AcquisitionEvidenceIndex.lua AcquisitionNavigationData.lua ResearchedItemFacts.lua EquipmentCache.lua GeneratedBeta7Evidence.lua GeneratedStatFlags.lua WorldDropBoEIndex.lua
+      - name: Retain validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recommendation-validation-evidence
+          path: |
+            ${{ runner.temp }}/getgear-source-diagnostic/
+            ${{ runner.temp }}/button-coverage.csv
+          retention-days: 14

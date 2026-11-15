@@ -1,7 +1,13 @@
 # GetGear coding-agent guide
 
 <!-- current-research-checkpoint -->
-**Beta9 publication authorised — validation pending:**user tested PRIVATE TEST4 sourceaa96895 and explicitly authorises v0.14.0-beta9 public prerelease. Version/packaging/docs only;no gameplay/data/900hold changes/main/merge. Read [release preparation](docs/source-audit-1-60/reconciliation-20261109/BETA9_RELEASE_PREPARATION.md). Next local+nonreleaseCI/wholecommitreview,exact sourceZIP/tag,draft,upload+verifybothassets,publish+publicverify,STOP. Preserve all prior releases/tags. Do not invoke historical release workflows.
+**Recommendation handover, 15 November 2026:** User authorizes bag acquisition,
+faction-aware geography and per-character weighted stats on a dedicated branch.
+Current branch `dev/recommendation-pipeline`; baseline validated Beta9 `0499287`.
+Read `docs/RECOMMENDATION_HANDOVER.md` and `docs/recommendation-validation.json`.
+Preserve catalogue/source inputs and all 900 candidate holds. Run read-only
+recommendation validation CI; no original-branch bot writes. No package, tag,
+release, main change or merge. Finish validation/reporting, then stop for review.
 <!-- /current-research-checkpoint -->
 
 Read these before work: [durable handover](docs/RECONCILIATION_PROGRESS.md), [release gate](docs/source-audit-1-60/RELEASE_GATE.md), [checkpoint execution plan](docs/OVERNIGHT_WORK_PLAN.md), and the latest CI result. These are authoritative, not chat excerpts.

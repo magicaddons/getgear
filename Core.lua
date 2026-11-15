@@ -7,6 +7,8 @@ events:RegisterEvent("ADDON_LOADED")
 events:RegisterEvent("PLAYER_ENTERING_WORLD")
 events:RegisterEvent("PLAYER_LEVEL_UP")
 events:RegisterEvent("BAG_UPDATE_DELAYED")
+events:RegisterEvent("QUEST_LOG_UPDATE")
+events:RegisterEvent("QUEST_TURNED_IN")
 events:RegisterEvent("ITEM_DATA_LOAD_RESULT")
 events:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
 events:RegisterEvent("UNIT_INVENTORY_CHANGED")
@@ -123,6 +125,8 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if type(db.detail.scale) ~= "number" then db.detail.scale=1 end
         db.specialization=nil -- the manual specialization system is retired
         GetGear.db = db
+        if type(o.hideImpracticalSources) ~= "boolean" then o.hideImpracticalSources = true end
+        if GetGear.InitializeStatPriorities then GetGear:InitializeStatPriorities() end
         if GetGear.AltInventory then GetGear.AltInventory:Initialize() end
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or 1
@@ -137,6 +141,8 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
     elseif event == "UNIT_INVENTORY_CHANGED" then
         if arg1 == "player" and GetGear.RefreshAll then GetGear:RefreshAll() end
     elseif event == "PLAYER_EQUIPMENT_CHANGED" then
+        if GetGear.RefreshAll then GetGear:RefreshAll() end
+    elseif event == "QUEST_LOG_UPDATE" or event == "QUEST_TURNED_IN" then
         if GetGear.RefreshAll then GetGear:RefreshAll() end
     elseif event == "BAG_UPDATE_DELAYED" then
         if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end

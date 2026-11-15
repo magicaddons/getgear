@@ -83,6 +83,8 @@ function GetGear:ShouldDisplayGear(gear,classToken,mode)
     classToken=classToken or self.classToken
     if self.CanClassEquipGear and not self:CanClassEquipGear(gear,classToken) then return false end
     if mode=="completed" or mode=="hidden" then return true end
+    if mode~="preview" and mode~="earlier" and mode~="materials-all"
+        and self.HasAccessibleAcquisition and not self:HasAccessibleAcquisition(gear,mode) then return false end
     local opts=self.db and self.db.overlay
     if opts and opts.showAllValidGear==true then return true end
     -- Full preview and explicitly All-materials are browsing scopes; neither

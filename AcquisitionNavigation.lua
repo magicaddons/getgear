@@ -2,8 +2,15 @@ local _, GetGear = ...
 
 -- Shared, read-only acquisition plans. Character quest progress is queried,
 -- never inferred from equipment status or another character's completion.
-local function data() return GetGear.AcquisitionNavigationData or {items={},sources={},quests={},chains={}} end
+local function data()
+    if GetGear.GetAcquisitionNavigationModel then return GetGear:GetAcquisitionNavigationModel() end
+    return GetGear.AcquisitionNavigationData or {items={},sources={},quests={},chains={}}
+end
 local function get(t,id) return t and (t[id] or t[tostring(id)]) end
+local function itemPlan(gear)
+    if GetGear.GetItemAcquisitionPlan then return GetGear:GetItemAcquisitionPlan(gear) end
+    return get(data().items,gear and gear.itemID)
+end
 function GetGear:GetRecipeSkillRequirement(gear)
     if not gear then return end
     local fact=get(data().recipeRequirements,gear.itemID) or {}
@@ -163,7 +170,8 @@ local function routesForCharacter(model,plan)
         end
         local sideAllowed=not side or activeSide or restricted~=1 and restricted~=2 or restricted==side
         local classAllowed=not classBit or not classMask or activeClass or math.floor(classMask/classBit)%2==1
-        if sideAllowed and classAllowed then useful[#useful+1]=route end
+        if sideAllowed and classAllowed and (not GetGear.IsAcquisitionRouteAllowed
+            or GetGear:IsAcquisitionRouteAllowed(route,model,{browse=true})) then useful[#useful+1]=route end
     end
     return useful
 end
@@ -198,7 +206,7 @@ end
 
 local function compactRecipeSummary(self,gear)
     if not gear or not gear.profession then return end
-    local model=data();local plan=get(model.items,gear.itemID)
+    local model=data();local plan=itemPlan(gear)
     local minimum=self:GetRecipeSkillRequirement(gear)
     local skill=minimum and (" ("..minimum..")") or " (skill unverified)"
     -- Some reviewed gates predate structured offers. Preserve their explicitly
@@ -294,7 +302,7 @@ end
 
 function GetGear:GetCompactRecipeSummary(gear)
     if not gear or not gear.profession then return end
-    local plan=get(data().items,gear.itemID)
+    local plan=itemPlan(gear)
     local routes=routesForCharacter(data(),plan)
     local summary=compactRecipeSummary(self,gear)
     local routine=summary and summary:find('Recipe: '..gear.profession..' trainer',1,true)==1
@@ -317,7 +325,7 @@ end
 
 function GetGear:GetAcquisitionCompactSummary(gear)
     if gear and gear.profession then return self:GetCompactRecipeSummary(gear) end
-    local model=data();local plan=get(model.items,gear and gear.itemID)
+    local model=data();local plan=itemPlan(gear)
     if plan and #(plan.routes or {})>0 and #routesForCharacter(model,plan)==0 then
         return 'Source: no known route for this character; see Guide'
     end
@@ -375,7 +383,7 @@ end
 function GetGear:GetAcquisitionNavigationChoices(gear)
     if not gear then return {} end
     local model=data()
-    local plan=get(model.items,gear.itemID)
+    local plan=itemPlan(gear)
     if not plan and type(gear.acquisitionLocation)=="table" then
         plan={routes={{kind="legacy",location=gear.acquisitionLocation,label=gear.acquisitionLocation.spot}}}
     end
@@ -572,10 +580,18 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
 end
 
 function GetGear:GetAcquisitionOverlayExclusion(gear)
-    if not gear or gear.bagUpgrade then return end
+    if not gear then return end
+    if self.GetEligibleAcquisitionRoutes then
+        local hard=self:GetEligibleAcquisitionRoutes(gear,false)
+        if hard and #hard==0 then return "No currently accessible acquisition route" end
+        local practical=self:GetEligibleAcquisitionRoutes(gear,true)
+        if practical and #practical==0 then return "Opposing-faction leveling sources hidden; see Guide or Display Settings" end
+    end
+    if gear.bagUpgrade then return end
     local policy=get(data().availability,gear.itemID)
     if policy and policy.overlayEligible==false then return policy.reason or "Current Forever availability unconfirmed" end
-    local plan=get(data().items,gear.itemID)
+    if self.GetEligibleAcquisitionRoutes then return end -- shared finished-route policy already evaluated
+    local plan=itemPlan(gear)
     if not plan or #(plan.routes or {})==0 then return end
     local side,_,_,level=travelContext()
     if not side then return end
@@ -587,7 +603,7 @@ function GetGear:GetAcquisitionOverlayExclusion(gear)
             if target.opposingHome then hostile=hostile+1 end
         end
     end
-    if type(level)=="number" and level<=15 and current>0 and current==hostile then
+    if not self.GetEligibleAcquisitionRoutes and type(level)=="number" and level<=15 and current>0 and current==hostile then
         return "Only opposing starting-territory routes are currently practical-level candidates; alternatives remain in the guide"
     end
 end
@@ -624,7 +640,7 @@ function GetGear:GetAcquisitionDirections(gear)
     if self:GetRecipeAcquisitionKind(gear)=="broad-book-drop" then
         out[#out+1]="Physical pattern: broad/random published drop references, not a targeted farm. Listed enemy/zone examples do not confirm current loot. If tradeable, consider the Auction House or player trade; current listings are unknown."
     end
-    local plan=get(data().items,gear and gear.itemID)
+    local plan=itemPlan(gear)
     for _, route in ipairs(routesForCharacter(data(),plan)) do
         if route.kind=="npc_container" then
             out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the NPC drops the container, not guaranteed finished equipment."

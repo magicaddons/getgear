@@ -27,6 +27,12 @@ function GetGear:ShouldDisplayCraftedGear(gear)
     local opts = self.db and self.db.overlay
     if not opts or opts.hideUncraftableCrafts ~= true then return true end
 
+    -- A finished quest/vendor/drop route isn't a personal recipe requirement.
+    local routes=self.GetEligibleAcquisitionRoutes and self:GetEligibleAcquisitionRoutes(gear,false)
+    for _,route in ipairs(routes or {}) do
+        if route.kind=="vendor" or route.kind=="quest" and not route.bookItemID
+            or route.kind=="dungeon" and not route.recipe or route.kind=="named_drop" or route.kind=="world_drop" then return true end
+    end
     local profession = CraftingProfession(gear)
     if not profession then return true end
     if profession == "__UNKNOWN_CRAFT__" then return false end
