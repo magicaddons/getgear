@@ -55,9 +55,9 @@ before implementation. Published packages, releases, tags and main are unchanged
   Values are finite, nonnegative and at most 100. Unedited custom weights retain
   defaults, and zero is supported. Settings live in `GetGear_CharacterDB`.
 - `GearCompare.lua`: retains spell/armor/resistance alias normalization and
-  paired weapon/ring comparisons; incorporates readable tooltip DPS; excludes
+  paired weapon/ring comparisons; incorporates readable tooltip DPS and keeps unreadable weapon DPS unknown; excludes
   potential-only offhands from upgrade qualification. Readable candidate or
-  equipped proc/use effects and unsupported positive stats leave the score
+  equipped proc/use effects and unsupported positive or negative stats leave the score
   unknown rather than inventing effect values. Missing item data remains open.
 - `Core.lua`, `UI.lua`: initialize preferences without schema reset, refresh on
   quest updates, add a Recommendations panel with the geographic toggle and optional stat controls,

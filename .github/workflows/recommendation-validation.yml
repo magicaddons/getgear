@@ -2,6 +2,14 @@ name: Validate bag, geographic and weighted recommendations (no release)
 on:
   push:
     branches: [dev/recommendation-pipeline]
+    paths:
+      - '*.lua'
+      - GetGear.toc
+      - tests/**
+      - tools/**
+      - .github/workflows/recommendation-validation.yml
+      - docs/source-audit-1-60/reconciliation-20261109/reviewed_*.json
+      - docs/source-audit-1-60/reconciliation-20261109/supplementary_crafts.json
   workflow_dispatch:
 permissions:
   contents: read

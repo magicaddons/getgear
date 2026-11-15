@@ -63,9 +63,9 @@ function GetGear:SetCustomStatWeight(key, value)
 end
 
 function GetGear:GetStatWeight(key, gear)
+    if self.IsClassRelevantStat and not self:IsClassRelevantStat(key,gear) then return 0 end
     local row=known[key]
     if not row then return nil end
-    if self.IsClassRelevantStat and not self:IsClassRelevantStat(key,gear) then return 0 end
     local p=self.db and self.db.statPriorities or {}
     local weight=row[3]
     local class=self.classToken
@@ -103,7 +103,7 @@ function GetGear:GetWeightedUpgrade(gear, comparison)
                 for _,stat in ipairs(group.rows or {}) do
                     local weight=self:GetStatWeight(stat.key,gear)
                     if weight then score=score+stat.delta*weight
-                    elseif stat.delta>0 then unknown=true end
+                    elseif math.abs(stat.delta)>0.0001 then unknown=true end
                 end
                 if unknown then uncertain=true end
                 if not unknown and (best==nil or score>best) then best=score end

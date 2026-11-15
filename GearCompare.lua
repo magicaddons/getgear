@@ -287,6 +287,36 @@ function GetGear:GetGearComparison(gear, suppressItemDataRequest, plannedMainHan
         local link,state=Equipped(slots[1])
         groups[1]=MakeGroup(gear.slot,candidate,link and {link} or {},state=="unknown")
     end
+    local weapon=gear.slot=="Main Hand" or gear.slot=="Wand" or gear.slot=="Ranged"
+        or gear.slot=="Thrown" or TWO_HANDED[gear.slot]
+        or gear.slot=="Off Hand" and (gear.armorType=="Dagger" or gear.armorType=="Sword"
+            or gear.armorType=="Axe" or gear.armorType=="Mace" or gear.armorType=="Fist Weapon")
+    if weapon then
+        for _,group in ipairs(groups) do
+            local missing=candidate and candidate.ITEM_MOD_DAMAGE_PER_SECOND_SHORT==nil
+            for _,link in ipairs(group.equippedLinks or {}) do
+                local stats=Stats(link)
+                if stats and stats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT==nil then
+                    local kind
+                    if C_Item and type(C_Item.GetItemInventoryTypeByID)=="function" then
+                        local ok,value=pcall(C_Item.GetItemInventoryTypeByID,link)
+                        if ok then kind=value end
+                    end
+                    -- A shield/frill needs no DPS; an unreadable weapon does.
+                    if kind~=14 and kind~=23 then missing=true end
+                end
+            end
+            if missing then
+                group.dpsUnknown=true
+                group.note=group.note or "Weapon DPS unavailable; showing reported non-DPS stats."
+                local rows={}
+                for _,row in ipairs(group.rows) do
+                    if row.key~="ITEM_MOD_DAMAGE_PER_SECOND_SHORT" then rows[#rows+1]=row end
+                end
+                group.rows=rows
+            end
+        end
+    end
     return {groups=groups}
 end
 

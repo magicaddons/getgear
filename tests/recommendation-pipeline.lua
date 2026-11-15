@@ -158,6 +158,24 @@ C_TooltipInfo={GetHyperlink=function(link)return{lines={{leftText=link=="item:91
 check(a:GetWeightedUpgrade(item(9102))==nil,"equipped unquantified use effect also protects tradeoff")
 C_TooltipInfo=nil
 check(a:GetWeightedUpgrade(item(999999))==nil,"uncached stats stay unknown")
+class="WARRIOR";a.classToken=class;equipped={[16]="item:9103"}
+check(a:GetWeightedUpgrade(item(9104,"Main Hand"))==nil,"missing weapon DPS is not zero")
+check(a:ShouldShowOverlayStatChanges(item(9104,"Main Hand")),"unknown weapon DPS remains a qualified choice")
+C_TooltipInfo={GetHyperlink=function(link)return{lines={{leftText=(link=="item:9104" and "12" or "10").." damage per second"}}}end}
+check(a:GetWeightedUpgrade(item(9104,"Main Hand"))>0,"readable tooltip DPS supplements item stats")
+C_TooltipInfo=nil
+stats["item:9110"]={ITEM_MOD_DAMAGE_PER_SECOND_SHORT=10,ITEM_MOD_STAMINA_SHORT=10}
+stats["item:9111"]={ITEM_MOD_DAMAGE_PER_SECOND_SHORT=12,ITEM_MOD_STAMINA_SHORT=1}
+equipped={[16]="item:9110"}
+check(a:GetWeightedUpgrade(item(9111,"Main Hand"))>0,"known weapon DPS includes stamina loss")
+stats["item:9111"].ITEM_MOD_DAMAGE_PER_SECOND_SHORT=9
+check(a:GetWeightedUpgrade(item(9111,"Main Hand"))<0,"DPS and stamina loss both count")
+class="PRIEST";a.classToken=class;equipped={[5]="item:9100"}
+stats["item:9112"]={ITEM_MOD_INTELLECT_SHORT=20,ITEM_MOD_SPELL_DAMAGE_SHORT=6,UNMODELED_UNIT=1}
+check(a:GetWeightedUpgrade(item(9112))==nil,"unsupported positive unit unscored")
+stats["item:9100"].UNMODELED_UNIT=2;stats["item:9112"].UNMODELED_UNIT=nil
+check(a:GetWeightedUpgrade(item(9112))==nil,"unsupported loss unscored as well")
+stats["item:9100"].UNMODELED_UNIT=nil
 local list={item(9101),item(9102)};a:SortUpgradeRecommendations(list);check(list[1].itemID==9102,"score controls ordering")
 a.Gear={item(9101)};a.db.overlay.showAllValidGear=true
 check(#a:GetItems("available")==1,"poor weighted choice remains in full guide")

@@ -5,7 +5,7 @@
     "lua54Programs": 20,
     "lua51Programs": 20,
     "luaProgramsPassedBothRuntimes": true,
-    "newPipelineAssertions": 323,
+    "newPipelineAssertions": 330,
     "pythonRegressions": 4,
     "addonModulesSyntaxCheckedPerRuntime": 29,
     "catalogueButtonAudit": "PASS:7707 items/36669 class-source checks, zero cache requests",
@@ -13,7 +13,8 @@
     "sourceReconciliation": {
       "exitCode": 0,
       "approved17FilesRestoredExactly": true,
-      "unrelatedNewSourcesAdopted": false
+      "unrelatedNewSourcesAdopted": false,
+      "secondFreshCaptureExitCode": 0
     },
     "protectedInputFilesByteExact": 97,
     "lua54PassLines": 20,
@@ -22,7 +23,11 @@
     "buttonsPassLines": 1
   },
   "ci": {
-    "status": "pending push",
+    "status": "follow-up pending push",
+    "initialValidatedCommit": "ce71c9608784eececd85fb7f79863bbfcd3c0a8c",
+    "initialRunID": 43672751063,
+    "initialConclusion": "success",
+    "initialRunURL": "https://github.com/magicaddons/getgear/actions/runs/43672751063",
     "workflow": ".github/workflows/recommendation-validation.yml"
   },
   "releaseCreated": false,
