@@ -8,6 +8,11 @@ assets remain unchanged. Historical status entries below remain provenance;
 they do not replace the current handover. Actual-client equipment comparison
 and acquisition/navigation acceptance remains required.
 
+Development validation complete: `a6b14963`, local115 checks and
+[non-release CI43715444716](https://github.com/magicaddons/getgear/actions/runs/43715444716)
+PASS on Lua5.1/5.4, all nine classes/both factions, source reconciliation and
+catalogue audits. This is not actual-client acceptance or release authorization.
+
 **Status: research resumed after verified Beta 8 publication. No build/package/tag/release/merge/main changes authorised by the current research request.**
 Beta 8 is already published and independently verified; its original immutable source/assets must remain untouched. Historical release-blocker and pause entries below describe prior states, not current instructions. Offline validation is not live-client acceptance.
 

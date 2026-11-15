@@ -1,13 +1,84 @@
 {
-  "recordedUTC": "2026-11-15T12:45:15.906160+00:00",
+  "recordedUTC": "2026-11-15T12:51:01.507961+00:00",
   "branch": "recommendation-sources-stat-priorities",
   "mainUnchangedAt": "4ba2a850c4e3933b85f40c82a50b98314f117d80",
   "acceptedGameplaySource": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3",
   "latestAcceptedSourceDocumentation": "0958954a542380173e4382e66bfd950738415162",
   "baselineIntegrationCommit": "1197104827266b7d49838c7de3c72e3ecfe49601",
-  "implementationCommit": null,
+  "implementationCommit": "a6b149632db883829b25b0261f83282efacaf361",
   "githubCI": {
-    "status": "pending branch push"
+    "conclusion": "success",
+    "headSha": "a6b149632db883829b25b0261f83282efacaf361",
+    "jobs": [
+      {
+        "completedAt": "2026-11-15T12:47:26Z",
+        "conclusion": "success",
+        "databaseId": 132815857668,
+        "name": "validate",
+        "startedAt": "2026-11-15T12:45:22Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install pinned Lua interpreters without changing the repository",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Fresh reconciliation with accepted source data preserved",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Integrated source, comparison, UI and saved-settings regressions",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Keep validation receipts (no addon package)",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 13,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/magicaddons/getgear/actions/runs/43715444716/job/132815857668"
+      }
+    ],
+    "name": "Validate bags, source access and stat priorities (no release)",
+    "status": "completed",
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43715444716",
+    "decodedJobLogInspected": true,
+    "checks": 115,
+    "receipt": "github-checks.txt",
+    "artifactURL": "https://github.com/magicaddons/getgear/actions/runs/43715444716/artifacts/14162357075",
+    "artifactDownloadedAndVerifiedLocally": false,
+    "artifactDownloadLimitation": "CLI log/artifact redirect downloads returned HTTP403. Complete decoded job logs were independently retrieved through the GitHub connector; artifact bytes are not claimed verified."
   },
   "local": {
     "checks": 115,
@@ -52,5 +123,45 @@
   "createdOrModifiedReleaseOrTag": false,
   "additionalTargetedChecks": [
     "Latest stat-priority assertions on Lua5.4 and Lua5.1: item completely lacking selected Spirit can still win after accounting for its full loss. PASS."
+  ],
+  "comparisonURL": "https://github.com/magicaddons/getgear/compare/11971048...recommendation-sources-stat-priorities",
+  "filesChangedByImplementation": [
+    ".github/workflows/recommendation-validation.yml",
+    "AGENTS.md",
+    "AcquisitionNavigation.lua",
+    "BagQuestData.lua",
+    "BagUpgrades.lua",
+    "Core.lua",
+    "GearCompare.lua",
+    "GearRelevance.lua",
+    "GetGear.toc",
+    "GuideEngine.lua",
+    "GuideState.lua",
+    "README.md",
+    "StatPriorities.lua",
+    "UI.lua",
+    "docs/RECONCILIATION_PROGRESS.md",
+    "docs/recommendation-audit/IMPLEMENTATION.md",
+    "docs/recommendation-audit/bag-catalogue-audit.csv",
+    "docs/recommendation-audit/bag-quest-evidence.json",
+    "docs/recommendation-audit/equipment-source-eligibility.csv",
+    "docs/recommendation-audit/fresh-reconciliation.json",
+    "docs/recommendation-audit/local-checks.json",
+    "docs/recommendation-audit/local-checks.txt",
+    "docs/recommendation-audit/local-summary.json",
+    "docs/recommendation-audit/validation.json",
+    "docs/source-audit-1-60/RELEASE_GATE.md",
+    "tests/acquisition-navigation.lua",
+    "tests/beta4-performance.lua",
+    "tests/beta7-acquisition-reconciled.lua",
+    "tests/full-toc-startup.lua",
+    "tests/quest-bag-recommendations.lua",
+    "tests/recommendation-priorities.lua",
+    "tests/source-faction-eligibility.lua",
+    "tests/stat-priority-settings.lua",
+    "tools/audit_recommendation_sources.lua",
+    "tools/build_bag_quest_catalogue.py",
+    "tools/export_navigation_inputs.lua",
+    "tools/validate_recommendations.py"
   ]
 }

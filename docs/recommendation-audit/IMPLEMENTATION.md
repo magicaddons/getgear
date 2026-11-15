@@ -198,9 +198,21 @@ the two new modules. No existing eligibility/material/source integrity assertion
 was removed.
 
 Final local and GitHub receipts, branch/commit URLs and exact preservation
-hashes are recorded in [validation.json](validation.json) after completion.
+hashes are recorded in [validation.json](validation.json).
 Automated results do **not** confirm Forever rendering, live source availability,
 quest acceptance or actual inventory-cache behavior.
+
+Final gate: **PASS locally and in [non-release CI43715444716](https://github.com/magicaddons/getgear/actions/runs/43715444716)**,
+job132815857668, source `a6b149632db883829b25b0261f83282efacaf361`. All115 command
+checks passed, including23 Lua regressions on each version,28-module syntax on
+each version, four Python generation regressions, both catalogue audits and20
+mocked release safety tests. Fresh reconciliation passed and restored the
+accepted snapshot. [Local receipts](local-checks.txt) and [timestamped CI checks](github-checks.txt)
+are retained. The complete decoded job log was independently read through the
+GitHub connector; CLI artifact/log redirect downloads returned403, so no local
+artifact-byte verification is claimed. There is no failed or pending required
+gate. Final receipt/CSV line-ending cleanup is documentation only; runtime
+continues to match the tested source commit exactly.
 
 In-game acceptance before any release:
 
@@ -226,3 +238,28 @@ In-game acceptance before any release:
 7. Reload and switch characters; verify independent mode/weights, defaults reset,
    preview isolation, settings fit/wrapping/scale, tracked materials, inventory
    browsing and progress. No real-client validation was performed here.
+
+## Git summary and review scope
+
+- Branch: `recommendation-sources-stat-priorities` (pushed; no PR, merge to main or release).
+- `11971048`: integrate the accepted Beta9 gameplay/source handover with current
+  main's release tooling, on this isolated branch.
+- `a6b14963`: the implementation, evidence, regression suites and validation
+  workflow;37 changed files. The subsequent receipt commit changes documentation
+  only. [Exact implementation file list](changed-files.txt).
+- [Review the implementation against its integrated baseline](https://github.com/magicaddons/getgear/compare/11971048...recommendation-sources-stat-priorities).
+  This avoids conflating the prerequisite recovery of accepted gameplay data
+  with the three new improvements.
+- Main remains `4ba2a850c4e3933b85f40c82a50b98314f117d80`; Beta9 tag still peels
+  to `04992876bd4f50b66d6b6dd78d00b32cd0594cd3`. Existing Beta9 ZIP is unchanged:
+  2,023,756 bytes, SHA256
+  `c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15`.
+  Release helpers, publishing workflow, accepted catalogue/stat/material data
+  and navigation coordinates/marker renderer were hash-checked unchanged.
+
+Primary implementation files: `BagUpgrades.lua` / `BagQuestData.lua` and its
+generator/evidence; `AcquisitionNavigation.lua` / `GuideEngine.lua` /
+`GuideState.lua` for shared source access; `StatPriorities.lua` /
+`GearCompare.lua` / `GearRelevance.lua` / `Core.lua` / `UI.lua` for scoring,
+settings and integration; four new regression scripts plus the read-only
+validator/workflow. Source and bag coverage CSVs retain the unresolved cases.

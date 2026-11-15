@@ -17,6 +17,12 @@ accepted acquisition snapshot. New quest-bag evidence is an independent,
 reviewed overlay. Preserve all 900 historical candidate holds and unresolved
 live-source qualifications. In-game acceptance is still required before release.
 
+Completed development gate: implementation `a6b14963`, local115 checks PASS;
+non-release CI43715444716/job132815857668 SUCCESS, all115 commands plus fresh
+reconciliation PASS, decoded full job log inspected. Final receipts are under
+`docs/recommendation-audit/`. Subsequent receipt commits are documentation only.
+Stop for actual-client acceptance; no release/main/package action is authorized.
+
 <!-- current-research-checkpoint -->
 **Beta9 upload BLOCKED — STOP:**validated release source/tag0499287,CI43569430115 PASS27;publicZIPsha c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15. Draft445097507 exists/unpublished/prerelease/zeroassets;uploads.github.com returned401Badcredentials. Read [release handover](docs/BETA9_RELEASE_HANDOVER.md). Exactresume needs upload-capableauthentication/manualupload to existingdraft,download+verifybothassets beforepublish/publicverify. Userauthorisation persists;do notcreate duplicate release/tag/change source/publish incomplete draft. Allpriorreleases/tags/main/900holds/gameplay/data preserved;no research/features/merge.
 <!-- /current-research-checkpoint -->
