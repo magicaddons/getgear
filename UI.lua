@@ -368,6 +368,12 @@ local function Describe(gear, previewMode)
             desc=desc.."\n"..research.details
         end
     end
+    -- Keep raw multi-faction research in the catalogue, but direct the player
+    -- only through eligible routes. Shared directions retain per-source gates.
+    if GetGear.GetFactionAcquisitionDescription then
+        local eligible=GetGear:GetFactionAcquisitionDescription(gear)
+        if eligible then desc=eligible end
+    end
     if gear.suitabilityWarning and gear.suitabilityWarning~="" and
         not desc:find(gear.suitabilityWarning,1,true) then
         desc=desc.."\n"..gear.suitabilityWarning
@@ -2190,8 +2196,8 @@ end
 -- Settings in separate window; overlay stays uncluttered while playing.
 -- =====================================================================
 local settings = CreateFrame("Frame", "GetGear_OverlaySettings", UIParent, "BasicFrameTemplateWithInset")
-settings:SetSize(418, 692)
-settings:SetPoint("CENTER", UIParent, "CENTER", 270, 50)
+settings:SetSize(780, 692)
+settings:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 -- Settings must still be usable when opened from the foreground detail guide.
 settings:SetFrameStrata("DIALOG")
 if settings.SetToplevel then settings:SetToplevel(true) end
@@ -2394,12 +2400,79 @@ materialScopeButton:SetScript("OnLeave",HideItemTooltip)
 local showOverlay=NewButton(settings,"Show / hide tracker",165,24)
 showOverlay:SetPoint("BOTTOMLEFT",20,18)
 showOverlay:SetScript("OnClick",function() GetGear:ToggleOverlay() end)
+
+local priorityTitle=NewText(settings,"GameFontNormal",325)
+priorityTitle:SetPoint("TOPLEFT",425,-42)
+priorityTitle:SetText("Stat priorities (this character)")
+local priorityHelp=NewText(settings,"GameFontHighlightSmall",325)
+priorityHelp:SetPoint("TOPLEFT",425,-70)
+priorityHelp:SetText("Balanced keeps the existing class-aware recommendations. Priority gives one stat 5x its normal weight. Custom uses your weights; unlisted stats count as zero.\n\nPriority and Custom compare all gains AND losses. Zero or negative net benefit is omitted from recommendations. Unknown comparisons stay visible.\n\nShow all valid equipment restores browsing; Preview uses no live equipment scoring. Bag capacity is evaluated separately.")
+local priorityMode=NewButton(settings,"",325,25)
+priorityMode:SetPoint("TOPLEFT",425,-250)
+local priorityStat=NewButton(settings,"",325,25)
+priorityStat:SetPoint("TOPLEFT",425,-287)
+local weightLabel=NewText(settings,"GameFontHighlightSmall",325)
+weightLabel:SetPoint("TOPLEFT",425,-328)
+weightLabel:SetText("Custom weight for selected stat (0–1000)")
+local weightEdit=CreateFrame("EditBox","GetGear_StatWeight",settings,"InputBoxTemplate")
+weightEdit:SetSize(110,25)
+weightEdit:SetPoint("TOPLEFT",433,-353)
+weightEdit:SetAutoFocus(false)
+weightEdit:SetMaxLetters(12)
+local applyWeight=NewButton(settings,"Apply weight",135,25)
+applyWeight:SetPoint("LEFT",weightEdit,"RIGHT",15,0)
+local priorityMessage=NewText(settings,"GameFontHighlightSmall",325)
+priorityMessage:SetPoint("TOPLEFT",425,-399)
+local resetPriorities=NewButton(settings,"Restore Balanced defaults",325,25)
+resetPriorities:SetPoint("TOPLEFT",425,-478)
+local selectedPriorityStat
+local function RefreshPrioritySettings()
+    local p=GetGear:InitializeStatPriorities();if not p then return end
+    local stats=GetGear:GetSupportedPriorityStats()
+    local selected
+    for _,d in ipairs(stats) do if d[1]==selectedPriorityStat then selected=d end end
+    if not selected then
+        for _,d in ipairs(stats) do if d[1]==p.priority then selected=d end end
+    end
+    selected=selected or stats[1];selectedPriorityStat=selected and selected[1]
+    priorityMode:SetText("Mode: "..({balanced="Balanced",priority="Prioritise one stat",custom="Advanced custom weights"})[p.mode].." (click)")
+    priorityStat:SetText((p.mode=="priority" and "Priority: " or "Stat: ")..(selected and selected[2] or "Unavailable").." (click)")
+    weightEdit:SetText(tostring(selected and (p.weights[selected[1]] or 0) or 0))
+    weightEdit:SetEnabled(p.mode=="custom");applyWeight:SetEnabled(p.mode=="custom")
+    priorityMessage:SetText(p.mode=="balanced" and "Balanced uses the established class-aware filters. Your progress and display preferences are saved separately."
+        or "Click Stat to cycle relevant attributes. Each applied weight is saved for this character. Scores use reported base stats; effects/procs are not simulated.")
+end
+priorityMode:SetScript("OnClick",function()
+    local nextMode={balanced="priority",priority="custom",custom="balanced"}
+    GetGear:SetStatPriorityMode(nextMode[GetGear:GetStatPriorityMode()])
+    if GetGear:GetStatPriorityMode()=="priority" and selectedPriorityStat then GetGear:SetPriorityStat(selectedPriorityStat) end
+    RefreshPrioritySettings()
+end)
+priorityStat:SetScript("OnClick",function()
+    local stats=GetGear:GetSupportedPriorityStats();local index=0
+    for i,d in ipairs(stats) do if d[1]==selectedPriorityStat then index=i;break end end
+    local selected=stats[index%#stats+1];selectedPriorityStat=selected[1]
+    if GetGear:GetStatPriorityMode()=="priority" then GetGear:SetPriorityStat(selectedPriorityStat) end
+    RefreshPrioritySettings()
+end)
+local function ApplyPriorityWeight()
+    if GetGear:GetStatPriorityMode()~="custom" then return end
+    if not GetGear:SetCustomStatWeight(selectedPriorityStat,tonumber(weightEdit:GetText())) then
+        priorityMessage:SetText("Enter a finite number from 0 to 1000. Weight was not changed.");return
+    end
+    weightEdit:ClearFocus();RefreshPrioritySettings()
+end
+applyWeight:SetScript("OnClick",ApplyPriorityWeight)
+weightEdit:SetScript("OnEnterPressed",ApplyPriorityWeight)
+weightEdit:SetScript("OnEscapePressed",function(self) self:ClearFocus();RefreshPrioritySettings() end)
+resetPriorities:SetScript("OnClick",function() GetGear:ResetStatPriorities();selectedPriorityStat=nil;RefreshPrioritySettings() end)
 local closeSettings=NewButton(settings,"Close",88,24)
 closeSettings:SetPoint("BOTTOMRIGHT",-18,18)
 closeSettings:SetScript("OnClick",function() settings:Hide() end)
 
 function GetGear:ShowSettings()
     if not self.db then return end
+    RefreshPrioritySettings()
     -- Within DIALOG, put settings above the detailed guide while it is open.
     settings:SetFrameLevel(math.max(settings:GetFrameLevel(), window:GetFrameLevel() + 20))
     settings:Show()

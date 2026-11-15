@@ -44,9 +44,12 @@ local function NotifyLevel(newLevel)
     if not GetGear.db or GetGear.db.notifications == false then return end
     local count = 0
     for _, item in ipairs(GetGear.Gear) do
+        if GetGear.GetRecommendationRecord then item=GetGear:GetRecommendationRecord(item) end
         if item.targetLevel == newLevel and VerifiedNotificationSource(item)
             and not GetGear:GetStatus(item) and not GetGear:IsHidden(item)
             and not GetGear:IsGearEquipped(item)
+            and (not GetGear.HasEligibleAcquisitionSource or GetGear:HasEligibleAcquisitionSource(item))
+            and (not GetGear.ShouldRecommendByStatPriority or GetGear:ShouldRecommendByStatPriority(item))
             and (not GetGear.ShouldDisplayGear or GetGear:ShouldDisplayGear(item,GetGear.classToken,"available"))
             and (not GetGear.ShouldShowOverlayAcquisition or GetGear:ShouldShowOverlayAcquisition(item))
             and (not GetGear.ShouldDisplayCraftedGear or GetGear:ShouldDisplayCraftedGear(item)) then
@@ -123,6 +126,7 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if type(db.detail.scale) ~= "number" then db.detail.scale=1 end
         db.specialization=nil -- the manual specialization system is retired
         GetGear.db = db
+        if GetGear.InitializeStatPriorities then GetGear:InitializeStatPriorities() end
         if GetGear.AltInventory then GetGear.AltInventory:Initialize() end
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or 1

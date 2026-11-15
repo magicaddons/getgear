@@ -2,7 +2,8 @@
 local root = arg[1] or "."
 local addon = {}
 local skip = { ["Core.lua"]=true, ["UI.lua"]=true, ["AltInventory.lua"]=true,
-    ["MapNavigation.lua"]=true, ["AcquisitionNavigationData.lua"]=true }
+    ["MapNavigation.lua"]=true, ["AcquisitionNavigationData.lua"]=true,
+    ["BagQuestData.lua"]=true } -- bag-only overlay is not equipment-generator input
 local toc = assert(io.open(root.."/GetGear.toc")):read("*a")
 for file in toc:gmatch("[^\r\n]+") do
     if file:match("%.lua$") and not skip[file] then

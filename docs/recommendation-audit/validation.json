@@ -1,0 +1,56 @@
+{
+  "recordedUTC": "2026-11-15T12:45:15.906160+00:00",
+  "branch": "recommendation-sources-stat-priorities",
+  "mainUnchangedAt": "4ba2a850c4e3933b85f40c82a50b98314f117d80",
+  "acceptedGameplaySource": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3",
+  "latestAcceptedSourceDocumentation": "0958954a542380173e4382e66bfd950738415162",
+  "baselineIntegrationCommit": "1197104827266b7d49838c7de3c72e3ecfe49601",
+  "implementationCommit": null,
+  "githubCI": {
+    "status": "pending branch push"
+  },
+  "local": {
+    "checks": 115,
+    "modules": 28,
+    "lua54Regressions": 23,
+    "lua51Regressions": 23,
+    "failures": 0,
+    "protectedAcquisitionSnapshotExact": true,
+    "actualClientTested": false,
+    "statement": "Offline/synthetic validation only. No addon package, tag, release or live acquisition claim."
+  },
+  "reconciliation": {
+    "exitCode": 0,
+    "acceptedSnapshotRestoredExactly": true,
+    "freshUnadoptedOutputsKeptOutsideRepository": true,
+    "receipt": "fresh-reconciliation.json"
+  },
+  "preservedSourceSHA256": {
+    "EquipmentCache.lua": "26d664699fb9c379545523950ad526cca466d6425ba55a191e56163fb72175dd",
+    "ResearchedItemFacts.lua": "f04e844e6283930b579d152d2e085677e9fc222bedb595ba2229d6b754da8051",
+    "GeneratedBeta7Evidence.lua": "b23e3b688585032312054e1ec5676ab55140629deebdfb71f7abd19778d9dfe6",
+    "GeneratedStatFlags.lua": "047c437981c54d9a3a3d60c9730e6b41e996333dac3d7436d583010feb8200bf",
+    "SourceEnrichment.lua": "958986371d7d8134b3161011d8336129bfb106143a1e82745be52ca9a4188f87",
+    "AcquisitionEvidenceIndex.lua": "0b207945423fccc9461f32ed65fbc978c93fbef25437add63cf436f6b0a32ee0",
+    "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
+    "Materials.lua": "972932157bf55d68200f7149d4d88ff8b149b36b054beb2abd0d2b268070cc7d",
+    "RecipeKnowledge.lua": "1a1ca65b2e626127a460a7dcdb286c68a1f10b85b327a99c9bf7fb51bb89740a",
+    "AltInventory.lua": "4b4fec128ac263f03eaafa6170df63ac1d38bc5ab57e8b2cf630b57882e14ebf",
+    "CraftingVisibility.lua": "e97ae0b1e9bed45fd5310f81863729a1f58f74deb77ad22495b31fbde2931bff",
+    "TalentAwareness.lua": "3da0d92394cb33015dfa92bee31f6467cdbfc8cca77b4b93841cd5fce21f3026",
+    "WorldDropBoEIndex.lua": "e513007214fd7081f66100a9c3e92fc701d3f8456d4300dc2d3889d030c0719c",
+    "MapNavigation.lua": "0445ac2feceaea9f19b4c134e00807956e4a4496440bcfc30eadac09aa0afedc"
+  },
+  "existingBeta9ZIP": {
+    "sha256": "c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15",
+    "bytes": 2023756,
+    "unchangedFromMain": true
+  },
+  "releaseToolingUnchangedFromMain": true,
+  "actualClientTested": false,
+  "createdNewAddonPackage": false,
+  "createdOrModifiedReleaseOrTag": false,
+  "additionalTargetedChecks": [
+    "Latest stat-priority assertions on Lua5.4 and Lua5.1: item completely lacking selected Spirit can still win after accounting for its full loss. PASS."
+  ]
+}

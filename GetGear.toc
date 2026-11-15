@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Title: GetGear
-## Notes: Alliance class-eligible gear 1–60 with source and crafting evidence (WoW Forever)
+## Notes: Class-eligible gear 1–60 with faction-aware sources, bags and stat priorities (WoW Forever)
 ## Version: 0.14.0-beta9
 ## SavedVariables: GetGear_AccountDB
 ## SavedVariablesPerCharacter: GetGear_CharacterDB
@@ -19,6 +19,7 @@ GuideEngine.lua
 GuideState.lua
 Materials.lua
 AcquisitionNavigationData.lua
+BagQuestData.lua
 AcquisitionNavigation.lua
 MapNavigation.lua
 AltInventory.lua
@@ -29,5 +30,6 @@ CraftingVisibility.lua
 TalentAwareness.lua
 GearRelevance.lua
 GearCompare.lua
+StatPriorities.lua
 Core.lua
 UI.lua

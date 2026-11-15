@@ -2375,3 +2375,21 @@ User reports PRIVATE TEST4 tested in WoW Forever and explicitly authorises publi
 ## Beta9 release validation complete — publication BLOCKED at asset upload
 
 Exact release/package/tag source04992876bd4f50b66d6b6dd78d00b32cd0594cd3;all26gameplay/map bytes match acceptedPRIVATE_TEST4aa96895/approveddata frozen.27local/19Lua5.1/26syntaxboth/36extractedpackage regressions PASS;CI43569430115/job132370346297 SUCCESS27timestampedPASS+26syntax,wholepost-CIdiffreviewed/no bot. PublicZIPGetGear-v0.14.0-beta9.zip2023756bytes/SHA256c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15. Newtag verified. Draft445097507 created;uploads.github.com rejected ZIP withHTTP401Badcredentials. Verified draft=true/prerelease=true/zeroassets;NOTpublished. Allpriorrelease/assetmetadata/tags/main unchanged. Read docs/BETA9_RELEASE_HANDOVER.md and beta9_release_state.json in reconciliationdirectory. Exactresume:upload-capableauthentication/manualupload to existingdraft,download+verifybothassets,thenpublish+publicverify. Authorisation persists,butSTOPnowperuser'supload-blocker instruction;no duplicate release/tag/research/feature/merge.
+## Current development — recommendation integration, 15 November 2026
+
+Current user steering authorizes three improvements on the isolated
+`recommendation-sources-stat-priorities` branch: quest bags, source-level
+faction eligibility and per-character stat priorities. Accepted Beta9 gameplay
+and subsequent source-branch handover were integrated as `11971048`, preserving
+main's release tooling and existing release assets. The old main checkout alone
+was not an adequate implementation baseline.
+
+See [implementation and acceptance report](recommendation-audit/IMPLEMENTATION.md).
+The 94-row normal-bag audit adds 22 missing published quest-bag candidates beside
+Canvas Latchbag (23 total), with 50 quest-page references and explicit unresolved
+cases. All 7,707 equipment IDs / 36,669 class entries, accepted 17-file acquisition
+snapshot and 900 held candidates remain intact. Per-source projection is shared
+by recommendations, materials, descriptions and navigation; geography alone
+does not veto a shared source. Priority/custom scoring uses complete net deltas;
+Balanced retains established behavior. No package/release/main/tag action is
+authorized. Final local/CI receipts are linked in the implementation report.

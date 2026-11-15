@@ -632,7 +632,7 @@ do
  assert(not a:ShouldShowOverlayAcquisition({itemID=2}),"genuinely opposing-faction-only source is not ordinary Alliance overlay recommendation")
  d.sources['npc:5']={name="Neutral drop",locations={{zone="Tirisfal Glades",x=35,y=50}}}
  d.items['3']={routes={{kind="named_drop",source="npc:5"}}}
- assert(not a:ShouldShowOverlayAcquisition({itemID=3}),"low-level neutral drop in opposing home territory is a travel preference,not faction-exclusive")
+ assert(a:ShouldShowOverlayAcquisition({itemID=3}),"shared sources remain eligible regardless of starting-territory travel preferences")
  assert(#a:GetAcquisitionNavigationChoices({itemID=3})==1,"inconvenient neutral source remains in guide")
  a.level=30;assert(a:ShouldShowOverlayAcquisition({itemID=3}),"not a blanket hostile-zone blacklist")
  a.level=5;C_Map={GetBestMapForUnit=function()return 99 end,GetMapInfo=function()return{name="Tirisfal Glades"}end}
@@ -650,7 +650,7 @@ do
  assert(a:GetRecipeAcquisitionKind({itemID=7280})=="broad-book-drop")
  assert(not a:ShouldShowOverlayAcquisition({itemID=241089}),"actual Scarlet Dagger version warning suppresses compact recommendation")
  a.level=5;C_Map=nil
- assert(not a:ShouldShowOverlayAcquisition({itemID=3334}),"Farmer's Shovel level5 Alliance source travel is not practical")
+ assert(a:ShouldShowOverlayAcquisition({itemID=3334}),"Farmer's Shovel has separate neutral drop leads; the level14 quest and travel risk cannot veto those routes")
  a.level=14
  local first=a:GetAcquisitionMapTarget({itemID=3334})
  assert(first and first.zone=="Westfall"and first.questID==79008,"Alliance variant begins in Westfall,not Horde territory or final turn-in")

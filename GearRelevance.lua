@@ -29,9 +29,9 @@ local SCHOOLS={
     HUNTER={Nature=true,Arcane=true,Fire=true},ROGUE={Nature=true},WARRIOR={},
 }
 GetGear.ClassOffensiveSchools=SCHOOLS
-function GetGear:IsClassRelevantStat(key,gear,class)
+function GetGear:IsClassRelevantStat(key,gear,class,strict)
     class=class or self.classToken
-    if not class or self.db and self.db.overlay and self.db.overlay.showAllValidGear then return true end
+    if not class or not strict and self.db and self.db.overlay and self.db.overlay.showAllValidGear then return true end
     local school=type(key)=='string' and key:match('^ITEM_MOD_(%u+)_DAMAGE_SHORT$')
     if school then
         school=school:sub(1,1)..school:sub(2):lower()

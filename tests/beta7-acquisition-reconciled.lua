@@ -337,7 +337,9 @@ for _,r in ipairs(tailoringBooks) do
     assert(describe(item,false):find("#"..r[2],1,true),"Guide retains book identity")
     assert(item.acquisitionResearch.confidence=="published-forever-recipe-vendor-reference")
     assert(not text:find("Boss:",1,true))
-    assert(describe(item,false):find("Jim'bek",1,true),"Guide lost Horde source")
+    assert(not describe(item,false):find("Jim'bek",1,true),"Alliance guide must describe its eligible seller")
+    assert(item.acquisitionResearch.sourceSummary:find("Jim'bek",1,true)
+        or item.acquisitionResearch.details:find("Jim'bek",1,true),"Original Horde provenance must remain in catalogue research")
 end
 UnitFactionGroup=previousSourceFaction
 

@@ -1,5 +1,22 @@
 # GetGear coding-agent guide
 
+## Current development handover — 15 November 2026
+
+The current user authorizes implementation, audit, tests and commits for quest
+bags, per-source faction access and character stat priorities. This supersedes
+historical STOP/release instructions below. Work is isolated on
+`recommendation-sources-stat-priorities`, integrating accepted Beta9 gameplay
+source `04992876` / latest source-branch documentation `0958954a` with current
+main's release tooling. Do not modify main, tags, releases or existing assets.
+Do not package this development revision without further authorization.
+
+Read `docs/recommendation-audit/IMPLEMENTATION.md`. Run the read-only
+`.github/workflows/recommendation-validation.yml` gate and
+`tools/validate_recommendations.py`; its fresh reconciliation retains the
+accepted acquisition snapshot. New quest-bag evidence is an independent,
+reviewed overlay. Preserve all 900 historical candidate holds and unresolved
+live-source qualifications. In-game acceptance is still required before release.
+
 <!-- current-research-checkpoint -->
 **Beta9 upload BLOCKED — STOP:**validated release source/tag0499287,CI43569430115 PASS27;publicZIPsha c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15. Draft445097507 exists/unpublished/prerelease/zeroassets;uploads.github.com returned401Badcredentials. Read [release handover](docs/BETA9_RELEASE_HANDOVER.md). Exactresume needs upload-capableauthentication/manualupload to existingdraft,download+verifybothassets beforepublish/publicverify. Userauthorisation persists;do notcreate duplicate release/tag/change source/publish incomplete draft. Allpriorreleases/tags/main/900holds/gameplay/data preserved;no research/features/merge.
 <!-- /current-research-checkpoint -->

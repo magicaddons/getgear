@@ -70,7 +70,7 @@ end
 GetGear.GuideDefinitions={}
 GetGear.EquipmentByClass={}
 for _,class in ipairs(CLASSES) do
-    GetGear.GuideDefinitions[class]={faction="Alliance",label=class}
+    GetGear.GuideDefinitions[class]={faction="Both",label=class}
     GetGear.EquipmentByClass[class]={}
 end
 
@@ -126,7 +126,7 @@ end
 function GetGear:SelectCurrentGuide()
     local name,token,faction,race=CharacterIdentity()
     self.className,self.classToken,self.faction,self.race=name,token,faction,race
-    self.Gear=(faction=="Alliance" and self.EquipmentByClass[token]) or {}
+    self.Gear=self.EquipmentByClass[token] or {}
     return #self.Gear
 end
 
@@ -138,9 +138,6 @@ end
 
 function GetGear:GetGuideEmptyMessage()
     if not self.classToken then return "Waiting for character information..." end
-    if self.faction~="Alliance" then
-        return "GetGear currently has Alliance acquisition routes; Horde routes need separate verification."
-    end
     if not self.EquipmentByClass[self.classToken] then
         return "No researched equipment available for this class."
     end

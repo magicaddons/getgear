@@ -1,8 +1,10 @@
 # GetGear
 
+Development branch: quest bags, source eligibility and per-character stat priorities are documented in [the implementation audit](docs/recommendation-audit/IMPLEMENTATION.md). This work is not a new release; the existing Beta 9 assets are unchanged.
+
 **An in-game levels 1–60 gear catalogue and crafting planner for World of Warcraft Forever.**
 
-GetGear helps **Alliance characters across all nine classes** browse class-equippable equipment from **level 1 through 60**, find documented acquisition leads, plan crafting materials, and track items they want to obtain. It is an **equipment information guide**, not a best-in-slot ranking or a specialization-based recommendation engine.
+GetGear helps **characters across all nine classes and both factions** browse class-equippable equipment from **level 1 through 60**, find documented acquisition leads, plan crafting materials, and track items they want to obtain. Source eligibility is evaluated per acquisition route; unresolved access stays labelled. Optional stat priorities assist equipment comparisons without claiming best-in-slot or combat simulation.
 
 > **Beta status:** Coverage is broad, but not every item or source has been verified in the live WoW Forever client. Where acquisition, recipe or availability information is uncertain, treat it as a lead rather than a guaranteed route.
 
@@ -18,7 +20,7 @@ Open the release page and download **`GetGear-v0.14.0-beta8.zip`** from **Assets
 
 ## Features
 
-- **Levels 1–60, all nine classes:** A unified catalogue of **7,707 distinct equipment item IDs**, indexed into **36,341 class-equippable item objectives**. These are candidates, not 36,341 individually verified upgrades.
+- **Levels 1–60, all nine classes:** A unified catalogue of **7,707 distinct equipment item IDs**, indexed into **36,669 class-equippable item objectives**. These are candidates, not individually verified upgrades.
 - **Simple, class-wide equipment lists:** No manual specialization selector. Browse equipment your class can equip and decide what is useful for your build.
 - **Level-aware progression:** **Available Now**, **Next 5 Levels**, and **Earlier Gear** update as you level. Track older items separately without losing their entries.
 - **Default armour priorities:** Warrior/Paladin see mail before level 40 and plate from level 40; Hunter/Shaman see leather before 40 and mail from 40; other classes use their usual primary armour type. **Show all valid equipment** restores unusual lower-armour choices when desired, without including known internal/test items.
@@ -68,7 +70,7 @@ GetGear records **last-known inventory snapshots** rather than live counts from 
 
 ## Current scope and limitations
 
-- **Alliance is the supported route focus.** This release covers equipment levels **1–60**, not a completed Horde acquisition guide.
+- **Source research remains incomplete for both factions.** Characters can browse the proficiency catalogue; known faction-only routes are filtered from recommendations and navigation. Missing source-side evidence does not establish either faction's access.
 - The 7,707-item catalogue includes candidates inferred from class proficiency and dated client records; inclusion **does not prove the item is currently obtainable or a practical upgrade**.
 - Beta 8 supplies **2,177 conservative acquisition summaries**, including individually reviewed metadata for **954 recipe-book cases** and **214 other equipment cases**. These include honest unknown origins, unavailable-page flags and cross-version warnings.
 - **Six dungeon source links and 954 current recipe-book routes** still need live verification. Broader world-drop, vendor and quest coverage remains incomplete; named sources do not imply guaranteed current loot or stock.

@@ -1,5 +1,13 @@
 # GetGear 1–60 acquisition reconciliation — release-readiness gate
 
+**Current task, 15 November 2026:** development of quest bags, source eligibility
+and stat priorities is authorized on `recommendation-sources-stat-priorities`.
+Read [the current report](../recommendation-audit/IMPLEMENTATION.md). No merge to
+main, addon packaging, tag or release is authorized for this revision. Beta9
+assets remain unchanged. Historical status entries below remain provenance;
+they do not replace the current handover. Actual-client equipment comparison
+and acquisition/navigation acceptance remains required.
+
 **Status: research resumed after verified Beta 8 publication. No build/package/tag/release/merge/main changes authorised by the current research request.**
 Beta 8 is already published and independently verified; its original immutable source/assets must remain untouched. Historical release-blocker and pause entries below describe prior states, not current instructions. Offline validation is not live-client acceptance.
 

@@ -12,6 +12,14 @@ function GetGear:GetMaterialCount(itemID)
     return nil
 end
 
+function GetGear:GetRecommendationRecord(record)
+    local minimum=self.GetAcquisitionMinimumLevel and self:GetAcquisitionMinimumLevel(record)
+    if minimum and minimum>(record.targetLevel or 1) then
+        return setmetatable({targetLevel=minimum},{__index=record})
+    end
+    return record
+end
+
 -- A hidden objective is not the same as a skipped or acquired objective.
 function GetGear:IsHidden(record)
     return self.db and self.db.hidden and self.db.hidden[record.id] == true or false
@@ -27,7 +35,9 @@ function GetGear:GetAggregateMaterials(scope)
     local level = self.level or 1
     local totals, result = {}, {}
     for _, gear in ipairs(self.Gear) do
+        gear=self:GetRecommendationRecord(gear)
         if gear.targetLevel <= level + 5 and not self:GetStatus(gear)
+            and (not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(gear))
             and (not self.ShouldDisplayGear
                 or self:ShouldDisplayGear(gear,self.classToken,
                     scope=="all" and "materials-all" or "materials"))
@@ -84,7 +94,7 @@ function GetGear:GetItems(mode)
     local planning = self.Gear
     if mode == "bags" then
         planning = self.GetBagPlanningObjectives and self:GetBagPlanningObjectives() or {}
-    elseif mode == "hidden" then
+    elseif mode == "hidden" or mode == "completed" then
         planning = {}
         for _, record in ipairs(self.Gear) do planning[#planning+1]=record end
         for _, record in ipairs(self.GetBagPlanningObjectives and self:GetBagPlanningObjectives() or {}) do
@@ -98,14 +108,15 @@ function GetGear:GetItems(mode)
         end
     end
     for _, record in ipairs(planning) do
-        local status = record.bagUpgrade and nil or self:GetStatus(record)
+        record=self:GetRecommendationRecord(record)
+        local status = self:GetStatus(record)
         local target = record.targetLevel
         if type(target) == "number"
             and (not self.ShouldDisplayGear or self:ShouldDisplayGear(record,self.classToken,mode)) then
             local hidden = self:IsHidden(record)
             local include = false
             if mode == "bags" then
-                include = record.bagUpgrade == true and not hidden
+                include = record.bagUpgrade == true and not hidden and status==nil
             elseif mode == "completed" then
                 include = status == "acquired" or status == "skipped"
                     or (status == nil and not hidden and self:IsGearEquipped(record))
@@ -140,12 +151,24 @@ function GetGear:GetItems(mode)
             local history = mode == "completed" or mode == "hidden" or mode == "bags"
             if include and (history or not self.ShouldDisplayCraftedGear
                 or self:ShouldDisplayCraftedGear(record)) then
-                result[#result + 1] = record
+                local recommendation=mode=="available" or mode=="upcoming" or mode=="tracker"
+                if not recommendation or ((not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(record))
+                    and (not self.ShouldRecommendByStatPriority or self:ShouldRecommendByStatPriority(record))) then
+                    result[#result + 1] = record
+                end
             end
         end
     end
     -- Objective ordering is neutral: level first, then equipment slot/name/ID.
+    local scores={}
+    if (mode=="available" or mode=="tracker" or mode=="upcoming")
+        and self.GetStatPriorityMode and self:GetStatPriorityMode()~="balanced" then
+        for _,gear in ipairs(result) do
+            scores[gear]=self:GetWeightedUpgradeEvaluation(gear).score or 0
+        end
+    end
     table.sort(result, function(a, b)
+        if scores[a] and scores[b] and scores[a]~=scores[b] then return scores[a]>scores[b] end
         if a.targetLevel ~= b.targetLevel then return a.targetLevel < b.targetLevel end
         local slotA,slotB=a.slot or "",b.slot or ""
         if slotA~=slotB then return slotA < slotB end

@@ -52,7 +52,7 @@ for i,key in ipairs(STAT_ORDER) do RANK[key]=i end
 
 local function IsSafe(v)
     return type(v)=="number" and
-       (type(issecretvalue)~="function" or not issecretvalue(v)) and v==v
+       (type(issecretvalue)~="function" or not issecretvalue(v)) and v==v and math.abs(v)<math.huge
 end
 local function Pretty(key)
     if STAT_LABELS[key] then return STAT_LABELS[key] end
@@ -107,6 +107,9 @@ local function NormalizeStats(raw)
     if IsSafe(healing) then safe.SPELL_HEALING_TOTAL=healing end
     return safe
 end
+local ReadTooltipDPS
+local WEAPON_INVENTORY_TYPES={[13]=true,[15]=true,[17]=true,[19]=true,[21]=true,[22]=true,[25]=true,[26]=true}
+local MELEE_SUBTYPES={Dagger=true,Axe=true,Sword=true,Mace=true,["Fist Weapon"]=true}
 local function Stats(link)
     if not link or not C_Item or type(C_Item.GetItemStats)~="function" then return nil end
     local id=type(link)=="string" and tonumber(link:match("item:(%d+)"))
@@ -116,7 +119,19 @@ local function Stats(link)
     end
     local ok, result=pcall(C_Item.GetItemStats,link)
     if not ok or type(result)~="table" then return nil end
-    return NormalizeStats(result)
+    for _,value in pairs(result) do
+        if type(issecretvalue)=="function" and issecretvalue(value)
+            or type(value)=="number" and not IsSafe(value) then return nil end
+    end
+    local stats=NormalizeStats(result)
+    if not stats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT and ReadTooltipDPS
+        and type(C_Item.GetItemInventoryTypeByID)=="function" then
+        local read,kind=pcall(C_Item.GetItemInventoryTypeByID,link)
+        if read and IsSafe(kind) and WEAPON_INVENTORY_TYPES[kind] then
+            stats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT=ReadTooltipDPS(link)
+        end
+    end
+    return stats
 end
 local function ItemStats(itemID, requestIfMissing)
     if not IsSafe(itemID) or itemID<=0 or itemID~=math.floor(itemID) then return nil end
@@ -185,7 +200,7 @@ local function MakeGroup(label, candidate, equippedLinks, unknownEquipment, unkn
     end
     result.emptySlot=#equippedLinks==0
     local base={}
-    local weaponsWithDPS=0
+    local weaponsWithDPS,weapons,untyped=0,0,false
     for _,link in ipairs(equippedLinks) do
         local equipped=Stats(link)
         if not equipped then
@@ -194,13 +209,20 @@ local function MakeGroup(label, candidate, equippedLinks, unknownEquipment, unkn
         end
         base=Combine(base,equipped)
         if (equipped.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0 then weaponsWithDPS=weaponsWithDPS+1 end
+        local read,kind
+        if C_Item and type(C_Item.GetItemInventoryTypeByID)=="function" then read,kind=pcall(C_Item.GetItemInventoryTypeByID,link) end
+        if read and IsSafe(kind) then
+            if WEAPON_INVENTORY_TYPES[kind] then weapons=weapons+1 end
+        else untyped=true end
     end
     if not candidate then
         result.message="Recommended item stats are loading"
         return result
     end
-    if weaponsWithDPS>1 then result.dpsUnknown=true end
+    if weaponsWithDPS>1 or weapons>1 or #equippedLinks>1 and untyped then result.dpsUnknown=true end
     if result.dpsUnknown then result.note='Weapon DPS is not summed for a dual-wield set.' end
+    result.candidateDPS=candidate and candidate.ITEM_MOD_DAMAGE_PER_SECOND_SHORT
+    result.baselineDPS=base.ITEM_MOD_DAMAGE_PER_SECOND_SHORT
     local union={}
     for key in pairs(base) do union[key]=true end
     for key in pairs(candidate) do union[key]=true end
@@ -258,7 +280,8 @@ function GetGear:GetGearComparison(gear, suppressItemDataRequest, plannedMainHan
                 local ok,kind
                 if C_Item and type(C_Item.GetItemInventoryTypeByID)=='function' then ok,kind=pcall(C_Item.GetItemInventoryTypeByID,link) end
                 if candidate and partnerStats and ok and (kind==13 or kind==21) then
-                    local dual=(candidate.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0 and(partnerStats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0
+                    local dual=MELEE_SUBTYPES[gear.armorType]
+                        or (candidate.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0 and(partnerStats.ITEM_MOD_DAMAGE_PER_SECOND_SHORT or 0)>0
                     result.groups[2]=MakeGroup('Planned '..(partner.name or link)..' + off-hand vs two-handed',Combine(candidate,partnerStats),{main},false,dual)
                     result.note='Potential off-hand benefits and the explicitly planned replacement set are shown separately; ownership is not assumed.'
                 end
@@ -296,6 +319,9 @@ end
 local ARMOR_ONLY_KEYS={ITEM_MOD_ARMOR_SHORT=true,RESISTANCE0_NAME=true}
 function GetGear:ShouldShowOverlayStatChanges(gear)
     if not gear or gear.bagUpgrade then return true end
+    if self.GetStatPriorityMode and self:GetStatPriorityMode()~="balanced" then
+        return self:ShouldRecommendByStatPriority(gear)
+    end
     if self.db and self.db.overlay and self.db.overlay.hideWithoutPositiveStats==false then
         return true
     end
@@ -443,6 +469,7 @@ local function ToolTipDPS(link)
     end
     return nil
 end
+ReadTooltipDPS=ToolTipDPS
 -- Conservative fallback for the two verified test-case wand IDs only.
 -- The client tooltip is preferred; patch changes should update these values.
 local VERIFIED_WAND_DPS = {[247789]=4.0, [279896]=18.53}
@@ -591,6 +618,11 @@ function GetGear:ComparisonInline(gear, detailed)
             lines[#lines+1]="|cff96a6baVs "..group.label.."|r"
         end
         if group.note then lines[#lines+1]='|cff96a6ba'..group.note..'|r' end
+        if self.ScoreComparisonGroup and self:GetStatPriorityMode()~="balanced" then
+            local score=self:ScoreComparisonGroup(gear,group)
+            lines[#lines+1]=score and ("Weighted net: "..(score>0 and "+" or "")..Number(score).." ("..self:GetStatPriorityMode()..")")
+                or "Weighted net unavailable; replacement set/data incomplete"
+        end
         if group.message then
             lines[#lines+1]="|cff96a6ba"..group.message.."|r"
         else
@@ -622,6 +654,11 @@ function GetGear:AppendComparisonTooltip(tip,gear)
     end
     for _,group in ipairs(compare.groups) do
         tip:AddLine("Against "..group.label,0.75,0.83,0.95)
+        if self.ScoreComparisonGroup and self:GetStatPriorityMode()~="balanced" then
+            local score=self:ScoreComparisonGroup(gear,group)
+            tip:AddLine(score and ("Weighted net: "..Number(score).." ("..self:GetStatPriorityMode()..")")
+                or "Weighted net unavailable; replacement set/data incomplete",0.75,0.83,0.95,true)
+        end
         if group.note then tip:AddLine(group.note,0.72,0.78,0.85,true) end
         if group.message then tip:AddLine(group.message,0.7,0.7,0.7,true)
         else
