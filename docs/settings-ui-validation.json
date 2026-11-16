@@ -27,8 +27,18 @@
     "adopted": false
   },
   "ci": {
-    "status": "pending"
+    "status": "success",
+    "run": 43805718038,
+    "job": 133095917730,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43805718038",
+    "headSha": "a2f1529da1461fb5e31b64b3ee47edaeb0a0b696",
+    "checks": 115,
+    "failures": 0,
+    "decodedFullJobLogInspected": true,
+    "approvedSnapshotExact": true,
+    "freshReconciliationRunInCI": false
   },
   "actualClientTested": false,
-  "newAddonPackageProduced": false
+  "newAddonPackageProduced": false,
+  "implementationCommit": "a2f1529da1461fb5e31b64b3ee47edaeb0a0b696"
 }

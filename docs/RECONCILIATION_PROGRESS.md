@@ -9,8 +9,9 @@ checks PASS on Lua5.1/5.4, including23 suites each and focused settings coverage
 See [settings report](SETTINGS_UI_REFINEMENT.md) and [receipts](settings-ui-validation.json). Fresh source diagnostic
 failed the existing trash-count guard (136 versus required137); all17 accepted
 snapshot files restored exactly, no source change adopted. UI branch CI checks
-the approved snapshot and the full recommendation gate; result recorded after
-completion. Actual-client rendering/focus/scale acceptance remains required.
+the approved snapshot and the full recommendation gate: [CI43805718038](https://github.com/magicaddons/getgear/actions/runs/43805718038)
+SUCCESS, all 115 commands on `a2f1529da1461fb5e31b64b3ee47edaeb0a0b696`;
+decoded job133095917730 fully inspected. Receipt-only commits follow. Actual-client rendering/focus/scale acceptance remains required.
 No new ZIP, main merge, release, tag or asset change.
 
 <!-- current-research-checkpoint -->

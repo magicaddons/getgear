@@ -10,6 +10,13 @@ grid. Read `docs/SETTINGS_UI_REFINEMENT.md`. Run the existing read-only
 recommendation validation gate, including its focused settings regressions.
 No merge to main, release, tag/asset change or new addon ZIP is authorized.
 
+Completed UI gate: implementation `a2f1529d`, local 115 and non-release
+CI43805718038/job133095917730 all 115 PASS; decoded full log inspected.
+Fresh local diagnostic failed an unchanged upstream source-count guard;
+all 17 approved files restored, CI verifies the accepted snapshot. Backend
+and existing packages exact. Read the report/receipts; actual-client UI
+acceptance remains pending. Later receipt commits are documentation only.
+
 ## Current development handover — 15 November 2026
 
 The current user authorizes implementation, audit, tests and commits for quest
