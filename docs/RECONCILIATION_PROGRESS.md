@@ -1,5 +1,18 @@
 # GetGear acquisition reconciliation — durable checkpoints
 
+## Settings UI refinement — 16 November 2026
+
+User-authorized UI-only work on `settings-ui-refinement`, based on
+`ffd60c0c`. Alphabetic display checkboxes, direct concise modes and a two-column
+Advanced weight grid preserve saved keys and all backend modules. Local115
+checks PASS on Lua5.1/5.4, including23 suites each and focused settings coverage.
+See [settings report](SETTINGS_UI_REFINEMENT.md) and [receipts](settings-ui-validation.json). Fresh source diagnostic
+failed the existing trash-count guard (136 versus required137); all17 accepted
+snapshot files restored exactly, no source change adopted. UI branch CI checks
+the approved snapshot and the full recommendation gate; result recorded after
+completion. Actual-client rendering/focus/scale acceptance remains required.
+No new ZIP, main merge, release, tag or asset change.
+
 <!-- current-research-checkpoint -->
 **8CZ offline research handover, 13 November 2026:** [comprehensive report](source-audit-1-60/reconciliation-20261109/COMPREHENSIVE_RESEARCH_REPORT.md). All current queues dispositioned; latest full gate 8CY19local/18CI43406651194, bot dfc3120 reviewed. **Next: actual Forever-client acceptance and explicit evidence exceptions**, not repeated completed research. 885 point-data / 1,581 directions / 3,085 missing / 2,156 N/A; rendering untested. 900 outside candidates await development review. Existing automation is disabled and independently verified; no release/main/Beta8 action.
 <!-- /current-research-checkpoint -->

@@ -1,5 +1,15 @@
 # GetGear coding-agent guide
 
+## Current UI refinement — 16 November 2026
+
+The user authorizes settings UI refinement on `settings-ui-refinement`, based
+on `recommendation-sources-stat-priorities` at `ffd60c0c`. Preserve all scoring,
+eligibility, bags, acquisition data and saved-setting keys. Scope: alphabetic
+display checkboxes, concise modes/descriptions and a direct Advanced weight
+grid. Read `docs/SETTINGS_UI_REFINEMENT.md`. Run the existing read-only
+recommendation validation gate, including its focused settings regressions.
+No merge to main, release, tag/asset change or new addon ZIP is authorized.
+
 ## Current development handover — 15 November 2026
 
 The current user authorizes implementation, audit, tests and commits for quest

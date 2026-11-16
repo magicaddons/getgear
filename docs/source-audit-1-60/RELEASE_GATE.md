@@ -1,5 +1,18 @@
 # GetGear 1–60 acquisition reconciliation — release-readiness gate
 
+## Settings UI refinement — 16 November 2026
+
+User-authorized UI-only work on `settings-ui-refinement`, based on
+`ffd60c0c`. Alphabetic display checkboxes, direct concise modes and a two-column
+Advanced weight grid preserve saved keys and all backend modules. Local115
+checks PASS on Lua5.1/5.4, including23 suites each and focused settings coverage.
+See [settings report](../SETTINGS_UI_REFINEMENT.md) and [receipts](../settings-ui-validation.json). Fresh source diagnostic
+failed the existing trash-count guard (136 versus required137); all17 accepted
+snapshot files restored exactly, no source change adopted. UI branch CI checks
+the approved snapshot and the full recommendation gate; result recorded after
+completion. Actual-client rendering/focus/scale acceptance remains required.
+No new ZIP, main merge, release, tag or asset change.
+
 **Current task, 15 November 2026:** development of quest bags, source eligibility
 and stat priorities is authorized on `recommendation-sources-stat-priorities`.
 Read [the current report](../recommendation-audit/IMPLEMENTATION.md). No merge to

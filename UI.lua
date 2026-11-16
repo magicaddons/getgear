@@ -2198,6 +2198,14 @@ end
 local settings = CreateFrame("Frame", "GetGear_OverlaySettings", UIParent, "BasicFrameTemplateWithInset")
 settings:SetSize(780, 692)
 settings:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
+settings:SetClampedToScreen(true)
+local function FitSettingsToScreen()
+    local width=UIParent.GetWidth and UIParent:GetWidth() or 780
+    local height=UIParent.GetHeight and UIParent:GetHeight() or 692
+    settings:SetScale(math.min(1,math.max(1,width-24)/780,math.max(1,height-24)/692))
+end
+for _,event in ipairs({"DISPLAY_SIZE_CHANGED","UI_SCALE_CHANGED"}) do pcall(settings.RegisterEvent,settings,event) end
+settings:SetScript("OnEvent",function() if settings:IsShown() then FitSettingsToScreen() end end)
 -- Settings must still be usable when opened from the foreground detail guide.
 settings:SetFrameStrata("DIALOG")
 if settings.SetToplevel then settings:SetToplevel(true) end
@@ -2255,28 +2263,37 @@ end
 local overlayScaleSlider=AddScaleSlider("GetGear_OverlayScaleSlider",150,"Overlay UI scale","overlay")
 local detailScaleSlider=AddScaleSlider("GetGear_DetailScaleSlider",218,"Detailed window UI scale","detail")
 
-local function NewCheck(parent,label,y,callback)
+local displayChecks={}
+local function LayoutDisplayChecks()
+    table.sort(displayChecks,function(a,b) return a.label:lower()<b.label:lower() end)
+    for index,entry in ipairs(displayChecks) do
+        entry.checkbox:ClearAllPoints()
+        entry.checkbox:SetPoint("TOPLEFT",18,-292-(index-1)*33)
+    end
+end
+local function NewCheck(parent,label,callback)
     local checkbox=CreateFrame("CheckButton",nil,parent,"UICheckButtonTemplate")
     checkbox:SetSize(25,25)
-    checkbox:SetPoint("TOPLEFT",18,-y)
     local text=NewText(parent,"GameFontHighlight",325)
     text:SetPoint("LEFT",checkbox,"RIGHT",3,0)
     text:SetText(label)
     checkbox:SetScript("OnClick",function(self)
         if GetGear.db then callback(self:GetChecked() and true or false) end
     end)
+    displayChecks[#displayChecks+1]={label=label,checkbox=checkbox}
+    LayoutDisplayChecks()
     return checkbox
 end
-local lockedCheck=NewCheck(settings,"Lock overlay position",292,function(v)
+local lockedCheck=NewCheck(settings,"Lock overlay position",function(v)
     GetGear.db.overlay.locked=v
 end)
-local combatCheck=NewCheck(settings,"Hide tracker automatically during combat",325,function(v)
+local combatCheck=NewCheck(settings,"Hide tracker automatically during combat",function(v)
     GetGear.db.overlay.hideInCombat=v
     GetGear:RefreshOverlay()
 end)
 -- This filter never edits hidden/acquired SavedVariables. Disabled means
 -- older recommendations return to Available Now and the overlay.
-local obsoleteCheck=NewCheck(settings,"Filter clearly outclassed earlier gear",357,function(v)
+local obsoleteCheck=NewCheck(settings,"Filter clearly outclassed earlier gear",function(v)
     GetGear.db.overlay.filterObsolete=v
     GetGear:RefreshAll()
 end)
@@ -2289,7 +2306,7 @@ obsoleteCheck:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 obsoleteCheck:SetScript("OnLeave",HideItemTooltip)
-local bagsCheck=NewCheck(settings,"Recommend ordinary bag upgrades",390,function(v)
+local bagsCheck=NewCheck(settings,"Recommend ordinary bag upgrades",function(v)
     GetGear.db.overlay.bagUpgrades=v
     GetGear:RefreshAll()
 end)
@@ -2304,7 +2321,7 @@ end)
 bagsCheck:SetScript("OnLeave",HideItemTooltip)
 -- This is only a display filter: it does not modify gear statuses or
 -- hide quest/dungeon/vendor objectives. Preview Guide stays unrestricted.
-local craftFilterCheck=NewCheck(settings,"Hide crafted gear I can't make",423,function(v)
+local craftFilterCheck=NewCheck(settings,"Hide crafted gear I can't make",function(v)
     GetGear.db.overlay.hideUncraftableCrafts=v
     GetGear:RefreshAll()
 end)
@@ -2319,7 +2336,7 @@ end)
 craftFilterCheck:SetScript("OnLeave",HideItemTooltip)
 -- All class-equipable gear, including off-role/novelty, is opt-in. Hard
 -- exclusions for QA and internal placeholders always remain excluded.
-local allValidGearCheck=NewCheck(settings,"Show all valid equipment (including off-spec)",459,function(v)
+local allValidGearCheck=NewCheck(settings,"Show all valid equipment (including off-spec)",function(v)
     GetGear.db.overlay.showAllValidGear=v
     GetGear:RefreshAll()
 end)
@@ -2334,7 +2351,7 @@ end)
 allValidGearCheck:SetScript("OnLeave",HideItemTooltip)
 -- Only suppress conclusively non-improving items on the tracker. Pending
 -- comparisons stay visible and all gear remains in the detailed guide.
-local positiveStatCheck=NewCheck(settings,"Hide gear without positive stat changes",493,function(v)
+local positiveStatCheck=NewCheck(settings,"Hide gear without positive stat changes",function(v)
     GetGear.db.overlay.hideWithoutPositiveStats=v
     GetGear:RefreshOverlay()
 end)
@@ -2349,7 +2366,7 @@ end)
 positiveStatCheck:SetScript("OnLeave",HideItemTooltip)
 -- This is only a display rule for generic world drops. A green BoE
 -- crafted item or a targetable boss/trash/quest reward is not filtered.
-local greenBoECheck=NewCheck(settings,"Hide green BoE world drops from tracker",526,function(v)
+local greenBoECheck=NewCheck(settings,"Hide green BoE world drops from tracker",function(v)
     GetGear.db.overlay.hideGreenBoEWorldDrops=v
     GetGear:RefreshOverlay()
 end)
@@ -2364,7 +2381,7 @@ end)
 greenBoECheck:SetScript("OnLeave",HideItemTooltip)
 -- Class alone does not imply a tank role. This opt-in restores armor-only
 -- recommendations without changing the full guide or other stat deltas.
-local armorOnlyCheck=NewCheck(settings,"Count armour-only improvements",559,function(v)
+local armorOnlyCheck=NewCheck(settings,"Count armour-only improvements",function(v)
     GetGear.db.overlay.countArmorOnlyUpgrades=v
     GetGear:RefreshOverlay()
 end)
@@ -2403,76 +2420,148 @@ showOverlay:SetScript("OnClick",function() GetGear:ToggleOverlay() end)
 
 local priorityTitle=NewText(settings,"GameFontNormal",325)
 priorityTitle:SetPoint("TOPLEFT",425,-42)
-priorityTitle:SetText("Stat priorities (this character)")
-local priorityHelp=NewText(settings,"GameFontHighlightSmall",325)
-priorityHelp:SetPoint("TOPLEFT",425,-70)
-priorityHelp:SetText("Balanced keeps the existing class-aware recommendations. Priority gives one stat 5x its normal weight. Custom uses your weights; unlisted stats count as zero.\n\nPriority and Custom compare all gains AND losses. Zero or negative net benefit is omitted from recommendations. Unknown comparisons stay visible.\n\nShow all valid equipment restores browsing; Preview uses no live equipment scoring. Bag capacity is evaluated separately.")
-local priorityMode=NewButton(settings,"",325,25)
-priorityMode:SetPoint("TOPLEFT",425,-250)
-local priorityStat=NewButton(settings,"",325,25)
-priorityStat:SetPoint("TOPLEFT",425,-287)
-local weightLabel=NewText(settings,"GameFontHighlightSmall",325)
-weightLabel:SetPoint("TOPLEFT",425,-328)
-weightLabel:SetText("Custom weight for selected stat (0–1000)")
-local weightEdit=CreateFrame("EditBox","GetGear_StatWeight",settings,"InputBoxTemplate")
-weightEdit:SetSize(110,25)
-weightEdit:SetPoint("TOPLEFT",433,-353)
-weightEdit:SetAutoFocus(false)
-weightEdit:SetMaxLetters(12)
-local applyWeight=NewButton(settings,"Apply weight",135,25)
-applyWeight:SetPoint("LEFT",weightEdit,"RIGHT",15,0)
-local priorityMessage=NewText(settings,"GameFontHighlightSmall",325)
-priorityMessage:SetPoint("TOPLEFT",425,-399)
-local resetPriorities=NewButton(settings,"Restore Balanced defaults",325,25)
-resetPriorities:SetPoint("TOPLEFT",425,-478)
-local selectedPriorityStat
+priorityTitle:SetText("Stat priorities")
+local priorityUI={modes={},weights={},refreshing=false}
+priorityUI.help=NewText(settings,"GameFontHighlightSmall",325)
+priorityUI.help:SetPoint("TOPLEFT",425,-112)
+local priorityDescriptions={balanced="Uses default class-based stat priorities.",
+    priority="Gives your chosen stat greater importance.",custom="Set your own stat weights."}
+for index,mode in ipairs({"balanced","priority","custom"}) do
+    local button=NewButton(settings,({balanced="Balanced",priority="Priority",custom="Advanced"})[mode],104,25)
+    button:SetPoint("TOPLEFT",425+(index-1)*110,-76)
+    priorityUI.modes[mode]=button
+end
+priorityUI.stat=NewButton(settings,"",325,25)
+priorityUI.stat:SetPoint("TOPLEFT",425,-150)
+priorityUI.heading=NewText(settings,"GameFontHighlightSmall",325)
+priorityUI.heading:SetPoint("TOPLEFT",425,-150)
+priorityUI.heading:SetText("Weights (0–1000)")
+priorityUI.scroll=CreateFrame("ScrollFrame","GetGear_PriorityWeights",settings,"UIPanelScrollFrameTemplate")
+priorityUI.scroll:SetPoint("TOPLEFT",425,-174)
+priorityUI.scroll:SetSize(325,420)
+priorityUI.content=CreateFrame("Frame",nil,priorityUI.scroll)
+priorityUI.content:SetSize(325,420)
+priorityUI.scroll:SetScrollChild(priorityUI.content)
+priorityUI.scroll:EnableMouseWheel(true)
+priorityUI.scroll:SetScript("OnMouseWheel",function(self,delta)
+    local maximum=math.max(0,priorityUI.content:GetHeight()-self:GetHeight())
+    self:SetVerticalScroll(math.max(0,math.min(maximum,self:GetVerticalScroll()-delta*30)))
+end)
+priorityUI.message=NewText(settings,"GameFontHighlightSmall",325)
+priorityUI.message:SetPoint("TOPLEFT",425,-602)
+local function UpdateWeightMessage()
+    for _,widget in pairs(priorityUI.weights) do
+        if widget.owner==GetGear.db and widget.invalid then
+            priorityUI.message:SetText("Enter a finite number from 0 to 1000. Invalid weights were not changed.")
+            return
+        end
+    end
+    priorityUI.message:SetText("")
+end
+local function SetWeightText(widget,value)
+    widget.rendering=true
+    widget.dirty=false;widget.invalid=false
+    widget.edit:SetText(tostring(value))
+    widget.edit:SetTextColor(1,1,1)
+    widget.rendering=false
+end
+local function SavePriorityWeight(widget)
+    if priorityUI.refreshing or not widget.dirty then return true end
+    -- A focus event from the previous character must never write to this one.
+    if widget.owner~=GetGear.db or GetGear:GetStatPriorityMode()~="custom" then return false end
+    local value=tonumber(widget.edit:GetText())
+    if not GetGear:SetCustomStatWeight(widget.key,value) then
+        widget.invalid=true;widget.edit:SetTextColor(1,0.4,0.4)
+        UpdateWeightMessage();return false
+    end
+    SetWeightText(widget,value);UpdateWeightMessage()
+    return true
+end
+local function CommitPriorityWeights()
+    for _,widget in pairs(priorityUI.weights) do SavePriorityWeight(widget) end
+end
+for _,definition in ipairs(GetGear.StatPriorityDefinitions) do
+    local key=definition[1]
+    local widget={key=key,label=NewText(priorityUI.content,"GameFontHighlightSmall",102)}
+    widget.label:SetText(definition[2]);widget.label:SetHeight(28)
+    widget.edit=CreateFrame("EditBox","GetGear_StatWeight_"..key,priorityUI.content,"InputBoxTemplate")
+    widget.edit:SetSize(48,24)
+    widget.edit:SetAutoFocus(false);widget.edit:SetMaxLetters(12)
+    widget.edit:SetScript("OnTextChanged",function()
+        if not widget.rendering and not priorityUI.refreshing then widget.dirty=true end
+    end)
+    widget.edit:SetScript("OnEnterPressed",function(self)
+        if SavePriorityWeight(widget) then self:ClearFocus() end
+    end)
+    widget.edit:SetScript("OnEditFocusLost",function() SavePriorityWeight(widget) end)
+    widget.edit:SetScript("OnEscapePressed",function(self)
+        if widget.owner==GetGear.db then
+            local p=GetGear:InitializeStatPriorities()
+            SetWeightText(widget,p.weights[key] or 0);UpdateWeightMessage()
+        end
+        self:ClearFocus()
+    end)
+    priorityUI.weights[key]=widget
+end
 local function RefreshPrioritySettings()
     local p=GetGear:InitializeStatPriorities();if not p then return end
+    priorityUI.refreshing=true
+    priorityUI.help:SetText(priorityDescriptions[p.mode])
+    for mode,button in pairs(priorityUI.modes) do button:SetEnabled(mode~=p.mode) end
+    priorityUI.stat:SetText("Priority: "..p.priority)
+    for _,widget in pairs(priorityUI.weights) do
+        widget.edit:ClearFocus()
+        widget.edit:Hide();widget.label:Hide()
+        widget.owner=GetGear.db
+        SetWeightText(widget,p.weights[widget.key] or 0)
+    end
     local stats=GetGear:GetSupportedPriorityStats()
-    local selected
-    for _,d in ipairs(stats) do if d[1]==selectedPriorityStat then selected=d end end
-    if not selected then
-        for _,d in ipairs(stats) do if d[1]==p.priority then selected=d end end
+    for index,definition in ipairs(stats) do
+        if definition[1]==p.priority then priorityUI.stat:SetText("Priority: "..definition[2]) end
+        local widget=priorityUI.weights[definition[1]]
+        local x=((index-1)%2)*166
+        local y=math.floor((index-1)/2)*30
+        widget.label:ClearAllPoints();widget.label:SetPoint("TOPLEFT",x,-y-2)
+        widget.edit:ClearAllPoints();widget.edit:SetPoint("TOPLEFT",x+108,-y)
+        if p.mode=="custom" then widget.label:Show();widget.edit:Show() end
     end
-    selected=selected or stats[1];selectedPriorityStat=selected and selected[1]
-    priorityMode:SetText("Mode: "..({balanced="Balanced",priority="Prioritise one stat",custom="Advanced custom weights"})[p.mode].." (click)")
-    priorityStat:SetText((p.mode=="priority" and "Priority: " or "Stat: ")..(selected and selected[2] or "Unavailable").." (click)")
-    weightEdit:SetText(tostring(selected and (p.weights[selected[1]] or 0) or 0))
-    weightEdit:SetEnabled(p.mode=="custom");applyWeight:SetEnabled(p.mode=="custom")
-    priorityMessage:SetText(p.mode=="balanced" and "Balanced uses the established class-aware filters. Your progress and display preferences are saved separately."
-        or "Click Stat to cycle relevant attributes. Each applied weight is saved for this character. Scores use reported base stats; effects/procs are not simulated.")
+    priorityUI.content:SetHeight(math.max(420,math.ceil(#stats/2)*30))
+    priorityUI.scroll:SetVerticalScroll(0)
+    priorityUI.scroll:SetShown(p.mode=="custom")
+    priorityUI.heading:SetShown(p.mode=="custom")
+    priorityUI.stat:SetShown(p.mode=="priority")
+    priorityUI.message:SetText("")
+    priorityUI.refreshing=false
 end
-priorityMode:SetScript("OnClick",function()
-    local nextMode={balanced="priority",priority="custom",custom="balanced"}
-    GetGear:SetStatPriorityMode(nextMode[GetGear:GetStatPriorityMode()])
-    if GetGear:GetStatPriorityMode()=="priority" and selectedPriorityStat then GetGear:SetPriorityStat(selectedPriorityStat) end
-    RefreshPrioritySettings()
-end)
-priorityStat:SetScript("OnClick",function()
+for mode,button in pairs(priorityUI.modes) do
+    local selectedMode=mode
+    button:SetScript("OnClick",function()
+        CommitPriorityWeights()
+        GetGear:SetStatPriorityMode(selectedMode)
+        RefreshPrioritySettings()
+    end)
+end
+priorityUI.stat:SetScript("OnClick",function()
     local stats=GetGear:GetSupportedPriorityStats();local index=0
-    for i,d in ipairs(stats) do if d[1]==selectedPriorityStat then index=i;break end end
-    local selected=stats[index%#stats+1];selectedPriorityStat=selected[1]
-    if GetGear:GetStatPriorityMode()=="priority" then GetGear:SetPriorityStat(selectedPriorityStat) end
+    local p=GetGear:InitializeStatPriorities()
+    for i,definition in ipairs(stats) do if definition[1]==p.priority then index=i;break end end
+    if #stats>0 then GetGear:SetPriorityStat(stats[index%#stats+1][1]) end
     RefreshPrioritySettings()
 end)
-local function ApplyPriorityWeight()
-    if GetGear:GetStatPriorityMode()~="custom" then return end
-    if not GetGear:SetCustomStatWeight(selectedPriorityStat,tonumber(weightEdit:GetText())) then
-        priorityMessage:SetText("Enter a finite number from 0 to 1000. Weight was not changed.");return
-    end
-    weightEdit:ClearFocus();RefreshPrioritySettings()
-end
-applyWeight:SetScript("OnClick",ApplyPriorityWeight)
-weightEdit:SetScript("OnEnterPressed",ApplyPriorityWeight)
-weightEdit:SetScript("OnEscapePressed",function(self) self:ClearFocus();RefreshPrioritySettings() end)
-resetPriorities:SetScript("OnClick",function() GetGear:ResetStatPriorities();selectedPriorityStat=nil;RefreshPrioritySettings() end)
+local resetPriorities=NewButton(settings,"Reset to defaults",230,24)
+resetPriorities:SetPoint("BOTTOMLEFT",425,18)
+resetPriorities:SetScript("OnClick",function() GetGear:ResetStatPriorities();RefreshPrioritySettings() end)
+settings:HookScript("OnHide",CommitPriorityWeights)
 local closeSettings=NewButton(settings,"Close",88,24)
 closeSettings:SetPoint("BOTTOMRIGHT",-18,18)
 closeSettings:SetScript("OnClick",function() settings:Hide() end)
 
 function GetGear:ShowSettings()
     if not self.db then return end
+    CommitPriorityWeights()
     RefreshPrioritySettings()
+    LayoutDisplayChecks()
+    FitSettingsToScreen()
     -- Within DIALOG, put settings above the detailed guide while it is open.
     settings:SetFrameLevel(math.max(settings:GetFrameLevel(), window:GetFrameLevel() + 20))
     settings:Show()
