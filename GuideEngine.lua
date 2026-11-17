@@ -133,7 +133,12 @@ end
 -- Read-only class preview. No manual spec tabs or progress mutations.
 -- The preview UI alone chooses the browsing level and full-range mode.
 function GetGear:GetPreviewRecommendations(classToken)
-    return self.EquipmentByClass[classToken] or {}
+    local result={}
+    local context=self.GetPreviewAcquisitionContext and self:GetPreviewAcquisitionContext(classToken)
+    for _,gear in ipairs(self.EquipmentByClass[classToken] or {}) do
+        if not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(gear,context) then result[#result+1]=gear end
+    end
+    return result
 end
 
 function GetGear:GetGuideEmptyMessage()

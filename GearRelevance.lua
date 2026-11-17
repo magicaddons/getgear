@@ -78,11 +78,16 @@ function GetGear:IsOlderGear(gear,characterLevel)
 end
 
 function GetGear:ShouldDisplayGear(gear,classToken,mode)
-    if not gear or gear.bagUpgrade then return true end
+    if not gear then return true end
+    if gear.bagUpgrade then
+        return mode=="completed" or mode=="hidden" or not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(gear)
+    end
     if self:IsHardExcludedGear(gear) then return false end
     classToken=classToken or self.classToken
     if self.CanClassEquipGear and not self:CanClassEquipGear(gear,classToken) then return false end
     if mode=="completed" or mode=="hidden" then return true end
+    local context=mode=="preview" and self.GetPreviewAcquisitionContext and self:GetPreviewAcquisitionContext(classToken) or nil
+    if self.HasEligibleAcquisitionSource and not self:HasEligibleAcquisitionSource(gear,context) then return false end
     local opts=self.db and self.db.overlay
     if opts and opts.showAllValidGear==true then return true end
     -- Full preview and explicitly All-materials are browsing scopes; neither

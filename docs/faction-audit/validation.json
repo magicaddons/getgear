@@ -1,0 +1,36 @@
+{
+  "branch": "settings-ui-refinement",
+  "baseline": "d500ce5364cb343ca162093c04e64245c9017605",
+  "implementationCommit": null,
+  "local": {
+    "checks": 130,
+    "modules": 29,
+    "lua54Regressions": 27,
+    "lua51Regressions": 27,
+    "failures": 0,
+    "protectedAcquisitionSnapshotExact": true,
+    "actualClientTested": false,
+    "statement": "Offline/synthetic validation only. No addon package, tag, release or live acquisition claim."
+  },
+  "localReceipts": "local-checks.txt",
+  "pythonFactionEvidenceUnitCases": 6,
+  "classFactionCombinations": 16,
+  "classRecordsChecked": 62704,
+  "levelViewCases": 320,
+  "catalogueAudit": "audit-summary.json",
+  "ci": {
+    "status": "pending",
+    "workflow": "recommendation-validation.yml"
+  },
+  "freshDiagnostic": {
+    "exitCode": 1,
+    "isolatedSourceCopy": true,
+    "approvedSnapshotExact": true,
+    "sourceAdopted": false,
+    "reason": "Existing upstream ingestion guard trash >=137 fails with136",
+    "receipt": "fresh-diagnostic.json"
+  },
+  "actualClientTested": false,
+  "addonPackaged": false,
+  "releasePublished": false
+}

@@ -12,10 +12,7 @@ for _,id in ipairs(ids)do
     local gear=a.ItemCatalog[id];local plan=a.AcquisitionNavigationData.items[tostring(id)] or {};local routes=plan.routes or {}
     local all,horde,shared,unknown=0,0,0,0
     for _,r in ipairs(routes)do
-        local actor=a.AcquisitionNavigationData.sources[r.source]or{}
-        local side=r.serviceSide or r.offer and r.offer.side
-        if r.kind=='quest'or r.kind=='quest_container'then side=(a.AcquisitionNavigationData.quests[tostring(r.questID)]or{}).side
-        elseif r.kind=='vendor'or r.kind=='recipe_vendor'or r.kind=='trainer'or r.kind=='vendor_container'then side=side or actor.serviceSide end
+        local side=a:GetAcquisitionRouteFactionSide(gear,r)
         if side==1 then all=all+1 elseif side==2 then horde=horde+1 elseif side==3 then shared=shared+1 else unknown=unknown+1 end
     end
     local sides={}
@@ -27,6 +24,7 @@ for _,id in ipairs(ids)do
         sides[#sides+1]=table.concat(allowed,' ')
     end
     local scope=#routes==0 and 'No structured route: access unresolved; legacy descriptions retained' or unknown>0 and 'Contains faction-unresolved routes; no zone-based inference' or 'Explicit published source-side metadata; live access unverified'
+    if (a.FactionEligibilityData.items[id]or{}).side or (a.FactionEligibilityData.items[id]or{}).acquisitionSide then scope='Published faction requirement/attribution; route alternatives and binding evaluated separately' end
     row(file,{id,gear.name,#routes,all,horde,shared,unknown,sides[1],sides[2],scope})
     counts[#routes==0 and 'unknown'or'known']=counts[#routes==0 and 'unknown'or'known']+1
     if all>0 then counts.allianceRestricted=counts.allianceRestricted+1 end

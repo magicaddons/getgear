@@ -44,19 +44,24 @@ def main():
             run([compiler, '-p', module])
         run([compiler, '-p', 'tools/export_navigation_inputs.lua'])
         run([compiler, '-p', 'tools/audit_recommendation_sources.lua'])
+        run([compiler, '-p', 'tools/audit_faction_eligibility.lua'])
     for script in sorted((ROOT / 'tests').glob('*.lua')):
         run([lua54, script, '.'])
         run([args.lua51, 'tools/release/lua51-harness.lua', script, '.'])
-    for script in ('reconcile-dungeon-link-guards.py', 'worlddrop-boe-fallback.py', 'navigation-generation.py', 'stat-school-generation.py'):
+    for script in ('reconcile-dungeon-link-guards.py', 'worlddrop-boe-fallback.py', 'navigation-generation.py', 'stat-school-generation.py', 'faction-evidence-generation.py'):
         run([sys.executable, ROOT / 'tests' / script])
     run([lua54, 'tools/audit_acquisition_buttons.lua', '.'])
     run([sys.executable, 'tools/audit_acquisition_presentation.py', '--output', args.output / 'presentation'])
     run([sys.executable, 'tools/build_bag_quest_catalogue.py', '--check'])
+    run([sys.executable, 'tools/build_faction_eligibility.py', '--check'])
     run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests/release', '-v'])
     with tempfile.TemporaryDirectory() as folder:
         source_audit = Path(folder) / 'sources.csv'
         run([lua54, 'tools/audit_recommendation_sources.lua', '.', source_audit])
         assert source_audit.read_bytes() == (ROOT / 'docs/recommendation-audit/equipment-source-eligibility.csv').read_bytes()
+        faction_audit = Path(folder) / 'factions.csv'
+        run([lua54, 'tools/audit_faction_eligibility.lua', '.', faction_audit])
+        assert faction_audit.read_bytes() == (ROOT / 'docs/faction-audit/catalogue-eligibility.csv').read_bytes()
     protected = json.loads((ROOT / 'docs/source-audit-1-60/reconciliation-20261109/presentation_data_snapshot.json').read_text())['files']
     assert all(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest for name, digest in protected.items())
     summary = dict(checks=len(results), modules=len(modules), lua54Regressions=len(list((ROOT / 'tests').glob('*.lua'))),

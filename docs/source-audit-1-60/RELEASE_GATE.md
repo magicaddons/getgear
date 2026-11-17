@@ -2366,3 +2366,21 @@ change documentation only; actual Forever acceptance remains pending.
 An isolated-copy fresh diagnostic fails the unchanged upstream trash>=137 guard
 (actual136); no fresh source output is adopted. Existing release assets,main,
 TOC/version and900holds remain unchanged. No package/tag/release/merge authorized.
+
+
+## Permanent systemic policy and global faction eligibility — 17 November 2026
+
+Current owner authorizes this policy/correction on `settings-ui-refinement` from
+`d500ce5`. `AGENTS.md` now mandates root-cause/full-scope/shared-rule/analogous-audit/
+positive-negative-regression/documentation work for all subsequent bugs. The new
+independent faction overlay and central acquisition rules cover7707 IDs, all nine
+classes/both factions with16 faction-valid original class combinations,62704
+class records and320 level/view cases.420 item requirement/attribution records;
+449 items change access (364 invalid access removed,85 legitimate alternatives
+restored), with209 qualified requirements/eight tooltip gaps kept explicit.
+Local130commands/29modules/27Lua suites on Lua5.1+5.4 PASS; non-release CI pending.
+Fresh isolated-copy diagnostic fails unchanged upstream trash>=137(actual136);
+no source adoption. Approved17-file snapshot, all identities/objectives/900holds,
+settings/progress/recipes/materials and existing assets preserved. Read
+`docs/faction-audit/REPORT.md` and its `validation.json` for final source/CI IDs
+and manual acceptance. No ZIP, release, tag, merge or main change authorized.

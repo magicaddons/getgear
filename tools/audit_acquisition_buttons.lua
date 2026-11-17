@@ -15,6 +15,7 @@ for _,c in ipairs(classes)do
  class=c;a.classToken=c
  for _,g in ipairs(a.EquipmentByClass[c])do
   checks=checks+1;local r=observations[g.itemID]or{classes=0,targets=0,point=0,area=0};observations[g.itemID]=r;r.classes=r.classes+1
+  if a:HasEligibleAcquisitionSource(g)then r.sourceEligible=(r.sourceEligible or 0)+1 end
   local t=a:GetAcquisitionMapTarget(g)
   if t then
    r.targets=r.targets+1
@@ -48,14 +49,14 @@ local counts={};local out=assert(io.open(output,'w'));out:write('itemID,name,cat
 local function csv(v)v=tostring(v or'');return '"'..v:gsub('"','""')..'"'end
 for _,id in ipairs(ids)do
  local p=a.AcquisitionNavigationData.items[tostring(id)]or{};local r=observations[id]or{classes=0,targets=0,point=0,area=0}
- local status=r.point>0 and'published_point_data'or r.area>0 and'published_area_data'or r.targets>0 and'written_or_native_only'or published[id]=='not_applicable'and'not_applicable'or'missing_actionable_target'
+ local status=r.point>0 and'published_point_data'or r.area>0 and'published_area_data'or r.targets>0 and'written_or_native_only'or(r.sourceEligible or 0)==0 and'character_restricted'or published[id]=='not_applicable'and'not_applicable'or'missing_actionable_target'
  counts[status]=(counts[status]or 0)+1
  local av=a.AcquisitionNavigationData.availability[tostring(id)]or{}
- local reason=r.targets==0 and (#(p.routes or{})>0 and 'Known source restricted/unresolved for this character context'or published[id]=='not_applicable'and'No fixed navigable source applicable'or'No structured actionable destination')or''
+ local reason=status=='character_restricted'and'Confirmed character/source restriction; no acquisition marker appropriate'or r.targets==0 and (#(p.routes or{})>0 and 'Known source restricted/unresolved for this character context'or published[id]=='not_applicable'and'No fixed navigable source applicable'or'No structured actionable destination')or''
  out:write(table.concat({id,csv(a.ItemCatalog[id].name),csv(p.category),r.classes,r.targets,r.point,r.area,csv(status),csv(av.status),csv(reason)},','),'\n')
 end
 out:close()
 local details=assert(io.open(output:gsub('%.csv$','.txt'),'w'))
 details:write('Scope:all7707catalogueIDs/36669eligibleclassrecords;Alliancelevel25/source-only planning;no active quests/location or live rendering assumed. No item-cache requests.\n')
-for _,k in ipairs({'published_point_data','published_area_data','written_or_native_only','missing_actionable_target','not_applicable'})do details:write(k..'='..tostring(counts[k]or 0)..'\n')end;details:close()
-print('PASS AH2 button audit:7707items/36669classsourcechecks/knownHordeservicesexcluded/zeroitemcache requests;point/area/written/missing distinguished;actual rendering untested')
+for _,k in ipairs({'published_point_data','published_area_data','written_or_native_only','character_restricted','missing_actionable_target','not_applicable'})do details:write(k..'='..tostring(counts[k]or 0)..'\n')end;details:close()
+print('PASS AH2 button audit:7707items/36669classsourcechecks/knownHordeservicesexcluded/zeroitemcache requests;point/area/written/character-restricted/missing distinguished;actual rendering untested')

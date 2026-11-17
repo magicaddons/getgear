@@ -223,7 +223,8 @@ function GetGear:GetCombinedMaterialRows(scope)
     -- number of bag slots requiring replacement. Non-tailors do not receive
     -- a misleading personal crafting shopping list.
     local bag = self.GetBagUpgradePlan and self:GetBagUpgradePlan() or nil
-    if bag and bag.profession=="Tailoring" and not self:IsHidden(bag) then
+    if bag and bag.profession=="Tailoring" and not self:IsHidden(bag)
+        and (not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(bag)) then
         for _,mat in ipairs(bag.reagents or {}) do
             total[mat.itemID]=(total[mat.itemID] or 0)+mat.amount
         end

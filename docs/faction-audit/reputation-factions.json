@@ -1,0 +1,89 @@
+{
+  "scope": "Reviewed battleground reputation affiliations; not a zone/item-name blacklist. Multiple reputation clauses remain ambiguous. Published requirements are not live stock/earning confirmation.",
+  "factions": {
+    "The League of Arathor": {
+      "id": 509,
+      "side": 1,
+      "url": "https://www.wowhead.com/forever/faction=509",
+      "basis": "Battleground faction affiliation; corroborated by exact-name item-side publication records and matching reputation requirements.",
+      "exampleItemID": 20041,
+      "corroboration": {
+        "file": "checkpoint8j_publication_evidence.json",
+        "pointer": "/items/20041",
+        "row": "/items/20041/item",
+        "sha256": "59df53de9fe71e0874d4917bb03d230f015b71ed71aa334815328866306b9588",
+        "url": "https://www.wowhead.com/forever/item=20041"
+      }
+    },
+    "The Defilers": {
+      "id": 510,
+      "side": 2,
+      "url": "https://www.wowhead.com/forever/faction=510",
+      "basis": "Battleground faction affiliation; corroborated by exact-name item-side publication records and matching reputation requirements.",
+      "exampleItemID": 20072,
+      "corroboration": {
+        "file": "checkpoint7c_vendor_publication_evidence.json",
+        "pointer": "/factionAndCoinPages/2",
+        "row": "/factionAndCoinPages/2/tables/items/1",
+        "sha256": "168884f2e79861ac9803897607921e6eb9b30d9a6a35f572d6eb1021f7954054",
+        "url": "https://www.wowhead.com/forever/faction=510/the-defilers"
+      }
+    },
+    "Frostwolf Clan": {
+      "id": 729,
+      "side": 2,
+      "url": "https://www.wowhead.com/forever/faction=729",
+      "basis": "Battleground faction affiliation; corroborated by exact-name item-side publication records and matching reputation requirements.",
+      "exampleItemID": 19087,
+      "corroboration": {
+        "file": "checkpoint8i_publication_evidence.json",
+        "pointer": "/items/19087",
+        "row": "/items/19087/item",
+        "sha256": "e691275dea6147e807b9ba6772540fa457385ec44e1007df2331e92bc8bb9294",
+        "url": "https://www.wowhead.com/forever/item=19087"
+      }
+    },
+    "Stormpike Guard": {
+      "id": 730,
+      "side": 1,
+      "url": "https://www.wowhead.com/forever/faction=730",
+      "basis": "Battleground faction affiliation; corroborated by exact-name item-side publication records and matching reputation requirements.",
+      "exampleItemID": 19091,
+      "corroboration": {
+        "file": "checkpoint8i_publication_evidence.json",
+        "pointer": "/items/19091",
+        "row": "/items/19091/item",
+        "sha256": "9f5a460e025e38087925219db8c48eb7cc8291a0188e1d390206fd211cc756e7",
+        "url": "https://www.wowhead.com/forever/item=19091"
+      }
+    },
+    "Warsong Outriders": {
+      "id": 889,
+      "side": 2,
+      "url": "https://www.wowhead.com/forever/faction=889",
+      "basis": "Battleground faction affiliation; corroborated by exact-name item-side publication records and matching reputation requirements.",
+      "exampleItemID": 19510,
+      "corroboration": {
+        "file": "checkpoint8j_publication_evidence.json",
+        "pointer": "/items/19510",
+        "row": "/items/19510/item",
+        "sha256": "d7aadbdad21f94f7047bb2a833d82b34bbf42cf9c55bab1e52e4706a7a3a71ab",
+        "url": "https://www.wowhead.com/forever/item=19510"
+      }
+    },
+    "Silverwing Sentinels": {
+      "id": 890,
+      "side": 1,
+      "url": "https://www.wowhead.com/forever/faction=890",
+      "basis": "Battleground faction affiliation; corroborated by exact-name item-side publication records and matching reputation requirements.",
+      "exampleItemID": 19514,
+      "corroboration": {
+        "file": "checkpoint8j_publication_evidence.json",
+        "pointer": "/items/19514",
+        "row": "/items/19514/item",
+        "sha256": "271121ab8bb497615da569a5a36a3eef0894a2125672cdc9e4c0410283880065",
+        "url": "https://www.wowhead.com/forever/item=19514"
+      }
+    }
+  }
+}

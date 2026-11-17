@@ -9,6 +9,13 @@ on:
       - tools/**
       - docs/recommendation-audit/bag-quest-evidence.json
       - docs/recommendation-audit/equipment-source-eligibility.csv
+      - docs/faction-audit/evidence.json
+      - docs/faction-audit/reputation-factions.json
+      - docs/faction-audit/catalogue-evidence-audit.csv
+      - docs/faction-audit/catalogue-eligibility.csv
+      - docs/faction-audit/eligibility-changes.json
+      - docs/GLOBAL_FILTERING_POLICY.md
+      - AGENTS.md
       - .github/workflows/recommendation-validation.yml
   pull_request:
     paths:
@@ -19,6 +26,13 @@ on:
       - tools/build_bag_quest_catalogue.py
       - tools/audit_recommendation_sources.lua
       - docs/recommendation-audit/**
+      - docs/faction-audit/evidence.json
+      - docs/faction-audit/reputation-factions.json
+      - docs/faction-audit/catalogue-evidence-audit.csv
+      - docs/faction-audit/catalogue-eligibility.csv
+      - docs/faction-audit/eligibility-changes.json
+      - docs/GLOBAL_FILTERING_POLICY.md
+      - AGENTS.md
       - .github/workflows/recommendation-validation.yml
   workflow_dispatch:
 permissions:

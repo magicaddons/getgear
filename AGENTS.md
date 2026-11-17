@@ -1,5 +1,47 @@
 # GetGear coding-agent guide
 
+## Permanent policy — systemic fixes, eligibility and regression coverage
+
+For every reported bug, treat the named character/class/faction/item/recipe/
+quest/source/view as a reproduction case, not the scope boundary. Automatically:
+1. Identify the underlying data, eligibility, recommendation, acquisition,
+   scoring or rendering defect.
+2. Determine its full applicable scope across the add-on: classes, both
+   factions, levels, slots, professions, source types and presentation surfaces.
+3. Correct the shared rule centrally with reusable, evidence-backed data and
+   logic. Use specific exceptions only for demonstrated unique game mechanics;
+   explain why a general rule does not apply.
+4. Audit analogous catalogue records/code paths and report affected counts.
+5. Add positive and negative, preferably table-driven regressions across the
+   applicable scope, including faction-valid original class combinations.
+6. Document root cause, audit scope, correction, counts, preserved behavior,
+   uncertainty and remaining actual-client checks before declaring completion.
+
+Absence of further user examples is not evidence that a defect is isolated.
+Keep equipment/use/crafting/acquisition eligibility separate from build/stat/
+travel relevance. Evaluate every supported acquisition alternative, including
+verified trade where permitted; one inaccessible route does not veto an item.
+Unknown data stays explicitly uncertain, never guessed from names/zone ownership.
+Show-all/off-spec and custom priorities lift relevance, never confirmed hard
+eligibility. Preserve saved settings/progress and prior accepted functionality.
+Apply this policy to all future GetGear tasks without requiring repetition.
+See `docs/GLOBAL_FILTERING_POLICY.md` for the review and release checklist.
+
+
+## Current global eligibility correction — 17 November 2026
+
+The current owner authorizes the permanent systemic-fix policy above and a
+catalogue-wide faction eligibility correction on `settings-ui-refinement`, from
+`d500ce5`. Read `docs/faction-audit/REPORT.md` and `validation.json` for the current
+implementation and final local/non-release CI receipt. The independent faction
+use/acquisition/offer overlay preserves the approved17-file acquisition snapshot,
+7707 equipment identities,36669 class objectives,900 holds and existing releases.
+The central rules cover all applicable classes/factions/methods/views, retain
+legitimate alternatives/unknown evidence and do not let Show-all bypass hard
+eligibility. Full validation is `tools/validate_recommendations.py` plus the
+read-only `recommendation-validation.yml` workflow. Actual-client acceptance is
+still required; no ZIP, release, tag, merge or main change is authorized.
+
 ## Current in-game acceptance fixes — 17 November 2026
 
 The user authorizes systematic tracker wrapping, all-nine-class read-only talent

@@ -1,0 +1,29 @@
+SOURCE Playfulls 23690 items 13599 published source labels
+SOURCE Everloot 2866 observed edges 2472 item relationships
+DATASET 10315 Forever items 16702 classic-reference items 7431 Classic NPC names 312 client encounter names
+BOOK_SOURCE_SAMPLE 273952 [{"type": "vendor", "npc": "Aisarra Nightmeadow", "zone": "Mount Hyjal", "path": "", "note": "", "sourceRow": 12665, "label": "Vendor"}, {"type": "vendor", "npc": "", "zone": "", "path": "", "note": "", "sourceRow": 4807, "label": "Vendor"}]
+BOOK_SOURCE_SAMPLE 273968 [{"type": "vendor", "npc": "Aisarra Nightmeadow", "zone": "Mount Hyjal", "path": "", "note": "", "sourceRow": 12665, "label": "Vendor"}, {"type": "vendor", "npc": "", "zone": "", "path": "", "note": "", "sourceRow": 4807, "label": "Vendor"}]
+BOOK_SOURCE_SAMPLE 273976 [{"type": "vendor", "npc": "Aisarra Nightmeadow", "zone": "Mount Hyjal", "path": "", "note": "", "sourceRow": 12665, "label": "Vendor"}, {"type": "vendor", "npc": "", "zone": "", "path": "", "note": "", "sourceRow": 4807, "label": "Vendor"}]
+BOOK_SOURCE_SAMPLE 273988 [{"type": "vendor", "npc": "Aisarra Nightmeadow", "zone": "Mount Hyjal", "path": "", "note": "", "sourceRow": 12665, "label": "Vendor"}, {"type": "vendor", "npc": "", "zone": "", "path": "", "note": "", "sourceRow": 4807, "label": "Vendor"}]
+BOOK_SOURCE_SAMPLE 274019 [{"type": "vendor", "npc": "Aisarra Nightmeadow", "zone": "Mount Hyjal", "path": "", "note": "", "sourceRow": 12665, "label": "Vendor"}, {"type": "vendor", "npc": "", "zone": "", "path": "", "note": "", "sourceRow": 4807, "label": "Vendor"}]
+RECONCILE DONE 7707 items 577 dungeon 1252 recipes 7373 in-addon summaries
+DUNGEON ROLES {'trash': 136, 'boss': 397, 'dungeon-enemy': 5, 'rare-boss': 12, 'container-lead': 2, 'crafted-item': 1, 'crafted-pattern': 24} true_dungeon 552
+DUNGEON CONFIDENCE {'forever-community-reference': 483, 'forever-observed-npc': 38, 'forever-reference-unverified': 4, 'published-forever-trash-reference': 2, 'published-forever-dungeon-journal': 10, 'forever-encounter-historic-loot-reference': 1, 'published-forever-dungeon-guide': 10, 'historic-container-reference': 2, 'forever-item-historic-loot-reference': 1, 'published-forever-beta-class-guide': 1, 'published-forever-recipe': 1, 'recipe-origin-unverified': 24}
+RECIPE STATUS {'trainer-reference': 238, 'trainer-reference-with-pattern-item': 886, 'forever-observed': 6, 'initial': 4, 'manual-researched': 50, 'supplementary-published-craft': 2, 'vendor-reference': 68}
+UNRESOLVED 7 true dungeon 954 recipe vendor_books 68 trainer_books 886
+Traceback (most recent call last):
+  File "/tmp/getgear-global-policy-diagnostic-source/tools/capture_acquisition_audit.py", line 72, in <module>
+    main()
+  File "/tmp/getgear-global-policy-diagnostic-source/tools/capture_acquisition_audit.py", line 56, in main
+    reconciler.main()
+  File "/tmp/getgear-global-policy-diagnostic-source/tools/reconcile_acquisition_1_60.py", line 835, in main
+    assert roles["rare-boss"]==12 and roles["trash"]>=137
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/tmp/getgear-global-policy-diagnostic-source/tools/reconcile_presentation_snapshot.py", line 53, in <module>
+    main()
+  File "/tmp/getgear-global-policy-diagnostic-source/tools/reconcile_presentation_snapshot.py", line 48, in main
+    assert code==0,('Fresh reconciliation failed;approved data preserved',code)
+           ^^^^^^^
+AssertionError: ('Fresh reconciliation failed;approved data preserved', 1)
