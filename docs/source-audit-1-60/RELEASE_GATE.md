@@ -2357,8 +2357,12 @@ read-only nine-class talent interpretation, Balanced net role tradeoffs and
 separate conservative low-level acquisition practicality are implemented.
 Priority/Advanced retain explicit preferences; guide/source browsing and all
 approved catalogue data remain intact. Local121commands/26Lua suites on each
-Lua5.1/5.4 PASS. Non-release CI pending; see
-`docs/in-game-acceptance/REPORT.md` and `validation.json` for final identifiers.
+Lua5.1/5.4 PASS. Implementation `cd3ffabb5f1bdd6e954ed3f836c3c54ddc39b0ac`;
+[non-release CI44003810372](https://github.com/magicaddons/getgear/actions/runs/44003810372)
+/job133774118641 SUCCESS/all121 commands plus approved-snapshot check. Full
+decoded job log inspected; no bot/generated source commit. Read
+`docs/in-game-acceptance/REPORT.md` and its `validation.json`. Receipt commits
+change documentation only; actual Forever acceptance remains pending.
 An isolated-copy fresh diagnostic fails the unchanged upstream trash>=137 guard
 (actual136); no fresh source output is adopted. Existing release assets,main,
 TOC/version and900holds remain unchanged. No package/tag/release/merge authorized.

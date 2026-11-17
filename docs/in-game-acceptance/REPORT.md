@@ -2,7 +2,12 @@
 
 Branch: `settings-ui-refinement`. Starting validated state:
 `28e9964d221f9186f93f23e9bbf3ae3990db4128`.
-Implementation and CI identifiers are recorded in [validation.json](validation.json).
+Implementation: `cd3ffabb5f1bdd6e954ed3f836c3c54ddc39b0ac`.
+[Non-release CI44003810372](https://github.com/magicaddons/getgear/actions/runs/44003810372),
+job133774118641, passed all121 commands on this exact source.
+Full decoded job log inspected; [timestamped PASS lines](ci-pass-lines.txt) retained.
+[validation.json](validation.json) records the complete receipt. Subsequent receipt
+commits change documentation only.
 No addon package, tag, release, merge or main-branch change is authorized or performed.
 
 ## Root causes and production changes
@@ -165,7 +170,9 @@ Final command receipts, summary and CI metadata are linked from [validation.json
 The local integrated gate passes **121 commands**: 28 runtime modules and two tools
 parsed on both Lua5.1/5.4, all26 Lua regression suites on each interpreter, four
 offline Python suites, source/presentation/bag audits and20 mocked release-safety
-unit tests. The non-release CI result must match the implementation SHA.
+unit tests. Non-release CI44003810372 passed the same121 commands plus the approved-snapshot
+verification on the exact implementation SHA; no generated commit or source update
+was made by this read-only job.
 
 New regressions include360 real-row synthetic layout combinations;54 named-tree/
 faction combinations; nine classes and both factions across recommendation modes,

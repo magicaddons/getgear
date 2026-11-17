@@ -10,7 +10,9 @@ settings work, the approved17-file acquisition snapshot and existing release
 assets. Use the non-release recommendation validation gate; no new addon ZIP,
 release, tag, merge or main modification is authorized. Fresh reconciliation is
 an isolated-copy diagnostic only, with no adoption of upstream source drift.
-Current local gate:121commands/26Lua suites on Lua5.1+5.4 PASS; CI pending.
+Completed gate:implementation `cd3ffabb`;121local commands/26Lua suites on
+Lua5.1+5.4 PASS. Non-release CI44003810372/job133774118641 SUCCESS/all121;
+complete decoded job log inspected. Receipt commits are documentation only.
 Actual Forever rendering/API/event/acquisition acceptance remains manual.
 
 
