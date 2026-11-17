@@ -2,8 +2,13 @@
 
 Branch: `settings-ui-refinement`, preserving validated starting commit
 `d500ce5364cb343ca162093c04e64245c9017605`.
-Final implementation/CI identifiers and command receipts are in
-[validation.json](validation.json). No release, package, tag or merge is authorized.
+Implementation: `8b3ca05e761d532a8d7d9f22a00966d98247d6bb`.
+[Non-release CI44026159962](https://github.com/magicaddons/getgear/actions/runs/44026159962),
+job133846893449, passed all130 commands on that exact source, plus snapshot
+verification. The complete decoded job log was inspected;
+[timestamped PASS lines](ci-pass-lines.txt) and [validation.json](validation.json)
+retain the receipt. Subsequent receipt commits change documentation only.
+No release, package, tag or merge is authorized.
 
 ## Permanent policy
 
@@ -171,8 +176,11 @@ crafting, per-offer versus merchant restrictions, race fallback, unknown evidenc
 shared sources, preview, materials, dynamic bags and history. It verifies zero
 explicit item-cache requests and cached-current-binding precedence. Existing
 save/reload, equipment eligibility, bags, map lifecycle, talent and layout suites
-remain in the gate. Non-release CI must validate the exact implementation SHA;
-its completed result is recorded in validation.json.
+remain in the gate. Non-release CI44026159962 passed all130 commands on the exact implementation
+SHA, with the approved snapshot verified and complete job log inspected. There
+was no generated source commit. Final CSV/newline normalization was followed by
+a passing overlay check and all six faction-evidence unit cases; runtime Lua was
+unchanged. Detailed receipts are in validation.json.
 
 All7707 equipment identities,36669 class objectives,900 candidate holds, the
 approved17-file acquisition snapshot, previous settings/progress, recipe/material

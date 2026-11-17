@@ -2378,7 +2378,11 @@ classes/both factions with16 faction-valid original class combinations,62704
 class records and320 level/view cases.420 item requirement/attribution records;
 449 items change access (364 invalid access removed,85 legitimate alternatives
 restored), with209 qualified requirements/eight tooltip gaps kept explicit.
-Local130commands/29modules/27Lua suites on Lua5.1+5.4 PASS; non-release CI pending.
+Local130commands/29modules/27Lua suites on Lua5.1+5.4 PASS. Implementation
+`8b3ca05e761d532a8d7d9f22a00966d98247d6bb`; [non-release CI44026159962](https://github.com/magicaddons/getgear/actions/runs/44026159962)
+/job133846893449 SUCCESS/all130 plus approved-snapshot verification. Complete
+decoded job log inspected; no generated source commit. Receipt commits change
+documentation only; actual-client acceptance remains pending.
 Fresh isolated-copy diagnostic fails unchanged upstream trash>=137(actual136);
 no source adoption. Approved17-file snapshot, all identities/objectives/900holds,
 settings/progress/recipes/materials and existing assets preserved. Read
