@@ -319,6 +319,7 @@ end
 local ARMOR_ONLY_KEYS={ITEM_MOD_ARMOR_SHORT=true,RESISTANCE0_NAME=true}
 function GetGear:ShouldShowOverlayStatChanges(gear)
     if not gear or gear.bagUpgrade then return true end
+    if self.db and self.db.overlay and self.db.overlay.showAllValidGear then return true end
     if self.GetStatPriorityMode and self:GetStatPriorityMode()~="balanced" then
         return self:ShouldRecommendByStatPriority(gear)
     end
@@ -326,6 +327,10 @@ function GetGear:ShouldShowOverlayStatChanges(gear)
         return true
     end
     local comparison=self:GetGearComparison(gear,true)
+    if self.GetTalentOrientation and self:GetTalentOrientation() and self.GetWeightedUpgradeEvaluation then
+        local result=self:GetWeightedUpgradeEvaluation(gear,comparison)
+        return result.status~="no-benefit" and result.status~="ineligible"
+    end
     if not comparison or comparison.message
         or type(comparison.groups)~="table" or #comparison.groups==0 then
         return true -- unavailable/equipped/unknown: not proof of no improvement

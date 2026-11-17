@@ -402,6 +402,10 @@ function GetGear:GetAcquisitionCompactSummary(gear)
     if plan and #(plan.routes or {})>0 and #routesForCharacter(model,plan)==0 then
         return 'Source: no known route for this character; see Guide'
     end
+    local practicality=self:GetAcquisitionPracticality(gear)
+    if practicality.remoteOriginal and practicality.alternative=="tradeable" then
+        return "Source: trade/Auction House for a verified BoE item if offered; listings unknown. Original drop/vendor route: Guide."
+    end
     local target=self:GetAcquisitionMapTarget(gear)
     if target then
         local label=target.label or target.zone or 'location unresolved'
@@ -464,7 +468,9 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     if not plan then return {} end
     local routes=routesForCharacter(model,plan)
     local choices,seen={},{}
+    local currentRoute
     local function add(target)
+        target.acquisitionRoute=currentRoute
         local b=target.bounds
         local footprint=b and table.concat({b.xMin or'',b.xMax or'',b.yMin or'',b.yMax or''},',')or''
         local key=target.kind=='dungeon' and target.entranceOnly and ('entrance|'..target.dungeon..'|'..(target.entranceID or'main'))
@@ -524,6 +530,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     local questRoutes=0
     for _, route in ipairs(routes) do if route.kind=="quest" or route.kind=="quest_container" then questRoutes=questRoutes+1 end end
     for _, route in ipairs(routes) do
+        currentRoute=route
         if route.kind=="quest" or route.kind=="quest_container" then
             local id,state=chooseQuest(route.questID)
             local q=get(model.quests,id) or {questID=id,starts={},ends={}}
@@ -614,6 +621,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     local side,map,zone,level=travelContext()
     local trainerPreferred,trainerRank
     for index,target in ipairs(choices) do
+        target.practicality,target.practicalPreferred=self:GetAcquisitionRoutePracticality(gear,target.acquisitionRoute,nil,target)
         local q=target.questID and get(model.quests,target.questID)
         local minimum=q and q.reqlevel
         target.minimumLevel=type(minimum)=="number" and minimum or nil
@@ -653,17 +661,112 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     return choices
 end
 
+-- Recommendation convenience is separate from source eligibility. This is a
+-- low-level travel heuristic, not a route/distance claim or a zone blacklist.
+local TRAVEL_SIDE={
+    ["The Barrens"]=2,["Silverpine Forest"]=2,["Durotar"]=2,["Mulgore"]=2,["Tirisfal Glades"]=2,
+    ["Westfall"]=1,["Loch Modan"]=1,["Darkshore"]=1,["Elwynn Forest"]=1,["Dun Morogh"]=1,["Teldrassil"]=1,
+}
+for zone,side in pairs(HOME_SIDE) do TRAVEL_SIDE[zone]=side end
+local ORDINARY_TRAVEL={named_drop=true,npc_container=true,object=true,vendor=true,vendor_container=true,
+    recipe_drop=true,recipe_vendor=true,trainer=true}
+
+function GetGear:GetAcquisitionRoutePracticality(gear,route,context,target)
+    if not route then return "unknown" end
+    -- Shared dungeons, accessible neutral quests and active quest guidance are
+    -- deliberate destinations. Unknown prerequisites are never a travel veto.
+    if route.kind=="dungeon" or route.kind=="quest" or route.kind=="quest_container" then return "practical" end
+    if not ORDINARY_TRAVEL[route.kind] then return "unknown" end
+    local side,_,zone,level=travelContext()
+    if context then
+        side=context.faction=="Alliance" and 1 or context.faction=="Horde" and 2
+        zone=context.zone;level=context.level
+    end
+    if not side or type(level)~="number" then return "unknown" end
+    if level>=30 then return "practical" end
+    local actor=data().sources[route.source] or {}
+    local service=route.serviceSide or route.offer and route.offer.side or actor.serviceSide
+    -- Neutral/unknown sellers may be in shared settlements (e.g. Ratchet).
+    -- Zone ownership cannot establish that their service is inconvenient.
+    if (route.kind=="vendor" or route.kind=="vendor_container" or route.kind=="recipe_vendor"
+        or route.kind=="trainer") and service~=1 and service~=2 then return "unknown" end
+    local locations=target and {target} or route.location and {route.location} or actor.locations or {}
+    if #locations==0 then return "unknown" end
+    local uncertain=false
+    for _,loc in ipairs(locations) do
+        if zone and loc.zone==zone then return "practical",true end
+        if loc.neutral==true or (data().instances or {})[loc.zone] or loc.kind=="dungeon" then return "practical" end
+        local owner=TRAVEL_SIDE[loc.zone]
+        local reliable=loc.verification and loc.verification~="legacy-reference"
+        if owner==side and reliable then return "practical",true end
+        if not owner or not reliable then uncertain=true end
+    end
+    return uncertain and "unknown" or "inconvenient"
+end
+
+function GetGear:GetAcquisitionPracticality(gear,context)
+    if not gear or gear.bagUpgrade then return {status="practical"} end
+    local routes,known=self:GetEligibleAcquisitionRoutes(gear,context)
+    if known and #routes==0 and not self:GetIndependentCraftAccess(gear,context) then return {status="ineligible"} end
+    local inconvenient,unknown=false,not known
+    for _,route in ipairs(routes) do
+        local status=self:GetAcquisitionRoutePracticality(gear,route,context)
+        if status=="practical" then return {status="practical",route=route} end
+        if status=="unknown" then unknown=true else inconvenient=true end
+    end
+    -- Learned recipes and verified tradeable finished items are independent
+    -- alternatives; no availability or current auction listing is invented.
+    local craft=self:GetIndependentCraftAccess(gear,context)
+    if craft or gear.bindingStatus=="boe" then
+        return {status="practical",alternative=craft or "tradeable",remoteOriginal=inconvenient and not unknown}
+    end
+    if unknown or not inconvenient then return {status="unknown"} end
+    return {status="inconvenient",reason="Only known ordinary sources require low-level travel into opposing territory; browse alternatives in Guide."}
+end
+
+-- Keep a substantial known upgrade or an independently confirmed empty slot.
+-- Missing stats, effects or equipment data cannot prove an upgrade is trivial.
+function GetGear:IsMinorAcquisitionUpgrade(gear)
+    if not self.GetWeightedUpgradeEvaluation then return false end
+    local effects=((gear.notes or "").." "..(gear.benefitsText or "")):lower()
+    for _,term in ipairs({"equip:","on use","on-use","proc","chance on hit","set bonus","special effect"}) do
+        if effects:find(term,1,true) then return false end
+    end
+    local comparison=self:GetGearComparison(gear,true)
+    if not comparison or comparison.message or #(comparison.groups or {})==0 then return false end
+    for _,group in ipairs(comparison.groups) do
+        if group.emptySlot then return false end
+        local score=self:ScoreComparisonGroup(gear,group)
+        if score==nil then return false end
+        local baseline=0
+        for _,row in ipairs(group.rows or {}) do
+            if type(row.old)~="number" then return false end
+            baseline=baseline+math.max(0,row.old)*self:GetStatWeight(row.key,gear)
+        end
+        -- Only changed stats enter this lower-bound baseline, so missing
+        -- unchanged attributes make this exception more generous, never stricter.
+        -- A relative threshold also respects Advanced weights expressed on
+        -- very small/large scales. A zero baseline cannot prove a minor gain.
+        if score>0 and (baseline<=0 or score>baseline*0.25) then return false end
+    end
+    return true
+end
+
 function GetGear:GetAcquisitionOverlayExclusion(gear)
     if not gear or gear.bagUpgrade then return end
     local policy=get(data().availability,gear.itemID)
     if policy and policy.overlayEligible==false then return policy.reason or "Current Forever availability unconfirmed" end
-    local plan=get(data().items,gear.itemID)
+    local plan=gear.acquisitionPlan or get(data().items,gear.itemID)
     if not plan or #(plan.routes or {})==0 then return end
     if not self:HasEligibleAcquisitionSource(gear) then return "No published source route for this character's faction/class" end
     local minimum=self:GetAcquisitionMinimumLevel(gear)
     local level=call(UnitLevel,"player") or self.level
     if minimum and type(level)=="number" and minimum>level+5 then
         return "Published quest minimum is outside the next five levels"
+    end
+    if not (self.db and self.db.overlay and self.db.overlay.showAllValidGear) then
+        local assessment=self:GetAcquisitionPracticality(gear)
+        if assessment.status=="inconvenient" and self:IsMinorAcquisitionUpgrade(gear) then return assessment.reason end
     end
 end
 function GetGear:ShouldShowOverlayAcquisition(gear)
@@ -677,7 +780,17 @@ function GetGear:GetAcquisitionMapTarget(gear)
     end
     if #useful==0 then return end
     local selected=useful[1]
-    for _, target in ipairs(useful) do if target.preferred then selected=target;break end end
+    -- Shared dungeons/quests remain accessible, but are not evidence of a
+    -- more convenient journey. Only a known local/friendly ordinary source
+    -- may displace the established selection; unknown routes retain order.
+    local function convenienceRank(target)
+        return (target.preferred or target.clientVerified
+            or target.practicalPreferred and not target.futureLevel and not target.chainUnresolved) and 0 or 1
+    end
+    for _,target in ipairs(useful) do
+        local rank,previous=convenienceRank(target),convenienceRank(selected)
+        if rank<previous or rank==previous and target.preferred and not selected.preferred then selected=target end
+    end
     local sameEntrance=selected.kind=="dungeon" and selected.entranceOnly==true
     for _,target in ipairs(useful) do
         if target.kind~="dungeon" or not target.entranceOnly or target.dungeon~=selected.dungeon or target.entranceID~=selected.entranceID then sameEntrance=false;break end

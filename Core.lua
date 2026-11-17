@@ -19,7 +19,8 @@ events:RegisterEvent("PLAYER_REGEN_ENABLED")
 -- Forever can expose different talent-event subsets. Optional registration
 -- must not abort addon loading when a particular event is unavailable.
 for _,name in ipairs({"TRAIT_CONFIG_UPDATED","ACTIVE_TALENT_GROUP_CHANGED",
-                     "PLAYER_TALENT_UPDATE","QUEST_LOG_UPDATE","QUEST_ACCEPTED","QUEST_TURNED_IN"}) do
+                     "PLAYER_TALENT_UPDATE","QUEST_LOG_UPDATE","QUEST_ACCEPTED","QUEST_TURNED_IN",
+                     "ZONE_CHANGED","ZONE_CHANGED_NEW_AREA"}) do
     pcall(events.RegisterEvent,events,name)
 end
 
@@ -137,6 +138,10 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or GetGear.level
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
+        if GetGear.RefreshAll then GetGear:RefreshAll() end
+    elseif event == "ZONE_CHANGED" or event == "ZONE_CHANGED_NEW_AREA" then
+        -- Travel recommendations and preferred source descriptions depend on
+        -- the current zone. Preserve any user-selected map marker.
         if GetGear.RefreshAll then GetGear:RefreshAll() end
     elseif event == "UNIT_INVENTORY_CHANGED" then
         if arg1 == "player" and GetGear.RefreshAll then GetGear:RefreshAll() end

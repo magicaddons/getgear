@@ -47,8 +47,8 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "$GITHUB_REF" == 'refs/heads/settings-ui-refinement' || "${GITHUB_HEAD_REF:-}" == 'settings-ui-refinement' ]]; then
-            # UI-only scope: retain the accepted snapshot. The separate local
-            # diagnostic found upstream drift in the unchanged source-count gate.
+            # Acceptance work retains the approved catalogue. Fresh diagnostics
+            # run separately; upstream source drift must not change this gate.
             python3 tools/reconcile_presentation_snapshot.py --verify-only
           else
             python3 tools/reconcile_presentation_snapshot.py --diagnostics "$RUNNER_TEMP/recommendation-reconciliation"

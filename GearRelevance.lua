@@ -142,6 +142,7 @@ function GetGear:ShouldDisplayGear(gear,classToken,mode)
     -- modifier, never items with generic spellpower, Intellect, healing,
     -- defensive stats, resistances or hybrid utility.
     if classToken=="MAGE" and mode~="preview"
+        and (not self.GetStatPriorityMode or self:GetStatPriorityMode()=="balanced")
         and type(gear.schoolOnly)=="string"
         and self.GetDominantTalentTree then
         local active=self:GetDominantTalentTree()

@@ -1,5 +1,19 @@
 # GetGear coding-agent guide
 
+## Current in-game acceptance fixes — 17 November 2026
+
+The user authorizes systematic tracker wrapping, all-nine-class read-only talent
+awareness and conservative per-route acquisition practicality on
+`settings-ui-refinement`, starting at `28e9964d`. Read
+`docs/in-game-acceptance/REPORT.md` and its validation receipt. Preserve all prior
+settings work, the approved17-file acquisition snapshot and existing release
+assets. Use the non-release recommendation validation gate; no new addon ZIP,
+release, tag, merge or main modification is authorized. Fresh reconciliation is
+an isolated-copy diagnostic only, with no adoption of upstream source drift.
+Current local gate:121commands/26Lua suites on Lua5.1+5.4 PASS; CI pending.
+Actual Forever rendering/API/event/acquisition acceptance remains manual.
+
+
 ## Current UI refinement — 16 November 2026
 
 The user authorizes settings UI refinement on `settings-ui-refinement`, based

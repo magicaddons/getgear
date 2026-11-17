@@ -1285,7 +1285,7 @@ function GetGear:RefreshUI()
         statusText:SetPoint("TOPRIGHT", -38, -151)
         local dominant=self.GetDominantTalentTree and self:GetDominantTalentTree()
         statusText:SetText(tostring(#list) .. " equipment items" ..
-            (self.classToken=="MAGE" and dominant and ("  |  "..dominant.." talents") or ""))
+            (dominant and ("  |  "..dominant.." talents") or ""))
         scroll:ClearAllPoints()
         scroll:SetPoint("TOPLEFT",17,-185)
         scroll:SetPoint("BOTTOMRIGHT",-35,15)
@@ -1634,7 +1634,6 @@ local function NewOverlayRow(i)
     local name = NewText(expand, "GameFontNormalSmall", 227)
     name:SetPoint("TOPLEFT", 2, -7)
     local sub = NewText(expand, "GameFontHighlightSmall", 226)
-    sub:SetPoint("TOPLEFT", 2, -26)
     local hide = NewButton(f, "X", 25, 22)
     hide:SetPoint("TOPRIGHT", -7, -11)
     hide:SetScript("OnEnter",function(self)
@@ -1670,6 +1669,18 @@ local function NewOverlayRow(i)
         hide=hide,minimize=minimize,pin=pin,profession=profession,professionIcon=professionIcon,
         desc=desc,comparison=comparison,benefits=benefits,matTitle=matTitle,matNote=matNote,mats=mats}
     return overlayRows[i]
+end
+
+-- Measure after assigning width/text on every refresh, including resize and
+-- row reuse. Keep the original single-line spacing without a fixed title box.
+local function LayoutOverlayHeader(row)
+    local subY=7+MeasureText(row.name,12)+7
+    row.sub:ClearAllPoints()
+    row.sub:SetPoint("TOPLEFT",row.expand,"TOPLEFT",2,-subY)
+    local bottom=subY+MeasureText(row.sub,12)
+    local headerHeight=math.max(47,bottom+9)
+    row.expand:SetHeight(headerHeight)
+    return math.max(48,bottom+10),headerHeight
 end
 
 local matHeader = CreateFrame("Button", nil, overlay)
@@ -1895,8 +1906,7 @@ function GetGear:RefreshOverlay()
     if self.ShouldShowOverlayStatChanges or self.ShouldShowOverlayWorldBoEDrops or self.ShouldShowOverlayAcquisition then
         local visible={}
         for _,gear in ipairs(list) do
-            local useful=(opts.hideWithoutPositiveStats==false)
-                or not self.ShouldShowOverlayStatChanges
+            local useful=not self.ShouldShowOverlayStatChanges
                 or self:ShouldShowOverlayStatChanges(gear)
             local obtainable=(opts.hideGreenBoEWorldDrops==false)
                 or not self.ShouldShowOverlayWorldBoEDrops
@@ -1928,19 +1938,23 @@ function GetGear:RefreshOverlay()
             for i=1,math.min(#list,overlayCap) do
                 local gear = list[i]
                 local r = overlayRows[i] or NewOverlayRow(i)
+                r.f:SetWidth(objContent:GetWidth())
                 r.f:ClearAllPoints()
                 r.f:SetPoint("TOPLEFT", objContent, "TOPLEFT", 0, -totalY)
                 r.bg:SetColorTexture(0.10, 0.13, 0.19, opacity*0.9)
+                r.desc:SetWidth(r.f:GetWidth()-20)
+                r.comparison:SetWidth(r.f:GetWidth()-23)
                 SetItemIcon(r.icon, gear.itemID,nil,nil,gear)
                 AssignAcquisitionPin(r.pin,gear)
                 -- Make room for the map pin in the header only for records
                 -- that have a trustworthy location attached.
                 local reserved=(r.pin:IsShown() and 27 or 0)
-                r.expand:SetWidth(math.max(125,r.f:GetWidth()-111-reserved))
-                r.name:SetWidth(math.max(125,r.f:GetWidth()-116-reserved))
-                r.sub:SetWidth(math.max(125,r.f:GetWidth()-116-reserved))
+                r.expand:SetWidth(math.max(80,r.f:GetWidth()-111-reserved))
+                r.name:SetWidth(math.max(80,r.f:GetWidth()-116-reserved))
+                r.sub:SetWidth(math.max(80,r.f:GetWidth()-116-reserved))
                 r.name:SetText(gear.name .. (gear.bagUpgrade and ("  x"..gear.quantity) or ""))
                 r.sub:SetText(gear.bagUpgrade and (tostring(gear.bagSlots).." slots each | "..gear.quantity.." needed") or ("Level " .. tostring(gear.targetLevel)))
+                local contentY,headerHeight=LayoutOverlayHeader(r)
                 r.expand:SetScript("OnClick", function()
                     opts.expanded[gear.id] = not opts.expanded[gear.id] or nil
                     self:RefreshOverlay()
@@ -1967,14 +1981,14 @@ function GetGear:RefreshOverlay()
                     r.desc:Hide(); r.matTitle:Hide(); r.matNote:Hide()
                     for _, w in ipairs(r.benefits) do w:Hide() end
                     for _, w in ipairs(r.mats) do w.frame:Hide() end
-                    r.f:SetHeight(47)
+                    r.f:SetHeight(headerHeight)
                     r.f:Show()
-                    totalY=totalY+51
+                    totalY=totalY+headerHeight+4
                 else
                 -- The compact tracker ALWAYS displays the per-item material
                 -- checklist, including for objectives within the next 5 levels.
                 -- Expanding adds benefits and useful source detail; status actions stay in the full Guide.
-                local nextY = 48
+                local nextY = contentY
                 -- The trade-skill requirement is rendered beside the item's
                 -- Materials heading below, not between level and stat deltas.
                 local changeText,showChange="",false
@@ -2205,7 +2219,10 @@ local function FitSettingsToScreen()
     settings:SetScale(math.min(1,math.max(1,width-24)/780,math.max(1,height-24)/692))
 end
 for _,event in ipairs({"DISPLAY_SIZE_CHANGED","UI_SCALE_CHANGED"}) do pcall(settings.RegisterEvent,settings,event) end
-settings:SetScript("OnEvent",function() if settings:IsShown() then FitSettingsToScreen() end end)
+settings:SetScript("OnEvent",function()
+    if settings:IsShown() then FitSettingsToScreen() end
+    if GetGear.db and GetGear.db.overlay.visible then GetGear:RefreshOverlay() end
+end)
 -- Settings must still be usable when opened from the foreground detail guide.
 settings:SetFrameStrata("DIALOG")
 if settings.SetToplevel then settings:SetToplevel(true) end
@@ -2359,7 +2376,7 @@ positiveStatCheck:SetScript("OnEnter",function(self)
     if not GameTooltip then return end
     GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
     GameTooltip:AddLine("Overlay upgrade comparison",1,0.82,0.35)
-    GameTooltip:AddLine("On by default. Requires at least one confirmed positive stat other than ordinary armour, unless you enable armour-only improvements below.",1,1,1,true)
+    GameTooltip:AddLine("On by default. Uses confirmed gains and losses for a clear talent build; otherwise requires a useful positive stat. Armour-only improvements are optional.",1,1,1,true)
     GameTooltip:AddLine("Missing comparison data, equipment empty slots, bag upgrades and the full Guide are unaffected.",0.72,0.83,1,true)
     GameTooltip:Show()
 end)
@@ -2424,7 +2441,7 @@ priorityTitle:SetText("Stat priorities")
 local priorityUI={modes={},weights={},refreshing=false}
 priorityUI.help=NewText(settings,"GameFontHighlightSmall",325)
 priorityUI.help:SetPoint("TOPLEFT",425,-112)
-local priorityDescriptions={balanced="Uses default class-based stat priorities.",
+local priorityDescriptions={balanced="Uses class and talent-aware stat priorities.",
     priority="Gives your chosen stat greater importance.",custom="Set your own stat weights."}
 for index,mode in ipairs({"balanced","priority","custom"}) do
     local button=NewButton(settings,({balanced="Balanced",priority="Priority",custom="Advanced"})[mode],104,25)

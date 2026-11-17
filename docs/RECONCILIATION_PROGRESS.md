@@ -2415,3 +2415,17 @@ job log inspected; source HEAD matches. Both Lua versions run23 suites and parse
 modules. Final documentation/CSV line-ending cleanup does not change runtime.
 Main/Beta9 tag/ZIP and protected source hashes were rechecked unchanged. Stop
 for the report's in-game acceptance checklist; no release/package is authorized.
+
+
+## In-game acceptance fixes — 17 November 2026
+
+On `settings-ui-refinement` from `28e9964d`, content-aware overlay headers,
+read-only nine-class talent interpretation, Balanced net role tradeoffs and
+separate conservative low-level acquisition practicality are implemented.
+Priority/Advanced retain explicit preferences; guide/source browsing and all
+approved catalogue data remain intact. Local121commands/26Lua suites on each
+Lua5.1/5.4 PASS. Non-release CI pending; see
+`docs/in-game-acceptance/REPORT.md` and `validation.json` for final identifiers.
+An isolated-copy fresh diagnostic fails the unchanged upstream trash>=137 guard
+(actual136); no fresh source output is adopted. Existing release assets,main,
+TOC/version and900holds remain unchanged. No package/tag/release/merge authorized.

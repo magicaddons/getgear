@@ -104,7 +104,7 @@ for i,expected in ipairs(expectedChecks)do
     assert(overlayRefresh-beforeOverlay==(expected[3]=='overlay'and 1 or 0))
     actual.checkbox:SetChecked(not actual.checkbox:GetChecked());actual.checkbox.OnClick(actual.checkbox)
 end
-local descriptions={balanced='Uses default class-based stat priorities.',priority='Gives your chosen stat greater importance.',custom='Set your own stat weights.'}
+local descriptions={balanced='Uses class and talent-aware stat priorities.',priority='Gives your chosen stat greater importance.',custom='Set your own stat weights.'}
 local labels={balanced='Balanced',priority='Priority',custom='Advanced'}
 for mode,button in pairs(controls.priority.modes)do assert(button.text==labels[mode])end
 local function checkMode(mode)
