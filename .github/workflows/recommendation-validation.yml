@@ -1,10 +1,11 @@
 name: Validate bags, source access and stat priorities (no release)
 on:
   push:
-    branches: [recommendation-sources-stat-priorities, settings-ui-refinement]
+    branches: [recommendation-sources-stat-priorities, settings-ui-refinement, integration/cumulative-slot-filtering]
     paths:
       - '*.lua'
       - GetGear.toc
+      - FEATURE_ACCEPTANCE.json
       - tests/**
       - tools/**
       - docs/recommendation-audit/bag-quest-evidence.json
@@ -21,8 +22,11 @@ on:
     paths:
       - '*.lua'
       - GetGear.toc
+      - FEATURE_ACCEPTANCE.json
       - tests/**
       - tools/validate_recommendations.py
+      - tools/validate_feature_acceptance.py
+      - tools/release/build_test_package.py
       - tools/build_bag_quest_catalogue.py
       - tools/audit_recommendation_sources.lua
       - docs/recommendation-audit/**
@@ -60,7 +64,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [[ "$GITHUB_REF" == 'refs/heads/settings-ui-refinement' || "${GITHUB_HEAD_REF:-}" == 'settings-ui-refinement' ]]; then
+          if [[ "$GITHUB_REF" == 'refs/heads/settings-ui-refinement' || "${GITHUB_HEAD_REF:-}" == 'settings-ui-refinement' || "$GITHUB_REF" == 'refs/heads/integration/cumulative-slot-filtering' || "${GITHUB_HEAD_REF:-}" == 'integration/cumulative-slot-filtering' ]]; then
             # Acceptance work retains the approved catalogue. Fresh diagnostics
             # run separately; upstream source drift must not change this gate.
             python3 tools/reconcile_presentation_snapshot.py --verify-only

@@ -81,6 +81,9 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if type(db.hidden) ~= "table" then db.hidden = {} end
         if type(db.overlay) ~= "table" then db.overlay = {} end
         if type(db.detail) ~= "table" then db.detail = {} end
+        -- Additive per-character UI preferences; retain schema and existing state.
+        db.overlay.slotFilter = GetGear:NormalizeEquipmentSlotFilter(db.overlay.slotFilter)
+        db.detail.slotFilter = GetGear:NormalizeEquipmentSlotFilter(db.detail.slotFilter)
         local o = db.overlay
         if o.visible == nil then o.visible = true end
         if type(o.backgroundOpacity) ~= "number" then o.backgroundOpacity = 0.78 end

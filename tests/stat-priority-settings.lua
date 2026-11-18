@@ -1,5 +1,5 @@
 local root=arg[1] or '.';local a={}
-for _,f in ipairs({'StatPriorities.lua','GearRelevance.lua'})do assert(loadfile(root..'/'..f))('GetGear',a)end
+for _,f in ipairs({'GuideState.lua','StatPriorities.lua','GearRelevance.lua'})do assert(loadfile(root..'/'..f))('GetGear',a)end
 local eventFrame
 CreateFrame=function()local f={RegisterEvent=function()end,SetScript=function(self,key,fn)self[key]=fn end};eventFrame=f;return f end
 SlashCmdList={};UnitLevel=function()return 15 end

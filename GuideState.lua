@@ -1,5 +1,106 @@
 local addonName, GetGear = ...
 
+-- Presentation-only slot groups. Call AFTER GetItems / preview generation;
+-- never use these preferences in eligibility, comparisons or materials.
+GetGear.EquipmentSlotFilters = {
+    {"all", "All Slots"}, {"head", "Head"}, {"neck", "Neck"},
+    {"shoulders", "Shoulders"}, {"back", "Back"}, {"chest", "Chest"},
+    {"wrists", "Wrists"}, {"hands", "Hands"}, {"waist", "Waist"},
+    {"legs", "Legs"}, {"feet", "Feet"}, {"rings", "Rings"},
+    {"trinkets", "Trinkets"}, {"weapons", "Weapons"},
+    {"offhand", "Off Hand"}, {"ranged", "Ranged"}, {"bags", "Bags"},
+}
+local FILTER_LABELS = {}
+for _, entry in ipairs(GetGear.EquipmentSlotFilters) do FILTER_LABELS[entry[1]] = entry[2] end
+local SLOT_GROUP = {
+    Head="head", Neck="neck", Shoulder="shoulders", Back="back", Chest="chest",
+    Wrist="wrists", Hands="hands", Waist="waist", Legs="legs", Feet="feet",
+    Ring="rings", Trinket="trinkets", Bag="bags",
+    Ranged="ranged", Thrown="ranged", Wand="ranged", Relic="ranged",
+    ["Main Hand"]="weapons", ["Off Hand"]="offhand",
+    ["Two-Hand"]="weapons", ["Two-Hand Staff"]="weapons",
+    ["Two-Hand Axe"]="weapons", ["Two-Hand Mace"]="weapons",
+    ["Two-Hand Sword"]="weapons", ["Two-Hand Polearm"]="weapons",
+}
+local MELEE_SUBTYPE = {Axe=true, Sword=true, Mace=true, Dagger=true,
+    ["Fist Weapon"]=true, ["Fist Weapons"]=true}
+local HAND_INVENTORY_TYPE = {INVTYPE_WEAPON=13, INVTYPE_WEAPONMAINHAND=21,
+    INVTYPE_WEAPONOFFHAND=22, INVTYPE_SHIELD=14, INVTYPE_HOLDABLE=23}
+
+function GetGear:NormalizeEquipmentSlotFilter(slot)
+    return type(slot)=="string" and FILTER_LABELS[slot] and slot or "all"
+end
+
+function GetGear:GetEquipmentSlotFilterLabel(slot)
+    return FILTER_LABELS[self:NormalizeEquipmentSlotFilter(slot)]
+end
+
+function GetGear:GetEquipmentSlotFilter(interface)
+    local options = self.db and self.db[interface]
+    return self:NormalizeEquipmentSlotFilter(options and options.slotFilter)
+end
+
+function GetGear:SetEquipmentSlotFilter(interface, slot)
+    if interface~="overlay" and interface~="detail" then return end
+    if self.db and self.db[interface] then
+        self.db[interface].slotFilter = self:NormalizeEquipmentSlotFilter(slot)
+    end
+end
+
+function GetGear:MatchesEquipmentSlotFilter(gear, slot)
+    slot = self:NormalizeEquipmentSlotFilter(slot)
+    if slot=="all" then return true end
+    local group = SLOT_GROUP[gear.slot]
+    if group==slot then return true end
+    -- The generated taxonomy folds One-Hand and Main Hand into Main Hand.
+    -- Use the same synchronous client metadata API as GearCompare to resolve
+    -- compatibility; do not load tooltips, request item data or inspect names.
+    if (slot=="offhand" and group=="weapons" and gear.slot=="Main Hand")
+        or (slot=="weapons" and group=="offhand") then
+        local inventoryType
+        if gear.itemID and C_Item and type(C_Item.GetItemInventoryTypeByID)=="function" then
+            local ok, value = pcall(C_Item.GetItemInventoryTypeByID, gear.itemID)
+            if ok and (type(issecretvalue)~="function" or not issecretvalue(value))
+                and type(value)=="number" and value>0 then
+                inventoryType = value
+            end
+        end
+        if not inventoryType and gear.itemID then
+            local instant = C_Item and C_Item.GetItemInfoInstant or GetItemInfoInstant
+            if type(instant)=="function" then
+                local ok, _, _, _, equipLoc = pcall(instant, gear.itemID)
+                if ok and (type(issecretvalue)~="function" or not issecretvalue(equipLoc))
+                    and type(equipLoc)=="string" then
+                    inventoryType = HAND_INVENTORY_TYPE[equipLoc]
+                end
+            end
+        end
+        if inventoryType~=nil then
+            return inventoryType==13 or inventoryType==22 -- One-Hand / Weapon Off Hand
+        end
+        -- Off-hand subtype is retained in the catalogue. Unknown Main Hand
+        -- compatibility must not be guessed when the client API is unavailable.
+        return slot=="weapons" and MELEE_SUBTYPE[gear.armorType]==true
+    end
+    return false
+end
+
+function GetGear:FilterEquipmentSlots(items, slot)
+    local result = {}
+    for _, gear in ipairs(items) do
+        if self:MatchesEquipmentSlotFilter(gear, slot) then result[#result+1] = gear end
+    end
+    -- New list, original record identities and order; no writes to inputs.
+    return result, #items
+end
+
+function GetGear:EquipmentSlotCountText(matches, total, displayed)
+    if displayed and displayed<matches then
+        return "Showing "..displayed.." of "..total.." ("..matches.." slot matches)"
+    end
+    return "Showing "..matches.." of "..total.." recommendations"
+end
+
 -- Unified runtime gear visibility, progress and materials (Beta 4).
 -- Equipment facts and eligibility are loaded separately.
 
@@ -54,7 +155,7 @@ function GetGear:GetAggregateMaterials(scope)
             for _, material in ipairs(gear.reagents or {}) do
                 local entry = totals[material.itemID]
                 if not entry then
-                    entry = { itemID = material.itemID, name = material.name, amount = 0 }
+                    entry = { itemID = material.itemID, name = self.MaterialName and self:MaterialName(material.itemID,material.name) or material.name, amount = 0 }
                     totals[material.itemID] = entry
                     result[#result + 1] = entry
                 end

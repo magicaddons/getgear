@@ -1,3 +1,9 @@
+> Current private integration: `integration/cumulative-slot-filtering`, based on
+> `settings-ui-refinement` at `3e590ae`. This includes the completed settings,
+> stat-priority, source/faction/talent, bag and material work plus slot filtering.
+> Read [the cumulative audit](docs/CUMULATIVE_INTEGRATION.md). Future test builds
+> must pass `FEATURE_ACCEPTANCE.json` and use `tools/release/build_test_package.py`.
+
 # GetGear
 
 Development branch: quest bags, source eligibility and per-character stat priorities are documented in [the implementation audit](docs/recommendation-audit/IMPLEMENTATION.md). This work is not a new release; the existing Beta 9 assets are unchanged.

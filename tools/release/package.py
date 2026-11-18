@@ -70,6 +70,11 @@ def validate(archive, source, tag, commit):
                 require(data == (source / name).read_bytes(), 'Source differs: ' + name)
             else:
                 require(commit.encode() in data, 'Missing source attribution')
+        if tag != BETA9['tag']:
+            require((source / 'FEATURE_ACCEPTANCE.json').is_file(),
+                    'Future builds require the cumulative feature acceptance manifest')
+            subprocess.run([sys.executable, str(HERE.parent / 'validate_feature_acceptance.py'),
+                            '--archive', str(archive), '--expected-source', str(source)], check=True)
         with tempfile.TemporaryDirectory() as tmp:
             z.extractall(tmp)  # membership above allows only the explicit safe paths
             root = Path(tmp) / 'GetGear'

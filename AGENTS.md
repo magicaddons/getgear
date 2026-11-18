@@ -1,3 +1,25 @@
+## Current owner-authorized cumulative integration — 18 November 2026
+
+The current request authorizes a cumulative development integration and one
+complete private testing ZIP, with source revision and SHA-256. Use
+`integration/cumulative-slot-filtering`, based on `settings-ui-refinement`
+`3e590ae438b2064bea756d40356ee5bc5c1205d4`. Do not build new work from the older
+main/runtime merely because its branch is named work. Read
+`docs/CUMULATIVE_INTEGRATION.md` and `FEATURE_ACCEPTANCE.json` first.
+
+All future testing builds are cumulative unless the owner explicitly approves
+removal. Run the feature contract, full functional gate and extracted-package
+gate. Use `tools/release/build_test_package.py`; archive byte/TOC checks alone
+cannot prove that previously accepted features were included. Preserve the
+approved source snapshot and existing settings/weights/progress.
+
+The original dirty worktree and paused navigation experiment are preserved
+separately. Do not import that experiment, its supplements or generated data
+into this integration. Accepted navigation is pinned by the feature contract.
+No main modification, merge, public release or remote publication is authorized
+by this request. Historical package prohibitions below are superseded only for
+this explicitly requested private cumulative test build.
+
 # GetGear coding-agent guide
 
 ## Permanent policy — systemic fixes, eligibility and regression coverage

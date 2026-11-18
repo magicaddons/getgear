@@ -22,6 +22,9 @@ local function ShowItemTooltip(button)
         GetGear:AppendComparisonTooltip(GameTooltip,button.gearRecord)
     end
     if button.material then
+        if GetGear.MaterialName then
+            GameTooltip:AddLine("Material: "..GetGear:MaterialName(button.itemID,button.material.name),0.9,0.8,0.6,true)
+        end
         local recipe = button.material.recipe
         if recipe then
             GameTooltip:AddLine(" ")
@@ -107,6 +110,50 @@ local function NewButton(parent, text, width, height)
     b:SetSize(width, height or 23)
     b:SetText(text)
     return b
+end
+
+-- Small shared dropdown using the addon's existing buttons and fonts. Each
+-- instance reads only its own character preference, including on reopening.
+local openSlotMenu
+local function NewSlotSelector(parent, name, interface, refresh)
+    local button = NewButton(parent, "Slot: All Slots  v", 166, 22)
+    local menu = CreateFrame("Frame", name, button)
+    menu:SetSize(166, #GetGear.EquipmentSlotFilters*21+8)
+    menu:SetPoint("TOPLEFT", button, "BOTTOMLEFT", 0, -2)
+    menu:SetFrameStrata("FULLSCREEN_DIALOG")
+    menu:SetClampedToScreen(true)
+    menu:EnableMouse(true)
+    local bg = menu:CreateTexture(nil, "BACKGROUND")
+    bg:SetAllPoints()
+    bg:SetColorTexture(0.045, 0.065, 0.10, 1)
+    local choices = {}
+    for i, entry in ipairs(GetGear.EquipmentSlotFilters) do
+        local key = entry[1]
+        local choice = NewButton(menu, entry[2], 158, 21)
+        choice:SetPoint("TOPLEFT", 4, -4-(i-1)*21)
+        choice:SetScript("OnClick", function()
+            GetGear:SetEquipmentSlotFilter(interface, key)
+            menu:Hide()
+            refresh()
+        end)
+        choices[key] = choice
+    end
+    menu:Hide()
+    if UISpecialFrames then table.insert(UISpecialFrames, name) end
+    button:SetScript("OnClick", function()
+        if menu:IsShown() then menu:Hide() else
+            if openSlotMenu then openSlotMenu:Hide() end
+            openSlotMenu=menu
+            menu:Show()
+        end
+    end)
+    button:HookScript("OnHide", function() menu:Hide() end)
+    function button:Update()
+        local selected = GetGear:GetEquipmentSlotFilter(interface)
+        self:SetText("Slot: "..GetGear:GetEquipmentSlotFilterLabel(selected).."  v")
+        for key, choice in pairs(choices) do choice:SetEnabled(key~=selected) end
+    end
+    return button
 end
 
 -- Blizzard's bundled profession textures, without external icon assets.
@@ -537,7 +584,7 @@ local function UpdateReagent(widget, mat, x, y, parent, aggregated, previewMode)
     local expandable = mat.hasChildren and mat.collapseKey
     local maxNameWidth = math.max(65,available-leftSpace-(expandable and 25 or 5))
     widget.name:SetWidth(maxNameWidth)
-    local materialLabel=mat.name
+    local materialLabel=GetGear.MaterialName and GetGear:MaterialName(mat.itemID,mat.name) or mat.name
     if not previewMode and not widget.compact and GetGear.GetAltMaterialSummary then
         local stock=GetGear:GetAltMaterialSummary(mat.itemID)
         if stock and stock.bank+stock.alts>0 then
@@ -854,13 +901,19 @@ previewClassButton:SetScript("OnEnter", function(self)
 end)
 previewClassButton:SetScript("OnLeave",HideItemTooltip)
 local statusText = NewText(window, "GameFontHighlightSmall", 720, "RIGHT")
-statusText:SetPoint("TOPRIGHT", -38, -151)
+local detailSlot = NewSlotSelector(window, "GetGear_DetailSlotMenu", "detail",
+    function() GetGear:RefreshUI() end)
+detailSlot:SetPoint("TOPLEFT", 18, -152)
+statusText:SetPoint("TOPLEFT", detailSlot, "TOPRIGHT", 12, -3)
+statusText:SetPoint("TOPRIGHT", window, "TOPRIGHT", -38, -155)
+local detailContext = NewText(window, "GameFontHighlightSmall", 440, "RIGHT")
+detailContext:SetPoint("TOPRIGHT", -38, -184)
 -- A full 1-60 catalogue can contain thousands of rows per class.
 -- Keep only one bounded page of detailed WoW frames alive at a time.
 local DETAIL_PAGE_SIZE = 40
 local detailPage, detailViewKey = 1, nil
 local pagePrev = NewButton(window, "< Prev", 72, 22)
-pagePrev:SetPoint("TOPLEFT", 18, -152)
+pagePrev:SetPoint("TOPLEFT", 18, -181)
 local pageNext = NewButton(window, "Next >", 72, 22)
 pageNext:SetPoint("LEFT", pagePrev, "RIGHT", 62, 0)
 local pageLabel = NewText(window, "GameFontHighlightSmall", 58, "CENTER")
@@ -876,7 +929,7 @@ pageNext:SetScript("OnClick", function()
     GetGear:RefreshUI()
 end)
 scroll = CreateFrame("ScrollFrame", nil, window, "UIPanelScrollFrameTemplate")
-scroll:SetPoint("TOPLEFT", 17, -185)
+scroll:SetPoint("TOPLEFT", 17, -214)
 scroll:SetPoint("BOTTOMRIGHT", -35, 15)
 local content = CreateFrame("Frame", nil, scroll)
 content:SetSize(720, 400)
@@ -1237,6 +1290,8 @@ function GetGear:RefreshUI()
         previewClassButton:Hide();
         previewMinus:Hide();previewPlus:Hide();previewLevelLabel:Hide();previewLevel:Hide();previewFullButton:Hide()
         statusText:Hide()
+        detailContext:Hide()
+        detailSlot:Hide()
         pagePrev:Hide(); pageNext:Hide(); pageLabel:Hide()
         scroll:Hide()
         inventoryView:Show()
@@ -1244,7 +1299,8 @@ function GetGear:RefreshUI()
         return
     end
     inventoryView:Hide()
-    scroll:Show();statusText:Show();optionsButton:Show()
+    scroll:Show();statusText:Show();optionsButton:Show();detailContext:Show()
+    detailSlot:Update()
     local inPreview = preview.active
     PositionDisplaySettingsForPreview(inPreview)
     local playerName = UnitName("player") or "Character"
@@ -1267,11 +1323,9 @@ function GetGear:RefreshUI()
         previewClassButton:SetText("Class: " .. previewNames[preview.classToken])
         previewLevel:SetText(tostring(preview.level))
         previewFullButton:SetText(preview.full and "Full 1-60: ON" or "Full 1-60: OFF")
-        statusText:ClearAllPoints()
-        statusText:SetPoint("TOPRIGHT", -38, -151)
-        statusText:SetText(tostring(#list) .. " preview objectives" .. (preview.full and " (all levels)" or " (up to level " .. preview.level .. ")"))
+        detailContext:SetText(preview.full and "Preview: all levels" or ("Preview: up to level "..preview.level))
         scroll:ClearAllPoints()
-        scroll:SetPoint("TOPLEFT",17,-185)
+        scroll:SetPoint("TOPLEFT",17,-214)
         scroll:SetPoint("BOTTOMRIGHT",-35,15)
     else
         list = self:GetItems(self.activeTab)
@@ -1281,15 +1335,20 @@ function GetGear:RefreshUI()
         previewHeading:Hide(); exitPreview:Hide()
         previewClassButton:Hide(); 
         previewMinus:Hide(); previewPlus:Hide(); previewLevelLabel:Hide(); previewLevel:Hide(); previewFullButton:Hide()
-        statusText:ClearAllPoints()
-        statusText:SetPoint("TOPRIGHT", -38, -151)
         local dominant=self.GetDominantTalentTree and self:GetDominantTalentTree()
-        statusText:SetText(tostring(#list) .. " equipment items" ..
-            (dominant and ("  |  "..dominant.." talents") or ""))
+        detailContext:SetText(dominant and (dominant.." talents") or "")
         scroll:ClearAllPoints()
-        scroll:SetPoint("TOPLEFT",17,-185)
+        scroll:SetPoint("TOPLEFT",17,-214)
         scroll:SetPoint("BOTTOMRIGHT",-35,15)
     end
+    -- The dedicated Bags view keeps its existing planning behaviour. Hidden
+    -- and tracker lists may contain bags and can still select the Bags group.
+    local dedicatedBags = not inPreview and self.activeTab=="bags"
+    if dedicatedBags then detailSlot:Hide() else detailSlot:Show() end
+    local slot = dedicatedBags and "all" or self:GetEquipmentSlotFilter("detail")
+    local total
+    list, total = self:FilterEquipmentSlots(list, slot)
+    local matches = #list
     local relevanceKey = self.db.overlay.showAllValidGear and "all" or "relevant"
     local viewKey = inPreview and ("preview:"..preview.classToken..":"..
         tostring(preview.level)..":"..tostring(preview.full)..":"..relevanceKey)
@@ -1298,8 +1357,13 @@ function GetGear:RefreshUI()
         detailPage, detailViewKey = 1, viewKey
         scroll:SetVerticalScroll(0)
     end
+    -- Keep the current page/scroll when possible; clamp only if the new
+    -- filtered list is shorter. Filters never affect the unfiltered view key.
     local pageCount = math.max(1, math.ceil(#list/DETAIL_PAGE_SIZE))
-    detailPage = math.min(detailPage, pageCount)
+    if detailPage>pageCount then
+        detailPage=pageCount
+        scroll:SetVerticalScroll(0)
+    end
     if pageCount > 1 then
         pagePrev:Show(); pageNext:Show(); pageLabel:Show()
         pagePrev:SetEnabled(detailPage>1)
@@ -1314,6 +1378,7 @@ function GetGear:RefreshUI()
     else
         pagePrev:Hide(); pageNext:Hide(); pageLabel:Hide()
     end
+    statusText:SetText(self:EquipmentSlotCountText(matches, total, #list))
     local innerWidth = math.max(655, (scroll:GetWidth() or 725) - 5)
     content:SetWidth(innerWidth)
     local y = 0
@@ -1324,8 +1389,9 @@ function GetGear:RefreshUI()
         row.frame:SetPoint("TOPLEFT", content, "TOPLEFT", 0, 0)
         row.frame:SetHeight(95)
         row.item:Hide()
-        row.name:SetText("No gear objectives in this category")
-        row.meta:SetText(inPreview and "No equipment for this class and level; try Full 1-60."
+        row.name:SetText(slot~="all" and "No recommendations for this slot." or "No gear objectives in this category")
+        row.meta:SetText(slot~="all" and "Choose All Slots or another slot to review this view."
+            or inPreview and "No equipment for this class and level; try Full 1-60."
             or (#self.Gear == 0 and self:GetGuideEmptyMessage()
             or (self.activeTab=="bags" and "No ordinary bag upgrades needed, bag inspection unavailable, or bag recommendations disabled."
             or self.activeTab=="earlier" and "No gear is outclassed or at least five levels below you in the default imported guide."
@@ -1519,6 +1585,8 @@ function GetGear:RefreshUI()
     end
     for i=(#list==0 and 2 or #list+1),#detailRows do detailRows[i].frame:Hide() end
     content:SetHeight(math.max(425,y))
+    local maxScroll = math.max(0, content:GetHeight()-scroll:GetHeight())
+    if scroll:GetVerticalScroll()>maxScroll then scroll:SetVerticalScroll(maxScroll) end
 end
 
 AllowResizing(window,720,400,1260,1000)
@@ -1604,7 +1672,7 @@ trackerClose:SetFrameLevel(dragArea:GetFrameLevel()+2)
 trackerClose:SetScript("OnClick", function() GetGear:ToggleOverlay() end)
 
 local objHead = CreateFrame("Button", nil, overlay)
-objHead:SetPoint("TOPLEFT", 10, -37)
+objHead:SetPoint("TOPLEFT", 10, -65)
 objHead:SetSize(326, 24)
 local objHeadText = NewText(objHead, "GameFontNormalSmall", 324)
 objHeadText:SetPoint("LEFT", 0, 0)
@@ -1614,8 +1682,11 @@ objHead:SetScript("OnClick", function()
     GetGear:RefreshOverlay()
 end)
 
+local overlaySlot = NewSlotSelector(overlay, "GetGear_OverlaySlotMenu", "overlay",
+    function() GetGear:RefreshOverlay() end)
+overlaySlot:SetPoint("TOPLEFT", 10, -37)
 local objScroll = CreateFrame("ScrollFrame", nil, overlay, "UIPanelScrollFrameTemplate")
-objScroll:SetPoint("TOPLEFT", overlay, "TOPLEFT", 10, -65)
+objScroll:SetPoint("TOPLEFT", overlay, "TOPLEFT", 10, -93)
 local objContent = CreateFrame("Frame", nil, objScroll)
 objContent:SetSize(290, 200)
 objScroll:SetScrollChild(objContent)
@@ -1761,8 +1832,8 @@ noObjectives:SetPoint("TOPLEFT", 5, -9)
 -- player's chosen ratio is persisted; no dependence on the current item count.
 local SIDE_PADDING = 10
 local SPLITTER_HEIGHT = 14
-local SECTION_START_Y = 65
-local BOTTOM_AND_HEADERS = 112
+local SECTION_START_Y = 93
+local BOTTOM_AND_HEADERS = 140
 local splitter = CreateFrame("Button", "GetGear_OverlaySectionSplitter", overlay)
 splitter:SetHeight(SPLITTER_HEIGHT)
 splitter:SetFrameLevel(overlay:GetFrameLevel()+5)
@@ -1916,14 +1987,24 @@ function GetGear:RefreshOverlay()
         end
         list=visible
     end
-    objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  OBJECTIVES (" .. #list .. ")")
+    -- Slot filtering is last: counts and matches respect every existing stat,
+    -- world-drop and acquisition visibility rule before limiting rendered rows.
+    overlaySlot:Update()
+    local slot = self:GetEquipmentSlotFilter("overlay")
+    local total
+    list, total = self:FilterEquipmentSlots(list, slot)
+    local overlayCap = 32
+    local displayed = opts.objectivesCollapsed and 0 or math.min(#list,overlayCap)
+    objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  " ..
+        self:EquipmentSlotCountText(#list, total, displayed))
     local totalY = 0
     if opts.objectivesCollapsed then
         objScroll:Hide()
     else
         objScroll:Show()
         if #list == 0 then
-            noObjectives:SetText(#self.Gear == 0 and self:GetGuideEmptyMessage()
+            noObjectives:SetText(slot~="all" and "No recommendations for this slot."
+                or #self.Gear == 0 and self:GetGuideEmptyMessage()
                 or "No current objectives. Check Earlier Gear, Hidden or Completed in /getgear.")
             noObjectives:Show()
             totalY = 44
@@ -1931,10 +2012,6 @@ function GetGear:RefreshOverlay()
             noObjectives:Hide()
             -- The compact overlay is a quick tracker, not a thousands-row catalogue.
             -- Browse the entire objective list in /getgear (paged above).
-            local overlayCap = 32
-            if #list > overlayCap then
-                objHeadText:SetText("OBJECTIVES ("..#list.."; first "..overlayCap.." shown, more in /getgear)")
-            end
             for i=1,math.min(#list,overlayCap) do
                 local gear = list[i]
                 local r = overlayRows[i] or NewOverlayRow(i)

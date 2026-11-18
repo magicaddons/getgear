@@ -1,8 +1,11 @@
-GetGear v0.14.0-beta9 — Public Testing Release
+PRIVATE CUMULATIVE TEST: 0.14.0-private-cumulative.20261118.1
+Check BUILD_INFO.txt for the source revision. This is not a public release.
+
+GetGear — Private Cumulative Testing Build
 ==============================================
 Gear planning and acquisition guidance for WoW Forever, levels 1–60.
 Alliance remains the documented route focus; known source restrictions and
-uncertainties are preserved. This is a public beta, not a stable release.
+uncertainties are preserved. This is a private test, not a stable release.
 
 INSTALL OR UPGRADE
 ------------------
@@ -16,12 +19,15 @@ INSTALL OR UPGRADE
 5. Launch the game, enable GetGear and use /getgear. Settings are available at
    /getgear settings; /getgear overlay toggles the compact tracker.
 
-The AddOns version should be 0.14.0-beta9. No new SavedVariables migration is
+The AddOns version should be 0.14.0-private-cumulative.20261118.1. No new SavedVariables migration is
 introduced relative to the tested v0.14.x builds. Retain backups when upgrading
 from older versions. GetGear requires no TomTom or other third-party addon.
 
 WHAT'S IMPROVED
 ---------------
+- Independent per-character Slot dropdowns in the overlay and detailed guide.
+- All nine display checkboxes, Balanced/Priority/Advanced and direct custom weights.
+- Canonical material names across direct/nested recipes, totals, bags and tooltips.
 - Class-aware equipment permissions and stat/school filtering, with Show-all
   still available for unusual but class-equippable choices.
 - Cleaner compact acquisition and recipe instructions; full alternatives and
