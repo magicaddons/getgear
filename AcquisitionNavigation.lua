@@ -341,6 +341,11 @@ function GetGear:GetAcquisitionInstanceDefinition(name)
     return (model.instanceEntrances or {})[canonical],canonical
 end
 
+function GetGear:GetAcquisitionInstanceName(name)
+    local definition,canonical=self:GetAcquisitionInstanceDefinition(name)
+    return (definition or (data().instances or {})[canonical]) and canonical or nil
+end
+
 -- Compact context is derived from structured, character-accessible routes.
 -- The original researched summary/provenance stays intact in the full guide.
 function GetGear:GetCompactAcquisitionRequirements(gear)
@@ -611,10 +616,10 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
             local writtenLocations=#locations>0 and locations or {{}}
             for _,loc in ipairs(writtenLocations) do
                 local context=(model.instanceDetails or {})[loc.zone]
-                local entrance=route.entranceOnly and (model.instances or {})[loc.zone]
+                local entrance=route.entranceOnly and GetGear:GetAcquisitionInstanceName(loc.zone)
                 local instructions=route.instructions
                 if context and context.instructions then instructions=(instructions and instructions.."\n" or "")..context.instructions end
-                add({kind=entrance and "dungeon" or "directions",dungeon=entrance and loc.zone or nil,
+                add({kind=entrance and "dungeon" or "directions",dungeon=entrance or nil,
                      entranceOnly=entrance and true or nil,source=key,label=actor.name or key,role=entrance and "Instance entrance" or role,
                      zone=loc.zone,verification=route.verification,
                      questID=q and q.questID,questName=q and q.name,preferred=preferred,
@@ -627,7 +632,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                  instructions="Exact location has not been established."..(route.instructions and "\n"..route.instructions or ""),missingLocation=true,requirements=requirements})
         end
         for _, loc in ipairs(locations) do
-            local instance=loc.dungeonApproach or (model.instances or {})[loc.zone] and loc.zone
+            local instance=loc.dungeonApproach or GetGear:GetAcquisitionInstanceName(loc.zone)
             local context=(model.instanceDetails or {})[instance or loc.zone]
             local instructions=route.instructions
             if loc.instructions then instructions=(instructions and instructions.."\n" or "")..loc.instructions end
@@ -675,8 +680,8 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                             objectiveRoute.instructions=(route.instructions and route.instructions.."\n" or "")..instructions
                             source(q.objectiveSource,"Published active quest objective",q,objectiveRoute,questRoutes==1)
                         elseif q.objectiveZone then
-                            local instance=(model.instances or {})[q.objectiveZone]
-                            add({kind=instance and "dungeon" or "directions",dungeon=instance and q.objectiveZone or nil,
+                            local instance=self:GetAcquisitionInstanceName(q.objectiveZone)
+                            add({kind=instance and "dungeon" or "directions",dungeon=instance or nil,
                                  questID=id,questName=q.name,label=q.name or "Quest #"..id,role="Published active quest objective",
                                  zone=q.objectiveZone,instructions=instructions,verification="published-reference",
                                  requirements=table.concat(q.sourceRequirements or {},"; "),preferred=questRoutes==1})
@@ -688,15 +693,15 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                 for _, item in ipairs(q.starterItems or {}) do
                     local requirements=q.reqlevel and "Quest minimum level: "..q.reqlevel or ""
                     if q.side==1 or q.side==2 then requirements=requirements..(requirements~="" and "; " or "")..(q.side==1 and "Alliance" or "Horde").." quest access" end
-                    local instance=(model.instances or {})[q.starterZone]
-                    add({kind=instance and "dungeon" or "directions",dungeon=instance and q.starterZone or nil,
+                    local instance=self:GetAcquisitionInstanceName(q.starterZone)
+                    add({kind=instance and "dungeon" or "directions",dungeon=instance or nil,
                          questID=id,questName=q.name,role="Quest starter item",label=item.name,
                          zone=q.starterZone,instructions=q.starterInstructions,requirements=requirements,
                          verification="published-reference",preferred=questRoutes==1})
                 end
                 if not q.starterItems or #q.starterItems==0 then
-                    local instance=(model.instances or {})[q.starterZone]
-                    add({kind=instance and "dungeon" or "directions",dungeon=instance and q.starterZone or nil,
+                    local instance=self:GetAcquisitionInstanceName(q.starterZone)
+                    add({kind=instance and "dungeon" or "directions",dungeon=instance or nil,
                          questID=id,questName=q.name,role="Published starting directions",label=q.name or "Quest #"..id,
                          zone=q.starterZone,instructions=q.starterInstructions,
                          verification="published-reference",preferred=questRoutes==1})

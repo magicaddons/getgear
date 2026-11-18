@@ -47,7 +47,13 @@ No main change, merge, push, release or remote publication is authorized.
    without a reliable position retain their existing written guidance. Native
    entrance data is preferred only when it is an exterior map and matches a
    requested distinct gate. Interior NPC/boss coordinates are never portals.
-6. **Coordinate spaces could be reinterpreted.** A recognized explicit map ID
+6. **Instance aliases bypassed source classification.** Three named-drop
+   records use The Stockade while the entrance definition uses Stormwind
+   Stockade. Source/quest/object classification now consumes the existing shared
+   instance alias table. This restores six faction/route observations without
+   adding coordinates or guessing names. Every published alias and all three
+   actual item records have regression coverage.
+7. **Coordinate spaces could be reinterpreted.** A recognized explicit map ID
    with a mismatching zone name previously fell through to another map with
    that name. It now fails safely to directions. Unresolved discovery indexes
    can retry when client map metadata arrives, rather than caching absence.
@@ -89,13 +95,13 @@ already has the earlier Buzzbox827 start and the qualified published series.
 `tools/audit_navigation_pipeline.lua` audits all **7,707 equipment identities**,
 plus runtime bag alternatives: **7,732 unique IDs / 74,004 class-faction checks**
 across nine classes and both factions. There are **23,412 destination/status
-rows**, including **8,551 usable location rows**. **Zero** usable locations lack
-the shared button. All **805 distinct usable destinations** are also opened
+rows**, including **8,557 usable location rows**. **Zero** usable locations lack
+the shared button. All **807 distinct usable destinations** are also opened
 through the actual adapter with synthetic map metadata, checking map/parent,
 shown state, native anchor math and absence of waypoint writes.
 
 An independent pass inspects accepted input routes, quest starters and actor
-locations before navigation choices are resolved: **24,488 source-evidence
+locations before navigation choices are resolved: **24,520 source-evidence
 checks**, with **zero** lost buttons. The feature contract records minimum
 reviewed catalogue/source/marker coverage and zero-loss assertions, so deleting
 all destinations cannot turn a vacuous audit into a pass. Build unit tests
@@ -104,16 +110,18 @@ rejection. A preliminary candidate gate was stopped to add these protections;
 only a complete extracted-package gate is a deliverable pass. The `.2`
 candidate then passed all145 checks and remains preserved. A final loading-order
 review added coverage/recovery for WorldMapFrame itself appearing late, rather
-than only its canvas. The final `.3` package must pass the full gate again.
+than only its canvas. Reviewing the explicit gap CSV also exposed the three Stockade
+alias records, which were corrected before rerunning `.3`. The final package
+must pass the full gate again.
 
 These counts are route/faction observations, not unique failing items:
 
 | Status | Rows | Meaning |
 | --- | ---: | --- |
-| Point data | 3,352 | Reviewed coordinates; live map-ID/name/rendering pending |
+| Point data | 3,358 | Reviewed coordinates; live map-ID/name/rendering pending |
 | Area data | 5,195 | Published footprint; no invented NPC midpoint |
 | Exterior approach only | 4 | Exact actor point unresolved; reviewed approach retained |
-| Coordinates missing | 634 | Known region/source without usable local coordinates |
+| Coordinates missing | 628 | Known region/source without usable local coordinates |
 | Source location missing | 1,319 | Actor identity has no resolved location |
 | Dungeon exterior missing | 126 | No resolved exterior destination in this context |
 | Quest chain unresolved | 143 | Known stage is not a verified actionable chain start |

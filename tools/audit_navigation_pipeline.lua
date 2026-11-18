@@ -45,7 +45,7 @@ local function actorEvidence(key,q,route)
  for _,loc in ipairs((model.sources[key]or{}).locations or{})do
   if not zone or loc.zone==zone then
    if loc.dungeonApproach then if entranceEvidence(loc.dungeonApproach)then return true end
-   elseif model.instances[loc.zone]then if entranceEvidence(loc.zone)then return true end
+   elseif a:GetAcquisitionInstanceName(loc.zone)then if entranceEvidence(loc.zone)then return true end
    elseif usableLocation(loc)then return true end
   end
  end

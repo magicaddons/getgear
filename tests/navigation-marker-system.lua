@@ -84,6 +84,19 @@ local stockade;for _,g in pairs(a.ItemCatalog)do
  if stockade then break end
 end
 assert(stockade,'catalogue Hands/Stockade reproduction')
+for alias,canonical in pairs(a.AcquisitionNavigationData.instanceEntranceAliases)do
+ assert(a:GetAcquisitionInstanceName(alias)==canonical,'instance alias lost: '..alias)
+end
+for _,id in ipairs({273811,273817,273820})do
+ local g=assert(a.ItemCatalog[id]);local found=false
+ for _,t in ipairs(a:GetAcquisitionNavigationChoices(g))do
+  if t.kind=='dungeon'and t.dungeon=='Stormwind Stockade'then
+   local resolved=click(g,t.id);assert(resolved.zone=='Stormwind City'and resolved.publishedEntrance)
+   found=true
+  end
+ end
+ assert(found,'named-drop alias must retain reviewed city entrance: '..id)
+end
 -- Every catalogue slot and route type with usable reviewed data uses the adapter.
 local slots,kinds,seen={}, {},{};local clicks=0
 for _,g in pairs(a.ItemCatalog)do
