@@ -43,7 +43,7 @@ class CumulativeBuildTests(unittest.TestCase):
     def test_current_cumulative_source_passes(self):
         result = validate(self.root)
         self.assertEqual(result['modules'], 29)
-        self.assertEqual(len(result['features']), 10)
+        self.assertEqual(len(result['features']), 12)
         self.assertTrue(result['acceptedNavigationExact'])
 
     def test_missing_backend_module_is_rejected_even_if_file_exists(self):

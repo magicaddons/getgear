@@ -47,6 +47,8 @@ m.quests['10']={questID=10,name='Earn the recipe',side=2,reqlevel=10,sourceRequi
 text=a:GetAcquisitionSummary(quest)
 for _,part in ipairs({'Earn the recipe','quest level 10','Horde','Bring 3 tokens','prerequisites/access'})do assert(text:find(part,1,true))end
 local disputed=gear(9,{copy(trainer)},{recipeLearnMethod='multiple'})
+assert(not a:GetAcquisitionSummary(disputed):find('disputed',1,true),'multiple sources alone do not dispute teaching')
+disputed.recipeLearningAvailability='disputed'
 assert(a:GetAcquisitionSummary(disputed):find('disputed',1,true))
 local conflicting=copy(second);conflicting.spellID=9999
 m.items['3'].routes[2]=conflicting
@@ -87,7 +89,7 @@ for _,pair in ipairs({{11604,'Armorsmith'},{12784,'Master Axesmith'},{15063,'Tri
  assert(catalog:GetAcquisitionSummary(catalog.ItemCatalog[pair[1]]):find(pair[2],1,true),'retain recipe learning specialisation across named drops and vendors')
 end
 assert(catalog:GetAcquisitionSummary(catalog.ItemCatalog[252424]):find('other methods: Guide',1,true),'mixed vendor/trainer paths must not imply that the physical pattern is the only method')
-assert(catalog:GetAcquisitionSummary(catalog.ItemCatalog[2311]):find('learning source unverified',1,true),'an unclassified recipe is not silently promoted to standard training')
+assert(catalog:GetAcquisitionSummary(catalog.ItemCatalog[2311]):find('Drop (multiple documented sources)',1,true)and catalog.RecipeEvidence[2311].craftingSkill==catalog:GetRecipeSkillRequirement(catalog.ItemCatalog[2311]),'new exact recipe/book-drop evidence must be visible consistently')
 assert(catalog:GetAcquisitionSummary(catalog.ItemCatalog[18405]):find("Knot Thimblejack's Cache",1,true),'legitimate object names containing Cache survive formatting')
 local container=gear(12,{{kind='npc_container',source='npc:4',containerItemID=900}});container.profession=nil
 assert(a:GetAcquisitionSummary(container):find('possible container contents',1,true),'a box drop is not guaranteed equipment')

@@ -178,7 +178,7 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
             GetGear.navigationRefreshPending=true
             local function refresh()
                 GetGear.navigationRefreshPending=nil
-                if GetGear.ClearAcquisitionMapMarker then GetGear:ClearAcquisitionMapMarker() end
+                if GetGear.RevalidateAcquisitionMapMarker then GetGear:RevalidateAcquisitionMapMarker() end
                 if GetGear.RefreshAll then GetGear:RefreshAll() end
             end
             if C_Timer and C_Timer.After then C_Timer.After(0.2,refresh) else refresh() end

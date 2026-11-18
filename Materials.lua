@@ -290,9 +290,11 @@ function GetGear:GetProfessionSkill(profession)
 end
 
 function GetGear:GetProfessionDisplay(gear)
-    if not gear.professionSkillRequired or gear.recipeLearnSkillEvidence=="unverified" then return nil end
+    local required=self.GetRecipeSkillRequirement and self:GetRecipeSkillRequirement(gear)
+    if not required and gear.recipeLearnSkillEvidence~="unverified" then required=gear.professionSkillRequired end
+    if not required then return nil end
     local current=self:GetProfessionSkill(gear.profession)
     local name=gear.profession
-    if current==nil then return name.."  -/"..gear.professionSkillRequired.." (not learned)",false end
-    return name.."  "..current.."/"..gear.professionSkillRequired,current>=gear.professionSkillRequired
+    if current==nil then return name.."  -/"..required.." (not learned)",false end
+    return name.."  "..current.."/"..required,current>=required
 end

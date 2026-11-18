@@ -1,4 +1,8 @@
-PRIVATE CUMULATIVE TEST: 0.14.0-private-cumulative.20261118.3
+GetGear private cumulative .20261118.4
+Tracker section geometry, event-driven acquisition marker lifecycle, independent recipe evidence and arrow-free slot selectors.
+Retain your WTF/SavedVariables. In-game acceptance remains required.
+
+PRIVATE CUMULATIVE TEST: 0.14.0-private-cumulative.20261118.4
 Check BUILD_INFO.txt for the source revision. This is not a public release.
 
 GetGear — Private Cumulative Testing Build
@@ -19,7 +23,7 @@ INSTALL OR UPGRADE
 5. Launch the game, enable GetGear and use /getgear. Settings are available at
    /getgear settings; /getgear overlay toggles the compact tracker.
 
-The AddOns version should be 0.14.0-private-cumulative.20261118.3. No new SavedVariables migration is
+The AddOns version should be 0.14.0-private-cumulative.20261118.4. No new SavedVariables migration is
 introduced relative to the tested v0.14.x builds. Retain backups when upgrading
 from older versions. GetGear requires no TomTom or other third-party addon.
 

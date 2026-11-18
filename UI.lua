@@ -116,7 +116,7 @@ end
 -- instance reads only its own character preference, including on reopening.
 local openSlotMenu
 local function NewSlotSelector(parent, name, interface, refresh)
-    local button = NewButton(parent, "Slot: All Slots  v", 166, 22)
+    local button = NewButton(parent, "Slot: All Slots", 166, 22)
     local menu = CreateFrame("Frame", name, button)
     menu:SetSize(166, #GetGear.EquipmentSlotFilters*21+8)
     menu:SetPoint("TOPLEFT", button, "BOTTOMLEFT", 0, -2)
@@ -150,7 +150,7 @@ local function NewSlotSelector(parent, name, interface, refresh)
     button:HookScript("OnHide", function() menu:Hide() end)
     function button:Update()
         local selected = GetGear:GetEquipmentSlotFilter(interface)
-        self:SetText("Slot: "..GetGear:GetEquipmentSlotFilterLabel(selected).."  v")
+        self:SetText("Slot: "..GetGear:GetEquipmentSlotFilterLabel(selected))
         for key, choice in pairs(choices) do choice:SetEnabled(key~=selected) end
     end
     return button
@@ -415,10 +415,16 @@ end
 local function Describe(gear, previewMode)
     local hasSource = type(gear.source)=="string" and gear.source~=""
     local desc = (hasSource and (gear.source .. ": ") or "") .. (gear.instructions or "")
+    local supplement=GetGear.RecipeEvidence and GetGear.RecipeEvidence[gear.itemID]
+    local normalized=supplement and GetGear:GetNormalizedRecipeData(gear)
+    local documented=normalized and normalized.sourceConfidence=="documented"
+    if documented then
+        desc=(GetGear:GetAcquisitionSummary(gear) or "Recipe: documented source").."\n"..(gear.instructions or "")
+    end
     if gear.notes and gear.notes ~= "" then desc = desc .. "\n" .. gear.notes end
     local research=gear.acquisitionResearch
     if research and (research.recipeReference or research.equipmentReference) and research.sourceSummary then
-        desc=desc.."\n"..research.sourceSummary
+        if not documented then desc=desc.."\n"..research.sourceSummary end
         if research.details and research.details~="" then
             desc=desc.."\n"..research.details
         end
@@ -470,7 +476,7 @@ local function DescribeOverlay(gear, hasLocationButton)
     -- second raw/provenance paragraph; the full Guide retains those details.
     if GetGear.GetAcquisitionSummary and GetGear:GetAcquisitionSummary(gear) then return nil end
     if gear.profession then
-        if gear.recipeLearningAvailability=="disputed" or gear.recipeLearnMethod=="multiple" then
+        if gear.recipeLearningAvailability=="disputed" then
             return "Recipe teaching method disputed in Forever; check trainer/pattern availability."
         end
         if gear.acquisitionConfidence=="classic-reference" or gear.confidence=="classic-reference" then
@@ -1868,47 +1874,87 @@ splitter:SetScript("OnEnter",function(self)
     end
 end)
 splitter:SetScript("OnLeave",HideItemTooltip)
+-- A section drag changes viewport geometry only. The last completed refresh
+-- owns row contents; no catalogue/stat/material work belongs on this path.
+local sectionLayout
+local function LayoutOverlaySections(share)
+    local state=sectionLayout
+    if not state or not GetGear.db then return end
+    local opts=GetGear.db.overlay
+    local desiredObj,desiredMat=state.desiredObj,state.desiredMat
+    local bothOpen=desiredObj>0 and desiredMat>0
+    local dividerSpace=bothOpen and SPLITTER_HEIGHT or 0
+    local budget=math.max(0,overlay:GetHeight()-BOTTOM_AND_HEADERS-dividerSpace)
+    local objH,matsH=0,0
+    if bothOpen then
+        share=share or opts.materialShare
+        local explicit=type(share)=="number"
+        if not explicit then share=math.max(0.45,math.min(0.65,desiredMat/math.max(1,desiredMat+desiredObj))) end
+        share=math.max(0.12,math.min(0.88,share))
+        local minimum=math.min(36,math.floor(budget/2))
+        matsH=math.max(minimum,math.min(budget-minimum,math.floor(budget*share+0.5)))
+        objH=budget-matsH
+        -- An explicit split is a viewport preference, independent of how many
+        -- rows currently fit. Content-based clamping made the grip jump back.
+        if not explicit then
+            if desiredObj<objH then objH=desiredObj;matsH=math.min(desiredMat,budget-objH)
+            elseif desiredMat<matsH then matsH=desiredMat;objH=math.min(desiredObj,budget-matsH) end
+        end
+        splitter:ClearAllPoints()
+        splitter:SetPoint("TOPLEFT",overlay,"TOPLEFT",SIDE_PADDING,-(SECTION_START_Y+objH+3))
+        splitter:Show()
+    else splitter:Hide() end
+    objScroll:SetHeight(objH)
+    if objScroll.GetVerticalScroll and objScroll:GetVerticalScroll()>math.max(0,state.totalY-objH) then
+        objScroll:SetVerticalScroll(math.max(0,state.totalY-objH))
+    end
+    local headerY=SECTION_START_Y+objH+6+dividerSpace
+    matHeader:ClearAllPoints();matHeader:SetPoint("TOPLEFT",overlay,"TOPLEFT",11,-headerY)
+    collapseMaterials:ClearAllPoints();collapseMaterials:SetPoint("TOPRIGHT",overlay,"TOPRIGHT",-11,-headerY-3)
+    matScroll:ClearAllPoints();matScroll:SetPoint("TOPLEFT",overlay,"TOPLEFT",9,-headerY-32)
+    matScroll:SetHeight(matsH)
+    if matScroll.GetVerticalScroll and matScroll:GetVerticalScroll()>math.max(0,state.totalMatsH-matsH) then
+        matScroll:SetVerticalScroll(math.max(0,state.totalMatsH-matsH))
+    end
+end
 local function UpdateSplitFromCursor()
-    if not GetGear.db or type(GetCursorPosition)~="function" then return end
+    if not GetGear.db or not sectionLayout or type(GetCursorPosition)~="function" then return end
     local scale=overlay.GetEffectiveScale and overlay:GetEffectiveScale() or 1
     if not scale or scale<=0 then scale=1 end
     local _,cursorY=GetCursorPosition()
     if type(cursorY)~="number" or type(overlay:GetTop())~="number" then return end
-    local fromTop=overlay:GetTop()-cursorY/scale
     local budget=math.max(0,overlay:GetHeight()-BOTTOM_AND_HEADERS-SPLITTER_HEIGHT)
     if budget<72 then return end
-    local objectiveHeight=fromTop-SECTION_START_Y-3
-    local minSection=36
-    objectiveHeight=math.max(minSection,math.min(budget-minSection,objectiveHeight))
+    local objectiveHeight=overlay:GetTop()-cursorY/scale-SECTION_START_Y-3
+    objectiveHeight=math.max(36,math.min(budget-36,objectiveHeight))
     local share=math.max(0.12,math.min(0.88,(budget-objectiveHeight)/budget))
-    local previous=GetGear.db.overlay.materialShare
-    if type(previous)=="number" and math.abs(previous-share)<0.004 then return end
-    GetGear.db.overlay.materialShare=share
-    GetGear:RefreshOverlay()
+    -- Skip unchanged physical pixels, without adding lag or writing settings.
+    local pixel=math.floor(budget*share+0.5)
+    if splitter.lastPixel==pixel then return end
+    splitter.lastPixel=pixel;splitter.pendingShare=share
+    LayoutOverlaySections(share)
+end
+local function FinishSectionDrag(self)
+    if not self.dragging then return end
+    self.dragging=false;self:SetScript("OnUpdate",nil)
+    if GetGear.db and self.pendingShare then GetGear.db.overlay.materialShare=self.pendingShare end
+    self.pendingShare=nil;self.lastPixel=nil
 end
 splitter:SetScript("OnMouseDown",function(self,button)
-    if button=="LeftButton" then
-        self.dragging=true
-        HideItemTooltip()
+    if button~="LeftButton" then return end
+    self.dragging=true;self.lastPixel=nil
+    HideItemTooltip();UpdateSplitFromCursor()
+    self:SetScript("OnUpdate",function(grip)
+        if type(IsMouseButtonDown)=="function" and not IsMouseButtonDown("LeftButton") then
+            UpdateSplitFromCursor();FinishSectionDrag(grip);return
+        end
         UpdateSplitFromCursor()
-    end
-end)
-splitter:SetScript("OnUpdate",function(self)
-    if not self.dragging then return end
-    -- A release outside the grip should not leave the splitter stuck.
-    if type(IsMouseButtonDown)=="function" and not IsMouseButtonDown("LeftButton") then
-        self.dragging=false
-        return
-    end
-    UpdateSplitFromCursor()
+    end)
 end)
 splitter:SetScript("OnMouseUp",function(self,button)
-    if button=="LeftButton" and self.dragging then
-        UpdateSplitFromCursor()
-        self.dragging=false
-    end
+    if button=="LeftButton" and self.dragging then UpdateSplitFromCursor();FinishSectionDrag(self) end
 end)
-splitter:SetScript("OnHide",function(self)self.dragging=false end)
+splitter:SetScript("OnHide",FinishSectionDrag)
 
 local function UpdateOverlayWidths()
     local width=overlay:GetWidth()
@@ -2179,45 +2225,8 @@ function GetGear:RefreshOverlay()
         overlay:SetHeight(BOTTOM_AND_HEADERS + dividerSpace
             + math.min(desiredObj,280) + math.min(desiredMat,215))
     end
-    local budget=math.max(0,overlay:GetHeight()-BOTTOM_AND_HEADERS-dividerSpace)
-    local objH,matsH=0,0
-    if bothOpen then
-        local share=opts.materialShare
-        if type(share)~="number" then
-            -- A sensible initial split; user-dragged preference takes priority.
-            share=math.max(0.45,math.min(0.65,desiredMat/math.max(1,desiredMat+desiredObj)))
-        end
-        share=math.max(0.12,math.min(0.88,share))
-        local minimum=math.min(36,math.floor(budget/2))
-        matsH=math.max(minimum,math.min(budget-minimum,math.floor(budget*share+0.5)))
-        objH=budget-matsH
-        if desiredObj<objH then
-            objH=desiredObj
-            matsH=math.min(desiredMat,budget-objH)
-        elseif desiredMat<matsH then
-            matsH=desiredMat
-            objH=math.min(desiredObj,budget-matsH)
-        end
-    elseif desiredObj>0 then
-        objH=math.min(desiredObj,budget)
-    elseif desiredMat>0 then
-        matsH=math.min(desiredMat,budget)
-    end
-    if bothOpen then
-        splitter:ClearAllPoints()
-        splitter:SetPoint("TOPLEFT",overlay,"TOPLEFT",SIDE_PADDING,-(SECTION_START_Y+objH+3))
-        splitter:Show()
-    else
-        splitter:Hide()
-    end
+    sectionLayout={desiredObj=desiredObj,desiredMat=desiredMat,totalY=totalY,totalMatsH=totalMatsH}
     objContent:SetHeight(math.max(50,totalY))
-    objScroll:SetHeight(objH)
-    if objScroll.GetVerticalScroll and objScroll:GetVerticalScroll()>math.max(0,totalY-objH) then
-        objScroll:SetVerticalScroll(math.max(0,totalY-objH))
-    end
-    local headerY = SECTION_START_Y+objH+6+dividerSpace
-    matHeader:ClearAllPoints()
-    matHeader:SetPoint("TOPLEFT",overlay,"TOPLEFT",11,-headerY)
     local missing = self:GetUndocumentedCrafts(opts.materialScope)
     -- The ingredient requirements and the account-owned inventory are
     -- separate concepts. Surface either gap, but explain which is affected
@@ -2246,8 +2255,6 @@ function GetGear:RefreshOverlay()
     matHeader.unscannedNames=unscannedNames
     matHeader.listIncomplete=(#missing>0 or missingBanks>0 or missingBags>0 or partialBanks>0)
     matHeaderText:SetText(matHeader.listIncomplete and "TOTAL MATERIALS (INCOMPLETE LIST)" or "TOTAL MATERIALS")
-    collapseMaterials:ClearAllPoints()
-    collapseMaterials:SetPoint("TOPRIGHT",overlay,"TOPRIGHT",-11,-headerY-3)
     collapseMaterials:SetText(opts.materialsCollapsed and "+" or "-")
     if opts.materialsCollapsed then
         matScroll:Hide()
@@ -2266,13 +2273,9 @@ function GetGear:RefreshOverlay()
         end
         for i=#materials+1,#materialRows do materialRows[i].frame:Hide() end
         matContent:SetHeight(totalMatsH)
-        matScroll:ClearAllPoints()
-        matScroll:SetPoint("TOPLEFT",overlay,"TOPLEFT",9,-headerY-32)
-        matScroll:SetHeight(matsH)
-        if matScroll.GetVerticalScroll and matScroll:GetVerticalScroll()>math.max(0,totalMatsH-matsH) then
-            matScroll:SetVerticalScroll(math.max(0,totalMatsH-matsH))
-        end
+
     end
+    LayoutOverlaySections(splitter.dragging and splitter.pendingShare)
 end
 
 AllowResizing(overlay,320,230,580,950)

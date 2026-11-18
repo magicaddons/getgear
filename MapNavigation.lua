@@ -143,10 +143,14 @@ local function dungeonEntrance(name,target)
 end
 
 local marker,activeTarget,elapsed,driver=nil,nil,0,nil
+local hookedCanvases=setmetatable({},{__mode="k"})
+local attachMapHooks
+local function stopReadiness()
+    if driver then driver:SetScript("OnUpdate",nil);driver:Hide() end
+end
 local hookedMaps=setmetatable({},{__mode="k"})
 local markerStatus,markerReason
 local pendingAge,pendingNotified,pendingGear,pendingAnchor=0,false,nil,nil
-local renderedOnce=false
 -- Primary marker text names the destination. Coordinate precision and source
 -- qualifications stay on the target, in the pin tooltip and in the full guide.
 function GetGear:GetAcquisitionMarkerLabel(target)
@@ -197,31 +201,47 @@ local function refreshMarker()
         marker.icon:Show();marker.area:Show()
     else hideMarker();return end
     marker.label:SetText(GetGear:GetAcquisitionMarkerLabel(target))
-    marker:Show();pendingAge=0;renderedOnce=true;markerStatus="map";markerReason=nil;return true
+    marker:Show();pendingAge=0;markerStatus="map";markerReason=nil
+    stopReadiness();return true
 end
-local function attachMapHooks()
-    if WorldMapFrame and not hookedMaps[WorldMapFrame] and type(WorldMapFrame.HookScript)=="function" then
-        hookedMaps[WorldMapFrame]=true
-        -- Hiding the map hides the owned pin; reopening restores only the
-        -- selected destination's map. Explicit clear/replacement ends it.
-        WorldMapFrame:HookScript('OnHide',function() hideMarker();if driver then driver:Hide() end end)
-        WorldMapFrame:HookScript('OnShow',function()
-            if driver and activeTarget then driver:Show() end
-            refreshMarker()
-        end)
+-- Observe the native canvas lifecycle. Never replace Blizzard scripts or
+-- enlist another addon's pin pool; these hooks only position our owned frame.
+local function observeMethod(object,name,callback)
+    if type(hooksecurefunc)=="function" and type(object[name])=="function" then
+        pcall(hooksecurefunc,object,name,callback)
+    end
+end
+attachMapHooks=function()
+    local map=WorldMapFrame
+    if not map then return end
+    if not hookedMaps[map] and type(map.HookScript)=="function" then
+        hookedMaps[map]=true
+        map:HookScript('OnHide',function() hideMarker();stopReadiness() end)
+        map:HookScript('OnShow',function() attachMapHooks();refreshMarker() end)
+        map:HookScript('OnSizeChanged',function() attachMapHooks();refreshMarker() end)
+        local function changed() attachMapHooks();refreshMarker() end
+        for _,name in ipairs({'SetMapID','OnMapChanged','OnCanvasScaleChanged',
+            'OnCanvasSizeChanged','RefreshAllDataProviders'}) do observeMethod(map,name,changed) end
+    end
+    local canvas=call(map.GetCanvas,map) or map.ScrollContainer and map.ScrollContainer.Child
+    if canvas and not hookedCanvases[canvas] and type(canvas.HookScript)=="function" then
+        hookedCanvases[canvas]=true
+        canvas:HookScript('OnSizeChanged',function() refreshMarker() end)
+        canvas:HookScript('OnShow',function() refreshMarker() end)
+        observeMethod(canvas,'SetScale',function() refreshMarker() end)
     end
 end
 local function tick(_,dt)
-    if not activeTarget then return end
-    elapsed=elapsed+(dt or 0)
+    -- Bounded first-open readiness only. Once rendered there is no polling,
+    -- even when the player browses another map or zooms/pans for a long time.
+    if not activeTarget then stopReadiness();return end
+    pendingAge=pendingAge+(dt or 0);elapsed=elapsed+(dt or 0)
     if elapsed<0.1 then return end
-    local delta=elapsed;elapsed=0
-    attachMapHooks()
-    local shown=refreshMarker()
-    -- Normal browsing/closing after a draw is not a failed destination.
-    if not shown and not renderedOnce then
-        pendingAge=pendingAge+delta
-        if pendingAge>=3 and not pendingNotified then
+    elapsed=0;attachMapHooks()
+    if refreshMarker() then return end
+    if pendingAge>=3 then
+        stopReadiness()
+        if not pendingNotified then
             pendingNotified=true;markerStatus="map-pending"
             markerReason="The GetGear marker has not been displayed: the destination map or its canvas is not ready. Use these directions; placement is not confirmed."
             if GetGear.ShowAcquisitionDirections and pendingGear then
@@ -241,14 +261,24 @@ local function installMarker(target,gear,anchor)
         marker.area=marker:CreateTexture(nil,"OVERLAY");marker.area:SetAllPoints();marker.area:SetColorTexture(1,0.75,0.15,0.28)
         marker.label=marker:CreateFontString(nil,"OVERLAY","GameFontNormalSmall");marker.label:SetPoint("BOTTOM",marker,"TOP",0,2);marker.label:SetWidth(250)
     end
-    -- The driver is independent of the hidden marker and map scripts. It can
-    -- recover from delayed readiness, canvas replacement and other map addons.
-    if not driver then driver=CreateFrame("Frame");driver:SetScript('OnUpdate',tick) end
+    -- An independent event frame handles native addon loading before the map
+    -- exists. Readiness work is bounded; later changes are entirely event driven.
+    if not driver then
+        driver=CreateFrame("Frame")
+        if driver.RegisterEvent then
+            for _,event in ipairs({'ADDON_LOADED','UI_SCALE_CHANGED','DISPLAY_SIZE_CHANGED'}) do
+                pcall(driver.RegisterEvent,driver,event)
+            end
+        end
+        driver:SetScript('OnEvent',function()
+            if activeTarget then attachMapHooks();refreshMarker() end
+        end)
+    end
     attachMapHooks()
     activeTarget=target;pendingGear=gear;pendingAnchor=anchor
-    pendingAge=0;pendingNotified=false;renderedOnce=false;elapsed=0;markerStatus="map-pending";markerReason=nil
-    driver:Show()
+    pendingAge=0;pendingNotified=false;elapsed=0;markerStatus="map-pending";markerReason=nil
     local shown=refreshMarker()
+    if not shown then driver:SetScript('OnUpdate',tick);driver:Show() end
     return true,shown
 end
 
@@ -320,7 +350,17 @@ end
 
 function GetGear:ClearAcquisitionMapMarker()
     activeTarget=nil;pendingGear=nil;pendingAnchor=nil;pendingAge=0;pendingNotified=false;markerStatus=nil;markerReason=nil;hideMarker()
-    if driver then driver:Hide() end
+    stopReadiness()
+end
+
+-- QUEST_LOG_UPDATE can fire simply from opening the map. It is not the end
+-- of a vendor/drop/craft acquisition session, nor proof of quest progression.
+function GetGear:RevalidateAcquisitionMapMarker()
+    if not activeTarget or not activeTarget.questID or not pendingGear then return end
+    for _,choice in ipairs(self:GetAcquisitionNavigationChoices(pendingGear)) do
+        if choice.id==activeTarget.id then return end
+    end
+    self:ClearAcquisitionMapMarker()
 end
 function GetGear:RefreshAcquisitionMapMarker() attachMapHooks();return refreshMarker() end
 function GetGear:GetAcquisitionMarkerState() return activeTarget,marker,markerStatus,markerReason end

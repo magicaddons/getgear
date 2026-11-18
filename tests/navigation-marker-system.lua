@@ -53,7 +53,7 @@ C_Map.OpenWorldMap=function(id)queuedMap=id end
 local bootOK,bootMode=a:OpenAcquisitionMap(bootGear,bootID)
 assert(bootOK and bootMode=='map-pending'and not select(2,a:GetAcquisitionMarkerState()):IsShown())
 WorldMapFrame=bootFrame;WorldMapFrame.mapID=queuedMap
-created[2].scripts.OnUpdate(created[2],.2)
+a:RefreshAcquisitionMapMarker()
 assert(select(2,a:GetAcquisitionMarkerState()):IsShown(),'first marker recovers after native map addon creation')
 C_Map.OpenWorldMap=bootOpen
 local function click(g,id)
@@ -118,15 +118,18 @@ for _,slot in ipairs({'Head','Neck','Shoulder','Back','Chest','Wrist','Hands','W
 end
 assert(kinds.quest and kinds.dungeon and kinds.vendor and kinds.trainer and kinds.recipe_vendor)
 local g=examples['Hunting Satchel'];local t,pin=click(g);local first=pin
-local driver=created[2];assert(driver and driver.scripts.OnUpdate)
-for _,s in ipairs({.05,.2,.7,1,2,4})do canvas.scale=s;driver.scripts.OnUpdate(driver,.2);click(g)end
-canvas.width=1500;driver.scripts.OnUpdate(driver,.2);click(g)
+local driver=created[2];assert(driver and not driver.scripts.OnUpdate)
+local function pump(dt)
+ if driver.scripts.OnUpdate then driver.scripts.OnUpdate(driver,dt) else a:RefreshAcquisitionMapMarker() end
+end
+for _,s in ipairs({.05,.2,.7,1,2,4})do canvas.scale=s;pump(.2);click(g)end
+canvas.width=1500;pump(.2);click(g)
 WorldMapFrame:Hide();assert(not pin:IsShown());WorldMapFrame:Show();assert(pin:IsShown())
-WorldMapFrame.mapID=-99;driver.scripts.OnUpdate(driver,4);assert(not pin:IsShown()and directions==0)
-WorldMapFrame.mapID=t.uiMapID;driver.scripts.OnUpdate(driver,.2);assert(pin:IsShown())
+WorldMapFrame.mapID=-99;pump(4);assert(not pin:IsShown()and directions==0)
+WorldMapFrame.mapID=t.uiMapID;pump(.2);assert(pin:IsShown())
 canvas.width=0;local ok,mode=a:OpenAcquisitionMap(g);assert(ok and mode=='map-pending')
-driver.scripts.OnUpdate(driver,3.1);assert(directions==1 and a.reason:find('not confirmed',1,true))
-canvas.width=1500;driver.scripts.OnUpdate(driver,.2);assert(pin:IsShown())
+pump(3.1);assert(directions==1 and a.reason:find('not confirmed',1,true))
+canvas.width=1500;pump(.2);assert(pin:IsShown())
 assert(first==select(2,a:GetAcquisitionMarkerState())and #created==2,'one marker plus one independent driver')
 assert(WorldMapFrame.scripts.OnUpdate==nativeUpdate and waypoint==C_Map.GetUserWaypoint(),'other map scripts/waypoint preserved')
 -- A known mismatching explicit map must not borrow another map's coordinate space.
@@ -143,7 +146,7 @@ C_Map.OpenWorldMap=function()end
 ok,mode=a:OpenAcquisitionMap(g);assert(ok and mode=='map-pending'and not pin:IsShown())
 local pending=a:GetAcquisitionMarkerState();assert(pending and pending.uiMapID)
 WorldMapFrame=nativeMap;WorldMapFrame.mapID=pending.uiMapID
-driver.scripts.OnUpdate(driver,.2);assert(pin:IsShown()and pin.parent==canvas)
+pump(.2);assert(pin:IsShown()and pin.parent==canvas)
 C_Map.OpenWorldMap=original
 for _,f in ipairs({'Alliance','Horde'})do side=f;for _,n in ipairs({1,15,30,60})do level=n;click(examples['Deviate Hide Pack'])end end
 a:ClearAcquisitionMapMarker();assert(not pin:IsShown()and not a:GetAcquisitionMarkerState())

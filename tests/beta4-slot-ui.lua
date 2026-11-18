@@ -243,7 +243,7 @@ for n=1,3 do
 end
 selectSlot(overlayMenu,"Chest");selectSlot(detailMenu,"Chest")
 addon:ToggleOverlay();addon:ToggleOverlay();addon:ToggleUI();addon:ToggleUI()
-assert(overlayMenu.parent.text=="Slot: Chest  v" and detailMenu.parent.text=="Slot: Chest  v")
+assert(overlayMenu.parent.text=="Slot: Chest" and detailMenu.parent.text=="Slot: Chest")
 local chest=checkRows(objContent,"Chest",32)[1]
 click(button(chest,"-"));assert(addon.db.overlay.minimized[rowItem(chest).id])
 selectSlot(overlayMenu,"Rings");selectSlot(overlayMenu,"Chest")
@@ -269,7 +269,7 @@ assert(objScroll:IsShown() and #visibleRows(objContent)==20)
 assert(materialCalls>50,"materials must continue refreshing independently")
 detail:Hide();addon:ShowUI()
 addon:ToggleOverlay();addon:ToggleOverlay()
-assert(detailMenu.parent:GetText()=="Slot: Chest  v" and overlayMenu.parent:GetText()=="Slot: Rings  v")
+assert(detailMenu.parent:GetText()=="Slot: Chest" and overlayMenu.parent:GetText()=="Slot: Rings")
 assert(overlayMenu.parent.points[1][3]==-37 and heading.points[1][3]==-65)
 -- Existing overlay-only policies precede the slot filter and its totals.
 -- Each excludes a different slot; the guide must retain its own visibility.
@@ -285,3 +285,45 @@ assert(heading.children[1].text=="-  Showing 19 of 137 recommendations")
 selectSlot(detailMenu,"Rings")
 assert(text(detail,"Showing 20 of 140 recommendations"))
 print("PASS slot UI: real dropdown/render callbacks, counts before caps/pages, empty states, Hide/Restore/Skip/Undo, preview, Bags/inventory isolation, reopen, scroll retention, wrapped rows, collapse/minimize and repeated switching")
+
+-- Profile the real splitter callbacks with existing wrapped rows and a large
+-- material viewport. Dragging must never enter recommendation/row processing.
+selectSlot(overlayMenu,"Chest")
+addon.GetCombinedMaterialRows=function() materialCalls=materialCalls+1;local t={};for i=1,200 do t[i]={itemID=2996,name="Bolt of Linen Cloth",amount=i} end;return t end
+addon:RefreshOverlay()
+local splitter=GetGear_OverlaySectionSplitter
+assert(splitter:IsShown())
+local beforeFrames=#frames
+local heavy=0
+for _,name in ipairs({"GetItems","ComparisonInline","GetCombinedMaterialRows","GetUndocumentedCrafts","FilterEquipmentSlots"})do
+ local original=addon[name]
+ addon[name]=function(...) heavy=heavy+1;return original(...) end
+end
+local saved=addon.db.overlay.materialShare
+local cursor=400
+GetCursorPosition=function() return 0,cursor end
+local down=true;IsMouseButtonDown=function() return down end
+local start=os.clock()
+splitter.scripts.OnMouseDown(splitter,"LeftButton")
+for i=1,1200 do
+ cursor=250+(i%300)
+ splitter.scripts.OnUpdate(splitter,1/120)
+ assert(addon.db.overlay.materialShare==saved,"drag wrote SavedVariables before release")
+end
+assert(heavy==0 and #frames==beforeFrames,"section drag rebuilt recommendations, materials, rows or frames")
+local ratio=splitter.pendingShare
+local point=splitter.points[1]
+assert(math.abs(-point[5]-(800-cursor))<=1,"splitter failed to follow physical cursor")
+down=false;splitter.scripts.OnUpdate(splitter,1/120)
+assert(not splitter.dragging and not splitter.scripts.OnUpdate)
+assert(addon.db.overlay.materialShare==ratio,"outside release did not persist the final split")
+for i=1,20 do
+ down=true;splitter.scripts.OnMouseDown(splitter,"LeftButton")
+ cursor=cursor+1;splitter.scripts.OnMouseUp(splitter,"LeftButton")
+ assert(not splitter.scripts.OnUpdate)
+end
+-- Hiding during dragging is also a terminating release, without new frames.
+down=true;splitter.scripts.OnMouseDown(splitter,"LeftButton");splitter:Hide()
+assert(not splitter.dragging and not splitter.scripts.OnUpdate and heavy==0 and #frames==beforeFrames)
+assert(addon.db.overlay.slotFilter=="chest" and addon.db.detail.slotFilter=="rings")
+print(string.format("PASS resize profile: 1200 movement ticks + repeated/outside/hidden releases; 0 heavy calls, 0 new frames; %.6fs synthetic Lua CPU (not in-game FPS)",os.clock()-start))

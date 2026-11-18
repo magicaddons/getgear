@@ -4,14 +4,48 @@ local _, GetGear = ...
 -- never inferred from equipment status or another character's completion.
 local function data() return GetGear.AcquisitionNavigationData or {items={},sources={},quests={},chains={}} end
 local function get(t,id) return t and (t[id] or t[tostring(id)]) end
+-- Skill, book learning and acquisition certainty are independent. A documented
+-- minimum survives missing source geography and multi-source loot tables.
+function GetGear:GetNormalizedRecipeData(gear)
+    if not gear or not gear.profession then return end
+    local fact=get(data().recipeRequirements,gear.itemID) or {}
+    local extra=get(self.RecipeEvidence,gear.itemID) or {}
+    local crafting=extra.craftingSkill or fact.recipeMinimumSkill
+    local learning=extra.learningSkill or fact.bookLearningSkill
+    if not learning and type(fact.trainerLearningSkills)=="table" and #fact.trainerLearningSkills==1 then learning=fact.trainerLearningSkills[1] end
+    if not learning and gear.recipeLearnSkillEvidence~="unverified" then learning=gear.professionSkillRequired end
+    local acquisitions=(get(data().items,gear.itemID) or {}).routes or {}
+    local sources={};local confidence="unverified"
+    for _,route in ipairs(acquisitions) do
+        local kind=({trainer="trainer",recipe_vendor="vendor",vendor="vendor",quest="quest",
+            recipe_drop="drop",world_drop="world_drop",reputation="reputation"})[route.kind]
+        if route.kind=="dungeon" then
+            kind=route.sourceRole=="boss" and "dungeon_boss" or route.sourceRole=="trash" and "dungeon_trash" or "dungeon_drop"
+        end
+        local certainty=(route.verification=="published-reference" or route.verification=="client") and "documented"
+            or route.verification=="legacy-reference" and "probable" or "unverified"
+        sources[#sources+1]={kind=kind or "unknown",confidence=certainty,route=route}
+        if certainty=="documented" or certainty=="probable" and confidence=="unverified" then confidence=certainty end
+    end
+    if #(extra.documentedDrops or {})>0 then confidence="documented" end
+    return {profession=gear.profession,craftingSkill=crafting,learningSkill=learning,
+        skillConfidence=(crafting or learning) and "documented" or "unverified",
+        sourceConfidence=confidence,sources=sources,
+        books=extra.books or {},documentedDrops=extra.documentedDrops or {},
+        evidence=extra.evidence or fact.evidence or {},acquisitions=acquisitions}
+
+end
 function GetGear:GetRecipeSkillRequirement(gear)
     if not gear then return end
+    local extra=get(self.RecipeEvidence,gear.itemID) or {}
+    if type(extra.craftingSkill)=="number" then return extra.craftingSkill,"recipe minimum" end
     local fact=get(data().recipeRequirements,gear.itemID) or {}
     if type(fact.recipeMinimumSkill)=="number" then return fact.recipeMinimumSkill,"recipe minimum" end
     if type(fact.trainerLearningSkills)=="table" and #fact.trainerLearningSkills==1 then
         return fact.trainerLearningSkills[1],"learning minimum"
     end
     if type(fact.bookLearningSkill)=="number" then return fact.bookLearningSkill,"book learning minimum" end
+    if type(extra.learningSkill)=="number" then return extra.learningSkill,"book learning minimum" end
     if type(gear.professionSkillRequired)=="number" and gear.recipeLearnSkillEvidence~="unverified" then
         return gear.professionSkillRequired,"learning minimum"
     end
@@ -363,6 +397,9 @@ function GetGear:GetCompactAcquisitionRequirements(gear)
             out[#out+1]=(tag=="book specialisation" and "Learn: " or tag=="specialisation" and "Specialisation: " or "")..clause
         end
     end
+    for _,requirement in ipairs((get(self.RecipeEvidence,gear and gear.itemID) or {}).learningRequirements or {}) do
+        out[#out+1]="Learn: "..requirement
+    end
     local tooltip=tostring(source):match('Exact tooltip requirement:%s*([^%.]+)')
     if tooltip then out[#out+1]='Requires: '..tooltip end
     return out
@@ -377,7 +414,7 @@ local function compactRecipeSummary(self,gear)
     -- labelled clause verbatim rather than losing it during summarisation.
     local requirements=self:GetCompactAcquisitionRequirements(gear)
     local publishedRequirement=#requirements>0 and table.concat(requirements,"; ")
-    local disputed=gear.recipeLearningAvailability=="disputed" or gear.recipeLearnMethod=="multiple"
+    local disputed=gear.recipeLearningAvailability=="disputed"
     if disputed then return "Recipe: teaching method disputed; "..(publishedRequirement and publishedRequirement.."; " or "").."see Guide for trainer/pattern routes." end
     local historical=gear.acquisitionConfidence=="classic-reference" or gear.confidence=="classic-reference"
     -- A trainer's mere mention is not a standard teaching route. Require the
@@ -410,6 +447,17 @@ local function compactRecipeSummary(self,gear)
         return "Recipe: random drop; trade/Auction House if tradeable (listings unknown)."
     end
     local routes=routesForCharacter(model,plan,nil,gear)
+    local normalized=self:GetNormalizedRecipeData(gear)
+    local drops=normalized.documentedDrops
+    local other=false
+    for _,route in ipairs(routes) do if route.kind~="dungeon" and route.kind~="recipe_drop" and route.kind~="legacy" then other=true end end
+    if #drops>0 and not other then
+        local allDungeons=true
+        for _,drop in ipairs(drops) do if not drop.dungeons then allDungeons=false;break end end
+        local source=allDungeons and (#drops>1 and "Dungeon drop (multiple sources)" or "Dungeon drop")
+            or (#drops>1 and "Drop (multiple documented sources)" or "Documented drop")
+        return "Recipe: "..source.." ("..gear.profession..(minimum and " "..minimum or "; skill unverified").."); live drops unverified"
+    end
     local function qualified(text,route,uncertainty)
         local requirements=offerText(route)
         if publishedRequirement and not requirements:find(publishedRequirement,1,true) then
@@ -450,7 +498,14 @@ local function compactRecipeSummary(self,gear)
             end
             return qualified(table.concat(parts,"; "),route,"; prerequisites/access: see Guide")
         elseif route.kind=="dungeon" then
-            return qualified((route.boss and route.boss.." — " or "")..route.dungeon.." drop",route,"; drop/access unverified")
+            local source=route.sourceRole=="trash" and "Dungeon trash drop — "..route.dungeon
+                or route.sourceRole=="boss" and "Boss drop — "..(route.enemyName or route.boss or route.dungeon)
+                or ((route.enemyName or route.boss) and (route.enemyName or route.boss)~="" and (route.enemyName or route.boss).." — " or "")..route.dungeon.." drop"
+            return qualified(source,route,"; drop/access unverified")
+        elseif route.kind=="world_drop" then
+            return qualified("World drop",route,"; live drops unverified")
+        elseif route.kind=="reputation" then
+            return qualified("Reputation reward",route,"; access unverified")
         elseif route.kind=="recipe_drop" then
             local actor=model.sources[route.source] or {}
             if actor.name then return qualified(actor.name.." drop",route,"; drop unverified") end
@@ -928,6 +983,24 @@ function GetGear:GetAcquisitionDirections(gear)
     local out={}
     local minimum,kind=self:GetRecipeSkillRequirement(gear)
     if minimum then out[#out+1]="Published "..kind..": "..(gear.profession or "profession").." "..minimum.."; not a yellow/green/grey skill-up threshold." end
+    local normalized=self:GetNormalizedRecipeData(gear)
+    if normalized and normalized.learningSkill and normalized.learningSkill~=minimum then
+        out[#out+1]="Published book-learning minimum: "..gear.profession.." "..normalized.learningSkill.."; separate from the recipe/crafting minimum."
+    end
+    if normalized then
+        local broad=#normalized.documentedDrops>40
+        local omitted=0
+        for _,drop in ipairs(normalized.documentedDrops) do
+            if not broad or drop.dungeons then
+                out[#out+1]="Recipe book #"..drop.bookItemID..": "..drop.name.." (#"..drop.npcID..")"..
+                    (drop.dungeons and " — "..table.concat(drop.dungeons,", ") or " — published drop; location/classification unresolved")
+            else omitted=omitted+1 end
+        end
+        if omitted>0 then
+            out[#out+1]=omitted.." additional published enemy-drop examples; not a targeted farm. Full source list:"
+            for _,book in ipairs(normalized.books) do out[#out+1]=book.evidence.url end
+        end
+    end
     local learning=get(data().recipeRequirements,gear and gear.itemID) or {}
     if learning.bookLearningSkill and learning.bookLearningSkill~=minimum then
         out[#out+1]="Published book-learning minimum: "..(gear.profession or "profession").." "..learning.bookLearningSkill.."; separate from the recipe/crafting minimum."

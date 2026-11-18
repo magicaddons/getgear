@@ -55,12 +55,14 @@ def main():
     for script in sorted((ROOT / 'tests').glob('*.lua')):
         run([lua54, script, addon_root])
         run([args.lua51, 'tools/release/lua51-harness.lua', script, addon_root])
-    for script in ('reconcile-dungeon-link-guards.py', 'worlddrop-boe-fallback.py', 'navigation-generation.py', 'stat-school-generation.py', 'faction-evidence-generation.py'):
+    for script in ('reconcile-dungeon-link-guards.py', 'worlddrop-boe-fallback.py', 'navigation-generation.py', 'stat-school-generation.py', 'faction-evidence-generation.py', 'recipe-evidence-generation.py'):
         run([sys.executable, ROOT / 'tests' / script])
     run([lua54, 'tools/audit_acquisition_buttons.lua', addon_root, args.output / 'button-coverage.csv'])
     run([lua54, 'tools/audit_navigation_pipeline.lua', addon_root, args.output / 'navigation'])
     validate_navigation_coverage(json.loads((args.output / 'navigation-summary.json').read_text()))
     run([sys.executable, 'tools/audit_acquisition_presentation.py', '--output', args.output / 'presentation'])
+    run([sys.executable, 'tools/build_recipe_evidence.py', '--check'])
+    run([sys.executable, 'tools/audit_recipe_integrity.py', '--addon-root', addon_root, '--output', args.output / 'recipes'])
     run([sys.executable, 'tools/build_bag_quest_catalogue.py', '--check'])
     run([sys.executable, 'tools/build_faction_eligibility.py', '--check'])
     run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests/release', '-v'])

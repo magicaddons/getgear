@@ -32,26 +32,30 @@ local function gear(id,routes)m.items[tostring(id)]={routes=routes};return{itemI
 local one=gear(1,{{kind='vendor',source='npc:1'}});local two=gear(2,{{kind='vendor',source='npc:2'}})
 local messages=0;a.ShowAcquisitionDirections=function()messages=messages+1 end
 assert(loadfile(root..'/MapNavigation.lua'))('GetGear',a)
+local function pump(dt)
+ if driver and driver.hooks.OnUpdate then driver.hooks.OnUpdate(driver,dt) else a:RefreshAcquisitionMapMarker() end
+end
 canvas.width=0
 local ok,mode=a:OpenAcquisitionMap(one);assert(ok and mode=='map-pending')
 local active,pin=a:GetAcquisitionMarkerState();assert(active and not pin:IsShown())
-canvas.width=1000;driver.hooks.OnUpdate(driver,.2);assert(pin:IsShown()and pin.point[4]==400)
+canvas.width=1000;pump(.2);assert(pin:IsShown()and pin.point[4]==400)
+assert(not driver.hooks.OnUpdate,'successful placement must stop readiness polling')
 assert(pin.label.text=='VendorA','primary marker names the vendor without a GetGear category prefix')
 -- Browsing another map after a successful draw must not open a popup later.
-mapID=21;driver.hooks.OnUpdate(driver,4);assert(not pin:IsShown()and messages==0)
-mapID=52;driver.hooks.OnUpdate(driver,.2);assert(pin:IsShown())
+mapID=21;pump(4);assert(not pin:IsShown()and messages==0)
+mapID=52;pump(.2);assert(pin:IsShown())
 canvasReady=false;ok,mode=a:OpenAcquisitionMap(one);assert(mode=='map-pending')
-driver.hooks.OnUpdate(driver,3.2);assert(messages==1 and a:GetAcquisitionMarkerState(),'fallback directions do not erase a pending target')
+pump(3.2);assert(messages==1 and a:GetAcquisitionMarkerState(),'fallback directions do not erase a pending target')
 -- A second click replaces the pending destination; delayed readiness cannot
 -- resurrect the old one. Only one GetGear-owned marker is created.
-a:OpenAcquisitionMap(two);canvasReady=true;driver.hooks.OnUpdate(driver,.2)
+a:OpenAcquisitionMap(two);canvasReady=true;pump(.2)
 assert(a:GetAcquisitionMarkerState().label=='VendorB'and pin.point[4]==700 and created==2)
 WorldMapFrame:Hide();assert(a:GetAcquisitionMarkerState()and not pin:IsShown())
 WorldMapFrame:Show();assert(pin:IsShown(),'reopen restores the selected destination on its map')
 -- ScrollContainer fallback and late map-ID transitions.
 WorldMapFrame.GetCanvas=nil;WorldMapFrame.ScrollContainer={Child=canvas};a:OpenAcquisitionMap(one);assert(pin:IsShown())
 C_Map.OpenWorldMap=function()mapID=21;WorldMapFrame:Show()end
-ok,mode=a:OpenAcquisitionMap(two);assert(mode=='map-pending');mapID=52;driver.hooks.OnUpdate(driver,.2);assert(pin:IsShown())
+ok,mode=a:OpenAcquisitionMap(two);assert(mode=='map-pending');mapID=52;pump(.2);assert(pin:IsShown())
 C_Map.OpenWorldMap=function(id)mapID=id;WorldMapFrame:Show()end
 m.instanceEntrances={['Shadowfang Keep']={entrances={{id='main',zone='Silverpine Forest',x=42.6,y=66.6,label='Published SFK approach',verification='published-reference'}}}}
 m.instanceEntranceAliases={['Shadowfang Keep']='Shadowfang Keep'}

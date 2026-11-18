@@ -224,7 +224,8 @@
         "acquisition-navigation.lua",
         "acquisition-map-readiness.lua",
         "navigation-marker-system.lua",
-        "navigation-button-visibility.lua"
+        "navigation-button-visibility.lua",
+        "map-marker-lifecycle.lua"
       ]
     },
     {
@@ -254,11 +255,39 @@
         "beta4-catalogue.lua",
         "beta4-performance.lua"
       ]
+    },
+    {
+      "id": "independent_recipe_evidence",
+      "requires": {
+        "AcquisitionNavigation.lua": [
+          "GetNormalizedRecipeData",
+          "sourceConfidence",
+          "skillConfidence"
+        ],
+        "RecipeKnowledge.lua": [
+          "GetGear.RecipeEvidence="
+        ]
+      },
+      "regressions": [
+        "recipe-source-integrity.lua"
+      ]
+    },
+    {
+      "id": "lightweight_tracker_section_resize",
+      "requires": {
+        "UI.lua": [
+          "LayoutOverlaySections",
+          "FinishSectionDrag"
+        ]
+      },
+      "regressions": [
+        "beta4-slot-ui.lua"
+      ]
     }
   ],
   "acceptedNavigationFiles": {
-    "MapNavigation.lua": "bc68d890dd23426825a37cb1d6b976c0363b2f78c70039fc63317f46124fa4b7",
-    "AcquisitionNavigation.lua": "d00bb866f4e9c7a7881fe6285abb478863c2ee2150f82a8fb2c19c2d4e281ea5",
+    "MapNavigation.lua": "10bf9e51102f7fdce9eba5b583288fa7e3b87fd6990911ab6841961cf8107acd",
+    "AcquisitionNavigation.lua": "abb0f02fea2e020da9e114c35d60476d69d1b203745a7eac9046bbd95097dfa0",
     "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
     "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
   },
@@ -273,7 +302,8 @@
   "navigationReview": {
     "baseline": "b31e30e92256a00dbb3b75347d77731b52a0f06f",
     "report": "docs/navigation-audit/REPORT.md",
-    "scope": "Owner-authorized shared marker/source audit; no paused dataset wholesale import"
+    "scope": "Owner-authorized shared marker/source audit; no paused dataset wholesale import",
+    "stabilityFollowup": "docs/stability-20261118/REPORT.md"
   },
   "navigationCoverageBaseline": {
     "review": "docs/navigation-audit/REPORT.md",
