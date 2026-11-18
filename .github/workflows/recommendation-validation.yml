@@ -9,6 +9,7 @@ on:
       - tests/**
       - tools/**
       - docs/recommendation-audit/bag-quest-evidence.json
+      - docs/navigation-audit/**
       - docs/recommendation-audit/equipment-source-eligibility.csv
       - docs/faction-audit/evidence.json
       - docs/faction-audit/reputation-factions.json
@@ -30,6 +31,7 @@ on:
       - tools/build_bag_quest_catalogue.py
       - tools/audit_recommendation_sources.lua
       - docs/recommendation-audit/**
+      - docs/navigation-audit/**
       - docs/faction-audit/evidence.json
       - docs/faction-audit/reputation-factions.json
       - docs/faction-audit/catalogue-evidence-audit.csv

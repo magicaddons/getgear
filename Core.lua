@@ -234,6 +234,12 @@ SlashCmdList.GETGEAR = function(command)
         elseif not GetGear:GetAcquisitionMapTarget(gear) then
             GetGear:ShowAcquisitionDirections(gear,nil,nil,"No reliable map destination is established for this item.")
         else GetGear:OpenAcquisitionMap(gear) end
+    elseif command == "mapstatus" then
+        local s=GetGear:GetAcquisitionMarkerDiagnostics()
+        Say("Marker "..s.status.."; shown "..tostring(s.markerShown).."; map "..tostring(s.mapID)
+            .." / destination "..tostring(s.destinationMapID).."; canvas "..tostring(s.canvasWidth).."x"..tostring(s.canvasHeight)
+            .."; canvas/pin scale "..tostring(s.canvasScale).."/"..tostring(s.markerScale))
+        if s.reason then Say(s.reason) end
     elseif command == "status" then
         Say("Level " .. tostring(GetGear.level) .. " " .. tostring(GetGear.className or "unknown class")
             .. "; inferred talent tree " .. tostring(GetGear.GetDominantTalentTree and GetGear:GetDominantTalentTree() or "unclassified")

@@ -52,7 +52,9 @@ local function resolveMap(zone,explicit)
         local info=mapInfo(id)
         if type(info)=="table" and cleanName(info.name)==cleanName(zone) then return id end
     end
-    if explicit and valid(explicit) then return explicit end
+    -- A known explicit ID defines the coordinate space. Never reinterpret its
+    -- coordinates on a similarly named city/zone map when the name disagrees.
+    if explicit and mapInfo(explicit) then return valid(explicit) end
     local maps=(GetGear.AcquisitionNavigationData or {}).maps or {}
     for _, id in ipairs(maps[zone] or {}) do if valid(id) then return id end end
     for _, id in ipairs(fallbackMaps[zone] or {}) do if valid(id) then return id end end
@@ -60,7 +62,10 @@ local function resolveMap(zone,explicit)
     discoverMaps()
     local id=mapNameIndex[cleanName(zone)]
     if id then return valid(id) end
+    mapNameIndex=nil -- map data may not be available on the first click
 end
+
+function GetGear:ResolveAcquisitionMapID(zone,explicit) return resolveMap(zone,explicit) end
 
 local entranceIndex
 function GetGear:ResetAcquisitionNavigation()
@@ -114,9 +119,10 @@ local function dungeonEntrance(name,target)
             for _, entry in ipairs(call(api,id) or {}) do
                 local x,y=position(entry.position)
                 local info=mapInfo(id)
-                local dungeonType=Enum and Enum.UIMapType and Enum.UIMapType.Dungeon
+                local dungeonType=Enum and Enum.UIMapType and Enum.UIMapType.Dungeon or 4
                 if x and entry.name and type(info)=='table' and type(info.name)=='string'
-                    and (not dungeonType or info.mapType~=dungeonType) then
+                    and info.mapType~=dungeonType
+                    and not ((GetGear.AcquisitionNavigationData or {}).instances or {})[info.name] then
                     local key=dungeonKey(entry.name)
                     entranceIndex[key]=entranceIndex[key] or {}
                     entranceIndex[key][#entranceIndex[key]+1]={zone=info and info.name,uiMapID=id,x=x,y=y,
@@ -136,7 +142,9 @@ local function dungeonEntrance(name,target)
     return published
 end
 
-local marker,activeTarget,elapsed=nil,nil,0
+local marker,activeTarget,elapsed,driver=nil,nil,0,nil
+local hookedMaps=setmetatable({},{__mode="k"})
+local markerStatus,markerReason
 local pendingAge,pendingNotified,pendingGear,pendingAnchor=0,false,nil,nil
 local renderedOnce=false
 -- Primary marker text names the destination. Coordinate precision and source
@@ -156,7 +164,7 @@ function GetGear:GetAcquisitionMarkerLabel(target)
 end
 local function hideMarker() if marker then marker:Hide() end end
 local function refreshMarker()
-    if not marker or not activeTarget or not WorldMapFrame or not WorldMapFrame:IsShown() then hideMarker();return end
+    if not marker or not activeTarget or not WorldMapFrame or not call(WorldMapFrame.IsShown,WorldMapFrame) then hideMarker();return end
     local target=activeTarget
     if call(WorldMapFrame.GetMapID,WorldMapFrame)~=target.uiMapID then hideMarker();return end
     local canvas=call(WorldMapFrame.GetCanvas,WorldMapFrame)
@@ -164,25 +172,63 @@ local function refreshMarker()
     if not canvas then hideMarker();return end
     local width,height=call(canvas.GetWidth,canvas),call(canvas.GetHeight,canvas)
     if type(width)~='number'or type(height)~='number'or width<=0 or height<=0 then hideMarker();return end
+    -- Forever's MapCanvas applies its zoom to Child. Native pins compensate
+    -- with inverse scale AND divide their anchor offsets by the pin scale.
+    -- A plain 22px child can otherwise become only a few pixels wide.
+    local canvasScale=call(WorldMapFrame.GetCanvasScale,WorldMapFrame) or call(canvas.GetScale,canvas) or 1
+    if type(canvasScale)~='number' or canvasScale~=canvasScale or canvasScale<=0 or canvasScale==math.huge then hideMarker();return end
+    local scale=type(marker.SetScale)=='function' and 1/canvasScale or 1
     marker:SetParent(canvas);marker:ClearAllPoints()
+    if marker.SetScale then marker:SetScale(scale) end
     if marker.SetFrameLevel and canvas.GetFrameLevel then marker:SetFrameLevel(canvas:GetFrameLevel()+100) end
     if marker.SetFrameStrata and WorldMapFrame.GetFrameStrata then marker:SetFrameStrata(WorldMapFrame:GetFrameStrata()) end
     local precise=percentage(target.x) and percentage(target.y) and target.verification~="legacy-reference"
     if precise then
-        marker:SetSize(22,26);marker:SetPoint("CENTER",canvas,"TOPLEFT",width*target.x/100,-height*target.y/100)
+        marker:SetSize(28,32);marker:SetPoint("CENTER",canvas,"TOPLEFT",width*target.x/100/scale,-height*target.y/100/scale)
         marker.icon:ClearAllPoints();marker.icon:SetAllPoints();marker.icon:Show();marker.area:Hide()
     elseif target.bounds then
         local b=target.bounds
         if not (percentage(b.xMin) and percentage(b.xMax) and percentage(b.yMin) and percentage(b.yMax)) then hideMarker();return end
-        marker:SetSize(math.max(2,width*(b.xMax-b.xMin)/100),math.max(2,height*(b.yMax-b.yMin)/100))
-        marker:SetPoint("TOPLEFT",canvas,"TOPLEFT",width*b.xMin/100,-height*b.yMin/100)
+        marker:SetSize(math.max(2,width*(b.xMax-b.xMin)/100/scale),math.max(2,height*(b.yMax-b.yMin)/100/scale))
+        marker:SetPoint("TOPLEFT",canvas,"TOPLEFT",width*b.xMin/100/scale,-height*b.yMin/100/scale)
         -- A recognizable pin identifies the published area; its corner anchor
         -- is not an invented NPC midpoint. The exact footprint stays visible.
-        marker.icon:ClearAllPoints();marker.icon:SetSize(22,26);marker.icon:SetPoint('BOTTOM',marker,'TOPLEFT',0,0)
+        marker.icon:ClearAllPoints();marker.icon:SetSize(28,32);marker.icon:SetPoint('BOTTOM',marker,'TOPLEFT',0,0)
         marker.icon:Show();marker.area:Show()
     else hideMarker();return end
     marker.label:SetText(GetGear:GetAcquisitionMarkerLabel(target))
-    marker:Show();pendingAge=0;renderedOnce=true;return true
+    marker:Show();pendingAge=0;renderedOnce=true;markerStatus="map";markerReason=nil;return true
+end
+local function attachMapHooks()
+    if WorldMapFrame and not hookedMaps[WorldMapFrame] and type(WorldMapFrame.HookScript)=="function" then
+        hookedMaps[WorldMapFrame]=true
+        -- Hiding the map hides the owned pin; reopening restores only the
+        -- selected destination's map. Explicit clear/replacement ends it.
+        WorldMapFrame:HookScript('OnHide',function() hideMarker();if driver then driver:Hide() end end)
+        WorldMapFrame:HookScript('OnShow',function()
+            if driver and activeTarget then driver:Show() end
+            refreshMarker()
+        end)
+    end
+end
+local function tick(_,dt)
+    if not activeTarget then return end
+    elapsed=elapsed+(dt or 0)
+    if elapsed<0.1 then return end
+    local delta=elapsed;elapsed=0
+    attachMapHooks()
+    local shown=refreshMarker()
+    -- Normal browsing/closing after a draw is not a failed destination.
+    if not shown and not renderedOnce then
+        pendingAge=pendingAge+delta
+        if pendingAge>=3 and not pendingNotified then
+            pendingNotified=true;markerStatus="map-pending"
+            markerReason="The GetGear marker has not been displayed: the destination map or its canvas is not ready. Use these directions; placement is not confirmed."
+            if GetGear.ShowAcquisitionDirections and pendingGear then
+                GetGear:ShowAcquisitionDirections(pendingGear,activeTarget,pendingAnchor,markerReason)
+            elseif GetGear.Say then GetGear.Say(markerReason) end
+        end
+    end
 end
 local function installMarker(target,gear,anchor)
     if not WorldMapFrame or type(CreateFrame)~="function" then return false end
@@ -192,34 +238,16 @@ local function installMarker(target,gear,anchor)
         marker.icon=marker:CreateTexture(nil,"OVERLAY");marker.icon:SetAllPoints();marker.icon:SetTexture("Interface\\AddOns\\GetGear\\MapPin")
         marker.area=marker:CreateTexture(nil,"OVERLAY");marker.area:SetAllPoints();marker.area:SetColorTexture(1,0.75,0.15,0.28)
         marker.label=marker:CreateFontString(nil,"OVERLAY","GameFontNormalSmall");marker.label:SetPoint("BOTTOM",marker,"TOP",0,2);marker.label:SetWidth(250)
-        local function tick(_,dt)
-            if not activeTarget then return end
-            elapsed=elapsed+dt;pendingAge=pendingAge+dt
-            if elapsed>=0.1 then
-                elapsed=0
-                if not refreshMarker() and not renderedOnce and pendingAge>=3 and not pendingNotified then
-                    pendingNotified=true
-                    if GetGear.ShowAcquisitionDirections and pendingGear then
-                        GetGear:ShowAcquisitionDirections(pendingGear,activeTarget,pendingAnchor,
-                            'The map is still preparing this marker. Published directions remain available; the destination will appear when its canvas is ready.')
-                    end
-                end
-            end
-        end
-        if type(WorldMapFrame.HookScript)=="function" then
-            WorldMapFrame:HookScript('OnHide',function() GetGear:ClearAcquisitionMapMarker() end)
-            WorldMapFrame:HookScript('OnShow',function() refreshMarker() end)
-            WorldMapFrame:HookScript('OnUpdate',tick)
-        else
-            -- Never overwrite a native map script. This fallback can refresh
-            -- a shown marker, but pending initialization needs a native hook.
-            marker:SetScript('OnUpdate',tick)
-        end
     end
+    -- The driver is independent of the hidden marker and map scripts. It can
+    -- recover from delayed readiness, canvas replacement and other map addons.
+    if not driver then driver=CreateFrame("Frame");driver:SetScript('OnUpdate',tick) end
+    attachMapHooks()
     activeTarget=target;pendingGear=gear;pendingAnchor=anchor
-    pendingAge=0;pendingNotified=false;renderedOnce=false;elapsed=0
+    pendingAge=0;pendingNotified=false;renderedOnce=false;elapsed=0;markerStatus="map-pending";markerReason=nil
+    driver:Show()
     local shown=refreshMarker()
-    return shown or type(WorldMapFrame.HookScript)=='function',shown
+    return true,shown
 end
 
 function GetGear:OpenAcquisitionMap(gear,destination,anchor,choose)
@@ -276,7 +304,8 @@ function GetGear:OpenAcquisitionMap(gear,destination,anchor,choose)
     end
     if not opened and WorldMapFrame and type(WorldMapFrame.SetMapID)=="function" then
         if type(ShowUIPanel)=="function" then pcall(ShowUIPanel,WorldMapFrame)
-        elseif type(ToggleWorldMap)=="function" and not WorldMapFrame:IsShown() then pcall(ToggleWorldMap) end
+        elseif type(ToggleWorldMap)=="function" and not WorldMapFrame:IsShown() then pcall(ToggleWorldMap)
+        elseif type(WorldMapFrame.Show)=="function" then pcall(WorldMapFrame.Show,WorldMapFrame) end
         local ok,result=pcall(WorldMapFrame.SetMapID,WorldMapFrame,id);opened=ok and result~=false
     end
     if not opened then return directions("Map-opening API unavailable; use these directions.") end
@@ -288,6 +317,19 @@ function GetGear:OpenAcquisitionMap(gear,destination,anchor,choose)
 end
 
 function GetGear:ClearAcquisitionMapMarker()
-    activeTarget=nil;pendingGear=nil;pendingAnchor=nil;pendingAge=0;pendingNotified=false;hideMarker()
+    activeTarget=nil;pendingGear=nil;pendingAnchor=nil;pendingAge=0;pendingNotified=false;markerStatus=nil;markerReason=nil;hideMarker()
+    if driver then driver:Hide() end
 end
-function GetGear:GetAcquisitionMarkerState() return activeTarget,marker end
+function GetGear:RefreshAcquisitionMapMarker() attachMapHooks();return refreshMarker() end
+function GetGear:GetAcquisitionMarkerState() return activeTarget,marker,markerStatus,markerReason end
+
+function GetGear:GetAcquisitionMarkerDiagnostics()
+    local map=WorldMapFrame
+    local canvas=map and (call(map.GetCanvas,map) or map.ScrollContainer and map.ScrollContainer.Child)
+    return {status=markerStatus or "none",reason=markerReason,mapID=map and call(map.GetMapID,map),
+        destinationMapID=activeTarget and activeTarget.uiMapID,zone=activeTarget and activeTarget.zone,
+        markerShown=marker and call(marker.IsShown,marker) or false,
+        canvasWidth=canvas and call(canvas.GetWidth,canvas),canvasHeight=canvas and call(canvas.GetHeight,canvas),
+        canvasScale=map and call(map.GetCanvasScale,map) or canvas and call(canvas.GetScale,canvas),
+        markerScale=marker and call(marker.GetScale,marker)}
+end

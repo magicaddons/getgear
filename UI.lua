@@ -198,6 +198,9 @@ local function NewAcquisitionPin(parent, size)
         end
         if destination.kind=="dungeon" then
             GameTooltip:AddLine("Uses a valid client entrance first, then a published outdoor approach. Exact portal/access and boss-floor positions are not assumed.",0.8,0.85,0.93,true)
+            if destination.approachOnly then
+                GameTooltip:AddLine("Marks the exterior approach for this source; the quest giver's exact local position is unresolved.",1,0.70,0.32,true)
+            end
         elseif destination.bounds and not destination.x then
             GameTooltip:AddLine("Published area, not an exact NPC position.",0.8,0.85,0.93,true)
         end
@@ -270,6 +273,11 @@ function GetGear:ShowAcquisitionDirections(gear,target,anchor,reason)
     for _, b in ipairs(f.buttons) do b:Hide() end
     f.previous:Hide();f.next:Hide();f.text:Show()
     local text=(reason and reason.."\n\n" or "")..self:GetAcquisitionDirections(gear)
+    if target then
+        text=(reason and reason.."\n\n" or "")..(target.role or "Destination")..": "..(target.label or target.zone or "Unresolved")
+            ..(target.zone and " — "..target.zone or "").."\n"..(target.instructions or "")
+            .."\n\n"..self:GetAcquisitionDirections(gear)
+    end
     if gear.instructions and gear.instructions~="" then text=text.."\n\n"..gear.instructions end
     local research=gear.acquisitionResearch
     if research and research.details then text=text.."\n\n"..research.details end

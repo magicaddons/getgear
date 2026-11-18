@@ -206,7 +206,11 @@
       "requires": {
         "MapNavigation.lua": [
           "function GetGear:OpenAcquisitionMap",
-          "function GetGear:GetAcquisitionMarkerState"
+          "function GetGear:GetAcquisitionMarkerState",
+          "local canvasScale=",
+          "/scale",
+          "GetAcquisitionMarkerDiagnostics",
+          "driver:SetScript"
         ],
         "UI.lua": [
           "function GetGear:ShowAcquisitionChoices",
@@ -215,7 +219,9 @@
       },
       "regressions": [
         "acquisition-navigation.lua",
-        "acquisition-map-readiness.lua"
+        "acquisition-map-readiness.lua",
+        "navigation-marker-system.lua",
+        "navigation-button-visibility.lua"
       ]
     },
     {
@@ -248,16 +254,22 @@
     }
   ],
   "acceptedNavigationFiles": {
-    "MapNavigation.lua": "0445ac2feceaea9f19b4c134e00807956e4a4496440bcfc30eadac09aa0afedc",
-    "AcquisitionNavigation.lua": "e4e4afbfc058c6e520b84cc729e611947515d4353ec4a3292bb274b2310fb76a",
-    "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2"
+    "MapNavigation.lua": "e2202a42bdc7577fb664e7b290f0907102f0df8ff458848eed318ffbab061c0f",
+    "AcquisitionNavigation.lua": "417ea1cbd31de6942d4c6abc355098ea371575d684f7355d8950b75ccbdb3af7",
+    "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
+    "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
   },
   "acceptedSections": [
     {
       "file": "UI.lua",
       "start": "local function NewAcquisitionPin(",
       "end": "local function NewProfessionIcon(",
-      "sha256": "055db68aaa29a03e3c81c9be2a67356b367b0583b9b4b664f1f929a03ed68ed3"
+      "sha256": "1c870b9841f2ce425f463ad622f8a01ce220a130993ee146eed81ff37dc495f1"
     }
-  ]
+  ],
+  "navigationReview": {
+    "baseline": "b31e30e92256a00dbb3b75347d77731b52a0f06f",
+    "report": "docs/navigation-audit/REPORT.md",
+    "scope": "Owner-authorized shared marker/source audit; no paused dataset wholesale import"
+  }
 }

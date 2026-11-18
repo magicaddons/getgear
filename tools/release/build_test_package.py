@@ -53,7 +53,8 @@ def build(output, lua51, luac51):
         f'Source revision: {revision}\nRuntime payload SHA-256: {source_digest}\n'
         'Baseline: settings-ui-refinement 3e590ae438b2064bea756d40356ee5bc5c1205d4\n'
         'Includes completed settings, stat priorities, faction/talent/source rules, bags, materials and slot filtering.\n'
-        'Paused navigation development is preserved separately and is not included.\n'
+        'Includes reviewed shared marker/source corrections; no bulk paused navigation dataset imported.\n'
+        'Original paused navigation development is preserved separately.\n'
         'Automated checks do not replace actual WoW Forever acceptance testing.\n').encode()
     staging = Path(tempfile.mkdtemp(prefix='validation-', dir=output))
     candidate = staging / 'candidate.zip'

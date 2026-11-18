@@ -20,7 +20,7 @@ end
 local canvas=frame();WorldMapFrame=frame();local canvasReady=true;local mapID=52
 WorldMapFrame.GetCanvas=function()return canvasReady and canvas or nil end
 WorldMapFrame.GetMapID=function()return mapID end
-local created=0;CreateFrame=function()created=created+1;return frame()end
+local created=0;local driver;CreateFrame=function()created=created+1;local f=frame();if created==2 then driver=f end;return f end
 local nativeWrites=0
 C_Map={GetMapInfo=function(id)return{name=id==52 and'Westfall'or id==21 and'Silverpine Forest'or'Ashenvale',mapID=id,parentMapID=0}end,
  OpenWorldMap=function(id)mapID=id;WorldMapFrame:Show()end,
@@ -35,23 +35,23 @@ assert(loadfile(root..'/MapNavigation.lua'))('GetGear',a)
 canvas.width=0
 local ok,mode=a:OpenAcquisitionMap(one);assert(ok and mode=='map-pending')
 local active,pin=a:GetAcquisitionMarkerState();assert(active and not pin:IsShown())
-canvas.width=1000;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(pin:IsShown()and pin.point[4]==400)
+canvas.width=1000;driver.hooks.OnUpdate(driver,.2);assert(pin:IsShown()and pin.point[4]==400)
 assert(pin.label.text=='VendorA','primary marker names the vendor without a GetGear category prefix')
 -- Browsing another map after a successful draw must not open a popup later.
-mapID=21;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,4);assert(not pin:IsShown()and messages==0)
-mapID=52;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(pin:IsShown())
+mapID=21;driver.hooks.OnUpdate(driver,4);assert(not pin:IsShown()and messages==0)
+mapID=52;driver.hooks.OnUpdate(driver,.2);assert(pin:IsShown())
 canvasReady=false;ok,mode=a:OpenAcquisitionMap(one);assert(mode=='map-pending')
-WorldMapFrame.hooks.OnUpdate(WorldMapFrame,3.2);assert(messages==1 and a:GetAcquisitionMarkerState(),'fallback directions do not erase a pending target')
+driver.hooks.OnUpdate(driver,3.2);assert(messages==1 and a:GetAcquisitionMarkerState(),'fallback directions do not erase a pending target')
 -- A second click replaces the pending destination; delayed readiness cannot
 -- resurrect the old one. Only one GetGear-owned marker is created.
-a:OpenAcquisitionMap(two);canvasReady=true;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2)
-assert(a:GetAcquisitionMarkerState().label=='VendorB'and pin.point[4]==700 and created==1)
-WorldMapFrame:Hide();assert(not a:GetAcquisitionMarkerState()and not pin:IsShown())
-WorldMapFrame:Show();assert(not pin:IsShown(),'normal reopen does not resurrect a closed destination')
+a:OpenAcquisitionMap(two);canvasReady=true;driver.hooks.OnUpdate(driver,.2)
+assert(a:GetAcquisitionMarkerState().label=='VendorB'and pin.point[4]==700 and created==2)
+WorldMapFrame:Hide();assert(a:GetAcquisitionMarkerState()and not pin:IsShown())
+WorldMapFrame:Show();assert(pin:IsShown(),'reopen restores the selected destination on its map')
 -- ScrollContainer fallback and late map-ID transitions.
 WorldMapFrame.GetCanvas=nil;WorldMapFrame.ScrollContainer={Child=canvas};a:OpenAcquisitionMap(one);assert(pin:IsShown())
 C_Map.OpenWorldMap=function()mapID=21;WorldMapFrame:Show()end
-ok,mode=a:OpenAcquisitionMap(two);assert(mode=='map-pending');mapID=52;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(pin:IsShown())
+ok,mode=a:OpenAcquisitionMap(two);assert(mode=='map-pending');mapID=52;driver.hooks.OnUpdate(driver,.2);assert(pin:IsShown())
 C_Map.OpenWorldMap=function(id)mapID=id;WorldMapFrame:Show()end
 m.instanceEntrances={['Shadowfang Keep']={entrances={{id='main',zone='Silverpine Forest',x=42.6,y=66.6,label='Published SFK approach',verification='published-reference'}}}}
 m.instanceEntranceAliases={['Shadowfang Keep']='Shadowfang Keep'}
@@ -72,7 +72,7 @@ local area=gear(4,{{kind='vendor',source='npc:3'}})
 a:OpenAcquisitionMap(area)
 assert(pin.label.text=="Va'yn Moongaze",'primary area marker uses only the destination name')
 assert(a:GetAcquisitionMarkerState().bounds.xMin==30 and a:GetAcquisitionDirections(area):find('published area',1,true),'concise name does not replace area uncertainty or its footprint')
-a:OpenAcquisitionMap(one);a:OpenAcquisitionMap(area);assert(created==1 and pin.label.text=="Va'yn Moongaze")
-WorldMapFrame:Hide();WorldMapFrame:Show();assert(not pin:IsShown())
+a:OpenAcquisitionMap(one);a:OpenAcquisitionMap(area);assert(created==2 and pin.label.text=="Va'yn Moongaze")
+WorldMapFrame:Hide();WorldMapFrame:Show();assert(pin:IsShown());a:ClearAcquisitionMapMarker();assert(not pin:IsShown())
 assert(nativeWrites==0,'native waypoint unchanged')
 print('PASS AH2 map readiness:delayed/zero canvas,late map IDs,refresh/resize/close/reopen,repeated destinations,published fallback/native priority/distinct gates/one marker;live rendering unverified')

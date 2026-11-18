@@ -636,3 +636,35 @@ with tempfile.TemporaryDirectory() as temp:
     location=model['sources']['npc:100']['locations'][0]
     assert location['coordinateScope']=='continent-only'and not any(k in location for k in ['x','y','bounds']),'continent sentinels never become precise vendor positions'
 print("PASS navigation generation: future evidence propagation, exact trainer spell/output/profession joins, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved")
+
+# Bag quests without mapper data retain explicit actor IDs from structured
+# start/end markup, never NPCs mentioned only in prose or objectives.
+import importlib.util
+spec = importlib.util.spec_from_file_location('bag_navigation', ROOT / 'tools/build_bag_quest_catalogue.py')
+bag_nav = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(bag_nav)
+assert bag_nav.quest_actors('[icon name=quest-start]Start: [url=/forever/npc=77/start]Starter[/url][/icon]', 'start') == [('npc', 77, 'Starter')]
+assert bag_nav.quest_actors('[icon name=quest-end][url=/forever/object=88]Return object[/url][/icon]', 'start') == []
+assert bag_nav.quest_actors('Collect from [url=/forever/npc=77]Enemy[/url]', 'start') == []
+with tempfile.TemporaryDirectory() as temp:
+    bag_nav.EVIDENCE = Path(temp) / 'quests.json'
+    bag_nav.LOCATIONS = Path(temp) / 'locations.json'
+    q = dict(id=1, name='Missing mapper fixture', reqlevel=1, level=10, side=3, raceIDs=[],
+             mapper=None, seriesToReward=[[1]], objective='Collect', sourceURL='https://example.org/quest=1',
+             itemrewards=[[99, 1]], info='[icon name=quest-start][url=/forever/npc=77]Starter[/url][/icon]')
+    bag_nav.EVIDENCE.write_text(json.dumps(dict(quests={'1': q}, bags=[dict(id=99, name='Bag fixture',
+        classs=1, subclass=0, nslots=6, tooltip='6 Slot Bag', disposition='quest recommendation', rewardQuests=[q])])) )
+    location = dict(zone='Known outdoor region', coordinateScope='continent-only', dungeonApproach='Known instance')
+    bag_nav.LOCATIONS.write_text(json.dumps(dict(schema=1, actorLocations={'npc:77':dict(name='Starter', locations=[location])})))
+    generated = bag_nav.build()
+    assert 'bagquest:1:1:77' in generated and 'Known instance' in generated
+    assert 'starterOriginUnresolved' not in generated
+    location['x'] = 51.8
+    bag_nav.LOCATIONS.write_text(json.dumps(dict(schema=1, actorLocations={'npc:77':dict(name='Starter', locations=[location])})))
+    try:
+        bag_nav.build()
+    except AssertionError as error:
+        assert 'Continent sentinel' in str(error)
+    else:
+        raise AssertionError('Continent coordinates must not become a precise local actor pin')
+print('PASS missing-mapper actor identity and no continent-to-local coordinate promotion')

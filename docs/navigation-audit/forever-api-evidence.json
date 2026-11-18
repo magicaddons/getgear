@@ -1,0 +1,41 @@
+{
+  "repository": "https://github.com/Gethe/wow-ui-source",
+  "branch": "forever",
+  "commit": "4cd0ab752a77164f654ccbca9d0c1fe8dafceebe",
+  "retrieved": "2026-11-18",
+  "files": [
+    {
+      "path": "Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua",
+      "sha256": "388257f524d4978bbebf6964c6ac6c1ff308798bbc88b5be34cb202addb30a23",
+      "bytes": 39576,
+      "localCopyGitBlobHash": "7914d0a8165d907abe3b36fc8ad9f54036d21a39"
+    },
+    {
+      "path": "Interface/AddOns/Blizzard_MapCanvas/MapCanvas_ScrollContainerMixin.lua",
+      "sha256": "7dd1d96f1a23ceddbaf5e8ff1e0de6fca8758df442c21b9880f205a9c8633095",
+      "bytes": 36442,
+      "localCopyGitBlobHash": "8a6e7ecf0d072c35750fa22b60f3d8745c847a8b"
+    },
+    {
+      "path": "Interface/AddOns/Blizzard_WorldMap/Blizzard_WorldMap.lua",
+      "sha256": "8fd72d5bac5d7dbaa7572842867bdd7f33f8d57f9db73ab9e5a07b7c5f6987b0",
+      "bytes": 52558,
+      "localCopyGitBlobHash": "5ef1c91d6f2783b4b3602b8f15eda63df9696031"
+    },
+    {
+      "path": "Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.xml",
+      "sha256": "d619ee11df59aa6fbef78b5b9b3559f96d1d62b54f455eb98baac43c97c1e259",
+      "bytes": 2405,
+      "localCopyGitBlobHash": "02a61b2a6bd98b3b2d6c40634756530c2acbb095"
+    }
+  ],
+  "confirmed": [
+    "GetCanvas returns ScrollContainer.Child",
+    "Child:SetScale(currentScale) applies map zoom to ordinary addon children",
+    "ApplyPinPosition divides canvas anchor offsets by pin:GetScale()",
+    "WorldMap methods use HookScript-compatible OnShow/OnHide and MapCanvas methods",
+    "OpenWorldMap delegates to WorldMapFrame:HandleUserActionOpenSelf"
+  ],
+  "limitations": "Pinned Forever source review is not verification of the installed client version, actual rendering, map addon interference or live map IDs.",
+  "copyNote": "Fingerprints identify locally materialized fetched source with its final newline, not upstream Git blob identities."
+}

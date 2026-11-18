@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "evidence": [
+    {
+      "url": "https://www.wowhead.com/forever/npc=5767/nalpak",
+      "sha256": "37ec676bf5712cb9bfcb95f4fddfb6a4f9d03e9d19d8560b228a0f467b4090fa",
+      "bytes": 68291,
+      "retrieved": "2026-11-18",
+      "liveVerified": false
+    },
+    {
+      "url": "https://foreverdb.net/quest/1486-deviate-hides",
+      "sha256": "69af4645a4916a98a26c7bab01641458ba0bbfc385605da499851794d67b1102",
+      "bytes": 50488,
+      "retrieved": "2026-11-18",
+      "liveVerified": false
+    }
+  ],
+  "actorLocations": {
+    "npc:5767": {
+      "name": "Nalpak",
+      "locations": [
+        {
+          "zone": "The Barrens",
+          "verification": "published-reference",
+          "coordinateKind": "exterior-approach-only",
+          "instructions": "Nalpak is the named quest starter. His exact local coordinates are unresolved: the published NPC mapper only gives a continent reference, which is not promoted to a precise NPC pin. Navigation uses the separately reviewed Wailing Caverns exterior approach. The quest giver is near the cavern entrance; follow written directions and verify the elevated cave in game, not the instance portal or a boss position.",
+          "evidence": [
+            "https://www.wowhead.com/forever/npc=5767/nalpak"
+          ],
+          "referencePosition": {
+            "uiMapID": 1414,
+            "x": 51.8,
+            "y": 55.4,
+            "zone": "Kalimdor"
+          },
+          "dungeonApproach": "Wailing Caverns",
+          "coordinateScope": "continent-only"
+        }
+      ]
+    }
+  }
+}

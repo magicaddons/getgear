@@ -5,11 +5,23 @@ No network or equipment-catalogue mutations. The source JSON retains every
 returned normal-bag row, exact reward IDs, restrictions, conflicts and gaps.
 """
 import argparse
+import html
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / 'docs/recommendation-audit/bag-quest-evidence.json'
+LOCATIONS = ROOT / 'docs/navigation-audit/reviewed-actor-locations.json'
+
+
+def quest_actors(info, role):
+    """Explicit quest-start/end entity links, independent of missing mapper data."""
+    block = re.search(r'\[icon name=quest-' + role + r'\](.*?)\[/icon\]', info or '')
+    if not block:
+        return []
+    return [(kind, int(id), html.unescape(re.sub(r'\[.*?\]', '', name)))
+            for kind, id, name in re.findall(r'\[url=/(?:forever/)?(npc|object)=(\d+)(?:/[^\]]*)?\](.*?)\[/url\]', block[1])]
 
 
 def lua(value):
@@ -28,6 +40,14 @@ def lua(value):
 
 def build():
     evidence = json.loads(EVIDENCE.read_text())
+    corrections = json.loads(LOCATIONS.read_text())
+    assert corrections['schema'] == 1
+    reviewed = corrections['actorLocations']
+    for actor in reviewed.values():
+        for location in actor['locations']:
+            assert isinstance(location.get('zone'), str) and location['zone']
+            if location.get('coordinateScope') == 'continent-only':
+                assert not any(k in location for k in ['x', 'y', 'bounds']), 'Continent sentinel is not a local pin'
     quests, sources, chains, bags = {}, {}, {}, []
     for key, q in evidence['quests'].items():
         record = dict(questID=q['id'], name=q['name'], reqlevel=q.get('reqlevel', 1),
@@ -61,6 +81,18 @@ def build():
                     role = 'starts' if point == 'start' else 'ends'
                     if source not in record[role]:
                         record[role].append(source)
+        # Some published quests have no mapper yet still name explicit starter
+        # entities in structured info. Retain their identity and any separately
+        # reviewed location; never turn the objective/turn-in into a starter.
+        for point, role in [('start', 'starts'), ('end', 'ends')]:
+            if record[role]:
+                continue
+            for kind, actor_id, name in quest_actors(q.get('info'), point):
+                source = 'bagquest:' + key + ':' + ('1' if kind == 'npc' else '2') + ':' + str(actor_id)
+                known = reviewed.get(kind + ':' + str(actor_id), {})
+                sources.setdefault(source, dict(name=name, locations=known.get('locations', []),
+                                                evidence=[q['sourceURL']]))
+                record[role].append(source)
         if not record['starts']:
             record['starterOriginUnresolved'] = True
             record['sourceRequirements'].append('Starting item/object origin is unresolved; the turn-in is not a starting destination.')

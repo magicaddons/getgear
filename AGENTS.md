@@ -1,3 +1,19 @@
+## Current owner-authorized navigation audit — 18 November 2026
+
+Continue on `integration/cumulative-slot-filtering` from cumulative
+`b31e30e92256a00dbb3b75347d77731b52a0f06f`. The owner authorizes shared
+acquisition marker/source corrections and a new private cumulative testing ZIP.
+Read `docs/navigation-audit/REPORT.md` and the current feature contract. Retain
+all prior accepted features and the approved17-file acquisition snapshot.
+Reviewed navigation files/section hashes are intentionally advanced for this
+request; their new functional and catalogue-wide gates are mandatory.
+
+The original `/workspace/getgear` and preservation snapshots remain untouched.
+Review valid paused ideas but do not bulk-import its 3.8 MB stripped evidence.
+Do not promote continent sentinel coordinates to precise local actor pins.
+No main change, merge, push, public release or remote publication is authorized.
+Actual Forever marker rendering and map-addon coexistence require owner testing.
+
 ## Current owner-authorized cumulative integration — 18 November 2026
 
 The current request authorizes a cumulative development integration and one

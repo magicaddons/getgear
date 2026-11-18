@@ -563,6 +563,25 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     local choices,seen={},{}
     local currentRoute
     local function add(target)
+        -- Instance NPCs/objects and dungeon loot share the same exterior
+        -- entrance resolver. Interior actor coordinates are never portal pins.
+        if target.kind=="dungeon" and not target.publishedEntrance and target.role~="Published active quest objective" then
+            local definition,canonical=GetGear:GetAcquisitionInstanceDefinition(target.dungeon)
+            local entrances=definition and definition.entrances or {}
+            if #entrances>0 then
+                for _,entrance in ipairs(entrances) do
+                    local copy={};for k,v in pairs(target) do copy[k]=v end
+                    copy.dungeon=canonical;copy.publishedEntrance=entrance;copy.entranceID=entrance.id
+                    copy.zone=entrance.zone;copy.x=entrance.x;copy.y=entrance.y;copy.bounds=nil
+                    copy.uiMapID=entrance.uiMapID;copy.multipleEntrances=#entrances>1
+                    copy.coordinateKind=entrance.coordinateKind
+                    copy.verification=entrance.verification or target.verification
+                    copy.instructions=(copy.instructions or '')..'\nExterior entrance approach, not an interior source position. '..(definition.instructions or '')
+                    add(copy)
+                end
+                return
+            end
+        end
         target.acquisitionRoute=currentRoute
         local b=target.bounds
         local footprint=b and table.concat({b.xMin or'',b.xMax or'',b.yMin or'',b.yMax or''},',')or''
@@ -608,16 +627,18 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
                  instructions="Exact location has not been established."..(route.instructions and "\n"..route.instructions or ""),missingLocation=true,requirements=requirements})
         end
         for _, loc in ipairs(locations) do
-            local instance=(model.instances or {})[loc.zone]
-            local context=(model.instanceDetails or {})[loc.zone]
+            local instance=loc.dungeonApproach or (model.instances or {})[loc.zone] and loc.zone
+            local context=(model.instanceDetails or {})[instance or loc.zone]
             local instructions=route.instructions
+            if loc.instructions then instructions=(instructions and instructions.."\n" or "")..loc.instructions end
             if context and context.instructions then instructions=(instructions and instructions.."\n" or "")..context.instructions end
-            add({kind=instance and "dungeon" or route.kind,dungeon=instance and loc.zone or nil,
+            add({kind=instance and "dungeon" or route.kind,dungeon=instance or nil,
                  entranceOnly=instance and route.entranceOnly and true or nil,
                  boss=instance and route.boss or nil,source=key,label=actor.name or key,zone=loc.zone,uiMapID=not instance and loc.uiMapID or nil,
                  x=not instance and loc.x or nil,y=not instance and loc.y or nil,bounds=not instance and loc.bounds or nil,verification=loc.verification,role=role,
                  questID=q and q.questID,questName=q and q.name,requirements=requirements,preferred=preferred,
-                 instructions=instructions,bookItemID=route.bookItemID,chainUnresolved=unresolved})
+                 instructions=instructions,bookItemID=route.bookItemID,chainUnresolved=unresolved,
+                 approachOnly=loc.dungeonApproach~=nil,coordinateScope=loc.coordinateScope})
         end
     end
     local questRoutes=0

@@ -269,7 +269,7 @@ local fishing=plan(16,{{kind="fishing",source="zone:33"}})
 assert(addon:GetAcquisitionMapTarget(fishing).role=="Fishing zone")
 
 -- Exercise actual adapter lifecycle using frame/API doubles, never game rendering.
-local frames=0
+local frames=0;local driver
 local function frame()
     local f={shown=true,width=1000,height=800,scripts={},hooks={}}
     function f:IsShown() return self.shown end
@@ -288,7 +288,7 @@ local function frame()
     function f:EnableMouse() end
     return f
 end
-CreateFrame=function() frames=frames+1;return frame() end
+CreateFrame=function() frames=frames+1;local f=frame();if frames==2 then driver=f end;return f end
 WorldMapFrame=frame();local canvas=frame();local mapID=52
 WorldMapFrame.GetCanvas=function() return canvas end
 WorldMapFrame.GetMapID=function() return mapID end
@@ -303,11 +303,11 @@ assert(fishOK and fishMode=="directions" and frames==0,"zone-only fishing opens 
 local ok,mode=addon:OpenAcquisitionMap(vendor);assert(ok and mode=="map")
 local target,marker=addon:GetAcquisitionMarkerState();assert(target.x==40 and marker:IsShown())
 assert(marker.point[4]==400 and marker.point[5]==-400,"normalized map-canvas position")
-addon:OpenAcquisitionMap(rare);local _,same=addon:GetAcquisitionMarkerState();assert(marker==same and frames==1,"reuse one marker")
-mapID=99;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(not marker:IsShown(),"changing map hides marker")
-mapID=52;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(marker:IsShown(),"returning to destination restores marker")
-canvas.width=500;WorldMapFrame.hooks.OnUpdate(WorldMapFrame,.2);assert(marker.point[4]==300,"resize repositions marker")
-WorldMapFrame:Hide();assert(not addon:GetAcquisitionMarkerState() and not marker:IsShown(),"closing clears marker")
+addon:OpenAcquisitionMap(rare);local _,same=addon:GetAcquisitionMarkerState();assert(marker==same and frames==2,"reuse one marker")
+mapID=99;driver.scripts.OnUpdate(driver,.2);assert(not marker:IsShown(),"changing map hides marker")
+mapID=52;driver.scripts.OnUpdate(driver,.2);assert(marker:IsShown(),"returning to destination restores marker")
+canvas.width=500;driver.scripts.OnUpdate(driver,.2);assert(marker.point[4]==300,"resize repositions marker")
+WorldMapFrame:Hide();assert(addon:GetAcquisitionMarkerState() and not marker:IsShown(),"closing hides marker and retains the last destination")
 ok,mode=addon:OpenAcquisitionMap(multi);assert(ok and mode=="choices" and #addon.choices==2)
 local id=addon.choices[2].id;ok,mode=addon:OpenAcquisitionMap(multi,id);assert(ok and mode=="map")
 InCombatLockdown=function() return true end
@@ -406,7 +406,7 @@ local completedEarly={};for _,id in ipairs({4182,4183,4184,4185,4186,4223,4224,4
 C_QuestLog={IsQuestFlaggedCompleted=function(id)return completedEarly[id] or false end,IsOnQuest=function()return false end}
 local noteFirst=false
 for _,target in ipairs(addon:GetAcquisitionNavigationChoices(addon.ItemCatalog[16309])) do
-    noteFirst=noteFirst or target.questID==4264 and target.role=='Quest starter item' and target.kind=='dungeon' and target.dungeon=='Blackrock Depths' and not target.x
+    noteFirst=noteFirst or target.questID==4264 and target.role=='Quest starter item' and target.kind=='dungeon' and target.dungeon=='Blackrock Depths' and target.publishedEntrance and target.coordinateKind=='outdoor-entrance-approach'
     if target.source=='npc:9023' then assert(target.boss==nil,'Marshal Windsor is a quest actor, not a boss') end
 end
 assert(noteFirst,'reliable completion flags can lead to the note stage without inventing a note-giving NPC')

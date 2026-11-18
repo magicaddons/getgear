@@ -1,5 +1,9 @@
 # Cumulative development integration — 18 November 2026
 
+Navigation follow-up: see `docs/navigation-audit/REPORT.md` for the subsequent
+owner-authorized marker/source audit and `.20261118.2` build. Its reviewed
+navigation pins supersede the original freeze; all cumulative capabilities remain.
+
 This is a private development integration for owner-requested in-game testing.
 It is not a merge into main, a public release, or an acquisition-data refresh.
 
