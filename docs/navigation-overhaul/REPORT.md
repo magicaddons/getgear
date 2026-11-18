@@ -7,7 +7,7 @@ Canonical remote baseline checked before development:
 Both preserve recovered `e61c16c1a136d3972b0af5b18821ceec1a2239f7` and original
 `b31e30e92256a00dbb3b75347d77731b52a0f06f` ancestry. The isolated branch preserves
 the entire tested `.4` implementation. Main and integration are not advanced.
-Private test identity: `0.14.0-private-cumulative.20261118.5`.
+Private test identity: `0.14.0-private-cumulative.20261118.6`.
 
 ## Confirmed runtime mechanisms
 
@@ -29,6 +29,15 @@ Revalidation preserves ordinary quest-log refreshes and clears real stage change
 There is no continuous quest polling or recommendation recomputation on drag.
 Non-dungeon source identities also include the UI map ID, so equal numerical
 coordinates in different map frames cannot collapse into one destination.
+
+The `.6` follow-up also separates identity from presentation: initial quest-cache
+readiness can change `Quest start` to `Next uncompleted published stage`, and a
+native objective counter can change its text without changing the destination.
+Those changes now preserve the source ID and refresh native objective text in
+place. Temporarily unavailable quest API data is not treated as abandonment or
+loss of completion. Regressions drive those exact transitions through Core.
+The tested `.5` checkpoint at `4ae9c792ea60d5d9bb5f39826c9a371a268b5eb3`
+is retained in history; `.6` is the follow-up testing package.
 
 **Native opening and placement readiness are separate.** An opening API can show
 the map before its frame consumes the requested map ID. The bounded readiness

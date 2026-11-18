@@ -1,11 +1,15 @@
 # Validation checkpoint
 
-The local integrated gate completed156 checks with zero failures, on Lua5.1
+The initial `.5` local integrated gate completed156 checks with zero failures, on Lua5.1
 and Lua5.4:29 runtime modules,35 functional suites on each interpreter,
 cumulative feature/build/source-integrity tests, source/recipe/faction/navigation
 generation and catalogue audits, and release-tool regressions. The final
 navigation/quest/bag regression was also rerun directly on both interpreters
 after adding the real Night Elf vendor-bag and abandonment cases.
+The `.6` follow-up adds initial-cache wording, native counter updates and
+unavailable-API regressions, rerun directly on both interpreters. Its complete
+immutable local extraction gate and GitHub CI receipts accompany final delivery;
+the earlier checkpoint's passing receipt is not a substitute for those checks.
 
 Commands (outputs deliberately outside the checkout):
 

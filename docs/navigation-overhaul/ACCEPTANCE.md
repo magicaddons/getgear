@@ -1,8 +1,8 @@
-# In-game acceptance for private cumulative .5
+# In-game acceptance for private cumulative .6
 
 Exit Forever, back up the current AddOns/GetGear folder outside AddOns, retain
 WTF/SavedVariables, and extract the verified ZIP. Confirm version
-`0.14.0-private-cumulative.20261118.5` and its BUILD_INFO source SHA. Do not overlay
+`0.14.0-private-cumulative.20261118.6` and its BUILD_INFO source SHA. Do not overlay
 files from an earlier testing package. None of the checks below was performed
 in an actual Forever client by the development environment.
 

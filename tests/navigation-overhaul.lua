@@ -21,6 +21,13 @@ local function pulse()
  assert(#queued==n+1);queued[#queued]()
 end
 local bags={};for _,g in ipairs(a.QuestBagCatalogue)do bags[g.itemID]=g end
+-- Initial cache uncertainty may change "Quest start" to "Next uncompleted
+-- published stage" without changing the selected stage, actor or destination.
+C_QuestLog={IsOnQuest=function()return false end,IsQuestFlaggedCompleted=function()return nil end}
+local cold=a:GetAcquisitionMapTarget(bags[918]);local coldTarget,coldPin=click(bags[918],cold.id)
+C_QuestLog.IsQuestFlaggedCompleted=function()return false end
+pulse();assert(a:GetAcquisitionMarkerState()and a:GetAcquisitionMarkerState().id==coldTarget.id and coldPin:IsShown(),'quest-cache wording changed the source identity')
+C_QuestLog=nil
 -- Actual choices regenerate on every event, including the selected approach's
 -- application of a record whose local entrance ID is only "main".
 for _,id in ipairs({918,2082})do
@@ -42,6 +49,17 @@ C_QuestLog.IsComplete=function()return false end
 active=a:GetAcquisitionMapTarget(g);click(g,active.id)
 C_QuestLog.IsOnQuest=function()return false end
 pulse();assert(not a:GetAcquisitionMarkerState(),'abandoning a quest retained its active context')
+C_QuestLog=nil
+-- A native objective's text/counter can update at the same waypoint. Neither
+-- that text nor transient unavailable API data ends its selected context.
+local objectiveText='Collect samples (0/3)'
+C_QuestLog={IsOnQuest=function(id)return id==983 end,IsComplete=function()return false end,
+ GetNextWaypoint=function()return 1439,.37,.44 end,GetNextWaypointText=function()return objectiveText end}
+local native=a:GetAcquisitionMapTarget(bags[2082]);assert(native.kind=='active_quest')
+local nativeTarget,nativePin=click(bags[2082],native.id)
+objectiveText='Collect samples (1/3)';pulse()
+assert(a:GetAcquisitionMarkerState()and nativePin:IsShown()and nativePin.label.text==objectiveText,'native objective text erased or failed to update its marker')
+C_QuestLog.IsOnQuest=function()return nil end;pulse();assert(a:GetAcquisitionMarkerState()and nativePin:IsShown(),'unavailable quest data became abandonment')
 C_QuestLog=nil
 -- Original equipment examples and every analogous structured label resolve
 -- through canonical names without splitting legitimate name punctuation.

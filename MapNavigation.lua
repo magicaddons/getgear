@@ -393,8 +393,22 @@ end
 -- of a vendor/drop/craft acquisition session, nor proof of quest progression.
 function GetGear:RevalidateAcquisitionMapMarker()
     if not activeTarget or not activeTarget.questID or not pendingGear then return end
+    local context=activeTarget.questContext
+    if context and (context:match(':active$') or context:match(':turn%-in$')) then
+        local on=C_QuestLog and call(C_QuestLog.IsOnQuest,activeTarget.questID)
+        if type(on)~='boolean' then return end -- unavailable is not abandonment
+        if on and context:match(':turn%-in$') and type(call(C_QuestLog.IsComplete,activeTarget.questID))~='boolean' then return end
+    elseif context and context:match(':completed$') then
+        if type(C_QuestLog and call(C_QuestLog.IsQuestFlaggedCompleted,activeTarget.questID))~='boolean' then return end
+    end
     for _,choice in ipairs(self:GetAcquisitionNavigationChoices(pendingGear)) do
-        if choice.id==activeTarget.id and choice.questContext==activeTarget.questContext then return end
+        if choice.id==activeTarget.id and choice.questContext==activeTarget.questContext then
+            if activeTarget.kind=='active_quest' and activeTarget.label~=choice.label then
+                activeTarget.label=choice.label
+                if marker then marker.label:SetText(self:GetAcquisitionMarkerLabel(activeTarget)) end
+            end
+            return
+        end
     end
     self:ClearAcquisitionMapMarker()
 end

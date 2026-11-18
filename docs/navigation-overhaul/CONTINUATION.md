@@ -27,6 +27,9 @@ Run `tools/build_navigation_review.py --check` for the additive projection.
   lack accepted numerical coordinates. Preserved original points/fingerprints.
 * Corrected entrance/source identity overwrites, semantic quest-stage
   revalidation, structured NPC labels and bounded native-map readiness fallback.
+* Follow-up `.6` keeps quest identities stable across cache-readiness wording
+  and native objective text changes, refreshes that text without recreating the
+  marker, and preserves context while client quest APIs are unavailable.
 * Corrected generator roster, map-frame reconciliation and zone-only vendor
   suppression rules; added reproducible additive projection and negative tests.
 * Expanded real-runtime event/regeneration and catalogue-wide marker checks.

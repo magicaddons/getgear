@@ -633,6 +633,11 @@ function GetGear:GetAcquisitionCompactSummary(gear)
     end
 end
 
+local QUEST_ROLE_IDENTITY={
+    ['Next uncompleted published stage']='Quest start',
+    ['Completed quest — start reference']='Quest start',
+    ['Completed quest — turn-in reference']='Quest turn-in',
+}
 function GetGear:GetAcquisitionNavigationChoices(gear)
     if not gear then return {} end
     if gear.bagFromInventory then return {} end
@@ -671,8 +676,12 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
         target.questContext=currentQuestContext
         local b=target.bounds
         local footprint=b and table.concat({b.xMin or'',b.xMax or'',b.yMin or'',b.yMax or''},',')or''
+        local identityRole=target.questID and QUEST_ROLE_IDENTITY[target.role] or target.role
+        -- Quest cache readiness and objective counters change presentation,
+        -- not the identity of a named actor or the same native objective point.
+        local identityLabel=target.questID and (target.source or target.kind=='active_quest') and '' or target.label
         local key=target.kind=='dungeon' and target.entranceOnly and ('entrance|'..target.dungeon..'|'..(target.entranceID or'main'))
-            or table.concat({target.role or "",target.questID or "",target.source or "",target.zone or "",target.uiMapID or "",target.x or "",target.y or "",footprint,target.dungeon or "",target.label or ""},"|")
+            or table.concat({identityRole or "",target.questID or "",target.source or "",target.zone or "",target.uiMapID or "",target.x or "",target.y or "",footprint,target.dungeon or "",identityLabel or ""},"|")
         if seen[key] then
             local old=seen[key]
             if target.instructions and not (old.instructions or ''):find(target.instructions,1,true) then old.instructions=(old.instructions or '')..'\n'..target.instructions end
