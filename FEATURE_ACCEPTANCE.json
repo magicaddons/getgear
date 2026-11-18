@@ -228,7 +228,8 @@
         "navigation-button-visibility.lua",
         "map-marker-lifecycle.lua",
         "navigation-overhaul.lua",
-        "navigation-rendering-integrity.lua"
+        "navigation-rendering-integrity.lua",
+        "map-label-boundaries.lua"
       ]
     },
     {
@@ -256,7 +257,9 @@
       "regressions": [
         "full-toc-startup.lua",
         "beta4-catalogue.lua",
-        "beta4-performance.lua"
+        "beta4-performance.lua",
+        "account-inventory.lua",
+        "inventory-events.lua"
       ]
     },
     {
@@ -284,12 +287,13 @@
         ]
       },
       "regressions": [
-        "beta4-slot-ui.lua"
+        "beta4-slot-ui.lua",
+        "tracker-resize-budget.lua"
       ]
     }
   ],
   "acceptedNavigationFiles": {
-    "MapNavigation.lua": "7928d892f57a51ab08b97d176489da9934db0812c519713f00a03900e6623520",
+    "MapNavigation.lua": "051270d68faca4e06da8dd77ef11cab2d9bd15b2f7276d8435450a55066d565c",
     "AcquisitionNavigation.lua": "a0143f25ff0b538e4e0f4d085d3013d579fcb270bbba45fcd22a38e1ecf68142",
     "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
     "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
@@ -308,7 +312,8 @@
     "scope": "Owner-authorized comprehensive navigation/source-integrity overhaul; frozen acquisition snapshot retained; evidence projection generated separately",
     "stabilityFollowup": "docs/stability-20261118/REPORT.md",
     "comprehensiveFollowup": "docs/navigation-overhaul/REPORT.md",
-    "rendererIntegrityFollowup": "docs/navigation-integrity/REPORT.md"
+    "rendererIntegrityFollowup": "docs/navigation-integrity/REPORT.md",
+    "stabilisationFollowup": "docs/stabilisation/REPORT.md"
   },
   "navigationCoverageBaseline": {
     "review": "docs/navigation-audit/REPORT.md",

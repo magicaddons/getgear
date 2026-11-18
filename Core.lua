@@ -63,6 +63,8 @@ local function NotifyLevel(newLevel)
 end
 
 events:SetScript("OnEvent", function(_, event, arg1, arg2)
+    local capture=GetGear.performanceStats
+    if capture then capture.events[event]=(capture.events[event]or 0)+1 end
     if event == "ADDON_LOADED" then
         if arg1 ~= addonName then return end
         if type(GetGear_CharacterDB) ~= "table" then GetGear_CharacterDB = {} end
@@ -147,9 +149,9 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         -- the current zone. Preserve any user-selected map marker.
         if GetGear.RefreshAll then GetGear:RefreshAll() end
     elseif event == "UNIT_INVENTORY_CHANGED" then
-        if arg1 == "player" and GetGear.RefreshAll then GetGear:RefreshAll() end
+        if arg1 == "player" and GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end
     elseif event == "PLAYER_EQUIPMENT_CHANGED" then
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end
     elseif event == "BAG_UPDATE_DELAYED" then
         if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end
     elseif event == "ITEM_DATA_LOAD_RESULT" then
@@ -195,6 +197,21 @@ SlashCmdList.GETGEAR = function(command)
         if not GetGear.db then Say("Settings not loaded yet.") return end
         GetGear.db.notifications = not GetGear.db.notifications
         Say("Level notifications " .. (GetGear.db.notifications and "enabled" or "disabled") .. ".")
+    elseif command == "perf start" then
+        GetGear:StartPerformanceCapture()
+        Say("Performance capture started. Reproduce the issue, then /getgear perf stop.")
+    elseif command == "perf stop" then
+        local capture=GetGear:StopPerformanceCapture()
+        if not capture then Say("No performance capture is running.");return end
+        local keys={};for key in pairs(capture.events)do keys[#keys+1]=key end;table.sort(keys)
+        for _,key in ipairs(keys)do Say(key..": "..capture.events[key].." events")end
+        keys={};for key in pairs(capture.samples)do keys[#keys+1]=key end;table.sort(keys)
+        for _,key in ipairs(keys)do
+            local s=capture.samples[key]
+            local memory=s.memoryAvailable and string.format("%.1fKiB net heap change",s.heapDeltaKB)or "heap measurement unavailable"
+            Say(string.format("%s: %d calls, %.2fms inclusive, %s",key,s.calls,s.milliseconds,memory))
+        end
+        Say("Nested timings overlap; heap changes include GC and profiling overhead.")
     elseif command == "navdiag" then
         local d=GetGear:GetAcquisitionMarkerDiagnostics()
         local keys={};for key in pairs(d) do keys[#keys+1]=key end;table.sort(keys)

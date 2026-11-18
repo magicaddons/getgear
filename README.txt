@@ -1,8 +1,8 @@
-GetGear private cumulative .20261118.7
-Native map layering, qualified NPC areas, reviewed city locations and expanded read-only navigation diagnostics. All cumulative features retained.
+GetGear private cumulative .20261119.8
+Stabilisation: permanent regression guards, bounded inventory refreshes and minimal map-label displacement. Accepted .7 map rendering and cumulative features retained.
 Retain your WTF/SavedVariables. In-game acceptance remains required.
 
-PRIVATE CUMULATIVE TEST: 0.14.0-private-cumulative.20261118.7
+PRIVATE CUMULATIVE TEST: 0.14.0-private-cumulative.20261119.8
 Check BUILD_INFO.txt for the source revision. This is not a public release.
 
 GetGear — Private Cumulative Testing Build
@@ -23,7 +23,7 @@ INSTALL OR UPGRADE
 5. Launch the game, enable GetGear and use /getgear. Settings are available at
    /getgear settings; /getgear overlay toggles the compact tracker.
 
-The AddOns version should be 0.14.0-private-cumulative.20261118.7. No new SavedVariables migration is
+The AddOns version should be 0.14.0-private-cumulative.20261119.8. No new SavedVariables migration is
 introduced relative to the tested v0.14.x builds. Retain backups when upgrading
 from older versions. GetGear requires no TomTom or other third-party addon.
 
@@ -75,3 +75,11 @@ Forever client cache: https://github.com/Napalmsteak/WoW-Classic-Item-Caches
 Recipe/client references: AHledger and the dated client snapshots documented
 in the repository. Individual publication checks cite Wowhead Forever and
 other source URLs in the reviewed evidence registers. No Blizzard affiliation.
+
+PERFORMANCE CAPTURE
+-------------------
+Use /getgear perf start, reproduce a short visible or hidden tracker scenario,
+then /getgear perf stop. Compare event/call counts and inclusive milliseconds.
+Nested times overlap; net heap changes include garbage collection and capture
+overhead and do not measure total allocations. Captures are session-only.
+Actual client hitching and section-drag smoothness still require testing.

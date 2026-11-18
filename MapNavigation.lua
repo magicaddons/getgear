@@ -193,6 +193,16 @@ local function fitLabel(precise)
     local viewport=call(WorldMapFrame.GetCanvasContainer,WorldMapFrame) or WorldMapFrame.ScrollContainer
     if not viewport then return end
     local vs,ls,ms=call(viewport.GetEffectiveScale,viewport),call(marker.label.GetEffectiveScale,marker.label),call(marker.GetEffectiveScale,marker)
+    if not(vs and ls and ms)or vs<=0 or ls<=0 or ms<=0 then return end
+    -- Fit the actual text, not a mostly empty fixed-width 250px box. Retain
+    -- wrapping for long names, bounded by the current physical viewport.
+    local limit=math.min(250,viewport:GetWidth()*vs/ls)
+    marker.label:SetWidth(math.max(1,limit))
+    marker.qualifier:SetWidth(math.max(1,limit))
+    local width=call(marker.label.GetStringWidth,marker.label)
+    marker.label:SetWidth(math.max(1,math.min(limit,type(width)=='number'and width+2 or 250)))
+    local qualifierWidth=call(marker.qualifier.GetStringWidth,marker.qualifier)
+    marker.qualifier:SetWidth(math.max(1,math.min(limit,type(qualifierWidth)=='number'and qualifierWidth+2 or 250)))
     local vl,vb=call(viewport.GetLeft,viewport),call(viewport.GetBottom,viewport)
     local ml,mb=call(marker.GetLeft,marker),call(marker.GetBottom,marker)
     local ll,lb=call(marker.label.GetLeft,marker.label),call(marker.label.GetBottom,marker.label)
@@ -201,6 +211,10 @@ local function fitLabel(precise)
     -- Do not float a label at the viewport edge for an off-screen destination.
     if (ml+marker:GetWidth())*ms<=vl or ml*ms>=vr or (mb+marker:GetHeight())*ms<=vb or mb*ms>=vt then return end
     local lr,lt=(ll+marker.label:GetWidth())*ls,(lb+marker.label:GetHeight())*ls;ll=ll*ls;lb=lb*ls
+    if not precise then
+        local ql=call(marker.qualifier.GetLeft,marker.qualifier)
+        if ql then ll=math.min(ll,ql*ls);lr=math.max(lr,(ql+marker.qualifier:GetWidth())*ls)end
+    end
     local bottom=lb-(precise and 0 or (marker.qualifier:GetHeight()+2)*ls)
     local dx=ll<vl and vl-ll or lr>vr and vr-lr or 0
     local dy=bottom<vb and vb-bottom or lt>vt and vt-lt or 0

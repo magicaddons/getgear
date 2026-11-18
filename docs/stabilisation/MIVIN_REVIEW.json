@@ -1,0 +1,32 @@
+{
+  "reviewedDateClientTimezone": "2026-11-19 Australia/Adelaide",
+  "npcID": 256735,
+  "name": "Mivin Shadowweave",
+  "retainedUIMapID": 1433,
+  "retainedBounds": {
+    "xMin": 10,
+    "xMax": 10,
+    "yMin": 72.4,
+    "yMax": 72.8
+  },
+  "cause": "Retained published mapper footprint with multiple positions; no reviewed stationary single-point decision. Not a fabricated fallback or demonstrated map conversion error.",
+  "freshReferences": [
+    {
+      "url": "https://www.wowhead.com/forever/npc=256735/mivin-shadowweave",
+      "access": "opened page",
+      "fact": "Exact NPC identity; page states Redridge Mountains (2). Text extract does not expose mapper coordinates."
+    },
+    {
+      "url": "https://www.foreverdb.app/en/forever/npcs/256735/mivin-shadowweave",
+      "access": "opened page",
+      "fact": "Exact NPC ID 256735, Redridge Mountains 10.0,72.7."
+    },
+    {
+      "url": "https://azeroth.wiki/forever/map/redridge-mountains/mivin-shadowweave",
+      "access": "opened page",
+      "fact": "Named NPC, Redridge Mountains 10,72.5."
+    }
+  ],
+  "decision": "Retain published region and honest uncertainty. Fresh secondary points differ; no uniquely verified point, versioned client position, or general source-handling defect warrants changing the accepted geometry.",
+  "actualClientVerified": false
+}

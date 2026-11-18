@@ -174,7 +174,70 @@ function GetGear:RefreshAll()
 end
 
 function GetGear:OnInventoryUpdated()
-    if self.RefreshAll then self:RefreshAll() end
+    if not self.db or self.inventoryRefreshPending then return end
+    -- Equipment, unit-inventory and bag notifications overlap during looting.
+    -- A fixed deadline coalesces the burst without starving sustained updates.
+    local function refresh()
+        self.inventoryRefreshPending=nil
+        -- An event arriving between the ledger and UI deadlines must not
+        -- leave the account browser showing the previous snapshot.
+        if self.AltInventory and self.AltInventory.FlushPendingBagScan then self.AltInventory:FlushPendingBagScan() end
+        if self.db and self.RefreshAll then self:RefreshAll() end
+    end
+    if C_Timer and type(C_Timer.After)=="function" then
+        self.inventoryRefreshPending=true
+        C_Timer.After(0.1,refresh)
+    else refresh() end
+end
+
+-- Opt-in session measurements only; no SavedVariables or idle polling.
+local function ProfileClock()
+    if type(debugprofilestop)=="function" then return debugprofilestop() end
+    return type(GetTime)=="function" and GetTime()*1000 or 0
+end
+local function ProfileMemory()
+    if type(collectgarbage)=="function" then
+        local ok,n=pcall(collectgarbage,"count")
+        if ok and type(n)=="number" then return n end
+    end
+end
+local function Pack(...)return {n=select('#',...),...}end
+local Unpack=unpack or table.unpack
+function GetGear:StopPerformanceCapture()
+    local capture=self.performanceStats
+    if not capture then return end
+    for _,entry in ipairs(capture.wrappers)do
+        if entry.owner[entry.name]==entry.wrapper then entry.owner[entry.name]=entry.original end
+    end
+    self.performanceStats=nil
+    capture.wrappers=nil
+    return capture
+end
+function GetGear:StartPerformanceCapture()
+    self:StopPerformanceCapture()
+    local capture={events={},samples={},wrappers={}}
+    self.performanceStats=capture
+    local function wrap(owner,name)
+        local original=owner and owner[name]
+        if type(original)~="function" then return end
+        local sample={calls=0,milliseconds=0,heapDeltaKB=0,memoryAvailable=false}
+        capture.samples[name]=sample
+        local function wrapper(...)
+            local started,memory=ProfileClock(),ProfileMemory()
+            local result=Pack(pcall(original,...))
+            sample.calls=sample.calls+1
+            sample.milliseconds=sample.milliseconds+math.max(0,ProfileClock()-started)
+            local after=ProfileMemory()
+            if memory and after then sample.memoryAvailable=true;sample.heapDeltaKB=sample.heapDeltaKB+after-memory end
+            if not result[1]then error(result[2])end
+            return Unpack(result,2,result.n)
+        end
+        owner[name]=wrapper
+        capture.wrappers[#capture.wrappers+1]={owner=owner,name=name,original=original,wrapper=wrapper}
+    end
+    for _,name in ipairs({"RefreshAll","RefreshUI","RefreshOverlay","GetItems","GetCombinedMaterialRows"})do wrap(self,name)end
+    for _,name in ipairs({"ScanBags","ScanBank"})do wrap(self.AltInventory,name)end
+    return capture
 end
 
 function GetGear:GetStatus(record)

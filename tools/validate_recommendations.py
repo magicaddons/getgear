@@ -30,6 +30,7 @@ def main():
     lua54, luac54 = shutil.which('lua5.4'), shutil.which('luac5.4')
     assert lua54 and luac54, 'Lua5.4 and luac5.4 must be on PATH'
     modules = [line.strip() for line in (addon_root / 'GetGear.toc').read_text().splitlines() if line.strip().endswith('.lua')]
+    scripts = sorted((ROOT / 'tests').glob('*.lua'))
     results = []
 
     def run(command):
@@ -52,7 +53,7 @@ def main():
         run([compiler, '-p', 'tools/audit_recommendation_sources.lua'])
         run([compiler, '-p', 'tools/audit_faction_eligibility.lua'])
         run([compiler, '-p', 'tools/audit_navigation_pipeline.lua'])
-    for script in sorted((ROOT / 'tests').glob('*.lua')):
+    for script in scripts:
         run([lua54, script, addon_root])
         run([args.lua51, 'tools/release/lua51-harness.lua', script, addon_root])
     for script in ('reconcile-dungeon-link-guards.py', 'worlddrop-boe-fallback.py', 'navigation-generation.py', 'navigation-review-generation.py', 'navigation-location-review.py', 'stat-school-generation.py', 'faction-evidence-generation.py', 'recipe-evidence-generation.py'):
@@ -76,8 +77,8 @@ def main():
         assert faction_audit.read_bytes() == (ROOT / 'docs/faction-audit/catalogue-eligibility.csv').read_bytes()
     protected = json.loads((ROOT / 'docs/source-audit-1-60/reconciliation-20261109/presentation_data_snapshot.json').read_text())['files']
     assert all(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest for name, digest in protected.items())
-    summary = dict(checks=len(results), modules=len(modules), lua54Regressions=len(list((ROOT / 'tests').glob('*.lua'))),
-                   lua51Regressions=len(list((ROOT / 'tests').glob('*.lua'))), failures=0,
+    summary = dict(checks=len(results), modules=len(modules), lua54Regressions=len(scripts),
+                   lua51Regressions=len(scripts), failures=0,
                    protectedAcquisitionSnapshotExact=True, actualClientTested=False,
                    addonRoot=str(addon_root), cumulativeFeaturesVerified=True,
                    statement='Offline/synthetic validation only. No addon package, tag, release or live acquisition claim.')
