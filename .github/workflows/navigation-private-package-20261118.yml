@@ -1,0 +1,42 @@
+name: Authorized navigation private package (.6)
+on:
+  push:
+    branches: ['dev/navigation-private-package-20261118-6']
+    paths: ['.github/workflows/navigation-private-package-20261118.yml']
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Preserve the verified navigation implementation
+        run: git merge-base --is-ancestor bee893e7c3f285afc23b90731422f14ae34ae3e1 HEAD
+      - name: Install the approved pinned Lua interpreters
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --location 'https://deb.debian.org/debian/pool/main/l/lua5.4/lua5.4_5.4.7-1+b2_amd64.deb' --output "$RUNNER_TEMP/lua54.deb"
+          curl --fail --show-error --location 'https://deb.debian.org/debian/pool/main/l/lua5.1/lua5.1_5.1.5-9_amd64.deb' --output "$RUNNER_TEMP/lua51.deb"
+          printf '%s  %s\n' 'da5947f8274bdcd0dd6d1aaf6d780bc7537827455d456d07dc9c14daf702f1df' "$RUNNER_TEMP/lua54.deb" | sha256sum --check -
+          printf '%s  %s\n' '2abaa116e03f4aaf34de634b447e7fa11569e27b33de342e93bbcf0857694015' "$RUNNER_TEMP/lua51.deb" | sha256sum --check -
+          dpkg-deb --extract "$RUNNER_TEMP/lua54.deb" "$RUNNER_TEMP/lua54"
+          dpkg-deb --extract "$RUNNER_TEMP/lua51.deb" "$RUNNER_TEMP/lua51"
+          echo "$RUNNER_TEMP/lua54/usr/bin" >> "$GITHUB_PATH"
+      - name: Build the explicitly authorized private package with every integrity check
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEVELOPMENT_BRANCH: ${{ github.ref_name }}
+        run: |
+          python3 tools/release/build_test_package.py --remote-branch "$DEVELOPMENT_BRANCH" --output "$RUNNER_TEMP/verified-navigation-package" --lua51 "$RUNNER_TEMP/lua51/usr/bin/lua5.1" --luac51 "$RUNNER_TEMP/lua51/usr/bin/luac5.1"
+      - name: Retain the complete verified private delivery directory
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-navigation-private-6-${{ github.sha }}
+          path: ${{ runner.temp }}/verified-navigation-package/
+          if-no-files-found: error
+          retention-days: 30
