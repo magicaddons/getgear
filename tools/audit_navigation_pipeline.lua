@@ -136,6 +136,12 @@ for _,r in pairs(records)do for _,v in pairs(r.targets)do
    local ok,mode=a:OpenAcquisitionMap(r.gear,key)
    assert(ok and mode=='map','synthetic adapter failed for usable destination: '..tostring(r.gear.itemID)..' '..key..' '..tostring(mode))
    local t,pin=a:GetAcquisitionMarkerState();assert(pin and pin:IsShown()and t.uiMapID==WorldMapFrame.mapID)
+   -- Rebuild routes through the real resolver after rendering, not a static
+   -- test-only choice. Entrance IDs must not replace selected source IDs.
+   local identity=t.id
+   a:RevalidateAcquisitionMapMarker()
+   assert(a:GetAcquisitionMarkerState()and a:GetAcquisitionMarkerState().id==identity and pin:IsShown(),
+       'route regeneration cleared a still-relevant selection: '..tostring(r.gear.itemID))
    local x,y=t.x,t.y;if not x then x,y=t.bounds.xMin,t.bounds.yMin end
    assert(math.abs(pin.point[4]*pin.scale/canvas.w-x/100)<.000001)
    assert(math.abs(-pin.point[5]*pin.scale/canvas.h-y/100)<.000001)

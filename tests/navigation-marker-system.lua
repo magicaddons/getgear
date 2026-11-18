@@ -79,7 +79,8 @@ assert(dev.publishedEntrance and dev.zone=='The Barrens'and dev.x~=51.8,'contine
 local stockade;for _,g in pairs(a.ItemCatalog)do
  if g.slot=='Hands'then for _,t in ipairs(a:GetAcquisitionNavigationChoices(g))do
   if t.dungeon=='Stormwind Stockade'then stockade=g;local resolved=click(g,t.id)
-   assert(resolved.zone=='Stormwind City'and resolved.coordinateKind=='outdoor-entrance-approach');break end
+   assert(resolved.zone=='Stormwind City'and resolved.coordinateKind=='exterior-portal-reference'
+       and resolved.uiMapID==1453 and resolved.x==50.35 and resolved.y==66.18);break end
  end end
  if stockade then break end
 end

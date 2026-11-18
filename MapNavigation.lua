@@ -54,7 +54,7 @@ local function resolveMap(zone,explicit)
     end
     -- A known explicit ID defines the coordinate space. Never reinterpret its
     -- coordinates on a similarly named city/zone map when the name disagrees.
-    if explicit and mapInfo(explicit) then return valid(explicit) end
+    if explicit then return valid(explicit) end
     local maps=(GetGear.AcquisitionNavigationData or {}).maps or {}
     for _, id in ipairs(maps[zone] or {}) do if valid(id) then return id end end
     for _, id in ipairs(fallbackMaps[zone] or {}) do if valid(id) then return id end end
@@ -81,6 +81,10 @@ local function position(point)
     if normalized(x) and normalized(y) then return x*100,y*100 end
 end
 local function dungeonEntrance(name,target)
+    -- A dungeon's native portal does not identify a nearby quest giver. Keep
+    -- that source's separately reviewed cave/building approach when selected.
+    if target and target.approachOnly and target.publishedEntrance then return target.publishedEntrance end
+    if target and target.publishedEntrance and target.publishedEntrance.routeInstructionsOnly then return target.publishedEntrance end
     local api=C_EncounterJournal and C_EncounterJournal.GetDungeonEntrancesForMap
         or C_Map and C_Map.GetDungeonEntrancesForMap
     if type(api)~='function' then return target and target.publishedEntrance end
@@ -92,7 +96,7 @@ local function dungeonEntrance(name,target)
         end
         for zone in pairs(fallbackMaps) do local id=resolveMap(zone);if id then maps[id]=true end end
         for _,definition in pairs((GetGear.AcquisitionNavigationData or {}).instanceEntrances or {})do
-            for _,entry in ipairs(definition.entrances or {})do local id=resolveMap(entry.zone);if id then maps[id]=true end end
+            for _,entry in ipairs(definition.entrances or {})do local id=resolveMap(entry.zone,entry.uiMapID);if id then maps[id]=true end end
         end
         local current=C_Map and call(C_Map.GetBestMapForUnit,"player")
         if current then maps[current]=true end
@@ -151,10 +155,13 @@ end
 local hookedMaps=setmetatable({},{__mode="k"})
 local markerStatus,markerReason
 local pendingAge,pendingNotified,pendingGear,pendingAnchor=0,false,nil,nil
+local pendingMapRequested=false
 -- Primary marker text names the destination. Coordinate precision and source
 -- qualifications stay on the target, in the pin tooltip and in the full guide.
 function GetGear:GetAcquisitionMarkerLabel(target)
     if not target then return "Destination" end
+    local npc=self.GetAcquisitionNPCName and self:GetAcquisitionNPCName(target)
+    if npc then return npc end
     local label=target.label or target.zone or "Destination"
     if target.kind=="dungeon" and target.dungeon then
         label=target.multipleEntrances and target.publishedEntrance and target.publishedEntrance.label
@@ -174,6 +181,7 @@ local function refreshMarker()
     local canvas=call(WorldMapFrame.GetCanvas,WorldMapFrame)
         or WorldMapFrame.ScrollContainer and WorldMapFrame.ScrollContainer.Child
     if not canvas then hideMarker();return end
+    if type(canvas.IsVisible)=='function' and call(canvas.IsVisible,canvas)==false then hideMarker();return end
     local width,height=call(canvas.GetWidth,canvas),call(canvas.GetHeight,canvas)
     if type(width)~='number'or type(height)~='number'or width<=0 or height<=0 then hideMarker();return end
     -- Forever's MapCanvas applies its zoom to Child. Native pins compensate
@@ -231,13 +239,21 @@ attachMapHooks=function()
         observeMethod(canvas,'SetScale',function() refreshMarker() end)
     end
 end
+local function requestPendingMap()
+    if pendingMapRequested or not activeTarget or not WorldMapFrame then return end
+    if call(WorldMapFrame.GetMapID,WorldMapFrame)~=activeTarget.uiMapID
+        and type(WorldMapFrame.SetMapID)=='function' then
+        pendingMapRequested=true
+        call(WorldMapFrame.SetMapID,WorldMapFrame,activeTarget.uiMapID)
+    end
+end
 local function tick(_,dt)
     -- Bounded first-open readiness only. Once rendered there is no polling,
     -- even when the player browses another map or zooms/pans for a long time.
     if not activeTarget then stopReadiness();return end
     pendingAge=pendingAge+(dt or 0);elapsed=elapsed+(dt or 0)
     if elapsed<0.1 then return end
-    elapsed=0;attachMapHooks()
+    elapsed=0;attachMapHooks();requestPendingMap()
     if refreshMarker() then return end
     if pendingAge>=3 then
         stopReadiness()
@@ -276,7 +292,11 @@ local function installMarker(target,gear,anchor)
     end
     attachMapHooks()
     activeTarget=target;pendingGear=gear;pendingAnchor=anchor
-    pendingAge=0;pendingNotified=false;elapsed=0;markerStatus="map-pending";markerReason=nil
+    pendingAge=0;pendingNotified=false;pendingMapRequested=false;elapsed=0;markerStatus="map-pending";markerReason=nil
+    -- Some map-opening surfaces show the frame before consuming the map ID.
+    -- Request it once through the native frame when available, including after
+    -- lazy loading, without redirecting later browsing or adding idle polling.
+    requestPendingMap()
     local shown=refreshMarker()
     if not shown then driver:SetScript('OnUpdate',tick);driver:Show() end
     return true,shown
@@ -292,7 +312,14 @@ function GetGear:OpenAcquisitionMap(gear,destination,anchor,choose)
     if destination then
         for _, candidate in ipairs(choices) do if candidate.id==destination or candidate==destination then target=candidate;break end end
     else target=self:GetAcquisitionMapTarget(gear) end
-    if not target then self:ClearAcquisitionMapMarker();return false,"missing" end
+    if not target then
+        self:ClearAcquisitionMapMarker()
+        if self.ShowAcquisitionDirections and gear then
+            self:ShowAcquisitionDirections(gear,nil,anchor,"This acquisition destination is no longer available. Review the current sources and select a location again.")
+            return true,"directions"
+        end
+        return false,"missing"
+    end
     if (choose or target.chooseFirst) and #choices>1 and self.ShowAcquisitionChoices then
         self:ClearAcquisitionMapMarker()
         self:ShowAcquisitionChoices(gear,choices,anchor);return true,"choices"
@@ -314,9 +341,18 @@ function GetGear:OpenAcquisitionMap(gear,destination,anchor,choose)
     end
     if target.kind=="dungeon" then
         local entrance=dungeonEntrance(target.dungeon,target)
-        if not entrance then return directions('No trustworthy outdoor entrance point is available from the client or reviewed references. Use the qualified instance directions; no portal or boss position was guessed.') end
+        if not entrance then
+            local definition=self:GetAcquisitionInstanceDefinition(target.dungeon)
+            return directions(definition and definition.resolutionNote or 'No trustworthy outdoor entrance point is available from the client or reviewed references. Use the qualified instance directions; no portal or boss position was guessed.')
+        end
         local copy={};for k,v in pairs(target) do copy[k]=v end
-        for k,v in pairs(entrance) do copy[k]=v end
+        -- An entrance's local ID (usually "main") is not the selected source
+        -- ID. Keep both identities, including after native-coordinate upgrades,
+        -- so regenerating choices on QUEST_LOG_UPDATE can find this selection.
+        for k,v in pairs(entrance) do
+            if k~="id" and k~="label" and k~="kind" then copy[k]=v end
+        end
+        copy.entranceID=entrance.id or copy.entranceID
         target=copy
     end
     local id=target.clientVerified and target.uiMapID or resolveMap(target.zone,target.uiMapID)
@@ -358,7 +394,7 @@ end
 function GetGear:RevalidateAcquisitionMapMarker()
     if not activeTarget or not activeTarget.questID or not pendingGear then return end
     for _,choice in ipairs(self:GetAcquisitionNavigationChoices(pendingGear)) do
-        if choice.id==activeTarget.id then return end
+        if choice.id==activeTarget.id and choice.questContext==activeTarget.questContext then return end
     end
     self:ClearAcquisitionMapMarker()
 end
@@ -369,8 +405,12 @@ function GetGear:GetAcquisitionMarkerDiagnostics()
     local map=WorldMapFrame
     local canvas=map and (call(map.GetCanvas,map) or map.ScrollContainer and map.ScrollContainer.Child)
     return {status=markerStatus or "none",reason=markerReason,mapID=map and call(map.GetMapID,map),
+        selectionID=activeTarget and activeTarget.id,entranceID=activeTarget and activeTarget.entranceID,
+        source=activeTarget and activeTarget.source,questID=activeTarget and activeTarget.questID,
+        label=activeTarget and self:GetAcquisitionMarkerLabel(activeTarget),
         destinationMapID=activeTarget and activeTarget.uiMapID,zone=activeTarget and activeTarget.zone,
         markerShown=marker and call(marker.IsShown,marker) or false,
+        markerVisible=marker and call(marker.IsVisible,marker),canvasVisible=canvas and call(canvas.IsVisible,canvas),
         canvasWidth=canvas and call(canvas.GetWidth,canvas),canvasHeight=canvas and call(canvas.GetHeight,canvas),
         canvasScale=map and call(map.GetCanvasScale,map) or canvas and call(canvas.GetScale,canvas),
         markerScale=marker and call(marker.GetScale,marker)}

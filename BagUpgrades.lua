@@ -240,18 +240,18 @@ function GetGear:GetBagPlanningObjectives()
     if level>=15 then
         local vendor
         if faction=="Horde" then
-            vendor={zone="Orgrimmar",x=58.9,y=52.9,
+            vendor={zone="Orgrimmar",x=58.9,y=52.9,npcName="Gotri",
                 spot="Gotri, bag vendor (Brown Leather Satchel)",quality="forever"}
         elseif faction~="Alliance" then
             vendor=nil -- unknown faction must not invent access to an Alliance seller
         elseif race == "Human" then
-            vendor={zone="Elwynn Forest",x=43.9,y=66.0,
+            vendor={zone="Elwynn Forest",x=43.9,y=66.0,npcName="Brog Hamfist",
                 spot="Brog Hamfist, general supplies (Brown Leather Satchel)",quality="forever"}
         elseif race == "NightElf" then
-            vendor={zone="Darnassus",x=64.5,y=53.1,
+            vendor={zone="Darnassus",x=64.5,y=53.1,npcName="Ellandrieth",
                 spot="Ellandrieth, general goods (Brown Leather Satchel)",quality="forever"}
         else
-            vendor={zone="Dun Morogh",x=47.2,y=52.4,
+            vendor={zone="Dun Morogh",x=47.2,y=52.4,npcName="Kreg Bilmn",
                 spot="Kreg Bilmn, general supplies (Brown Leather Satchel)",quality="forever"}
         end
         if vendor then Alternative(4498,"Brown Leather Satchel",8,15,CountUnder(8),

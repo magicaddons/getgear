@@ -76,18 +76,22 @@ def instance_entrances(known, evidence):
     def cited(proof):
         return (isinstance(proof, dict) and str(proof.get('url','')).startswith('https://')
                 and re.fullmatch(r'[0-9a-f]{64}', str(proof.get('sha256',''))))
-    for name, definition in json.loads(path.read_text()).get('instances', {}).items():
-        if name not in known:
-            continue
+    definitions = json.loads(path.read_text()).get('instances', {})
+    known = set(known) | set(definitions)
+    for name, definition in definitions.items():
         entry = dict(canonicalName=name, instructions=definition.get('instructions',''), entrances=[],
                      legacyApproachLabels=definition.get('legacyApproachLabels',[]), evidence=definition.get('evidence',{}))
         for location in definition.get('entrances',[]):
-            if (isinstance(location, dict) and location.get('coordinateKind') == 'outdoor-entrance-approach'
+            if (isinstance(location, dict) and location.get('coordinateKind') in
+                    {'outdoor-entrance-approach', 'exterior-portal-reference', 'cave-entrance-reference'}
                     and location.get('verification') == 'published-reference' and cited(location.get('evidence'))
                     and location.get('zone') and location['zone'] not in known
                     and coordinate(location.get('x')) and coordinate(location.get('y'))
+                    and (location.get('uiMapID') is None or type(location['uiMapID']) is int and location['uiMapID'] > 0)
                     and (location['x'] or location['y']) and isinstance(location.get('id'),str)):
                 entry['entrances'].append(location)
+                if type(location.get('uiMapID')) is int and location['uiMapID'] > 0:
+                    evidence.maps[location['zone']].add(location['uiMapID'])
         result[name] = entry
         for alias in [name] + definition.get('aliases',[]):
             if isinstance(alias,str): aliases[alias] = name
@@ -114,6 +118,7 @@ class Evidence:
         self.currencies = {}
         self.maps = collections.defaultdict(set)
         self.inputs = []
+        self.conflicts = []
 
     def location(self, zone, area_id=None, raw=None):
         raw = raw or {}
@@ -126,7 +131,7 @@ class Evidence:
             except (ValueError, TypeError):
                 pass
         map_id = raw.get("uiMapId", raw.get("uiMapID"))
-        if isinstance(map_id, int) and map_id > 0:
+        if type(map_id) is int and map_id > 0:
             result["uiMapID"] = map_id
             self.maps[zone].add(map_id)
         if raw.get("coordinateScope") == "continent-only":
@@ -450,11 +455,26 @@ def build(inputs):
     # A quest mapper's example point is not more precise than the same NPC's
     # independently documented roaming footprint. Preserve the full area.
     for source in evidence.sources.values():
+        frames = collections.defaultdict(set)
+        for location in source['locations']:
+            if location.get('uiMapID'):
+                frames[(location['zone'], location.get('areaID'), location.get('coordinateScope'))].add(location['uiMapID'])
         grouped = collections.defaultdict(list)
         for location in source["locations"]:
-            grouped[location["zone"]].append(location)
+            candidates = frames[(location['zone'], location.get('areaID'), location.get('coordinateScope'))]
+            if not location.get('uiMapID') and len(candidates) == 1:
+                location = dict(location, uiMapID=next(iter(candidates)))
+            elif not location.get('uiMapID') and len(candidates) > 1:
+                evidence.conflicts.append(dict(sourceID=source.get('sourceID'),zone=location['zone'],
+                    reason='Unqualified coordinates have multiple UI map frames',mapIDs=sorted(candidates),location=location))
+                location = {k:v for k,v in location.items() if k not in ['x','y','bounds']}
+                location['coordinateScope'] = 'map-frame-unresolved'
+            # A zone name does not identify a coordinate frame. In particular,
+            # do not merge Classic/Forever maps or continent-only sentinels.
+            grouped[(location['zone'], location.get('areaID'), location.get('uiMapID'),
+                     location.get('coordinateScope'))].append(location)
         source["locations"] = []
-        for zone, variants in grouped.items():
+        for frame, variants in grouped.items():
             merged = dict(variants[0])
             boxes = [x["bounds"] for x in variants if x.get("bounds")]
             if boxes:
@@ -538,6 +558,7 @@ def build(inputs):
                 instances={name: True for name in known_dungeons | set(evidence.instances)},
                 instanceDetails=evidence.instances)
     data['instanceEntrances'],data['instanceEntranceAliases'] = instance_entrances(known_dungeons | set(evidence.instances), evidence)
+    data['instances'].update(dict.fromkeys(data['instanceEntrances'], True))
     container_routes = collections.defaultdict(list)
     for container_id, container in evidence.items.items():
         shared = container.get("containerNavigationRoutes", [])
@@ -917,11 +938,14 @@ def build(inputs):
                                    and (actor:=evidence.sources.get(r.get('source'),{})).get('name')
                                    and (legacy.get('spot')==actor['name'] or str(legacy.get('spot','')).startswith(actor['name']+','))
                                    and any(loc['zone']==legacy['zone'] for loc in actor['locations'])), None)
-                if same_actor:
+                if same_actor and any(loc['zone']==legacy['zone'] and (loc.get('bounds') or
+                        coordinate(loc.get('x')) and coordinate(loc.get('y')))
+                        for loc in evidence.sources[same_actor['source']]['locations']):
                     same_actor['instructions']=(same_actor.get('instructions')or'')+' Earlier catalogue directions retained: '+legacy_text+'. The independently published actor footprint is used; current position/access remains unverified.'
                 else:
+                    actor_name = evidence.sources[same_actor['source']]['name'] if same_actor else None
                     route("recipe_vendor" if craft and gear.get("recipeVendor") else "trainer" if "Trainer" in gear.get("acquisitionKind", "") else "legacy",
-                  location=dict(legacy, verification="legacy-reference" if legacy.get("quality") == "classic-reference" else "published-reference"),
+                  location=dict(legacy, **({'npcName': actor_name} if actor_name else {}), verification="legacy-reference" if legacy.get("quality") == "classic-reference" else "published-reference"),
                   label=legacy.get("spot", gear.get("source")), instructions=gear.get("instructions"),
                   cost=gear.get("recipeVendorCost"), currency=gear.get("recipeVendorCurrency"))
         warning_confidences = {
@@ -1012,7 +1036,8 @@ def build(inputs):
     for name, ids in evidence.maps.items():
         data["maps"][name] = sorted(ids)
     data["audit"] = dict(items=len(coverage), statuses=dict(collections.Counter(r["status"] for r in coverage)),
-                         inGameRenderingVerified=0, gapRows=len(gaps), legacyRecipeQuestReferences=dict(evidence.legacy_stats))
+                         inGameRenderingVerified=0, gapRows=len(gaps), legacyRecipeQuestReferences=dict(evidence.legacy_stats),
+                         coordinateFrameConflicts=evidence.conflicts)
     used_sources = set()
     for plan in data["items"].values():
         for entry in plan["routes"]:

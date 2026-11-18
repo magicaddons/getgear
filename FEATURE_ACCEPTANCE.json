@@ -217,7 +217,8 @@
           "function GetGear:ShowAcquisitionDirections"
         ],
         "AcquisitionNavigation.lua": [
-          "function GetGear:GetAcquisitionInstanceName"
+          "function GetGear:GetAcquisitionInstanceName",
+          "function GetGear:GetAcquisitionNPCName"
         ]
       },
       "regressions": [
@@ -225,7 +226,8 @@
         "acquisition-map-readiness.lua",
         "navigation-marker-system.lua",
         "navigation-button-visibility.lua",
-        "map-marker-lifecycle.lua"
+        "map-marker-lifecycle.lua",
+        "navigation-overhaul.lua"
       ]
     },
     {
@@ -286,8 +288,8 @@
     }
   ],
   "acceptedNavigationFiles": {
-    "MapNavigation.lua": "10bf9e51102f7fdce9eba5b583288fa7e3b87fd6990911ab6841961cf8107acd",
-    "AcquisitionNavigation.lua": "abb0f02fea2e020da9e114c35d60476d69d1b203745a7eac9046bbd95097dfa0",
+    "MapNavigation.lua": "35321c6f6904e2a9a526a1d985869e6bc5fb142828e30b0dbb2fb22e63489ae3",
+    "AcquisitionNavigation.lua": "28f8872fc83792ae8991247167e7f052d66153ab6b870f9be033183211a19b70",
     "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
     "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
   },
@@ -302,8 +304,9 @@
   "navigationReview": {
     "baseline": "b31e30e92256a00dbb3b75347d77731b52a0f06f",
     "report": "docs/navigation-audit/REPORT.md",
-    "scope": "Owner-authorized shared marker/source audit; no paused dataset wholesale import",
-    "stabilityFollowup": "docs/stability-20261118/REPORT.md"
+    "scope": "Owner-authorized comprehensive navigation/source-integrity overhaul; frozen acquisition snapshot retained; evidence projection generated separately",
+    "stabilityFollowup": "docs/stability-20261118/REPORT.md",
+    "comprehensiveFollowup": "docs/navigation-overhaul/REPORT.md"
   },
   "navigationCoverageBaseline": {
     "review": "docs/navigation-audit/REPORT.md",

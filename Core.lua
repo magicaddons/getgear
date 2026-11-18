@@ -195,6 +195,13 @@ SlashCmdList.GETGEAR = function(command)
         if not GetGear.db then Say("Settings not loaded yet.") return end
         GetGear.db.notifications = not GetGear.db.notifications
         Say("Level notifications " .. (GetGear.db.notifications and "enabled" or "disabled") .. ".")
+    elseif command == "navdiag" then
+        local d=GetGear:GetAcquisitionMarkerDiagnostics()
+        for _,key in ipairs({'status','reason','mapID','destinationMapID','selectionID','entranceID',
+            'source','questID','label','zone','markerShown','markerVisible','canvasVisible',
+            'canvasWidth','canvasHeight','canvasScale','markerScale'}) do
+            Say(key..'='..tostring(d[key]))
+        end
     elseif command == "bankdiag" then
         if not (C_Container and type(C_Container.GetContainerNumSlots)=="function") then
             Say("Container API unavailable")
