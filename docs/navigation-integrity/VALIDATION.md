@@ -46,3 +46,10 @@ An earlier preliminary local attempt was stopped while finalizing the renderer;
 it is not counted as a passing gate. Complete successful logs are in the local
 receipt directory above and, for the final installable runtime, in the verified
 package delivery. See ACCEPTANCE.md for the remaining actual-client checks.
+
+The secondary-evidence receipt follow-up replaces an accidentally saved tool
+argument error with successful named extracts and corrects the Classic/indexed
+qualifications. The159-check local implementation receipt above is retained;
+targeted projection/location/feature/snapshot checks validate the follow-up.
+Final CI and the immutable extraction gate repeat all159 checks against the
+final corrected GitHub revision, recorded in the delivery receipt.

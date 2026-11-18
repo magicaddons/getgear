@@ -117,10 +117,10 @@ own live observations. Current exact primary records take precedence over older
 combined excerpts; the older disagreements remain in the audit, not averaged.
 
 Georgio is a stationary precise point at **53.2,81.4 / map1453**, supported by the
-current exact primary mapper, an independent published trainer reference, and
+current exact primary mapper, an independent published Forever city table, and
 the owner's reported approximate player position beside him (53.3,81.4).
 Alexandra's current primary mapper supports only x53.2,y81.4..81.6; secondary
-references differ slightly, including an explicitly Classic-qualified result.
+references differ slightly, including an explicitly Classic-qualified result and an indexed-only observation. The full ForeverDB trainer section is also explicitly Classic-qualified; it is retained as historical corroboration, not current Forever proof.
 Her old cross-city box is replaced by the primary shop region and an explicit
 conflict qualification. No unsupported exact point is selected. Lucan Cordell,
 Field Marshal Stonebridge and Simon Tanner also gain published single-point

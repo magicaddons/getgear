@@ -1,14 +1,56 @@
 {
+  "schema": 1,
   "retrieved": "2026-11-18",
-  "kind": "web-tool-extraction-receipt",
-  "limitation": "Fingerprint covers retained tool extraction, not unavailable full provider HTML.",
-  "response": {
-    "content": [
-      {
-        "type": "text",
-        "text": "Error parsing function call: Invalid function_name='run' call: kwargs={'find': [{'ref_id': 'turn3view0', 'fuzzy_pattern': 'Georgio Bolero'}, {'ref_id': 'turn3view1', 'fuzzy_pattern': 'Georgio Bolero'}], 'open': [{'ref_id': 'https://foreverdb.net/spell/7639'}], 'response_length': 'short'}. Expected: type run = (_: {\n// Open the page indicated by `ref_id` and position viewport at the line number `lineno`.\n// In addition to reference ids (like \"turn0search1\"), you can also use the fully qualified URL.\n// If `lineno` is not provided, the viewport will be positioned at the beginning of the document or centered on\n// the most relevant passage, if available.\n// You can use this to scroll to a new location of previously opened pages.\nopen?: {\n  ref_id: string;\n  lineno: number | null;\n}[] | null,\n// Open the link `id` from the page indicated by `ref_id`.\n// Valid link ids are displayed with the formatting: `【{id}†.*】`.\nclick?: {\n  ref_id: string;\n  id: number;\n}[] | null,\n// Find the text `pattern` in the page indicated by `ref_id`.\nfind?: {\n  ref_id: string;\n  pattern: string;\n}[] | null,\n// Take a screenshot of the page `pageno` indicated by `ref_id`. Currently only works on pdfs.\n// `pageno` is 0-indexed and can be at most the number of pdf pages -1.\nscreenshot?: {\n  ref_id: string;\n  pageno: number;\n}[] | null,\n// query internet search engine for a given list of queries\nsystem2_search_query?: {\n  q: string;\n  recency: number | null;\n  domains: string[] | null;\n}[] | null,\n// query image search engine for a given list of queries\nimage_query?: {\n  q: string;\n  recency: number | null;\n  domains: string[] | null;\n}[] | null,\n// search for products for a given list of queries\nproduct_query?: {\n  search: string[] | null;\n  lookup: string[] | null;\n} | null,\n// search for places, restaurants, events, hotels and other businesses given a query\nbusinesses_query?: {\n  location: string | null;\n  query: string[] | null;\n  lookup: string[] | null;\n  lat: number | null;\n  long: number | null;\n  lat_span: number | null;\n  long_span: number | null;\n}[] | null,\n// look up sports schedules and standings for games in a given league\nsports?: {\n  tool: \"sports\";\n  fn: \"schedule\" | \"standings\";\n  league: \"nba\" | \"wnba\" | \"nfl\" | \"nhl\" | \"mlb\" | \"epl\" | \"ncaamb\" | \"ncaawb\" | \"ipl\";\n  team: string | null;\n  opponent: string | null;\n  date_from: string | null;\n  date_to: string | null;\n  num_games: number | null;\n  locale: string | null;\n}[] | null,\n// look up prices for a given list of stock symbols\nfinance?: {\n  ticker: string;\n  type: \"equity\" | \"fund\" | \"crypto\" | \"index\";\n  market: string | null;\n}[] | null,\n// look up weather for a given list of locations\nweather?: {\n  location: string;\n  start: string | null;\n  duration: number | null;\n}[] | null,\n// do basic calculations with a calculator\ncalculator?: {\n  expression: string;\n  prefix: string;\n  suffix: string;\n}[] | null,\n// get time for the given list of UTC offsets\ntime?: {\n  utc_offset: string;\n}[] | null,\n// the length of the response to be returned\nresponse_length?: \"short\" | \"medium\" | \"long\", // default: medium\n}) => any;"
-      }
-    ],
-    "isError": false
-  }
+  "actualClientVerified": false,
+  "kind": "reviewed-web-extracts",
+  "limitation": "Named coordinate facts and qualifications from web-tool page/index extractions; no full-provider HTML fingerprint asserted for secondary references.",
+  "sources": [
+    {
+      "url": "https://urgametips.com/wow-forever/zones/stormwind-city/map/?npc=1347",
+      "kind": "full-published-forever-zone-table",
+      "npcID": 1346,
+      "name": "Georgio Bolero",
+      "zone": "Stormwind City",
+      "x": 53.2,
+      "y": 81.4,
+      "excerpt": "Georgio Bolero | Tailoring trainer | 53.2, 81.4",
+      "evidenceLocation": "Named NPC row, extracted line298; portrait identifies NPC1346.",
+      "qualification": "Independent published Forever city table; map1453 comes from the primary NPC record, not this page."
+    },
+    {
+      "url": "https://foreverdb.net/profession/tailoring",
+      "kind": "full-published-classic-fallback",
+      "npcID": 1346,
+      "name": "Georgio Bolero",
+      "zone": "Stormwind City",
+      "x": 53.2,
+      "y": 81.4,
+      "excerpt": "Trainers (Classic locations); Georgio Bolero (Artisan Tailor), Stormwind City 53.2, 81.4",
+      "evidenceLocation": "Section heading line175 and named trainer line187.",
+      "qualification": "Classic location fallback. Page-wide client-build attribution does not establish current Forever trainer geography."
+    },
+    {
+      "url": "https://foreverdb.net/item/6274",
+      "kind": "indexed-published-classic-fallback",
+      "npcID": 1347,
+      "name": "Alexandra Bolero",
+      "zone": "Stormwind City",
+      "x": 53.1,
+      "y": 81.8,
+      "excerpt": "Sold by Alexandra Bolero in Stormwind City (53.1, 81.8) map Classic data",
+      "qualification": "Indexed excerpt explicitly labels Classic data; does not override the current primary NPC/map extract."
+    },
+    {
+      "url": "https://foreverdb.net/spell/7639",
+      "kind": "indexed-published-excerpt",
+      "npcID": 1347,
+      "name": "Alexandra Bolero",
+      "zone": "Stormwind City",
+      "x": 53.4,
+      "y": 81.9,
+      "excerpt": "Alexandra Bolero Tailoring Supplies \u00b7 Stormwind City 53.4, 81.9 Seen in Forever",
+      "qualification": "Search-index observation. The subsequently opened current full spell page lists no NPC coordinates; indexed Seen in Forever is not current full-page corroboration."
+    }
+  ],
+  "correctedReceipt": "The earlier saved response was an argument-validation error and supplied no evidence. Successful extracts supersede it; the earlier attempt remains in Git history."
 }

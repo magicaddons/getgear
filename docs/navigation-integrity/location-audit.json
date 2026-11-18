@@ -27848,9 +27848,17 @@
             "y": 81.4
           },
           {
-            "kind": "published-forever-trainer-reference",
-            "limitation": "Published Seen in Forever attribution, not our own client observation.",
+            "kind": "published-classic-fallback",
+            "limitation": "The full trainer section is explicitly labelled Classic locations. Retained only as historical corroboration, not current-client proof.",
             "url": "https://foreverdb.net/profession/tailoring",
+            "x": 53.2,
+            "y": 81.4
+          },
+          {
+            "kind": "published-forever-zone-table",
+            "limitation": "Full named Georgio row in the Forever city table. UI map1453 comes from the primary NPC record; no live observation claimed.",
+            "npcID": 1346,
+            "url": "https://urgametips.com/wow-forever/zones/stormwind-city/map/?npc=1347",
             "x": 53.2,
             "y": 81.4
           }
@@ -28008,7 +28016,8 @@
       ],
       "decision": {
         "locationKind": "conflicting-evidence",
-        "reason": "Stationary tailoring supplier. Current exact Forever NPC 1347/map1453 mapper supports the small shop region x53.2,y81.4..81.6. Secondary references list 53.1,81.8 (explicit Classic fallback) or 53.4,81.9 (Seen in Forever). Retain that disagreement; use the primary small region without inventing a precise point. Older 43.x,74.x observations are withheld."
+        "reason": "Stationary tailoring supplier. Current exact Forever NPC 1347/map1453 mapper supports the small shop region x53.2,y81.4..81.6. Secondary references list 53.1,81.8 (explicit Classic fallback) or 53.4,81.9 (Seen in Forever). Retain that disagreement; use the primary small region without inventing a precise point. Older 43.x,74.x observations are withheld.",
+        "secondarySourceQualification": "The53.4,81.9 observation is indexed-only and absent from the subsequently opened full spell page. It is retained as a historical secondary disagreement, not a current full-page observation."
       },
       "evidenceAnalysis": {
         "distinctUnmergedGeometries": 1,
