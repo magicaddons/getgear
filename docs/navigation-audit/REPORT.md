@@ -93,6 +93,15 @@ the shared button. All **805 distinct usable destinations** are also opened
 through the actual adapter with synthetic map metadata, checking map/parent,
 shown state, native anchor math and absence of waypoint writes.
 
+An independent pass inspects accepted input routes, quest starters and actor
+locations before navigation choices are resolved: **24,488 source-evidence
+checks**, with **zero** lost buttons. The feature contract records minimum
+reviewed catalogue/source/marker coverage and zero-loss assertions, so deleting
+all destinations cannot turn a vacuous audit into a pass. Build unit tests
+deliberately reduce marker coverage or introduce lost source evidence and verify
+rejection. A preliminary candidate gate was stopped to add these protections;
+only the subsequent complete extracted-package gate is a deliverable pass.
+
 These counts are route/faction observations, not unique failing items:
 
 | Status | Rows | Meaning |

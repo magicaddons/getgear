@@ -27,6 +27,16 @@ def require(ok, message):
         raise FeatureValidationError(message)
 
 
+def validate_navigation_coverage(report, contract=CONTRACT):
+    """A silent resolver drop must fail even if the remaining targets work."""
+    baseline = json.loads(Path(contract).read_text())['navigationCoverageBaseline']
+    for key, minimum in baseline['minimum'].items():
+        require(report.get(key, -1) >= minimum, 'Navigation coverage fell below reviewed baseline: ' + key)
+    for key in baseline['zero']:
+        require(report.get(key) == 0, 'Navigation lost usable source evidence: ' + key)
+    return True
+
+
 def validate(root, contract=CONTRACT):
     root = Path(root)
     spec = json.loads(Path(contract).read_text())

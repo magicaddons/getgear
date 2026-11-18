@@ -271,5 +271,20 @@
     "baseline": "b31e30e92256a00dbb3b75347d77731b52a0f06f",
     "report": "docs/navigation-audit/REPORT.md",
     "scope": "Owner-authorized shared marker/source audit; no paused dataset wholesale import"
+  },
+  "navigationCoverageBaseline": {
+    "review": "docs/navigation-audit/REPORT.md",
+    "minimum": {
+      "auditedItemIDs": 7732,
+      "classFactionChecks": 74004,
+      "usableLocationRows": 8551,
+      "simulatedDistinctMarkerDestinations": 805,
+      "rawSourceEvidenceChecks": 24488
+    },
+    "zero": [
+      "usableLocationsWithoutButton",
+      "sourceEvidenceWithoutButton",
+      "itemCacheRequests"
+    ]
   }
 }

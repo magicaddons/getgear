@@ -9,10 +9,27 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools'))
-from validate_feature_acceptance import FeatureValidationError, validate, validate_archive
+from validate_feature_acceptance import FeatureValidationError, validate, validate_archive, validate_navigation_coverage
 
 
 class CumulativeBuildTests(unittest.TestCase):
+    def navigation_report(self):
+        baseline = json.loads((ROOT / 'FEATURE_ACCEPTANCE.json').read_text())['navigationCoverageBaseline']
+        return dict(baseline['minimum'], **dict.fromkeys(baseline['zero'], 0))
+
+    def test_navigation_destination_loss_is_rejected(self):
+        report = self.navigation_report()
+        self.assertTrue(validate_navigation_coverage(report))
+        report['simulatedDistinctMarkerDestinations'] -= 1
+        with self.assertRaisesRegex(FeatureValidationError, 'coverage fell'):
+            validate_navigation_coverage(report)
+
+    def test_raw_source_evidence_lost_before_choices_is_rejected(self):
+        report = self.navigation_report()
+        report['sourceEvidenceWithoutButton'] = 1
+        with self.assertRaisesRegex(FeatureValidationError, 'source evidence'):
+            validate_navigation_coverage(report)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)

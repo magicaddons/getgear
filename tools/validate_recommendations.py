@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import time
+from validate_feature_acceptance import validate_navigation_coverage
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -58,6 +59,7 @@ def main():
         run([sys.executable, ROOT / 'tests' / script])
     run([lua54, 'tools/audit_acquisition_buttons.lua', addon_root, args.output / 'button-coverage.csv'])
     run([lua54, 'tools/audit_navigation_pipeline.lua', addon_root, args.output / 'navigation'])
+    validate_navigation_coverage(json.loads((args.output / 'navigation-summary.json').read_text()))
     run([sys.executable, 'tools/audit_acquisition_presentation.py', '--output', args.output / 'presentation'])
     run([sys.executable, 'tools/build_bag_quest_catalogue.py', '--check'])
     run([sys.executable, 'tools/build_faction_eligibility.py', '--check'])
