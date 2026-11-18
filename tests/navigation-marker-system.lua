@@ -45,6 +45,17 @@ C_Map={GetMapInfo=function(id)return infos[id]end,GetBestMapForUnit=function()re
 local directions=0
 a.ShowAcquisitionDirections=function(self,g,t,anchor,reason)directions=directions+1;self.reason=reason end
 a.ShowAcquisitionChoices=function(self,g,choices)self.choices=choices end
+local bootFrame,bootOpen=WorldMapFrame,C_Map.OpenWorldMap
+local bootGear;for _,g in ipairs(a.QuestBagCatalogue)do if g.itemID==2082 then bootGear=g end end
+assert(bootGear);local bootID=a:GetAcquisitionMapTarget(bootGear).id
+WorldMapFrame=nil;local queuedMap
+C_Map.OpenWorldMap=function(id)queuedMap=id end
+local bootOK,bootMode=a:OpenAcquisitionMap(bootGear,bootID)
+assert(bootOK and bootMode=='map-pending'and not select(2,a:GetAcquisitionMarkerState()):IsShown())
+WorldMapFrame=bootFrame;WorldMapFrame.mapID=queuedMap
+created[2].scripts.OnUpdate(created[2],.2)
+assert(select(2,a:GetAcquisitionMarkerState()):IsShown(),'first marker recovers after native map addon creation')
+C_Map.OpenWorldMap=bootOpen
 local function click(g,id)
  local ok,mode=a:OpenAcquisitionMap(g,id)
  if mode=='choices'then assert(a.choices and #a.choices>1);ok,mode=a:OpenAcquisitionMap(g,a.choices[1].id)end
@@ -111,6 +122,15 @@ assert(not a:ResolveAcquisitionMapID(zone,wrong))
 assert(not a:ResolveAcquisitionMapID('Unresolved test zone'))
 local original=C_Map.OpenWorldMap;C_Map.OpenWorldMap=function()error('restricted API')end
 ok,mode=a:OpenAcquisitionMap(g);assert(mode=='directions'and not a:GetAcquisitionMarkerState())
+C_Map.OpenWorldMap=original
+-- First native open can precede creation of WorldMapFrame itself, not merely
+-- a ready canvas. The latest destination must survive that loading boundary.
+local nativeMap=WorldMapFrame;WorldMapFrame=nil
+C_Map.OpenWorldMap=function()end
+ok,mode=a:OpenAcquisitionMap(g);assert(ok and mode=='map-pending'and not pin:IsShown())
+local pending=a:GetAcquisitionMarkerState();assert(pending and pending.uiMapID)
+WorldMapFrame=nativeMap;WorldMapFrame.mapID=pending.uiMapID
+driver.scripts.OnUpdate(driver,.2);assert(pin:IsShown()and pin.parent==canvas)
 C_Map.OpenWorldMap=original
 for _,f in ipairs({'Alliance','Horde'})do side=f;for _,n in ipairs({1,15,30,60})do level=n;click(examples['Deviate Hide Pack'])end end
 a:ClearAcquisitionMapMarker();assert(not pin:IsShown()and not a:GetAcquisitionMarkerState())

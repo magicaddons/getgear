@@ -231,9 +231,11 @@ local function tick(_,dt)
     end
 end
 local function installMarker(target,gear,anchor)
-    if not WorldMapFrame or type(CreateFrame)~="function" then return false end
+    if type(CreateFrame)~="function" then return false end
     if not marker then
-        marker=CreateFrame("Frame",nil,WorldMapFrame)
+        -- The native map addon may still be loading after OpenWorldMap. Keep
+        -- an owned hidden frame and independent driver until it materializes.
+        marker=CreateFrame("Frame",nil,WorldMapFrame or UIParent)
         marker:EnableMouse(false)
         marker.icon=marker:CreateTexture(nil,"OVERLAY");marker.icon:SetAllPoints();marker.icon:SetTexture("Interface\\AddOns\\GetGear\\MapPin")
         marker.area=marker:CreateTexture(nil,"OVERLAY");marker.area:SetAllPoints();marker.area:SetColorTexture(1,0.75,0.15,0.28)

@@ -2,7 +2,7 @@
 
 Owner-authorized follow-up to cumulative build `.20261118.1`, source
 `b31e30e92256a00dbb3b75347d77731b52a0f06f`. The new private build identity is
-`0.14.0-private-cumulative.20261118.2`. All cumulative features remain required.
+`0.14.0-private-cumulative.20261118.3`. All cumulative features remain required.
 No main change, merge, push, release or remote publication is authorized.
 
 ## Failure mechanisms and corrections
@@ -18,7 +18,8 @@ No main change, merge, push, release or remote publication is authorized.
    independent driver. Old mocks only used scale 1 and missed this defect.
 2. **Readiness and lifecycle.** Updating through the native map's OnUpdate
    hook or the hidden pin's own fallback tied recovery to those surfaces.
-   One independent GetGear driver now retries pending placement. It never
+   One independent GetGear driver now retries pending placement, including
+   a WorldMapFrame that is created only after the native open API returns. It never
    replaces native scripts. Closing hides the pin; reopening on its map
    restores the last selection. Browsing another map hides it. New clicks
    replace the destination; explicit clear/reset removes it. A three-second
@@ -100,7 +101,10 @@ reviewed catalogue/source/marker coverage and zero-loss assertions, so deleting
 all destinations cannot turn a vacuous audit into a pass. Build unit tests
 deliberately reduce marker coverage or introduce lost source evidence and verify
 rejection. A preliminary candidate gate was stopped to add these protections;
-only the subsequent complete extracted-package gate is a deliverable pass.
+only a complete extracted-package gate is a deliverable pass. The `.2`
+candidate then passed all145 checks and remains preserved. A final loading-order
+review added coverage/recovery for WorldMapFrame itself appearing late, rather
+than only its canvas. The final `.3` package must pass the full gate again.
 
 These counts are route/faction observations, not unique failing items:
 
@@ -148,7 +152,7 @@ marker visibility claim is available from API doubles.
 ## In-game acceptance
 
 1. Exit Forever, move the old GetGear folder outside AddOns, retain WTF/settings,
-   extract the complete `.20261118.2` ZIP and verify its TOC/BUILD_INFO identity.
+   extract the complete `.20261118.3` ZIP and verify its TOC/BUILD_INFO identity.
 2. Set a native player waypoint first. Open Gunnysack and Hunting Satchel from
    overlay, guide and Bags; confirm a visible labelled destination and an
    unchanged player waypoint. Check source chooser alternatives too.
