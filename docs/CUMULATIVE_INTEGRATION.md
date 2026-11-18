@@ -136,6 +136,15 @@ ZIP SHA-256 outside the checkout in its artifact directory. No actual WoW client
 is available; synthetic frames and API mocks do not establish native rendering,
 SavedVariables behavior on a real client, item-cache timing or live acquisitions.
 
+The slot integration matrix uses all catalogue records/target levels and 126
+real-engine class/faction/boundary-level contexts (1,15,30,39,40,45,60), alongside
+the accepted full source/faction/talent suites. The original all-60-level stress
+test repeatedly recalculated immutable acquisition routes and exceeded this
+baseline's CI workload budget; its original copy remains in the preservation
+snapshot. A first candidate validation was stopped for this test-workload
+adjustment, before producing any final ZIP. No implementation was weakened to
+make tests pass. Only the subsequent complete gate is reported as passing.
+
 1. Exit Forever, back up/move the old GetGear folder outside AddOns, retain WTF,
    and extract the new ZIP to `Interface/AddOns/GetGear/GetGear.toc`.
 2. Verify the private cumulative version in the AddOns list/TOC and BUILD_INFO.

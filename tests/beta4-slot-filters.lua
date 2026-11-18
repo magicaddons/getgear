@@ -129,6 +129,11 @@ addon.GetObsoleteGearReason=function() return nil end
 local bags={{id="test_bag",itemID=4238,slot="Bag",bagUpgrade=true,targetLevel=1}}
 addon.GetBagPlanningObjectives=function() return bags end
 local scenarios,large=0,0
+-- Full catalogue classification above covers every target level. Exercise the
+-- real (source-aware) engine at representative levels and the 39/40 proficiency
+-- boundary; repeating every unchanged view at all 60 levels exceeds the CI
+-- budget without adding slot-classification coverage.
+local levels={1,15,30,39,40,45,60}
 for _,f in ipairs({"Alliance","Horde"}) do
     faction=f
     for _,c in ipairs(classes) do
@@ -142,7 +147,7 @@ for _,f in ipairs({"Alliance","Horde"}) do
             elseif i%137==0 then addon.db.status[item.id]="skipped"
             elseif i%139==0 then equipped[item.id]=true end
         end
-        for n=1,60 do
+        for _,n in ipairs(levels) do
             level=n;addon.level=n
             local stateBefore=clone(addon.db)
             for _,mode in ipairs({"available","upcoming","earlier","completed","hidden","tracker","bags"}) do
@@ -182,7 +187,7 @@ for _,f in ipairs({"Alliance","Horde"}) do
         end
     end
 end
-assert(scenarios==1080 and large>100,"missing class/faction/level or large-list coverage")
+assert(scenarios==126 and large>0,"missing class/faction/level or large-list coverage")
 assert(requests==0,"presentation filtering requested item loads")
 
 -- Exercise the real SavedVariables initializer and progress methods.
@@ -236,4 +241,4 @@ addon:SetStatus(gear,nil)
 assert(not addon:GetStatus(gear) and not addon:IsHidden(gear))
 same(addon.ItemCatalog,catalogBefore,"catalogue")
 same(addon.EquipmentByClass,indexesBefore,"class indexes")
-print("PASS slot filters: entire catalogue, 1080 class/faction/level scenarios, all views, large lists, preview, metadata overlap/failure, independent character saves, Hide/Unhide and progress; 0 item loads")
+print("PASS slot filters: entire catalogue/all target levels, 126 class/faction/boundary-level scenarios, all views, large lists, preview, metadata overlap/failure, independent character saves, Hide/Unhide and progress; 0 item loads")

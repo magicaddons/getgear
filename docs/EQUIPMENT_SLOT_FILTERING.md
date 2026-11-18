@@ -94,8 +94,9 @@ lua5.1 tools/release/lua51-harness.lua tests/beta4-slot-ui.lua .
 python3 -m unittest discover -s tests/release -v
 ```
 
-The data test covers all 7,707 catalogue items via nine class indexes, every
-level 1–60 for nine classes and two faction states (1,080 combinations), all
+The cumulative data test covers all 7,707 catalogue items/all target levels via
+nine class indexes and levels 1,15,30,39,40,45,60 for nine classes and two faction
+states (126 combinations, including the armour proficiency boundary), all
 seven character views, class-specific Preview lists, 100+ item lists, canonical
 slot coverage, hand overlap and metadata failure, invalid preferences, existing
 schema-4 saves, simulated reload/character switching, Hide/Unhide, Skip/Undo,
