@@ -85,8 +85,9 @@ with tempfile.TemporaryDirectory() as temp:
     path.write_text(json.dumps(proof))
     data, coverage, gaps, _ = nav.build(gear)
     locations = data["sources"]["npc:100"]["locations"]
-    assert len(locations) == 1 and "x" not in locations[0], "never turn a roaming footprint into a fake precise centroid"
-    assert locations[0]["bounds"] == dict(xMin=20, xMax=50, yMin=30, yMax=60)
+    assert len(locations) == 2 and all('x' not in loc for loc in locations), "conflicting mapper samples retain separate geometries without a fake centroid"
+    assert any(loc['bounds'] == dict(xMin=20, xMax=50, yMin=30, yMax=60) for loc in locations)
+    assert all(loc['locationKind']=='conflicting-evidence' for loc in locations), 'A footprint plus quest sample does not prove an NPC patrol'
     assert coverage[0]["status"] == "directions"
     (nav.REPORT / "reviewed_equipment_sources.json").write_text(json.dumps([{
         "itemID": 2, "navigationRoutes": [{"kind": "crafting_requirement", "source": "npc:100", "instructions": "Fixture special forge"}],

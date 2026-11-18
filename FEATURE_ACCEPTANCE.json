@@ -227,7 +227,8 @@
         "navigation-marker-system.lua",
         "navigation-button-visibility.lua",
         "map-marker-lifecycle.lua",
-        "navigation-overhaul.lua"
+        "navigation-overhaul.lua",
+        "navigation-rendering-integrity.lua"
       ]
     },
     {
@@ -288,8 +289,8 @@
     }
   ],
   "acceptedNavigationFiles": {
-    "MapNavigation.lua": "d2a7beb7b919eb81ffa6bac6affe263fa63bc63ec8da384f709698fe0c1b32b9",
-    "AcquisitionNavigation.lua": "57e3db7d4d66e09cb27eff312a40fe0ea161b1eef277de04cf0f545476fc5b14",
+    "MapNavigation.lua": "7928d892f57a51ab08b97d176489da9934db0812c519713f00a03900e6623520",
+    "AcquisitionNavigation.lua": "a0143f25ff0b538e4e0f4d085d3013d579fcb270bbba45fcd22a38e1ecf68142",
     "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
     "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
   },
@@ -306,7 +307,8 @@
     "report": "docs/navigation-audit/REPORT.md",
     "scope": "Owner-authorized comprehensive navigation/source-integrity overhaul; frozen acquisition snapshot retained; evidence projection generated separately",
     "stabilityFollowup": "docs/stability-20261118/REPORT.md",
-    "comprehensiveFollowup": "docs/navigation-overhaul/REPORT.md"
+    "comprehensiveFollowup": "docs/navigation-overhaul/REPORT.md",
+    "rendererIntegrityFollowup": "docs/navigation-integrity/REPORT.md"
   },
   "navigationCoverageBaseline": {
     "review": "docs/navigation-audit/REPORT.md",

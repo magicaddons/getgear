@@ -142,6 +142,10 @@ class Evidence:
         points = [p for p in rows(raw.get("coords")) if isinstance(p, list) and len(p) >= 2 and coordinate(p[0]) and coordinate(p[1]) and (p[0] != 0 or p[1] != 0)]
         bounds = raw.get("bounds")
         if points:
+            # Mapper observations are evidence, not a patrol declaration. Keep
+            # every observed point so later reconciliation can distinguish
+            # version conflicts, spawn sets and genuinely reviewed routes.
+            result['coordinateObservations'] = [list(p[:2]) for p in points]
             bounds = dict(xMin=min(x[0] for x in points), xMax=max(x[0] for x in points),
                           yMin=min(x[1] for x in points), yMax=max(x[1] for x in points))
         if isinstance(bounds, dict) and all(coordinate(bounds.get(k)) for k in ["xMin", "xMax", "yMin", "yMax"]):
@@ -150,6 +154,9 @@ class Evidence:
                 result["bounds"] = bounds
                 if bounds["xMin"] == bounds["xMax"] and bounds["yMin"] == bounds["yMax"]:
                     result.update(x=bounds["xMin"], y=bounds["yMin"])
+                    result['locationKind'] = 'published-point'
+                else:
+                    result['locationKind'] = raw.get('locationKind', 'published-region')
         return result
 
     def source(self, kind, source_id, name=None, provenance=None):
@@ -452,8 +459,8 @@ def build(inputs):
                     item["startsQuest"] = True
             if not q["starts"] and not (q.get("starterZone") and q.get("starterInstructions")):
                 q["starterOriginUnresolved"] = True
-    # A quest mapper's example point is not more precise than the same NPC's
-    # independently documented roaming footprint. Preserve the full area.
+    # Retain separate evidence geometries in each verified map frame. A quest
+    # mapper sample does not resolve a stationary NPC/patrol/version conflict.
     for source in evidence.sources.values():
         frames = collections.defaultdict(set)
         for location in source['locations']:
@@ -475,22 +482,19 @@ def build(inputs):
                      location.get('coordinateScope'))].append(location)
         source["locations"] = []
         for frame, variants in grouped.items():
-            merged = dict(variants[0])
-            boxes = [x["bounds"] for x in variants if x.get("bounds")]
-            if boxes:
-                merged["bounds"] = dict(xMin=min(x["xMin"] for x in boxes), xMax=max(x["xMax"] for x in boxes),
-                                        yMin=min(x["yMin"] for x in boxes), yMax=max(x["yMax"] for x in boxes))
-                box = merged["bounds"]
-                merged.pop("x", None)
-                merged.pop("y", None)
-                if box["xMin"] == box["xMax"] and box["yMin"] == box["yMax"]:
-                    merged.update(x=box["xMin"], y=box["yMin"])
-            map_ids = {x["uiMapID"] for x in variants if x.get("uiMapID")}
-            if len(map_ids) == 1:
-                merged["uiMapID"] = next(iter(map_ids))
-            elif len(map_ids) > 1:
-                merged.pop("uiMapID", None)
-            source["locations"].append(merged)
+            geometries = {json.dumps({k:v for k,v in x.items() if k in ['x','y','bounds']},sort_keys=True)
+                          for x in variants if 'bounds' in x or 'x' in x}
+            for variant in variants:
+                location = dict(variant)
+                if len(geometries)>1 and location.get('locationKind') not in ['roaming','multiple-spawns']:
+                    location['locationKind']='conflicting-evidence'
+                    # Keep a point's original observation as a degenerate
+                    # footprint until review resolves the disagreement.
+                    if 'x' in location and 'y' in location:
+                        location.setdefault('bounds',dict(xMin=location['x'],xMax=location['x'],yMin=location['y'],yMax=location['y']))
+                        location.pop('x');location.pop('y')
+                if location not in source['locations']:
+                    source['locations'].append(location)
     partial_hints = set()
     for path in REPORT.glob("checkpoint*_partial_evidence.json"):
         for raw_id, item in json.loads(path.read_text()).get("items", {}).items():

@@ -1,0 +1,111 @@
+{
+  "referenceBranch": "classic_era",
+  "commit": "4192ac60067fc55566182291bc67c85dd9b6794d",
+  "records": [
+    {
+      "url": "https://github.com/Gethe/wow-ui-source/blob/4192ac60067fc55566182291bc67c85dd9b6794d/Interface/AddOns/Blizzard_MapCanvas/Blizzard_MapCanvas.lua",
+      "sha256": "6f3c2d4c78b6e880b3382192dc245cc1c4afa5edacf4baceb739cb75ff92c10d",
+      "bytes": 24731,
+      "excerpts": [
+        {
+          "line": 7,
+          "text": "\tself.detailLayerPool = CreateFramePool(\"FRAME\", self:GetCanvas(), \"MapCanvasDetailLayerTemplate\");"
+        },
+        {
+          "line": 158,
+          "text": "\t\t\tself.pinPools[pinTemplate] = CreateFramePool(pinTemplateType, self:GetCanvas(), pinTemplate, OnPinReleased);"
+        },
+        {
+          "line": 393,
+          "text": "\t\tself.debugAreaTriggerPool = CreateTexturePool(self:GetCanvas(), \"OVERLAY\", 7, \"MapCanvasDebugTriggerAreaTemplate\");"
+        },
+        {
+          "line": 399,
+          "text": "\tlocal canvas = self:GetCanvas();"
+        },
+        {
+          "line": 427,
+          "text": "\t\tdetailLayer:SetAllPoints(self:GetCanvas());"
+        },
+        {
+          "line": 515,
+          "text": "\t\t\tlocal canvas = self:GetCanvas();"
+        },
+        {
+          "line": 517,
+          "text": "\t\t\tpin:SetParent(canvas);"
+        },
+        {
+          "line": 519,
+          "text": "\t\t\tpin:SetPoint(\"CENTER\", canvas, \"TOPLEFT\", (canvas:GetWidth() * x) / scale, -(canvas:GetHeight() * y) / scale);"
+        },
+        {
+          "line": 531,
+          "text": "function MapCanvasMixin:GetCanvas()"
+        },
+        {
+          "line": 532,
+          "text": "\treturn self.ScrollContainer.Child;"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Gethe/wow-ui-source/blob/4192ac60067fc55566182291bc67c85dd9b6794d/Interface/AddOns/Blizzard_MapCanvas/MapCanvas_PinFrameLevelsManager.lua",
+      "sha256": "3628749a0149e85cb68fb6f4d2423faef7a20bf2319b5dad7f57d90c38974bee",
+      "bytes": 5385,
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "local MAP_CANVAS_PIN_FRAME_LEVEL_DEFAULT = 2000;"
+        },
+        {
+          "line": 66,
+          "text": "\tif self.definitions[frameLevelType] or frameLevelType == \"PIN_FRAME_LEVEL_TOPMOST\" then"
+        },
+        {
+          "line": 78,
+          "text": "\tif not relativeDefinition or self.definitions[frameLevelType] or frameLevelType == \"PIN_FRAME_LEVEL_TOPMOST\" then"
+        },
+        {
+          "line": 96,
+          "text": "\tif not relativeDefinition or self.definitions[frameLevelType] or frameLevelType == \"PIN_FRAME_LEVEL_TOPMOST\" then"
+        },
+        {
+          "line": 138,
+          "text": "function MapCanvasPinFrameLevelsManagerMixin:GetValidFrameLevel(frameLevelType, optionalIndex)"
+        },
+        {
+          "line": 140,
+          "text": "\tif frameLevelType == \"PIN_FRAME_LEVEL_TOPMOST\" then"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Gethe/wow-ui-source/blob/4192ac60067fc55566182291bc67c85dd9b6794d/Interface/AddOns/Blizzard_SharedMapDataProviders/MapExplorationDataProvider.lua",
+      "sha256": "971ca1c8ab157e6ac48cb8937875c60b50bbe9a9f468c8415c2a08b89699a898",
+      "bytes": 6443,
+      "excerpts": [
+        {
+          "line": 54,
+          "text": "\tself:UseFrameLevelType(\"PIN_FRAME_LEVEL_MAP_EXPLORATION\");"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Gethe/wow-ui-source/blob/4192ac60067fc55566182291bc67c85dd9b6794d/Interface/AddOns/Blizzard_WorldMap/Vanilla/Blizzard_WorldMap.lua",
+      "sha256": "236ffd5267bd002b65933ab8bb78bd0ca8f749966c80784f1cba1c2ffd8f1d7a",
+      "bytes": 20093,
+      "excerpts": [
+        {
+          "line": 215,
+          "text": "\tpinFrameLevelsManager:AddFrameLevel(\"PIN_FRAME_LEVEL_MAP_EXPLORATION\");"
+        },
+        {
+          "line": 354,
+          "text": "\t\tlocal azerothMapInfo = MapUtil.GetMapParentInfo(mapID, Enum.UIMapType.World, TOPMOST);"
+        }
+      ]
+    }
+  ],
+  "limitation": "Published FrameXML reference, not a dump of the owner's installed Forever client."
+}

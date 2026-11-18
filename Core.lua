@@ -197,9 +197,8 @@ SlashCmdList.GETGEAR = function(command)
         Say("Level notifications " .. (GetGear.db.notifications and "enabled" or "disabled") .. ".")
     elseif command == "navdiag" then
         local d=GetGear:GetAcquisitionMarkerDiagnostics()
-        for _,key in ipairs({'status','reason','mapID','destinationMapID','selectionID','entranceID',
-            'source','questID','label','zone','markerShown','markerVisible','canvasVisible',
-            'canvasWidth','canvasHeight','canvasScale','markerScale'}) do
+        local keys={};for key in pairs(d) do keys[#keys+1]=key end;table.sort(keys)
+        for _,key in ipairs(keys) do
             Say(key..'='..tostring(d[key]))
         end
     elseif command == "bankdiag" then

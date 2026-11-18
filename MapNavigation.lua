@@ -174,42 +174,84 @@ function GetGear:GetAcquisitionMarkerLabel(target)
     return label
 end
 local function hideMarker() if marker then marker:Hide() end end
+local placementReason
+local function placementFailed(reason)
+    placementReason=reason;hideMarker()
+end
+local function frameLevel(canvas)
+    -- MapCanvas levels are absolute (native pins start near 2000), not a
+    -- small offset from Child. Exploration is itself a native pin and can
+    -- occlude a perfectly shown/visible frame at Child+100.
+    local manager=call(WorldMapFrame.GetPinFrameLevelsManager,WorldMapFrame)
+    -- A custom topmost definition may reserve a range, not a single level.
+    -- The native manager clamps this index to the end of that range.
+    local top=manager and call(manager.GetValidFrameLevel,manager,'PIN_FRAME_LEVEL_TOPMOST',9000)
+    local base=call(canvas.GetFrameLevel,canvas) or 0
+    return math.max(base+1,type(top)=='number' and top+1 or 2100)
+end
+local function fitLabel(precise)
+    local viewport=call(WorldMapFrame.GetCanvasContainer,WorldMapFrame) or WorldMapFrame.ScrollContainer
+    if not viewport then return end
+    local vs,ls,ms=call(viewport.GetEffectiveScale,viewport),call(marker.label.GetEffectiveScale,marker.label),call(marker.GetEffectiveScale,marker)
+    local vl,vb=call(viewport.GetLeft,viewport),call(viewport.GetBottom,viewport)
+    local ml,mb=call(marker.GetLeft,marker),call(marker.GetBottom,marker)
+    local ll,lb=call(marker.label.GetLeft,marker.label),call(marker.label.GetBottom,marker.label)
+    if not (vs and ls and ms and vl and vb and ml and mb and ll and lb) then return end
+    local vr,vt=(vl+viewport:GetWidth())*vs,(vb+viewport:GetHeight())*vs;vl=vl*vs;vb=vb*vs
+    -- Do not float a label at the viewport edge for an off-screen destination.
+    if (ml+marker:GetWidth())*ms<=vl or ml*ms>=vr or (mb+marker:GetHeight())*ms<=vb or mb*ms>=vt then return end
+    local lr,lt=(ll+marker.label:GetWidth())*ls,(lb+marker.label:GetHeight())*ls;ll=ll*ls;lb=lb*ls
+    local bottom=lb-(precise and 0 or (marker.qualifier:GetHeight()+2)*ls)
+    local dx=ll<vl and vl-ll or lr>vr and vr-lr or 0
+    local dy=bottom<vb and vb-bottom or lt>vt and vt-lt or 0
+    marker.label:SetPoint(precise and 'BOTTOM' or 'CENTER',marker,precise and 'TOP' or 'CENTER',dx/ls,(precise and 2 or 0)+dy/ls)
+end
 local function refreshMarker()
-    if not marker or not activeTarget or not WorldMapFrame or not call(WorldMapFrame.IsShown,WorldMapFrame) then hideMarker();return end
+    if not marker or not activeTarget then return placementFailed('no-selection') end
+    if not WorldMapFrame or not call(WorldMapFrame.IsShown,WorldMapFrame) then return placementFailed('map-hidden-or-unavailable') end
     local target=activeTarget
-    if call(WorldMapFrame.GetMapID,WorldMapFrame)~=target.uiMapID then hideMarker();return end
+    if call(WorldMapFrame.GetMapID,WorldMapFrame)~=target.uiMapID then return placementFailed('different-map') end
     local canvas=call(WorldMapFrame.GetCanvas,WorldMapFrame)
         or WorldMapFrame.ScrollContainer and WorldMapFrame.ScrollContainer.Child
-    if not canvas then hideMarker();return end
-    if type(canvas.IsVisible)=='function' and call(canvas.IsVisible,canvas)==false then hideMarker();return end
+    if not canvas then return placementFailed('canvas-unavailable') end
+    if type(canvas.IsVisible)=='function' and call(canvas.IsVisible,canvas)==false then return placementFailed('canvas-hidden') end
     local width,height=call(canvas.GetWidth,canvas),call(canvas.GetHeight,canvas)
-    if type(width)~='number'or type(height)~='number'or width<=0 or height<=0 then hideMarker();return end
+    if type(width)~='number'or type(height)~='number'or width<=0 or height<=0 then return placementFailed('canvas-size-invalid') end
     -- Forever's MapCanvas applies its zoom to Child. Native pins compensate
     -- with inverse scale AND divide their anchor offsets by the pin scale.
     -- A plain 22px child can otherwise become only a few pixels wide.
     local canvasScale=call(WorldMapFrame.GetCanvasScale,WorldMapFrame) or call(canvas.GetScale,canvas) or 1
-    if type(canvasScale)~='number' or canvasScale~=canvasScale or canvasScale<=0 or canvasScale==math.huge then hideMarker();return end
+    if type(canvasScale)~='number' or canvasScale~=canvasScale or canvasScale<=0 or canvasScale==math.huge then return placementFailed('canvas-scale-invalid') end
     local scale=type(marker.SetScale)=='function' and 1/canvasScale or 1
     marker:SetParent(canvas);marker:ClearAllPoints()
     if marker.SetScale then marker:SetScale(scale) end
-    if marker.SetFrameLevel and canvas.GetFrameLevel then marker:SetFrameLevel(canvas:GetFrameLevel()+100) end
-    if marker.SetFrameStrata and WorldMapFrame.GetFrameStrata then marker:SetFrameStrata(WorldMapFrame:GetFrameStrata()) end
+    if marker.SetFrameStrata then marker:SetFrameStrata(call(canvas.GetFrameStrata,canvas) or call(WorldMapFrame.GetFrameStrata,WorldMapFrame) or 'HIGH') end
+    if marker.SetFrameLevel then marker:SetFrameLevel(frameLevel(canvas)) end
     local precise=percentage(target.x) and percentage(target.y) and target.verification~="legacy-reference"
     if precise then
         marker:SetSize(28,32);marker:SetPoint("CENTER",canvas,"TOPLEFT",width*target.x/100/scale,-height*target.y/100/scale)
         marker.icon:ClearAllPoints();marker.icon:SetAllPoints();marker.icon:Show();marker.area:Hide()
+        marker.qualifier:Hide()
     elseif target.bounds then
         local b=target.bounds
-        if not (percentage(b.xMin) and percentage(b.xMax) and percentage(b.yMin) and percentage(b.yMax)) then hideMarker();return end
+        if not (percentage(b.xMin) and percentage(b.xMax) and percentage(b.yMin) and percentage(b.yMax) and b.xMin<=b.xMax and b.yMin<=b.yMax) then return placementFailed('bounds-invalid') end
         marker:SetSize(math.max(2,width*(b.xMax-b.xMin)/100/scale),math.max(2,height*(b.yMax-b.yMin)/100/scale))
         marker:SetPoint("TOPLEFT",canvas,"TOPLEFT",width*b.xMin/100/scale,-height*b.yMin/100/scale)
-        -- A recognizable pin identifies the published area; its corner anchor
-        -- is not an invented NPC midpoint. The exact footprint stays visible.
-        marker.icon:ClearAllPoints();marker.icon:SetSize(28,32);marker.icon:SetPoint('BOTTOM',marker,'TOPLEFT',0,0)
-        marker.icon:Show();marker.area:Show()
-    else hideMarker();return end
+        -- A region has no precise destination. Shade its actual footprint and
+        -- label its centre as an area; never put an NPC pin at a box corner.
+        marker.icon:Hide();marker.area:Show()
+        marker.qualifier:SetText(target.locationKind=='conflicting-evidence' and 'Conflicting published locations' or target.locationKind=='roaming' and 'Published roaming area' or 'Approximate published area')
+        marker.qualifier:Show()
+    else return placementFailed('coordinates-unavailable') end
     marker.label:SetText(GetGear:GetAcquisitionMarkerLabel(target))
-    marker:Show();pendingAge=0;markerStatus="map";markerReason=nil
+    marker.label:ClearAllPoints()
+    marker.label:SetPoint(precise and 'BOTTOM' or 'CENTER',marker,precise and 'TOP' or 'CENTER',0,precise and 2 or 0)
+    marker.label:Show()
+    if marker.SetAlpha then marker:SetAlpha(1) end
+    if marker.icon.SetAlpha then marker.icon:SetAlpha(1) end
+    if marker.icon.SetVertexColor then marker.icon:SetVertexColor(1,1,1,1) end
+    placementReason=nil
+    marker:Show();fitLabel(precise);pendingAge=0;markerStatus="map";markerReason=nil
     stopReadiness();return true
 end
 -- Observe the native canvas lifecycle. Never replace Blizzard scripts or
@@ -229,7 +271,7 @@ attachMapHooks=function()
         map:HookScript('OnSizeChanged',function() attachMapHooks();refreshMarker() end)
         local function changed() attachMapHooks();refreshMarker() end
         for _,name in ipairs({'SetMapID','OnMapChanged','OnCanvasScaleChanged',
-            'OnCanvasSizeChanged','RefreshAllDataProviders'}) do observeMethod(map,name,changed) end
+            'OnCanvasSizeChanged','OnCanvasPanChanged','RefreshAllDataProviders','ReapplyPinFrameLevels'}) do observeMethod(map,name,changed) end
     end
     local canvas=call(map.GetCanvas,map) or map.ScrollContainer and map.ScrollContainer.Child
     if canvas and not hookedCanvases[canvas] and type(canvas.HookScript)=="function" then
@@ -276,6 +318,10 @@ local function installMarker(target,gear,anchor)
         marker.icon=marker:CreateTexture(nil,"OVERLAY");marker.icon:SetAllPoints();marker.icon:SetTexture("Interface\\AddOns\\GetGear\\MapPin")
         marker.area=marker:CreateTexture(nil,"OVERLAY");marker.area:SetAllPoints();marker.area:SetColorTexture(1,0.75,0.15,0.28)
         marker.label=marker:CreateFontString(nil,"OVERLAY","GameFontNormalSmall");marker.label:SetPoint("BOTTOM",marker,"TOP",0,2);marker.label:SetWidth(250)
+        if marker.label.SetTextColor then marker.label:SetTextColor(1,0.85,0.25,1) end
+        if marker.label.SetShadowColor then marker.label:SetShadowColor(0,0,0,1);marker.label:SetShadowOffset(1,-1) end
+        marker.qualifier=marker:CreateFontString(nil,'OVERLAY','GameFontNormalSmall')
+        marker.qualifier:SetPoint('TOP',marker.label,'BOTTOM',0,-2);marker.qualifier:SetWidth(250)
     end
     -- An independent event frame handles native addon loading before the map
     -- exists. Readiness work is bounded; later changes are entirely event driven.
@@ -415,10 +461,39 @@ end
 function GetGear:RefreshAcquisitionMapMarker() attachMapHooks();return refreshMarker() end
 function GetGear:GetAcquisitionMarkerState() return activeTarget,marker,markerStatus,markerReason end
 
+local function read(object,method) return object and call(object[method],object) end
+local function identity(object)
+    if not object then return 'nil' end
+    return read(object,'GetDebugName') or read(object,'GetName') or tostring(object)
+end
+local function rectangle(object)
+    local l,b,w,h=read(object,'GetLeft'),read(object,'GetBottom'),read(object,'GetWidth'),read(object,'GetHeight')
+    local s=read(object,'GetEffectiveScale')
+    if type(l)=='number' and type(b)=='number' and type(w)=='number' and type(h)=='number' and type(s)=='number' then
+        return {l=l*s,b=b*s,r=(l+w)*s,t=(b+h)*s}
+    end
+end
+local function rectText(r)
+    return r and string.format('left=%.2f bottom=%.2f right=%.2f top=%.2f (screen pixels)',r.l,r.b,r.r,r.t) or 'unavailable'
+end
+local function intersects(a,b)
+    if a and b then return a.l<b.r and a.r>b.l and a.b<b.t and a.t>b.b end
+end
+local function regionDiagnostics(d,prefix,region,viewport)
+    d[prefix..'Shown']=read(region,'IsShown');d[prefix..'Visible']=read(region,'IsVisible')
+    d[prefix..'Alpha']=read(region,'GetAlpha');d[prefix..'EffectiveAlpha']=read(region,'GetEffectiveAlpha')
+    d[prefix..'Parent']=identity(read(region,'GetParent'))
+    d[prefix..'Rect']=rectText(rectangle(region))
+    d[prefix..'IntersectsViewport']=intersects(rectangle(region),viewport)
+    d[prefix..'AnchorCount']=read(region,'GetNumPoints')
+end
 function GetGear:GetAcquisitionMarkerDiagnostics()
     local map=WorldMapFrame
     local canvas=map and (call(map.GetCanvas,map) or map.ScrollContainer and map.ScrollContainer.Child)
-    return {status=markerStatus or "none",reason=markerReason,mapID=map and call(map.GetMapID,map),
+    local viewport=map and (call(map.GetCanvasContainer,map) or map.ScrollContainer or map)
+    local viewRect=rectangle(viewport)
+    local b=activeTarget and activeTarget.bounds
+    local d={status=markerStatus or "none",reason=markerReason,mapID=map and call(map.GetMapID,map),
         selectionID=activeTarget and activeTarget.id,entranceID=activeTarget and activeTarget.entranceID,
         source=activeTarget and activeTarget.source,questID=activeTarget and activeTarget.questID,
         label=activeTarget and self:GetAcquisitionMarkerLabel(activeTarget),
@@ -427,5 +502,39 @@ function GetGear:GetAcquisitionMarkerDiagnostics()
         markerVisible=marker and call(marker.IsVisible,marker),canvasVisible=canvas and call(canvas.IsVisible,canvas),
         canvasWidth=canvas and call(canvas.GetWidth,canvas),canvasHeight=canvas and call(canvas.GetHeight,canvas),
         canvasScale=map and call(map.GetCanvasScale,map) or canvas and call(canvas.GetScale,canvas),
-        markerScale=marker and call(marker.GetScale,marker)}
+        markerScale=marker and call(marker.GetScale,marker),placementFailure=placementReason,
+        x=activeTarget and activeTarget.x,y=activeTarget and activeTarget.y,
+        bounds=b and string.format('x=%.2f..%.2f y=%.2f..%.2f',b.xMin,b.xMax,b.yMin,b.yMax),
+        locationKind=activeTarget and activeTarget.locationKind,
+        canvas=identity(canvas),canvasRect=rectText(rectangle(canvas)),viewport=identity(viewport),viewportRect=rectText(viewRect),
+        canvasEffectiveScale=read(canvas,'GetEffectiveScale'),markerEffectiveScale=read(marker,'GetEffectiveScale'),
+        markerParent=identity(read(marker,'GetParent')),markerRect=rectText(rectangle(marker)),
+        markerIntersectsViewport=intersects(rectangle(marker),viewRect),
+        markerAlpha=read(marker,'GetAlpha'),markerEffectiveAlpha=read(marker,'GetEffectiveAlpha'),
+        markerStrata=read(marker,'GetFrameStrata'),markerLevel=read(marker,'GetFrameLevel'),
+        canvasStrata=read(canvas,'GetFrameStrata'),canvasLevel=read(canvas,'GetFrameLevel'),
+        texture=marker and read(marker.icon,'GetTexture'),
+        visualAcceptance='unverified; visibility flags do not prove unobscured pixels'}
+    if marker and type(marker.GetPoint)=='function' then
+        local ok,point,relative,relativePoint,x,y=pcall(marker.GetPoint,marker,1)
+        if ok then d.anchor=tostring(point)..' -> '..identity(relative)..':'..tostring(relativePoint)..' '..tostring(x)..','..tostring(y) end
+    end
+    if marker then
+        regionDiagnostics(d,'icon',marker.icon,viewRect);regionDiagnostics(d,'label',marker.label,viewRect)
+        regionDiagnostics(d,'area',marker.area,viewRect)
+        d.labelText=read(marker.label,'GetText')
+        d.iconAttached=read(marker.icon,'GetParent')==marker;d.labelAttached=read(marker.label,'GetParent')==marker
+        d.iconWidth=read(marker.icon,'GetWidth');d.iconHeight=read(marker.icon,'GetHeight')
+        local layer,sublevel=call(marker.icon.GetDrawLayer,marker.icon)
+        d.iconDrawLayer=layer and layer..':'..tostring(sublevel)
+        local manager=map and call(map.GetPinFrameLevelsManager,map)
+        d.nativeTopLevel=manager and call(manager.GetValidFrameLevel,manager,'PIN_FRAME_LEVEL_TOPMOST',9000)
+        local cr,mr=rectangle(canvas),rectangle(marker)
+        if cr and mr and activeTarget and activeTarget.x and activeTarget.y then
+            local dx=(mr.l+mr.r)/2-(cr.l+(cr.r-cr.l)*activeTarget.x/100)
+            local dy=(mr.b+mr.t)/2-(cr.t-(cr.t-cr.b)*activeTarget.y/100)
+            d.positionErrorPixels=string.format('dx=%.2f dy=%.2f',dx,dy)
+        end
+    end
+    return d
 end

@@ -55,7 +55,7 @@ def main():
     for script in sorted((ROOT / 'tests').glob('*.lua')):
         run([lua54, script, addon_root])
         run([args.lua51, 'tools/release/lua51-harness.lua', script, addon_root])
-    for script in ('reconcile-dungeon-link-guards.py', 'worlddrop-boe-fallback.py', 'navigation-generation.py', 'navigation-review-generation.py', 'stat-school-generation.py', 'faction-evidence-generation.py', 'recipe-evidence-generation.py'):
+    for script in ('reconcile-dungeon-link-guards.py', 'worlddrop-boe-fallback.py', 'navigation-generation.py', 'navigation-review-generation.py', 'navigation-location-review.py', 'stat-school-generation.py', 'faction-evidence-generation.py', 'recipe-evidence-generation.py'):
         run([sys.executable, ROOT / 'tests' / script])
     run([lua54, 'tools/audit_acquisition_buttons.lua', addon_root, args.output / 'button-coverage.csv'])
     run([lua54, 'tools/audit_navigation_pipeline.lua', addon_root, args.output / 'navigation'])

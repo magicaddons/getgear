@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import re
 from build_acquisition_navigation import lua, instance_entrances, Evidence
+from navigation_location_review import review_locations
 
 ROOT = Path(__file__).resolve().parents[1]
 BEGIN = '-- BEGIN GENERATED NAVIGATION REVIEW\n'
@@ -95,9 +96,11 @@ def render(export):
         if definition.get('sourceApproachID'):
             assert any(e['id']==definition['sourceApproachID'] for e in definition['entrances']), 'Source approach was dropped: '+name
     names, unresolved = structured_names(export)
+    locations,location_audit=review_locations(export)
     block = BEGIN + '-- Published references only; native client entrances take precedence.\n'
     block += 'do\nlocal model=GetGear.AcquisitionNavigationData\nif model then\n'
     block += 'model.npcLabels=' + lua(names) + '\n'
+    block += 'for key,locations in pairs(' + lua(locations) + ')do if model.sources[key]then model.sources[key].locations=locations end end\n'
     block += 'local definitions=' + lua(definitions) + '\n'
     block += 'for name,definition in pairs(definitions)do model.instanceEntrances[name]=definition;model.instances[name]=true end\n'
     block += 'for alias,name in pairs(' + lua(aliases) + ')do model.instanceEntranceAliases[alias]=name end\n'
@@ -105,6 +108,7 @@ def render(export):
     return block, dict(export['counts'], structuredNPCLabels=len(names), unresolvedDescriptiveLabels=len(unresolved),
                        unresolvedLabels=unresolved, providers=export['providers'],
                        dungeonDefinitions=len(definitions), entranceChoices=sum(len(v['entrances']) for v in definitions.values()),
+                       locationAudit=location_audit,
                        actualClientVerified=False)
 
 
@@ -114,7 +118,7 @@ def main():
     args=p.parse_args()
     interpreter=shutil.which('lua5.4')
     assert interpreter, 'Lua 5.4 is required'
-    export=json.loads(subprocess.check_output([interpreter,str(ROOT/'tools/export_navigation_review.lua'),str(ROOT)]))
+    export=json.loads(subprocess.check_output([interpreter,str(ROOT/'tools/export_navigation_review.lua'),str(ROOT),'baseline']))
     block,report=render(export)
     path=ROOT/'AcquisitionNavigation.lua';old=path.read_text()
     if BEGIN in old:
@@ -125,6 +129,33 @@ def main():
     if args.check:assert old==expected,'Reviewed navigation projection is stale'
     else:path.write_text(expected)
     if args.output:args.output.write_text(json.dumps(report,indent=2)+'\n')
+    audit=report['locationAudit']
+    audit_path=ROOT/'docs/navigation-integrity/location-audit.json'
+    expected_audit=json.dumps(audit,indent=2,sort_keys=True)+'\n'
+    if args.check:assert audit_path.read_text()==expected_audit,'Location audit is stale'
+    else:audit_path.write_text(expected_audit)
+    import csv,io
+    output=io.StringIO(newline='')
+    columns=['source','name','kind','categories','oldLocations','acceptedLocations','confidence','conflicts','unresolved','originalEvidence','reviewedEvidence','nextAction']
+    writer=csv.DictWriter(output,fieldnames=columns);writer.writeheader()
+    for row in audit['sources']:
+        writer.writerow({k:json.dumps(row[k],sort_keys=True)if isinstance(row[k],(list,dict)) else row[k]for k in columns})
+    csv_path=audit_path.with_suffix('.csv')
+    if args.check:assert csv_path.read_bytes()==output.getvalue().encode(),'Location CSV audit is stale'
+    else:csv_path.write_bytes(output.getvalue().encode())
+    lines=['# Acquisition location audit','',
+           'All source records, including unresolved records. Full original observations, citations and conflicts are in `location-audit.json` and the CSV. These are published-reference decisions, not live-client acceptance.','',
+           '| Source | Name | Category | Map/zone | Accepted representation | Unresolved |',
+           '| --- | --- | --- | --- | --- | --- |']
+    for row in audit['sources']:
+        cells=[row['source'],row['name'] or '',', '.join(row['categories']) or row['kind'],
+               '; '.join(loc.get('zone','?')+' / '+str(loc.get('uiMapID','unknown frame')) for loc in row['acceptedLocations']),
+               '; '.join(loc['locationKind']+(' '+str(loc['x'])+','+str(loc['y']) if 'x'in loc else ' '+json.dumps(loc['bounds'],sort_keys=True)if 'bounds'in loc else '')for loc in row['acceptedLocations'])or 'unknown',
+               'yes'if row['unresolved']else 'no (client check pending)']
+        lines.append('| '+' | '.join(c.replace('|','\\|').replace('\n',' ')for c in cells)+' |')
+    markdown='\n'.join(lines)+'\n';md_path=audit_path.with_name('LOCATION_AUDIT.md')
+    if args.check:assert md_path.read_text()==markdown,'Location Markdown audit is stale'
+    else:md_path.write_text(markdown)
     print('PASS reviewed navigation:',report['dungeonDefinitions'],'definitions,',report['entranceChoices'],'entrances,',report['structuredNPCLabels'],'structured NPC labels; frozen snapshot preserved')
 
 
