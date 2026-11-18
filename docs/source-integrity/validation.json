@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "branch": "infra/cumulative-source-integrity-20261118",
+  "canonicalBranch": "integration/cumulative",
+  "canonicalRevision": "e61c16c1a136d3972b0af5b18821ceec1a2239f7",
+  "originalCumulativeCommit": "b31e30e92256a00dbb3b75347d77731b52a0f06f",
+  "subsequentCommitCount": 4,
+  "archivedInstructionsSHA256": "3dc40153fea7678b0bd5755d6ccf738570fbee4f6a116eab3d222c7d603e4faf",
+  "gameplayChanged": false,
+  "newGameplayTestingZIPCreated": false,
+  "actualClientTested": false,
+  "localValidation": {
+    "fullGate": "tools/validate_recommendations.py",
+    "checks": 145,
+    "modules": 29,
+    "lua51Regressions": 32,
+    "lua54Regressions": 32,
+    "buildSafeguardUnitTests": 40,
+    "releaseUnitTests": 20,
+    "protectedAcquisitionFiles": 17,
+    "failures": 0,
+    "workflowActionlint": "1.7.7 PASS",
+    "fullGateSummary": {
+      "checks": 145,
+      "modules": 29,
+      "lua54Regressions": 32,
+      "lua51Regressions": 32,
+      "failures": 0,
+      "protectedAcquisitionSnapshotExact": true,
+      "actualClientTested": false,
+      "addonRoot": "/workspace/getgear",
+      "cumulativeFeaturesVerified": true,
+      "statement": "Offline/synthetic validation only. No addon package, tag, release or live acquisition claim."
+    },
+    "fullGateChecksSHA256": "cb8c0cf7dfae1bb75066bd071a8b73d689d830888eda3464155606284d7c03a3",
+    "commands": [
+      "PATH=/workspace/.getgear-tools/lua/usr/bin:$PATH PYTHONDONTWRITEBYTECODE=1 python3 tools/validate_recommendations.py --output /workspace/getgear-integrity-final-validation --lua51 /workspace/validation-tools/lua51/usr/bin/lua5.1 --luac51 /workspace/validation-tools/lua51/usr/bin/luac5.1",
+      "python3 tools/reconcile_presentation_snapshot.py --verify-only",
+      "/workspace/validation-tools/actionlint -shellcheck= .github/workflows/recommendation-validation.yml",
+      "git diff --check"
+    ]
+  },
+  "note": "Full implementation SHA and live remote verification are recorded in the GitHub Actions run and final handover. This receipt does not contain a self-referential commit hash."
+}

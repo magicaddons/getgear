@@ -1,8 +1,10 @@
-> Current private integration: `integration/cumulative-slot-filtering`, based on
-> `settings-ui-refinement` at `3e590ae`. This includes the completed settings,
-> stat-priority, source/faction/talent, bag and material work plus slot filtering.
-> Read [the cumulative audit](docs/CUMULATIVE_INTEGRATION.md). Future test builds
-> must pass `FEATURE_ACCEPTANCE.json` and use `tools/release/build_test_package.py`.
+> Canonical cumulative development baseline: the current GitHub head of
+> `integration/cumulative`, established at recovered `e61c16c` with all four
+> later integration corrections preserved. Read [the source-control and build
+> procedure](docs/SOURCE_CONTROL_AND_BUILDS.md) and [cumulative audit](docs/CUMULATIVE_INTEGRATION.md).
+> Future testing builds must pass the cumulative feature contract and the
+> mandatory exact-GitHub-source gate in `tools/release/build_test_package.py`.
+> The infrastructure safeguards are on their separate development branch pending review.
 
 # GetGear
 

@@ -89,7 +89,7 @@ def validate_archive(archive, source=None):
             modules = [s.strip() for s in toc.splitlines() if s.strip() and not s.lstrip().startswith('#')]
             require(all(re.fullmatch(r'[A-Za-z0-9_-]+\.lua', n) for n in modules), 'Unsafe TOC module')
             allowed = {'GetGear/' + name for name in modules + ['GetGear.toc', 'MapPin.tga', 'README.txt', 'BUILD_INFO.txt']}
-            optional = {'GetGear/', 'GetGear/DATA_MODEL.md'}
+            optional = {'GetGear/', 'GetGear/DATA_MODEL.md', 'GetGear/PACKAGE_MANIFEST.json', 'GetGear/SHA256SUMS'}
             require(allowed <= set(names) and set(names) <= allowed | optional, 'ZIP has missing dependencies or development/unexpected files')
             for info in z.infolist():
                 p = PurePosixPath(info.filename)
@@ -98,7 +98,7 @@ def validate_archive(archive, source=None):
                     require(info.filename == 'GetGear/', 'Unexpected ZIP directory')
                     continue
                 require(len(p.parts) == 2 and stat.S_IFMT(info.external_attr >> 16) in (0, stat.S_IFREG), 'Unsafe ZIP member type/path')
-                if source and p.name != 'BUILD_INFO.txt':
+                if source and p.name not in ('BUILD_INFO.txt', 'PACKAGE_MANIFEST.json', 'SHA256SUMS'):
                     require(z.read(info.filename) == (Path(source) / p.name).read_bytes(), 'Package differs from tested source: ' + p.name)
             z.extractall(folder)
         return validate(Path(folder) / 'GetGear')

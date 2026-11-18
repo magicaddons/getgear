@@ -1,55 +1,24 @@
-name: Validate bags, source access and stat priorities (no release)
+name: Validate cumulative development (no release)
 on:
   push:
-    branches: [recommendation-sources-stat-priorities, settings-ui-refinement, integration/cumulative-slot-filtering]
-    paths:
-      - '*.lua'
-      - GetGear.toc
-      - FEATURE_ACCEPTANCE.json
-      - tests/**
-      - tools/**
-      - docs/recommendation-audit/bag-quest-evidence.json
-      - docs/navigation-audit/**
-      - docs/recommendation-audit/equipment-source-eligibility.csv
-      - docs/faction-audit/evidence.json
-      - docs/faction-audit/reputation-factions.json
-      - docs/faction-audit/catalogue-evidence-audit.csv
-      - docs/faction-audit/catalogue-eligibility.csv
-      - docs/faction-audit/eligibility-changes.json
-      - docs/GLOBAL_FILTERING_POLICY.md
-      - AGENTS.md
-      - .github/workflows/recommendation-validation.yml
+    branches: ['**', '!main']
   pull_request:
-    paths:
-      - '*.lua'
-      - GetGear.toc
-      - FEATURE_ACCEPTANCE.json
-      - tests/**
-      - tools/validate_recommendations.py
-      - tools/validate_feature_acceptance.py
-      - tools/release/build_test_package.py
-      - tools/build_bag_quest_catalogue.py
-      - tools/audit_recommendation_sources.lua
-      - docs/recommendation-audit/**
-      - docs/navigation-audit/**
-      - docs/faction-audit/evidence.json
-      - docs/faction-audit/reputation-factions.json
-      - docs/faction-audit/catalogue-evidence-audit.csv
-      - docs/faction-audit/catalogue-eligibility.csv
-      - docs/faction-audit/eligibility-changes.json
-      - docs/GLOBAL_FILTERING_POLICY.md
-      - AGENTS.md
-      - .github/workflows/recommendation-validation.yml
   workflow_dispatch:
+    inputs:
+      build_testing_package:
+        description: 'Create a verified cumulative private-testing artifact (owner authorization required)'
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-depth: 0
           persist-credentials: false
       - name: Install pinned Lua interpreters without changing the repository
         shell: bash
@@ -62,25 +31,36 @@ jobs:
           dpkg-deb --extract "$RUNNER_TEMP/lua54.deb" "$RUNNER_TEMP/lua54"
           dpkg-deb --extract "$RUNNER_TEMP/lua51.deb" "$RUNNER_TEMP/lua51"
           echo "$RUNNER_TEMP/lua54/usr/bin" >> "$GITHUB_PATH"
-      - name: Validate acquisition snapshot (fresh reconciliation on source branches)
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [[ "$GITHUB_REF" == 'refs/heads/settings-ui-refinement' || "${GITHUB_HEAD_REF:-}" == 'settings-ui-refinement' || "$GITHUB_REF" == 'refs/heads/integration/cumulative-slot-filtering' || "${GITHUB_HEAD_REF:-}" == 'integration/cumulative-slot-filtering' ]]; then
-            # Acceptance work retains the approved catalogue. Fresh diagnostics
-            # run separately; upstream source drift must not change this gate.
-            python3 tools/reconcile_presentation_snapshot.py --verify-only
-          else
-            python3 tools/reconcile_presentation_snapshot.py --diagnostics "$RUNNER_TEMP/recommendation-reconciliation"
-          fi
+      - name: Verify approved acquisition snapshot
+        run: python3 tools/reconcile_presentation_snapshot.py --verify-only
       - name: Integrated source, comparison, UI and saved-settings regressions
         run: python3 tools/validate_recommendations.py --output "$RUNNER_TEMP/recommendation-validation" --lua51 "$RUNNER_TEMP/lua51/usr/bin/lua5.1" --luac51 "$RUNNER_TEMP/lua51/usr/bin/luac5.1"
-      - name: Keep validation receipts (no addon package)
+      - name: Verify exact GitHub development source (read only)
+        if: github.event_name != 'pull_request' && github.ref_type == 'branch' && github.ref_name != 'main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEVELOPMENT_BRANCH: ${{ github.ref_name }}
+        run: python3 tools/release/source_integrity.py --remote-branch "$DEVELOPMENT_BRANCH" --recovery-output "$RUNNER_TEMP/source-recovery" > "$RUNNER_TEMP/recommendation-validation/remote-source.json"
+      - name: Build explicitly requested private testing artifact
+        if: github.event_name == 'workflow_dispatch' && inputs.build_testing_package && github.ref_type == 'branch' && github.ref_name != 'main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEVELOPMENT_BRANCH: ${{ github.ref_name }}
+        run: python3 tools/release/build_test_package.py --remote-branch "$DEVELOPMENT_BRANCH" --output "$RUNNER_TEMP/verified-testing-package" --lua51 "$RUNNER_TEMP/lua51/usr/bin/lua5.1" --luac51 "$RUNNER_TEMP/lua51/usr/bin/luac5.1"
+      - name: Keep verified private testing build (no GitHub Release)
+        if: success() && github.event_name == 'workflow_dispatch' && inputs.build_testing_package && github.ref_type == 'branch' && github.ref_name != 'main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-cumulative-testing-${{ github.sha }}
+          path: ${{ runner.temp }}/verified-testing-package/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Keep validation receipts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: recommendation-validation-receipts
           path: |
             ${{ runner.temp }}/recommendation-validation/
-            ${{ runner.temp }}/recommendation-reconciliation/PRESENTATION_SNAPSHOT_RECONCILIATION.json
+            ${{ runner.temp }}/source-recovery/
           retention-days: 30

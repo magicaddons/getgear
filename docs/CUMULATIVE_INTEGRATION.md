@@ -1,5 +1,10 @@
 # Cumulative development integration — 18 November 2026
 
+Current source-control authority: see [durable build procedure](SOURCE_CONTROL_AND_BUILDS.md)
+and `CUMULATIVE_BASELINE.json`. The current remote `integration/cumulative` is
+the canonical development baseline. Historical local paths and no-push statements
+below describe the earlier recovery, not the active source-control policy.
+
 Navigation follow-up: see `docs/navigation-audit/REPORT.md` for the subsequent
 owner-authorized marker/source audit and `.20261118.3` build. Its reviewed
 navigation pins supersede the original freeze; all cumulative capabilities remain.
