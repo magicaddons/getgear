@@ -11,6 +11,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import re
+import collections
 from build_acquisition_navigation import lua, instance_entrances, Evidence
 from navigation_location_review import review_locations
 
@@ -130,6 +131,29 @@ def main():
     else:path.write_text(expected)
     if args.output:args.output.write_text(json.dumps(report,indent=2)+'\n')
     audit=report['locationAudit']
+    baseline=json.loads((ROOT/'docs/location-review/baseline-service-areas.json').read_text())['records']
+    reviewed={r['source']:r for r in audit['sources']}
+    service_rows=[]
+    for old in sorted(baseline,key=lambda r:(bool(r['reviewedEvidence']),r['source'])):
+        row=reviewed[old['source']]
+        assert row['serviceReview'], 'Service area record was not reviewed: '+old['source']
+        classes=sorted({r['decision']['classification']for r in row['serviceReview']})
+        service_rows.append(dict(source=row['source'],name=row['name'],categories=row['categories'],
+            priority='outside-former-capital-review'if not old['reviewedEvidence']else'previous-capital-review',
+            baselineLocations=old['acceptedLocations'],locations=row['acceptedLocations'],classifications=classes,
+            promotedToPoint=any(c in ['reported-point','verified-npc-point','multiple-spawn-points']for c in classes),
+            requiresExactSpawnVerification=any(c!='verified-npc-point'for c in classes),reviews=row['serviceReview']))
+    service_report=dict(schema=1,baselineCommit='3ad2ec83be36624dab99cf2200352d8032930307',
+        reviewed=len(service_rows),outsideFormerCapitalReview=sum(r['priority']=='outside-former-capital-review'for r in service_rows),
+        promotedToPoint=sum(r['promotedToPoint']for r in service_rows),
+        retainedAsAreaOrUnknown=sum(not r['promotedToPoint']for r in service_rows),
+        independentExactSpawnVerificationStillRequired=sum(r['requiresExactSpawnVerification']for r in service_rows),
+        classifications=dict(collections.Counter(c for r in service_rows for c in r['classifications'])),
+        records=service_rows,actualClientTested=False)
+    service_path=ROOT/'docs/location-review/service-audit.json'
+    encoded=json.dumps(service_report,indent=2,sort_keys=True)+'\n'
+    if args.check:assert service_path.read_text()==encoded,'Service classification audit is stale'
+    else:service_path.write_text(encoded)
     audit_path=ROOT/'docs/navigation-integrity/location-audit.json'
     expected_audit=json.dumps(audit,indent=2,sort_keys=True)+'\n'
     if args.check:assert audit_path.read_text()==expected_audit,'Location audit is stale'
@@ -137,7 +161,7 @@ def main():
     import csv,io
     output=io.StringIO(newline='')
     columns=['source','name','kind','categories','oldLocations','acceptedLocations','confidence','conflicts','unresolved','originalEvidence','reviewedEvidence','nextAction']
-    writer=csv.DictWriter(output,fieldnames=columns);writer.writeheader()
+    writer=csv.DictWriter(output,fieldnames=columns,lineterminator='\n');writer.writeheader()
     for row in audit['sources']:
         writer.writerow({k:json.dumps(row[k],sort_keys=True)if isinstance(row[k],(list,dict)) else row[k]for k in columns})
     csv_path=audit_path.with_suffix('.csv')

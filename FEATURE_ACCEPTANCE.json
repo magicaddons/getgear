@@ -229,7 +229,8 @@
         "map-marker-lifecycle.lua",
         "navigation-overhaul.lua",
         "navigation-rendering-integrity.lua",
-        "map-label-boundaries.lua"
+        "map-label-boundaries.lua",
+        "location-classification.lua"
       ]
     },
     {
@@ -294,7 +295,7 @@
   ],
   "acceptedNavigationFiles": {
     "MapNavigation.lua": "051270d68faca4e06da8dd77ef11cab2d9bd15b2f7276d8435450a55066d565c",
-    "AcquisitionNavigation.lua": "a0143f25ff0b538e4e0f4d085d3013d579fcb270bbba45fcd22a38e1ecf68142",
+    "AcquisitionNavigation.lua": "98274ae17b5140b711ddf7bd4c54a0af697bbcdec12ec04b242e6c9c10563fec",
     "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
     "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
   },
@@ -313,7 +314,8 @@
     "stabilityFollowup": "docs/stability-20261118/REPORT.md",
     "comprehensiveFollowup": "docs/navigation-overhaul/REPORT.md",
     "rendererIntegrityFollowup": "docs/navigation-integrity/REPORT.md",
-    "stabilisationFollowup": "docs/stabilisation/REPORT.md"
+    "stabilisationFollowup": "docs/stabilisation/REPORT.md",
+    "locationClassificationFollowup": "docs/location-review/REPORT.md"
   },
   "navigationCoverageBaseline": {
     "review": "docs/navigation-audit/REPORT.md",

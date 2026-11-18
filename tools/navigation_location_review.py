@@ -9,11 +9,10 @@ import hashlib
 import json
 from pathlib import Path
 from build_acquisition_navigation import Evidence, REPORT, coordinate
+from location_classification import MapCatalog, service_review
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = ROOT / 'docs/navigation-integrity'
-CITIES = {'Stormwind City':1453, 'Ironforge':1455, 'Darnassus':1457,
-          'Orgrimmar':1454, 'Thunder Bluff':1456, 'Undercity':1458}
 
 
 def fingerprint(value):
@@ -33,6 +32,7 @@ def represent(location):
         loc.setdefault('instructions','Approximate published region. NPC motion, spawn distribution and version agreement are not established; no corner is an exact NPC destination.')
     else:
         loc.setdefault('locationKind','map-frame-unresolved' if loc.get('coordinateScope') else 'unknown')
+    loc.setdefault('locationClass','reported-point'if 'x'in loc and 'y'in loc else 'approximate-area'if 'bounds'in loc else 'unknown')
     loc.setdefault('locationConfidence','retained-published-reference')
     return loc
 
@@ -65,6 +65,7 @@ def review_locations(export, research=None, decisions=None, originals=None):
     research=research if research is not None else json.loads((REVIEW/'research/city-locations.json').read_text())
     decisions=decisions if decisions is not None else json.loads((REVIEW/'location-decisions.json').read_text())
     originals=originals if originals is not None else raw_observations()
+    catalog=MapCatalog(export.get('maps'))
     fresh={f"npc:{r['npcID']}":r for r in research if r.get('status')==200}
     updates,rows,counts={},[],collections.Counter()
     for key,source in sorted(export['sources'].items()):
@@ -78,12 +79,13 @@ def review_locations(export, research=None, decisions=None, originals=None):
             for i,loc in enumerate(before):
                 # No name-only/map-frame conversions and no adoption of a new
                 # region merely because another version lists the same NPC.
-                zone=loc.get('zone');map_id=CITIES.get(zone)
-                if not map_id or loc.get('uiMapID') not in [None,map_id]:continue
+                zone=loc.get('zone');map_id=loc.get('uiMapID')
+                if map_id is None and len(catalog.maps.get(zone,[]))==1:map_id=catalog.maps[zone][0]
+                if not catalog.valid(zone,map_id):continue
                 candidates=[]
                 for area_id,areas in record.get('mapper',{}).items():
                     for area in areas:
-                        if area.get('uiMapName')==zone and area.get('uiMapId')==map_id:
+                        if area.get('uiMapName')==zone and type(area.get('uiMapId'))is int and area['uiMapId']==map_id:
                             location=Evidence().location(zone,int(area_id),area)
                             if location and 'bounds' in location:candidates.append(location)
                 if not candidates:continue
@@ -98,6 +100,7 @@ def review_locations(export, research=None, decisions=None, originals=None):
                     assert point in accepted['coordinateObservations'], 'Accepted point absent from primary evidence'
                     assert decision.get('corroboration') and decision.get('reason')
                     accepted.pop('bounds',None);accepted.update(x=point[0],y=point[1],locationKind='stationary')
+                    accepted['locationClass']='reported-point'  # corroborated publication/proximity, not a measured target position
                     accepted.pop('instructions',None)
                 elif decision.get('locationKind'):
                     assert decision['locationKind'] in ['stationary','roaming','multiple-spawns','conflicting-evidence','published-region']
@@ -107,9 +110,16 @@ def review_locations(export, research=None, decisions=None, originals=None):
                 if accepted.get('bounds') and 'x' not in accepted:
                     accepted['instructions']+=' Approximate published area; no precise NPC point is asserted.'
                 after[i]=accepted
+        original=originals.get(key,{})
+        service_audit=[]
+        if key.startswith('npc:') and set(source.get('categories',{}))&{'vendor','recipe_vendor','trainer'}:
+            after,service_audit=service_review(key,source,after,original,record,decisions.get(key),catalog)
+            if service_audit:
+                counts['serviceRecordsReviewed']+=1
+                if any('x'in loc for a in service_audit for loc in a['after']):counts['serviceRecordsPromoted']+=1
+                else:counts['serviceRecordsRetainedAsAreasOrUnknown']+=1
         if after!=before:updates[key]=after
         kinds=sorted({loc['locationKind'] for loc in after})
-        original=originals.get(key,{})
         conflict=[]
         if any(geometry(a)!=geometry(b)for a,b in zip(before,after)):
             conflict.append('Earlier frozen geometry differs from current exact NPC/map reference; retained below, not averaged.')
@@ -124,7 +134,7 @@ def review_locations(export, research=None, decisions=None, originals=None):
                       motionEstablished=False,
                       interpretation='Mapper observations alone do not distinguish patrols, spawns, stale versions or extraction errors.')
         if analysis['multipleMapFrames']:conflict.append('Multiple explicit UI map frames retained separately; no coordinate conversion inferred.')
-        unresolved=not after or any(loc['locationKind'] in ['published-region','conflicting-evidence','unknown','map-frame-unresolved'] or ('bounds'in loc and 'x'not in loc)for loc in after)
+        unresolved=not after or any(loc.get('locationClass')!='verified-npc-point' and loc.get('locationKind')not in ['published-point','stationary'] for loc in after)
         if unresolved:counts['unresolvedSources']+=1
         for kind in kinds:counts['kind:'+kind]+=1
         rows.append(dict(source=key,name=source.get('name'),kind=source.get('kind','bag-quest-actor'),
@@ -133,6 +143,7 @@ def review_locations(export, research=None, decisions=None, originals=None):
             evidenceAnalysis=analysis,
             observationEvidence=original.get('evidence',[]),reviewedEvidence=proofs,
             decision=decisions.get(key),confidence=sorted({loc['locationConfidence']for loc in after}),
+            serviceReview=service_audit,
             conflicts=conflict,unresolved=unresolved,
             nextAction='Compare exact NPC identity and UI map with versioned client position; preserve separate routes/spawns and resolve conflicting observations.' if unresolved else 'Owner actual-client confirmation still required.'))
     counts.update(sourceRecords=len(rows),locationRecords=sum(len(s.get('locations',[])) for s in export['sources'].values()),

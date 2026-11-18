@@ -1,8 +1,8 @@
-GetGear private cumulative .20261119.8
-Stabilisation: permanent regression guards, bounded inventory refreshes and minimal map-label displacement. Accepted .7 map rendering and cumulative features retained.
+GetGear private cumulative .20261119.9
+Location review: map-aware reported navigation points and preserved uncertainty. Accepted .8 renderer, inventory performance improvements and cumulative features retained.
 Retain your WTF/SavedVariables. In-game acceptance remains required.
 
-PRIVATE CUMULATIVE TEST: 0.14.0-private-cumulative.20261119.8
+PRIVATE CUMULATIVE TEST: 0.14.0-private-cumulative.20261119.9
 Check BUILD_INFO.txt for the source revision. This is not a public release.
 
 GetGear — Private Cumulative Testing Build
@@ -23,7 +23,7 @@ INSTALL OR UPGRADE
 5. Launch the game, enable GetGear and use /getgear. Settings are available at
    /getgear settings; /getgear overlay toggles the compact tracker.
 
-The AddOns version should be 0.14.0-private-cumulative.20261119.8. No new SavedVariables migration is
+The AddOns version should be 0.14.0-private-cumulative.20261119.9. No new SavedVariables migration is
 introduced relative to the tested v0.14.x builds. Retain backups when upgrading
 from older versions. GetGear requires no TomTom or other third-party addon.
 

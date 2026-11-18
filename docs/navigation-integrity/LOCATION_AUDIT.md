@@ -101,7 +101,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:10359 | Sri'skulk | named_drop | Tirisfal Glades / 1420 | published-region {"xMax": 91, "xMin": 79.6, "yMax": 56.8, "yMin": 39.6} | yes |
 | npc:1036 | Dragonmaw Centurion | named_drop | Wetlands / 1437 | published-region {"xMax": 53.4, "xMin": 46.4, "yMax": 56, "yMin": 45.1} | yes |
 | npc:10363 | General Drakkisath | quest-objectives | Blackrock Spire / unknown frame | unknown | yes |
-| npc:10369 | Trayexir | vendor | Durotar / 1411 | published-region {"xMax": 56.6, "xMin": 56.4, "yMax": 73.2, "yMin": 73.2} | yes |
+| npc:10369 | Trayexir | vendor | Durotar / 1411 | reported-point 56.4,73.2 | yes |
 | npc:1042 | Red Whelp | named_drop | Wetlands / 1437 | published-region {"xMax": 66.1, "xMin": 57.1, "yMax": 54.2, "yMin": 39.3} | yes |
 | npc:10429 | Warchief Rend Blackhand | quest-objectives | Blackrock Spire / unknown frame | unknown | yes |
 | npc:1043 | Lost Whelp | named_drop | Wetlands / 1437 | published-region {"xMax": 67.3, "xMin": 58.8, "yMax": 52.8, "yMin": 32.7} | yes |
@@ -133,7 +133,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:11146 | Ironus Coldsteel | trainer |  | unknown | yes |
 | npc:11177 | Okothos Ironrager | trainer |  | unknown | yes |
 | npc:11178 | Borgosh Corebender | trainer |  | unknown | yes |
-| npc:11185 | Xizzer Fizzbolt | recipe_vendor | Winterspring / 1452 | published-region {"xMax": 60.8, "xMin": 60.8, "yMax": 38.6, "yMin": 38.4} | yes |
+| npc:11185 | Xizzer Fizzbolt | recipe_vendor | Winterspring / 1452 | reported-point 60.8,38.4 | yes |
 | npc:11189 | Qia | recipe_vendor | Winterspring / 1452 | published-point 61.2,37.2 | no (client check pending) |
 | npc:1119 | Hammerspine | named_drop | Dun Morogh / 1426 | published-region {"xMax": 73, "xMin": 71.4, "yMax": 53.6, "yMin": 51.2} | yes |
 | npc:11191 | Lilith the Lithe | quest-ends, quest-starts | Winterspring / 1452 | published-point 61.2,37.2 | no (client check pending) |
@@ -141,7 +141,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:11193 | Seril Scourgebane | quest-ends, quest-starts | Winterspring / 1452 | published-point 61.2,37.2 | no (client check pending) |
 | npc:11216 | Eva Sarkhoff | quest-ends, quest-starts | Western Plaguelands / 1422 | published-point 70.2,73.8 | no (client check pending) |
 | npc:11261 | Doctor Theolen Krastinov | quest-objectives | Scholomance / unknown frame | unknown | yes |
-| npc:11278 | Magnus Frostwake | recipe_vendor | Western Plaguelands / 1422 | published-region {"xMax": 68, "xMin": 68, "yMax": 77.6, "yMin": 77.4} | yes |
+| npc:11278 | Magnus Frostwake | recipe_vendor | Western Plaguelands / 1422 | reported-point 68,77.4 | yes |
 | npc:11286 | Magistrate Marduke | quest-ends, quest-starts | Western Plaguelands / 1422 | published-region {"xMax": 70.6, "xMin": 70.4, "yMax": 74, "yMin": 74} | yes |
 | npc:1130 | Bjarn | named_drop | Dun Morogh / unknown frame | published-region {"xMax": 63.6, "xMin": 53.2, "yMax": 60.6, "yMin": 55.2} | yes |
 | npc:1132 | Timber | named_drop | Dun Morogh / unknown frame | published-region {"xMax": 36.4, "xMin": 33.3, "yMax": 44, "yMin": 39.6} | yes |
@@ -152,9 +152,9 @@ All source records, including unresolved records. Full original observations, ci
 | npc:1146 | Vharr | recipe_vendor, vendor | Stranglethorn Vale / 1434 | published-point 32.2,28 | no (client check pending) |
 | npc:115 | Harvest Reaper | named_drop | Duskwood / 1431; Westfall / 1436 | published-region {"xMax": 13.4, "xMin": 3.2, "yMax": 63.8, "yMin": 61.8}; published-region {"xMax": 65.8, "xMin": 59.1, "yMax": 62.4, "yMin": 57.7} | yes |
 | npc:11502 | Ragnaros | named_drop | Molten Core / unknown frame | unknown | yes |
-| npc:11536 | Quartermaster Miranda Breechlock | recipe_vendor, vendor | Eastern Plaguelands / 1423 | published-region {"xMax": 81.6, "xMin": 81.4, "yMax": 60, "yMin": 60} | yes |
-| npc:11555 | Gorn One Eye | quest-ends, vendor | Felwood / 1448 | published-region {"xMax": 65.4, "xMin": 65.2, "yMax": 2.6, "yMin": 2.4} | yes |
-| npc:11557 | Meilosh | recipe_vendor, trainer, vendor | Felwood / 1448 | published-region {"xMax": 65.6, "xMin": 65.4, "yMax": 2.8, "yMin": 2.8} | yes |
+| npc:11536 | Quartermaster Miranda Breechlock | recipe_vendor, vendor | Eastern Plaguelands / 1423 | reported-point 81.4,60 | yes |
+| npc:11555 | Gorn One Eye | quest-ends, vendor | Felwood / 1448 | reported-point 65.2,2.6 | yes |
+| npc:11557 | Meilosh | recipe_vendor, trainer, vendor | Felwood / 1448 | reported-point 65.4,2.8 | yes |
 | npc:11583 | Nefarian | named_drop | Blackwing Lair / unknown frame | unknown | yes |
 | npc:1163 | Stonesplinter Skullthumper | named_drop | Loch Modan / 1432 | published-region {"xMax": 51.8, "xMin": 28.2, "yMax": 90.8, "yMin": 20.1} | yes |
 | npc:11658 | Molten Giant | quest-objectives | Molten Core / unknown frame | unknown | yes |
@@ -172,7 +172,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:11832 | Keeper Remulos | quest-ends, quest-starts | Moonglade / 1450 | published-region {"xMax": 36.6, "xMin": 36.2, "yMax": 41.8, "yMin": 41.4} | yes |
 | npc:1187 | Daryl the Youngling | quest-ends, quest-starts | Loch Modan / 1432 | published-point 83.4,65.2 | no (client check pending) |
 | npc:11872 | Myranda the Hag | quest-ends, quest-starts | Western Plaguelands / 1422 | published-point 50.8,77.8 | no (client check pending) |
-| npc:11874 | Masat T'andr | recipe_vendor | Swamp of Sorrows / 1435 | published-region {"xMax": 26.6, "xMin": 26.2, "yMax": 31.6, "yMin": 31.4} | yes |
+| npc:11874 | Masat T'andr | recipe_vendor | Swamp of Sorrows / 1435 | reported-point 26.4,31.6 | yes |
 | npc:11880 | Twilight Avenger | named_drop | Silithus / 1451 | published-region {"xMax": 68.6, "xMin": 17, "yMax": 88.6, "yMin": 15.2} | yes |
 | npc:11881 | Twilight Geolord | named_drop | Silithus / 1451 | published-region {"xMax": 41.8, "xMin": 17, "yMax": 88.6, "yMin": 31.2} | yes |
 | npc:11882 | Twilight Stonecaller | named_drop | Silithus / 1451 | published-region {"xMax": 39.6, "xMin": 18.2, "yMax": 84.8, "yMin": 32.2} | yes |
@@ -188,7 +188,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:11988 | Golemagg the Incinerator | named_drop | Molten Core / unknown frame | unknown | yes |
 | npc:12017 | Broodlord Lashlayer | named_drop | Blackwing Lair / unknown frame | unknown | yes |
 | npc:12018 | Majordomo Executus | named_drop | Molten Core / unknown frame | unknown | yes |
-| npc:12022 | Lorelae Wintersong | recipe_vendor | Moonglade / 1450 | published-region {"xMax": 48.6, "xMin": 48.4, "yMax": 40.6, "yMin": 40} | yes |
+| npc:12022 | Lorelae Wintersong | recipe_vendor | Moonglade / 1450 | reported-point 48.6,40.2 | yes |
 | npc:12029 | Narianna | vendor | Moonglade / 1450 | published-point 53.2,42.6 | no (client check pending) |
 | npc:12045 | Hae'Wilani | vendor | Desolace / 1443 | published-point 25.8,71 | no (client check pending) |
 | npc:12056 | Baron Geddon | named_drop | Molten Core / unknown frame | unknown | yes |
@@ -202,7 +202,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:1214 | Aldren Cordon | vendor | Loch Modan / 1432 | published-point 64.8,66 | no (client check pending) |
 | npc:1222 | Dark Iron Sapper | named_drop | Loch Modan / 1432 | published-region {"xMax": 56.6, "xMin": 55.4, "yMax": 14.6, "yMin": 12.4} | yes |
 | npc:12245 | Vendor-Tron 1000 | recipe_vendor | Desolace / 1443 | published-point 60.2,38.2 | no (client check pending) |
-| npc:12246 | Super-Seller 680 | recipe_vendor | Desolace / 1443 | published-region {"xMax": 40.6, "xMin": 40.4, "yMax": 79.2, "yMin": 79.2} | yes |
+| npc:12246 | Super-Seller 680 | recipe_vendor | Desolace / 1443 | reported-point 40.4,79.2 | yes |
 | npc:12259 | Gehennas | named_drop, quest-objectives | Molten Core / unknown frame | unknown | yes |
 | npc:1226 | Maxan Anvol | quest-ends, quest-starts | Dun Morogh / 1426 | published-point 47.2,52.2 | no (client check pending) |
 | npc:12264 | Shazzrah | named_drop, quest-objectives | Molten Core / unknown frame | unknown | yes |
@@ -219,7 +219,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:12457 | Blackwing Spellbinder | named_drop | Blackwing Lair / unknown frame | unknown | yes |
 | npc:12459 | Blackwing Warlock | named_drop | Blackwing Lair / unknown frame | unknown | yes |
 | npc:12461 | Death Talon Overseer | named_drop | Blackwing Lair / unknown frame | unknown | yes |
-| npc:1250 | Drake Lindgren | recipe_vendor | Elwynn Forest / 1429 | published-region {"xMax": 83.2, "xMin": 83, "yMax": 66.6, "yMin": 66.4} | yes |
+| npc:1250 | Drake Lindgren | recipe_vendor | Elwynn Forest / 1429 | reported-point 83,66.4 | yes |
 | npc:12580 | Reginald Windsor | quest-ends, quest-objectives, quest-starts | Elwynn Forest / 1429; Stormwind City / 1453 | published-region {"xMax": 34.6, "xMin": 32, "yMax": 53.2, "yMin": 49.2}; published-region {"xMax": 79.6, "xMin": 63.4, "yMax": 90.8, "yMin": 38.8} | yes |
 | npc:1260 | Great Father Arctikus | named_drop | Dun Morogh / 1426 | published-region {"xMax": 23.6, "xMin": 21.1, "yMax": 54.6, "yMin": 50.8} | yes |
 | npc:1270 | Fetid Corpse | named_drop | Duskwood / 1431 | published-region {"xMax": 81.2, "xMin": 72.5, "yMax": 46.1, "yMin": 30} | yes |
@@ -227,27 +227,27 @@ All source records, including unresolved records. Full original observations, ci
 | npc:12777 | Captain Dirgehammer | vendor |  | unknown | yes |
 | npc:12782 | Captain O'Neal | vendor |  | unknown | yes |
 | npc:12792 | Lady Palanseer | vendor |  | unknown | yes |
-| npc:12799 | Sergeant Ba'sha | vendor | Orgrimmar / 1454 | published-region {"xMax": 41.6, "xMin": 41.4, "yMax": 69.6, "yMin": 68.4} | yes |
-| npc:12805 | Officer Areyn | vendor | Stormwind City / 1453 | published-region {"xMax": 76.8, "xMin": 76.4, "yMax": 65.8, "yMin": 65} | yes |
+| npc:12799 | Sergeant Ba'sha | vendor | Orgrimmar / 1454 | reported-point 41.4,68.8 | yes |
+| npc:12805 | Officer Areyn | vendor | Stormwind City / 1453 | reported-point 76.4,65.2 | yes |
 | npc:12899 | Axtroz | quest-objectives | Wetlands / 1437 | published-region {"xMax": 84.8, "xMin": 81.2, "yMax": 50.6, "yMin": 46.2} | yes |
 | npc:12900 | Somnus | quest-objectives | Swamp of Sorrows / 1435 | published-region {"xMax": 91.8, "xMin": 7.6, "yMax": 84, "yMin": 23.6} | yes |
-| npc:12941 | Jase Farlane | recipe_vendor | Eastern Plaguelands / 1423 | published-region {"xMax": 80.6, "xMin": 80.4, "yMax": 57.6, "yMin": 57.6} | yes |
+| npc:12941 | Jase Farlane | recipe_vendor | Eastern Plaguelands / 1423 | reported-point 80.4,57.6 | yes |
 | npc:12942 | Leonard Porter | recipe_vendor | Western Plaguelands / 1422 | published-point 43,84.2 | no (client check pending) |
 | npc:12943 | Werg Thickblade | recipe_vendor | Tirisfal Glades / 1420 | published-point 83.2,69.6 | no (client check pending) |
 | npc:12944 | Lokhtos Darkbargainer | quest-ends, recipe_vendor | Blackrock Depths / unknown frame | unknown | yes |
 | npc:12956 | Zannok Hidepiercer | recipe_vendor | Silithus / 1451 | published-region {"xMax": 82.2, "xMin": 81.8, "yMax": 17.8, "yMin": 17.4} | yes |
 | npc:12957 | Blimo Gadgetspring | recipe_vendor | Azshara / 1447 | published-point 45.2,90.8 | no (client check pending) |
-| npc:12958 | Gigget Zipcoil | recipe_vendor | The Hinterlands / 1425 | published-region {"xMax": 34.6, "xMin": 34.4, "yMax": 38.6, "yMin": 38.4} | yes |
+| npc:12958 | Gigget Zipcoil | recipe_vendor | The Hinterlands / 1425 | reported-point 34.4,38.4 | yes |
 | npc:12959 | Nergal | recipe_vendor | Un'Goro Crater / 1449 | published-point 43.2,7.8 | no (client check pending) |
-| npc:1297 | Lina Stover | vendor | Stormwind City / 1453 | published-region {"xMax": 58.6, "xMin": 58.4, "yMax": 69, "yMin": 68.8} | yes |
-| npc:1298 | Frederick Stover | vendor | Stormwind City / 1453 | published-region {"xMax": 58.6, "xMin": 58.4, "yMax": 69, "yMin": 69} | yes |
+| npc:1297 | Lina Stover | vendor | Stormwind City / 1453 | reported-point 58.4,69 | yes |
+| npc:1298 | Frederick Stover | vendor | Stormwind City / 1453 | reported-point 58.4,69 | yes |
 | npc:13020 | Vaelastrasz the Corrupt | named_drop, quest-starts | Blackwing Lair / unknown frame | unknown | yes |
-| npc:1307 | Charys Yserian | vendor | Stormwind City / 1453 | published-region {"xMax": 44.8, "xMin": 44, "yMax": 86.2, "yMin": 86.2} | yes |
+| npc:1307 | Charys Yserian | vendor | Stormwind City / 1453 | reported-point 44,86.2 | yes |
 | npc:1317 | Lucan Cordell | trainer | Stormwind City / 1453 | published-point 53,74.2 | no (client check pending) |
 | npc:13216 | Gaelden Hammersmith | vendor | Alterac Valley / unknown frame | unknown | yes |
-| npc:13217 | Thanthaldis Snowgleam | vendor | Alterac Mountains / 1416 | published-region {"xMax": 39.6, "xMin": 39.4, "yMax": 81.6, "yMin": 81.4} | yes |
+| npc:13217 | Thanthaldis Snowgleam | vendor | Alterac Mountains / 1416 | reported-point 39.4,81.4 | yes |
 | npc:13218 | Grunnda Wolfheart | vendor | Alterac Valley / unknown frame | unknown | yes |
-| npc:13219 | Jekyll Flandring | vendor | Alterac Mountains / 1416 | published-region {"xMax": 62.8, "xMin": 62.8, "yMax": 59.6, "yMin": 59.4} | yes |
+| npc:13219 | Jekyll Flandring | vendor | Alterac Mountains / 1416 | reported-point 62.8,59.4 | yes |
 | npc:13278 | Duke Hydraxis | quest-ends, quest-starts | Azshara / 1447 | published-region {"xMax": 79.2, "xMin": 79.2, "yMax": 73.6, "yMin": 73.4} | yes |
 | npc:13417 | Sagorne Creststrider | quest-ends, quest-starts | Orgrimmar / 1454 | published-region {"xMax": 38.8, "xMin": 38.4, "yMax": 36.6, "yMin": 36} | yes |
 | npc:1346 | Georgio Bolero | trainer | Stormwind City / 1453 | stationary 53.2,81.4 | no (client check pending) |
@@ -266,7 +266,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:14347 | Highlord Demitrian | quest-ends, quest-starts | Silithus / 1451 | published-region {"xMax": 21.8, "xMin": 21.6, "yMax": 8.6, "yMin": 8.4} | yes |
 | npc:14368 | Lorekeeper Lydros | quest-ends | Dire Maul / unknown frame | unknown | yes |
 | npc:14371 | Shen'dralar Provisioner | recipe_vendor | Dire Maul / unknown frame | unknown | yes |
-| npc:1441 | Brak Durnad | vendor | Wetlands / 1437 | published-region {"xMax": 11.6, "xMin": 11.4, "yMax": 59.6, "yMin": 59.4} | yes |
+| npc:1441 | Brak Durnad | vendor | Wetlands / 1437 | reported-point 11.4,59.6 | yes |
 | npc:14429 | Grimmaw | named_drop | Teldrassil / unknown frame | published-region {"xMax": 41.8, "xMin": 40.4, "yMax": 79.7, "yMin": 78.2} | yes |
 | npc:14430 | Duskstalker | named_drop | Teldrassil / unknown frame | published-region {"xMax": 62, "xMin": 50.2, "yMax": 77.8, "yMin": 71.2} | yes |
 | npc:14431 | Fury Shelda | named_drop | Teldrassil / unknown frame | published-region {"xMax": 37.6, "xMin": 35.2, "yMax": 42.6, "yMin": 34.8} | yes |
@@ -277,16 +277,16 @@ All source records, including unresolved records. Full original observations, ci
 | npc:1454 | Jennabink Powerseam | recipe_vendor, vendor | Wetlands / 1437 | published-point 8,55.8 | no (client check pending) |
 | npc:14567 | Derotain Mudsipper | quest-ends, quest-starts | Tanaris / 1446 | published-region {"xMax": 51.4, "xMin": 51.4, "yMax": 28.6, "yMin": 28.4} | yes |
 | npc:14581 | Sergeant Thunderhorn | vendor |  | unknown | yes |
-| npc:1459 | Naela Trance | vendor | Wetlands / 1437 | published-region {"xMax": 11.2, "xMin": 11.2, "yMax": 58.6, "yMin": 58.4} | yes |
+| npc:1459 | Naela Trance | vendor | Wetlands / 1437 | reported-point 11.2,58.4 | yes |
 | npc:14601 | Ebonroc | named_drop | Blackwing Lair / unknown frame | unknown | yes |
 | npc:14625 | Overseer Oilfist | quest-ends | Searing Gorge / 1427 | published-region {"xMax": 38.2, "xMin": 38, "yMax": 27, "yMin": 26.4} | yes |
-| npc:1471 | Jannos Ironwill | recipe_vendor | Arathi Highlands / 1417 | published-region {"xMax": 46, "xMin": 46, "yMax": 47.6, "yMin": 47.4} | yes |
+| npc:1471 | Jannos Ironwill | recipe_vendor | Arathi Highlands / 1417 | reported-point 46,47.4 | yes |
 | npc:14720 | High Overlord Saurfang | quest-ends | Silithus / 1451; Orgrimmar / 1454 | published-region {"xMax": 49.6, "xMin": 29, "yMax": 90.8, "yMin": 35.2}; published-region {"xMax": 53, "xMin": 50.4, "yMax": 78, "yMin": 75.4} | yes |
 | npc:14721 | Field Marshal Stonebridge | quest-ends | Stormwind City / 1453 | published-point 71.2,80.4 | no (client check pending) |
 | npc:1474 | Rann Flamespinner | recipe_vendor | Loch Modan / 1432 | published-point 36,46 | no (client check pending) |
-| npc:14753 | Illiyana Moonblaze | vendor | Ashenvale / 1440 | published-region {"xMax": 61.6, "xMin": 61.4, "yMax": 83.8, "yMin": 83.8} | yes |
+| npc:14753 | Illiyana Moonblaze | vendor | Ashenvale / 1440 | reported-point 61.4,83.8 | yes |
 | npc:14754 | Kelm Hargunth | vendor | The Barrens / 1413 | published-point 46.6,8.4 | no (client check pending) |
-| npc:14828 | Gelvas Grimegate | quest-ends, quest-starts, vendor | Elwynn Forest / 1429; Mulgore / 1412 | published-region {"xMax": 41.6, "xMin": 41.4, "yMax": 69, "yMin": 68.8}; published-point 37.2,37.8 | yes |
+| npc:14828 | Gelvas Grimegate | quest-ends, quest-starts, vendor | Elwynn Forest / 1429; Mulgore / 1412 | reported-point 41.4,69; published-point 37.2,37.8 | yes |
 | npc:14846 | Lhara | vendor | Elwynn Forest / 1429; Mulgore / 1412 | published-point 41.2,69.8; published-point 36.4,38 | no (client check pending) |
 | npc:14847 | Professor Thaddeus Paleo | quest-ends | Elwynn Forest / 1429; Mulgore / 1412 | published-point 41.2,69.8; published-region {"xMax": 36.6, "xMin": 36.4, "yMax": 38, "yMin": 38} | yes |
 | npc:1487 | Splinter Fist Enslaver | named_drop | Duskwood / unknown frame | published-region {"xMax": 38, "xMin": 35, "yMax": 84.6, "yMin": 78.4} | yes |
@@ -298,9 +298,9 @@ All source records, including unresolved records. Full original observations, ci
 | npc:1493 | Mok'rash | named_drop | Stranglethorn Vale / unknown frame | published-region {"xMax": 25.9, "xMin": 23, "yMax": 74.5, "yMin": 71.2} | yes |
 | npc:15078 | Jang | vendor | Stranglethorn Vale / 1434 | published-point 27.4,76.8 | no (client check pending) |
 | npc:15126 | Rutherford Twing | vendor | Arathi Highlands / 1417 | published-point 73.4,29.8 | no (client check pending) |
-| npc:15127 | Samuel Hawke | vendor | Arathi Highlands / 1417 | published-region {"xMax": 46, "xMin": 46, "yMax": 45.6, "yMin": 45.2} | yes |
+| npc:15127 | Samuel Hawke | vendor | Arathi Highlands / 1417 | reported-point 46,45.2 | yes |
 | npc:15176 | Vargus | quest-ends, quest-starts, recipe_vendor | Silithus / 1451 | published-point 51.2,38.8 | no (client check pending) |
-| npc:15179 | Mishta | recipe_vendor | Silithus / 1451 | published-region {"xMax": 49.8, "xMin": 49.8, "yMax": 36.6, "yMin": 36.4} | yes |
+| npc:15179 | Mishta | recipe_vendor | Silithus / 1451 | reported-point 49.8,36.4 | yes |
 | npc:15181 | Commander Mar'alith | quest-ends | Silithus / 1451 | published-region {"xMax": 49.2, "xMin": 49.2, "yMax": 34.6, "yMin": 34.2} | yes |
 | npc:15184 | Cenarion Hold Infantry | recipe_drop | Silithus / 1451 | published-region {"xMax": 52.2, "xMin": 47.8, "yMax": 39.6, "yMin": 34.4} | yes |
 | npc:15192 | Anachronos | quest-ends, quest-starts, vendor | Tanaris / unknown frame | published-point 65.2,50 | no (client check pending) |
@@ -401,7 +401,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:16215 | Unholy Staff | named_drop | Naxxramas / unknown frame | unknown | yes |
 | npc:16216 | Unholy Swords | named_drop | Naxxramas / unknown frame | unknown | yes |
 | npc:16244 | Infectious Ghoul | named_drop | Naxxramas / unknown frame | unknown | yes |
-| npc:1632 | Adele Fielder | trainer | Elwynn Forest / 1429 | published-region {"xMax": 46.6, "xMin": 46.4, "yMax": 62.2, "yMin": 62.2} | yes |
+| npc:1632 | Adele Fielder | trainer | Elwynn Forest / 1429 | reported-point 46.4,62.2 | yes |
 | npc:16368 | Necropolis Acolyte | named_drop | Naxxramas / unknown frame | unknown | yes |
 | npc:16446 | Plagued Gargoyle | named_drop | Naxxramas / unknown frame | unknown | yes |
 | npc:16449 | Spirit of Naxxramas | named_drop | Naxxramas / unknown frame | unknown | yes |
@@ -413,8 +413,8 @@ All source records, including unresolved records. Full original observations, ci
 | npc:16506 | Naxxramas Worshipper | named_drop | Naxxramas / unknown frame | unknown | yes |
 | npc:1658 | Captain Dargol | named_drop | Tirisfal Glades / 1420 | published-region {"xMax": 52.6, "xMin": 52.2, "yMax": 26.6, "yMin": 26.4} | yes |
 | npc:1663 | Dextren Ward | named_drop | The Stockade / unknown frame | unknown | yes |
-| npc:1668 | William MacGregor | vendor | Westfall / 1436 | published-region {"xMax": 57.6, "xMin": 57.4, "yMax": 53.8, "yMin": 53.8} | yes |
-| npc:1669 | Defias Profiteer | vendor | Westfall / 1436 | published-region {"xMax": 43.6, "xMin": 43.4, "yMax": 67, "yMin": 66.8} | yes |
+| npc:1668 | William MacGregor | vendor | Westfall / 1436 | reported-point 57.4,53.8 | yes |
+| npc:1669 | Defias Profiteer | vendor | Westfall / 1436 | reported-point 43.4,66.8 | yes |
 | npc:167 | Morhan Coppertongue | vendor | Loch Modan / 1432 | published-point 34,46.6 | no (client check pending) |
 | npc:16803 | Deathknight Understudy | named_drop | Naxxramas / unknown frame | unknown | yes |
 | npc:1687 | Cliff Hadin | vendor | Loch Modan / 1432 | published-point 83,63 | no (client check pending) |
@@ -458,9 +458,9 @@ All source records, including unresolved records. Full original observations, ci
 | npc:2246 | Syndicate Assassin | named_drop | Alterac Mountains / 1416 | published-region {"xMax": 43.2, "xMin": 36.5, "yMax": 19.8, "yMin": 14.4} | yes |
 | npc:225 | Gavin Gnarltree | vendor | Duskwood / 1431 | published-region {"xMax": 73.6, "xMin": 73.4, "yMax": 49.8, "yMin": 48.8} | yes |
 | npc:2252 | Crushridge Ogre | recipe_drop | Alterac Mountains / 1416 | published-region {"xMax": 55.6, "xMin": 44.9, "yMax": 63.8, "yMin": 31.4} | yes |
-| npc:226 | Morg Gnarltree | vendor | Duskwood / 1431 | published-region {"xMax": 73.8, "xMin": 73.8, "yMax": 48.6, "yMin": 48.4} | yes |
+| npc:226 | Morg Gnarltree | vendor | Duskwood / 1431 | reported-point 73.8,48.4 | yes |
 | npc:227853 | Pix Xizzix | vendor | Stranglethorn Vale / 1434 | published-point 28.4,75.8 | no (client check pending) |
-| npc:228 | Avette Fellwood | vendor | Duskwood / 1431 | published-region {"xMax": 73.2, "xMin": 73, "yMax": 44.8, "yMin": 44.4} | yes |
+| npc:228 | Avette Fellwood | vendor | Duskwood / 1431 | reported-point 73,44.4 | yes |
 | npc:2283 | Ravenclaw Regent | named_drop | Silverpine Forest / 1421 | published-region {"xMax": 57.8, "xMin": 57.2, "yMax": 71.6, "yMin": 69.8} | yes |
 | npc:2287 | Crushridge Warmonger | named_drop | Alterac Mountains / 1416 | published-region {"xMax": 40.6, "xMin": 34.3, "yMax": 59.6, "yMin": 46} | yes |
 | npc:234 | Gryan Stoutmantle | quest-ends, quest-starts | Westfall / 1436 | published-region {"xMax": 56.2, "xMin": 56.2, "yMax": 47.6, "yMin": 47.4} | yes |
@@ -480,7 +480,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:2393 | Christoph Jeffcoat | recipe_vendor | Hillsbrad Foothills / 1424 | published-point 62.2,19 | no (client check pending) |
 | npc:2394 | Mallen Swain | recipe_vendor | Hillsbrad Foothills / 1424 | published-point 62,21 | no (client check pending) |
 | npc:2399 | Daryl Stack | trainer |  | unknown | yes |
-| npc:240248 | Bryon Steelblade | vendor | Eastern Plaguelands / 1423 | published-region {"xMax": 98.6, "xMin": 98.4, "yMax": 84, "yMin": 84} | yes |
+| npc:240248 | Bryon Steelblade | vendor | Eastern Plaguelands / 1423 | reported-point 98.4,84 | yes |
 | npc:2452 | Skhowl | named_drop | Alterac Mountains / unknown frame | published-region {"xMax": 45.8, "xMin": 28, "yMax": 72.2, "yMin": 35.4} | yes |
 | npc:2453 | Lo'Grosh | named_drop | Alterac Mountains / 1416 | published-region {"xMax": 53.8, "xMin": 47.4, "yMax": 49.8, "yMin": 32.2} | yes |
 | npc:2476 | Large Loch Crocolisk | named_drop | Loch Modan / 1432 | published-region {"xMax": 59.8, "xMin": 57.8, "yMax": 39.6, "yMin": 30.3} | yes |
@@ -489,7 +489,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:2482 | Zarena Cromwind | recipe_vendor, vendor | Stranglethorn Vale / 1434 | published-point 28.4,75.4 | no (client check pending) |
 | npc:248200 | Fizzlefuse | recipe_vendor | The Barrens / unknown frame | unknown | yes |
 | npc:248201 | Pawani | recipe_vendor | The Barrens / unknown frame | unknown | yes |
-| npc:248202 | Jim'bek | recipe_vendor | The Barrens / 1413 | published-region {"xMax": 49.6, "xMin": 49.6, "yMax": 29.6, "yMin": 29.4} | yes |
+| npc:248202 | Jim'bek | recipe_vendor | The Barrens / 1413 | reported-point 49.6,29.4 | yes |
 | npc:2483 | Jaquilina Dramet | recipe_vendor, vendor | Stranglethorn Vale / 1434 | published-point 35.6,10.6 | no (client check pending) |
 | npc:250936 | Den'dralass | named_drop | Zephras Isle / unknown frame | published-region {"xMax": 62.8, "xMin": 53.3, "yMax": 42.7, "yMin": 31.4} | yes |
 | npc:251902 | Illaya Amberwind | quest-ends, quest-starts | Zephras Isle / 2521 | published-region {"xMax": 43.6, "xMin": 43.4, "yMax": 44.8, "yMin": 44.8} | yes |
@@ -521,7 +521,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:256732 | Alynsia | recipe_vendor | Redridge Mountains / unknown frame | unknown | yes |
 | npc:256733 | Fritz Fizzle | recipe_vendor | Redridge Mountains / unknown frame | unknown | yes |
 | npc:256734 | Daniel Stitchsong | recipe_vendor | Redridge Mountains / unknown frame | unknown | yes |
-| npc:256735 | Mivin Shadowweave | recipe_vendor | Redridge Mountains / 1433 | published-region {"xMax": 10, "xMin": 10, "yMax": 72.8, "yMin": 72.4} | yes |
+| npc:256735 | Mivin Shadowweave | recipe_vendor | Redridge Mountains / 1433 | reported-point 10.0,72.7 | yes |
 | npc:257421 | Tephri Thriceforged | vendor | Zephras Isle / 2521 | published-point 44.8,44.2 | no (client check pending) |
 | npc:257422 | Railee Thriceforged | vendor | Zephras Isle / 2521 | published-point 59,75.4 | no (client check pending) |
 | npc:257521 | High Order Apprentice | quest-objectives | Zephras Isle / unknown frame | published-region {"xMax": 46.7, "xMin": 45.4, "yMax": 39.9, "yMin": 37.9} | yes |
@@ -529,7 +529,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:257597 | Bruegs Kindleborn | quest-ends, quest-starts | Dun Morogh / 1426 | published-region {"xMax": 87.6, "xMin": 87.4, "yMax": 43.6, "yMin": 43.6} | yes |
 | npc:258023 | Sergeant Riftan | quest-ends, quest-starts | Riverglades / 2548 | published-point 30.6,49 | no (client check pending) |
 | npc:258098 | Eldrun Stormbreaker | quest-ends, quest-starts | Ironforge / 1455 | published-region {"xMax": 47.8, "xMin": 47.4, "yMax": 13.6, "yMin": 12.4} | yes |
-| npc:258306 | Granny Finespindle | recipe_vendor | Ironforge / 1455 | published-region {"xMax": 39.6, "xMin": 39.2, "yMax": 33.8, "yMin": 33.4} | yes |
+| npc:258306 | Granny Finespindle | recipe_vendor | Ironforge / 1455 | reported-point 39.2,33.6 | yes |
 | npc:2584 | Stromgarde Defender | named_drop | Arathi Highlands / 1417 | published-region {"xMax": 27.2, "xMin": 22, "yMax": 62.2, "yMin": 58} | yes |
 | npc:258570 | Da'grosh | quest-ends, quest-starts | Riverglades / 2548 | published-point 33.4,38 | no (client check pending) |
 | npc:258964 | Nar'gurk | npc | Eastern Kingdoms / 1415; Krol'dok Stronghold / unknown frame | map-frame-unresolved; unknown | yes |
@@ -548,8 +548,8 @@ All source records, including unresolved records. Full original observations, ci
 | npc:260993 | Crag'rog | quest-ends, quest-starts | Riverglades / 2548 | published-region {"xMax": 27.5, "xMin": 27.4, "yMax": 36.9, "yMin": 36.7} | yes |
 | npc:263 | Lord Ello Ebonlocke | quest-ends, quest-starts | Duskwood / 1431 | published-region {"xMax": 72, "xMin": 71.8, "yMax": 46.6, "yMin": 46.4} | yes |
 | npc:263569 | Bryanna Embreeze | vendor | The Barrens / 1413 | published-point 63.4,58.6 | no (client check pending) |
-| npc:263570 | Creeg Bothunk | vendor | The Barrens / 1413 | published-region {"xMax": 65, "xMin": 65, "yMax": 34.6, "yMin": 34.4} | yes |
-| npc:264078 | Sutara Plainstalker | recipe_vendor | Mulgore / 1412 | published-region {"xMax": 34.6, "xMin": 34.4, "yMax": 22.8, "yMin": 22.8} | yes |
+| npc:263570 | Creeg Bothunk | vendor | The Barrens / 1413 | reported-point 65,34.4 | yes |
+| npc:264078 | Sutara Plainstalker | recipe_vendor | Mulgore / 1412 | reported-point 34.4,22.8 | yes |
 | npc:2644 | Vilebranch Hideskinner | recipe_drop | The Hinterlands / 1425 | published-region {"xMax": 67.6, "xMin": 57.8, "yMax": 80, "yMin": 65.4} | yes |
 | npc:264797 | Aisarra Nightmeadow | recipe_vendor | Mount Hyjal / 2482 | published-point 71,51.2 | no (client check pending) |
 | npc:265003 | Thom Filch | quest-ends, quest-starts | Ironforge / 1455 | published-region {"xMax": 32.6, "xMin": 31.4, "yMax": 45.8, "yMin": 44.4} | yes |
@@ -557,16 +557,16 @@ All source records, including unresolved records. Full original observations, ci
 | npc:265575 | Gezzy Gunkgear | vendor | Stranglethorn Vale / 1434 | published-point 28.2,74.8 | no (client check pending) |
 | npc:265576 | Rettrick | vendor | Tanaris / 1446 | published-point 51.6,28.6 | no (client check pending) |
 | npc:266 | Wiley the Black | quest-ends, quest-starts | Redridge Mountains / unknown frame | published-region {"xMax": 26.6, "xMin": 21.4, "yMax": 45.2, "yMin": 45.2} | yes |
-| npc:2669 | Sheri Zipstitch | recipe_vendor | Duskwood / 1431 | published-region {"xMax": 75.6, "xMin": 75.6, "yMax": 45.6, "yMin": 45.4} | yes |
+| npc:2669 | Sheri Zipstitch | recipe_vendor | Duskwood / 1431 | reported-point 75.6,45.4 | yes |
 | npc:266901 | Pexmit | recipe_vendor | Mount Hyjal / 2482 | published-region {"xMax": 59.6, "xMin": 58.8, "yMax": 49.2, "yMin": 41.8} | yes |
 | npc:2670 | Xizk Goodstitch | recipe_vendor | Stranglethorn Vale / 1434 | published-point 28.6,76.8 | no (client check pending) |
-| npc:2672 | Cowardly Crosby | recipe_vendor | Stranglethorn Vale / 1434 | published-region {"xMax": 27, "xMin": 27, "yMax": 82.6, "yMin": 82.4} | yes |
+| npc:2672 | Cowardly Crosby | recipe_vendor | Stranglethorn Vale / 1434 | reported-point 27,82.4 | yes |
 | npc:2679 | Wenna Silkbeard | recipe_vendor, vendor | Wetlands / 1437 | published-point 25.6,25.8 | no (client check pending) |
-| npc:2682 | Fradd Swiftgear | recipe_vendor | Wetlands / 1437 | published-region {"xMax": 26.4, "xMin": 26.2, "yMax": 25.8, "yMin": 25.4} | yes |
-| npc:268238 | Nordun Steadysight | vendor | Elwynn Forest / 1429 | published-region {"xMax": 42, "xMin": 42, "yMax": 66.6, "yMin": 66.4} | yes |
+| npc:2682 | Fradd Swiftgear | recipe_vendor | Wetlands / 1437 | reported-point 26.2,25.4 | yes |
+| npc:268238 | Nordun Steadysight | vendor | Elwynn Forest / 1429 | reported-point 42,66.4 | yes |
 | npc:268592 | Olariaan Swiftburn | quest-ends, quest-starts | Zephras Isle / 2521 | published-point 51.2,86 | no (client check pending) |
 | npc:268679 | Brazier of Eternal Flame | quest-objectives | Zephras Isle / unknown frame | published-point 58.4,78.8 | no (client check pending) |
-| npc:2698 | George Candarte | recipe_vendor | Hillsbrad Foothills / 1424 | published-region {"xMax": 92, "xMin": 92, "yMax": 38.6, "yMin": 38.2} | yes |
+| npc:2698 | George Candarte | recipe_vendor | Hillsbrad Foothills / 1424 | reported-point 92,38.2 | yes |
 | npc:2699 | Rikqiz | recipe_vendor | Stranglethorn Vale / 1434 | published-point 28.4,76 | no (client check pending) |
 | npc:270570 | Justine Kai | vendor | Riverglades / 2548 | published-point 64,80.6 | no (client check pending) |
 | npc:271080 | Blightsculler | named_drop | Tirisfal Glades / unknown frame | published-region {"xMax": 18.2, "xMin": 15.6, "yMax": 56.8, "yMin": 51.8} | yes |
@@ -588,14 +588,14 @@ All source records, including unresolved records. Full original observations, ci
 | npc:2779 | Prince Nazjak | named_drop | Arathi Highlands / 1417 | published-region {"xMax": 24.8, "xMin": 19.8, "yMax": 91.6, "yMin": 81} | yes |
 | npc:2810 | Hammon Karwn | recipe_vendor | Arathi Highlands / 1417 | published-point 46.4,47.4 | no (client check pending) |
 | npc:2816 | Androd Fadran | recipe_vendor | Arathi Highlands / 1417 | published-point 45,46.8 | no (client check pending) |
-| npc:2819 | Tunkk | recipe_vendor | Arathi Highlands / 1417 | published-region {"xMax": 74.8, "xMin": 74.8, "yMax": 34.6, "yMin": 34.4} | yes |
-| npc:2821 | Keena | recipe_vendor | Arathi Highlands / 1417 | published-region {"xMax": 74, "xMin": 74, "yMax": 32.6, "yMin": 32.4} | yes |
+| npc:2819 | Tunkk | recipe_vendor | Arathi Highlands / 1417 | reported-point 74.8,34.4 | yes |
+| npc:2821 | Keena | recipe_vendor | Arathi Highlands / 1417 | reported-point 74,32.4 | yes |
 | npc:2836 | Brikk Keencraft | trainer |  | unknown | yes |
-| npc:2839 | Haren Kanmae | vendor | Stranglethorn Vale / 1434 | published-region {"xMax": 28.2, "xMin": 28.2, "yMax": 74.6, "yMin": 74.4} | yes |
+| npc:2839 | Haren Kanmae | vendor | Stranglethorn Vale / 1434 | reported-point 28.2,74.4 | yes |
 | npc:2840 | Kizz Bluntstrike | vendor | Stranglethorn Vale / 1434 | published-point 28.2,75.2 | no (client check pending) |
 | npc:2843 | Jutak | recipe_vendor, vendor | Stranglethorn Vale / 1434 | published-point 27.4,77.4 | no (client check pending) |
 | npc:2845 | Fargon Mortalak | vendor | Stranglethorn Vale / 1434 | published-point 29,75 | no (client check pending) |
-| npc:2846 | Blixrez Goodstitch | recipe_vendor | Stranglethorn Vale / 1434 | published-region {"xMax": 28.2, "xMin": 28.2, "yMax": 77.6, "yMin": 77.4} | yes |
+| npc:2846 | Blixrez Goodstitch | recipe_vendor | Stranglethorn Vale / 1434 | reported-point 28.2,77.4 | yes |
 | npc:2893 | Stonevault Bonesnapper | recipe_drop | Badlands / 1418 | published-region {"xMax": 52.6, "xMin": 47.4, "yMax": 72.6, "yMin": 62.2} | yes |
 | npc:2894 | Stonevault Shaman | recipe_drop | Badlands / 1418 | published-region {"xMax": 51.6, "xMin": 48.2, "yMax": 70.6, "yMin": 65.4} | yes |
 | npc:28989 | Aemara | vendor | Alterac Mountains / 1416 | published-point 17.2,71.4 | no (client check pending) |
@@ -603,27 +603,27 @@ All source records, including unresolved records. Full original observations, ci
 | npc:2907 | Dustbelcher Mystic | recipe_drop | Badlands / 1418 | published-region {"xMax": 67.5, "xMin": 48.8, "yMax": 73.9, "yMin": 22} | yes |
 | npc:3 | Flesh Eater | named_drop | Duskwood / 1431 | published-region {"xMax": 28.6, "xMin": 21.1, "yMax": 43.1, "yMin": 31.4} | yes |
 | npc:3015 | Kuna Thunderhorn | vendor | Thunder Bluff / 1456 | published-region {"xMax": 46.8, "xMin": 46.4, "yMax": 46.8, "yMin": 44.4} | yes |
-| npc:3019 | Delgo Ragetotem | vendor | Thunder Bluff / 1456 | published-region {"xMax": 53.8, "xMin": 53.4, "yMax": 57.6, "yMin": 56.4} | yes |
+| npc:3019 | Delgo Ragetotem | vendor | Thunder Bluff / 1456 | reported-point 53.8,57.2 | yes |
 | npc:3033 | Turak Runetotem | quest-ends, quest-starts | Thunder Bluff / 1456 | published-region {"xMax": 76.6, "xMin": 76.4, "yMax": 27.6, "yMin": 27.4} | yes |
 | npc:3068 | Mazzranache | named_drop | Mulgore / unknown frame | published-region {"xMax": 54.2, "xMin": 34.2, "yMax": 49.7, "yMin": 43.2} | yes |
 | npc:3091 | Franklin Hamar | vendor | Redridge Mountains / 1433 | published-region {"xMax": 27.2, "xMin": 22, "yMax": 45.6, "yMin": 45.4} | yes |
 | npc:3097 | Bernard Brubaker | vendor | Redridge Mountains / 1433 | published-region {"xMax": 88.2, "xMin": 83, "yMax": 71.6, "yMin": 71} | yes |
-| npc:3134 | Kzixx | vendor | Duskwood / 1431 | published-region {"xMax": 81.8, "xMin": 81.4, "yMax": 19.8, "yMin": 19.8} | yes |
+| npc:3134 | Kzixx | vendor | Duskwood / 1431 | reported-point 81.4,19.8 | yes |
 | npc:314 | Eliza | quest-objectives | Duskwood / unknown frame | published-region {"xMax": 28.8, "xMin": 27, "yMax": 33.9, "yMin": 30.4} | yes |
 | npc:3165 | Ghrawt | vendor | Durotar / 1411 | published-point 53,41 | no (client check pending) |
-| npc:3180 | Dark Iron Entrepreneur | vendor | Wetlands / 1437 | published-region {"xMax": 46.6, "xMin": 46.4, "yMax": 18.2, "yMin": 18.2} | yes |
+| npc:3180 | Dark Iron Entrepreneur | vendor | Wetlands / 1437 | reported-point 46.4,18.2 | yes |
 | npc:32287 | Archmage Alvareaux | recipe_vendor | Alterac Mountains / 1416 | published-point 14,63.2 | no (client check pending) |
 | npc:3253 | Silithid Harvester | named_drop | The Barrens / 1413 | published-region {"xMax": 48.8, "xMin": 42, "yMax": 74, "yMin": 58.4} | yes |
 | npc:3270 | Elder Mystic Razorsnout | named_drop | The Barrens / 1413 | published-region {"xMax": 58.9, "xMin": 58.3, "yMax": 26.8, "yMin": 24.3} | yes |
 | npc:3295 | Sludge Beast | named_drop | The Barrens / 1413 | published-region {"xMax": 56.8, "xMin": 56.4, "yMax": 8.5, "yMin": 7.4} | yes |
-| npc:3315 | Tor'phan | vendor | Orgrimmar / 1454 | published-region {"xMax": 62.6, "xMin": 62.4, "yMax": 50.6, "yMin": 50.4} | yes |
-| npc:3316 | Handor | vendor | Orgrimmar / 1454 | published-region {"xMax": 62.8, "xMin": 62.4, "yMax": 45.4, "yMin": 44.4} | yes |
+| npc:3315 | Tor'phan | vendor | Orgrimmar / 1454 | reported-point 62.4,50.4 | yes |
+| npc:3316 | Handor | vendor | Orgrimmar / 1454 | reported-point 62.8,44.8 | yes |
 | npc:332 | Master Mathias Shaw | quest-ends, quest-starts | Stormwind City / 1453 | published-region {"xMax": 78.6, "xMin": 78.4, "yMax": 70.6, "yMin": 70.6} | yes |
-| npc:3356 | Sumi | recipe_vendor | Orgrimmar / 1454 | published-region {"xMax": 82.4, "xMin": 82.4, "yMax": 23.8, "yMin": 23.4} | yes |
-| npc:3364 | Borya | recipe_vendor | Orgrimmar / 1454 | published-region {"xMax": 63.2, "xMin": 63, "yMax": 51.2, "yMin": 50.4} | yes |
+| npc:3356 | Sumi | recipe_vendor | Orgrimmar / 1454 | reported-point 82.4,23.4 | yes |
+| npc:3364 | Borya | recipe_vendor | Orgrimmar / 1454 | reported-point 63,51.2 | yes |
 | npc:3398 | Gesharahan | named_drop | The Barrens / 1413 | published-region {"xMax": 46.5, "xMin": 46.4, "yMax": 39.9, "yMin": 39} | yes |
-| npc:3409 | Zendo'jian | vendor | Orgrimmar / 1454 | published-region {"xMax": 81.2, "xMin": 81, "yMax": 19.6, "yMin": 18.4} | yes |
-| npc:3410 | Jin'sora | vendor | Orgrimmar / 1454 | published-region {"xMax": 77.8, "xMin": 77.4, "yMax": 38.6, "yMin": 38.4} | yes |
+| npc:3409 | Zendo'jian | vendor | Orgrimmar / 1454 | reported-point 81.2,19 | yes |
+| npc:3410 | Jin'sora | vendor | Orgrimmar / 1454 | reported-point 77.8,38.6 | yes |
 | npc:344 | Magistrate Solomon | quest-ends, quest-starts | Redridge Mountains / 1433 | published-region {"xMax": 30, "xMin": 24.6, "yMax": 44.6, "yMin": 44.2} | yes |
 | npc:3448 | Tonga Runetotem | quest-ends, quest-starts | The Barrens / 1413 | published-point 52.2,31.8 | no (client check pending) |
 | npc:3470 | Rathorian | named_drop | The Barrens / 1413 | published-region {"xMax": 47.6, "xMin": 47.4, "yMax": 19.2, "yMin": 19} | yes |
@@ -634,12 +634,12 @@ All source records, including unresolved records. Full original observations, ci
 | npc:3492 | Vexspindle | vendor | The Barrens / 1413 | published-point 62.2,38.4 | no (client check pending) |
 | npc:3493 | Grazlix | vendor | The Barrens / 1413 | published-point 62.2,38.4 | no (client check pending) |
 | npc:3499 | Ranik | recipe_vendor | The Barrens / 1413 | published-point 61.8,38.6 | no (client check pending) |
-| npc:3522 | Constance Brisboise | recipe_vendor | Tirisfal Glades / 1420 | published-region {"xMax": 52.6, "xMin": 52.4, "yMax": 55.6, "yMin": 55.6} | yes |
+| npc:3522 | Constance Brisboise | recipe_vendor | Tirisfal Glades / 1420 | reported-point 52.4,55.6 | yes |
 | npc:3534 | Wallace the Blind | vendor | Silverpine Forest / 1421 | published-region {"xMax": 46.6, "xMin": 43.6, "yMax": 86.4, "yMin": 84.4} | yes |
 | npc:3535 | Blackmoss the Fetid | named_drop | Teldrassil / unknown frame; Kalimdor / unknown frame | published-region {"xMax": 44, "xMin": 42.2, "yMax": 38, "yMin": 25.6}; published-point 42,7.6 | yes |
 | npc:3536 | Kris Legace | vendor | Hillsbrad Foothills / 1424 | published-point 80,39 | no (client check pending) |
 | npc:3537 | Zixil | recipe_vendor, vendor | Hillsbrad Foothills / 1424 | published-region {"xMax": 60.8, "xMin": 50.4, "yMax": 50.8, "yMin": 19.8} | yes |
-| npc:3539 | Ott | vendor | Hillsbrad Foothills / 1424 | published-region {"xMax": 60.6, "xMin": 60.4, "yMax": 26, "yMin": 26} | yes |
+| npc:3539 | Ott | vendor | Hillsbrad Foothills / 1424 | reported-point 60.4,26 | yes |
 | npc:3543 | Robert Aebischer | vendor | Hillsbrad Foothills / 1424 | published-point 51.2,57 | no (client check pending) |
 | npc:3552 | Alexandre Lefevre | vendor | Silverpine Forest / 1421 | published-point 44.6,39.2 | no (client check pending) |
 | npc:3554 | Andrea Boynton | vendor | Silverpine Forest / 1421 | published-point 44.6,39.2 | no (client check pending) |
@@ -657,7 +657,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:3672 | Boahn | named_drop | Kalimdor / 1414 | published-region {"xMax": 52.8, "xMin": 52.4, "yMax": 55, "yMin": 54.4} | yes |
 | npc:3682 | Vrang Wildgore | vendor | The Barrens / 1413 | published-point 43.8,12.2 | no (client check pending) |
 | npc:3683 | Kiknikle | vendor | The Barrens / 1413 | published-point 41.8,38.6 | no (client check pending) |
-| npc:3684 | Pizznukle | vendor | The Barrens / 1413 | published-region {"xMax": 41.8, "xMin": 41.8, "yMax": 38.6, "yMin": 38.4} | yes |
+| npc:3684 | Pizznukle | vendor | The Barrens / 1413 | reported-point 41.8,38.4 | yes |
 | npc:3702 | Alanndarian Nightsong | quest-ends, quest-starts | Darkshore / 1439 | published-point 37.6,40.6 | no (client check pending) |
 | npc:377 | Priestess Josetta | quest-ends, quest-starts | Elwynn Forest / 1429 | published-point 43.4,65.6 | no (client check pending) |
 | npc:3792 | Terrowulf Packlord | named_drop | Ashenvale / unknown frame | published-region {"xMax": 52, "xMin": 50, "yMax": 39.6, "yMin": 36.8} | yes |
@@ -673,20 +673,20 @@ All source records, including unresolved records. Full original observations, ci
 | npc:4099 | Galak Marauder | named_drop | Thousand Needles / 1441 | published-region {"xMax": 44.6, "xMin": 16.4, "yMax": 36.2, "yMin": 19} | yes |
 | npc:4132 | Silithid Ravager | named_drop | Thousand Needles / 1441 | published-region {"xMax": 79.6, "xMin": 63.4, "yMax": 91.4, "yMin": 77.8} | yes |
 | npc:4151 | Saltstone Crystalhide | recipe_drop | Thousand Needles / 1441 | published-region {"xMax": 88.6, "xMin": 69.2, "yMax": 90.6, "yMin": 52.2} | yes |
-| npc:4159 | Me'lynn | trainer | Darnassus / 1457 | published-region {"xMax": 63.6, "xMin": 62.4, "yMax": 22.6, "yMin": 22.2} | yes |
-| npc:4168 | Elynna | recipe_vendor | Darnassus / 1457 | published-region {"xMax": 64.6, "xMin": 64.2, "yMax": 21.6, "yMin": 21.4} | yes |
-| npc:4173 | Landria | vendor | Darnassus / 1457 | published-region {"xMax": 63.2, "xMin": 63, "yMax": 67.6, "yMin": 66.4} | yes |
-| npc:4175 | Vinasia | vendor | Darnassus / 1457 | published-region {"xMax": 60.8, "xMin": 60.4, "yMax": 72.6, "yMin": 72.2} | yes |
+| npc:4159 | Me'lynn | trainer | Darnassus / 1457 | reported-point 62.6,22.6 | yes |
+| npc:4168 | Elynna | recipe_vendor | Darnassus / 1457 | reported-point 64.2,21.4 | yes |
+| npc:4173 | Landria | vendor | Darnassus / 1457 | reported-point 63.2,66.6 | yes |
+| npc:4175 | Vinasia | vendor | Darnassus / 1457 | reported-point 60.6,72.2 | yes |
 | npc:4186 | Mavralyn | recipe_vendor | Darkshore / 1439 | published-point 37,41.2 | no (client check pending) |
 | npc:4189 | Valdaron | recipe_vendor | Darkshore / 1439 | published-region {"xMax": 38.2, "xMin": 38, "yMax": 40.6, "yMin": 40.4} | yes |
-| npc:4203 | Ariyell Skyshadow | vendor | Darnassus / 1457 | published-region {"xMax": 58.6, "xMin": 58.4, "yMax": 44.8, "yMin": 44.4} | yes |
-| npc:4212 | Telonis | trainer | Darnassus / 1457 | published-region {"xMax": 64.6, "xMin": 64.4, "yMax": 21.6, "yMin": 21.4} | yes |
-| npc:4213 | Taladan | trainer | Darnassus / 1457 | published-region {"xMax": 58.6, "xMin": 58.4, "yMax": 13.6, "yMin": 13.2} | yes |
+| npc:4203 | Ariyell Skyshadow | vendor | Darnassus / 1457 | reported-point 58.4,44.4 | yes |
+| npc:4212 | Telonis | trainer | Darnassus / 1457 | reported-point 64.4,21.4 | yes |
+| npc:4213 | Taladan | trainer | Darnassus / 1457 | reported-point 58.4,13.2 | yes |
 | npc:4217 | Mathrengyl Bearwalker | quest-ends, quest-starts | Darnassus / 1457 | published-region {"xMax": 35.2, "xMin": 34.8, "yMax": 8.6, "yMin": 7.4} | yes |
 | npc:4225 | Saenorion | recipe_vendor | Darnassus / 1457 | published-region {"xMax": 64.4, "xMin": 63.2, "yMax": 22.6, "yMin": 21.4} | yes |
 | npc:423 | Redridge Mongrel | named_drop | Redridge Mountains / 1433 | published-region {"xMax": 38.8, "xMin": 7.6, "yMax": 84, "yMin": 59.7} | yes |
-| npc:4232 | Glorandiir | vendor | Darnassus / 1457 | published-region {"xMax": 64, "xMin": 63.4, "yMax": 59.6, "yMin": 58.2} | yes |
-| npc:4235 | Turian | vendor | Darnassus / 1457 | published-region {"xMax": 62.6, "xMin": 62.2, "yMax": 66.6, "yMin": 65.4} | yes |
+| npc:4232 | Glorandiir | vendor | Darnassus / 1457 | reported-point 64,59 | yes |
+| npc:4235 | Turian | vendor | Darnassus / 1457 | reported-point 62.4,65.6 | yes |
 | npc:424 | Redridge Poacher | named_drop | Redridge Mountains / 1433 | published-region {"xMax": 43.2, "xMin": 21.5, "yMax": 84.1, "yMin": 70.4} | yes |
 | npc:4258 | Bengus Deepforge | trainer | Ironforge / 1455 | published-region {"xMax": 53.2, "xMin": 51.4, "yMax": 42.6, "yMin": 40} | yes |
 | npc:4260 | Venture Co. Shredder | named_drop | Stranglethorn Vale / 1434 | published-region {"xMax": 46.6, "xMin": 44, "yMax": 23.6, "yMin": 17.4} | yes |
@@ -705,10 +705,10 @@ All source records, including unresolved records. Full original observations, ci
 | npc:446 | Redridge Basher | named_drop | Redridge Mountains / 1433 | published-region {"xMax": 35.6, "xMin": 10.1, "yMax": 36.2, "yMin": 13.2} | yes |
 | npc:453 | Riverpaw Mystic | named_drop | Westfall / 1436 | published-region {"xMax": 66.6, "xMin": 60.2, "yMax": 77.6, "yMin": 71.4} | yes |
 | npc:4568 | Anastasia Hartwell | quest-ends, quest-starts | Undercity / 1458 | published-region {"xMax": 85, "xMin": 84.4, "yMax": 11, "yMin": 10.2} | yes |
-| npc:4577 | Millie Gregorian | recipe_vendor | Undercity / 1458 | published-region {"xMax": 70.8, "xMin": 70.4, "yMax": 30.2, "yMin": 29.4} | yes |
+| npc:4577 | Millie Gregorian | recipe_vendor | Undercity / 1458 | reported-point 70.4,29.4 | yes |
 | npc:4578 | Josephine Lister | trainer |  | unknown | yes |
-| npc:4589 | Joseph Moore | recipe_vendor | Undercity / 1458 | published-region {"xMax": 70.6, "xMin": 70.2, "yMax": 59.6, "yMin": 58} | yes |
-| npc:4604 | Abigail Sawyer | vendor | Undercity / 1458 | published-region {"xMax": 55, "xMin": 54.8, "yMax": 38.6, "yMin": 37.4} | yes |
+| npc:4589 | Joseph Moore | recipe_vendor | Undercity / 1458 | reported-point 70.4,58.8 | yes |
+| npc:4604 | Abigail Sawyer | vendor | Undercity / 1458 | reported-point 54.8,38 | yes |
 | npc:462 | Vultros | named_drop | Westfall / 1436 | published-region {"xMax": 52.4, "xMin": 51.8, "yMax": 27.1, "yMin": 24.3} | yes |
 | npc:4654 | Maraudine Scout | quest-objectives | Desolace / 1443; Kalimdor / 1414 | published-region {"xMax": 39.6, "xMin": 29.8, "yMax": 68.6, "yMin": 53.4}; published-point 38.5,57.8 | yes |
 | npc:4655 | Maraudine Wrangler | quest-objectives | Desolace / unknown frame | published-region {"xMax": 39.6, "xMin": 29.8, "yMax": 68.8, "yMin": 54.4} | yes |
@@ -721,25 +721,25 @@ All source records, including unresolved records. Full original observations, ci
 | npc:471 | Mother Fang | named_drop | Elwynn Forest / unknown frame | published-region {"xMax": 62, "xMin": 60.4, "yMax": 48.5, "yMin": 47} | yes |
 | npc:472 | Fedfennel | named_drop | Elwynn Forest / unknown frame | published-region {"xMax": 68, "xMin": 66.4, "yMax": 45.2, "yMin": 39.4} | yes |
 | npc:4809 | Twilight Acolyte | quest-objectives | Blackfathom Deeps / unknown frame | unknown | yes |
-| npc:4877 | Jandia | recipe_vendor | Thousand Needles / 1441 | published-region {"xMax": 46, "xMin": 46, "yMax": 51.6, "yMin": 51.4} | yes |
+| npc:4877 | Jandia | recipe_vendor | Thousand Needles / 1441 | reported-point 46,51.4 | yes |
 | npc:4884 | Zulrg | vendor | Dustwallow Marsh / 1445 | published-point 36.2,31.6 | no (client check pending) |
 | npc:4888 | Marie Holdston | vendor | Dustwallow Marsh / 1445 | published-point 64.6,50 | no (client check pending) |
 | npc:4890 | Piter Verance | vendor | Dustwallow Marsh / 1445 | published-point 67.4,47.8 | no (client check pending) |
 | npc:4892 | Jensen Farran | vendor | Dustwallow Marsh / 1445 | published-point 67.8,49.8 | no (client check pending) |
-| npc:4897 | Helenia Olden | recipe_vendor | Dustwallow Marsh / 1445 | published-region {"xMax": 66.4, "xMin": 66.4, "yMax": 51.6, "yMin": 51.4} | yes |
+| npc:4897 | Helenia Olden | recipe_vendor | Dustwallow Marsh / 1445 | reported-point 66.4,51.4 | yes |
 | npc:4949 | Thrall | quest-ends, quest-starts | Orgrimmar / 1454 | published-point 32,37.8 | no (client check pending) |
 | npc:5056 | Deviate Dreadfang | quest-objectives | Wailing Caverns / unknown frame | unknown | yes |
 | npc:506 | Sergeant Brashclaw | named_drop | Westfall / 1436 | published-region {"xMax": 38.4, "xMin": 35.7, "yMax": 32.8, "yMin": 29.9} | yes |
 | npc:507 | Fenros | named_drop | Duskwood / 1431 | published-region {"xMax": 74.6, "xMin": 57, "yMax": 57.4, "yMin": 20.2} | yes |
 | npc:5122 | Skolmin Goldfury | vendor | Ironforge / 1455 | published-region {"xMax": 72.6, "xMin": 71.2, "yMax": 67.6, "yMin": 65.4} | yes |
-| npc:5127 | Fimble Finespindle | trainer | Ironforge / 1455 | published-region {"xMax": 40.6, "xMin": 39.4, "yMax": 33.8, "yMin": 32.4} | yes |
-| npc:514 | Smith Argus | trainer | Elwynn Forest / 1429 | published-region {"xMax": 41.6, "xMin": 41.6, "yMax": 65.6, "yMin": 65.4} | yes |
+| npc:5127 | Fimble Finespindle | trainer | Ironforge / 1455 | reported-point 39.8,33.4 | yes |
+| npc:514 | Smith Argus | trainer | Elwynn Forest / 1429 | reported-point 41.6,65.4 | yes |
 | npc:5144 | Bink | quest-ends, quest-starts | Ironforge / 1455 | published-region {"xMax": 27, "xMin": 26.4, "yMax": 9.6, "yMin": 8.2} | yes |
-| npc:5153 | Jormund Stonebrow | trainer | Ironforge / 1455 | published-region {"xMax": 44, "xMin": 43.2, "yMax": 30.6, "yMin": 28.2} | yes |
+| npc:5153 | Jormund Stonebrow | trainer | Ironforge / 1455 | reported-point 43.6,29.2 | yes |
 | npc:5157 | Gimble Thistlefuzz | trainer | Ironforge / 1455 | published-region {"xMax": 60.8, "xMin": 59, "yMax": 45.6, "yMin": 44.2} | yes |
 | npc:5164 | Grumnus Steelshaper | trainer |  | unknown | yes |
 | npc:517 | Murloc Oracle | named_drop | Westfall / 1436 | published-region {"xMax": 35, "xMin": 24.8, "yMax": 86, "yMin": 52.5} | yes |
-| npc:5174 | Springspindle Fizzlegear | trainer | Ironforge / 1455 | published-region {"xMax": 68.8, "xMin": 68.2, "yMax": 45.2, "yMin": 43.4} | yes |
+| npc:5174 | Springspindle Fizzlegear | trainer | Ironforge / 1455 | reported-point 68.6,44.2 | yes |
 | npc:519 | Slark | named_drop | Westfall / 1436 | published-region {"xMax": 57, "xMin": 24.8, "yMax": 87.8, "yMin": 8.2} | yes |
 | npc:520 | Brack | named_drop | Westfall / 1436 | published-region {"xMax": 58, "xMin": 25.2, "yMax": 86.2, "yMin": 8.4} | yes |
 | npc:521 | Lupos | named_drop | Duskwood / 1431 | published-region {"xMax": 73.6, "xMin": 19.8, "yMax": 32.8, "yMin": 22.2} | yes |
@@ -749,15 +749,15 @@ All source records, including unresolved records. Full original observations, ci
 | npc:5397 | Uthek the Wise | quest-ends, quest-starts | Desolace / 1443 | published-point 36.2,79.2 | no (client check pending) |
 | npc:5398 | Warug | quest-ends, quest-starts | Desolace / 1443 | published-point 74.8,68 | no (client check pending) |
 | npc:5402 | Khan Hratha | quest-objectives | Desolace / unknown frame | published-region {"xMax": 30, "xMin": 29.2, "yMax": 53.6, "yMin": 50.4} | yes |
-| npc:5411 | Krinkle Goodsteel | recipe_vendor | Tanaris / 1446 | published-region {"xMax": 51.6, "xMin": 51.4, "yMax": 28.8, "yMin": 28.8} | yes |
+| npc:5411 | Krinkle Goodsteel | recipe_vendor | Tanaris / 1446 | reported-point 51.4,28.8 | yes |
 | npc:5413 | Furen Longbeard | quest-ends, quest-starts | Stormwind City / 1453 | published-region {"xMax": 64.6, "xMin": 64.4, "yMax": 37.6, "yMin": 37.2} | yes |
 | npc:544 | Murloc Nightcrawler | named_drop | Redridge Mountains / 1433 | published-region {"xMax": 81.6, "xMin": 75.2, "yMax": 70, "yMin": 58.4} | yes |
 | npc:545 | Murloc Tidecaller | named_drop | Redridge Mountains / 1433 | published-region {"xMax": 53.4, "xMin": 49.1, "yMax": 58.6, "yMin": 50} | yes |
 | npc:5497 | Jennea Cannon | quest-ends, quest-starts | Stormwind City / 1453 | published-region {"xMax": 49.6, "xMin": 49.4, "yMax": 86.6, "yMin": 86} | yes |
 | npc:550 | Defias Messenger | quest-objectives | Westfall / unknown frame | published-region {"xMax": 46, "xMin": 44.1, "yMax": 69.6, "yMin": 21.9} | yes |
-| npc:5511 | Therum Deepforge | trainer | Stormwind City / 1453 | published-region {"xMax": 64, "xMin": 63.4, "yMax": 37.6, "yMin": 36.2} | yes |
-| npc:5512 | Kaita Deepforge | recipe_vendor | Stormwind City / 1453 | published-region {"xMax": 63.6, "xMin": 63.2, "yMax": 37.6, "yMin": 37.4} | yes |
-| npc:5518 | Lilliam Sparkspindle | trainer | Stormwind City / 1453 | published-region {"xMax": 62.2, "xMin": 62, "yMax": 30.6, "yMin": 30.4} | yes |
+| npc:5511 | Therum Deepforge | trainer | Stormwind City / 1453 | reported-point 63.4,37.2 | yes |
+| npc:5512 | Kaita Deepforge | recipe_vendor | Stormwind City / 1453 | reported-point 63.4,37.6 | yes |
+| npc:5518 | Lilliam Sparkspindle | trainer | Stormwind City / 1453 | reported-point 62,30.6 | yes |
 | npc:5564 | Simon Tanner | trainer | Stormwind City / 1453 | published-point 71.8,62.8 | no (client check pending) |
 | npc:5601 | Khan Jehn | quest-objectives | Desolace / unknown frame | published-region {"xMax": 66.8, "xMin": 66, "yMax": 80.6, "yMin": 79.4} | yes |
 | npc:5615 | Wastewander Rogue | recipe_drop | Tanaris / 1446 | published-region {"xMax": 65.6, "xMin": 58.4, "yMax": 40.6, "yMin": 32.2} | yes |
@@ -884,7 +884,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:7802 | Galvan the Ancient | quest-ends, quest-starts | Stranglethorn Vale / 1434 | published-region {"xMax": 50.6, "xMin": 50.4, "yMax": 20.6, "yMin": 20.4} | yes |
 | npc:785 | Skeletal Warder | named_drop | Duskwood / 1431 | published-region {"xMax": 19.1, "xMin": 13.5, "yMax": 39.7, "yMin": 28.2} | yes |
 | npc:7852 | Pratt McGrubben | quest-ends, quest-starts, recipe_vendor | Feralas / 1444 | published-region {"xMax": 30.6, "xMin": 30.4, "yMax": 42.8, "yMin": 42.6} | yes |
-| npc:7854 | Jangdor Swiftstrider | quest-ends, quest-starts, recipe_vendor | Feralas / 1444 | published-region {"xMax": 74.6, "xMin": 74.4, "yMax": 42.8, "yMin": 42.8} | yes |
+| npc:7854 | Jangdor Swiftstrider | quest-ends, quest-starts, recipe_vendor | Feralas / 1444 | reported-point 74.4,42.8 | yes |
 | npc:7864 | Lingering Highborne | recipe_drop | Azshara / 1447 | published-region {"xMax": 41.4, "xMin": 34, "yMax": 63.6, "yMin": 44.2} | yes |
 | npc:7866 | Peter Galen | trainer |  | unknown | yes |
 | npc:7867 | Thorkaf Dragoneye | trainer |  | unknown | yes |
@@ -895,17 +895,17 @@ All source records, including unresolved records. Full original observations, ci
 | npc:7871 | Se'Jib | trainer |  | unknown | yes |
 | npc:79 | Narg the Taskmaster | named_drop | Elwynn Forest / 1429 | published-region {"xMax": 41.2, "xMin": 38.9, "yMax": 82.5, "yMin": 77.4} | yes |
 | npc:793 | Kara Adams | vendor | Redridge Mountains / 1433 | published-region {"xMax": 30.6, "xMin": 25.4, "yMax": 46.6, "yMin": 46.4} | yes |
-| npc:7940 | Darnall | recipe_vendor | Moonglade / 1450 | published-region {"xMax": 51.6, "xMin": 51.4, "yMax": 33.6, "yMin": 33.2} | yes |
+| npc:7940 | Darnall | recipe_vendor | Moonglade / 1450 | reported-point 51.6,33.2 | yes |
 | npc:8160 | Nioma | recipe_vendor | The Hinterlands / 1425 | published-point 13.4,43.4 | no (client check pending) |
 | npc:8161 | Harggan | recipe_vendor | The Hinterlands / 1425 | published-point 13.4,44 | no (client check pending) |
-| npc:8176 | Gharash | recipe_vendor | Swamp of Sorrows / 1435 | published-region {"xMax": 45.6, "xMin": 45.4, "yMax": 51.6, "yMin": 51.4} | yes |
+| npc:8176 | Gharash | recipe_vendor | Swamp of Sorrows / 1435 | reported-point 45.4,51.4 | yes |
 | npc:8197 | Chronalis | quest-objectives | Tanaris / 1446 | published-region {"xMax": 64.6, "xMin": 64.4, "yMax": 50.6, "yMin": 50.2} | yes |
 | npc:8201 | Omgorn the Lost | named_drop | Tanaris / 1446 | published-region {"xMax": 48.8, "xMin": 35.4, "yMax": 75.2, "yMin": 49.9} | yes |
 | npc:824 | Defias Digger | named_drop | Westfall / 1436; Eastern Kingdoms / 1415 | published-region {"xMax": 43.8, "xMin": 41.2, "yMax": 78.3, "yMin": 72.4}; published-region {"xMax": 41.1, "xMin": 41, "yMax": 79.7, "yMin": 79.4} | yes |
 | npc:830 | Sand Crawler | named_drop | Westfall / 1436 | published-region {"xMax": 51.7, "xMin": 39.4, "yMax": 13.2, "yMin": 9} | yes |
 | npc:831 | Sea Crawler | named_drop | Westfall / 1436 | published-region {"xMax": 37.6, "xMin": 31, "yMax": 25.8, "yMin": 15.4} | yes |
 | npc:832 | Dust Devil | named_drop | Westfall / 1436 | published-region {"xMax": 69.3, "xMin": 33.2, "yMax": 73.8, "yMin": 21.4} | yes |
-| npc:843 | Gina MacGregor | recipe_vendor | Westfall / 1436 | published-region {"xMax": 57.6, "xMin": 57.4, "yMax": 54, "yMin": 54} | yes |
+| npc:843 | Gina MacGregor | recipe_vendor | Westfall / 1436 | reported-point 57.4,54 | yes |
 | npc:8439 | Nilith Lokrav | quest-ends, quest-starts | Searing Gorge / 1427 | published-region {"xMax": 41, "xMin": 40.8, "yMax": 74.8, "yMin": 74.4} | yes |
 | npc:844 | Antonio Perelli | vendor | Duskwood / 1431; Elwynn Forest / 1429; Westfall / 1436; Redridge Mountains / 1433 | published-region {"xMax": 75, "xMin": 19.4, "yMax": 66.6, "yMin": 46.4}; published-region {"xMax": 75, "xMin": 42.4, "yMax": 72.4, "yMin": 66.4}; published-region {"xMax": 60.4, "xMin": 56.8, "yMax": 65, "yMin": 19}; published-region {"xMax": 29.6, "xMin": 28.8, "yMax": 47.8, "yMin": 47.4} | yes |
 | npc:8442 | Shadowsilk Poacher | quest-objectives | Searing Gorge / unknown frame | published-region {"xMax": 73.2, "xMin": 34, "yMax": 55.8, "yMin": 21} | yes |
@@ -925,7 +925,7 @@ All source records, including unresolved records. Full original observations, ci
 | npc:8716 | Dreadlord | named_drop | Blasted Lands / 1419; The Tainted Scar / unknown frame | published-region {"xMax": 47, "xMin": 32, "yMax": 80.4, "yMin": 57.8}; unknown | yes |
 | npc:8717 | Felguard Elite | named_drop | Blasted Lands / 1419; The Tainted Scar / unknown frame | published-region {"xMax": 60.6, "xMin": 33.8, "yMax": 76, "yMin": 50.8}; unknown | yes |
 | npc:8718 | Manahound | named_drop | Blasted Lands / 1419; The Tainted Scar / unknown frame | published-region {"xMax": 66.2, "xMin": 32.2, "yMax": 80.2, "yMin": 16}; unknown | yes |
-| npc:8878 | Muuran | recipe_vendor | Desolace / 1443 | published-region {"xMax": 55.6, "xMin": 55.6, "yMax": 56.6, "yMin": 56.4} | yes |
+| npc:8878 | Muuran | recipe_vendor | Desolace / 1443 | reported-point 55.6,56.4 | yes |
 | npc:889 | Splinter Fist Ogre | named_drop | Duskwood / 1431 | published-region {"xMax": 43.2, "xMin": 35.6, "yMax": 75.1, "yMin": 67.6} | yes |
 | npc:892 | Splinter Fist Taskmaster | named_drop | Duskwood / 1431 | published-region {"xMax": 39.5, "xMin": 32.9, "yMax": 74.9, "yMin": 67.2} | yes |
 | npc:8983 | Golem Lord Argelmach | quest-objectives | Blackrock Depths / unknown frame | unknown | yes |
@@ -935,31 +935,31 @@ All source records, including unresolved records. Full original observations, ci
 | npc:9077 | Warlord Goretooth | quest-ends, quest-starts | Badlands / 1418 | published-region {"xMax": 5.8, "xMin": 3, "yMax": 47.6, "yMin": 47.4} | yes |
 | npc:910 | Defias Enchanter | named_drop | Duskwood / 1431 | published-region {"xMax": 50.6, "xMin": 21, "yMax": 77.6, "yMin": 71.4} | yes |
 | npc:9177 | Oralius | quest-ends, quest-starts | Burning Steppes / 1428 | published-region {"xMax": 84.6, "xMin": 84.4, "yMax": 68.6, "yMin": 68.4} | yes |
-| npc:9179 | Jazzrik | recipe_vendor | Badlands / 1418 | published-region {"xMax": 42.6, "xMin": 42.4, "yMax": 52.6, "yMin": 52.4} | yes |
+| npc:9179 | Jazzrik | recipe_vendor | Badlands / 1418 | reported-point 42.4,52.4 | yes |
 | npc:9196 | Highlord Omokk | quest-objectives | Blackrock Spire / unknown frame | unknown | yes |
 | npc:920 | Nightbane Tainted One | named_drop | Duskwood / 1431 | published-region {"xMax": 74.2, "xMin": 60, "yMax": 83.7, "yMin": 72.1} | yes |
 | npc:9237 | War Master Voone | quest-objectives | Blackrock Spire / unknown frame | unknown | yes |
 | npc:9462 | Chieftain Bloodmaw | quest-objectives | Felwood / unknown frame | published-region {"xMax": 63.5, "xMin": 62.4, "yMax": 8.6, "yMin": 6.8} | yes |
 | npc:947 | Rohh the Silent | named_drop | Redridge Mountains / 1433 | published-region {"xMax": 85.6, "xMin": 63, "yMax": 57.6, "yMin": 29.4} | yes |
 | npc:9499 | Plugger Spazzring | recipe_vendor | Blackrock Depths / unknown frame | unknown | yes |
-| npc:954 | Kat Sampson | vendor | Loch Modan / 1432 | published-region {"xMax": 82.6, "xMin": 82.4, "yMax": 64, "yMin": 64} | yes |
+| npc:954 | Kat Sampson | vendor | Loch Modan / 1432 | reported-point 82.4,64 | yes |
 | npc:9543 | Ribbly Screwspigot | recipe_drop | Blackrock Depths / unknown frame | unknown | yes |
-| npc:9548 | Cawind Trueaim | vendor | Feralas / 1444 | published-region {"xMax": 74.8, "xMin": 74.8, "yMax": 45.6, "yMin": 45.4} | yes |
+| npc:9548 | Cawind Trueaim | vendor | Feralas / 1444 | reported-point 74.8,45.4 | yes |
 | npc:9549 | Borand | vendor | Stonetalon Mountains / 1442 | published-point 45.2,59.2 | no (client check pending) |
-| npc:9551 | Starn | vendor | Thousand Needles / 1441 | published-region {"xMax": 45, "xMin": 45, "yMax": 50.6, "yMin": 50.4} | yes |
-| npc:9552 | Zanara | vendor | Dustwallow Marsh / 1445 | published-region {"xMax": 35.6, "xMin": 35.4, "yMax": 30.2, "yMin": 30.2} | yes |
-| npc:9553 | Nadia Vernon | vendor | Silverpine Forest / 1421 | published-region {"xMax": 45, "xMin": 44.8, "yMax": 39.6, "yMin": 39.4} | yes |
-| npc:9555 | Mu'uta | vendor | Arathi Highlands / 1417 | published-region {"xMax": 72.6, "xMin": 72.4, "yMax": 33.6, "yMin": 33.4} | yes |
+| npc:9551 | Starn | vendor | Thousand Needles / 1441 | reported-point 45,50.4 | yes |
+| npc:9552 | Zanara | vendor | Dustwallow Marsh / 1445 | reported-point 35.4,30.2 | yes |
+| npc:9553 | Nadia Vernon | vendor | Silverpine Forest / 1421 | reported-point 44.8,39.6 | yes |
+| npc:9555 | Mu'uta | vendor | Arathi Highlands / 1417 | reported-point 72.6,33.4 | yes |
 | npc:9560 | Marshal Maxwell | quest-ends, quest-starts | Burning Steppes / 1428 | published-point 84.6,68.8 | no (client check pending) |
 | npc:9562 | Helendis Riverhorn | quest-ends, quest-starts | Burning Steppes / 1428 | published-region {"xMax": 85.6, "xMin": 85.4, "yMax": 69, "yMin": 68.8} | yes |
 | npc:9563 | Ragged John | quest-objectives | Burning Steppes / 1428 | published-point 65,23.6 | no (client check pending) |
 | npc:9568 | Overlord Wyrmthalak | quest-objectives | Blackrock Spire / unknown frame | unknown | yes |
 | npc:9584 | Jalane Ayrole | trainer |  | unknown | yes |
 | npc:9596 | Bannok Grimaxe | recipe_drop | Blackrock Spire / unknown frame | unknown | yes |
-| npc:9636 | Kireena | recipe_vendor | Desolace / 1443 | published-region {"xMax": 51, "xMin": 51, "yMax": 53.6, "yMin": 53.4} | yes |
+| npc:9636 | Kireena | recipe_vendor | Desolace / 1443 | reported-point 51,53.4 | yes |
 | npc:9736 | Quartermaster Zigris | npc_container | Blackrock Spire / unknown frame | unknown | yes |
 | npc:9816 | Pyroguard Emberseer | quest-objectives | Blackrock Spire / unknown frame | unknown | yes |
-| npc:984 | Thralosh | vendor | Swamp of Sorrows / 1435 | published-region {"xMax": 45, "xMin": 44.8, "yMax": 51.6, "yMin": 51.4} | yes |
+| npc:984 | Thralosh | vendor | Swamp of Sorrows / 1435 | reported-point 44.8,51.4 | yes |
 | npc:99 | Morgaine the Sly | named_drop | Elwynn Forest / 1429 | published-region {"xMax": 31.6, "xMin": 30.2, "yMax": 65.6, "yMin": 64.4} | yes |
 | object:102986 | Ju-Ju Heap | quest-objectives | Durotar / unknown frame | published-region {"xMax": 68.5, "xMin": 67.1, "yMax": 86.5, "yMin": 82.4} | yes |
 | object:142184 | Captain's Chest | object | Tanaris / 1446 | published-region {"xMax": 76.5, "xMin": 76.4, "yMax": 45.8, "yMin": 45.7} | yes |
