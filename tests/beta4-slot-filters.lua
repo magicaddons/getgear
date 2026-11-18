@@ -200,6 +200,9 @@ SlashCmdList={}
 assert(loadfile(root.."/Core.lua"))("GetGear",addon)
 local function loadCharacter(db)
     GetGear_CharacterDB=db
+    -- ADDON_LOADED runs in a fresh Lua VM on reload/relog. Do not carry the
+    -- previous matrix character's class into the existing priority defaults.
+    addon.classToken=nil
     events.OnEvent(events,"ADDON_LOADED","GetGear")
     return addon.db
 end
