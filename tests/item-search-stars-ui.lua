@@ -126,6 +126,18 @@ click(button(focus,'Acquired'));assert(addon:GetStatus(future)=='acquired')
 click(button(focus,'Undo'));assert(addon:GetStatus(future)==nil)
 -- Escape clears the session focus without modifying any saved choices.
 edit.scripts.OnEscapePressed(edit);assert(not popup:IsShown() and not addon.focusedSearchItem)
+-- Restore a pre-fix star without silently deleting the user's selection.
+-- Production composition must remove it from actionable guide/tracker lists.
+db.starredItems[14147]=true
+addon:RefreshAll()
+assert(not addon:HasEligibleAcquisitionSource(addon.ItemCatalog[14147]))
+assert(db.starredItems[14147]==true,'acquisition correction erased saved star')
+for _,mode in ipairs({'available','tracker'})do
+ for _,g in ipairs(addon:ComposeStarredItems(addon:GetItems(mode),mode,nil,true))do
+  assert(g.itemID~=14147,'saved RFC star bypassed production acquisition checks')
+ end
+end
+db.starredItems[14147]=nil
 -- A full-class wishlist has bounded rendered rows and direct ordinary navigation.
 local valid={}
 for _,r in ipairs(addon.Gear)do
@@ -152,9 +164,15 @@ assert(pages>1,'wishlist pages inaccessible')
 local ordinary=addon:GetItems('tracker')[1]
 db.starredItems[ordinary.itemID]=nil;addon:RefreshOverlay()
 click(button(overlay,'Other'));assert(contains(objContent,ordinary.itemID),'Other jump did not reach normal recommendations')
--- No source calculations for thousands of off-page stars; only visible rows.
+-- Every restored star needs a cheap eligibility check. Expensive navigation
+-- and source presentation remain bounded to visible rows, even on a full wishlist.
+local choicesCalls=0;local choicesFn=addon.GetAcquisitionNavigationChoices
+addon.GetAcquisitionNavigationChoices=function(...)choicesCalls=choicesCalls+1;return choicesFn(...)end
 sourceCalls=0
-addon:RefreshOverlay();assert(sourceCalls<650,'off-page wishlist evaluated acquisition routes')
+addon:RefreshOverlay()
+assert(sourceCalls<starCount+650,'wishlist repeated eligibility scans')
+assert(choicesCalls<150,'off-page wishlist built navigation/source pages')
+addon.GetAcquisitionNavigationChoices=choicesFn
 -- Preview cannot write progress or stars, including another class.
 click(button(detail,'Preview guide'))
 local previewRow=visibleRows(detailContent)[1];assert(previewRow)

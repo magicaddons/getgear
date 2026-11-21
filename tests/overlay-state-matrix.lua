@@ -21,7 +21,7 @@ local addon={}
 for line in io.lines(root..'/GetGear.toc')do
  if line:match('%.lua$')then assert(loadfile(root..'/'..line))('GetGear',addon)end
 end
-local expected=not record and assert(loadfile(dir..'fixtures/overlay-state-signatures.lua'))()
+local expected=not record and assert(loadfile(dir..'fixtures/overlay-state-signatures-alliance-access.lua'))()
 local contexts,slotChecks=0,0
 local started=os.clock()
 for _,token in ipairs({'WARRIOR','PALADIN','HUNTER','ROGUE','PRIEST','SHAMAN','MAGE','WARLOCK','DRUID'})do

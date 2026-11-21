@@ -1,12 +1,20 @@
-GETGEAR 0.14.0-private-cumulative.20261121.13 — PRIVATE UI TEST
-==========================================================
-Separate testing follow-up to public v0.14.0-beta10. Not a public release.
-The overlay group headings are removed and the item identity area moves up
-2 pixels. All other 28 Lua modules and all three textures are unchanged from
-public source efe67f9d9a75daf85545d9dda37b0c238d638010.
-Back up the public version before installing this testing ZIP. The same folder
-layout and SavedVariables schema apply. This follow-up needs user approval
-before publication; the existing public Beta 10 remains unchanged.
+GETGEAR 0.14.0-private-cumulative.20261121.14 — PRIVATE ACQUISITION TEST
+===================================================================
+Complete cumulative correction based on latest overlay-polish .13 source
+8c18efa54eaab8a43fb5d5eb8d9c5032707a388e. Keeps the accepted overlay, immediate
+star reordering, tracking, slots, comparisons, materials and acquisition maps.
+
+Normal Alliance recommendations now exclude routes inside Horde capitals,
+including Ragefire Chasm. Source restrictions apply independently: a documented
+accessible alternative, known learned recipe or verified finished BoE can keep
+an item eligible. No seller, drop or trade listing is invented. Unknown source
+facts remain explicitly uncertain. Shared dungeons such as Shadowfang Keep and
+Wailing Caverns remain eligible. Saved stars cannot bypass acquisition checks.
+
+Private in-game acceptance build only. No tag, release or automatic publication.
+Back up the previous addon and SavedVariables; extract and replace GetGear.
+This task supports Alliance acquisition testing across the nine class catalogues;
+Horde acquisition support is outside this correction's acceptance scope.
 
 DOWNLOAD
 https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta10
@@ -15,7 +23,7 @@ private testing ZIP to test this overlay refinement; do not use source archives.
 
 SUPPORTED CLIENT
 WoW Forever, addon interface 16001. Other clients are not verified.
-Levels 1–60, all nine original classes, both factions.
+Levels 1–60, all nine class catalogues; Alliance acquisition testing scope.
 
 INSTALL / UPGRADE
 1. Exit the game. Back up AddOns/GetGear and GetGear SavedVariables in WTF.

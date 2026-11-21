@@ -1,0 +1,24 @@
+{
+  "checks": 185,
+  "modules": 29,
+  "lua54Regressions": 48,
+  "lua51Regressions": 48,
+  "failures": 0,
+  "protectedAcquisitionSnapshotExact": true,
+  "actualClientTested": false,
+  "addonRoot": "/workspace/getgear",
+  "cumulativeFeaturesVerified": true,
+  "statement": "Offline/synthetic validation only. No addon package, tag, release or live acquisition claim.",
+  "sourceBranch": "fix/alliance-acquisition-20261121",
+  "baseRevision": "8c18efa54eaab8a43fb5d5eb8d9c5032707a388e",
+  "runtimeSHA256": {
+    "AcquisitionNavigation.lua": "5125ff5bb3da59517e8ee772715f47892164b73f095ab83b39e0c1899f625243",
+    "GuideState.lua": "e1276e6ee3b476d87473940dd267e67dc9a3546b20d80528f97ab2e129954f40",
+    "UI.lua": "a1468fbdf257803e566223407415fab85318f5e00bb22fab639cebf0cb53cf8b",
+    "Core.lua": "8f3d6e524e863546ee3567d6e636fe04bbf8aa3b57294f872171d79e0ffb5f43",
+    "GearRelevance.lua": "3b9a750d6e3a9f01679dd16f2d5135b9d7cca2dfda4cf4c95abce10b0009e70d",
+    "GearCompare.lua": "62ef63fc46a2a819458ff63a3a6cc3daca8b05e1416fea4eb16abf14fec5ab9a",
+    "MapNavigation.lua": "051270d68faca4e06da8dd77ef11cab2d9bd15b2f7276d8435450a55066d565c"
+  },
+  "command": "python3 tools/validate_recommendations.py --output /workspace/artifacts/alliance-validation-complete --lua51 /workspace/toolchain/lua51/usr/bin/lua5.1 --luac51 /workspace/toolchain/lua51/usr/bin/luac5.1"
+}

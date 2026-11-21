@@ -70,6 +70,9 @@ def main():
     run([sys.executable, 'tools/build_faction_eligibility.py', '--check'])
     run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests/release', '-v'])
     with tempfile.TemporaryDirectory() as folder:
+        alliance_audit = Path(folder) / 'alliance.csv'
+        run([lua54, 'tools/audit_alliance_acquisition.lua', addon_root, alliance_audit])
+        assert alliance_audit.read_bytes() == (ROOT / 'docs/alliance-acquisition/catalogue-access.csv').read_bytes()
         source_audit = Path(folder) / 'sources.csv'
         run([lua54, 'tools/audit_recommendation_sources.lua', addon_root, source_audit])
         assert source_audit.read_bytes() == (ROOT / 'docs/recommendation-audit/equipment-source-eligibility.csv').read_bytes()

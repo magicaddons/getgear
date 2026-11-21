@@ -4,6 +4,137 @@ local _, GetGear = ...
 -- never inferred from equipment status or another character's completion.
 local function data() return GetGear.AcquisitionNavigationData or {items={},sources={},quests={},chains={}} end
 local function get(t,id) return t and (t[id] or t[tostring(id)]) end
+
+-- Acquisition topology, separate from item-use restrictions and travel scoring.
+-- Capital interiors are not ordinary Alliance destinations. Surrounding zones
+-- (including Tirisfal/Silverpine/The Barrens) deliberately have no such rule.
+-- Instance containment is structural evidence, not an item blacklist or loot claim.
+GetGear.AcquisitionAccessPolicy = {
+    supportedSides = {[1]=true}, -- current correction/acceptance scope: Alliance
+    capitals = {Orgrimmar=2, Undercity=2, ["Thunder Bluff"]=2,
+        ["Stormwind City"]=1, Stormwind=1, Ironforge=1, Darnassus=1},
+    instances = {
+        ["Ragefire Chasm"]={capital="Orgrimmar",
+            evidence="https://www.wowhead.com/forever/guide/dungeons-overview-locations-details"},
+        ["The Stockade"]={capital="Stormwind City",
+            evidence="https://www.wowhead.com/forever/guide/dungeons-overview-locations-details"},
+    },
+    -- Existing reviewed affiliations: docs/faction-audit/reputation-factions.json.
+    reputations = {[509]=1,[510]=2,[729]=2,[730]=1,[889]=2,[890]=1},
+}
+local function model() return GetGear.AcquisitionNavigationData or {} end
+local function side(context)
+    local faction=context and context.faction
+    if not context and type(UnitFactionGroup)=="function" then faction=UnitFactionGroup("player") end
+    return faction=="Alliance" and 1 or faction=="Horde" and 2
+end
+local function canonical(zone)
+    return (model().instanceEntranceAliases or {})[zone] or zone
+end
+
+function GetGear:IsAcquisitionLocationEligible(location,context)
+    if type(location)~="table" then return true end
+    local playerSide=side(context)
+    if not self.AcquisitionAccessPolicy.supportedSides[playerSide] then return true end
+    local zone=canonical(location.dungeonApproach or location.dungeon or location.zone)
+    local policy=self.AcquisitionAccessPolicy
+    local containment=policy.instances[zone]
+    local owner=policy.capitals[zone] or containment and policy.capitals[containment.capital]
+    if owner and owner~=playerSide then return false,"Acquisition requires an opposing-faction capital" end
+    return true
+end
+
+local function locationsAllow(self,locations,context,zone)
+    local checked=false
+    for _,location in ipairs(locations or {}) do
+        if not zone or location.zone==zone then
+            checked=true
+            if self:IsAcquisitionLocationEligible(location,context) then return true end
+        end
+    end
+    -- Missing geography is unresolved, not proof of inaccessibility.
+    return not checked
+end
+
+local function questAccess(self,quest,context)
+    if not quest then return true end
+    for _,field in ipairs({"starts","ends"}) do
+        local actors=quest[field] or {}
+        local possible=#actors==0
+        for _,key in ipairs(actors) do
+            local actor=(model().sources or {})[key] or {}
+            local zone=quest.actorZones and quest.actorZones[key]
+            if locationsAllow(self,actor.locations,context,zone)
+                and (not zone or self:IsAcquisitionLocationEligible({zone=zone},context)) then possible=true end
+        end
+        if not possible then return false,"Quest requires an opposing-faction capital" end
+    end
+    return true
+end
+
+function GetGear:IsAcquisitionRouteAccessible(gear,route,context)
+    local playerSide=side(context)
+    local policy=self.AcquisitionAccessPolicy
+    if not policy.supportedSides[playerSide] then return true end
+    local required=route.reputationSide or (route.offer and type(route.offer.standing)=="number" and route.offer.standing>0
+        and policy.reputations[tonumber(route.offer.reqfaction)])
+    if playerSide and (required==1 or required==2) and required~=playerSide then
+        return false,"Source requires an opposing-faction reputation"
+    end
+    if route.dungeon then
+        local name=canonical(route.dungeon)
+        local allowed,reason=self:IsAcquisitionLocationEligible({dungeon=name},context)
+        if not allowed then return false,reason end
+        local definition=(model().instanceEntrances or {})[name]
+        if definition and not locationsAllow(self,definition.entrances,context) then
+            return false,"All documented instance entrances require an opposing-faction capital"
+        end
+    end
+    if route.location and not self:IsAcquisitionLocationEligible(route.location,context) then
+        return false,"Source location requires an opposing-faction capital"
+    end
+    if route.sourceZone and not self:IsAcquisitionLocationEligible({zone=route.sourceZone},context) then
+        return false,"Source requires an opposing-faction capital"
+    end
+    local actor=(model().sources or {})[route.source]
+    if actor and not locationsAllow(self,actor.locations,context,route.sourceZone) then
+        return false,"All documented source locations require an opposing-faction capital"
+    end
+    if route.kind=="quest" or route.kind=="quest_container" then
+        local allowed,reason=questAccess(self,get(model().quests,route.questID),context)
+        if not allowed then return false,reason end
+    end
+    return true
+end
+
+-- Only recover explicitly recorded destinations. Never fabricate a trade,
+-- world-drop or vendor alternative for a source with missing structured data.
+function GetGear:GetLegacyAcquisitionAccessRoute(gear)
+    if not gear then return end
+    local location=gear.acquisitionLocation
+    if location and (self.AcquisitionAccessPolicy.capitals[location.zone]
+        or self.AcquisitionAccessPolicy.instances[canonical(location.zone)]) then
+        return {kind="legacy",location=location,label=location.spot or gear.source}
+    end
+    local zone=gear.zone
+    if type(zone)=="string" then zone=zone:gsub("%s*%([^)]*%)%s*$","") end
+    if self.AcquisitionAccessPolicy.capitals[zone] or self.AcquisitionAccessPolicy.instances[canonical(zone)] then
+        return {kind="legacy",location={zone=zone},label=gear.source}
+    end
+end
+
+-- Use the same recorded fallback for eligibility and presentation. A verified
+-- BoE may survive a blocked legacy source, but must then display trade access.
+local function planForGear(gear)
+    if not gear then return end
+    local plan=gear.acquisitionPlan or get(data().items,gear.itemID)
+    if not plan or #(plan.routes or {})==0 then
+        local route=GetGear:GetLegacyAcquisitionAccessRoute(gear)
+        if route then return {routes={route}} end
+    end
+    return plan
+end
+
 -- Names are structured facts, never the result of splitting descriptive text.
 -- In particular, a comma or parenthesis may be part of an NPC's real name.
 function GetGear:GetAcquisitionNPCName(target)
@@ -180,12 +311,15 @@ end
 
 local function sourceLocations(actor,q,key,route)
     local zone=q and q.actorZones and q.actorZones[key] or route and route.sourceZone
-    if not zone then return actor.locations or {} end
     local locations={}
     for _,loc in ipairs(actor.locations or {}) do
-        if loc.zone==zone then locations[#locations+1]=loc end
+        if (not zone or loc.zone==zone) and GetGear:IsAcquisitionLocationEligible(loc) then
+            locations[#locations+1]=loc
+        end
     end
-    if #locations==0 then locations[1]={zone=zone,verification="published-reference"} end
+    if #locations==0 and zone and GetGear:IsAcquisitionLocationEligible({zone=zone}) then
+        locations[1]={zone=zone,verification="published-reference"}
+    end
     return locations
 end
 
@@ -316,15 +450,17 @@ local function routesForCharacter(model,plan,context,gear)
             or route.kind=="object" or route.kind=="fishing") and route.verification and route.verification~="legacy-reference"
         local attributedAccess=not side or attribution~=1 and attribution~=2 or attribution==side
             or restricted==side or restricted==3 or activeSide or sharedSource
-        if sideAllowed and classAllowed and raceAllowed and attributedAccess then useful[#useful+1]=route end
+        if sideAllowed and classAllowed and raceAllowed and attributedAccess
+            and GetGear:IsAcquisitionRouteAccessible(gear,route,context) then useful[#useful+1]=route end
     end
     return useful
 end
 
 -- Source access is independent of item proficiency and travel convenience.
--- Unknown routes remain unknown; no zone or distance creates a faction veto.
+-- Unknown routes remain unknown; only documented capital containment adds an
+-- access restriction. Surrounding hostile/contested zones remain travel context.
 function GetGear:GetEligibleAcquisitionRoutes(gear,context)
-    local plan=gear and (gear.acquisitionPlan or get(data().items,gear.itemID))
+    local plan=planForGear(gear)
     if not self:IsFactionUseEligible(gear,context) then return {},true end
     local faction=context and context.faction or not context and call(UnitFactionGroup,"player")
     local side=faction=="Alliance" and 1 or faction=="Horde" and 2
@@ -365,7 +501,7 @@ end
 function GetGear:GetFactionAcquisitionDescription(gear)
     local usable,reason=self:IsFactionUseEligible(gear)
     if not usable then return reason end
-    local plan=gear and (gear.acquisitionPlan or get(data().items,gear.itemID))
+    local plan=planForGear(gear)
     if not plan or #(plan.routes or {})==0 then return end
     local eligible=routesForCharacter(data(),plan,nil,gear)
     if #eligible==#plan.routes then return end
@@ -406,6 +542,30 @@ end
 
 -- Compact context is derived from structured, character-accessible routes.
 -- The original researched summary/provenance stays intact in the full guide.
+-- Raw recipe evidence remains intact; actionable summaries use accessible
+-- drop locations independently, just like equipment routes.
+function GetGear:GetAccessibleRecipeDrops(normalized)
+    local drops={}
+    for _,drop in ipairs(normalized and normalized.documentedDrops or {}) do
+        local dungeons={}
+        local hasDungeons=type(drop.dungeons)=="table" and #drop.dungeons>0
+        for _,name in ipairs(drop.dungeons or {}) do
+            if self:IsAcquisitionRouteAccessible(nil,{kind="dungeon",dungeon=name}) then
+                dungeons[#dungeons+1]=name
+            end
+        end
+        local actor=(data().sources or {})["npc:"..tostring(drop.npcID)]
+        if (not hasDungeons or #dungeons>0)
+            and (hasDungeons or not actor or locationsAllow(self,actor.locations)) then
+            if hasDungeons and #dungeons~=#drop.dungeons then
+                local copy={};for k,v in pairs(drop) do copy[k]=v end
+                copy.dungeons=dungeons;drops[#drops+1]=copy
+            else drops[#drops+1]=drop end
+        end
+    end
+    return drops
+end
+
 function GetGear:GetCompactAcquisitionRequirements(gear)
     local source=gear and gear.sourceSummary or ""
     local out={}
@@ -472,7 +632,7 @@ local function compactRecipeSummary(self,gear)
     end
     local routes=routesForCharacter(model,plan,nil,gear)
     local normalized=self:GetNormalizedRecipeData(gear)
-    local drops=normalized.documentedDrops
+    local drops=self:GetAccessibleRecipeDrops(normalized)
     local other=false
     for _,route in ipairs(routes) do if route.kind~="dungeon" and route.kind~="recipe_drop" and route.kind~="legacy" then other=true end end
     if #drops>0 and not other then
@@ -572,7 +732,7 @@ end
 function GetGear:GetAcquisitionCompactSummary(gear)
     if gear and gear.bagFromInventory then return "Owned bag: equip from inventory or retrieve from bank; no new quest needed." end
     if gear and gear.profession then return self:GetCompactRecipeSummary(gear) end
-    local model=data();local plan=gear and gear.acquisitionPlan or get(model.items,gear and gear.itemID)
+    local model=data();local plan=planForGear(gear)
     if plan and #(plan.routes or {})>0 and #routesForCharacter(model,plan,nil,gear)==0 then
         if self:GetIndependentAcquisitionAccess(gear)=="tradeable" then
             return "Source: trade/Auction House for a verified BoE item if offered; listings unknown. No direct source is eligible; see Guide."
@@ -643,7 +803,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     if not gear then return {} end
     if gear.bagFromInventory then return {} end
     local model=data()
-    local plan=gear.acquisitionPlan or get(model.items,gear.itemID)
+    local plan=planForGear(gear)
     if not plan and type(gear.acquisitionLocation)=="table" then
         plan={routes={{kind="legacy",location=gear.acquisitionLocation,label=gear.acquisitionLocation.spot}}}
     end
@@ -652,6 +812,7 @@ function GetGear:GetAcquisitionNavigationChoices(gear)
     local choices,seen={},{}
     local currentRoute,currentQuestContext
     local function add(target)
+        if not self:IsAcquisitionLocationEligible(target) then return end
         -- Instance NPCs/objects and dungeon loot share the same exterior
         -- entrance resolver. Interior actor coordinates are never portal pins.
         if target.kind=="dungeon" and not target.publishedEntrance and target.role~="Published active quest objective" then
@@ -890,6 +1051,7 @@ local ORDINARY_TRAVEL={named_drop=true,npc_container=true,object=true,vendor=tru
 
 function GetGear:GetAcquisitionRoutePracticality(gear,route,context,target)
     if not route then return "unknown" end
+    if not self:IsAcquisitionRouteAccessible(gear,route,context) then return "ineligible" end
     -- Shared dungeons, accessible neutral quests and active quest guidance are
     -- deliberate destinations. Unknown prerequisites are never a travel veto.
     if route.kind=="dungeon" or route.kind=="quest" or route.kind=="quest_container" then return "practical" end
@@ -1031,9 +1193,10 @@ function GetGear:GetAcquisitionDirections(gear)
         out[#out+1]="Published book-learning minimum: "..gear.profession.." "..normalized.learningSkill.."; separate from the recipe/crafting minimum."
     end
     if normalized then
-        local broad=#normalized.documentedDrops>40
+        local accessibleDrops=self:GetAccessibleRecipeDrops(normalized)
+        local broad=#accessibleDrops>40
         local omitted=0
-        for _,drop in ipairs(normalized.documentedDrops) do
+        for _,drop in ipairs(accessibleDrops) do
             if not broad or drop.dungeons then
                 out[#out+1]="Recipe book #"..drop.bookItemID..": "..drop.name.." (#"..drop.npcID..")"..
                     (drop.dungeons and " — "..table.concat(drop.dungeons,", ") or " — published drop; location/classification unresolved")

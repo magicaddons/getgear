@@ -112,12 +112,15 @@ end
 assert(excavationChoices==2,'reported dungeon item lost its separate entrance and meeting-stone choices')
 -- Every reviewed definition, alias and separately labelled entrance choice.
 -- Missing coordinates must use written directions, never report a blank map.
-local definitions,entrances,aliases=0,0,0
+local definitions,entrances,aliases,blockedEntrances=0,0,0,0
 for name,definition in pairs(a.AcquisitionNavigationData.instanceEntrances)do
  definitions=definitions+1
  local item={itemID=-1,name=name,acquisitionPlan={routes={{kind='dungeon',dungeon=name}}}}
  local choices=a:GetAcquisitionNavigationChoices(item)
- if #definition.entrances==0 then
+ if not a:IsAcquisitionRouteAccessible(item,item.acquisitionPlan.routes[1]) then
+  assert(#choices==0 and not a:HasEligibleAcquisitionSource(item), 'capital dungeon leaked into navigation')
+  blockedEntrances=blockedEntrances+#definition.entrances
+ elseif #definition.entrances==0 then
   C_EncounterJournal=nil;a:ResetAcquisitionNavigation()
   local ok,mode=a:OpenAcquisitionMap(item,choices[1].id);assert(ok and mode=='directions'and not a:GetAcquisitionMarkerState())
  else
@@ -128,9 +131,11 @@ end
 for alias,name in pairs(a.AcquisitionNavigationData.instanceEntranceAliases)do
  assert(a:GetAcquisitionInstanceName(alias)==name);aliases=aliases+1
  local item={itemID=-1,name=alias,acquisitionPlan={routes={{kind='dungeon',dungeon=alias}}}}
- assert(#a:GetAcquisitionNavigationChoices(item)>0)
+ if a:IsAcquisitionRouteAccessible(item,item.acquisitionPlan.routes[1]) then
+  assert(#a:GetAcquisitionNavigationChoices(item)>0)
+ else assert(#a:GetAcquisitionNavigationChoices(item)==0) end
 end
-assert(definitions>=39 and entrances>=31 and aliases>=60)
+assert(definitions>=39 and entrances+blockedEntrances>=31 and blockedEntrances>0 and aliases>=60)
 assert(not a:ResolveAcquisitionMapID('Westfall',987654),'unknown explicit frame borrowed coordinates from another map')
 -- Identical numerical coordinates on different maps are distinct sources;
 -- preserving them in the generator must survive runtime deduplication too.

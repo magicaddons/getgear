@@ -65,3 +65,5 @@ User acceptance applies to the tested private build. Automated Lua 5.1/5.4 regre
 No project-wide software license was present in the approved source. This owner-authorized release provides the addon for public download and installation; it does not add an open-source license or infer broader modification or redistribution permissions. Third-party game names and referenced data retain their respective owners' rights. Contact the project owner for licensing questions.
 
 GetGear is a community addon and is not an official Blizzard product.
+
+Private cumulative .14 acquisition correction for Alliance acceptance testing: see [root cause, audit and validation](docs/ALLIANCE_ACQUISITION_20261121.md). This branch does not publish an update.

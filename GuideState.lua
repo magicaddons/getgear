@@ -252,6 +252,7 @@ local function RefreshVisible(self)
 end
 
 function GetGear:RefreshAll(trigger)
+    self.starAcquisitionProofs=nil
     local capture=self.performanceStats
     local previous=capture and capture.trigger
     if capture then capture.trigger=trigger or "RefreshAll" end
@@ -671,10 +672,25 @@ function GetGear:ComposeStarredItems(recommendations,mode,displayedStars,deferSo
     if not saved or not next(saved) or mode=="bags" then return recommendations end
     local stars,rest,seen={},{},{}
     local history=mode=="hidden" or mode=="completed"
+    -- Proofs live only in the current rendered model, never SavedVariables.
+    -- A full refresh always rebuilds them. Immediate star-only reorders can
+    -- reuse successful checks from that model without rescanning source pages.
+    self.starAcquisitionProofs=self.starAcquisitionProofs or {}
+    local proofs=displayedStars and self.starAcquisitionProofs[mode] or {}
+    proofs=proofs or {}
+    self.starAcquisitionProofs[mode]=proofs
+    local function sourceEligible(record)
+        if displayedStars and proofs[record] then return true end
+        local allowed=not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(record)
+        proofs[record]=allowed or nil
+        return allowed
+    end
     for _,record in ipairs(recommendations) do
-        if self:IsItemStarred(record.itemID) then
-            stars[#stars+1]=record;seen[record.itemID]=true
-        else rest[#rest+1]=record end
+        if history or sourceEligible(record) then
+            if self:IsItemStarred(record.itemID) then
+                stars[#stars+1]=record;seen[record.itemID]=true
+            else rest[#rest+1]=record end
+        end
     end
     if not history then
         self:InitializeItemSearch()
@@ -682,7 +698,8 @@ function GetGear:ComposeStarredItems(recommendations,mode,displayedStars,deferSo
         for id,value in pairs(saved) do
             if value==true and not seen[id] then
                 local record=displayedStars and displayedStars[id] or not displayedStars and self:GetSearchRecord(id)
-                if record and (displayedStars or not self:GetSearchRestriction(record,not deferSources))
+                if record and (not self:GetSearchRestriction(record,false))
+                    and sourceEligible(record)
                     and not self:IsHidden(record) and not self:GetStatus(record)
                     and (equipped and not equipped[id] or not equipped and
                         (not self.IsGearEquipped or not self:IsGearEquipped(record))) then

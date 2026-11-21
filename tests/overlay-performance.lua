@@ -73,7 +73,7 @@ local function measure(label,fn)
   calls.GetGearComparison or 0,calls.GetObsoleteGearReason or 0,calls.GetProfessionSkill or 0,
   calls.GetCombinedMaterialRows or 0,calls.GetUndocumentedCrafts or 0,textWrites,#frames-frameCount))
  -- Fingerprint ordered recommendations and exact ingredient quantities against
- -- the accepted .9 runtime, rather than accepting a faster empty result.
+ -- the reviewed Alliance-access correction, rather than accepting an empty result.
  local measuredCalls=calls;calls={}
  local hash=7
  local function digest(text)for i=1,#text do hash=(hash*31+text:byte(i))%1000000007 end end
@@ -85,7 +85,7 @@ local function measure(label,fn)
   digest(scope)
   for _,m in ipairs(addon:GetCombinedMaterialRows(scope))do digest(m.itemID..':'..m.amount..':'..m.name..';')end
  end
- assert(hash==232596664,'accepted .9 fingerprint changed: '..label..' '..hash)
+ assert(hash==591227800,'Alliance-access fingerprint changed: '..label..' '..hash)
  print('SIGNATURE '..label..' '..hash)
  calls=measuredCalls
 end

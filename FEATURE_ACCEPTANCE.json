@@ -157,7 +157,9 @@
         "AcquisitionNavigation.lua": [
           "function GetGear:IsFactionUseEligible",
           "function GetGear:GetEligibleAcquisitionRoutes",
-          "function GetGear:HasEligibleAcquisitionSource"
+          "function GetGear:HasEligibleAcquisitionSource",
+          "function GetGear:IsAcquisitionRouteAccessible",
+          "function GetGear:IsAcquisitionLocationEligible"
         ],
         "GuideState.lua": [
           "HasEligibleAcquisitionSource"
@@ -166,7 +168,8 @@
       "regressions": [
         "source-faction-eligibility.lua",
         "faction-global-eligibility.lua",
-        "acquisition-practicality.lua"
+        "acquisition-practicality.lua",
+        "alliance-acquisition-access.lua"
       ]
     },
     {
@@ -324,7 +327,7 @@
   ],
   "acceptedNavigationFiles": {
     "MapNavigation.lua": "051270d68faca4e06da8dd77ef11cab2d9bd15b2f7276d8435450a55066d565c",
-    "AcquisitionNavigation.lua": "98274ae17b5140b711ddf7bd4c54a0af697bbcdec12ec04b242e6c9c10563fec",
+    "AcquisitionNavigation.lua": "5125ff5bb3da59517e8ee772715f47892164b73f095ab83b39e0c1899f625243",
     "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
     "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
   },
