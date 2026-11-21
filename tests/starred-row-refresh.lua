@@ -254,6 +254,25 @@ for _,width in ipairs({720,960,1260,720})do
  end
  assert(detailContent:GetHeight()>=bottom,'detailed scroll child clips content')
 end
+-- A hidden pooled row can retain a previous width. Entering through a
+-- star after resizing must render it at the current width, not reuse its body.
+local late=addon:GetSearchRecord(candidates[#candidates].itemID)
+addon.GetItems=function()return {fixtures[1],late}end
+detailContent.parent:SetWidth(1208);addon:RefreshUI()
+addon.GetItems=function()return {fixtures[1]}end
+detailContent.parent:SetWidth(668);addon:RefreshUI()
+assert(addon:SetItemStarred(late.itemID,true))
+local entering=assert(contains(detailContent,late.itemID))
+for _,label in ipairs(entering.children)do
+ if label.kind=='FontString' and label:IsShown() and label.points[1] and label.points[1][1]=='TOPLEFT' then
+  local point=label.points[1]
+  local left=point[#point-1]
+  if type(left)=='number' and left==62 then
+   assert(left+label:GetWidth()<=entering:GetWidth()-10,'hidden pooled row retained stale width after star')
+  end
+ end
+end
+assert(addon:SetItemStarred(late.itemID,false))
 -- Empty-state labels must invalidate the old body before a future item
 -- returns through a targeted star update (no category switch).
 addon.GetItems=function()return {} end

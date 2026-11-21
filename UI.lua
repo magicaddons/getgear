@@ -1263,7 +1263,12 @@ end
 -- Reuse expensive row bodies by ID, then bind every frame to its sorted position.
 function wishlistUI.ReusePresentationRows(rows,list,create)
     local byID,used,ordered={},{},{}
-    for _,row in ipairs(rows) do if row.gear then byID[row.gear.itemID]=row end end
+    for _,row in ipairs(rows) do
+        -- Hidden bodies may predate a resize, filter or page change. Reuse only
+        -- the current visible presentation; entering rows must measure afresh.
+        if not (row.f or row.frame):IsShown() then row.gear=nil end
+        if row.gear then byID[row.gear.itemID]=row end
+    end
     for i,gear in ipairs(list) do
         local row=byID[gear.itemID]
         if row then ordered[i]=row;used[row]=true end

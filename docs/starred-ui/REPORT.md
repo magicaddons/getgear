@@ -47,7 +47,7 @@ render an empty list, then bring the same item back via a targeted future star;
 the placeholder must be replaced by the item's actual rendered body.
 
 The targeted refresh now assigns a dense reusable row pool to sorted positions,
-invalidates placeholder identities, updates headings/counts and commits changed
+invalidates placeholder and hidden pooled-body identities, updates headings/counts and commits changed
 scroll rectangles. Starring selects the first page/top of the starred section,
 without writing either saved equipment-slot selection. Unstarring recomposes
 against the ordinary model, retaining ordinary ordering and eligibility. Existing
@@ -116,8 +116,8 @@ fingerprints were identical in every case. Warm refreshes create zero new frames
 The first full guide creates forty additional texture regions, one per guide
 star; the rendered guide pool remains capped at forty rows. The full raw
 comparison retains timing/heap variation: separate-process Lua 5.1 medians
-included +20.74% for the warm-overlay batch, while Lua 5.4's corresponding median
-was -9.44%. These noisy measurements prompted the paired check below; they are
+included -38.69% for the warm-overlay batch, while Lua 5.4's corresponding median
+was +64.73%. These noisy measurements prompted the paired check below; they are
 not omitted from the delivery.
 
 Alternating nine old/new batches in isolated addon environments within one
@@ -125,10 +125,10 @@ interpreter, with collection reset before each ten-refresh batch, gave:
 
 | Baseline | Lua | Expanded materials | Collapsed materials |
 | --- | --- | --- | --- |
-| `.10` | 5.1 | +0.65% | +2.94% |
-| `.10` | 5.4 | +2.78% | +3.28% |
-| `.11` | 5.1 | -0.33% | +5.60% |
-| `.11` | 5.4 | +3.80% | +4.40% |
+| `.10` | 5.1 | +0.71% | +4.69% |
+| `.10` | 5.4 | +3.40% | -0.85% |
+| `.11` | 5.1 | -5.55% | -3.16% |
+| `.11` | 5.4 | +3.93% | -6.73% |
 
 Source-call counts and ordered recommendation identity remained exact. This
 supports preservation of `.10`'s computation improvements with a small measured
@@ -139,14 +139,16 @@ following median synthetic CPU times with both windows open:
 
 | Scenario | Lua 5.1 old / new | Lua 5.4 old / new |
 | --- | --- | --- |
-| Existing visible item | 22.535 / 21.978 ms | 18.877 / 20.114 ms |
-| Future-level item | 28.047 / 28.031 ms | 25.745 / 25.092 ms |
-| 120-star collection | 95.545 / 89.954 ms | 86.390 / 78.468 ms |
+| Existing visible item | 14.770 / 13.905 ms | 10.894 / 10.610 ms |
+| Future-level item | 16.976 / 19.159 ms | 13.286 / 15.246 ms |
+| 120-star collection | 63.684 / 56.108 ms | 48.759 / 43.421 ms |
 
 All toggle batches made zero GetItems, combined-material and undocumented-craft
 calls. Large-collection route calls fell from 360 to 80 per forty toggles;
 comparison and per-row material calls did not increase. Existing visible rows
-needed zero comparison/material reconstruction. Heap samples and all raw timing
+needed zero comparison/material reconstruction. The future-entry scenario has a
+13–15% relative CPU increase, about 0.05 ms per toggle in these fixtures, with
+unchanged source/comparison/material counts. Heap samples and all raw timing
 logs accompany the delivery. Counts, signatures and existing operation/heap
 budgets provide the regression gates; CPU percentages are observations on this
 shared host, without a timing-only pass/fail claim.
@@ -157,3 +159,16 @@ release-tool tests, generated-data audits and source/faction/navigation coverage
 The approved 17-file snapshot and `git diff --check` passed. The gated build runs
 the full suite again from an immutable export against the extracted package;
 its final receipt and exact-commit CI result are recorded outside the commit.
+
+The pushed implementation checkpoint `829923584203af8ea9ce966926b26abdfe0ac681`
+passed exact-commit CI (run `44854762601`). A final production probe then caught
+an additional presentation-reuse defect: render a future item at a wide guide
+width, filter it out, narrow the guide, then star it. A hidden pooled row kept
+its former text widths and could be reused without measuring. The new regression
+fails that checkpoint with `hidden pooled row retained stale width after star`.
+Only currently visible bodies are now eligible for reuse; hidden identities are
+invalidated before allocating entering rows. This also prevents an older hidden
+copy of an ID from shadowing the current visible body in the reuse lookup.
+The final receipt identifies the follow-up commit and repeats full extracted
+runtime and exact-commit CI validation. The source-integrity guard rejected the
+in-progress package when its test inputs changed; no interim ZIP was promoted.
