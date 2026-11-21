@@ -1849,7 +1849,6 @@ wishlistUI.overlayPrevious=NewButton(overlay,"<",22,22)
 wishlistUI.overlayNext=NewButton(overlay,">",22,22)
 wishlistUI.overlayOther=NewButton(overlay,"Other",48,22)
 wishlistUI.overlayStarCount=0
-wishlistUI.overlayGroups={wishlistUI.GroupLabel(objContent),wishlistUI.GroupLabel(objContent)}
 wishlistUI.overlayPrevious:SetPoint("TOPLEFT",181,-37)
 wishlistUI.overlayNext:SetPoint("TOPLEFT",205,-37)
 wishlistUI.overlayOther:SetPoint("TOPLEFT",230,-37)
@@ -1857,15 +1856,17 @@ wishlistUI.overlayPrevious:SetScript("OnClick",function() wishlistUI.overlayPage
 wishlistUI.overlayNext:SetScript("OnClick",function() wishlistUI.overlayPage=wishlistUI.overlayPage+1;objScroll:SetVerticalScroll(0);GetGear:RefreshOverlay() end)
 wishlistUI.overlayOther:SetScript("OnClick",function() wishlistUI.overlayPage=math.floor(wishlistUI.overlayStarCount/32)+1;objScroll:SetVerticalScroll(0);GetGear:RefreshOverlay() end)
 
+-- Keep a small gap below the unchanged 22px action strip.
+local OVERLAY_IDENTITY_TOP = 32
 local function NewOverlayRow(i)
     local f = CreateFrame("Frame", nil, objContent)
     f:SetSize(316, 46)
     local bg = f:CreateTexture(nil, "BACKGROUND")
     bg:SetAllPoints()
     local icon = NewIcon(f, 30)
-    icon:SetPoint("TOPLEFT", 5, -41)
+    icon:SetPoint("TOPLEFT", 5, -(OVERLAY_IDENTITY_TOP+7))
     local expand = CreateFrame("Button", nil, f)
-    expand:SetPoint("TOPLEFT", 41, -34)
+    expand:SetPoint("TOPLEFT", 41, -OVERLAY_IDENTITY_TOP)
     expand:SetSize(229, 46)
     local name = NewText(expand, "GameFontNormalSmall", 227)
     name:SetPoint("TOPLEFT", 2, -7)
@@ -1918,7 +1919,7 @@ local function LayoutOverlayHeader(row)
     local bottom=subY+MeasureText(row.sub,12)
     local headerHeight=math.max(47,bottom+9)
     row.expand:SetHeight(headerHeight)
-    return 34+math.max(48,bottom+10),34+headerHeight
+    return OVERLAY_IDENTITY_TOP+math.max(48,bottom+10),OVERLAY_IDENTITY_TOP+headerHeight
 end
 
 local matHeader = CreateFrame("Button", nil, overlay)
@@ -2229,8 +2230,6 @@ local function RefreshOverlay(self)
         self:EquipmentSlotCountText(matches, total, displayed)..(pages>1 and wishlistUI.overlayStarCount>0 and ("  |  "..wishlistUI.overlayPage.."/"..pages) or ""))
     if wishlistUI.starPresentationOnly and not opts.objectivesCollapsed then wishlistUI.ReusePresentationRows(overlayRows,list,NewOverlayRow) end
     local totalY = 0
-    for _,label in ipairs(wishlistUI.overlayGroups) do label:Hide() end
-    local lastGroup,groupIndex=nil,0
     if opts.objectivesCollapsed then
         objScroll:Hide()
     else
@@ -2247,13 +2246,6 @@ local function RefreshOverlay(self)
             -- Browse the entire objective list in /getgear (paged above).
             for i=1,math.min(#list,overlayCap) do
                 local gear = list[i]
-                local group=self.IsItemStarred and self:IsItemStarred(gear.itemID) and "Starred Items" or "Other Recommendations"
-                if self.db.starredItems and next(self.db.starredItems) and group~=lastGroup then
-                    groupIndex=groupIndex+1
-                    local label=wishlistUI.overlayGroups[groupIndex]
-                    label:ClearAllPoints();label:SetPoint("TOPLEFT",objContent,"TOPLEFT",5,-totalY)
-                    label:SetText(group=="Starred Items" and (group.." ("..wishlistUI.overlayStarCount..")") or group);label:Show();totalY=totalY+23;lastGroup=group
-                end
                 local r = overlayRows[i] or NewOverlayRow(i)
                 r.f:SetWidth(objContent:GetWidth())
                 r.f:ClearAllPoints()

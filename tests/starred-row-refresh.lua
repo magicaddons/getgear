@@ -94,8 +94,21 @@ local function expected(mode,scope)
  return addon:FilterEquipmentSlots(addon:ComposeStarredItems(base,mode,nil,true),addon:GetEquipmentSlotFilter(scope))
 end
 local function verifyOrder(parent,mode,scope,cap)
- local list=expected(mode,scope)
+ local list,total=expected(mode,scope)
  local rows=sortedRows(parent)
+ if scope=='overlay' then
+  local countText=addon:EquipmentSlotCountText(#list,total,#rows)
+  local found=false
+  for _,label in ipairs(frames)do
+   if label.kind=='FontString' and label.parent and label.parent.parent==overlay
+      and label:IsShown() and label.text:find(countText,1,true)then found=true end
+  end
+  assert(found,'recommendation count changed after star/filter/resize')
+  for _,label in ipairs(parent.children)do
+   assert(label.kind~='FontString' or (not label.text:find('Starred Items',1,true)
+      and label.text~='Other Recommendations'),'overlay retained a redundant group heading')
+  end
+ end
  if #list==0 then
   assert(#rows==(scope=='detail' and 1 or 0),'empty state differs')
   if rows[1] then
@@ -110,6 +123,7 @@ local function verifyOrder(parent,mode,scope,cap)
   assert(g.itemID==list[i].itemID,'visible order differs immediately after toggle')
   assert(not seen[g.itemID],'duplicate row');seen[g.itemID]=true
   local y=-row.points[1][5]
+  if scope=='overlay' then assert(y==(i==1 and 0 or bottom+4),'overlay has a heading gap or empty group space') end
   assert(y>=bottom,'row backgrounds/click targets overlap');bottom=y+row:GetHeight()
   local star=starButton(row)
   assert(star.record.itemID==g.itemID and star.starred==addon:IsItemStarred(g.itemID))
@@ -123,7 +137,7 @@ local function verifyOrder(parent,mode,scope,cap)
   for _,action in ipairs(actions)do
    local inset=-action.points[1][4]
    assert(inset>=right,'action controls overlap');right=inset+action:GetWidth()
-   assert(-action.points[1][5]+action:GetHeight()<=34,'action extends into identity')
+   assert(-action.points[1][5]+action:GetHeight()<=(scope=='overlay' and 32 or 34),'action extends into identity')
   end
  end
  assert(parent:GetHeight()>=bottom,'scroll child clips last row')
@@ -132,7 +146,7 @@ local function verifyOrder(parent,mode,scope,cap)
  for _,label in ipairs(parent.children)do
   if label.kind=='FontString' and label:IsShown() and label.text=='Starred Items ('..count..')' then heading=true end
  end
- assert(count==0 or heading,'star count/heading not updated')
+ if scope=='detail' then assert(count==0 or heading,'detailed guide star count/heading not updated') end
  assert((parent.parent.layoutCommits or 0)>0,'native scroll rectangle was not committed')
 end
 local function verifyBoth()
@@ -165,6 +179,17 @@ end
 assert(slotCount>0,'no real catalogue slot coverage')
 if testFull then
 assert(slotCount>=8,'insufficient Druid catalogue slot coverage')
+-- The actual overlay hide action and restoring Hidden must retain counts,
+-- ordering and the gap-free starred presentation.
+addon:SetEquipmentSlotFilter('overlay','all');addon:SetEquipmentSlotFilter('detail','all')
+addon:RefreshOverlay();addon:RefreshUI()
+local hideRow=assert(sortedRows(objContent)[1]);local hiddenGear=item(hideRow)
+click(starButton(hideRow));verifyBoth()
+click(button(assert(contains(objContent,hiddenGear.itemID)),'X'))
+assert(addon:IsHidden(hiddenGear) and not contains(objContent,hiddenGear.itemID));verifyBoth()
+addon:SetHidden(hiddenGear,false);verifyBoth()
+assert(contains(objContent,hiddenGear.itemID))
+assert(addon:SetItemStarred(hiddenGear.itemID,false));verifyBoth()
 -- A future star enters a sparse visible pool ahead of an existing row. Then
 -- grow beyond both caps and star on a later page: the new section stays reachable.
 addon:SetEquipmentSlotFilter('overlay','legs');addon:SetEquipmentSlotFilter('detail','legs')

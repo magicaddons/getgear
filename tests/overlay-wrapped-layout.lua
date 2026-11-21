@@ -57,7 +57,7 @@ local env=setmetatable({GetGear=addon,self=addon,opacity=0.8,overlayRows=rows,ob
 },{__index=_G})
 local measure=section('local function MeasureText(', '\nlocal function NewButton(')
 local helpers=section('local wishlistUI =', 'wishlistUI.detailGroups=')
-local factory=section('local function NewOverlayRow(', '\nlocal matHeader =')
+local factory=section('local OVERLAY_IDENTITY_TOP =', '\nlocal matHeader =')
 local header=section('local function ShowOverlayMaterialHeader(', '\nfunction GetGear:RefreshOverlay()')
 local body=section('                local r = overlayRows[i] or NewOverlayRow(i)', '\n            end\n        end\n    end\n    for i=(opts.objectivesCollapsed')
 local render=assert(load(measure..helpers..factory..header..'\nreturn function(gear,opts)\nlocal i,totalY=1,0\n'..body..'\nreturn r,totalY\nend','real overlay rows','t',env))()
@@ -75,20 +75,25 @@ for _,width in ipairs({254,290,316,534})do
      if state=='materials'then g.reagents={{},{}}elseif state=='unknown'then g.unknownMaterials=true end
      local opts={expanded={fixture=state=='expanded'},minimized={fixture=state=='minimized'}}
      local row,total=render(g,opts)
-     assert(y(row.expand)==34 and y(row.icon)==41,'identity must start below action strip')
+     assert(y(row.expand)==32 and y(row.icon)==39,'identity keeps the tightened gap below action strip')
      for _,action in ipairs({row.star,row.pin,row.minimize,row.hide})do
       if action:IsShown()then
-       assert(y(action)+action.height<=34,'action overlaps identity')
+       assert(y(action)+action.height<=27,'action strip dimensions changed')
+       for _,scale in ipairs({0.64,0.8,1,1.25,1.5})do
+        local function px(value)return math.floor(value*scale+0.5)end
+        assert(px(y(row.expand))-px(y(action)+action.height)>=3,'scaled action/identity separation lost')
+        assert(px(y(row.icon))==px(y(row.expand)+7),'scaled icon/title alignment changed')
+       end
        assert(-action.point[4]+action.width<=width,'action exceeds row width')
       end
      end
      assert(row.name.width==width-52,'actions unnecessarily narrowed the name')
-     local bottom=34+y(row.sub)+math.ceil(row.sub:GetStringHeight())
+     local bottom=32+y(row.sub)+math.ceil(row.sub:GetStringHeight())
      assert(y(row.sub)>=7+math.ceil(row.name:GetStringHeight())+7,'level overlaps wrapped title')
      assert(row.f.width==width and row.bg.allPoints,'first/reused rows need current width and full background')
-     assert(34+row.expand.height>=bottom and row.f.height>=34+row.expand.height,'title click target must cover header')
+     assert(32+row.expand.height>=bottom and row.f.height>=32+row.expand.height,'title click target must cover header')
      assert(total==row.f.height+4,'scroll extent must include the entire row')
-     if state=='minimized'then assert(not row.comparison.shown and not row.desc.shown and row.f.height==34+row.expand.height)
+     if state=='minimized'then assert(not row.comparison.shown and not row.desc.shown and row.f.height==32+row.expand.height)
      else
       assert(y(row.comparison)>=bottom+10,'comparison overlaps header')
       assert(y(row.desc)>=y(row.comparison)+math.ceil(row.comparison:GetStringHeight())+14,'source overlaps comparison')
@@ -106,7 +111,7 @@ for _,width in ipairs({254,290,316,534})do
 end
 content.width=316;metrics.glyph=6;metrics.line=12
 local r=render({id='fixture',name='Mace',targetLevel=14},{expanded={},minimized={fixture=true}})
-assert(y(r.sub)==26 and r.f.height==81,'ordinary header must retain the separate action strip after reuse')
+assert(y(r.sub)==26 and r.f.height==79,'ordinary header retains the separate action strip with a 2px tighter gap')
 assert(source:find('local nextY = contentY',1,true) and source:find('totalY=totalY+headerHeight+4',1,true))
 assert(source:find('function overlay:afterResize()',1,true) and source:find('"UI_SCALE_CHANGED"',1,true))
-print('PASS wrapped overlay: '..cases..' title/width/font/state/pin combinations; real row geometry, click/background/scroll extents, materials and reuse')
+print('PASS wrapped overlay: '..cases..' title/width/font/state/pin combinations at five pixel scales; real geometry, click/background/scroll extents, materials and reuse')

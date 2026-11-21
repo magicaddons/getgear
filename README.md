@@ -1,5 +1,7 @@
 # GetGear
 
+> This branch contains private UI testing build `.20261121.13`, a separate follow-up to public Beta 10. It removes only compact overlay group headings and tightens the item header gap by 2 pixels. Install the supplied private testing ZIP to try it; the public download below is unchanged. Publication requires the user’s later approval.
+
 An in-game gear catalogue, crafting planner and item tracker for **World of Warcraft Forever**, covering levels **1–60**, all nine original classes and both factions.
 
 ## Download

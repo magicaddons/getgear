@@ -1,12 +1,17 @@
-GETGEAR 0.14.0-beta10 — WOW FOREVER
-================================
-Public release of user-accepted cumulative private build .20261121.12.
-The 29 Lua modules and three textures are unchanged from accepted source
-f248b098a60beef89d8e3112dba19fa0b329905f. Only release metadata/docs change.
+GETGEAR 0.14.0-private-cumulative.20261121.13 — PRIVATE UI TEST
+==========================================================
+Separate testing follow-up to public v0.14.0-beta10. Not a public release.
+The overlay group headings are removed and the item identity area moves up
+2 pixels. All other 28 Lua modules and all three textures are unchanged from
+public source efe67f9d9a75daf85545d9dda37b0c238d638010.
+Back up the public version before installing this testing ZIP. The same folder
+layout and SavedVariables schema apply. This follow-up needs user approval
+before publication; the existing public Beta 10 remains unchanged.
 
 DOWNLOAD
 https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta10
-Use GetGear-v0.14.0-beta10.zip, not the automatic source-code archive.
+Public download above is the unchanged Beta 10. Install the supplied distinct
+private testing ZIP to test this overlay refinement; do not use source archives.
 
 SUPPORTED CLIENT
 WoW Forever, addon interface 16001. Other clients are not verified.
