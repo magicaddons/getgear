@@ -36,7 +36,7 @@ class CumulativeBuildTests(unittest.TestCase):
         self.root = Path(self.temp.name) / 'GetGear'
         self.root.mkdir()
         spec = json.loads((ROOT / 'FEATURE_ACCEPTANCE.json').read_text())
-        for name in spec['requiredModules'] + ['GetGear.toc', 'MapPin.tga', 'README.txt']:
+        for name in spec['requiredModules'] + ['GetGear.toc', 'MapPin.tga', 'StarOutline.tga', 'StarFilled.tga', 'README.txt']:
             shutil.copyfile(ROOT / name, self.root / name)
         (self.root / 'BUILD_INFO.txt').write_text('Private unit-test package')
 
@@ -45,6 +45,15 @@ class CumulativeBuildTests(unittest.TestCase):
         self.assertEqual(result['modules'], 29)
         self.assertEqual(len(result['features']), 13)
         self.assertTrue(result['acceptedNavigationExact'])
+
+    def test_missing_star_texture_is_rejected(self):
+        for name in ('StarOutline.tga', 'StarFilled.tga'):
+            path = self.root / name
+            body = path.read_bytes()
+            path.unlink()
+            with self.assertRaisesRegex(FeatureValidationError, name):
+                validate(self.root)
+            path.write_bytes(body)
 
     def test_missing_backend_module_is_rejected_even_if_file_exists(self):
         toc = self.root / 'GetGear.toc'

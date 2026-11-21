@@ -81,7 +81,7 @@ def validate_metadata(archive, source, proof):
             require(record['buildIdentifier'] == version + '-' + proof['sourceRevision'], 'build identity mismatch')
             modules = runtime_modules(toc)
             require(record['runtimeModules'] == modules, 'module inventory mismatch')
-            names = modules + ['GetGear.toc', 'MapPin.tga', 'README.txt']
+            names = modules + ['GetGear.toc', 'MapPin.tga', 'StarOutline.tga', 'StarFilled.tga', 'README.txt']
             payload = {name: (source / name).read_bytes() for name in names}
             expected_files = [dict(path=name, bytes=len(body), sha256=digest(body))
                               for name, body in sorted(payload.items())]

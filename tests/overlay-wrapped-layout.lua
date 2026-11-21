@@ -18,6 +18,9 @@ function methods:SetPoint(...)self.point={...}end
 function methods:ClearAllPoints()self.point=nil end
 function methods:SetAllPoints()self.allPoints=true end
 function methods:SetColorTexture()end
+function methods:RegisterForClicks()end
+function methods:SetHighlightTexture()end
+function methods:SetTexture(value)self.texture=value end
 function methods:SetScript(k,f)self.scripts[k]=f end
 function methods:SetEnabled(value)self.enabled=value end
 function methods:SetShown(value)self.shown=value end
@@ -43,7 +46,9 @@ local env=setmetatable({GetGear=addon,self=addon,opacity=0.8,overlayRows=rows,ob
     CreateFrame=function(_,_,parent)return frame(parent)end,
     NewText=function(parent,_,width)local f=frame(parent);f.width=width;return f end,
     NewButton=function(parent,text,w,h)local f=frame(parent);f:SetText(text);f:SetSize(w,h);return f end,
-    NewIcon=frame,NewProfessionIcon=frame,NewAcquisitionPin=frame,HideItemTooltip=function()end,
+    NewIcon=function(parent,size)local f=frame(parent);f:SetSize(size,size);return f end,
+    NewProfessionIcon=function(parent,size)local f=frame(parent);f:SetSize(size,size);return f end,
+    NewAcquisitionPin=function(parent,size)local f=frame(parent);f:SetSize(size,size);return f end,HideItemTooltip=function()end,
     AssignAcquisitionPin=function(pin,g)pin.shown=g.pin end,SetItemIcon=function()end,
     DescribeOverlay=function()return 'Additional expanded acquisition instructions with prerequisites.'end,
     UpdateProfessionSkill=function()return false end,
@@ -70,12 +75,20 @@ for _,width in ipairs({254,290,316,534})do
      if state=='materials'then g.reagents={{},{}}elseif state=='unknown'then g.unknownMaterials=true end
      local opts={expanded={fixture=state=='expanded'},minimized={fixture=state=='minimized'}}
      local row,total=render(g,opts)
-     local bottom=y(row.sub)+math.ceil(row.sub:GetStringHeight())
+     assert(y(row.expand)==34 and y(row.icon)==41,'identity must start below action strip')
+     for _,action in ipairs({row.star,row.pin,row.minimize,row.hide})do
+      if action:IsShown()then
+       assert(y(action)+action.height<=34,'action overlaps identity')
+       assert(-action.point[4]+action.width<=width,'action exceeds row width')
+      end
+     end
+     assert(row.name.width==width-52,'actions unnecessarily narrowed the name')
+     local bottom=34+y(row.sub)+math.ceil(row.sub:GetStringHeight())
      assert(y(row.sub)>=7+math.ceil(row.name:GetStringHeight())+7,'level overlaps wrapped title')
      assert(row.f.width==width and row.bg.allPoints,'first/reused rows need current width and full background')
-     assert(row.expand.height>=bottom and row.f.height>=row.expand.height,'title click target must cover header')
+     assert(34+row.expand.height>=bottom and row.f.height>=34+row.expand.height,'title click target must cover header')
      assert(total==row.f.height+4,'scroll extent must include the entire row')
-     if state=='minimized'then assert(not row.comparison.shown and not row.desc.shown and row.f.height==row.expand.height)
+     if state=='minimized'then assert(not row.comparison.shown and not row.desc.shown and row.f.height==34+row.expand.height)
      else
       assert(y(row.comparison)>=bottom+10,'comparison overlaps header')
       assert(y(row.desc)>=y(row.comparison)+math.ceil(row.comparison:GetStringHeight())+14,'source overlaps comparison')
@@ -93,7 +106,7 @@ for _,width in ipairs({254,290,316,534})do
 end
 content.width=316;metrics.glyph=6;metrics.line=12
 local r=render({id='fixture',name='Mace',targetLevel=14},{expanded={},minimized={fixture=true}})
-assert(y(r.sub)==26 and r.f.height==47,'ordinary single-line header must remain compact after reuse')
+assert(y(r.sub)==26 and r.f.height==81,'ordinary header must retain the separate action strip after reuse')
 assert(source:find('local nextY = contentY',1,true) and source:find('totalY=totalY+headerHeight+4',1,true))
 assert(source:find('function overlay:afterResize()',1,true) and source:find('"UI_SCALE_CHANGED"',1,true))
 print('PASS wrapped overlay: '..cases..' title/width/font/state/pin combinations; real row geometry, click/background/scroll extents, materials and reuse')

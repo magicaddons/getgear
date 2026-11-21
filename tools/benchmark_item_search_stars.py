@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--baseline-revision', default='d608838d049802e191e763ab32078116bc09a797')
     parser.add_argument('--baseline', type=Path, required=True)
     parser.add_argument('--lua51', required=True)
     parser.add_argument('--lua54', required=True)
@@ -21,7 +22,7 @@ def main():
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     baseline = args.baseline.resolve()
-    revision = 'd608838d049802e191e763ab32078116bc09a797'
+    revision = args.baseline_revision
     # Independently verify the baseline runtime against committed .10 Git objects.
     names = [line for line in (baseline / 'GetGear.toc').read_text().splitlines() if line.endswith('.lua')]
     for name in names + ['GetGear.toc', 'MapPin.tga']:
@@ -30,7 +31,7 @@ def main():
     feature = args.output / 'feature-runtime'
     feature.mkdir(exist_ok=True)
     feature_hashes = {}
-    for name in names + ['GetGear.toc', 'MapPin.tga']:
+    for name in names + ['GetGear.toc', 'MapPin.tga', 'StarOutline.tga', 'StarFilled.tga']:
         shutil.copyfile(ROOT / name, feature / name)
         feature_hashes[name] = hashlib.sha256((feature / name).read_bytes()).hexdigest()
     rows = {}
@@ -60,7 +61,7 @@ def main():
             for before, after in zip(base, new):
                 for count in ('records', 'sourceChecks', 'routes', 'comparisons', 'obsolete', 'professions', 'aggregate', 'undocumented'):
                     assert before['counts'][count] == after['counts'][count], (name, count, before, after)
-                expected_new_controls = 40 if name == 'detail + overlay' else 0
+                expected_new_controls = (40 if 'NewStarButton' in (baseline / 'UI.lua').read_text() else 80) if name == 'detail + overlay' else 0
                 assert after['counts']['newFrames'] == before['counts']['newFrames'] + expected_new_controls, (name, 'unexpected frame growth')
             old_ms = statistics.median(row['cpuMS'] for row in base)
             new_ms = statistics.median(row['cpuMS'] for row in new)
@@ -75,7 +76,7 @@ def main():
                   interpreters=rows, actualClientTested=False,
                   statement='Synthetic Lua CPU only. Operation counts and recommendation/material signatures are exact; text writes include star controls.')
     (args.output / 'comparison.json').write_text(json.dumps(report, indent=2) + '\n')
-    print('PASS identical .10 calculation counts and output fingerprints on both interpreters')
+    print('PASS identical baseline calculation counts and output fingerprints on both interpreters')
 
 
 if __name__ == '__main__':

@@ -14,6 +14,8 @@ import stat
 import tempfile
 import zipfile
 
+RUNTIME_ASSETS = ['MapPin.tga', 'StarOutline.tga', 'StarFilled.tga']
+
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / 'FEATURE_ACCEPTANCE.json'
 
@@ -64,7 +66,8 @@ def validate(root, contract=CONTRACT):
         for script in feature['regressions']:
             require((ROOT / 'tests' / script).is_file(), 'Required functional regression missing: ' + script)
         features.append(feature['id'])
-    require((root / 'MapPin.tga').is_file(), 'Required map-pin asset missing')
+    for asset in RUNTIME_ASSETS:
+        require((root / asset).is_file(), 'Required runtime asset missing: ' + asset)
     for name, expected in spec.get('acceptedNavigationFiles', {}).items():
         require(hashlib.sha256((root / name).read_bytes()).hexdigest() == expected,
                 'Unreviewed navigation changes in ' + name)
@@ -88,7 +91,7 @@ def validate_archive(archive, source=None):
             toc = z.read('GetGear/GetGear.toc').decode()
             modules = [s.strip() for s in toc.splitlines() if s.strip() and not s.lstrip().startswith('#')]
             require(all(re.fullmatch(r'[A-Za-z0-9_-]+\.lua', n) for n in modules), 'Unsafe TOC module')
-            allowed = {'GetGear/' + name for name in modules + ['GetGear.toc', 'MapPin.tga', 'README.txt', 'BUILD_INFO.txt']}
+            allowed = {'GetGear/' + name for name in modules + RUNTIME_ASSETS + ['GetGear.toc', 'README.txt', 'BUILD_INFO.txt']}
             optional = {'GetGear/', 'GetGear/DATA_MODEL.md', 'GetGear/PACKAGE_MANIFEST.json', 'GetGear/SHA256SUMS'}
             require(allowed <= set(names) and set(names) <= allowed | optional, 'ZIP has missing dependencies or development/unexpected files')
             for info in z.infolist():

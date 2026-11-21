@@ -19,7 +19,7 @@ import zipfile
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools'))
-from validate_feature_acceptance import validate, validate_archive
+from validate_feature_acceptance import RUNTIME_ASSETS, validate, validate_archive
 from source_integrity import RemoteSourceError, SourceIntegrityError, clean_revision, git, recovery_bundle, verify
 from test_package_metadata import add_metadata, digest, encode, manifest, payload_digest, validate_metadata
 
@@ -69,7 +69,7 @@ def build(output, lua51, luac51, remote_branch):
                 raise RuntimeError('Testing packages require a distinct private TOC version')
             modules = [line.strip() for line in toc.decode().splitlines()
                        if line.strip() and not line.lstrip().startswith('#')]
-            names = modules + ['GetGear.toc', 'MapPin.tga', 'README.txt']
+            names = modules + RUNTIME_ASSETS + ['GetGear.toc', 'README.txt']
             payload = {name: (source / name).read_bytes() for name in names}
             candidate = staging / 'candidate.zip'
             candidate.write_bytes(zip_bytes(dict(payload, **{'BUILD_INFO.txt': b'LOCAL CANDIDATE: validation pending\n'})))

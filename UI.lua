@@ -1259,19 +1259,49 @@ function wishlistUI.RememberStars(list)
     end
     return records
 end
-function wishlistUI.ReusePresentationRows(rows,list)
-    local needed,byID,free,ordered={},{},{},{}
-    for _,gear in ipairs(list) do needed[gear.itemID]=true end
-    for _,row in ipairs(rows) do
-        if row.gear and needed[row.gear.itemID] then byID[row.gear.itemID]=row
-        else free[#free+1]=row end
+-- Keep the pool dense even when a newly visible item has no reusable row.
+-- Reuse expensive row bodies by ID, then bind every frame to its sorted position.
+function wishlistUI.ReusePresentationRows(rows,list,create)
+    local byID,used,ordered={},{},{}
+    for _,row in ipairs(rows) do if row.gear then byID[row.gear.itemID]=row end end
+    for i,gear in ipairs(list) do
+        local row=byID[gear.itemID]
+        if row then ordered[i]=row;used[row]=true end
     end
-    for i,gear in ipairs(list) do ordered[i]=byID[gear.itemID] or table.remove(free) end
-    local count=math.max(#rows,#list)
-    for i=1,count do rows[i]=ordered[i] or table.remove(free) end
+    local free={}
+    for _,row in ipairs(rows) do if not used[row] then free[#free+1]=row end end
+    for i=1,#list do if not ordered[i] then ordered[i]=table.remove(free) or create(i) end end
+    -- Every displayed position now owns a frame; unused frames remain pooled.
+    for i=1,#list do rows[i]=ordered[i] end
+    for i=#list+1,#list+#free do rows[i]=table.remove(free) end
+end
+function wishlistUI.CountStars(list)
+    local count=0
+    for _,gear in ipairs(list) do if GetGear:IsItemStarred(gear.itemID) then count=count+1 end end
+    return count
+end
+function wishlistUI.LayoutActions(parent,buttons)
+    local right=7
+    for _,button in ipairs(buttons) do
+        if button:IsShown() then
+            button:ClearAllPoints()
+            button:SetPoint("TOPRIGHT",parent,"TOPRIGHT",-right,-5)
+            right=right+button:GetWidth()+5
+        end
+    end
+end
+function wishlistUI.CommitScrollLayout(scrollFrame)
+    -- Native ScrollFrames cache their child rectangle. A star reorder can keep
+    -- identical dimensions; explicitly commit changed child positions as well.
+    if scrollFrame.UpdateScrollChildRect then scrollFrame:UpdateScrollChildRect() end
 end
 function wishlistUI.NewStarButton(parent)
-    local button=NewButton(parent,"☆",22,22)
+    local button=CreateFrame("Button",nil,parent)
+    button:SetSize(22,22)
+    button:RegisterForClicks("LeftButtonUp")
+    button.starTexture=button:CreateTexture(nil,"ARTWORK")
+    button.starTexture:SetAllPoints()
+    button:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square","ADD")
     button:SetScript("OnEnter",function(self)
         if not GameTooltip then return end
         GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
@@ -1289,7 +1319,9 @@ function wishlistUI.NewStarButton(parent)
 end
 function wishlistUI.AssignStar(button,gear,inPreview)
     button.record,button.preview=gear,inPreview
-    button:SetText(GetGear:IsItemStarred(gear.itemID) and "|cffffd35a★|r" or "|cff9aa6b5☆|r")
+    button.starred=GetGear:IsItemStarred(gear.itemID)
+    button.starTexture:SetTexture(button.starred and "Interface\\AddOns\\GetGear\\StarFilled.tga"
+        or "Interface\\AddOns\\GetGear\\StarOutline.tga")
     button:SetEnabled(not inPreview)
     button:SetShown(not gear.bagUpgrade)
 end
@@ -1415,6 +1447,7 @@ local function RefreshUI(self)
     local total
     list, total = self:FilterEquipmentSlots(list, slot)
     local matches = #list
+    local starredCount=wishlistUI.CountStars(list)
     local relevanceKey = self.db.overlay.showAllValidGear and "all" or "relevant"
     local viewKey = inPreview and ("preview:"..preview.classToken..":"..
         tostring(preview.level)..":"..tostring(preview.full)..":"..relevanceKey)
@@ -1447,7 +1480,7 @@ local function RefreshUI(self)
     statusText:SetText(self:EquipmentSlotCountText(matches, total, #list))
     local innerWidth = math.max(655, (scroll:GetWidth() or 725) - 5)
     content:SetWidth(innerWidth)
-    if wishlistUI.starPresentationOnly then wishlistUI.ReusePresentationRows(detailRows,list) end
+    if wishlistUI.starPresentationOnly then wishlistUI.ReusePresentationRows(detailRows,list,NewDetailRow) end
     local y = 0
     for _,label in ipairs(wishlistUI.detailGroups) do label:Hide() end
     local lastGroup,groupIndex=nil,0
@@ -1457,6 +1490,11 @@ local function RefreshUI(self)
         row.frame:SetWidth(innerWidth-3)
         row.frame:SetPoint("TOPLEFT", content, "TOPLEFT", 0, 0)
         row.frame:SetHeight(95)
+        row.gear=nil -- Empty-state labels are not a reusable rendered item body.
+        row.name:ClearAllPoints();row.name:SetPoint("TOPLEFT",12,-12)
+        row.name:SetWidth(innerWidth-30)
+        row.meta:ClearAllPoints();row.meta:SetPoint("TOPLEFT",12,-40)
+        row.meta:SetWidth(innerWidth-30)
         row.item:Hide()
         row.name:SetText(slot~="all" and "No recommendations for this slot." or "No gear objectives in this category")
         row.meta:SetText(slot~="all" and "Choose All Slots or another slot to review this view."
@@ -1479,24 +1517,29 @@ local function RefreshUI(self)
         y = 102
     else
         for i, gear in ipairs(list) do
-            local group=not inPreview and self.IsItemStarred and self:IsItemStarred(gear.itemID) and "★ Starred Items" or "Other Recommendations"
+            local group=not inPreview and self.IsItemStarred and self:IsItemStarred(gear.itemID) and "Starred Items" or "Other Recommendations"
             if not inPreview and self.db.starredItems and next(self.db.starredItems) and group~=lastGroup then
                 groupIndex=groupIndex+1
                 local label=wishlistUI.detailGroups[groupIndex]
                 label:ClearAllPoints();label:SetPoint("TOPLEFT",content,"TOPLEFT",10,-y)
-                label:SetText(group);label:Show();y=y+23;lastGroup=group
+                label:SetText(group=="Starred Items" and (group.." ("..starredCount..")") or group);label:Show();y=y+23;lastGroup=group
             end
             local row = detailRows[i] or NewDetailRow(i)
-            if not inPreview and self:IsItemStarred(gear.itemID) then gear=self:GetRecommendationRecord(gear) end
             row.frame:ClearAllPoints()
             row.frame:SetPoint("TOPLEFT", content, "TOPLEFT", 0, -y)
             row.frame:SetWidth(innerWidth-3)
+            row.frame:Show()
             wishlistUI.AssignStar(row.star,gear,inPreview)
             if wishlistUI.starPresentationOnly and row.gear and row.gear.itemID==gear.itemID then
+                row.levelHeader:SetText(gear.bagUpgrade and "SLOTS" or
+                    (self:IsItemStarred(gear.itemID) and gear.targetLevel>(self.level or 1) and "FUTURE" or "LEVEL"))
                 row.frame:Show();y=y+row.frame:GetHeight()+11
             else
+            if not inPreview and self:IsItemStarred(gear.itemID) then gear=self:GetRecommendationRecord(gear) end
             row.gear=gear
-            row.name:SetWidth(math.max(130,innerWidth-260))
+            row.item:ClearAllPoints();row.item:SetPoint("TOPLEFT",10,-39)
+            row.name:ClearAllPoints();row.name:SetPoint("TOPLEFT",62,-39)
+            row.name:SetWidth(innerWidth-85)
             row.desc:SetWidth(innerWidth-85)
             row.item:Show()
             SetItemIcon(row.item, gear.itemID,nil,nil,gear,inPreview)
@@ -1512,8 +1555,9 @@ local function RefreshUI(self)
                 row.metaRest:ClearAllPoints()
                 row.metaRest:SetPoint("LEFT",row.metaSourceIcon,"RIGHT",5,0)
                 row.metaRest:SetText("|  " .. (gear.zone or "Unknown"))
+                row.metaRest:Show()
             else
-                row.meta:SetWidth(math.max(290,innerWidth-260))
+                row.meta:SetWidth(innerWidth-85)
                 row.meta:SetText((gear.slot or "Item") .. "  |  " .. (gear.sourceType or "Source") .. "  |  " .. (gear.zone or "Unknown"))
                 row.metaSourceIcon:Hide();row.metaRest:Hide()
             end
@@ -1523,20 +1567,29 @@ local function RefreshUI(self)
                 row.levelHeader:SetText("FUTURE")
             end
 
-            -- Profession progress belongs to the metadata block, not below
-            -- the stat changes. This second metadata row also gives the
-            -- coloured comparison an unobstructed starting position.
-            local nextY = 65
+            local metaY=39+MeasureText(row.name,14)+8
+            row.meta:ClearAllPoints();row.meta:SetPoint("TOPLEFT",62,-metaY)
+            row.metaRest:SetWidth(math.max(80,innerWidth-110-row.meta:GetWidth()))
+            if sourceProf then
+                row.metaSourceIcon:ClearAllPoints()
+                row.metaSourceIcon:SetPoint("TOPLEFT",row.frame,"TOPLEFT",70+row.meta:GetWidth(),-metaY)
+                row.metaRest:ClearAllPoints()
+                row.metaRest:SetPoint("TOPLEFT",row.frame,"TOPLEFT",93+row.meta:GetWidth(),-metaY)
+            end
+            local nextY=metaY+math.max(MeasureText(row.meta,14),sourceProf and MeasureText(row.metaRest,18) or 0)+8
+            row.levelHeader:ClearAllPoints();row.levelHeader:SetPoint("TOPLEFT",62,-nextY)
+            row.levelValue:ClearAllPoints();row.levelValue:SetPoint("TOPLEFT",124,-nextY)
+            nextY=nextY+math.max(MeasureText(row.levelHeader,14),MeasureText(row.levelValue,14))+8
             if UpdateProfessionSkill(row.professionIcon,row.profession,gear,nil,inPreview) then
                 row.professionIcon:ClearAllPoints()
-                row.professionIcon:SetPoint("TOPLEFT",row.frame,"TOPLEFT",62,-54)
+                row.professionIcon:SetPoint("TOPLEFT",row.frame,"TOPLEFT",62,-nextY)
                 row.profession:ClearAllPoints()
                 if row.professionIcon:IsShown() then
                     row.profession:SetPoint("LEFT",row.professionIcon,"RIGHT",7,0)
                 else
-                    row.profession:SetPoint("TOPLEFT",row.frame,"TOPLEFT",62,-54)
+                    row.profession:SetPoint("TOPLEFT",row.frame,"TOPLEFT",62,-nextY)
                 end
-                nextY=81
+                nextY=nextY+math.max(18,MeasureText(row.profession,14))+8
             end
             -- Automatic comparison: visible in every item row, no extra toggle.
             local changeText,showChange = "",false
@@ -1665,14 +1718,16 @@ local function RefreshUI(self)
                     row.pin:SetPoint("LEFT",row.b,"RIGHT",10,0)
                 end
             end
-            row.frame:SetHeight(nextY + 35)
+            wishlistUI.LayoutActions(row.frame,{row.c,row.b,row.a,row.pin,row.star})
+            row.frame:SetHeight(nextY + 10)
             row.frame:Show()
-            y = y + nextY + 46
+            y = y + row.frame:GetHeight() + 11
             end -- reuse rendered row on a star click
         end
     end
     for i=(#list==0 and 2 or #list+1),#detailRows do detailRows[i].frame:Hide() end
     content:SetHeight(math.max(425,y))
+    wishlistUI.CommitScrollLayout(scroll)
     local maxScroll = math.max(0, content:GetHeight()-scroll:GetHeight())
     if scroll:GetVerticalScroll()>maxScroll then scroll:SetVerticalScroll(maxScroll) end
 end
@@ -1803,9 +1858,9 @@ local function NewOverlayRow(i)
     local bg = f:CreateTexture(nil, "BACKGROUND")
     bg:SetAllPoints()
     local icon = NewIcon(f, 30)
-    icon:SetPoint("TOPLEFT", 5, -7)
+    icon:SetPoint("TOPLEFT", 5, -41)
     local expand = CreateFrame("Button", nil, f)
-    expand:SetPoint("TOPLEFT", 41, 0)
+    expand:SetPoint("TOPLEFT", 41, -34)
     expand:SetSize(229, 46)
     local name = NewText(expand, "GameFontNormalSmall", 227)
     name:SetPoint("TOPLEFT", 2, -7)
@@ -1858,7 +1913,7 @@ local function LayoutOverlayHeader(row)
     local bottom=subY+MeasureText(row.sub,12)
     local headerHeight=math.max(47,bottom+9)
     row.expand:SetHeight(headerHeight)
-    return math.max(48,bottom+10),headerHeight
+    return 34+math.max(48,bottom+10),34+headerHeight
 end
 
 local matHeader = CreateFrame("Button", nil, overlay)
@@ -2073,9 +2128,9 @@ local function UpdateOverlayWidths()
     splitter:SetWidth(rowW)
     for _,r in ipairs(overlayRows) do
         r.f:SetWidth(scrollW)
-        r.expand:SetWidth(scrollW-111)
-        r.name:SetWidth(scrollW-116)
-        r.sub:SetWidth(scrollW-116)
+        r.expand:SetWidth(scrollW-48)
+        r.name:SetWidth(scrollW-52)
+        r.sub:SetWidth(scrollW-52)
         r.desc:SetWidth(scrollW-20)
         r.comparison:SetWidth(scrollW-20)
         r.matTitle:SetWidth(scrollW-20)
@@ -2095,13 +2150,15 @@ local function ShowOverlayMaterialHeader(row, gear, y)
     row.matTitle:SetWidth(82)
     row.matTitle:SetText("MATERIALS")
     row.matTitle:Show()
-    if UpdateProfessionSkill(row.professionIcon, row.profession, gear, true) then
+    local professionShown=UpdateProfessionSkill(row.professionIcon, row.profession, gear, true)
+    if professionShown then
         row.professionIcon:Hide()
-        row.profession:SetWidth(170)
+        row.profession:SetWidth(math.max(80,row.f:GetWidth()-115))
         row.profession:SetJustifyH("RIGHT")
         row.profession:ClearAllPoints()
         row.profession:SetPoint("TOPRIGHT", row.f, "TOPRIGHT", -11, -y)
     end
+    return math.max(MeasureText(row.matTitle,12),professionShown and MeasureText(row.profession,12) or 0)+5
 end
 
 local function RefreshOverlay(self)
@@ -2165,7 +2222,7 @@ local function RefreshOverlay(self)
     local displayed = opts.objectivesCollapsed and 0 or math.min(#list,overlayCap)
     objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  " ..
         self:EquipmentSlotCountText(matches, total, displayed)..(pages>1 and wishlistUI.overlayStarCount>0 and ("  |  "..wishlistUI.overlayPage.."/"..pages) or ""))
-    if wishlistUI.starPresentationOnly then wishlistUI.ReusePresentationRows(overlayRows,list) end
+    if wishlistUI.starPresentationOnly and not opts.objectivesCollapsed then wishlistUI.ReusePresentationRows(overlayRows,list,NewOverlayRow) end
     local totalY = 0
     for _,label in ipairs(wishlistUI.overlayGroups) do label:Hide() end
     local lastGroup,groupIndex=nil,0
@@ -2185,36 +2242,36 @@ local function RefreshOverlay(self)
             -- Browse the entire objective list in /getgear (paged above).
             for i=1,math.min(#list,overlayCap) do
                 local gear = list[i]
-                if self:IsItemStarred(gear.itemID) then gear=self:GetRecommendationRecord(gear) end
-                local group=self.IsItemStarred and self:IsItemStarred(gear.itemID) and "★ Starred Items" or "Other Recommendations"
+                local group=self.IsItemStarred and self:IsItemStarred(gear.itemID) and "Starred Items" or "Other Recommendations"
                 if self.db.starredItems and next(self.db.starredItems) and group~=lastGroup then
                     groupIndex=groupIndex+1
                     local label=wishlistUI.overlayGroups[groupIndex]
                     label:ClearAllPoints();label:SetPoint("TOPLEFT",objContent,"TOPLEFT",5,-totalY)
-                    label:SetText(group);label:Show();totalY=totalY+23;lastGroup=group
+                    label:SetText(group=="Starred Items" and (group.." ("..wishlistUI.overlayStarCount..")") or group);label:Show();totalY=totalY+23;lastGroup=group
                 end
                 local r = overlayRows[i] or NewOverlayRow(i)
                 r.f:SetWidth(objContent:GetWidth())
                 r.f:ClearAllPoints()
                 r.f:SetPoint("TOPLEFT", objContent, "TOPLEFT", 0, -totalY)
+                r.f:Show()
                 wishlistUI.AssignStar(r.star,gear,false)
                 if wishlistUI.starPresentationOnly and r.gear and r.gear.itemID==gear.itemID then
                     r.f:Show();totalY=totalY+r.f:GetHeight()+4
                 else
+                if self:IsItemStarred(gear.itemID) then gear=self:GetRecommendationRecord(gear) end
                 r.gear=gear
                 r.bg:SetColorTexture(0.10, 0.13, 0.19, opacity*0.9)
                 r.desc:SetWidth(r.f:GetWidth()-20)
                 r.comparison:SetWidth(r.f:GetWidth()-23)
+                r.matNote:SetWidth(r.f:GetWidth()-22)
                 SetItemIcon(r.icon, gear.itemID,nil,nil,gear)
                 AssignAcquisitionPin(r.pin,gear)
                 local restriction=self:IsItemStarred(gear.itemID) and self:GetSearchRestriction(gear,true)
                 if restriction then r.pin:Hide() end
-                -- Make room for the map pin in the header only for records
-                -- that have a trustworthy location attached.
-                local reserved=(r.pin:IsShown() and 27 or 0)+(r.star:IsShown() and 25 or 0)
-                r.expand:SetWidth(math.max(80,r.f:GetWidth()-111-reserved))
-                r.name:SetWidth(math.max(80,r.f:GetWidth()-116-reserved))
-                r.sub:SetWidth(math.max(80,r.f:GetWidth()-116-reserved))
+                wishlistUI.LayoutActions(r.f,{r.hide,r.minimize,r.pin,r.star})
+                r.expand:SetWidth(r.f:GetWidth()-48)
+                r.name:SetWidth(r.f:GetWidth()-52)
+                r.sub:SetWidth(r.f:GetWidth()-52)
                 r.name:SetText(gear.name .. (gear.bagUpgrade and ("  x"..gear.quantity) or ""))
                 r.sub:SetText(gear.bagUpgrade and (tostring(gear.bagSlots).." slots each | "..gear.quantity.." needed") or ((gear.targetLevel>(self.level or 1) and "Future | " or "").."Level " .. tostring(gear.targetLevel)))
                 local contentY,headerHeight=LayoutOverlayHeader(r)
@@ -2260,6 +2317,7 @@ local function RefreshOverlay(self)
                     r.comparison:ClearAllPoints()
                     r.comparison:SetPoint("TOPLEFT",r.f,"TOPLEFT",11,-nextY)
                     r.comparison:SetWidth(r.f:GetWidth()-23)
+                r.matNote:SetWidth(r.f:GetWidth()-22)
                     r.comparison:SetText(changeText)
                     r.comparison:Show()
                     -- Match the deliberate gap above the stat block, measured
@@ -2301,9 +2359,8 @@ local function RefreshOverlay(self)
 
                 local reagents = self:GetCraftingMaterialRows(gear)
                 if #reagents > 0 then
-                    ShowOverlayMaterialHeader(r, gear, nextY)
+                    nextY=nextY+ShowOverlayMaterialHeader(r, gear, nextY)
                     r.matNote:Hide()
-                    nextY = nextY + 17
                     for j, mat in ipairs(reagents) do
                         local widget = r.mats[j]
                         if not widget then widget=NewReagent(r.f,true);r.mats[j]=widget end
@@ -2314,22 +2371,20 @@ local function RefreshOverlay(self)
                     if gear.bagUpgrade and gear.profession then
                         -- Show the craft threshold even when the player is not
                         -- a Tailor (and hence we don't track their reagents).
-                        ShowOverlayMaterialHeader(r, gear, nextY)
+                        nextY=nextY+ShowOverlayMaterialHeader(r, gear, nextY)
                         r.matTitle:SetText("CRAFTING")
-                        nextY = nextY + 17
                         r.matNote:ClearAllPoints()
                         r.matNote:SetPoint("TOPLEFT",r.f,"TOPLEFT",11,-nextY)
                         r.matNote:SetText("Buy, commission, or learn Tailoring")
                         r.matNote:Show()
-                        nextY = nextY + 17
+                        nextY = nextY + MeasureText(r.matNote,12)+5
                     elseif self.IsCraftMaterialsUnknown and self:IsCraftMaterialsUnknown(gear) then
-                        ShowOverlayMaterialHeader(r, gear, nextY)
-                        nextY = nextY + 17
+                        nextY=nextY+ShowOverlayMaterialHeader(r, gear, nextY)
                         r.matNote:ClearAllPoints()
                         r.matNote:SetPoint("TOPLEFT", r.f, "TOPLEFT", 11, -nextY)
                         r.matNote:SetText("Materials not yet documented")
                         r.matNote:Show()
-                        nextY = nextY + 17
+                        nextY = nextY + MeasureText(r.matNote,12)+5
                     else
                         r.matTitle:Hide()
                         r.matNote:Hide()
@@ -2352,6 +2407,7 @@ local function RefreshOverlay(self)
         sectionLayout.desiredObj=opts.objectivesCollapsed and 0 or math.max(45,totalY)
         sectionLayout.totalY=totalY
         objContent:SetHeight(math.max(50,totalY))
+        wishlistUI.CommitScrollLayout(objScroll)
         LayoutOverlaySections(splitter.dragging and splitter.pendingShare)
         return
     end
@@ -2372,6 +2428,7 @@ local function RefreshOverlay(self)
     end
     sectionLayout={desiredObj=desiredObj,desiredMat=desiredMat,totalY=totalY,totalMatsH=totalMatsH}
     objContent:SetHeight(math.max(50,totalY))
+    wishlistUI.CommitScrollLayout(objScroll)
     local missing = self:GetUndocumentedCrafts(opts.materialScope)
     -- The ingredient requirements and the account-owned inventory are
     -- separate concepts. Surface either gap, but explain which is affected
@@ -2434,8 +2491,12 @@ function GetGear:RefreshStarPresentation(itemID,starred)
     local record=starred and self:GetSearchRecord(itemID)
     if record and not self:IsHidden(record) and not self:GetStatus(record)
         and not self:IsGearEquipped(record) then
-        wishlistUI.detailStarModel[itemID]=self:GetRecommendationRecord(record)
+        wishlistUI.detailStarModel[itemID]=record
         wishlistUI.overlayStarModel[itemID]=wishlistUI.detailStarModel[itemID]
+    end
+    if starred then
+        wishlistUI.overlayPage=1;detailPage=1
+        objScroll:SetVerticalScroll(0);scroll:SetVerticalScroll(0)
     end
     wishlistUI.starPresentationOnly=true
     local ok,err=pcall(function()
@@ -2946,11 +3007,15 @@ function GetGear:InitializeItemSearchUI()
     popup:SetScript("OnHide",function() edit:ClearFocus();focused=nil;self.focusedSearchItem=nil end)
     overlay:HookScript("OnHide",dismiss)
     if UISpecialFrames then table.insert(UISpecialFrames,"GetGear_ItemSearch") end
+    local resultScroll=CreateFrame("ScrollFrame",nil,popup,"UIPanelScrollFrameTemplate")
+    resultScroll:SetPoint("TOPLEFT",8,-60);resultScroll:SetPoint("BOTTOMRIGHT",-28,10)
+    local resultContent=CreateFrame("Frame",nil,resultScroll)
+    resultContent:SetSize(264,320);resultScroll:SetScrollChild(resultContent)
     for i=1,6 do
-        local row=NewButton(popup,"",290,54)
+        local row=NewButton(resultContent,"",264,54)
         row:SetPoint("TOPLEFT",10,-60-(i-1)*56)
-        row.label=NewText(row,"GameFontHighlightSmall",257);row.label:SetPoint("TOPLEFT",4,-3)
-        row.star=wishlistUI.NewStarButton(row);row.star:SetPoint("RIGHT",-2,0)
+        row.label=NewText(row,"GameFontHighlightSmall",256);row.label:SetPoint("TOPLEFT",4,-32)
+        row.star=wishlistUI.NewStarButton(row);row.star:SetPoint("TOPRIGHT",-4,-4)
         row:SetScript("OnClick",function()
             local result=results[i]
             if not result then return end
@@ -2996,7 +3061,7 @@ function GetGear:InitializeItemSearchUI()
         skip:SetScript("OnClick",function() if status=="skipped" then self:SetStatus(gear,nil) else self:SetStatus(gear,"skipped") end;refreshFocus(true) end)
     end
     function self:ShowSearchFocus(record)
-        popup:Show();focused=record
+        popup:Show();resultScroll:Hide();focused=record
         hint:SetText("Search focus | "..(record.slot or "Equipment"))
         for _,row in ipairs(rows) do row:Hide() end
         focus:Show();glow:SetColorTexture(.45,.32,.07,.8);refreshFocus(true)
@@ -3006,7 +3071,8 @@ function GetGear:InitializeItemSearchUI()
         end) end
     end
     local function drawResults()
-        focus:Hide()
+        focus:Hide();resultScroll:Show()
+        local resultY=0
         hint:SetText(#results==0 and (edit:GetText()=="" and "Search equipment by name" or "No matching equipment.")
             or "Enter: locate | Arrows: choose | Escape: close")
         for i,row in ipairs(rows) do
@@ -3016,7 +3082,6 @@ function GetGear:InitializeItemSearchUI()
                 local eligibility=self.EquipmentEligibility and self.EquipmentEligibility[result.itemID]
                 local level=eligibility and eligibility[2] or gear.requiredLevel or gear.targetLevel or gear.availableLevel or "?"
                 local name=gear.name or ("Item "..result.itemID)
-                if #name>33 then name=name:sub(1,30).."..." end
                 local status=result.restriction or self:GetSearchItemState(gear)
                 if #status>36 then status=status:sub(1,33).."..." end
                 row.itemID,row.gearRecord=result.itemID,gear
@@ -3024,12 +3089,18 @@ function GetGear:InitializeItemSearchUI()
                 row.label:SetText((selected==i and "> " or "")..name.."\nLevel "..level.." | "..(gear.slot or "Unknown slot").."\n"..status)
                 wishlistUI.AssignStar(row.star,gear,false)
                 row.star:SetEnabled(not result.restriction or self:IsItemStarred(result.itemID))
+                row:ClearAllPoints();row:SetPoint("TOPLEFT",resultContent,"TOPLEFT",0,-resultY)
+                row:SetHeight(MeasureText(row.label,36)+38)
+                resultY=resultY+row:GetHeight()+4
                 row:Show()
             else row:Hide() end
         end
+        resultContent:SetHeight(math.max(1,resultY))
+        wishlistUI.CommitScrollLayout(resultScroll)
     end
     edit:SetScript("OnTextChanged",function()
         focused=nil;self.focusedSearchItem=nil;selected=1
+        resultScroll:SetVerticalScroll(0)
         results=self:SearchEquipment(edit:GetText(),6);drawResults()
     end)
     edit:SetScript("OnEnterPressed",function()
@@ -3044,6 +3115,13 @@ function GetGear:InitializeItemSearchUI()
         if key=="UP" then selected=math.max(1,selected-1)
         elseif key=="DOWN" then selected=math.min(#results,selected+1) end
         drawResults()
+        local top=0
+        for i=1,selected-1 do top=top+rows[i]:GetHeight()+4 end
+        local bottom=top+(rows[selected] and rows[selected]:GetHeight() or 0)
+        local offset=resultScroll:GetVerticalScroll()
+        local height=resultScroll:GetHeight()
+        if top<offset then resultScroll:SetVerticalScroll(top)
+        elseif bottom>offset+height then resultScroll:SetVerticalScroll(math.max(0,bottom-height)) end
     end)
     function self:RefreshItemSearchUI(recalculate)
         if not popup:IsShown() then return end

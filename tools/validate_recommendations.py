@@ -44,6 +44,7 @@ def main():
         (args.output / 'checks.json').write_text(json.dumps(results, indent=2) + '\n')
         assert process.returncode == 0, process.stdout
 
+    run([sys.executable, 'tools/generate_star_textures.py', '--check'])
     run([sys.executable, 'tools/validate_feature_acceptance.py', '--root', addon_root])
     run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests/build', '-v'])
     for compiler in (luac54, args.luac51):

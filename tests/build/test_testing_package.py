@@ -23,7 +23,7 @@ class TestingPackageTests(unittest.TestCase):
         self.source = self.parent / 'source'
         self.source.mkdir()
         self.payload = {'GetGear.toc': b'## Version: 1.0-private-fixture\nCore.lua\n',
-                        'Core.lua': b'-- synthetic fixture\n', 'MapPin.tga': b'fixture', 'README.txt': b'fixture'}
+                        'Core.lua': b'-- synthetic fixture\n', 'MapPin.tga': b'fixture', 'StarOutline.tga': b'fixture', 'StarFilled.tga': b'fixture', 'README.txt': b'fixture'}
         for name, body in self.payload.items():
             (self.source / name).write_bytes(body)
         self.proof = dict(sourceRevision='a' * 40, sourceTree='b' * 40, repository='magicaddons/getgear',
