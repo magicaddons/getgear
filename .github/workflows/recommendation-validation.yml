@@ -1,0 +1,66 @@
+name: Validate cumulative development (no release)
+on:
+  push:
+    branches: ['**', '!main']
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      build_testing_package:
+        description: 'Create a verified cumulative private-testing artifact (owner authorization required)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install pinned Lua interpreters without changing the repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --location 'https://deb.debian.org/debian/pool/main/l/lua5.4/lua5.4_5.4.7-1+b2_amd64.deb' --output "$RUNNER_TEMP/lua54.deb"
+          curl --fail --show-error --location 'https://deb.debian.org/debian/pool/main/l/lua5.1/lua5.1_5.1.5-9_amd64.deb' --output "$RUNNER_TEMP/lua51.deb"
+          printf '%s  %s\n' 'da5947f8274bdcd0dd6d1aaf6d780bc7537827455d456d07dc9c14daf702f1df' "$RUNNER_TEMP/lua54.deb" | sha256sum --check -
+          printf '%s  %s\n' '2abaa116e03f4aaf34de634b447e7fa11569e27b33de342e93bbcf0857694015' "$RUNNER_TEMP/lua51.deb" | sha256sum --check -
+          dpkg-deb --extract "$RUNNER_TEMP/lua54.deb" "$RUNNER_TEMP/lua54"
+          dpkg-deb --extract "$RUNNER_TEMP/lua51.deb" "$RUNNER_TEMP/lua51"
+          echo "$RUNNER_TEMP/lua54/usr/bin" >> "$GITHUB_PATH"
+      - name: Verify approved acquisition snapshot
+        run: python3 tools/reconcile_presentation_snapshot.py --verify-only
+      - name: Integrated source, comparison, UI and saved-settings regressions
+        run: python3 tools/validate_recommendations.py --output "$RUNNER_TEMP/recommendation-validation" --lua51 "$RUNNER_TEMP/lua51/usr/bin/lua5.1" --luac51 "$RUNNER_TEMP/lua51/usr/bin/luac5.1"
+      - name: Verify exact GitHub development source (read only)
+        if: github.event_name != 'pull_request' && github.ref_type == 'branch' && github.ref_name != 'main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEVELOPMENT_BRANCH: ${{ github.ref_name }}
+        run: python3 tools/release/source_integrity.py --remote-branch "$DEVELOPMENT_BRANCH" --recovery-output "$RUNNER_TEMP/source-recovery" > "$RUNNER_TEMP/recommendation-validation/remote-source.json"
+      - name: Build explicitly requested private testing artifact
+        if: github.event_name == 'workflow_dispatch' && inputs.build_testing_package && github.ref_type == 'branch' && github.ref_name != 'main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEVELOPMENT_BRANCH: ${{ github.ref_name }}
+        run: python3 tools/release/build_test_package.py --remote-branch "$DEVELOPMENT_BRANCH" --output "$RUNNER_TEMP/verified-testing-package" --lua51 "$RUNNER_TEMP/lua51/usr/bin/lua5.1" --luac51 "$RUNNER_TEMP/lua51/usr/bin/luac5.1"
+      - name: Keep verified private testing build (no GitHub Release)
+        if: success() && github.event_name == 'workflow_dispatch' && inputs.build_testing_package && github.ref_type == 'branch' && github.ref_name != 'main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-cumulative-testing-${{ github.sha }}
+          path: ${{ runner.temp }}/verified-testing-package/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Keep validation receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recommendation-validation-receipts
+          path: |
+            ${{ runner.temp }}/recommendation-validation/
+            ${{ runner.temp }}/source-recovery/
+          retention-days: 30

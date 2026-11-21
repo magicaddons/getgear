@@ -1,0 +1,119 @@
+2026-11-15T12:45:23.2673261Z Contents: read
+2026-11-15T12:46:11.6063617Z PASS exact HTTP capture: original fetch/bytes/fingerprints; 9 responses; no duplicate diagnostic feed requests
+2026-11-15T12:46:11.7365880Z PASS diagnostic reconciliation:original HTTP responses captured;approved presentation data restored;no new acquisition facts adopted
+2026-11-15T12:46:11.8168573Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p ResearchedItemFacts.lua
+2026-11-15T12:46:11.8300600Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p EquipmentCache.lua
+2026-11-15T12:46:11.8347994Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p GeneratedBeta7Evidence.lua
+2026-11-15T12:46:11.8362809Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p SourceEnrichment.lua
+2026-11-15T12:46:11.9758063Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p AcquisitionEvidenceIndex.lua
+2026-11-15T12:46:11.9773408Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p AcquisitionEvidence.lua
+2026-11-15T12:46:11.9788919Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p AcquisitionSummary.lua
+2026-11-15T12:46:11.9806736Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p WorldDropBoEIndex.lua
+2026-11-15T12:46:11.9881630Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p GeneratedStatFlags.lua
+2026-11-15T12:46:11.9896111Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p StatEvidence.lua
+2026-11-15T12:46:11.9910286Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p GuideEngine.lua
+2026-11-15T12:46:11.9924279Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p GuideState.lua
+2026-11-15T12:46:11.9940948Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p Materials.lua
+2026-11-15T12:46:12.0498867Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p AcquisitionNavigationData.lua
+2026-11-15T12:46:12.0525978Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p BagQuestData.lua
+2026-11-15T12:46:12.0553748Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p AcquisitionNavigation.lua
+2026-11-15T12:46:12.0570869Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p MapNavigation.lua
+2026-11-15T12:46:12.0587266Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p AltInventory.lua
+2026-11-15T12:46:12.0599613Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p RecipeKnowledge.lua
+2026-11-15T12:46:12.0615630Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p BagUpgrades.lua
+2026-11-15T12:46:12.0627794Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p ItemData.lua
+2026-11-15T12:46:12.0639817Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p CraftingVisibility.lua
+2026-11-15T12:46:12.0652418Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p TalentAwareness.lua
+2026-11-15T12:46:12.0666700Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p GearRelevance.lua
+2026-11-15T12:46:12.0711015Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p GearCompare.lua
+2026-11-15T12:46:12.0727834Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p StatPriorities.lua
+2026-11-15T12:46:12.0744459Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p Core.lua
+2026-11-15T12:46:12.0786798Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p UI.lua
+2026-11-15T12:46:12.0800337Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p tools/export_navigation_inputs.lua
+2026-11-15T12:46:12.0813491Z PASS /home/runner/work/_temp/lua54/usr/bin/luac5.4 -p tools/audit_recommendation_sources.lua
+2026-11-15T12:46:12.0869681Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p ResearchedItemFacts.lua
+2026-11-15T12:46:12.1019508Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p EquipmentCache.lua
+2026-11-15T12:46:12.1070160Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p GeneratedBeta7Evidence.lua
+2026-11-15T12:46:12.1084281Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p SourceEnrichment.lua
+2026-11-15T12:46:12.2091609Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p AcquisitionEvidenceIndex.lua
+2026-11-15T12:46:12.2107143Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p AcquisitionEvidence.lua
+2026-11-15T12:46:12.2122433Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p AcquisitionSummary.lua
+2026-11-15T12:46:12.2144029Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p WorldDropBoEIndex.lua
+2026-11-15T12:46:12.2231882Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p GeneratedStatFlags.lua
+2026-11-15T12:46:12.2244778Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p StatEvidence.lua
+2026-11-15T12:46:12.2259474Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p GuideEngine.lua
+2026-11-15T12:46:12.2273665Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p GuideState.lua
+2026-11-15T12:46:12.2289911Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p Materials.lua
+2026-11-15T12:46:12.2779583Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p AcquisitionNavigationData.lua
+2026-11-15T12:46:12.2805892Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p BagQuestData.lua
+2026-11-15T12:46:12.2833017Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p AcquisitionNavigation.lua
+2026-11-15T12:46:12.2852478Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p MapNavigation.lua
+2026-11-15T12:46:12.2870194Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p AltInventory.lua
+2026-11-15T12:46:12.2883915Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p RecipeKnowledge.lua
+2026-11-15T12:46:12.2901107Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p BagUpgrades.lua
+2026-11-15T12:46:12.2914125Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p ItemData.lua
+2026-11-15T12:46:12.2926576Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p CraftingVisibility.lua
+2026-11-15T12:46:12.2940251Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p TalentAwareness.lua
+2026-11-15T12:46:12.2955102Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p GearRelevance.lua
+2026-11-15T12:46:12.2977732Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p GearCompare.lua
+2026-11-15T12:46:12.2993412Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p StatPriorities.lua
+2026-11-15T12:46:12.3009852Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p Core.lua
+2026-11-15T12:46:12.3056287Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p UI.lua
+2026-11-15T12:46:12.3070423Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p tools/export_navigation_inputs.lua
+2026-11-15T12:46:12.3084153Z PASS /home/runner/work/_temp/lua51/usr/bin/luac5.1 -p tools/audit_recommendation_sources.lua
+2026-11-15T12:46:12.3133348Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/acquisition-map-readiness.lua .
+2026-11-15T12:46:12.3180395Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/acquisition-map-readiness.lua .
+2026-11-15T12:46:13.0262539Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/acquisition-navigation.lua .
+2026-11-15T12:46:13.7487819Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/acquisition-navigation.lua .
+2026-11-15T12:46:14.2044133Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/acquisition-presentation.lua .
+2026-11-15T12:46:14.6667451Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/acquisition-presentation.lua .
+2026-11-15T12:46:15.1625085Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta4-catalogue.lua .
+2026-11-15T12:46:15.7117045Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta4-catalogue.lua .
+2026-11-15T12:46:17.0047025Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta4-filters.lua .
+2026-11-15T12:46:18.7467539Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta4-filters.lua .
+2026-11-15T12:46:22.1848622Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta4-performance.lua .
+2026-11-15T12:46:26.6244568Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta4-performance.lua .
+2026-11-15T12:46:27.0667722Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta4-talents.lua .
+2026-11-15T12:46:27.5239274Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta4-talents.lua .
+2026-11-15T12:46:28.1453754Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta7-acquisition-reconciled.lua .
+2026-11-15T12:46:28.9468075Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta7-acquisition-reconciled.lua .
+2026-11-15T12:46:29.1353793Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta7-armor-priority.lua .
+2026-11-15T12:46:29.3944879Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta7-armor-priority.lua .
+2026-11-15T12:46:29.5919770Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta7-coverage.lua .
+2026-11-15T12:46:29.8603680Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta7-coverage.lua .
+2026-11-15T12:46:30.2978796Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta7-evidence.lua .
+2026-11-15T12:46:30.7557851Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta7-evidence.lua .
+2026-11-15T12:46:31.1920287Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta7-material-names.lua .
+2026-11-15T12:46:31.6503652Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta7-material-names.lua .
+2026-11-15T12:46:31.6532623Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta7-preview-layout.lua .
+2026-11-15T12:46:31.6559505Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta7-preview-layout.lua .
+2026-11-15T12:46:31.6579633Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta7-source-visibility.lua .
+2026-11-15T12:46:31.6601242Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta7-source-visibility.lua .
+2026-11-15T12:46:32.0968711Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/beta7-stat-flags.lua .
+2026-11-15T12:46:32.5515909Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/beta7-stat-flags.lua .
+2026-11-15T12:46:33.0242616Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/class-stat-eligibility.lua .
+2026-11-15T12:46:33.5399776Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/class-stat-eligibility.lua .
+2026-11-15T12:46:33.9756397Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/full-toc-startup.lua .
+2026-11-15T12:46:34.4338018Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/full-toc-startup.lua .
+2026-11-15T12:46:34.4384365Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/overlay-green-boe-filter.lua .
+2026-11-15T12:46:34.4431630Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/overlay-green-boe-filter.lua .
+2026-11-15T12:46:34.4592153Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/overlay-stat-filter.lua .
+2026-11-15T12:46:34.4816071Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/overlay-stat-filter.lua .
+2026-11-15T12:46:35.1462083Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/quest-bag-recommendations.lua .
+2026-11-15T12:46:35.8946740Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/quest-bag-recommendations.lua .
+2026-11-15T12:46:36.3567980Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/recommendation-priorities.lua .
+2026-11-15T12:46:36.8419243Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/recommendation-priorities.lua .
+2026-11-15T12:46:37.2793915Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/source-faction-eligibility.lua .
+2026-11-15T12:46:37.7429998Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/source-faction-eligibility.lua .
+2026-11-15T12:46:37.7484372Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 /home/runner/work/getgear/getgear/tests/stat-priority-settings.lua .
+2026-11-15T12:46:37.7536012Z PASS /home/runner/work/_temp/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /home/runner/work/getgear/getgear/tests/stat-priority-settings.lua .
+2026-11-15T12:46:38.0801177Z PASS /usr/bin/python3 /home/runner/work/getgear/getgear/tests/reconcile-dungeon-link-guards.py
+2026-11-15T12:46:38.6295768Z PASS /usr/bin/python3 /home/runner/work/getgear/getgear/tests/worlddrop-boe-fallback.py
+2026-11-15T12:46:38.7891294Z PASS /usr/bin/python3 /home/runner/work/getgear/getgear/tests/navigation-generation.py
+2026-11-15T12:46:38.8582916Z PASS /usr/bin/python3 /home/runner/work/getgear/getgear/tests/stat-school-generation.py
+2026-11-15T12:46:39.9207196Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 tools/audit_acquisition_buttons.lua .
+2026-11-15T12:47:20.7729440Z PASS /usr/bin/python3 tools/audit_acquisition_presentation.py --output /home/runner/work/_temp/recommendation-validation/presentation
+2026-11-15T12:47:20.8272453Z PASS /usr/bin/python3 tools/build_bag_quest_catalogue.py --check
+2026-11-15T12:47:20.9773093Z PASS /usr/bin/python3 -m unittest discover -s tests/release -v
+2026-11-15T12:47:21.7271452Z PASS /home/runner/work/_temp/lua54/usr/bin/lua5.4 tools/audit_recommendation_sources.lua . /tmp/tmp71lqza5w/sources.csv
+2026-11-15T12:47:21.7660072Z PASS integrated development gate: {"checks": 115, "modules": 28, "lua54Regressions": 23, "lua51Regressions": 23, "failures": 0, "protectedAcquisitionSnapshotExact": true, "actualClientTested": false, "statement": "Offline/synthetic validation only. No addon package, tag, release or live acquisition claim."}

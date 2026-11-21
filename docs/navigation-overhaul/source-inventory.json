@@ -1,0 +1,758 @@
+{
+  "items": 3681,
+  "questRecords": 716,
+  "routes": 7440,
+  "sourceRecords": 975,
+  "structuredNPCLabels": 14,
+  "unresolvedDescriptiveLabels": 15,
+  "unresolvedLabels": [
+    "Ashenvale|Blackfathom Deeps outer ruins at Zoram Strand",
+    "Ashenvale|Blackfathom Deeps outer ruins, Zoram Strand",
+    "Darnassus|Dawnwatcher Shaedlass",
+    "Loch Modan|WANTED notice",
+    "Silverpine Forest|Shadowfang Keep dungeon in Silverpine Forest",
+    "The Barrens|Razorfen Kraul dungeon entrance",
+    "The Barrens|Razorfen Kraul entrance",
+    "The Barrens|Upper cave above Wailing Caverns: Ebru (Deviate Eradication)",
+    "The Barrens|Wailing Caverns cave entrance (Ebru is inside)",
+    "The Barrens|Wailing Caverns outer entrance (Kresh drop is Classic-only reference)",
+    "Tirisfal Glades|Ruins of Lordaeron above Undercity (hostile access for Alliance)",
+    "Tirisfal Glades|Scarlet Monastery, northeast Tirisfal Glades",
+    "Westfall|Deadmines surface entrance (VanCleef drops the starter)",
+    "Westfall|Deadmines surface entrance, Moonbrook",
+    "Wetlands|Excavation Site: Wetlands portal (approach from Thelgen Rock)"
+  ],
+  "providers": {
+    "www.wowhead.com|bag-quest-evidence.json": {
+      "file": "bag-quest-evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "quest": true,
+        "unknown": true
+      },
+      "references": 127
+    },
+    "www.wowhead.com|checkpoint6k_nightclaw_access_evidence.json": {
+      "file": "checkpoint6k_nightclaw_access_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 4
+    },
+    "www.wowhead.com|checkpoint6l_location_evidence.json": {
+      "file": "checkpoint6l_location_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 3
+    },
+    "www.wowhead.com|checkpoint6m_location_evidence.json": {
+      "file": "checkpoint6m_location_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 8
+    },
+    "www.wowhead.com|checkpoint6o_supplementary_evidence.json": {
+      "file": "checkpoint6o_supplementary_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 79
+    },
+    "www.wowhead.com|checkpoint6p_location_evidence.json": {
+      "file": "checkpoint6p_location_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 45
+    },
+    "www.wowhead.com|checkpoint6q_supplementary_evidence.json": {
+      "file": "checkpoint6q_supplementary_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 6
+    },
+    "www.wowhead.com|checkpoint6s_book_drop_references.csv": {
+      "file": "checkpoint6s_book_drop_references.csv",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 44
+    },
+    "www.wowhead.com|checkpoint6s_location_evidence.json": {
+      "file": "checkpoint6s_location_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 39
+    },
+    "www.wowhead.com|checkpoint6u_book_drop_references.csv": {
+      "file": "checkpoint6u_book_drop_references.csv",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 16
+    },
+    "www.wowhead.com|checkpoint6u_publication_evidence.json": {
+      "file": "checkpoint6u_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 19
+    },
+    "www.wowhead.com|checkpoint7a_hyjal_publication_evidence.json": {
+      "file": "checkpoint7a_hyjal_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 1
+    },
+    "www.wowhead.com|checkpoint7b_quest_publication_evidence.json": {
+      "file": "checkpoint7b_quest_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "object": true,
+        "quest": true
+      },
+      "references": 22
+    },
+    "www.wowhead.com|checkpoint7c_vendor_publication_evidence.json": {
+      "file": "checkpoint7c_vendor_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 72
+    },
+    "www.wowhead.com|checkpoint7d_publication_evidence.json": {
+      "file": "checkpoint7d_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 7
+    },
+    "www.wowhead.com|checkpoint8aa_working_evidence.json": {
+      "file": "checkpoint8aa_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 141
+    },
+    "www.wowhead.com|checkpoint8ad_working_evidence.json": {
+      "file": "checkpoint8ad_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "quest": true
+      },
+      "references": 3
+    },
+    "www.wowhead.com|checkpoint8aj_input_evidence.json": {
+      "file": "checkpoint8aj_input_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 40
+    },
+    "www.wowhead.com|checkpoint8aj_working_evidence.json": {
+      "file": "checkpoint8aj_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "quest": true
+      },
+      "references": 20
+    },
+    "www.wowhead.com|checkpoint8ak_working_evidence.json": {
+      "file": "checkpoint8ak_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 36
+    },
+    "www.wowhead.com|checkpoint8al_working_evidence.json": {
+      "file": "checkpoint8al_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 16
+    },
+    "www.wowhead.com|checkpoint8am_working_evidence.json": {
+      "file": "checkpoint8am_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 62
+    },
+    "www.wowhead.com|checkpoint8an_working_evidence.json": {
+      "file": "checkpoint8an_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 21
+    },
+    "www.wowhead.com|checkpoint8ao_working_evidence.json": {
+      "file": "checkpoint8ao_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 43
+    },
+    "www.wowhead.com|checkpoint8ap_working_evidence.json": {
+      "file": "checkpoint8ap_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "quest": true
+      },
+      "references": 72
+    },
+    "www.wowhead.com|checkpoint8aq_working_evidence.json": {
+      "file": "checkpoint8aq_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true,
+        "quest": true
+      },
+      "references": 21
+    },
+    "www.wowhead.com|checkpoint8ar_working_evidence.json": {
+      "file": "checkpoint8ar_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 30
+    },
+    "www.wowhead.com|checkpoint8as_working_evidence.json": {
+      "file": "checkpoint8as_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 42
+    },
+    "www.wowhead.com|checkpoint8at_working_evidence.json": {
+      "file": "checkpoint8at_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 4
+    },
+    "www.wowhead.com|checkpoint8au_working_evidence.json": {
+      "file": "checkpoint8au_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 20
+    },
+    "www.wowhead.com|checkpoint8av_working_evidence.json": {
+      "file": "checkpoint8av_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 25
+    },
+    "www.wowhead.com|checkpoint8aw_working_evidence.json": {
+      "file": "checkpoint8aw_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 14
+    },
+    "www.wowhead.com|checkpoint8ax_working_evidence.json": {
+      "file": "checkpoint8ax_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 22
+    },
+    "www.wowhead.com|checkpoint8ay_working_evidence.json": {
+      "file": "checkpoint8ay_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 21
+    },
+    "www.wowhead.com|checkpoint8az_working_evidence.json": {
+      "file": "checkpoint8az_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 19
+    },
+    "www.wowhead.com|checkpoint8ba_working_evidence.json": {
+      "file": "checkpoint8ba_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 10
+    },
+    "www.wowhead.com|checkpoint8bb_working_evidence.json": {
+      "file": "checkpoint8bb_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 14
+    },
+    "www.wowhead.com|checkpoint8bc_working_evidence.json": {
+      "file": "checkpoint8bc_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 9
+    },
+    "www.wowhead.com|checkpoint8bd_working_evidence.json": {
+      "file": "checkpoint8bd_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 8
+    },
+    "www.wowhead.com|checkpoint8be_working_evidence.json": {
+      "file": "checkpoint8be_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 8
+    },
+    "www.wowhead.com|checkpoint8bf_working_evidence.json": {
+      "file": "checkpoint8bf_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true,
+        "quest": true
+      },
+      "references": 13
+    },
+    "www.wowhead.com|checkpoint8bg_working_evidence.json": {
+      "file": "checkpoint8bg_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 5
+    },
+    "www.wowhead.com|checkpoint8bh_working_evidence.json": {
+      "file": "checkpoint8bh_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 2
+    },
+    "www.wowhead.com|checkpoint8bj_working_evidence.json": {
+      "file": "checkpoint8bj_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "zone": true
+      },
+      "references": 13
+    },
+    "www.wowhead.com|checkpoint8bk_working_evidence.json": {
+      "file": "checkpoint8bk_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 2
+    },
+    "www.wowhead.com|checkpoint8bl_working_evidence.json": {
+      "file": "checkpoint8bl_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 1
+    },
+    "www.wowhead.com|checkpoint8bm_working_evidence.json": {
+      "file": "checkpoint8bm_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 1
+    },
+    "www.wowhead.com|checkpoint8bo_working_evidence.json": {
+      "file": "checkpoint8bo_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 33
+    },
+    "www.wowhead.com|checkpoint8bp_working_evidence.json": {
+      "file": "checkpoint8bp_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 2
+    },
+    "www.wowhead.com|checkpoint8bq_working_evidence.json": {
+      "file": "checkpoint8bq_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 7
+    },
+    "www.wowhead.com|checkpoint8br_working_evidence.json": {
+      "file": "checkpoint8br_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 4
+    },
+    "www.wowhead.com|checkpoint8bs_working_evidence.json": {
+      "file": "checkpoint8bs_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true,
+        "quest": true
+      },
+      "references": 102
+    },
+    "www.wowhead.com|checkpoint8bt_working_evidence.json": {
+      "file": "checkpoint8bt_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 14
+    },
+    "www.wowhead.com|checkpoint8bu_working_evidence.json": {
+      "file": "checkpoint8bu_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 13
+    },
+    "www.wowhead.com|checkpoint8bw_working_evidence.json": {
+      "file": "checkpoint8bw_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 7
+    },
+    "www.wowhead.com|checkpoint8bx_working_evidence.json": {
+      "file": "checkpoint8bx_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 19
+    },
+    "www.wowhead.com|checkpoint8by_working_evidence.json": {
+      "file": "checkpoint8by_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 10
+    },
+    "www.wowhead.com|checkpoint8bz_working_evidence.json": {
+      "file": "checkpoint8bz_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 13
+    },
+    "www.wowhead.com|checkpoint8c_publication_evidence.json": {
+      "file": "checkpoint8c_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true,
+        "quest": true
+      },
+      "references": 217
+    },
+    "www.wowhead.com|checkpoint8ca_working_evidence.json": {
+      "file": "checkpoint8ca_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 6
+    },
+    "www.wowhead.com|checkpoint8cb_working_evidence.json": {
+      "file": "checkpoint8cb_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 4
+    },
+    "www.wowhead.com|checkpoint8cc_working_evidence.json": {
+      "file": "checkpoint8cc_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true,
+        "quest": true
+      },
+      "references": 21
+    },
+    "www.wowhead.com|checkpoint8cd_upstream_evidence.json": {
+      "file": "checkpoint8cd_upstream_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 1
+    },
+    "www.wowhead.com|checkpoint8cd_working_evidence.json": {
+      "file": "checkpoint8cd_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 101
+    },
+    "www.wowhead.com|checkpoint8ce_upstream_evidence.json": {
+      "file": "checkpoint8ce_upstream_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 1
+    },
+    "www.wowhead.com|checkpoint8ce_working_evidence.json": {
+      "file": "checkpoint8ce_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 7
+    },
+    "www.wowhead.com|checkpoint8cf_working_evidence.json": {
+      "file": "checkpoint8cf_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 7
+    },
+    "www.wowhead.com|checkpoint8cg_working_evidence.json": {
+      "file": "checkpoint8cg_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true,
+        "quest": true
+      },
+      "references": 100
+    },
+    "www.wowhead.com|checkpoint8ch_working_evidence.json": {
+      "file": "checkpoint8ch_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true,
+        "quest": true
+      },
+      "references": 58
+    },
+    "www.wowhead.com|checkpoint8ci_working_evidence.json": {
+      "file": "checkpoint8ci_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 54
+    },
+    "www.wowhead.com|checkpoint8cj_working_evidence.json": {
+      "file": "checkpoint8cj_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 3
+    },
+    "www.wowhead.com|checkpoint8ck_working_evidence.json": {
+      "file": "checkpoint8ck_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 1
+    },
+    "www.wowhead.com|checkpoint8cl_working_evidence.json": {
+      "file": "checkpoint8cl_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 3
+    },
+    "www.wowhead.com|checkpoint8cm_working_evidence.json": {
+      "file": "checkpoint8cm_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 11
+    },
+    "www.wowhead.com|checkpoint8cn_working_evidence.json": {
+      "file": "checkpoint8cn_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 55
+    },
+    "www.wowhead.com|checkpoint8cx_working_evidence.json": {
+      "file": "checkpoint8cx_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true
+      },
+      "references": 11
+    },
+    "www.wowhead.com|checkpoint8cy_working_evidence.json": {
+      "file": "checkpoint8cy_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 1
+    },
+    "www.wowhead.com|checkpoint8e_publication_evidence.json": {
+      "file": "checkpoint8e_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 67
+    },
+    "www.wowhead.com|checkpoint8f_publication_evidence.json": {
+      "file": "checkpoint8f_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 16
+    },
+    "www.wowhead.com|checkpoint8f_working_evidence.json": {
+      "file": "checkpoint8f_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "quest": true
+      },
+      "references": 36
+    },
+    "www.wowhead.com|checkpoint8h_publication_evidence.json": {
+      "file": "checkpoint8h_publication_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 7
+    },
+    "www.wowhead.com|checkpoint_acceptance1_working_evidence.json": {
+      "file": "checkpoint_acceptance1_working_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "object": true,
+        "quest": true
+      },
+      "references": 34
+    },
+    "www.wowhead.com|checkpoint_acceptance2_navigation_evidence.json": {
+      "file": "checkpoint_acceptance2_navigation_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 2
+    },
+    "www.wowhead.com|checkpoint_navigation_evidence.json": {
+      "file": "checkpoint_navigation_evidence.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true,
+        "quest": true
+      },
+      "references": 17
+    },
+    "www.wowhead.com|reviewed_recipe_sources.json": {
+      "file": "reviewed_recipe_sources.json",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "npc": true
+      },
+      "references": 535
+    },
+    "www.wowhead.com|unspecified": {
+      "file": "unspecified",
+      "host": "www.wowhead.com",
+      "kinds": {
+        "unknown": true
+      },
+      "references": 20
+    }
+  },
+  "dungeonDefinitions": 39,
+  "entranceChoices": 39,
+  "actualClientVerified": false
+}

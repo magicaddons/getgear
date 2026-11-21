@@ -1,0 +1,367 @@
+{
+  "schema": 1,
+  "policy": "Testing builds are cumulative. Removing a listed capability requires explicit owner approval and an accompanying reviewed manifest change. A current branch name or passing unrelated tests is not sufficient.",
+  "acceptedBaseline": {
+    "settings-ui-refinement": "3e590ae438b2064bea756d40356ee5bc5c1205d4",
+    "recommendation-sources-stat-priorities": "ffd60c0c3c658ecff9dbabc09c442b4182955bf5",
+    "beta9": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3"
+  },
+  "requiredModules": [
+    "ResearchedItemFacts.lua",
+    "EquipmentCache.lua",
+    "GeneratedBeta7Evidence.lua",
+    "SourceEnrichment.lua",
+    "AcquisitionEvidenceIndex.lua",
+    "AcquisitionEvidence.lua",
+    "AcquisitionSummary.lua",
+    "WorldDropBoEIndex.lua",
+    "GeneratedStatFlags.lua",
+    "StatEvidence.lua",
+    "GuideEngine.lua",
+    "GuideState.lua",
+    "Materials.lua",
+    "AcquisitionNavigationData.lua",
+    "BagQuestData.lua",
+    "FactionEligibilityData.lua",
+    "AcquisitionNavigation.lua",
+    "MapNavigation.lua",
+    "AltInventory.lua",
+    "RecipeKnowledge.lua",
+    "BagUpgrades.lua",
+    "ItemData.lua",
+    "CraftingVisibility.lua",
+    "TalentAwareness.lua",
+    "GearRelevance.lua",
+    "GearCompare.lua",
+    "StatPriorities.lua",
+    "Core.lua",
+    "UI.lua"
+  ],
+  "loadOrder": [
+    [
+      "GuideEngine.lua",
+      "GuideState.lua",
+      "Materials.lua",
+      "Core.lua",
+      "UI.lua"
+    ],
+    [
+      "FactionEligibilityData.lua",
+      "AcquisitionNavigation.lua"
+    ],
+    [
+      "GearCompare.lua",
+      "StatPriorities.lua",
+      "Core.lua",
+      "UI.lua"
+    ]
+  ],
+  "features": [
+    {
+      "id": "display_settings",
+      "requires": {
+        "UI.lua": [
+          "Count armour-only improvements",
+          "Hide green BoE world drops from tracker",
+          "Hide gear without positive stat changes",
+          "Filter clearly outclassed earlier gear",
+          "Hide crafted gear I can't make",
+          "Hide tracker automatically during combat",
+          "Lock overlay position",
+          "Recommend ordinary bag upgrades",
+          "Show all valid equipment (including off-spec)"
+        ],
+        "Core.lua": [
+          "countArmorOnlyUpgrades = false",
+          "hideWithoutPositiveStats = true",
+          "hideGreenBoEWorldDrops = true"
+        ]
+      },
+      "regressions": [
+        "stat-priority-settings.lua",
+        "overlay-stat-filter.lua",
+        "overlay-green-boe-filter.lua"
+      ]
+    },
+    {
+      "id": "stat_priority_modes",
+      "requires": {
+        "UI.lua": [
+          "Balanced",
+          "Priority",
+          "Advanced",
+          "SetStatPriorityMode",
+          "priorityUI.weights",
+          "SavePriorityWeight",
+          "SetCustomStatWeight"
+        ],
+        "StatPriorities.lua": [
+          "function GetGear:InitializeStatPriorities",
+          "function GetGear:SetCustomStatWeight",
+          "function GetGear:ShouldRecommendByStatPriority",
+          "GetBalancedTalentStatFactor"
+        ]
+      },
+      "regressions": [
+        "stat-priority-settings.lua",
+        "recommendation-priorities.lua"
+      ]
+    },
+    {
+      "id": "canonical_material_names",
+      "requires": {
+        "Materials.lua": [
+          "function GetGear:IndexMaterialNames",
+          "function GetGear:MaterialName",
+          "RememberMaterialName",
+          "self.ItemCatalog",
+          "RequestItemDataOnce"
+        ],
+        "UI.lua": [
+          "GetGear:MaterialName(mat.itemID,mat.name)"
+        ]
+      },
+      "regressions": [
+        "material-name-resolution.lua",
+        "beta7-material-names.lua"
+      ]
+    },
+    {
+      "id": "equipment_slot_filtering",
+      "requires": {
+        "Core.lua": [
+          "db.overlay.slotFilter",
+          "db.detail.slotFilter"
+        ],
+        "GuideState.lua": [
+          "function GetGear:FilterEquipmentSlots",
+          "EquipmentSlotFilters",
+          "GetEquipmentSlotFilter"
+        ],
+        "UI.lua": [
+          "GetGear_OverlaySlotMenu",
+          "GetGear_DetailSlotMenu",
+          "FilterEquipmentSlots(list, slot)",
+          "EquipmentSlotCountText",
+          "No recommendations for this slot."
+        ]
+      },
+      "regressions": [
+        "beta4-slot-filters.lua",
+        "beta4-slot-ui.lua"
+      ]
+    },
+    {
+      "id": "source_and_faction_eligibility",
+      "requires": {
+        "AcquisitionNavigation.lua": [
+          "function GetGear:IsFactionUseEligible",
+          "function GetGear:GetEligibleAcquisitionRoutes",
+          "function GetGear:HasEligibleAcquisitionSource",
+          "function GetGear:IsAcquisitionRouteAccessible",
+          "function GetGear:IsAcquisitionLocationEligible"
+        ],
+        "GuideState.lua": [
+          "HasEligibleAcquisitionSource"
+        ]
+      },
+      "regressions": [
+        "source-faction-eligibility.lua",
+        "faction-global-eligibility.lua",
+        "acquisition-practicality.lua",
+        "alliance-acquisition-access.lua"
+      ]
+    },
+    {
+      "id": "nine_class_talent_relevance",
+      "requires": {
+        "TalentAwareness.lua": [
+          "GetTalentOrientation"
+        ],
+        "StatPriorities.lua": [
+          "GetBalancedTalentStatFactor"
+        ],
+        "UI.lua": [
+          "detailContext:SetText(dominant"
+        ]
+      },
+      "regressions": [
+        "talent-recommendations.lua",
+        "beta4-talents.lua"
+      ]
+    },
+    {
+      "id": "quest_and_vendor_bags",
+      "requires": {
+        "BagUpgrades.lua": [
+          "function GetGear:GetBagPlanningObjectives"
+        ],
+        "GetGear.toc": [
+          "BagQuestData.lua"
+        ]
+      },
+      "regressions": [
+        "quest-bag-recommendations.lua"
+      ]
+    },
+    {
+      "id": "accepted_acquisition_navigation",
+      "requires": {
+        "MapNavigation.lua": [
+          "function GetGear:OpenAcquisitionMap",
+          "function GetGear:GetAcquisitionMarkerState",
+          "local canvasScale=",
+          "/scale",
+          "GetAcquisitionMarkerDiagnostics",
+          "driver:SetScript"
+        ],
+        "UI.lua": [
+          "function GetGear:ShowAcquisitionChoices",
+          "function GetGear:ShowAcquisitionDirections"
+        ],
+        "AcquisitionNavigation.lua": [
+          "function GetGear:GetAcquisitionInstanceName",
+          "function GetGear:GetAcquisitionNPCName"
+        ]
+      },
+      "regressions": [
+        "acquisition-navigation.lua",
+        "acquisition-map-readiness.lua",
+        "navigation-marker-system.lua",
+        "navigation-button-visibility.lua",
+        "map-marker-lifecycle.lua",
+        "navigation-overhaul.lua",
+        "navigation-rendering-integrity.lua",
+        "map-label-boundaries.lua",
+        "location-classification.lua"
+      ]
+    },
+    {
+      "id": "wrapped_row_layout",
+      "requires": {
+        "UI.lua": [
+          "local function LayoutOverlayHeader",
+          "LayoutOverlayHeader(r)",
+          "MeasureText"
+        ]
+      },
+      "regressions": [
+        "overlay-wrapped-layout.lua",
+        "beta7-preview-layout.lua"
+      ]
+    },
+    {
+      "id": "complete_runtime",
+      "requires": {
+        "GetGear.toc": [
+          "GetGear_AccountDB",
+          "GetGear_CharacterDB"
+        ]
+      },
+      "regressions": [
+        "full-toc-startup.lua",
+        "beta4-catalogue.lua",
+        "beta4-performance.lua",
+        "account-inventory.lua",
+        "inventory-events.lua",
+        "overlay-performance.lua",
+        "overlay-state-matrix.lua",
+        "recommendation-snapshot.lua"
+      ]
+    },
+    {
+      "id": "independent_recipe_evidence",
+      "requires": {
+        "AcquisitionNavigation.lua": [
+          "GetNormalizedRecipeData",
+          "sourceConfidence",
+          "skillConfidence"
+        ],
+        "RecipeKnowledge.lua": [
+          "GetGear.RecipeEvidence="
+        ]
+      },
+      "regressions": [
+        "recipe-source-integrity.lua"
+      ]
+    },
+    {
+      "id": "lightweight_tracker_section_resize",
+      "requires": {
+        "UI.lua": [
+          "LayoutOverlaySections",
+          "FinishSectionDrag"
+        ]
+      },
+      "regressions": [
+        "beta4-slot-ui.lua",
+        "tracker-resize-budget.lua"
+      ]
+    },
+    {
+      "id": "character_item_search_and_stars",
+      "requires": {
+        "GuideState.lua": [
+          "function GetGear:SearchEquipment",
+          "function GetGear:SetItemStarred",
+          "function GetGear:ComposeStarredItems",
+          "function GetGear:SelectSearchItem"
+        ],
+        "Core.lua": [
+          "db.starredItems"
+        ],
+        "UI.lua": [
+          "GetGear_ItemSearchInput",
+          "RefreshStarPresentation",
+          "Preview is read-only",
+          "Starred Items",
+          "Other Recommendations"
+        ]
+      },
+      "regressions": [
+        "item-search-stars.lua",
+        "item-search-stars-ui.lua",
+        "starred-row-refresh.lua"
+      ]
+    }
+  ],
+  "acceptedNavigationFiles": {
+    "MapNavigation.lua": "051270d68faca4e06da8dd77ef11cab2d9bd15b2f7276d8435450a55066d565c",
+    "AcquisitionNavigation.lua": "5125ff5bb3da59517e8ee772715f47892164b73f095ab83b39e0c1899f625243",
+    "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
+    "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
+  },
+  "acceptedSections": [
+    {
+      "file": "UI.lua",
+      "start": "local function NewAcquisitionPin(",
+      "end": "local function NewProfessionIcon(",
+      "sha256": "1c870b9841f2ce425f463ad622f8a01ce220a130993ee146eed81ff37dc495f1"
+    }
+  ],
+  "navigationReview": {
+    "baseline": "b31e30e92256a00dbb3b75347d77731b52a0f06f",
+    "report": "docs/navigation-audit/REPORT.md",
+    "scope": "Owner-authorized comprehensive navigation/source-integrity overhaul; frozen acquisition snapshot retained; evidence projection generated separately",
+    "stabilityFollowup": "docs/stability-20261118/REPORT.md",
+    "comprehensiveFollowup": "docs/navigation-overhaul/REPORT.md",
+    "rendererIntegrityFollowup": "docs/navigation-integrity/REPORT.md",
+    "stabilisationFollowup": "docs/stabilisation/REPORT.md",
+    "locationClassificationFollowup": "docs/location-review/REPORT.md"
+  },
+  "navigationCoverageBaseline": {
+    "review": "docs/navigation-audit/REPORT.md",
+    "minimum": {
+      "auditedItemIDs": 7732,
+      "classFactionChecks": 74004,
+      "usableLocationRows": 8557,
+      "simulatedDistinctMarkerDestinations": 807,
+      "rawSourceEvidenceChecks": 24520
+    },
+    "zero": [
+      "usableLocationsWithoutButton",
+      "sourceEvidenceWithoutButton",
+      "itemCacheRequests"
+    ]
+  }
+}

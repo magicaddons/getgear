@@ -325,12 +325,32 @@ function GetGear:AppendAltMaterialTooltip(tooltip,itemID,required)
 end
 
 local frame=CreateFrame("Frame")
+local pendingBagScan
+function Ledger:FlushPendingBagScan()
+    if not pendingBagScan then return end
+    pendingBagScan=nil
+    self:ScanBags()
+end
+local function QueueBagScan()
+    if pendingBagScan then return end
+    if not(C_Timer and type(C_Timer.After)=="function")then Ledger:ScanBags();return end
+    local ticket={};pendingBagScan=ticket
+    C_Timer.After(0.05,function()
+        if pendingBagScan~=ticket then return end
+        Ledger:FlushPendingBagScan()
+    end)
+end
 for _,event in ipairs({"PLAYER_ENTERING_WORLD","BAG_UPDATE_DELAYED","BANKFRAME_OPENED",
     "BANKFRAME_CLOSED","BANK_TABS_CHANGED","PLAYERBANKSLOTS_CHANGED","PLAYER_LOGOUT"}) do
     frame:RegisterEvent(event)
 end
 frame:SetScript("OnEvent",function(_,event)
-    if event=="PLAYER_ENTERING_WORLD" or event=="BAG_UPDATE_DELAYED" or event=="PLAYER_LOGOUT" then
+    if event=="BAG_UPDATE_DELAYED" then
+        QueueBagScan()
+    elseif event=="PLAYER_ENTERING_WORLD" or event=="PLAYER_LOGOUT" then
+        -- Final logout state must be written synchronously, without waiting
+        -- for a timer that cannot run once the client closes.
+        pendingBagScan=nil
         Ledger:ScanBags()
     end
     if event=="BANKFRAME_OPENED" then

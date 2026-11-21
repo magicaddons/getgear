@@ -1,0 +1,29 @@
+Acceptance2 final eligibility gate
+Source ce6a2e1b8c65501c6c57e0f87e1376f856d2b2d7
+Run https://github.com/magicaddons/getgear/actions/runs/43545006409
+Job132294156148 SUCCESS;23 timestamped regression PASS plus26module syntax
+Whole direct bot19267acb0b75ff5a48779b5d17d90a97b7508869 reviewed:only fourEverloot hashes/runUTC in provenance.json;allotherbytes exact. Bot response bodies unread;no full-fact equality inferred. Same-branch fast-forward only,no merge commit.
+2026-11-14T02:12:59.5599659Z PASS offline dungeon-link boundaries: reviewed gaps, publication leads, exact actor observations
+2026-11-14T02:12:59.7504262Z PASS offline green-BoE generator: reviewed Rare/BoP exception beats obsolete feeds; other IDs retained; invalid exclusion rejected
+2026-11-14T02:12:59.9017067Z PASS navigation generation: future evidence propagation, exact trainer spell/output/profession joins, source deduplication, no fake centroids/random farms/prerequisites, partial/disputed evidence remains unresolved
+2026-11-14T02:12:59.9665443Z PASS AH2 school/proficiency extraction:generic/healing/school/proc evidence;two-hand and unrestricted/class-gated nonweapon offhands
+2026-11-14T02:13:29.1554437Z PASS Beta4 canonical catalogue: 7707 records, 36669 class entries, 9 classes, 259 research overrides, quest/gates, 0 spec profiles
+2026-11-14T02:13:30.1087436Z PASS Beta7 Warrior lvl15 hides leather and four earlier items; aged/role gates, late quests, boundary, status, all-valid, materials and preview
+2026-11-14T02:13:30.5701727Z PASS Beta4 C_Traits Fire/Frost/Arcane dominance, mixed stat safety, ambiguity and API fallback, expanded/preview and conservative pure-school items
+2026-11-14T02:13:32.9615538Z PASS Beta4 stress: 26 Lua files, 45 class/level checks, 0 item-cache requests, load 0.43s, filtering 1.93s
+2026-11-14T02:13:33.4359930Z PASS Beta 7 evidence overlay: 7707 unchanged identities, nine classes, 8 corrected items, explicit trash/recipe provenance, map/mat evidence
+2026-11-14T02:13:33.9051980Z PASS Beta7 material names: belt names, all class recipes, 1254 crafts, 4857 ingredients without client item cache
+2026-11-14T02:13:34.1220077Z PASS full Beta7: 7707 items, 36669 class objectives, nine classes, 1060 new recipes, 43 corrections, 415 named dungeon enemies (not necessarily bosses), 55 vendor, 27 quest
+2026-11-14T02:13:34.1370164Z PASS Beta7 class-wide source-uncertainty visibility, QA veto, role, and older boundary
+2026-11-14T02:13:34.3163875Z PASS Beta7 preferred armor for nine classes, 39/40 switch, preview, upcoming, cloaks, all-valid and item 3313
+2026-11-14T02:13:34.3313898Z PASS Beta7 Preview Guide: no overlap, settings next to Full 1-60, 720px fit and correct normal/inventory transitions
+2026-11-14T02:13:34.7572191Z PASS Forever stat flags: 7699 independently typed 1-60 items, Crusader/Protector variants, 9 classes, hybrid examples and all-valid override
+2026-11-14T02:13:34.8010592Z PASS overlay stat filter: nine classes, two armor keys, armor-only opt-in, other positives/resistance, negative/zero/unknown, rings, bags, guide, materials, toggle and zero bulk requests
+2026-11-14T02:13:35.2906173Z PASS AH2:7707items/36669legal objectives/224audited item masks/nine-class schools/meaningful stats/aliases/explicit offhand planning;client rendering untested
+2026-11-14T02:13:35.3284227Z PASS green-BoE overlay: world-drop default, route exceptions, live override, provisional fallback and settings
+2026-11-14T02:13:35.9491411Z PASS full acquisition reconciliation: 7373 item-ID sources; 7372 new displayed references; 759 new recipe book IDs, 577 dungeon routes, 1252 crafts and nine classes
+2026-11-14T02:13:36.5946586Z PASS acquisition navigation: 14 source scenarios, character progress, shared compact/guide pin, API fallbacks, one-marker lifecycle, native waypoint preserved, 7707 catalogue IDs/36669 class objectives; rendering requires manual client tests
+2026-11-14T02:13:36.6315993Z PASS AH2 map readiness:delayed/zero canvas,late map IDs,refresh/resize/close/reopen,repeated destinations,published fallback/native priority/distinct gates/one marker;live rendering unverified
+2026-11-14T02:13:37.6387270Z PASS AH2 button audit:7707items/36669classsourcechecks/knownHordeservicesexcluded/zeroitemcache requests;point/area/written/missing distinguished;actual rendering untested
+2026-11-14T02:13:38.1195000Z PASS full TOC smoke:26modules including Core/UI/AltInventory;shared navigation helpers/slash command;no external addon library;synthetic frames only
+

@@ -1,0 +1,100 @@
+{
+  "capturedUTC": "2026-11-09T23:41:21.370372+00:00",
+  "method": "Exact full factual snapshot comparison8O\u21928X; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23280,
+    "afterItems": 23283,
+    "beforeDefinitions": 9152,
+    "afterDefinitions": 9152,
+    "newItems": [
+      {
+        "itemID": 11824,
+        "name": "Cyclopean Band",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18320,
+        "name": "Demondash Spaulders",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 276745,
+        "name": "Beastbond Robe",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.ab9ed0a4a2.json",
+        "bytes": 988877,
+        "sha256": "ab9ed0a4a241f9d85aa58ea07b05a9a47985b7ca080021254867647bed372b23",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.52f06f89f4.json",
+        "bytes": 1315133,
+        "sha256": "52f06f89f424c2633eabc0ee061a1c82b6cb3c2d328c68f30a3d605207e3daa5",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.0957e49311.json",
+        "bytes": 464371,
+        "sha256": "0957e493112398c50b51b85773a78047330a5902bb294da08f7e7a707841ad54",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.292a214b24.json",
+        "bytes": 446193,
+        "sha256": "292a214b245b938460af74a16419643148825d98bc9f57ec7b28ac8ccc3adb9c",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1398,
+    "afterRaw": 1398,
+    "qualifying": 1198,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selected100QualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "f870b61a71f02a0b1faf5130ff0cac14ea26350856087edec616ff5de7e004c1",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T21:40:15.722Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103653,
+        "sha256": "93867cca730c4838267f1d7d31f860468decac99484f04f2b650622e3a4b880e",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T21:40:15.722Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 82267,
+        "sha256": "9c74836b5253f5fc4c115e3a32160cc12e069c57a6b8281381b8e00b99f01c47",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T21:40:15.722Z"
+      }
+    ]
+  }
+}

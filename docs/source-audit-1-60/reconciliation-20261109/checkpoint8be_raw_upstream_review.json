@@ -1,0 +1,1180 @@
+{
+  "capturedUTC": "2026-11-11T00:52:03.436483+00:00",
+  "method": "Exact full factual snapshot comparison: retainedreviewed8BDactualfactualsnapshots to8BE;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23464,
+    "afterItems": 23484,
+    "beforeDefinitions": 9160,
+    "afterDefinitions": 9161,
+    "newItems": [
+      {
+        "itemID": 10625,
+        "name": "Stealthblade",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 10628,
+        "name": "Deathblow",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12462,
+        "name": "Embrace of the Wind Serpent",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Avatar of Hakkar",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "3495436b2dee36c3d855879ff7ec44406b2f391b85c9717890cd21cd45fdbc0b"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13527,
+        "name": "Lavawalker Greaves",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Maleki the Pallid",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "b4409002dc5fb383dcae81b77024c17ac77b51de2b0f19b988ad895f0582c986"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 14502,
+        "name": "Frostbite Girdle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "d2fcff54d1c2e5d8e23acf632ffddae7d6c1daa49e73d30cc74836cbf5540a41"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18326,
+        "name": "Razor Gauntlets",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Alzzin the Wildshaper",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "3894c224c587160bc3936ba6b52d94557a0606ab6d76eae284d2ae0beaf86af8"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18338,
+        "name": "Wand of Arcane Potency",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18344,
+        "name": "Stonebark Gauntlets",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18345,
+        "name": "Murmuring Ring",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Tsu'zee",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "c64392bda2e9924efb2a8afcb1d8e61467247dce44fc56cf31d5aa30f05c5908"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18346,
+        "name": "Threadbare Trousers",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Tsu'zee",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "c64392bda2e9924efb2a8afcb1d8e61467247dce44fc56cf31d5aa30f05c5908"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18391,
+        "name": "Eyestalk Cord",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Immol'thar",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "b0f9a6d81f40e3f15012aedf10cd05ef05977333dfde094c81799a08bc901df3"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18459,
+        "name": "Gallant's Wristguards",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Guard Mol'dar",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "078a9e98c2a7944c885ad0e91f9cafb0e42b5fbb7c061b8d7d0120af65b4f6b5"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18465,
+        "name": "Royal Seal of Eldre'Thalas",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "Garona: A Study on Stealth and Treachery",
+            "zone": "Dire Maul",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18496,
+        "name": "Heliotrope Cloak",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Guard Mol'dar",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "078a9e98c2a7944c885ad0e91f9cafb0e42b5fbb7c061b8d7d0120af65b4f6b5"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18497,
+        "name": "Sublime Wristguards",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Guard Mol'dar",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "078a9e98c2a7944c885ad0e91f9cafb0e42b5fbb7c061b8d7d0120af65b4f6b5"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18690,
+        "name": "Wraithplate Leggings",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Jandice Barov",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "f77c47f526c31f2984cb81d1fe76b61ea54f7999a2c1c58c113d5756e3f3609a"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18696,
+        "name": "Intricately Runed Shield",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "d2fcff54d1c2e5d8e23acf632ffddae7d6c1daa49e73d30cc74836cbf5540a41"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 279471,
+        "name": "Alcaz Operative Insignia",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280013,
+        "name": "Frostfang Mail Vest",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 284104,
+        "name": "Cultist's Cuffs",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 3080,
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 924,
+        "name": "Maul",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 1607,
+        "name": "Soulkeeper",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 1652,
+        "name": "Sturdy Lunchbox",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 2520,
+        "name": "Broadsword",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 3938,
+        "name": "Crochet Bracers",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4004,
+        "name": "Overlinked Chain Gloves",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4005,
+        "name": "Overlinked Chain Pants",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4056,
+        "name": "Cortello's Riddle",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4581,
+        "name": "Patch of Fine Fur",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4590,
+        "name": "Curved Yellow Bill",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4591,
+        "name": "Eagle Eye",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 6126,
+        "name": "Trapper's Pants",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 8113,
+        "name": "Hibernal Robe",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8119,
+        "name": "Heraldic Breastplate",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8132,
+        "name": "Myrmidon's Leggings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8267,
+        "name": "Ebonhold Gauntlets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8271,
+        "name": "Ebonhold Leggings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8272,
+        "name": "Ebonhold Shoulderpads",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8285,
+        "name": "Arcane Bands",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8315,
+        "name": "Alabaster Plate Girdle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 8926,
+        "name": "Instant Poison IV",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 10099,
+        "name": "Councillor's Gloves",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10103,
+        "name": "Councillor's Sash",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10136,
+        "name": "High Councillor's Bracers",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10156,
+        "name": "Mercurial Bracers",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10159,
+        "name": "Mercurial Cloak",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10164,
+        "name": "Templar Chestplate",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10169,
+        "name": "Templar Legplates",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10183,
+        "name": "Swashbuckler's Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10204,
+        "name": "Heavy Lamellar Shield",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10210,
+        "name": "Elegant Mantle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10224,
+        "name": "Nightshade Cloak",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10226,
+        "name": "Nightshade Helmet",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10234,
+        "name": "Engraved Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10240,
+        "name": "Heavy Lamellar Chestpiece",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10244,
+        "name": "Heavy Lamellar Leggings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10269,
+        "name": "Masterwork Girdle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10280,
+        "name": "Emerald Legplates",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10307,
+        "name": "Scroll of Stamina IV",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 10381,
+        "name": "Commander's Girdle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10387,
+        "name": "Hyperion Girdle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10457,
+        "name": "Empty Sea Snail Shell",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 11387,
+        "name": "Basilisk Heart",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 11410,
+        "name": "Savage Bear Claw",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 11978,
+        "name": "Jasper Link",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 12004,
+        "name": "Obsidian Band",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 12005,
+        "name": "Granite Ring",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 12015,
+        "name": "Swamp Ring",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 12057,
+        "name": "Dragonscale Band",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13001,
+        "name": "Maiden's Circle",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13002,
+        "name": "Lady Alizabeth's Pendant",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13006,
+        "name": "Mass of McGowan",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13007,
+        "name": "Mageflame Cloak",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13044,
+        "name": "Demonslayer",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13070,
+        "name": "Sapphiron's Scale Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13096,
+        "name": "Band of the Hierophant",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13101,
+        "name": "Wolfrunner Shoes",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13130,
+        "name": "Windrunner Legguards",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 13724,
+        "name": "Enriched Manna Biscuit",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 14274,
+        "name": "Gaea's Leggings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14277,
+        "name": "Gaea's Tunic",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14285,
+        "name": "Opulent Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14295,
+        "name": "Arachnidian Legguards",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14298,
+        "name": "Bonecaster's Spaulders",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14311,
+        "name": "Celestial Bindings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14321,
+        "name": "Resplendent Cloak",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14324,
+        "name": "Resplendent Sarong",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14427,
+        "name": "Windchaser Wraps",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14450,
+        "name": "Highborne Cloak",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14672,
+        "name": "Pridelord Bands",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14674,
+        "name": "Pridelord Girdle",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 14675,
+        "name": "Pridelord Gloves",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14796,
+        "name": "Protector Legguards",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14797,
+        "name": "Protector Pads",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14799,
+        "name": "Bloodlust Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14807,
+        "name": "Bloodlust Bracelets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14916,
+        "name": "Jade Deflector",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14922,
+        "name": "Lofty Sabatons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14924,
+        "name": "Lofty Breastplate",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14933,
+        "name": "Heroic Gauntlets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14954,
+        "name": "Bloodforged Shield",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14957,
+        "name": "High Chief's Sabatons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15179,
+        "name": "Praetorian Padded Armor",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15190,
+        "name": "Grand Cloak",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15218,
+        "name": "Crystal Sword",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15276,
+        "name": "Magus Long Staff",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15326,
+        "name": "Gleaming Throwing Axe",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 15389,
+        "name": "Jadefire Sabatons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15395,
+        "name": "Jadefire Epaulets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15427,
+        "name": "Peerless Cloak",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15431,
+        "name": "Peerless Leggings",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15432,
+        "name": "Peerless Shoulders",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15628,
+        "name": "Gryphon Mail Pauldrons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15650,
+        "name": "Merciless Surcoat",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15653,
+        "name": "Merciless Gauntlets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15654,
+        "name": "Merciless Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15662,
+        "name": "Impenetrable Gauntlets",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15663,
+        "name": "Impenetrable Belt",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15696,
+        "name": "Ruined Tome",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 15936,
+        "name": "Duskwoven Branch",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 15966,
+        "name": "Venomshroud Orb",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 18356,
+        "name": "Garona: A Study on Stealth and Treachery",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 19234,
+        "name": "Six of Beasts",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 19273,
+        "name": "Six of Elementals",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 19275,
+        "name": "Eight of Elementals",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 19282,
+        "name": "Six of Portals",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 19284,
+        "name": "Eight of Portals",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 19292,
+        "name": "Last Month's Mutton",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 19935,
+        "name": "Empty Venom Sac",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 20395,
+        "name": "Twilight Lexicon - Chapter 2",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 20769,
+        "name": "Disgusting Oozeling",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 23197,
+        "name": "Idol of the Moon",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 23199,
+        "name": "Totem of the Storm",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 264116,
+        "name": "Craftsman's Writ: Potion of Demonslaying",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264117,
+        "name": "Craftsman's Writ: Dreamless Sleep Potion",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264122,
+        "name": "Craftsman's Writ: Limited Invulnerability Potion",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264128,
+        "name": "Craftsman's Writ: Mithril Spurs",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264130,
+        "name": "Craftsman's Writ: Darkrune Gauntlets",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264133,
+        "name": "Craftsman's Writ: Ebon Shiv",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264135,
+        "name": "Craftsman's Writ: Green Lens",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264144,
+        "name": "Craftsman's Writ: Gordok Ogre Suit",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 264153,
+        "name": "Craftsman's Writ: Runecloth Bag",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 277502,
+        "name": "Scroll of Imbue Precision",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 280399,
+        "name": "Damaged Scimitar",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 282026,
+        "name": "Unyielding Battle Signet",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 282555,
+        "name": "Shadowforge Shield",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 284262,
+        "name": "Howling Hide",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 284282,
+        "name": "Queen Guard's Royal Seal",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 284573,
+        "name": "Ursol'lok's Paws",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 285103,
+        "name": "Marsh Serpent's Scales",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 285284,
+        "name": "Balanced Knives",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 286619,
+        "name": "Big Basher's Belt",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 287022,
+        "name": "Spaulders of Containment",
+        "before": "3",
+        "after": 7
+      },
+      {
+        "itemID": 287033,
+        "name": "Furbolg Berserker's Boots",
+        "before": "3",
+        "after": 7
+      }
+    ],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.d7bda8ec07.json",
+        "bytes": 989996,
+        "sha256": "d7bda8ec0719554d325f7549f319f87d4285de4f2a5405286b4a304b423e0245",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.2e359fb25b.json",
+        "bytes": 1338533,
+        "sha256": "2e359fb25bf99bcf71be2121dbfc67955488c9a0be3bdc5f6d3cceba95ebe463",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.0db4ae3263.json",
+        "bytes": 464366,
+        "sha256": "0db4ae32637ef0c1a7ef51263ccb370d5b733c495909796c03f063b10807243a",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.ae88aa75ac.json",
+        "bytes": 446270,
+        "sha256": "ae88aa75ac837b2b7622cbad45c73529bd511736f92bd16da6d303ac68f115b4",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1550,
+    "afterRaw": 1551,
+    "qualifying": 1316,
+    "addedEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 3502,
+        "rel": "dropped_by",
+        "toKind": "object",
+        "toId": 1723,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T12:13:18.000Z",
+        "lastSeen": "2026-11-11T00:24:08.000Z"
+      }
+    ],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "97caf139a4ebf1ed30a289267af762a60147cc3356605a29df8e8b5b846c2c13",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-11T00:50:15.211Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103544,
+        "sha256": "18226cf4d8dfbc9270f5351451b7bdb5b1f6a78d748d91cee660bf56abdc58cd",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-11T00:50:15.211Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103405,
+        "sha256": "b117f8117898a881375dee4721d112355c2d9cd9f1805be988123bf1b7e9c5ed",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-11T00:50:15.211Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 10916,
+        "sha256": "d83eba5ecd1bfe75ebfa860ddfc6ae094d67f9500e2a8dd7f85c6873e754422c",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-11T00:50:15.211Z"
+      }
+    ]
+  }
+}

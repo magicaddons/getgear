@@ -1,0 +1,170 @@
+{
+  "dungeon_items_reconciled.csv": {
+    "rows": 577,
+    "changedRows": [
+      {
+        "itemID": 1155,
+        "changes": {
+          "confidence": {
+            "before": "forever-community-reference",
+            "after": "forever-observed-npc"
+          },
+          "sourceSummary": {
+            "before": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever reference; live unverified)",
+            "after": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever observed)"
+          },
+          "playerObservedNPCs": {
+            "before": "[]",
+            "after": "[{\"name\": \"Twilight Lord Kelris\", \"npcID\": 4832, \"installs\": 3, \"lastSeen\": \"2026-11-10T09:36:19.000Z\", \"evidence\": \"everloot-3plus-installs\"}]"
+          },
+          "needsLiveVerification": {
+            "before": "True",
+            "after": "False"
+          }
+        }
+      },
+      {
+        "itemID": 6903,
+        "changes": {
+          "confidence": {
+            "before": "forever-community-reference",
+            "after": "forever-observed-npc"
+          },
+          "sourceSummary": {
+            "before": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever reference; live unverified)",
+            "after": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever observed)"
+          },
+          "playerObservedNPCs": {
+            "before": "[]",
+            "after": "[{\"name\": \"Twilight Lord Kelris\", \"npcID\": 4832, \"installs\": 3, \"lastSeen\": \"2026-11-10T08:56:16.000Z\", \"evidence\": \"everloot-3plus-installs\"}]"
+          },
+          "needsLiveVerification": {
+            "before": "True",
+            "after": "False"
+          }
+        }
+      }
+    ],
+    "scope": "Only exact new attributed observation/confidence cells;identities-roles-gates-ingredientlists unchanged."
+  },
+  "recipes_reconciled.csv": {
+    "rows": 1252,
+    "changedRows": [
+      {
+        "itemID": 3485,
+        "changes": {
+          "evidence": {
+            "before": "forever-community-reference",
+            "after": "forever-observed"
+          },
+          "observedBookAcquisition": {
+            "before": "[]",
+            "after": "[{\"relation\": \"dropped_by\", \"targetID\": 4805, \"targetType\": \"npc\", \"targetName\": \"Blackfathom Sea Witch\", \"installs\": 3, \"lastSeen\": \"2026-11-10T09:10:57.000Z\"}]"
+          }
+        }
+      }
+    ],
+    "scope": "Only exact new attributed observation/confidence cells;identities-roles-gates-ingredientlists unchanged."
+  },
+  "dungeon_equipment_drops.csv": {
+    "rows": 552,
+    "changedRows": [
+      {
+        "itemID": 1155,
+        "changes": {
+          "confidence": {
+            "before": "forever-community-reference",
+            "after": "forever-observed-npc"
+          },
+          "sourceSummary": {
+            "before": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever reference; live unverified)",
+            "after": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever observed)"
+          },
+          "playerObservedNPCs": {
+            "before": "[]",
+            "after": "[{\"name\": \"Twilight Lord Kelris\", \"npcID\": 4832, \"installs\": 3, \"lastSeen\": \"2026-11-10T09:36:19.000Z\", \"evidence\": \"everloot-3plus-installs\"}]"
+          },
+          "needsLiveVerification": {
+            "before": "True",
+            "after": "False"
+          }
+        }
+      },
+      {
+        "itemID": 6903,
+        "changes": {
+          "confidence": {
+            "before": "forever-community-reference",
+            "after": "forever-observed-npc"
+          },
+          "sourceSummary": {
+            "before": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever reference; live unverified)",
+            "after": "Blackfathom Deeps | Boss: Twilight Lord Kelris (Forever observed)"
+          },
+          "playerObservedNPCs": {
+            "before": "[]",
+            "after": "[{\"name\": \"Twilight Lord Kelris\", \"npcID\": 4832, \"installs\": 3, \"lastSeen\": \"2026-11-10T08:56:16.000Z\", \"evidence\": \"everloot-3plus-installs\"}]"
+          },
+          "needsLiveVerification": {
+            "before": "True",
+            "after": "False"
+          }
+        }
+      }
+    ],
+    "scope": "Only exact new attributed observation/confidence cells;identities-roles-gates-ingredientlists unchanged."
+  },
+  "dungeon_source_followups.csv": {
+    "rows": 6,
+    "changedRows": [],
+    "scope": "Only exact new attributed observation/confidence cells;identities-roles-gates-ingredientlists unchanged."
+  },
+  "recipe_source_followups.csv": {
+    "rows": 954,
+    "changedRows": [
+      {
+        "itemID": 3485,
+        "changes": {
+          "evidence": {
+            "before": "forever-community-reference",
+            "after": "forever-observed"
+          },
+          "observedBookAcquisition": {
+            "before": "[]",
+            "after": "[{\"relation\": \"dropped_by\", \"targetID\": 4805, \"targetType\": \"npc\", \"targetName\": \"Blackfathom Sea Witch\", \"installs\": 3, \"lastSeen\": \"2026-11-10T09:10:57.000Z\"}]"
+          }
+        }
+      }
+    ],
+    "scope": "Only exact new attributed observation/confidence cells;identities-roles-gates-ingredientlists unchanged."
+  },
+  "recipe_trainer_book_checks.csv": {
+    "rows": 886,
+    "changedRows": [
+      {
+        "itemID": 3485,
+        "changes": {
+          "evidence": {
+            "before": "forever-community-reference",
+            "after": "forever-observed"
+          },
+          "observedBookAcquisition": {
+            "before": "[]",
+            "after": "[{\"relation\": \"dropped_by\", \"targetID\": 4805, \"targetType\": \"npc\", \"targetName\": \"Blackfathom Sea Witch\", \"installs\": 3, \"lastSeen\": \"2026-11-10T09:10:57.000Z\"}]"
+          }
+        }
+      }
+    ],
+    "scope": "Only exact new attributed observation/confidence cells;identities-roles-gates-ingredientlists unchanged."
+  },
+  "recipe_vendor_book_checks.csv": {
+    "rows": 68,
+    "changedRows": [],
+    "scope": "Only exact new attributed observation/confidence cells;identities-roles-gates-ingredientlists unchanged."
+  },
+  "supplementary_crafts_reconciled.csv": {
+    "rows": 2,
+    "changedRows": [],
+    "scope": "Only exact new attributed observation/confidence cells;identities-roles-gates-ingredientlists unchanged."
+  }
+}

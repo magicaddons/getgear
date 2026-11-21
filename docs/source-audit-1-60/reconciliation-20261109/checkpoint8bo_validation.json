@@ -1,0 +1,310 @@
+{
+  "checkpoint": "8BO",
+  "status": "verified-pushed;continue8BP",
+  "sourceCommit": "346965ba802945280ee3a77bb682bcc66362de52",
+  "finalValidatedGeneratedHead": "07e23c2c9ff29a6af85be8d3d2eea2fd3e38a2fa",
+  "CI": {
+    "runID": 43017346161,
+    "jobID": 130511594308,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43017346161",
+    "conclusion": "success",
+    "timestampedTestPASS": 18,
+    "LuaSuites": 15,
+    "offlinePythonSuites": 3,
+    "modules": 26
+  },
+  "local": {
+    "status": "60integrated/fullfinal19localPASS;nonreleaseCI/directbotpending",
+    "registry": 5056,
+    "index": 6527,
+    "display": 6526,
+    "books": 759,
+    "remaining": 846,
+    "next": "8BP51level47numericIDorder",
+    "priorObjectsExact": 4996,
+    "caseCounts": {
+      "selected": 60,
+      "groups": {
+        "broad-worlddrop": 60
+      },
+      "caseFullPages": 150,
+      "caseNewPages": 121,
+      "caseCachedPages": 29,
+      "primaryWithRetainedContext": 288,
+      "newFullPages": 121,
+      "reusedFullPages": 167,
+      "exactQueries": 60,
+      "sharedQueries": 4,
+      "dropReverseJoins": 190,
+      "dropReverseOmissions": 44,
+      "objectReverseJoins": 77,
+      "objectReverseOmissions": 5,
+      "physicalContainerReferences": 123,
+      "physicalContainerReverseJoins": 103,
+      "physicalContainerOmissions": 20,
+      "qualities": {
+        "3": 5,
+        "2": 54,
+        "4": 1
+      },
+      "BoE": 60,
+      "plainUnique": 0,
+      "UniqueEquipped": 1,
+      "newQuestPages": 18,
+      "formalQuestActorJoins": 35,
+      "newFailures": 0,
+      "liveVerified": 0,
+      "supplementalOutsideCandidateOwnPages": 17,
+      "outsideCandidateSourceJoins": 21
+    },
+    "successfulCapture": {
+      "label": "8bo3",
+      "exitCode": 0,
+      "responses": {
+        "https://playfulls.com/db/meta.29d9278241.json": {
+          "bytes": 999737,
+          "sha256": "29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f",
+          "workspacePath": "/tmp/getgear-research/8bo3-http-capture/29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f.body",
+          "capturedUTC": "2026-11-11T11:56:00.420865+00:00"
+        },
+        "https://playfulls.com/db/gear.bf4cb1a848.json": {
+          "bytes": 1356331,
+          "sha256": "bf4cb1a84827db4dc1b9e5ead15fbf4a5eb6e73e4f55d31c54d249635e1cbd59",
+          "workspacePath": "/tmp/getgear-research/8bo3-http-capture/bf4cb1a84827db4dc1b9e5ead15fbf4a5eb6e73e4f55d31c54d249635e1cbd59.body",
+          "capturedUTC": "2026-11-11T11:56:00.537474+00:00"
+        },
+        "https://playfulls.com/db/goods.c72521f744.json": {
+          "bytes": 467080,
+          "sha256": "c72521f744f828b7b53b93cf8e12dd4e6d028447c7fb9cba44ac2e3814feb536",
+          "workspacePath": "/tmp/getgear-research/8bo3-http-capture/c72521f744f828b7b53b93cf8e12dd4e6d028447c7fb9cba44ac2e3814feb536.body",
+          "capturedUTC": "2026-11-11T11:56:00.705779+00:00"
+        },
+        "https://playfulls.com/db/other.98a68c9cf1.json": {
+          "bytes": 446765,
+          "sha256": "98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60",
+          "workspacePath": "/tmp/getgear-research/8bo3-http-capture/98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60.body",
+          "capturedUTC": "2026-11-11T11:56:00.850617+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500": {
+          "bytes": 103443,
+          "sha256": "880f9dc92b0ca640a142382afb3661e2cc88df3fd2cb5888558b0096b0c2186d",
+          "workspacePath": "/tmp/getgear-research/8bo3-http-capture/880f9dc92b0ca640a142382afb3661e2cc88df3fd2cb5888558b0096b0c2186d.body",
+          "capturedUTC": "2026-11-11T11:56:04.421955+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+          "bytes": 103479,
+          "sha256": "3dae31dda55eb149efb3f28f8eb41abd89779be72af11f3033c158293cf9799f",
+          "workspacePath": "/tmp/getgear-research/8bo3-http-capture/3dae31dda55eb149efb3f28f8eb41abd89779be72af11f3033c158293cf9799f.body",
+          "capturedUTC": "2026-11-11T11:56:08.721697+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+          "bytes": 103463,
+          "sha256": "d0426218e193e545f42cb5d3d59d8a6f8b0afc76c277652f0ab91247d406fcf2",
+          "workspacePath": "/tmp/getgear-research/8bo3-http-capture/d0426218e193e545f42cb5d3d59d8a6f8b0afc76c277652f0ab91247d406fcf2.body",
+          "capturedUTC": "2026-11-11T11:56:12.474884+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+          "bytes": 35754,
+          "sha256": "97674a53af7f3c7676157a0e4cf7b661b0fdecd459ccc8e84c64d6ec09ce1a44",
+          "workspacePath": "/tmp/getgear-research/8bo3-http-capture/97674a53af7f3c7676157a0e4cf7b661b0fdecd459ccc8e84c64d6ec09ce1a44.body",
+          "capturedUTC": "2026-11-11T11:56:14.976481+00:00"
+        }
+      }
+    },
+    "earlierSuccessfulCaptures": [
+      {
+        "label": "8bo",
+        "scope": "Successfulpriorfinalsourcewording/candidatesupplement stages;allthreefreshcompletecaptures,nonefailed/replayed.",
+        "responses": {
+          "https://playfulls.com/db/meta.29d9278241.json": {
+            "bytes": 999737,
+            "sha256": "29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f",
+            "workspacePath": "/tmp/getgear-research/8bo-http-capture/29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f.body",
+            "capturedUTC": "2026-11-11T11:44:56.073607+00:00"
+          },
+          "https://playfulls.com/db/gear.bf4cb1a848.json": {
+            "bytes": 1356331,
+            "sha256": "bf4cb1a84827db4dc1b9e5ead15fbf4a5eb6e73e4f55d31c54d249635e1cbd59",
+            "workspacePath": "/tmp/getgear-research/8bo-http-capture/bf4cb1a84827db4dc1b9e5ead15fbf4a5eb6e73e4f55d31c54d249635e1cbd59.body",
+            "capturedUTC": "2026-11-11T11:44:56.246524+00:00"
+          },
+          "https://playfulls.com/db/goods.c72521f744.json": {
+            "bytes": 467080,
+            "sha256": "c72521f744f828b7b53b93cf8e12dd4e6d028447c7fb9cba44ac2e3814feb536",
+            "workspacePath": "/tmp/getgear-research/8bo-http-capture/c72521f744f828b7b53b93cf8e12dd4e6d028447c7fb9cba44ac2e3814feb536.body",
+            "capturedUTC": "2026-11-11T11:44:56.516575+00:00"
+          },
+          "https://playfulls.com/db/other.98a68c9cf1.json": {
+            "bytes": 446765,
+            "sha256": "98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60",
+            "workspacePath": "/tmp/getgear-research/8bo-http-capture/98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60.body",
+            "capturedUTC": "2026-11-11T11:44:56.661807+00:00"
+          },
+          "https://everloot.app/api/edges?evidence=observed&limit=500": {
+            "bytes": 103443,
+            "sha256": "d4ba608cf31ef7cd7f572d8886fe0a3dbd44e0c33ac3bf03464b8f559d996ba7",
+            "workspacePath": "/tmp/getgear-research/8bo-http-capture/d4ba608cf31ef7cd7f572d8886fe0a3dbd44e0c33ac3bf03464b8f559d996ba7.body",
+            "capturedUTC": "2026-11-11T11:45:00.440608+00:00"
+          },
+          "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+            "bytes": 103479,
+            "sha256": "7164ce9c0a720c8370ca70d4fbcad2894887b0c6122cf9d52f7691bad792d212",
+            "workspacePath": "/tmp/getgear-research/8bo-http-capture/7164ce9c0a720c8370ca70d4fbcad2894887b0c6122cf9d52f7691bad792d212.body",
+            "capturedUTC": "2026-11-11T11:45:04.508160+00:00"
+          },
+          "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+            "bytes": 103463,
+            "sha256": "2ee9dcad6128a4d1d4d499c16857247d179146f889e28487d6cd9cd24768cc22",
+            "workspacePath": "/tmp/getgear-research/8bo-http-capture/2ee9dcad6128a4d1d4d499c16857247d179146f889e28487d6cd9cd24768cc22.body",
+            "capturedUTC": "2026-11-11T11:45:08.159815+00:00"
+          },
+          "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+            "bytes": 35754,
+            "sha256": "91222db3e9da3a5be85be50299f73509ddb4e1084e851b22df7c637edcf3ba66",
+            "workspacePath": "/tmp/getgear-research/8bo-http-capture/91222db3e9da3a5be85be50299f73509ddb4e1084e851b22df7c637edcf3ba66.body",
+            "capturedUTC": "2026-11-11T11:45:10.860651+00:00"
+          }
+        }
+      },
+      {
+        "label": "8bo2",
+        "scope": "Successfulpriorfinalsourcewording/candidatesupplement stages;allthreefreshcompletecaptures,nonefailed/replayed.",
+        "responses": {
+          "https://playfulls.com/db/meta.29d9278241.json": {
+            "bytes": 999737,
+            "sha256": "29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f",
+            "workspacePath": "/tmp/getgear-research/8bo2-http-capture/29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f.body",
+            "capturedUTC": "2026-11-11T11:46:49.084075+00:00"
+          },
+          "https://playfulls.com/db/gear.bf4cb1a848.json": {
+            "bytes": 1356331,
+            "sha256": "bf4cb1a84827db4dc1b9e5ead15fbf4a5eb6e73e4f55d31c54d249635e1cbd59",
+            "workspacePath": "/tmp/getgear-research/8bo2-http-capture/bf4cb1a84827db4dc1b9e5ead15fbf4a5eb6e73e4f55d31c54d249635e1cbd59.body",
+            "capturedUTC": "2026-11-11T11:46:49.422710+00:00"
+          },
+          "https://playfulls.com/db/goods.c72521f744.json": {
+            "bytes": 467080,
+            "sha256": "c72521f744f828b7b53b93cf8e12dd4e6d028447c7fb9cba44ac2e3814feb536",
+            "workspacePath": "/tmp/getgear-research/8bo2-http-capture/c72521f744f828b7b53b93cf8e12dd4e6d028447c7fb9cba44ac2e3814feb536.body",
+            "capturedUTC": "2026-11-11T11:46:49.598572+00:00"
+          },
+          "https://playfulls.com/db/other.98a68c9cf1.json": {
+            "bytes": 446765,
+            "sha256": "98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60",
+            "workspacePath": "/tmp/getgear-research/8bo2-http-capture/98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60.body",
+            "capturedUTC": "2026-11-11T11:46:49.783760+00:00"
+          },
+          "https://everloot.app/api/edges?evidence=observed&limit=500": {
+            "bytes": 103443,
+            "sha256": "0d7b64dc66137e5d84df415de1378d1c804e38c19aa089ca690a6deb1ce0b09c",
+            "workspacePath": "/tmp/getgear-research/8bo2-http-capture/0d7b64dc66137e5d84df415de1378d1c804e38c19aa089ca690a6deb1ce0b09c.body",
+            "capturedUTC": "2026-11-11T11:46:54.321054+00:00"
+          },
+          "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+            "bytes": 103479,
+            "sha256": "cfc36caafb76f9242b2be57fbf483c385b507965bfd5c4e3061a37af39888302",
+            "workspacePath": "/tmp/getgear-research/8bo2-http-capture/cfc36caafb76f9242b2be57fbf483c385b507965bfd5c4e3061a37af39888302.body",
+            "capturedUTC": "2026-11-11T11:46:57.943141+00:00"
+          },
+          "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+            "bytes": 103463,
+            "sha256": "503fe2ff39ad265fd8e31427377ba047f9016d85f7da2aaba33f4720a9764809",
+            "workspacePath": "/tmp/getgear-research/8bo2-http-capture/503fe2ff39ad265fd8e31427377ba047f9016d85f7da2aaba33f4720a9764809.body",
+            "capturedUTC": "2026-11-11T11:46:59.548013+00:00"
+          },
+          "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+            "bytes": 35754,
+            "sha256": "b6a6f85305fa207d314f29f26662106e9ee64622d9bb713e8177c2fcedb9c63a",
+            "workspacePath": "/tmp/getgear-research/8bo2-http-capture/b6a6f85305fa207d314f29f26662106e9ee64622d9bb713e8177c2fcedb9c63a.body",
+            "capturedUTC": "2026-11-11T11:47:02.236054+00:00"
+          }
+        }
+      }
+    ],
+    "sourceProofImmutableSHA256": "c2b4541c8aef09a7517dbfa9098ce6fc3702db2d210f16fee05f563fdadc5329",
+    "sourceProofState": "Historicalpre-finalvalidation snapshot;local/finalvalidationoverridespendingstate. Do notmodifyproof forclosure.",
+    "companionFiles": {
+      "dungeon_equipment_drops.csv": "byte-exact",
+      "dungeon_items_reconciled.csv": "byte-exact",
+      "dungeon_source_followups.csv": "byte-exact",
+      "recipes_reconciled.csv": "byte-exact",
+      "recipe_source_followups.csv": "byte-exact",
+      "recipe_trainer_book_checks.csv": "byte-exact",
+      "recipe_vendor_book_checks.csv": "byte-exact",
+      "supplementary_crafts_reconciled.csv": "byte-exact",
+      "reviewed_recipe_sources.json": "byte-exact",
+      "supplementary_crafts.json": "byte-exact",
+      "upstream_playfulls_display_snapshot.csv": "byte-exact",
+      "upstream_playfulls_display_definitions.json": "byte-exact",
+      "upstream_playfulls_source_definitions.json": "byte-exact",
+      "upstream_everloot_edges_snapshot.csv": "byte-exact",
+      "upstream_playfulls_acquisition_snapshot.csv": "byte-exact"
+    },
+    "navigation": {
+      "not_applicable": 2578,
+      "directions": 1275,
+      "missing": 3172,
+      "verified_coordinate_data": 682
+    },
+    "gapRows": 6758,
+    "liveRenderingVerified": 0,
+    "CI": "pending18timestampedPASS/no release",
+    "feedScope": "PF23605/9246fullraw-sources-metaexact8BN;EV1672/1431fullrelations-fields exactactual8BNlocal. Zero newremovedupdatedselectedopaque. Allfactualdiagnosticsnapshots unchanged.",
+    "outsideCandidates": 380,
+    "candidateScope": {
+      "before": 363,
+      "after": 380,
+      "added": 17,
+      "priorRowsExact": true,
+      "activeCatalogueAdoptions": 0,
+      "BackSlot": 16,
+      "qualities": {
+        "Uncommon": 15,
+        "Rare": 2
+      },
+      "binding": "17BoE",
+      "eligibilityScope": "Pending systematic ALLslot/Back/Thrown review;Clothsubclass not a caster gate. Known ten omitted-cloak issue remains alongside these newly registered leads.",
+      "sourceReverseJoins": 21
+    },
+    "sharedNavigationChanges": {
+      "verifiedCurrencyNames": "Primarycurrency515label persists withoutC_CurrencyInfo;validlocalizedclient name takesprecedence/unknownIDskeepnumericfallback. No newrequiredAPI.",
+      "providedQuestInputs": "Given/provided delivery items displayedseparatelyfromexternallycollectedrequirements;notnewfees/equipmenteligibilitygates.",
+      "newMapPinsForRandomDrops": 0,
+      "existingSinglePinAndLifecyclePreserved": true
+    }
+  },
+  "botReview": {
+    "directParentVerified": true,
+    "files": [
+      "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+    ],
+    "changedKeys": [
+      "https://everloot.app/api/edges?evidence=observed&limit=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+      "lastRunUTC"
+    ],
+    "allOtherJSONAndRuntimeSourceAuditReportBytesUnchanged": true,
+    "botEverlootAPIBodiesRead": false,
+    "actualLocalFactualBaseline": "Actual local source/case/feed proof retained;equal counters never treatedas identicalfacts"
+  },
+  "frozenQueue": {
+    "total": 5688,
+    "publicationResearched": 4842,
+    "pending": 846
+  },
+  "next": {
+    "checkpoint": "8BP",
+    "cases": 51,
+    "level": 47,
+    "order": "numericitemID",
+    "queue": "remaining_equipment_research_queue.csv/nextBatch8BP"
+  },
+  "protectedRefs": {
+    "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "Beta8tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "Beta8commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  },
+  "limits": "Publicationonly,notlive/maprendering. Historicalsourceproof/localCIpendingfields overridden by this finalSUCCESS record.380candidates/allslotBackThrown/tencloaks/sixdungeon954livebooks/manualmap/finalintegrityremain. Singleexistingautomation/sameworker;no mainBeta8buildpackagereleasebilling."
+}

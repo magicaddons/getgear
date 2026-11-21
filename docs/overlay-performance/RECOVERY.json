@@ -1,0 +1,24 @@
+{
+  "baseline": "b08945d44fd454c13446a322bedbb58b1acc77fa",
+  "interruptedThread": "6afe55ce-0810-8191-9ccc-dfbf841ae09e",
+  "originalWorkspaceAccessible": false,
+  "recoveredFrom": "retained command history, selectively reviewed without executing redacted edits",
+  "originalFailure": "combined benchmark counted ShowUI + RefreshAll (two RefreshUI, one RefreshOverlay) against one overlay budget",
+  "checkpoint": "Production-path benchmark and .9 output signatures before runtime modifications",
+  "validation": {
+    "baselineIntegratedChecks": 169,
+    "baselineLuaSuitesEach": 41,
+    "baselineFailures": 0,
+    "benchmarkLuaVersions": [
+      "5.1",
+      "5.4"
+    ],
+    "stateContexts": 108,
+    "slotViews": 12852,
+    "stateMatrixLuaVersions": [
+      "5.1",
+      "5.4"
+    ]
+  },
+  "actualClientTested": false
+}

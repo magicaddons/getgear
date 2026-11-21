@@ -1,0 +1,2987 @@
+{
+  "featureRuntimeSHA256": {
+    "ResearchedItemFacts.lua": "f04e844e6283930b579d152d2e085677e9fc222bedb595ba2229d6b754da8051",
+    "EquipmentCache.lua": "26d664699fb9c379545523950ad526cca466d6425ba55a191e56163fb72175dd",
+    "GeneratedBeta7Evidence.lua": "b23e3b688585032312054e1ec5676ab55140629deebdfb71f7abd19778d9dfe6",
+    "SourceEnrichment.lua": "958986371d7d8134b3161011d8336129bfb106143a1e82745be52ca9a4188f87",
+    "AcquisitionEvidenceIndex.lua": "0b207945423fccc9461f32ed65fbc978c93fbef25437add63cf436f6b0a32ee0",
+    "AcquisitionEvidence.lua": "d740e25b01b5d0a7864fabedd132264d4798321b216c966ba1aab4a91e452715",
+    "AcquisitionSummary.lua": "7c9801409d2129f0ea6fd7c26f5bd596c74d328b04f03f838fc1399ce7d1fbee",
+    "WorldDropBoEIndex.lua": "e513007214fd7081f66100a9c3e92fc701d3f8456d4300dc2d3889d030c0719c",
+    "GeneratedStatFlags.lua": "047c437981c54d9a3a3d60c9730e6b41e996333dac3d7436d583010feb8200bf",
+    "StatEvidence.lua": "4930287b53bd3f5d26cc7d92cdfe71a8ce5af724a97e3a2e7628476b137da79e",
+    "GuideEngine.lua": "81016de3d7b4f10a177bace2f4fec20fd16b4a26634e22def6264c0413f747ff",
+    "GuideState.lua": "a43baa551d01e1767cefbaaf5e82bceeb20023cc4ce8357a8b7f2913023f51d1",
+    "Materials.lua": "d65f64a4d23323d8e6be8b557db372efb90670894a4d82f0e33658ca40ccf625",
+    "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
+    "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db",
+    "FactionEligibilityData.lua": "af3e804823f2287dbe79b69e3b521c4e30f80f6314de190af53385618ac24b9b",
+    "AcquisitionNavigation.lua": "98274ae17b5140b711ddf7bd4c54a0af697bbcdec12ec04b242e6c9c10563fec",
+    "MapNavigation.lua": "051270d68faca4e06da8dd77ef11cab2d9bd15b2f7276d8435450a55066d565c",
+    "AltInventory.lua": "05c0855c31d8a3813d59dd2e9880a905887f2cee463b9de7dee24fac36561bea",
+    "RecipeKnowledge.lua": "7cf89d8ccf01539cee7deb0b247f28d70a7d30811304459c7c2a18897da740ab",
+    "BagUpgrades.lua": "2b85cadf763901e3bd87fb235c455ac41fb9806dad0c832fd9b290c7abbc75c6",
+    "ItemData.lua": "aecb8e1dd9cfae5436ec3622120ffc02becf1e1f31967ca07665bc9f67f33c69",
+    "CraftingVisibility.lua": "f12405b9e8c3907ff0c05e01b0e72db951ee8aca36af88d7cd72608a99524229",
+    "TalentAwareness.lua": "05c6f622860782990f65cfeedf31a6e93d9f98b8d8502cd95728a4592a05cf45",
+    "GearRelevance.lua": "3b9a750d6e3a9f01679dd16f2d5135b9d7cca2dfda4cf4c95abce10b0009e70d",
+    "GearCompare.lua": "62ef63fc46a2a819458ff63a3a6cc3daca8b05e1416fea4eb16abf14fec5ab9a",
+    "StatPriorities.lua": "eba5bdb4f77f31f6119883846fa443b128702deade2b2e64b8dd44a395335682",
+    "Core.lua": "8f3d6e524e863546ee3567d6e636fe04bbf8aa3b57294f872171d79e0ffb5f43",
+    "UI.lua": "7b96cef46212c1e84b79dff5659b734f6bd0c7ed0ea9aa2b8c53f67980e16906",
+    "GetGear.toc": "c9af4f50c965896c2956bedf37f0cee959fdcda30c49f25722021712854d50c7",
+    "MapPin.tga": "cbdcc54438c808d9e0117ec89b1e916aea0ba8aed04065e7e4eb8e92821d8a53"
+  },
+  "baselineRevision": "d608838d049802e191e763ab32078116bc09a797",
+  "baselineRuntimeExact": true,
+  "repeats": 3,
+  "workloadSHA256": "d5bda170e45cfa82e73eba896ce58b756d7cfd4d448a6cf72445407ac1edd5ef",
+  "interpreters": {
+    "5.1": {
+      "warm overlay x10": {
+        "baselineMedianMS": 205.218,
+        "featureMedianMS": 177.769,
+        "changePercent": -13.38,
+        "baseline": [
+          {
+            "cpuMS": 205.218,
+            "netHeapKiB": 16078.0,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 236.196,
+            "netHeapKiB": 16078.0,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 172.326,
+            "netHeapKiB": 16078.0,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 204.187,
+            "netHeapKiB": 16084.3,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2910,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 177.769,
+            "netHeapKiB": 16084.3,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2910,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 171.93,
+            "netHeapKiB": 16084.3,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2910,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "one loot": {
+        "baselineMedianMS": 24.189,
+        "featureMedianMS": 20.022,
+        "changePercent": -17.23,
+        "baseline": [
+          {
+            "cpuMS": 24.189,
+            "netHeapKiB": 1691.0,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 31.343,
+            "netHeapKiB": 1691.0,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 20.03,
+            "netHeapKiB": 1691.0,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 24.091,
+            "netHeapKiB": 1691.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 291,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 18.56,
+            "netHeapKiB": 1691.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 291,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 20.022,
+            "netHeapKiB": 1691.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 291,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "rapid loot x12": {
+        "baselineMedianMS": 19.218,
+        "featureMedianMS": 21.801,
+        "changePercent": 13.44,
+        "baseline": [
+          {
+            "cpuMS": 19.218,
+            "netHeapKiB": 1672.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 31.093,
+            "netHeapKiB": 1672.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 19.052,
+            "netHeapKiB": 1672.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 21.801,
+            "netHeapKiB": 1673.3,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 22.628,
+            "netHeapKiB": 1673.3,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 18.428,
+            "netHeapKiB": 1673.3,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "mining + skill": {
+        "baselineMedianMS": 41.97,
+        "featureMedianMS": 36.644,
+        "changePercent": -12.69,
+        "baseline": [
+          {
+            "cpuMS": 41.97,
+            "netHeapKiB": 3253.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 63.758,
+            "netHeapKiB": 3253.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 34.397,
+            "netHeapKiB": 3253.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 36.644,
+            "netHeapKiB": 3258.0,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 34.986,
+            "netHeapKiB": 3258.0,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 38.236,
+            "netHeapKiB": 3258.0,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "movement zones x10": {
+        "baselineMedianMS": 187.542,
+        "featureMedianMS": 225.414,
+        "changePercent": 20.19,
+        "baseline": [
+          {
+            "cpuMS": 187.542,
+            "netHeapKiB": 15903.9,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 314.084,
+            "netHeapKiB": 15903.9,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 165.973,
+            "netHeapKiB": 15903.9,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 442.48,
+            "netHeapKiB": 15910.3,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2850,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 177.339,
+            "netHeapKiB": 15910.3,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2850,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 225.414,
+            "netHeapKiB": 15910.3,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2850,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "ordinary movement idle": {
+        "baselineMedianMS": 0.004,
+        "featureMedianMS": 0.006,
+        "changePercent": 50.0,
+        "baseline": [
+          {
+            "cpuMS": 0.004,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 0.006,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 0.004,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 0.006,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 0.037,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 0.005,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "collapsed materials": {
+        "baselineMedianMS": 18.39,
+        "featureMedianMS": 32.892,
+        "changePercent": 78.86,
+        "baseline": [
+          {
+            "cpuMS": 25.201,
+            "netHeapKiB": 1572.9,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 16.781,
+            "netHeapKiB": 1572.9,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 18.39,
+            "netHeapKiB": 1572.9,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 118.949,
+            "netHeapKiB": 1573.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 219,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 16.401,
+            "netHeapKiB": 1573.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 219,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 32.892,
+            "netHeapKiB": 1573.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 219,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "slot changes x3": {
+        "baselineMedianMS": 64.71,
+        "featureMedianMS": 57.286,
+        "changePercent": -11.47,
+        "baseline": [
+          {
+            "cpuMS": 64.71,
+            "netHeapKiB": 4608.4,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          },
+          {
+            "cpuMS": 65.237,
+            "netHeapKiB": 4608.4,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          },
+          {
+            "cpuMS": 46.308,
+            "netHeapKiB": 4608.4,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 57.286,
+            "netHeapKiB": 4610.2,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 603,
+              "newFrames": 171
+            }
+          },
+          {
+            "cpuMS": 49.83,
+            "netHeapKiB": 4610.2,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 603,
+              "newFrames": 171
+            }
+          },
+          {
+            "cpuMS": 91.591,
+            "netHeapKiB": 4610.2,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 603,
+              "newFrames": 171
+            }
+          }
+        ]
+      },
+      "open close x3": {
+        "baselineMedianMS": 53.307,
+        "featureMedianMS": 52.173,
+        "changePercent": -2.13,
+        "baseline": [
+          {
+            "cpuMS": 61.547,
+            "netHeapKiB": 4832.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 52.338,
+            "netHeapKiB": 4832.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 53.307,
+            "netHeapKiB": 4832.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 52.173,
+            "netHeapKiB": 4834.6,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 51.695,
+            "netHeapKiB": 4834.6,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 95.946,
+            "netHeapKiB": 4834.6,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "priority settings": {
+        "baselineMedianMS": 53.856,
+        "featureMedianMS": 56.342,
+        "changePercent": 4.62,
+        "baseline": [
+          {
+            "cpuMS": 62.084,
+            "netHeapKiB": 5075.8,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 53.856,
+            "netHeapKiB": 5075.8,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 53.824,
+            "netHeapKiB": 5075.8,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 52.836,
+            "netHeapKiB": 5077.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 56.342,
+            "netHeapKiB": 5077.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 83.516,
+            "netHeapKiB": 5077.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "equipment": {
+        "baselineMedianMS": 18.465,
+        "featureMedianMS": 19.995,
+        "changePercent": 8.29,
+        "baseline": [
+          {
+            "cpuMS": 19.406,
+            "netHeapKiB": 1670.1,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 18.465,
+            "netHeapKiB": 1670.1,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 18.013,
+            "netHeapKiB": 1670.1,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 19.995,
+            "netHeapKiB": 1670.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 18.768,
+            "netHeapKiB": 1670.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 23.639,
+            "netHeapKiB": 1670.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "profession": {
+        "baselineMedianMS": 40.323,
+        "featureMedianMS": 34.385,
+        "changePercent": -14.73,
+        "baseline": [
+          {
+            "cpuMS": 40.42,
+            "netHeapKiB": 3251.1,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 40.323,
+            "netHeapKiB": 3251.1,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 38.136,
+            "netHeapKiB": 3251.1,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 33.54,
+            "netHeapKiB": 3252.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 34.385,
+            "netHeapKiB": 3252.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 61.466,
+            "netHeapKiB": 3252.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "hide restore": {
+        "baselineMedianMS": 38.356,
+        "featureMedianMS": 38.953,
+        "changePercent": 1.56,
+        "baseline": [
+          {
+            "cpuMS": 38.356,
+            "netHeapKiB": 3320.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          },
+          {
+            "cpuMS": 43.532,
+            "netHeapKiB": 3320.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          },
+          {
+            "cpuMS": 36.779,
+            "netHeapKiB": 3320.4,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 38.953,
+            "netHeapKiB": 3321.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 54
+            }
+          },
+          {
+            "cpuMS": 38.515,
+            "netHeapKiB": 3321.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 54
+            }
+          },
+          {
+            "cpuMS": 40.11,
+            "netHeapKiB": 3321.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 54
+            }
+          }
+        ]
+      },
+      "detail + overlay": {
+        "baselineMedianMS": 35.017,
+        "featureMedianMS": 32.674,
+        "changePercent": -6.69,
+        "baseline": [
+          {
+            "cpuMS": 37.378,
+            "netHeapKiB": 4083.0,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          },
+          {
+            "cpuMS": 32.362,
+            "netHeapKiB": 4083.0,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          },
+          {
+            "cpuMS": 35.017,
+            "netHeapKiB": 4083.0,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 31.607,
+            "netHeapKiB": 4137.5,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1387,
+              "newFrames": 1032
+            }
+          },
+          {
+            "cpuMS": 32.674,
+            "netHeapKiB": 4137.5,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1387,
+              "newFrames": 1032
+            }
+          },
+          {
+            "cpuMS": 36.797,
+            "netHeapKiB": 4137.5,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1387,
+              "newFrames": 1032
+            }
+          }
+        ]
+      }
+    },
+    "5.4": {
+      "warm overlay x10": {
+        "baselineMedianMS": 180.653,
+        "featureMedianMS": 169.314,
+        "changePercent": -6.28,
+        "baseline": [
+          {
+            "cpuMS": 179.651,
+            "netHeapKiB": 2347.8,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 180.653,
+            "netHeapKiB": 2347.8,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 290.869,
+            "netHeapKiB": 2347.8,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 169.314,
+            "netHeapKiB": 2349.4,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2910,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 152.192,
+            "netHeapKiB": 2349.4,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2910,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 304.333,
+            "netHeapKiB": 2349.4,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2910,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "one loot": {
+        "baselineMedianMS": 20.269,
+        "featureMedianMS": 17.644,
+        "changePercent": -12.95,
+        "baseline": [
+          {
+            "cpuMS": 20.269,
+            "netHeapKiB": 1357.8,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 17.228,
+            "netHeapKiB": 1357.8,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 26.834,
+            "netHeapKiB": 1357.8,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 17.924,
+            "netHeapKiB": 1358.4,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 291,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 15.012,
+            "netHeapKiB": 1358.4,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 291,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 17.644,
+            "netHeapKiB": 1358.4,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 291,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "rapid loot x12": {
+        "baselineMedianMS": 19.531,
+        "featureMedianMS": 16.799,
+        "changePercent": -13.99,
+        "baseline": [
+          {
+            "cpuMS": 19.531,
+            "netHeapKiB": 1342.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 17.587,
+            "netHeapKiB": 1342.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 27.277,
+            "netHeapKiB": 1342.7,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 16.698,
+            "netHeapKiB": 1343.3,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 16.799,
+            "netHeapKiB": 1343.3,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 20.241,
+            "netHeapKiB": 1343.3,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "mining + skill": {
+        "baselineMedianMS": 51.862,
+        "featureMedianMS": 35.957,
+        "changePercent": -30.67,
+        "baseline": [
+          {
+            "cpuMS": 33.112,
+            "netHeapKiB": 2601.3,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 57.723,
+            "netHeapKiB": 2601.3,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 51.862,
+            "netHeapKiB": 2601.3,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 35.957,
+            "netHeapKiB": 2602.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 28.558,
+            "netHeapKiB": 2602.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 36.175,
+            "netHeapKiB": 2602.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "movement zones x10": {
+        "baselineMedianMS": 271.288,
+        "featureMedianMS": 174.297,
+        "changePercent": -35.75,
+        "baseline": [
+          {
+            "cpuMS": 169.15,
+            "netHeapKiB": 2237.4,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 271.288,
+            "netHeapKiB": 2237.4,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 284.338,
+            "netHeapKiB": 2237.4,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 174.297,
+            "netHeapKiB": 2222.0,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2850,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 149.552,
+            "netHeapKiB": 2222.0,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2850,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 180.057,
+            "netHeapKiB": 2222.0,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2850,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "ordinary movement idle": {
+        "baselineMedianMS": 0.005,
+        "featureMedianMS": 0.005,
+        "changePercent": 0.0,
+        "baseline": [
+          {
+            "cpuMS": 0.006,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 0.005,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 0.005,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 0.005,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 0.004,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 0.005,
+            "netHeapKiB": 0.0,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "collapsed materials": {
+        "baselineMedianMS": 21.482,
+        "featureMedianMS": 14.64,
+        "changePercent": -31.85,
+        "baseline": [
+          {
+            "cpuMS": 14.677,
+            "netHeapKiB": 1261.8,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 21.482,
+            "netHeapKiB": 1261.8,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 24.07,
+            "netHeapKiB": 1261.8,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 14.96,
+            "netHeapKiB": 1262.4,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 219,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 13.871,
+            "netHeapKiB": 1262.4,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 219,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 14.64,
+            "netHeapKiB": 1262.4,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 219,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "slot changes x3": {
+        "baselineMedianMS": 74.254,
+        "featureMedianMS": 42.91,
+        "changePercent": -42.21,
+        "baseline": [
+          {
+            "cpuMS": 42.399,
+            "netHeapKiB": 3590.4,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          },
+          {
+            "cpuMS": 74.549,
+            "netHeapKiB": 3590.4,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          },
+          {
+            "cpuMS": 74.254,
+            "netHeapKiB": 3590.4,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 43.605,
+            "netHeapKiB": 3592.3,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 603,
+              "newFrames": 171
+            }
+          },
+          {
+            "cpuMS": 39.364,
+            "netHeapKiB": 3592.3,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 603,
+              "newFrames": 171
+            }
+          },
+          {
+            "cpuMS": 42.91,
+            "netHeapKiB": 3592.3,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 603,
+              "newFrames": 171
+            }
+          }
+        ]
+      },
+      "open close x3": {
+        "baselineMedianMS": 79.979,
+        "featureMedianMS": 50.28,
+        "changePercent": -37.13,
+        "baseline": [
+          {
+            "cpuMS": 50.106,
+            "netHeapKiB": 3859.0,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 79.979,
+            "netHeapKiB": 3859.0,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 89.535,
+            "netHeapKiB": 3859.0,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 51.022,
+            "netHeapKiB": 3860.8,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 44.701,
+            "netHeapKiB": 3860.8,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 50.28,
+            "netHeapKiB": 3860.8,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "priority settings": {
+        "baselineMedianMS": 82.474,
+        "featureMedianMS": 52.351,
+        "changePercent": -36.52,
+        "baseline": [
+          {
+            "cpuMS": 46.777,
+            "netHeapKiB": 4034.9,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 86.938,
+            "netHeapKiB": 4034.9,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 82.474,
+            "netHeapKiB": 4034.9,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 54.517,
+            "netHeapKiB": 4036.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 50.916,
+            "netHeapKiB": 4036.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 52.351,
+            "netHeapKiB": 4036.7,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 855,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "equipment": {
+        "baselineMedianMS": 28.094,
+        "featureMedianMS": 17.24,
+        "changePercent": -38.63,
+        "baseline": [
+          {
+            "cpuMS": 17.484,
+            "netHeapKiB": 1340.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 34.586,
+            "netHeapKiB": 1340.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 28.094,
+            "netHeapKiB": 1340.6,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 17.24,
+            "netHeapKiB": 1341.2,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 17.321,
+            "netHeapKiB": 1341.2,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 16.794,
+            "netHeapKiB": 1341.2,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 285,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "profession": {
+        "baselineMedianMS": 51.606,
+        "featureMedianMS": 35.077,
+        "changePercent": -32.03,
+        "baseline": [
+          {
+            "cpuMS": 34.324,
+            "netHeapKiB": 2599.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 56.523,
+            "netHeapKiB": 2599.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 51.606,
+            "netHeapKiB": 2599.6,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 35.077,
+            "netHeapKiB": 2600.8,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 41.391,
+            "netHeapKiB": 2600.8,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          },
+          {
+            "cpuMS": 31.471,
+            "netHeapKiB": 2600.8,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 0
+            }
+          }
+        ]
+      },
+      "hide restore": {
+        "baselineMedianMS": 49.84,
+        "featureMedianMS": 38.847,
+        "changePercent": -22.06,
+        "baseline": [
+          {
+            "cpuMS": 37.785,
+            "netHeapKiB": 2648.1,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          },
+          {
+            "cpuMS": 58.245,
+            "netHeapKiB": 2648.1,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          },
+          {
+            "cpuMS": 49.84,
+            "netHeapKiB": 2648.1,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 42.057,
+            "netHeapKiB": 2649.3,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 54
+            }
+          },
+          {
+            "cpuMS": 30.956,
+            "netHeapKiB": 2649.3,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 54
+            }
+          },
+          {
+            "cpuMS": 38.847,
+            "netHeapKiB": 2649.3,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 570,
+              "newFrames": 54
+            }
+          }
+        ]
+      },
+      "detail + overlay": {
+        "baselineMedianMS": 32.249,
+        "featureMedianMS": 31.061,
+        "changePercent": -3.68,
+        "baseline": [
+          {
+            "cpuMS": 32.249,
+            "netHeapKiB": 3443.9,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          },
+          {
+            "cpuMS": 30.683,
+            "netHeapKiB": 3443.9,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          },
+          {
+            "cpuMS": 50.45,
+            "netHeapKiB": 3443.9,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          }
+        ],
+        "feature": [
+          {
+            "cpuMS": 31.061,
+            "netHeapKiB": 3483.1,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1387,
+              "newFrames": 1032
+            }
+          },
+          {
+            "cpuMS": 28.631,
+            "netHeapKiB": 3483.1,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1387,
+              "newFrames": 1032
+            }
+          },
+          {
+            "cpuMS": 34.816,
+            "netHeapKiB": 3483.1,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1387,
+              "newFrames": 1032
+            }
+          }
+        ]
+      }
+    }
+  },
+  "actualClientTested": false,
+  "statement": "Synthetic Lua CPU only. Operation counts and recommendation/material signatures are exact; text writes include star controls."
+}

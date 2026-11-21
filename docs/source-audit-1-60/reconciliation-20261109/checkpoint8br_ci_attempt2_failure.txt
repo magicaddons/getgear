@@ -1,0 +1,9 @@
+Run43060773179 attempt2 job130666113524 source c2c54fe35455695cb62783fa20503d464184edfa.
+Repeated infrastructure failure in Install Lua; reconciliation/syntax/tests skipped. No addon test failure or PASS is inferred. Previous successful8BQ used the same ubuntu26.04 image20261101.186.1/Lua5.4.8 package; imagechange is not an established cause.
+2026-11-11T16:51:27.8149506Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/resolute/InRelease  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:51:27.8150318Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/resolute-updates/InRelease  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:51:27.8151122Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/resolute-backports/InRelease  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:51:27.8151908Z W: Failed to fetch mirror+file:/etc/apt/apt-mirrors.txt/dists/resolute-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:52:49.2139494Z E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/universe/l/lua5.4/lua5.4_5.4.8-1build1_amd64v3.deb  Temporary failure resolving 'security.ubuntu.com'
+2026-11-11T16:52:49.2139998Z E: Unable to fetch some archives, maybe run apt update or try with --fix-missing?
+2026-11-11T16:52:49.2169279Z ##[error]Process completed with exit code 100.

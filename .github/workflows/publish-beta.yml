@@ -71,7 +71,13 @@ jobs:
           import os, sys
           sys.path.insert(0, 'infrastructure/tools/release')
           from publish import GitHub, verify_tag
-          verify_tag(GitHub(os.environ['GITHUB_REPOSITORY']), os.environ['TAG'], os.environ['COMMIT'])
+          from package import require
+          api = GitHub(os.environ['GITHUB_REPOSITORY'])
+          commit = os.environ['COMMIT']
+          verify_tag(api, os.environ['TAG'], commit)
+          comparison = api.api('compare/' + commit + '...' + os.environ['GITHUB_SHA'])
+          require(comparison['status'] in ('ahead', 'identical'),
+                  'Release source must be in approved main history')
           PY
       - name: Install Lua compatibility tools
         run: |

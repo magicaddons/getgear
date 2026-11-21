@@ -1,0 +1,210 @@
+{
+  "capturedUTC": "2026-11-11T12:49:50.519492+00:00",
+  "method": "Exact full factual snapshot comparison: retained8BOfinalactual-localPF23605/EV1672 snapshots to8BP;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23605,
+    "afterItems": 23608,
+    "beforeDefinitions": 9246,
+    "afterDefinitions": 9246,
+    "newItems": [
+      {
+        "itemID": 14537,
+        "name": "Corpselight Greaves",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Rattlegore",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "42c5fee65f03dc68a617734070a7236ba3f008547c5723202a7d7a8a07c9f9b7"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18744,
+        "name": "Plaguebat Fur Gloves",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 276072,
+        "name": "Soulwoven Drape",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 2463,
+        "name": "Studded Doublet",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 4026,
+        "name": "Sentinel Musket",
+        "before": "0",
+        "after": 4
+      },
+      {
+        "itemID": 10371,
+        "name": "Imbued Plate Greaves",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 10376,
+        "name": "Commander's Boots",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14455,
+        "name": "Highborne Padded Armor",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 14678,
+        "name": "Pridelord Pauldrons",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15266,
+        "name": "Fierce Mauler",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 15425,
+        "name": "Peerless Bracers",
+        "before": "2",
+        "after": 6
+      },
+      {
+        "itemID": 282080,
+        "name": "Flame Seared Signet",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 286266,
+        "name": "Antonidas' Silver Coin",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 286308,
+        "name": "Attumen's Copper Coin",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 286309,
+        "name": "Danath's Copper Coin",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 286313,
+        "name": "Landro Longshot's Copper Coin",
+        "before": "1",
+        "after": 5
+      },
+      {
+        "itemID": 286317,
+        "name": "Ofalo's Copper Coin",
+        "before": "1",
+        "after": 5
+      }
+    ],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.4312e87ed1.json",
+        "bytes": 999737,
+        "sha256": "4312e87ed1f8255c5a3b1e1efb85999c881fe37c3c6135824522654427c8e5dd",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.b0bf409a63.json",
+        "bytes": 1356813,
+        "sha256": "b0bf409a636fc3299aa96da2ae5d0c4e4f1c1844db9ff639ba80eb1fe7c87874",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.6eed640c18.json",
+        "bytes": 467020,
+        "sha256": "6eed640c184f7110f016ce926fac6ca47e421a12428c7b59022869bb6d3736f8",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.d80c1a3fa6.json",
+        "bytes": 446730,
+        "sha256": "d80c1a3fa6ac5d8ca445d9e700be50da760cd3126e4aa5261a1e23101ebd2b3f",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1672,
+    "afterRaw": 1672,
+    "qualifying": 1431,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "d6de385e4f9156d4d6d9255520b02be793b055ba20003691e3c554daf6dca04f",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-11T10:10:14.556Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103479,
+        "sha256": "ad4bf7331e6599ace1bd21e8035a0c46f7b7f9fefb352e605322554d96575a96",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-11T10:10:14.556Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103463,
+        "sha256": "45e213b508995ab3a1f9c8a134790e14e54354192dece6e541d5001c83383e13",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-11T10:10:14.556Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 35754,
+        "sha256": "6a1a2c51a679fb43eaa1fc8fd52b2887690c94688aa6ab4f51a2fa366363cf55",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-11T10:10:14.556Z"
+      }
+    ]
+  }
+}

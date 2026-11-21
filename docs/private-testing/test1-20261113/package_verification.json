@@ -1,0 +1,247 @@
+{
+  "kind": "PRIVATE DEVELOPMENT TEST PACKAGE",
+  "version": "0.14.0-private-test1.20261113",
+  "sourceCommit": "a7baf3c4c60d6b7fb76ccfdaddc15e9d1a93bd3d",
+  "sourceTree": "3a38b2d9e35b46654c7f9e4ba8c0116726a910db",
+  "zipName": "GetGear-0.14.0-private-test1.20261113-a7baf3c.zip",
+  "zipBytes": 1907491,
+  "zipSHA256": "25cae37037b4ec3739e9548fd5d7433ea3173466d74af245bf505f60e2a03ebb",
+  "zipCRCVerified": true,
+  "exactMemberCount": 34,
+  "payloadManifestFiles": 32,
+  "gameplayLuaFiles": 26,
+  "sourceModulesByteExactToResearchHandover": true,
+  "archiveMembers": [
+    {
+      "path": "GetGear/AcquisitionEvidence.lua",
+      "bytes": 2136,
+      "sha256": "d740e25b01b5d0a7864fabedd132264d4798321b216c966ba1aab4a91e452715"
+    },
+    {
+      "path": "GetGear/AcquisitionEvidenceIndex.lua",
+      "bytes": 19442731,
+      "sha256": "0b207945423fccc9461f32ed65fbc978c93fbef25437add63cf436f6b0a32ee0"
+    },
+    {
+      "path": "GetGear/AcquisitionNavigation.lua",
+      "bytes": 25109,
+      "sha256": "f9eb9e3992cf7b363bc78d6925454f95d39cd394a074f1bd4df15d661720d7bc"
+    },
+    {
+      "path": "GetGear/AcquisitionNavigationData.lua",
+      "bytes": 3665380,
+      "sha256": "6a7961654daed0aee14880cc383971e7a13d12826df1b9535c1cff493b69654b"
+    },
+    {
+      "path": "GetGear/AcquisitionSummary.lua",
+      "bytes": 1999,
+      "sha256": "a365bf4569df28b53c85d091bd0b812d9064f161ba2166b4c0be4fbc3f30c981"
+    },
+    {
+      "path": "GetGear/AltInventory.lua",
+      "bytes": 14938,
+      "sha256": "4b4fec128ac263f03eaafa6170df63ac1d38bc5ab57e8b2cf630b57882e14ebf"
+    },
+    {
+      "path": "GetGear/BUILD_INFO.txt",
+      "bytes": 951,
+      "sha256": "d601d6797f40eb64f4052cc4c517df87c18bd480624d9cb672c841135bd6aea6"
+    },
+    {
+      "path": "GetGear/BagUpgrades.lua",
+      "bytes": 12697,
+      "sha256": "f7c84a32da111c95f845e4db45243e869b80aa6d0c0c0f2f4af3857cecee6150"
+    },
+    {
+      "path": "GetGear/Core.lua",
+      "bytes": 13416,
+      "sha256": "545890d6815db4e779b569f8ed2d7450435e055b6c723241b59a047f24e91ea8"
+    },
+    {
+      "path": "GetGear/CraftingVisibility.lua",
+      "bytes": 2657,
+      "sha256": "e97ae0b1e9bed45fd5310f81863729a1f58f74deb77ad22495b31fbde2931bff"
+    },
+    {
+      "path": "GetGear/DATA_MODEL.md",
+      "bytes": 6254,
+      "sha256": "563bafb90d1acf05b4d085c082448d3c1c41099a61e66e847d4e80ccf76a7c39"
+    },
+    {
+      "path": "GetGear/EquipmentCache.lua",
+      "bytes": 683649,
+      "sha256": "26d664699fb9c379545523950ad526cca466d6425ba55a191e56163fb72175dd"
+    },
+    {
+      "path": "GetGear/GearCompare.lua",
+      "bytes": 27007,
+      "sha256": "2b94a48b11ba851e2e37a8796e1ba63d8bf29a756b198c9a6dbcf1b5e6c238af"
+    },
+    {
+      "path": "GetGear/GearRelevance.lua",
+      "bytes": 5704,
+      "sha256": "c35f1cf367cd4769824c7acaff00d3faef412b90729bde7024e1b33b87838e28"
+    },
+    {
+      "path": "GetGear/GeneratedBeta7Evidence.lua",
+      "bytes": 196151,
+      "sha256": "b23e3b688585032312054e1ec5676ab55140629deebdfb71f7abd19778d9dfe6"
+    },
+    {
+      "path": "GetGear/GeneratedStatFlags.lua",
+      "bytes": 89744,
+      "sha256": "6433285e910f156dd0598884b045ab14a637416a66d294aab61eb7b9410961d9"
+    },
+    {
+      "path": "GetGear/GetGear.toc",
+      "bytes": 900,
+      "sha256": "6d514be3bb1fee0448d0e1f8548a5538750d1fd7e60e0113eb777ff7231f8265"
+    },
+    {
+      "path": "GetGear/GuideEngine.lua",
+      "bytes": 3910,
+      "sha256": "4a5d8d4300865a59c65021b97d81ff4283422e6ba6bfa35f08e1da84d9c51d7c"
+    },
+    {
+      "path": "GetGear/GuideState.lua",
+      "bytes": 7127,
+      "sha256": "377936d4669732e190c9aecf92a44efeb9cdbc5dd3759f5c4d7b90e70ab1c01b"
+    },
+    {
+      "path": "GetGear/ItemData.lua",
+      "bytes": 1860,
+      "sha256": "cd15d9a8a54982a1015d1c00ce31264c11fa56bab6ebe8dcb3dd87371e0ca72a"
+    },
+    {
+      "path": "GetGear/MANIFEST.json",
+      "bytes": 11467,
+      "sha256": "e12b73cb3095cf518de604006fb67c825a1fb6146380f05c89c73d271ec1a158"
+    },
+    {
+      "path": "GetGear/MapNavigation.lua",
+      "bytes": 12299,
+      "sha256": "953aae80b318c23198fcc7eb938165f08cbc81a2e9a6a750cb49cb7ae4ed5083"
+    },
+    {
+      "path": "GetGear/MapPin.tga",
+      "bytes": 16428,
+      "sha256": "cbdcc54438c808d9e0117ec89b1e916aea0ba8aed04065e7e4eb8e92821d8a53"
+    },
+    {
+      "path": "GetGear/Materials.lua",
+      "bytes": 13205,
+      "sha256": "972932157bf55d68200f7149d4d88ff8b149b36b054beb2abd0d2b268070cc7d"
+    },
+    {
+      "path": "GetGear/README.txt",
+      "bytes": 7584,
+      "sha256": "4726378434015065c0d88d9c6c74a4982e2e4e24abac756bc44f35f06aebfc56"
+    },
+    {
+      "path": "GetGear/RecipeKnowledge.lua",
+      "bytes": 2650,
+      "sha256": "1a1ca65b2e626127a460a7dcdb286c68a1f10b85b327a99c9bf7fb51bb89740a"
+    },
+    {
+      "path": "GetGear/ResearchedItemFacts.lua",
+      "bytes": 394827,
+      "sha256": "f04e844e6283930b579d152d2e085677e9fc222bedb595ba2229d6b754da8051"
+    },
+    {
+      "path": "GetGear/SHA256SUMS.txt",
+      "bytes": 2781,
+      "sha256": "683426108be8ee5aa7af604bd2e8e61b1af8c6e4dbb6cdb348633706cc7fb1cb"
+    },
+    {
+      "path": "GetGear/SOURCE_CREDITS.txt",
+      "bytes": 859,
+      "sha256": "ef89c23ecf4cdca4479a81b132a12247ffd5c1f2c76abddf6f2b70f06bbb476e"
+    },
+    {
+      "path": "GetGear/SourceEnrichment.lua",
+      "bytes": 12789,
+      "sha256": "958986371d7d8134b3161011d8336129bfb106143a1e82745be52ca9a4188f87"
+    },
+    {
+      "path": "GetGear/StatEvidence.lua",
+      "bytes": 881,
+      "sha256": "28b602961f19a1a7d88fa6cb955e1868b84f4a6bc3d07aaca454f920f26d0909"
+    },
+    {
+      "path": "GetGear/TalentAwareness.lua",
+      "bytes": 3338,
+      "sha256": "3da0d92394cb33015dfa92bee31f6467cdbfc8cca77b4b93841cd5fce21f3026"
+    },
+    {
+      "path": "GetGear/UI.lua",
+      "bytes": 120103,
+      "sha256": "3ef0e7ca3fa8f93f45f325ae6f9c7127e77da8f3958cc77af005235ee0dac67d"
+    },
+    {
+      "path": "GetGear/WorldDropBoEIndex.lua",
+      "bytes": 33004,
+      "sha256": "e513007214fd7081f66100a9c3e92fc701d3f8456d4300dc2d3889d030c0719c"
+    }
+  ],
+  "documentedPackagingOnlyChanges": {
+    "GetGear.toc": {
+      "sourcePath": "GetGear.toc",
+      "sourceSHA256": "28732edf7d772fd37d3d1fb051364daef7cf63b387dc679d48198c4b413bbd18",
+      "transformation": "Private title/version/notes and X metadata only;module order/interface/SavedVariables unchanged"
+    },
+    "README.txt": {
+      "sourcePath": "docs/PRIVATE_DEVELOPMENT_TEST1.md",
+      "sourceSHA256": "4726378434015065c0d88d9c6c74a4982e2e4e24abac756bc44f35f06aebfc56",
+      "transformation": "Private guide/checklist installed as README.txt;public Beta8 README omitted"
+    },
+    "SOURCE_CREDITS.txt": {
+      "sourcePath": "README.txt",
+      "sourceSHA256": "3d317c008029225ef88f0dc8fc86d4aea6e880ff21edb75d82bb35cdca692845",
+      "transformation": "Exact SOURCE CREDITS section extracted;full attribution retained"
+    },
+    "BUILD_INFO.txt": {
+      "sourcePath": null,
+      "sourceSHA256": null,
+      "transformation": "Generated private build provenance;not a gameplay module"
+    }
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "zlibVersion": "1.3.2",
+  "privateOnly": true,
+  "publicReleaseOrTagCreated": false,
+  "manualInGameVerified": false,
+  "artifactDirectory": "/workspace/artifacts/getgear-private-test1-20261113",
+  "zipPath": "/workspace/artifacts/getgear-private-test1-20261113/GetGear-0.14.0-private-test1.20261113-a7baf3c.zip",
+  "checksumPath": "/workspace/artifacts/getgear-private-test1-20261113/GetGear-0.14.0-private-test1.20261113-a7baf3c.zip.sha256",
+  "externalManifestPath": "/workspace/artifacts/getgear-private-test1-20261113/GetGear-0.14.0-private-test1.20261113-a7baf3c.zip.manifest.json",
+  "checklistPath": "/workspace/artifacts/getgear-private-test1-20261113/ACCEPTANCE_CHECKLIST.md",
+  "builderPath": "/workspace/artifacts/getgear-private-test1-20261113/BUILD_RECIPE.py",
+  "artifactSHA256": {
+    "GetGear-0.14.0-private-test1.20261113-a7baf3c.zip.manifest.json": "875ac9e18c98faac0948d6878870baee784bbef45b9407304a38466d2b3441f4",
+    "GetGear-0.14.0-private-test1.20261113-a7baf3c.zip.sha256": "149f54c158a3996b2b20f97f17a6323a736b4beb81720b208ceed6e4e90de9ae",
+    "ACCEPTANCE_CHECKLIST.md": "4726378434015065c0d88d9c6c74a4982e2e4e24abac756bc44f35f06aebfc56",
+    "BUILD_RECIPE.py": "193bdbcbb94fb493a66e8a43254fb8074fc08d66407c8fc6f43d5c2a4f282567",
+    "GetGear-0.14.0-private-test1.20261113-a7baf3c.zip": "25cae37037b4ec3739e9548fd5d7433ea3173466d74af245bf505f60e2a03ebb"
+  },
+  "validation": {
+    "standardLocalChecks": 19,
+    "sourceLua51Regressions": 15,
+    "sourceLua51TestFixtureAdapter": true,
+    "Lua51SyntaxModules": 26,
+    "packagedLuaTests": 28,
+    "packagedFullTOCSmokes": 2,
+    "packagedSyntaxModulesPerRuntime": 26,
+    "packagedRuntimes": [
+      "5.4",
+      "5.1"
+    ],
+    "repeatBuildByteIdentical": true,
+    "allSourcesAndQualificationsFrozen": true,
+    "noAcquisitionFeedRefresh": true,
+    "noGameplayFilesChanged": true,
+    "actualClientRenderingVerified": false
+  },
+  "packagingChanges": "TOC title/version/notes/X metadata and private README/attribution/build/integrity files only;all26gameplaymodules andasset unchangedfromae809d6",
+  "stopState": "Await actual in-game acceptance results. No further development/research/release is being started.",
+  "verifiedUTC": "2026-11-13T11:20:38.043754+00:00"
+}

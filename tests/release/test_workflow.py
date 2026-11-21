@@ -26,12 +26,22 @@ class WorkflowPermissionsTests(unittest.TestCase):
         self.assertEqual(re.findall(r'^  (\w+):', self.text.split('\npermissions:', 1)[0], re.M),
                          ['workflow_dispatch'])
 
+    def test_historical_public_publishers_require_manual_dispatch(self):
+        for path in WORKFLOW.parent.glob('publish-*.yml'):
+            with self.subTest(workflow=path.name):
+                events = path.read_text().split('\non:\n', 1)[1].split('\npermissions:', 1)[0]
+                self.assertIn('  workflow_dispatch:', events)
+                self.assertNotIn('  push:', events)
+                self.assertNotIn('  pull_request:', events)
+
     def test_build_and_all_source_execution_stay_read_only(self):
         build = self.jobs['build']
         self.assertIn("if: github.ref == 'refs/heads/main'", build)
         self.assertIn('permissions:\n      contents: read\n', build)
         self.assertNotIn('contents: write', build)
         self.assertIn('verify_tag(', build)
+        self.assertIn("comparison['status'] in ('ahead', 'identical')", build)
+        self.assertIn('Release source must be in approved main history', build)
         self.assertNotIn('select(', build)
         self.assertNotIn('publish.py', build)
         self.assertIn('package.py source dist', build)

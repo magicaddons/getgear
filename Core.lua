@@ -19,7 +19,8 @@ events:RegisterEvent("PLAYER_REGEN_ENABLED")
 -- Forever can expose different talent-event subsets. Optional registration
 -- must not abort addon loading when a particular event is unavailable.
 for _,name in ipairs({"TRAIT_CONFIG_UPDATED","ACTIVE_TALENT_GROUP_CHANGED",
-                     "PLAYER_TALENT_UPDATE"}) do
+                     "PLAYER_TALENT_UPDATE","QUEST_LOG_UPDATE","QUEST_ACCEPTED","QUEST_TURNED_IN",
+                     "ZONE_CHANGED","ZONE_CHANGED_NEW_AREA"}) do
     pcall(events.RegisterEvent,events,name)
 end
 
@@ -44,10 +45,14 @@ local function NotifyLevel(newLevel)
     if not GetGear.db or GetGear.db.notifications == false then return end
     local count = 0
     for _, item in ipairs(GetGear.Gear) do
+        if GetGear.GetRecommendationRecord then item=GetGear:GetRecommendationRecord(item) end
         if item.targetLevel == newLevel and VerifiedNotificationSource(item)
             and not GetGear:GetStatus(item) and not GetGear:IsHidden(item)
             and not GetGear:IsGearEquipped(item)
+            and (not GetGear.HasEligibleAcquisitionSource or GetGear:HasEligibleAcquisitionSource(item))
+            and (not GetGear.ShouldRecommendByStatPriority or GetGear:ShouldRecommendByStatPriority(item))
             and (not GetGear.ShouldDisplayGear or GetGear:ShouldDisplayGear(item,GetGear.classToken,"available"))
+            and (not GetGear.ShouldShowOverlayAcquisition or GetGear:ShouldShowOverlayAcquisition(item))
             and (not GetGear.ShouldDisplayCraftedGear or GetGear:ShouldDisplayCraftedGear(item)) then
             count = count + 1
         end
@@ -58,6 +63,8 @@ local function NotifyLevel(newLevel)
 end
 
 events:SetScript("OnEvent", function(_, event, arg1, arg2)
+    local capture=GetGear.performanceStats
+    if capture then capture.events[event]=(capture.events[event]or 0)+1 end
     if event == "ADDON_LOADED" then
         if arg1 ~= addonName then return end
         if type(GetGear_CharacterDB) ~= "table" then GetGear_CharacterDB = {} end
@@ -76,6 +83,9 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if type(db.hidden) ~= "table" then db.hidden = {} end
         if type(db.overlay) ~= "table" then db.overlay = {} end
         if type(db.detail) ~= "table" then db.detail = {} end
+        -- Additive per-character UI preferences; retain schema and existing state.
+        db.overlay.slotFilter = GetGear:NormalizeEquipmentSlotFilter(db.overlay.slotFilter)
+        db.detail.slotFilter = GetGear:NormalizeEquipmentSlotFilter(db.detail.slotFilter)
         local o = db.overlay
         if o.visible == nil then o.visible = true end
         if type(o.backgroundOpacity) ~= "number" then o.backgroundOpacity = 0.78 end
@@ -86,6 +96,21 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         -- Only presentation is affected: status, hidden and acquired keys never change.
         if type(o.filterObsolete) ~= "boolean" then o.filterObsolete = true end
         if type(o.bagUpgrades) ~= "boolean" then o.bagUpgrades = true end
+        -- Overlay-only; default on for both new and existing characters.
+        -- A missing/unknown comparison is never treated as a stat downgrade.
+        if type(o.hideWithoutPositiveStats) ~= "boolean" then
+            o.hideWithoutPositiveStats = true
+        end
+        -- Disabled by default on all classes, including Warrior/Paladin/Druid:
+        -- current class alone does not establish a tanking role.
+        if type(o.countArmorOnlyUpgrades) ~= "boolean" then
+            o.countArmorOnlyUpgrades = false
+        end
+        -- Overlay only: untargetable green BoE WORLD drops are off by
+        -- default, but dungeon/quest/vendor/crafted gear remains eligible.
+        if type(o.hideGreenBoEWorldDrops) ~= "boolean" then
+            o.hideGreenBoEWorldDrops = true
+        end
         -- Per-character opt-in: preserve profession-agnostic recommendations by default.
         if type(o.hideUncraftableCrafts) ~= "boolean" then o.hideUncraftableCrafts = false end
         -- Beta 2: all class-equippable gear is an explicit opt-in.
@@ -106,23 +131,30 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         end
         if type(db.detail.scale) ~= "number" then db.detail.scale=1 end
         db.specialization=nil -- the manual specialization system is retired
+        if type(db.starredItems) ~= "table" then db.starredItems = {} end
         GetGear.db = db
+        if GetGear.InitializeStatPriorities then GetGear:InitializeStatPriorities() end
         if GetGear.AltInventory then GetGear.AltInventory:Initialize() end
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or 1
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
         if GetGear.InitializeUI then GetGear:InitializeUI() end
     elseif event == "PLAYER_ENTERING_WORLD" then
+        if GetGear.ResetAcquisitionNavigation then GetGear:ResetAcquisitionNavigation() end
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or GetGear.level
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
+    elseif event == "ZONE_CHANGED" or event == "ZONE_CHANGED_NEW_AREA" then
+        -- Travel recommendations and preferred source descriptions depend on
+        -- the current zone. Preserve any user-selected map marker.
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "UNIT_INVENTORY_CHANGED" then
-        if arg1 == "player" and GetGear.RefreshAll then GetGear:RefreshAll() end
+        if arg1 == "player" and GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated(event) end
     elseif event == "PLAYER_EQUIPMENT_CHANGED" then
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated(event) end
     elseif event == "BAG_UPDATE_DELAYED" then
-        if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end
+        if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated(event) end
     elseif event == "ITEM_DATA_LOAD_RESULT" then
         -- Only respond to outstanding GetGear requests, with debounced refresh.
         if GetGear.OnItemDataLoadResult then GetGear:OnItemDataLoadResult(arg1,arg2) end
@@ -134,16 +166,26 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         end
         if (event == "TRADE_SKILL_LIST_UPDATE" or event == "TRADE_SKILL_SHOW")
             and GetGear.ScanKnownRecipes then GetGear:ScanKnownRecipes() end
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "PLAYER_LEVEL_UP" then
         local newLevel = tonumber(arg1) or UnitLevel("player") or GetGear.level
         if newLevel > GetGear.level then NotifyLevel(newLevel) end
         GetGear.level = newLevel
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "TRAIT_CONFIG_UPDATED" or event == "ACTIVE_TALENT_GROUP_CHANGED"
         or event == "PLAYER_TALENT_UPDATE" then
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
+    elseif event == "QUEST_LOG_UPDATE" or event == "QUEST_ACCEPTED" or event == "QUEST_TURNED_IN" then
+        if not GetGear.navigationRefreshPending then
+            GetGear.navigationRefreshPending=true
+            local function refresh()
+                GetGear.navigationRefreshPending=nil
+                if GetGear.RevalidateAcquisitionMapMarker then GetGear:RevalidateAcquisitionMapMarker() end
+                if GetGear.RefreshAll then GetGear:RefreshAll(event) end
+            end
+            if C_Timer and C_Timer.After then C_Timer.After(0.2,refresh) else refresh() end
+        end
     elseif event == "PLAYER_REGEN_DISABLED" or event == "PLAYER_REGEN_ENABLED" then
         if GetGear.RefreshOverlay then GetGear:RefreshOverlay() end
     end
@@ -156,6 +198,37 @@ SlashCmdList.GETGEAR = function(command)
         if not GetGear.db then Say("Settings not loaded yet.") return end
         GetGear.db.notifications = not GetGear.db.notifications
         Say("Level notifications " .. (GetGear.db.notifications and "enabled" or "disabled") .. ".")
+    elseif command == "perf start" then
+        GetGear:StartPerformanceCapture()
+        Say("Performance capture started. Reproduce the issue, then /getgear perf stop.")
+    elseif command == "perf stop" then
+        local capture=GetGear:StopPerformanceCapture()
+        if not capture then Say("No performance capture is running.");return end
+        local keys={};for key in pairs(capture.events)do keys[#keys+1]=key end;table.sort(keys)
+        for _,key in ipairs(keys)do Say(key..": "..capture.events[key].." events")end
+        keys={};for key in pairs(capture.samples)do keys[#keys+1]=key end;table.sort(keys)
+        for _,key in ipairs(keys)do
+            local s=capture.samples[key]
+            local memory=s.memoryAvailable and string.format("%.1fKiB net heap change",s.heapDeltaKB)or "heap measurement unavailable"
+            Say(string.format("%s: %d calls, %.2fms inclusive, avg %.2fms max %.2fms; p50/p95 %.2f/%.2fms (last %d), %s",
+                key,s.calls,s.milliseconds,s.averageMilliseconds,s.maxMilliseconds,
+                s.p50Milliseconds or 0,s.p95Milliseconds or 0,s.windowSamples,memory))
+            local reasons={};for reason in pairs(s.triggers)do reasons[#reasons+1]=reason end;table.sort(reasons)
+            for _,reason in ipairs(reasons)do Say("  "..reason..": "..s.triggers[reason])end
+        end
+        keys={};for key in pairs(capture.cache)do keys[#keys+1]=key end;table.sort(keys)
+        for _,key in ipairs(keys)do
+            local c=capture.cache[key];Say(key.." snapshot cache: "..c.hits.." hits / "..c.misses.." misses")
+        end
+        -- At most 128 records; retain only in memory for optional inspection.
+        GetGear.lastPerformanceCapture=capture
+        Say("Nested timings overlap; net heap is GC-sensitive, not allocations. CPU timings are not game-frame latency; percentiles use the last 128 samples per operation.")
+    elseif command == "navdiag" then
+        local d=GetGear:GetAcquisitionMarkerDiagnostics()
+        local keys={};for key in pairs(d) do keys[#keys+1]=key end;table.sort(keys)
+        for _,key in ipairs(keys) do
+            Say(key..'='..tostring(d[key]))
+        end
     elseif command == "bankdiag" then
         if not (C_Container and type(C_Container.GetContainerNumSlots)=="function") then
             Say("Container API unavailable")
@@ -188,6 +261,19 @@ SlashCmdList.GETGEAR = function(command)
             ..", your bank "..(s.bankKnown and tostring(s.bank) or "not scanned")
             ..", same-realm/faction alts "..s.alts..", other "..s.other)
         else Say("Use /getgear inventory [itemID] to check an item.") end
+    elseif command:sub(1,4)=="map " then
+        local id=tonumber(command:sub(5))
+        local gear=id and GetGear.ItemCatalog and GetGear.ItemCatalog[id]
+        if not gear then Say("Use /getgear map [catalogue itemID].")
+        elseif not GetGear:GetAcquisitionMapTarget(gear) then
+            GetGear:ShowAcquisitionDirections(gear,nil,nil,"No reliable map destination is established for this item.")
+        else GetGear:OpenAcquisitionMap(gear) end
+    elseif command == "mapstatus" then
+        local s=GetGear:GetAcquisitionMarkerDiagnostics()
+        Say("Marker "..s.status.."; shown "..tostring(s.markerShown).."; map "..tostring(s.mapID)
+            .." / destination "..tostring(s.destinationMapID).."; canvas "..tostring(s.canvasWidth).."x"..tostring(s.canvasHeight)
+            .."; canvas/pin scale "..tostring(s.canvasScale).."/"..tostring(s.markerScale))
+        if s.reason then Say(s.reason) end
     elseif command == "status" then
         Say("Level " .. tostring(GetGear.level) .. " " .. tostring(GetGear.className or "unknown class")
             .. "; inferred talent tree " .. tostring(GetGear.GetDominantTalentTree and GetGear:GetDominantTalentTree() or "unclassified")
@@ -199,7 +285,7 @@ SlashCmdList.GETGEAR = function(command)
     elseif command == "settings" then
         if GetGear.ShowSettings then GetGear:ShowSettings() end
     elseif command == "help" then
-        Say("/getgear = guide; /getgear inventory [itemID] = cached bags/banks; /getgear bankdiag = bank slot diagnostics; /getgear overlay = tracker; /getgear settings = settings; /getgear notify = alerts; /getgear status = diagnostics")
+        Say("/getgear = guide; /getgear map [itemID] = acquisition navigation; /getgear inventory [itemID] = cached bags/banks; /getgear bankdiag = bank slot diagnostics; /getgear overlay = tracker; /getgear settings = settings; /getgear notify = alerts; /getgear status = diagnostics")
     elseif GetGear.ToggleUI then
         GetGear:ToggleUI()
     end

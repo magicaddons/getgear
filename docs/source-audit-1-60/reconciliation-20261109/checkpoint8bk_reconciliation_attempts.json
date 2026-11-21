@@ -1,0 +1,119 @@
+{
+  "first": {
+    "label": "8bk",
+    "exitCode": 1,
+    "reason": "Two new unknown-origin summaries omitted the required explicit word unverified; existing reconciler assertion correctly rejected them.",
+    "responses": {
+      "https://playfulls.com/db/meta.29d9278241.json": {
+        "bytes": 999737,
+        "sha256": "29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f",
+        "workspacePath": "/tmp/getgear-research/8bk-http-capture/29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f.body",
+        "capturedUTC": "2026-11-11T10:35:19.208276+00:00"
+      },
+      "https://playfulls.com/db/gear.e6a582c4bd.json": {
+        "bytes": 1356331,
+        "sha256": "e6a582c4bd5e969081585f5ea1b605a91bc5e1934924678792f6c26795aeafd4",
+        "workspacePath": "/tmp/getgear-research/8bk-http-capture/e6a582c4bd5e969081585f5ea1b605a91bc5e1934924678792f6c26795aeafd4.body",
+        "capturedUTC": "2026-11-11T10:35:19.444100+00:00"
+      },
+      "https://playfulls.com/db/goods.63f4057e9a.json": {
+        "bytes": 467080,
+        "sha256": "63f4057e9a7daf0d1344f460f1206ffd22602063f80b9b6cadcf84630bf1c7d3",
+        "workspacePath": "/tmp/getgear-research/8bk-http-capture/63f4057e9a7daf0d1344f460f1206ffd22602063f80b9b6cadcf84630bf1c7d3.body",
+        "capturedUTC": "2026-11-11T10:35:19.615954+00:00"
+      },
+      "https://playfulls.com/db/other.98a68c9cf1.json": {
+        "bytes": 446765,
+        "sha256": "98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60",
+        "workspacePath": "/tmp/getgear-research/8bk-http-capture/98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60.body",
+        "capturedUTC": "2026-11-11T10:35:19.859881+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103443,
+        "sha256": "c23fa7a81be7d5b8f5a94073bb7264d228f8bccac9938dbf38e8f6087037f2a8",
+        "workspacePath": "/tmp/getgear-research/8bk-http-capture/c23fa7a81be7d5b8f5a94073bb7264d228f8bccac9938dbf38e8f6087037f2a8.body",
+        "capturedUTC": "2026-11-11T10:35:24.751161+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103479,
+        "sha256": "d672d97f2a4d6a20995104c9ad645fe36d51962dad09b7842a200ec5f008ad29",
+        "workspacePath": "/tmp/getgear-research/8bk-http-capture/d672d97f2a4d6a20995104c9ad645fe36d51962dad09b7842a200ec5f008ad29.body",
+        "capturedUTC": "2026-11-11T10:35:29.432980+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103463,
+        "sha256": "27ff073d4b10a3efa5c5098d7d0436f848d2da9fc86250ed8127ee40b09fd93d",
+        "workspacePath": "/tmp/getgear-research/8bk-http-capture/27ff073d4b10a3efa5c5098d7d0436f848d2da9fc86250ed8127ee40b09fd93d.body",
+        "capturedUTC": "2026-11-11T10:35:33.839869+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 35754,
+        "sha256": "655bc06d34e784f6724b085a23b3b8852644c2df8c9f8e4bd150dba99d4eaa17",
+        "workspacePath": "/tmp/getgear-research/8bk-http-capture/655bc06d34e784f6724b085a23b3b8852644c2df8c9f8e4bd150dba99d4eaa17.body",
+        "capturedUTC": "2026-11-11T10:35:36.766132+00:00"
+      }
+    },
+    "notValidationSuccess": true
+  },
+  "successful": {
+    "label": "8bk2",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.29d9278241.json": {
+        "bytes": 999737,
+        "sha256": "29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f",
+        "workspacePath": "/tmp/getgear-research/8bk2-http-capture/29d92782412e159af91a12b793add03bdfc92a39eb29fb9c3e4d9e9a24845e9f.body",
+        "capturedUTC": "2026-11-11T10:35:57.192641+00:00"
+      },
+      "https://playfulls.com/db/gear.e6a582c4bd.json": {
+        "bytes": 1356331,
+        "sha256": "e6a582c4bd5e969081585f5ea1b605a91bc5e1934924678792f6c26795aeafd4",
+        "workspacePath": "/tmp/getgear-research/8bk2-http-capture/e6a582c4bd5e969081585f5ea1b605a91bc5e1934924678792f6c26795aeafd4.body",
+        "capturedUTC": "2026-11-11T10:35:57.515651+00:00"
+      },
+      "https://playfulls.com/db/goods.63f4057e9a.json": {
+        "bytes": 467080,
+        "sha256": "63f4057e9a7daf0d1344f460f1206ffd22602063f80b9b6cadcf84630bf1c7d3",
+        "workspacePath": "/tmp/getgear-research/8bk2-http-capture/63f4057e9a7daf0d1344f460f1206ffd22602063f80b9b6cadcf84630bf1c7d3.body",
+        "capturedUTC": "2026-11-11T10:35:57.914135+00:00"
+      },
+      "https://playfulls.com/db/other.98a68c9cf1.json": {
+        "bytes": 446765,
+        "sha256": "98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60",
+        "workspacePath": "/tmp/getgear-research/8bk2-http-capture/98a68c9cf1fc10966994741666676cfd28d73b36098c2d108d671ae94e1f6f60.body",
+        "capturedUTC": "2026-11-11T10:35:58.073748+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103443,
+        "sha256": "7c7077bfea667030441ce78ad414fc0c2fbd71d9342bbaa48d51bc338c49167d",
+        "workspacePath": "/tmp/getgear-research/8bk2-http-capture/7c7077bfea667030441ce78ad414fc0c2fbd71d9342bbaa48d51bc338c49167d.body",
+        "capturedUTC": "2026-11-11T10:36:01.618934+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103479,
+        "sha256": "3ba2109d9eca2403b1bca4e2851e247f8ccf5f3002215a24193c8609de566204",
+        "workspacePath": "/tmp/getgear-research/8bk2-http-capture/3ba2109d9eca2403b1bca4e2851e247f8ccf5f3002215a24193c8609de566204.body",
+        "capturedUTC": "2026-11-11T10:36:05.886486+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103463,
+        "sha256": "33acf9b730a02e66e3b26c4c1e2900e682685fdd4a8910f7b918be07125d4ede",
+        "workspacePath": "/tmp/getgear-research/8bk2-http-capture/33acf9b730a02e66e3b26c4c1e2900e682685fdd4a8910f7b918be07125d4ede.body",
+        "capturedUTC": "2026-11-11T10:36:08.408163+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 35754,
+        "sha256": "afac15c6867408c3ca79631e2ce00ceafa1bcef7be51673e26dc855e61bc363e",
+        "workspacePath": "/tmp/getgear-research/8bk2-http-capture/afac15c6867408c3ca79631e2ce00ceafa1bcef7be51673e26dc855e61bc363e.body",
+        "capturedUTC": "2026-11-11T10:36:10.974539+00:00"
+      }
+    },
+    "reason": "Corrected only the two summaries, then performed a fresh complete unchanged-reconciler run; no response replay, automatic retry or network fallback."
+  },
+  "localTests": {
+    "initialAfterSuccessfulCapture": 19,
+    "finalAfterQueueAndNavigationRegeneration": 19,
+    "log": "checkpoint8bk_local_results.txt"
+  },
+  "limits": "No test is represented as passed before actual process exit0. First failed attempt is separate from successful fingerprints."
+}

@@ -1,0 +1,73 @@
+{
+  "checkpoint": "8BK",
+  "status": "verified-pushed;continue8BL",
+  "sourceCommit": "cbe110014a6b35c1882ffe4b16f394071389193d",
+  "finalValidatedGeneratedHead": "1b9898a43d4180c23b2863fd594f4a27e2de1546",
+  "CI": {
+    "runID": 43005580595,
+    "jobID": 130472115571,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43005580595",
+    "conclusion": "success",
+    "timestampedTestPass": 18,
+    "LuaSuites": 15,
+    "offlinePythonSuites": 3,
+    "modules": 26
+  },
+  "local": {
+    "fullPASS": 19,
+    "successfulReconciliationLabel": "8bk2",
+    "initialFailureExplicitlyPreserved": "checkpoint8bk_reconciliation_attempts.json",
+    "finalSourceProofAndQueueDigestRegenerated": true
+  },
+  "botReview": {
+    "directParentVerified": true,
+    "files": [
+      "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+    ],
+    "changedKeys": [
+      "https://everloot.app/api/edges?evidence=observed&limit=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+      "lastRunUTC"
+    ],
+    "scope": "OnlyfourEverlootfingerprints/lastRunUTC;allotherJSONvalues-runtime-reports-audits unchanged.",
+    "botEverlootAPIBodiesRead": false,
+    "actualLocalFactualBaseline": "1672raw/1431qual;originalfiveupdate diff retained;botcounts not treatedas identicalfacts"
+  },
+  "counts": {
+    "registry": 4825,
+    "index": 6296,
+    "display": 6295,
+    "books": 759,
+    "frozenResearched": 4611,
+    "frozenPending": 1077,
+    "outsideCandidates": 363,
+    "identities": 7707,
+    "classObjectives": 36341,
+    "crafts": 1254,
+    "ingredients": 4857
+  },
+  "navigation": {
+    "publishedPointData": 682,
+    "directions": 1271,
+    "missing": 3172,
+    "notApplicable": 2582,
+    "overlappingGapRows": 6450,
+    "inGameRenderingVerified": 0
+  },
+  "next": {
+    "checkpoint": "8BL",
+    "cases": 56,
+    "level": 43,
+    "order": "numericitemID",
+    "queue": "remaining_equipment_research_queue.csv/nextBatch8BL",
+    "noRepeat": "Completed8B\u20138BKsourcecases/unchangedfailedURLs.363outsidecandidates/allslotBackThrown/tencloaks/sixdungeon954livebooks/manualmap/finalintegrity remain."
+  },
+  "protectedRefs": {
+    "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "Beta8tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "Beta8commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  },
+  "limits": "Published references only,notcurrentliveacceptance/maprendering. Singleexistingautomation/sameworker;no main/build/package/tag/release/billing. Immutablepre-CIsourceproof is overridden by this explicit completedvalidation state."
+}

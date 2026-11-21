@@ -1,0 +1,2182 @@
+{
+  "scope": "Complete reviewed catalogue roster plus missing Forever dungeons and announced raids. Published approaches and portal references are distinct; actual-client placement unverified.",
+  "instances": {
+    "The Hall of Thanes": {
+      "canonicalName": "The Hall of Thanes",
+      "aliases": [
+        "Hall of Thanes",
+        "Halls of Thanes"
+      ],
+      "entrances": [
+        {
+          "id": "high-seat",
+          "zone": "Ironforge",
+          "x": 42,
+          "y": 55,
+          "label": "High Seat approach to Hall of Thanes",
+          "coordinateKind": "outdoor-entrance-approach",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/hall-of-thanes-dungeon-overview-location-rewards",
+            "sha256": "be2a009f5285c8b642acd154fe8ebec6bb19c74a1e158202c29da59d80a4a55e",
+            "bytes": 113616,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "This marks the High Seat, not the underground portal. Take the open door to Old Ironforge on the left after entering the High Seat; follow stairs to the bottom.",
+          "uiMapID": 1455
+        }
+      ],
+      "instructions": "The primary guide identifies the High Seat at Ironforge 42,55. This is a building approach; the portal below uses a different position. Conflicting underground projections are not used as precise outdoor portal pins.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for The Hall of Thanes in the full Forever dungeon overview",
+      "publishedWaypointPairs": [],
+      "publishedMapPinPairs": [],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Ragefire Chasm": {
+      "canonicalName": "Ragefire Chasm",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Ragefire Chasm — published outdoor approach",
+          "zone": "Orgrimmar",
+          "areaID": 1637,
+          "x": 52.0,
+          "y": 49.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside the Cleft of Shadow Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1454
+        }
+      ],
+      "instructions": "Inside the Cleft of Shadow Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Ragefire Chasm in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 52.0,
+          "y": 49.0
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 52.0,
+          "y": 49.0
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Ragefire Chasm — published outdoor approach",
+          "zone": "Orgrimmar",
+          "areaID": 1637,
+          "x": 52.0,
+          "y": 49.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside the Cleft of Shadow Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Ruins of Lordaeron": {
+      "canonicalName": "Ruins of Lordaeron",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "courtyard",
+          "zone": "Tirisfal Glades",
+          "x": 65,
+          "y": 70,
+          "label": "Ruins of Lordaeron courtyard approach",
+          "coordinateKind": "outdoor-entrance-approach",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/ruins-of-lordaeron-dungeon-overview-location-rewards",
+            "sha256": "337f6fb0e7bb1fc084e39d3a4a3d037f8c8110e64b15bbbbe00a6690e246c77a",
+            "bytes": 130581,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Follow the ruined city above Undercity. This is the primary guide courtyard approach, not its separate Undercity-map reference at 70,10.",
+          "uiMapID": 1420
+        }
+      ],
+      "instructions": "Above Undercity in the ruined city. The primary guide labels a Tirisfal approach at 65,70; the published client-derived record gives 63.3,67.5. They remain distinct approach/entrance evidence; exact portal placement needs in-game comparison.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Ruins of Lordaeron in the full Forever dungeon overview",
+      "publishedWaypointPairs": [],
+      "publishedMapPinPairs": [],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Wailing Caverns": {
+      "canonicalName": "Wailing Caverns",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Wailing Caverns: cave approach",
+          "zone": "The Barrens",
+          "areaID": 17,
+          "x": 45.5,
+          "y": 35.5,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1413
+        },
+        {
+          "id": "portal-reference",
+          "zone": "The Barrens",
+          "x": 47.69,
+          "y": 34.98,
+          "label": "Wailing Caverns: instance portal",
+          "coordinateKind": "exterior-portal-reference",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://foreverdb.net/dungeon/43-wailing-caverns",
+            "sha256": "347852dddfc81255d5b5820b8a85378cc41a554e74f157ad0ba5348f88ee5e8f",
+            "bytes": 111118,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Published exterior reference. Verify exact portal position and current access in the Forever client.",
+          "uiMapID": 1413
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check. Nalpak is in the elevated cave near the mouth; his exact local position is not established. His source marker retains the exterior approach, not the native dungeon portal.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Wailing Caverns in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 45.5,
+          "y": 35.5
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 45.5,
+          "y": 35.5
+        }
+      ],
+      "sourceApproachID": "main",
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Wailing Caverns — published outdoor approach",
+          "zone": "The Barrens",
+          "areaID": 17,
+          "x": 45.5,
+          "y": 35.5,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Deadmines": {
+      "canonicalName": "Deadmines",
+      "aliases": [
+        "The Deadmines"
+      ],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Deadmines — published outdoor approach",
+          "zone": "Westfall",
+          "areaID": 40,
+          "x": 42.4,
+          "y": 70.4,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside a building in Moonbrook Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1436
+        }
+      ],
+      "instructions": "Inside a building in Moonbrook Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Deadmines in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 42.4,
+          "y": 70.4
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 42.4,
+          "y": 70.4
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Deadmines — published outdoor approach",
+          "zone": "Westfall",
+          "areaID": 40,
+          "x": 42.4,
+          "y": 70.4,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside a building in Moonbrook Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Shadowfang Keep": {
+      "canonicalName": "Shadowfang Keep",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Shadowfang Keep — published outdoor approach",
+          "zone": "Silverpine Forest",
+          "areaID": 130,
+          "x": 42.6,
+          "y": 66.6,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Above Pyrewood Village Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1421
+        }
+      ],
+      "instructions": "Above Pyrewood Village Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Shadowfang Keep in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 42.6,
+          "y": 66.6
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 42.6,
+          "y": 66.6
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Shadowfang Keep — published outdoor approach",
+          "zone": "Silverpine Forest",
+          "areaID": 130,
+          "x": 42.6,
+          "y": 66.6,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Above Pyrewood Village Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Stormwind Stockade": {
+      "canonicalName": "Stormwind Stockade",
+      "aliases": [
+        "The Stockade",
+        "Stockade",
+        "Stockades",
+        "The Stockades"
+      ],
+      "entrances": [
+        {
+          "id": "main",
+          "zone": "Stormwind City",
+          "x": 50.35,
+          "y": 66.18,
+          "label": "Stormwind Stockade entrance reference",
+          "coordinateKind": "exterior-portal-reference",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://foreverdb.net/dungeon/34-stormwind-stockade",
+            "sha256": "030010e1b29d696535f14e0abea65320c325b74d00c7ecc22baf4218403963b0",
+            "bytes": 80215,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Published exterior reference. Verify exact portal position and current access in the Forever client.",
+          "uiMapID": 1453
+        }
+      ],
+      "instructions": "Published Forever-client-derived entrance on UI map 1453, corroborated by Azeroth DB 50.4,66.2. The overview 41.0,57.0 conflicts and is retained only in the audit. Owner in-game placement remains pending.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Stormwind Stockade in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 41.0,
+          "y": 57.0
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 41.0,
+          "y": 57.0
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Stormwind Stockade — published outdoor approach",
+          "zone": "Stormwind City",
+          "areaID": 1519,
+          "x": 41.0,
+          "y": 57.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Beneath the canal district Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Excavation Site: Wetlands": {
+      "canonicalName": "Excavation Site: Wetlands",
+      "aliases": [
+        "Excavation Site",
+        "Wetlands Excavation Site"
+      ],
+      "entrances": [
+        {
+          "id": "portal-reference",
+          "zone": "Wetlands",
+          "x": 47.8,
+          "y": 56.3,
+          "label": "Excavation Site: entrance",
+          "coordinateKind": "exterior-portal-reference",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/excavation-site-wetlands-dungeon-overview-location-rewards",
+            "sha256": "2d522245ebbdb1071a394b49f1a50fa88cc227ff20973eec74e13598cfd5ccf3",
+            "bytes": 131454,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Individual primary guide map area 11 explicitly labels this as Entrance to Excavation Site. Follow the new path uphill; this is distinct from the meeting stone.",
+          "uiMapID": 1437
+        },
+        {
+          "id": "meeting-stone",
+          "zone": "Wetlands",
+          "x": 53.4,
+          "y": 65.3,
+          "label": "Excavation Site: meeting-stone approach",
+          "coordinateKind": "outdoor-entrance-approach",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/excavation-site-wetlands-dungeon-overview-location-rewards",
+            "sha256": "2d522245ebbdb1071a394b49f1a50fa88cc227ff20973eec74e13598cfd5ccf3",
+            "bytes": 131454,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Individual primary guide labels this Meeting Stone and Entry. Begin the uphill road near Thelgen Rock/Dun Algaz; continue to the separate entrance.",
+          "uiMapID": 1437
+        }
+      ],
+      "instructions": "Near Thelgen Rock and Dun Algaz, take the new road up into the hills southeast of Whelgar excavation. The individual Wowhead map supplies two separate points omitted from the overview. ForeverDB 24.5,73.4 is an inferred portal-model match and conflicts; it is withheld.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Excavation Site: Wetlands in the full Forever dungeon overview",
+      "publishedWaypointPairs": [],
+      "publishedMapPinPairs": [],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Blackfathom Deeps": {
+      "canonicalName": "Blackfathom Deeps",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Blackfathom Deeps — published outdoor approach",
+          "zone": "Ashenvale",
+          "areaID": 331,
+          "x": 13.4,
+          "y": 12.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Along the Zoram Strand Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1440
+        }
+      ],
+      "instructions": "Along the Zoram Strand Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check. Legacy GetGear outdoor reference14.5,14.6 and this guide13.4,12.8 describe qualified Zoram Strand approaches,not independent boss destinations;original source coordinates remain in the catalogue. The practical entrance selector uses the canonical guide approach. Current portal placement must be checked in game.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "legacyApproachLabels": [
+        "Blackfathom Deeps outer ruins, Zoram Strand"
+      ],
+      "sourceLocator": "Entrance box for Blackfathom Deeps in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 13.4,
+          "y": 12.8
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 13.4,
+          "y": 12.8
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Blackfathom Deeps — published outdoor approach",
+          "zone": "Ashenvale",
+          "areaID": 331,
+          "x": 13.4,
+          "y": 12.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Along the Zoram Strand Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "City of Dalaran": {
+      "canonicalName": "City of Dalaran",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "alterac-approach",
+          "zone": "Alterac Mountains",
+          "x": 8,
+          "y": 61.2,
+          "label": "Dalaran: Alterac approach",
+          "coordinateKind": "outdoor-entrance-approach",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/city-of-dalaran-dungeon-overview-location-rewards",
+            "sha256": "a43292b6f18f636190999d2271f9ba56c87d8d7a3a7b4ed4389e1d48432836e7",
+            "bytes": 165134,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Published exterior reference. Verify exact portal position and current access in the Forever client.",
+          "uiMapID": 1416
+        },
+        {
+          "id": "silverpine-approach",
+          "zone": "Silverpine Forest",
+          "x": 63.5,
+          "y": 64,
+          "label": "Dalaran: Silverpine approach",
+          "coordinateKind": "outdoor-entrance-approach",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/city-of-dalaran-dungeon-overview-location-rewards",
+            "sha256": "a43292b6f18f636190999d2271f9ba56c87d8d7a3a7b4ed4389e1d48432836e7",
+            "bytes": 165134,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Published exterior reference. Verify exact portal position and current access in the Forever client.",
+          "uiMapID": 1421
+        }
+      ],
+      "instructions": "Primary guide map pins distinguish Alterac Mountains 8,61.2 and Silverpine Forest 63.5,64. The guide contains contradictory faction wording; these are qualified approaches, not a guarantee of either faction's access. Review the Dalaran Sewer Key/teleport route in the client.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for City of Dalaran in the full Forever dungeon overview",
+      "publishedWaypointPairs": [],
+      "publishedMapPinPairs": [],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Scarlet Monastery": {
+      "canonicalName": "Scarlet Monastery",
+      "aliases": [
+        "Scarlet Monastery: Graveyard",
+        "Scarlet Monastery: Library",
+        "Scarlet Monastery: Armory",
+        "Scarlet Monastery: Cathedral"
+      ],
+      "entrances": [
+        {
+          "id": "graveyard",
+          "label": "Scarlet Monastery: Graveyard — shared exterior approach",
+          "zone": "Tirisfal Glades",
+          "areaID": 85,
+          "x": 83.5,
+          "y": 32.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the Graveyard portal. Continue inside following the Graveyard route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1420
+        },
+        {
+          "id": "library",
+          "label": "Scarlet Monastery: Library — shared exterior approach",
+          "zone": "Tirisfal Glades",
+          "areaID": 85,
+          "x": 83.5,
+          "y": 32.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the Library portal. Continue inside following the Library route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1420
+        },
+        {
+          "id": "armory",
+          "label": "Scarlet Monastery: Armory — shared exterior approach",
+          "zone": "Tirisfal Glades",
+          "areaID": 85,
+          "x": 83.5,
+          "y": 32.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the Armory portal. Continue inside following the Armory route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1420
+        },
+        {
+          "id": "cathedral",
+          "label": "Scarlet Monastery: Cathedral — shared exterior approach",
+          "zone": "Tirisfal Glades",
+          "areaID": 85,
+          "x": 83.5,
+          "y": 32.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the Cathedral portal. Continue inside following the Cathedral route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1420
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check. The distinct wing choices retain the common outdoor approach and written route; no separate portal coordinates are invented.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Scarlet Monastery in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 83.5,
+          "y": 32.0
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 83.5,
+          "y": 32.0
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Scarlet Monastery — published outdoor approach",
+          "zone": "Tirisfal Glades",
+          "areaID": 85,
+          "x": 83.5,
+          "y": 32.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Gnomeregan": {
+      "canonicalName": "Gnomeregan",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Gnomeregan — published outdoor approach",
+          "zone": "Dun Morogh",
+          "areaID": 1,
+          "x": 30.5,
+          "y": 36.3,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1426
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Gnomeregan in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 30.5,
+          "y": 36.3
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 30.5,
+          "y": 36.3
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Gnomeregan — published outdoor approach",
+          "zone": "Dun Morogh",
+          "areaID": 1,
+          "x": 30.5,
+          "y": 36.3,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Razorfen Kraul": {
+      "canonicalName": "Razorfen Kraul",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Razorfen Kraul — published outdoor approach",
+          "zone": "The Barrens",
+          "areaID": 17,
+          "x": 42.6,
+          "y": 88.5,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1413
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Razorfen Kraul in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 42.6,
+          "y": 88.5
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 42.6,
+          "y": 88.5
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Razorfen Kraul — published outdoor approach",
+          "zone": "The Barrens",
+          "areaID": 17,
+          "x": 42.6,
+          "y": 88.5,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Krol'dok Stronghold": {
+      "canonicalName": "Krol'dok Stronghold",
+      "aliases": [
+        "Krol’dok Stronghold",
+        "Krol'Dok Stronghold"
+      ],
+      "entrances": [
+        {
+          "id": "main",
+          "zone": "Riverglades",
+          "x": 39,
+          "y": 39,
+          "label": "Krol'dok Stronghold approach",
+          "coordinateKind": "outdoor-entrance-approach",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/kroldok-stronghold-dungeon-overview-location-rewards",
+            "sha256": "12797a5050af2c3de7c207f2f4153720a3eec4cc98745520770d598a03af37d7",
+            "bytes": 125910,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Published exterior reference. Verify exact portal position and current access in the Forever client.",
+          "uiMapID": 2548
+        }
+      ],
+      "instructions": "The primary guide map area 16591 labels an entrance at Riverglades 39,39, north of Sunnyglade near the closed city gates. Community guides place the cave around 37–37.5,37–37.9. Use the approach and verify the cave; no UI map ID is inferred from area ID 16591.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Krol'dok Stronghold in the full Forever dungeon overview",
+      "publishedWaypointPairs": [],
+      "publishedMapPinPairs": [],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Razorfen Downs": {
+      "canonicalName": "Razorfen Downs",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Razorfen Downs — published outdoor approach",
+          "zone": "The Barrens",
+          "areaID": 17,
+          "x": 50.0,
+          "y": 92.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1413
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Razorfen Downs in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 50.0,
+          "y": 92.0
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 50.0,
+          "y": 92.0
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Razorfen Downs — published outdoor approach",
+          "zone": "The Barrens",
+          "areaID": 17,
+          "x": 50.0,
+          "y": 92.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Uldaman": {
+      "canonicalName": "Uldaman",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Uldaman — published outdoor approach",
+          "zone": "Badlands",
+          "areaID": 3,
+          "x": 42.6,
+          "y": 10.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1418
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Uldaman in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 42.6,
+          "y": 10.8
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 42.6,
+          "y": 10.8
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Uldaman — published outdoor approach",
+          "zone": "Badlands",
+          "areaID": 3,
+          "x": 42.6,
+          "y": 10.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Zul'Farrak": {
+      "canonicalName": "Zul'Farrak",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Zul'Farrak — published outdoor approach",
+          "zone": "Tanaris",
+          "areaID": 440,
+          "x": 39.5,
+          "y": 21.3,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1446
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Zul'Farrak in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 39.5,
+          "y": 21.3
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 39.5,
+          "y": 21.3
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Zul'Farrak — published outdoor approach",
+          "zone": "Tanaris",
+          "areaID": 440,
+          "x": 39.5,
+          "y": 21.3,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Maraudon": {
+      "canonicalName": "Maraudon",
+      "aliases": [
+        "Maraudon: Orange",
+        "Maraudon: Purple",
+        "Maraudon: Inner falls"
+      ],
+      "entrances": [
+        {
+          "id": "orange",
+          "label": "Maraudon: Orange — shared exterior approach",
+          "zone": "Desolace",
+          "areaID": 405,
+          "x": 29.5,
+          "y": 57.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the Orange portal. Continue inside following the Orange route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1443
+        },
+        {
+          "id": "purple",
+          "label": "Maraudon: Purple — shared exterior approach",
+          "zone": "Desolace",
+          "areaID": 405,
+          "x": 29.5,
+          "y": 57.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the Purple portal. Continue inside following the Purple route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1443
+        },
+        {
+          "id": "inner-falls",
+          "label": "Maraudon: Inner falls — shared exterior approach",
+          "zone": "Desolace",
+          "areaID": 405,
+          "x": 29.5,
+          "y": 57.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the Inner falls portal. Continue inside following the Inner falls route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1443
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check. The distinct wing choices retain the common outdoor approach and written route; no separate portal coordinates are invented.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Maraudon in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 29.5,
+          "y": 57.8
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 29.5,
+          "y": 57.8
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Maraudon — published outdoor approach",
+          "zone": "Desolace",
+          "areaID": 405,
+          "x": 29.5,
+          "y": 57.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Alcaz Prison": {
+      "canonicalName": "Alcaz Prison",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "keep",
+          "zone": "Dustwallow Marsh",
+          "x": 75,
+          "y": 15,
+          "label": "Alcaz Prison: keep approach",
+          "coordinateKind": "outdoor-entrance-approach",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/alcaz-prison-dungeon-overview-location-rewards",
+            "sha256": "013deafde8c1823872b61eb57c81e39003125a8c3f0955ee6a0f9e6aa5218ffe",
+            "bytes": 125720,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Published exterior reference. Verify exact portal position and current access in the Forever client.",
+          "uiMapID": 1445
+        }
+      ],
+      "instructions": "Take the western landing onto Alcaz Island, go to the northern keep, and descend into its basement for the portal. The outdoor map point marks the keep approach, not a basement floor coordinate.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Alcaz Prison in the full Forever dungeon overview",
+      "publishedWaypointPairs": [],
+      "publishedMapPinPairs": [],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "The Temple of Atal'Hakkar": {
+      "canonicalName": "The Temple of Atal'Hakkar",
+      "aliases": [
+        "Sunken Temple",
+        "Temple of Atal'Hakkar"
+      ],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "The Temple of Atal'Hakkar — published outdoor approach",
+          "zone": "Swamp of Sorrows",
+          "areaID": 8,
+          "x": 69.6,
+          "y": 53.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1435
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for The Temple of Atal'Hakkar in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 69.6,
+          "y": 53.2
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 69.6,
+          "y": 53.2
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "The Temple of Atal'Hakkar — published outdoor approach",
+          "zone": "Swamp of Sorrows",
+          "areaID": 8,
+          "x": 69.6,
+          "y": 53.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Blackrock Depths": {
+      "canonicalName": "Blackrock Depths",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Blackrock Depths — Blackrock Mountain (published approach)",
+          "zone": "Searing Gorge",
+          "areaID": 51,
+          "x": 35.2,
+          "y": 84.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1427
+        }
+      ],
+      "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Blackrock Depths in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 35.2,
+          "y": 84.2
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 35.2,
+          "y": 84.2
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Blackrock Depths — Blackrock Mountain (published approach)",
+          "zone": "Searing Gorge",
+          "areaID": 51,
+          "x": 35.2,
+          "y": 84.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Blackmaw Hold": {
+      "canonicalName": "Blackmaw Hold",
+      "aliases": [],
+      "entrances": [],
+      "instructions": "Behind the Furbolg Gates in North Azshara Published entrance region: Azshara. No trustworthy entrance coordinates in this full guide. Current opening/access unverified.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Blackmaw Hold in the full Forever dungeon overview",
+      "publishedWaypointPairs": [],
+      "publishedMapPinPairs": [],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Behind the Furbolg Gates in North Azshara Published entrance region: Azshara. No trustworthy entrance coordinates in this full guide. Current opening/access unverified.",
+      "previousEntrances": [],
+      "reviewStatus": "researched-coordinate-unresolved",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Blackrock Spire": {
+      "canonicalName": "Blackrock Spire",
+      "aliases": [
+        "Lower Blackrock Spire",
+        "LBRS"
+      ],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Blackrock Spire — Blackrock Mountain (published approach)",
+          "zone": "Searing Gorge",
+          "areaID": 51,
+          "x": 35.2,
+          "y": 84.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1427
+        }
+      ],
+      "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Blackrock Spire in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 35.2,
+          "y": 84.2
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 35.2,
+          "y": 84.2
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Blackrock Spire — Blackrock Mountain (published approach)",
+          "zone": "Searing Gorge",
+          "areaID": 51,
+          "x": 35.2,
+          "y": 84.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Upper Blackrock Spire": {
+      "canonicalName": "Upper Blackrock Spire",
+      "aliases": [
+        "UBRS"
+      ],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Upper Blackrock Spire — Blackrock Mountain (published approach)",
+          "zone": "Searing Gorge",
+          "areaID": 51,
+          "x": 35.2,
+          "y": 84.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1427
+        }
+      ],
+      "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Upper Blackrock Spire in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 35.2,
+          "y": 84.2
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 35.2,
+          "y": 84.2
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Upper Blackrock Spire — Blackrock Mountain (published approach)",
+          "zone": "Searing Gorge",
+          "areaID": 51,
+          "x": 35.2,
+          "y": 84.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Inside Blackrock Mountain Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Dire Maul": {
+      "canonicalName": "Dire Maul",
+      "aliases": [
+        "Dire Maul: East",
+        "Dire Maul: West",
+        "Dire Maul: North",
+        "Dire Maul East",
+        "Dire Maul West",
+        "Dire Maul North"
+      ],
+      "entrances": [
+        {
+          "id": "east",
+          "label": "Dire Maul: East — shared exterior approach",
+          "zone": "Feralas",
+          "areaID": 357,
+          "x": 58.9,
+          "y": 41.5,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the East portal. Continue inside following the East route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1444
+        },
+        {
+          "id": "west",
+          "label": "Dire Maul: West — shared exterior approach",
+          "zone": "Feralas",
+          "areaID": 357,
+          "x": 58.9,
+          "y": 41.5,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the West portal. Continue inside following the West route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1444
+        },
+        {
+          "id": "north",
+          "label": "Dire Maul: North — shared exterior approach",
+          "zone": "Feralas",
+          "areaID": 357,
+          "x": 58.9,
+          "y": 41.5,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "This is the shared outdoor approach, not the North portal. Continue inside following the North route; exact wing-door coordinates are not independently verified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "routeInstructionsOnly": true,
+          "uiMapID": 1444
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check. The distinct wing choices retain the common outdoor approach and written route; no separate portal coordinates are invented.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Dire Maul in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 58.9,
+          "y": 41.5
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 58.9,
+          "y": 41.5
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Dire Maul — published outdoor approach",
+          "zone": "Feralas",
+          "areaID": 357,
+          "x": 58.9,
+          "y": 41.5,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Scholomance": {
+      "canonicalName": "Scholomance",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Scholomance — published outdoor approach",
+          "zone": "Western Plaguelands",
+          "areaID": 28,
+          "x": 69.8,
+          "y": 76.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Beneath Caer Darrow Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1422
+        }
+      ],
+      "instructions": "Beneath Caer Darrow Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Scholomance in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 69.8,
+          "y": 76.0
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 69.8,
+          "y": 76.0
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Scholomance — published outdoor approach",
+          "zone": "Western Plaguelands",
+          "areaID": 28,
+          "x": 69.8,
+          "y": 76.0,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Beneath Caer Darrow Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Stratholme": {
+      "canonicalName": "Stratholme",
+      "aliases": [],
+      "entrances": [
+        {
+          "id": "main",
+          "label": "Stratholme — Living Side Entrance (published approach)",
+          "zone": "Eastern Plaguelands",
+          "areaID": 139,
+          "x": 30.9,
+          "y": 15.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1423
+        },
+        {
+          "id": "service",
+          "label": "Stratholme — Undead Side Entrance (published approach)",
+          "zone": "Eastern Plaguelands",
+          "areaID": 139,
+          "x": 48.3,
+          "y": 21.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check. Published Undead-side gate requires Key to the City; current access unverified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          },
+          "uiMapID": 1423
+        }
+      ],
+      "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+      "evidence": {
+        "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+        "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+        "bytes": 170481,
+        "kind": "full-published-forever-guide",
+        "liveVerified": false
+      },
+      "sourceLocator": "Entrance box for Stratholme in the full Forever dungeon overview",
+      "publishedWaypointPairs": [
+        {
+          "x": 30.9,
+          "y": 15.2
+        },
+        {
+          "x": 48.3,
+          "y": 21.8
+        }
+      ],
+      "publishedMapPinPairs": [
+        {
+          "x": 30.9,
+          "y": 15.2
+        },
+        {
+          "x": 48.3,
+          "y": 21.8
+        }
+      ],
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "previousEntrances": [
+        {
+          "id": "main",
+          "label": "Stratholme — Living Side Entrance (published approach)",
+          "zone": "Eastern Plaguelands",
+          "areaID": 139,
+          "x": 30.9,
+          "y": 15.2,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        },
+        {
+          "id": "service",
+          "label": "Stratholme — Undead Side Entrance (published approach)",
+          "zone": "Eastern Plaguelands",
+          "areaID": 139,
+          "x": 48.3,
+          "y": 21.8,
+          "verification": "published-reference",
+          "coordinateKind": "outdoor-entrance-approach",
+          "instructions": "Published outdoor entrance approach; continue inside using the written dungeon/wing instructions. This is not a verified current portal, boss floor or live access check. Published Undead-side gate requires Key to the City; current access unverified.",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/dungeons-overview-locations-details",
+            "sha256": "92b8ae6529de34cccd643c7f7a7b4b139f464a91560e069e2efcb0728290dbe1",
+            "bytes": 170481,
+            "kind": "full-published-forever-guide",
+            "liveVerified": false
+          }
+        }
+      ],
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Naxxramas": {
+      "canonicalName": "Naxxramas",
+      "aliases": [],
+      "entrances": [],
+      "instructions": "Published Naxxramas access reference: visit Archmage Angela Dosantos at Light's Hope Chapel,Eastern Plaguelands81.4–81.6,58.2. The Dread Citadel - Naxxramas alternatives,minimum60/Both: Honored9121 asks5 Arcane Crystals,2 Nexus Crystals,1 Righteous Orb and60gold;Revered9122 asks2 Arcane Crystals,1 Nexus Crystal and30gold;Exalted9123 waives the cost. Choose the reputation alternative,not all three quests. Published completion describes the rune portal in Plaguewood. Current mandatory attunement,acceptance,phase/access and your completion state are unverified;giver fullpage remains unread. Map action resolves a client entrance,not an invented portal or boss floor point.",
+      "evidence": {
+        "file": "checkpoint8cd_working_evidence.json",
+        "sha256": "cacb85934882def5260f8f40071f6b828e0a4c72442ccd3427aecba408399657",
+        "url": "https://www.wowhead.com/forever/zone=3456"
+      },
+      "publicationCoordinateGap": true,
+      "actualClientVerified": false,
+      "availability": "client-listed-current-availability-unconfirmed",
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Published Naxxramas access reference: visit Archmage Angela Dosantos at Light's Hope Chapel,Eastern Plaguelands81.4–81.6,58.2. The Dread Citadel - Naxxramas alternatives,minimum60/Both: Honored9121 asks5 Arcane Crystals,2 Nexus Crystals,1 Righteous Orb and60gold;Revered9122 asks2 Arcane Crystals,1 Nexus Crystal and30gold;Exalted9123 waives the cost. Choose the reputation alternative,not all three quests. Published completion describes the rune portal in Plaguewood. Current mandatory attunement,acceptance,phase/access and your completion state are unverified;giver fullpage remains unread. Map action resolves a client entrance,not an invented portal or boss floor point.",
+      "previousEntrances": [],
+      "reviewStatus": "researched-coordinate-unresolved",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Blackwing Lair": {
+      "canonicalName": "Blackwing Lair",
+      "aliases": [],
+      "entrances": [],
+      "instructions": "Published transport reference: obtain Blackhand's Command letter #18987 from Scarshield Quartermaster #9046 (Classic-qualified full join),read it to start #7761,minimum55/Both. Touch Drakkisath's Brand by General Drakkisath in Blackrock Spire for the Orb of Command teleport path. Raw brand0,0 is not a map point. Current mandatory attunement,alternative access and earlier unlocks unverified;client entrance only,not a boss floor point.",
+      "evidence": {
+        "file": "checkpoint8cd_working_evidence.json",
+        "sha256": "438cbb40e87c4a4af0e94519ee0517a0fe95b02fa3cfa542093b69ceaffd1c6d",
+        "url": "https://www.wowhead.com/forever/zone=2677"
+      },
+      "publicationCoordinateGap": true,
+      "actualClientVerified": false,
+      "availability": "client-listed-current-availability-unconfirmed",
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Published transport reference: obtain Blackhand's Command letter #18987 from Scarshield Quartermaster #9046 (Classic-qualified full join),read it to start #7761,minimum55/Both. Touch Drakkisath's Brand by General Drakkisath in Blackrock Spire for the Orb of Command teleport path. Raw brand0,0 is not a map point. Current mandatory attunement,alternative access and earlier unlocks unverified;client entrance only,not a boss floor point.",
+      "previousEntrances": [],
+      "reviewStatus": "researched-coordinate-unresolved",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Molten Core": {
+      "canonicalName": "Molten Core",
+      "aliases": [],
+      "entrances": [],
+      "instructions": "Published transport reference: Lothos Riftwaker in Blackrock Mountain (Burning Steppes area26.4–26.6,24.4–24.8). Attunement to the Core #7848,minimum55/Both,asks one Core Fragment from the Molten Core entry portal inside Blackrock Depths;return to Lothos. Current mandatory entry,other access paths and earlier unlocks unverified. Map action resolves the client instance entrance,not Lothos or a boss floor point.",
+      "evidence": {
+        "file": "checkpoint8cd_working_evidence.json",
+        "sha256": "d08a56b77abe277d94c99faefb0624b7e7cd729197789edd6a931ee810ac9a21",
+        "url": "https://www.wowhead.com/forever/zone=2717"
+      },
+      "publicationCoordinateGap": true,
+      "actualClientVerified": false,
+      "availability": "client-listed-current-availability-unconfirmed",
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Published transport reference: Lothos Riftwaker in Blackrock Mountain (Burning Steppes area26.4–26.6,24.4–24.8). Attunement to the Core #7848,minimum55/Both,asks one Core Fragment from the Molten Core entry portal inside Blackrock Depths;return to Lothos. Current mandatory entry,other access paths and earlier unlocks unverified. Map action resolves the client instance entrance,not Lothos or a boss floor point.",
+      "previousEntrances": [],
+      "reviewStatus": "researched-coordinate-unresolved",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Ahn'Qiraj": {
+      "canonicalName": "Ahn'Qiraj",
+      "aliases": [],
+      "entrances": [],
+      "instructions": "Published instance source. Open the client-resolved entrance if available;exact boss floor/wing,keys,current access and group requirements remain unverified. No invented floor coordinate.",
+      "evidence": {
+        "file": "checkpoint8cd_working_evidence.json",
+        "sha256": "b184eb6baf5b8e338f6debb14c3f9af851198cc5f2caa3cd70e6c0c23570f263",
+        "url": "https://www.wowhead.com/forever/zone=3428"
+      },
+      "publicationCoordinateGap": true,
+      "actualClientVerified": false,
+      "availability": "client-listed-current-availability-unconfirmed",
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Published instance source. Open the client-resolved entrance if available;exact boss floor/wing,keys,current access and group requirements remain unverified. No invented floor coordinate.",
+      "previousEntrances": [],
+      "reviewStatus": "researched-coordinate-unresolved",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "Zul'Gurub": {
+      "canonicalName": "Zul'Gurub",
+      "aliases": [],
+      "entrances": [],
+      "instructions": "Published instance source. Open the client-resolved entrance if available;exact boss floor/wing,keys,current access and group requirements remain unverified. No invented floor coordinate.",
+      "evidence": {
+        "file": "checkpoint8cd_working_evidence.json",
+        "sha256": "85192b7b35711657bf6744260ed1b18944921412ba301890546dd8b40a2d01fa",
+        "url": "https://www.wowhead.com/forever/zone=1977"
+      },
+      "publicationCoordinateGap": true,
+      "actualClientVerified": false,
+      "availability": "client-listed-current-availability-unconfirmed",
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Published instance source. Open the client-resolved entrance if available;exact boss floor/wing,keys,current access and group requirements remain unverified. No invented floor coordinate.",
+      "previousEntrances": [],
+      "reviewStatus": "researched-coordinate-unresolved",
+      "evidenceScope": "Historical definition provenance; current coordinate facts cite per-entrance evidence."
+    },
+    "The Drowned City": {
+      "aliases": [
+        "Drowned City"
+      ],
+      "entrances": [
+        {
+          "id": "sea-cave",
+          "zone": "Stranglethorn Vale",
+          "x": 21,
+          "y": 28,
+          "label": "Drowned City: sea-cave approach",
+          "coordinateKind": "cave-entrance-reference",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.wowhead.com/forever/guide/the-drowned-city-dungeon-overview-location-rewards",
+            "sha256": "d56fe778e0712bed3a94eb2c57b7cb616bb88ff5a45ad1581e8586b2f49b8262",
+            "bytes": 146187,
+            "retrieved": "2026-11-18",
+            "kind": "published-forever-reference",
+            "liveVerified": false
+          },
+          "instructions": "Published exterior reference. Verify exact portal position and current access in the Forever client.",
+          "uiMapID": 1434
+        }
+      ],
+      "legacyApproachLabels": [],
+      "instructions": "Off the coast of Stranglethorn Vale, south of Haunted Isle; the primary guide labels 21,28 on area 33. Swim to the cave in the ocean. Nearby community references round to 21,27; this is a sea-cave approach, not an interior boss point.",
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "reviewStatus": "published-qualified-client-acceptance-pending",
+      "canonicalName": "The Drowned City"
+    },
+    "Shaper's Terrace": {
+      "aliases": [
+        "The Shaper's Terrace",
+        "Shaper’s Terrace"
+      ],
+      "entrances": [
+        {
+          "id": "refuge-approach",
+          "label": "Shaper's Terrace: Marshal's Refuge hill approach",
+          "zone": "Un'Goro Crater",
+          "uiMapID": 1449,
+          "x": 48.1,
+          "y": 6.1,
+          "coordinateKind": "outdoor-entrance-approach",
+          "verification": "published-reference",
+          "evidence": {
+            "url": "https://www.warcrafttavern.com/forever/guides/shapers-terrace/",
+            "sha256": "016fa0a532fc9608d40b1b2cc3f5a5a62b024b8cf46d868cf815af924689ca41",
+            "fingerprintScope": "committed search retrieval response, not provider HTML",
+            "file": "docs/navigation-overhaul/research/search-8.json",
+            "kind": "indexed-published-excerpt",
+            "retrieved": "2026-11-18",
+            "liveVerified": false
+          },
+          "instructions": "Published guide coordinate corroborated by LFCarry. Approach above Marshal's Refuge; the full provider page was inaccessible, so treat this as a qualified approach requiring current-client comparison."
+        }
+      ],
+      "legacyApproachLabels": [],
+      "instructions": "Northern Un'Goro Crater, hill overlooking Marshal's Refuge, published 48.1,6.1. Warcraft Tavern indexed text and LFCarry agree. Full primary page and actual client verification remain pending.",
+      "actualClientVerified": false,
+      "availability": "published-dungeon",
+      "reviewStatus": "qualified-indexed-reference-client-acceptance-pending",
+      "canonicalName": "Shaper's Terrace"
+    },
+    "Onyxia's Lair": {
+      "aliases": [
+        "Onyxia’s Lair"
+      ],
+      "entrances": [],
+      "legacyApproachLabels": [],
+      "instructions": "Official raid roster includes this raid. Dustwallow Marsh location is known, but the primary overview explicitly warns the entrance may have moved. Client-derived 52.9,77.71 is retained in the audit; exact current placement/access is unverified.",
+      "availability": "announced-raid-client-acceptance-pending",
+      "actualClientVerified": false,
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Official raid roster includes this raid. Dustwallow Marsh location is known, but the primary overview explicitly warns the entrance may have moved. Client-derived 52.9,77.71 is retained in the audit; exact current placement/access is unverified.",
+      "reviewStatus": "researched-coordinate-unresolved",
+      "canonicalName": "Onyxia's Lair"
+    },
+    "Hyjal Summit": {
+      "aliases": [],
+      "entrances": [],
+      "legacyApproachLabels": [],
+      "instructions": "Official raid roster includes this raid. Mount Hyjal entrance is not established by the primary overview. Anonymous beta-comment coordinates 89,32 are unverified and are not accepted.",
+      "availability": "announced-raid-client-acceptance-pending",
+      "actualClientVerified": false,
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Official raid roster includes this raid. Mount Hyjal entrance is not established by the primary overview. Anonymous beta-comment coordinates 89,32 are unverified and are not accepted.",
+      "reviewStatus": "researched-coordinate-unresolved",
+      "canonicalName": "Hyjal Summit"
+    },
+    "The Barrow Deeps": {
+      "aliases": [
+        "Barrow Deeps"
+      ],
+      "entrances": [],
+      "legacyApproachLabels": [],
+      "instructions": "Official raid roster includes this raid. Three approaches connect Mount Hyjal, Winterspring and Blackmaw Hold. The primary overview gives no precise entrances; anonymous beta coordinates are not accepted.",
+      "availability": "announced-raid-client-acceptance-pending",
+      "actualClientVerified": false,
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Official raid roster includes this raid. Three approaches connect Mount Hyjal, Winterspring and Blackmaw Hold. The primary overview gives no precise entrances; anonymous beta coordinates are not accepted.",
+      "reviewStatus": "researched-coordinate-unresolved",
+      "canonicalName": "The Barrow Deeps"
+    },
+    "Ruins of Ahn'Qiraj": {
+      "aliases": [
+        "AQ20"
+      ],
+      "entrances": [],
+      "legacyApproachLabels": [],
+      "instructions": "Historical raid/client-listed data, current Forever availability unannounced in reviewed official roster. Silithus Scarab Wall approaches are recorded, but no current portal or access is verified.",
+      "availability": "client-listed-current-availability-unconfirmed",
+      "actualClientVerified": false,
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Historical raid/client-listed data, current Forever availability unannounced in reviewed official roster. Silithus Scarab Wall approaches are recorded, but no current portal or access is verified.",
+      "reviewStatus": "researched-coordinate-unresolved",
+      "canonicalName": "Ruins of Ahn'Qiraj"
+    },
+    "Ahn'Qiraj Temple": {
+      "aliases": [
+        "Temple of Ahn'Qiraj",
+        "AQ40"
+      ],
+      "entrances": [],
+      "legacyApproachLabels": [],
+      "instructions": "Historical raid/client-listed data, current Forever availability unannounced in reviewed official roster. Keep separate from Ruins of Ahn'Qiraj; current exact portal/access remains unverified.",
+      "availability": "client-listed-current-availability-unconfirmed",
+      "actualClientVerified": false,
+      "resolutionNote": "Published route information exists; precise exterior coordinates remain under review. Historical raid/client-listed data, current Forever availability unannounced in reviewed official roster. Keep separate from Ruins of Ahn'Qiraj; current exact portal/access remains unverified.",
+      "reviewStatus": "researched-coordinate-unresolved",
+      "canonicalName": "Ahn'Qiraj Temple"
+    }
+  }
+}

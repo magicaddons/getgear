@@ -1,0 +1,139 @@
+{
+  "tag": "v0.14.0-beta8",
+  "sourceCommit": "543e5a248a018f8a9144e64aca655d242cf274e0",
+  "validatedCodeCommit": "a907d939aea29fa9683a740514c4a8171b1318e3",
+  "CI": "https://github.com/magicaddons/getgear/actions/runs/42602679107",
+  "files": 29,
+  "luaModules": 24,
+  "sha256": "f8435b632cede83dd79ddded6348a7e2f9995da08fe13e4f859466a10a97a732",
+  "bytes": 519620,
+  "manifest": [
+    {
+      "path": "GetGear/AcquisitionEvidence.lua",
+      "sha256": "d740e25b01b5d0a7864fabedd132264d4798321b216c966ba1aab4a91e452715"
+    },
+    {
+      "path": "GetGear/AcquisitionEvidenceIndex.lua",
+      "sha256": "26aa6f964dfa785a0e3ad8642b5cf0fbda26c8f07a4a1aa880e97bd251640dd6"
+    },
+    {
+      "path": "GetGear/AcquisitionSummary.lua",
+      "sha256": "a365bf4569df28b53c85d091bd0b812d9064f161ba2166b4c0be4fbc3f30c981"
+    },
+    {
+      "path": "GetGear/AltInventory.lua",
+      "sha256": "4b4fec128ac263f03eaafa6170df63ac1d38bc5ab57e8b2cf630b57882e14ebf"
+    },
+    {
+      "path": "GetGear/BUILD_INFO.txt",
+      "sha256": "ccfbabbc0b5625f3d21e0654bf37c49a04374f53867af95065269de026f28b52"
+    },
+    {
+      "path": "GetGear/BagUpgrades.lua",
+      "sha256": "f7c84a32da111c95f845e4db45243e869b80aa6d0c0c0f2f4af3857cecee6150"
+    },
+    {
+      "path": "GetGear/Core.lua",
+      "sha256": "18951aba863eecb620a82572ab34311272dad39c6cfed34c90b3412d32a5d9d4"
+    },
+    {
+      "path": "GetGear/CraftingVisibility.lua",
+      "sha256": "e97ae0b1e9bed45fd5310f81863729a1f58f74deb77ad22495b31fbde2931bff"
+    },
+    {
+      "path": "GetGear/DATA_MODEL.md",
+      "sha256": "563bafb90d1acf05b4d085c082448d3c1c41099a61e66e847d4e80ccf76a7c39"
+    },
+    {
+      "path": "GetGear/EquipmentCache.lua",
+      "sha256": "26d664699fb9c379545523950ad526cca466d6425ba55a191e56163fb72175dd"
+    },
+    {
+      "path": "GetGear/GearCompare.lua",
+      "sha256": "2b94a48b11ba851e2e37a8796e1ba63d8bf29a756b198c9a6dbcf1b5e6c238af"
+    },
+    {
+      "path": "GetGear/GearRelevance.lua",
+      "sha256": "c35f1cf367cd4769824c7acaff00d3faef412b90729bde7024e1b33b87838e28"
+    },
+    {
+      "path": "GetGear/GeneratedBeta7Evidence.lua",
+      "sha256": "b23e3b688585032312054e1ec5676ab55140629deebdfb71f7abd19778d9dfe6"
+    },
+    {
+      "path": "GetGear/GeneratedStatFlags.lua",
+      "sha256": "6433285e910f156dd0598884b045ab14a637416a66d294aab61eb7b9410961d9"
+    },
+    {
+      "path": "GetGear/GetGear.toc",
+      "sha256": "e7d83fbd265122780d3823356f7d3a01e8f2e72320bfdfbcb6e8e472c6b558cd"
+    },
+    {
+      "path": "GetGear/GuideEngine.lua",
+      "sha256": "4a5d8d4300865a59c65021b97d81ff4283422e6ba6bfa35f08e1da84d9c51d7c"
+    },
+    {
+      "path": "GetGear/GuideState.lua",
+      "sha256": "377936d4669732e190c9aecf92a44efeb9cdbc5dd3759f5c4d7b90e70ab1c01b"
+    },
+    {
+      "path": "GetGear/ItemData.lua",
+      "sha256": "cd15d9a8a54982a1015d1c00ce31264c11fa56bab6ebe8dcb3dd87371e0ca72a"
+    },
+    {
+      "path": "GetGear/MapNavigation.lua",
+      "sha256": "169279c9501d9ae1662746d4f0eec71bd6b787c54d4318fd07b858fceeef88a3"
+    },
+    {
+      "path": "GetGear/MapPin.tga",
+      "sha256": "cbdcc54438c808d9e0117ec89b1e916aea0ba8aed04065e7e4eb8e92821d8a53"
+    },
+    {
+      "path": "GetGear/Materials.lua",
+      "sha256": "972932157bf55d68200f7149d4d88ff8b149b36b054beb2abd0d2b268070cc7d"
+    },
+    {
+      "path": "GetGear/README.txt",
+      "sha256": "3d317c008029225ef88f0dc8fc86d4aea6e880ff21edb75d82bb35cdca692845"
+    },
+    {
+      "path": "GetGear/RecipeKnowledge.lua",
+      "sha256": "1a1ca65b2e626127a460a7dcdb286c68a1f10b85b327a99c9bf7fb51bb89740a"
+    },
+    {
+      "path": "GetGear/ResearchedItemFacts.lua",
+      "sha256": "f04e844e6283930b579d152d2e085677e9fc222bedb595ba2229d6b754da8051"
+    },
+    {
+      "path": "GetGear/SourceEnrichment.lua",
+      "sha256": "5e858fe329d2485157ab1914953899e2e809fdfdf4a3691d39053fa52a7e68ef"
+    },
+    {
+      "path": "GetGear/StatEvidence.lua",
+      "sha256": "28b602961f19a1a7d88fa6cb955e1868b84f4a6bc3d07aaca454f920f26d0909"
+    },
+    {
+      "path": "GetGear/TalentAwareness.lua",
+      "sha256": "3da0d92394cb33015dfa92bee31f6467cdbfc8cca77b4b93841cd5fce21f3026"
+    },
+    {
+      "path": "GetGear/UI.lua",
+      "sha256": "3a2b62af4bb8dfe97ce495731f9f329795c1179481975f8e0456346b8fb9a717"
+    },
+    {
+      "path": "GetGear/WorldDropBoEIndex.lua",
+      "sha256": "ed19112871795b70159b2baae4a76ccfdaaac1e0fc3f33e59cebfd177a80f30d"
+    }
+  ],
+  "publicationStatus": "BLOCKED: draft only, no assets uploaded",
+  "draftReleaseID": 439010698,
+  "draftURL": "https://github.com/magicaddons/getgear/releases/tag/untagged-8f551a13a9bcb4bf7902",
+  "blocker": {
+    "host": "uploads.github.com",
+    "operation": "GitHub release asset upload",
+    "response": "HTTP 403 Forbidden",
+    "observedNetworkPolicy": "restricted/enforced; observations current; hostname absent from effective allowed hosts",
+    "requiredAction": "Add uploads.github.com to cloud environment allowed domains and apply; no credentials requested in chat"
+  },
+  "mainUnchanged": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4"
+}

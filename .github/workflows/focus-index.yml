@@ -1,0 +1,33 @@
+name: Index source-audit unresolved queues (offline)
+on:
+  push:
+    branches: [work/catalogue-source-audit-1-60]
+    paths:
+      - tools/index_source_audit.py
+      - .github/workflows/focus-index.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Partition current completed audit without network
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/index_source_audit.py
+          python3 tools/index_source_audit.py
+          cat docs/source-audit-1-60/FOCUS_QUEUES.md
+      - name: Commit report views to audit branch
+        run: |
+          git config user.name "GetGear audit bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/source-audit-1-60/
+          if ! git diff --cached --quiet; then
+            git commit -m "Add source-audit unresolved dungeon, recipe and item queues"
+            git push origin "HEAD:work/catalogue-source-audit-1-60"
+          fi
+      - name: No addon release
+        run: echo "Report indexing only. No addon package, main push, or release."

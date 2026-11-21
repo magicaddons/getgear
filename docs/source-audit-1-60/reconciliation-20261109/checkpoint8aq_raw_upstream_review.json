@@ -1,0 +1,193 @@
+{
+  "capturedUTC": "2026-11-10T13:28:23.379724+00:00",
+  "method": "Exact full factual snapshot comparison: retained8AP inspectedbot Playfulls and8AP actual local Everloot factual baselines to8AQ; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23434,
+    "afterItems": 23441,
+    "beforeDefinitions": 9157,
+    "afterDefinitions": 9157,
+    "newItems": [
+      {
+        "itemID": 13384,
+        "name": "Rainbow Girdle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Hearthsinger Forresten",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "d0b7f58cf3e12296279302749853abac966d0ff9f91b2d7811d77e0e2bb7d4b8"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13402,
+        "name": "Timmy's Galoshes",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Timmy the Cruel",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "f887e01c312b4c9c10d0b0ed910eac57c506521729abb94fc87b7d2bc3137c9c"
+          }
+        ],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 13537,
+        "name": "Chillhide Bracers",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Baroness Anastari",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "df6ccfe113462d21c332c86423bc5ce18f792a3deed56e22ed275db540027376"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18372,
+        "name": "Blade of the New Moon",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Immol'thar",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "b0f9a6d81f40e3f15012aedf10cd05ef05977333dfde094c81799a08bc901df3"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18392,
+        "name": "Distracting Dagger",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Prince Tortheldrin",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e153c7b10b555e7a32734ea20259ff150ad8da3dd781272b44252f1def2cd488"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18395,
+        "name": "Emerald Flame Ring",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Prince Tortheldrin",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e153c7b10b555e7a32734ea20259ff150ad8da3dd781272b44252f1def2cd488"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22411,
+        "name": "Helm of the Executioner",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Baron Rivendare",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "378ceec83cc6a18a6fc132439f338fe088c6c99c17f94868259d2270a95220ed"
+          }
+        ],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.e8a3a7757c.json",
+        "bytes": 989497,
+        "sha256": "e8a3a7757c0f2fe6e4831e4618c616aa2b3599d76e86e75027ace60e5a24a2e4",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.4a3380ce2c.json",
+        "bytes": 1333831,
+        "sha256": "4a3380ce2c3315d73fa505a741731598a28fd9831515f905147850b335d5e5db",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.fccef921c6.json",
+        "bytes": 464365,
+        "sha256": "fccef921c6f6e52b6114d46189bf434c464c679148f7582336a9789d3b7d7efd",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.1b23cb60a8.json",
+        "bytes": 446192,
+        "sha256": "1b23cb60a8757ade49e3c374c663ad708620ffbfa3d77ad4acc14b7a0a241425",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1416,
+    "afterRaw": 1416,
+    "qualifying": 1204,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "618cd77d30efc60187c1fb37609d97d2f865dc8d8eaef57ce1c0128dff84b43a",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103652,
+        "sha256": "9a874fc4cb310e494b781bf692a260218c47186bcefea4ee1a4b5560b37a597a",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 85987,
+        "sha256": "5acf71a4e740d10ef6f95f22e8b66058dbf2d7d2d395b45809f73e95b7021577",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T12:00:14.623Z"
+      }
+    ]
+  },
+  "wholePriorRawRowsExact": 23434,
+  "fullSourceDefinitionArraysExact": true,
+  "metadataChangedKeys": [
+    "st"
+  ],
+  "snapshotUpdate": "23441/9157;7new=1canonical+6outside201pending9A;Timmyone-sidedprimary+communityonly;allpriorrawrows/sourceobjects exact;Everloot1416/1204exactrelations/counters unchanged. Separate canonical scope evidence retained."
+}

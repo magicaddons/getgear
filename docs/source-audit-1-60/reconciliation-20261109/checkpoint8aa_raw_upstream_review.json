@@ -1,0 +1,698 @@
+{
+  "capturedUTC": "2026-11-10T04:27:07.863698+00:00",
+  "method": "Exact full factual snapshot comparison8Z\u21928AA; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23313,
+    "afterItems": 23334,
+    "beforeDefinitions": 9153,
+    "afterDefinitions": 9153,
+    "newItems": [
+      {
+        "itemID": 2244,
+        "name": "Krol Blade",
+        "sources": [
+          {
+            "type": "worlddrop",
+            "label": "World drop",
+            "npc": "",
+            "zone": "",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 10630,
+        "name": "Soulcatcher Halo",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12535,
+        "name": "Doomforged Straightedge",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13203,
+        "name": "Armswake Cloak",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Ghok Bashguud",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13252,
+        "name": "Cloudrunner Girdle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Quartermaster Zigris",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "caafece7069148b1090b6b6ba4dfca28981f9602494f14aaa697f70fd4047e05"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13283,
+        "name": "Magus Ring",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Spirestone Lord Magus",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13360,
+        "name": "Gift of the Elven Magi",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Balnazzar",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "bc76d2516e8dc4ccd44e1866295fcbaf043afe11167ac7276732c0ef021ec97c"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13369,
+        "name": "Fire Striders",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Balnazzar",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "bc76d2516e8dc4ccd44e1866295fcbaf043afe11167ac7276732c0ef021ec97c"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13381,
+        "name": "Master Cannoneer Boots",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Cannon Master Willey",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "0585f0370148eb5296c90908702a6cdf98c6eca1cd2f0ce7f7c96923c5ece9b6"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13387,
+        "name": "Foresight Girdle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Archivist Galford",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "cc97c6d6159a55b7356249714920370537294b21a50a0b6c6c38407e60f09e25"
+          }
+        ],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 13400,
+        "name": "Vambraces of the Sadist",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Timmy the Cruel",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "f887e01c312b4c9c10d0b0ed910eac57c506521729abb94fc87b7d2bc3137c9c"
+          }
+        ],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 13944,
+        "name": "Tombstone Breastplate",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Darkmaster Gandling",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "30f1f60ff88978deaf302d49835edc150fe42348ae4598d9f2999d2bf271d45b"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 14487,
+        "name": "Bonechill Hammer",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "d2fcff54d1c2e5d8e23acf632ffddae7d6c1daa49e73d30cc74836cbf5540a41"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 14525,
+        "name": "Boneclenched Gauntlets",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "d2fcff54d1c2e5d8e23acf632ffddae7d6c1daa49e73d30cc74836cbf5540a41"
+          }
+        ],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 18295,
+        "name": "Phasing Boots",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18735,
+        "name": "Maleki's Footwraps",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Maleki the Pallid",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "b4409002dc5fb383dcae81b77024c17ac77b51de2b0f19b988ad895f0582c986"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22395,
+        "name": "Totem of Rage",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Magmus",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "6873417688dbb10886d1afd6ede0d09f29ddfd7ea6043cdc3b5da57c4501f55a"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22403,
+        "name": "Nacreous Shell Necklace",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Cannon Master Willey",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "0585f0370148eb5296c90908702a6cdf98c6eca1cd2f0ce7f7c96923c5ece9b6"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 276403,
+        "name": "Scarlet Bonebreaker",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280018,
+        "name": "Hammer of Thundering Hooves",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280028,
+        "name": "Heartflame Gauntlets",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.b4d62c8d8f.json",
+        "bytes": 988994,
+        "sha256": "b4d62c8d8f1665c7d66069e36c810c61b83833b5b4c4313b5f9559c07aca4c01",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.ab1f787eb2.json",
+        "bytes": 1321109,
+        "sha256": "ab1f787eb2f1b9b9812726f93aabf08a9e1be644e166b775b58165f4cf59a338",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.421b112e64.json",
+        "bytes": 464371,
+        "sha256": "421b112e647ecfbda1db5850861e6adc5ca3e2ad8d64fdca32d27a8763ca5219",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.6e87304986.json",
+        "bytes": 446193,
+        "sha256": "6e873049869fc6ada82f4c2d57c10deb52ca6c2a7f8fba36f122faba014546e2",
+        "matchesRecordedFingerprint": true
+      }
+    ],
+    "newCanonicalCoverage": [
+      {
+        "itemID": 13387,
+        "name": "Foresight Girdle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Archivist Galford",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "cc97c6d6159a55b7356249714920370537294b21a50a0b6c6c38407e60f09e25"
+          }
+        ],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 13400,
+        "name": "Vambraces of the Sadist",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Timmy the Cruel",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "f887e01c312b4c9c10d0b0ed910eac57c506521729abb94fc87b7d2bc3137c9c"
+          }
+        ],
+        "alreadyCanonical": true
+      },
+      {
+        "itemID": 14525,
+        "name": "Boneclenched Gauntlets",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "d2fcff54d1c2e5d8e23acf632ffddae7d6c1daa49e73d30cc74836cbf5540a41"
+          }
+        ],
+        "alreadyCanonical": true
+      }
+    ],
+    "newOutsideCanonicalCandidates": [
+      {
+        "itemID": 2244,
+        "name": "Krol Blade",
+        "sources": [
+          {
+            "type": "worlddrop",
+            "label": "World drop",
+            "npc": "",
+            "zone": "",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 10630,
+        "name": "Soulcatcher Halo",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Sunken Temple",
+            "path": "loot-tables/dungeons/sunken-temple",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 12535,
+        "name": "Doomforged Straightedge",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13203,
+        "name": "Armswake Cloak",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Ghok Bashguud",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13252,
+        "name": "Cloudrunner Girdle",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Quartermaster Zigris",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "caafece7069148b1090b6b6ba4dfca28981f9602494f14aaa697f70fd4047e05"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13283,
+        "name": "Magus Ring",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Spirestone Lord Magus",
+            "zone": "Blackrock Spire",
+            "path": "loot-tables/dungeons/blackrock-spire",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13360,
+        "name": "Gift of the Elven Magi",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Balnazzar",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "bc76d2516e8dc4ccd44e1866295fcbaf043afe11167ac7276732c0ef021ec97c"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13369,
+        "name": "Fire Striders",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Balnazzar",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "bc76d2516e8dc4ccd44e1866295fcbaf043afe11167ac7276732c0ef021ec97c"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13381,
+        "name": "Master Cannoneer Boots",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Cannon Master Willey",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "0585f0370148eb5296c90908702a6cdf98c6eca1cd2f0ce7f7c96923c5ece9b6"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 13944,
+        "name": "Tombstone Breastplate",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Darkmaster Gandling",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "30f1f60ff88978deaf302d49835edc150fe42348ae4598d9f2999d2bf271d45b"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 14487,
+        "name": "Bonechill Hammer",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Ras Frostwhisper",
+            "zone": "Scholomance",
+            "path": "loot-tables/dungeons/scholomance",
+            "noteSHA256": "d2fcff54d1c2e5d8e23acf632ffddae7d6c1daa49e73d30cc74836cbf5540a41"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18295,
+        "name": "Phasing Boots",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Dire Maul",
+            "path": "loot-tables/dungeons/dire-maul",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 18735,
+        "name": "Maleki's Footwraps",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Maleki the Pallid",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "b4409002dc5fb383dcae81b77024c17ac77b51de2b0f19b988ad895f0582c986"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22395,
+        "name": "Totem of Rage",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Magmus",
+            "zone": "Blackrock Depths",
+            "path": "loot-tables/dungeons/blackrock-depths",
+            "noteSHA256": "6873417688dbb10886d1afd6ede0d09f29ddfd7ea6043cdc3b5da57c4501f55a"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 22403,
+        "name": "Nacreous Shell Necklace",
+        "sources": [
+          {
+            "type": "boss",
+            "label": "Boss drop",
+            "npc": "Cannon Master Willey",
+            "zone": "Stratholme",
+            "path": "loot-tables/dungeons/stratholme",
+            "noteSHA256": "0585f0370148eb5296c90908702a6cdf98c6eca1cd2f0ce7f7c96923c5ece9b6"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 276403,
+        "name": "Scarlet Bonebreaker",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280018,
+        "name": "Hammer of Thundering Hooves",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280028,
+        "name": "Heartflame Gauntlets",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1399,
+    "afterRaw": 1399,
+    "qualifying": 1199,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "8d6cacdc66ce854b67f3a4d7a28712d5c909c136fa45be3b9d294fd8015e6264",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T03:30:17.397Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103653,
+        "sha256": "f18807cb3a0bdf076249b24787d1e5237e12388ad5abb33cb793a6d0dba5adaf",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T03:30:17.397Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 82469,
+        "sha256": "b669d4c1ac9a4889911c39853d1d9e788be670c0bc6626c0302b04d552fa2fb3",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-10T03:30:17.397Z"
+      }
+    ]
+  },
+  "directCommunityPageChecks": [
+    {
+      "itemID": 13387,
+      "exactItemLink": "/item/13387-foresight-girdle",
+      "publishedBossHeading": "Archivist Galford",
+      "sourceURL": "https://playfulls.com/loot-tables/dungeons/stratholme",
+      "bytes": 163352,
+      "sha256": "18dc2eb72527733825fa84aa4dd98d440b5e970cd092d7a3f184d5ef7afb44c5",
+      "rateProvenance": "Publisher labels rate expected, not confirmed in Forever; no rate/current live confirmation adopted"
+    },
+    {
+      "itemID": 13400,
+      "exactItemLink": "/item/13400-vambraces-of-the-sadist",
+      "publishedBossHeading": "Timmy the Cruel",
+      "sourceURL": "https://playfulls.com/loot-tables/dungeons/stratholme",
+      "bytes": 163352,
+      "sha256": "18dc2eb72527733825fa84aa4dd98d440b5e970cd092d7a3f184d5ef7afb44c5",
+      "rateProvenance": "Publisher labels rate expected, not confirmed in Forever; no rate/current live confirmation adopted"
+    },
+    {
+      "itemID": 14525,
+      "exactItemLink": "/item/14525-boneclenched-gauntlets",
+      "publishedBossHeading": "Ras Frostwhisper",
+      "sourceURL": "https://playfulls.com/loot-tables/dungeons/scholomance",
+      "bytes": 142103,
+      "sha256": "386456e3fd55aca5f1c19c0e18f9a181a97bf44482325496da216e20d7cde571",
+      "rateProvenance": "Publisher labels rate expected, not confirmed in Forever; no rate/current live confirmation adopted"
+    }
+  ],
+  "interpretation": "21 newly indexed feed IDs:3 already canonical gain community references/confidence;18 outsidecanonical become90 pending9A candidates. Zero previously indexed source facts change. All3 directly inspected publisher page/ID/boss joins label rates expected/unconfirmed, not current live loot. Existing regression caught14525 automatic boss/queue promotion; generator now retains reviewed item-link exceptions as unresolved community leads unless exact actor corroboration exists. Six original followups/role counts/requirements preserved; existing Lua tests unchanged.100 reviewed summaries plus14525 qualified summary,3 confidence/sourceURL changes; no class/stat/material/recipe or stronger-observation mutation.",
+  "validationHistory": {
+    "initial": "13Lua PASS; final acquisition regression rejected removing14525 from unresolved queue at tests/beta7-acquisition-reconciled.lua:219. Local only; no failing source pushed/CI triggered.",
+    "correction": "Identity-locked four reviewed dungeon-link gaps stay queued on uncorroborated community boss labels. Exact matching actor observation can pass; other-actor evidence retained without confirming selected link. Original Lua6followup/count requirements unchanged.",
+    "addedOfflineTest": "tests/reconcile-dungeon-link-guards.py:four negative pending cases,normal community reference,exact actor positive and wrong-actor boundary; synthetic IDs, not research facts.",
+    "final": "Fresh regenerated data; offlinePython guards and14Lua regressions/24modules/fourreports PASS"
+  }
+}

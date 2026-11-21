@@ -1,0 +1,928 @@
+{
+  "capturedUTC": "2026-11-10T19:49:41.736060+00:00",
+  "method": "Exact full factual snapshot comparison: retainedreviewed8AXactualfactualsnapshots to8AY;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23450,
+    "afterItems": 23459,
+    "beforeDefinitions": 9158,
+    "afterDefinitions": 9160,
+    "newItems": [
+      {
+        "itemID": 1680,
+        "name": "Headchopper",
+        "sources": [
+          {
+            "type": "zonedrop",
+            "label": "Zone drop",
+            "npc": "Mosh'Ogg Butcher",
+            "zone": "Stranglethorn Vale",
+            "path": "professions/zones/stranglethorn-vale",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 9512,
+        "name": "Blackmetal Cape",
+        "sources": [
+          {
+            "type": "dungeon",
+            "label": "Dungeon drop",
+            "npc": "Trash mobs",
+            "zone": "Zul'Farrak",
+            "path": "loot-tables/dungeons/zulfarrak",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 15411,
+        "name": "Mark of Fordring",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "In Dreams",
+            "zone": "Western Plaguelands",
+            "path": "professions/zones/western-plaguelands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 15413,
+        "name": "Ornate Adamantium Breastplate",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "In Dreams",
+            "zone": "Western Plaguelands",
+            "path": "professions/zones/western-plaguelands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 15418,
+        "name": "Shimmering Platinum Warhammer",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "In Dreams",
+            "zone": "Western Plaguelands",
+            "path": "professions/zones/western-plaguelands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 15421,
+        "name": "Shroud of the Exile",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "In Dreams",
+            "zone": "Western Plaguelands",
+            "path": "professions/zones/western-plaguelands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 16058,
+        "name": "Fordring's Seal",
+        "sources": [
+          {
+            "type": "quest",
+            "label": "Quest",
+            "npc": "In Dreams",
+            "zone": "Western Plaguelands",
+            "path": "professions/zones/western-plaguelands",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 280029,
+        "name": "Cinderedge Crescent",
+        "sources": [],
+        "alreadyCanonical": false
+      },
+      {
+        "itemID": 287044,
+        "name": "Predator's Shroud",
+        "sources": [],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 13577,
+    "uninterpretedField10Changes": [
+      {
+        "itemID": 250482,
+        "name": "Glowing Copper Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250488,
+        "name": "Veteran's Chain Shirt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250489,
+        "name": "Guard's Chain Shirt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250490,
+        "name": "Protector's Chain Shirt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250491,
+        "name": "Acolyte's Chain Shirt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250492,
+        "name": "Crusader's Chain Shirt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250493,
+        "name": "Veteran's Chain Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250494,
+        "name": "Guard's Chain Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250495,
+        "name": "Protector's Chain Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250496,
+        "name": "Acolyte's Chain Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250497,
+        "name": "Crusader's Chain Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250498,
+        "name": "Veteran's Chain Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250499,
+        "name": "Guard's Chain Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250500,
+        "name": "Protector's Chain Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250501,
+        "name": "Acolyte's Chain Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250502,
+        "name": "Crusader's Chain Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250546,
+        "name": "Officer's Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250547,
+        "name": "Sentinel's Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250548,
+        "name": "Warder's Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250549,
+        "name": "Prefect's Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250550,
+        "name": "Justicar's Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250551,
+        "name": "Officer's Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250552,
+        "name": "Sentinel's Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250553,
+        "name": "Warder's Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250554,
+        "name": "Prefect's Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250555,
+        "name": "Justicar's Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250556,
+        "name": "Officer's Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250557,
+        "name": "Sentinel's Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250558,
+        "name": "Warder's Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250559,
+        "name": "Prefect's Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250560,
+        "name": "Justicar's Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250620,
+        "name": "Gemmed Copper Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 250621,
+        "name": "Strange Copper Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252424,
+        "name": "Black Whelp Slippers",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252425,
+        "name": "Dark Leather Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252426,
+        "name": "Murloc Scale Shoes",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252427,
+        "name": "Moonglow Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252434,
+        "name": "Defender's Leather Armor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252435,
+        "name": "Totemic Leather Armor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252445,
+        "name": "Defender's Leather Pants",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252446,
+        "name": "Totemic Leather Pants",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252455,
+        "name": "Defender's Leather Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252456,
+        "name": "Totemic Leather Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252459,
+        "name": "Prowler's Leather Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252460,
+        "name": "Warden's Leather Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252461,
+        "name": "Skirmisher's Leather Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252465,
+        "name": "Prowler's Leather Shoes",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252466,
+        "name": "Warden's Leather Shoes",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252490,
+        "name": "Brawler's Leather Armor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252491,
+        "name": "Trapper's Leather Armor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252492,
+        "name": "Stormrider's Leather Armor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252493,
+        "name": "Wisdom's Leather Armor",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252500,
+        "name": "Brawler's Leather Pants",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252501,
+        "name": "Trapper's Leather Pants",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252502,
+        "name": "Stormrider's Leather Pants",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252503,
+        "name": "Wisdom's Leather Pants",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252512,
+        "name": "Brawler's Leather Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252513,
+        "name": "Trapper's Leather Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252514,
+        "name": "Stormrider's Leather Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252515,
+        "name": "Wisdom's Leather Helm",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252520,
+        "name": "Skulker's Leather Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252521,
+        "name": "Stalker's Leather Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252522,
+        "name": "Skycaller's Leather Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252523,
+        "name": "Mender's Leather Belt",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252531,
+        "name": "Skulker's Leather Shoes",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252532,
+        "name": "Skycaller's Leather Shoes",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252533,
+        "name": "Mender's Leather Shoes",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252547,
+        "name": "Prowler's Leather Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252548,
+        "name": "Skulker's Leather Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252549,
+        "name": "Warden's Leather Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252550,
+        "name": "Skycaller's Leather Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252551,
+        "name": "Mender's Leather Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252562,
+        "name": "Stalker's Mail Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252563,
+        "name": "Skycaller's Mail Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252564,
+        "name": "Skirmisher's Mail Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252565,
+        "name": "Mender's Mail Boots",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252584,
+        "name": "Stalker's Mail Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252585,
+        "name": "Skycaller's Mail Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252586,
+        "name": "Skirmisher's Mail Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 252587,
+        "name": "Mender's Mail Gauntlets",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253901,
+        "name": "Filigreed Pristine Gown",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253903,
+        "name": "Filigreed Silky Gown",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253905,
+        "name": "Filigreed Flame Gown",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253907,
+        "name": "Filigreed Shadow Gown",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253909,
+        "name": "Filigreed Pearly Gown",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253911,
+        "name": "Filigreed Shining Gown",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253937,
+        "name": "Filigreed Pristine Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253939,
+        "name": "Filigreed Silky Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253941,
+        "name": "Filigreed Flame Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253943,
+        "name": "Filigreed Shadow Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253945,
+        "name": "Filigreed Pearly Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253947,
+        "name": "Filigreed Shining Leggings",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253975,
+        "name": "Filigreed Pristine Circlet",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253977,
+        "name": "Filigreed Silky Circlet",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253979,
+        "name": "Filigreed Flame Circlet",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253981,
+        "name": "Filigreed Shadow Circlet",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253983,
+        "name": "Filigreed Pearly Circlet",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 253985,
+        "name": "Filigreed Shining Circlet",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254001,
+        "name": "Gilded Slippers",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254003,
+        "name": "Frothing Slippers",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254005,
+        "name": "Fiery Slippers",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254007,
+        "name": "Black Slippers",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254009,
+        "name": "Golden Slippers",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254011,
+        "name": "Radiant Slippers",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254037,
+        "name": "Gilded Cord",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254039,
+        "name": "Frothing Cord",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254041,
+        "name": "Fiery Cord",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254043,
+        "name": "Black Cord",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254045,
+        "name": "Golden Cord",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254047,
+        "name": "Radiant Cord",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254095,
+        "name": "Gilded Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254097,
+        "name": "Frothing Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254099,
+        "name": "Fiery Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254101,
+        "name": "Black Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254103,
+        "name": "Golden Gloves",
+        "before": "4",
+        "after": 6
+      },
+      {
+        "itemID": 254105,
+        "name": "Radiant Gloves",
+        "before": "4",
+        "after": 6
+      }
+    ],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.9b6239dcb2.json",
+        "bytes": 989827,
+        "sha256": "9b6239dcb206fef7d81c5f4c330d41f38443898921c2dc747067cff3e2238a43",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.6895f81aa3.json",
+        "bytes": 1335832,
+        "sha256": "6895f81aa36462d4e471d3d09513a3f0958986acf709eafe0c051bcfbfdddf47",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.79db2b20fc.json",
+        "bytes": 464365,
+        "sha256": "79db2b20fc84551fc86b0323367841f8ee3540a0b3d256ba6d79e0b06a0e6e9f",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.607ccde792.json",
+        "bytes": 446192,
+        "sha256": "607ccde7927b5095a88af862d66b672f8fb3e0d82ca6790d0321913bdef6f203",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1550,
+    "afterRaw": 1550,
+    "qualifying": 1315,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 9818,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3873,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T09:05:17.000Z",
+        "lastSeen": "2026-11-09T09:05:17.000Z"
+      },
+      {
+        "fromKind": "item",
+        "fromId": 14177,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 3473,
+        "evidence": "observed",
+        "build": null,
+        "installs": 4,
+        "firstSeen": "2026-11-08T17:48:40.000Z",
+        "lastSeen": "2026-11-08T17:48:40.000Z"
+      }
+    ],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "c670a262535be9baa1b73530a360df86b40406f406c67f33ef6623aca662bb5c",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T19:20:16.992Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103546,
+        "sha256": "1cafe7376172621586307db960ccc558edb344d9d4d99c7d0a4734a38c11c05e",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T19:20:16.992Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103400,
+        "sha256": "f947ac0e062f5a418405119e87310e1d0606ab258e3901435e1457aaabca6a99",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T19:20:16.992Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 10711,
+        "sha256": "5860aba38baae2c5afdf098b97656b66f35e71a67f2c1ec82d5d782d04ffbb58",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T19:20:16.992Z"
+      }
+    ]
+  }
+}

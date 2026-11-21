@@ -1,0 +1,252 @@
+{
+  "originalTypedScope698AllAssessed": true,
+  "newTypedLeads": {
+    "276395": [
+      {
+        "source": "npc:11058",
+        "relation": "drops",
+        "url": "https://www.wowhead.com/forever/npc=11058",
+        "sha256": "0a228e751e9c1c39c319957bd3d1f698a59284bdd39e8fade1b4faf12194f545",
+        "publishedRow": {
+          "appearances": {
+            "0": [
+              11119,
+              "inv_gauntlets_06"
+            ]
+          },
+          "armor": 52,
+          "classs": 4,
+          "displayName": "Grimm's Packing Gloves",
+          "displayid": 11119,
+          "flags2": 4,
+          "id": 276395,
+          "level": 59,
+          "name": "Grimm's Packing Gloves",
+          "quality": 3,
+          "reqlevel": 54,
+          "slot": 10,
+          "slotbak": 10,
+          "source": [
+            2
+          ],
+          "sourcemore": [
+            {
+              "bd": 1,
+              "dd": -1,
+              "n": "Ezra Grimm",
+              "t": 1,
+              "ti": 11058,
+              "z": 2017
+            }
+          ],
+          "subclass": 1,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "modes": {
+            "mode": [
+              1
+            ],
+            "1": {
+              "count": 2,
+              "outof": 7
+            },
+            "0": {
+              "count": 2,
+              "outof": 7
+            }
+          },
+          "count": 2,
+          "stack": [
+            1,
+            1
+          ],
+          "specificDrop": true,
+          "itemSeasonPhaseData": {
+            "0": {
+              "0": {
+                "1": {
+                  "count": 2,
+                  "outof": 7
+                },
+                "0": {
+                  "count": 2,
+                  "outof": 7
+                }
+              }
+            }
+          },
+          "outof": 7
+        }
+      }
+    ],
+    "276396": [
+      {
+        "source": "npc:11058",
+        "relation": "drops",
+        "url": "https://www.wowhead.com/forever/npc=11058",
+        "sha256": "0a228e751e9c1c39c319957bd3d1f698a59284bdd39e8fade1b4faf12194f545",
+        "publishedRow": {
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Ezra's Seal of Authenticity",
+          "flags2": 4,
+          "id": 276396,
+          "level": 59,
+          "name": "Ezra's Seal of Authenticity",
+          "quality": 3,
+          "reqlevel": 54,
+          "slot": 11,
+          "slotbak": 11,
+          "source": [
+            2
+          ],
+          "sourcemore": [
+            {
+              "bd": 1,
+              "dd": -1,
+              "n": "Ezra Grimm",
+              "t": 1,
+              "ti": 11058,
+              "z": 2017
+            }
+          ],
+          "subclass": -2,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "modes": {
+            "mode": [
+              1
+            ],
+            "1": {
+              "count": 1,
+              "outof": 7
+            },
+            "0": {
+              "count": 1,
+              "outof": 7
+            }
+          },
+          "count": 1,
+          "stack": [
+            1,
+            1
+          ],
+          "specificDrop": true,
+          "itemSeasonPhaseData": {
+            "0": {
+              "0": {
+                "1": {
+                  "count": 1,
+                  "outof": 7
+                },
+                "0": {
+                  "count": 1,
+                  "outof": 7
+                }
+              }
+            }
+          },
+          "outof": 7
+        }
+      }
+    ],
+    "280363": [
+      {
+        "source": "npc:254151",
+        "relation": "sells",
+        "url": "https://www.wowhead.com/forever/npc=254151",
+        "sha256": "2b94ca3a48c8199e2ef489044c3d0722a383cf9e01601abff0b14e1ca1aaf0a6",
+        "publishedRow": {
+          "appearances": {
+            "0": [
+              684948,
+              "inv_shoulder_07"
+            ]
+          },
+          "armor": 0,
+          "classs": 4,
+          "displayName": "Nightclaw Mantle",
+          "displayid": 684948,
+          "id": 280363,
+          "level": 20,
+          "name": "Nightclaw Mantle",
+          "quality": 2,
+          "reqlevel": 15,
+          "slot": 3,
+          "slotbak": 3,
+          "source": [
+            5
+          ],
+          "sourcemore": [
+            {
+              "n": "Vayn Moongaze",
+              "t": 1,
+              "ti": 254151,
+              "z": 16593
+            }
+          ],
+          "subclass": 5,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            0,
+            0
+          ],
+          "stack": [
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              2995,
+              [],
+              []
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "nextCheckpoint": "8CU",
+  "nextCount": 3,
+  "IDs": [
+    276395,
+    276396,
+    280363
+  ],
+  "untypedRewardScope": {
+    "totalPending": 204,
+    "registerAndSharedQueueStatus": "untyped-reward-identity-and-scope-review-pending",
+    "nextAfter8CU": "8CVfirst100then104",
+    "source": "checkpoint8ct_untyped_scope_references.json"
+  },
+  "outsideRegister": {
+    "total": 1404,
+    "assessed": 1200,
+    "pending": 204
+  },
+  "sharedQueue": {
+    "total": 905,
+    "assessed": 698,
+    "pendingTyped": 3,
+    "pendingUntypedScope": 204
+  },
+  "knownFailedURLs": 1731,
+  "additionalRequiredFixes": [
+    "source reputation standing convention6Revered currentlyrenderedHonored;keep source basis distinct from client standing IDs",
+    "published own/full merchant quote50000versus52631 source-specific uncertainty",
+    "source-only reusable coordinate propagation to current/future routes",
+    "two canonical spell mappings2844/2845"
+  ],
+  "remaining": "sixdungeon/currentlivebooks/coordinate-chaingapdispositions/finalintegrity/manualacceptance"
+}

@@ -1,0 +1,80 @@
+{
+  "717": {
+    "error": "HTTP 403; not retried",
+    "url": "https://www.wowhead.com/forever/zone=717"
+  },
+  "4420": {
+    "url": "https://www.wowhead.com/forever/npc=4420",
+    "sha256": "25772f956ae9b92a15a75343a5277d53585b143a0b7609600a57313559dc6c96",
+    "mentionsRazorfen": true,
+    "mentionsGnomeregan": false,
+    "mapperAreaID": 491,
+    "zone": "Razorfen Kraul"
+  },
+  "6228": {
+    "url": "https://www.wowhead.com/forever/npc=6228",
+    "sha256": "3c1f8e7c45eeedb385d3948789769429eb72679609e06b20f0181612151dd2e4",
+    "mentionsRazorfen": false,
+    "mentionsGnomeregan": true,
+    "mapperAreaID": 721,
+    "zone": "Gnomeregan"
+  },
+  "acceptedAreaJoins": [
+    {
+      "areaID": 717,
+      "zone": "The Stockade",
+      "source": "npc:1663",
+      "evidence": [
+        {
+          "file": "checkpoint8az_working_evidence.json",
+          "sha256": "60780a7b577cef09c07e4fa9d842e64cbc94721049192d61783c586ef3c5cda6",
+          "url": "https://www.wowhead.com/forever/npc=1663"
+        }
+      ]
+    },
+    {
+      "areaID": 719,
+      "zone": "Blackfathom Deeps",
+      "source": "npc:4809",
+      "evidence": [
+        {
+          "file": "checkpoint8c_publication_evidence.json",
+          "sha256": "46892f2b93205d4e54574911ada3485cf90b09ae5ebf8efd39ccda5582123619",
+          "url": "https://www.wowhead.com/forever/quest=1740"
+        }
+      ]
+    },
+    {
+      "areaID": 796,
+      "zone": "Scarlet Monastery",
+      "source": "npc:6487",
+      "evidence": [
+        {
+          "file": "checkpoint6s_location_evidence.json",
+          "sha256": "9d91ea33e5b048f28ff68361efe857c8cbe058f5cbcbeff2337eac92b25e4563",
+          "url": "https://www.wowhead.com/forever/npc=6487"
+        },
+        {
+          "file": "checkpoint8aa_working_evidence.json",
+          "sha256": "70899e13cc277527f15a5d2d14d4a1b609fd613e5d8ce05b38f138554084d06d",
+          "url": "https://www.wowhead.com/forever/npc=6487"
+        },
+        {
+          "file": "checkpoint6s_book_drop_references.csv",
+          "sha256": "56f366aaecd053c72f3cbc78eb9643f056d202188206d4dc4a5a63970586944d",
+          "url": "https://www.wowhead.com/forever/item=252845&xml"
+        },
+        {
+          "file": "checkpoint6s_book_drop_references.csv",
+          "sha256": "f97110c62eb04be3cc4ffd0aff3e0343b71afa7434517e8dc3a68e10c8ea684c",
+          "url": "https://www.wowhead.com/forever/item=252846&xml"
+        },
+        {
+          "file": "checkpoint6s_book_drop_references.csv",
+          "sha256": "bf4b2aeea024d31df1c4e021f05cd49304b29d45254752e23487d86565c90396",
+          "url": "https://www.wowhead.com/forever/item=252847&xml"
+        }
+      ]
+    }
+  ]
+}

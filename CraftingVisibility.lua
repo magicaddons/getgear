@@ -10,6 +10,9 @@ local CRAFT_PROFESSIONS = {
     Blacksmithing=true,
     Engineering=true,
     Enchanting=true,
+    Alchemy=true,
+    Cooking=true,
+    ["First Aid"]=true,
 }
 
 local function CraftingProfession(gear)
@@ -41,11 +44,12 @@ function GetGear:ShouldDisplayCraftedGear(gear)
     local skill = self:GetProfessionSkill(profession)
     if type(skill) ~= "number" then return false end
 
-    -- These values are recipe *learning* minima. Use only confirmed values:
-    -- do not confuse yellow/green/grey skill-ups with actual requirements.
-    local needed = gear.professionSkillRequired
+    -- Prefer the shared documented crafting/learning requirement. Source
+    -- uncertainty and skill-up colors cannot erase or invent that minimum.
+    local known = self.GetRecipeSkillRequirement and self:GetRecipeSkillRequirement(gear)
+    local needed = known or gear.professionSkillRequired
     if type(needed) == "number"
-        and gear.recipeLearnSkillEvidence ~= "unverified"
+        and (known or gear.recipeLearnSkillEvidence ~= "unverified")
         and gear.recipeLearnSkillProvisional ~= true
         and skill < needed then
         return false

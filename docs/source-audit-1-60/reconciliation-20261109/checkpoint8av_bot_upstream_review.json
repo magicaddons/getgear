@@ -1,0 +1,19 @@
+{
+  "source": "bead889b6316be7f677d8b42de098c9e36f6667d",
+  "bot": "4785d73b3f6bec950da4e02cea22b662a121c8bd",
+  "ciRun": 42880798184,
+  "ciJob": 130056237743,
+  "status": "success",
+  "changedFiles": [
+    "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+  ],
+  "changedProvenanceKeys": [
+    "https://playfulls.com/database",
+    "https://everloot.app/api/edges?evidence=observed&limit=500",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+    "lastRunUTC"
+  ],
+  "scope": "Only timestamp/Playfulls landing-page hash/four Everloot response hashes; all four content-addressed PF payloads unchanged. Runtime/reports/counts unchanged. Actual local8avfixed factual edges/counters retained; bot API/landing bodies not independently captured, no equal-counter inference from same counts or extra diagnostic requests."
+}

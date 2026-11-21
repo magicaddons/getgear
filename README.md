@@ -1,14 +1,14 @@
 # GetGear
 
-An in-game gear catalogue, crafting planner and item tracker for **World of Warcraft Forever**, covering levels **1–60**, all nine original classes and both factions.
+An in-game gear catalogue, crafting planner and item tracker for **World of Warcraft Forever**, covering levels **1–60**, class-equippable gear for **Alliance characters**. Horde gameplay and acquisition routes are outside the supported beta scope.
 
 ## Download
 
-[Download GetGear v0.14.0-beta10](https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta10) · [Direct installable ZIP](https://github.com/magicaddons/getgear/releases/download/v0.14.0-beta10/GetGear-v0.14.0-beta10.zip) · [Release notes](https://github.com/magicaddons/getgear/blob/v0.14.0-beta10/RELEASE_v0.14.0-beta10.md)
+[Download GetGear v0.14.0-beta11](https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta11) · [Direct installable ZIP](https://github.com/magicaddons/getgear/releases/download/v0.14.0-beta11/GetGear-v0.14.0-beta11.zip) · [Release notes](https://github.com/magicaddons/getgear/blob/v0.14.0-beta11/RELEASE_v0.14.0-beta11.md)
 
-Choose **GetGear-v0.14.0-beta10.zip** under Assets. GitHub's automatic “Source code” archives are development snapshots and are not the installation package.
+Choose **GetGear-v0.14.0-beta11.zip** under Assets. GitHub's automatic “Source code” archives are development snapshots and are not the installation package.
 
-This public beta preserves the cumulative private build `.20261121.12` accepted by the user in WoW Forever. Release preparation changes version metadata and documentation only; the Lua modules and bundled textures are unchanged. Broad source coverage still includes uncertain acquisition information.
+This is the **latest recommended public beta**. It preserves the cumulative private build `.20261121.14` accepted by the user in WoW Forever (`5b75e2cffe1fa40cd0b17b6472be53d3da53f747`). Release preparation changes version metadata and documentation only; the Lua modules and bundled textures are unchanged. Broad source coverage still includes uncertain acquisition information.
 
 ## Supported client
 
@@ -48,7 +48,7 @@ Existing cumulative-build settings, stars and progress use the same SavedVariabl
 
 Class-equippable gear, faction-aware acquisition leads, talent-aware and optional custom stat priorities, crafting recipes and material totals, quest/vendor bag planning, item tooltips and comparisons, map navigation, character-specific stars and saved account inventory. The public package includes every one of the approved build's 29 Lua modules and its map and star textures.
 
-Beta 10 includes cumulative overlay computation improvements, indexed item search, shared outline/filled star artwork, immediate wishlist reordering and counts, corrected wrapped row actions, and hidden-row refresh fixes. It retains the earlier inventory, tracking, navigation, eligibility and settings improvements.
+Beta 11 adds the accepted compact-overlay heading removal, tighter item-header spacing and systemic Alliance acquisition filtering (including Ragefire Chasm exclusion while retaining valid alternative sources). It includes cumulative overlay computation improvements, indexed item search, shared outline/filled star artwork, immediate wishlist reordering and counts, corrected wrapped row actions, and hidden-row refresh fixes. It retains the earlier inventory, tracking, navigation, eligibility and settings improvements.
 
 ## Limitations and feedback
 
@@ -57,6 +57,10 @@ The catalogue is a planning aid, not a best-in-slot ranking or a guarantee that 
 User acceptance applies to the tested private build. Automated Lua 5.1/5.4 regressions and startup simulations do not establish fresh in-game verification or validate every class, item and route.
 
 [Report an issue](https://github.com/magicaddons/getgear/issues) with your addon version, class, level, item ID/name, expected and observed behaviour, and any Lua error or screenshot.
+
+## Development and releases
+
+`main` is the latest user-approved production source. Develop on separate branches; integrate through a pull request only after automated validation and user acceptance. Public versions have distinct tags. Private testing packages stay separate, and development pushes never publish public releases. See [the development and build workflow](docs/SOURCE_CONTROL_AND_BUILDS.md).
 
 ## Licensing
 

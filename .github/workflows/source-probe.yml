@@ -1,0 +1,60 @@
+name: Probe public Forever evidence sources (audit-only)
+on:
+  push:
+    branches: [work/catalogue-source-audit-1-60]
+    paths: ['.github/workflows/source-probe.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check public data endpoints
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,urllib.request,urllib.error
+          urls=[
+            'https://raw.githubusercontent.com/Everloot/everloot/main/web/src/data/game-data/client-recipes.json',
+            'https://raw.githubusercontent.com/MAF2414/wow-forever-talents/main/docs/professions-data.json',
+            'https://raw.githubusercontent.com/nobody174/wow-forever/main/bis/sources.json',
+            'https://ahledger.com/api/catalog?class=armor',
+            'https://ahledger.com/api/catalog?class=weapons',
+            'https://ahledger.com/api/catalog?class=recipes',
+            'https://ahledger.com/api/catalog?class=trade-goods',
+            'https://api.ahledger.com/v1/items/250489?game=forever',
+            'https://api.ahledger.com/v1/crafting/forever.normal.alliance.us?all=1&limit=2000',
+            'https://everloot.app/api/edges?limit=2',
+            'https://everloot.app/api/rollups/drops?limit=2',
+            'https://everloot.app/api/items?item=250489&limit=2',
+            'https://everloot.app/api/corpus/public?limit=2',
+          ]
+          for url in urls:
+            try:
+              req=urllib.request.Request(url,headers={'User-Agent':'GetGear-Open-Source-Audit/1.0','Accept':'application/json'})
+              with urllib.request.urlopen(req,timeout=12) as res:
+                data=res.read(7_500_000)
+                try:
+                  obj=json.loads(data)
+                  if isinstance(obj,dict): shape={k:type(v).__name__ for k,v in list(obj.items())[:20]}
+                  else: shape={'rootType':type(obj).__name__,'len':len(obj)}
+                  if 'professions-data' in url:
+                    craft=next((x for x in obj.get('records',[]) if x.get('outputs') and x.get('reagents')),None)
+                    specific=next((x for x in obj.get('records',[]) if x.get('id')==1252238),None)
+                    print('MAF_CRAFT '+json.dumps({'craft':craft,'guards':specific},default=str)[:4500])
+                    print('MAF_SAMPLE '+json.dumps({'item_sample':next(iter(obj.get('items',{}).items()),None),'record_sample':obj.get('records',[None])[0],'profession_sample':obj.get('professions',[None])[0]},default=str)[:3500])
+                  if '/v1/crafting/' in url:
+                    print('CRAFT_SAMPLE '+json.dumps({'total':len(obj.get('recipes',[])),'filters':obj.get('filters'),'first':obj.get('recipes',[None])[0]},default=str)[:1700])
+                  if 'everloot.app/api/' in url:
+                    print('EVERLOOT_SAMPLE '+json.dumps({k:(v[:1] if isinstance(v,list) else v) for k,v in obj.items()},default=str)[:1800])
+                  if 'api/catalog' in url:
+                    print('CATALOG_SAMPLE '+json.dumps({'rowCount':len(obj.get('rows',[])),'first':obj.get('rows',[None])[0]},default=str)[:1800])
+                  print(json.dumps({'url':url,'status':res.status,'sizeRead':len(data),'shape':shape},sort_keys=True))
+                except Exception as e:
+                  print(json.dumps({'url':url,'status':res.status,'bytes':len(data),'head':data[:150].decode('utf-8','replace')}))
+            except Exception as e:
+              print(json.dumps({'url':url,'error':str(e)[:200]}))
+          PY
