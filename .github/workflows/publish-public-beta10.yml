@@ -1,0 +1,78 @@
+name: Publish approved GetGear Beta 10
+run-name: Verify approved Beta 10 (publish=${{ inputs.publish }})
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Upload the byte-pinned approved ZIP and publish its existing draft
+        required: true
+        default: false
+        type: boolean
+permissions: {}
+concurrency:
+  group: getgear-beta-release
+  cancel-in-progress: false
+env:
+  TAG: v0.14.0-beta10
+  SOURCE: efe67f9d9a75daf85545d9dda37b0c238d638010
+  CHECKSUM: 38ddf7f3fe50086cfd3197a45ccac29e30152a4f3fc0289b52d005fd1df85421
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/main' && github.repository == 'magicaddons/getgear'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          path: infrastructure
+          persist-credentials: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ env.SOURCE }}
+          path: source
+          persist-credentials: false
+      - name: Verify exact approved bytes, source, cumulative features and archive layout
+        run: |
+          set -euo pipefail
+          cd infrastructure/release-packages
+          sha256sum --check GetGear-v0.14.0-beta10.zip.sha256
+          test "$(sha256sum GetGear-v0.14.0-beta10.zip | cut -d' ' -f1)" = "$CHECKSUM"
+          cd ../..
+          test "$(git -C source rev-parse HEAD)" = "$SOURCE"
+          python3 source/tools/validate_feature_acceptance.py \
+            --archive infrastructure/release-packages/GetGear-v0.14.0-beta10.zip \
+            --expected-source source
+          python3 -m unittest discover -s infrastructure/tests/release -v
+      - name: Verify immutable source tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PYTHONPATH=infrastructure/tools/release python3 - <<'PY'
+          import os
+          from publish import GitHub, verify_tag
+          verify_tag(GitHub(os.environ['GITHUB_REPOSITORY']), os.environ['TAG'], os.environ['SOURCE'])
+          PY
+  publish:
+    if: github.ref == 'refs/heads/main' && inputs.publish
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            tools/release
+            release-packages
+          sparse-checkout-cone-mode: true
+      - name: Upload, download-verify and publish the existing draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 tools/release/publish.py release-packages "$TAG" "$SOURCE" "$CHECKSUM" true
