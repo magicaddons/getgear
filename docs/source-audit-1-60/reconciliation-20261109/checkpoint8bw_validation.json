@@ -1,0 +1,219 @@
+{
+  "checkpoint": "8BW",
+  "status": "verified-pushed;continue8BX",
+  "sourceCommit": "2b154c5dc40f25672c4935729828a20562289c60",
+  "finalValidatedGeneratedHead": "0e40b1cd066a7a0dfcc353457b1310ab335b62d0",
+  "CI": {
+    "runID": 43152941444,
+    "jobID": 130966176140,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43152941444",
+    "conclusion": "success",
+    "timestampedTestPASS": 18,
+    "LuaSuites": 15,
+    "offlinePythonSuites": 3,
+    "modules": 26
+  },
+  "local": {
+    "status": "55integrated/full19localPASS;nonreleaseCI/directbotpending",
+    "registry": 5474,
+    "index": 6945,
+    "display": 6944,
+    "books": 759,
+    "remaining": 428,
+    "next": "8BX54level55numericIDorder",
+    "priorObjectsExact": 5419,
+    "caseCounts": {
+      "selected": 55,
+      "groups": {
+        "broad-worlddrop": 54,
+        "unavailable-reference": 1
+      },
+      "caseFullPages": 210,
+      "caseNewPages": 101,
+      "caseCachedPages": 109,
+      "primaryWithRetainedContext": 483,
+      "newFullPages": 101,
+      "reusedFullPages": 382,
+      "exactQueries": 55,
+      "sharedQueries": 4,
+      "dropReverseJoins": 926,
+      "dropReverseOmissions": 661,
+      "objectReverseJoins": 79,
+      "objectReverseOmissions": 43,
+      "physicalContainerReferences": 96,
+      "physicalContainerReverseJoins": 90,
+      "physicalContainerOmissions": 6,
+      "additionalFullOnlyContainerReferences": 0,
+      "qualities": {
+        "4": 1,
+        "3": 4,
+        "2": 50
+      },
+      "BoE": 55,
+      "plainUnique": 0,
+      "UniqueEquipped": 0,
+      "newFailures": 0,
+      "liveVerified": 0,
+      "newQuestPages": 3,
+      "formalQuestActorJoins": 6,
+      "reusedTemplarInputJoins": 4,
+      "newInputObjectJoins": 1,
+      "newNPCContainerJoins": 1,
+      "newOutsideCandidates": 0,
+      "sharedContainerDestinations": 3,
+      "sharedFullContentsRows": 177,
+      "publishedUnavailableWarnings": 1
+    },
+    "successfulCapture": {
+      "label": "8bw",
+      "exitCode": 0,
+      "responses": {
+        "https://playfulls.com/db/meta.c41512b4d5.json": {
+          "bytes": 999981,
+          "sha256": "c41512b4d5104cb27e1801651402cdff556769c053e8cd5994a539e07fb163d1",
+          "workspacePath": "/tmp/getgear-research/8bw-http-capture/c41512b4d5104cb27e1801651402cdff556769c053e8cd5994a539e07fb163d1.body",
+          "capturedUTC": "2026-11-12T04:00:46.259074+00:00"
+        },
+        "https://playfulls.com/db/gear.cd133e9d8c.json": {
+          "bytes": 1359233,
+          "sha256": "cd133e9d8caa56a062a2ee261fb7926eadd0a910824b945202a110c45c2a45d1",
+          "workspacePath": "/tmp/getgear-research/8bw-http-capture/cd133e9d8caa56a062a2ee261fb7926eadd0a910824b945202a110c45c2a45d1.body",
+          "capturedUTC": "2026-11-12T04:00:46.672065+00:00"
+        },
+        "https://playfulls.com/db/goods.77a729a585.json": {
+          "bytes": 467013,
+          "sha256": "77a729a585eb0fd320883ee420f3a209360ad35c569d0eb31c7bbe8adb0ad82a",
+          "workspacePath": "/tmp/getgear-research/8bw-http-capture/77a729a585eb0fd320883ee420f3a209360ad35c569d0eb31c7bbe8adb0ad82a.body",
+          "capturedUTC": "2026-11-12T04:00:46.843199+00:00"
+        },
+        "https://playfulls.com/db/other.426fc3124a.json": {
+          "bytes": 446797,
+          "sha256": "426fc3124a7a46005691f36950ac2c42da26a89c7efc8c3febfabdf7a0d6069b",
+          "workspacePath": "/tmp/getgear-research/8bw-http-capture/426fc3124a7a46005691f36950ac2c42da26a89c7efc8c3febfabdf7a0d6069b.body",
+          "capturedUTC": "2026-11-12T04:00:47.018040+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500": {
+          "bytes": 103442,
+          "sha256": "96e982e6565c2166a2c824a0c79b3e652f64c5839b097777d6692e80615552d8",
+          "workspacePath": "/tmp/getgear-research/8bw-http-capture/96e982e6565c2166a2c824a0c79b3e652f64c5839b097777d6692e80615552d8.body",
+          "capturedUTC": "2026-11-12T04:00:50.715846+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+          "bytes": 103495,
+          "sha256": "90265dbf791e86358455fa571b195186e5224c0dae61ad42330b8d57fb92dbee",
+          "workspacePath": "/tmp/getgear-research/8bw-http-capture/90265dbf791e86358455fa571b195186e5224c0dae61ad42330b8d57fb92dbee.body",
+          "capturedUTC": "2026-11-12T04:00:55.228302+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+          "bytes": 103457,
+          "sha256": "a9a012e49b3f5734fb97ebcd4fdc915e18d97f7e5654a88c9a980fd6ab286280",
+          "workspacePath": "/tmp/getgear-research/8bw-http-capture/a9a012e49b3f5734fb97ebcd4fdc915e18d97f7e5654a88c9a980fd6ab286280.body",
+          "capturedUTC": "2026-11-12T04:00:57.213891+00:00"
+        },
+        "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+          "bytes": 39034,
+          "sha256": "0f7f841c33154ee058cb02d9f8fe6046cd355f0774d7a8df1393ef657a3a6979",
+          "workspacePath": "/tmp/getgear-research/8bw-http-capture/0f7f841c33154ee058cb02d9f8fe6046cd355f0774d7a8df1393ef657a3a6979.body",
+          "capturedUTC": "2026-11-12T04:01:00.699510+00:00"
+        }
+      }
+    },
+    "sourceProofImmutableSHA256": "4cafb8c8c44fc48c91083a86488811e688636ffac6d1863149d17ca522061b06",
+    "sourceProofState": "Historical integration-pending fields overridden by local and later final CI closure; no mutation after capture.",
+    "companionFiles": {
+      "dungeon_equipment_drops.csv": "byte-exact",
+      "dungeon_items_reconciled.csv": "byte-exact",
+      "dungeon_source_followups.csv": "byte-exact",
+      "recipes_reconciled.csv": "byte-exact",
+      "recipe_source_followups.csv": "byte-exact",
+      "recipe_trainer_book_checks.csv": "byte-exact",
+      "recipe_vendor_book_checks.csv": "byte-exact",
+      "supplementary_crafts_reconciled.csv": "byte-exact",
+      "reviewed_recipe_sources.json": "byte-exact",
+      "supplementary_crafts.json": "byte-exact",
+      "upstream_playfulls_display_definitions.json": "byte-exact",
+      "upstream_playfulls_source_definitions.json": "byte-exact",
+      "upstream_playfulls_acquisition_snapshot.csv": "byte-exact",
+      "upstream_playfulls_display_snapshot.csv": "byte-exact",
+      "upstream_everloot_edges_snapshot.csv": "byte-exact",
+      "additional_catalogue_coverage_candidates.csv": "byte-exact"
+    },
+    "navigation": {
+      "not_applicable": 2378,
+      "directions": 1465,
+      "missing": 3173,
+      "verified_coordinate_data": 691
+    },
+    "gapRows": 8462,
+    "liveRenderingVerified": 0,
+    "CI": "pending18timestampedPASS/pinnedprebuiltLua/no release",
+    "feedScope": "PF23629/9248 allraw-fullsources-entiremetadata exactactual8BV2;EV1688raw1439qual allrelationfields exact. Zero added/removed/updated/opaque/index changes;factual snapshots byte-exact.",
+    "outsideCandidates": 470,
+    "candidateScope": {
+      "before": 470,
+      "after": 470,
+      "byteExact": true,
+      "activeCatalogueAdoptions": 0,
+      "newCandidates": 0
+    },
+    "sharedNavigationChanges": {
+      "newContainers": [
+        12849,
+        13247,
+        20603
+      ],
+      "publishedContentsRows": 177,
+      "fullQuestOrNPCLootAndExactContentsRequired": true,
+      "NPCContainerRoutes": 73,
+      "questContainerRoutes": 313,
+      "automaticClassicDirectionsOnly": true,
+      "questClassSourceSelection": true,
+      "clientClassAPIFallback": true,
+      "activeQuestOverridesStaleClassRestriction": true,
+      "sharedUnrestrictedStageDoesNotProveRestrictedFinalClass": true,
+      "gearClassEligibilityUnchanged": true,
+      "bookLearning260ArmorsmithNotSourceAcceptance": true,
+      "newlyLocatedCases": 50,
+      "newCoordinateDataCases": 9,
+      "existingDirectionsUpgradedToCoordinate": 6,
+      "recipe12628MissingToLoraxPoint": true,
+      "band18674InapplicableToMissing": true,
+      "newRandomNPCFarmPins": 0
+    },
+    "limits": "Publication not live/rendering. Lore quest55/Both/WP flags/currentclass-profession-earlieraccess unverified;book260Armorsmithlearning separate. ZigrisfootlockerClassic/no accurate floor/wing/key/currentloot or rate. 18674primaryunavailablewarning not permanentserverretirement.470candidates/ALLslotBackThrown/knowncloaks/sixdungeon954livebooks/3173missinglocations/manualmap/finalintegrity remain."
+  },
+  "botReview": {
+    "directParentVerified": true,
+    "files": [
+      "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+    ],
+    "changedKeys": [
+      "https://everloot.app/api/edges?evidence=observed&limit=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+      "lastRunUTC"
+    ],
+    "allOtherJSONAndRuntimeSourceAuditReportBytesUnchanged": true,
+    "botEverlootAPIBodiesRead": false,
+    "actualLocalFactualBaseline": "Actual local source/case/feed proof retained;equal counters never treatedas identicalfacts"
+  },
+  "frozenQueue": {
+    "total": 5688,
+    "publicationResearched": 5260,
+    "pending": 428
+  },
+  "next": {
+    "checkpoint": "8BX",
+    "cases": 54,
+    "level": 55,
+    "order": "numericitemID",
+    "queue": "remaining_equipment_research_queue.csv/nextBatch8BX"
+  },
+  "protectedRefs": {
+    "main": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4",
+    "Beta8tag": "0a088935f66d7a683f4db32a448157e15b5e6f39",
+    "Beta8commit": "543e5a248a018f8a9144e64aca655d242cf274e0"
+  },
+  "limits": "Publicationonly,notlive/maprendering. Historicalsourceproof/localCIpendingfields overridden by this finalSUCCESS record.470candidates/allslotBackThrown/tencloaks/sixdungeon954livebooks/manualmap/finalintegrityremain. Singleexistingautomation/sameworker;no mainBeta8buildpackagereleasebilling."
+}

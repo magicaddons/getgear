@@ -1,0 +1,27 @@
+{
+  "scope": "Entire offline Lua navigation model decoded and compared;not map rendering.",
+  "allPriorSourceFactsAndLocationsExact": true,
+  "additiveSourceEvidence": [
+    {
+      "source": "npc:7112",
+      "additiveEvidence": [
+        {
+          "file": "checkpoint8cl_working_evidence.json",
+          "sha256": "770cb0cd57ae60730cead451a8d10274a3124baf70603469e2f39c42cf657138",
+          "url": "https://www.wowhead.com/forever/npc=7112"
+        }
+      ]
+    }
+  ],
+  "newQuestRecords": [
+    "97270",
+    "99233"
+  ],
+  "activeItemsChainsMapsAndAuditExact": true,
+  "newQuests": {
+    "fullPrimaryMinimum55": true,
+    "formalActorIDsOrCoordinatesInvented": false,
+    "optionalAlreadyObtainedTrinketInstructions": true,
+    "noPrerequisiteGraphInvented": true
+  }
+}

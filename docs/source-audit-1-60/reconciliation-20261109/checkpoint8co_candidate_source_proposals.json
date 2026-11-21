@@ -1,0 +1,750 @@
+{
+  "scope": "Future-development proposals in the existing shared model;requiresFullLootJoin is the actual source guard. No active gear adoption or working candidate-only map coverage. Dungeon-region context reuses existing instance names/entrance fallback,not new guessed definitions or points.",
+  "navigationCounts": {
+    "published_named_region;candidate_not_active": 11,
+    "published_full_quest_route;candidate_not_active": 2
+  },
+  "candidates": {
+    "274998": {
+      "itemID": 274998,
+      "name": "Shadowlight Athame",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 274998,
+        "name": "Shadowlight Athame",
+        "inventoryType": 21,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258972",
+          "name": "Twilight Commander Zarmok",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=274998",
+      "sourceSHA256": "f10a7362a29c2830f1ea1b76fce10aab2c629b2fff6d84e977fe456dd104a5de",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "274999": {
+      "itemID": 274999,
+      "name": "Shadecaster's Leggings",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 274999,
+        "name": "Shadecaster's Leggings",
+        "inventoryType": 7,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258972",
+          "name": "Twilight Commander Zarmok",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=274999",
+      "sourceSHA256": "e48748e6e0da0e80d70f55c3456a2f8be1ffe7221436c3305f85ca6bd7ee63e6",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275000": {
+      "itemID": 275000,
+      "name": "Zarmok's Plated Signet",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275000,
+        "name": "Zarmok's Plated Signet",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 40,
+        "renderedEquipLevel": 40,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258972",
+          "name": "Twilight Commander Zarmok",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact guide NPC identity and full own NPC page; no floor coordinates."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275000",
+      "sourceSHA256": "2f598a734b39eaa96ce54fed6d4edc4e3510cce46162686249971bdfeda851ce",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275004": {
+      "itemID": 275004,
+      "name": "Chain of the Corruptor",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275004,
+        "name": "Chain of the Corruptor",
+        "inventoryType": 2,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258964",
+          "name": "Nar'gurk",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275004",
+      "sourceSHA256": "6cde82344610f0c1bc64ef5631a95b1823b06dec246e6fe040eee09f0c53ac8e",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275005": {
+      "itemID": 275005,
+      "name": "Krol'dok Warplate Chest",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275005,
+        "name": "Krol'dok Warplate Chest",
+        "inventoryType": 5,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258964",
+          "name": "Nar'gurk",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275005",
+      "sourceSHA256": "9e2c36155deb038f824aa40f32989a11a23c8ddffca9987af24d232ce653d015",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275006": {
+      "itemID": 275006,
+      "name": "Krol'dok Warplate Helmet",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275006,
+        "name": "Krol'dok Warplate Helmet",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 41,
+        "renderedEquipLevel": 41,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258964",
+          "name": "Nar'gurk",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275006",
+      "sourceSHA256": "42bf9b4bd6a0e1e7953866c1b498a3c853db812580bf3cbad2dd68660f8aac55",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275007": {
+      "itemID": 275007,
+      "name": "Mugg's Jabber",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275007,
+        "name": "Mugg's Jabber",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258968",
+          "name": "Overlord Mugg",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275007",
+      "sourceSHA256": "1db303ecad20961427ac5c7c79ae8290f262a617234ed12d2997033b60bac017",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275008": {
+      "itemID": 275008,
+      "name": "Mugg's Crosser",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275008,
+        "name": "Mugg's Crosser",
+        "inventoryType": 13,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258968",
+          "name": "Overlord Mugg",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275008",
+      "sourceSHA256": "3ecc6f569ccd4e2abbc9d727fdbcca777cd7311e9e50873e335cdcb4eb2351e4",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275009": {
+      "itemID": 275009,
+      "name": "Emblem of Slamming",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275009,
+        "name": "Emblem of Slamming",
+        "inventoryType": 12,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258968",
+          "name": "Overlord Mugg",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275009",
+      "sourceSHA256": "bbd016b37b21aa6c569373619b6f95ab5acb473e81de7bc84f48f684021f3aed",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275010": {
+      "itemID": 275010,
+      "name": "Strongly Scented Hood",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275010,
+        "name": "Strongly Scented Hood",
+        "inventoryType": 1,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 42,
+        "renderedEquipLevel": 42,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:258968",
+          "name": "Overlord Mugg",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16842,
+              "name": "Krol'dok Stronghold",
+              "pointCount": 0,
+              "scope": "Exact full quest objective/physical input/own-full NPC join;not a floor point or all-world NPC position."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Krol'dok Stronghold",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275010",
+      "sourceSHA256": "6dba91a9d0eae111deaa1392128b3eac03613f3b7827979d3b3f3b963a293442",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275050": {
+      "itemID": 275050,
+      "name": "Cloak of the Cult",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275050,
+        "name": "Cloak of the Cult",
+        "inventoryType": 16,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 38,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 94768,
+          "verification": "published-full-quest-reward",
+          "choiceReward": true,
+          "sourceMinimum": 38,
+          "sourceSide": 2,
+          "sourceRequirements": [
+            "Published source minimum 38; Horde quest. Current acceptance,earlier unlocks and mandatory access remain unverified."
+          ],
+          "instructions": "The full quest rewards this equipment or offers it as one alternative choice. Source quest minimum is not a wearer level. Full primary segments and reported unlocks retain separate confidence;current acceptance/earlier unlocks unverified."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_full_quest_route;candidate_not_active",
+      "gaps": [
+        "missing_printed_equip_level",
+        "source_quest_minimum_not_wearer_gate",
+        "current_acceptance_and_earlier_unlocks_unverified",
+        "reported_Horde_unlock_graph_and_parallel_order_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275050",
+      "sourceSHA256": "c2c5ac1df016b92d2fcec67fd1a492db6275b9e086b34c37384e46c706e41af7",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "275051": {
+      "itemID": 275051,
+      "name": "Twilight Barrier",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 275051,
+        "name": "Twilight Barrier",
+        "inventoryType": 14,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 38,
+        "renderedEquipLevel": null,
+        "primaryVersion": "new",
+        "currentParserReason": "no-proven-equip-level",
+        "policyCompatibleClasses": [
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "hold-no-rendered-equip-level",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "quest",
+          "questID": 94768,
+          "verification": "published-full-quest-reward",
+          "choiceReward": true,
+          "sourceMinimum": 38,
+          "sourceSide": 2,
+          "sourceRequirements": [
+            "Published source minimum 38; Horde quest. Current acceptance,earlier unlocks and mandatory access remain unverified."
+          ],
+          "instructions": "The full quest rewards this equipment or offers it as one alternative choice. Source quest minimum is not a wearer level. Full primary segments and reported unlocks retain separate confidence;current acceptance/earlier unlocks unverified."
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_full_quest_route;candidate_not_active",
+      "gaps": [
+        "missing_printed_equip_level",
+        "source_quest_minimum_not_wearer_gate",
+        "current_acceptance_and_earlier_unlocks_unverified",
+        "reported_Horde_unlock_graph_and_parallel_order_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=275051",
+      "sourceSHA256": "c41d6749897a53280309c4187179e18ee5e54aa18b8d3b50bd4cbe21af1b4e38",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    },
+    "287025": {
+      "itemID": 287025,
+      "name": "Enchantresses' Spire",
+      "activeAdoption": false,
+      "eligibility": {
+        "itemID": 287025,
+        "name": "Enchantresses' Spire",
+        "inventoryType": 17,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 49,
+        "renderedEquipLevel": 49,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:255373",
+          "name": "Strashaz Enchantress",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "publishedLocations": [
+            {
+              "zoneID": 16620,
+              "name": "Alcaz Prison",
+              "pointCount": 0,
+              "scope": "Printed source region only; not a UI map ID, floor point or current actor position."
+            }
+          ],
+          "instructions": "Published exact full own/NPC loot join and instance context;use a native entrance only if the client resolves it,otherwise shared written approach directions. Exact boss floor,current loot/access/rate unverified.",
+          "sourceZone": "Alcaz Prison",
+          "entranceOnly": true
+        }
+      ],
+      "primaryRegionReferences": [],
+      "navigationStatus": "published_named_region;candidate_not_active",
+      "gaps": [
+        "current_loot_access_and_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=287025",
+      "sourceSHA256": "4cfc6efc57925907e239045fdf3c2d3bdfbaed56419cddc8e388c558a936e814",
+      "sharedEvidence": "checkpoint8co_partial_research.json"
+    }
+  }
+}

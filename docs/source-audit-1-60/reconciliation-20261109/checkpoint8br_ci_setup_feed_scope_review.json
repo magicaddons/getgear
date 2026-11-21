@@ -1,0 +1,188 @@
+{
+  "method": "Actual8br4 vs already-advanced8br2/8br3 diagnostic baseline;original8BQ\u21928BRdelta preserved separately. Supplementalfood/reagent observation,notnewgear/craft/ingredient.",
+  "newObservedEdge": {
+    "fromKind": "item",
+    "fromId": 3713,
+    "rel": "sold_by",
+    "toKind": "npc",
+    "toId": 248198,
+    "evidence": "observed",
+    "build": null,
+    "installs": 3,
+    "firstSeen": "2026-11-09T14:20:50.000Z",
+    "lastSeen": "2026-11-11T16:44:57.000Z"
+  },
+  "updatedEdges": [
+    {
+      "key": [
+        "item",
+        "159",
+        "sold_by",
+        "npc",
+        "3934"
+      ],
+      "changes": {
+        "lastSeen": {
+          "before": "2026-11-11T08:08:55.000Z",
+          "after": "2026-11-11T16:37:29.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "item",
+        "1179",
+        "sold_by",
+        "npc",
+        "3934"
+      ],
+      "changes": {
+        "lastSeen": {
+          "before": "2026-11-09T17:23:41.000Z",
+          "after": "2026-11-11T16:37:29.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "item",
+        "4471",
+        "sold_by",
+        "npc",
+        "248198"
+      ],
+      "changes": {
+        "lastSeen": {
+          "before": "2026-11-11T13:52:16.000Z",
+          "after": "2026-11-11T16:44:57.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "item",
+        "4470",
+        "sold_by",
+        "npc",
+        "248198"
+      ],
+      "changes": {
+        "lastSeen": {
+          "before": "2026-11-11T13:52:16.000Z",
+          "after": "2026-11-11T16:44:57.000Z"
+        }
+      }
+    },
+    {
+      "key": [
+        "npc",
+        "258878",
+        "located_in",
+        "zone",
+        "1413"
+      ],
+      "changes": {
+        "installs": {
+          "before": "4",
+          "after": "5"
+        },
+        "lastSeen": {
+          "before": "2026-11-09T19:01:41.000Z",
+          "after": "2026-11-11T16:43:50.000Z"
+        }
+      }
+    }
+  ],
+  "primaryResponses": [
+    {
+      "url": "https://www.wowhead.com/forever/item=3713",
+      "bytes": 141257,
+      "sha256": "53cbf4964192ae2142ec7ce7281100cb1695931d8ecc88bdd662dcb5e487abbc",
+      "title": "Soothing Spices - Item - Forever",
+      "reusedCachedResponse": true
+    },
+    {
+      "url": "https://www.wowhead.com/forever/npc=248198",
+      "bytes": 64053,
+      "sha256": "eb23271946f92b975661d7daa806dcfe57d04ec4f1d5dc27c78fca1f6c396b45",
+      "title": "Aza'bek - NPC - Forever",
+      "reusedCachedResponse": false
+    }
+  ],
+  "ownSellerRow": {
+    "classification": 0,
+    "displayName": "Aza'bek",
+    "displayNames": [],
+    "id": 248198,
+    "location": [
+      17
+    ],
+    "maxlevel": 60,
+    "minlevel": 60,
+    "name": "Aza'bek",
+    "names": [],
+    "react": [
+      null,
+      0
+    ],
+    "tag": "Chef",
+    "type": 7,
+    "envChange": {
+      "status": "new",
+      "labels": [],
+      "lines": []
+    },
+    "stock": -1,
+    "cost": [
+      [
+        160
+      ]
+    ],
+    "stack": 1,
+    "popularity": 1214
+  },
+  "fullNPCSaleRow": {
+    "classs": 7,
+    "displayName": "Soothing Spices",
+    "flags2": -2147459068,
+    "id": 3713,
+    "level": 30,
+    "name": "Soothing Spices",
+    "quality": 1,
+    "slot": 0,
+    "source": [
+      5
+    ],
+    "subclass": 11,
+    "envChange": {
+      "status": "updated",
+      "labels": [
+        "text_changed"
+      ],
+      "lines": [
+        "Flavor text added"
+      ],
+      "notShown": []
+    },
+    "standing": 0,
+    "react": [
+      null,
+      0
+    ],
+    "stack": [
+      1
+    ],
+    "avail": -1,
+    "cost": [
+      [
+        168,
+        [],
+        []
+      ]
+    ]
+  },
+  "exactActorJoinPositive": true,
+  "priceUncertainty": "Ownitem lists160copper/fullAza'bek248198sale lists168copper. Do not harmonize or infer reputation/tax/discount/currentchargedprice. Observation verifies attributed relation,notcost/stock. Neither negative stock marker provescurrentavailability.",
+  "scope": "SoothingSpices3713craftingreagent/supplierrelation outsideequipmentcatalogue;no newrecipe ormateriallist mutation.",
+  "failures": {}
+}

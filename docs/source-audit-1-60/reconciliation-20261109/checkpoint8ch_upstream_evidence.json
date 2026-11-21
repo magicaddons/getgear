@@ -1,0 +1,118 @@
+{
+  "status": "Three full new primary followups/zero failures;one toy excluded/no gear adoption",
+  "newFull": 3,
+  "cachedFull": 0,
+  "npcs": {
+    "382": {
+      "url": "https://www.wowhead.com/forever/npc=382",
+      "bytes": 58756,
+      "sha256": "1e21257c72986f4a3a2d0145770db8260feb40f7647f31434e0dce0b918889e0",
+      "title": "Marshal Marris - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 44,
+          "name": "Redridge Mountains",
+          "uiMapID": 1433,
+          "pointCount": 3,
+          "bounds": {
+            "xMin": 28.2,
+            "xMax": 33.6,
+            "yMin": 48.8,
+            "yMax": 49
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 382,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1433,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T06:54:13.000Z",
+        "lastSeen": "2026-11-12T17:34:11.000Z"
+      },
+      "scope": "Two independent primary NPC geography matches for observed3-install located_in references;not a gear-loot/stock/quest-unlock or observed precise position claim. Primary area44/UI1433 kept distinct."
+    },
+    "341": {
+      "url": "https://www.wowhead.com/forever/npc=341",
+      "bytes": 61157,
+      "sha256": "a1ddb1744df6f5645ef239200c32aade36180b47fc7949317e9959e13063ff24",
+      "title": "Foreman Oslow - NPC - WoW Forever",
+      "reusedCachedResponse": false,
+      "publishedLocationFootprints": [
+        {
+          "zoneID": 44,
+          "name": "Redridge Mountains",
+          "uiMapID": 1433,
+          "pointCount": 4,
+          "bounds": {
+            "xMin": 27,
+            "xMax": 32.2,
+            "yMin": 48.4,
+            "yMax": 48.6
+          }
+        }
+      ],
+      "observedLocationJoin": {
+        "fromKind": "npc",
+        "fromId": 341,
+        "rel": "located_in",
+        "toKind": "zone",
+        "toId": 1433,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-08T06:54:23.000Z",
+        "lastSeen": "2026-11-12T17:58:46.000Z"
+      },
+      "scope": "Two independent primary NPC geography matches for observed3-install located_in references;not a gear-loot/stock/quest-unlock or observed precise position claim. Primary area44/UI1433 kept distinct."
+    }
+  },
+  "excludedFeedItems": {
+    "286573": {
+      "url": "https://www.wowhead.com/forever/item=286573",
+      "bytes": 55014,
+      "sha256": "8d773dffd198d75770dfe369861bb8ff3dc4b064940576d1cfc7112d16f16922",
+      "title": "Unleashed Swarm - Item - WoW Forever",
+      "reusedCachedResponse": false,
+      "identity": {
+        "classs": 15,
+        "displayName": "Unleashed Swarm",
+        "id": 286573,
+        "level": 1,
+        "name": "Unleashed Swarm",
+        "quality": 3,
+        "slot": 0,
+        "subclass": 4,
+        "jsonequip": {
+          "quality": 3,
+          "classs": 15,
+          "displayName": "Unleashed Swarm",
+          "id": 286573,
+          "level": 1,
+          "name": "Unleashed Swarm",
+          "slot": 0,
+          "subclass": 4,
+          "cooldown": 300000,
+          "itemSquishEraId": 0,
+          "reqlevel": 1,
+          "statsInfo": []
+        }
+      },
+      "printedTooltip": "Unleashed Swarm      Item Level  1   Binds when picked up    Toy             Use:   Open a silithid hive, unleashing the swarm.  (5 Min Cooldown)",
+      "disposition": "excluded-non-equipment-toy",
+      "scope": "Full own identity confirms new feed lead is class15/slot0Toy,not wearable equipment. No acquisition origin invented;not added to equipment candidate queue. Existing equipment-only policy retained."
+    }
+  },
+  "counts": {
+    "totalPrimaryWithCheckpoint": 241,
+    "newPrimaryWithCheckpoint": 154,
+    "cachedPrimaryWithCheckpoint": 87
+  },
+  "iconReview": "checkpoint8ch_icon_index_review.json;268rawindexchanges/allpriorresolvedicons exact",
+  "limits": "AnonymousNPCgeography is not new gearloot,currentstock,exactposition or questprogress. Toy excluded by existing wearable-equipment policy,not arbitrarily missing eligible gear. All prior acquisition facts remain exact."
+}

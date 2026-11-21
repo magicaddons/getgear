@@ -1,0 +1,25 @@
+{
+  "checkpoint": "Legacy recipe-quest navigation format repair",
+  "status": "verified;continue8BX",
+  "sourceCommit": "f38564187ce594d9b9dfd9c7ac950211d15b5e68",
+  "finalValidatedGeneratedHead": "cad1336bc3f334da2c74ef6556d3faa4a8d860f7",
+  "CI": {
+    "runID": 43184666327,
+    "jobID": 131068755503,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43184666327",
+    "conclusion": "success",
+    "timestampedTestPASS": 18
+  },
+  "localPASS": 19,
+  "botReview": "Entire direct-bot diff reviewed: only lastRunUTC/four Everloot fingerprints changed; all other runtime/source/report bytes exact. Bot API bodies unread; actual-local full snapshots retained, never inferred from counters.",
+  "next": "8BX all54 level55 numeric ID order; original5260 researched/428 pending;493 outside candidates",
+  "navigation": {
+    "verified_coordinate_data": 695,
+    "directions": 1483,
+    "missing": 3151,
+    "not_applicable": 2378,
+    "gapRows": 8529,
+    "inGameRenderingVerified": 0
+  },
+  "closureValidation": "Documentation-only targeted evidence, immutable prior candidate rows, all input fingerprints, relative links and full bot-diff checks; retain prior full local/CI results, no new full-run claim."
+}

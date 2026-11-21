@@ -1,0 +1,44 @@
+{
+  "baseCommit": "ffd60c0c3c658ecff9dbabc09c442b4182955bf5",
+  "branch": "settings-ui-refinement",
+  "local": {
+    "checks": 115,
+    "modules": 28,
+    "lua54Regressions": 23,
+    "lua51Regressions": 23,
+    "failures": 0,
+    "protectedAcquisitionSnapshotExact": true,
+    "actualClientTested": false,
+    "statement": "Offline/synthetic validation only. No addon package, tag, release or live acquisition claim."
+  },
+  "preservation": {
+    "other27LuaModulesExact": true,
+    "tocExact": true,
+    "uiOutsideSettingsExact": true,
+    "beta9ZipSHA256": "c78667f180a103f1f6392c0275f052b16d4432a6d830a3495bbab412ef386a15",
+    "priorPrivateZipSHA256": "ee6228931b484ab8514c2ca601663b9f7f214666e1f537bf16550b7faa9821ef"
+  },
+  "freshReconciliation": {
+    "exitCode": 1,
+    "snapshotRestoredExactly": true,
+    "failedGuard": "rare-boss == 12 and trash >= 137",
+    "freshTrashCount": 136,
+    "roleChangedItem": 1925,
+    "adopted": false
+  },
+  "ci": {
+    "status": "success",
+    "run": 43805718038,
+    "job": 133095917730,
+    "url": "https://github.com/magicaddons/getgear/actions/runs/43805718038",
+    "headSha": "a2f1529da1461fb5e31b64b3ee47edaeb0a0b696",
+    "checks": 115,
+    "failures": 0,
+    "decodedFullJobLogInspected": true,
+    "approvedSnapshotExact": true,
+    "freshReconciliationRunInCI": false
+  },
+  "actualClientTested": false,
+  "newAddonPackageProduced": false,
+  "implementationCommit": "a2f1529da1461fb5e31b64b3ee47edaeb0a0b696"
+}

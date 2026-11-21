@@ -11,7 +11,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'tools/release'))
-from package import BETA9, build, digest, identity, validate
+from package import BETA9, build, digest, identity, members, validate
 from publish import GitHub, run, select, verify_tag
 
 TAG = BETA9['tag']
@@ -239,12 +239,20 @@ class PackageSafetyTests(unittest.TestCase):
         self.source = self.root / 'source'
         self.source.mkdir()
         (self.source / 'GetGear.toc').write_text('## Version: 1.2.3-beta10\nCore.lua\n')
-        for name in ['Core.lua', 'MapPin.tga', 'README.txt']:
+        for name in ['Core.lua', 'MapPin.tga', 'StarOutline.tga', 'StarFilled.tga', 'README.txt']:
             (self.source / name).write_bytes(b'fixture')
         self.archive = self.root / 'test.zip'
 
+    def test_public_package_requires_both_star_textures(self):
+        names, _ = members(self.source, 'v1.2.3-beta10')
+        self.assertIn('StarOutline.tga', names)
+        self.assertIn('StarFilled.tga', names)
+        (self.source / 'StarFilled.tga').unlink()
+        with self.assertRaisesRegex(RuntimeError, 'StarFilled.tga'):
+            members(self.source, 'v1.2.3-beta10')
+
     def test_archive_traversal_duplicate_and_symlink_rejected(self):
-        safe = ['Core.lua', 'GetGear.toc', 'MapPin.tga', 'README.txt', 'BUILD_INFO.txt']
+        safe = ['Core.lua', 'GetGear.toc', 'MapPin.tga', 'StarOutline.tga', 'StarFilled.tga', 'README.txt', 'BUILD_INFO.txt']
         for mode in ['traversal', 'duplicate', 'symlink']:
             with self.subTest(mode=mode):
                 with zipfile.ZipFile(self.archive, 'w') as z:

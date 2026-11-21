@@ -1,3 +1,18 @@
+# Current public beta workflow
+
+`main` contains the latest user-approved production implementation. Beta 11 promotes the accepted cumulative source `5b75e2cffe1fa40cd0b17b6472be53d3da53f747` with no gameplay changes. [Development and source policy](SOURCE_CONTROL_AND_BUILDS.md) explains branch and private-package rules.
+
+1. Develop on an isolated branch from current remote `main`. Run `tools/reconcile_presentation_snapshot.py --verify-only` and the complete `tools/validate_recommendations.py` gate on Lua 5.1/5.4. Obtain user acceptance of gameplay changes, then integrate through a controlled pull request.
+2. Set the intended public TOC version and public documentation on that PR. Compare every runtime Lua module, texture and protected acquisition file to the accepted source. Keep automation, security safeguards and earlier release bytes. Inspect the full integration diff for unwanted files and credentials.
+3. After checks pass and the approved PR merges, create a new distinct tag on the integrated `main` commit. Never move a published tag, force-push or overwrite an earlier release.
+4. Build using `tools/release/package.py SOURCE OUTPUT TAG FULL_SHA CHECKSUM ORIGINAL`. A provisional checksum may be used locally to discover the deterministic hash; this stops before validation/publication. Review the hash and rebuild with it to run the full extracted-package gate. Keep artifacts outside the checkout. Future packages require all 29 current modules, all three textures, public README, optional data-model documentation and generated source attribution.
+5. Create one draft pre-release with the exact full source SHA and reviewed notes. Dispatch **Publish verified GetGear beta** (`publish-beta.yml`) from `main`, supplying the tag, full commit and exact ZIP checksum. Use `publish=false` first; inspect successful build and draft inspection. Dispatch with `publish=true` only for an owner-authorized public release.
+6. The isolated publisher uploads the ZIP and `.sha256`, downloads both to compare exact bytes, then publishes the pre-release. It never creates/moves tags, overwrites assets or publishes automatically on pushes. Verify anonymous downloads and checksum after publication. Keep the README pointed at the newest recommended beta. GitHub's automatic “Latest” stable badge is unavailable for prereleases.
+
+Source and all tests execute only in the read-only build job without persisted credentials. Inspect/publish jobs check out only trusted release helpers and never execute release payloads. Preserve the existing offline safety tests, immutable Beta 9 path and distinct Beta 10 publisher/package for historical reproducibility. The original historical procedures below remain evidence, not the current download or release instructions.
+
+---
+
 # Manual beta release publishing
 
 Workflow: **Publish verified GetGear beta**, `.github/workflows/publish-beta.yml`.

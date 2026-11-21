@@ -1,0 +1,104 @@
+{
+  "capturedUTC": "2026-11-13T04:19:27.189503+00:00",
+  "method": "Exact full factual snapshot comparison: actual8CM4/retained8CL2 PF23627/9328definitions/EV1702 snapshots to8CO actual8co1; original8BR deltas preserved separately;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23627,
+    "afterItems": 23628,
+    "beforeDefinitions": 9328,
+    "afterDefinitions": 9328,
+    "newItems": [
+      {
+        "itemID": 14557,
+        "name": "The Lion Horn of Stormwind",
+        "sources": [
+          {
+            "type": "worlddrop",
+            "label": "World drop",
+            "npc": "",
+            "zone": "",
+            "path": "",
+            "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        ],
+        "alreadyCanonical": false
+      }
+    ],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.7f7d5e4131.json",
+        "bytes": 1010725,
+        "sha256": "7f7d5e4131f309e16aad68ab3ee23dec483f1b218e8ae6a319439dfeeef92e1a",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.3dd56ea4d7.json",
+        "bytes": 1360916,
+        "sha256": "3dd56ea4d7bb69ad1c99b6046db30984ac3e2bf83adbb3b0bd11bfdc19a63cfd",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.0dd030350d.json",
+        "bytes": 466933,
+        "sha256": "0dd030350dc5afe48875a5d5dae670fb2dd0862bdf7cdcca27fbccaf54dadc53",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.d4891008c4.json",
+        "bytes": 446812,
+        "sha256": "d4891008c48c8982dddeb672823876795359b8d3ee0ebf78b91b92496c43d140",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1702,
+    "afterRaw": 1702,
+    "qualifying": 1439,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [],
+    "selectedQualifyingEdges": [],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103442,
+        "sha256": "f1dfe145b780498d813fc83de7ed6eef34045e6b3e4895ec3af6a8dc7fbcbcf1",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103495,
+        "sha256": "792182c4b99dc29eaebcbe6b758fdbf8c50ac7f653abba4fbdf3d7843eec895d",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103456,
+        "sha256": "bbbf0fc84fd791aeaa105d4d0e35b872568d78a73b53b69f7c4751a3443fbf30",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 41905,
+        "sha256": "cd2cfe0320da1bc5ae51263afd088b3db691a3b26130d9c34cbcdfaf8d119a86",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-12T23:20:14.015Z"
+      }
+    ]
+  }
+}

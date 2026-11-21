@@ -1,0 +1,136 @@
+{
+  "scope": "Future source proposals only;twoqualifiedwrittenentrances/oneunsupportedtypehold.",
+  "candidates": {
+    "276395": {
+      "itemID": 276395,
+      "name": "Grimm's Packing Gloves",
+      "eligibility": {
+        "itemID": 276395,
+        "name": "Grimm's Packing Gloves",
+        "inventoryType": 10,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "activeAdoption": false,
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11058",
+          "sourceZone": "Stratholme",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "instructions": "Exact published own/full Ezra Grimm loot match. Use a native Stratholme entrance only if client-resolved;exact NPC floor,current loot/access/rate remain unverified."
+        }
+      ],
+      "navigationStatus": "published_instance_written_entrance;candidate_not_active",
+      "gaps": [
+        "current_loot_access_rate_and_in_instance_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276395",
+      "sourceSHA256": "5bfa45c5942959c04a034bc8fea468040c0b653cff13720a33929fd89c33b78b",
+      "sharedEvidence": "checkpoint8cu_partial_research.json"
+    },
+    "276396": {
+      "itemID": 276396,
+      "name": "Ezra's Seal of Authenticity",
+      "eligibility": {
+        "itemID": 276396,
+        "name": "Ezra's Seal of Authenticity",
+        "inventoryType": 11,
+        "quality": 3,
+        "rawStructuredRequiredLevel": 54,
+        "renderedEquipLevel": 54,
+        "primaryVersion": "new",
+        "currentParserReason": null,
+        "policyCompatibleClasses": [
+          "PRIEST",
+          "MAGE",
+          "WARLOCK",
+          "DRUID",
+          "ROGUE",
+          "HUNTER",
+          "SHAMAN",
+          "WARRIOR",
+          "PALADIN"
+        ],
+        "assessment": "published-all-slot-baseline-pass;future-development-review",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "activeAdoption": false,
+      "routes": [
+        {
+          "kind": "named_drop",
+          "source": "npc:11058",
+          "sourceZone": "Stratholme",
+          "requiresFullLootJoin": true,
+          "verification": "published-reference",
+          "directionsOnly": true,
+          "entranceOnly": true,
+          "instructions": "Exact published own/full Ezra Grimm loot match. Use a native Stratholme entrance only if client-resolved;exact NPC floor,current loot/access/rate remain unverified."
+        }
+      ],
+      "navigationStatus": "published_instance_written_entrance;candidate_not_active",
+      "gaps": [
+        "current_loot_access_rate_and_in_instance_floor_unverified"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=276396",
+      "sourceSHA256": "36db24fe5dd5f7b6dddb31a3dd0f17882b4253b91f0a6f26a2574b798e8cb3a9",
+      "sharedEvidence": "checkpoint8cu_partial_research.json"
+    },
+    "280363": {
+      "itemID": 280363,
+      "name": "Nightclaw Mantle",
+      "eligibility": {
+        "itemID": 280363,
+        "name": "Nightclaw Mantle",
+        "inventoryType": 3,
+        "quality": 2,
+        "rawStructuredRequiredLevel": 15,
+        "renderedEquipLevel": 15,
+        "primaryVersion": "new",
+        "currentParserReason": "unsupported-or-unknown-slot",
+        "policyCompatibleClasses": [],
+        "assessment": "hold-unsupported-equipment-type-or-class-policy",
+        "activeAdoption": false,
+        "rawClassMask": null,
+        "printedClassRestriction": false,
+        "scope": "Full primary tooltip compared with existing importer, not original cache replay or live confirmation. Raw/source minima never replace a missing printed wearer level; class-policy projection does not adopt equipment."
+      },
+      "activeAdoption": false,
+      "routes": [],
+      "navigationStatus": "unsupported_primary_equipment_type_policy_hold;no_marker",
+      "gaps": [
+        "printed_shoulder_but_no_supported_armour_type_or_class_policy",
+        "Nightclaw_Druids_Exalted_not_a_player_Druid_class_gate",
+        "source_standing7Exalted_current_label_code_followup"
+      ],
+      "sourceURL": "https://www.wowhead.com/forever/item=280363",
+      "sourceSHA256": "0c03cf2f6f19d80f4cc57170f95cfae47ad5a5acf9f89b8c0c3346f6d753bdce",
+      "sharedEvidence": "checkpoint8cu_partial_research.json"
+    }
+  }
+}

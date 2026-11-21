@@ -1779,7 +1779,7 @@ local acquisition = {
  [282284]={4,"Twisted Hatred"},
  [284715]={6,"Mr. Smite"},
 }
-local counts={recipe=0,boss=0,vendor=0,quest=0,reagentConflicts=0,reagentCorrections=0}
+local counts={recipe=0,dungeonEnemy=0,vendor=0,quest=0,reagentConflicts=0,reagentCorrections=0}
 for id, record in pairs(recipes) do
  local item=assert(GetGear.ItemCatalog[id],"Missing Beta7 item "..id)
  local profession,spell,inputs=record[1],record[2],record[3]
@@ -1816,9 +1816,9 @@ for id,src in pairs(acquisition) do
  local item=assert(GetGear.ItemCatalog[id],"Missing source item "..id)
  local kind,label=src[1],src[2]
  if kind==6 and item.sourceType=="Dungeon (loot table unverified)" then
-  item.source="Boss: "..label.." (dated client reference; live loot unverified)"
-  item.acquisitionKind="Dungeon boss (client reference)"
-  item.acquisitionConfidence="client";counts.boss=counts.boss+1
+  item.source="Dungeon enemy: "..label.." (dated client reference; live loot unverified)"
+  item.acquisitionKind="Dungeon enemy (client reference)"
+  item.acquisitionConfidence="client";counts.dungeonEnemy=counts.dungeonEnemy+1
  elseif kind==3 and item.sourceType=="Vendor (availability unverified)" then
   item.source="Seen sold by "..label.." (sampled Forever vendor window; verify faction and stock)"
   item.acquisitionKind="Vendor (observed inventory)"

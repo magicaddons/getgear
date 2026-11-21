@@ -1,0 +1,128 @@
+{
+  "baselineRef": "9e35db97db4cd811dde3bf3f091082f2dad2450d",
+  "itemsExamined": 7707,
+  "recipesExamined": 1254,
+  "exportMetadata": {
+    "contexts": 276750,
+    "currencies": {
+      "3402": {
+        "evidence": {
+          "file": "checkpoint_acceptance2_navigation_evidence.json",
+          "sha256": "d426eef48d52d2f7ccc1aff46259afaa129fdeacf915e2310d5961c92e10c5eb",
+          "url": "https://www.wowhead.com/forever/currency=3402"
+        },
+        "name": "Merchant's Favor",
+        "verification": "published-reference"
+      },
+      "3469": {
+        "evidence": {
+          "file": "checkpoint8t_publication_evidence.json",
+          "sha256": "049de5eb153e5bbf9ae90a351ff6cf68a04f082e8b33a9ec1996e419b0723a38",
+          "url": "https://www.wowhead.com/forever/currency=3469"
+        },
+        "name": "Tarnished Undermine Real",
+        "verification": "published-reference"
+      },
+      "515": {
+        "evidence": {
+          "file": "checkpoint8cd_working_evidence.json",
+          "sha256": "152477de3b12dbf5442278848cbc4f3458cfae68bdc2a8bce1bb3ee2d737cc68",
+          "url": "https://www.wowhead.com/forever/currency=515"
+        },
+        "name": "Darkmoon Prize Ticket",
+        "verification": "published-reference"
+      }
+    },
+    "inputModelUnchanged": true,
+    "itemQueries": 0,
+    "items": 7707,
+    "labelChecks": 640754,
+    "recipes": 1254
+  },
+  "sourceCategories": {
+    "dungeon": 555,
+    "fishing": 1,
+    "legacy": 27,
+    "named_drop": 433,
+    "npc_container": 73,
+    "object": 45,
+    "quest": 277,
+    "quest_container": 229,
+    "recipe_drop": 60,
+    "recipe_vendor": 432,
+    "trainer": 148,
+    "vendor": 1400,
+    "vendor_container": 58
+  },
+  "uniqueTargetVariants": 13970,
+  "catalogueSourceTypes": {
+    "Alchemy": 1,
+    "Blacksmithing": 399,
+    "Dungeon": 27,
+    "Dungeon (loot table unverified)": 515,
+    "Dungeon boss drop": 11,
+    "Dungeon drop (Classic-only source)": 1,
+    "Dungeon trash": 2,
+    "Enchanting": 37,
+    "Engineering": 33,
+    "Leatherworking": 453,
+    "Paladin class quest (Classic reference)": 1,
+    "Quest": 9,
+    "Quest chain": 1,
+    "Quest reward": 5,
+    "Quest reward (eligibility unverified)": 231,
+    "Quest reward (seen in Forever)": 1,
+    "Reputation": 2,
+    "Source not documented": 1268,
+    "Tailoring": 327,
+    "Vendor (availability unverified)": 1492,
+    "Weapon vendor": 1,
+    "Weapon vendor (Classic reference)": 3,
+    "World drop": 6,
+    "World drop (route unverified)": 2881
+  },
+  "recipeMethods": {
+    "initial": 4,
+    "multiple": 2,
+    "pattern": 835,
+    "trainer": 38,
+    "unclassified": 372,
+    "unknown": 3
+  },
+  "mixedSourceRecipes": 11,
+  "recipesWithRequirementClauses": 219,
+  "itemsWithTargets": 3411,
+  "pointOrAreaTargetVariants": 6509,
+  "baselineProblemItems": 4609,
+  "baselineProblemRecipes": 600,
+  "baselineProblemTextVariants": 8567,
+  "baselineProblemLabelVariants": 1,
+  "currentProblemTextVariants": 0,
+  "correctedProblemItems": 4609,
+  "correctedProblemRecipes": 600,
+  "changedProblemItems": 4609,
+  "remainingProblemItems": 0,
+  "remainingFlags": {},
+  "baselineFlagCounts": {
+    "empty_recipe_description": 157,
+    "expanded_over_220_review": 284,
+    "expanded_redundant_prefix": 343,
+    "expanded_research_wording": 4185,
+    "lost_book_requirement": 29,
+    "lost_book_specialisation": 22,
+    "lost_limited_stock": 29,
+    "lost_specialisation": 9,
+    "lost_typed_purchase_cost": 139,
+    "marker_internal_wording": 1,
+    "mixed_method_omitted": 11,
+    "summary_over_220_review": 171,
+    "summary_redundant_prefix": 343,
+    "summary_research_wording": 4185
+  },
+  "currentFlagCounts": {},
+  "recipesWithUnresolvedLearning": 286,
+  "itemsWithUnknownOrContextRestrictedSources": 1346,
+  "baselineSHA256": "53917589ceaa1565430300f7e6788c65054da1e263218439404e23096394a65c",
+  "actualClientRenderingVerified": false,
+  "exportLog": "PASS read-only export:items=7707 recipes=1254 contexts=276750 labelChecks=640754 zeroItemQueries/fullmodelunchanged"
+}

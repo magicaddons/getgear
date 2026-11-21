@@ -1,0 +1,5846 @@
+{
+  "baseline": "30b4b2f5a7acca72f1fffa332346772ae10f4b5c",
+  "reviewedOn": "2026-11-09",
+  "status": "Integrated; full validation pending",
+  "counts": {
+    "items": 42,
+    "itemPages": 42,
+    "exactItemMerchantCostStockJoins": 42,
+    "darkspearExaltedCases": 11,
+    "currencyCases": 31,
+    "exactCurrencyPageReverseJoins": 31,
+    "selectedFinishedRelics": 10,
+    "explicitVersionWarnings": 0,
+    "currentExactIDAcquisitionsConfirmed": 0
+  },
+  "items": {
+    "272095": {
+      "url": "https://www.wowhead.com/forever/item=272095",
+      "bytes": 192176,
+      "sha256": "5fea9df23bdfa9699355b1f5134e0ebe2cb116535dfeb9af0621efc558de4cbf",
+      "title": "Raider Gauntlets - Item - Forever",
+      "identity": {
+        "id": 272095,
+        "name": "Raider Gauntlets",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              141647
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272097": {
+      "url": "https://www.wowhead.com/forever/item=272097",
+      "bytes": 230569,
+      "sha256": "436739f3b63ed80c0f18a7d01c123b385544d70ddcb6256adb177695555260c2",
+      "title": "Raider Handwraps - Item - Forever",
+      "identity": {
+        "id": 272097,
+        "name": "Raider Handwraps",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              81107
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272099": {
+      "url": "https://www.wowhead.com/forever/item=272099",
+      "bytes": 197102,
+      "sha256": "7e2194dbc0537815e9d2a83dd535fdeaaf189a22b595033cc12efa1bbb142485",
+      "title": "Raider Gloves - Item - Forever",
+      "identity": {
+        "id": 272099,
+        "name": "Raider Gloves",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              102974
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272101": {
+      "url": "https://www.wowhead.com/forever/item=272101",
+      "bytes": 206219,
+      "sha256": "c58a59da1f78ee3014ea5fdc00608c8711afd1feb600dd2b660c5915b560dd2f",
+      "title": "Raider Handguards - Item - Forever",
+      "identity": {
+        "id": 272101,
+        "name": "Raider Handguards",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              123528
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272103": {
+      "url": "https://www.wowhead.com/forever/item=272103",
+      "bytes": 225380,
+      "sha256": "00ae87bb04628dc47b42770e8e60f0db1e9c6f0a80c18ffcd7e5e2b5bcf16db5",
+      "title": "Darkspear Shoulderpads - Item - Forever",
+      "identity": {
+        "id": 272103,
+        "name": "Darkspear Shoulderpads",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              124455
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272104": {
+      "url": "https://www.wowhead.com/forever/item=272104",
+      "bytes": 220885,
+      "sha256": "211b83d8a17d88aabf309267fa77088b77b953a73622577e9e6613211293abf7",
+      "title": "Darkspear Shoulders - Item - Forever",
+      "identity": {
+        "id": 272104,
+        "name": "Darkspear Shoulders",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              156572
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272105": {
+      "url": "https://www.wowhead.com/forever/item=272105",
+      "bytes": 194690,
+      "sha256": "08f538204636ed19e1a94a921651457cb2bb1476e823f2e80e113adb97c8b35e",
+      "title": "Darkspear Pauldrons - Item - Forever",
+      "identity": {
+        "id": 272105,
+        "name": "Darkspear Pauldrons",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              157161
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272106": {
+      "url": "https://www.wowhead.com/forever/item=272106",
+      "bytes": 184037,
+      "sha256": "f962dc65bfa217da0fbd6a15664b047a4939d4c96aea0a27a24a3c6cf36ee962",
+      "title": "Darkspear Epaulets - Item - Forever",
+      "identity": {
+        "id": 272106,
+        "name": "Darkspear Epaulets",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              189616
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272107": {
+      "url": "https://www.wowhead.com/forever/item=272107",
+      "bytes": 205638,
+      "sha256": "4db2a2b6bab292bb47e9ba96ce256561680b05042c3e80701166904ceb3b063b",
+      "title": "Darkspear Mantle - Item - Forever",
+      "identity": {
+        "id": 272107,
+        "name": "Darkspear Mantle",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              220641
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272108": {
+      "url": "https://www.wowhead.com/forever/item=272108",
+      "bytes": 222766,
+      "sha256": "35aae9f43c01899ad7e5cafd12a3376ce6de0c8e3ff4161258d9b3109e148735",
+      "title": "Darkspear Spaulders - Item - Forever",
+      "identity": {
+        "id": 272108,
+        "name": "Darkspear Spaulders",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              221462
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    },
+    "272393": {
+      "url": "https://www.wowhead.com/forever/item=272393",
+      "bytes": 207784,
+      "sha256": "ea87b954c8b54c270b07bdc39c7c85fd94488d376d9ab683a49fb4d3b897fa10",
+      "title": "Magician's Cord - Item - Forever",
+      "identity": {
+        "id": 272393,
+        "name": "Magician's Cord",
+        "reqlevel": 60,
+        "reqclass": 128,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 128,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Mage",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272394": {
+      "url": "https://www.wowhead.com/forever/item=272394",
+      "bytes": 171896,
+      "sha256": "b3081f8e7fe176c57a51dbac5ee227468abb54cc9b3b3ee6a277a78574476a45",
+      "title": "Penitent's Cinch - Item - Forever",
+      "identity": {
+        "id": 272394,
+        "name": "Penitent's Cinch",
+        "reqlevel": 60,
+        "reqclass": 16,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 16,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Priest",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272395": {
+      "url": "https://www.wowhead.com/forever/item=272395",
+      "bytes": 214459,
+      "sha256": "97fb488279dca388a948a82ef8da531142c8daf7a11501751fbcfd243a4cc371",
+      "title": "Assassin's Waistguard - Item - Forever",
+      "identity": {
+        "id": 272395,
+        "name": "Assassin's Waistguard",
+        "reqlevel": 60,
+        "reqclass": 8,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 8,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Rogue",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272396": {
+      "url": "https://www.wowhead.com/forever/item=272396",
+      "bytes": 168692,
+      "sha256": "49b0c0d4e14922582e0c1f4e7f30c5df8634abde83443fbccd10d28de02d18cd",
+      "title": "Shifter's Belt - Item - Forever",
+      "identity": {
+        "id": 272396,
+        "name": "Shifter's Belt",
+        "reqlevel": 60,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272397": {
+      "url": "https://www.wowhead.com/forever/item=272397",
+      "bytes": 213170,
+      "sha256": "dd478a85e8775d967d23d74b7399d09d71f9d996d559a88ef4c4890962f16487",
+      "title": "Ranger's Belt - Item - Forever",
+      "identity": {
+        "id": 272397,
+        "name": "Ranger's Belt",
+        "reqlevel": 60,
+        "reqclass": 4,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 4,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Hunter",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272398": {
+      "url": "https://www.wowhead.com/forever/item=272398",
+      "bytes": 168334,
+      "sha256": "8418534b11b8ddf5ddaf399ae7863711e01ac28008c5a4ed78781bcff0f132b5",
+      "title": "Caretaker's Cord - Item - Forever",
+      "identity": {
+        "id": 272398,
+        "name": "Caretaker's Cord",
+        "reqlevel": 60,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272399": {
+      "url": "https://www.wowhead.com/forever/item=272399",
+      "bytes": 172621,
+      "sha256": "a64475ed4ceea34c1df03dbc6e5a82a1483de3eba2416ffca26059455107aff8",
+      "title": "Stormseeker's Girdle - Item - Forever",
+      "identity": {
+        "id": 272399,
+        "name": "Stormseeker's Girdle",
+        "reqlevel": 60,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272401": {
+      "url": "https://www.wowhead.com/forever/item=272401",
+      "bytes": 211683,
+      "sha256": "bb20dc81d8293cd41dd3e343eb94af908a30351c9da4d996d912b577dfe4ed2a",
+      "title": "Elunite Cord - Item - Forever",
+      "identity": {
+        "id": 272401,
+        "name": "Elunite Cord",
+        "reqlevel": 60,
+        "reqclass": 1024,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 1024,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Druid",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272402": {
+      "url": "https://www.wowhead.com/forever/item=272402",
+      "bytes": 169442,
+      "sha256": "5847c3a73c981fcc8c4cc660a079c8374349ccf443fb20b170a14f4e4761411e",
+      "title": "Prophet's Waistcord - Item - Forever",
+      "identity": {
+        "id": 272402,
+        "name": "Prophet's Waistcord",
+        "reqlevel": 60,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272403": {
+      "url": "https://www.wowhead.com/forever/item=272403",
+      "bytes": 216642,
+      "sha256": "449d98d2d5401c7ceeef8f3673216a19287eb45c12d08c3e09a108638bc10ffe",
+      "title": "Valiant's Waistguard - Item - Forever",
+      "identity": {
+        "id": 272403,
+        "name": "Valiant's Waistguard",
+        "reqlevel": 60,
+        "reqclass": 1,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 1,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Warrior",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272404": {
+      "url": "https://www.wowhead.com/forever/item=272404",
+      "bytes": 177296,
+      "sha256": "761b3c61c3b0537d862af8bf0979b5c4f0a73e6991cac046058ab922e778fdea",
+      "title": "Vindicator's Belt - Item - Forever",
+      "identity": {
+        "id": 272404,
+        "name": "Vindicator's Belt",
+        "reqlevel": 60,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272405": {
+      "url": "https://www.wowhead.com/forever/item=272405",
+      "bytes": 208453,
+      "sha256": "26672e9e9c7aa92908daf61c889c48e50f80b763070134a56bc37c19618db6a8",
+      "title": "Redeemer's Waistcord - Item - Forever",
+      "identity": {
+        "id": 272405,
+        "name": "Redeemer's Waistcord",
+        "reqlevel": 60,
+        "reqclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 2,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Paladin",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272406": {
+      "url": "https://www.wowhead.com/forever/item=272406",
+      "bytes": 170084,
+      "sha256": "80f0d38c5af6786d22e67e96d141b93f519f544b57e5e823374aa8a6084444d8",
+      "title": "Channeler's Ring - Item - Forever",
+      "identity": {
+        "id": 272406,
+        "name": "Channeler's Ring",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  75
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272407": {
+      "url": "https://www.wowhead.com/forever/item=272407",
+      "bytes": 170690,
+      "sha256": "001ce90766549a5b607d2b0bfb047b6cd457736897a0d26bd0a54d1ed79fbb63",
+      "title": "Blessed Band of Light - Item - Forever",
+      "identity": {
+        "id": 272407,
+        "name": "Blessed Band of Light",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  75
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272408": {
+      "url": "https://www.wowhead.com/forever/item=272408",
+      "bytes": 166676,
+      "sha256": "c4887f8452c8ae9d7f8238d29ff192c106c0cbb4caafcd400847193760acf08b",
+      "title": "Cutthroat's Signet - Item - Forever",
+      "identity": {
+        "id": 272408,
+        "name": "Cutthroat's Signet",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  75
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272409": {
+      "url": "https://www.wowhead.com/forever/item=272409",
+      "bytes": 169947,
+      "sha256": "8841c02232e015a3d6311260fc9aaca3fa3f38de0db749d07da63c71fa5b6ed3",
+      "title": "Ring of Awareness - Item - Forever",
+      "identity": {
+        "id": 272409,
+        "name": "Ring of Awareness",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  75
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272410": {
+      "url": "https://www.wowhead.com/forever/item=272410",
+      "bytes": 202617,
+      "sha256": "3c260a712f27eeb91aea3f895817b15b8b115170b56a169426f1e3f7250cea19",
+      "title": "Windseeker's Belt - Item - Forever",
+      "identity": {
+        "id": 272410,
+        "name": "Windseeker's Belt",
+        "reqlevel": 60,
+        "reqclass": 64,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqclass": 64,
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Classes: Shaman",
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272427": {
+      "url": "https://www.wowhead.com/forever/item=272427",
+      "bytes": 160074,
+      "sha256": "f8eb677034e7c55494bf0424b2f0f4181a750bd39ee925e53b362130c5af7e0d",
+      "title": "Howling Idol - Item - Forever",
+      "identity": {
+        "id": 272427,
+        "name": "Howling Idol",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272428": {
+      "url": "https://www.wowhead.com/forever/item=272428",
+      "bytes": 160095,
+      "sha256": "9b7d5226d469350f59ce4b70dd8d66f4cb2abbdf689e02f32b9ddd8c7884063e",
+      "title": "Enraged Idol - Item - Forever",
+      "identity": {
+        "id": 272428,
+        "name": "Enraged Idol",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272429": {
+      "url": "https://www.wowhead.com/forever/item=272429",
+      "bytes": 160298,
+      "sha256": "2002152052911c70f68cc498e682160599233cea9972896b17868ad5ad0cc8de",
+      "title": "Idol of Synthesis - Item - Forever",
+      "identity": {
+        "id": 272429,
+        "name": "Idol of Synthesis",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272430": {
+      "url": "https://www.wowhead.com/forever/item=272430",
+      "bytes": 160172,
+      "sha256": "4259cbfd6509be487b4cf13ffd7548a4bb7013de84e1dcaa39a287ddc2e9a1ac",
+      "title": "Swarming Idol - Item - Forever",
+      "identity": {
+        "id": 272430,
+        "name": "Swarming Idol",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272431": {
+      "url": "https://www.wowhead.com/forever/item=272431",
+      "bytes": 160079,
+      "sha256": "a35c2ee2bef80d353669760ccfce5c57126f5032938ae567e518e5b625478136",
+      "title": "Tidal Totem - Item - Forever",
+      "identity": {
+        "id": 272431,
+        "name": "Tidal Totem",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272432": {
+      "url": "https://www.wowhead.com/forever/item=272432",
+      "bytes": 161052,
+      "sha256": "03a48f1eb03a2937b6237f564e1ebe3d7cc08c02291efc1b08fec2b1d2447204",
+      "title": "Totem of the Storm - Item - Forever",
+      "identity": {
+        "id": 272432,
+        "name": "Totem of the Storm",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272433": {
+      "url": "https://www.wowhead.com/forever/item=272433",
+      "bytes": 160075,
+      "sha256": "3c02d10d035cc80123e584ee7f962f3510186aef8de7ffe22528cb825f9cc03c",
+      "title": "Burning Totem - Item - Forever",
+      "identity": {
+        "id": 272433,
+        "name": "Burning Totem",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272434": {
+      "url": "https://www.wowhead.com/forever/item=272434",
+      "bytes": 160175,
+      "sha256": "13579cf2d29780b5386af846df9bc1acbbcb82b6a10acbd97075abbaf3b3b830",
+      "title": "Sentinel's Libram - Item - Forever",
+      "identity": {
+        "id": 272434,
+        "name": "Sentinel's Libram",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272435": {
+      "url": "https://www.wowhead.com/forever/item=272435",
+      "bytes": 160038,
+      "sha256": "f24e2f50d392cd0d47c7fa16473baf7e6a09c244660736038a63fbba0c5d99fe",
+      "title": "Libram of Law - Item - Forever",
+      "identity": {
+        "id": 272435,
+        "name": "Libram of Law",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272436": {
+      "url": "https://www.wowhead.com/forever/item=272436",
+      "bytes": 160151,
+      "sha256": "00fbaedf4e6c7c578e0c1a8856cee23c78946fdda4012d56108df73c92bb5a96",
+      "title": "Libram of Economy - Item - Forever",
+      "identity": {
+        "id": 272436,
+        "name": "Libram of Economy",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 553
+        }
+      ],
+      "versionWarning": false
+    },
+    "272437": {
+      "url": "https://www.wowhead.com/forever/item=272437",
+      "bytes": 195445,
+      "sha256": "76f30b22d77f304ed4fae246531918e710e34d836c60eea7eefebfe8ac3bfaa9",
+      "title": "Adaptive Combat Assistant - Item - Forever",
+      "identity": {
+        "id": 272437,
+        "name": "Adaptive Combat Assistant",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  125
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272438": {
+      "url": "https://www.wowhead.com/forever/item=272438",
+      "bytes": 195353,
+      "sha256": "2856638de3245cb1dc5564a39c53ef01099372b49f4b1e8e27acb3de896e4279",
+      "title": "Weakness Analyzer - Item - Forever",
+      "identity": {
+        "id": 272438,
+        "name": "Weakness Analyzer",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  125
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272439": {
+      "url": "https://www.wowhead.com/forever/item=272439",
+      "bytes": 195671,
+      "sha256": "f85e760ca7bfaaf184fe208724926194ae19f235ee9c8e6b16e05bd43b8c5e5b",
+      "title": "Serenity Field - Item - Forever",
+      "identity": {
+        "id": 272439,
+        "name": "Serenity Field",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  125
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272440": {
+      "url": "https://www.wowhead.com/forever/item=272440",
+      "bytes": 195908,
+      "sha256": "1bf40160a244ab01764c5c935b260b3c48709150ec0c819bf7526114b6c82202",
+      "title": "Defender's Grip Stabilizer - Item - Forever",
+      "identity": {
+        "id": 272440,
+        "name": "Defender's Grip Stabilizer",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60
+      },
+      "requirements": [
+        "Requires Level 60"
+      ],
+      "soldBy": [
+        {
+          "classification": 0,
+          "displayName": "Pix Xizzix",
+          "displayNames": [],
+          "hasQuests": 1,
+          "id": 227853,
+          "location": [
+            33
+          ],
+          "maxlevel": 60,
+          "minlevel": 60,
+          "name": "Pix Xizzix",
+          "names": [],
+          "react": [
+            1,
+            1
+          ],
+          "tag": "Undermine Trader",
+          "type": 7,
+          "envChange": {
+            "status": "updated",
+            "labels": [
+              "vendor_changed"
+            ],
+            "lines": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ],
+            "notShown": [
+              "Sells: adds Adaptive Combat Assistant, Arcanoweave Cloak, Assassin's Waistguard, and 32 more",
+              "Sells: no longer Abandoned Wedding Band, Ancient Belt, Ancient Bindings, and 154 more"
+            ]
+          },
+          "stock": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  125
+                ]
+              ],
+              []
+            ]
+          ],
+          "popularity": 694
+        }
+      ],
+      "versionWarning": false
+    },
+    "272958": {
+      "url": "https://www.wowhead.com/forever/item=272958",
+      "bytes": 188878,
+      "sha256": "b6a1bc1778bff3a749a6976e05ababed874a92820aedf0fdeb8616cc1928f8af",
+      "title": "Darkspear Shoulderguards - Item - Forever",
+      "identity": {
+        "id": 272958,
+        "name": "Darkspear Shoulderguards",
+        "reqlevel": 60,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "publishedEquipFields": {
+        "reqlevel": 60,
+        "reqfaction": 2798,
+        "reqrep": 7
+      },
+      "requirements": [
+        "Requires Level 60",
+        "Requires Darkspear Raiders - Exalted"
+      ],
+      "soldBy": [
+        {
+          "classification": 1,
+          "displayName": "Creeg Bothunk",
+          "displayNames": [],
+          "id": 263570,
+          "location": [
+            17
+          ],
+          "maxlevel": 55,
+          "minlevel": 55,
+          "name": "Creeg Bothunk",
+          "names": [],
+          "react": [
+            null,
+            0
+          ],
+          "tag": "Darkspear Raiders Quartermaster",
+          "type": 7,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "stock": -1,
+          "cost": [
+            [
+              195317
+            ]
+          ],
+          "popularity": 559
+        }
+      ],
+      "versionWarning": false
+    }
+  },
+  "merchants": {
+    "263570": {
+      "url": "https://www.wowhead.com/forever/npc=263570",
+      "bytes": 97808,
+      "sha256": "d218768609758ec9e375c6caa73ca9456472f22e390e71721ead16f2fb71eb2c",
+      "title": "Creeg Bothunk - NPC - Forever",
+      "maps": {
+        "17": [
+          {
+            "count": 2,
+            "coords": [
+              [
+                65,
+                34.4
+              ],
+              [
+                65,
+                34.6
+              ]
+            ],
+            "uiMapId": 1413,
+            "uiMapName": "The Barrens"
+          }
+        ]
+      },
+      "selectedInventoryRows": [
+        {
+          "id": 272095,
+          "name": "Raider Gauntlets",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              141647,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272097,
+          "name": "Raider Handwraps",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              81107,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272099,
+          "name": "Raider Gloves",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              102974,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272101,
+          "name": "Raider Handguards",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              123528,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272103,
+          "name": "Darkspear Shoulderpads",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              124455,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272104,
+          "name": "Darkspear Shoulders",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              156572,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272105,
+          "name": "Darkspear Pauldrons",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              157161,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272106,
+          "name": "Darkspear Epaulets",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              189616,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272107,
+          "name": "Darkspear Mantle",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              220641,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272108,
+          "name": "Darkspear Spaulders",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              221462,
+              [],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272958,
+          "name": "Darkspear Shoulderguards",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 7,
+          "react": [
+            null,
+            0
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              195317,
+              [],
+              []
+            ]
+          ]
+        }
+      ],
+      "allInventoryIDs": [
+        17348,
+        17349,
+        17351,
+        17352,
+        272053,
+        272054,
+        272055,
+        272056,
+        272057,
+        272058,
+        272059,
+        272060,
+        272061,
+        272062,
+        272063,
+        272064,
+        272065,
+        272066,
+        272067,
+        272068,
+        272069,
+        272070,
+        272071,
+        272072,
+        272073,
+        272074,
+        272075,
+        272076,
+        272077,
+        272078,
+        272079,
+        272080,
+        272081,
+        272082,
+        272083,
+        272084,
+        272085,
+        272086,
+        272087,
+        272088,
+        272089,
+        272090,
+        272091,
+        272092,
+        272093,
+        272094,
+        272095,
+        272096,
+        272097,
+        272098,
+        272099,
+        272100,
+        272101,
+        272102,
+        272103,
+        272104,
+        272105,
+        272106,
+        272107,
+        272108,
+        272958
+      ]
+    },
+    "227853": {
+      "url": "https://www.wowhead.com/forever/npc=227853",
+      "bytes": 87042,
+      "sha256": "609195a2db255c1d0705ff5fffa77e57537321eede9d863d5da790c95102f850",
+      "title": "Pix Xizzix - NPC - Forever",
+      "maps": {
+        "33": [
+          {
+            "count": 1,
+            "coords": [
+              [
+                28.4,
+                75.8
+              ]
+            ],
+            "uiMapId": 1434,
+            "uiMapName": "Stranglethorn Vale"
+          }
+        ]
+      },
+      "selectedInventoryRows": [
+        {
+          "id": 272393,
+          "name": "Magician's Cord",
+          "reqlevel": 60,
+          "reqclass": 128,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272394,
+          "name": "Penitent's Cinch",
+          "reqlevel": 60,
+          "reqclass": 16,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272395,
+          "name": "Assassin's Waistguard",
+          "reqlevel": 60,
+          "reqclass": 8,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272396,
+          "name": "Shifter's Belt",
+          "reqlevel": 60,
+          "reqclass": 1024,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272397,
+          "name": "Ranger's Belt",
+          "reqlevel": 60,
+          "reqclass": 4,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272398,
+          "name": "Caretaker's Cord",
+          "reqlevel": 60,
+          "reqclass": 1024,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272399,
+          "name": "Stormseeker's Girdle",
+          "reqlevel": 60,
+          "reqclass": 64,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272401,
+          "name": "Elunite Cord",
+          "reqlevel": 60,
+          "reqclass": 1024,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272402,
+          "name": "Prophet's Waistcord",
+          "reqlevel": 60,
+          "reqclass": 64,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272403,
+          "name": "Valiant's Waistguard",
+          "reqlevel": 60,
+          "reqclass": 1,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272404,
+          "name": "Vindicator's Belt",
+          "reqlevel": 60,
+          "reqclass": 2,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272405,
+          "name": "Redeemer's Waistcord",
+          "reqlevel": 60,
+          "reqclass": 2,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272406,
+          "name": "Channeler's Ring",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  75
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272407,
+          "name": "Blessed Band of Light",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  75
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272408,
+          "name": "Cutthroat's Signet",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  75
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272409,
+          "name": "Ring of Awareness",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  75
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272410,
+          "name": "Windseeker's Belt",
+          "reqlevel": 60,
+          "reqclass": 64,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  100
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272427,
+          "name": "Howling Idol",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272428,
+          "name": "Enraged Idol",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272429,
+          "name": "Idol of Synthesis",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272430,
+          "name": "Swarming Idol",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272431,
+          "name": "Tidal Totem",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272432,
+          "name": "Totem of the Storm",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272433,
+          "name": "Burning Totem",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272434,
+          "name": "Sentinel's Libram",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272435,
+          "name": "Libram of Law",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272436,
+          "name": "Libram of Economy",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  50
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272437,
+          "name": "Adaptive Combat Assistant",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  125
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272438,
+          "name": "Weakness Analyzer",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  125
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272439,
+          "name": "Serenity Field",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  125
+                ]
+              ],
+              []
+            ]
+          ]
+        },
+        {
+          "id": 272440,
+          "name": "Defender's Grip Stabilizer",
+          "reqlevel": 60,
+          "envChange": {
+            "status": "new",
+            "labels": [],
+            "lines": []
+          },
+          "standing": 0,
+          "react": [
+            1,
+            1
+          ],
+          "avail": -1,
+          "cost": [
+            [
+              0,
+              [
+                [
+                  3469,
+                  125
+                ]
+              ],
+              []
+            ]
+          ]
+        }
+      ],
+      "allInventoryIDs": [
+        13518,
+        13519,
+        13520,
+        13521,
+        13522,
+        17010,
+        17011,
+        17012,
+        226405,
+        228175,
+        228176,
+        228189,
+        232454,
+        232455,
+        232456,
+        232457,
+        236414,
+        272151,
+        272393,
+        272394,
+        272395,
+        272396,
+        272397,
+        272398,
+        272399,
+        272401,
+        272402,
+        272403,
+        272404,
+        272405,
+        272406,
+        272407,
+        272408,
+        272409,
+        272410,
+        272411,
+        272413,
+        272414,
+        272415,
+        272427,
+        272428,
+        272429,
+        272430,
+        272431,
+        272432,
+        272433,
+        272434,
+        272435,
+        272436,
+        272437,
+        272438,
+        272439,
+        272440
+      ]
+    }
+  },
+  "currency": {
+    "url": "https://www.wowhead.com/forever/currency=3469",
+    "bytes": 81128,
+    "sha256": "049de5eb153e5bbf9ae90a351ff6cf68a04f082e8b33a9ec1996e419b0723a38",
+    "title": "Tarnished Undermine Real - Currency - Forever"
+  },
+  "currencyFacts": {
+    "id": 3469,
+    "name": "Tarnished Undermine Real",
+    "publishedTotalCap": 165,
+    "selectedCurrencyRows": [
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Defender's Grip Stabilizer",
+        "flags2": 8192,
+        "id": 272440,
+        "level": 65,
+        "name": "Defender's Grip Stabilizer",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                125
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 64
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Serenity Field",
+        "flags2": 24576,
+        "id": 272439,
+        "level": 65,
+        "name": "Serenity Field",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                125
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 89
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Weakness Analyzer",
+        "flags2": 24576,
+        "id": 272438,
+        "level": 65,
+        "name": "Weakness Analyzer",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                125
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 189
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Adaptive Combat Assistant",
+        "flags2": 24576,
+        "id": 272437,
+        "level": 65,
+        "name": "Adaptive Combat Assistant",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 12,
+        "slotbak": 12,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": -4,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                125
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 468
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Libram of Economy",
+        "flags2": 24576,
+        "id": 272436,
+        "level": 65,
+        "name": "Libram of Economy",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 7,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 57
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Libram of Law",
+        "flags2": 24576,
+        "id": 272435,
+        "level": 65,
+        "name": "Libram of Law",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 7,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 292
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Sentinel's Libram",
+        "flags2": 8192,
+        "id": 272434,
+        "level": 65,
+        "name": "Sentinel's Libram",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 7,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 59
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Burning Totem",
+        "flags2": 24576,
+        "id": 272433,
+        "level": 65,
+        "name": "Burning Totem",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 9,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 72
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Totem of the Storm",
+        "flags2": 24576,
+        "id": 272432,
+        "level": 65,
+        "name": "Totem of the Storm",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 9,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 195
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Tidal Totem",
+        "flags2": 24576,
+        "id": 272431,
+        "level": 65,
+        "name": "Tidal Totem",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 9,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 55
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Swarming Idol",
+        "flags2": 8192,
+        "id": 272430,
+        "level": 65,
+        "name": "Swarming Idol",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 8,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 51
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Idol of Synthesis",
+        "flags2": 8192,
+        "id": 272429,
+        "level": 65,
+        "name": "Idol of Synthesis",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 8,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 65
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Enraged Idol",
+        "flags2": 24576,
+        "id": 272428,
+        "level": 65,
+        "name": "Enraged Idol",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 8,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 96
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Howling Idol",
+        "flags2": 24576,
+        "id": 272427,
+        "level": 65,
+        "name": "Howling Idol",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 28,
+        "slotbak": 28,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 8,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                50
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 144
+      },
+      {
+        "appearances": {
+          "0": [
+            34694,
+            ""
+          ]
+        },
+        "armor": 217,
+        "classs": 4,
+        "displayName": "Windseeker's Belt",
+        "displayid": 34694,
+        "flags2": 24576,
+        "id": 272410,
+        "level": 60,
+        "name": "Windseeker's Belt",
+        "quality": 4,
+        "reqclass": 64,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 3,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 14
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Ring of Awareness",
+        "flags2": 24576,
+        "id": 272409,
+        "level": 65,
+        "name": "Ring of Awareness",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 11,
+        "slotbak": 11,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": -2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                75
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 15
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Cutthroat's Signet",
+        "flags2": 8192,
+        "id": 272408,
+        "level": 65,
+        "name": "Cutthroat's Signet",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 11,
+        "slotbak": 11,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": -2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                75
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 68
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Blessed Band of Light",
+        "flags2": 24576,
+        "id": 272407,
+        "level": 65,
+        "name": "Blessed Band of Light",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 11,
+        "slotbak": 11,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": -2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                75
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 81
+      },
+      {
+        "armor": 0,
+        "classs": 4,
+        "displayName": "Channeler's Ring",
+        "flags2": 24576,
+        "id": 272406,
+        "level": 65,
+        "name": "Channeler's Ring",
+        "quality": 3,
+        "reqlevel": 60,
+        "slot": 11,
+        "slotbak": 11,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": -2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                75
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 64
+      },
+      {
+        "appearances": {
+          "0": [
+            34520,
+            ""
+          ]
+        },
+        "armor": 385,
+        "classs": 4,
+        "displayName": "Redeemer's Waistcord",
+        "displayid": 34520,
+        "flags2": 24576,
+        "id": 272405,
+        "level": 60,
+        "name": "Redeemer's Waistcord",
+        "quality": 4,
+        "reqclass": 2,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 4,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 15
+      },
+      {
+        "appearances": {
+          "0": [
+            684404,
+            "inv_belt_11"
+          ]
+        },
+        "armor": 385,
+        "classs": 4,
+        "displayName": "Vindicator's Belt",
+        "displayid": 684404,
+        "flags2": 24576,
+        "id": 272404,
+        "level": 60,
+        "name": "Vindicator's Belt",
+        "quality": 4,
+        "reqclass": 2,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 4,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 30
+      },
+      {
+        "appearances": {
+          "0": [
+            34610,
+            "inv_belt_34"
+          ]
+        },
+        "armor": 385,
+        "classs": 4,
+        "displayName": "Valiant's Waistguard",
+        "displayid": 34610,
+        "flags2": 24576,
+        "id": 272403,
+        "level": 60,
+        "name": "Valiant's Waistguard",
+        "quality": 4,
+        "reqclass": 1,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 4,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 70
+      },
+      {
+        "appearances": {
+          "0": [
+            684447,
+            "inv_belt_16"
+          ]
+        },
+        "armor": 217,
+        "classs": 4,
+        "displayName": "Prophet's Waistcord",
+        "displayid": 684447,
+        "flags2": 24576,
+        "id": 272402,
+        "level": 60,
+        "name": "Prophet's Waistcord",
+        "quality": 4,
+        "reqclass": 64,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 3,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 12
+      },
+      {
+        "appearances": {
+          "0": [
+            34637,
+            ""
+          ]
+        },
+        "armor": 104,
+        "classs": 4,
+        "displayName": "Elunite Cord",
+        "displayid": 34637,
+        "flags2": 24576,
+        "id": 272401,
+        "level": 60,
+        "name": "Elunite Cord",
+        "quality": 4,
+        "reqclass": 1024,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 11
+      },
+      {
+        "appearances": {
+          "0": [
+            684436,
+            "inv_belt_16"
+          ]
+        },
+        "armor": 217,
+        "classs": 4,
+        "displayName": "Stormseeker's Girdle",
+        "displayid": 684436,
+        "flags2": 24576,
+        "id": 272399,
+        "level": 60,
+        "name": "Stormseeker's Girdle",
+        "quality": 4,
+        "reqclass": 64,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 3,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 19
+      },
+      {
+        "appearances": {
+          "0": [
+            684464,
+            "inv_belt_15"
+          ]
+        },
+        "armor": 104,
+        "classs": 4,
+        "displayName": "Caretaker's Cord",
+        "displayid": 684464,
+        "flags2": 24576,
+        "id": 272398,
+        "level": 60,
+        "name": "Caretaker's Cord",
+        "quality": 4,
+        "reqclass": 1024,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 9
+      },
+      {
+        "appearances": {
+          "0": [
+            34646,
+            "inv_belt_28"
+          ]
+        },
+        "armor": 217,
+        "classs": 4,
+        "displayName": "Ranger's Belt",
+        "displayid": 34646,
+        "flags2": 24576,
+        "id": 272397,
+        "level": 60,
+        "name": "Ranger's Belt",
+        "quality": 4,
+        "reqclass": 4,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 3,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 50
+      },
+      {
+        "appearances": {
+          "0": [
+            684472,
+            "inv_belt_15"
+          ]
+        },
+        "armor": 104,
+        "classs": 4,
+        "displayName": "Shifter's Belt",
+        "displayid": 684472,
+        "flags2": 24576,
+        "id": 272396,
+        "level": 60,
+        "name": "Shifter's Belt",
+        "quality": 4,
+        "reqclass": 1024,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 45
+      },
+      {
+        "appearances": {
+          "0": [
+            34699,
+            "inv_belt_03"
+          ]
+        },
+        "armor": 104,
+        "classs": 4,
+        "displayName": "Assassin's Waistguard",
+        "displayid": 34699,
+        "flags2": 24576,
+        "id": 272395,
+        "level": 60,
+        "name": "Assassin's Waistguard",
+        "quality": 4,
+        "reqclass": 8,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 2,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 95
+      },
+      {
+        "appearances": {
+          "0": [
+            684388,
+            "inv_belt_10"
+          ]
+        },
+        "armor": 52,
+        "classs": 4,
+        "displayName": "Penitent's Cinch",
+        "displayid": 684388,
+        "flags2": 8192,
+        "id": 272394,
+        "level": 60,
+        "name": "Penitent's Cinch",
+        "quality": 4,
+        "reqclass": 16,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 1,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 14
+      },
+      {
+        "appearances": {
+          "0": [
+            34599,
+            "inv_belt_08"
+          ]
+        },
+        "armor": 52,
+        "classs": 4,
+        "displayName": "Magician's Cord",
+        "displayid": 34599,
+        "flags2": 16384,
+        "id": 272393,
+        "level": 60,
+        "name": "Magician's Cord",
+        "quality": 4,
+        "reqclass": 128,
+        "reqlevel": 60,
+        "slot": 6,
+        "slotbak": 6,
+        "source": [
+          5
+        ],
+        "sourcemore": [
+          {
+            "n": "Pix Xizzix",
+            "t": 1,
+            "ti": 227853,
+            "z": 33
+          }
+        ],
+        "subclass": 1,
+        "envChange": {
+          "status": "new",
+          "labels": [],
+          "lines": []
+        },
+        "cost": [
+          [
+            0,
+            [
+              [
+                3469,
+                100
+              ]
+            ],
+            []
+          ]
+        ],
+        "popularity": 18
+      }
+    ],
+    "allPublishedCurrencyItemIDs": [
+      272440,
+      272439,
+      272438,
+      272437,
+      272436,
+      272435,
+      272434,
+      272433,
+      272432,
+      272431,
+      272430,
+      272429,
+      272428,
+      272427,
+      272415,
+      272414,
+      272413,
+      272411,
+      272410,
+      272409,
+      272408,
+      272407,
+      272406,
+      272405,
+      272404,
+      272403,
+      272402,
+      272401,
+      272399,
+      272398,
+      272397,
+      272396,
+      272395,
+      272394,
+      272393,
+      272151,
+      236414,
+      232457,
+      232456,
+      232455,
+      232454,
+      228189,
+      228176,
+      228175,
+      226405,
+      17012,
+      17011,
+      17010,
+      13522,
+      13521,
+      13520,
+      13519,
+      13518
+    ],
+    "currencyTypeEmbeddedIdentity": "WH.Gatherer.addData type17; not item identity type3"
+  },
+  "separatePhysicalItem": {
+    "url": "https://www.wowhead.com/forever/item=226404",
+    "bytes": 47962,
+    "sha256": "4254b1de6c62031576658564cea962a260abb2c6fde77ae28e2555c1adc2070c",
+    "title": "Tarnished Undermine Real - Item - Forever",
+    "tooltipText": "Tarnished Undermine Real      Item Level  60   Binds when picked up Unique (250)              \"This currency is slowly being phased out of circulation, but it still enjoys a very favorable exchange rate throughout the Eastern Kingdoms and Kalimdor.\"     Max Stack: 250",
+    "identity": {
+      "classs": 12,
+      "displayName": "Tarnished Undermine Real",
+      "flags2": 8196,
+      "id": 226404,
+      "level": 60,
+      "name": "Tarnished Undermine Real",
+      "quality": 2,
+      "slot": 0,
+      "subclass": 0,
+      "envChange": {
+        "status": "updated",
+        "labels": [
+          "reworded"
+        ],
+        "lines": [
+          "Flavor text reworded"
+        ],
+        "notShown": []
+      },
+      "jsonequip": {
+        "quality": 2,
+        "classs": 12,
+        "displayName": "Tarnished Undermine Real",
+        "flags2": 8196,
+        "id": 226404,
+        "level": 60,
+        "name": "Tarnished Undermine Real",
+        "slot": 0,
+        "subclass": 0,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "reworded"
+          ],
+          "lines": [
+            "Flavor text reworded"
+          ],
+          "notShown": []
+        },
+        "dmgrange": 1.0,
+        "itemSquishEraId": 0,
+        "maxcount": 250,
+        "reqlevel": 1,
+        "statsInfo": []
+      }
+    },
+    "namedAcquisitionLists": []
+  },
+  "guide": {
+    "url": "https://www.wowhead.com/forever/guide/currency/tarnished-undermine-real-overview",
+    "bytes": 85431,
+    "sha256": "756fb4e1e20d3972ffeff618d113ac95ef122b428afe8a6c73de078ccd8b47fc",
+    "updated": "2026-10-25",
+    "usedFacts": "As of guide date earning drops not observed;55+ dungeon-boss model explicitly assumed fromSoD; rewards beta/may change; previous55 purchase gate unconfirmed. Not current zero-drop proof or a current guaranteed earning/reset/rank. Compact facts only, no guide article copied."
+  },
+  "secondaryCurrencyContext": {
+    "url": "https://wowgoldfarms.com/guides/forever/undermine-coins-wow-forever/",
+    "status": "Search read; beta70291 datamine context, not adopted as current farm, trade, conversion or weekly-cap fact"
+  },
+  "method": "42 new exact output identities/merchant cost/stock joins.31 primary currency embedded identities and currency reverse item/cost matches.11 exact Exalted tooltip/reqrep7/faction2798/inventory7 matches. Published cap165 separate from item226404250 limits; no currency-to-item ID conflation, assumed live boss farm, prior level55 gate or regular crafting added."
+}

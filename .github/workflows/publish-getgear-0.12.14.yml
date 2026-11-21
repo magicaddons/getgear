@@ -1,10 +1,6 @@
 name: Publish GetGear v0.12.14 beta
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/publish-getgear-0.12.14.yml'
   workflow_dispatch:
 
 permissions:

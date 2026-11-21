@@ -1,0 +1,138 @@
+{
+  "refs": [
+    {
+      "name": "settings-ui-refinement",
+      "sha": "3e590ae438b2064bea756d40356ee5bc5c1205d4"
+    },
+    {
+      "name": "recommendation-sources-stat-priorities",
+      "sha": "ffd60c0c3c658ecff9dbabc09c442b4182955bf5"
+    },
+    {
+      "name": "accepted-beta9",
+      "sha": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3"
+    },
+    {
+      "name": "main-and-original-work",
+      "sha": "4ba2a850c4e3933b85f40c82a50b98314f117d80"
+    }
+  ],
+  "settingsVsStatBranch": {
+    "status": "ahead",
+    "ahead": 7,
+    "behind": 0,
+    "files": [
+      ".github/workflows/recommendation-validation.yml",
+      "AGENTS.md",
+      "AcquisitionNavigation.lua",
+      "Core.lua",
+      "FactionEligibilityData.lua",
+      "GearCompare.lua",
+      "GearRelevance.lua",
+      "GetGear.toc",
+      "GuideEngine.lua",
+      "Materials.lua",
+      "StatPriorities.lua",
+      "TalentAwareness.lua",
+      "UI.lua",
+      "docs/GLOBAL_FILTERING_POLICY.md",
+      "docs/RECONCILIATION_PROGRESS.md",
+      "docs/SETTINGS_UI_REFINEMENT.md",
+      "docs/faction-audit/REPORT.md",
+      "docs/faction-audit/audit-summary.json",
+      "docs/faction-audit/catalogue-eligibility.csv",
+      "docs/faction-audit/catalogue-evidence-audit.csv",
+      "docs/faction-audit/ci-pass-lines.txt",
+      "docs/faction-audit/eligibility-changes.json",
+      "docs/faction-audit/evidence.json",
+      "docs/faction-audit/fresh-diagnostic-log.txt",
+      "docs/faction-audit/fresh-diagnostic.json",
+      "docs/faction-audit/local-checks.txt",
+      "docs/faction-audit/local-summary.json",
+      "docs/faction-audit/reputation-factions.json",
+      "docs/faction-audit/validation.json",
+      "docs/in-game-acceptance/REPORT.md",
+      "docs/in-game-acceptance/black-whelp-tooltip-evidence.json",
+      "docs/in-game-acceptance/ci-pass-lines.txt",
+      "docs/in-game-acceptance/fresh-diagnostic-log.txt",
+      "docs/in-game-acceptance/fresh-diagnostic.json",
+      "docs/in-game-acceptance/local-checks.txt",
+      "docs/in-game-acceptance/local-summary.json",
+      "docs/in-game-acceptance/source-selection-review.txt",
+      "docs/in-game-acceptance/validation.json",
+      "docs/recommendation-audit/equipment-source-eligibility.csv",
+      "docs/settings-ui-validation.json",
+      "docs/settings-ui-validation/ci-pass-lines.txt",
+      "docs/settings-ui-validation/fresh-diagnostic.json",
+      "docs/settings-ui-validation/fresh-diagnostic.log",
+      "docs/settings-ui-validation/local-checks.txt",
+      "docs/settings-ui-validation/unadopted-role-confidence-diff.json",
+      "docs/source-audit-1-60/RELEASE_GATE.md",
+      "docs/source-audit-1-60/reconciliation-20261109/acceptance2_button_coverage.csv",
+      "docs/source-audit-1-60/reconciliation-20261109/acceptance2_button_coverage.txt",
+      "tests/acquisition-practicality.lua",
+      "tests/beta4-performance.lua",
+      "tests/faction-evidence-generation.py",
+      "tests/faction-global-eligibility.lua",
+      "tests/full-toc-startup.lua",
+      "tests/overlay-wrapped-layout.lua",
+      "tests/stat-priority-settings.lua",
+      "tests/talent-recommendations.lua",
+      "tools/audit_acquisition_buttons.lua",
+      "tools/audit_faction_eligibility.lua",
+      "tools/audit_recommendation_sources.lua",
+      "tools/build_faction_eligibility.py",
+      "tools/validate_recommendations.py"
+    ]
+  },
+  "ancestry": [
+    {
+      "base": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3",
+      "head": "3e590ae438b2064bea756d40356ee5bc5c1205d4",
+      "status": "ahead",
+      "ahead": 18,
+      "behind": 0,
+      "mergeBase": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3"
+    },
+    {
+      "base": "work/overlay-positive-stat-filter",
+      "head": "3e590ae438b2064bea756d40356ee5bc5c1205d4",
+      "status": "diverged",
+      "ahead": 606,
+      "behind": 6,
+      "mergeBase": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4"
+    },
+    {
+      "base": "work/overlay-hide-green-boe-world-drops",
+      "head": "3e590ae438b2064bea756d40356ee5bc5c1205d4",
+      "status": "ahead",
+      "ahead": 606,
+      "behind": 0,
+      "mergeBase": "cf7fa410f841cc19c84f4514e6b98ec435ff2ec4"
+    },
+    {
+      "base": "fix/clean-comparison-disclaimers",
+      "head": "3e590ae438b2064bea756d40356ee5bc5c1205d4",
+      "status": "diverged",
+      "ahead": 796,
+      "behind": 24,
+      "mergeBase": "ffb861acd17c70d29b38c3be90b2030c2559adb2"
+    },
+    {
+      "base": "work/full-acquisition-reconciliation-20261109",
+      "head": "3e590ae438b2064bea756d40356ee5bc5c1205d4",
+      "status": "ahead",
+      "ahead": 17,
+      "behind": 0,
+      "mergeBase": "0958954a542380173e4382e66bfd950738415162"
+    },
+    {
+      "base": "dev/recommendation-pipeline",
+      "head": "3e590ae438b2064bea756d40356ee5bc5c1205d4",
+      "status": "diverged",
+      "ahead": 18,
+      "behind": 3,
+      "mergeBase": "04992876bd4f50b66d6b6dd78d00b32cd0594cd3"
+    }
+  ]
+}

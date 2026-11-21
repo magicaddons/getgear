@@ -1,0 +1,3945 @@
+{
+  "baselineCommit": "b08945d44fd454c13446a322bedbb58b1acc77fa",
+  "implementationRevision": "d96453008f5124186f50c593594e479841ea8a5d",
+  "implementationHasUncommittedChanges": true,
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "repeats": 3,
+  "actualClientTested": false,
+  "qualification": "Sequential identical workloads; median synthetic CPU times. Inclusive profile times overlap. Net heap is GC-sensitive; GC-paused Lua growth is a proxy, not a client allocation counter.",
+  "interpreters": {
+    "5.1": {
+      "executable": "/workspace/.getgear-tools/lua/usr/bin/lua5.1",
+      "scenarios": {
+        "warm overlay x10": {
+          "baseline": {
+            "medianMilliseconds": 726.974,
+            "counts": {
+              "records": 25480,
+              "sourceChecks": 54710,
+              "routes": 78090,
+              "comparisons": 3460,
+              "obsolete": 9440,
+              "professions": 80,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 162.958,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -77.58
+        },
+        "one loot": {
+          "baseline": {
+            "medianMilliseconds": 64.038,
+            "counts": {
+              "records": 2548,
+              "sourceChecks": 5471,
+              "routes": 7809,
+              "comparisons": 346,
+              "obsolete": 944,
+              "professions": 8,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 19.057,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -70.24
+        },
+        "rapid loot x12": {
+          "baseline": {
+            "medianMilliseconds": 64.36,
+            "counts": {
+              "records": 2548,
+              "sourceChecks": 5471,
+              "routes": 7809,
+              "comparisons": 346,
+              "obsolete": 944,
+              "professions": 8,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 19.12,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -70.29
+        },
+        "mining + skill": {
+          "baseline": {
+            "medianMilliseconds": 125.288,
+            "counts": {
+              "records": 5096,
+              "sourceChecks": 10942,
+              "routes": 15618,
+              "comparisons": 692,
+              "obsolete": 1888,
+              "professions": 16,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 33.803,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -73.02
+        },
+        "movement zones x10": {
+          "baseline": {
+            "medianMilliseconds": 698.934,
+            "counts": {
+              "records": 25480,
+              "sourceChecks": 54710,
+              "routes": 78090,
+              "comparisons": 3460,
+              "obsolete": 9440,
+              "professions": 80,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 162.652,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -76.73
+        },
+        "ordinary movement idle": {
+          "baseline": {
+            "medianMilliseconds": 0.005,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 0.005,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": 0.0
+        },
+        "collapsed materials": {
+          "baseline": {
+            "medianMilliseconds": 63.82,
+            "counts": {
+              "records": 2548,
+              "sourceChecks": 5471,
+              "routes": 7809,
+              "comparisons": 346,
+              "obsolete": 944,
+              "professions": 8,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 16.341,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -74.4
+        },
+        "slot changes x3": {
+          "baseline": {
+            "medianMilliseconds": 174.685,
+            "counts": {
+              "records": 7644,
+              "sourceChecks": 16413,
+              "routes": 23382,
+              "comparisons": 994,
+              "obsolete": 2832,
+              "professions": 26,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 44.831,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          },
+          "timeChangePercent": -74.34
+        },
+        "open close x3": {
+          "baseline": {
+            "medianMilliseconds": 194.092,
+            "counts": {
+              "records": 7644,
+              "sourceChecks": 16413,
+              "routes": 23427,
+              "comparisons": 1038,
+              "obsolete": 2832,
+              "professions": 24,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 49.492,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -74.5
+        },
+        "priority settings": {
+          "baseline": {
+            "medianMilliseconds": 183.173,
+            "counts": {
+              "records": 7644,
+              "sourceChecks": 16413,
+              "routes": 23427,
+              "comparisons": 2294,
+              "obsolete": 2832,
+              "professions": 24,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 48.887,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -73.31
+        },
+        "equipment": {
+          "baseline": {
+            "medianMilliseconds": 68.827,
+            "counts": {
+              "records": 2548,
+              "sourceChecks": 5471,
+              "routes": 7809,
+              "comparisons": 346,
+              "obsolete": 944,
+              "professions": 8,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 19.688,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -71.39
+        },
+        "profession": {
+          "baseline": {
+            "medianMilliseconds": 121.031,
+            "counts": {
+              "records": 5096,
+              "sourceChecks": 10942,
+              "routes": 15618,
+              "comparisons": 692,
+              "obsolete": 1888,
+              "professions": 16,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 33.632,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -72.21
+        },
+        "hide restore": {
+          "baseline": {
+            "medianMilliseconds": 124.039,
+            "counts": {
+              "records": 5096,
+              "sourceChecks": 10939,
+              "routes": 15613,
+              "comparisons": 691,
+              "obsolete": 1885,
+              "professions": 16,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 33.425,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          },
+          "timeChangePercent": -73.05
+        },
+        "detail + overlay": {
+          "baseline": {
+            "medianMilliseconds": 135.846,
+            "counts": {
+              "records": 7644,
+              "sourceChecks": 10903,
+              "routes": 17479,
+              "comparisons": 426,
+              "obsolete": 1280,
+              "professions": 20,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 30.259,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          },
+          "timeChangePercent": -77.73
+        }
+      },
+      "samples": {
+        "baseline": [
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 726.974,
+                "netHeapKB": 57533.6,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 64.764,
+                "netHeapKB": 15056.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 64.36,
+                "netHeapKB": 15038.4,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 120.683,
+                "netHeapKB": 29918.2,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 686.756,
+                "netHeapKB": 57352.1,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.004,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 61.895,
+                "netHeapKB": 15017.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 179.412,
+                "netHeapKB": 44414.4,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23382,
+                  "comparisons": 994,
+                  "obsolete": 2832,
+                  "professions": 26,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 204.643,
+                "netHeapKB": 44796.0,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 1038,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 186.661,
+                "netHeapKB": 45793.6,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 2294,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 68.827,
+                "netHeapKB": 15035.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 122.876,
+                "netHeapKB": 29915.9,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 126.118,
+                "netHeapKB": 29973.7,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10939,
+                  "routes": 15613,
+                  "comparisons": 691,
+                  "obsolete": 1885,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 135.846,
+                "netHeapKB": 33309.2,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 10903,
+                  "routes": 17479,
+                  "comparisons": 426,
+                  "obsolete": 1280,
+                  "professions": 20,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 15031.9,
+            "separateRoutes": 126440,
+            "separateSources": 81870,
+            "sharedRoutes": 126440,
+            "sharedSources": 81870
+          },
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 725.768,
+                "netHeapKB": 57533.6,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 62.597,
+                "netHeapKB": 15056.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 82.244,
+                "netHeapKB": 15038.4,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 125.288,
+                "netHeapKB": 29918.2,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 698.934,
+                "netHeapKB": 57352.1,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.005,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 63.82,
+                "netHeapKB": 15017.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 174.685,
+                "netHeapKB": 44414.4,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23382,
+                  "comparisons": 994,
+                  "obsolete": 2832,
+                  "professions": 26,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 177.35,
+                "netHeapKB": 44796.0,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 1038,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 183.173,
+                "netHeapKB": 45793.6,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 2294,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 65.538,
+                "netHeapKB": 15035.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 121.031,
+                "netHeapKB": 29915.9,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 120.126,
+                "netHeapKB": 29973.7,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10939,
+                  "routes": 15613,
+                  "comparisons": 691,
+                  "obsolete": 1885,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 130.922,
+                "netHeapKB": 33309.2,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 10903,
+                  "routes": 17479,
+                  "comparisons": 426,
+                  "obsolete": 1280,
+                  "professions": 20,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 15031.9,
+            "separateRoutes": 126440,
+            "separateSources": 81870,
+            "sharedRoutes": 126440,
+            "sharedSources": 81870
+          },
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 786.518,
+                "netHeapKB": 57533.6,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 64.038,
+                "netHeapKB": 15056.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 60.577,
+                "netHeapKB": 15038.4,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 125.437,
+                "netHeapKB": 29918.2,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 700.477,
+                "netHeapKB": 57352.1,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.007,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 64.733,
+                "netHeapKB": 15017.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 172.394,
+                "netHeapKB": 44414.4,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23382,
+                  "comparisons": 994,
+                  "obsolete": 2832,
+                  "professions": 26,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 194.092,
+                "netHeapKB": 44796.0,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 1038,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 182.821,
+                "netHeapKB": 45793.6,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 2294,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 70.559,
+                "netHeapKB": 15035.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 120.502,
+                "netHeapKB": 29915.9,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 124.039,
+                "netHeapKB": 29973.7,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10939,
+                  "routes": 15613,
+                  "comparisons": 691,
+                  "obsolete": 1885,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 142.442,
+                "netHeapKB": 33309.2,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 10903,
+                  "routes": 17479,
+                  "comparisons": 426,
+                  "obsolete": 1280,
+                  "professions": 20,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 15031.9,
+            "separateRoutes": 126440,
+            "separateSources": 81870,
+            "sharedRoutes": 126440,
+            "sharedSources": 81870
+          }
+        ],
+        "implementation": [
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 162.958,
+                "netHeapKB": 16078.0,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 19.15,
+                "netHeapKB": 1691.0,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 20.282,
+                "netHeapKB": 1672.7,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 33.803,
+                "netHeapKB": 3253.4,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 183.827,
+                "netHeapKB": 15903.9,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.005,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 17.03,
+                "netHeapKB": 1572.9,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 0,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 44.831,
+                "netHeapKB": 4608.4,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 994,
+                  "obsolete": 942,
+                  "professions": 4,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 72.224,
+                "netHeapKB": 4832.7,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 47.95,
+                "netHeapKB": 5075.8,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 21.539,
+                "netHeapKB": 1670.1,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 33.632,
+                "netHeapKB": 3251.1,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 33.425,
+                "netHeapKB": 3320.4,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 691,
+                  "obsolete": 627,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 30.259,
+                "netHeapKB": 4083.0,
+                "counts": {
+                  "records": 2927,
+                  "sourceChecks": 604,
+                  "routes": 632,
+                  "comparisons": 408,
+                  "obsolete": 482,
+                  "professions": 2,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 1665.7,
+            "separateRoutes": 6320,
+            "separateSources": 6040,
+            "sharedRoutes": 4160,
+            "sharedSources": 3900
+          },
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 179.435,
+                "netHeapKB": 16078.0,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 18.055,
+                "netHeapKB": 1691.0,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 18.678,
+                "netHeapKB": 1672.7,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 32.222,
+                "netHeapKB": 3253.4,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 153.605,
+                "netHeapKB": 15903.9,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.005,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 15.705,
+                "netHeapKB": 1572.9,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 0,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 44.387,
+                "netHeapKB": 4608.4,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 994,
+                  "obsolete": 942,
+                  "professions": 4,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 45.366,
+                "netHeapKB": 4832.7,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 48.887,
+                "netHeapKB": 5075.8,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 17.872,
+                "netHeapKB": 1670.1,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 32.117,
+                "netHeapKB": 3251.1,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 32.322,
+                "netHeapKB": 3320.4,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 691,
+                  "obsolete": 627,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 30.068,
+                "netHeapKB": 4083.0,
+                "counts": {
+                  "records": 2927,
+                  "sourceChecks": 604,
+                  "routes": 632,
+                  "comparisons": 408,
+                  "obsolete": 482,
+                  "professions": 2,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 1665.7,
+            "separateRoutes": 6320,
+            "separateSources": 6040,
+            "sharedRoutes": 4160,
+            "sharedSources": 3900
+          },
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 154.574,
+                "netHeapKB": 16078.0,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 19.057,
+                "netHeapKB": 1691.0,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 19.12,
+                "netHeapKB": 1672.7,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 34.55,
+                "netHeapKB": 3253.4,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 162.652,
+                "netHeapKB": 15903.9,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.004,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 16.341,
+                "netHeapKB": 1572.9,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 0,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 45.59,
+                "netHeapKB": 4608.4,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 994,
+                  "obsolete": 942,
+                  "professions": 4,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 49.492,
+                "netHeapKB": 4832.7,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 53.3,
+                "netHeapKB": 5075.8,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 19.688,
+                "netHeapKB": 1670.1,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 38.027,
+                "netHeapKB": 3251.1,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 35.584,
+                "netHeapKB": 3320.4,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 691,
+                  "obsolete": 627,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 30.586,
+                "netHeapKB": 4083.0,
+                "counts": {
+                  "records": 2927,
+                  "sourceChecks": 604,
+                  "routes": 632,
+                  "comparisons": 408,
+                  "obsolete": 482,
+                  "professions": 2,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 1665.7,
+            "separateRoutes": 6320,
+            "separateSources": 6040,
+            "sharedRoutes": 4160,
+            "sharedSources": 3900
+          }
+        ]
+      }
+    },
+    "5.4": {
+      "executable": "/workspace/.getgear-tools/lua/usr/bin/lua5.4",
+      "scenarios": {
+        "warm overlay x10": {
+          "baseline": {
+            "medianMilliseconds": 532.072,
+            "counts": {
+              "records": 25480,
+              "sourceChecks": 54710,
+              "routes": 78090,
+              "comparisons": 3460,
+              "obsolete": 9440,
+              "professions": 80,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 130.458,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2590,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -75.48
+        },
+        "one loot": {
+          "baseline": {
+            "medianMilliseconds": 50.178,
+            "counts": {
+              "records": 2548,
+              "sourceChecks": 5471,
+              "routes": 7809,
+              "comparisons": 346,
+              "obsolete": 944,
+              "professions": 8,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 15.022,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 259,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -70.06
+        },
+        "rapid loot x12": {
+          "baseline": {
+            "medianMilliseconds": 51.936,
+            "counts": {
+              "records": 2548,
+              "sourceChecks": 5471,
+              "routes": 7809,
+              "comparisons": 346,
+              "obsolete": 944,
+              "professions": 8,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 15.64,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -69.89
+        },
+        "mining + skill": {
+          "baseline": {
+            "medianMilliseconds": 106.912,
+            "counts": {
+              "records": 5096,
+              "sourceChecks": 10942,
+              "routes": 15618,
+              "comparisons": 692,
+              "obsolete": 1888,
+              "professions": 16,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 27.894,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -73.91
+        },
+        "movement zones x10": {
+          "baseline": {
+            "medianMilliseconds": 520.776,
+            "counts": {
+              "records": 25480,
+              "sourceChecks": 54710,
+              "routes": 78090,
+              "comparisons": 3460,
+              "obsolete": 9440,
+              "professions": 80,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 125.036,
+            "counts": {
+              "records": 10930,
+              "sourceChecks": 3900,
+              "routes": 4160,
+              "comparisons": 3460,
+              "obsolete": 3140,
+              "professions": 10,
+              "aggregate": 10,
+              "undocumented": 10,
+              "textWrites": 2530,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -75.99
+        },
+        "ordinary movement idle": {
+          "baseline": {
+            "medianMilliseconds": 0.006,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 0.006,
+            "counts": {
+              "records": 0,
+              "sourceChecks": 0,
+              "routes": 0,
+              "comparisons": 0,
+              "obsolete": 0,
+              "professions": 0,
+              "aggregate": 0,
+              "undocumented": 0,
+              "textWrites": 0,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": 0.0
+        },
+        "collapsed materials": {
+          "baseline": {
+            "medianMilliseconds": 48.364,
+            "counts": {
+              "records": 2548,
+              "sourceChecks": 5471,
+              "routes": 7809,
+              "comparisons": 346,
+              "obsolete": 944,
+              "professions": 8,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 13.359,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 0,
+              "undocumented": 1,
+              "textWrites": 187,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -72.38
+        },
+        "slot changes x3": {
+          "baseline": {
+            "medianMilliseconds": 154.606,
+            "counts": {
+              "records": 7644,
+              "sourceChecks": 16413,
+              "routes": 23382,
+              "comparisons": 994,
+              "obsolete": 2832,
+              "professions": 26,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 36.345,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 994,
+              "obsolete": 942,
+              "professions": 4,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 551,
+              "newFrames": 171
+            }
+          },
+          "timeChangePercent": -76.49
+        },
+        "open close x3": {
+          "baseline": {
+            "medianMilliseconds": 156.67,
+            "counts": {
+              "records": 7644,
+              "sourceChecks": 16413,
+              "routes": 23427,
+              "comparisons": 1038,
+              "obsolete": 2832,
+              "professions": 24,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 37.648,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -75.97
+        },
+        "priority settings": {
+          "baseline": {
+            "medianMilliseconds": 162.214,
+            "counts": {
+              "records": 7644,
+              "sourceChecks": 16413,
+              "routes": 23427,
+              "comparisons": 2294,
+              "obsolete": 2832,
+              "professions": 24,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 41.274,
+            "counts": {
+              "records": 3279,
+              "sourceChecks": 1170,
+              "routes": 1248,
+              "comparisons": 1038,
+              "obsolete": 942,
+              "professions": 3,
+              "aggregate": 3,
+              "undocumented": 3,
+              "textWrites": 759,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -74.56
+        },
+        "equipment": {
+          "baseline": {
+            "medianMilliseconds": 53.122,
+            "counts": {
+              "records": 2548,
+              "sourceChecks": 5471,
+              "routes": 7809,
+              "comparisons": 346,
+              "obsolete": 944,
+              "professions": 8,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 16.956,
+            "counts": {
+              "records": 1093,
+              "sourceChecks": 390,
+              "routes": 416,
+              "comparisons": 346,
+              "obsolete": 314,
+              "professions": 1,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 253,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -68.08
+        },
+        "profession": {
+          "baseline": {
+            "medianMilliseconds": 103.75,
+            "counts": {
+              "records": 5096,
+              "sourceChecks": 10942,
+              "routes": 15618,
+              "comparisons": 692,
+              "obsolete": 1888,
+              "professions": 16,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 28.161,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 692,
+              "obsolete": 628,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 0
+            }
+          },
+          "timeChangePercent": -72.86
+        },
+        "hide restore": {
+          "baseline": {
+            "medianMilliseconds": 107.516,
+            "counts": {
+              "records": 5096,
+              "sourceChecks": 10939,
+              "routes": 15613,
+              "comparisons": 691,
+              "obsolete": 1885,
+              "professions": 16,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 26.454,
+            "counts": {
+              "records": 2186,
+              "sourceChecks": 780,
+              "routes": 832,
+              "comparisons": 691,
+              "obsolete": 627,
+              "professions": 2,
+              "aggregate": 2,
+              "undocumented": 2,
+              "textWrites": 506,
+              "newFrames": 54
+            }
+          },
+          "timeChangePercent": -75.4
+        },
+        "detail + overlay": {
+          "baseline": {
+            "medianMilliseconds": 111.285,
+            "counts": {
+              "records": 7644,
+              "sourceChecks": 10903,
+              "routes": 17479,
+              "comparisons": 426,
+              "obsolete": 1280,
+              "professions": 20,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          },
+          "implementation": {
+            "medianMilliseconds": 24.375,
+            "counts": {
+              "records": 2927,
+              "sourceChecks": 604,
+              "routes": 632,
+              "comparisons": 408,
+              "obsolete": 482,
+              "professions": 2,
+              "aggregate": 1,
+              "undocumented": 1,
+              "textWrites": 1235,
+              "newFrames": 992
+            }
+          },
+          "timeChangePercent": -78.1
+        }
+      },
+      "samples": {
+        "baseline": [
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 536.487,
+                "netHeapKB": 10210.6,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 49.661,
+                "netHeapKB": 9905.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 55.07,
+                "netHeapKB": 9890.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 118.774,
+                "netHeapKB": 8872.1,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 520.776,
+                "netHeapKB": 10057.0,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.005,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 50.894,
+                "netHeapKB": 9871.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 154.606,
+                "netHeapKB": 7358.4,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23382,
+                  "comparisons": 994,
+                  "obsolete": 2832,
+                  "professions": 26,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 156.67,
+                "netHeapKB": 7594.1,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 1038,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 158.099,
+                "netHeapKB": 8347.2,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 2294,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 48.943,
+                "netHeapKB": 9888.7,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 101.073,
+                "netHeapKB": 8836.1,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 107.516,
+                "netHeapKB": 8921.7,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10939,
+                  "routes": 15613,
+                  "comparisons": 691,
+                  "obsolete": 1885,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 115.678,
+                "netHeapKB": 12177.8,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 10903,
+                  "routes": 17479,
+                  "comparisons": 426,
+                  "obsolete": 1280,
+                  "professions": 20,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 9885.5,
+            "separateRoutes": 126440,
+            "separateSources": 81870,
+            "sharedRoutes": 126440,
+            "sharedSources": 81870
+          },
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 532.072,
+                "netHeapKB": 10210.6,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 53.544,
+                "netHeapKB": 9905.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 48.07,
+                "netHeapKB": 9890.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 106.912,
+                "netHeapKB": 8872.1,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 509.677,
+                "netHeapKB": 10057.0,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.006,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 47.44,
+                "netHeapKB": 9871.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 143.26,
+                "netHeapKB": 7358.4,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23382,
+                  "comparisons": 994,
+                  "obsolete": 2832,
+                  "professions": 26,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 171.226,
+                "netHeapKB": 7594.1,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 1038,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 168.729,
+                "netHeapKB": 8347.2,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 2294,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 53.122,
+                "netHeapKB": 9888.7,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 103.75,
+                "netHeapKB": 8836.1,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 109.884,
+                "netHeapKB": 8921.7,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10939,
+                  "routes": 15613,
+                  "comparisons": 691,
+                  "obsolete": 1885,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 111.285,
+                "netHeapKB": 12177.8,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 10903,
+                  "routes": 17479,
+                  "comparisons": 426,
+                  "obsolete": 1280,
+                  "professions": 20,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 9885.5,
+            "separateRoutes": 126440,
+            "separateSources": 81870,
+            "sharedRoutes": 126440,
+            "sharedSources": 81870
+          },
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 523.857,
+                "netHeapKB": 10210.6,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 50.178,
+                "netHeapKB": 9905.9,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 51.936,
+                "netHeapKB": 9890.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 103.234,
+                "netHeapKB": 8872.1,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 553.925,
+                "netHeapKB": 10057.0,
+                "counts": {
+                  "records": 25480,
+                  "sourceChecks": 54710,
+                  "routes": 78090,
+                  "comparisons": 3460,
+                  "obsolete": 9440,
+                  "professions": 80,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.006,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 48.364,
+                "netHeapKB": 9871.8,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 179.789,
+                "netHeapKB": 7358.4,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23382,
+                  "comparisons": 994,
+                  "obsolete": 2832,
+                  "professions": 26,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 154.147,
+                "netHeapKB": 7594.1,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 1038,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 162.214,
+                "netHeapKB": 8347.2,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 16413,
+                  "routes": 23427,
+                  "comparisons": 2294,
+                  "obsolete": 2832,
+                  "professions": 24,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 53.85,
+                "netHeapKB": 9888.7,
+                "counts": {
+                  "records": 2548,
+                  "sourceChecks": 5471,
+                  "routes": 7809,
+                  "comparisons": 346,
+                  "obsolete": 944,
+                  "professions": 8,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 110.027,
+                "netHeapKB": 8836.1,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10942,
+                  "routes": 15618,
+                  "comparisons": 692,
+                  "obsolete": 1888,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 102.754,
+                "netHeapKB": 8921.7,
+                "counts": {
+                  "records": 5096,
+                  "sourceChecks": 10939,
+                  "routes": 15613,
+                  "comparisons": 691,
+                  "obsolete": 1885,
+                  "professions": 16,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 107.488,
+                "netHeapKB": 12177.8,
+                "counts": {
+                  "records": 7644,
+                  "sourceChecks": 10903,
+                  "routes": 17479,
+                  "comparisons": 426,
+                  "obsolete": 1280,
+                  "professions": 20,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 9885.5,
+            "separateRoutes": 126440,
+            "separateSources": 81870,
+            "sharedRoutes": 126440,
+            "sharedSources": 81870
+          }
+        ],
+        "implementation": [
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 138.169,
+                "netHeapKB": 2347.8,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 14.935,
+                "netHeapKB": 1357.8,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 15.526,
+                "netHeapKB": 1342.7,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 27.894,
+                "netHeapKB": 2601.3,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 126.473,
+                "netHeapKB": 2237.4,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.006,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 13.359,
+                "netHeapKB": 1261.8,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 0,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 36.345,
+                "netHeapKB": 3590.4,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 994,
+                  "obsolete": 942,
+                  "professions": 4,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 37.425,
+                "netHeapKB": 3859.0,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 41.735,
+                "netHeapKB": 4034.9,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 16.956,
+                "netHeapKB": 1340.6,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 27.298,
+                "netHeapKB": 2599.6,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 26.454,
+                "netHeapKB": 2648.1,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 691,
+                  "obsolete": 627,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 23.565,
+                "netHeapKB": 3443.9,
+                "counts": {
+                  "records": 2927,
+                  "sourceChecks": 604,
+                  "routes": 632,
+                  "comparisons": 408,
+                  "obsolete": 482,
+                  "professions": 2,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 1337.1,
+            "separateRoutes": 6320,
+            "separateSources": 6040,
+            "sharedRoutes": 4160,
+            "sharedSources": 3900
+          },
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 120.526,
+                "netHeapKB": 2347.8,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 15.022,
+                "netHeapKB": 1357.8,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 15.64,
+                "netHeapKB": 1342.7,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 28.556,
+                "netHeapKB": 2601.3,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 124.225,
+                "netHeapKB": 2237.4,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.006,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 13.305,
+                "netHeapKB": 1261.8,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 0,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 35.22,
+                "netHeapKB": 3590.4,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 994,
+                  "obsolete": 942,
+                  "professions": 4,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 37.648,
+                "netHeapKB": 3859.0,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 41.274,
+                "netHeapKB": 4034.9,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 15.929,
+                "netHeapKB": 1340.6,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 28.161,
+                "netHeapKB": 2599.6,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 26.033,
+                "netHeapKB": 2648.1,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 691,
+                  "obsolete": 627,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 24.375,
+                "netHeapKB": 3443.9,
+                "counts": {
+                  "records": 2927,
+                  "sourceChecks": 604,
+                  "routes": 632,
+                  "comparisons": 408,
+                  "obsolete": 482,
+                  "professions": 2,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 1337.1,
+            "separateRoutes": 6320,
+            "separateSources": 6040,
+            "sharedRoutes": 4160,
+            "sharedSources": 3900
+          },
+          {
+            "scenarios": {
+              "warm overlay x10": {
+                "milliseconds": 130.458,
+                "netHeapKB": 2347.8,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2590,
+                  "newFrames": 0
+                }
+              },
+              "one loot": {
+                "milliseconds": 15.66,
+                "netHeapKB": 1357.8,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 259,
+                  "newFrames": 0
+                }
+              },
+              "rapid loot x12": {
+                "milliseconds": 16.194,
+                "netHeapKB": 1342.7,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "mining + skill": {
+                "milliseconds": 26.139,
+                "netHeapKB": 2601.3,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "movement zones x10": {
+                "milliseconds": 125.036,
+                "netHeapKB": 2237.4,
+                "counts": {
+                  "records": 10930,
+                  "sourceChecks": 3900,
+                  "routes": 4160,
+                  "comparisons": 3460,
+                  "obsolete": 3140,
+                  "professions": 10,
+                  "aggregate": 10,
+                  "undocumented": 10,
+                  "textWrites": 2530,
+                  "newFrames": 0
+                }
+              },
+              "ordinary movement idle": {
+                "milliseconds": 0.005,
+                "netHeapKB": 0.0,
+                "counts": {
+                  "records": 0,
+                  "sourceChecks": 0,
+                  "routes": 0,
+                  "comparisons": 0,
+                  "obsolete": 0,
+                  "professions": 0,
+                  "aggregate": 0,
+                  "undocumented": 0,
+                  "textWrites": 0,
+                  "newFrames": 0
+                }
+              },
+              "collapsed materials": {
+                "milliseconds": 15.495,
+                "netHeapKB": 1261.8,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 0,
+                  "undocumented": 1,
+                  "textWrites": 187,
+                  "newFrames": 0
+                }
+              },
+              "slot changes x3": {
+                "milliseconds": 46.179,
+                "netHeapKB": 3590.4,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 994,
+                  "obsolete": 942,
+                  "professions": 4,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 551,
+                  "newFrames": 171
+                }
+              },
+              "open close x3": {
+                "milliseconds": 41.039,
+                "netHeapKB": 3859.0,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "priority settings": {
+                "milliseconds": 41.007,
+                "netHeapKB": 4034.9,
+                "counts": {
+                  "records": 3279,
+                  "sourceChecks": 1170,
+                  "routes": 1248,
+                  "comparisons": 1038,
+                  "obsolete": 942,
+                  "professions": 3,
+                  "aggregate": 3,
+                  "undocumented": 3,
+                  "textWrites": 759,
+                  "newFrames": 0
+                }
+              },
+              "equipment": {
+                "milliseconds": 24.1,
+                "netHeapKB": 1340.6,
+                "counts": {
+                  "records": 1093,
+                  "sourceChecks": 390,
+                  "routes": 416,
+                  "comparisons": 346,
+                  "obsolete": 314,
+                  "professions": 1,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 253,
+                  "newFrames": 0
+                }
+              },
+              "profession": {
+                "milliseconds": 29.968,
+                "netHeapKB": 2599.6,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 692,
+                  "obsolete": 628,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 0
+                }
+              },
+              "hide restore": {
+                "milliseconds": 39.463,
+                "netHeapKB": 2648.1,
+                "counts": {
+                  "records": 2186,
+                  "sourceChecks": 780,
+                  "routes": 832,
+                  "comparisons": 691,
+                  "obsolete": 627,
+                  "professions": 2,
+                  "aggregate": 2,
+                  "undocumented": 2,
+                  "textWrites": 506,
+                  "newFrames": 54
+                }
+              },
+              "detail + overlay": {
+                "milliseconds": 25.747,
+                "netHeapKB": 3443.9,
+                "counts": {
+                  "records": 2927,
+                  "sourceChecks": 604,
+                  "routes": 632,
+                  "comparisons": 408,
+                  "obsolete": 482,
+                  "professions": 2,
+                  "aggregate": 1,
+                  "undocumented": 1,
+                  "textWrites": 1235,
+                  "newFrames": 992
+                }
+              }
+            },
+            "signatures": {
+              "warm overlay x10": 232596664,
+              "one loot": 232596664,
+              "rapid loot x12": 232596664,
+              "mining + skill": 232596664,
+              "movement zones x10": 232596664,
+              "ordinary movement idle": 232596664,
+              "collapsed materials": 232596664,
+              "slot changes x3": 232596664,
+              "open close x3": 232596664,
+              "priority settings": 232596664,
+              "equipment": 232596664,
+              "profession": 232596664,
+              "hide restore": 232596664,
+              "detail + overlay": 232596664
+            },
+            "gcPausedHeapGrowthKB": 1337.1,
+            "separateRoutes": 6320,
+            "separateSources": 6040,
+            "sharedRoutes": 4160,
+            "sharedSources": 3900
+          }
+        ]
+      }
+    }
+  }
+}

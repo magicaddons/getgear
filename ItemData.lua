@@ -26,7 +26,7 @@ Schedule=function()
         running=true
         lastRun=Clock()
         local ok,err=pcall(function()
-            if GetGear.RefreshAll then GetGear:RefreshAll() end
+            if GetGear.RefreshAll then GetGear:RefreshAll("item-data") end
         end)
         running=false
         if dirty then Schedule() end

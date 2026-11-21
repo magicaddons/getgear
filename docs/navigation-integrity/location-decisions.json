@@ -1,0 +1,43 @@
+{
+  "npc:1346": {
+    "point": [
+      53.2,
+      81.4
+    ],
+    "reason": "Stationary Artisan Tailor. Exact current Forever NPC 1346 mapper and independent Forever trainer reference agree at 53.2,81.4 on Stormwind City map 1453; owner stood beside Georgio at about 53.3,81.4. Older 43.x,73.x observations are incompatible with that supported shop location and are withheld, not averaged.",
+    "corroboration": [
+      {
+        "kind": "owner-client-observation",
+        "file": "docs/navigation-integrity/REQUEST.md",
+        "x": 53.3,
+        "y": 81.4,
+        "uiMapID": 1453,
+        "limitation": "Approximate reported player position beside the NPC; no screenshot was attached to this task."
+      },
+      {
+        "url": "https://foreverdb.net/profession/tailoring",
+        "kind": "published-classic-fallback",
+        "x": 53.2,
+        "y": 81.4,
+        "limitation": "The full trainer section is explicitly labelled Classic locations. Retained only as historical corroboration, not current-client proof."
+      },
+      {
+        "url": "https://urgametips.com/wow-forever/zones/stormwind-city/map/?npc=1347",
+        "kind": "published-forever-zone-table",
+        "npcID": 1346,
+        "x": 53.2,
+        "y": 81.4,
+        "limitation": "Full named Georgio row in the Forever city table. UI map1453 comes from the primary NPC record; no live observation claimed."
+      }
+    ]
+  },
+  "npc:1347": {
+    "locationKind": "conflicting-evidence",
+    "reason": "Stationary tailoring supplier. Current exact Forever NPC 1347/map1453 mapper supports the small shop region x53.2,y81.4..81.6. Secondary references list 53.1,81.8 (explicit Classic fallback) or 53.4,81.9 (Seen in Forever). Retain that disagreement; use the primary small region without inventing a precise point. Older 43.x,74.x observations are withheld.",
+    "secondarySourceQualification": "The53.4,81.9 observation is indexed-only and absent from the subsequently opened full spell page. It is retained as a historical secondary disagreement, not a current full-page observation."
+  },
+  "npc:12580": {
+    "locationKind": "published-region",
+    "reason": "Reginald Windsor has quest-context movement and multiple published observations. Retain the current map-bound footprint as an approximate region, not a stationary NPC or invented route. Stage-specific path and position require client evidence."
+  }
+}

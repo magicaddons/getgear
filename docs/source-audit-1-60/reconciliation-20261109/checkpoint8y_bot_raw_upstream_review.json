@@ -1,0 +1,166 @@
+{
+  "capturedUTC": "2026-11-09T23:53:23.250818+00:00",
+  "method": "Exact full factual snapshot comparison8X baseline\u21928Y bot; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23283,
+    "afterItems": 23283,
+    "beforeDefinitions": 9152,
+    "afterDefinitions": 9152,
+    "newItems": [],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.ab9ed0a4a2.json",
+        "bytes": 988877,
+        "sha256": "ab9ed0a4a241f9d85aa58ea07b05a9a47985b7ca080021254867647bed372b23",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.52f06f89f4.json",
+        "bytes": 1315133,
+        "sha256": "52f06f89f424c2633eabc0ee061a1c82b6cb3c2d328c68f30a3d605207e3daa5",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.0957e49311.json",
+        "bytes": 464371,
+        "sha256": "0957e493112398c50b51b85773a78047330a5902bb294da08f7e7a707841ad54",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.292a214b24.json",
+        "bytes": 446193,
+        "sha256": "292a214b245b938460af74a16419643148825d98bc9f57ec7b28ac8ccc3adb9c",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1398,
+    "afterRaw": 1399,
+    "qualifying": 1199,
+    "addedEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 2320,
+        "rel": "sold_by",
+        "toKind": "npc",
+        "toId": 5783,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-07T17:41:29.000Z",
+        "lastSeen": "2026-11-09T23:17:59.000Z"
+      }
+    ],
+    "removedEdges": [],
+    "updatedEdges": [
+      {
+        "key": [
+          "item",
+          "5124",
+          "dropped_by",
+          "npc",
+          "3637"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-08T20:14:41.000Z",
+            "after": "2026-11-09T23:11:23.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "3361",
+          "located_in",
+          "zone",
+          "1454"
+        ],
+        "changes": {
+          "installs": {
+            "before": "3",
+            "after": "4"
+          },
+          "lastSeen": {
+            "before": "2026-11-06T20:47:02.000Z",
+            "after": "2026-11-09T23:48:28.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "11868",
+          "located_in",
+          "zone",
+          "1454"
+        ],
+        "changes": {
+          "installs": {
+            "before": "4",
+            "after": "5"
+          },
+          "lastSeen": {
+            "before": "2026-11-06T21:02:04.000Z",
+            "after": "2026-11-09T23:48:26.000Z"
+          }
+        }
+      },
+      {
+        "key": [
+          "npc",
+          "5784",
+          "located_in",
+          "zone",
+          "1414"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-07T23:12:40.000Z",
+            "after": "2026-11-09T23:17:58.000Z"
+          }
+        }
+      }
+    ],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "57d57d6f9619ebdb47c68c1317c09633f92575e5a289ae31504e873d86a17893",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T23:50:15.829Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103653,
+        "sha256": "732ee78f42f2de3b98d4d7897907f0de36c86de444d44db750514441e4125636",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T23:50:15.829Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 82469,
+        "sha256": "12777795f461cb79e557c668d400ff1b27897d45ec0c1d316694bb427a785290",
+        "matchesReconciliationResponseFingerprint": false,
+        "dataAsOf": "2026-11-09T23:50:15.829Z"
+      }
+    ],
+    "selected76QualifyingEdges": []
+  },
+  "ciRun": 42723894319,
+  "validatedBotHead": "f5b9f56ea3840decb9b0f1628320737d2e6fa7fa",
+  "runtimeReview": "Full bot diff inspected:README count and provenance only. No runtime index or catalogue/dungeon/recipe report change. Added item2320 CoarseThread\u2192NPC5783 sold_by at3installs is a reagent-vendor edge, not equipment acquisition or new recipe ingredient. Four exact previous edge counter/time updates;0 removed. Runtime/materials/regressions already PASS in CI; no unnecessary rerun."
+}

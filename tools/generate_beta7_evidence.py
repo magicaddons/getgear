@@ -93,13 +93,14 @@ def main():
             rec.update(confidence="published-client-recipe",evidence="ForeverTome client recipe 2026-10-31",generated=True)
             if not rec["gap"]:rec["gap"]="Learning source/threshold not verified"
         elif category=="dungeon":
+            # Upstream bossNames also contains regular trash mobs; do not assert boss status.
             bosses=sorted({s for s in cache.get(iid,{}).get("bossNames",[]) if s and "unknown" not in s.lower()})
             if bosses:
                 acquisition.append((iid,6," / ".join(bosses)))
                 selected["dungeon"]+=1
                 rec.update(confidence="client-reference",evidence="Forever client cache 2026-10-21",generated=True)
-                rec["gap"]="Boss is a client reference, not an observed live loot rate"
-            else:rec["gap"]="Boss unverified"
+                rec["gap"]="Named dungeon enemy is a client reference, not observed live loot"
+            else:rec["gap"]="Specific dungeon enemy unverified"
         elif category=="vendor":
             vendors=sorted({name for name,build,src in observedVendors.get(iid,{}).values()})
             if vendors:
@@ -137,7 +138,7 @@ def main():
         lines.append(f" [{iid}]={{{kind},{quote(label)}}},")
     lines.extend([
         "}",
-        "local counts={recipe=0,boss=0,vendor=0,quest=0,reagentConflicts=0,reagentCorrections=0}",
+        "local counts={recipe=0,dungeonEnemy=0,vendor=0,quest=0,reagentConflicts=0,reagentCorrections=0}",
         "for id, record in pairs(recipes) do",
         ' local item=assert(GetGear.ItemCatalog[id],"Missing Beta7 item "..id)',
         " local profession,spell,inputs=record[1],record[2],record[3]",
@@ -174,9 +175,9 @@ def main():
         ' local item=assert(GetGear.ItemCatalog[id],"Missing source item "..id)',
         " local kind,label=src[1],src[2]",
         ' if kind==6 and item.sourceType=="Dungeon (loot table unverified)" then',
-        '  item.source="Boss: "..label.." (dated client reference; live loot unverified)"',
-        '  item.acquisitionKind="Dungeon boss (client reference)"',
-        '  item.acquisitionConfidence="client";counts.boss=counts.boss+1',
+        '  item.source="Dungeon enemy: "..label.." (dated client reference; live loot unverified)"',
+        '  item.acquisitionKind="Dungeon enemy (client reference)"',
+        '  item.acquisitionConfidence="client";counts.dungeonEnemy=counts.dungeonEnemy+1',
         ' elseif kind==3 and item.sourceType=="Vendor (availability unverified)" then',
         '  item.source="Seen sold by "..label.." (sampled Forever vendor window; verify faction and stock)"',
         '  item.acquisitionKind="Vendor (observed inventory)"',

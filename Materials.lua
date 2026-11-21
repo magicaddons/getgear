@@ -36,10 +36,56 @@ local NAMES = {
     [2692]="Hot Spices",[2453]="Bruiseweed",[10938]="Lesser Magic Essence",
     [10998]="Lesser Astral Essence",[2775]="Silver Ore",[2776]="Gold Ore",
 }
-for _, gear in ipairs(GetGear.Gear) do
-    for _, reagent in ipairs(gear.reagents or {}) do
-        NAMES[reagent.itemID] = reagent.name
+-- All 1-60 item facts and generated recipe ingredients are loaded before
+-- Materials.lua. GetGear.Gear is an EMPTY placeholder at this point, populated
+-- only when a character guide is selected during ADDON_LOADED. Index the
+-- canonical catalogue instead so reagent names are always available offline,
+-- even for other classes and before the WoW item cache loads.
+local function ValidMaterialName(name)
+    return type(name)=="string" and name:match("%S")~=nil
+        and not name:lower():match("^%s*item%s+%d+%s*$")
+end
+local function RememberMaterialName(itemID,name)
+    if type(itemID)=="number" and ValidMaterialName(name) and not ValidMaterialName(NAMES[itemID]) then
+        NAMES[itemID]=name
     end
+end
+function GetGear:IndexMaterialNames(catalog)
+    for _,gear in pairs(catalog or self.ItemCatalog or {}) do
+        for _,reagent in ipairs(gear.reagents or {}) do
+            RememberMaterialName(reagent.itemID,reagent.name)
+        end
+    end
+end
+GetGear:IndexMaterialNames()
+
+-- One resolver for direct/nested recipes, aggregate totals, bags and tooltips.
+-- Known catalogue names win before touching any asynchronous client API.
+-- Placeholders are never cached, so later item-data events can resolve them.
+function GetGear:MaterialName(itemID,knownName)
+    RememberMaterialName(itemID,knownName)
+    local supplied=self.MaterialNames and self.MaterialNames[itemID]
+    if ValidMaterialName(supplied) then return supplied end
+    if ValidMaterialName(NAMES[itemID]) then return NAMES[itemID] end
+    local recipe=INTERMEDIATE[itemID]
+    if recipe and ValidMaterialName(recipe.name) then return recipe.name end
+    local item=self.ItemCatalog and self.ItemCatalog[itemID]
+    if item and ValidMaterialName(item.name) then
+        RememberMaterialName(itemID,item.name)
+        return item.name
+    end
+    for _,api in ipairs({C_Item and C_Item.GetItemNameByID or false,
+        C_Item and C_Item.GetItemInfo or false,GetItemInfo or false}) do
+        if type(api)=="function" then
+            local ok,name=pcall(api,itemID)
+            if ok and (type(issecretvalue)~="function" or not issecretvalue(name)) and ValidMaterialName(name) then
+                RememberMaterialName(itemID,name)
+                return name
+            end
+        end
+    end
+    if self.RequestItemDataOnce then self:RequestItemDataOnce(itemID) end
+    return "Item "..tostring(itemID)
 end
 
 -- Some conversion recipes differ in their current trainer thresholds across sources.
@@ -72,6 +118,7 @@ local function Plan(directReagents)
     for _,reagent in ipairs(directReagents or {}) do
         if type(reagent.itemID)=="number" and type(reagent.amount)=="number" then
             local id = reagent.itemID
+            RememberMaterialName(id,reagent.name)
             totals[id] = (totals[id] or 0) + reagent.amount
             if not direct[id] then
                 rootOrder[#rootOrder+1] = id
@@ -125,7 +172,7 @@ local function Plan(directReagents)
         if shown[id] then return end
         shown[id]=true
         local recipe=INTERMEDIATE[id]
-        local row={itemID=id,name=(GetGear.MaterialNames and GetGear.MaterialNames[id]) or NAMES[id] or (recipe and recipe.name) or ("Item "..id),
+        local row={itemID=id,name=GetGear:MaterialName(id),
             amount=totals[id],depth=depth or 0,parentID=parentID,recipe=recipe,hasChildren=children[id]~=nil}
         result[#result+1]=row
         for _,childID in ipairs(children[id] or {}) do Add(childID,(depth or 0)+1,id) end
@@ -134,7 +181,7 @@ local function Plan(directReagents)
     -- Remaining shared children: displayed once rather than counted twice.
     local extra = {}
     for id in pairs(totals) do if not shown[id] then extra[#extra+1]=id end end
-    table.sort(extra,function(a,b) return (NAMES[a] or "")<(NAMES[b] or "") end)
+    table.sort(extra,function(a,b) return GetGear:MaterialName(a)<GetGear:MaterialName(b) end)
     for _,id in ipairs(extra) do Add(id,0) end
     return result
 end
@@ -173,7 +220,7 @@ end
 function GetGear:GetUndocumentedCrafts(scope)
     local pending,level={},self.level or 1
     for _,gear in ipairs(self.Gear) do
-        if gear.targetLevel<=level+5 and not self:GetStatus(gear)
+        if self:IsCraftMaterialsUnknown(gear) and gear.targetLevel<=level+5 and not self:GetStatus(gear)
             and (not self.ShouldDisplayGear
                 or self:ShouldDisplayGear(gear,self.classToken,
                     scope=="all" and "materials-all" or "materials"))
@@ -193,7 +240,7 @@ function GetGear:GetCombinedMaterialRows(scope)
     local total, list = {}, {}
     local level=self.level or 1
     for _,gear in ipairs(self.Gear) do
-        if gear.targetLevel <= level+5 and not self:GetStatus(gear)
+        if gear.reagents and #gear.reagents>0 and gear.targetLevel <= level+5 and not self:GetStatus(gear)
             and (not self.ShouldDisplayGear
                 or self:ShouldDisplayGear(gear,self.classToken,
                     scope=="all" and "materials-all" or "materials"))
@@ -202,6 +249,7 @@ function GetGear:GetCombinedMaterialRows(scope)
                 and not self:IsGearEquipped(gear)
                 and self:GetObsoleteGearReason(gear)==nil)) then
             for _,mat in ipairs(gear.reagents or {}) do
+                RememberMaterialName(mat.itemID,mat.name)
                 total[mat.itemID]=(total[mat.itemID] or 0)+mat.amount
             end
         end
@@ -210,13 +258,15 @@ function GetGear:GetCombinedMaterialRows(scope)
     -- number of bag slots requiring replacement. Non-tailors do not receive
     -- a misleading personal crafting shopping list.
     local bag = self.GetBagUpgradePlan and self:GetBagUpgradePlan() or nil
-    if bag and bag.profession=="Tailoring" and not self:IsHidden(bag) then
+    if bag and bag.profession=="Tailoring" and not self:IsHidden(bag)
+        and (not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(bag)) then
         for _,mat in ipairs(bag.reagents or {}) do
+            RememberMaterialName(mat.itemID,mat.name)
             total[mat.itemID]=(total[mat.itemID] or 0)+mat.amount
         end
     end
     for id,qty in pairs(total) do
-        list[#list+1]={itemID=id,amount=qty,name=(GetGear.MaterialNames and GetGear.MaterialNames[id]) or NAMES[id] or ("Item "..id)}
+        list[#list+1]={itemID=id,amount=qty,name=self:MaterialName(id)}
     end
     table.sort(list,function(a,b) return a.name<b.name end)
     return VisibleRows(Plan(list), "total:" .. (scope or "tracked"), self.db)
@@ -240,13 +290,11 @@ function GetGear:GetProfessionSkill(profession)
 end
 
 function GetGear:GetProfessionDisplay(gear)
-    if not gear.professionSkillRequired or gear.recipeLearnSkillEvidence=="unverified" then return nil end
+    local required=self.GetRecipeSkillRequirement and self:GetRecipeSkillRequirement(gear)
+    if not required and gear.recipeLearnSkillEvidence~="unverified" then required=gear.professionSkillRequired end
+    if not required then return nil end
     local current=self:GetProfessionSkill(gear.profession)
     local name=gear.profession
-    if current==nil then return name.."  -/"..gear.professionSkillRequired.." (not learned)",false end
-    return name.."  "..current.."/"..gear.professionSkillRequired,current>=gear.professionSkillRequired
-end
-
-function GetGear:MaterialName(itemID)
-    return (self.MaterialNames and self.MaterialNames[itemID]) or NAMES[itemID] or (INTERMEDIATE[itemID] and INTERMEDIATE[itemID].name) or ("Item "..tostring(itemID))
+    if current==nil then return name.."  -/"..required.." (not learned)",false end
+    return name.."  "..current.."/"..required,current>=required
 end

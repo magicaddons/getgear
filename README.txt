@@ -1,65 +1,74 @@
-GETGEAR 0.14.0 BETA 7 — ALLIANCE LEVELS 1–60
+GETGEAR 0.14.0-beta11 — PUBLIC BETA FOR ALLIANCE
 ================================================
-PUBLIC BETA / PRE-RELEASE. Not a finished, fully verified item database.
-Official download: https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta7
+Gear catalogue, crafting planner and item tracker for WoW Forever, levels 1–60.
+Alliance characters are the supported gameplay scope; Horde is unsupported.
 
-ABOUT
------
-GetGear is an in-game guide for gear that each of the nine Alliance classes
-can equip between levels 1 and 60. It lists useful leads and materials, not
-a ranked best-in-slot list or a prescribed specialization build.
+LATEST RECOMMENDED DOWNLOAD
+https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta11
+Choose GetGear-v0.14.0-beta11.zip from Assets (not the source archives).
+Exit the game and back up your addon and SavedVariables before installing.
 
-FEATURES
---------
-- Unified class catalogue across levels 1–60; no manual spec picker.
-- Available Now, Next 5 Levels, Earlier Gear, Completed/Skipped, Hidden,
-  Bags, and a read-only guide preview for all classes and levels.
-- Compact overlay with up to 32 shown records; detailed pages of 40.
-- Default body armour priorities, including the level-40 plate/mail changes.
-  Enable "Show all valid equipment" for unusual class-equippable alternatives.
-- Source leads for quests, bosses, vendors, crafting and world drops, with
-  uncertainty clearly indicated where the live Forever route is unknown.
-- Crafting recipes and materials from a dated Forever client snapshot;
-  combined material totals and optional personal "can't craft" filter.
-- Progress state, item tooltips, stat comparisons, map navigation where
-  supported, bag objectives, and saved account inventory snapshots.
-- Preview Guide Display settings are positioned to avoid control overlap.
+Beta 11 preserves approved cumulative .20261121.14, including overlay polish,
+immediate star sorting and systemic Alliance acquisition filtering. Horde-capital
+routes such as Ragefire Chasm are excluded while valid alternative routes remain.
+All 29 Lua modules, three textures and accepted acquisition data are retained.
+
+SUPPORTED CLIENT
+WoW Forever, addon interface 16001. Other clients are not verified.
+Levels 1–60, class-equippable gear and acquisition planning for Alliance characters.
 
 INSTALL / UPGRADE
------------------
-1. Exit WoW Forever completely.
-2. Back up AddOns/GetGear and its WTF SavedVariables.
-3. Extract the official GitHub Release ZIP. Copy the single GetGear folder
-   into _forever_/Interface/AddOns/, replacing the old folder.
-4. Ensure _forever_/Interface/AddOns/GetGear/GetGear.toc exists (no nesting).
-5. Open the game and type /getgear. Do not use /gg.
+1. Exit the game. Back up AddOns/GetGear and GetGear SavedVariables in WTF.
+2. Extract the ZIP and replace the GetGear folder in _forever_/Interface/AddOns/.
+3. Confirm _forever_/Interface/AddOns/GetGear/GetGear.toc exists; no nesting.
+4. Start the game, enable GetGear in AddOns, and type /getgear.
+Use your actual Forever install path. Cumulative-build settings/stars/progress
+retain the same schema. Migration from v0.12.x can reset older character
+progress/preferences; keep backups. Account inventory is saved snapshots.
 
-WARNING: Moving from v0.12.x to the unified v0.14.x schema can reset old
-per-character acquired/skipped/hidden statuses and display preferences.
-Account inventory is intended to remain, but back it up as well.
+BASIC USE
+- /getgear opens/closes the guide; /getgear overlay toggles the tracker.
+- Browse Available Now, Next 5 Levels, Earlier Gear and equipment slots.
+- Click the tracker's magnifying glass; search by item name or ID.
+- Click outline/filled stars to add/remove character-specific wishlist items.
+  Starred Items appear first; stars do not bypass eligibility restrictions.
+- Expand rows for acquisition and crafting details. Mark acquired, skip or hide
+  items with row actions. Resize the tracker and expand/collapse its sections.
+- /getgear settings opens display options and stat priority preferences.
+- Use map actions for supported sources, choices and directions.
+- Browse Alt Inventory after logging into each character and opening its bank.
+  Offline counts are last-known snapshots, not live access.
+- Preview Guide is read-only for other classes/levels and does not edit stars.
 
-KEY COMMANDS
-------------
-/getgear             Open/close detailed guide
-/getgear overlay     Toggle compact tracker
-/getgear settings    Display options
-/getgear status      Catalogue / talent-detection diagnostics
-/getgear notify      Toggle source-aware level notifications
-/getgear inventory   Inventory diagnostics
-/getgear bankdiag    Bank-container diagnostics
+OTHER COMMANDS
+/getgear status       Catalogue/talent diagnostics
+/getgear inventory    Account inventory diagnostics
+/getgear bankdiag     Bank container diagnostics
+/getgear notify       Toggle source-aware level notifications
 
-SOURCES, SCOPE & REPORTING
---------------------------
-The 7,707-item catalogue (36,341 class-equippable item objectives) is based
-partly on a Forever item snapshot from 21 Oct 2026. Recipe reagents for 1,244
-crafted items come from 31 Oct 2026 client-derived data. Not all entries,
-vendor stock, quests, boss drops, recipe-learning sources and skill levels
-are verified obtainable in the current game. Alliance is the route focus.
+RECENT IMPROVEMENTS
+Overlay computation improvements; indexed equipment search; shared star
+textures; immediate wishlist reordering/counts; wrapped row actions and hidden
+row refresh corrections. Earlier cumulative tracking, inventory, navigation,
+class/faction eligibility, stat priorities and settings fixes remain included.
 
-Bank and bag contents for offline alts are last-known snapshots only;
-inventory does not imply live remote access.
+LIMITATIONS
+Public beta. Catalogue/source information can be dated, incomplete or uncertain;
+it does not guarantee current loot, vendor stock, quests, recipes or coordinates.
+This is not a best-in-slot ranking. Bank snapshots can become stale; mail,
+auctions and guild/account banks are not automatically tracked. User acceptance
+was reported for the private build. Automated Lua compatibility/regression tests
+do not constitute new in-game verification or exhaustive live route testing.
 
-Read the public release notes and current README.md at:
+LICENSING
+No project-wide software license was present in the approved source. This
+owner-authorized release permits public download and installation; no new
+open-source license or broader modification/redistribution grant is added.
+Third-party game names and referenced data retain their respective owners'
+rights. Contact the project owner for licensing questions.
+GetGear is a community addon, not an official Blizzard product.
+
+HELP / RELEASE NOTES
 https://github.com/magicaddons/getgear
-Report errors with item IDs, class, level, source and screenshots at:
 https://github.com/magicaddons/getgear/issues
+Include addon version, class/level, item ID/name, symptoms and any Lua error.

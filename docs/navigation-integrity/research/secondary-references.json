@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "retrieved": "2026-11-18",
+  "actualClientVerified": false,
+  "kind": "reviewed-web-extracts",
+  "limitation": "Named coordinate facts and qualifications from web-tool page/index extractions; no full-provider HTML fingerprint asserted for secondary references.",
+  "sources": [
+    {
+      "url": "https://urgametips.com/wow-forever/zones/stormwind-city/map/?npc=1347",
+      "kind": "full-published-forever-zone-table",
+      "npcID": 1346,
+      "name": "Georgio Bolero",
+      "zone": "Stormwind City",
+      "x": 53.2,
+      "y": 81.4,
+      "excerpt": "Georgio Bolero | Tailoring trainer | 53.2, 81.4",
+      "evidenceLocation": "Named NPC row, extracted line298; portrait identifies NPC1346.",
+      "qualification": "Independent published Forever city table; map1453 comes from the primary NPC record, not this page."
+    },
+    {
+      "url": "https://foreverdb.net/profession/tailoring",
+      "kind": "full-published-classic-fallback",
+      "npcID": 1346,
+      "name": "Georgio Bolero",
+      "zone": "Stormwind City",
+      "x": 53.2,
+      "y": 81.4,
+      "excerpt": "Trainers (Classic locations); Georgio Bolero (Artisan Tailor), Stormwind City 53.2, 81.4",
+      "evidenceLocation": "Section heading line175 and named trainer line187.",
+      "qualification": "Classic location fallback. Page-wide client-build attribution does not establish current Forever trainer geography."
+    },
+    {
+      "url": "https://foreverdb.net/item/6274",
+      "kind": "indexed-published-classic-fallback",
+      "npcID": 1347,
+      "name": "Alexandra Bolero",
+      "zone": "Stormwind City",
+      "x": 53.1,
+      "y": 81.8,
+      "excerpt": "Sold by Alexandra Bolero in Stormwind City (53.1, 81.8) map Classic data",
+      "qualification": "Indexed excerpt explicitly labels Classic data; does not override the current primary NPC/map extract."
+    },
+    {
+      "url": "https://foreverdb.net/spell/7639",
+      "kind": "indexed-published-excerpt",
+      "npcID": 1347,
+      "name": "Alexandra Bolero",
+      "zone": "Stormwind City",
+      "x": 53.4,
+      "y": 81.9,
+      "excerpt": "Alexandra Bolero Tailoring Supplies \u00b7 Stormwind City 53.4, 81.9 Seen in Forever",
+      "qualification": "Search-index observation. The subsequently opened current full spell page lists no NPC coordinates; indexed Seen in Forever is not current full-page corroboration."
+    }
+  ],
+  "correctedReceipt": "The earlier saved response was an argument-validation error and supplied no evidence. Successful extracts supersede it; the earlier attempt remains in Git history."
+}

@@ -1,0 +1,23 @@
+{
+  "source": "67b2614cdfd7a1130bdf581296fc42b54ca46df9",
+  "bot": "517bafa4c8d65b5348cc71385be1d3dd8b9c185e",
+  "ciRun": 42894684782,
+  "ciJob": 130104574626,
+  "status": "success",
+  "changedFiles": [
+    "docs/source-audit-1-60/reconciliation-20261109/provenance.json"
+  ],
+  "changedProvenanceKeys": [
+    "https://everloot.app/api/edges?evidence=observed&limit=500",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+    "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+    "lastRunUTC"
+  ],
+  "scope": "Only reconciliationtime and recorded Everlootresponse fingerprints;PF/runtime/reports/counts unchanged. Actual local8AZ facts/counters retained;bot API bytes not independently captured,no equal-counter inference from counts/extra diagnostic fetches.",
+  "redundantRun": {
+    "run": 42894707334,
+    "status": "cancelled",
+    "reason": "Manualdispatch before push-triggered run appeared;queued duplicate cancelled,original push run completed. No duplicate research worker."
+  }
+}

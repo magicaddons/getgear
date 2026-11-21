@@ -1,0 +1,235 @@
+{
+  "status": "Fully reviewed actual8AYfeed delta;no canonical gear/stat/class/availability adoption",
+  "playfullsBeforeItems": 23450,
+  "playfullsAfterItems": 23459,
+  "definitionsBefore": 9158,
+  "definitionsAfter": 9160,
+  "newOutsideCanonicalCandidates": [
+    {
+      "itemID": 1680,
+      "name": "Headchopper",
+      "sources": [
+        {
+          "type": "zonedrop",
+          "label": "Zone drop",
+          "npc": "Mosh'Ogg Butcher",
+          "zone": "Stranglethorn Vale",
+          "path": "professions/zones/stranglethorn-vale",
+          "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "alreadyCanonical": false
+    },
+    {
+      "itemID": 9512,
+      "name": "Blackmetal Cape",
+      "sources": [
+        {
+          "type": "dungeon",
+          "label": "Dungeon drop",
+          "npc": "Trash mobs",
+          "zone": "Zul'Farrak",
+          "path": "loot-tables/dungeons/zulfarrak",
+          "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "alreadyCanonical": false
+    },
+    {
+      "itemID": 15411,
+      "name": "Mark of Fordring",
+      "sources": [
+        {
+          "type": "quest",
+          "label": "Quest",
+          "npc": "In Dreams",
+          "zone": "Western Plaguelands",
+          "path": "professions/zones/western-plaguelands",
+          "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "alreadyCanonical": false
+    },
+    {
+      "itemID": 15413,
+      "name": "Ornate Adamantium Breastplate",
+      "sources": [
+        {
+          "type": "quest",
+          "label": "Quest",
+          "npc": "In Dreams",
+          "zone": "Western Plaguelands",
+          "path": "professions/zones/western-plaguelands",
+          "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "alreadyCanonical": false
+    },
+    {
+      "itemID": 15418,
+      "name": "Shimmering Platinum Warhammer",
+      "sources": [
+        {
+          "type": "quest",
+          "label": "Quest",
+          "npc": "In Dreams",
+          "zone": "Western Plaguelands",
+          "path": "professions/zones/western-plaguelands",
+          "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "alreadyCanonical": false
+    },
+    {
+      "itemID": 15421,
+      "name": "Shroud of the Exile",
+      "sources": [
+        {
+          "type": "quest",
+          "label": "Quest",
+          "npc": "In Dreams",
+          "zone": "Western Plaguelands",
+          "path": "professions/zones/western-plaguelands",
+          "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "alreadyCanonical": false
+    },
+    {
+      "itemID": 16058,
+      "name": "Fordring's Seal",
+      "sources": [
+        {
+          "type": "quest",
+          "label": "Quest",
+          "npc": "In Dreams",
+          "zone": "Western Plaguelands",
+          "path": "professions/zones/western-plaguelands",
+          "noteSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "alreadyCanonical": false
+    },
+    {
+      "itemID": 280029,
+      "name": "Cinderedge Crescent",
+      "sources": [],
+      "alreadyCanonical": false
+    },
+    {
+      "itemID": 287044,
+      "name": "Predator's Shroud",
+      "sources": [],
+      "alreadyCanonical": false
+    }
+  ],
+  "prior210CandidateRowsExact": true,
+  "pendingCandidates": 219,
+  "fullRawComparison": {
+    "otherChangedRawCells": [],
+    "lengthChanges": [],
+    "metadataChangedKeys": [
+      "so",
+      "st"
+    ],
+    "fullDefinitionsRemoved": [],
+    "fullDefinitionsAdded": [
+      "[11, 1, \"Mosh'Ogg Butcher\", \"\", \"Stranglethorn Vale\", \"professions/zones/stranglethorn-vale\", \"\", \"\"]",
+      "[1, 0, \"In Dreams\", \"\", \"Western Plaguelands\", \"professions/zones/western-plaguelands\", \"level 60\", \"\"]"
+    ],
+    "sourceKindsExact": true,
+    "statFacetIdentitiesGroupsExact": true,
+    "statFacetCountChanges": [
+      {
+        "key": "str",
+        "label": "Strength",
+        "before": 2452,
+        "after": 2454
+      },
+      {
+        "key": "agi",
+        "label": "Agility",
+        "before": 2042,
+        "after": 2044
+      },
+      {
+        "key": "sta",
+        "label": "Stamina",
+        "before": 6055,
+        "after": 6061
+      },
+      {
+        "key": "int",
+        "label": "Intellect",
+        "before": 3354,
+        "after": 3356
+      },
+      {
+        "key": "spi",
+        "label": "Spirit",
+        "before": 2195,
+        "after": 2196
+      },
+      {
+        "key": "armor",
+        "label": "Armor",
+        "before": 657,
+        "after": 658
+      },
+      {
+        "key": "def",
+        "label": "Defense",
+        "before": 309,
+        "after": 310
+      },
+      {
+        "key": "crit",
+        "label": "Critical Strike",
+        "before": 1016,
+        "after": 1019
+      },
+      {
+        "key": "ap",
+        "label": "Attack Power",
+        "before": 538,
+        "after": 541
+      },
+      {
+        "key": "sp",
+        "label": "Spell Damage",
+        "before": 2249,
+        "after": 2251
+      },
+      {
+        "key": "heal",
+        "label": "Healing",
+        "before": 2380,
+        "after": 2382
+      },
+      {
+        "key": "proc",
+        "label": "Chance on hit",
+        "before": 236,
+        "after": 237
+      }
+    ]
+  },
+  "sourceIndexOnlyRows": 13577,
+  "uninterpretedField10Cells": 116,
+  "selectedField10Cells": 0,
+  "priorResolvedSourceFactsChanged": 0,
+  "otherRawCellsChanged": 0,
+  "rowsLengthChanged": 0,
+  "allPrior9158RawSourceRowsExact": true,
+  "metadataChangedKeys": [
+    "so",
+    "st"
+  ],
+  "statFacetCountCells": 12,
+  "statFacetMeaning": "Publishedstatfacetidentities/labels/groups unchanged;onlycounts change. Not timestamps,gearavailability/phase/equip/class/stat mutations.",
+  "companionRemapProof": "checkpoint8ay_companion_remap_review.json",
+  "sourceRowOnlyCells": 3352,
+  "otherAuditCSVSemanticsChanged": 0,
+  "everloot": "1550/1315allrelations/build/install/first-lastSeen unchanged/two selectededges",
+  "scope": "Nine feed IDs are publication references pending individual identity/version/scope/eligibility/acquisition audits,notnineautomaticallyadoptedgearitems/newgamecontent/currentguaranteedInDreamsrewards. Systematicfull-cache/feedBack-slotcoverageauditstillrequired,notonlynewIDs. No duplicate diagnostic network fetches."
+}

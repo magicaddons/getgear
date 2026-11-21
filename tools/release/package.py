@@ -40,6 +40,8 @@ def members(source, tag):
     require(all(re.fullmatch(r'[A-Za-z0-9_-]+\.lua', x) for x in modules),
             'Only flat Lua TOC entries supported; review packaging for a new layout')
     names = modules + ['GetGear.toc', 'MapPin.tga', 'README.txt']
+    if tag != BETA9['tag']:
+        names += ['StarOutline.tga', 'StarFilled.tga']
     # Preserve the current documentation convention for future releases.
     if (source / 'DATA_MODEL.md').exists():
         names.append('DATA_MODEL.md')
@@ -70,12 +72,25 @@ def validate(archive, source, tag, commit):
                 require(data == (source / name).read_bytes(), 'Source differs: ' + name)
             else:
                 require(commit.encode() in data, 'Missing source attribution')
+        if tag != BETA9['tag']:
+            require((source / 'FEATURE_ACCEPTANCE.json').is_file(),
+                    'Future builds require the cumulative feature acceptance manifest')
+            subprocess.run([sys.executable, str(HERE.parent / 'validate_feature_acceptance.py'),
+                            '--archive', str(archive), '--expected-source', str(source)], check=True)
         with tempfile.TemporaryDirectory() as tmp:
             z.extractall(tmp)  # membership above allows only the explicit safe paths
             root = Path(tmp) / 'GetGear'
             # Evidence fixtures are test-only; gameplay modules always come from the ZIP.
             if (source / 'docs').is_dir():
                 (root / 'docs').symlink_to(source / 'docs', target_is_directory=True)
+            if tag != BETA9['tag']:
+                # Run the complete cumulative gate against the installed payload,
+                # including build/release safeguards, generators and source audits.
+                subprocess.run([sys.executable, str(source / 'tools/validate_recommendations.py'),
+                                '--output', str(archive.parent.resolve() / 'validation'),
+                                '--addon-root', str(root), '--lua51', 'lua5.1',
+                                '--luac51', 'luac5.1'], check=True)
+                return
             for runtime in ('5.1', '5.4'):
                 for module in modules:
                     subprocess.run(['luac' + runtime, '-p', str(root / module)], check=True)

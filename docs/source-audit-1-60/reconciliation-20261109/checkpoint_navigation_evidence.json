@@ -1,0 +1,967 @@
+{
+  "status": "published-reference, not live prerequisite verification",
+  "quests": {
+    "quest:65": {
+      "url": "https://www.wowhead.com/forever/quest=65",
+      "bytes": 80778,
+      "sha256": "c70b46a5ec74db5631ac4b0466a010579aa3702656e0f09bb3fe56a7ee642f5f",
+      "title": "The Defias Brotherhood - Quest - Forever",
+      "quest": {
+        "category": 40,
+        "category2": 0,
+        "id": 65,
+        "level": 18,
+        "name": "The Defias Brotherhood",
+        "reprewards": [
+          [
+            72,
+            100
+          ]
+        ],
+        "reqlevel": 14,
+        "side": 1,
+        "xp": 1350,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        132,
+        135,
+        141,
+        142
+      ],
+      "objectiveMapper": {
+        "parent": "fweiuasf",
+        "objectives": {
+          "40": {
+            "zone": "Westfall",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                }
+              ]
+            ]
+          },
+          "44": {
+            "zone": "Redridge Mountains",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "end",
+                  "name": "Wiley the Black",
+                  "coord": [
+                    26.6,
+                    45.2
+                  ],
+                  "coords": [
+                    [
+                      21.4,
+                      45.2
+                    ],
+                    [
+                      21.6,
+                      45.2
+                    ],
+                    [
+                      26.4,
+                      45.2
+                    ],
+                    [
+                      26.6,
+                      45.2
+                    ]
+                  ],
+                  "id": 266,
+                  "reactalliance": 1,
+                  "reacthorde": 0
+                }
+              ]
+            ]
+          }
+        },
+        "zoneparent": "lksjdowlha",
+        "zones": [
+          [
+            40,
+            1
+          ],
+          [
+            44,
+            1
+          ]
+        ],
+        "missing": 0
+      },
+      "reusedCachedResponse": false
+    },
+    "quest:141": {
+      "url": "https://www.wowhead.com/forever/quest=141",
+      "bytes": 62435,
+      "sha256": "be5b4d3107077bcfe02570a36b83530203721aa5ada0c92dc07cab15783eb48a",
+      "title": "The Defias Brotherhood - Quest - Forever",
+      "quest": {
+        "category": 40,
+        "category2": 0,
+        "id": 141,
+        "level": 18,
+        "name": "The Defias Brotherhood",
+        "reprewards": [
+          [
+            72,
+            25
+          ]
+        ],
+        "reqlevel": 14,
+        "side": 1,
+        "xp": 340,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        65,
+        132,
+        135,
+        142
+      ],
+      "objectiveMapper": {
+        "parent": "fweiuasf",
+        "objectives": {
+          "1519": {
+            "zone": "Stormwind City",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "name": "Master Mathias Shaw",
+                  "coord": [
+                    75.8,
+                    59.8
+                  ],
+                  "coords": [
+                    [
+                      75.8,
+                      59.8
+                    ],
+                    [
+                      78.4,
+                      70.6
+                    ],
+                    [
+                      78.6,
+                      70.6
+                    ]
+                  ],
+                  "id": 332,
+                  "reactalliance": 1,
+                  "reacthorde": 0
+                }
+              ]
+            ]
+          },
+          "40": {
+            "zone": "Westfall",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "end",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                }
+              ]
+            ]
+          }
+        },
+        "zoneparent": "lksjdowlha",
+        "zones": [
+          [
+            1519,
+            1
+          ],
+          [
+            40,
+            1
+          ]
+        ],
+        "missing": 0
+      },
+      "reusedCachedResponse": false
+    },
+    "quest:155": {
+      "url": "https://www.wowhead.com/forever/quest=155",
+      "bytes": 113795,
+      "sha256": "6783e548f3a521f201c2248153e17417e1a18cdb59f4e78423690ffe1df0d56a",
+      "title": "The Defias Brotherhood - Quest - Forever",
+      "quest": {
+        "category": 40,
+        "category2": 0,
+        "id": 155,
+        "level": 18,
+        "name": "The Defias Brotherhood",
+        "reprewards": [
+          [
+            72,
+            150
+          ]
+        ],
+        "reqlevel": 14,
+        "side": 1,
+        "xp": 1700,
+        "envChange": {
+          "status": "updated",
+          "labels": [
+            "text_changed"
+          ],
+          "lines": [
+            "Progress text added"
+          ],
+          "notShown": [
+            "Progress text added"
+          ]
+        }
+      },
+      "seriesQuestIDs": [
+        166
+      ],
+      "objectiveMapper": {
+        "parent": "fweiuasf",
+        "objectives": {
+          "40": {
+            "zone": "Westfall",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "name": "The Defias Traitor",
+                  "coord": [
+                    55.6,
+                    47.4
+                  ],
+                  "coords": [
+                    [
+                      43.2,
+                      70
+                    ],
+                    [
+                      44.1,
+                      69.6
+                    ],
+                    [
+                      45.4,
+                      65.4
+                    ],
+                    [
+                      45.4,
+                      65.6
+                    ],
+                    [
+                      45.6,
+                      65.4
+                    ],
+                    [
+                      45.6,
+                      65.6
+                    ],
+                    [
+                      45.6,
+                      68.4
+                    ],
+                    [
+                      45.6,
+                      68.6
+                    ],
+                    [
+                      50,
+                      64
+                    ],
+                    [
+                      54.8,
+                      66.6
+                    ],
+                    [
+                      55,
+                      66.4
+                    ],
+                    [
+                      55.6,
+                      47.4
+                    ],
+                    [
+                      55.6,
+                      47.6
+                    ],
+                    [
+                      56.4,
+                      53.8
+                    ],
+                    [
+                      56.6,
+                      54
+                    ],
+                    [
+                      57.4,
+                      62
+                    ]
+                  ],
+                  "id": 467,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                },
+                {
+                  "type": 1,
+                  "point": "end",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                }
+              ]
+            ]
+          }
+        },
+        "zoneparent": "lksjdowlha",
+        "zones": [
+          [
+            40,
+            2
+          ]
+        ],
+        "missing": 1
+      },
+      "reusedCachedResponse": true
+    },
+    "quest:166": {
+      "url": "https://www.wowhead.com/forever/quest=166",
+      "bytes": 203395,
+      "sha256": "98b43dba43322eb1b49d84be01923fed097b0197a936e716642a708490a4d501",
+      "title": "The Defias Brotherhood - Quest - Forever",
+      "quest": {
+        "category": 1581,
+        "category2": 2,
+        "id": 166,
+        "itemchoices": [
+          [
+            6087,
+            1
+          ],
+          [
+            2041,
+            1
+          ],
+          [
+            2042,
+            1
+          ]
+        ],
+        "level": 22,
+        "name": "The Defias Brotherhood",
+        "reprewards": [
+          [
+            72,
+            200
+          ]
+        ],
+        "reqlevel": 14,
+        "side": 1,
+        "type": 81,
+        "xp": 2600,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        155
+      ],
+      "objectiveMapper": {
+        "parent": "fweiuasf",
+        "objectives": {
+          "40": {
+            "zone": "Westfall",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                },
+                {
+                  "type": 1,
+                  "point": "end",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                }
+              ]
+            ]
+          },
+          "1581": {
+            "zone": "The Deadmines",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "sourcerequirement",
+                  "name": "Edwin VanCleef",
+                  "coord": [
+                    ""
+                  ],
+                  "coords": [],
+                  "objective": 0,
+                  "id": 639,
+                  "reactalliance": -1,
+                  "reacthorde": -1,
+                  "item": "Head of VanCleef"
+                }
+              ]
+            ]
+          }
+        },
+        "zoneparent": "lksjdowlha",
+        "zones": [
+          [
+            40,
+            1
+          ],
+          [
+            1581,
+            1
+          ]
+        ],
+        "missing": 0
+      },
+      "reusedCachedResponse": true
+    },
+    "quest:135": {
+      "url": "https://www.wowhead.com/forever/quest=135",
+      "bytes": 72269,
+      "sha256": "9608b11f53f5a9a80120735e4dcf483465b78a46e024d6f1980752fd85f1233a",
+      "title": "The Defias Brotherhood - Quest - Forever",
+      "quest": {
+        "category": 40,
+        "category2": 0,
+        "id": 135,
+        "level": 18,
+        "name": "The Defias Brotherhood",
+        "reprewards": [
+          [
+            72,
+            50
+          ]
+        ],
+        "reqlevel": 14,
+        "side": 1,
+        "xp": 680,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        65,
+        132,
+        141,
+        142
+      ],
+      "objectiveMapper": {
+        "parent": "fweiuasf",
+        "objectives": {
+          "40": {
+            "zone": "Westfall",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                }
+              ]
+            ]
+          },
+          "1519": {
+            "zone": "Stormwind City",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "end",
+                  "name": "Master Mathias Shaw",
+                  "coord": [
+                    75.8,
+                    59.8
+                  ],
+                  "coords": [
+                    [
+                      75.8,
+                      59.8
+                    ],
+                    [
+                      78.4,
+                      70.6
+                    ],
+                    [
+                      78.6,
+                      70.6
+                    ]
+                  ],
+                  "id": 332,
+                  "reactalliance": 1,
+                  "reacthorde": 0
+                }
+              ]
+            ]
+          }
+        },
+        "zoneparent": "lksjdowlha",
+        "zones": [
+          [
+            40,
+            1
+          ],
+          [
+            1519,
+            1
+          ]
+        ],
+        "missing": 0
+      },
+      "reusedCachedResponse": false
+    },
+    "quest:132": {
+      "url": "https://www.wowhead.com/forever/quest=132",
+      "bytes": 64592,
+      "sha256": "da83960fea01593c36cc59536195cadf7acd232739dbcac7ef695fd1b4987eb8",
+      "title": "The Defias Brotherhood - Quest - Forever",
+      "quest": {
+        "category": 40,
+        "category2": 0,
+        "id": 132,
+        "level": 18,
+        "name": "The Defias Brotherhood",
+        "reprewards": [
+          [
+            72,
+            50
+          ]
+        ],
+        "reqlevel": 14,
+        "side": 1,
+        "xp": 680,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        65,
+        135,
+        141,
+        142
+      ],
+      "objectiveMapper": {
+        "parent": "fweiuasf",
+        "objectives": {
+          "44": {
+            "zone": "Redridge Mountains",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "name": "Wiley the Black",
+                  "coord": [
+                    26.6,
+                    45.2
+                  ],
+                  "coords": [
+                    [
+                      21.4,
+                      45.2
+                    ],
+                    [
+                      21.6,
+                      45.2
+                    ],
+                    [
+                      26.4,
+                      45.2
+                    ],
+                    [
+                      26.6,
+                      45.2
+                    ]
+                  ],
+                  "id": 266,
+                  "reactalliance": 1,
+                  "reacthorde": 0
+                }
+              ]
+            ]
+          },
+          "40": {
+            "zone": "Westfall",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "end",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                }
+              ]
+            ]
+          }
+        },
+        "zoneparent": "lksjdowlha",
+        "zones": [
+          [
+            44,
+            1
+          ],
+          [
+            40,
+            1
+          ]
+        ],
+        "missing": 0
+      },
+      "reusedCachedResponse": false
+    },
+    "quest:142": {
+      "url": "https://www.wowhead.com/forever/quest=142",
+      "bytes": 103428,
+      "sha256": "743c7129adb68f860786022274d7bf0af94f4c92915785ec03e9070759c35b92",
+      "title": "The Defias Brotherhood - Quest - Forever",
+      "quest": {
+        "category": 40,
+        "category2": 0,
+        "id": 142,
+        "level": 18,
+        "name": "The Defias Brotherhood",
+        "reprewards": [
+          [
+            72,
+            100
+          ]
+        ],
+        "reqlevel": 14,
+        "side": 1,
+        "xp": 1350,
+        "envChange": {
+          "status": "unchanged",
+          "labels": [],
+          "lines": []
+        }
+      },
+      "seriesQuestIDs": [
+        65,
+        132,
+        135,
+        141
+      ],
+      "objectiveMapper": {
+        "parent": "fweiuasf",
+        "objectives": {
+          "40": {
+            "zone": "Westfall",
+            "mappable": 1,
+            "levels": [
+              [
+                {
+                  "type": 1,
+                  "point": "start",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                },
+                {
+                  "type": 1,
+                  "point": "end",
+                  "name": "Gryan Stoutmantle",
+                  "coord": [
+                    56.2,
+                    47.6
+                  ],
+                  "coords": [
+                    [
+                      56.2,
+                      47.4
+                    ],
+                    [
+                      56.2,
+                      47.6
+                    ]
+                  ],
+                  "id": 234,
+                  "reactalliance": 1,
+                  "reacthorde": -1
+                },
+                {
+                  "type": 1,
+                  "point": "sourcerequirement",
+                  "name": "Defias Messenger",
+                  "coord": [
+                    44.6,
+                    69.6
+                  ],
+                  "coords": [
+                    [
+                      44.1,
+                      62.4
+                    ],
+                    [
+                      44.4,
+                      69.4
+                    ],
+                    [
+                      44.4,
+                      69.6
+                    ],
+                    [
+                      44.6,
+                      69.4
+                    ],
+                    [
+                      44.6,
+                      69.6
+                    ],
+                    [
+                      44.8,
+                      21.9
+                    ],
+                    [
+                      45.2,
+                      68.2
+                    ],
+                    [
+                      45.3,
+                      64.9
+                    ],
+                    [
+                      45.3,
+                      67.2
+                    ],
+                    [
+                      45.5,
+                      65.4
+                    ],
+                    [
+                      45.6,
+                      68.2
+                    ],
+                    [
+                      46,
+                      68.8
+                    ]
+                  ],
+                  "objective": 0,
+                  "id": 550,
+                  "reactalliance": -1,
+                  "reacthorde": -1,
+                  "item": "A Mysterious Message"
+                }
+              ]
+            ]
+          }
+        },
+        "zoneparent": "lksjdowlha",
+        "zones": [
+          [
+            40,
+            2
+          ]
+        ],
+        "missing": 0
+      },
+      "reusedCachedResponse": false
+    }
+  },
+  "review": {
+    "route": [
+      65,
+      132,
+      135,
+      141,
+      142,
+      155,
+      166
+    ],
+    "basis": "65\u2013142 are ordered together by each published quest series. Quest142 completion directs escorting the captured traitor; quest155 starts that escort and ends with Stoutmantle. Quest155\u2013166 are ordered together. This supports written travel order, not a complete mandatory prerequisite graph or current availability.",
+    "unknowns": [
+      "Unlisted preceding unlocks or alternate branches",
+      "Current server acceptance and character availability",
+      "Quest completion does not identify which choice reward was taken"
+    ],
+    "API": {
+      "repository": "https://github.com/Gethe/wow-ui-source/tree/forever",
+      "commit": "4cd0ab752a77164f654ccbca9d0c1fe8dafceebe",
+      "files": {
+        "Interface/AddOns/Blizzard_APIDocumentationGenerated/MapDocumentation.lua": "247a3b2ddfbc4ecca0667fd5bacfeaeea7cfffae",
+        "Interface/AddOns/Blizzard_APIDocumentationGenerated/QuestLogDocumentation.lua": "587006566ca7de68deeb8fb044f8e3bcbc999931",
+        "Interface/AddOns/Blizzard_APIDocumentationGenerated/EncounterJournalDocumentation.lua": "58d83832277663cd20c349e8e4b1a16f48af0010",
+        "Interface/AddOns/Blizzard_WorldMap/Blizzard_WorldMap.lua": "6b17b93085e6793627885c296a5f79a3a01d2289"
+      },
+      "confirmed": [
+        "C_Map.OpenWorldMap (restricted)",
+        "C_Map.GetMapInfo/GetMapChildrenInfo",
+        "C_EncounterJournal.GetDungeonEntrancesForMap",
+        "C_QuestLog.IsOnQuest/IsQuestFlaggedCompleted/GetNextWaypoint/GetNextWaypointText",
+        "WorldMapFrame:GetCanvas/GetMapID, OnHide"
+      ],
+      "limitation": "Source-code compatibility evidence only; actual map rendering requires manual Forever-client checks."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "dungeon_equipment_drops.csv": {
+    "rows": 552,
+    "sourceRowOffsetOnlyCells": 159,
+    "semanticChanges": [
+      {
+        "itemID": "18722",
+        "changes": {
+          "confidence": {
+            "before": "forever-reference-unverified",
+            "after": "forever-community-reference"
+          },
+          "PlayfullsRoutes": {
+            "before": [],
+            "after": [
+              {
+                "type": "boss",
+                "npc": "Magistrate Barthilas",
+                "zone": "Stratholme",
+                "path": "loot-tables/dungeons/stratholme",
+                "note": "loot-tables/dungeons/stratholme#boss-magistrate-barthilas",
+                "label": "Boss drop"
+              }
+            ]
+          },
+          "sourceURL": {
+            "before": "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json",
+            "after": "https://playfulls.com/database"
+          }
+        }
+      }
+    ]
+  },
+  "dungeon_source_followups.csv": {
+    "rows": 6,
+    "sourceRowOffsetOnlyCells": 1,
+    "semanticChanges": []
+  },
+  "recipe_source_followups.csv": {
+    "rows": 954,
+    "sourceRowOffsetOnlyCells": 456,
+    "semanticChanges": []
+  },
+  "recipe_trainer_book_checks.csv": {
+    "rows": 886,
+    "sourceRowOffsetOnlyCells": 388,
+    "semanticChanges": []
+  },
+  "recipe_vendor_book_checks.csv": {
+    "rows": 68,
+    "sourceRowOffsetOnlyCells": 68,
+    "semanticChanges": []
+  }
+}

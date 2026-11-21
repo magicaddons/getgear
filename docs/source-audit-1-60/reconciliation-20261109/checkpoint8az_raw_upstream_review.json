@@ -1,0 +1,117 @@
+{
+  "capturedUTC": "2026-11-10T20:21:05.022283+00:00",
+  "method": "Exact full factual snapshot comparison: retainedreviewed8AYactualfactualsnapshots to8AZ;original8AUand8AVdeltas preservedseparately; actual unchanged reconciler fetch bytes captured during final run, no duplicate diagnostic network requests; ignore sourceRow/rawRowSHA256 for resolved-source facts. Anonymous edges compared by exact relation keys, never inferred from lastSeen.",
+  "playfulls": {
+    "beforeItems": 23459,
+    "afterItems": 23459,
+    "beforeDefinitions": 9160,
+    "afterDefinitions": 9160,
+    "newItems": [],
+    "removedIDs": [],
+    "changedNames": [],
+    "changedAcquisitionFacts": [],
+    "sourceIndexOnlyRows": 0,
+    "uninterpretedField10Changes": [],
+    "fingerprints": [
+      {
+        "url": "https://playfulls.com/db/meta.9b6239dcb2.json",
+        "bytes": 989827,
+        "sha256": "9b6239dcb206fef7d81c5f4c330d41f38443898921c2dc747067cff3e2238a43",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/gear.6895f81aa3.json",
+        "bytes": 1335832,
+        "sha256": "6895f81aa36462d4e471d3d09513a3f0958986acf709eafe0c051bcfbfdddf47",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/goods.79db2b20fc.json",
+        "bytes": 464365,
+        "sha256": "79db2b20fc84551fc86b0323367841f8ee3540a0b3d256ba6d79e0b06a0e6e9f",
+        "matchesRecordedFingerprint": true
+      },
+      {
+        "url": "https://playfulls.com/db/other.607ccde792.json",
+        "bytes": 446192,
+        "sha256": "607ccde7927b5095a88af862d66b672f8fb3e0d82ca6790d0321913bdef6f203",
+        "matchesRecordedFingerprint": true
+      }
+    ]
+  },
+  "everloot": {
+    "beforeRaw": 1550,
+    "afterRaw": 1550,
+    "qualifying": 1315,
+    "addedEdges": [],
+    "removedEdges": [],
+    "updatedEdges": [
+      {
+        "key": [
+          "item",
+          "2770",
+          "dropped_by",
+          "object",
+          "1731"
+        ],
+        "changes": {
+          "lastSeen": {
+            "before": "2026-11-10T14:37:11.000Z",
+            "after": "2026-11-10T19:53:31.000Z"
+          }
+        }
+      }
+    ],
+    "selectedQualifyingEdges": [
+      {
+        "fromKind": "item",
+        "fromId": 6393,
+        "rel": "dropped_by",
+        "toKind": "npc",
+        "toId": 2529,
+        "evidence": "observed",
+        "build": null,
+        "installs": 3,
+        "firstSeen": "2026-11-09T09:17:06.000Z",
+        "lastSeen": "2026-11-09T09:17:06.000Z"
+      }
+    ],
+    "attribution": {
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Data from Everloot (https://everloot.app), CC BY-SA 4.0.",
+      "source": "https://everloot.app/database/items",
+      "terms": "https://everloot.app/terms#licences"
+    },
+    "captureResponses": [
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500",
+        "bytes": 103443,
+        "sha256": "17a97568abbb2c5d2bb7e932937a712a48be374222b0c6e6b4d72d53d7475d37",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T20:10:17.037Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500",
+        "bytes": 103546,
+        "sha256": "c3aeb61358dba872029ee6f6b5070e41dd4bb13dc5836595947850c8dbc39d47",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T20:10:17.037Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000",
+        "bytes": 103400,
+        "sha256": "141e308cba8a5539ba658444c510839bd04864d478b1f2e9d76bf01eea687b36",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T20:10:17.037Z"
+      },
+      {
+        "url": "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500",
+        "bytes": 10711,
+        "sha256": "f1002f7880f375ddad8cd92665cc5572d6abf4bfd005f52e19316f75b0bb56ef",
+        "matchesReconciliationResponseFingerprint": true,
+        "dataAsOf": "2026-11-10T20:10:17.037Z"
+      }
+    ]
+  }
+}

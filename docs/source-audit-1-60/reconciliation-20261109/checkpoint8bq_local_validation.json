@@ -1,0 +1,138 @@
+{
+  "status": "51integrated/full19localPASS;nonreleaseCI/directbotpending",
+  "registry": 5158,
+  "index": 6629,
+  "display": 6628,
+  "books": 759,
+  "remaining": 744,
+  "next": "8BR54level49numericIDorder",
+  "priorObjectsExact": 5107,
+  "caseCounts": {
+    "selected": 51,
+    "groups": {
+      "broad-worlddrop": 51
+    },
+    "caseFullPages": 110,
+    "caseNewPages": 87,
+    "caseCachedPages": 23,
+    "primaryWithRetainedContext": 289,
+    "newFullPages": 87,
+    "reusedFullPages": 202,
+    "exactQueries": 51,
+    "sharedQueries": 0,
+    "dropReverseJoins": 617,
+    "dropReverseOmissions": 229,
+    "objectReverseJoins": 60,
+    "objectReverseOmissions": 9,
+    "physicalContainerReferences": 93,
+    "physicalContainerReverseJoins": 89,
+    "physicalContainerOmissions": 4,
+    "additionalFullOnlyContainerReferences": 1,
+    "qualities": {
+      "3": 5,
+      "2": 46
+    },
+    "BoE": 51,
+    "plainUnique": 1,
+    "UniqueEquipped": 0,
+    "newFailures": 0,
+    "liveVerified": 0
+  },
+  "successfulCapture": {
+    "label": "8bq",
+    "exitCode": 0,
+    "responses": {
+      "https://playfulls.com/db/meta.4312e87ed1.json": {
+        "bytes": 999737,
+        "sha256": "4312e87ed1f8255c5a3b1e1efb85999c881fe37c3c6135824522654427c8e5dd",
+        "workspacePath": "/tmp/getgear-research/8bq-http-capture/4312e87ed1f8255c5a3b1e1efb85999c881fe37c3c6135824522654427c8e5dd.body",
+        "capturedUTC": "2026-11-11T13:08:22.447667+00:00"
+      },
+      "https://playfulls.com/db/gear.b0bf409a63.json": {
+        "bytes": 1356813,
+        "sha256": "b0bf409a636fc3299aa96da2ae5d0c4e4f1c1844db9ff639ba80eb1fe7c87874",
+        "workspacePath": "/tmp/getgear-research/8bq-http-capture/b0bf409a636fc3299aa96da2ae5d0c4e4f1c1844db9ff639ba80eb1fe7c87874.body",
+        "capturedUTC": "2026-11-11T13:08:22.648715+00:00"
+      },
+      "https://playfulls.com/db/goods.6eed640c18.json": {
+        "bytes": 467020,
+        "sha256": "6eed640c184f7110f016ce926fac6ca47e421a12428c7b59022869bb6d3736f8",
+        "workspacePath": "/tmp/getgear-research/8bq-http-capture/6eed640c184f7110f016ce926fac6ca47e421a12428c7b59022869bb6d3736f8.body",
+        "capturedUTC": "2026-11-11T13:08:22.814777+00:00"
+      },
+      "https://playfulls.com/db/other.d80c1a3fa6.json": {
+        "bytes": 446730,
+        "sha256": "d80c1a3fa6ac5d8ca445d9e700be50da760cd3126e4aa5261a1e23101ebd2b3f",
+        "workspacePath": "/tmp/getgear-research/8bq-http-capture/d80c1a3fa6ac5d8ca445d9e700be50da760cd3126e4aa5261a1e23101ebd2b3f.body",
+        "capturedUTC": "2026-11-11T13:08:22.982513+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500": {
+        "bytes": 103443,
+        "sha256": "7b7a141462a733891f08093e6951c7aaec8e9ebbbc0785f953f42d00fdc6af38",
+        "workspacePath": "/tmp/getgear-research/8bq-http-capture/7b7a141462a733891f08093e6951c7aaec8e9ebbbc0785f953f42d00fdc6af38.body",
+        "capturedUTC": "2026-11-11T13:08:27.446380+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=500": {
+        "bytes": 103479,
+        "sha256": "f3a17fbf563d43f22c521d37c6f928ee242ff7445993fd92185e195bd04deda2",
+        "workspacePath": "/tmp/getgear-research/8bq-http-capture/f3a17fbf563d43f22c521d37c6f928ee242ff7445993fd92185e195bd04deda2.body",
+        "capturedUTC": "2026-11-11T13:08:29.784812+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1000": {
+        "bytes": 103463,
+        "sha256": "9ae48b43cb413ea31143a479d15d497b61e75c75069beb8d28bf6f6941ea7964",
+        "workspacePath": "/tmp/getgear-research/8bq-http-capture/9ae48b43cb413ea31143a479d15d497b61e75c75069beb8d28bf6f6941ea7964.body",
+        "capturedUTC": "2026-11-11T13:08:31.273913+00:00"
+      },
+      "https://everloot.app/api/edges?evidence=observed&limit=500&offset=1500": {
+        "bytes": 35754,
+        "sha256": "c22f9b6d713f7651c61813777dad97aa81242d4722275c4156c03120b70d0af8",
+        "workspacePath": "/tmp/getgear-research/8bq-http-capture/c22f9b6d713f7651c61813777dad97aa81242d4722275c4156c03120b70d0af8.body",
+        "capturedUTC": "2026-11-11T13:08:34.627159+00:00"
+      }
+    }
+  },
+  "sourceProofImmutableSHA256": "d7140d6677005180bb98080ff8b8d71c9161a0ef367b3cceb68616ad32287ed3",
+  "sourceProofState": "Historical pre-finalvalidation;local/final overridespendingstate. Do notmodifyproof forclosure.",
+  "companionFiles": {
+    "dungeon_equipment_drops.csv": "byte-exact",
+    "dungeon_items_reconciled.csv": "byte-exact",
+    "dungeon_source_followups.csv": "byte-exact",
+    "recipes_reconciled.csv": "byte-exact",
+    "recipe_source_followups.csv": "byte-exact",
+    "recipe_trainer_book_checks.csv": "byte-exact",
+    "recipe_vendor_book_checks.csv": "byte-exact",
+    "supplementary_crafts_reconciled.csv": "byte-exact",
+    "reviewed_recipe_sources.json": "byte-exact",
+    "supplementary_crafts.json": "byte-exact",
+    "upstream_playfulls_display_snapshot.csv": "byte-exact",
+    "upstream_playfulls_display_definitions.json": "byte-exact",
+    "upstream_playfulls_source_definitions.json": "byte-exact",
+    "upstream_everloot_edges_snapshot.csv": "byte-exact",
+    "upstream_playfulls_acquisition_snapshot.csv": "byte-exact",
+    "additional_catalogue_coverage_candidates.csv": "byte-exact"
+  },
+  "navigation": {
+    "not_applicable": 2577,
+    "directions": 1276,
+    "missing": 3172,
+    "verified_coordinate_data": 682
+  },
+  "gapRows": 6980,
+  "liveRenderingVerified": 0,
+  "CI": "pending18timestampedPASS/no release",
+  "feedScope": "PF23608/9246entireraw-fullsources-entiremetadata exactactual8BP;EV1672/1431entirerelations-fields exactactual8BP;zero newremovedupdatedselectedopaque/allfactualsnapshotsbyteexact.",
+  "outsideCandidates": 396,
+  "candidateScope": {
+    "before": 396,
+    "after": 396,
+    "added": 0,
+    "activeCatalogueAdoptions": 0,
+    "scope": "Allnewlyusedfullcontainer/objectcontents checked againstactive7707andcandidate396;no newoutsidelead. WholeALLslotBackThrowneligibilitywork stillpending."
+  },
+  "sharedNavigationChanges": {
+    "newRuntimeNavigationCode": false,
+    "newMapPinsForRandomDrops": 0,
+    "futureSourcesUseExistingSharedModel": true
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "reviewedOn": "2026-11-09",
+  "liveVerified": false,
+  "lootableObjects": [
+    {
+      "objectID": 173232,
+      "name": "Blacksmithing Plans",
+      "sourceURL": "https://www.wowhead.com/forever/object=173232",
+      "sha256": "02b8cb7bfaaf75395b3e4d14de42ff898f43eb14b0fc8a0fb8dec60560bd9441",
+      "mapper": [],
+      "liveVerified": false
+    },
+    {
+      "objectID": 173234,
+      "name": "Blacksmithing Plans",
+      "sourceURL": "https://www.wowhead.com/forever/object=173234",
+      "sha256": "9773323c956fd1593a662cbeb7b68e708e5f5e7fb799505a37db6ea4ad489a5d",
+      "mapper": [],
+      "liveVerified": false
+    }
+  ],
+  "outdoorNPCs": [
+    {
+      "npcID": 979,
+      "name": "Kurzen Shadow Hunter",
+      "url": "https://www.wowhead.com/forever/npc=979",
+      "sha256": "e14c387d1724adcc85dced1b511ad48d5c4f06d2a8dafb6bfcb7281a89323ac4",
+      "mapper": {
+        "33": [
+          {
+            "count": 7,
+            "coords": [
+              [
+                48.4,
+                5.6
+              ],
+              [
+                48.6,
+                5
+              ],
+              [
+                49.2,
+                6.4
+              ],
+              [
+                49.2,
+                6.6
+              ],
+              [
+                49.4,
+                4
+              ],
+              [
+                49.6,
+                5.8
+              ],
+              [
+                49.8,
+                3.8
+              ]
+            ],
+            "uiMapId": 1434,
+            "uiMapName": "Stranglethorn Vale"
+          }
+        ]
+      }
+    }
+  ],
+  "additionalZones": [
+    {
+      "zoneID": 1477,
+      "name": "The Temple of Atal'Hakkar",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1477",
+      "sha256": "30f6c36cca2ddec7129615cad6688a9c62da80631ab6c081640635bb54881cb6"
+    },
+    {
+      "zoneID": 1584,
+      "name": "Blackrock Depths",
+      "sourceURL": "https://www.wowhead.com/forever/zone=1584",
+      "sha256": "823ccb6267e2d300f346be25206f50c961e9800dc8ad0e4eef35680dc3b54041"
+    }
+  ],
+  "scope": "Book/object/NPC publication references only. No generated pin where object map data is absent; no enemy role inferred from rank or shared zone."
+}

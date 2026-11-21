@@ -1,0 +1,119 @@
+{
+  "scope": "New full NPC259250teaching rows joined to existing canonical recipe spell/output/profession/current gear names.15active routes;2missingcanonicalmappingholds. No physical book origin/ingredients/gear mutation.",
+  "npcID": 259250,
+  "sourceURL": "https://www.wowhead.com/forever/npc=259250",
+  "sourceSHA256": "28f8299bbbe1f78898e7e5511c18c27ec0c6787f227879579f0a64ec28b896cf",
+  "canonicalRecipeMapSHA256": "3746d83e11fcf910429be2f8e1d7878537c6e3eff5191f42b395b193d0430c0a",
+  "rawTeachingRows": 23,
+  "canonicalEquipmentOutputRows": 17,
+  "accepted15": [
+    {
+      "itemID": 250482,
+      "spellID": 1252231,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 35. Published training fee: 105 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 250620,
+      "spellID": 1252229,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 35. Published training fee: 105 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 250621,
+      "spellID": 1252230,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 35. Published training fee: 105 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 2847,
+      "spellID": 2739,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 25. Published training fee: 50 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 2851,
+      "spellID": 2661,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 30. Published training fee: 100 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 2852,
+      "spellID": 2662,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 15. Published training fee: 50 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 2857,
+      "spellID": 2666,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 45. Published training fee: 200 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 3469,
+      "spellID": 3319,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 20. Published training fee: 50 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 3472,
+      "spellID": 3323,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 35. Published training fee: 100 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 3473,
+      "spellID": 3324,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 35. Published training fee: 200 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 3488,
+      "spellID": 3293,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 30. Published training fee: 250 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 3489,
+      "spellID": 3294,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 45. Published training fee: 500 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 6214,
+      "spellID": 7408,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 40. Published training fee: 300 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 7166,
+      "spellID": 8880,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 25. Published training fee: 100 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    },
+    {
+      "itemID": 7955,
+      "spellID": 9983,
+      "instructions": "Learn this recipe from the published trainer. Published learning skill: Blacksmithing 25. Published training fee: 100 copper. This locates recipe learning, not finished equipment or a physical pattern book. Learning skill is not a wearer requirement. Current teaching, price and access remain unverified."
+    }
+  ],
+  "held2": [
+    {
+      "itemID": 2844,
+      "name": "Copper Mace",
+      "canonicalSpellID": "",
+      "fullNPCSpellID": 2737,
+      "gap": "canonical_spell_mapping_missing_no_trainer_route_installed"
+    },
+    {
+      "itemID": 2845,
+      "name": "Copper Axe",
+      "canonicalSpellID": "",
+      "fullNPCSpellID": 2738,
+      "gap": "canonical_spell_mapping_missing_no_trainer_route_installed"
+    }
+  ],
+  "learningLocation": [
+    {
+      "areaID": 16591,
+      "bounds": {
+        "xMax": 64.4,
+        "xMin": 64.4,
+        "yMax": 82,
+        "yMin": 82
+      },
+      "uiMapID": 2548,
+      "verification": "published-reference",
+      "x": 64.4,
+      "y": 82,
+      "zone": "Riverglades"
+    }
+  ],
+  "learningServiceOrCurrentPricesVerifiedLive": false
+}
