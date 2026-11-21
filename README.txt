@@ -1,99 +1,69 @@
-GetGear private cumulative .20261121.10
-Location review: map-aware reported navigation points and preserved uncertainty. Accepted .8 renderer, inventory performance improvements and cumulative features retained.
-Retain your WTF/SavedVariables. In-game acceptance remains required.
+GETGEAR 0.14.0-beta10 — WOW FOREVER
+================================
+Public release of user-accepted cumulative private build .20261121.12.
+The 29 Lua modules and three textures are unchanged from accepted source
+f248b098a60beef89d8e3112dba19fa0b329905f. Only release metadata/docs change.
 
-PRIVATE CUMULATIVE TEST: 0.14.0-private-cumulative.20261121.10
-Check BUILD_INFO.txt for the source revision. This is not a public release.
+DOWNLOAD
+https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta10
+Use GetGear-v0.14.0-beta10.zip, not the automatic source-code archive.
 
-GetGear — Private Cumulative Testing Build
-==============================================
-Gear planning and acquisition guidance for WoW Forever, levels 1–60.
-Alliance remains the documented route focus; known source restrictions and
-uncertainties are preserved. This is a private test, not a stable release.
+SUPPORTED CLIENT
+WoW Forever, addon interface 16001. Other clients are not verified.
+Levels 1–60, all nine original classes, both factions.
 
-INSTALL OR UPGRADE
-------------------
-1. Exit WoW Forever completely.
-2. Back up the existing Interface/AddOns/GetGear folder outside AddOns, and
-   back up GetGear account/character SavedVariables in WTF. Keep your progress.
-3. Extract the ZIP's single GetGear folder into Interface/AddOns. Move the old
-   addon folder out first so files from earlier tests do not remain behind.
-4. Confirm Interface/AddOns/GetGear/GetGear.toc exists without extra nesting.
-   Do not install multiple GetGear copies simultaneously or rename the folder.
-5. Launch the game, enable GetGear and use /getgear. Settings are available at
-   /getgear settings; /getgear overlay toggles the compact tracker.
+INSTALL / UPGRADE
+1. Exit the game. Back up AddOns/GetGear and GetGear SavedVariables in WTF.
+2. Extract the ZIP and replace the GetGear folder in _forever_/Interface/AddOns/.
+3. Confirm _forever_/Interface/AddOns/GetGear/GetGear.toc exists; no nesting.
+4. Start the game, enable GetGear in AddOns, and type /getgear.
+Use your actual Forever install path. Cumulative-build settings/stars/progress
+retain the same schema. Migration from v0.12.x can reset older character
+progress/preferences; keep backups. Account inventory is saved snapshots.
 
-The AddOns version should be 0.14.0-private-cumulative.20261121.10. No new SavedVariables migration is
-introduced relative to the tested v0.14.x builds. Retain backups when upgrading
-from older versions. GetGear requires no TomTom or other third-party addon.
+BASIC USE
+- /getgear opens/closes the guide; /getgear overlay toggles the tracker.
+- Browse Available Now, Next 5 Levels, Earlier Gear and equipment slots.
+- Click the tracker's magnifying glass; search by item name or ID.
+- Click outline/filled stars to add/remove character-specific wishlist items.
+  Starred Items appear first; stars do not bypass eligibility restrictions.
+- Expand rows for acquisition and crafting details. Mark acquired, skip or hide
+  items with row actions. Resize the tracker and expand/collapse its sections.
+- /getgear settings opens display options and stat priority preferences.
+- Use map actions for supported sources, choices and directions.
+- Browse Alt Inventory after logging into each character and opening its bank.
+  Offline counts are last-known snapshots, not live access.
+- Preview Guide is read-only for other classes/levels and does not edit stars.
 
-WHAT'S IMPROVED
----------------
-- Independent per-character Slot dropdowns in the overlay and detailed guide.
-- All nine display checkboxes, Balanced/Priority/Advanced and direct custom weights.
-- Canonical material names across direct/nested recipes, totals, bags and tooltips.
-- Class-aware equipment permissions and stat/school filtering, with Show-all
-  still available for unusual but class-equippable choices.
-- Cleaner compact acquisition and recipe instructions; full alternatives and
-  requirements remain in the Guide.
-- Context-sensitive map pins, delayed map readiness handling, useful published
-  dungeon approaches, source choices and preserved native waypoints.
-- Recipe learning requirements, specialisations, reputation/currency/material
-  costs and potential offhand planning while using a two-handed weapon.
-- All 7,707 items included in the presentation audit. The approved catalogue
-  and acquisition dataset are unchanged from PRIVATE TEST 4.
+OTHER COMMANDS
+/getgear status       Catalogue/talent diagnostics
+/getgear inventory    Account inventory diagnostics
+/getgear bankdiag     Bank container diagnostics
+/getgear notify       Toggle source-aware level notifications
 
-PLEASE HELP TEST
-----------------
-Report problems at https://github.com/magicaddons/getgear/issues
-Include version, class/level, affected item name/ID, relevant settings, expected
-and actual result, screenshot and any full Lua error. /console scriptErrors 1
-can help capture errors. Do not farm an uncertain source solely to verify it.
+RECENT IMPROVEMENTS
+Overlay computation improvements; indexed equipment search; shared star
+textures; immediate wishlist reordering/counts; wrapped row actions and hidden
+row refresh corrections. Earlier cumulative tracking, inventory, navigation,
+class/faction eligibility, stat priorities and settings fixes remain included.
 
-KNOWN LIMITATIONS
------------------
-Some recipe-learning sources, locations and current acquisition conditions
-remain unverified. Published map areas are not exact current NPC positions;
-dungeon approaches are not boss-floor coordinates or a guarantee of access.
-Current vendor stock, loot, quest access, map behaviour and client interactions
-still need community testing. Unknown sources remain explicitly qualified.
-Automated checks and the user's private in-game testing do not confirm every
-route, class, client state or other-addon interaction. The 900 held candidates
-have not been added.
+LIMITATIONS
+Public beta. Catalogue/source information can be dated, incomplete or uncertain;
+it does not guarantee current loot, vendor stock, quests, recipes or coordinates.
+This is not a best-in-slot ranking. Bank snapshots can become stale; mail,
+auctions and guild/account banks are not automatically tracked. User acceptance
+was reported for the private build. Automated Lua compatibility/regression tests
+do not constitute new in-game verification or exhaustive live route testing.
 
-SOURCE CREDITS
---------------
-Everloot: https://everloot.app — community observation data, CC BY-SA 4.0
-https://creativecommons.org/licenses/by-sa/4.0/
-Everloot-derived reference data is adapted/combined and remains subject to
-CC BY-SA 4.0. Observations do not imply guaranteed future loot or rates.
-Playfulls: https://playfulls.com/database — public community source references;
-https://playfulls.com/methodology
-WoW Forever Friends: https://www.wowforeverfriends.org — Classic-reference
-item/NPC data, not proof of current Forever acquisition.
-Forever client cache: https://github.com/Napalmsteak/WoW-Classic-Item-Caches
-Recipe/client references: AHledger and the dated client snapshots documented
-in the repository. Individual publication checks cite Wowhead Forever and
-other source URLs in the reviewed evidence registers. No Blizzard affiliation.
+LICENSING
+No project-wide software license was present in the approved source. This
+owner-authorized release permits public download and installation; no new
+open-source license or broader modification/redistribution grant is added.
+Third-party game names and referenced data retain their respective owners'
+rights. Contact the project owner for licensing questions.
+GetGear is a community addon, not an official Blizzard product.
 
-PERFORMANCE CAPTURE
--------------------
-Use /getgear perf start, reproduce a short visible or hidden tracker scenario,
-then /getgear perf stop. Compare event/call counts and inclusive milliseconds.
-Nested times overlap; net heap changes include garbage collection and capture
-overhead and do not measure total allocations. Captures are session-only.
-Actual client hitching and section-drag smoothness still require testing.
-
-Private cumulative .11: Equipment search and character wishlist
-Click the search icon beside Guide in the tracker. Type a partial item name,
-use arrows and Enter or click a result. The highlighted search card shows that
-item's slot, state, source and star without changing saved filters. Escape closes.
-Stars are saved per character. Click an outline/filled star to toggle it in the
-tracker, guide or search. Future equipment remains in the starred group. Use
-< / > to page long tracker lists and Other to jump to ordinary recommendations.
-Preview is read-only. Hidden, skipped, acquired and equipped items stay out of
-active wishlists; search and history retain their existing management actions.
-Stars bypass relevance, level-window, personal-craft and positive-stat display
-filters, never class/faction use restrictions or scoring. A saved item with a
-newly blocked acquisition route is labelled Unavailable. Wishlist stars do not
-add future items to total crafting materials or imply that an item is an upgrade.
+HELP / RELEASE NOTES
+https://github.com/magicaddons/getgear
+https://github.com/magicaddons/getgear/issues
+Include addon version, class/level, item ID/name, symptoms and any Lua error.
