@@ -110,8 +110,11 @@ separate-process timings showed substantial host variation, including isolated
 samples more than twice their neighboring samples. To investigate, the paired
 runner alternated nine batches of ten old/new refreshes inside each interpreter,
 with separate addon environments and the same frame/inventory fixtures. The
-expanded/collapsed median differences were +0.19% / -4.83% on Lua 5.1 and
-+2.56% / +4.30% on Lua 5.4. Source calculations stayed identical. This supports
+expanded/collapsed median differences were +2.62% / -0.76% on Lua 5.1 and
++6.47% / -0.31% on Lua 5.4. Collection is reset before each measured batch,
+not only before each pair; the latter could charge collection from the first
+runtime to the second. The corrected controlled results are retained in
+`paired-lua51.txt` and `paired-lua54.txt`. Source calculations stayed identical. This supports
 a small presentation cost rather than renewed acquisition calculations; it
 is not a promise of equivalent client frame pacing. Existing operation/heap
 budgets remain intact. First opening the guide creates exactly forty additional

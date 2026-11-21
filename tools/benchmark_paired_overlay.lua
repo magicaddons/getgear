@@ -39,6 +39,7 @@ local function signature(runtime)
 end
 assert(signature(base)==signature(new))
 local function batch(runtime)
+ collectgarbage('collect')
  local before=runtime.count();local started=os.clock()
  for _=1,10 do runtime.addon:RefreshOverlay() end
  return (os.clock()-started)*1000,runtime.count()-before
