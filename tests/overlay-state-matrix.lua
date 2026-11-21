@@ -33,6 +33,16 @@ for _,token in ipairs({'WARRIOR','PALADIN','HUNTER','ROGUE','PRIEST','SHAMAN','M
     hideWithoutPositiveStats=true,hideGreenBoEWorldDrops=true,countArmorOnlyUpgrades=false,
     expanded={},minimized={},dependencyCollapsed={},dependencyExpanded={},materialScope='tracked'},detail={}}
    addon:SelectCurrentGuide()
+   -- Drive the real UI for every class/faction/level, using the same output
+   -- oracle below. Collapse/expand must reread current inventory immediately.
+   addon.db.overlay.visible=true
+   addon:InitializeUI();addon:ShowUI();addon:RefreshAll()
+   assert(GetGear_MainWindow:IsShown() and GetGear_TrackerOverlay:IsShown())
+   addon.db.overlay.materialsCollapsed=true;addon:RefreshOverlay()
+   owned=owned+1
+   addon.db.overlay.materialsCollapsed=false;addon:RefreshOverlay()
+   assert(addon:GetMaterialCount(2589)==owned)
+   GetGear_MainWindow:Hide()
    -- Exercise history decisions separately from recommendations and levels.
    if addon.Gear[1]then addon.db.status[addon.Gear[1].id]='acquired' end
    if addon.Gear[2]then addon.db.hidden[addon.Gear[2].id]=true end

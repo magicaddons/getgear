@@ -220,7 +220,7 @@ end
 function GetGear:GetUndocumentedCrafts(scope)
     local pending,level={},self.level or 1
     for _,gear in ipairs(self.Gear) do
-        if gear.targetLevel<=level+5 and not self:GetStatus(gear)
+        if self:IsCraftMaterialsUnknown(gear) and gear.targetLevel<=level+5 and not self:GetStatus(gear)
             and (not self.ShouldDisplayGear
                 or self:ShouldDisplayGear(gear,self.classToken,
                     scope=="all" and "materials-all" or "materials"))
@@ -240,7 +240,7 @@ function GetGear:GetCombinedMaterialRows(scope)
     local total, list = {}, {}
     local level=self.level or 1
     for _,gear in ipairs(self.Gear) do
-        if gear.targetLevel <= level+5 and not self:GetStatus(gear)
+        if gear.reagents and #gear.reagents>0 and gear.targetLevel <= level+5 and not self:GetStatus(gear)
             and (not self.ShouldDisplayGear
                 or self:ShouldDisplayGear(gear,self.classToken,
                     scope=="all" and "materials-all" or "materials"))

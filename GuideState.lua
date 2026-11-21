@@ -114,7 +114,24 @@ function GetGear:GetMaterialCount(itemID)
 end
 
 function GetGear:GetRecommendationRecord(record)
-    local minimum=self.GetAcquisitionMinimumLevel and self:GetAcquisitionMinimumLevel(record)
+    -- Raw quest facts can rule out an increase without building eligible routes.
+    -- Any possible increase still uses the complete character-aware minimum.
+    local model=self.AcquisitionNavigationData
+    local mayRaise=not model
+    if model and not record.bagUpgrade and not record.profession then
+        local plan=record.acquisitionPlan or model.items and
+            (model.items[record.itemID] or model.items[tostring(record.itemID)])
+        for _,route in ipairs(plan and plan.routes or {}) do
+            if route.kind=="quest" or route.kind=="quest_container" then
+                local quests=model.quests or {}
+                local quest=quests[route.questID] or quests[tostring(route.questID)]
+                if quest and type(quest.reqlevel)=="number" and quest.reqlevel>(record.targetLevel or 1) then
+                    mayRaise=true;break
+                end
+            end
+        end
+    end
+    local minimum=mayRaise and self.GetAcquisitionMinimumLevel and self:GetAcquisitionMinimumLevel(record)
     if minimum and minimum>(record.targetLevel or 1) then
         return setmetatable({targetLevel=minimum},{__index=record})
     end
@@ -136,6 +153,7 @@ function GetGear:GetAggregateMaterials(scope)
     local level = self.level or 1
     local totals, result = {}, {}
     for _, gear in ipairs(self.Gear) do
+        if gear.reagents and #gear.reagents>0 then
         gear=self:GetRecommendationRecord(gear)
         if gear.targetLevel <= level + 5 and not self:GetStatus(gear)
             and (not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(gear))
@@ -162,18 +180,89 @@ function GetGear:GetAggregateMaterials(scope)
                 entry.amount = entry.amount + material.amount
             end
         end
+        end -- documented reagents
     end
     table.sort(result, function(a,b) return a.name < b.name end)
     return result
 end
 
+-- A synchronous refresh is one coherent state snapshot. Share pure derived
+-- results across catalogue, material and visible-row consumers, then release
+-- every reference before returning to the client. No cross-event cache exists:
+-- inventory, equipment, talents, quests, professions, settings and item data
+-- are always read afresh on the next refresh, including direct UI refreshes.
+local SnapshotNil={}
+local SnapshotUnpack=unpack or table.unpack
+local function SnapshotPack(...)return {n=select('#',...),...}end
+local function InstallSnapshotMethods(self)
+    if self.snapshotMethodsInstalled then return end
+    self.snapshotMethodsInstalled=true
+    for _,name in ipairs({"GetEligibleAcquisitionRoutes",
+        "HasEligibleAcquisitionSource","IsGearEquipped",
+        "GetObsoleteGearReason","GetGearComparison","GetWeightedUpgradeEvaluation",
+        "GetProfessionSkill","IsFactionUseEligible","GetNormalizedRecipeData",
+        "GetRecipeSkillRequirement","GetAcquisitionPracticality"}) do
+        local original=self[name]
+        if type(original)=="function" then
+            self[name]=function(owner,key,option,planningPartner)
+                local snapshot=owner.recommendationSnapshot
+                -- Explicit weapon-pair planning is uncommon and may carry
+                -- caller-owned mutable tables; use its original path.
+                if not snapshot or planningPartner~=nil then
+                    return original(owner,key,option,planningPartner)
+                end
+                local cache=snapshot[name]
+                if not cache then cache={};snapshot[name]=cache end
+                local keyIndex=key
+                if keyIndex==nil then keyIndex=SnapshotNil end
+                local optionKey=option
+                if optionKey==nil then optionKey=SnapshotNil end
+                local bucket=cache[optionKey]
+                if not bucket then bucket={};cache[optionKey]=bucket end
+                local result=bucket[keyIndex]
+                local capture=owner.performanceStats
+                if capture then
+                    local counter=capture.cache[name]
+                    if not counter then counter={hits=0,misses=0};capture.cache[name]=counter end
+                    local field=result and "hits" or "misses";counter[field]=counter[field]+1
+                end
+                if not result then
+                    result=SnapshotPack(original(owner,key,option,planningPartner))
+                    bucket[keyIndex]=result
+                end
+                return SnapshotUnpack(result,1,result.n)
+            end
+        end
+    end
+end
+function GetGear:WithRecommendationSnapshot(callback,...)
+    if self.recommendationSnapshot then return callback(self,...) end
+    InstallSnapshotMethods(self)
+    self.recommendationSnapshot={}
+    local result=SnapshotPack(pcall(callback,self,...))
+    self.recommendationSnapshot=nil -- also on errors; never retain stale state
+    if not result[1] then error(result[2],0) end
+    return SnapshotUnpack(result,2,result.n)
+end
+
 -- Refresh whichever windows are currently visible.
-function GetGear:RefreshAll()
+local function RefreshVisible(self)
     if self.RefreshUI and self.IsUIShown and self:IsUIShown() then self:RefreshUI() end
     if self.RefreshOverlay then self:RefreshOverlay() end
 end
 
-function GetGear:OnInventoryUpdated()
+function GetGear:RefreshAll(trigger)
+    local capture=self.performanceStats
+    local previous=capture and capture.trigger
+    if capture then capture.trigger=trigger or "RefreshAll" end
+    local ok,err=pcall(self.WithRecommendationSnapshot,self,RefreshVisible)
+    if capture then capture.trigger=previous end
+    if not ok then error(err,0) end
+end
+
+function GetGear:OnInventoryUpdated(trigger)
+    self.inventoryRefreshTrigger=trigger or "inventory"
+
     if not self.db or self.inventoryRefreshPending then return end
     -- Equipment, unit-inventory and bag notifications overlap during looting.
     -- A fixed deadline coalesces the burst without starving sustained updates.
@@ -182,7 +271,7 @@ function GetGear:OnInventoryUpdated()
         -- An event arriving between the ledger and UI deadlines must not
         -- leave the account browser showing the previous snapshot.
         if self.AltInventory and self.AltInventory.FlushPendingBagScan then self.AltInventory:FlushPendingBagScan() end
-        if self.db and self.RefreshAll then self:RefreshAll() end
+        if self.db and self.RefreshAll then self:RefreshAll(self.inventoryRefreshTrigger) end
     end
     if C_Timer and type(C_Timer.After)=="function" then
         self.inventoryRefreshPending=true
@@ -203,6 +292,26 @@ local function ProfileMemory()
 end
 local function Pack(...)return {n=select('#',...),...}end
 local Unpack=unpack or table.unpack
+function GetGear:PerformanceClock()return ProfileClock()end
+local function NewSample()
+    return {calls=0,milliseconds=0,maxMilliseconds=0,heapDeltaKB=0,
+        memoryAvailable=false,durations={},triggers={}}
+end
+local function AddDuration(sample,elapsed,trigger)
+    sample.calls=sample.calls+1
+    sample.milliseconds=sample.milliseconds+elapsed
+    sample.maxMilliseconds=math.max(sample.maxMilliseconds,elapsed)
+    -- Bounded rolling latency window; no per-frame polling or unbounded log.
+    sample.durations[(sample.calls-1)%128+1]=elapsed
+    sample.triggers[trigger]=(sample.triggers[trigger] or 0)+1
+end
+function GetGear:RecordPerformancePhase(name,started)
+    local capture=self.performanceStats
+    if not capture or not started then return end
+    local sample=capture.samples[name]
+    if not sample then sample=NewSample();capture.samples[name]=sample end
+    AddDuration(sample,math.max(0,ProfileClock()-started),capture.trigger or "UI/direct")
+end
 function GetGear:StopPerformanceCapture()
     local capture=self.performanceStats
     if not capture then return end
@@ -211,31 +320,54 @@ function GetGear:StopPerformanceCapture()
     end
     self.performanceStats=nil
     capture.wrappers=nil
+    for _,sample in pairs(capture.samples)do
+        local values={}
+        for i,value in ipairs(sample.durations)do values[i]=value end
+        table.sort(values)
+        sample.windowSamples=#values
+        sample.averageMilliseconds=sample.calls>0 and sample.milliseconds/sample.calls or 0
+        sample.p50Milliseconds=values[math.ceil(#values*.50)]
+        sample.p95Milliseconds=values[math.ceil(#values*.95)]
+    end
     return capture
 end
 function GetGear:StartPerformanceCapture()
     self:StopPerformanceCapture()
-    local capture={events={},samples={},wrappers={}}
+    -- Install memo delegates before profiling them, so stopping the capture
+    -- always restores method identity even when this is the first refresh.
+    InstallSnapshotMethods(self)
+    local capture={events={},samples={},wrappers={},cache={},refreshes={}}
     self.performanceStats=capture
     local function wrap(owner,name)
         local original=owner and owner[name]
         if type(original)~="function" then return end
-        local sample={calls=0,milliseconds=0,heapDeltaKB=0,memoryAvailable=false}
+        local sample=NewSample()
         capture.samples[name]=sample
         local function wrapper(...)
+            local previous=capture.trigger
+            local reason=(name=="RefreshAll" or name=="RefreshOverlay") and select(2,...) or nil
+            local trigger=previous or (type(reason)=="string" and reason) or "UI/direct"
+            capture.trigger=trigger
             local started,memory=ProfileClock(),ProfileMemory()
             local result=Pack(pcall(original,...))
-            sample.calls=sample.calls+1
-            sample.milliseconds=sample.milliseconds+math.max(0,ProfileClock()-started)
+            local elapsed=math.max(0,ProfileClock()-started)
+            capture.trigger=previous
+            AddDuration(sample,elapsed,trigger)
             local after=ProfileMemory()
             if memory and after then sample.memoryAvailable=true;sample.heapDeltaKB=sample.heapDeltaKB+after-memory end
-            if not result[1]then error(result[2])end
+            if name=="RefreshOverlay" then
+                capture.refreshes[(sample.calls-1)%128+1]={milliseconds=elapsed,
+                    trigger=trigger,heapDeltaKB=memory and after and after-memory or nil}
+            end
+            if not result[1]then error(result[2],0)end
             return Unpack(result,2,result.n)
         end
         owner[name]=wrapper
         capture.wrappers[#capture.wrappers+1]={owner=owner,name=name,original=original,wrapper=wrapper}
     end
-    for _,name in ipairs({"RefreshAll","RefreshUI","RefreshOverlay","GetItems","GetCombinedMaterialRows"})do wrap(self,name)end
+    for _,name in ipairs({"RefreshAll","RefreshUI","RefreshOverlay","GetItems",
+        "SortRecommendations","GetCombinedMaterialRows","GetUndocumentedCrafts",
+        "GetCraftingMaterialRows"})do wrap(self,name)end
     for _,name in ipairs({"ScanBags","ScanBank"})do wrap(self.AltInventory,name)end
     return capture
 end
@@ -252,7 +384,8 @@ function GetGear:SetStatus(record, status)
     self:RefreshAll()
 end
 
-function GetGear:GetItems(mode)
+local function CalculateItems(self,mode)
+    local started=self.performanceStats and ProfileClock()
     local result = {}
     local level = self.level or 1
     local planning = self.Gear
@@ -272,6 +405,13 @@ function GetGear:GetItems(mode)
         end
     end
     for _, record in ipairs(planning) do
+        -- Acquisition minimums only RAISE targetLevel. Reject impossible
+        -- future entries before route/class/faction/stat work; history modes
+        -- remain unrestricted. Recheck the effective target below.
+        local rawTarget=record.targetLevel
+        local ceiling=(mode=="available" or mode=="earlier") and level
+            or (mode=="tracker" or mode=="upcoming") and level+5
+        if not ceiling or type(rawTarget)~="number" or rawTarget<=ceiling then
         record=self:GetRecommendationRecord(record)
         local status = self:GetStatus(record)
         local target = record.targetLevel
@@ -322,7 +462,13 @@ function GetGear:GetItems(mode)
                 end
             end
         end
+        end -- within raw level ceiling
     end
+    if self.performanceStats then self:RecordPerformancePhase("ItemsEvaluation",started) end
+    return self:SortRecommendations(result,mode)
+end
+
+function GetGear:SortRecommendations(result,mode)
     -- Objective ordering is neutral: level first, then equipment slot/name/ID.
     local scores={}
     if (mode=="available" or mode=="tracker" or mode=="upcoming")
@@ -341,4 +487,8 @@ function GetGear:GetItems(mode)
         return (a.itemID or 0) < (b.itemID or 0)
     end)
     return result
+end
+
+function GetGear:GetItems(mode)
+    return self:WithRecommendationSnapshot(CalculateItems,mode)
 end

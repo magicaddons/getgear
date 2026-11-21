@@ -1293,7 +1293,7 @@ local function NewDetailRow(i)
     return detailRows[i]
 end
 
-function GetGear:RefreshUI()
+local function RefreshUI(self)
     if not self.db then return end
     if inventoryMode then
         levelText:SetText("GetGear  |  Account inventory")
@@ -1601,6 +1601,11 @@ function GetGear:RefreshUI()
     content:SetHeight(math.max(425,y))
     local maxScroll = math.max(0, content:GetHeight()-scroll:GetHeight())
     if scroll:GetVerticalScroll()>maxScroll then scroll:SetVerticalScroll(maxScroll) end
+end
+
+function GetGear:RefreshUI()
+    if self.WithRecommendationSnapshot then return self:WithRecommendationSnapshot(RefreshUI) end
+    return RefreshUI(self)
 end
 
 AllowResizing(window,720,400,1260,1000)
@@ -2011,7 +2016,7 @@ local function ShowOverlayMaterialHeader(row, gear, y)
     end
 end
 
-function GetGear:RefreshOverlay()
+local function RefreshOverlay(self)
     if not self.db then return end
     local opts = self.db.overlay
     local opacity = math.max(0.2, math.min(1, opts.backgroundOpacity or 0.78))
@@ -2025,6 +2030,7 @@ function GetGear:RefreshOverlay()
     local classToken = type(UnitClass)=="function" and select(2,UnitClass("player")) or nil
     trackerLevel:SetText(ColoredCharacterLabel(self.level, race, class, classToken))
 
+    local selectionStarted=self.performanceStats and self:PerformanceClock()
     local list = self:GetItems("tracker")
     -- These are independent overlay presentation filters. Neither affects
     -- the full guide, saved progress, or the catalogue's source research.
@@ -2047,6 +2053,8 @@ function GetGear:RefreshOverlay()
     local slot = self:GetEquipmentSlotFilter("overlay")
     local total
     list, total = self:FilterEquipmentSlots(list, slot)
+    if self.performanceStats then self:RecordPerformancePhase("OverlaySelection",selectionStarted) end
+    local rowsStarted=self.performanceStats and self:PerformanceClock()
     local overlayCap = 32
     local displayed = opts.objectivesCollapsed and 0 or math.min(#list,overlayCap)
     objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  " ..
@@ -2213,7 +2221,11 @@ function GetGear:RefreshOverlay()
         end
     end
     for i=(opts.objectivesCollapsed and 1 or math.min(#list,32)+1),#overlayRows do overlayRows[i].f:Hide() end
-    local materials = self:GetCombinedMaterialRows(opts.materialScope)
+    if self.performanceStats then self:RecordPerformancePhase("OverlayObjectiveUI",rowsStarted) end
+    -- A collapsed total has no visible rows. Requirements are rebuilt from
+    -- current state on expansion; per-objective materials remain independent.
+    local materials = not opts.materialsCollapsed and self:GetCombinedMaterialRows(opts.materialScope) or {}
+    local materialUIStarted=self.performanceStats and self:PerformanceClock()
     local totalMatsH=math.max(42,#materials*29+7)
     local desiredObj = opts.objectivesCollapsed and 0 or math.max(45,totalY)
     local desiredMat = opts.materialsCollapsed and 0 or totalMatsH
@@ -2276,6 +2288,12 @@ function GetGear:RefreshOverlay()
 
     end
     LayoutOverlaySections(splitter.dragging and splitter.pendingShare)
+    if self.performanceStats then self:RecordPerformancePhase("OverlayMaterialUI",materialUIStarted) end
+end
+
+function GetGear:RefreshOverlay()
+    if self.WithRecommendationSnapshot then return self:WithRecommendationSnapshot(RefreshOverlay) end
+    return RefreshOverlay(self)
 end
 
 AllowResizing(overlay,320,230,580,950)

@@ -54,6 +54,19 @@ local function measure(label,fn)
  local mem=collectgarbage('count');local started=os.clock();local frameCount=#frames
  fn()
  local elapsed=(os.clock()-started)*1000
+ if not baseline then
+  if label=='detail + overlay' then
+   assert(calls.RefreshUI==2 and calls.RefreshOverlay==1,'combined scenario changed execution path')
+   assert((calls.HasEligibleAcquisitionSource or 0)<=650,'combined source work regressed')
+   assert((calls.GetEligibleAcquisitionRoutes or 0)<=700,'combined route work regressed')
+   assert((calls.GetObsoleteGearReason or 0)<=550,'combined comparison work regressed')
+  elseif label~='ordinary movement idle' then
+   local refreshes=calls.RefreshOverlay or 0
+   assert((calls.HasEligibleAcquisitionSource or 0)<=450*refreshes,'source workload regressed: '..label)
+   assert((calls.GetEligibleAcquisitionRoutes or 0)<=500*refreshes,'route workload regressed: '..label)
+   assert((calls.GetObsoleteGearReason or 0)<=400*refreshes,'comparison workload regressed: '..label)
+  end
+ end
  print(string.format('MEASURE %s: %.3fms; net heap %.1fKiB; records=%d sourceChecks=%d routes=%d comparisons=%d obsolete=%d professions=%d aggregate=%d undocumented=%d textWrites=%d newFrames=%d',
   label,elapsed,collectgarbage('count')-mem,calls.GetRecommendationRecord or 0,
   calls.HasEligibleAcquisitionSource or 0,calls.GetEligibleAcquisitionRoutes or 0,
@@ -84,7 +97,7 @@ measure('movement zones x10',function()for _=1,10 do event('ZONE_CHANGED')end en
 measure('ordinary movement idle',function()advance(5)end)
 assert(not next(calls),'idle movement scheduled catalogue/UI work')
 measure('collapsed materials',function()addon.db.overlay.materialsCollapsed=true;addon:RefreshOverlay()end)
--- Collapsed calculation budget accompanies the implementation checkpoint.
+if not baseline then assert(not calls.GetCombinedMaterialRows,'collapsed totals still aggregate')end
 addon.db.overlay.materialsCollapsed=false
 measure('slot changes x3',function()for _,slot in ipairs({'head','rings','all'})do addon:SetEquipmentSlotFilter('overlay',slot);addon:RefreshOverlay()end end)
 measure('open close x3',function()for _=1,3 do addon:ToggleOverlay();addon:ToggleOverlay()end end)
@@ -94,11 +107,56 @@ measure('profession',function()event('SKILL_LINES_CHANGED');event('TRADE_SKILL_S
 local gear=assert(addon:GetItems('tracker')[1])
 measure('hide restore',function()addon:SetHidden(gear,true);assert(addon:IsHidden(gear));addon:SetHidden(gear,false);assert(not addon:IsHidden(gear))end)
 measure('detail + overlay',function()addon:ShowUI();addon:RefreshAll();GetGear_MainWindow:Hide()end)
+-- A warmed combined refresh is a distinct workload from ShowUI + RefreshAll.
+GetGear_MainWindow:Show();addon:RefreshAll()
+local function combined(shared)
+ reset()
+ for _=1,10 do
+  if shared then addon:RefreshAll()else addon:RefreshUI();addon:RefreshOverlay()end
+ end
+ return calls.GetEligibleAcquisitionRoutes or 0,calls.HasEligibleAcquisitionSource or 0
+end
+local separateRoutes,separateSources=combined(false)
+local sharedRoutes,sharedSources=combined(true)
+assert(calls.RefreshUI==10 and calls.RefreshOverlay==10 and calls.GetItems==20)
+if not baseline then
+ assert(sharedRoutes<separateRoutes and sharedSources<separateSources,'guide/overlay did not share calculation work')
+end
+print(string.format('SHARED separate routes=%d sources=%d; shared routes=%d sources=%d',separateRoutes,separateSources,sharedRoutes,sharedSources))
+GetGear_MainWindow:Hide()
 -- Repeated UI refreshes must retain pooled objects and recommendation contents.
 local function ids(list)local out={};for _,g in ipairs(list)do out[#out+1]=g.id..':'..g.targetLevel end;return table.concat(out,',')end
 local before=ids(addon:GetItems('tracker'));local frameCount=#frames
 for _=1,3 do addon:RefreshOverlay()end
 assert(ids(addon:GetItems('tracker'))==before and #frames==frameCount)
+-- Include total-material expansion/collapse after an inventory change.
+addon.db.overlay.materialsCollapsed=true;reset();addon:RefreshOverlay()
+if not baseline then assert(not calls.GetCombinedMaterialRows)end
+amount=99;event('BAG_UPDATE_DELAYED');advance(.2)
+addon.db.overlay.materialsCollapsed=false;reset();addon:RefreshOverlay()
+assert(calls.GetCombinedMaterialRows==1 and addon:GetMaterialCount(2589)==99)
+-- A single collection-paused refresh is a Lua heap-growth proxy, not a client
+-- allocation counter. Never pause GC in production; instrumentation stays opt-in.
+collectgarbage('collect');collectgarbage('stop')
+local heap=collectgarbage('count');addon:RefreshOverlay()
+local growth=collectgarbage('count')-heap
+collectgarbage('restart');collectgarbage('collect')
+print(string.format('HEAP one refresh with GC paused: %.1fKiB',growth))
+if not baseline then assert(growth<3000,'refresh heap growth proxy regressed')end
+addon:StartPerformanceCapture()
+for _=1,10 do addon:RefreshOverlay()end
+local profile=addon:StopPerformanceCapture()
+for _,key in ipairs({'RefreshOverlay','GetItems','GetCombinedMaterialRows'})do
+ local v=profile.samples[key]
+ print(string.format('PROFILE %s calls=%d total=%.3fms',key,v.calls,v.milliseconds))
+end
+if not baseline then
+ assert(profile.samples.ItemsEvaluation.calls==10 and profile.samples.OverlayObjectiveUI.calls==10)
+ assert(profile.samples.RefreshOverlay.windowSamples==10 and #profile.refreshes==10 and next(profile.cache))
+ addon:StartPerformanceCapture();event('BAG_UPDATE_DELAYED');advance(.2)
+ local triggered=addon:StopPerformanceCapture()
+ assert(triggered.samples.RefreshOverlay.triggers.BAG_UPDATE_DELAYED==1,'deferred event attribution lost')
+end
 print('PASS production overlay performance scenarios (synthetic; times are not client frame latency)')
 ]=]
 assert(load(prefix..body,'overlay performance','t',_G))()

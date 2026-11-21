@@ -143,17 +143,17 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or GetGear.level
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "ZONE_CHANGED" or event == "ZONE_CHANGED_NEW_AREA" then
         -- Travel recommendations and preferred source descriptions depend on
         -- the current zone. Preserve any user-selected map marker.
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "UNIT_INVENTORY_CHANGED" then
-        if arg1 == "player" and GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end
+        if arg1 == "player" and GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated(event) end
     elseif event == "PLAYER_EQUIPMENT_CHANGED" then
-        if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end
+        if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated(event) end
     elseif event == "BAG_UPDATE_DELAYED" then
-        if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated() end
+        if GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated(event) end
     elseif event == "ITEM_DATA_LOAD_RESULT" then
         -- Only respond to outstanding GetGear requests, with debounced refresh.
         if GetGear.OnItemDataLoadResult then GetGear:OnItemDataLoadResult(arg1,arg2) end
@@ -165,23 +165,23 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         end
         if (event == "TRADE_SKILL_LIST_UPDATE" or event == "TRADE_SKILL_SHOW")
             and GetGear.ScanKnownRecipes then GetGear:ScanKnownRecipes() end
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "PLAYER_LEVEL_UP" then
         local newLevel = tonumber(arg1) or UnitLevel("player") or GetGear.level
         if newLevel > GetGear.level then NotifyLevel(newLevel) end
         GetGear.level = newLevel
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "TRAIT_CONFIG_UPDATED" or event == "ACTIVE_TALENT_GROUP_CHANGED"
         or event == "PLAYER_TALENT_UPDATE" then
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
-        if GetGear.RefreshAll then GetGear:RefreshAll() end
+        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "QUEST_LOG_UPDATE" or event == "QUEST_ACCEPTED" or event == "QUEST_TURNED_IN" then
         if not GetGear.navigationRefreshPending then
             GetGear.navigationRefreshPending=true
             local function refresh()
                 GetGear.navigationRefreshPending=nil
                 if GetGear.RevalidateAcquisitionMapMarker then GetGear:RevalidateAcquisitionMapMarker() end
-                if GetGear.RefreshAll then GetGear:RefreshAll() end
+                if GetGear.RefreshAll then GetGear:RefreshAll(event) end
             end
             if C_Timer and C_Timer.After then C_Timer.After(0.2,refresh) else refresh() end
         end
@@ -209,9 +209,19 @@ SlashCmdList.GETGEAR = function(command)
         for _,key in ipairs(keys)do
             local s=capture.samples[key]
             local memory=s.memoryAvailable and string.format("%.1fKiB net heap change",s.heapDeltaKB)or "heap measurement unavailable"
-            Say(string.format("%s: %d calls, %.2fms inclusive, %s",key,s.calls,s.milliseconds,memory))
+            Say(string.format("%s: %d calls, %.2fms inclusive, avg %.2fms max %.2fms; p50/p95 %.2f/%.2fms (last %d), %s",
+                key,s.calls,s.milliseconds,s.averageMilliseconds,s.maxMilliseconds,
+                s.p50Milliseconds or 0,s.p95Milliseconds or 0,s.windowSamples,memory))
+            local reasons={};for reason in pairs(s.triggers)do reasons[#reasons+1]=reason end;table.sort(reasons)
+            for _,reason in ipairs(reasons)do Say("  "..reason..": "..s.triggers[reason])end
         end
-        Say("Nested timings overlap; heap changes include GC and profiling overhead.")
+        keys={};for key in pairs(capture.cache)do keys[#keys+1]=key end;table.sort(keys)
+        for _,key in ipairs(keys)do
+            local c=capture.cache[key];Say(key.." snapshot cache: "..c.hits.." hits / "..c.misses.." misses")
+        end
+        -- At most 128 records; retain only in memory for optional inspection.
+        GetGear.lastPerformanceCapture=capture
+        Say("Nested timings overlap; net heap is GC-sensitive, not allocations. CPU timings are not game-frame latency; percentiles use the last 128 samples per operation.")
     elseif command == "navdiag" then
         local d=GetGear:GetAcquisitionMarkerDiagnostics()
         local keys={};for key in pairs(d) do keys[#keys+1]=key end;table.sort(keys)

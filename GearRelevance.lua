@@ -87,13 +87,15 @@ function GetGear:ShouldDisplayGear(gear,classToken,mode)
     if self.CanClassEquipGear and not self:CanClassEquipGear(gear,classToken) then return false end
     if mode=="completed" or mode=="hidden" then return true end
     local context=mode=="preview" and self.GetPreviewAcquisitionContext and self:GetPreviewAcquisitionContext(classToken) or nil
-    if self.HasEligibleAcquisitionSource and not self:HasEligibleAcquisitionSource(gear,context) then return false end
     local opts=self.db and self.db.overlay
-    if opts and opts.showAllValidGear==true then return true end
+    if opts and opts.showAllValidGear==true then
+        return not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(gear,context)
+    end
     -- Full preview and explicitly All-materials are browsing scopes; neither
     -- is restricted by the player character's current level.
     if mode~="earlier" and mode~="preview" and mode~="materials-all"
         and self:IsOlderGear(gear) then return false end
+    if self.HasEligibleAcquisitionSource and not self:HasEligibleAcquisitionSource(gear,context) then return false end
     if NOVELTY[gear.itemID] then return false end
     -- Source uncertainty is not an equipment/proficiency veto. Unknown
     -- world-drop or acquisition routes remain visible with their existing
