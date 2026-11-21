@@ -131,6 +131,7 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         end
         if type(db.detail.scale) ~= "number" then db.detail.scale=1 end
         db.specialization=nil -- the manual specialization system is retired
+        if type(db.starredItems) ~= "table" then db.starredItems = {} end
         GetGear.db = db
         if GetGear.InitializeStatPriorities then GetGear:InitializeStatPriorities() end
         if GetGear.AltInventory then GetGear.AltInventory:Initialize() end

@@ -19,6 +19,8 @@ function methods:ClearAllPoints()self.point=nil end
 function methods:SetAllPoints()self.allPoints=true end
 function methods:SetColorTexture()end
 function methods:SetScript(k,f)self.scripts[k]=f end
+function methods:SetEnabled(value)self.enabled=value end
+function methods:SetShown(value)self.shown=value end
 function methods:Show()self.shown=true end
 function methods:Hide()self.shown=false end
 function methods:IsShown()return self.shown end
@@ -32,6 +34,7 @@ function methods:GetStringHeight()
 end
 local rows,content={},frame()
 local addon={}
+function addon:IsItemStarred()return false end
 function addon:ComparisonInline(g)return g.change or '',g.change~=nil end
 function addon:GetAcquisitionSummary(g)return g.summary end
 function addon:GetCraftingMaterialRows(g)return g.reagents or {} end
@@ -48,10 +51,11 @@ local env=setmetatable({GetGear=addon,self=addon,opacity=0.8,overlayRows=rows,ob
     UpdateReagent=function(widget,_,_,y)widget.frame:Show();widget.y=y end,
 },{__index=_G})
 local measure=section('local function MeasureText(', '\nlocal function NewButton(')
+local helpers=section('local wishlistUI =', 'wishlistUI.detailGroups=')
 local factory=section('local function NewOverlayRow(', '\nlocal matHeader =')
 local header=section('local function ShowOverlayMaterialHeader(', '\nfunction GetGear:RefreshOverlay()')
 local body=section('                local r = overlayRows[i] or NewOverlayRow(i)', '\n            end\n        end\n    end\n    for i=(opts.objectivesCollapsed')
-local render=assert(load(measure..factory..header..'\nreturn function(gear,opts)\nlocal i,totalY=1,0\n'..body..'\nreturn r,totalY\nend','real overlay rows','t',env))()
+local render=assert(load(measure..helpers..factory..header..'\nreturn function(gear,opts)\nlocal i,totalY=1,0\n'..body..'\nreturn r,totalY\nend','real overlay rows','t',env))()
 local function y(f)return -f.point[#f.point]end
 local cases=0
 for _,width in ipairs({254,290,316,534})do

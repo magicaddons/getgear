@@ -83,3 +83,17 @@ then /getgear perf stop. Compare event/call counts and inclusive milliseconds.
 Nested times overlap; net heap changes include garbage collection and capture
 overhead and do not measure total allocations. Captures are session-only.
 Actual client hitching and section-drag smoothness still require testing.
+
+Private cumulative .11: Equipment search and character wishlist
+Click the search icon beside Guide in the tracker. Type a partial item name,
+use arrows and Enter or click a result. The highlighted search card shows that
+item's slot, state, source and star without changing saved filters. Escape closes.
+Stars are saved per character. Click an outline/filled star to toggle it in the
+tracker, guide or search. Future equipment remains in the starred group. Use
+< / > to page long tracker lists and Other to jump to ordinary recommendations.
+Preview is read-only. Hidden, skipped, acquired and equipped items stay out of
+active wishlists; search and history retain their existing management actions.
+Stars bypass relevance, level-window, personal-craft and positive-stat display
+filters, never class/faction use restrictions or scoring. A saved item with a
+newly blocked acquisition route is labelled Unavailable. Wishlist stars do not
+add future items to total crafting materials or imply that an item is an upgrade.

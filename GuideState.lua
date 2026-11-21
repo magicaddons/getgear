@@ -492,3 +492,218 @@ end
 function GetGear:GetItems(mode)
     return self:WithRecommendationSnapshot(CalculateItems,mode)
 end
+
+-- Catalogue search and character wishlist are presentation tools. Neither is
+-- consulted by GetItems, stat evaluation, acquisition rules or material totals.
+local function SearchName(value)
+    return type(value)=="string" and value:lower() or ""
+end
+function GetGear:GetWishlistRequiredLevel(record)
+    local eligibility=self.EquipmentEligibility and self.EquipmentEligibility[record.itemID]
+    return eligibility and eligibility[2] or record.requiredLevel or record.targetLevel or record.availableLevel or 0
+end
+local function WishlistOrder(self,a,b)
+    local la,lb=self:GetWishlistRequiredLevel(a),self:GetWishlistRequiredLevel(b)
+    if la~=lb then return la<lb end
+    if (a.slot or "")~=(b.slot or "") then return (a.slot or "")<(b.slot or "") end
+    if SearchName(a.name)~=SearchName(b.name) then return SearchName(a.name)<SearchName(b.name) end
+    return a.itemID<b.itemID
+end
+
+function GetGear:InitializeItemSearch()
+    if self.itemSearchIndex then return end
+    local index={entries={},grams={},classes={},builds=1}
+    -- Metadata only; no source queries, item data requests or recommendation copies.
+    for class,list in pairs(self.EquipmentByClass or {}) do
+        local lookup={};index.classes[class]=lookup
+        for _,record in ipairs(list) do lookup[record.itemID]=record end
+    end
+    for id,record in pairs(self.ItemCatalog or {}) do
+        if type(id)=="number" and type(record)=="table" then
+            local name=SearchName(record.name)
+            local entry={itemID=id,name=name,record=record}
+            index.entries[id]=entry
+            -- One-/two-character queries use the same index as longer queries.
+            for size=1,3 do
+                local seen={}
+                for pos=1,#name-size+1 do
+                    local gram=name:sub(pos,pos+size-1)
+                    if not seen[gram] then
+                        seen[gram]=true
+                        local bucket=index.grams[gram]
+                        if not bucket then bucket={};index.grams[gram]=bucket end
+                        bucket[#bucket+1]=id
+                    end
+                end
+            end
+        end
+    end
+    self.itemSearchIndex=index
+end
+
+function GetGear:GetSearchRecord(itemID)
+    self:InitializeItemSearch()
+    local index=self.itemSearchIndex
+    local class=index.classes[self.classToken]
+    return class and class[itemID] or self.ItemCatalog and self.ItemCatalog[itemID]
+end
+
+function GetGear:GetSearchRestriction(record,checkSource)
+    if not record or type(record.itemID)~="number" or type(record.name)~="string"
+        or record.name=="" or type(record.slot)~="string"
+        or type(record.targetLevel or record.availableLevel)~="number" then
+        return "Incomplete catalogue information"
+    end
+    if self.IsHardExcludedGear and self:IsHardExcludedGear(record) then return "Internal/test equipment" end
+    if not self.classToken then return "Waiting for character information" end
+    if self.CanClassEquipGear and not self:CanClassEquipGear(record,self.classToken) then
+        return "Not equippable by this class"
+    end
+    -- Require a class objective, rather than guessing an absent requirement.
+    local class=self.itemSearchIndex and self.itemSearchIndex.classes[self.classToken]
+    if not class or not class[record.itemID] then return "No class equipment objective in catalogue" end
+    if self.IsFactionUseEligible then
+        local usable,reason=self:IsFactionUseEligible(record)
+        if not usable then return reason or "Faction/race restriction" end
+    end
+    if checkSource and self.HasEligibleAcquisitionSource and not self:HasEligibleAcquisitionSource(record) then
+        return "No eligible acquisition route for this character"
+    end
+end
+
+function GetGear:SearchEquipment(query,limit)
+    self:InitializeItemSearch()
+    query=SearchName(query):match("^%s*(.-)%s*$")
+    limit=math.max(1,math.min(12,tonumber(limit) or 8))
+    if query=="" then return {} end
+    local index=self.itemSearchIndex
+    local size=math.min(3,#query)
+    local bucket
+    -- Pick the rarest gram. Verify the whole literal name before ranking.
+    for pos=1,#query-size+1 do
+        local candidate=index.grams[query:sub(pos,pos+size-1)]
+        if not candidate then return {} end
+        if not bucket or #candidate<#bucket then bucket=candidate end
+    end
+    local results={}
+    local function before(a,b)
+        if a.rank~=b.rank then return a.rank<b.rank end
+        if a.entry.name~=b.entry.name then return a.entry.name<b.entry.name end
+        return a.entry.itemID<b.entry.itemID
+    end
+    for _,id in ipairs(bucket or {}) do
+        local entry=index.entries[id]
+        local start=entry.name:find(query,1,true)
+        if start then
+            local result={entry=entry,rank=entry.name==query and 1 or start==1 and 2 or 3}
+            local pos=1
+            while results[pos] and not before(result,results[pos]) do pos=pos+1 end
+            if pos<=limit then
+                table.insert(results,pos,result)
+                if #results>limit then table.remove(results) end
+            end
+        end
+    end
+    local out={}
+    for _,result in ipairs(results) do
+        local record=self:GetSearchRecord(result.entry.itemID)
+        out[#out+1]={itemID=result.entry.itemID,record=record,
+            restriction=self:GetSearchRestriction(record,false)}
+    end
+    return out
+end
+
+function GetGear:IsItemStarred(itemID)
+    return self.db and type(self.db.starredItems)=="table" and self.db.starredItems[itemID]==true or false
+end
+
+local function ChangeItemStar(self,itemID,starred,previewMode)
+    if not self.db or previewMode then return false,"Preview is read-only" end
+    if type(itemID)~="number" or itemID<=0 or itemID~=math.floor(itemID) then return false,"Invalid item ID" end
+    if starred then
+        local record=self:GetSearchRecord(itemID)
+        local reason=self:GetSearchRestriction(record,true)
+        if reason then return false,reason end
+    end
+    if type(self.db.starredItems)~="table" then self.db.starredItems={} end
+    self.db.starredItems[itemID]=starred and true or nil
+    if self.RefreshStarPresentation then self:RefreshStarPresentation(itemID,starred) end
+    return true
+end
+
+function GetGear:SetItemStarred(itemID,starred,previewMode)
+    return self:WithRecommendationSnapshot(ChangeItemStar,itemID,starred,previewMode)
+end
+
+function GetGear:GetSearchItemState(record)
+    if self:IsHidden(record) then return "Hidden" end
+    local status=self:GetStatus(record)
+    if status=="skipped" then return "Skipped" elseif status=="acquired" then return "Acquired" end
+    if self.IsGearEquipped and self:IsGearEquipped(record) then return "Equipped" end
+    local owned=self:GetMaterialCount(record.itemID)
+    if type(owned)=="number" and (type(issecretvalue)~="function" or not issecretvalue(owned)) and owned>0 then return "Owned in bags (not marked acquired)" end
+    if record.targetLevel and record.targetLevel>(self.level or 1) then
+        return "Future: target level "..record.targetLevel
+    end
+    return "Catalogue item; not necessarily an upgrade"
+end
+
+-- Read equipped IDs once for a large wishlist, within this call only.
+local function WishlistEquippedIDs()
+    if type(GetInventoryItemID)~="function" and type(GetInventoryItemLink)~="function" then return nil end
+    local ids={}
+    for slot=1,19 do
+        local ok,value
+        if type(GetInventoryItemID)=="function" then ok,value=pcall(GetInventoryItemID,"player",slot) end
+        if ok and type(value)=="number" and (type(issecretvalue)~="function" or not issecretvalue(value)) then ids[value]=true
+        elseif type(GetInventoryItemLink)=="function" then
+            ok,value=pcall(GetInventoryItemLink,"player",slot)
+            if ok and type(value)=="string" and (type(issecretvalue)~="function" or not issecretvalue(value)) then
+                local id=tonumber(value:match("item:(%d+)"));if id then ids[id]=true end
+            end
+        end
+    end
+    return ids
+end
+
+function GetGear:ComposeStarredItems(recommendations,mode,displayedStars,deferSources)
+    local saved=self.db and self.db.starredItems
+    if not saved or not next(saved) or mode=="bags" then return recommendations end
+    local stars,rest,seen={},{},{}
+    local history=mode=="hidden" or mode=="completed"
+    for _,record in ipairs(recommendations) do
+        if self:IsItemStarred(record.itemID) then
+            stars[#stars+1]=record;seen[record.itemID]=true
+        else rest[#rest+1]=record end
+    end
+    if not history then
+        self:InitializeItemSearch()
+        local equipped=WishlistEquippedIDs()
+        for id,value in pairs(saved) do
+            if value==true and not seen[id] then
+                local record=displayedStars and displayedStars[id] or not displayedStars and self:GetSearchRecord(id)
+                if record and (displayedStars or not self:GetSearchRestriction(record,not deferSources))
+                    and not self:IsHidden(record) and not self:GetStatus(record)
+                    and (equipped and not equipped[id] or not equipped and
+                        (not self.IsGearEquipped or not self:IsGearEquipped(record))) then
+                    stars[#stars+1]=deferSources and record or self:GetRecommendationRecord(record)
+                    seen[id]=true
+                end
+            end
+        end
+    end
+    table.sort(stars,function(a,b) return WishlistOrder(self,a,b) end)
+    for _,record in ipairs(rest) do stars[#stars+1]=record end
+    return stars
+end
+
+function GetGear:SelectSearchItem(itemID)
+    local record=self:GetSearchRecord(itemID)
+    local reason=self:GetSearchRestriction(record,true)
+    if reason then return false,reason end
+    record=self:GetRecommendationRecord(record)
+    -- Session-only focus. Never writes slot, level, status or display preferences.
+    self.focusedSearchItem=record
+    if self.ShowSearchFocus then self:ShowSearchFocus(record) end
+    return true,record
+end

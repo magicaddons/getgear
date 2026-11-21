@@ -294,6 +294,31 @@
         "beta4-slot-ui.lua",
         "tracker-resize-budget.lua"
       ]
+    },
+    {
+      "id": "character_item_search_and_stars",
+      "requires": {
+        "GuideState.lua": [
+          "function GetGear:SearchEquipment",
+          "function GetGear:SetItemStarred",
+          "function GetGear:ComposeStarredItems",
+          "function GetGear:SelectSearchItem"
+        ],
+        "Core.lua": [
+          "db.starredItems"
+        ],
+        "UI.lua": [
+          "GetGear_ItemSearchInput",
+          "RefreshStarPresentation",
+          "Preview is read-only",
+          "Starred Items",
+          "Other Recommendations"
+        ]
+      },
+      "regressions": [
+        "item-search-stars.lua",
+        "item-search-stars-ui.lua"
+      ]
     }
   ],
   "acceptedNavigationFiles": {
