@@ -41,6 +41,29 @@ local function VerifiedNotificationSource(item)
 end
 GetGear.VerifiedNotificationSource=VerifiedNotificationSource
 
+-- ZONE_CHANGED includes subzone boundaries. Recommendation travel rules read
+-- the player's map and its name, not subzone text or per-frame coordinates.
+-- Retain only these scalar inputs, never recommendation results across events.
+local locationKnown,lastMap,lastMapName
+local function LocationChanged()
+    local function read(fn,...)
+        if type(fn)~="function" then return true,nil end
+        local ok,value=pcall(fn,...)
+        if ok and type(issecretvalue)=="function" and issecretvalue(value) then return false end
+        return ok,value
+    end
+    local ok,map=read(C_Map and C_Map.GetBestMapForUnit,"player")
+    local infoOK,info=read(map and C_Map and C_Map.GetMapInfo,map)
+    local name=type(info)=="table" and info.name or nil
+    if not ok or not infoOK or (type(issecretvalue)=="function" and issecretvalue(name)) then
+        locationKnown=nil -- retry uncertain/transient API failures
+        return true
+    end
+    local changed=not locationKnown or map~=lastMap or name~=lastMapName
+    locationKnown,lastMap,lastMapName=true,map,name
+    return changed
+end
+
 local function NotifyLevel(newLevel)
     if not GetGear.db or GetGear.db.notifications == false then return end
     local count = 0
@@ -139,7 +162,9 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         GetGear.level = UnitLevel("player") or 1
         if GetGear.RefreshTalentAwareness then GetGear:RefreshTalentAwareness() end
         if GetGear.InitializeUI then GetGear:InitializeUI() end
+        LocationChanged()
     elseif event == "PLAYER_ENTERING_WORLD" then
+        LocationChanged()
         if GetGear.ResetAcquisitionNavigation then GetGear:ResetAcquisitionNavigation() end
         if GetGear.SelectCurrentGuide then GetGear:SelectCurrentGuide() end
         GetGear.level = UnitLevel("player") or GetGear.level
@@ -148,7 +173,7 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
     elseif event == "ZONE_CHANGED" or event == "ZONE_CHANGED_NEW_AREA" then
         -- Travel recommendations and preferred source descriptions depend on
         -- the current zone. Preserve any user-selected map marker.
-        if GetGear.RefreshAll then GetGear:RefreshAll(event) end
+        if LocationChanged() and GetGear.RefreshAll then GetGear:RefreshAll(event) end
     elseif event == "UNIT_INVENTORY_CHANGED" then
         if arg1 == "player" and GetGear.OnInventoryUpdated then GetGear:OnInventoryUpdated(event) end
     elseif event == "PLAYER_EQUIPMENT_CHANGED" then
@@ -187,7 +212,7 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
             if C_Timer and C_Timer.After then C_Timer.After(0.2,refresh) else refresh() end
         end
     elseif event == "PLAYER_REGEN_DISABLED" or event == "PLAYER_REGEN_ENABLED" then
-        if GetGear.RefreshOverlay then GetGear:RefreshOverlay() end
+        if GetGear.RefreshOverlayCombatVisibility then GetGear:RefreshOverlayCombatVisibility() end
     end
 end)
 

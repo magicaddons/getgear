@@ -163,7 +163,8 @@ assert(pages>1,'wishlist pages inaccessible')
 -- Give ordinary recommendations their own reachable page even after many stars.
 local ordinary=addon:GetItems('tracker')[1]
 db.starredItems[ordinary.itemID]=nil;addon:RefreshOverlay()
-click(button(overlay,'Other'));assert(contains(objContent,ordinary.itemID),'Other jump did not reach normal recommendations')
+click(button(overlay,'All v'));click(button(GetGear_OverlayGroupMenu,'Other'))
+assert(contains(objContent,ordinary.itemID),'Other group did not reach normal recommendations')
 -- Every restored star needs a cheap eligibility check. Expensive navigation
 -- and source presentation remain bounded to visible rows, even on a full wishlist.
 local choicesCalls=0;local choicesFn=addon.GetAcquisitionNavigationChoices

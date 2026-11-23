@@ -130,5 +130,10 @@ a.dominantTalentTree='Feral Combat';a.talentOrientation='feral'
 events.OnEvent(nil,'TRAIT_CONFIG_UPDATED');assert(not a:GetTalentOrientation() and refreshed==1)
 assert(events.registered.ZONE_CHANGED and events.registered.ZONE_CHANGED_NEW_AREA)
 events.OnEvent(nil,'ZONE_CHANGED');events.OnEvent(nil,'ZONE_CHANGED_NEW_AREA')
-assert(refreshed==3,'zone transitions refresh source convenience without stale choices')
+assert(refreshed==2,'unchanged location should not rebuild source convenience twice')
+local map=1
+C_Map={GetBestMapForUnit=function()return map end,GetMapInfo=function()return {name='Test zone'}end}
+events.OnEvent(nil,'ZONE_CHANGED');assert(refreshed==3)
+events.OnEvent(nil,'ZONE_CHANGED_NEW_AREA');assert(refreshed==3)
+map=2;events.OnEvent(nil,'ZONE_CHANGED');assert(refreshed==4,'real map transitions must refresh source convenience')
 print('PASS talent recommendations: '..count..' tree/faction cases; nine classes/three modes, ambiguity/invalid APIs, exact reported tunic deltas, utility, guide choice, events and saved preferences')

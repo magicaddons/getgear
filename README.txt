@@ -1,3 +1,10 @@
+PRIVATE TEST BUILD — overlay performance and recommendation groups
+Version: 0.14.0-private.overlay-groups.20261123.1
+Full cumulative Beta 11 runtime plus the changes below. Install this ZIP using
+the instructions below. In-game acceptance is pending; no public release.
+Tracker group menu: All (starred first), Starred, or Other (non-starred).
+Pages are independent per group. Slot filters apply to every group.
+
 GETGEAR 0.14.0-beta11 — PUBLIC BETA FOR ALLIANCE
 ================================================
 Gear catalogue, crafting planner and item tracker for WoW Forever, levels 1–60.

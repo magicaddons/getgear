@@ -1,0 +1,1741 @@
+{
+  "baseline": "de1037a8a20593430d1c27e123685980d6da909b",
+  "actualClientTested": false,
+  "repeats": 3,
+  "fixtureSHA256": "af4eaa3d7796e69e44466b79fda0c8311829c500a28aab66c82c4e8c19baaab4",
+  "qualification": "Synthetic CPU medians; inclusive counts; GC-paused Lua heap growth is a proxy, not client allocations. Frame-loop CPU includes walking mocked frames and cannot measure native render cost.",
+  "interpreters": {
+    "5.1": {
+      "WARRIOR level 27: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 1737.144,
+          "heapGrowthMedianKB": 105135.9,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 17440
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 4.098,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "WARRIOR level 27: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 1704.797,
+          "heapGrowthMedianKB": 105136.1,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 17440
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 4.173,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "WARRIOR level 27: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 2082.042,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 2015.049,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "WARRIOR level 27: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 851.855,
+          "heapGrowthMedianKB": 55746.8,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 8720
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 71.715,
+          "heapGrowthMedianKB": 11538.1,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "WARRIOR level 27: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 121.266,
+          "heapGrowthMedianKB": 7978.9,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 1267
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 16.462,
+          "heapGrowthMedianKB": 1319.2,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 53
+          }
+        }
+      },
+      "WARRIOR level 27: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 4.8,
+          "heapGrowthMedianKB": 7.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.566,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "DRUID level 23: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 1139.812,
+          "heapGrowthMedianKB": 91554.2,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 17480
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.761,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "DRUID level 23: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 1051.183,
+          "heapGrowthMedianKB": 91554.2,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 17480
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.541,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "DRUID level 23: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 3036.269,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 3066.372,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "DRUID level 23: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 598.624,
+          "heapGrowthMedianKB": 46332.1,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 8740
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 69.908,
+          "heapGrowthMedianKB": 10278.4,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "DRUID level 23: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 84.631,
+          "heapGrowthMedianKB": 7531.1,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 1282
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 18.524,
+          "heapGrowthMedianKB": 2050.3,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 58
+          }
+        }
+      },
+      "DRUID level 23: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 7.189,
+          "heapGrowthMedianKB": 7.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 7.284,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "PRIEST level 31: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 889.715,
+          "heapGrowthMedianKB": 65239.3,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 13840
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 3.559,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "PRIEST level 31: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 771.867,
+          "heapGrowthMedianKB": 65235.0,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 13840
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 3.932,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "PRIEST level 31: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 1829.56,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 2046.194,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "PRIEST level 31: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 470.406,
+          "heapGrowthMedianKB": 33848.1,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 6920
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 68.713,
+          "heapGrowthMedianKB": 10322.2,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "PRIEST level 31: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 67.274,
+          "heapGrowthMedianKB": 4621.7,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 994
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 12.334,
+          "heapGrowthMedianKB": 928.9,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 44
+          }
+        }
+      },
+      "PRIEST level 31: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 5.194,
+          "heapGrowthMedianKB": 7.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.208,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "MAGE level 60: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 1628.18,
+          "heapGrowthMedianKB": 100585.6,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 20400
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.776,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "MAGE level 60: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 1574.343,
+          "heapGrowthMedianKB": 100585.6,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 20400
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 6.038,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "MAGE level 60: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 2943.566,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 3025.805,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "MAGE level 60: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 781.61,
+          "heapGrowthMedianKB": 50095.7,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 10200
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 64.578,
+          "heapGrowthMedianKB": 9558.8,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "MAGE level 60: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 109.38,
+          "heapGrowthMedianKB": 8354.8,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 1526
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 21.784,
+          "heapGrowthMedianKB": 2439.1,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 84
+          }
+        }
+      },
+      "MAGE level 60: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 6.347,
+          "heapGrowthMedianKB": 7.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 7.036,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "SHAMAN level 45: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 2242.537,
+          "heapGrowthMedianKB": 107146.2,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 16920
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 6.631,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "SHAMAN level 45: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 2045.282,
+          "heapGrowthMedianKB": 107146.2,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 16920
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 6.946,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "SHAMAN level 45: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 3280.145,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 3351.762,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "SHAMAN level 45: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 953.22,
+          "heapGrowthMedianKB": 56931.8,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 8460
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 88.81,
+          "heapGrowthMedianKB": 12445.9,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "SHAMAN level 45: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 149.013,
+          "heapGrowthMedianKB": 7732.6,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 1225
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 19.223,
+          "heapGrowthMedianKB": 935.8,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 47
+          }
+        }
+      },
+      "SHAMAN level 45: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 8.223,
+          "heapGrowthMedianKB": 7.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 12.93,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "HUNTER level 15: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 1266.723,
+          "heapGrowthMedianKB": 85020.4,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 13000
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 4.88,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "HUNTER level 15: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 1199.736,
+          "heapGrowthMedianKB": 85020.4,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 13000
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 4.843,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "HUNTER level 15: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 2636.154,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 2464.315,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "HUNTER level 15: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 643.025,
+          "heapGrowthMedianKB": 42885.3,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 6500
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 77.418,
+          "heapGrowthMedianKB": 12347.3,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "HUNTER level 15: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 93.952,
+          "heapGrowthMedianKB": 5684.4,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 923
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 15.101,
+          "heapGrowthMedianKB": 1181.2,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 44
+          }
+        }
+      },
+      "HUNTER level 15: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 6.282,
+          "heapGrowthMedianKB": 7.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 6.816,
+          "heapGrowthMedianKB": 5.6,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      }
+    },
+    "5.4": {
+      "WARRIOR level 27: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 1371.97,
+          "heapGrowthMedianKB": 81550.1,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 17440
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 3.771,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "WARRIOR level 27: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 1280.188,
+          "heapGrowthMedianKB": 81550.1,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 17440
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 3.857,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "WARRIOR level 27: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 1589.909,
+          "heapGrowthMedianKB": 0.2,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 1587.962,
+          "heapGrowthMedianKB": 0.4,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "WARRIOR level 27: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 694.051,
+          "heapGrowthMedianKB": 42910.9,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 8720
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 62.392,
+          "heapGrowthMedianKB": 9909.5,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "WARRIOR level 27: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 97.154,
+          "heapGrowthMedianKB": 6086.8,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 1267
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 15.181,
+          "heapGrowthMedianKB": 1086.9,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 53
+          }
+        }
+      },
+      "WARRIOR level 27: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 5.053,
+          "heapGrowthMedianKB": 6.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.305,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "DRUID level 23: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 937.537,
+          "heapGrowthMedianKB": 72212.1,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 17480
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.955,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "DRUID level 23: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 961.713,
+          "heapGrowthMedianKB": 72212.1,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 17480
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 6.01,
+          "heapGrowthMedianKB": 0.1,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "DRUID level 23: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 2471.141,
+          "heapGrowthMedianKB": 0.2,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 2421.905,
+          "heapGrowthMedianKB": 0.4,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "DRUID level 23: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 510.005,
+          "heapGrowthMedianKB": 36557.2,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 8740
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 71.389,
+          "heapGrowthMedianKB": 9456.5,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "DRUID level 23: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 68.37,
+          "heapGrowthMedianKB": 5763.6,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 1282
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 17.475,
+          "heapGrowthMedianKB": 1601.0,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 58
+          }
+        }
+      },
+      "DRUID level 23: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 7.662,
+          "heapGrowthMedianKB": 6.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 7.028,
+          "heapGrowthMedianKB": 4.8,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "PRIEST level 31: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 761.899,
+          "heapGrowthMedianKB": 52288.7,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 13840
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 4.048,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "PRIEST level 31: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 761.384,
+          "heapGrowthMedianKB": 52288.7,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 13840
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 4.019,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "PRIEST level 31: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 1605.469,
+          "heapGrowthMedianKB": 0.2,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 1634.472,
+          "heapGrowthMedianKB": 0.4,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "PRIEST level 31: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 373.494,
+          "heapGrowthMedianKB": 27118.0,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 6920
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 61.227,
+          "heapGrowthMedianKB": 9245.0,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "PRIEST level 31: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 51.118,
+          "heapGrowthMedianKB": 3625.8,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 994
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 7.208,
+          "heapGrowthMedianKB": 798.3,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 44
+          }
+        }
+      },
+      "PRIEST level 31: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 5.287,
+          "heapGrowthMedianKB": 6.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 6.331,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "MAGE level 60: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 1157.281,
+          "heapGrowthMedianKB": 78681.8,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 20400
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.697,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "MAGE level 60: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 1171.888,
+          "heapGrowthMedianKB": 78681.7,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 20400
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 6.627,
+          "heapGrowthMedianKB": 0.1,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "MAGE level 60: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 2270.752,
+          "heapGrowthMedianKB": 0.2,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 2385.998,
+          "heapGrowthMedianKB": 0.4,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "MAGE level 60: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 629.853,
+          "heapGrowthMedianKB": 39082.5,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 10200
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 54.453,
+          "heapGrowthMedianKB": 8758.8,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "MAGE level 60: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 89.071,
+          "heapGrowthMedianKB": 7137.6,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 1526
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 16.688,
+          "heapGrowthMedianKB": 2660.0,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 84
+          }
+        }
+      },
+      "MAGE level 60: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 6.758,
+          "heapGrowthMedianKB": 6.3,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 7.18,
+          "heapGrowthMedianKB": 4.8,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "SHAMAN level 45: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 1553.603,
+          "heapGrowthMedianKB": 84590.7,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 16920
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 6.648,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "SHAMAN level 45: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 1396.635,
+          "heapGrowthMedianKB": 84590.6,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 16920
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 7.079,
+          "heapGrowthMedianKB": 0.1,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "SHAMAN level 45: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 2463.422,
+          "heapGrowthMedianKB": 0.2,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 2905.291,
+          "heapGrowthMedianKB": 0.4,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "SHAMAN level 45: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 732.059,
+          "heapGrowthMedianKB": 45068.6,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 8460
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 70.815,
+          "heapGrowthMedianKB": 11201.3,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "SHAMAN level 45: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 110.977,
+          "heapGrowthMedianKB": 6039.3,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 1225
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 15.101,
+          "heapGrowthMedianKB": 814.9,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 47
+          }
+        }
+      },
+      "SHAMAN level 45: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 8.941,
+          "heapGrowthMedianKB": 6.3,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 9.736,
+          "heapGrowthMedianKB": 4.8,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "HUNTER level 15: same map zones x20": {
+        "baseline": {
+          "cpuMedianMS": 872.82,
+          "heapGrowthMedianKB": 68090.0,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 13000
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.019,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "HUNTER level 15: combat x20": {
+        "baseline": {
+          "cpuMedianMS": 1062.083,
+          "heapGrowthMedianKB": 68090.0,
+          "counts": {
+            "refresh": 40,
+            "items": 40,
+            "compose": 40,
+            "totals": 40,
+            "comparisons": 13000
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 5.16,
+          "heapGrowthMedianKB": 0.0,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "HUNTER level 15: idle frames x3600": {
+        "baseline": {
+          "cpuMedianMS": 2064.618,
+          "heapGrowthMedianKB": 0.2,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 2008.647,
+          "heapGrowthMedianKB": 0.4,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "HUNTER level 15: pages x10": {
+        "baseline": {
+          "cpuMedianMS": 472.756,
+          "heapGrowthMedianKB": 34223.7,
+          "counts": {
+            "refresh": 20,
+            "items": 20,
+            "compose": 20,
+            "totals": 20,
+            "comparisons": 6500
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 67.149,
+          "heapGrowthMedianKB": 11199.5,
+          "counts": {
+            "refresh": 20,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 640
+          }
+        }
+      },
+      "HUNTER level 15: slots x3": {
+        "baseline": {
+          "cpuMedianMS": 70.71,
+          "heapGrowthMedianKB": 4404.8,
+          "counts": {
+            "refresh": 3,
+            "items": 3,
+            "compose": 3,
+            "totals": 3,
+            "comparisons": 923
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 7.258,
+          "heapGrowthMedianKB": 1001.3,
+          "counts": {
+            "refresh": 3,
+            "items": 0,
+            "compose": 3,
+            "totals": 0,
+            "comparisons": 44
+          }
+        }
+      },
+      "HUNTER level 15: closed zones x20": {
+        "baseline": {
+          "cpuMedianMS": 7.01,
+          "heapGrowthMedianKB": 6.2,
+          "counts": {
+            "refresh": 40,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "cpuMedianMS": 7.777,
+          "heapGrowthMedianKB": 4.7,
+          "counts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      }
+    }
+  }
+}

@@ -663,25 +663,26 @@ local function AllowResizing(frame,minW,minH,maxW,maxH)
     grip:SetNormalTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Up")
     grip:SetHighlightTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Highlight")
     grip:SetPushedTexture("Interface\\ChatFrame\\UI-ChatIM-SizeGrabber-Down")
+    local function finish()
+        grip:SetScript("OnUpdate",nil)
+        if not frame.isSizing then return end
+        frame:StopMovingOrSizing();frame.isSizing=false
+        if frame.afterResize then frame:afterResize() end
+    end
     grip:SetScript("OnMouseDown",function(self,button)
-        if button=="LeftButton" then frame.isSizing=true;frame:StartSizing("BOTTOMRIGHT") end
+        if button=="LeftButton" then
+            frame.isSizing=true;frame:StartSizing("BOTTOMRIGHT")
+            self:SetScript("OnUpdate",function()
+                if type(IsMouseButtonDown)=="function" and not IsMouseButtonDown("LeftButton") then finish() end
+            end)
+        end
     end)
     grip:SetScript("OnMouseUp",function(self,button)
-        if button=="LeftButton" and frame.isSizing then
-            frame:StopMovingOrSizing()
-            frame.isSizing=false
-            if frame.afterResize then frame:afterResize() end
-        end
+        if button=="LeftButton" then finish() end
     end)
     grip:SetScript("OnHide",function()
+        grip:SetScript("OnUpdate",nil)
         if frame.isSizing then frame:StopMovingOrSizing();frame.isSizing=false end
-    end)
-    grip:SetScript("OnUpdate",function()
-        if frame.isSizing and type(IsMouseButtonDown)=="function" and not IsMouseButtonDown("LeftButton") then
-            frame:StopMovingOrSizing()
-            frame.isSizing=false
-            if frame.afterResize then frame:afterResize() end
-        end
     end)
     return grip
 end
@@ -1836,7 +1837,7 @@ objHead:SetScript("OnClick", function()
 end)
 
 local overlaySlot = NewSlotSelector(overlay, "GetGear_OverlaySlotMenu", "overlay",
-    function() GetGear:RefreshOverlay() end)
+    function() GetGear:RefreshOverlayPresentation() end)
 overlaySlot:SetPoint("TOPLEFT", 10, -37)
 local objScroll = CreateFrame("ScrollFrame", nil, overlay, "UIPanelScrollFrameTemplate")
 objScroll:SetPoint("TOPLEFT", overlay, "TOPLEFT", 10, -93)
@@ -1845,16 +1846,47 @@ objContent:SetSize(290, 200)
 objScroll:SetScrollChild(objContent)
 local overlayRows = {}
 wishlistUI.overlayPage,wishlistUI.overlayViewKey=1,nil
+wishlistUI.overlayGroup="all"
+wishlistUI.overlayPages={all=1,starred=1,other=1}
 wishlistUI.overlayPrevious=NewButton(overlay,"<",22,22)
 wishlistUI.overlayNext=NewButton(overlay,">",22,22)
-wishlistUI.overlayOther=NewButton(overlay,"Other",48,22)
-wishlistUI.overlayStarCount=0
+wishlistUI.overlayGroupButton=NewButton(overlay,"All v",80,22)
 wishlistUI.overlayPrevious:SetPoint("TOPLEFT",181,-37)
 wishlistUI.overlayNext:SetPoint("TOPLEFT",205,-37)
-wishlistUI.overlayOther:SetPoint("TOPLEFT",230,-37)
-wishlistUI.overlayPrevious:SetScript("OnClick",function() wishlistUI.overlayPage=math.max(1,wishlistUI.overlayPage-1);objScroll:SetVerticalScroll(0);GetGear:RefreshOverlay() end)
-wishlistUI.overlayNext:SetScript("OnClick",function() wishlistUI.overlayPage=wishlistUI.overlayPage+1;objScroll:SetVerticalScroll(0);GetGear:RefreshOverlay() end)
-wishlistUI.overlayOther:SetScript("OnClick",function() wishlistUI.overlayPage=math.floor(wishlistUI.overlayStarCount/32)+1;objScroll:SetVerticalScroll(0);GetGear:RefreshOverlay() end)
+wishlistUI.overlayGroupButton:SetPoint("TOPLEFT",230,-37)
+wishlistUI.overlayPrevious:SetScript("OnClick",function() wishlistUI.overlayPage=math.max(1,wishlistUI.overlayPage-1);objScroll:SetVerticalScroll(0);GetGear:RefreshOverlayPresentation(true) end)
+wishlistUI.overlayNext:SetScript("OnClick",function() wishlistUI.overlayPage=wishlistUI.overlayPage+1;objScroll:SetVerticalScroll(0);GetGear:RefreshOverlayPresentation(true) end)
+local groupMenu=CreateFrame("Frame","GetGear_OverlayGroupMenu",wishlistUI.overlayGroupButton)
+groupMenu:SetSize(100,71)
+groupMenu:SetPoint("TOPRIGHT",wishlistUI.overlayGroupButton,"BOTTOMRIGHT",0,-2)
+groupMenu:SetFrameStrata("FULLSCREEN_DIALOG")
+groupMenu:SetClampedToScreen(true)
+groupMenu:EnableMouse(true)
+local groupBackground=groupMenu:CreateTexture(nil,"BACKGROUND")
+groupBackground:SetAllPoints();groupBackground:SetColorTexture(0.045,0.065,0.10,1)
+wishlistUI.overlayGroupChoices={}
+for i,entry in ipairs({{"all","All"},{"starred","Starred"},{"other","Other"}}) do
+    local key,label=entry[1],entry[2]
+    local choice=NewButton(groupMenu,label,92,21)
+    choice:SetPoint("TOPLEFT",4,-4-(i-1)*21)
+    wishlistUI.overlayGroupChoices[key]=choice
+    choice:SetScript("OnClick",function()
+        wishlistUI.overlayPages[wishlistUI.overlayGroup]=wishlistUI.overlayPage
+        wishlistUI.overlayGroup=key
+        wishlistUI.overlayPage=wishlistUI.overlayPages[key]
+        groupMenu:Hide();objScroll:SetVerticalScroll(0)
+        GetGear:RefreshOverlayPresentation(true)
+    end)
+end
+groupMenu:Hide()
+if UISpecialFrames then table.insert(UISpecialFrames,"GetGear_OverlayGroupMenu") end
+wishlistUI.overlayGroupButton:SetScript("OnClick",function()
+    if groupMenu:IsShown() then groupMenu:Hide() else
+        if openSlotMenu then openSlotMenu:Hide() end
+        openSlotMenu=groupMenu;groupMenu:Show()
+    end
+end)
+wishlistUI.overlayGroupButton:HookScript("OnHide",function() groupMenu:Hide() end)
 
 -- Keep a small gap below the unchanged 22px action strip.
 local OVERLAY_IDENTITY_TOP = 32
@@ -2183,51 +2215,64 @@ local function RefreshOverlay(self)
     trackerLevel:SetText(ColoredCharacterLabel(self.level, race, class, classToken))
 
     local selectionStarted=self.performanceStats and self:PerformanceClock()
-    local list = wishlistUI.starPresentationOnly and wishlistUI.overlayModel or self:GetItems("tracker")
-    -- These are independent overlay presentation filters. Neither affects
-    -- the full guide, saved progress, or the catalogue's source research.
-    if not wishlistUI.starPresentationOnly and (self.ShouldShowOverlayStatChanges or self.ShouldShowOverlayWorldBoEDrops or self.ShouldShowOverlayAcquisition) then
-        local visible={}
-        for _,gear in ipairs(list) do
-            local useful=not self.ShouldShowOverlayStatChanges
-                or self:ShouldShowOverlayStatChanges(gear)
-            local obtainable=(opts.hideGreenBoEWorldDrops==false)
-                or not self.ShouldShowOverlayWorldBoEDrops
-                or self:ShouldShowOverlayWorldBoEDrops(gear)
-            local accessible=not self.ShouldShowOverlayAcquisition or self:ShouldShowOverlayAcquisition(gear)
-            if useful and obtainable and accessible then visible[#visible+1]=gear end
-        end
-        list=visible
-    end
-    wishlistUI.overlayModel=list
-    if self.ComposeStarredItems then list=self:ComposeStarredItems(list,"tracker",wishlistUI.starPresentationOnly and wishlistUI.overlayStarModel or nil,true);wishlistUI.overlayStarModel=wishlistUI.RememberStars(list) end
-    -- Slot filtering is last: counts and matches respect every existing stat,
-    -- world-drop and acquisition visibility rule before limiting rendered rows.
-    overlaySlot:Update()
     local slot = self:GetEquipmentSlotFilter("overlay")
-    local total
-    list, total = self:FilterEquipmentSlots(list, slot)
+    if wishlistUI.overlayViewKey~=slot then
+        wishlistUI.overlayPage=1;wishlistUI.overlayPages={all=1,starred=1,other=1}
+        wishlistUI.overlayViewKey=slot;wishlistUI.overlayNavigationOnly=false
+    end
+    if not wishlistUI.overlayNavigationOnly then
+        local list = wishlistUI.starPresentationOnly and wishlistUI.overlayModel or self:GetItems("tracker")
+        -- These are independent overlay presentation filters. Neither affects
+        -- the full guide, saved progress, or the catalogue's source research.
+        if not wishlistUI.starPresentationOnly and (self.ShouldShowOverlayStatChanges or self.ShouldShowOverlayWorldBoEDrops or self.ShouldShowOverlayAcquisition) then
+            local visible={}
+            for _,gear in ipairs(list) do
+                local useful=not self.ShouldShowOverlayStatChanges
+                    or self:ShouldShowOverlayStatChanges(gear)
+                local obtainable=(opts.hideGreenBoEWorldDrops==false)
+                    or not self.ShouldShowOverlayWorldBoEDrops
+                    or self:ShouldShowOverlayWorldBoEDrops(gear)
+                local accessible=not self.ShouldShowOverlayAcquisition or self:ShouldShowOverlayAcquisition(gear)
+                if useful and obtainable and accessible then visible[#visible+1]=gear end
+            end
+            list=visible
+        end
+        wishlistUI.overlayModel=list
+        if self.ComposeStarredItems then list=self:ComposeStarredItems(list,"tracker",wishlistUI.starPresentationOnly and wishlistUI.overlayStarModel or nil,true);wishlistUI.overlayStarModel=wishlistUI.RememberStars(list) end
+        -- Slot filtering is last: counts and matches respect every existing stat,
+        -- world-drop and acquisition visibility rule before limiting rendered rows.
+        overlaySlot:Update()
+        local total
+        list, total = self:FilterEquipmentSlots(list, slot)
+        local groups={all=list,starred={},other={}}
+        for _,gear in ipairs(list) do
+            local group=self:IsItemStarred(gear.itemID) and groups.starred or groups.other
+            group[#group+1]=gear
+        end
+        wishlistUI.overlayGroups=groups
+        wishlistUI.overlayTotal=total
+    end
+    local group=wishlistUI.overlayGroup
+    local list=wishlistUI.overlayGroups[group]
+    local total=wishlistUI.overlayTotal
+    local groupLabel=group=="starred" and "Starred" or group=="other" and "Other" or "All"
+    wishlistUI.overlayGroupButton:SetText(groupLabel.." v")
+    for key,choice in pairs(wishlistUI.overlayGroupChoices) do choice:SetEnabled(key~=group) end
     if self.performanceStats then self:RecordPerformancePhase("OverlaySelection",selectionStarted) end
     local rowsStarted=self.performanceStats and self:PerformanceClock()
     local overlayCap = 32
     local matches=#list
-    local key=slot
-    if wishlistUI.overlayViewKey~=key then wishlistUI.overlayPage=1;wishlistUI.overlayViewKey=key end
     local pages=math.max(1,math.ceil(matches/overlayCap))
     wishlistUI.overlayPage=math.min(wishlistUI.overlayPage,pages)
-    wishlistUI.overlayStarCount=0
-    for _,gear in ipairs(list) do
-        if self.IsItemStarred and self:IsItemStarred(gear.itemID) then wishlistUI.overlayStarCount=wishlistUI.overlayStarCount+1 end
-    end
+    wishlistUI.overlayPages[group]=wishlistUI.overlayPage
     wishlistUI.overlayPrevious:SetShown(pages>1);wishlistUI.overlayNext:SetShown(pages>1)
     wishlistUI.overlayPrevious:SetEnabled(wishlistUI.overlayPage>1);wishlistUI.overlayNext:SetEnabled(wishlistUI.overlayPage<pages)
-    wishlistUI.overlayOther:SetShown(wishlistUI.overlayStarCount>0 and wishlistUI.overlayStarCount<matches and pages>1)
     local subset={}
     for i=(wishlistUI.overlayPage-1)*overlayCap+1,math.min(matches,wishlistUI.overlayPage*overlayCap) do subset[#subset+1]=list[i] end
     list=subset
     local displayed = opts.objectivesCollapsed and 0 or math.min(#list,overlayCap)
     objHeadText:SetText((opts.objectivesCollapsed and "+" or "-") .. "  " ..
-        self:EquipmentSlotCountText(matches, total, displayed)..(pages>1 and wishlistUI.overlayStarCount>0 and ("  |  "..wishlistUI.overlayPage.."/"..pages) or ""))
+        self:EquipmentSlotCountText(matches, total, displayed)..(pages>1 and ("  |  "..wishlistUI.overlayPage.."/"..pages) or ""))
     if wishlistUI.starPresentationOnly and not opts.objectivesCollapsed then wishlistUI.ReusePresentationRows(overlayRows,list,NewOverlayRow) end
     local totalY = 0
     if opts.objectivesCollapsed then
@@ -2235,7 +2280,8 @@ local function RefreshOverlay(self)
     else
         objScroll:Show()
         if #list == 0 then
-            noObjectives:SetText(slot~="all" and "No recommendations for this slot."
+            noObjectives:SetText(group~="all" and ("No "..(group=="starred" and "starred" or "other").." recommendations"..(slot~="all" and " for this slot." or "."))
+                or slot~="all" and "No recommendations for this slot."
                 or #self.Gear == 0 and self:GetGuideEmptyMessage()
                 or "No current objectives. Check Earlier Gear, Hidden or Completed in /getgear.")
             noObjectives:Show()
@@ -2482,6 +2528,22 @@ end
 function GetGear:RefreshOverlay()
     if self.WithRecommendationSnapshot then return self:WithRecommendationSnapshot(RefreshOverlay) end
     return RefreshOverlay(self)
+end
+
+-- Only explicit presentation actions reuse the last validated model. Gameplay
+-- events and direct full refreshes still read current inputs synchronously.
+function GetGear:RefreshOverlayPresentation(navigationOnly)
+    if not wishlistUI.overlayModel then return self:RefreshOverlay() end
+    wishlistUI.starPresentationOnly=true
+    wishlistUI.overlayNavigationOnly=navigationOnly and wishlistUI.overlayGroups~=nil
+    local ok,err=pcall(self.RefreshOverlay,self)
+    wishlistUI.starPresentationOnly=false;wishlistUI.overlayNavigationOnly=false
+    if not ok then error(err,0) end
+end
+
+function GetGear:RefreshOverlayCombatVisibility()
+    if not self.db or not self.db.overlay.hideInCombat then return end
+    if IsInCombat() then overlay:Hide() else self:RefreshOverlay() end
 end
 
 function GetGear:RefreshStarPresentation(itemID,starred)

@@ -137,6 +137,7 @@ local detailContent=detailScroll.child
 local function visibleRows(parent)
     local rows={}
     for _,f in ipairs(parent.children) do if f.kind=="Frame" and f:IsShown() then rows[#rows+1]=f end end
+    table.sort(rows,function(a,b)return -a.points[1][5]<-b.points[1][5] end)
     return rows
 end
 local function rowItem(row)
@@ -156,7 +157,7 @@ local function checkRows(parent,slot,limit)
 end
 assert(#visibleRows(objContent)==32 and #visibleRows(detailContent)==40)
 local heading=find(overlay,function(f) return f.kind=="Button" and f.children[1] and f.children[1].text:find("Showing",1,true) end)
-assert(heading.children[1].text=="-  Showing 32 of 140 (140 slot matches)")
+assert(heading.children[1].text=="-  Showing 32 of 140 (140 slot matches)  |  1/5")
 assert(text(detail,"Showing 40 of 140 (140 slot matches)"))
 selectSlot(overlayMenu,"Chest")
 assert(addon.db.overlay.slotFilter=="chest" and addon.db.detail.slotFilter=="all")
@@ -236,11 +237,13 @@ local inventoryView=find(detail,function(f) return f.kind=="Frame" and pcall(but
 click(button(inventoryView,"Return to guide"))
 assert(detailMenu.parent:IsShown())
 -- Reopen restores labels; repeated changes retain row bounds and measured height.
+local beforeSlotMaterials=materialCalls
 for n=1,3 do
     for _,entry in ipairs(addon.EquipmentSlotFilters) do
         selectSlot(overlayMenu,entry[2]);selectSlot(detailMenu,entry[2])
     end
 end
+assert(materialCalls==beforeSlotMaterials,'presentation-only slot switching rebuilt total materials')
 selectSlot(overlayMenu,"Chest");selectSlot(detailMenu,"Chest")
 addon:ToggleOverlay();addon:ToggleOverlay();addon:ToggleUI();addon:ToggleUI()
 assert(overlayMenu.parent.text=="Slot: Chest" and detailMenu.parent.text=="Slot: Chest")
@@ -266,7 +269,9 @@ assert(mapped==rowItem(chest),"filtered map button points at wrong item")
 click(heading);assert(not objScroll:IsShown())
 selectSlot(overlayMenu,"Rings");click(heading)
 assert(objScroll:IsShown() and #visibleRows(objContent)==20)
-assert(materialCalls>50,"materials must continue refreshing independently")
+local beforeFullMaterials=materialCalls
+addon:RefreshOverlay()
+assert(materialCalls==beforeFullMaterials+1,"full refresh must still update total materials")
 detail:Hide();addon:ShowUI()
 addon:ToggleOverlay();addon:ToggleOverlay()
 assert(detailMenu.parent:GetText()=="Slot: Chest" and overlayMenu.parent:GetText()=="Slot: Rings")
@@ -276,10 +281,11 @@ assert(overlayMenu.parent.points[1][3]==-37 and heading.points[1][3]==-65)
 addon.ShouldShowOverlayStatChanges=function(_,gear) return gear.itemID~=1 end
 addon.ShouldShowOverlayWorldBoEDrops=function(_,gear) return gear.itemID~=71 end
 addon.ShouldShowOverlayAcquisition=function(_,gear) return gear.itemID~=121 end
+addon:RefreshOverlay() -- settings/gameplay changes invalidate presentation models
 selectSlot(overlayMenu,"All Slots")
-assert(heading.children[1].text=="-  Showing 32 of 137 (137 slot matches)")
+assert(heading.children[1].text=="-  Showing 32 of 137 (137 slot matches)  |  1/5")
 selectSlot(overlayMenu,"Chest")
-assert(heading.children[1].text=="-  Showing 32 of 137 (69 slot matches)")
+assert(heading.children[1].text=="-  Showing 32 of 137 (69 slot matches)  |  1/3")
 selectSlot(overlayMenu,"Rings")
 assert(heading.children[1].text=="-  Showing 19 of 137 recommendations")
 selectSlot(detailMenu,"Rings")
