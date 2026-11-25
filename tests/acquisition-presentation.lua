@@ -73,7 +73,8 @@ end
 for _,side in ipairs({'Alliance','Horde'})do
  UnitFactionGroup=function()return side end
  local g=catalog.ItemCatalog[2300];assert(g.name=='Embossed Leather Vest')
- assert(catalog:GetAcquisitionSummary(g)=='Recipe: Leatherworking trainer (35)',side..' reported trainer text')
+ if side=='Alliance' then assert(catalog:GetAcquisitionSummary(g)=='Recipe: Leatherworking trainer (35)',side..' reported trainer text')
+ else assert(not catalog:GetAcquisitionSummary(g):find('Leatherworking trainer',1,true),'missing accessible teacher must not be promoted to routine training') end
  local details=catalog:GetAcquisitionDirections(g)
  if side=='Alliance'then assert(details:find('Adele Fielder',1,true)and details:find('current',1,true))end
 end

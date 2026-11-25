@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "effectiveDate": "2026-11-24",
+  "approvedPrimaryEvidence": [
+    "Applicable current Forever client observations",
+    "Applicable native game API observations"
+  ],
+  "approvedHosts": [
+    "blizzard.com",
+    "news.blizzard.com",
+    "worldofwarcraft.blizzard.com",
+    "us.forums.blizzard.com",
+    "eu.forums.blizzard.com",
+    "www.wowhead.com",
+    "nether.wowhead.com",
+    "foreverdb.net",
+    "www.foreverdb.net",
+    "wow-forever.gg",
+    "www.wow-forever.gg",
+    "github.com",
+    "api.github.com",
+    "raw.githubusercontent.com",
+    "curseforge.com",
+    "www.curseforge.com",
+    "reddit.com",
+    "www.reddit.com",
+    "old.reddit.com",
+    "www.blizzard.com",
+    "support.blizzard.com",
+    "develop.battle.net",
+    "us.api.blizzard.com",
+    "eu.api.blizzard.com",
+    "worldofwarcraft.com",
+    "www.worldofwarcraft.com",
+    "wowhead.com",
+    "api.curseforge.com"
+  ],
+  "blacklistedHosts": [
+    "dailyrespawn.com",
+    "hardcorehelper.com",
+    "questing.wiki",
+    "wowforeverbuilds.com",
+    "wowclassicforever.info",
+    "wowsrc.com",
+    "senseos.gg",
+    "forever-codex.com",
+    "metaforge.app",
+    "lvren.fun",
+    "60.tools",
+    "wowforever.ninja",
+    "foreverdiff.com",
+    "wowforever.gameslantern.com",
+    "theforeverera.com",
+    "wowforever.wclbox.com",
+    "wowforevertalents.com"
+  ],
+  "blacklistedProviders": [
+    "ForeverDex",
+    "WoWNexus"
+  ],
+  "platformHosts": [
+    "github.com",
+    "api.github.com",
+    "raw.githubusercontent.com",
+    "curseforge.com",
+    "www.curseforge.com",
+    "reddit.com",
+    "www.reddit.com",
+    "old.reddit.com",
+    "api.curseforge.com"
+  ],
+  "quarantinedRepositories": [
+    "Everloot/everloot",
+    "MAF2414/wow-forever-talents",
+    "nobody174/wow-forever",
+    "Napalmsteak/WoW-Classic-Item-Caches"
+  ],
+  "rule": "Approval permits research, never automatic verification. Wowhead must be Forever. Platform facts need attributable original authors, inspected lineage and build applicability. Quarantined historical datasets remain audit-only until individually revalidated. Blacklisted reproductions remain prohibited regardless of hosting. Current-client observations are primary; published, historical, inferred and unverified facts stay distinct."
+}

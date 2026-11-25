@@ -42,8 +42,8 @@ class CumulativeBuildTests(unittest.TestCase):
 
     def test_current_cumulative_source_passes(self):
         result = validate(self.root)
-        self.assertEqual(result['modules'], 29)
-        self.assertEqual(len(result['features']), 13)
+        self.assertEqual(result['modules'], 32)
+        self.assertEqual(len(result['features']), 14)
         self.assertTrue(result['acceptedNavigationExact'])
 
     def test_missing_star_texture_is_rejected(self):
@@ -96,7 +96,7 @@ class CumulativeBuildTests(unittest.TestCase):
         return path
 
     def test_complete_archive_is_validated_from_extracted_bytes(self):
-        self.assertEqual(validate_archive(self.archive(), self.root)['modules'], 29)
+        self.assertEqual(validate_archive(self.archive(), self.root)['modules'], 32)
 
     def test_missing_dependency_in_archive_is_rejected(self):
         with self.assertRaisesRegex(FeatureValidationError, 'missing dependencies'):

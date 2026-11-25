@@ -247,20 +247,22 @@ local describe=assert(load("return function(gear,previewMode)\n"..describeBody..
     "Describe", "t", {type=type,tostring=tostring,table=table,GetGear=addon}))()
 -- Source-evidence assertions belong in the full guide; compact contracts are
 -- covered separately without requiring both factions and provenance in one row.
+local oldBookFaction=UnitFactionGroup
+UnitFactionGroup=function()return 'Alliance' end
 for _,r in ipairs(reviewedBooks) do
     local item=assert(addon.ItemCatalog[r[1]])
     local ev=assert(item.acquisitionResearch)
     assert(ev.recipeReference and ev.confidence=="published-forever-recipe-vendor-reference")
     assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
     local text=describe(item,false)
-    assert(text:find("Plans #"..r[2],1,true)
+    assert(text:find("#"..r[2],1,true)
         and text:find("Blacksmithing "..r[3],1,true)
-        and text:find("Alliance Stondry Darkhammer",1,true)
-        and text:find("Horde Gor'mak",1,true)
-        and text:find("Three Corners",1,true)
-        and text:find("Crossroads",1,true)
+        and text:find("Stondry Darkhammer",1,true)
+        and not text:find("Gor'mak",1,true)
+        and not text:find("Crossroads",1,true)
         and text:find("30 Merchant's Favor",1,true)
-        and text:find("live stock/gates unverified",1,true))
+        and text:find("unverified",1,true),tostring(r[1])..": "..text)
+    assert(ev.sourceSummary:find("Gor'mak",1,true) or ev.details:find("Gor'mak",1,true),"retain both historical factions in evidence, outside actionable directions")
     assert(item.acquisitionConfidence=="published-client-recipe",
         "Publication must not promote original item confidence")
     assert(item.professionSkillRequired==nil,
@@ -272,7 +274,8 @@ assert(addon.ItemCatalog[250512].sourceSummary:find("enemy unspecified",1,true))
 assert(addon.ItemCatalog[250529].sourceSummary:find("Verdan the Everliving",1,true))
 local detailed=describe(addon.ItemCatalog[250515],false)
 assert(detailed:find("Stondry Darkhammer",1,true)
-    and detailed:find("Gor'mak",1,true) and detailed:find("unverified",1,true))
+    and not detailed:find("Gor'mak",1,true) and detailed:find("unverified",1,true))
+UnitFactionGroup=oldBookFaction
 -- An existing observed/manual description retains display precedence.
 local fixture={ItemCatalog={[250515]={sourceSummary="Original observation",
     acquisitionConfidence="observed",reagents={{itemID=2840,amount=12}},classMask=1}},
@@ -366,26 +369,29 @@ local leatherBooks={
     {252458,252823,125},
     {252518,252824,125},
 }
+local oldLeatherFaction=UnitFactionGroup
+UnitFactionGroup=function()return 'Alliance' end
 for _,r in ipairs(leatherBooks) do
     local item=assert(addon.ItemCatalog[r[1]])
     local text=describe(item,false)
     assert(item.recipePatternItemID==r[2] and item.recipeLearnMethod=="pattern")
     assert(text:find("#"..r[2],1,true) and text:find("Leatherworking "..r[3],1,true)
-        and text:find("Alliance Daniel Stitchsong",1,true)
-        and text:find("Horde Pawani",1,true)
+        and text:find("Daniel Stitchsong",1,true)
+        and not text:find("Pawani",1,true)
         and text:find("30 Merchant's Favor",1,true)
-        and text:find("live stock/gates unverified",1,true))
-    assert(describe(item,false):find("Pawani",1,true))
+        and text:find("unverified",1,true))
+    assert(item.acquisitionResearch.sourceSummary:find("Pawani",1,true) or item.acquisitionResearch.details:find("Pawani",1,true))
 end
 local bookDrop=assert(addon.ItemCatalog[252497]) -- Totemic Gloves
-local bookDetail=describe(bookDrop,false)
+local bookDetail=bookDrop.acquisitionResearch.details
 assert(bookDetail:find("Published book-drop references",1,true)
     and bookDetail:find("The Deadmines: Sneed",1,true)
     and bookDetail:find("Fel Steed",1,true) and bookDetail:find("Ragefire Chasm",1,true)
     and bookDetail:find("live unverified; no drop-rate claim",1,true))
 assert(bookDrop.sourceType=="Leatherworking" and bookDrop.profession=="Leatherworking")
 assert(not addon:GetAcquisitionSummary(bookDrop):find("Boss:",1,true))
-assert(describe(addon.ItemCatalog[252505],false):find("Player report: Lord Cobrahn",1,true))
+assert(addon.ItemCatalog[252505].acquisitionResearch.details:find("Player report: Lord Cobrahn",1,true))
+UnitFactionGroup=oldLeatherFaction
 local beltDetail=addon.ItemCatalog[252428].acquisitionResearch.details or ""
 assert(not beltDetail:find("Published book-drop references",1,true)
     and not beltDetail:find("Lord Cobrahn",1,true)
@@ -395,26 +401,30 @@ assert(beltDetail:find("Waylaid Crate",1,true),"Shared Favor directions remain u
 
 -- Checkpoint 6E: item-specific costs and reputation must not leak
 -- between profession families or turn a publication into live stock.
+local oldServiceFaction=UnitFactionGroup
+UnitFactionGroup=function() return "Alliance" end
 for _,r in ipairs({{249392,249482},{249393,249483},{249394,249484}}) do
     local item=assert(addon.ItemCatalog[r[1]])
     local text=describe(item,false)
     assert(item.recipePatternItemID==r[2] and text:find("Enchanting 140",1,true)
-        and text:find("Alliance Alynsia",1,true) and text:find("Horde Beneris",1,true)
+        and text:find("Alynsia",1,true) and not text:find("Beneris",1,true)
         and text:find("45 Merchant's Favor",1,true)
-        and text:find("live stock/gates unverified",1,true))
-    assert(not text:find("Friendly reputation",1,true),"Do not infer a gate from Engineering")
+        and text:find("unverified",1,true))
+    assert(not text:find("Friendly with Azeroth Commerce Authority",1,true),"Do not infer a gate from Engineering")
 end
 for _,r in ipairs({{280306,280321},{280307,280322},{280308,280323}}) do
     local item=assert(addon.ItemCatalog[r[1]])
     local text=describe(item,false)
     assert(item.recipePatternItemID==r[2] and text:find("Engineering 175",1,true)
-        and text:find("Alliance Fritz Fizzle",1,true) and text:find("Horde Fizzlefuse",1,true)
+        and text:find("Fritz Fizzle",1,true) and not text:find("Fizzlefuse",1,true)
         and text:find("180 Merchant's Favor",1,true)
-        and text:find("Friendly reputation",1,true)
-        and text:find("Horde: Durotar Supply and Logistics",1,true)
-        and text:find("live stock/gates unverified",1,true))
-    assert(describe(item,false):find("does not name its faction",1,true))
+        and text:find("Friendly with Azeroth Commerce Authority",1,true)
+        and text:find("Azeroth Commerce Authority",1,true)
+        and text:find("unverified",1,true))
+    assert(item.acquisitionResearch.details:find("does not name its faction",1,true), "Historical uncertainty remains in the audit record")
 end
+
+UnitFactionGroup=oldServiceFaction
 
 -- Checkpoint 6F: book quest routes retain distinct starts/turn-ins,
 -- reward choices and access gates without restricting the gear catalogue.

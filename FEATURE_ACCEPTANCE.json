@@ -35,7 +35,10 @@
     "GearCompare.lua",
     "StatPriorities.lua",
     "Core.lua",
-    "UI.lua"
+    "UI.lua",
+    "CommercePolicyData.lua",
+    "ResearchPolicyData.lua",
+    "AcquisitionPolicy.lua"
   ],
   "loadOrder": [
     [
@@ -54,6 +57,13 @@
       "StatPriorities.lua",
       "Core.lua",
       "UI.lua"
+    ],
+    [
+      "RecipeKnowledge.lua",
+      "CommercePolicyData.lua",
+      "ResearchPolicyData.lua",
+      "AcquisitionPolicy.lua",
+      "BagUpgrades.lua"
     ]
   ],
   "features": [
@@ -323,11 +333,24 @@
         "item-search-stars-ui.lua",
         "starred-row-refresh.lua"
       ]
+    },
+    {
+      "id": "approved_research_and_commerce_access",
+      "requires": {
+        "AcquisitionPolicy.lua": [
+          "GetAcquisitionServiceDecision",
+          "GetTerritoryAcquisitionPracticality",
+          "GetAcquisitionResearchDecision"
+        ]
+      },
+      "regressions": [
+        "commerce-source-policy.lua"
+      ]
     }
   ],
   "acceptedNavigationFiles": {
     "MapNavigation.lua": "051270d68faca4e06da8dd77ef11cab2d9bd15b2f7276d8435450a55066d565c",
-    "AcquisitionNavigation.lua": "5125ff5bb3da59517e8ee772715f47892164b73f095ab83b39e0c1899f625243",
+    "AcquisitionNavigation.lua": "caeaa51612feb9b5c1f3175d8e350fccef0ff32e0838dec03016dde1ff3cad11",
     "AcquisitionNavigationData.lua": "3a0e72d37fe30ed2425221376e8e6b5b097b0c44d835c96c66561a98e8307db2",
     "BagQuestData.lua": "fceab2ca58428dddbffbfff768692b6fcff2d0803cbf6be73b72a953249bc6db"
   },
@@ -347,21 +370,24 @@
     "comprehensiveFollowup": "docs/navigation-overhaul/REPORT.md",
     "rendererIntegrityFollowup": "docs/navigation-integrity/REPORT.md",
     "stabilisationFollowup": "docs/stabilisation/REPORT.md",
-    "locationClassificationFollowup": "docs/location-review/REPORT.md"
+    "locationClassificationFollowup": "docs/location-review/REPORT.md",
+    "sourceIntegrityFollowup": "docs/source-integrity-20261124/REPORT.md"
   },
   "navigationCoverageBaseline": {
-    "review": "docs/navigation-audit/REPORT.md",
+    "review": "docs/source-integrity-20261124/REPORT.md",
     "minimum": {
       "auditedItemIDs": 7732,
       "classFactionChecks": 74004,
       "usableLocationRows": 8557,
       "simulatedDistinctMarkerDestinations": 807,
-      "rawSourceEvidenceChecks": 24520
+      "rawSourceEvidenceChecks": 22016
     },
     "zero": [
       "usableLocationsWithoutButton",
       "sourceEvidenceWithoutButton",
       "itemCacheRequests"
-    ]
+    ],
+    "previousRawSourceEvidenceChecks": 24520,
+    "sourcePolicyReason": "Unapproved acquisition and coordinate holds, explicit same-frame publication disagreements, and redundant unverified NPC/object aliases are withheld from active navigation. Other navigation minima and zero-loss assertions remain."
   }
 }

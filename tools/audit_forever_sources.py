@@ -5,6 +5,7 @@ Uses independent, public Forever client extracts; does NOT equate client item
 existence with live dungeon loot or vendor/trainer availability. No user data.
 Reports and candidate-only Lua fixes are written to --out; never edits add-on.
 """
+from research_sources import research_open
 import argparse, collections, csv, datetime, hashlib, json, pathlib, re, urllib.request, urllib.error, time
 from urllib.parse import quote
 
@@ -24,7 +25,7 @@ CLASSES=("PRIEST","MAGE","WARLOCK","DRUID","ROGUE","HUNTER","SHAMAN","WARRIOR","
 
 def pull(url):
     req=urllib.request.Request(url,headers={"User-Agent":"GetGear-DataQualityAudit/1.0 (github.com/magicaddons/getgear)","Accept":"application/json"})
-    with urllib.request.urlopen(req,timeout=35) as res:
+    with research_open(req,timeout=35) as res:
         data=res.read(15_000_000)
     return json.loads(data),{"url":url,"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()}
 

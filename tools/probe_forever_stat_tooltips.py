@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+from research_sources import research_open
 import urllib.request,json,re,html
 url="https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json"
 req=urllib.request.Request(url,headers={"User-Agent":"GetGear-StatAudit/1.0"})
-with urllib.request.urlopen(req,timeout=45) as resp:
+with research_open(req,timeout=45) as resp:
     payload=resp.read(28000000)
 j=json.loads(payload)
 print("SCHEMA_ROOT",type(j).__name__,len(j),list(j[0].keys()))

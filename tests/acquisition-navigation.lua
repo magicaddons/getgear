@@ -584,7 +584,7 @@ C_QuestLog={IsOnQuest=function(id)return id==8801 end,IsComplete=function()retur
 for _,target in ipairs(addon:GetAcquisitionNavigationChoices(researchGear(8802))) do if target.source=='npc:15379' then assert(target.zone=="Ahn'Qiraj" and not target.x and not target.bounds,'the actual inside-Temple hand-in does not inherit Silithus world bounds') end end
 C_QuestLog=nil
 local blackmawStart=addon:GetAcquisitionMapTarget(researchGear(92065))
-assert(blackmawStart and blackmawStart.questID==86791 and blackmawStart.source=='npc:236573' and blackmawStart.x==42.4,'full NPC quest-role evidence supplies the unread initial reference without substituting Classic rare6651')
+assert(blackmawStart and blackmawStart.questID==86791 and blackmawStart.source=='npc:236573' and not blackmawStart.x and blackmawStart.instructions:find('unverified',1,true),'full NPC quest-role identity survives while conflicting coordinate precision is withheld')
 assert(not actualModel.quests['86791'].reqlevel and not actualModel.quests['86791'].side and not actualModel.chains['92065'].routeVerified,'unread initial quest and mandatory link do not inherit eligibility from later stages')
 C_QuestLog={IsOnQuest=function(id)return id==92065 end,IsComplete=function()return false end}
 local blackmawObjective=addon:GetAcquisitionMapTarget(researchGear(92065))

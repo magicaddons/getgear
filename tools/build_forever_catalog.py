@@ -8,6 +8,7 @@ sources are expressly UNVERIFIED and must not be presented as live drop tables.
 
 python3 tools/build_forever_catalog.py [--input /path/cache.json]
 """
+from research_sources import research_open, require_research
 import argparse
 import collections
 import hashlib
@@ -338,6 +339,7 @@ def write_lua(records, path, digest):
 
 
 def main():
+    require_research(UPSTREAM, dataset=True)  # Cached origin has the same source boundary as network input.
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, help="Use a previously downloaded cache")
     parser.add_argument("--output", type=Path, default=REPO / "GeneratedForeverGear.lua")
@@ -347,7 +349,7 @@ def main():
         data_bytes = args.input.read_bytes()
     else:
         req = urllib.request.Request(UPSTREAM, headers={"User-Agent": "GetGear data audit"})
-        with urllib.request.urlopen(req, timeout=75) as response:
+        with research_open(req, timeout=75) as response:
             data_bytes = response.read(30_000_000)
     digest = hashlib.sha256(data_bytes).hexdigest()
     source = json.loads(data_bytes)

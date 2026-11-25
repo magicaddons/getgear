@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: GetGear
 ## Notes: Class-eligible gear 1–60 with faction-aware sources, bags and stat priorities (WoW Forever)
-## Version: 0.14.0-beta11
+## Version: 0.14.0-private-cumulative.20261124.15
 ## SavedVariables: GetGear_AccountDB
 ## SavedVariablesPerCharacter: GetGear_CharacterDB
 
@@ -25,6 +25,9 @@ AcquisitionNavigation.lua
 MapNavigation.lua
 AltInventory.lua
 RecipeKnowledge.lua
+CommercePolicyData.lua
+ResearchPolicyData.lua
+AcquisitionPolicy.lua
 BagUpgrades.lua
 ItemData.lua
 CraftingVisibility.lua

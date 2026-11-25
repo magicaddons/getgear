@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build independent stat flags from WoW Forever item tooltip HTML, not statRole."""
+from research_sources import research_open, require_research
 import argparse,csv,hashlib,html,json,pathlib,re,urllib.request
 from html.parser import HTMLParser
 
@@ -66,7 +67,7 @@ class Plain(HTMLParser):
 
 def download(url):
     req=urllib.request.Request(url,headers={"User-Agent":"GetGear-StatEvidenceAudit/1.0","Accept":"application/json"})
-    with urllib.request.urlopen(req,timeout=60) as resp:raw=resp.read(26000000)
+    with research_open(req,timeout=60) as resp:raw=resp.read(26000000)
     return json.loads(raw),hashlib.sha256(raw).hexdigest()
 
 def norm(value):return re.sub(r"[^a-z0-9]","",str(value or "").lower())
@@ -103,6 +104,7 @@ def flags_from_tooltip(raw):
                 ("physical",physical),("defense",defense)) if ok)
 
 def main():
+    require_research(SOURCE_URL, dataset=True)  # Cached origin has the same source boundary as network input.
     args=argparse.ArgumentParser()
     args.add_argument('--input',type=pathlib.Path,help='Pinned full Forever tooltip cache; no network when supplied')
     options=args.parse_args()

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Read-only schema probe for public source catalogues; prints no proprietary data."""
+from research_sources import research_open
 import json,urllib.request,urllib.error,collections
 urls={
 "classic_items":"https://www.wowforeverfriends.org/items/items.json",
@@ -16,7 +17,7 @@ def summarize(value):
 for key,url in urls.items():
  try:
   req=urllib.request.Request(url,headers={"User-Agent":"GetGear-AcquisitionAudit/1.0","Accept":"application/json,text/html"})
-  with urllib.request.urlopen(req,timeout=30) as resp:
+  with research_open(req,timeout=30) as resp:
    data=resp.read(35000000);ct=resp.headers.get("Content-Type","")
    print("PROBE",key,resp.status,ct,len(data))
   try:

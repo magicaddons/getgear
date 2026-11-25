@@ -85,7 +85,7 @@ local function measure(label,fn)
   digest(scope)
   for _,m in ipairs(addon:GetCombinedMaterialRows(scope))do digest(m.itemID..':'..m.amount..':'..m.name..';')end
  end
- assert(hash==591227800,'Alliance-access fingerprint changed: '..label..' '..hash)
+ assert(hash==145248101,'Source-integrity fingerprint changed: '..label..' '..hash)
  print('SIGNATURE '..label..' '..hash)
  calls=measuredCalls
 end

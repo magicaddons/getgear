@@ -64,9 +64,11 @@ C_QuestLog=nil
 -- Original equipment examples and every analogous structured label resolve
 -- through canonical names without splitting legitimate name punctuation.
 for _,id in ipairs({250523,250519})do
- local item=assert(a.ItemCatalog[id]);local t,pin=click(item)
- assert(t.zone=='Redridge Mountains'and t.x==10.4 and t.y==74.7)
- assert(pin.label.text=='Stondry Darkhammer');pulse();assert(pin:IsShown())
+ local item=assert(a.ItemCatalog[id]);local t=assert(a:GetAcquisitionMapTarget(item))
+ assert(t.zone=='Redridge Mountains' and not t.x and t.instructions:find('disagree',1,true))
+ assert(a:GetAcquisitionNPCName(t)=='Stondry Darkhammer')
+ local ok,mode=a:OpenAcquisitionMap(item,t.id)
+ assert(ok and mode=='directions' and not a:GetAcquisitionMarkerState(),'conflicting vendor coordinates must not become an exact pin')
 end
 assert(a:GetAcquisitionMarkerLabel({zone='Darnassus',label='Ellandrieth, general goods (Brown Leather Satchel)',npcName='Ellandrieth'})=='Ellandrieth')
 local oldRace,oldContainer=UnitRace,C_Container

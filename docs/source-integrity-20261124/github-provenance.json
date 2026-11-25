@@ -1,0 +1,54 @@
+[
+  {
+    "repository": "Everloot/everloot",
+    "url": "https://api.github.com/repos/Everloot/everloot/readme",
+    "retrievedAt": "2026-11-24",
+    "scope": "Repository documentation only; historical datasets not fetched",
+    "sha256": "6030c6122df97ec825acdb519322899301dfc4bb8ddea907c8cbebb13eecdb7b",
+    "finding": "The maintainer describes player-collected observations and separately extracted client recipe/encounter tables. This supports separating datasets rather than treating every Everloot field as interchangeable. Historical GetGear API/cache rows still lack sufficient per-fact current-build lineage; no blacklisted upstream relationship was established for the exact recipe/encounter extracts.",
+    "historicalRevisionPinned": false
+  },
+  {
+    "repository": "MAF2414/wow-forever-talents",
+    "url": "https://api.github.com/repos/MAF2414/wow-forever-talents/readme",
+    "retrievedAt": "2026-11-24",
+    "scope": "Repository documentation only; historical datasets not fetched",
+    "sha256": "f606d2b11b0fa32e286e79e2f3741f6195873fe66392912870c02ec2020dd111",
+    "finding": "The README identifies Wago.Tools DB2 exports, with a September 2026 cached extraction workflow. Wago is outside the newly approved list. A relationship to the blacklisted wowforevertalents.com domain was not established; similar names alone do not establish ownership or data lineage.",
+    "historicalRevisionPinned": false
+  },
+  {
+    "repository": "nobody174/wow-forever",
+    "url": "https://api.github.com/repos/nobody174/wow-forever/readme",
+    "retrievedAt": "2026-11-24",
+    "scope": "Repository documentation only; historical datasets not fetched",
+    "sha256": "3082291b250c61ca7d9921148311ef626aff784fac420f4cf53eda0cd4960b89",
+    "finding": "The current author credits Classic community loot datasets, AtlasLoot, ForeverDB and several other providers, and explicitly attributes item statistics/names to WCLBox. This establishes a mixed and partly blacklisted current lineage; the unpinned historical GetGear download cannot be mapped retrospectively to every current field.",
+    "historicalRevisionPinned": false
+  },
+  {
+    "repository": "Napalmsteak/WoW-Classic-Item-Caches",
+    "url": "https://api.github.com/repos/Napalmsteak/WoW-Classic-Item-Caches/readme",
+    "retrievedAt": "2026-11-24",
+    "scope": "Repository documentation only; historical datasets not fetched",
+    "sha256": "703fe8879d7e19c7ae6fb5a370b6bac1326bebc0182fd2cdaf3beda0de0ae613",
+    "finding": "The author describes embedded Wowhead tooltips and broad source categories across multiple game versions. That is a dated derivative, not a fresh live-client observation. Fresh direct Forever tooltip responses can revalidate individual printed fields without relying on this repository.",
+    "historicalRevisionPinned": false
+  },
+  {
+    "repository": "Everloot/everloot",
+    "url": "https://github.com/Everloot/everloot/blob/main/docs/DATA_POLICY.md",
+    "sha256": "0b5a0b2377f8ccb58b5fc1cb198c77435562249c6b8cac5f29ce30b2be942d10",
+    "retrievedAt": "2026-11-24",
+    "finding": "The author separates first-party player uploads, client-file recipe/encounter projections, and third-party inputs. The ledger documents Blizzard-file extraction for recipe tables and local-only/research-only sources. These author claims do not verify the historical GetGear row or its live-build applicability.",
+    "scope": "Provenance documentation reviewed; no game dataset used as verification."
+  },
+  {
+    "repository": "Everloot/everloot",
+    "url": "https://github.com/Everloot/everloot/blob/main/docs/sources/LEDGER.md",
+    "sha256": "cf71925211f4248c8d02c53c549b079729c4f891f121cf74723579e8f7048570",
+    "retrievedAt": "2026-11-24",
+    "finding": "The author separates first-party player uploads, client-file recipe/encounter projections, and third-party inputs. The ledger documents Blizzard-file extraction for recipe tables and local-only/research-only sources. These author claims do not verify the historical GetGear row or its live-build applicability.",
+    "scope": "Provenance documentation reviewed; no game dataset used as verification."
+  }
+]
