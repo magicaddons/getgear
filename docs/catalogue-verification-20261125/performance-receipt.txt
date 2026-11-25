@@ -1,0 +1,130 @@
+$ /workspace/toolchain/lua54/usr/bin/lua5.4 /workspace/getgear/tests/beta4-performance.lua /workspace/getgear
+$ /workspace/toolchain/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /workspace/getgear/tests/beta4-performance.lua /workspace/getgear
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000022s total 0.015315s heap delta 1176.0KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000021s total 0.000144s heap delta 2.1KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000022s total 0.017682s heap delta 1476.8KiB (GC-sensitive, synthetic)
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000024s total 0.017325s heap delta 1501.8KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000025s total 0.000214s heap delta 2.7KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000025s total 0.023740s heap delta 1790.2KiB (GC-sensitive, synthetic)
+$ /workspace/toolchain/lua54/usr/bin/lua5.4 /workspace/getgear/tests/inventory-scope-performance.lua /workspace/getgear
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.006092s; browse 0.369300s; retained heap 1.75KiB; container reads 0 (synthetic)
+$ /workspace/toolchain/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /workspace/getgear/tests/inventory-scope-performance.lua /workspace/getgear
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.006690s; browse 0.448169s; retained heap 2.78KiB; container reads 0 (synthetic)
+PASS production search selection/focus, arrows/Enter/Escape; cross-view stars; 80 toggle pool/material budgets; large wishlist paging/source budget; Preview read-only; Core reload/character independence; inventory/gathering hidden-window budgets
+PASS production search selection/focus, arrows/Enter/Escape; cross-view stars; 80 toggle pool/material budgets; large wishlist paging/source budget; Preview read-only; Core reload/character independence; inventory/gathering hidden-window budgets
+$ /workspace/toolchain/lua54/usr/bin/lua5.4 /workspace/getgear/tests/overlay-idle-groups.lua /workspace/getgear
+IDLE_GROUPS WARRIOR level=27 same map zones x20 cpu=2.797ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS WARRIOR level=27 combat x20 cpu=2.661ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS WARRIOR level=27 idle frames x3600 cpu=1693.619ms heapGrowth=0.4KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS WARRIOR level=27 pages x10 cpu=78.953ms heapGrowth=9397.6KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS WARRIOR level=27 slots x3 cpu=11.234ms heapGrowth=948.6KiB refresh=3 items=0 compose=3 totals=0 comparisons=47
+IDLE_GROUPS WARRIOR level=27 closed zones x20 cpu=3.555ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS DRUID level=23 same map zones x20 cpu=3.010ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS DRUID level=23 combat x20 cpu=2.667ms heapGrowth=0.1KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS DRUID level=23 idle frames x3600 cpu=2292.363ms heapGrowth=0.4KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS DRUID level=23 pages x10 cpu=69.458ms heapGrowth=9301.2KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS DRUID level=23 slots x3 cpu=12.476ms heapGrowth=1563.7KiB refresh=3 items=0 compose=3 totals=0 comparisons=58
+IDLE_GROUPS DRUID level=23 closed zones x20 cpu=3.662ms heapGrowth=4.8KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS PRIEST level=31 same map zones x20 cpu=2.616ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS PRIEST level=31 combat x20 cpu=2.307ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS PRIEST level=31 idle frames x3600 cpu=1608.635ms heapGrowth=0.4KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS PRIEST level=31 pages x10 cpu=80.188ms heapGrowth=9746.6KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS PRIEST level=31 slots x3 cpu=6.010ms heapGrowth=723.8KiB refresh=3 items=0 compose=3 totals=0 comparisons=42
+IDLE_GROUPS PRIEST level=31 closed zones x20 cpu=3.359ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS MAGE level=60 same map zones x20 cpu=3.078ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS MAGE level=60 combat x20 cpu=2.985ms heapGrowth=0.1KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS MAGE level=60 idle frames x3600 cpu=2382.835ms heapGrowth=0.4KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS MAGE level=60 pages x10 cpu=69.002ms heapGrowth=8813.1KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS MAGE level=60 slots x3 cpu=11.526ms heapGrowth=2665.5KiB refresh=3 items=0 compose=3 totals=0 comparisons=84
+IDLE_GROUPS MAGE level=60 closed zones x20 cpu=4.807ms heapGrowth=4.8KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS SHAMAN level=45 same map zones x20 cpu=3.752ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS SHAMAN level=45 combat x20 cpu=3.031ms heapGrowth=0.1KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS SHAMAN level=45 idle frames x3600 cpu=2527.460ms heapGrowth=0.4KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS SHAMAN level=45 pages x10 cpu=74.832ms heapGrowth=10954.6KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS SHAMAN level=45 slots x3 cpu=9.370ms heapGrowth=812.3KiB refresh=3 items=0 compose=3 totals=0 comparisons=47
+IDLE_GROUPS SHAMAN level=45 closed zones x20 cpu=4.677ms heapGrowth=4.8KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS HUNTER level=15 same map zones x20 cpu=2.797ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS HUNTER level=15 combat x20 cpu=2.673ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS HUNTER level=15 idle frames x3600 cpu=2088.962ms heapGrowth=0.4KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS HUNTER level=15 pages x10 cpu=84.890ms heapGrowth=11155.4KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS HUNTER level=15 slots x3 cpu=7.108ms heapGrowth=965.6KiB refresh=3 items=0 compose=3 totals=0 comparisons=41
+IDLE_GROUPS HUNTER level=15 closed zones x20 cpu=3.418ms heapGrowth=4.7KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+$ /workspace/toolchain/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /workspace/getgear/tests/overlay-idle-groups.lua /workspace/getgear
+IDLE_GROUPS WARRIOR level=27 same map zones x20 cpu=2.918ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS WARRIOR level=27 combat x20 cpu=3.221ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS WARRIOR level=27 idle frames x3600 cpu=2287.386ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS WARRIOR level=27 pages x10 cpu=95.153ms heapGrowth=10819.1KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS WARRIOR level=27 slots x3 cpu=12.288ms heapGrowth=1149.4KiB refresh=3 items=0 compose=3 totals=0 comparisons=47
+IDLE_GROUPS WARRIOR level=27 closed zones x20 cpu=3.488ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS DRUID level=23 same map zones x20 cpu=3.769ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS DRUID level=23 combat x20 cpu=4.040ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS DRUID level=23 idle frames x3600 cpu=3168.268ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS DRUID level=23 pages x10 cpu=80.298ms heapGrowth=10147.1KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS DRUID level=23 slots x3 cpu=29.316ms heapGrowth=2001.8KiB refresh=3 items=0 compose=3 totals=0 comparisons=58
+IDLE_GROUPS DRUID level=23 closed zones x20 cpu=4.493ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS PRIEST level=31 same map zones x20 cpu=2.636ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS PRIEST level=31 combat x20 cpu=2.534ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS PRIEST level=31 idle frames x3600 cpu=2057.427ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS PRIEST level=31 pages x10 cpu=96.497ms heapGrowth=10846.5KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS PRIEST level=31 slots x3 cpu=10.170ms heapGrowth=848.2KiB refresh=3 items=0 compose=3 totals=0 comparisons=42
+IDLE_GROUPS PRIEST level=31 closed zones x20 cpu=3.939ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS MAGE level=60 same map zones x20 cpu=3.889ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS MAGE level=60 combat x20 cpu=3.882ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS MAGE level=60 idle frames x3600 cpu=3076.914ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS MAGE level=60 pages x10 cpu=79.710ms heapGrowth=9643.4KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS MAGE level=60 slots x3 cpu=18.389ms heapGrowth=2447.2KiB refresh=3 items=0 compose=3 totals=0 comparisons=84
+IDLE_GROUPS MAGE level=60 closed zones x20 cpu=4.481ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS SHAMAN level=45 same map zones x20 cpu=4.639ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS SHAMAN level=45 combat x20 cpu=4.199ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS SHAMAN level=45 idle frames x3600 cpu=3385.681ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS SHAMAN level=45 pages x10 cpu=94.853ms heapGrowth=12138.1KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS SHAMAN level=45 slots x3 cpu=6.920ms heapGrowth=932.0KiB refresh=3 items=0 compose=3 totals=0 comparisons=47
+IDLE_GROUPS SHAMAN level=45 closed zones x20 cpu=5.559ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS HUNTER level=15 same map zones x20 cpu=3.594ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS HUNTER level=15 combat x20 cpu=3.462ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS HUNTER level=15 idle frames x3600 cpu=2819.964ms heapGrowth=0.0KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+IDLE_GROUPS HUNTER level=15 pages x10 cpu=110.586ms heapGrowth=12205.9KiB refresh=20 items=0 compose=0 totals=0 comparisons=640
+IDLE_GROUPS HUNTER level=15 slots x3 cpu=13.817ms heapGrowth=1128.4KiB refresh=3 items=0 compose=3 totals=0 comparisons=41
+IDLE_GROUPS HUNTER level=15 closed zones x20 cpu=5.648ms heapGrowth=5.6KiB refresh=0 items=0 compose=0 totals=0 comparisons=0
+$ /workspace/toolchain/lua54/usr/bin/lua5.4 /workspace/getgear/tests/overlay-performance.lua /workspace/getgear
+MEASURE warm overlay x10: 145.901ms; net heap 2427.4KiB; records=10930 sourceChecks=3900 routes=4160 comparisons=3360 obsolete=3040 professions=10 aggregate=10 undocumented=10 textWrites=2780 newFrames=0
+MEASURE one loot: 14.507ms; net heap 1381.4KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=278 newFrames=0
+MEASURE rapid loot x12: 16.352ms; net heap 1364.7KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=270 newFrames=0
+MEASURE mining + skill: 28.131ms; net heap 2646.1KiB; records=2186 sourceChecks=780 routes=832 comparisons=672 obsolete=608 professions=2 aggregate=2 undocumented=2 textWrites=540 newFrames=0
+MEASURE movement zones x10: 0.530ms; net heap 0.6KiB; records=0 sourceChecks=0 routes=0 comparisons=0 obsolete=0 professions=0 aggregate=0 undocumented=0 textWrites=0 newFrames=0
+MEASURE ordinary movement idle: 0.004ms; net heap 0.0KiB; records=0 sourceChecks=0 routes=0 comparisons=0 obsolete=0 professions=0 aggregate=0 undocumented=0 textWrites=0 newFrames=0
+SIGNATURE ordinary movement idle 145248101
+MEASURE collapsed materials: 13.230ms; net heap 1284.0KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=0 undocumented=1 textWrites=204 newFrames=0
+MEASURE slot changes x3: 39.931ms; net heap 3620.9KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=962 obsolete=912 professions=4 aggregate=3 undocumented=3 textWrites=560 newFrames=171
+MEASURE open close x3: 60.698ms; net heap 3926.5KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=1008 obsolete=912 professions=3 aggregate=3 undocumented=3 textWrites=810 newFrames=0
+MEASURE priority settings: 42.387ms; net heap 4098.5KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=1008 obsolete=912 professions=3 aggregate=3 undocumented=3 textWrites=810 newFrames=0
+MEASURE equipment: 14.403ms; net heap 1362.6KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=270 newFrames=0
+MEASURE profession: 29.127ms; net heap 2644.3KiB; records=2186 sourceChecks=780 routes=832 comparisons=672 obsolete=608 professions=2 aggregate=2 undocumented=2 textWrites=540 newFrames=0
+MEASURE hide restore: 28.627ms; net heap 2643.3KiB; records=2186 sourceChecks=780 routes=832 comparisons=671 obsolete=607 professions=2 aggregate=2 undocumented=2 textWrites=540 newFrames=0
+MEASURE detail + overlay: 28.831ms; net heap 3693.0KiB; records=2927 sourceChecks=604 routes=632 comparisons=399 obsolete=466 professions=2 aggregate=1 undocumented=1 textWrites=1252 newFrames=1072
+HEAP one refresh with GC paused: 1359.3KiB
+PASS production overlay performance scenarios (synthetic; times are not client frame latency)
+$ /workspace/toolchain/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /workspace/getgear/tests/overlay-performance.lua /workspace/getgear
+MEASURE warm overlay x10: 187.177ms; net heap 16322.5KiB; records=10930 sourceChecks=3900 routes=4160 comparisons=3360 obsolete=3040 professions=10 aggregate=10 undocumented=10 textWrites=2780 newFrames=0
+MEASURE one loot: 19.353ms; net heap 1717.4KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=278 newFrames=0
+MEASURE rapid loot x12: 19.670ms; net heap 1697.3KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=270 newFrames=0
+MEASURE mining + skill: 37.499ms; net heap 3300.6KiB; records=2186 sourceChecks=780 routes=832 comparisons=672 obsolete=608 professions=2 aggregate=2 undocumented=2 textWrites=540 newFrames=0
+MEASURE movement zones x10: 0.920ms; net heap 0.6KiB; records=0 sourceChecks=0 routes=0 comparisons=0 obsolete=0 professions=0 aggregate=0 undocumented=0 textWrites=0 newFrames=0
+MEASURE ordinary movement idle: 0.004ms; net heap 0.0KiB; records=0 sourceChecks=0 routes=0 comparisons=0 obsolete=0 professions=0 aggregate=0 undocumented=0 textWrites=0 newFrames=0
+SIGNATURE ordinary movement idle 145248101
+MEASURE collapsed materials: 18.694ms; net heap 1594.1KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=0 undocumented=1 textWrites=204 newFrames=0
+MEASURE slot changes x3: 49.027ms; net heap 4643.2KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=962 obsolete=912 professions=4 aggregate=3 undocumented=3 textWrites=560 newFrames=171
+MEASURE open close x3: 54.436ms; net heap 4898.6KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=1008 obsolete=912 professions=3 aggregate=3 undocumented=3 textWrites=810 newFrames=0
+MEASURE priority settings: 54.356ms; net heap 5136.6KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=1008 obsolete=912 professions=3 aggregate=3 undocumented=3 textWrites=810 newFrames=0
+MEASURE equipment: 20.186ms; net heap 1691.1KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=270 newFrames=0
+MEASURE profession: 39.715ms; net heap 3298.5KiB; records=2186 sourceChecks=780 routes=832 comparisons=672 obsolete=608 professions=2 aggregate=2 undocumented=2 textWrites=540 newFrames=0
+MEASURE hide restore: 37.453ms; net heap 3293.5KiB; records=2186 sourceChecks=780 routes=832 comparisons=671 obsolete=607 professions=2 aggregate=2 undocumented=2 textWrites=540 newFrames=0
+MEASURE detail + overlay: 35.703ms; net heap 4371.4KiB; records=2927 sourceChecks=604 routes=632 comparisons=399 obsolete=466 professions=2 aggregate=1 undocumented=1 textWrites=1252 newFrames=1072
+HEAP one refresh with GC paused: 1686.7KiB
+PASS production overlay performance scenarios (synthetic; times are not client frame latency)
+PASS all nine classes / 16 original faction-valid race/class contexts; cold collapsed tracker allocation budget
+PASS all nine classes / 16 original faction-valid race/class contexts; cold collapsed tracker allocation budget
+$ /workspace/toolchain/lua54/usr/bin/lua5.4 /workspace/getgear/tests/tracker-resize-budget.lua /workspace/getgear
+PASS resize budget: 5000 stationary ticks, zero geometry writes/frames/heavy work; movement clamps scroll, repeated release persists once; 0.002659s synthetic CPU
+$ /workspace/toolchain/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /workspace/getgear/tests/tracker-resize-budget.lua /workspace/getgear
+PASS resize budget: 5000 stationary ticks, zero geometry writes/frames/heavy work; movement clamps scroll, repeated release persists once; 0.003316s synthetic CPU

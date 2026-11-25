@@ -1,0 +1,110 @@
+[
+  {
+    "url": "https://www.wowhead.com/forever/item-set=2098/manaflare-regalia",
+    "purpose": "Alternate exact-ID evidence for failed item tooltips",
+    "findings": [
+      "Published set membership still references 280450 through 280455 as placeholder item labels.",
+      "Set membership does not establish the current item names, stats, drops or availability."
+    ],
+    "trustBasis": "Direct Forever set page opened through web lookup.",
+    "limitations": [
+      "One publisher family. Rewritten web-tool page, no exact response byte checksum. Not promoted to a fully verified item."
+    ],
+    "retrievedAt": "2026-11-25",
+    "evidenceFamily": "Wowhead",
+    "retrieval": "web lookup",
+    "rawResponseSHA256": null,
+    "status": "research-lead; partial-publication-context",
+    "liveClientVerified": false
+  },
+  {
+    "url": "https://www.wowhead.com/forever/item=273975/pattern-manaflare-boots",
+    "purpose": "Distinguish physical pattern and embedded output from obfuscated set-member IDs",
+    "findings": [
+      "The published pattern has Tailoring 300, a Hyjal progress/specialization qualification, and an embedded crafted output.",
+      "The embedded output and set-member placeholders must not be merged by shared name."
+    ],
+    "trustBasis": "Direct Forever pattern page opened through web lookup.",
+    "limitations": [
+      "Same publisher as the set and retained tooltips. Current stock and gates remain unverified."
+    ],
+    "retrievedAt": "2026-11-25",
+    "evidenceFamily": "Wowhead",
+    "retrieval": "web lookup",
+    "rawResponseSHA256": null,
+    "status": "research-lead; partial-publication-context",
+    "liveClientVerified": false
+  },
+  {
+    "url": "https://www.wowhead.com/forever/news/itemization-of-crafted-tier-sets-revealed-in-wow-forevers-first-raid-tier-383946",
+    "purpose": "Investigate version/obfuscation and crafted versus raid identity discrepancies",
+    "findings": [
+      "The publisher reports intentionally revealed crafted-tier statistics, placeholder set bonuses and uncertain current recipe origins after beta vendor changes.",
+      "These statements are investigation leads, not an official item-by-item live availability determination."
+    ],
+    "trustBasis": "Attributed original article in the approved Forever namespace; reports a Blizzard statement.",
+    "limitations": [
+      "Reported attribution does not equal an independently retained Blizzard statement. No blanket correction, removal or vendor hold is inferred."
+    ],
+    "retrievedAt": "2026-11-25",
+    "evidenceFamily": "Wowhead",
+    "retrieval": "web lookup",
+    "rawResponseSHA256": null,
+    "status": "research-lead; partial-publication-context",
+    "liveClientVerified": false
+  },
+  {
+    "url": "https://worldofwarcraft.blizzard.com/en-us/news/24315281/wow-forever-hotfixes-november-10-2026",
+    "purpose": "Freshness and effect applicability",
+    "findings": [
+      "Official indexed November 23 hotfix notes include a Feralheart set-effect correction.",
+      "This confirms that fixed historical effect text can become stale; no generic Classic effect is imported."
+    ],
+    "trustBasis": "Official Blizzard hotfix publication, web search result inspected.",
+    "limitations": [
+      "Direct shell download blocked. Search metadata and snippets do not establish an exact current full-response hash. No numeric catalogue effect overwritten."
+    ],
+    "retrievedAt": "2026-11-25",
+    "evidenceFamily": "Blizzard",
+    "retrieval": "web lookup",
+    "rawResponseSHA256": null,
+    "status": "research-lead; partial-publication-context",
+    "liveClientVerified": false
+  },
+  {
+    "url": "https://www.wowhead.com/forever/spell=1248665/enchant-bracer-superior-deflection",
+    "purpose": "Investigate formula 249539 effect contradiction",
+    "findings": [
+      "Indexed spell text uses nine defense while retained formula teaching text uses six.",
+      "Current numeric effect remains unresolved."
+    ],
+    "trustBasis": "Exact Forever spell-ID search result.",
+    "limitations": [
+      "Same provider; indexing may lag; no client effect measurement."
+    ],
+    "retrievedAt": "2026-11-25",
+    "evidenceFamily": "Wowhead",
+    "retrieval": "web lookup",
+    "rawResponseSHA256": null,
+    "status": "research-lead; partial-publication-context",
+    "liveClientVerified": false
+  },
+  {
+    "url": "https://www.wowhead.com/forever/guide/professions/leatherworking-overview-trainer-locations-recipes",
+    "purpose": "Investigate all 54 Leatherworking commerce skill disagreements",
+    "findings": [
+      "Indexed profession guide examples agree with the book/spell requirement for the Brawler family.",
+      "No indexed guide material list replaces the exact recipe reagents."
+    ],
+    "trustBasis": "Applicable Forever profession guide from the same approved publisher.",
+    "limitations": [
+      "Same family as book/spell evidence; material text can itself conflict and is not promoted."
+    ],
+    "retrievedAt": "2026-11-25",
+    "evidenceFamily": "Wowhead",
+    "retrieval": "web lookup",
+    "rawResponseSHA256": null,
+    "status": "research-lead; partial-publication-context",
+    "liveClientVerified": false
+  }
+]

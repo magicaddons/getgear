@@ -1,5 +1,5 @@
 GETGEAR — CUMULATIVE PRIVATE TEST BUILD
-Version: 0.14.0-private-cumulative.inventory-catalogue.20261125.1
+Version: 0.14.0-private-cumulative.catalogue-audit.20261125.1
 
 Complete accepted Beta 11 baseline plus the preserved overlay idle/group changes,
 the Alt Inventory identity/snapshot fix and reviewed catalogue/commerce corrections.

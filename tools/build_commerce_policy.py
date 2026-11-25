@@ -8,6 +8,7 @@ import re
 from pathlib import Path
 from build_acquisition_navigation import lua
 from research_sources import validate_receipt
+from build_catalogue_verification import commerce_preferences
 
 ROOT = Path(__file__).resolve().parents[1]
 D = ROOT/'docs/source-integrity-20261124'
@@ -80,6 +81,14 @@ def build():
                 verification='published-reference',locationClass='unknown',locationKind='conflicting-evidence',
                 instructions='Published vendor positions disagree. Find this ACA vendor at Three Corners in Redridge; the exact current position is unverified, so no precise pin is offered.')]
     assert len(opposing)==7
+    for identifier,preference in commerce_preferences().items():
+        offer=offers[identifier]
+        assert offer['learningSkill']==preference['guideLearningSkill']
+        assert offer['bookLearningSkill']==preference['preferredLearningSkill']
+        assert preference['spellID'] in offer['taughtSpellIDs']
+        offer['preferredLearningSkill']=preference['preferredLearningSkill']
+        offer['skillDecision']='book-and-spell-publications-agree; guide-table-conflicts; live-unverified'
+        offer['skillEvidence']=preference['evidence']
     return dict(sources=sources,opposingSources=opposing,offers=offers,evidence=proof)
 
 
@@ -93,7 +102,8 @@ def main():
     if a.check: assert path.read_text()==text, 'Commerce policy drift'
     else:
         path.write_text(text)
-        (D/'commerce-published-offers.json').write_text(json.dumps(value,indent=2)+'\n')
+        # Preserve the completed audit and its manifest as historical evidence.
+        (ROOT/'docs/catalogue-verification-20261125/commerce-published-offers.json').write_text(json.dumps(value,indent=2)+'\n')
     print('PASS commerce guide: 7 separately located vendors, 317 exact book offers, 7 professions')
 
 

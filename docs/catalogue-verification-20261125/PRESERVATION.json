@@ -1,0 +1,66 @@
+{
+  "integratedBaseline": "c600da4fa50ab103ebbfa19f96bf1c6ade586fcf",
+  "runtimeModules": 32,
+  "changedRuntimeModules": [
+    "RecipeKnowledge.lua",
+    "CommercePolicyData.lua",
+    "AcquisitionPolicy.lua"
+  ],
+  "unchangedRuntimeModules": 29,
+  "itemFactChanges": [
+    {
+      "itemID": 247789,
+      "field": "recipeSpellID",
+      "before": null,
+      "after": 1245321
+    },
+    {
+      "itemID": 2844,
+      "field": "recipeSpellID",
+      "before": null,
+      "after": 2737
+    },
+    {
+      "itemID": 2845,
+      "field": "recipeSpellID",
+      "before": null,
+      "after": 2738
+    },
+    {
+      "itemID": 2853,
+      "field": "recipeSpellID",
+      "before": null,
+      "after": 2663
+    },
+    {
+      "itemID": 3719,
+      "field": "recipeSpellID",
+      "before": null,
+      "after": 3760
+    },
+    {
+      "itemID": 4311,
+      "field": "recipeSpellID",
+      "before": null,
+      "after": 3844
+    },
+    {
+      "itemID": 5542,
+      "field": "recipeSpellID",
+      "before": null,
+      "after": 6521
+    },
+    {
+      "itemID": 7053,
+      "field": "recipeSpellID",
+      "before": null,
+      "after": 8786
+    }
+  ],
+  "allOtherItemFactsExact": true,
+  "allClassesExact": true,
+  "allModelSourcesQuestsRoutesExact": true,
+  "inventoryCoreUIMapAndComparisonModulesExact": true,
+  "historicalCandidateHoldsExact": true,
+  "oldAuditManifestExact": true
+}

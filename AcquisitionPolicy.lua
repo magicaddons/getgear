@@ -227,7 +227,12 @@ function GetGear:GetCommerceLearningRequirements(gear)
     local requirements={}
     if offer.reputation~='unverified-per-book' then requirements[#requirements+1]='Learn: Requires '..offer.reputation..' with Azeroth Commerce Authority' end
     if offer.learningSkillDisputed then
-        requirements[#requirements+1]='Learning skill disputed: guide '..offer.learningSkill..', book '..offer.bookLearningSkill
+        if offer.preferredLearningSkill then
+            requirements[#requirements+1]='Learn '..offer.preferredLearningSkill
+                ..' (book/spell; guide '..offer.learningSkill..'; live unverified)'
+        else
+            requirements[#requirements+1]='Learning skill disputed: guide '..offer.learningSkill..', book '..offer.bookLearningSkill
+        end
     end
     return requirements
 end

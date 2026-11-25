@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "scope": "Committed audit artifacts; raw web bodies remain in the external evidence archive. Final source/package SHA in external delivery receipt.",
+  "files": {
+    "BASELINE.json": {
+      "bytes": 419,
+      "sha256": "4fee758e52a3a42fe26d8f404282865abb79504570d7b932436aed0d200d1912"
+    },
+    "CHECKPOINT.md": {
+      "bytes": 6237,
+      "sha256": "f9c2aa0c8b60f96262bf85d81583489663f8d1cd189f122ab819d54c4c4acd99"
+    },
+    "COVERAGE.md": {
+      "bytes": 6880,
+      "sha256": "bdb52a5a43d54c709ba69354ba52fb18354539150651cf16b058cffb3719a716"
+    },
+    "LEDGER.md": {
+      "bytes": 4687,
+      "sha256": "e144346b50b59ca261f0f19fc84a0e90b493b08b5728423ff7ffbcc65aaad229"
+    },
+    "PRESERVATION.json": {
+      "bytes": 1385,
+      "sha256": "dcfd044fdf4051902cc5b1657701e08ca1238860e100a3e480989dd6df79bc48"
+    },
+    "REPORT.md": {
+      "bytes": 9571,
+      "sha256": "666e603529587b7cf652cb5d3a4c8e3c92c302adb128a1c5334a71d7d734ce43"
+    },
+    "REQUEST.md": {
+      "bytes": 13064,
+      "sha256": "8f8e7f1339b964885f2e940c4dead5a013dc283ff31754f81f868a61ac14205d"
+    },
+    "VALIDATION.md": {
+      "bytes": 4727,
+      "sha256": "c4b1592de24ef6282957139a5ce4f2e34b1eb4127931014068d741ef36417adf"
+    },
+    "acquisition-bidirectional-reconciliation.json.gz": {
+      "bytes": 24470,
+      "sha256": "67f45a8522083aa9138b0da90164a3dc132a824905997ff34f1ec07810abb50c"
+    },
+    "bag-field-ledger.jsonl.gz": {
+      "bytes": 7961,
+      "sha256": "531b73661d0a6e5bfc560db6d6c6b111823dd221f89b79d23f9b5fd7989d5252"
+    },
+    "baseline-recipe-minima.json": {
+      "bytes": 46573,
+      "sha256": "ffb81780939f19728e4c44f358707b50d1eddd7f47739f83cde9ced87df2581e"
+    },
+    "change-register.json": {
+      "bytes": 62472,
+      "sha256": "8374d342d1870388b4ecf33079936171f681b22dd8578992d12ce401c5dd0813"
+    },
+    "commerce-published-offers.json": {
+      "bytes": 248785,
+      "sha256": "8f3e6c4b23e60a6163acd227a4eb16f310d140b8285d5e529bb9c67b43de942c"
+    },
+    "commerce-skill-evidence.json": {
+      "bytes": 44511,
+      "sha256": "d1a7983b90ce9949c18f6333ddb55ddcb5c5a748136b6ea6f21ac3e3d537254e"
+    },
+    "coverage.json": {
+      "bytes": 13779,
+      "sha256": "9796463cdf37b19902c81c01082442a19fc1a0aa30cee30b7022ff048a147682"
+    },
+    "crafting-reconciliation.json": {
+      "bytes": 164723,
+      "sha256": "b343d5c5fe2c002b8237970f977301ddead991e83d2d0ef3b1cc030f9e8704a6"
+    },
+    "independent-acquisition-inventory.json.gz": {
+      "bytes": 139967,
+      "sha256": "10bea4bc9a2c70cde9d73894dc73e0dcdaa4f07f2ad00c0521ecc489efc6c551"
+    },
+    "independent-equipment-inventory.json.gz": {
+      "bytes": 334470,
+      "sha256": "e9c7d3495c7739278497fb448dabc715e88b7d86bc7cc8063b042f6154e8ae15"
+    },
+    "independent-recipe-inventory.json.gz": {
+      "bytes": 94866,
+      "sha256": "a4b2ebe41a1da69a3aaa3384d98337fdf21fbe11defbffe579cb5e7b884b312d"
+    },
+    "inherited-entity-audit-reference.json": {
+      "bytes": 261,
+      "sha256": "288a8bb500236485672007ed75a7878d62f1c11ae9422cb334366fbea53796c8"
+    },
+    "performance-receipt.txt": {
+      "bytes": 18383,
+      "sha256": "51ff7e3c519fb9d938cac0983583aba8d03ed1663ae8a4a811e0fbedf73ad408"
+    },
+    "publication-extracts.json.gz": {
+      "bytes": 2612569,
+      "sha256": "bc97fc3afc3a295807f20f685ac644a5586f810c7f95ac344ca24da40a21d86b"
+    },
+    "recipe-corrections.json": {
+      "bytes": 7058,
+      "sha256": "08fcb9f0121d9e9fca007cd6f008495234d586b93979c83ed1859dfc99857095"
+    },
+    "record-ledger.json.gz": {
+      "bytes": 125586,
+      "sha256": "3a8db88c59cf5abbfde9cf0dfe4b5c7532eff628e8d267e0d253138e206485c4"
+    },
+    "search-source-register.json": {
+      "bytes": 5209,
+      "sha256": "ea484646dec0a52d69b0ddc2bbd94a2d0868e381eaacab8eaeb656ccf0cf2e93"
+    },
+    "source-quest-field-ledger.jsonl.gz": {
+      "bytes": 386224,
+      "sha256": "ca597943719f06fd47fe790f095d7a4e716858b357346bb70d905f5979108aa7"
+    },
+    "source-register.json.gz": {
+      "bytes": 703544,
+      "sha256": "62f9378e2305490cf9bb7a9b61dba5b184df1594b67808876a01ebc9fd12e15f"
+    },
+    "unresolved-issues.json.gz": {
+      "bytes": 130824,
+      "sha256": "5b6b903687cb608508f718b764e0b874caa33f3eb0db1888387d587e21bda606"
+    },
+    "validation-checks.json": {
+      "bytes": 44724,
+      "sha256": "a148dbbb949e09f021fbcb04c9d71f6f3f0e113b3eecaca99166226507083b8e"
+    },
+    "validation-summary.json": {
+      "bytes": 368,
+      "sha256": "401bfee8b90a37550b2f8b71f158ecfb33b3c19717390a3261240b029f061aad"
+    },
+    "verification-ledger.jsonl.gz": {
+      "bytes": 2878049,
+      "sha256": "1b28acef599dfc7b04c88bbc2145479d87de138cca5979384d42da1a15bca5f8"
+    },
+    "web-crafting-joins.json": {
+      "bytes": 17810,
+      "sha256": "b17a61f3fc179882df66bbf185c586d86655df3b194c5205f594acfc31cb5133"
+    }
+  }
+}

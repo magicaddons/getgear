@@ -171,6 +171,11 @@ def parse_equipment(record):
         else:
             slot = "Main Hand"
         kind = "weapon"
+    elif re.search(r"<td[^>]*>\s*Back\s*</td>", markup, re.I) and re.search(r"\bBack\b", equip_header):
+        # Cloak tooltips print Back without a Cloth/Leather suffix. Treating
+        # them as typed body armour silently discarded the entire category.
+        # Restrict this to the equipment header, before effects/source prose.
+        slot, subtype, classes, kind = "Back", "Cloak", set(ALL), "armor"
     elif re.search(r"\bOff Hand\s+Shield\b", equip_header, re.I):
         slot = "Off Hand"
         subtype = "Shield"
