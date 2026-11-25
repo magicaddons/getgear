@@ -26,7 +26,7 @@
       "independently-verified": 15083,
       "previously-sourced-currently-unverified": 223314
     },
-    "historicalFilesWithUnapprovedOrBlacklistedReferences": 464,
+    "historicalFilesWithUnapprovedOrBlacklistedReferences": 463,
     "historicalModelFacts": {
       "availability": 7085,
       "chains": 585,
@@ -9702,5 +9702,10 @@
     93165,
     93459,
     94484
-  ]
+  ],
+  "researchWorkflowSafeguards": {
+    "source-probe.yml": "Every request uses research_open; rejected sources fail before network.",
+    "getgear-audit-source-export.yml": "Quarantined; exits before downloading or promoting evidence.",
+    "regression": "tests/build/test_research_sources.py"
+  }
 }

@@ -58,3 +58,13 @@ class SourcePolicyTests(unittest.TestCase):
         for url in ['https://dailyrespawn.com/item/1','https://ahledger.com/item/1',
                     'https://github.com/author/unreviewed-data']:
             with self.assertRaises(ValueError):require_evidence_tree({'proofs':[{'url':url}]})
+
+    def test_historical_workflows_cannot_bypass_source_guard(self):
+        root=Path(__file__).resolve().parents[2]
+        probe=(root/'.github/workflows/source-probe.yml').read_text()
+        self.assertIn('from research_sources import research_open',probe)
+        self.assertNotIn('urllib.request.urlopen',probe)
+        retired=(root/'.github/workflows/getgear-audit-source-export.yml').read_text()
+        self.assertIn('exit 1',retired)
+        for downloader in ['curl ', 'wget ', 'urlopen', 'research_open']:
+            self.assertNotIn(downloader,retired)

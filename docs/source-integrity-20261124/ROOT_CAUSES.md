@@ -52,8 +52,8 @@ The new data table applies that default independently of upgrade magnitude.
 Historical generators directly downloaded unapproved provider APIs and accepted
 dated derivative caches. Some verification labels describe those historical
 audits, not current policy compliance. Domain/redirect/platform checks did not
-previously gate research promotion. Those entry points now share the source
-boundary; cache origins are not exempt. Old evidence remains retained for audit.
+previously gate research promotion. Those Python and probe entry points now share the source
+boundary; the standalone mixed-origin workflow is retired before downloads; cache origins are not exempt. Old evidence remains retained for audit.
 
 The fresh item-level corrections exposed another propagation requirement:
 class objectives copy `targetLevel` before the later policy overlay loads.

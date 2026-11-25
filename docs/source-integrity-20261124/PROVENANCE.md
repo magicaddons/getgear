@@ -3,7 +3,9 @@
 The owner's new policy is authoritative in `docs/RESEARCH_SOURCE_POLICY.json`.
 `tools/research_sources.py` enforces allowed hosts, Forever URL paths, the full
 blacklist, HTTPS, redirects, platform provenance and native-observation receipts.
-All historical research download entry points now use that boundary. The dated
+Historical Python research entry points and the old endpoint-probe workflow now
+use that boundary. The standalone mixed-provenance export workflow is quarantined
+and fails before any download; its original text remains in Git history. The dated
 GitHub tooltip/recipe caches are quarantined as generation inputs, including
 local-cache imports, pending individually reviewed original lineage. Historical
 files remain auditable; a permitted hosting platform never verifies their facts.
