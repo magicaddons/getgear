@@ -170,6 +170,8 @@ local function acquisitionSummary(self,gear)
 end
 
 function GetGear:GetAcquisitionSummary(gear)
+    local unverified=self.GetUnverifiedAcquisitionDescription and self:GetUnverifiedAcquisitionDescription(gear)
+    if unverified then return unverified end
     local text=acquisitionSummary(self,gear)
     if text and self.GetCompactAcquisitionRequirements then
         for _,requirement in ipairs(self:GetCompactAcquisitionRequirements(gear)) do

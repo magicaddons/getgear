@@ -11,6 +11,7 @@ provisional references. They do not override loaded live-client metadata.
 This is a fallback when Forever's own GetItemInfo isn't cached. Live client
 quality/bind always take priority and can override it. No server loot claims.
 """
+from research_sources import research_open
 import csv,json,urllib.request,re,hashlib,collections,pathlib,sys
 root=pathlib.Path(".")
 source=root/"docs/source-audit-1-60/all_items.csv"
@@ -36,7 +37,7 @@ exclusionsPath=root/"docs/source-audit-1-60/worlddrop_boe_fallback_exclusions.js
 exclusions=reviewed_exclusions(exclusionsPath)
 def pull(url):
     req=urllib.request.Request(url,headers={"User-Agent":"GetGear-DataQualityIndex/1.0","Accept":"application/json"})
-    with urllib.request.urlopen(req,timeout=40) as resp:data=resp.read(30000000)
+    with research_open(req,timeout=40) as resp:data=resp.read(30000000)
     return json.loads(data),hashlib.sha256(data).hexdigest()
 classicUrl="https://www.wowforeverfriends.org/items/items.json"
 classic,classic_sha=pull(classicUrl)

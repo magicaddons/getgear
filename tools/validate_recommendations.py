@@ -64,6 +64,11 @@ def main():
     validate_navigation_coverage(json.loads((args.output / 'navigation-summary.json').read_text()))
     run([sys.executable, 'tools/audit_acquisition_presentation.py', '--output', args.output / 'presentation'])
     run([sys.executable, 'tools/build_recipe_evidence.py', '--check'])
+    run([sys.executable, 'tools/build_commerce_policy.py', '--check'])
+    integrity_export=args.output/'integrity-export.json'
+    with integrity_export.open('w') as output:
+        subprocess.run([lua54, 'tools/export_integrity_audit.lua', addon_root],cwd=ROOT,env=env,stdout=output,check=True)
+    run([sys.executable, 'tools/build_research_policy.py', '--export', integrity_export, '--check'])
     run([sys.executable, 'tools/build_navigation_review.py', '--check'])
     run([sys.executable, 'tools/audit_recipe_integrity.py', '--addon-root', addon_root, '--output', args.output / 'recipes'])
     run([sys.executable, 'tools/build_bag_quest_catalogue.py', '--check'])

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build conservative, inspectable school-only damage metadata from a dated
 Forever client cache. Never classify mixed/generic spellpower as school-only."""
+from research_sources import research_open
 import argparse
 import hashlib
 import html
@@ -16,7 +17,7 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument("--output",type=pathlib.Path,required=True)
     a=p.parse_args()
-    raw=urllib.request.urlopen(urllib.request.Request(
+    raw=research_open(urllib.request.Request(
         UPSTREAM,headers={"User-Agent":"GetGear beta4 data audit"}),timeout=75).read(30_000_000)
     digest=hashlib.sha256(raw).hexdigest()
     generated=(ROOT/"EquipmentCache.lua").read_text(encoding="utf8")

@@ -349,13 +349,21 @@ local function UpdateProfessionSkill(icon, label, gear, showRequiredProfession, 
     local required=published or gear.professionSkillRequired
     if not published and gear.recipeLearnSkillEvidence=="unverified" then required=nil end
     local provisional=not published and gear.recipeLearnSkillProvisional==true
+    local trainer=gear.professionLearnSource=="Trainer" or gear.professionSkillEstimate~=nil or gear.recipeLearnMethod=="trainer"
+    if not required and trainer and GetGear.GetEligibleAcquisitionRoutes then
+        -- Preview items were class-filtered upstream; do not substitute the
+        -- actual character's class/race when qualifying their learning label.
+        local context=previewMode and GetGear.GetPreviewAcquisitionContext and GetGear:GetPreviewAcquisitionContext() or nil
+        local routes,known=GetGear:GetEligibleAcquisitionRoutes(gear,context)
+        if known and #routes==0 then trainer=false end
+    end
     if previewMode then
         -- This is an alternate class/level; the actual player's skill and
         -- known recipes must not be presented as the preview character's.
         if required then
             label:SetText(gear.profession .. " " .. tostring(required) ..
                 (provisional and "? (reported)" or " required"))
-        elseif gear.professionLearnSource == "Trainer" or gear.professionSkillEstimate or gear.recipeLearnMethod=="trainer" then
+        elseif trainer then
             label:SetText(gear.profession .. " - Trainer (verify skill)")
         else
             label:SetText(gear.profession .. " - skill unverified")
@@ -369,8 +377,6 @@ local function UpdateProfessionSkill(icon, label, gear, showRequiredProfession, 
     -- requirement. Lookup is tri-state: nil means the client has not supplied
     -- trustworthy learning data, not that the player lacks the recipe.
     local learned = GetGear.GetRecipeKnowledge and GetGear:GetRecipeKnowledge(gear)
-    local trainer = gear.professionLearnSource == "Trainer" or
-        gear.professionSkillEstimate ~= nil or gear.recipeLearnMethod=="trainer"
     if learned ~= true and required == nil and not trainer then
         icon:Hide()
         label:SetText(gear.profession .. " - skill unverified")
@@ -415,17 +421,19 @@ end
 local function Describe(gear, previewMode)
     local hasSource = type(gear.source)=="string" and gear.source~=""
     local desc = (hasSource and (gear.source .. ": ") or "") .. (gear.instructions or "")
+    local commerce=GetGear.HasVerifiedCommerceBook and GetGear:HasVerifiedCommerceBook(gear)
     local supplement=GetGear.RecipeEvidence and GetGear.RecipeEvidence[gear.itemID]
-    local normalized=supplement and GetGear:GetNormalizedRecipeData(gear)
+    local normalized=(commerce or supplement) and GetGear:GetNormalizedRecipeData(gear)
     local documented=normalized and normalized.sourceConfidence=="documented"
     if documented then
-        desc=(GetGear:GetAcquisitionSummary(gear) or "Recipe: documented source").."\n"..(gear.instructions or "")
+        desc=(GetGear:GetAcquisitionSummary(gear) or "Recipe: documented source")
+            ..(not commerce and ("\n"..(gear.instructions or "")) or "")
     end
     if gear.notes and gear.notes ~= "" then desc = desc .. "\n" .. gear.notes end
     local research=gear.acquisitionResearch
     if research and (research.recipeReference or research.equipmentReference) and research.sourceSummary then
         if not documented then desc=desc.."\n"..research.sourceSummary end
-        if research.details and research.details~="" then
+        if not commerce and research.details and research.details~="" then
             desc=desc.."\n"..research.details
         end
     end

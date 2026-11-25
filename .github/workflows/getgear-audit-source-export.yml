@@ -1,11 +1,6 @@
-name: GetGear temporary source audit export
+name: Historical source export (quarantined)
 
 on:
-  push:
-    branches:
-      - work/gear-1-60-expansion
-    paths:
-      - .github/workflows/getgear-audit-source-export.yml
   workflow_dispatch:
 
 permissions:
@@ -15,65 +10,10 @@ jobs:
   export:
     runs-on: ubuntu-latest
     steps:
-      - name: Download public source evidence
+      - name: Reject retired mixed-provenance exporter
         shell: bash
         run: |
-          set -euo pipefail
-          mkdir -p export
-          curl -fLSsS --retry 3 --max-time 120 "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/Forever%20Cache.json" -o export/ForeverCache.json
-          curl -fLSsS --retry 3 --max-time 30 "https://raw.githubusercontent.com/Napalmsteak/WoW-Classic-Item-Caches/main/itemDatabaseSources.json" -o export/itemDatabaseSources.json
-          python3 -m json.tool export/ForeverCache.json > /dev/null
-          python3 -m json.tool export/itemDatabaseSources.json > /dev/null
-          for site in "https://forevertome.com/professions" "https://guide.wow4ever.se/en/professions" "https://wowforever.one/professions/" "https://foreverdb.net/profession/blacksmithing"; do
-            host=$(echo "$site" | sed -E 's,https?://([^/]+)/?.*,\\1,')
-            curl -fLSsS --retry 2 --max-time 25 -A "GetGearAudit/1.0 (noncommercial research)" "$site" -o "export/$host.html" || rm -f "export/$host.html"
-          done
-          for u in "https://www.curseforge.com/api/v1/mods/1558781/files/9095167/download" "https://mediafilez.forgecdn.net/files/9095/167/ProfessionDB-ProfessionDB-v1.9.1.zip" "https://edge.forgecdn.net/files/9095/167/ProfessionDB-ProfessionDB-v1.9.1.zip"; do
-            if curl -fLSsS --retry 1 --max-time 45 "$u" -o export/LibProfessionDB.zip && unzip -tq export/LibProfessionDB.zip >/dev/null 2>&1; then
-              echo "Recipe library downloaded from $u"; break
-            fi
-            rm -f export/LibProfessionDB.zip
-          done
-          for site in "https://forevertome.com/professions" "https://guide.wow4ever.se/en/professions" "https://wowforever.one/professions/" "https://foreverdb.net/profession/blacksmithing"; do
-             fname=$(echo "$site" | sed -E 's#https?://([^/]+)/?.*#\\1#')
-             curl -fLSsS --retry 1 --max-time 30 "$site" -o "export/prof-${fname}.html" || true
-          done
-          for u in "https://www.curseforge.com/api/v1/mods/1558208/files/9335129/download" "https://mediafilez.forgecdn.net/files/9335/129/ItemDB-ItemDB-v1.8.0.zip"; do
-            if curl -fLSsS --retry 1 --max-time 80 "$u" -o export/LibItemDB.zip && unzip -tq export/LibItemDB.zip >/dev/null 2>&1; then
-              echo "Item name library downloaded"; break
-            fi
-            rm -f export/LibItemDB.zip
-          done
-          curl -fLSsS --retry 1 --max-time 25 https://forevertome.com/professions -o export/forevertome-professions.html || true
-          curl -fLSsS --retry 1 --max-time 25 https://guide.wow4ever.se/en/professions -o export/wow4ever-professions.html || true
-          curl -fLSsS --retry 1 --max-time 25 https://wowforever.one/professions/ -o export/wowforever-professions.html || true
-                    curl -fLSsS --retry 2 --max-time 65 https://forevertome.com/data/recipes.yafo0pc388.json -o export/ForeverTomeRecipes.json
-          python3 -m json.tool export/ForeverTomeRecipes.json > /dev/null
-                    python3 - <<'PY'
-          import urllib.request, json, pathlib
-          root=pathlib.Path("export/eg");root.mkdir(exist_ok=True,parents=True)
-          source="https://raw.githubusercontent.com/JIVESCORP/eg-link-output-wowf/main/data"
-          with urllib.request.urlopen(source+"/index.json",timeout=50) as r:idx=json.load(r)
-          (root/"index.json").write_text(json.dumps(idx),encoding="utf-8")
-          builds=idx["products"]["wowf"]
-          selected=list(builds)[-8:]
-          for build in selected:
-            target=root/build;target.mkdir(exist_ok=True)
-            for kind in ("vendors","npcs","loot","quests.enUS","quest_scan","creatures"):
-              if kind not in builds[build]:continue
-              try:
-                with urllib.request.urlopen(source+"/wowf/"+build+"/"+kind+".json",timeout=45) as r:
-                  data=r.read()
-                json.loads(data)
-                (target/(kind+".json")).write_bytes(data)
-                print("EG",build,kind,len(data))
-              except Exception as ex: print("EG unavailable",build,kind,str(ex)[:90])
-          PY
-                    ls -lh export
-          sha256sum export/*.json > export/SOURCE_HASHES.txt
-      - name: Upload source snapshot
-        uses: actions/upload-artifact@v4
-        with:
-          name: getgear-source-audit-2026-11-08
-          path: export/
-          retention-days: 7
+          echo "This historical exporter is quarantined by docs/RESEARCH_SOURCE_POLICY.json."
+          echo "Use guarded research tools with individually reviewed provenance."
+          echo "The original exporter remains in Git history; no evidence is downloaded or promoted."
+          exit 1

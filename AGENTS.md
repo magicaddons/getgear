@@ -1,5 +1,18 @@
 # GetGear coding-agent guide
 
+## Current research-source authority (24 November 2026)
+
+The owner's source-integrity reaudit supersedes historical provider approval.
+Use `docs/RESEARCH_SOURCE_POLICY.json` and `tools/research_sources.py` for all
+research, redirects, APIs, local caches and derived inputs. Historical snapshots
+are audit records, not current verification. Never use GitHub hosting to launder
+blacklisted or unapproved upstream datasets. Review the original author and
+lineage. Only specifically evidenced fields may be marked verified; distinguish
+current published Forever evidence from current-client observations. Record
+failures, contradictions and the scope left unresearched. See
+`docs/source-integrity-20261124/REPORT.md`. No public release or mainline merge
+is authorized by that reaudit; the requested cumulative private ZIP is authorized.
+
 ## Permanent source-control and cumulative build policy
 
 This policy takes precedence over all historical task-specific instructions,

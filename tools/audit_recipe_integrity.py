@@ -18,7 +18,11 @@ def main():
     assert set(current)==set(baseline) and len(current)==1254
     rows=[];improved=0;preserved=0;methods=collections.Counter();professions=collections.Counter()
     for key,item in current.items():
-        old=baseline[key];assert all(item[k]==old[k] for k in ['itemID','name','profession'])
+        old=baseline[key];assert all(item[k]==old[k] for k in ['itemID','profession'])
+        if item['name']!=old['name']:
+            import gzip
+            proofs=[json.loads(line) for line in gzip.decompress((ROOT/'docs/source-integrity-20261124/current-item-tooltips.jsonl.gz').read_bytes()).splitlines()]
+            assert any(str(proof['entityIDs']['item'])==key and proof['status']=='retrieved' and json.loads(proof['body'])['name']==item['name'] for proof in proofs), ('Unresearched name change',key)
         if old.get('minimum') is not None:
             assert item.get('minimum')==old['minimum'],('Existing minimum changed',key)
             preserved+=1

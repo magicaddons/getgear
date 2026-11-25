@@ -1,8 +1,10 @@
 """Offline source-boundary checks; observation IDs below are synthetic fixtures."""
 import pathlib
 import runpy
+import sys
 
 root=pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(root/'tools'))
 api=runpy.run_path(str(root/"tools/reconcile_acquisition_1_60.py"))
 route=api["evidence_route"]
 norm=api["norm"]

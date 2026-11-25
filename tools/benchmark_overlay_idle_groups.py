@@ -28,7 +28,12 @@ def main():
     a = p.parse_args()
     assert a.repeats > 0
     a.output.mkdir(parents=True, exist_ok=False)
-    for name in ['GetGear.toc'] + [line.strip() for line in (ROOT / 'GetGear.toc').read_text().splitlines() if line.endswith('.lua')]:
+    # Validate the pinned baseline's own module list. A cumulative implementation
+    # can add modules that deliberately do not exist in the production baseline.
+    baseline_toc = subprocess.check_output(['git', 'show', BASELINE + ':GetGear.toc'], cwd=ROOT)
+    baseline_modules = [line.strip() for line in baseline_toc.decode().splitlines()
+                        if line.strip().endswith('.lua')]
+    for name in ['GetGear.toc'] + baseline_modules:
         expected = subprocess.check_output(['git', 'show', BASELINE + ':' + name], cwd=ROOT)
         assert (a.baseline_root / name).read_bytes() == expected, name
     report = dict(baseline=BASELINE, actualClientTested=False, repeats=a.repeats,

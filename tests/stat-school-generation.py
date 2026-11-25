@@ -4,6 +4,7 @@ sys.dont_write_bytecode=True
 import importlib.util
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(R/'tools'))
 def module(name,path):
  s=importlib.util.spec_from_file_location(name,R/path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
 m=module('flags','tools/generate_forever_stat_flags.py')

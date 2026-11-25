@@ -1,0 +1,344 @@
+{
+  "actualClientTested": false,
+  "baselineProduction": "de1037a8a20593430d1c27e123685980d6da909b",
+  "repeatsPerInterpreter": 3,
+  "overlay": {
+    "5.1": {
+      "same map zones x20": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 1183.816,
+          "maxOfContextMedianHeapGrowthKiB": 107146.2,
+          "countsAcrossSixContexts": {
+            "refresh": 240,
+            "items": 240,
+            "compose": 240,
+            "totals": 240,
+            "comparisons": 99080
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 4.504,
+          "maxOfContextMedianHeapGrowthKiB": 5.6,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "combat x20": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 1190.174,
+          "maxOfContextMedianHeapGrowthKiB": 107146.2,
+          "countsAcrossSixContexts": {
+            "refresh": 240,
+            "items": 240,
+            "compose": 240,
+            "totals": 240,
+            "comparisons": 99080
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 4.183,
+          "maxOfContextMedianHeapGrowthKiB": 0.0,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "idle frames x3600": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 3095.71,
+          "maxOfContextMedianHeapGrowthKiB": 0.0,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 3322.713,
+          "maxOfContextMedianHeapGrowthKiB": 0.0,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "pages x10": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 615.71,
+          "maxOfContextMedianHeapGrowthKiB": 56931.8,
+          "countsAcrossSixContexts": {
+            "refresh": 120,
+            "items": 120,
+            "compose": 120,
+            "totals": 120,
+            "comparisons": 49540
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 119.25,
+          "maxOfContextMedianHeapGrowthKiB": 12205.8,
+          "countsAcrossSixContexts": {
+            "refresh": 120,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 3840
+          }
+        }
+      },
+      "slots x3": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 85.058,
+          "maxOfContextMedianHeapGrowthKiB": 8354.8,
+          "countsAcrossSixContexts": {
+            "refresh": 18,
+            "items": 18,
+            "compose": 18,
+            "totals": 18,
+            "comparisons": 7217
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 16.618,
+          "maxOfContextMedianHeapGrowthKiB": 2447.2,
+          "countsAcrossSixContexts": {
+            "refresh": 18,
+            "items": 0,
+            "compose": 18,
+            "totals": 0,
+            "comparisons": 319
+          }
+        }
+      },
+      "closed zones x20": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 5.974,
+          "maxOfContextMedianHeapGrowthKiB": 7.2,
+          "countsAcrossSixContexts": {
+            "refresh": 240,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 6.379,
+          "maxOfContextMedianHeapGrowthKiB": 5.6,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      }
+    },
+    "5.4": {
+      "same map zones x20": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 1010.39,
+          "maxOfContextMedianHeapGrowthKiB": 84590.7,
+          "countsAcrossSixContexts": {
+            "refresh": 240,
+            "items": 240,
+            "compose": 240,
+            "totals": 240,
+            "comparisons": 99080
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 3.411,
+          "maxOfContextMedianHeapGrowthKiB": 4.7,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "combat x20": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 1019.7,
+          "maxOfContextMedianHeapGrowthKiB": 84590.6,
+          "countsAcrossSixContexts": {
+            "refresh": 240,
+            "items": 240,
+            "compose": 240,
+            "totals": 240,
+            "comparisons": 99080
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 3.213,
+          "maxOfContextMedianHeapGrowthKiB": 0.1,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "idle frames x3600": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 2796.764,
+          "maxOfContextMedianHeapGrowthKiB": 0.2,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 2650.388,
+          "maxOfContextMedianHeapGrowthKiB": 0.4,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      },
+      "pages x10": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 531.321,
+          "maxOfContextMedianHeapGrowthKiB": 45068.6,
+          "countsAcrossSixContexts": {
+            "refresh": 120,
+            "items": 120,
+            "compose": 120,
+            "totals": 120,
+            "comparisons": 49540
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 94.963,
+          "maxOfContextMedianHeapGrowthKiB": 11152.9,
+          "countsAcrossSixContexts": {
+            "refresh": 120,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 3840
+          }
+        }
+      },
+      "slots x3": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 71.316,
+          "maxOfContextMedianHeapGrowthKiB": 7137.6,
+          "countsAcrossSixContexts": {
+            "refresh": 18,
+            "items": 18,
+            "compose": 18,
+            "totals": 18,
+            "comparisons": 7217
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 14.216,
+          "maxOfContextMedianHeapGrowthKiB": 2665.5,
+          "countsAcrossSixContexts": {
+            "refresh": 18,
+            "items": 0,
+            "compose": 18,
+            "totals": 0,
+            "comparisons": 319
+          }
+        }
+      },
+      "closed zones x20": {
+        "baseline": {
+          "maxOfContextMedianCPUMilliseconds": 4.671,
+          "maxOfContextMedianHeapGrowthKiB": 6.3,
+          "countsAcrossSixContexts": {
+            "refresh": 240,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        },
+        "implementation": {
+          "maxOfContextMedianCPUMilliseconds": 5.108,
+          "maxOfContextMedianHeapGrowthKiB": 4.8,
+          "countsAcrossSixContexts": {
+            "refresh": 0,
+            "items": 0,
+            "compose": 0,
+            "totals": 0,
+            "comparisons": 0
+          }
+        }
+      }
+    }
+  },
+  "inventory": {
+    "lua54": {
+      "baseline": {
+        "initializeMedianSeconds": 9e-06,
+        "browse200MedianSeconds": 0.328489,
+        "browseOneMedianMilliseconds": 1.642445,
+        "materialSummaryOneMedianMilliseconds": 0.04708
+      },
+      "fixed": {
+        "initializeMedianSeconds": 0.00559,
+        "browse200MedianSeconds": 0.364854,
+        "browseOneMedianMilliseconds": 1.82427,
+        "materialSummaryOneMedianMilliseconds": 0.165312
+      }
+    },
+    "lua51": {
+      "baseline": {
+        "initializeMedianSeconds": 9e-06,
+        "browse200MedianSeconds": 0.386502,
+        "browseOneMedianMilliseconds": 1.9325100000000002,
+        "materialSummaryOneMedianMilliseconds": 0.052422
+      },
+      "fixed": {
+        "initializeMedianSeconds": 0.006528,
+        "browse200MedianSeconds": 0.433503,
+        "browseOneMedianMilliseconds": 2.1675150000000003,
+        "materialSummaryOneMedianMilliseconds": 0.187286
+      }
+    }
+  },
+  "catalogue": {
+    "catalogueItems": 7707,
+    "classes": 9,
+    "itemTooltipsAttempted": 7707,
+    "itemTooltipsRetrieved": 7615,
+    "itemTooltipsMissing": 92,
+    "namesCorrected": 30,
+    "levelsCorrected": 3,
+    "craftedRecords": 1254,
+    "craftingSpellsRetrieved": 1246,
+    "materialListsVerifiedAsPublished": 1222,
+    "materialListDisagreements": 0,
+    "wholeRecordsIndependentlyVerified": 0,
+    "actualClientObservations": 0
+  }
+}

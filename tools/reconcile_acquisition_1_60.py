@@ -6,6 +6,7 @@ overlay for targeted dungeon/recipe sources.  Never changes eligibility,
 item stats, reagent lists, or user SavedVariables.  Public data is not treated
 as proof of live realm loot unless independent player observations support it.
 """
+from research_sources import research_open
 import collections,csv,datetime,hashlib,html,json,pathlib,re,sys,urllib.request,urllib.parse
 from html.parser import HTMLParser
 
@@ -104,7 +105,7 @@ failures={}
 
 def fetch(url,maxbytes=30_000_000):
     req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/json,text/html"})
-    with urllib.request.urlopen(req,timeout=55) as res:
+    with research_open(req,timeout=55) as res:
         data=res.read(maxbytes)
         assert res.status==200
     provenance[url]={"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()}

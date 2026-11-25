@@ -1,0 +1,85 @@
+Final full integrated gate; synthetic measurements only.
+
+/workspace/toolchain/lua54/usr/bin/lua5.4 /workspace/getgear/tests/beta4-performance.lua /workspace/getgear
+PASS Beta4 stress: 32 Lua files, 45 class/level checks, 0 item-cache requests, load 0.41s, filtering 2.55s
+
+$ /workspace/toolchain/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /workspace/getgear/tests/beta4-performance.lua /workspace/getgear
+PASS Beta4 stress: 32 Lua files, 45 class/level checks, 0 item-cache requests, load 0.54s, filtering 3.43s
+
+$ /workspace/toolchain/lua54/usr/bin/lua5.4 /workspace/getgear/tests/overlay-performance.lua /workspace/getgear
+MEASURE warm overlay x10: 151.941ms; net heap 2415.6KiB; records=10930 sourceChecks=3900 routes=4160 comparisons=3360 obsolete=3040 professions=10 aggregate=10 undocumented=10 textWrites=2770 newFrames=0
+SIGNATURE warm overlay x10 145248101
+MEASURE one loot: 17.087ms; net heap 1378.9KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=277 newFrames=0
+SIGNATURE one loot 145248101
+MEASURE rapid loot x12: 16.915ms; net heap 1362.2KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=269 newFrames=0
+SIGNATURE rapid loot x12 145248101
+MEASURE mining + skill: 29.864ms; net heap 2641.3KiB; records=2186 sourceChecks=780 routes=832 comparisons=672 obsolete=608 professions=2 aggregate=2 undocumented=2 textWrites=538 newFrames=0
+SIGNATURE mining + skill 145248101
+MEASURE movement zones x10: 173.129ms; net heap 2307.3KiB; records=10930 sourceChecks=3900 routes=4160 comparisons=3360 obsolete=3040 professions=10 aggregate=10 undocumented=10 textWrites=2690 newFrames=0
+SIGNATURE movement zones x10 145248101
+MEASURE ordinary movement idle: 0.006ms; net heap 0.0KiB; records=0 sourceChecks=0 routes=0 comparisons=0 obsolete=0 professions=0 aggregate=0 undocumented=0 textWrites=0 newFrames=0
+SIGNATURE ordinary movement idle 145248101
+MEASURE collapsed materials: 16.002ms; net heap 1281.5KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=0 undocumented=1 textWrites=203 newFrames=0
+SIGNATURE collapsed materials 145248101
+MEASURE slot changes x3: 41.896ms; net heap 3617.1KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=962 obsolete=912 professions=4 aggregate=3 undocumented=3 textWrites=557 newFrames=171
+SIGNATURE slot changes x3 145248101
+MEASURE open close x3: 43.418ms; net heap 3919.4KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=1008 obsolete=912 professions=3 aggregate=3 undocumented=3 textWrites=807 newFrames=0
+SIGNATURE open close x3 145248101
+MEASURE priority settings: 44.479ms; net heap 4091.3KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=1008 obsolete=912 professions=3 aggregate=3 undocumented=3 textWrites=807 newFrames=0
+SIGNATURE priority settings 145248101
+MEASURE equipment: 18.051ms; net heap 1360.2KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=269 newFrames=0
+SIGNATURE equipment 145248101
+MEASURE profession: 28.920ms; net heap 2639.5KiB; records=2186 sourceChecks=780 routes=832 comparisons=672 obsolete=608 professions=2 aggregate=2 undocumented=2 textWrites=538 newFrames=0
+SIGNATURE profession 145248101
+MEASURE hide restore: 31.311ms; net heap 2638.6KiB; records=2186 sourceChecks=780 routes=832 comparisons=671 obsolete=607 professions=2 aggregate=2 undocumented=2 textWrites=538 newFrames=0
+SIGNATURE hide restore 145248101
+MEASURE detail + overlay: 29.094ms; net heap 3690.6KiB; records=2927 sourceChecks=604 routes=632 comparisons=399 obsolete=466 professions=2 aggregate=1 undocumented=1 textWrites=1251 newFrames=1072
+SIGNATURE detail + overlay 145248101
+SHARED separate routes=6320 sources=6040; shared routes=4160 sources=3900
+HEAP one refresh with GC paused: 1356.8KiB
+PROFILE RefreshOverlay calls=10 total=209.573ms
+PROFILE GetItems calls=10 total=88.011ms
+PROFILE GetCombinedMaterialRows calls=10 total=26.772ms
+PASS production overlay performance scenarios (synthetic; times are not client frame latency)
+
+$ /workspace/toolchain/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /workspace/getgear/tests/overlay-performance.lua /workspace/getgear
+MEASURE warm overlay x10: 171.639ms; net heap 16299.0KiB; records=10930 sourceChecks=3900 routes=4160 comparisons=3360 obsolete=3040 professions=10 aggregate=10 undocumented=10 textWrites=2770 newFrames=0
+SIGNATURE warm overlay x10 145248101
+MEASURE one loot: 23.519ms; net heap 1714.9KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=277 newFrames=0
+SIGNATURE one loot 145248101
+MEASURE rapid loot x12: 22.171ms; net heap 1694.8KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=269 newFrames=0
+SIGNATURE rapid loot x12 145248101
+MEASURE mining + skill: 38.807ms; net heap 3295.8KiB; records=2186 sourceChecks=780 routes=832 comparisons=672 obsolete=608 professions=2 aggregate=2 undocumented=2 textWrites=538 newFrames=0
+SIGNATURE mining + skill 145248101
+MEASURE movement zones x10: 165.851ms; net heap 16104.1KiB; records=10930 sourceChecks=3900 routes=4160 comparisons=3360 obsolete=3040 professions=10 aggregate=10 undocumented=10 textWrites=2690 newFrames=0
+SIGNATURE movement zones x10 145248101
+MEASURE ordinary movement idle: 0.005ms; net heap 0.0KiB; records=0 sourceChecks=0 routes=0 comparisons=0 obsolete=0 professions=0 aggregate=0 undocumented=0 textWrites=0 newFrames=0
+SIGNATURE ordinary movement idle 145248101
+MEASURE collapsed materials: 19.194ms; net heap 1591.6KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=0 undocumented=1 textWrites=203 newFrames=0
+SIGNATURE collapsed materials 145248101
+MEASURE slot changes x3: 74.782ms; net heap 4639.1KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=962 obsolete=912 professions=4 aggregate=3 undocumented=3 textWrites=557 newFrames=171
+SIGNATURE slot changes x3 145248101
+MEASURE open close x3: 55.082ms; net heap 4891.5KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=1008 obsolete=912 professions=3 aggregate=3 undocumented=3 textWrites=807 newFrames=0
+SIGNATURE open close x3 145248101
+MEASURE priority settings: 56.344ms; net heap 5129.5KiB; records=3279 sourceChecks=1170 routes=1248 comparisons=1008 obsolete=912 professions=3 aggregate=3 undocumented=3 textWrites=807 newFrames=0
+SIGNATURE priority settings 145248101
+MEASURE equipment: 20.744ms; net heap 1688.6KiB; records=1093 sourceChecks=390 routes=416 comparisons=336 obsolete=304 professions=1 aggregate=1 undocumented=1 textWrites=269 newFrames=0
+SIGNATURE equipment 145248101
+MEASURE profession: 38.505ms; net heap 3289.8KiB; records=2186 sourceChecks=780 routes=832 comparisons=672 obsolete=608 professions=2 aggregate=2 undocumented=2 textWrites=538 newFrames=0
+SIGNATURE profession 145248101
+MEASURE hide restore: 38.755ms; net heap 3288.7KiB; records=2186 sourceChecks=780 routes=832 comparisons=671 obsolete=607 professions=2 aggregate=2 undocumented=2 textWrites=538 newFrames=0
+SIGNATURE hide restore 145248101
+MEASURE detail + overlay: 36.300ms; net heap 4369.0KiB; records=2927 sourceChecks=604 routes=632 comparisons=399 obsolete=466 professions=2 aggregate=1 undocumented=1 textWrites=1251 newFrames=1072
+SIGNATURE detail + overlay 145248101
+SHARED separate routes=6320 sources=6040; shared routes=4160 sources=3900
+HEAP one refresh with GC paused: 1684.3KiB
+PROFILE RefreshOverlay calls=10 total=213.169ms
+PROFILE GetItems calls=10 total=101.173ms
+PROFILE GetCombinedMaterialRows calls=10 total=22.635ms
+PASS production overlay performance scenarios (synthetic; times are not client frame latency)
+
+$ /workspace/toolchain/lua54/usr/bin/lua5.4 /workspace/getgear/tests/overlay-state-matrix.lua /workspace/getgear
+PASS state matrix: 108 class/faction/level contexts, 12852 slot views; 26.790s synthetic CPU
+
+$ /workspace/toolchain/lua51/usr/bin/lua5.1 tools/release/lua51-harness.lua /workspace/getgear/tests/overlay-state-matrix.lua /workspace/getgear
+PASS state matrix: 108 class/faction/level contexts, 12852 slot views; 33.599s synthetic CPU

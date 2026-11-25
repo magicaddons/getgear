@@ -63,8 +63,8 @@ for _,uiScale in ipairs({.64,1,1.5})do for _,zoom in ipairs({.5,1,2})do
 end end
 -- Mivin is a reported navigation point; the source does not certify an exact spawn.
 local m=a.AcquisitionNavigationData.sources['npc:256735'].locations[1]
-assert(m.x==10 and m.y==72.7 and not m.bounds and m.locationClass=='reported-point')
-assert(m.instructions:find('not independently verified',1,true))
+assert(not m.x and not m.bounds and m.locationClass=='unknown')
+assert(m.instructions:find('disagree',1,true))
 print('PASS label boundaries: '..checked..' edge/corner/interior/scale cases, minimal displacement, no clipping, precise marker unchanged and Mivin uncertainty preserved; synthetic font metrics only')
 ]=]
 assert(load(prefix..geometry..body,'label boundaries','t',_G))()

@@ -58,7 +58,16 @@ C_Map={GetMapInfo=function(id)return infos[id]end,OpenWorldMap=function(id)World
  SetUserWaypoint=function()error('native waypoint write')end,ClearUserWaypoint=function()error('native waypoint clear')end}
 a.db={overlay={},hidden={},status={}};a.classToken='PRIEST';a.level=31
 local bags={};for _,g in ipairs(a.QuestBagCatalogue)do bags[g.itemID]=g end
-local cases={{a.ItemCatalog[250523],nil,'Stondry Darkhammer'},{a.ItemCatalog[250519],nil,'Stondry Darkhammer'},
+local directionCalls=0
+a.ShowAcquisitionDirections=function()directionCalls=directionCalls+1 end
+for _,id in ipairs({250523,250519}) do
+ local g=a.ItemCatalog[id];local t=assert(a:GetAcquisitionMapTarget(g))
+ assert(not t.x and t.instructions:find('disagree',1,true))
+ local ok,mode=a:OpenAcquisitionMap(g,t.id)
+ assert(ok and mode=='directions' and not a:GetAcquisitionMarkerState(),'unresolved vendor precision must not be rendered as an exact marker')
+end
+assert(directionCalls==2)
+local cases={{a.ItemCatalog[228175],'npc:256732','Alynsia'},{a.ItemCatalog[228176],'npc:256732','Alynsia'},
  {bags[2082],nil,nil},{a.ItemCatalog[4835],'npc:2679','Wenna Silkbeard'},
  {a.ItemCatalog[7057],'npc:1346','Georgio Bolero'}}
 local checked=0

@@ -29,7 +29,7 @@ for token in pairs(classIDs)do for _,side in ipairs({'Alliance','Horde'})do
  local enemy=side=='Alliance' and 'The Barrens' or 'Westfall'
  local home=side=='Alliance' and 'Loch Modan' or 'Silverpine Forest'
  local enemySide=side=='Alliance' and 2 or 1
- actor('fixture:drop',enemy);actor('fixture:home',home,3-enemySide);actor('fixture:neutral',enemy)
+ actor('fixture:drop',enemy);actor('fixture:home',home,3-enemySide);actor('fixture:neutral',enemy,3)
  actor('fixture:restricted',enemy,enemySide)
  actor('fixture:unknown','Uncharted');actor('fixture:starter',side=='Alliance' and 'Durotar' or 'Elwynn Forest')
  local remote=item(990001,{{kind='named_drop',source='fixture:drop'}})
@@ -42,7 +42,7 @@ for token in pairs(classIDs)do for _,side in ipairs({'Alliance','Horde'})do
  model.quests['990099']={questID=990099,name='Shared neutral quest',side=0,starts={'fixture:neutral'},ends={},reqlevel=10}
  local quest=item(990008,{{kind='quest',questID=990099}})
  a.Gear={remote,alternate,neutral,dungeon,starter,uncertain,forbidden,quest}
- assert(a:HasEligibleAcquisitionSource(remote) and a:GetAcquisitionPracticality(remote).status=='inconvenient')
+ assert(a:HasEligibleAcquisitionSource(remote) and a:GetAcquisitionPracticality(remote).status==(side=='Alliance' and 'restricted-territory' or 'inconvenient'))
  assert(not a:ShouldShowOverlayAcquisition(remote) and not a:ShouldShowOverlayAcquisition(starter),'minor remote ordinary sources should wait in Guide')
  assert(contains('available',remote) and contains('available',starter),'detailed guide preserves inconvenient sources')
  for _,g in ipairs({alternate,neutral,dungeon,uncertain,quest})do
@@ -56,23 +56,23 @@ for token in pairs(classIDs)do for _,side in ipairs({'Alliance','Horde'})do
  a.db.overlay.showAllValidGear=true
  assert(a:ShouldShowOverlayAcquisition(remote) and not a:ShouldShowOverlayAcquisition(forbidden),'show all lifts convenience, never hard restrictions')
  a.db.overlay.showAllValidGear=false
- gain=20;assert(a:ShouldShowOverlayAcquisition(remote),'substantial gain may justify travel');gain=1
+ gain=20;assert(a:ShouldShowOverlayAcquisition(remote)==(side=='Horde'),'substantial gain may justify travel');gain=1
  a.db.statPriorities={mode='custom',weights={ITEM_MOD_STAMINA_SHORT=0.001}}
- gain=4;assert(a:ShouldShowOverlayAcquisition(remote),'substantial custom-weight gain is independent of numerical weight scale')
+ gain=4;assert(a:ShouldShowOverlayAcquisition(remote)==(side=='Horde'),'substantial custom-weight gain is independent of numerical weight scale')
  gain=1;assert(not a:ShouldShowOverlayAcquisition(remote),'relative minor gain remains minor at small custom scales')
  a.db.statPriorities=nil
 
- occupied=false;assert(a:ShouldShowOverlayAcquisition(remote),'confirmed empty slot may justify travel');occupied=true
+ occupied=false;assert(a:ShouldShowOverlayAcquisition(remote)==(side=='Horde'),'confirmed empty slot may justify travel');occupied=true
  local saved=C_Item.GetItemStats;C_Item.GetItemStats=function()return nil end
- assert(a:ShouldShowOverlayAcquisition(remote),'unknown comparisons cannot prove a trivial gain');C_Item.GetItemStats=saved
- zone=enemy;assert(a:ShouldShowOverlayAcquisition(remote),'already in the source zone');zone=nil
- level=30;assert(a:ShouldShowOverlayAcquisition(remote),'do not extend low-level travel heuristics into endgame');level=14
+ assert(a:ShouldShowOverlayAcquisition(remote)==(side=='Horde'),'unknown comparisons cannot prove a trivial gain');C_Item.GetItemStats=saved
+ zone=enemy;assert(a:ShouldShowOverlayAcquisition(remote)==(side=='Horde'),'already in the source zone');zone=nil
+ level=30;assert(a:ShouldShowOverlayAcquisition(remote)==(side=='Horde'),'do not extend low-level travel heuristics into endgame');level=14
  remote.bindingStatus='boe';assert(a:ShouldShowOverlayAcquisition(remote))
  assert(a:GetAcquisitionCompactSummary(remote):find('listings unknown',1,true),'trade alternative is distinct from original drop');remote.bindingStatus=nil
- remote.notes='Equip: movement speed bonus';assert(a:ShouldShowOverlayAcquisition(remote),'unscored effects cannot be trivialized');remote.notes=nil
+ remote.notes='Equip: movement speed bonus';assert(a:ShouldShowOverlayAcquisition(remote)==(side=='Horde'),'unscored effects cannot be trivialized');remote.notes=nil
  local unknown=item(990009,{});assert(a:ShouldShowOverlayAcquisition(unknown))
  model.sources['fixture:drop'].locations[1].verification=nil
- assert(a:ShouldShowOverlayAcquisition(remote),'unqualified geography remains uncertain')
+ assert(a:ShouldShowOverlayAcquisition(remote)==(side=='Horde'),'unqualified geography remains uncertain')
  -- A known learned recipe is independent of its remote book-learning source.
  local craft=item(990010,{{kind='recipe_vendor',source='fixture:restricted'}});craft.profession='Leatherworking'
  a.GetRecipeKnowledge=function()return true end;assert(a:ShouldShowOverlayAcquisition(craft));a.GetRecipeKnowledge=nil
@@ -85,7 +85,7 @@ for _,spec in ipairs({{285339,'Centaur War Chain','npc:5841','Rocklance'},
  local g=assert(a.ItemCatalog[spec[1]]);local plan=assert(model.items[tostring(spec[1])]);local r=plan.routes[1]
  assert(g.name==spec[2] and r.kind=='named_drop' and r.source==spec[3] and not r.serviceSide)
  local source=assert(model.sources[r.source]);assert(source.name==spec[4] and not source.serviceSide and source.locations[1].zone=='The Barrens')
- assert(a:HasEligibleAcquisitionSource(g) and a:GetAcquisitionPracticality(g).status=='inconvenient')
+ assert(a:HasEligibleAcquisitionSource(g) and a:GetAcquisitionPracticality(g).status=='restricted-territory')
 end
 actor('fixture:multi-location','The Barrens')
 model.sources['fixture:multi-location'].locations[2]={zone='Loch Modan',x=12,y=34,verification='published-reference'}

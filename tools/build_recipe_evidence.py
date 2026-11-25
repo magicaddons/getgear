@@ -11,6 +11,7 @@ import html
 import re
 from pathlib import Path
 from build_acquisition_navigation import lua, PROFESSION_SKILLS
+from research_sources import require_evidence_tree
 
 ROOT=Path(__file__).resolve().parents[1]
 D=ROOT/'docs/recipe-audit'
@@ -34,6 +35,7 @@ def render():
     evidence=json.loads((D/'evidence.json').read_text())
     pages=json.loads((D/'fresh-spell-pages.json').read_text())
     records=evidence['records']
+    require_evidence_tree(records)
     books=json.loads((D/'fresh-book-pages.json').read_text())
     for key,record in records.items():
         assert str(record['itemID'])==key and record['profession'] in PROFESSION_SKILLS

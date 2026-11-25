@@ -2,7 +2,10 @@
 local root=arg[1]or'.';local a={}
 for f in io.lines(root..'/GetGear.toc')do
  if f:match('%.lua$')and f~='Core.lua'and f~='UI.lua'and f~='AltInventory.lua'then
-  if f=='AcquisitionNavigation.lua' and arg[2]=='baseline' then
+  if f=='AcquisitionPolicy.lua' and arg[2]=='baseline' then
+   -- The historical geometry classifier must reproduce its frozen input,
+   -- before current source holds and commerce points are projected separately.
+  elseif f=='AcquisitionNavigation.lua' and arg[2]=='baseline' then
    local handle=assert(io.open(root..'/'..f));local body=handle:read('*a');handle:close()
    body=body:gsub('%-%- BEGIN GENERATED NAVIGATION REVIEW\n.-%-%- END GENERATED NAVIGATION REVIEW\n','')
    assert((loadstring or load)(body,'@'..f))('GetGear',a)

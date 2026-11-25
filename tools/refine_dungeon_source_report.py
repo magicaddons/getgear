@@ -4,12 +4,13 @@
 Reads saved output only, and the same published client encounter roster.
 Does not scrape loot pages, promote live claims, or alter addon Lua.
 """
+from research_sources import research_open
 import collections,csv,importlib.util,json,pathlib,re,urllib.request
 root=pathlib.Path("docs/source-audit-1-60")
 spec=importlib.util.spec_from_file_location("source_audit","tools/audit_forever_sources.py")
 module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 url="https://raw.githubusercontent.com/Everloot/everloot/main/web/src/data/game-data/client-encounters.json"
-with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"GetGear-SourceAudit-Review/1.0"}),timeout=20) as r:
+with research_open(urllib.request.Request(url,headers={"User-Agent":"GetGear-SourceAudit-Review/1.0"}),timeout=20) as r:
     observed=json.load(r)
 bosses={module.norm(e.get("name")) for entries in observed["instances"].values() for e in entries if e.get("name")}
 def read(filename):

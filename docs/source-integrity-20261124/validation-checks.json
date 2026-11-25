@@ -1,0 +1,1818 @@
+[
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/generate_star_textures.py",
+      "--check"
+    ],
+    "exitCode": 0,
+    "seconds": 0.162
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/validate_feature_acceptance.py",
+      "--root",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.082
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/build",
+      "-v"
+    ],
+    "exitCode": 0,
+    "seconds": 2.602
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/ResearchedItemFacts.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.006
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/EquipmentCache.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.011
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/GeneratedBeta7Evidence.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.004
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/SourceEnrichment.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/AcquisitionEvidenceIndex.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.115
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/AcquisitionEvidence.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/AcquisitionSummary.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/WorldDropBoEIndex.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/GeneratedStatFlags.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.006
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/StatEvidence.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/GuideEngine.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/GuideState.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/Materials.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/AcquisitionNavigationData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.045
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/BagQuestData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/FactionEligibilityData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.004
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/AcquisitionNavigation.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.012
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/MapNavigation.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/AltInventory.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/RecipeKnowledge.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.008
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/CommercePolicyData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.003
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/ResearchPolicyData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/AcquisitionPolicy.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/BagUpgrades.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/ItemData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/CraftingVisibility.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/TalentAwareness.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/GearRelevance.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/GearCompare.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/StatPriorities.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/Core.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "/workspace/getgear/UI.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.004
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "tools/export_navigation_inputs.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "tools/audit_recommendation_sources.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "tools/audit_faction_eligibility.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/luac5.4",
+      "-p",
+      "tools/audit_navigation_pipeline.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/ResearchedItemFacts.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.005
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/EquipmentCache.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.015
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/GeneratedBeta7Evidence.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.004
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/SourceEnrichment.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/AcquisitionEvidenceIndex.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.091
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/AcquisitionEvidence.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/AcquisitionSummary.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/WorldDropBoEIndex.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/GeneratedStatFlags.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.007
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/StatEvidence.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/GuideEngine.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/GuideState.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/Materials.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/AcquisitionNavigationData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.038
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/BagQuestData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/FactionEligibilityData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.005
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/AcquisitionNavigation.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.013
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/MapNavigation.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/AltInventory.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/RecipeKnowledge.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.007
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/CommercePolicyData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.003
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/ResearchPolicyData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/AcquisitionPolicy.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/BagUpgrades.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/ItemData.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/CraftingVisibility.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/TalentAwareness.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/GearRelevance.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/GearCompare.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/StatPriorities.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/Core.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "/workspace/getgear/UI.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.004
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "tools/export_navigation_inputs.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "tools/audit_recommendation_sources.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "tools/audit_faction_eligibility.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/luac5.1",
+      "-p",
+      "tools/audit_navigation_pipeline.lua"
+    ],
+    "exitCode": 0,
+    "seconds": 0.001
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/account-inventory.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/account-inventory.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/acquisition-map-readiness.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.015
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/acquisition-map-readiness.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.014
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/acquisition-navigation.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.81
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/acquisition-navigation.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 1.008
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/acquisition-practicality.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.491
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/acquisition-practicality.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.509
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/acquisition-presentation.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.477
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/acquisition-presentation.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.588
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/alliance-acquisition-access.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 5.128
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/alliance-acquisition-access.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 7.876
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta4-catalogue.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.575
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta4-catalogue.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.749
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta4-filters.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.871
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta4-filters.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.969
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta4-performance.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 3.011
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta4-performance.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 4.058
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta4-slot-filters.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 43.704
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta4-slot-filters.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 64.433
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta4-slot-ui.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.16
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta4-slot-ui.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.182
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta4-talents.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.495
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta4-talents.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.499
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta7-acquisition-reconciled.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.635
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta7-acquisition-reconciled.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 1.069
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta7-armor-priority.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.156
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta7-armor-priority.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.334
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta7-coverage.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.17
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta7-coverage.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.285
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta7-evidence.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.567
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta7-evidence.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.513
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta7-material-names.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.522
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta7-material-names.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.641
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta7-preview-layout.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta7-preview-layout.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta7-source-visibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta7-source-visibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.002
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/beta7-stat-flags.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.501
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/beta7-stat-flags.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.56
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/class-stat-eligibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.513
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/class-stat-eligibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.636
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/commerce-source-policy.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.779
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/commerce-source-policy.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 1.088
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/faction-global-eligibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 16.434
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/faction-global-eligibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 21.864
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/full-toc-startup.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.476
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/full-toc-startup.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.536
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/inventory-events.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.882
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/inventory-events.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 1.029
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/item-search-stars-ui.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 6.801
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/item-search-stars-ui.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 9.114
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/item-search-stars.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.716
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/item-search-stars.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.818
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/location-classification.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.495
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/location-classification.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.637
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/map-label-boundaries.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.509
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/map-label-boundaries.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.518
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/map-marker-lifecycle.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.536
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/map-marker-lifecycle.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.523
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/material-name-resolution.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.584
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/material-name-resolution.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.612
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/navigation-button-visibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.642
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/navigation-button-visibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.728
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/navigation-marker-system.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.648
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/navigation-marker-system.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.884
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/navigation-overhaul.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.535
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/navigation-overhaul.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.495
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/navigation-rendering-integrity.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.555
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/navigation-rendering-integrity.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.559
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/overlay-green-boe-filter.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.003
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/overlay-green-boe-filter.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.004
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/overlay-performance.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 3.438
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/overlay-performance.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 4.489
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/overlay-stat-filter.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.016
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/overlay-stat-filter.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.019
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/overlay-state-matrix.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 27.417
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/overlay-state-matrix.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 34.3
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/overlay-wrapped-layout.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.012
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/overlay-wrapped-layout.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.014
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/quest-bag-recommendations.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.846
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/quest-bag-recommendations.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.936
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/recipe-source-integrity.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.542
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/recipe-source-integrity.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.501
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/recommendation-priorities.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.832
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/recommendation-priorities.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 1.134
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/recommendation-snapshot.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.003
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/recommendation-snapshot.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.003
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/source-faction-eligibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.807
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/source-faction-eligibility.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 1.264
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/starred-row-refresh.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 37.042
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/starred-row-refresh.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 46.96
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/stat-priority-settings.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.008
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/stat-priority-settings.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.009
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/talent-recommendations.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.475
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/talent-recommendations.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.562
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "/workspace/getgear/tests/tracker-resize-budget.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.148
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua51/usr/bin/lua5.1",
+      "tools/release/lua51-harness.lua",
+      "/workspace/getgear/tests/tracker-resize-budget.lua",
+      "/workspace/getgear"
+    ],
+    "exitCode": 0,
+    "seconds": 0.179
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/getgear/tests/reconcile-dungeon-link-guards.py"
+    ],
+    "exitCode": 0,
+    "seconds": 0.069
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/getgear/tests/worlddrop-boe-fallback.py"
+    ],
+    "exitCode": 0,
+    "seconds": 0.17
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/getgear/tests/navigation-generation.py"
+    ],
+    "exitCode": 0,
+    "seconds": 0.13
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/getgear/tests/navigation-review-generation.py"
+    ],
+    "exitCode": 0,
+    "seconds": 0.049
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/getgear/tests/navigation-location-review.py"
+    ],
+    "exitCode": 0,
+    "seconds": 2.904
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/getgear/tests/stat-school-generation.py"
+    ],
+    "exitCode": 0,
+    "seconds": 0.053
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/getgear/tests/faction-evidence-generation.py"
+    ],
+    "exitCode": 0,
+    "seconds": 0.067
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/getgear/tests/recipe-evidence-generation.py"
+    ],
+    "exitCode": 0,
+    "seconds": 0.154
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "tools/audit_acquisition_buttons.lua",
+      "/workspace/getgear",
+      "/workspace/validation-final-workflows-20261125/button-coverage.csv"
+    ],
+    "exitCode": 0,
+    "seconds": 1.607
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "tools/audit_navigation_pipeline.lua",
+      "/workspace/getgear",
+      "/workspace/validation-final-workflows-20261125/navigation"
+    ],
+    "exitCode": 0,
+    "seconds": 4.724
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/audit_acquisition_presentation.py",
+      "--output",
+      "/workspace/validation-final-workflows-20261125/presentation"
+    ],
+    "exitCode": 0,
+    "seconds": 53.875
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/build_recipe_evidence.py",
+      "--check"
+    ],
+    "exitCode": 0,
+    "seconds": 0.154
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/build_commerce_policy.py",
+      "--check"
+    ],
+    "exitCode": 0,
+    "seconds": 0.305
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/build_research_policy.py",
+      "--export",
+      "/workspace/validation-final-workflows-20261125/integrity-export.json",
+      "--check"
+    ],
+    "exitCode": 0,
+    "seconds": 1.094
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/build_navigation_review.py",
+      "--check"
+    ],
+    "exitCode": 0,
+    "seconds": 3.15
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/audit_recipe_integrity.py",
+      "--addon-root",
+      "/workspace/getgear",
+      "--output",
+      "/workspace/validation-final-workflows-20261125/recipes"
+    ],
+    "exitCode": 0,
+    "seconds": 2.51
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/build_bag_quest_catalogue.py",
+      "--check"
+    ],
+    "exitCode": 0,
+    "seconds": 0.032
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/build_faction_eligibility.py",
+      "--check"
+    ],
+    "exitCode": 0,
+    "seconds": 0.322
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/release",
+      "-v"
+    ],
+    "exitCode": 0,
+    "seconds": 0.103
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "tools/audit_alliance_acquisition.lua",
+      "/workspace/getgear",
+      "/tmp/tmpg9iudsta/alliance.csv"
+    ],
+    "exitCode": 0,
+    "seconds": 0.751
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "tools/audit_recommendation_sources.lua",
+      "/workspace/getgear",
+      "/tmp/tmpg9iudsta/sources.csv"
+    ],
+    "exitCode": 0,
+    "seconds": 0.956
+  },
+  {
+    "command": [
+      "/workspace/toolchain/lua54/usr/bin/lua5.4",
+      "tools/audit_faction_eligibility.lua",
+      "/workspace/getgear",
+      "/tmp/tmpg9iudsta/factions.csv"
+    ],
+    "exitCode": 0,
+    "seconds": 1.238
+  }
+]

@@ -13,11 +13,13 @@ import json
 import os
 import re
 import runpy
+import sys
 import shutil
 import tempfile
 from unittest.mock import patch
 
 root=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(root/'tools'))
 source=root/"docs/source-audit-1-60/all_items.csv"
 register=root/"docs/source-audit-1-60/worlddrop_boe_fallback_exclusions.json"
 records={int(r["itemID"]):r for r in csv.DictReader(source.open())}
@@ -53,7 +55,7 @@ with tempfile.TemporaryDirectory(prefix="getgear-boe-regression-")as directory:
     shutil.copyfile(register,audit/register.name)
     try:
         os.chdir(fixture)
-        with patch("urllib.request.urlopen",side_effect=fake_open),contextlib.redirect_stdout(io.StringIO()):
+        with patch("research_sources.research_open",side_effect=fake_open),contextlib.redirect_stdout(io.StringIO()):
             runpy.run_path(str(root/"tools/generate_worlddrop_boe_index.py"),run_name="__main__")
         generated=set(map(int,re.findall(r"\[(\d+)\]=true",(fixture/"WorldDropBoEIndex.lua").read_text())))
         assert generated==ids-{4768}, "Obsolete feeds must not reintroduce the exception or lose other IDs"
@@ -68,7 +70,7 @@ with tempfile.TemporaryDirectory(prefix="getgear-boe-regression-")as directory:
         (audit/register.name).write_text(json.dumps(invalid))
         calls.clear()
         try:
-            with patch("urllib.request.urlopen",side_effect=fake_open),contextlib.redirect_stdout(io.StringIO()):
+            with patch("research_sources.research_open",side_effect=fake_open),contextlib.redirect_stdout(io.StringIO()):
                 runpy.run_path(str(root/"tools/generate_worlddrop_boe_index.py"),run_name="__main__")
         except AssertionError as error:
             assert "green BoE cannot be excluded"in str(error)

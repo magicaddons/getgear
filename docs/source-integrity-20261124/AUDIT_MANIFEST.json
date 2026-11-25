@@ -1,0 +1,246 @@
+{
+  "schema": 1,
+  "scope": "Audit artifacts; manifest excludes itself. Runtime source SHA and install ZIP checksum are in the external package receipt.",
+  "files": {
+    "CHANGES.md": {
+      "bytes": 3750,
+      "sha256": "da57f7b152cef2174fc048b08729aea6ba481801f052af09cafd0eb620015fb7"
+    },
+    "COMMERCE.md": {
+      "bytes": 4286,
+      "sha256": "7f6af74fdcec38f37a1c3d0254cc2cb7d67f7f4a55d8af5ab1d8147dae65fa5f"
+    },
+    "COVERAGE.md": {
+      "bytes": 5053,
+      "sha256": "2b0508fa1cd848c5d479117ebec64cd234d296c2d05a3f756fe2a55061262091"
+    },
+    "PROVENANCE.md": {
+      "bytes": 5776,
+      "sha256": "173fead639ddaf39b0f31f579c0fdffd1b1e6aea4c47e5545bebe05171409610"
+    },
+    "REPORT.md": {
+      "bytes": 4888,
+      "sha256": "764485354b6d3065a26ad8363f2c1e6a1dc5b351cb58ca65258159eb531484df"
+    },
+    "ROOT_CAUSES.md": {
+      "bytes": 4450,
+      "sha256": "792fc613fa66dc56573bf46271afdfbb2a6db2348add9f38488489aaa19cea78"
+    },
+    "VALIDATION.md": {
+      "bytes": 3625,
+      "sha256": "2f4e44f277ef67e2caabbfbac72c098c79dce1e497917589c198df4797dfd48b"
+    },
+    "acquisition-changes.json": {
+      "bytes": 450308,
+      "sha256": "1250090273138e079a6a5f9caf42a624015687570b5c49286586ff7cef257ee9"
+    },
+    "added-acquisition-routes.json": {
+      "bytes": 12883,
+      "sha256": "dcf68abc56c3ba5f9b58fdf44d5cf654d0a92f48d8c337ae6eda8bcacbb64b65"
+    },
+    "azeroth-commerce-authority.html.gz": {
+      "bytes": 48622,
+      "sha256": "dd5c7d92d3fa74d09f90770901293725bd0df0a1f65ff85fad4646e16f430701"
+    },
+    "bag-revalidation.json": {
+      "bytes": 19838,
+      "sha256": "0745407a030c191b961fce694b9175e100d4acf0569f01b547dac179d23e9af7"
+    },
+    "bag-spell-tooltips.jsonl.gz": {
+      "bytes": 1344,
+      "sha256": "40f325bf0994554034f0816352cd68c65f5878c6307340cd7dd6be3526f5af87"
+    },
+    "catalogue-revalidation.csv": {
+      "bytes": 1269017,
+      "sha256": "fd4f05a8acba0f6e8973afab34b90315b0657f96a0c5d44525f01ec3f184acb4"
+    },
+    "change-report.json": {
+      "bytes": 333892,
+      "sha256": "77e886839101745996793829ed676327ceaa20876a57b8e4b1910da98b3ac39d"
+    },
+    "commerce-audit.json": {
+      "bytes": 1022151,
+      "sha256": "2c6f0215738deebed69ea30d3359a4b4ab17165a6cd9ccb8fbfaebc5778eabe2"
+    },
+    "commerce-published-offers.json": {
+      "bytes": 227251,
+      "sha256": "9911174c66a04fde0af1abb3fd257c1088c67e6f4c13e383c568fd8435fc7af2"
+    },
+    "contradictions.json": {
+      "bytes": 12343,
+      "sha256": "6f6fc0592be1ea34f471ac4278e334e44374a30abb3ea945167cc7a26bb8007a"
+    },
+    "current-item-tooltips.jsonl.gz": {
+      "bytes": 1189968,
+      "sha256": "a4cff947edff49f185db2987735380936ba52d3fbc2b0fa4917ba79c7d281d82"
+    },
+    "current-source-entities.jsonl.gz": {
+      "bytes": 225155,
+      "sha256": "fa822acf4c4221d7f6852f282fe084acfe236b4029810b9807ae7b43c563b5d4"
+    },
+    "current-spell-tooltips.jsonl.gz": {
+      "bytes": 202343,
+      "sha256": "9492b14f54e8ea45c3e043c439cfde7d89a2c8e9fc8402090682b2f9b00cacb9"
+    },
+    "dungeon-guides/alcaz-prison-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 34901,
+      "sha256": "87d5527febf57b51298de7b7ff3dc2d946e2f511a1e30d33f6b0b1231a1c0ffd"
+    },
+    "dungeon-guides/blackfathom-deeps-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 37663,
+      "sha256": "5f890f46497cdf843b9d1dfc6afeae0de4d1182878fe6df229e0f05773f5124e"
+    },
+    "dungeon-guides/blackrock-depths-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 82225,
+      "sha256": "d375cb41b5c2bbe715fda7c6f8c3e33a7dc3bad84009d798b08f26f5179ddb07"
+    },
+    "dungeon-guides/city-of-dalaran-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 41985,
+      "sha256": "dadc9ce8f214e9e6f3dea25522ac81f481b9f3bc83dce6e4ba228dbe8ce8c23f"
+    },
+    "dungeon-guides/excavation-site-wetlands-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 35497,
+      "sha256": "9a6c7a58f45d47c0ce2a085582c5532bccf564c5ab706007e86f347164d45634"
+    },
+    "dungeon-guides/gnomeregan-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 42234,
+      "sha256": "8449dca0fcec02e743d950798519c5ed9ea24bedc8c729624bcb961b2020ebbd"
+    },
+    "dungeon-guides/hall-of-thanes-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 31819,
+      "sha256": "bd7ad990d68cdff3262c526ba02438bd52f8f9a93bad3e1e33d4b45fa03fac62"
+    },
+    "dungeon-guides/kroldok-stronghold-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 34249,
+      "sha256": "2b7de551fb57c2e985b226546426a8359dfe01bf9feb36ea51d751db87b6a8d0"
+    },
+    "dungeon-guides/lower-blackrock-spire-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 52505,
+      "sha256": "7f0072471e0ac1f16520cee7d749e6fefa2ab062f5018ac2f787c33bf883630a"
+    },
+    "dungeon-guides/manifest.json": {
+      "bytes": 9232,
+      "sha256": "80176d4e29961331195b74aef603ab58c72fea987cb2e1061dea26a5e0f1800a"
+    },
+    "dungeon-guides/maraudon-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 47355,
+      "sha256": "c639073ab8a7aef4b9ca384091856bb8c74adb86b494421ab47ef9e91026175b"
+    },
+    "dungeon-guides/ragefire-chasm-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 31074,
+      "sha256": "228d92a69a081bfdbf694b3f8749bdf9d3c717ff931e2dfae716a4236ada0180"
+    },
+    "dungeon-guides/razorfen-downs-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 35042,
+      "sha256": "0756ef2bde927874d75bbfbbdc7213d5d8fb530819964b03cbf391976a595f90"
+    },
+    "dungeon-guides/ruins-of-lordaeron-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 34179,
+      "sha256": "e4343f43ba1863a8f37c0e1f4f17c2f5405caedbc56fe29c3c669fca94688750"
+    },
+    "dungeon-guides/scholomance-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 57908,
+      "sha256": "02cfc1ad04727b6e326b44cbf6932b6244b8bb6aa5d3cf91862d273f4561b79d"
+    },
+    "dungeon-guides/shadowfang-keep-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 35494,
+      "sha256": "fd920c49e6561f30b031ef2233763d3ef10c655d1e637cd478e39dea83e3a7a8"
+    },
+    "dungeon-guides/the-drowned-city-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 38588,
+      "sha256": "50db638511004979e268b24fc9eb1b5797c4d2f632e2fa64182340965c9a9eed"
+    },
+    "dungeon-guides/the-stockade-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 32126,
+      "sha256": "4b8a450892499c39e9c04a53021f25ee6b55f1c591ab71b5664dd35c5ee7529d"
+    },
+    "dungeon-guides/the-temple-of-atalhakkar-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 49232,
+      "sha256": "f3f7f14f22af6b1adf2df4664cc8cdb1f90a66fbf59e5c2d4082d4b0c3973401"
+    },
+    "dungeon-guides/uldaman-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 52369,
+      "sha256": "2d18acd1c3e24b987286886e0a963597a2a61a8e0f55fee4f191115b1888c207"
+    },
+    "dungeon-guides/upper-blackrock-spire-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 56960,
+      "sha256": "9c42128cb029a7a92aeed63c8d21f9dee2ae0a9a4aedc6fcab08bfceab97fa08"
+    },
+    "dungeon-guides/wailing-caverns-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 37884,
+      "sha256": "f5d431bd03133c7d33b437db5f75f0255348840b55bc9ac1ba23241b173a91c0"
+    },
+    "dungeon-guides/zulfarrak-dungeon-overview-location-rewards.html.gz": {
+      "bytes": 37167,
+      "sha256": "16e085bf7c17f07491307e3b4e0d76572581bb4ea2a81c5236d08b7c5c3d6f80"
+    },
+    "durotar-supply-and-logistics.html.gz": {
+      "bytes": 39543,
+      "sha256": "05b1b807bbf321ca85e14f0f77f362b556216e1366d64adc35392788f660014d"
+    },
+    "entity-revalidation.json.gz": {
+      "bytes": 201649,
+      "sha256": "5376ad442838066738bb33a3c5d1d5712459173358ca1e8f56edac0f7a097b21"
+    },
+    "entity-summary.json": {
+      "bytes": 1126,
+      "sha256": "acf6f0fe4ab75b3f834017a09e4d32641695d2de986a0c9723ebf4e62b8e284f"
+    },
+    "equipment-shape-revalidation.json.gz": {
+      "bytes": 348641,
+      "sha256": "4b127af6b9eceec3d7cb9dce29049e9f81499a8edd9e03bef7cb1bd4645aa578"
+    },
+    "fact-register.jsonl.gz": {
+      "bytes": 5811250,
+      "sha256": "674bfa4a0ad47f63a9288c9a66b2d6914b2bbeda9c40c472503e1cd9bb5c9ae2"
+    },
+    "github-provenance.json": {
+      "bytes": 4150,
+      "sha256": "5e482e4c57488bf2fea69a246e943f460f819b398fff6184a5434a63771a4f94"
+    },
+    "materialDisagreements.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "new-book-associations.json": {
+      "bytes": 14208,
+      "sha256": "833a9372e974896b515f8ed5d9a9b4cd924a6806529ca7fd64858b5bf7b00757"
+    },
+    "performance-receipt.txt": {
+      "bytes": 8360,
+      "sha256": "ee94d8af29b0bcc2c1a2a56c31339f47281131b677cd821479f081bd76897a6e"
+    },
+    "projected-legacy-routes.json": {
+      "bytes": 71860,
+      "sha256": "bb1ab31d5e199ce3de47a4ecf031ab98bc7beb42179157e05cb12f66692478a6"
+    },
+    "providerCounts.json": {
+      "bytes": 44109,
+      "sha256": "69c37cf4ac4c9d6bfc2acf976d19a199b934491e47346bbbfe808ab3a7d85d7e"
+    },
+    "route-evidence-decisions.json": {
+      "bytes": 2827888,
+      "sha256": "8188e270d481c26899cedba3392238c86e5737095e76801054ba4d4ac643c215"
+    },
+    "sourceInventory.json.gz": {
+      "bytes": 1023805,
+      "sha256": "6bb9a14f8bb9a61f8a05eca9598dc5f45e947715ffc8290ef4a74c77054a1dec"
+    },
+    "summary.json": {
+      "bytes": 2226,
+      "sha256": "d5c68c5a9ef3faa117e82d7de1eac48a7ded9f529a27a38b512b725bd942efd3"
+    },
+    "validation-checks.json": {
+      "bytes": 41835,
+      "sha256": "3398c2c40e33a5544cfa022ac20e0c3a8fb7fb4d47f874f550e1ddd8b4bf2ad5"
+    },
+    "validation-summary.json": {
+      "bytes": 368,
+      "sha256": "d7d554b263523d83df15208b9971494f4904ce1168cd9077fab13b959d866c15"
+    },
+    "wailing-caverns.html.gz": {
+      "bytes": 37884,
+      "sha256": "f5d431bd03133c7d33b437db5f75f0255348840b55bc9ac1ba23241b173a91c0"
+    }
+  }
+}

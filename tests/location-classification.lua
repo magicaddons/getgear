@@ -7,25 +7,26 @@ local rendering=assert(read('navigation-rendering-integrity.lua'):match('local b
 local geometry=rendering:sub(1,assert(rendering:find('local cases=',1,true))-1)
 local body=[=[
 local fixture={itemID=999999,name='Reported-point fixture'}
-a.AcquisitionNavigationData.items['999999']={routes={{kind='recipe_vendor',source='npc:256735'}}}
-local source=a.AcquisitionNavigationData.sources['npc:256735']
-local loc=assert(source.locations[1]);assert(loc.locationClass=='reported-point'and loc.locationConfidence=='credible-reported')
-assert(loc.x==10 and loc.y==72.7 and loc.uiMapID==1433 and not loc.bounds)
-assert(loc.originalBounds.yMin==72.4 and loc.originalBounds.yMax==72.8)
+local disputed=a.AcquisitionNavigationData.sources['npc:256735']
+assert(not disputed.locations[1].x and disputed.locations[1].instructions:find('disagree',1,true))
+assert(disputed.previousCommerceLocations[1].x==10)
+a.AcquisitionNavigationData.items['999999']={routes={{kind='recipe_vendor',source='npc:256732'}}}
+local source=a.AcquisitionNavigationData.sources['npc:256732']
+local historical=assert(source.previousCommerceLocations[1])
+assert(historical and a.CommercePolicyData.sources['npc:256732'].coordinateDisputed==false)
+local loc=assert(source.locations[1]);assert(loc.locationClass=='reported-point' and loc.locationConfidence=='published-guide-vendor')
+assert(loc.x==11.2 and loc.y==71.6 and loc.uiMapID==1433 and not loc.bounds)
 local evidence=loc.coordinateEvidence
-assert(evidence.independentFamilyCount==1,'mirrored publications inflated evidence independence')
-assert(evidence.selectedObservation.kind=='build-attributed-point'and #evidence.rejectedObservations>0)
-assert(evidence.geometry.geometryStatus=='published-classic-frame-reference')
 local choice=assert(a:GetAcquisitionNavigationChoices(fixture)[1])
 assert(choice.locationClass=='reported-point'and choice.coordinateEvidence==evidence)
 assert(choice.instructions:find('not independently verified',1,true))
-assert(a:GetAcquisitionDirections(fixture):find('Reported navigation point',1,true))
+assert(a:GetAcquisitionDirections(fixture):find('Individual vendor point published in the ACA guide',1,true))
 assert(a:OpenAcquisitionMap(fixture,choice.id))
 local target,pin=a:GetAcquisitionMarkerState()
-assert(target.x==10 and target.y==72.7 and pin:IsShown()and pin.icon:IsVisible()and not pin.area:IsShown())
-assert(pin.label.text=='Mivin Shadowweave'and pin.parent==canvas and pin.level>2001)
-assert(math.abs(pin.point[4]*pin.scale/canvas.width-.1)<.000001)
-assert(math.abs(-pin.point[5]*pin.scale/canvas.height-.727)<.000001)
+assert(target.x==11.2 and target.y==71.6 and pin:IsShown()and pin.icon:IsVisible()and not pin.area:IsShown())
+assert(pin.label.text=='Alynsia'and pin.parent==canvas and pin.level>2001)
+assert(math.abs(pin.point[4]*pin.scale/canvas.width-.112)<.000001)
+assert(math.abs(-pin.point[5]*pin.scale/canvas.height-.716)<.000001)
 for _=1,5 do assert(a:OpenAcquisitionMap(fixture,choice.id));assert(select(2,a:GetAcquisitionMarkerState())==pin)end
 -- An explicitly unresolved service retains an area and separate qualification.
 local uncertain={itemID=999998,name='Uncertain service fixture'}

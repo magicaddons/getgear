@@ -1,24 +1,21 @@
-PRIVATE TEST BUILD — overlay performance and recommendation groups
-Version: 0.14.0-private.overlay-groups.20261123.1
-Full cumulative Beta 11 runtime plus the changes below. Install this ZIP using
-the instructions below. In-game acceptance is pending; no public release.
+GETGEAR — CUMULATIVE PRIVATE TEST BUILD
+Version: 0.14.0-private-cumulative.inventory-catalogue.20261125.1
+
+Complete accepted Beta 11 baseline plus the preserved overlay idle/group changes,
+the Alt Inventory identity/snapshot fix and reviewed catalogue/commerce corrections.
+Includes 32 Lua modules, three textures and the accepted historical data snapshot.
+Alliance characters remain the supported gameplay scope. Native Forever acceptance
+is pending; no public release or mainline merge is part of this testing build.
+Install the complete supplied private ZIP using the instructions below.
+
 Tracker group menu: All (starred first), Starred, or Other (non-starred).
 Pages are independent per group. Slot filters apply to every group.
-
-GETGEAR 0.14.0-beta11 — PUBLIC BETA FOR ALLIANCE
-================================================
-Gear catalogue, crafting planner and item tracker for WoW Forever, levels 1–60.
-Alliance characters are the supported gameplay scope; Horde is unsupported.
-
-LATEST RECOMMENDED DOWNLOAD
-https://github.com/magicaddons/getgear/releases/tag/v0.14.0-beta11
-Choose GetGear-v0.14.0-beta11.zip from Assets (not the source archives).
-Exit the game and back up your addon and SavedVariables before installing.
-
-Beta 11 preserves approved cumulative .20261121.14, including overlay polish,
-immediate star sorting and systemic Alliance acquisition filtering. Horde-capital
-routes such as Ragefire Chasm are excluded while valid alternative routes remain.
-All 29 Lua modules, three textures and accepted acquisition data are retained.
+Inventory scope: same-realm/faction uses recovered identity; unresolved records
+remain available in Other / unknown, All and individual scopes. Scope choices
+remain transient and reopening starts at Same realm/faction.
+Catalogue: corrected published names/levels/titles, shared commerce access and
+qualified coordinates. Published evidence does not prove live loot or stock;
+research gaps, disputed skill requirements and unknown identity remain explicit.
 
 SUPPORTED CLIENT
 WoW Forever, addon interface 16001. Other clients are not verified.
@@ -43,8 +40,10 @@ BASIC USE
   items with row actions. Resize the tracker and expand/collapse its sections.
 - /getgear settings opens display options and stat priority preferences.
 - Use map actions for supported sources, choices and directions.
-- Browse Alt Inventory after logging into each character and opening its bank.
-  Offline counts are last-known snapshots, not live access.
+- Alt Inventory shows recorded bags/banks immediately. Existing banks need no
+  revisit to recover sufficient legacy metadata; login can establish a missing
+  faction. Open a bank only when you want to refresh its contents. Offline counts
+  are last-known snapshots, not live access.
 - Preview Guide is read-only for other classes/levels and does not edit stars.
 
 OTHER COMMANDS
@@ -60,11 +59,10 @@ row refresh corrections. Earlier cumulative tracking, inventory, navigation,
 class/faction eligibility, stat priorities and settings fixes remain included.
 
 LIMITATIONS
-Public beta. Catalogue/source information can be dated, incomplete or uncertain;
+Private testing build. Catalogue/source information can be dated, incomplete or uncertain;
 it does not guarantee current loot, vendor stock, quests, recipes or coordinates.
 This is not a best-in-slot ranking. Bank snapshots can become stale; mail,
-auctions and guild/account banks are not automatically tracked. User acceptance
-was reported for the private build. Automated Lua compatibility/regression tests
+auctions and guild/account banks are not automatically tracked. This combined build awaits in-game acceptance. Automated Lua compatibility/regression tests
 do not constitute new in-game verification or exhaustive live route testing.
 
 LICENSING
@@ -79,11 +77,3 @@ HELP / RELEASE NOTES
 https://github.com/magicaddons/getgear
 https://github.com/magicaddons/getgear/issues
 Include addon version, class/level, item ID/name, symptoms and any Lua error.
-
-Private inventory-scope testing build (25 November 2026): preserves Beta 11
-and the overlay idle/group improvements. Same-realm/faction inventory uses
-normalized, evidence-backed identity; legacy keys and formatting aliases retain
-recorded banks. Unknown identity stays accessible in Other / unknown, All, and
-individual scopes. Scope choices remain transient and reopen at Same realm/faction.
-Install the entire GetGear folder, retaining SavedVariables. Live Forever testing
-is pending; this private build is not a public release.

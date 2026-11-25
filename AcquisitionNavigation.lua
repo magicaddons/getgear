@@ -36,6 +36,8 @@ function GetGear:IsAcquisitionLocationEligible(location,context)
     if type(location)~="table" then return true end
     local playerSide=side(context)
     if not self.AcquisitionAccessPolicy.supportedSides[playerSide] then return true end
+    if (location.serviceSide==1 or location.serviceSide==2) and location.serviceSide~=playerSide
+        or location.faction=='Horde' and playerSide==1 then return false,"Location requires opposing-faction service" end
     local zone=canonical(location.dungeonApproach or location.dungeon or location.zone)
     local policy=self.AcquisitionAccessPolicy
     local containment=policy.instances[zone]
@@ -73,9 +75,18 @@ local function questAccess(self,quest,context)
 end
 
 function GetGear:IsAcquisitionRouteAccessible(gear,route,context)
+    if self.ProjectAcquisitionRoute then route=self:ProjectAcquisitionRoute(gear,route) end
     local playerSide=side(context)
     local policy=self.AcquisitionAccessPolicy
     if not policy.supportedSides[playerSide] then return true end
+    if self.GetAcquisitionServiceDecision then
+        local allowed,reason=self:GetAcquisitionServiceDecision(gear,route,context)
+        if not allowed then return false,reason end
+    end
+    if self.GetAcquisitionResearchDecision then
+        local allowed,reason=self:GetAcquisitionResearchDecision(gear,route)
+        if not allowed then return false,reason end
+    end
     local required=route.reputationSide or (route.offer and type(route.offer.standing)=="number" and route.offer.standing>0
         and policy.reputations[tonumber(route.offer.reqfaction)])
     if playerSide and (required==1 or required==2) and required~=playerSide then
@@ -112,8 +123,9 @@ end
 function GetGear:GetLegacyAcquisitionAccessRoute(gear)
     if not gear then return end
     local location=gear.acquisitionLocation
+    local territory=self.AcquisitionPracticalityPolicy and self.AcquisitionPracticalityPolicy.ordinaryTerritories or {}
     if location and (self.AcquisitionAccessPolicy.capitals[location.zone]
-        or self.AcquisitionAccessPolicy.instances[canonical(location.zone)]) then
+        or self.AcquisitionAccessPolicy.instances[canonical(location.zone)] or territory[location.zone] or location.serviceSide) then
         return {kind="legacy",location=location,label=location.spot or gear.source}
     end
     local zone=gear.zone
@@ -169,9 +181,10 @@ function GetGear:GetNormalizedRecipeData(gear)
     local learning=extra.learningSkill or fact.bookLearningSkill
     if not learning and type(fact.trainerLearningSkills)=="table" and #fact.trainerLearningSkills==1 then learning=fact.trainerLearningSkills[1] end
     if not learning and gear.recipeLearnSkillEvidence~="unverified" then learning=gear.professionSkillRequired end
-    local acquisitions=(get(data().items,gear.itemID) or {}).routes or {}
+    local acquisitions=(planForGear(gear) or {}).routes or {}
     local sources={};local confidence="unverified"
-    for _,route in ipairs(acquisitions) do
+    for _,rawRoute in ipairs(acquisitions) do
+        local route=self.ProjectAcquisitionRoute and self:ProjectAcquisitionRoute(gear,rawRoute) or rawRoute
         local kind=({trainer="trainer",recipe_vendor="vendor",vendor="vendor",quest="quest",
             recipe_drop="drop",world_drop="world_drop",reputation="reputation"})[route.kind]
         if route.kind=="dungeon" then
@@ -312,7 +325,7 @@ end
 local function sourceLocations(actor,q,key,route)
     local zone=q and q.actorZones and q.actorZones[key] or route and route.sourceZone
     local locations={}
-    for _,loc in ipairs(actor.locations or {}) do
+    for _,loc in ipairs(GetGear.GetAcquisitionPolicyLocations and GetGear:GetAcquisitionPolicyLocations(actor,key) or actor.locations or {}) do
         if (not zone or loc.zone==zone) and GetGear:IsAcquisitionLocationEligible(loc) then
             locations[#locations+1]=loc
         end
@@ -380,6 +393,7 @@ function GetGear:GetIndependentAcquisitionAccess(gear,context)
 end
 
 function GetGear:GetAcquisitionRouteFactionSide(gear,route)
+    if self.ProjectAcquisitionRoute then route=self:ProjectAcquisitionRoute(gear,route) end
     local registry=self.FactionEligibilityData or {}
     if route.kind=="quest" or route.kind=="quest_container" then
         local goal=get(data().quests,route.questID) or {}
@@ -389,6 +403,9 @@ function GetGear:GetAcquisitionRouteFactionSide(gear,route)
     local restricted=route.serviceSide or route.offer and route.offer.side
     if restricted then return restricted end
     if route.kind=="vendor" or route.kind=="recipe_vendor" or route.kind=="trainer" or route.kind=="vendor_container" then
+        local reviewed=self.CommercePolicyData and (self.CommercePolicyData.sources[route.source]
+            or (self.CommercePolicyData.opposingSources or {})[route.source])
+        if reviewed then return reviewed.serviceSide end
         local actor=data().sources[route.source] or {}
         if actor.serviceSide then return actor.serviceSide end
         local origin=route.bookItemID or (route.kind=="recipe_vendor" or route.kind=="trainer") and gear and gear.recipePatternItemID or gear and gear.itemID
@@ -420,7 +437,8 @@ local function routesForCharacter(model,plan,context,gear)
         raceID=id or ({Human=1,Orc=2,Dwarf=3,NightElf=4,Scourge=5,Tauren=6,Gnome=7,Troll=8})[raceToken]
     end
     local useful={}
-    for _,route in ipairs(routes) do
+    for _,rawRoute in ipairs(routes) do
+        local route=GetGear.ProjectAcquisitionRoute and GetGear:ProjectAcquisitionRoute(gear,rawRoute) or rawRoute
         local restricted=GetGear:GetAcquisitionRouteFactionSide(gear,route)
         local classMask
         local raceAllowed=true
@@ -502,9 +520,16 @@ function GetGear:GetFactionAcquisitionDescription(gear)
     local usable,reason=self:IsFactionUseEligible(gear)
     if not usable then return reason end
     local plan=planForGear(gear)
-    if not plan or #(plan.routes or {})==0 then return end
+    if not plan or #(plan.routes or {})==0 then
+        if self.GetUnverifiedAcquisitionDescription then return self:GetUnverifiedAcquisitionDescription(gear) end
+        return
+    end
     local eligible=routesForCharacter(data(),plan,nil,gear)
-    if #eligible==#plan.routes then return end
+    if #eligible==#plan.routes then
+        local projected=false
+        for _,route in ipairs(plan.routes) do if self.ProjectAcquisitionRoute and self:ProjectAcquisitionRoute(gear,route)~=route then projected=true;break end end
+        if not projected then return end
+    end
     if #eligible==0 then
         local craft=self:GetIndependentAcquisitionAccess(gear)
         if craft=="learned" then
@@ -513,7 +538,8 @@ function GetGear:GetFactionAcquisitionDescription(gear)
             return (gear.profession and "The known recipe produces a bind-on-equip item. Commissioning or trading the finished item" or "This verified bind-on-equip item can be traded; acquisition")
                 .." is possible if an offer is available; no current offer is confirmed. No published direct acquisition route is eligible for this character."
         end
-        return "No published acquisition route is eligible for this character. Source access is separate from equipment proficiency."
+        return (gear.profession and "Alliance learning source remains unverified. " or "Acquisition source remains unverified. ")..
+            "No published acquisition route is eligible for this character. Source access is separate from equipment proficiency."
     end
     local names={}
     for _,route in ipairs(eligible) do
@@ -586,12 +612,19 @@ function GetGear:GetCompactAcquisitionRequirements(gear)
     end
     local tooltip=tostring(source):match('Exact tooltip requirement:%s*([^%.]+)')
     if tooltip then out[#out+1]='Requires: '..tooltip end
+    local commerce=self.GetCommerceLearningRequirements and self:GetCommerceLearningRequirements(gear)
+    if commerce then
+        local filtered={}
+        for _,requirement in ipairs(out) do if not requirement:find('with this faction',1,true) then filtered[#filtered+1]=requirement end end
+        out=filtered
+        for _,requirement in ipairs(commerce) do out[#out+1]=requirement end
+    end
     return out
 end
 
 local function compactRecipeSummary(self,gear)
     if not gear or not gear.profession then return end
-    local model=data();local plan=get(model.items,gear.itemID)
+    local model=data();local plan=planForGear(gear)
     local minimum=self:GetRecipeSkillRequirement(gear)
     local skill=minimum and (" ("..minimum..")") or " (skill unverified)"
     -- Some reviewed gates predate structured offers. Preserve their explicitly
@@ -605,10 +638,11 @@ local function compactRecipeSummary(self,gear)
     -- existing explicit trainer method or multiple independently matched full
     -- teaching tables, a known minimum and no competing/restricted book route.
     local fact=get(model.recipeRequirements,gear.itemID) or {}
+    local eligibleRoutes=routesForCharacter(model,plan,nil,gear)
     local teachers,seen,spell,ordinary=0,{},nil,not historical and not gear.recipePatternItemID
         and not gear.recipeVendor and not fact.minimumDisputed and not publishedRequirement
         and gear.recipeLearnMethod~="pattern" and gear.recipeLearnMethod~="unknown"
-    for _,route in ipairs(plan and plan.routes or {}) do
+    for _,route in ipairs(eligibleRoutes) do
         if route.kind~="trainer" or route.verification~="published-reference"
             or not route.spellID or #(route.sourceRequirements or {})>0 or route.offer
             or route.cost or route.currency then ordinary=false end
@@ -621,10 +655,10 @@ local function compactRecipeSummary(self,gear)
         end
     end
     local explicit=gear.recipeLearnMethod=="trainer" or gear.professionLearnSource=="Trainer"
-    if ordinary and (explicit or teachers>=2 and minimum) then
+    if ordinary and #eligibleRoutes>0 and (explicit or teachers>=2 and minimum) then
         return "Recipe: "..gear.profession.." trainer"..skill
     end
-    if gear.recipeLearnMethod=="initial" and ordinary then
+    if gear.recipeLearnMethod=="initial" and ordinary and (not plan or #(plan.routes or {})==0 or #eligibleRoutes>0) then
         return "Recipe: learned with "..gear.profession..skill
     end
     if self:GetRecipeAcquisitionKind(gear)=="broad-book-drop" then
@@ -705,12 +739,13 @@ end
 
 function GetGear:GetCompactRecipeSummary(gear)
     if not gear or not gear.profession then return end
-    local plan=get(data().items,gear.itemID)
+    local unverified=self.GetUnverifiedAcquisitionDescription and self:GetUnverifiedAcquisitionDescription(gear)
+    if unverified then return unverified end
+    local plan=planForGear(gear)
     local routes=routesForCharacter(data(),plan,nil,gear)
     local summary=compactRecipeSummary(self,gear)
-    local routine=summary and summary:find('Recipe: '..gear.profession..' trainer',1,true)==1
-    if not routine and plan and #(plan.routes or {})>0 and #routes==0 then
-        summary="Recipe: no known source route for this character; see Guide"
+    if plan and #(plan.routes or {})>0 and #routes==0 then
+        summary="Recipe: Alliance learning source remains unverified; no known source route for this character; see Guide"
         local access=self:GetIndependentCraftAccess(gear)
         if access=="learned" then summary="Recipe already learned; no new book needed"
         elseif access=="tradeable" then summary="Recipe learning route unavailable; finished BoE: commission/trade if available" end
@@ -802,6 +837,7 @@ local QUEST_ROLE_IDENTITY={
 function GetGear:GetAcquisitionNavigationChoices(gear)
     if not gear then return {} end
     if gear.bagFromInventory then return {} end
+    if self.GetUnverifiedAcquisitionDescription and self:GetUnverifiedAcquisitionDescription(gear) then return {} end
     local model=data()
     local plan=planForGear(gear)
     if not plan and type(gear.acquisitionLocation)=="table" then
@@ -1051,7 +1087,12 @@ local ORDINARY_TRAVEL={named_drop=true,npc_container=true,object=true,vendor=tru
 
 function GetGear:GetAcquisitionRoutePracticality(gear,route,context,target)
     if not route then return "unknown" end
+    if self.ProjectAcquisitionRoute then route=self:ProjectAcquisitionRoute(gear,route) end
     if not self:IsAcquisitionRouteAccessible(gear,route,context) then return "ineligible" end
+    if self.GetTerritoryAcquisitionPracticality then
+        local status=self:GetTerritoryAcquisitionPracticality(gear,route,context,target)
+        if status then return status end
+    end
     -- Shared dungeons, accessible neutral quests and active quest guidance are
     -- deliberate destinations. Unknown prerequisites are never a travel veto.
     if route.kind=="dungeon" or route.kind=="quest" or route.kind=="quest_container" then return "practical" end
@@ -1084,21 +1125,23 @@ function GetGear:GetAcquisitionRoutePracticality(gear,route,context,target)
 end
 
 function GetGear:GetAcquisitionPracticality(gear,context)
-    if not gear or gear.bagUpgrade then return {status="practical"} end
+    if not gear or gear.bagFromInventory then return {status="practical"} end
     local routes,known=self:GetEligibleAcquisitionRoutes(gear,context)
     if known and #routes==0 and not self:GetIndependentAcquisitionAccess(gear,context) then return {status="ineligible"} end
-    local inconvenient,unknown=false,not known
+    local inconvenient,unknown,restricted=false,not known,false
     for _,route in ipairs(routes) do
         local status=self:GetAcquisitionRoutePracticality(gear,route,context)
         if status=="practical" then return {status="practical",route=route} end
-        if status=="unknown" then unknown=true else inconvenient=true end
+        if status=="restricted-territory" then restricted=true
+        elseif status=="unknown" then unknown=true else inconvenient=true end
     end
     -- Learned recipes and verified tradeable finished items are independent
     -- alternatives; no availability or current auction listing is invented.
     local craft=self:GetIndependentAcquisitionAccess(gear,context)
     if craft then
-        return {status="practical",alternative=craft or "tradeable",remoteOriginal=inconvenient and not unknown}
+        return {status="practical",alternative=craft or "tradeable",remoteOriginal=(inconvenient or restricted) and not unknown}
     end
+    if restricted and not unknown then return {status="restricted-territory",reason="Ordinary acquisition in opposing territory is suppressed by default; shared dungeons, quests and verified neutral vendors remain available in Guide."} end
     if unknown or not inconvenient then return {status="unknown"} end
     return {status="inconvenient",reason="Only known ordinary sources require low-level travel into opposing territory; browse alternatives in Guide."}
 end
@@ -1132,10 +1175,17 @@ function GetGear:IsMinorAcquisitionUpgrade(gear)
 end
 
 function GetGear:GetAcquisitionOverlayExclusion(gear)
-    if not gear or gear.bagUpgrade then return end
+    if not gear then return end
     local usable,reason=self:IsFactionUseEligible(gear)
     if not usable then return reason end
+    if gear.bagFromInventory then return end
     if not self:HasEligibleAcquisitionSource(gear) then return "No published source route for this character's faction/class" end
+    if gear.bagUpgrade then
+        if not (self.db and self.db.overlay and self.db.overlay.showAllValidGear) and self:GetAcquisitionPracticality(gear).status=='restricted-territory' then
+            return 'Ordinary bag acquisition in opposing territory is suppressed by default'
+        end
+        return
+    end
     local policy=get(data().availability,gear.itemID)
     if policy and policy.overlayEligible==false then return policy.reason or "Current Forever availability unconfirmed" end
     local plan=gear.acquisitionPlan or get(data().items,gear.itemID)
@@ -1148,6 +1198,7 @@ function GetGear:GetAcquisitionOverlayExclusion(gear)
     end
     if not (self.db and self.db.overlay and self.db.overlay.showAllValidGear) then
         local assessment=self:GetAcquisitionPracticality(gear)
+        if assessment.status=="restricted-territory" then return assessment.reason end
         if assessment.status=="inconvenient" and self:IsMinorAcquisitionUpgrade(gear) then return assessment.reason end
     end
 end
@@ -1215,7 +1266,12 @@ function GetGear:GetAcquisitionDirections(gear)
         out[#out+1]="Physical pattern: broad/random published drop references, not a targeted farm. Listed enemy/zone examples do not confirm current loot. If tradeable, consider the Auction House or player trade; current listings are unknown."
     end
     local plan=gear and gear.acquisitionPlan or get(data().items,gear and gear.itemID)
+    local listedBooks={}
     for _, route in ipairs(routesForCharacter(data(),plan,nil,gear)) do
+        if gear and gear.profession and route.bookItemID and route.kind~='quest' and not listedBooks[route.bookItemID] then
+            out[#out+1]='Recipe book reference: #'..route.bookItemID..'. Other learning methods remain separate.'
+            listedBooks[route.bookItemID]=true
+        end
         if route.kind=="npc_container" then
             out[#out+1]="Possible equipment from container #"..route.containerItemID.."; the NPC drops the container, not guaranteed finished equipment."
         elseif route.kind=="vendor_container" then
