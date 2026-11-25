@@ -47,3 +47,26 @@ event('BANKFRAME_OPENED');event('BANKFRAME_CLOSED')
 local closed=c.bank;broken=true;flush();assert(c.bank==closed)
 assert(GetGear_AccountDB==db and not GetGear_CharacterDB,'ledger must remain independent of character settings')
 print('PASS account inventory: readable/empty/unavailable bags and purchased bank tabs, stale snapshots preserved, bank closure and delayed scans, realm/faction totals, account persistence; synthetic only')
+-- A failure in an equipped/reagent bag must preserve the entire last snapshot.
+broken=false;empty=false
+local oldSlots=C_Container.GetContainerNumSlots
+C_Container.GetContainerNumSlots=function(id)if id==3 then error('bag loading')end;return oldSlots(id)end
+local retainedBags=c.bags;assert(not a.AltInventory:ScanBags() and c.bags==retainedBags)
+C_Container.GetContainerNumSlots=oldSlots
+-- One purchased tab loading must not replace a complete bank with half its data.
+event('BANKFRAME_OPENED');flush();local retainedBank=c.bank
+C_Container.GetContainerNumSlots=function(id)if id==7 then return 0 end;return oldSlots(id)end
+assert(not a.AltInventory:ScanBank() and c.bank==retainedBank)
+C_Container.GetContainerNumSlots=oldSlots
+-- An open-bank logout captures the latest synchronous state, without UI visibility.
+stamp=300;empty=true;event('PLAYER_LOGOUT')
+assert(c.bankAt==300 and next(c.bank)==nil and c.bagsAt==300 and next(c.bags)==nil)
+event('BANKFRAME_CLOSED')
+print('PASS inventory collection audit: non-backpack API failure, partially loaded purchased bank, final open-bank logout; snapshots atomic and UI-independent')
+-- Failure to enumerate purchased tabs cannot downgrade a retained full snapshot.
+empty=false;event('BANKFRAME_OPENED');flush()
+local complete=c.bank;local at=c.bankAt
+C_Bank.FetchPurchasedBankTabData=function()error('tab list not ready')end
+assert(not a.AltInventory:ScanBank() and c.bank==complete and c.bankAt==at)
+event('BANKFRAME_CLOSED')
+print('PASS bank completeness: missing purchased-tab API preserves the retained complete snapshot')

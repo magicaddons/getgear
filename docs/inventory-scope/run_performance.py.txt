@@ -1,0 +1,20 @@
+from pathlib import Path
+import subprocess,json,re,statistics
+out=Path('/workspace/artifacts/alt-inventory/delivery-performance.txt');data={}
+with out.open('w') as f:
+ for version in ('lua54','lua51'):
+  lua='/workspace/toolchains/'+version+'/usr/bin/'+('lua5.4' if version=='lua54' else 'lua5.1')
+  for repeat in range(3):
+   for label,root in [('baseline','/workspace/artifacts/alt-inventory/baseline'),('fixed','.')][::1 if repeat%2==0 else -1]:
+    for script in ('tests/inventory-scope-performance.lua','tests/inventory-events.lua','/workspace/artifacts/alt-inventory/material-summary-benchmark.lua'):
+     cmd=[lua]+(['tools/release/lua51-harness.lua']if version=='lua51' else [])+[script,root]
+     p=subprocess.run(cmd,text=True,capture_output=True)
+     f.write(f'{label} {version} repeat {repeat+1} {script}\n'+p.stdout+p.stderr+'\n');f.flush()
+     assert p.returncode==0,p.stdout+p.stderr
+     values=data.setdefault(version,{}).setdefault(label,{'scope':[],'summaries':[]})
+     m=re.search(r'initialize ([0-9.]+)s; browse ([0-9.]+)s;',p.stdout)
+     if m:values['scope'].append(tuple(map(float,m.groups())))
+     m=re.search(r'1000 material summaries \(50 characters\): ([0-9.]+) seconds',p.stdout)
+     if m:values['summaries'].append(float(m[1]))
+summary={v:{k:{'initializeMedianSeconds':statistics.median(r[0] for r in rows['scope']),'browse200MedianSeconds':statistics.median(r[1]for r in rows['scope']),'browseOneMedianMilliseconds':statistics.median(r[1]for r in rows['scope'])*5,'materialSummaryOneMedianMilliseconds':statistics.median(rows['summaries'])}for k,rows in groups.items()}for v,groups in data.items()}
+Path('/workspace/artifacts/alt-inventory/delivery-performance-summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary,indent=2))

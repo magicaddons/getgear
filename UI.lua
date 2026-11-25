@@ -1046,7 +1046,7 @@ local function InventoryScopeName(scope)
     if scope=="eligible" then return "Same realm/faction" end
     if scope=="current" then return "Current character" end
     if scope=="alts" then return "Eligible alts" end
-    if scope=="other" then return "Other realms/factions" end
+    if scope=="other" then return "Other / unknown realm/faction" end
     if scope=="all" then return "All saved characters*" end
     for _,c in ipairs(inventoryChoices) do
         if scope==c.key then return c.name.." ("..c.realm..")" end
@@ -1197,7 +1197,9 @@ RefreshInventoryBrowser=function(resetScroll)
     inventoryStatus:SetText(#inventoryResults.." items  |  "..#inventoryMeta.characters.." character(s)  |  "
         ..inventoryMeta.missingBanks.." bank(s) unscanned"
         ..(inventoryMeta.missingBags>0 and ("  |  "..inventoryMeta.missingBags.." bag(s) unscanned") or "")
-        ..(inventoryMeta.partialBanks>0 and ("  |  "..inventoryMeta.partialBanks.." partial bank(s)") or ""))
+        ..(inventoryMeta.partialBanks>0 and ("  |  "..inventoryMeta.partialBanks.." partial bank(s)") or "")
+        ..((inventoryMeta.unresolvedCharacters or 0)>0 and
+            ("  |  "..inventoryMeta.unresolvedCharacters.." unresolved character(s); see Other scope") or ""))
     inventoryHelp:SetText(inventoryScope=="all" and
         "*Different realms/factions are combined for browsing only; transfers are not guaranteed."
         or "Click an item for locations and scan dates. A + means some inventories are unscanned.")
@@ -1233,6 +1235,7 @@ inventoryScopeButton:SetScript("OnEnter",function(self)
     GameTooltip:AddLine("Inventory scope",1,0.84,0.42)
     GameTooltip:AddLine("Click to cycle current character, eligible alts, other characters, and individual saved characters.",1,1,1,true)
     GameTooltip:AddLine("Combined transferable totals use same-realm/faction only; all-character mode is for reference.",0.78,0.84,0.91,true)
+    GameTooltip:AddLine("Unresolved records remain in Other / unknown, All, and individual scopes. Login establishes missing identity without a bank visit. Conflicting identities are retained for review.",0.78,0.84,0.91,true)
     GameTooltip:Show()
 end)
 inventoryScopeButton:SetScript("OnLeave",HideItemTooltip)

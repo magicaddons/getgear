@@ -1,0 +1,144 @@
+baseline lua54 repeat 1 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.000034s; browse 0.673941s; retained heap 1.50KiB; container reads 0 (synthetic)
+
+baseline lua54 repeat 1 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000136s total 0.024632s heap delta 1186.2KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000058s total 0.000159s heap delta 2.0KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000030s total 0.023660s heap delta 1499.8KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+baseline lua54 repeat 1 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.073366 seconds
+
+fixed lua54 repeat 1 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.010267s; browse 0.614572s; retained heap 1.72KiB; container reads 0 (synthetic)
+
+fixed lua54 repeat 1 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000033s total 0.020829s heap delta 1186.3KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000035s total 0.000161s heap delta 2.1KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000032s total 0.024352s heap delta 1499.9KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+fixed lua54 repeat 1 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.281343 seconds
+
+fixed lua54 repeat 2 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.010103s; browse 0.593091s; retained heap 1.72KiB; container reads 0 (synthetic)
+
+fixed lua54 repeat 2 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000028s total 0.019287s heap delta 1186.3KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000031s total 0.000174s heap delta 2.1KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000030s total 0.024990s heap delta 1499.9KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+fixed lua54 repeat 2 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.269155 seconds
+
+baseline lua54 repeat 2 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.000012s; browse 0.555797s; retained heap 1.50KiB; container reads 0 (synthetic)
+
+baseline lua54 repeat 2 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000034s total 0.020062s heap delta 1186.2KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000033s total 0.000206s heap delta 2.0KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000030s total 0.025757s heap delta 1499.8KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+baseline lua54 repeat 2 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.072378 seconds
+
+baseline lua54 repeat 3 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.000011s; browse 0.550171s; retained heap 1.50KiB; container reads 0 (synthetic)
+
+baseline lua54 repeat 3 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000039s total 0.021269s heap delta 1186.2KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000088s total 0.000194s heap delta 2.0KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000031s total 0.027101s heap delta 1499.8KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+baseline lua54 repeat 3 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.072741 seconds
+
+fixed lua54 repeat 3 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.010623s; browse 0.597303s; retained heap 1.72KiB; container reads 0 (synthetic)
+
+fixed lua54 repeat 3 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000030s total 0.020997s heap delta 1186.3KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000032s total 0.000157s heap delta 2.1KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000028s total 0.027312s heap delta 1499.9KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+fixed lua54 repeat 3 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.276808 seconds
+
+baseline lua51 repeat 1 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.000016s; browse 0.664216s; retained heap 2.50KiB; container reads 0 (synthetic)
+
+baseline lua51 repeat 1 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000036s total 0.022171s heap delta 1513.6KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000043s total 0.000203s heap delta 2.6KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000036s total 0.028177s heap delta 1815.2KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+baseline lua51 repeat 1 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.089362 seconds
+
+fixed lua51 repeat 1 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.008574s; browse 0.701587s; retained heap 2.78KiB; container reads 0 (synthetic)
+
+fixed lua51 repeat 1 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000035s total 0.023795s heap delta 1513.7KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000033s total 0.000246s heap delta 2.7KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000035s total 0.030359s heap delta 1815.3KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+fixed lua51 repeat 1 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.311956 seconds
+
+fixed lua51 repeat 2 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.011044s; browse 0.702394s; retained heap 2.78KiB; container reads 0 (synthetic)
+
+fixed lua51 repeat 2 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000035s total 0.022933s heap delta 1513.7KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000029s total 0.000209s heap delta 2.7KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000032s total 0.029795s heap delta 1815.3KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+fixed lua51 repeat 2 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.326395 seconds
+
+baseline lua51 repeat 2 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.000012s; browse 0.649929s; retained heap 2.50KiB; container reads 0 (synthetic)
+
+baseline lua51 repeat 2 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000036s total 0.023306s heap delta 1513.6KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000034s total 0.000240s heap delta 2.6KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000036s total 0.030398s heap delta 1815.2KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+baseline lua51 repeat 2 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.087696 seconds
+
+baseline lua51 repeat 3 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.000011s; browse 0.669896s; retained heap 2.50KiB; container reads 0 (synthetic)
+
+baseline lua51 repeat 3 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000033s total 0.023607s heap delta 1513.6KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000034s total 0.000193s heap delta 2.6KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000033s total 0.032440s heap delta 1815.2KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+baseline lua51 repeat 3 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.085285 seconds
+
+fixed lua51 repeat 3 tests/inventory-scope-performance.lua
+MEASURE inventory scope: 50 characters x 50 item IDs; 200 switches; initialize 0.010684s; browse 0.691604s; retained heap 2.78KiB; container reads 0 (synthetic)
+
+fixed lua51 repeat 3 tests/inventory-events.lua
+MEASURE inventory overlay: 36 events; 1 list scans, 1 bag snapshots, 100 slot reads; sync 0.000031s total 0.023423s heap delta 1513.7KiB (GC-sensitive, synthetic)
+MEASURE inventory hidden: 36 events; 0 list scans, 1 bag snapshots, 36 slot reads; sync 0.000075s total 0.000253s heap delta 2.7KiB (GC-sensitive, synthetic)
+MEASURE inventory detail+overlay: 36 events; 2 list scans, 1 bag snapshots, 100 slot reads; sync 0.000034s total 0.030928s heap delta 1815.3KiB (GC-sensitive, synthetic)
+PASS inventory events: bounded refresh/ledger work, hidden/visible/detail, latest state, repeated bursts, target exclusion, synchronous logout, profiling and timer-free fallback; synthetic only
+
+fixed lua51 repeat 3 /workspace/artifacts/alt-inventory/material-summary-benchmark.lua
+1000 material summaries (50 characters): 0.32292 seconds
+

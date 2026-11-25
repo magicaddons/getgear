@@ -14,24 +14,188 @@ local function Clock()
     return 0
 end
 
+-- Compare canonical identity without changing saved ledger keys. Unknown values
+-- are never proof that two characters share a realm or faction.
+local function Text(value)
+    if type(value)~="string" then return nil end
+    value=value:match("^%s*(.-)%s*$")
+    if value=="" or value:lower()=="unknown" then return nil end
+    return value
+end
+local function Realm(value)
+    value=Text(value)
+    return value and value:lower():gsub("[%s%-%']", "") or nil
+end
+local function SameName(a,b)
+    return a~=nil and b~=nil and a:lower()==b:lower()
+end
+local function Faction(value)
+    value=Text(value)
+    if not value then return nil end
+    local lower=value:lower()
+    if lower=="alliance" or value==FACTION_ALLIANCE then return "Alliance" end
+    if lower=="horde" or value==FACTION_HORDE then return "Horde" end
+    return nil
+end
+local function RealmID(value)
+    local id=tonumber(value)
+    if id and id>0 and id==math.floor(id) then return id end
+end
+local function GuidRealm(guid)
+    return type(guid)=="string" and RealmID(guid:match("^Player%-(%d+)%-")) or nil
+end
+local function Read(fn,...)
+    if type(fn)~="function" then return nil end
+    local ok,value=pcall(fn,...)
+    if ok then return value end
+end
 local function Identity()
-    local name = type(UnitName)=="function" and UnitName("player") or nil
-    local realm = type(GetRealmName)=="function" and GetRealmName() or nil
-    if not name or name=="" or not realm or realm=="" then return nil end
-    local faction=type(UnitFactionGroup)=="function" and UnitFactionGroup("player") or "Unknown"
-    return realm .. ":" .. name, name, realm, faction
+    local name=Text(Read(UnitName,"player"))
+    local realm=Text(Read(GetRealmName)) or Text(Read(GetNormalizedRealmName))
+    if not realm and type(UnitFullName)=="function" then
+        local ok,_,fullRealm=pcall(UnitFullName,"player")
+        if ok then realm=Text(fullRealm) end
+    end
+    if not name or not realm then return nil end
+    local guid=Read(UnitGUID,"player")
+    return realm..":"..name,name,realm,Faction(Read(UnitFactionGroup,"player")),
+        RealmID(Read(GetRealmID)) or GuidRealm(guid),guid
+end
+local function Metadata(key,c)
+    local keyRealm,keyName
+    if type(key)=="string" then keyRealm,keyName=key:match("^([^:]+):([^:]+)$") end
+    -- The historical writer always used Realm:Name. A key can fill a missing
+    -- field, but cannot override explicit metadata or supply a faction.
+    return Text(c.name) or Text(keyName),Text(c.realm) or Text(keyRealm),
+        Faction(c.faction),RealmID(c.realmID) or GuidRealm(c.guid)
+end
+local function SameRealm(ar,ai,br,bi)
+    if ai and bi then return ai==bi end
+    local a,b=Realm(ar),Realm(br)
+    return a~=nil and b~=nil and a==b
+end
+local function Eligible(realm,id,faction,currentRealm,currentID,currentFaction)
+    return faction~=nil and currentFaction~=nil and faction==currentFaction
+        and SameRealm(realm,id,currentRealm,currentID)
 end
 
+local function CharacterIdentity(key,c,currentName,currentRealm,currentFaction,currentID,currentGUID)
+    local name,realm,faction,id=Metadata(key,c)
+    local sameCharacter=SameName(name,currentName) and SameRealm(realm,id,currentRealm,currentID)
+    local conflict=c.inventoryIdentityConflict or (sameCharacter and c.guid and currentGUID and c.guid~=currentGUID)
+    return name,realm,faction,not conflict and sameCharacter,
+        not conflict and Eligible(realm,id,faction,currentRealm,currentID,currentFaction),
+        conflict or not realm or not faction
+end
+
+-- Reconcile formatting aliases once at login. Retain original records as
+-- evidence; use the latest complete snapshot per storage, never sum aliases.
+-- Conflicting identities remain separate and are labelled unresolved below.
+function Ledger:ReconcileMetadata()
+    local records=GetGear_AccountDB.characters
+    local keys={}
+    for key,c in pairs(records) do
+        if type(c)=="table" then
+            keys[#keys+1]=key
+            local name,realm,faction,id=Metadata(key,c)
+            c.name=name; c.realm=realm
+            if faction then c.faction=faction end
+            if id then c.realmID=id end
+            c.inventoryAliasOf=nil
+            c.inventoryIdentityConflict=nil
+        end
+    end
+    table.sort(keys,function(a,b)return tostring(a)<tostring(b) end)
+    -- Detect ambiguous groups before merging any member (including aliases
+    -- lacking a GUID/faction between two contradictory known records).
+    for _,key in ipairs(keys) do
+        local c=records[key]
+        local name,realm,faction,id=Metadata(key,c)
+        local guid=c.guid
+        local groupID=id
+        for _,otherKey in ipairs(keys) do
+            local other=records[otherKey]
+            local on,orr,of,oi=Metadata(otherKey,other)
+            if SameName(name,on)
+                and (SameRealm(realm,id,orr,oi) or (Realm(realm) and Realm(realm)==Realm(orr)))
+                and (not id or not oi or id==oi) then
+                if (guid and other.guid and guid~=other.guid)
+                    or (faction and of and faction~=of) or (groupID and oi and groupID~=oi) then
+                    c.inventoryIdentityConflict=true
+                end
+                guid=guid or other.guid;faction=faction or of;groupID=groupID or oi
+            end
+        end
+    end
+    for i,key in ipairs(keys) do
+        local c=records[key]
+        if not c.inventoryAliasOf and not c.inventoryIdentityConflict then
+            local name,realm,faction,id=Metadata(key,c)
+            for j=i+1,#keys do
+                local otherKey=keys[j];local other=records[otherKey]
+                local on,orr,of,oi=Metadata(otherKey,other)
+                if not other.inventoryAliasOf and not other.inventoryIdentityConflict
+                    and SameName(name,on)
+                    and SameRealm(realm,id,orr,oi) then
+                    for _,storage in ipairs({"bags","bank"}) do
+                        local at=storage.."At"
+                        local moreComplete=storage=="bank" and c.bankPartial and not other.bankPartial
+                        local lessComplete=storage=="bank" and not c.bankPartial and other.bankPartial
+                        if type(other[storage])=="table" and (type(c[storage])~="table" or moreComplete
+                            or (not lessComplete and (tonumber(other[at]) or 0)>(tonumber(c[at]) or 0))) then
+                            c[storage]=other[storage];c[at]=other[at]
+                            if storage=="bank" then
+                                c.bankPartial=other.bankPartial;c.bankTabCount=other.bankTabCount
+                            end
+                        end
+                    end
+                    c.faction=faction or of;c.realmID=id or oi;c.guid=c.guid or other.guid
+                    faction=c.faction;id=c.realmID
+                    other.inventoryAliasOf=key
+                end
+            end
+        end
+    end
+    GetGear_AccountDB.inventorySchemaVersion=2
+end
+
+local currentRecord,currentRecordKey
 local function Current()
-    local key,name,realm,faction=Identity()
+    local key,name,realm,faction,id,guid=Identity()
     local db=GetGear_AccountDB
     if not key or type(db)~="table" or type(db.characters)~="table" then return nil end
-    local c=db.characters[key]
-    if type(c)~="table" then
-        c={name=name,realm=realm,faction=faction}
-        db.characters[key]=c
+    if currentRecord and currentRecordKey and db.characters[currentRecordKey]==currentRecord then
+        local n,r,_,ri=Metadata(currentRecordKey,currentRecord)
+        if not SameName(n,name) or not SameRealm(r,ri,realm,id) then currentRecord=nil end
     end
-    c.name=name; c.realm=realm; c.faction=faction
+    local c=currentRecord
+    if not c then
+        c=db.characters[key]
+        if type(c)=="table" and c.inventoryAliasOf then key=c.inventoryAliasOf;c=db.characters[key] end
+        if type(c)~="table" then
+            -- Formatting changes must reuse a recorded bank instead of creating
+            -- a second character. Metadata reconciliation already merges aliases.
+            for savedKey,record in pairs(db.characters) do
+                if type(record)=="table" and not record.inventoryAliasOf then
+                    local n,r,_,ri=Metadata(savedKey,record)
+                    if SameName(n,name) and SameRealm(r,ri,realm,id)
+                        and not record.inventoryIdentityConflict
+                        and (not record.guid or not guid or record.guid==guid) then c=record;key=savedKey;break end
+                end
+            end
+        end
+        if type(c)~="table" then c={};db.characters[key]=c end
+        currentRecord=c;currentRecordKey=key
+    else key=currentRecordKey end
+    if c.inventoryIdentityConflict or (c.guid and guid and c.guid~=guid) then return nil end
+    local savedName,savedRealm,_,savedID=Metadata(key,c)
+    if (savedName and not SameName(savedName,name)) or (savedRealm and not SameRealm(savedRealm,savedID,realm,id)) then return nil end
+    if savedID and id and savedID~=id then return nil end
+    c.name=name;c.realm=realm
+    -- Unavailable login APIs must not erase previously established metadata.
+    if faction then c.faction=faction end
+    if id then c.realmID=id end
+    if guid then c.guid=guid end
     return c,key
 end
 
@@ -79,8 +243,8 @@ function Ledger:ScanBags()
         if items then
             if id==0 and slots>0 then backpackSeen=true end
             Merge(totals,items)
-        elseif id==0 then
-            return false
+        else
+            return false -- one unavailable bag must not erase its previous contents
         end
     end
     if not backpackSeen then return false end -- bags not loaded yet
@@ -118,12 +282,16 @@ function Ledger:ScanBank()
     for _,id in ipairs(tabs) do
         local items,n=ReadBag(id)
         if not items then return false end
-        if n>0 then readable=readable+1 end
+        if n>0 then readable=readable+1
+        elseif known then return false end -- purchased tab still loading
         Merge(totals,items)
     end
     -- An opening bank can initially return zero slots while tabs load.
     -- No successful tab scan => never erase the last known bank snapshot.
     if readable==0 then return false end
+    -- Without a purchased-tab list we cannot prove a partial result replaces
+    -- an existing snapshot safely. Keep it until a complete read is possible.
+    if not known and type(c.bank)=="table" then return false end
     c.bank=totals
     c.bankAt=Clock()
     c.bankTabCount=readable
@@ -136,6 +304,8 @@ end
 function Ledger:Initialize()
     if type(GetGear_AccountDB)~="table" then GetGear_AccountDB={} end
     if type(GetGear_AccountDB.characters)~="table" then GetGear_AccountDB.characters={} end
+    self:ReconcileMetadata()
+    currentRecord=nil;currentRecordKey=nil
     self:ScanBags()
 end
 
@@ -148,14 +318,16 @@ function GetGear:GetAltMaterialSummary(itemID)
     if type(bagCount)~="number" then bagCount=c.bags and (c.bags[itemID] or 0) or nil end
     local ownBank=(type(c.bank)=="table") and (c.bank[itemID] or 0) or 0
     local alts,other,details=0,0,{}
+    local _,currentName,currentRealm,currentFaction,currentID,currentGUID=Identity()
     for otherKey,record in pairs(GetGear_AccountDB.characters) do
-        if otherKey~=key and type(record)=="table" then
+        if otherKey~=key and type(record)=="table" and not record.inventoryAliasOf then
             local bags=type(record.bags)=="table" and (record.bags[itemID] or 0) or 0
             local bank=type(record.bank)=="table" and (record.bank[itemID] or 0) or 0
             if bags+bank>0 then
-                local same=(record.realm==c.realm and record.faction==c.faction)
+                local name,realm,_,_,same=CharacterIdentity(otherKey,record,
+                    currentName,currentRealm,currentFaction,currentID,currentGUID)
                 if same then alts=alts+bags+bank else other=other+bags+bank end
-                details[#details+1]={name=record.name or otherKey,realm=record.realm,
+                details[#details+1]={name=name or tostring(otherKey),realm=realm,
                     bags=bags,bank=bank,bankAt=record.bankAt,bagsAt=record.bagsAt,
                     transferable=same}
             end
@@ -193,14 +365,16 @@ local function InventoryItemName(id)
 end
 
 function Ledger:BrowserCharacters()
-    local currentKey,currentName,currentRealm,currentFaction=Identity()
+    local _,currentName,currentRealm,currentFaction,currentID,currentGUID=Identity()
     local records=GetGear_AccountDB and GetGear_AccountDB.characters or {}
     local result={}
     for key,c in pairs(records) do
-        if type(c)=="table" then
-            result[#result+1]={key=key,name=c.name or key,realm=c.realm or "Unknown",
-                faction=c.faction or "Unknown",current=key==currentKey,
-                eligible=c.realm==currentRealm and c.faction==currentFaction,
+        if type(c)=="table" and not c.inventoryAliasOf then
+            local name,realm,faction,current,eligible,unknown=CharacterIdentity(key,c,
+                currentName,currentRealm,currentFaction,currentID,currentGUID)
+            result[#result+1]={key=key,name=name or tostring(key),realm=realm or "Unknown",
+                faction=faction or "Unknown",current=current,eligible=eligible,
+                metadataUnknown=unknown,
                 bagsKnown=type(c.bags)=="table",bankKnown=type(c.bank)=="table",
                 bagsAt=c.bagsAt,bankAt=c.bankAt,bankPartial=c.bankPartial,
                 bankTabCount=c.bankTabCount}
@@ -222,8 +396,9 @@ function Ledger:BrowseItems(scope,query)
     local items,selected={},{}
     local records=GetGear_AccountDB and GetGear_AccountDB.characters or {}
     local all=(scope=="all")
-    local unknownBanks,unknownBags,partialBanks=0,0,0
+    local unknownBanks,unknownBags,partialBanks,unknownMetadata,unresolvedCharacters=0,0,0,0,0
     for _,c in ipairs(chars) do
+        if c.metadataUnknown then unresolvedCharacters=unresolvedCharacters+1 end
         local include=(scope=="eligible" and c.eligible)
             or (scope=="current" and c.current)
             or (scope=="alts" and c.eligible and not c.current)
@@ -231,6 +406,7 @@ function Ledger:BrowseItems(scope,query)
             or all or (scope==c.key)
         if include then
             selected[#selected+1]=c
+            if c.metadataUnknown then unknownMetadata=unknownMetadata+1 end
             if not c.bankKnown then unknownBanks=unknownBanks+1 end
             if not c.bagsKnown then unknownBags=unknownBags+1 end
             if c.bankPartial then partialBanks=partialBanks+1 end
@@ -286,7 +462,8 @@ function Ledger:BrowseItems(scope,query)
     end)
     return results,{characters=selected,missingBanks=unknownBanks,
         missingBags=unknownBags,partialBanks=partialBanks,
-        eligibleOnly=not all and scope~="other",totalInScope=#results}
+        unknownMetadata=unknownMetadata,unresolvedCharacters=unresolvedCharacters,
+        eligibleOnly=scope=="eligible" or scope=="alts",totalInScope=#results}
 end
 
 function Ledger:FormatScanTime(value)
@@ -352,6 +529,7 @@ frame:SetScript("OnEvent",function(_,event)
         -- for a timer that cannot run once the client closes.
         pendingBagScan=nil
         Ledger:ScanBags()
+        if event=="PLAYER_LOGOUT" and bankOpen then Ledger:ScanBank() end
     end
     if event=="BANKFRAME_OPENED" then
         bankOpen=true

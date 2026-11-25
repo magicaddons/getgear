@@ -1,0 +1,30 @@
+{
+  "lua54": {
+    "baseline": {
+      "initializeMedianSeconds": 1.2e-05,
+      "browse200MedianSeconds": 0.555797,
+      "browseOneMedianMilliseconds": 2.778985,
+      "materialSummaryOneMedianMilliseconds": 0.072741
+    },
+    "fixed": {
+      "initializeMedianSeconds": 0.010267,
+      "browse200MedianSeconds": 0.597303,
+      "browseOneMedianMilliseconds": 2.9865150000000003,
+      "materialSummaryOneMedianMilliseconds": 0.276808
+    }
+  },
+  "lua51": {
+    "baseline": {
+      "initializeMedianSeconds": 1.2e-05,
+      "browse200MedianSeconds": 0.664216,
+      "browseOneMedianMilliseconds": 3.3210800000000003,
+      "materialSummaryOneMedianMilliseconds": 0.087696
+    },
+    "fixed": {
+      "initializeMedianSeconds": 0.010684,
+      "browse200MedianSeconds": 0.701587,
+      "browseOneMedianMilliseconds": 3.507935,
+      "materialSummaryOneMedianMilliseconds": 0.32292
+    }
+  }
+}

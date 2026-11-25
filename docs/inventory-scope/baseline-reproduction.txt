@@ -1,0 +1,6 @@
+/workspace/toolchains/lua54/usr/bin/lua5.4: tests/inventory-scope.lua:25: eligible expected 35 got 1
+stack traceback:
+	[C]: in function 'assert'
+	tests/inventory-scope.lua:25: in local 'count'
+	tests/inventory-scope.lua:29: in main chunk
+	[C]: in ?

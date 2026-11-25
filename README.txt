@@ -79,3 +79,11 @@ HELP / RELEASE NOTES
 https://github.com/magicaddons/getgear
 https://github.com/magicaddons/getgear/issues
 Include addon version, class/level, item ID/name, symptoms and any Lua error.
+
+Private inventory-scope testing build (25 November 2026): preserves Beta 11
+and the overlay idle/group improvements. Same-realm/faction inventory uses
+normalized, evidence-backed identity; legacy keys and formatting aliases retain
+recorded banks. Unknown identity stays accessible in Other / unknown, All, and
+individual scopes. Scope choices remain transient and reopen at Same realm/faction.
+Install the entire GetGear folder, retaining SavedVariables. Live Forever testing
+is pending; this private build is not a public release.
