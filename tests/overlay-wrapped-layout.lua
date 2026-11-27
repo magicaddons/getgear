@@ -58,7 +58,7 @@ local env=setmetatable({GetGear=addon,self=addon,opacity=0.8,overlayRows=rows,ob
 local measure=section('local function MeasureText(', '\nlocal function NewButton(')
 local helpers=section('local wishlistUI =', 'wishlistUI.detailGroups=')
 local factory=section('local OVERLAY_IDENTITY_TOP =', '\nlocal matHeader =')
-local header=section('local function ShowOverlayMaterialHeader(', '\nfunction GetGear:RefreshOverlay()')
+local header=section('local function ShowOverlayMaterialHeader(', '\nfunction GetGear:RefreshOverlay(')
 local body=section('                local r = overlayRows[i] or NewOverlayRow(i)', '\n            end\n        end\n    end\n    for i=(opts.objectivesCollapsed')
 local render=assert(load(measure..helpers..factory..header..'\nreturn function(gear,opts)\nlocal i,totalY=1,0\n'..body..'\nreturn r,totalY\nend','real overlay rows','t',env))()
 local function y(f)return -f.point[#f.point]end
