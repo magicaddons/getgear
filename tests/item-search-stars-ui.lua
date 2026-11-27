@@ -33,7 +33,7 @@ local function event(name,...)
 end
 local sourceCalls=0;local sourceFn=addon.HasEligibleAcquisitionSource
 addon.HasEligibleAcquisitionSource=function(...)sourceCalls=sourceCalls+1;return sourceFn(...)end
-local db={schemaVersion=4,status={retained='skipped'},hidden={keep=true},overlay={visible=true,materialsCollapsed=true},detail={}}
+local db={schemaVersion=4,status={retained='skipped'},hidden={keep=true},overlay={visible=true,materialsCollapsed=true,materialScope='all'},detail={}}
 GetGear_CharacterDB=db;event('ADDON_LOADED','GetGear');advance(1)
 local overlay=GetGear_TrackerOverlay
 local popup=GetGear_ItemSearch
@@ -77,7 +77,10 @@ assert(empty)
 click(searchButton);assert(not popup:IsShown())
 -- Find a future class/faction-valid objective and exercise actual search callbacks.
 local future
-for _,r in ipairs(addon.Gear)do if r.targetLevel>=40 and not addon:GetSearchRestriction(addon:GetSearchRecord(r.itemID),true) then future=r;break end end
+for _,r in ipairs(addon.Gear)do
+ if r.targetLevel>=40 and not r.reagents and not addon:IsCraftMaterialsUnknown(r)
+    and not addon:GetSearchRestriction(addon:GetSearchRecord(r.itemID),true) then future=r;break end
+end
 assert(future)
 popup:Show();edit:SetText(future.name)
 assert(#addon:SearchEquipment(future.name,6)>0)
@@ -102,14 +105,14 @@ assert(materialSignature(addon:GetCombinedMaterialRows('tracked'))==materialSign
 
 -- Source/material comparisons from rows already rendered are reused on star clicks.
 local calls={};local originals={}
-for _,name in ipairs({'GetItems','GetCombinedMaterialRows','GetCraftingMaterialRows','GetUndocumentedCrafts','GetEligibleAcquisitionRoutes','GetGearComparison'})do
+for _,name in ipairs({'GetItems','GetStarredMaterialRows','GetCraftingMaterialRows','GetEligibleAcquisitionRoutes','GetGearComparison'})do
  originals[name]=addon[name];addon[name]=function(...)calls[name]=(calls[name]or 0)+1;return originals[name](...)end
 end
 -- Warm both arrangements once; no repeated full guide or totals rebuilds.
 addon:SetItemStarred(future.itemID,false);addon:SetItemStarred(future.itemID,true)
 calls={};local frameCount=#frames
 for _=1,40 do assert(addon:SetItemStarred(future.itemID,false));assert(addon:SetItemStarred(future.itemID,true))end
-assert(not calls.GetItems and not calls.GetCombinedMaterialRows and not calls.GetUndocumentedCrafts,'star click recomputed recommendations/totals')
+assert(not calls.GetItems and not calls.GetStarredMaterialRows,'non-craft star click recomputed recommendations/totals')
 print('TOGGLE source='..(calls.GetEligibleAcquisitionRoutes or 0)..' comparisons='..(calls.GetGearComparison or 0)..' materials='..(calls.GetCraftingMaterialRows or 0));assert((calls.GetEligibleAcquisitionRoutes or 0)<=160,'star toggles repeated source work')
 assert(#frames==frameCount,'repeated star toggles grew row pools')
 for name,fn in pairs(originals)do addon[name]=fn end
@@ -138,6 +141,60 @@ for _,mode in ipairs({'available','tracker'})do
  end
 end
 db.starredItems[14147]=nil
+-- The total follows actionable stars even with the old All setting saved.
+local function assertMaterials(...)
+ local expected={}
+ for _,gear in ipairs({...})do
+  for _,mat in ipairs(gear.reagents)do expected[mat.itemID]=(expected[mat.itemID] or 0)+mat.amount end
+ end
+ for _,frame in ipairs(frames)do
+  if frame.aggregate and frame.texture and frame:IsShown() and (frame.material.depth or 0)==0 then
+   assert(expected[frame.itemID]==frame.material.amount,'unexpected starred materials for '..frame.itemID)
+   expected[frame.itemID]=nil
+  end
+ end
+ assert(not next(expected),'missing starred material rows')
+end
+local currentCrafts={}
+for _,gear in ipairs(addon:GetItems('tracker'))do
+ for _,mat in ipairs(gear.reagents or {})do currentCrafts[mat.itemID]=gear end
+end
+local craft, futureCraft
+for _,gear in ipairs(addon.Gear)do
+ if gear.targetLevel>30 and gear.reagents
+    and not addon:GetSearchRestriction(addon:GetSearchRecord(gear.itemID),true) then
+  for _,mat in ipairs(gear.reagents)do
+   if currentCrafts[mat.itemID] then craft=currentCrafts[mat.itemID];futureCraft=gear;break end
+  end
+  if futureCraft then break end
+ end
+end
+assert(futureCraft,'catalogue fixture needs current and future crafts with a shared reagent')
+db.overlay.materialsCollapsed=false;addon:RefreshOverlay();assertMaterials()
+assert(addon:SetItemStarred(craft.itemID,true));assertMaterials(craft)
+assert(addon:SelectSearchItem(futureCraft.itemID))
+click(starButton(focus));assertMaterials(craft,futureCraft)
+addon:SetEquipmentSlotFilter('overlay','bags');addon:RefreshOverlayPresentation();assertMaterials(craft,futureCraft)
+addon:SetHidden(craft,true);assertMaterials(futureCraft)
+addon:SetHidden(craft,false);assertMaterials(craft,futureCraft)
+addon:SetStatus(craft,'acquired');assertMaterials(futureCraft)
+addon:SetStatus(craft,nil);assertMaterials(craft,futureCraft)
+assert(addon:SetItemStarred(craft.itemID,false));assertMaterials(futureCraft)
+local compileMaterials=addon.GetStarredMaterialRows
+addon.GetStarredMaterialRows=function(self,stars,expanded)
+ assert(not expanded,'collapsed tracker built material rows')
+ return compileMaterials(self,stars,expanded)
+end
+db.overlay.materialsCollapsed=true;addon:RefreshOverlay()
+assert(addon:SetItemStarred(futureCraft.itemID,false));assertMaterials()
+addon.GetStarredMaterialRows=compileMaterials
+db.overlay.materialsCollapsed=false;addon:RefreshOverlay();assertMaterials()
+local undocumented={name='Undocumented craft',profession='Tailoring'}
+local automaticBag={bagUpgrade=true,reagents=craft.reagents}
+local rows,missing,hasMaterials=compileMaterials(addon,{[1]=undocumented,[2]=automaticBag},true)
+assert(#rows==0 and missing[1]==undocumented and #missing==1 and not hasMaterials)
+db.overlay.materialsCollapsed=true
+addon:SetEquipmentSlotFilter('overlay','all');addon:RefreshOverlay();edit.scripts.OnEscapePressed(edit)
 -- A full-class wishlist has bounded rendered rows and direct ordinary navigation.
 local valid={}
 for _,r in ipairs(addon.Gear)do

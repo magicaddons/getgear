@@ -95,8 +95,7 @@ local mapped
 addon.GetAcquisitionMapTarget=function() return {zone="Test zone",spot="Test source",quality="forever"} end
 addon.OpenAcquisitionMap=function(_,gear) mapped=gear end
 local materialCalls=0
-addon.GetCombinedMaterialRows=function() materialCalls=materialCalls+1;return {} end
-addon.GetUndocumentedCrafts=function() return {} end
+addon.GetStarredMaterialRows=function() materialCalls=materialCalls+1;return {},{} end
 addon.ComparisonInline=function() return string.rep("+10 Strength +20 Stamina ",9),true end
 local previewedClass
 addon.GetPreviewRecommendations=function(_,class) previewedClass=class;return all end
@@ -295,13 +294,13 @@ print("PASS slot UI: real dropdown/render callbacks, counts before caps/pages, e
 -- Profile the real splitter callbacks with existing wrapped rows and a large
 -- material viewport. Dragging must never enter recommendation/row processing.
 selectSlot(overlayMenu,"Chest")
-addon.GetCombinedMaterialRows=function() materialCalls=materialCalls+1;local t={};for i=1,200 do t[i]={itemID=2996,name="Bolt of Linen Cloth",amount=i} end;return t end
+addon.GetStarredMaterialRows=function() materialCalls=materialCalls+1;local t={};for i=1,200 do t[i]={itemID=2996,name="Bolt of Linen Cloth",amount=i} end;return t,{},true end
 addon:RefreshOverlay()
 local splitter=GetGear_OverlaySectionSplitter
 assert(splitter:IsShown())
 local beforeFrames=#frames
 local heavy=0
-for _,name in ipairs({"GetItems","ComparisonInline","GetCombinedMaterialRows","GetUndocumentedCrafts","FilterEquipmentSlots"})do
+for _,name in ipairs({"GetItems","ComparisonInline","GetStarredMaterialRows","FilterEquipmentSlots"})do
  local original=addon[name]
  addon[name]=function(...) heavy=heavy+1;return original(...) end
 end

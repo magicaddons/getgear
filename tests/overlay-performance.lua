@@ -39,9 +39,10 @@ local function event(name,...)
 end
 GetGear_CharacterDB={schemaVersion=4,status={},hidden={},overlay={visible=true},detail={}}
 local calls={}
+local materialsMethod=addon.GetStarredMaterialRows and 'GetStarredMaterialRows' or 'GetCombinedMaterialRows'
 for _,name in ipairs({'GetItems','GetRecommendationRecord','HasEligibleAcquisitionSource',
  'GetEligibleAcquisitionRoutes','GetGearComparison','GetObsoleteGearReason','GetProfessionSkill',
- 'GetCombinedMaterialRows','GetUndocumentedCrafts','RefreshOverlay','RefreshUI'})do
+ materialsMethod,'GetUndocumentedCrafts','RefreshOverlay','RefreshUI'})do
  local original=assert(addon[name]);addon[name]=function(...)calls[name]=(calls[name] or 0)+1;return original(...)end
 end
 local textWrites=0
@@ -71,7 +72,7 @@ local function measure(label,fn)
   label,elapsed,collectgarbage('count')-mem,calls.GetRecommendationRecord or 0,
   calls.HasEligibleAcquisitionSource or 0,calls.GetEligibleAcquisitionRoutes or 0,
   calls.GetGearComparison or 0,calls.GetObsoleteGearReason or 0,calls.GetProfessionSkill or 0,
-  calls.GetCombinedMaterialRows or 0,calls.GetUndocumentedCrafts or 0,textWrites,#frames-frameCount))
+  calls[materialsMethod] or 0,calls.GetUndocumentedCrafts or 0,textWrites,#frames-frameCount))
  -- Fingerprint ordered recommendations and exact ingredient quantities against
  -- the reviewed Alliance-access correction, rather than accepting an empty result.
  local measuredCalls=calls;calls={}
@@ -97,7 +98,7 @@ measure('movement zones x10',function()for _=1,10 do event('ZONE_CHANGED')end en
 measure('ordinary movement idle',function()advance(5)end)
 assert(not next(calls),'idle movement scheduled catalogue/UI work')
 measure('collapsed materials',function()addon.db.overlay.materialsCollapsed=true;addon:RefreshOverlay()end)
-if not baseline then assert(not calls.GetCombinedMaterialRows,'collapsed totals still aggregate')end
+if not baseline then assert(not calls.GetCombinedMaterialRows,'collapsed totals still scan recommendations')end
 addon.db.overlay.materialsCollapsed=false
 measure('slot changes x3',function()for _,slot in ipairs({'head','rings','all'})do addon:SetEquipmentSlotFilter('overlay',slot);addon:RefreshOverlay()end end)
 measure('open close x3',function()for _=1,3 do addon:ToggleOverlay();addon:ToggleOverlay()end end)
@@ -134,7 +135,7 @@ addon.db.overlay.materialsCollapsed=true;reset();addon:RefreshOverlay()
 if not baseline then assert(not calls.GetCombinedMaterialRows)end
 amount=99;event('BAG_UPDATE_DELAYED');advance(.2)
 addon.db.overlay.materialsCollapsed=false;reset();addon:RefreshOverlay()
-assert(calls.GetCombinedMaterialRows==1 and addon:GetMaterialCount(2589)==99)
+assert(calls[materialsMethod]==1 and addon:GetMaterialCount(2589)==99)
 -- A single collection-paused refresh is a Lua heap-growth proxy, not a client
 -- allocation counter. Never pause GC in production; instrumentation stays opt-in.
 collectgarbage('collect');collectgarbage('stop')
@@ -146,7 +147,7 @@ if not baseline then assert(growth<3000,'refresh heap growth proxy regressed')en
 addon:StartPerformanceCapture()
 for _=1,10 do addon:RefreshOverlay()end
 local profile=addon:StopPerformanceCapture()
-for _,key in ipairs({'RefreshOverlay','GetItems','GetCombinedMaterialRows'})do
+for _,key in ipairs({'RefreshOverlay','GetItems',materialsMethod})do
  local v=profile.samples[key]
  print(string.format('PROFILE %s calls=%d total=%.3fms',key,v.calls,v.milliseconds))
 end

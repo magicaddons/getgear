@@ -28,7 +28,8 @@ local function sortedRows()
  return rows
 end
 local counts={}
-for _,name in ipairs({'RefreshOverlay','GetItems','ComposeStarredItems','GetCombinedMaterialRows','GetGearComparison'})do
+local materialsMethod=addon.GetStarredMaterialRows and 'GetStarredMaterialRows' or 'GetCombinedMaterialRows'
+for _,name in ipairs({'RefreshOverlay','GetItems','ComposeStarredItems',materialsMethod,'GetGearComparison'})do
  local fn=addon[name];addon[name]=function(...)counts[name]=(counts[name]or 0)+1;return fn(...)end
 end
 local function measure(label,fn)
@@ -38,7 +39,7 @@ local function measure(label,fn)
  collectgarbage('restart');collectgarbage('collect')
  print(string.format('IDLE_GROUPS %s level=%d %s cpu=%.3fms heapGrowth=%.1fKiB refresh=%d items=%d compose=%d totals=%d comparisons=%d',
   testClass,testLevel,label,cpu,growth,counts.RefreshOverlay or 0,counts.GetItems or 0,
-  counts.ComposeStarredItems or 0,counts.GetCombinedMaterialRows or 0,counts.GetGearComparison or 0))
+  counts.ComposeStarredItems or 0,counts[materialsMethod] or 0,counts.GetGearComparison or 0))
 end
 measure('same map zones x20',function()for _=1,20 do event('ZONE_CHANGED');event('ZONE_CHANGED_NEW_AREA')end end)
 if not baseline then assert(not next(counts),'unchanged map rebuilt the overlay')end
@@ -53,16 +54,16 @@ end)
 if not baseline then assert(ticks==0 and not next(counts),'overlay has an idle frame callback')end
 print('FRAME_CALLBACKS '..testClass..' '..ticks)
 measure('pages x10',function()for _=1,10 do click(button(overlay,'>'));click(button(overlay,'<'))end end)
-if not baseline then assert(not counts.GetItems and not counts.ComposeStarredItems and not counts.GetCombinedMaterialRows,'page navigation rebuilt selection/totals')end
+if not baseline then assert(not counts.GetItems and not counts.ComposeStarredItems and not counts[materialsMethod],'page navigation rebuilt selection/totals')end
 measure('slots x3',function()
  for _,label in ipairs({'Head','Rings','All Slots'})do
   click(GetGear_OverlaySlotMenu.parent);click(button(GetGear_OverlaySlotMenu,label))
  end
 end)
-if not baseline then assert(not counts.GetItems and not counts.GetCombinedMaterialRows,'slot action rebuilt selection/totals')end
+if not baseline then assert(not counts.GetItems and not counts[materialsMethod],'slot action rebuilt selection/totals')end
 addon:ToggleOverlay()
 measure('closed zones x20',function()for _=1,20 do event('ZONE_CHANGED');event('ZONE_CHANGED_NEW_AREA')end end)
-assert(not counts.GetItems and not counts.GetCombinedMaterialRows,'closed overlay evaluated data')
+assert(not counts.GetItems and not counts[materialsMethod],'closed overlay evaluated data')
 addon:ToggleOverlay()
 if baseline then return end
 -- Real map/name changes must still refresh immediately, including transitions
@@ -92,7 +93,7 @@ grip.scripts.OnMouseDown(grip,'LeftButton');assert(grip.scripts.OnUpdate)
 grip.scripts.OnUpdate(grip);assert(not grip.scripts.OnUpdate and not overlay.isSizing)
 -- Closed/open gameplay-event processing, with the same map transition.
 addon:ToggleOverlay();counts={};currentMap=1436;event('ZONE_CHANGED')
-assert(not counts.GetItems and not counts.GetCombinedMaterialRows)
+assert(not counts.GetItems and not counts[materialsMethod])
 addon:ToggleOverlay();assert(counts.GetItems==1)
 if not testFull then return end
 local function selectGroup(label)
@@ -162,7 +163,7 @@ db.starredItems={};addon:RefreshAll();selectGroup('Other')
 local target=item(sortedRows()[1]);counts={}
 assert(addon:SetItemStarred(target.itemID,true));verify(false,119)
 assert(GetGear_OverlayGroupMenu.parent.text=='Other v')
-assert(not counts.GetItems and not counts.GetCombinedMaterialRows)
+assert(not counts.GetItems and not counts[materialsMethod])
 selectGroup('Starred');verify(true,1)
 assert(addon:SetItemStarred(target.itemID,false));verify(true,0)
 local empty=false
@@ -179,7 +180,7 @@ for _,slot in ipairs(addon.EquipmentSlotFilters)do
    assert(addon:IsItemStarred(g.itemID)==(label=='Starred'))
   end
  end
- assert(not counts.GetItems and not counts.GetCombinedMaterialRows,'slot/group action rebuilt gameplay data')
+ assert(not counts.GetItems and not counts[materialsMethod],'slot/group action rebuilt gameplay data')
 end
 print('PASS 54/120 recommendations; 0/1/31/32/33/54 stars; independent pages, membership, empty groups and all slots')
 ]=]

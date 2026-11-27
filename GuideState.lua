@@ -367,7 +367,7 @@ function GetGear:StartPerformanceCapture()
         capture.wrappers[#capture.wrappers+1]={owner=owner,name=name,original=original,wrapper=wrapper}
     end
     for _,name in ipairs({"RefreshAll","RefreshUI","RefreshOverlay","GetItems",
-        "SortRecommendations","GetCombinedMaterialRows","GetUndocumentedCrafts",
+        "SortRecommendations","GetCombinedMaterialRows","GetUndocumentedCrafts","GetStarredMaterialRows",
         "GetCraftingMaterialRows"})do wrap(self,name)end
     for _,name in ipairs({"ScanBags","ScanBank"})do wrap(self.AltInventory,name)end
     return capture

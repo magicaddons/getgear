@@ -1977,18 +1977,16 @@ end)
 matHeader:SetScript("OnEnter", function(self)
     if not GameTooltip then return end
     GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
-    GameTooltip:AddLine(self.listIncomplete and "Why this list is incomplete" or "Total crafting materials",1,0.82,0.35)
+    GameTooltip:AddLine(self.listIncomplete and "Why this list is incomplete" or "Materials for starred gear",1,0.82,0.35)
     local undocumented=self.undocumentedCrafts or {}
     if #undocumented>0 then
-        GameTooltip:AddLine("Recipe requirements: "..#undocumented.." tracked craft(s) have no documented ingredient list.",1,0.77,0.4,true)
+        GameTooltip:AddLine("Recipe requirements: "..#undocumented.." starred craft(s) have no documented ingredient list.",1,0.77,0.4,true)
         for i=1,math.min(#undocumented,3) do
             GameTooltip:AddLine("  "..tostring(undocumented[i].name or "Unnamed craft"),0.84,0.85,0.91,true)
         end
         if #undocumented>3 then
             GameTooltip:AddLine("  ...and "..(#undocumented-3).." more; see Guide.",0.76,0.81,0.88)
         end
-    else
-        GameTooltip:AddLine("Ingredient requirements are documented for the tracked crafts.",0.59,0.87,0.65,true)
     end
     if (self.unscannedBanks or 0)>0 or (self.unscannedBags or 0)>0
         or (self.partialBanks or 0)>0 then
@@ -2013,7 +2011,6 @@ matHeader:SetScript("OnEnter", function(self)
     GameTooltip:Show()
 end)
 matHeader:SetScript("OnLeave",HideItemTooltip)
-local scopeButton = nil -- material scope is configured in /getgear settings
 -- Dedicated, clearly labelled collapse control instead of a tracking button.
 local collapseMaterials=NewButton(overlay,"-",24,22)
 collapseMaterials:SetScript("OnClick",function()
@@ -2210,7 +2207,7 @@ local function ShowOverlayMaterialHeader(row, gear, y)
     return math.max(MeasureText(row.matTitle,12),professionShown and MeasureText(row.profession,12) or 0)+5
 end
 
-local function RefreshOverlay(self)
+local function RefreshOverlay(self,refreshStarMaterials)
     if not self.db then return end
     local opts = self.db.overlay
     local opacity = math.max(0.2, math.min(1, opts.backgroundOpacity or 0.78))
@@ -2346,8 +2343,7 @@ local function RefreshOverlay(self)
                     end
                     self:RefreshOverlay()
                 end)
-                -- Minimized objectives retain their header (icon/name/level)
-                -- and continue contributing to the aggregate materials tracker.
+                -- Minimized objectives retain their header (icon/name/level).
                 -- Full objectives retain their prior title-click detail toggle.
                 if minimized then
                     r.comparison:Hide()
@@ -2457,7 +2453,7 @@ local function RefreshOverlay(self)
     end
     for i=(opts.objectivesCollapsed and 1 or math.min(#list,32)+1),#overlayRows do overlayRows[i].f:Hide() end
     if self.performanceStats then self:RecordPerformancePhase("OverlayObjectiveUI",rowsStarted) end
-    if wishlistUI.starPresentationOnly then
+    if wishlistUI.starPresentationOnly and not refreshStarMaterials then
         sectionLayout.desiredObj=opts.objectivesCollapsed and 0 or math.max(45,totalY)
         sectionLayout.totalY=totalY
         objContent:SetHeight(math.max(50,totalY))
@@ -2467,8 +2463,8 @@ local function RefreshOverlay(self)
     end
     -- A collapsed total has no visible rows. Requirements are rebuilt from
     -- current state on expansion; per-objective materials remain independent.
-    local materials = not opts.materialsCollapsed and self:GetCombinedMaterialRows(opts.materialScope) or {}
     local materialUIStarted=self.performanceStats and self:PerformanceClock()
+    local materials,missing,hasMaterials = self:GetStarredMaterialRows(wishlistUI.overlayStarModel,not opts.materialsCollapsed)
     local totalMatsH=math.max(42,#materials*29+7)
     local desiredObj = opts.objectivesCollapsed and 0 or math.max(45,totalY)
     local desiredMat = opts.materialsCollapsed and 0 or totalMatsH
@@ -2483,13 +2479,12 @@ local function RefreshOverlay(self)
     sectionLayout={desiredObj=desiredObj,desiredMat=desiredMat,totalY=totalY,totalMatsH=totalMatsH}
     objContent:SetHeight(math.max(50,totalY))
     wishlistUI.CommitScrollLayout(objScroll)
-    local missing = self:GetUndocumentedCrafts(opts.materialScope)
     -- The ingredient requirements and the account-owned inventory are
     -- separate concepts. Surface either gap, but explain which is affected
     -- in the hover text rather than implying all recipes lack materials.
     local missingBanks,missingBags,partialBanks=0,0,0
     local unscannedNames={}
-    if self.AltInventory and self.AltInventory.BrowserCharacters then
+    if hasMaterials and self.AltInventory and self.AltInventory.BrowserCharacters then
         for _,character in ipairs(self.AltInventory:BrowserCharacters()) do
             if character.eligible then
                 local bankMissing=not character.bankKnown
@@ -2510,14 +2505,14 @@ local function RefreshOverlay(self)
     matHeader.partialBanks=partialBanks
     matHeader.unscannedNames=unscannedNames
     matHeader.listIncomplete=(#missing>0 or missingBanks>0 or missingBags>0 or partialBanks>0)
-    matHeaderText:SetText(matHeader.listIncomplete and "TOTAL MATERIALS (INCOMPLETE LIST)" or "TOTAL MATERIALS")
+    matHeaderText:SetText(matHeader.listIncomplete and "STARRED MATERIALS (INCOMPLETE)" or "STARRED MATERIALS")
     collapseMaterials:SetText(opts.materialsCollapsed and "+" or "-")
     if opts.materialsCollapsed then
         matScroll:Hide()
     else
         matScroll:Show()
         if #materials == 0 then
-            emptyMaterialText:SetText(#missing>0 and ("Materials missing for " .. #missing .. " craft(s); total is incomplete.") or "No documented materials needed for these objectives.")
+            emptyMaterialText:SetText(#missing>0 and ("Ingredient lists are missing for " .. #missing .. " starred craft(s).") or "Star a craftable item to track its materials.")
             emptyMaterialText:Show()
         else
             emptyMaterialText:Hide()
@@ -2536,9 +2531,9 @@ local function RefreshOverlay(self)
     if self.performanceStats then self:RecordPerformancePhase("OverlayMaterialUI",materialUIStarted) end
 end
 
-function GetGear:RefreshOverlay()
-    if self.WithRecommendationSnapshot then return self:WithRecommendationSnapshot(RefreshOverlay) end
-    return RefreshOverlay(self)
+function GetGear:RefreshOverlay(refreshStarMaterials)
+    if self.WithRecommendationSnapshot then return self:WithRecommendationSnapshot(RefreshOverlay,refreshStarMaterials) end
+    return RefreshOverlay(self,refreshStarMaterials)
 end
 
 -- Only explicit presentation actions reuse the last validated model. Gameplay
@@ -2558,8 +2553,8 @@ function GetGear:RefreshOverlayCombatVisibility()
 end
 
 function GetGear:RefreshStarPresentation(itemID,starred)
-    local record=starred and self:GetSearchRecord(itemID)
-    if record and not self:IsHidden(record) and not self:GetStatus(record)
+    local record=self:GetSearchRecord(itemID)
+    if starred and record and not self:IsHidden(record) and not self:GetStatus(record)
         and not self:IsGearEquipped(record) then
         wishlistUI.detailStarModel[itemID]=record
         wishlistUI.overlayStarModel[itemID]=wishlistUI.detailStarModel[itemID]
@@ -2577,7 +2572,12 @@ function GetGear:RefreshStarPresentation(itemID,starred)
                 end
             else self:RefreshUI() end
         end
-        if overlay:IsShown() then self:RefreshOverlay() end
+        if overlay:IsShown() then
+            local materialRecord=wishlistUI.overlayStarModel[itemID] or record
+            local refreshMaterials=materialRecord and ((materialRecord.reagents and #materialRecord.reagents>0)
+                or self:IsCraftMaterialsUnknown(materialRecord))
+            self:RefreshOverlay(refreshMaterials)
+        end
         if self.RefreshItemSearchUI then self:RefreshItemSearchUI() end
     end)
     wishlistUI.starPresentationOnly=false
@@ -2805,26 +2805,6 @@ armorOnlyCheck:SetScript("OnEnter",function(self)
     GameTooltip:Show()
 end)
 armorOnlyCheck:SetScript("OnLeave",HideItemTooltip)
--- Keep the Tracked/All material-scope choice in settings, without
--- confusing it with the Total Materials minimize button.
-local materialScopeButton=NewButton(settings,"",185,23)
-materialScopeButton:SetPoint("TOPLEFT",18,-604)
-materialScopeButton:SetScript("OnClick",function(self)
-    if not GetGear.db then return end
-    local opts=GetGear.db.overlay
-    opts.materialScope = opts.materialScope == "tracked" and "all" or "tracked"
-    self:SetText("Materials: " .. (opts.materialScope == "all" and "All" or "Tracked"))
-    GetGear:RefreshOverlay()
-end)
-materialScopeButton:SetScript("OnEnter",function(self)
-    if not GameTooltip then return end
-    GameTooltip:SetOwner(self,"ANCHOR_RIGHT")
-    GameTooltip:AddLine("Material tally scope",1,0.82,0.35)
-    GameTooltip:AddLine("Tracked: visible objectives only",1,1,1)
-    GameTooltip:AddLine("All: also includes hidden and earlier objectives",1,1,1)
-    GameTooltip:Show()
-end)
-materialScopeButton:SetScript("OnLeave",HideItemTooltip)
 local showOverlay=NewButton(settings,"Show / hide tracker",165,24)
 showOverlay:SetPoint("BOTTOMLEFT",20,18)
 showOverlay:SetScript("OnClick",function() GetGear:ToggleOverlay() end)
@@ -2977,7 +2957,6 @@ function GetGear:ShowSettings()
     settings:SetFrameLevel(math.max(settings:GetFrameLevel(), window:GetFrameLevel() + 20))
     settings:Show()
     if type(settings.Raise) == "function" then settings:Raise() end
-    materialScopeButton:SetText("Materials: " .. (self.db.overlay.materialScope == "all" and "All" or "Tracked"))
     lockedCheck:SetChecked(self.db.overlay.locked)
     combatCheck:SetChecked(self.db.overlay.hideInCombat)
     obsoleteCheck:SetChecked(self.db.overlay.filterObsolete ~= false)

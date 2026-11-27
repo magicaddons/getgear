@@ -114,7 +114,6 @@ events:SetScript("OnEvent", function(_, event, arg1, arg2)
         if type(o.backgroundOpacity) ~= "number" then o.backgroundOpacity = 0.78 end
         if type(o.locked) ~= "boolean" then o.locked = false end
         if type(o.hideInCombat) ~= "boolean" then o.hideInCombat = false end
-        if o.materialScope ~= "all" then o.materialScope = "tracked" end
         -- Enabled by default, including on characters with older SavedVariables.
         -- Only presentation is affected: status, hidden and acquired keys never change.
         if type(o.filterObsolete) ~= "boolean" then o.filterObsolete = true end

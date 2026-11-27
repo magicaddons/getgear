@@ -217,6 +217,41 @@ function GetGear:IsCraftMaterialsUnknown(gear)
         and (type(gear.reagents)~="table" or #gear.reagents==0)
 end
 
+local function AddMaterials(total,reagents)
+    for _,mat in ipairs(reagents) do
+        RememberMaterialName(mat.itemID,mat.name)
+        total[mat.itemID]=(total[mat.itemID] or 0)+mat.amount
+    end
+end
+
+local function MaterialTotalRows(self,total,scope)
+    local list={}
+    for id,qty in pairs(total) do
+        list[#list+1]={itemID=id,amount=qty,name=self:MaterialName(id)}
+    end
+    table.sort(list,function(a,b) return a.name<b.name end)
+    return VisibleRows(Plan(list), "total:" .. scope, self.db)
+end
+
+-- The overlay supplies its actionable stars before applying slot filters or pages.
+function GetGear:GetStarredMaterialRows(stars,expanded)
+    local total,missing={},{}
+    local hasMaterials=false
+    for _,gear in pairs(stars) do
+        if not gear.bagUpgrade then
+            if gear.reagents and #gear.reagents>0 then
+                hasMaterials=true
+                if expanded then AddMaterials(total,gear.reagents) end
+            elseif self:IsCraftMaterialsUnknown(gear) then
+                missing[#missing+1]=gear
+            end
+        end
+    end
+    table.sort(missing,function(a,b) return a.name<b.name end)
+    -- Keep the existing tracked-total ingredient expansion preferences.
+    return expanded and hasMaterials and MaterialTotalRows(self,total,"tracked") or {},missing,hasMaterials
+end
+
 function GetGear:GetUndocumentedCrafts(scope)
     local pending,level={},self.level or 1
     for _,gear in ipairs(self.Gear) do
@@ -237,7 +272,7 @@ function GetGear:GetUndocumentedCrafts(scope)
 end
 
 function GetGear:GetCombinedMaterialRows(scope)
-    local total, list = {}, {}
+    local total = {}
     local level=self.level or 1
     for _,gear in ipairs(self.Gear) do
         if gear.reagents and #gear.reagents>0 and gear.targetLevel <= level+5 and not self:GetStatus(gear)
@@ -248,10 +283,7 @@ function GetGear:GetCombinedMaterialRows(scope)
             and (scope=="all" or (not self:IsHidden(gear)
                 and not self:IsGearEquipped(gear)
                 and self:GetObsoleteGearReason(gear)==nil)) then
-            for _,mat in ipairs(gear.reagents or {}) do
-                RememberMaterialName(mat.itemID,mat.name)
-                total[mat.itemID]=(total[mat.itemID] or 0)+mat.amount
-            end
+            AddMaterials(total,gear.reagents)
         end
     end
     -- One dynamic bag tier at a time. Quantities are already multiplied by
@@ -260,16 +292,9 @@ function GetGear:GetCombinedMaterialRows(scope)
     local bag = self.GetBagUpgradePlan and self:GetBagUpgradePlan() or nil
     if bag and bag.profession=="Tailoring" and not self:IsHidden(bag)
         and (not self.HasEligibleAcquisitionSource or self:HasEligibleAcquisitionSource(bag)) then
-        for _,mat in ipairs(bag.reagents or {}) do
-            RememberMaterialName(mat.itemID,mat.name)
-            total[mat.itemID]=(total[mat.itemID] or 0)+mat.amount
-        end
+        AddMaterials(total,bag.reagents or {})
     end
-    for id,qty in pairs(total) do
-        list[#list+1]={itemID=id,amount=qty,name=self:MaterialName(id)}
-    end
-    table.sort(list,function(a,b) return a.name<b.name end)
-    return VisibleRows(Plan(list), "total:" .. (scope or "tracked"), self.db)
+    return MaterialTotalRows(self,total,scope or "tracked")
 end
 
 -- The professions API is present in WoW Forever's Mainline-derived client.
